@@ -1,58 +1,58 @@
 ---
-title: "Using Replaceable Parameters (The Registrar&#39;s Preprocessor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AddReplacement"
-  - "ClearReplacements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "%MODULE%"
+title: "Usar parámetros reemplazables (registrador de ATL) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- AddReplacement
+- ClearReplacements
+dev_langs: C++
+helpviewer_keywords: '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6909db6a68a9e637ed0cf8513f49ba306007ce6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Using Replaceable Parameters (The Registrar&#39;s Preprocessor)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los parámetros reemplazables permiten al cliente de un registro especifique datos en tiempo de ejecución.  Para ello, el registro mantiene un reemplazo asignado en la que escribe los valores asociados con los parámetros reemplazables en el script.  El registro crea estas entradas en tiempo de ejecución.  
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usar parámetros reemplazables (el registrador de &#39; s preprocesador)
+Parámetros reemplazables permiten que un cliente del registrador especificar los datos de tiempo de ejecución. Para ello, el registrador mantiene un mapa de reemplazo en el que escribe los valores asociados a los parámetros reemplazables en el script. El registrador realiza estas entradas en tiempo de ejecución.  
   
-##  <a name="_atl_using_.25.module.25"></a> Mediante el %MODULE%  
- [Asistente para controles ATL](../atl/reference/atl-control-wizard.md) automáticamente genera un script que utilice `%MODULE%`.  ATL utiliza este parámetro reemplazable para la ubicación real de DLL o EXE del servidor.  
+##  <a name="_atl_using_.25.module.25"></a>Utilizar % MODULE %  
+ El [Asistente para controles ATL](../atl/reference/atl-control-wizard.md) genera automáticamente un script que usa `%MODULE%`. ATL utiliza este parámetro reemplazable para la ubicación real del archivo DLL o EXE de su servidor.  
   
-## Concatenar datos en tiempo de ejecución con datos de script  
- Otro uso de preprocesador es concatenar datos en tiempo de ejecución con datos del script.  Por ejemplo, supongamos que una entrada es necesaria que contiene una ruta de acceso completa a un módulo con la cadena “`, 1`” anexado al final.  Primero, defina la siguiente extensión:  
+## <a name="concatenating-run-time-data-with-script-data"></a>Concatenar datos de tiempo de ejecución con los datos de la secuencia de comandos  
+ Otro uso del preprocesador es concatenar datos de tiempo de ejecución con los datos de la secuencia de comandos. Por ejemplo, supongamos que se necesita una entrada que contiene una ruta de acceso completa a un módulo con la cadena "`, 1`" anexado al final. En primer lugar, defina la expansión siguiente:  
   
 ```  
 'MySampleKey' = s '%MODULE%, 1'  
 ```  
   
- A continuación, antes de llamar a uno de los métodos de procesamiento de script enumerados en [Invocar scripts](../atl/invoking-scripts.md), agregue un reemplazo al mapa:  
+ A continuación, antes de llamar a uno de los métodos enumerados en el procesamiento de scripts [invocar Scripts](../atl/invoking-scripts.md), agregue un reemplazo al mapa:  
   
- [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/CPP/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]  
   
- Durante el análisis de script, el registro expanda `'%MODULE%, 1'` a `c:\mycode\mydll.dll, 1`.  
-  
-> [!NOTE]
->  En un script de registro, 4K es el tamaño máximo de token.  \(El símbolo consiste en cualquier elemento reconocible en la sintaxis.\) Esto incluye los tokenes creados o expandidos por el preprocesador.  
+ Durante el análisis de la secuencia de comandos, el registrador expande `'%MODULE%, 1'` a `c:\mycode\mydll.dll, 1`.  
   
 > [!NOTE]
->  Sustituir valores de reemplazo en tiempo de ejecución, quite la llamada en el script a la macro de [DECLARE\_REGISTRY\_RESOURCE](../Topic/DECLARE_REGISTRY_RESOURCE.md) o de [DECLARE\_REGISTRY\_RESOURCEID](../Topic/DECLARE_REGISTRY_RESOURCEID.md) .  En su lugar, sustitúyalo con su propio método de `UpdateRegistry` que llame a [CAtlModule::UpdateRegistryFromResourceD](../Topic/CAtlModule::UpdateRegistryFromResourceD.md) o [CAtlModule::UpdateRegistryFromResourceS](../Topic/CAtlModule::UpdateRegistryFromResourceS.md), y pase la matriz de estructuras de **\_ATL\_REGMAP\_ENTRY** .  La matriz de **\_ATL\_REGMAP\_ENTRY** debe tener una entrada que se establezca {**NULL**,**NULL**}, y esta entrada debe ser siempre la última entrada.  Si no, un error de infracción de acceso se generará cuando se llama a **UpdateRegistryFromResource** .  
+>  En una secuencia de comandos del registrador, 4K es el tamaño máximo del token. (Un token es cualquier elemento reconocible en la sintaxis). Esto incluye los símbolos creados o expandidos por el preprocesador.  
   
 > [!NOTE]
->  Al compilar un proyecto que genera un archivo ejecutable, ATL agrega automáticamente comillas alrededor del nombre de ruta creado en tiempo de ejecución con el parámetro de script de registro de **%MODULE%** .  Si no desea que el nombre de ruta para incluir las comillas, utilice el nuevo parámetro de **%MODULE\_RAW%** en su lugar.  
+>  Para sustituir los valores de reemplazo en tiempo de ejecución, quite la llamada en el script para la [macros DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) o [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) macro. En su lugar, se reemplace por su propio `UpdateRegistry` método que llama a [CAtlModule:: UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) o [CAtlModule:: UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)y pase la matriz de **_ATL_REGMAP_ENTRY** estructuras. La matriz de **_ATL_REGMAP_ENTRY** debe tener al menos una entrada que se establece en {**NULL**,**NULL**}, y esta entrada debe ser siempre la última entrada. En caso contrario, será un error de infracción de acceso cuando **a UpdateRegistryFromResource** se llama.  
+  
+> [!NOTE]
+>  Al crear un proyecto que genera un archivo ejecutable, ATL agrega automáticamente comillas al nombre de ruta de acceso creada en tiempo de ejecución con el **% MODULE %** parámetro de secuencia de comandos del registrador. Si no desea que el nombre de ruta de acceso debe incluir las comillas, use la nueva **% MODULE_RAW %** parámetro en su lugar.  
 >   
->  Al compilar un proyecto que genere un archivo DLL, ATL no agregará comillas al nombre de ruta si se utiliza **%MODULE%** o **%MODULE\_RAW%** .  
+>  Al crear un proyecto que genera un archivo DLL, ATL no agregará comillas al nombre de ruta de acceso si **% MODULE %** o **% MODULE_RAW %** se utiliza.  
   
-## Vea también  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>Vea también  
+ [Crear scripts del registrador](../atl/creating-registrar-scripts.md)
+

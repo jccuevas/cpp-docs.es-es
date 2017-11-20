@@ -1,41 +1,40 @@
 ---
-title: "Transacci&#243;n: Realizar una transacci&#243;n en un conjunto de registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transacciones, actualizar conjuntos de registros"
+title: "Transacción: Realizar una transacción en un conjunto de registros (ODBC) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1451775374b94bbefb6396e7afeda2396df84ba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Transacci&#243;n: Realizar una transacci&#243;n en un conjunto de registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transacción: Realizar una transacción en un conjunto de registros (ODBC)
 Este tema explica cómo realizar una transacción en un conjunto de registros.  
   
 > [!NOTE]
->  Sólo se admite un nivel de transacciones; no es posible anidar las transacciones.  
+>  Se admite solo un nivel de transacciones; no se pueden anidar transacciones.  
   
-#### Para realizar una transacción en un conjunto de registros  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Para realizar una transacción en un conjunto de registros  
   
-1.  Llame a la función miembro **BeginTrans** del objeto `CDatabase`.  
+1.  Llame a la `CDatabase` del objeto **BeginTrans** función miembro.  
   
-2.  Si no está implementada la obtención de filas masiva, llame a las funciones miembro **AddNew\/Update**, **Edit\/Update** y **Delete** de uno o más objetos de conjunto de registros correspondientes a la misma base de datos tantas veces como sea necesario.  Para obtener más información, vea [Conjunto de registros: Agregar, actualizar y eliminar registros \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md) Si está implementada la obtención de filas masiva, debe escribir sus propias funciones para actualizar el origen de datos.  
+2.  Si no ha implementado la obtención masiva de filas, llame a la **AddNew/Update**, **editar o actualizar**, y **eliminar** las funciones miembro de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, consulte [conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.  
   
-3.  Por último, llame a la función miembro **CommitTrans** del objeto `CDatabase`.  Si ocurre un error en una de las actualizaciones o decide cancelar los cambios, llame a su función miembro **Rollback**.  
+3.  Por último, llame a la `CDatabase` del objeto **CommitTrans** función miembro. Si se produce un error en una de las actualizaciones o decide cancelar los cambios, llame a su **reversión** función miembro.  
   
- El ejemplo siguiente usa dos conjuntos de registros para eliminar la inscripción de un estudiante de una base de datos de registro de estudiantes, quitando al estudiante de todas las clases en que se inscribió.  Deben ejecutarse con éxito las llamadas a **Delete** en ambos conjuntos de registros, por lo que se requiere una transacción.  El ejemplo supone la existencia de `m_dbStudentReg`, una variable miembro del tipo `CDatabase` ya conectada al origen de datos, y de las clases de conjunto de registros `CEnrollmentSet` y `CStudentSet`.  La variable `strStudentID` contiene un valor obtenido del usuario.  
+ En el ejemplo siguiente se usa dos conjuntos de registros para eliminar la inscripción de un estudiante de una base de datos de registro de escuela, quitando al estudiante de todas las clases en el que está inscrito los estudiantes. Dado que la **eliminar** llamadas en ambos conjuntos de registros deben tener éxito, se requiere una transacción. El ejemplo supone la existencia de `m_dbStudentReg`, una variable miembro de tipo `CDatabase` ya está conectado al origen de datos y las clases de conjunto de registros `CEnrollmentSet` y `CStudentSet`. El `strStudentID` variable contiene un valor obtenido del usuario.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -88,10 +87,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  Si se llama de nuevo a **BeginTrans** sin llamar a **CommitTrans** o **Rollback**, se produce un error.  
+>  Al llamar a **BeginTrans** sin necesidad de llamar a **CommitTrans** o **reversión** es un error.  
   
-## Vea también  
- [Transacción \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transacción: Cómo afectan las transacciones a las actualizaciones \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Vea también  
+ [Transacción (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transacción: Cómo afectan las transacciones a las actualizaciones (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase (clase)](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset (clase)](../../mfc/reference/crecordset-class.md)

@@ -1,66 +1,66 @@
 ---
-title: "/FORCE (Forzar resultados de archivo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ForceLink"
-  - "/force"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FORCE (opción del vinculador)"
-  - "archivo de resultados del vinculador"
-  - "FORCE (opción del vinculador)"
-  - "-FORCE (opción del vinculador)"
+title: -FORCE (Forzar resultados de archivo) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ForceLink
+- /force
+dev_langs: C++
+helpviewer_keywords:
+- FORCE linker option
+- file output in linker
+- /FORCE linker option
+- -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2990ff88e896c7cafb3ff8eb2d9acf149d7a90c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /FORCE (Forzar resultados de archivo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="force-force-file-output"></a>/FORCE (Forzar resultados de archivo)
 ```  
 /FORCE:[MULTIPLE|UNRESOLVED]  
 ```  
   
-## Comentarios  
- La opción \/FORCE le indica al vinculador que cree una DLL o archivo .exe válidos, independientemente de que se haga referencia a un símbolo sin definir o definido de forma múltiple.  
+## <a name="remarks"></a>Comentarios  
+ La opción /FORCE le indica al vinculador para crear un archivo .exe válido o DLL incluso si se hace referencia a un símbolo pero no definido o definido de forma múltiple.  
   
- Esta opción puede aceptar argumentos opcionales:  
+ La opción/Force puede tomar un argumento opcional:  
   
--   Use \/FORCE:MULTIPLE para crear un archivo de salida independientemente de que LINK encuentre o no más de una definición para un símbolo.  
+-   Utilice/Force: Multiple para crear un archivo de salida independientemente de que LINK encuentre más de una definición de un símbolo.  
   
--   Use \/FORCE:UNRESOLVED para crear un archivo de salida independientemente de que LINK encuentre o no un símbolo no definido. \/FORCE:UNRESOLVED se omite si el símbolo del punto de entrada no está resuelto.  
+-   / Force: UNRESOLVED se EMPLEA para crear un archivo de salida independientemente de que LINK encuentre un símbolo sin definir. / FORCE: sin resolver se omite si el símbolo de punto de entrada no está resuelto.  
   
- \/FORCE sin argumentos implica definiciones múltiples y sin resolver.  
+ /Force sin argumentos implica tanto definiciones múltiples y sin resolver.  
   
- La ejecución de archivos creados con esta opción podría causar resultados imprevistos.  Si la opción \/FORCE está especificada, el vinculador no vinculará de forma incremental  
+ Un archivo creado con esta opción no funcionen según lo previsto. El vinculador no se vinculará de forma incremental cuando se especifica la opción/Force.  
   
- Si un módulo se compila con **\/clr**, **\/FORCE** no se creará una imagen.  
+ Si un módulo se compila con **/CLR**, **/FORCE** no creará una imagen.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción en la **opciones adicionales** cuadro.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,18 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6c142d9c7dca6c46453317e056ec573cbc960f51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (clase)
 Esta clase proporciona un grupo de subprocesos de trabajo que procesan una cola de elementos de trabajo.  
@@ -100,7 +82,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Comentarios  
  Se crean y se destruyen cuando se inicializa, se cambia el tamaño o se apaga el grupo de subprocesos en el grupo. Una instancia de clase *trabajo* se creará en la pila de cada subproceso de trabajo en el grupo. Cada instancia residirá durante la duración del subproceso.  
   
- Inmediatamente después de la creación de un subproceso, *trabajo*:: `Initialize` se llamará en el objeto asociado a ese subproceso. Inmediatamente antes de la destrucción de un subproceso, *trabajo*:: `Terminate` se llamará. Ambos métodos deben aceptar un **void\* ** argumento. El valor de este argumento se pasa al grupo de subprocesos a través de la `pvWorkerParam` parámetro de [CThreadPool::Initialize](#initialize).  
+ Inmediatamente después de la creación de un subproceso, *trabajo*:: `Initialize` se llamará en el objeto asociado a ese subproceso. Inmediatamente antes de la destrucción de un subproceso, *trabajo*:: `Terminate` se llamará. Ambos métodos deben aceptar un **void\***  argumento. El valor de este argumento se pasa al grupo de subprocesos a través de la `pvWorkerParam` parámetro de [CThreadPool::Initialize](#initialize).  
   
  Cuando hay elementos de trabajo en los subprocesos de trabajo y de cola disponible para el trabajo, un subproceso de trabajo extraerá un elemento de la cola y llamar a la **Execute** método de la *trabajo* objeto de ese subproceso. Tres elementos, a continuación, se pasan al método: el elemento de la cola, el mismo `pvWorkerParam` pasado a *trabajo*:: `Initialize` y *trabajo*:: `Terminate`y un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura usada para la cola de puerto de finalización de E/S.  
   
@@ -331,4 +313,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [Interfaz IThreadPoolConfig (interfaz)](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Clases](../../atl/reference/atl-classes.md)
-

@@ -1,40 +1,39 @@
 ---
-title: "/LINENUMBERS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/linenumbers"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LINENUMBERS (opción de dumpbin)"
-  - "números de línea"
-  - "LINENUMBERS (opción de dumpbin)"
-  - "-LINENUMBERS (opción de dumpbin)"
+title: -LINENUMBERS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /linenumbers
+dev_langs: C++
+helpviewer_keywords:
+- LINENUMBERS dumpbin option
+- line numbers
+- -LINENUMBERS dumpbin option
+- /LINENUMBERS dumpbin option
 ms.assetid: 1681d582-2c2f-484e-9920-109959549055
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f81ee61dacab794d457db88532025c05ae5d413b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /LINENUMBERS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linenumbers"></a>/LINENUMBERS
 ```  
 /LINENUMBERS  
 ```  
   
-## Comentarios  
- Esta opción muestra los números de línea COFF.  En un archivo objeto existirán números de línea si se compiló con las opciones Base de datos de programa \(\/Zi\), Compatible con C7 \(\/Z7\) o Sólo números de línea \(\/Zd\).  Un archivo ejecutable o una DLL contendrá números de línea COFF si se vinculó con la opción Generar información de depuración \(\/DEBUG\).  
+## <a name="remarks"></a>Comentarios  
+ Esta opción muestra los números de línea COFF. Números de línea no existan en un archivo de objeto si se compiló con el programa de base de datos (/Zi), compatible con C7 (/ Z7), o sólo números de línea (/ Zd). Un archivo ejecutable o DLL contiene números de línea COFF si se vincula con generar información de depuración (/Debug).  
   
- En los archivos producidos con la opción de compilador [\/GL](../../build/reference/gl-whole-program-optimization.md) sólo está disponible la opción [\/HEADERS](../../build/reference/headers.md) de DUMPBIN.  
+ Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

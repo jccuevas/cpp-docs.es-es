@@ -1,69 +1,68 @@
 ---
-title: "CTable (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CTable"
-  - "ATL.CTable"
-  - "CTable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTable (clase)"
+title: CTable (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CTable
+- ATL.CTable
+- CTable
+dev_langs: C++
+helpviewer_keywords: CTable class
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8398b53e4af21333adf60f2fa44296a35caf2ce9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CTable (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona significa obtener acceso directamente a un conjunto de filas \(uno sin parámetros\).  
+# <a name="ctable-class"></a>CTable (Clase)
+Proporciona un medio para tener acceso directamente a un conjunto de filas simple (uno sin parámetros).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template <   
-   class TAccessor = CNoAccessor,    
-   template <typename T> class TRowset = CRowset    
+template <   
+   class TAccessor = CNoAccessor,    
+   template <typename T> class TRowset = CRowset    
 >  
-class CTable :    
-   public CAccessorRowset <   
-      TAccessor,    
-      TRowset    
+class CTable :    
+   public CAccessorRowset <   
+      TAccessor,    
+      TRowset    
    >  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TAccessor`  
  Una clase de descriptor de acceso.  
   
  `TRowset`  
  Una clase de conjunto de filas.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[Abrir](../../data/oledb/ctable-open.md)|Abra la tabla.|  
+|[Abrir](../../data/oledb/ctable-open.md)|Se abre la tabla.|  
   
-## Comentarios  
- Vea [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando de tener acceso a un conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Vea [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para tener acceso a un conjunto de filas.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)
+ [IOpenRowset:: OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)

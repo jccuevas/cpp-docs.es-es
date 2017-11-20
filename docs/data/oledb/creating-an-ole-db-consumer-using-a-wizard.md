@@ -1,30 +1,29 @@
 ---
-title: "Crear un consumidor OLE DB mediante un asistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consumidores OLE DB, crear"
+title: Crear un consumidor OLE DB mediante un asistente | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52b1780d9553de049ee02d13ea8f8fbe9535fe8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Crear un consumidor OLE DB mediante un asistente
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este procedimiento se muestra cómo se puede utilizar el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL para generar un consumidor de plantillas OLE DB y, después, modificar el código principal de la aplicación de consola para recuperar y mostrar datos de una tabla de base de datos.  
+# <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Crear un consumidor OLE DB mediante un asistente
+Este procedimiento muestra cómo puede usar el Asistente para proyectos ATL y el Asistente para consumidores OLE DB ATL para generar un consumidor de plantillas OLE DB y, a continuación, modifique el código principal de la aplicación de consola para recuperar y mostrar los datos de una tabla de base de datos.  
   
- En las dos últimas secciones se explica el código del consumidor OLE DB generado por el asistente.  
+ Las dos últimas secciones explican el código de consumidor OLE DB generados por el asistente.  
   
  En esta sección se tratan los siguientes temas:  
   
@@ -36,5 +35,5 @@ En este procedimiento se muestra cómo se puede utilizar el Asistente para proye
   
 -   [Métodos generados por el Asistente para consumidores](../../data/oledb/consumer-wizard-generated-methods.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)

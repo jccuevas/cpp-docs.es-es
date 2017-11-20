@@ -1,47 +1,48 @@
 ---
-title: "Platform::InvalidCastException (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::InvalidCastException::InvalidCastException"
-  - "Platform/Platform::InvalidCastException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::InvalidCastException"
+title: InvalidCastException (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::InvalidCastException::InvalidCastException
+- VCCORLIB/Platform::InvalidCastException
+dev_langs: C++
+helpviewer_keywords: Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 00ae3e193f3f7114d3d271f7a928dbb5c10c176c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::InvalidCastException (Clase)
+# <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException (Clase)
 Se produce cuando una conversión o una conversión explícita no es válida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 public ref class InvalidCastException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Comentarios  
- Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .  
   
-## Requisitos  
- **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisitos  
+ **Cliente mínimo admitido:** Windows 8  
   
- **Servidor mínimo admitido:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Servidor mínimo admitido:** Windows Server 2012  
   
  **Espacio de nombres:** Platform  
   
  **Metadatos:** platform.winmd  
   
-## Vea también  
- [Platform::COMException \(Clase\)](../cppcx/platform-comexception-class.md)
+## <a name="see-also"></a>Vea también  
+ [Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)

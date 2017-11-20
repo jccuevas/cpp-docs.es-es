@@ -1,57 +1,58 @@
 ---
-title: "nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint (función)"
-  - "nearbyintf (función)"
-  - "nearbyintl (función)"
+title: nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs: C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# nearbyint, nearbyintf, nearbyintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Redondea el valor de punto flotante especificado en un entero y devuelve ese valor en un formato de punto flotante.  
+# <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
+Redondea el valor de punto flotante especificado en un entero y devuelve ese valor con un formato de punto flotante.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 double nearbyint(  
@@ -76,33 +77,33 @@ long double nearbyintl(
   
 ```  
   
-#### Parámetros  
- \[in\] `x`  
+#### <a name="parameters"></a>Parámetros  
+ [in] `x`  
  El valor que se va a redondear.  
   
-## Valor devuelto  
- Si se realiza correctamente, devuelve `x`, redondeada al entero más cercano, usando el formato de redondeo actual según se define en fegetround. De lo contrario, la función puede devolver uno de los siguientes valores:  
+## <a name="return-value"></a>Valor devuelto  
+ Si se realiza correctamente, devuelve `x`, redondeado al entero más cercano usando el formato de redondeo actual, de acuerdo con lo que se defina en fegetround. De lo contrario, es posible que la función devuelva uno de los siguientes valores:  
   
 |Problema|Volver|  
-|--------------|------------|  
-|`x` \= ±INFINITY|±Infinity, sin modificar|  
-|`x` \= ±0|± 0, sin modificar|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = ±INFINITY|±INFINITY, sin modificar|  
+|`x` = ±0|±0, sin modificar|  
+|`x` = NaN|NaN|  
   
- No se notifican a través de [\_matherr](../../c-runtime-library/reference/matherr.md); en concreto, esta función no informa de las excepciones de FE\_INEXACT.  
+ Los errores no se notifican a través de [_matherr](../../c-runtime-library/reference/matherr.md); en concreto, esta función no notifica ninguna excepción FE_INEXACT.  
   
-## Comentarios  
- La principal diferencia entre esta función y `rint` es que esta función no genera la excepción de punto flotante inexacto.  
+## <a name="remarks"></a>Comentarios  
+ La principal diferencia entre esta función y `rint` es que esta función no genera la excepción de punto flotante inexacta.  
   
- Dado que los valores de punto flotante máximos son enteros exactas, esta función nunca se desborde por sí mismo; en su lugar, la salida puede desbordar el valor devuelto, según la versión de la función que utilice.  
+ Dado que los valores de punto flotante máximos son enteros exactos, esta función nunca se desbordará por sí misma, sino que la salida podría desbordar el valor devuelto, según la versión de la función que use.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`nearbyint`, `nearbyintf`,  `nearbyintl`|\<math.h\>|\<cmath\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

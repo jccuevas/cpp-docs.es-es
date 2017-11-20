@@ -1,49 +1,47 @@
 ---
-title: "ptr::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator!"
-  - "msclr::com::ptr::operator!"
-  - "ptr.operator!"
-  - "msclr.com.ptr.operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator!"
+title: ptr::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator!
+- msclr::com::ptr::operator!
+- ptr.operator!
+- msclr.com.ptr.operator!
+dev_langs: C++
+helpviewer_keywords: ptr::operator!
 ms.assetid: 7f4101dc-2045-42e7-abb1-6a30e17147f2
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82ff71586b495e42f7165f3782f41891767d583e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operador para determinar si el objeto COM propiedad no es válido.  
+# <a name="ptroperator"></a>ptr::operator!
+Operador que se va a determinar si el propio objeto COM no es válido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool operator!();  
 ```  
   
-## Valor devuelto  
- `true` si el objeto COM propiedad no es válida; `false` de otra manera.  
+## <a name="return-value"></a>Valor devuelto  
+ `true`Si el propio objeto COM no es válido; `false` en caso contrario.  
   
-## Comentarios  
- El objeto COM propiedad es válido si no es `nullptr`.  
+## <a name="remarks"></a>Comentarios  
+ El propio objeto COM es válido si no lo es `nullptr`.  
   
-## Ejemplo  
- Este ejemplo implementa una clase CLR que utilice `com::ptr` para ajustar su objeto de `IXMLDOMDocument` miembro privado.  La función miembro de `CreateInstance` utiliza `operator!` para determinar si un objeto document se ya posee, y solo crea una nueva instancia si el objeto no es válido.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  El `CreateInstance` función miembro utiliza `operator!` para determinar si un objeto de documento ya tiene propietario y solo crea una nueva instancia si el objeto no es válido.  
   
 ```  
 // comptr_op_not.cpp  
@@ -90,12 +88,15 @@ int main() {
 }  
 ```  
   
-  **Documento DOM creado.**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\com\\ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- msclr::com de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\com\ptr.h >  
   
-## Vea también  
- [ptr \(Miembros\)](../dotnet/ptr-members.md)   
+ **Namespace** msclr::com  
+  
+## <a name="see-also"></a>Vea también  
+ [PTR (miembros)](../dotnet/ptr-members.md)   
  [ptr::operator bool](../dotnet/ptr-operator-bool.md)

@@ -1,40 +1,39 @@
 ---
-title: "C&#243;mo: Enumerar tipos de datos en ensamblados mediante reflexi&#243;n (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ensamblados [C++]"
-  - "ensamblados [C++], enumerar tipos de datos"
-  - "tipos de datos [C++], enumerar"
-  - "miembros públicos [C++]"
-  - "tipos públicos [C++]"
-  - "reflexión [C++], ensamblados externos"
+title: "Cómo: Enumerar tipos de datos mediante la reflexión (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++], enumerating data types in
+- public types [C++]
+- reflection [C++], external assemblies
+- assemblies [C++]
+- data types [C++], enumerating
+- public members [C++]
 ms.assetid: c3578e6d-bb99-4599-80e1-ab795305f878
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d89324e49cb08014892d08a046221b9a1e28d2e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Enumerar tipos de datos en ensamblados mediante reflexi&#243;n (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El código siguiente muestra la enumeración de tipos y miembros públicos mediante <xref:System.Reflection>.  
+# <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Cómo: Enumerar tipos de datos en ensamblados mediante reflexión (C++/CLI)
+El código siguiente muestra la enumeración de los tipos públicos y miembros mediante <xref:System.Reflection>.  
   
- Dado el nombre de un ensamblado, ya sea en el directorio local o en la GAC, el código que sigue trata de abrir el ensamblado y recuperar descripciones.  Si lo consigue, cada tipo se muestra con sus miembros públicos.  
+ Dado el nombre de un ensamblado, en el directorio local o en la GAC, el código siguiente intenta abrir el ensamblado y recuperar descripciones. Si es correcto, cada tipo se muestra con sus miembros públicos.  
   
- Observe que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> requiere que no se utilice ninguna extensión de archivo.  Por tanto, el uso de "mscorlib.dll" como argumento de la línea de comandos generará un error, mientras que el uso de "mscorlib" resultará en la presentación de los tipos de .NET Framework.  Si no se proporciona ningún nombre de ensamblado, el código detectará y creará informes de los tipos incluidos en el ensamblado actual \(el EXE que resulta de este código\).  
+ Tenga en cuenta que <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> requiere que no se use ninguna extensión de archivo. Por lo tanto, el uso de "mscorlib.dll" como un argumento de línea de comandos se producirá un error, aunque el uso de "mscorlib" dará como resultado la presentación de los tipos de .NET Framework. Si no se proporciona ningún nombre de ensamblado, el código detectará y notifican los tipos en el ensamblado actual (el EXE resultantes de este código).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // self_reflection.cpp  
@@ -83,5 +82,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Reflexión](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Reflexión (C++-CLI)](../dotnet/reflection-cpp-cli.md)

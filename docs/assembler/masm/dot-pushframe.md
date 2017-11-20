@@ -1,42 +1,39 @@
 ---
-title: ".PUSHFRAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".PUSHFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".PUSHFRAME directive"
+title: . PUSHFRAME | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .PUSHFRAME
+dev_langs: C++
+helpviewer_keywords: .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f10b8dff4974807107b5875347ec0156c8d166aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .PUSHFRAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Genera `UWOP_PUSH_MACHFRAME` desenredado entrada de código.  Si se especifica `code` opcional, la entrada de código de desenredo se concede un modificador de 1.  De lo contrario, el modificador es 0.  
+# <a name="pushframe"></a>.PUSHFRAME
+Genera un `UWOP_PUSH_MACHFRAME` entrada al código de desenredado. Si la parte opcional `code` se especifica, la entrada de código de desenredo recibe un modificador de 1. En caso contrario, el modificador es 0.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 .PUSHFRAME [code]  
 ```  
   
-## Comentarios  
- .PUSHFRAME Permite a los usuarios de ml64.exe especifican cómo una función de cuadro desenredo y sólo se permite en el prólogo, que extiende de declaración FRAME de [PROC](../../assembler/masm/proc.md) a la directiva de [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) .  estas directivas no generan código; generan solo `.xdata` y `.pdata`.  .PUSHFRAME Deben ir precedidas por las instrucciones que implementan realmente acciones para ser desenrollado.  Es aconsejable ajustar las directivas de desenredo y el código que está pensada desenrede en una macro para garantizar el contrato.  
+## <a name="remarks"></a>Comentarios  
+ . PUSHFRAME permite a los usuarios ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que abarca desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . PUSHFRAME debe ir precedida de instrucciones que realmente se implementan las acciones que puede desenredar. Es una buena práctica para ajustar las directivas de desenredado y el código que están concebidos para desenredar en una macro para asegurarse de acuerdo.  
   
- Para obtener más información, vea [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

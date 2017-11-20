@@ -1,44 +1,43 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS (opción de dumpbin)"
-  - "símbolos públicos"
-  - "tabla de símbolos"
-  - "SYMBOLS (opción de dumpbin)"
-  - "-SYMBOLS (opción de dumpbin)"
-  - "símbolos, mostrar tabla de símbolos COFF"
-  - "símbolos, volcar"
+title: -SYMBOLS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 360f26de5043eae7f5cdb4688612f95b96be8fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- Esta opción muestra la tabla de símbolos COFF.  En todos los archivos objeto existen tablas de símbolos.  En un archivo de imagen sólo aparecerá una tabla de símbolos COFF si se vincula a la opción \/DEBUG.  
+ Esta opción muestra la tabla de símbolos COFF. Tablas de símbolos existen en todos los archivos de objeto. Una tabla de símbolos COFF en un archivo de imagen solo aparece si se vincula con/Debug.  
   
- A continuación se muestra una descripción del resultado de la opción \/SYMBOLS.  Encontrará más información acerca del significado del resultado de \/SYMBOLS en winnt.h \(IMAGE\_SYMBOL e IMAGE\_AUX\_SYMBOL\) o en la documentación de COFF.  
+ La siguiente es una descripción de la salida de /SYMBOLS. Encontrará información adicional sobre el significado del resultado de /SYMBOLS mirando en winnt.h (IMAGE_SYMBOL e IMAGE_AUX_SYMBOL) o la documentación de COFF.  
   
- Veamos el siguiente volcado de memoria de ejemplo:  
+ Dado el volcado de ejemplo siguiente:  
   
 ```  
 Dump of file main.obj  
@@ -63,18 +62,18 @@ Summary
       23 .text  
 ```  
   
-## Comentarios  
- En la siguiente descripción, en las líneas que empiezan por un número de símbolo, se describen columnas que contienen información relevante para los usuarios:  
+## <a name="remarks"></a>Comentarios  
+ La siguiente descripción, para las líneas que comienzan por un número de símbolos, describe las columnas que contienen información relevante para los usuarios:  
   
--   El primer número de tres dígitos es el índice o número de símbolo.  
+-   El primer número de tres dígitos es el índice/número de símbolos.  
   
--   Si la tercera columna contiene SECT*x*, indica que el símbolo está definido en esa sección del archivo objeto.  No obstante, si aparece UNDEF, el símbolo no está definido en ese objeto y debe resolverse en otra parte.  
+-   Si la tercera columna contiene SECT*x*, el símbolo está definido en esa sección del archivo objeto. Pero, si aparece UNDEF no está definido en ese objeto y debe resolverse en otra parte.  
   
--   La quinta columna \(Static, External\) indica si el símbolo sólo está visible dentro de ese objeto o si es público \(visible externamente\).  No se puede vincular un símbolo de tipo Static denominado \_sym a un símbolo Public también denominado \_sym, ya que habría dos instancias diferentes de funciones con el mismo nombre, \_sym.  
+-   La quinta columna (Static, External) indica si el símbolo es visible solo dentro de ese objeto, o si es público (visible externamente). Un símbolo estático, _sym, no se puede vincular a un _sym símbolos públicos. podría tratarse de dos instancias diferentes de funciones denominadas _sym.  
   
- La última columna de una línea numerada es el nombre del símbolo \(en formato representativo y en formato no representativo\).  
+ La última columna de una línea numerada es el nombre del símbolo, ambos representativos y no representativos.  
   
- En los archivos producidos con la opción de compilador [\/GL](../../build/reference/gl-whole-program-optimization.md) sólo está disponible la opción [\/HEADERS](../../build/reference/headers.md) de DUMPBIN.  
+ Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

@@ -1,60 +1,59 @@
 ---
-title: "/GZ (Habilitar comprobaci&#243;n de errores del marco de pila en tiempo de ejecuci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gz"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GZ (opción del compilador) [C++]"
-  - "compilaciones de depuración, interceptar errores de versión de lanzamiento"
-  - "GZ (opción del compilador) [C++]"
-  - "-GZ (opción del compilador) [C++]"
-  - "errores de versión de lanzamiento"
+title: "-GZ (habilitar la pila de comprobación de errores en tiempo de ejecución de marco) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /gz
+dev_langs: C++
+helpviewer_keywords:
+- -GZ compiler option [C++]
+- release-build errors
+- /GZ compiler option [C++]
+- GZ compiler option [C++]
+- debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f3e4dc59154d64d79db0f4d15471b51ce67bed58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /GZ (Habilitar comprobaci&#243;n de errores del marco de pila en tiempo de ejecuci&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Realiza las mismas operaciones que la opción [\/RTC \(Comprobaciones de errores en tiempo de ejecución\)](../../build/reference/rtc-run-time-error-checks.md).  Obsoleto.  
+# <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Habilitar comprobación de errores del marco de pila en tiempo de ejecución)
+Realiza las mismas operaciones como la [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) opción. Desusado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /GZ  
 ```  
   
-## Comentarios  
- **\/GZ** es solo para uso en una compilación \([\/Od \(Deshabilitar \(Depurar\)\)](../../build/reference/od-disable-debug.md)\) no optimizada.  
+## <a name="remarks"></a>Comentarios  
+ **/GZ** es únicamente para su uso en una no optimizada ([/Od (deshabilitar (depurar))](../../build/reference/od-disable-debug.md)) de compilación.  
   
- **\/GZ** está desusado; utilice [\/RTC \(Comprobaciones de errores en tiempo de ejecución\)](../../build/reference/rtc-run-time-error-checks.md) en su lugar.  Para obtener más información, vea [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/es-es/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+ **/GZ** está en desuso desde Visual Studio 2005; use [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y quitar opciones de compilador** en [opciones de compilador enumerados por categoría](../../build/reference/compiler-options-listed-by-category.md).  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción del compilador en el cuadro **Opciones adicionales** .  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

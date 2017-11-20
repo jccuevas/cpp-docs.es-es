@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,36 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2WEX::CA2WEX
 - ATLCONV/ATL::CA2WEX::m_psz
 - ATLCONV/ATL::CA2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2WEX class
+dev_langs: C++
+helpviewer_keywords: CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 5483b6eff89b95a29d2f348347a02b7664e75e7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2wex-class"></a>Clase CA2WEX
 Esta clase se utiliza por las macros de conversión de cadena `CA2TEX`, `CA2CTEX`, `CT2WEX`, y `CT2CWEX`y la definición de tipo **CA2W**.  
@@ -128,7 +109,7 @@ CA2WEX(LPCSTR psz) throw(...);
  La cadena de texto que se va a convertir.  
   
  `nCodePage`  
- La página de códigos que se utiliza para realizar la conversión. Vea la descripción del parámetro de página de código para el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] función [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) para obtener más detalles.  
+ La página de códigos que se utiliza para realizar la conversión. Vea la descripción del parámetro de página de código para la función de Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) para obtener más detalles.  
   
 ### <a name="remarks"></a>Comentarios  
  Asigna el búfer utilizado en el proceso de traducción.  
@@ -174,4 +155,3 @@ operator LPWSTR() const throw();
  [Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Clase CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

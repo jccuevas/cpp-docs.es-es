@@ -1,70 +1,70 @@
 ---
-title: "Crear el proyecto (Tutorial de ATL, Parte 1) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: Crear el proyecto (ATL Tutorial, parte 1) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Crear el proyecto (Tutorial de ATL, Parte 1)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tutorial recorre paso a paso un proyecto sin atributos ATL que cree un objeto ActiveX que muestra un polígono.  El objeto incluye opciones para permitir que el usuario cambie el número de lados que componen el polígono, y el código para actualizar la presentación.  
+# <a name="creating-the-project-atl-tutorial-part-1"></a>Crear el proyecto (Tutorial de ATL, Parte 1)
+Este tutorial le guía paso a paso para un proyecto ATL sin atributos que crea un objeto ActiveX que muestra un polígono. El objeto incluye opciones para permitir que al usuario para cambiar el número de lados que componen el polígono y el código para actualizar la presentación.  
   
 > [!NOTE]
 >  ATL y MFC no se admiten normalmente en las ediciones Express de Visual Studio.  
   
 > [!NOTE]
->  Este tutorial crea el mismo código fuente que el ejemplo Polygon.  Si desea evitar escribir código fuente manualmente, puede descargarlo de [Resumen del polígono](../top/visual-cpp-samples.md).  Puede hacer referencia al código fuente Polygon al realizar el tutorial, o lo utiliza para comprobar errores en dispone de proyecto.  
+>  Este tutorial crea el mismo código de origen como en el ejemplo de polígono. Si desea evitar escribir manualmente el código fuente, puede descargarlo desde el [extracto del ejemplo Polygon](../visual-cpp-samples.md). A continuación, puede hacer referencia al código fuente de Polygon a medida que trabajar con el tutorial, o utilizarlo para comprobar si hay errores en su propio proyecto.  
   
-### Para crear el proyecto inicial ATL mediante el asistente para proyectos ATL  
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Para crear el proyecto ATL inicial mediante el Asistente para proyectos ATL  
   
-1.  En el entorno de desarrollo de Visual Studio, haga clic **Nueva** en el menú **Archivo**, y haga clic en **proyecto**.  
+1.  En el entorno de desarrollo de Visual Studio, haga clic en **New** en el **archivo** menú y, a continuación, haga clic en **proyecto**.  
   
-2.  Haga clic en la carpeta **Proyectos de Visual C** y seleccione **Proyecto ATL**.  
+2.  Haga clic en el **proyectos de Visual C++** carpeta y seleccione **proyecto ATL**.  
   
-3.  Tipo `Polígono` como nombre del proyecto.  
+3.  Tipo `Polygon` como el nombre del proyecto.  
   
-     La ubicación del código fuente establecerá como valor predeterminado normalmente a mis documentos \\visual \\Visual Studio Projects \\Visual Studio Projects, y una nueva carpeta se creará automáticamente.  
+     La ubicación para el código fuente normalmente predeterminado será Mis documentos\Visual Studio Projects y automáticamente se creará una nueva carpeta.  
   
-4.  Haga clic **Aceptar** y el asistente para proyectos ATL.  
+4.  Haga clic en **Aceptar** y abre el Asistente para proyectos ATL.  
   
-5.  Haga clic **Configuración de la aplicación** para ver las opciones disponibles.  
+5.  Haga clic en **configuración de la aplicación** para ver las opciones disponibles.  
   
-6.  Mientras está creando un control, un control debe ser un servidor en proceso, permite **Tipo de aplicación** como DLL.  
+6.  Crea un control y un control debe ser un servidor en proceso, deje el **tipo de aplicación** como un archivo DLL.  
   
-7.  Deje las otras opciones en sus valores predeterminados, y haga clic **finalizar**.  
+7.  Deje las demás opciones en sus valores predeterminados y haga clic en **finalizar**.  
   
- El asistente para proyectos ATL creará el proyecto genera varios archivos.  Puede ver estos archivos en el explorador de soluciones expandiendo el objeto Polygon.  Los archivos se enumeran.  
+ El Asistente para proyectos ATL creará el proyecto generando varios archivos. Puede ver estos archivos en el Explorador de soluciones, expanda el objeto de polígono. Los archivos se enumeran a continuación.  
   
 |Archivo|Descripción|  
-|-------------|-----------------|  
-|Polygon.cpp|Contiene la implementación de `DllMain`, de `DllCanUnloadNow`, de `DllGetClassObject`, de `DllRegisterServer`, y de `DllUnregisterServer`.  También contiene el mapa de objetos, que es una lista de objetos ATL en el proyecto.  Esto es inicialmente en blanco.|  
-|Polygon.def|Este archivo de la módulo\- definición proporciona el vinculador con información sobre exportaciones requeridas por el archivo DLL.|  
+|----------|-----------------|  
+|Polygon.cpp|Contiene la implementación de `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, y `DllUnregisterServer`. También contiene el mapa de objetos, que es una lista de los objetos ATL en el proyecto. Esto está inicialmente en blanco.|  
+|Polygon.def|Este archivo de definición de módulo proporciona al vinculador información sobre las exportaciones requeridas por el archivo DLL.|  
 |Polygon.idl|El archivo de lenguaje de definición de interfaz, que describe las interfaces específicas de los objetos.|  
-|Polygon.rgs|Este script de registro contiene información para registrar la DLL del programa.|  
-|Polygon.rc|El archivo de recursos, que inicialmente contiene la información de versión y una cadena que contenga el nombre del proyecto.|  
-|Resource.h|Archivo de encabezado del archivo de recursos.|  
-|Polygonps.def|Este archivo de definición de módulo proporciona el vinculador con información sobre exportaciones que requiere el proxy y código auxiliar que las llamadas admiten entre apartamentos.|  
-|stdafx.cpp|El archivo que `#include` implementar archivos de ATL.|  
-|stdafx.h|El archivo que `#include` los archivos de encabezado ATL.|  
+|Polygon.rgs|Esta secuencia de comandos del registro contiene información para registrar la DLL del programa.|  
+|Polygon.rc|El archivo de recursos, que inicialmente contiene la información de versión y una cadena que contiene el nombre del proyecto.|  
+|Resource.h|El archivo de encabezado para el archivo de recursos.|  
+|Polygonps.def|Este archivo de definición de módulo proporciona al vinculador información sobre las exportaciones requeridas por el código proxy y código auxiliar que permiten las llamadas entre apartamentos.|  
+|stdafx.cpp|El archivo que incluirá `#include` los archivos de implementación ATL.|  
+|stdafx.h|El archivo que incluirá `#include` los archivos de encabezado ATL.|  
   
-1.  En el explorador de soluciones, haga clic con el botón secundario en el proyecto de `Polygon`.  
+1.  En el Explorador de soluciones, haga clic en el `Polygon` proyecto.  
   
 2.  En el menú contextual, haga clic en **propiedades**.  
   
-3.  Haga clic en **Vinculador**.  Cambie la opción **Por\-usuarioRedirección** a **Sí**.  
+3.  Haga clic en **vinculador**. Cambiar el **por UserRedirection** opción **Sí**.  
   
 4.  Haga clic en **Aceptar**.  
   
@@ -72,5 +72,6 @@ Este tutorial recorre paso a paso un proyecto sin atributos ATL que cree un obje
   
  [En el paso 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)
+

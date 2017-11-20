@@ -4,53 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlcom/ATL::BEGIN_SERVICE_MAP
+- atlcom/ATL::END_SERVICE_MAP
+- atlcom/ATL::SERVICE_ENTRY
+- atlcom/ATL::SERVICE_ENTRY_CHAIN
+dev_langs: C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: eea45a3315237c77eff0231d485111cefb8557cc
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: fb8ee6db5f75a71e11a0b3dbdbca1bc6c077c3a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="service-map-macros"></a>Macros de mapa de servicio
-Estas macros definen entradas y mapas de servicio.  
+Estas macros definen los mapas de servicio y las entradas.  
   
 |||  
 |-|-|  
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Marca el principio de un mapa de servicio ATL.|  
 |[END_SERVICE_MAP](#end_service_map)|Marca el final de un mapa de servicio ATL.|  
-|[SERVICE_ENTRY](#service_entry)|Indica que el objeto admite un Id.|  
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indica a [método IServiceProviderImpl:: QueryService](#queryservice) cadena al objeto especificado.|  
+|[SERVICE_ENTRY](#service_entry)|Indica que el objeto admite un identificador de servicio específico.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indica a [método IServiceProviderImpl:: QueryService](#queryservice) cadena en el objeto especificado.|  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
    
 ##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
- Marca el comienzo de la asignación de servicio.  
+ Marca el principio de la asignación de servicio.  
   
 ```
 BEGIN_SERVICE_MAP(theClass)
@@ -61,14 +49,14 @@ BEGIN_SERVICE_MAP(theClass)
  [in] Especifica la clase que contiene el mapa de servicio.  
   
 ### <a name="remarks"></a>Comentarios  
- Utilice el mapa de servicio para implementar la funcionalidad del proveedor de servicio en el objeto COM. En primer lugar, debe derivar la clase de [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Hay dos tipos de entradas:  
+ Use el mapa de servicio para implementar la funcionalidad de proveedor de servicio en el objeto COM. En primer lugar, debe derivar la clase de [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md). Hay dos tipos de entradas:  
   
 - [SERVICE_ENTRY](#service_entry) indica la compatibilidad con identificador (SID) de servicio especificado.  
   
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain) indica a [método IServiceProviderImpl:: QueryService](#queryservice) cadena a otro objeto especificado.  
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain) indica a [método IServiceProviderImpl:: QueryService](#queryservice) encadenar a otro objeto especificado.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM&#57;](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
+ [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
 ##  <a name="end_service_map"></a>END_SERVICE_MAP  
  Marca el final de la asignación de servicio.  
@@ -89,7 +77,7 @@ SERVICE_ENTRY( SID )
   
 ### <a name="parameters"></a>Parámetros  
  *SID*  
- El identificador del servicio.  
+ El identificador de servicio.  
   
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_SERVICE_MAP](#begin_service_map).  
@@ -133,11 +121,11 @@ STDMETHOD(QueryService)(
   
 |Valor devuelto|Significado|  
 |------------------|-------------|  
-|S_OK|El servicio se creó o se recuperó correctamente.|  
+|S_OK|El servicio se creó correctamente o se recuperan.|  
 |E_INVALIDARG|Uno o varios argumentos no son válidos.|  
 |E_OUTOFMEMORY|Memoria es insuficiente para crear el servicio.|  
 |E_UNEXPECTED|Se ha producido un error desconocido.|  
-|E_NOINTERFACE|La interfaz solicitada no es parte de este servicio o el servicio es desconocido.|  
+|E_NOINTERFACE|La interfaz solicitada no forma parte de este servicio o si el servicio se desconoce.|  
   
 ### <a name="remarks"></a>Comentarios  
  `QueryService`Devuelve un puntero indirecto a la interfaz solicitada en el servicio especificado. El llamador es responsable de liberar el puntero this cuando ya no sea necesario.  
@@ -146,14 +134,13 @@ STDMETHOD(QueryService)(
   
  El objeto que implementa la interfaz también puede implementar interfaces que forman parte de otros servicios. Considere el siguiente caso:  
   
--   Algunas de estas interfaces pueden ser opcionales. No todas las interfaces definidas en la descripción del servicio están necesariamente presentes en cada implementación del servicio o en cada objeto devuelto.  
+-   Algunas de estas interfaces pueden ser opcionales. No todas las interfaces definidas en la descripción del servicio están necesariamente presentes en todas las implementaciones del servicio o en todos los objetos devueltos.  
   
--   A diferencia de las llamadas a `QueryInterface`, pasando un identificador de servicio diferentes no significa necesariamente que se devuelve un objeto de modelo de objetos componentes (COM) diferente.  
+-   A diferencia de las llamadas a `QueryInterface`, pasar un identificador de servicio diferente no significa necesariamente que se devuelve un objeto de modelo de objetos componentes (COM) diferente.  
   
 -   El objeto devuelto podría tener interfaces adicionales que no forman parte de la definición del servicio.  
   
- Dos servicios diferentes, como SID_SMyService y SID_SYourService, pueden ambos especifican el uso de la misma interfaz, aunque la implementación de la interfaz podría no tienen nada en común entre los dos servicios. Esto funciona porque una llamada a `QueryService` (SID_SMyService, IID_IDispatch) puede devolver un objeto diferente `QueryService` (SID_SYourService, IID_IDispatch). No se supone la identidad de objeto cuando se especifica un identificador de servicio diferente.  
+ Dos servicios diferentes, como SID_SMyService y SID_SYourService, pueden ambos especifican el uso de la misma interfaz, aunque podría tener la implementación de la interfaz nada en común entre los dos servicios. Esto funciona porque una llamada a `QueryService` (SID_SMyService, IID_IDispatch) puede devolver un objeto diferente que `QueryService` (SID_SYourService, IID_IDispatch). No se supone la identidad de objeto cuando se especifica un identificador de servicio diferente.  
   
 ## <a name="see-also"></a>Vea también  
  [Macros](../../atl/reference/atl-macros.md)
-

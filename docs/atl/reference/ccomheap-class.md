@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,24 @@ f1_keywords:
 - ATLCOMMEM/ATL::CComHeap::Free
 - ATLCOMMEM/ATL::CComHeap::GetSize
 - ATLCOMMEM/ATL::CComHeap::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComHeap class
+dev_langs: C++
+helpviewer_keywords: CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 323ad1aed4bae706ecbf66de769e33873f20c149
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 771685ce7e3ff5c4ffc01cb793be9f4f93e7ee26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomheap-class"></a>Clase CComHeap
 Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,12 +46,12 @@ class CComHeap : public IAtlMemMgr
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[CComHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|  
-|[CComHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por el Administrador de memoria.|  
-|[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por el Administrador de memoria asignado.|  
-|[CComHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|  
+|[Ccomheap:: Free](#free)|Llamar a este método para liberar un bloque de memoria asignada por este administrador de memoria.|  
+|[CComHeap::GetSize](#getsize)|Llamar a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|  
+|[Ccomheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComHeap`implementa las funciones de asignación de memoria mediante las funciones de asignación COM, incluyendo [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), y [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). La cantidad máxima de memoria que puede asignar es igual a **INT_MAX** (2.147.483.647) bytes.  
+ `CComHeap`implementa las funciones de asignación de memoria mediante las funciones de asignación COM, incluido [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)y [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280). Es igual a la cantidad máxima de memoria que se pueden asignar **INT_MAX** (2.147.483.647) bytes.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -97,12 +79,12 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
  Devuelve un puntero al principio del bloque de memoria recién asignado.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a [CComHeap::Free](#free) o [CComHeap::Reallocate](#reallocate) para liberar la memoria asignada por este método.  
+ Llame a [ccomheap:: Free](#free) o [ccomheap:: ReAllocate](#reallocate) para liberar la memoria asignada por este método.  
   
- Implementa mediante [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
+ Implementado mediante [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727).  
   
-##  <a name="free"></a>CComHeap::Free  
- Llame a este método para liberar un bloque de memoria asignada por el Administrador de memoria.  
+##  <a name="free"></a>Ccomheap:: Free  
+ Llamar a este método para liberar un bloque de memoria asignada por este administrador de memoria.  
   
 ```
 virtual void Free(void* p) throw();
@@ -113,10 +95,10 @@ virtual void Free(void* p) throw();
  Puntero a la memoria previamente asignada por este administrador de memoria. NULL es un valor válido y no hace nada.  
   
 ### <a name="remarks"></a>Comentarios  
- Implementa mediante [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
+ Implementado mediante [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722).  
   
 ##  <a name="getsize"></a>CComHeap::GetSize  
- Llame a este método para obtener el tamaño de un bloque de memoria asignado por el Administrador de memoria asignado.  
+ Llamar a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.  
   
 ```
 virtual size_t GetSize(void* p) throw();
@@ -130,9 +112,9 @@ virtual size_t GetSize(void* p) throw();
  Devuelve el tamaño del bloque de memoria asignada en bytes.  
   
 ### <a name="remarks"></a>Comentarios  
- Implementa mediante [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
+ Implementado mediante [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226).  
   
-##  <a name="reallocate"></a>CComHeap::Reallocate  
+##  <a name="reallocate"></a>Ccomheap:: ReAllocate  
  Llame a este método para reasignar la memoria asignada por este administrador de memoria.  
   
 ```
@@ -150,16 +132,15 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
  Devuelve un puntero al principio del bloque de memoria recién asignado.  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a [CComHeap::Free](#free) para liberar la memoria asignada por este método.  
+ Llame a [ccomheap:: Free](#free) para liberar la memoria asignada por este método.  
   
- Implementa mediante [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
+ Implementado mediante [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280).  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo DynamicConsumer](../../visual-cpp-samples.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)   
- [Clase CWin32Heap](../../atl/reference/cwin32heap-class.md)   
+ [Información general de clases](../../atl/atl-class-overview.md)   
+ [Clase de CWin32Heap](../../atl/reference/cwin32heap-class.md)   
  [Clase CLocalHeap](../../atl/reference/clocalheap-class.md)   
  [Clase CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
  [Clase CCRTHeap](../../atl/reference/ccrtheap-class.md)   
  [IAtlMemMgr (clase)](../../atl/reference/iatlmemmgr-class.md)
-

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3002
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3002
+f1_keywords: C3002
+dev_langs: C++
+helpviewer_keywords: C3002
 ms.assetid: 2d4241a7-c8eb-4d43-a128-dca255d137bc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 972df6a4260c8f14190371ddd439ff6456c3259e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3002"></a>Error del compilador C3002
 'nombre1 nombre2': nombres de directiva de OpenMP múltiples  

@@ -1,39 +1,39 @@
 ---
-title: "Trabajar con conexiones de base de datos ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conexiones [C++], bases de datos"
-  - "conexiones de bases de datos [C++], ODBC"
-  - "bases de datos [C++], conectar"
-  - "ODBC [C++], conectividad"
-  - "conexiones ODBC [C++]"
-  - "conexiones ODBC [C++], bases de datos"
+title: Trabajar con conexiones de base de datos ODBC | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- database connections [C++], ODBC
+- ODBC connections [C++]
+- ODBC [C++], connectivity
+- connections [C++], databases
+- databases [C++], connecting to
+- ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e54e45ee34520d80d2611ed77dde578727d24e17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Trabajar con conexiones de base de datos ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En los temas siguientes se explica la forma de conectarse a orígenes de datos ODBC.  
+# <a name="work-with-odbc-database-connections"></a>Trabajar con conexiones de base de datos ODBC
+Los temas siguientes explican cómo conectarse a orígenes de datos ODBC.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 -   [Administrar conexiones de base de datos ODBC](../../data/odbc/data-source-managing-connections-odbc.md)  
   
--   [Configurar un origen de datos ODBC mediante programación](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+-   [Configurar mediante programación un origen de datos ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
-## Vea también  
- [Conectividad abierta de bases de datos \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

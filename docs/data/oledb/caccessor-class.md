@@ -1,36 +1,35 @@
 ---
-title: "CAccessor (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CAccessor<T>"
-  - "ATL::CAccessor"
-  - "CAccessor"
-  - "ATL::CAccessor<T>"
-  - "ATL.CAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessor (clase)"
+title: CAccessor (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CAccessor<T>
+- ATL::CAccessor
+- CAccessor
+- ATL::CAccessor<T>
+- ATL.CAccessor
+dev_langs: C++
+helpviewer_keywords: CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 759ea7436124c1806ae26fb6a91a59d56c86d04a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessor (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Representa uno de los descriptores de acceso.  
+# <a name="caccessor-class"></a>CAccessor (Clase)
+Representa uno de los tipos de descriptor de acceso.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,20 +39,20 @@ Representa uno de los descriptores de acceso.
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  La clase de registro de usuario.  
   
-## Comentarios  
- Se utiliza cuando un registro se enlaza estáticamente a un origen de datos.  El registro contiene el búfer.  Esta clase admite múltiples descriptores de acceso en un conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Se utiliza cuando un registro de forma estática se enlaza a un origen de datos. El registro contiene el búfer. Esta clase admite varios descriptores de acceso en un conjunto de filas.  
   
- Utilice este tipo de descriptor cuando sepa la estructura y el tipo de la base de datos.  
+ Use este tipo de descriptor de acceso si conoce la estructura y el tipo de la base de datos.  
   
- Si el descriptor de acceso contiene campos que señalan a memoria \(como `BSTR` o interfaz\) que será liberada, llame a la función [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) miembro para que se lea el registro siguiente.  
+ Si el descriptor de acceso contiene campos que apuntan a la memoria (como un `BSTR` o interfaz) que debe ser liberado, llame a la función miembro [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) antes de la siguiente se lee el registro.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

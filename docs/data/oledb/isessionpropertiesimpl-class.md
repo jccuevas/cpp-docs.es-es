@@ -1,62 +1,60 @@
 ---
-title: "ISessionPropertiesImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISessionPropertiesImpl (clase)"
+title: ISessionPropertiesImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ISessionPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8824ac2081ffd214402a23c6a5975e027ecf9ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ISessionPropertiesImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona una implementación de la interfaz de [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) .  
+# <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl (Clase)
+Proporciona una implementación de la [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE ISessionPropertiesImpl :  
-   public ISessionProperties,    
+   public ISessionProperties,    
    public CUtlProps<PropClass>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- La clase, derivada de `ISessionPropertiesImpl`.  
+ La clase derivada de `ISessionPropertiesImpl`.  
   
  `PropClass`  
- Una clase de propiedad definida por el usuario que toma como valor predeterminado la `T`.  
+ Una clase de propiedad definibles por el usuario que tiene como valor predeterminado `T`.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos de interfaz  
+### <a name="interface-methods"></a>Métodos de interfaz  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Devuelve la lista de propiedades del grupo de propiedades de la sesión que se establecen actualmente en la sesión.|  
-|[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Establezca las propiedades en el grupo de propiedades de la sesión.|  
+|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Devuelve la lista de propiedades en el grupo de propiedades de sesión que están establecidas actualmente en la sesión.|  
+|[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Establece las propiedades en el grupo de propiedades de la sesión.|  
   
-## Comentarios  
- Una interfaz de enlace en sesiones.  Esta clase implementa propiedades de sesión llamando a una función estática definida por [mapa del conjunto de propiedades](../../data/oledb/begin-propset-map.md).  El mapa del conjunto de propiedades se debe especificar en la clase de sesión.  
+## <a name="remarks"></a>Comentarios  
+ Una interfaz obligatoria en las sesiones. Esta clase implementa las propiedades de la sesión mediante una llamada a una función estática definida por el [mapa de conjunto de propiedades](../../data/oledb/begin-propset-map.md). La asignación de conjunto de propiedad debe especificarse en la clase de sesión.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

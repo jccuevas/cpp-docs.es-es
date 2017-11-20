@@ -1,38 +1,37 @@
 ---
-title: "ICommandTextImpl::m_strCommandText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::ICommandTextImpl::m_strCommandText"
-  - "ICommandTextImpl<T>::m_strCommandText"
-  - "m_strCommandText"
-  - "ICommandTextImpl.m_strCommandText"
-  - "ICommandTextImpl::m_strCommandText"
-  - "ATL::ICommandTextImpl<T>::m_strCommandText"
-  - "ATL.ICommandTextImpl.m_strCommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_strCommandText"
+title: 'ICommandTextImpl:: M_strcommandtext | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::ICommandTextImpl::m_strCommandText
+- ICommandTextImpl<T>::m_strCommandText
+- m_strCommandText
+- ICommandTextImpl.m_strCommandText
+- ICommandTextImpl::m_strCommandText
+- ATL::ICommandTextImpl<T>::m_strCommandText
+- ATL.ICommandTextImpl.m_strCommandText
+dev_langs: C++
+helpviewer_keywords: m_strCommandText
 ms.assetid: a15e7b2c-e5ff-4570-a7d7-171a60914c7d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b2f54283e33be1500f9fe80b6ce94e355d587b42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandTextImpl::m_strCommandText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Almacena la cadena de texto del comando.  
+# <a name="icommandtextimplmstrcommandtext"></a>ICommandTextImpl::m_strCommandText
+Almacena la cadena de texto de comando.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,10 +39,10 @@ CComBSTR m_strCommandText;
   
 ```  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [ICommandTextImpl \(Clase\)](../../data/oledb/icommandtextimpl-class.md)   
- [ICommandTextImpl::GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)   
+## <a name="see-also"></a>Vea también  
+ [ICommandTextImpl (clase)](../../data/oledb/icommandtextimpl-class.md)   
+ [ICommandTextImpl:: Getcommandtext](../../data/oledb/icommandtextimpl-getcommandtext.md)   
  [ICommandTextImpl::SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)

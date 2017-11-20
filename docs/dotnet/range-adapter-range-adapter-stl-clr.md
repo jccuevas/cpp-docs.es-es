@@ -1,32 +1,30 @@
 ---
-title: "range_adapter::range_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::range_adapter::range_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range_adapter (miembro) [STL/CLR]"
+title: range_adapter::range_adapter (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::range_adapter::range_adapter
+dev_langs: C++
+helpviewer_keywords: range_adapter member [STL/CLR]
 ms.assetid: b16af13f-3358-4e82-927d-d0d4986bcb18
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f886d05227e4b1092599899aa140cd9d2ee2f77d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# range_adapter::range_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rangeadapterrangeadapter-stlclr"></a>range_adapter::range_adapter (STL/CLR)
 Construye un objeto de adaptador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 range_adapter();  
@@ -35,42 +33,42 @@ range_adapter(range_adapter<Iter>^ right);
 range_adapter(Iter first, Iter last);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Primer iterador a ajustar.  
+ Primer iterador que se va a ajustar.  
   
  last  
- Segundo iterador a ajustar.  
+ Segundo iterador del que va a contener.  
   
- right  
- Objeto a la copia.  
+ derecha  
+ Objeto que se va a copiar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `range_adapter();`  
   
- inicializa el par almacenado de iterador con iteradores construidos predeterminado.  
+ Inicializa el par de iterador almacenado con los iteradores construido de forma predeterminada.  
   
  El constructor:  
   
  `range_adapter(range_adapter<Iter>% right);`  
   
- inicializa el par almacenado de iterador copiando los pares almacenados en `right`.  
+ Inicializa el par de iterador almacenado copiando el par almacenado en `right`.  
   
  El constructor:  
   
  `range_adapter(range_adapter<Iter>^ right);`  
   
- inicializa el par almacenado de iterador copiando los pares almacenados en `*right`.  
+ Inicializa el par de iterador almacenado copiando el par almacenado en `*right`.  
   
  El constructor:  
   
  `range_adapter(Iter^ first, last);`  
   
- inicializa el par almacenado de iterador con `first` y `last`.  
+ Inicializa el par de iterador almacenado con `first` y `last`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_range_adapter_construct.cpp   
@@ -113,14 +111,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c**   
-## Requisitos  
- cliext \<\/adaptador de**Encabezado:** \>  
+```Output  
+a b c  
+a b c  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/adaptador >  
   
-## Vea también  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)   
- [range\_adapter::operator\=](../dotnet/range-adapter-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)   
+ [range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)

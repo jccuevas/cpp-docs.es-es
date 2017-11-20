@@ -1,66 +1,65 @@
 ---
-title: "CRowset::SetData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.SetData"
-  - "SetData"
-  - "ATL::CRowset::SetData"
-  - "CRowset<TAccessor>.SetData"
-  - "CRowset::SetData"
-  - "ATL.CRowset.SetData"
-  - "CRowset.SetData"
-  - "CRowset<TAccessor>::SetData"
-  - "ATL::CRowset<TAccessor>::SetData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetData (método)"
+title: 'CRowset:: SetData | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.SetData
+- SetData
+- ATL::CRowset::SetData
+- CRowset<TAccessor>.SetData
+- CRowset::SetData
+- ATL.CRowset.SetData
+- CRowset.SetData
+- CRowset<TAccessor>::SetData
+- ATL::CRowset<TAccessor>::SetData
+dev_langs: C++
+helpviewer_keywords: SetData method
 ms.assetid: 68125142-8510-4132-9393-e39efd39c784
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0daa66111e2b9657218e42d66c9f9b5b9364cd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::SetData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Establece valores de datos en una o más columnas de una fila.  
+# <a name="crowsetsetdata"></a>CRowset::SetData
+Establece los valores de datos en una o varias columnas de una fila.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT SetData( ) const throw( );   
+      HRESULT SetData( ) const throw( );   
 HRESULT SetData(  
    int nAccessor   
 ) const throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nAccessor`  
- \[in\] El número de descriptor de acceso para tener acceso a los datos.  
+ [in] El número del descriptor de acceso que se utilizará para tener acceso a los datos.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Para el formulario de `SetData` que no acepta argumentos, utilizan a todos los descriptores de acceso para actualizar.  Normalmente se llama a **SetData** para establecer valores de datos de columnas de una fila, llamar [Actualización](../../data/oledb/crowset-update.md) para transmitir los cambios.  
+## <a name="remarks"></a>Comentarios  
+ Para el `SetData` form que acepta ningún argumento, todos los descriptores de acceso se utilizan para la actualización. Se suele llamar a **SetData** para establecer los valores de datos en columnas de una fila, a continuación, llame a [actualización](../../data/oledb/crowset-update.md) para transmitir los cambios.  
   
- Este método requiere la interfaz opcional `IRowsetChange`, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetChange** a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+ Este método requiere que la interfaz opcional `IRowsetChange`, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetChange** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
- La operación de valor podría producir errores si una o más columnas no son programables.  Modifique el mapa de cursores para corregirlo.  
+ La operación de configuración podría producir errores si no se puede escribir una o varias columnas. Modifique la asignación del cursor para corregirlo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

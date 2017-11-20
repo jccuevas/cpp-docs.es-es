@@ -4,46 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4047
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4047
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4d39939ef2094c1fdb99521ac99c69b91b42f1ef
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: fafa1878b62b2e010f2f80541c454082b07e6059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4047"></a>Compilador advertencia (nivel 1) C4047
 'operador': 'identificador1' se diferencia del 'identificador2' en los niveles de direccionamiento indirecto  
   
- Un puntero puede señalar a una variable (un nivel de direccionamiento indirecto) a otro puntero que señala a una variable (dos niveles de direccionamiento indirecto) y así sucesivamente.  
+ Un puntero puede señalar a una variable (un nivel de direccionamiento indirecto), a otro puntero que señala a una variable (dos niveles de direccionamiento indirecto) y así sucesivamente.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera C4047:  

@@ -1,69 +1,68 @@
 ---
-title: "CRowset::Undo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.Undo"
-  - "ATL::CRowset<TAccessor>::Undo"
-  - "CRowset<TAccessor>::Undo"
-  - "ATL.CRowset.Undo"
-  - "ATL.CRowset<TAccessor>.Undo"
-  - "CRowset<TAccessor>.Undo"
-  - "ATL::CRowset::Undo"
-  - "CRowset::Undo"
-  - "Undo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Undo (método)"
+title: 'CRowset:: Undo | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.Undo
+- ATL::CRowset<TAccessor>::Undo
+- CRowset<TAccessor>::Undo
+- ATL.CRowset.Undo
+- ATL.CRowset<TAccessor>.Undo
+- CRowset<TAccessor>.Undo
+- ATL::CRowset::Undo
+- CRowset::Undo
+- Undo
+dev_langs: C++
+helpviewer_keywords: Undo method
 ms.assetid: 1ccd70e2-3931-41c4-893e-a05d0e295410
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33213cb9780846639de6638bc3028a3e656d1a9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::Undo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Deshace los cambios realizados en una fila desde la última búsqueda o [Actualización](../../data/oledb/crowset-update.md).  
+# <a name="crowsetundo"></a>CRowset::Undo
+Deshace los cambios realizados en una fila desde la última recuperación o [actualización](../../data/oledb/crowset-update.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT Undo(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
+      HRESULT Undo(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW* phRow = NULL,   
+   DBROWSTATUS* pStatus = NULL    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pcRows`  
- \[out\] Un puntero a la ubicación donde **Deshacer** devuelve el número de filas que intentó deshacer si es necesario.  
+ [out] Un puntero a la ubicación donde **deshacer** devuelve el número de filas que se intentó deshacer si es necesario.  
   
  `phRow`  
- \[out\] Un puntero a la ubicación donde **Deshacer** devuelve una matriz de identificadores en todas las filas se intentó deshacer si es necesario.  
+ [out] Un puntero a la ubicación donde **deshacer** devuelve una matriz de identificadores para todas las filas que se intentó deshacer si es necesario.  
   
  `pStatus`  
- \[out\] Un puntero a la ubicación donde **Deshacer** devuelve el valor de estado de fila.  No se devuelve ningún estado si `pStatus` es null.  
+ [out] Un puntero a la ubicación donde **deshacer** devuelve el valor de estado de fila. Si no se devuelve ningún estado `pStatus` es null.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método requiere la interfaz opcional `IRowsetUpdate`, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetUpdate** a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Este método requiere que la interfaz opcional `IRowsetUpdate`, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetUpdate** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
  [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)

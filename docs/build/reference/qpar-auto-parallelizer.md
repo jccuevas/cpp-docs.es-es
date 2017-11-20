@@ -1,58 +1,57 @@
 ---
-title: "/Qpar (Paralelizador autom&#225;tico) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration"
-dev_langs: 
-  - "C++"
+title: "-/Qpar (Paralelizador automático) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
+dev_langs: C++
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 82f33d178799f56465f0d1a9794dacad7c01c77a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /Qpar (Paralelizador autom&#225;tico)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permite a la característica de [Auto\-Parallelizer](../../parallel/auto-parallelization-and-auto-vectorization.md) de compilador automáticamente para paralelizar bucles en el código.  
+# <a name="qpar-auto-parallelizer"></a>/Qpar (Paralelizador automático)
+Habilita la [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) característica del compilador automáticamente paralelizar bucles en el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Qpar  
 ```  
   
-## Comentarios  
- Cuando el compilador automáticamente paraleliza bucles en código, mejora el cálculo a través de varios núcleos de procesador.  Se paraleliza el bucle sólo si el compilador determina que se permite hacerlo y que la paralelización mejoraría el rendimiento.  
+## <a name="remarks"></a>Comentarios  
+ Cuando el compilador ejecuta automáticamente paralelo bucles en el código, propaga de cálculo entre varios núcleos de procesador. Un bucle se paraleliza sólo si el compilador determina que es válido para hacerlo y que la ejecución en paralelo mejoraría el rendimiento.  
   
- Las directivas de `#pragma loop()` son que ayudan al optimizador a paralelizar bucles concretos.  Para obtener más información, vea [loop](../../preprocessor/loop.md).  
+ El `#pragma loop()` directivas están disponibles para ayudar a que el optimizador paralelizar los bucles específicos. Para obtener más información, consulte [bucle](../../preprocessor/loop.md).  
   
- Para obtener información sobre cómo habilitar los mensajes de salida para el auto \- parallelizer, vea [\/Qpar\-report \(Nivel de información de paralelizador automático\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
+ Para obtener información acerca de cómo habilitar los mensajes de salida para el paralelizador automático, consulte [/qpar-Report (nivel de información de Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
   
-### Para establecer la opción del compilador \/Qpar en Visual Studio  
+### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Para establecer la opción del compilador /Qpar en Visual Studio  
   
 1.  En el **Explorador de soluciones**, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.  
   
-2.  En el cuadro de diálogo de **Páginas de propiedades** , en **C\/C\+\+**, seleccione **Línea de comandos**.  
+2.  En el **páginas de propiedades** cuadro de diálogo **C/C++**, seleccione **línea de comandos**.  
   
-3.  En el cuadro de **Opciones adicionales** , entre en `/Qpar`.  
+3.  En el **opciones adicionales** cuadro, escriba `/Qpar`.  
   
-### Para establecer la opción del compilador \/Qpar mediante programación  
+### <a name="to-set-the-qpar-compiler-option-programmatically"></a>Para establecer la opción del compilador /Qpar mediante programación  
   
--   Utilice el ejemplo de código en <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Use el ejemplo de código de <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vea también  
- [\/Q \(Opciones\) \(Operaciones de bajo nivel\)](../../build/reference/q-options-low-level-operations.md)   
- [\/Qpar\-report \(Nivel de información de paralelizador automático\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
+## <a name="see-also"></a>Vea también  
+ [Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)   
+ [/ Qpar-informe (Paralelizador automático Reporting nivel)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [bucle \#pragma \(\)](../../preprocessor/loop.md)   
+ [#pragma loop()](../../preprocessor/loop.md)   
  [Programación paralela en código nativo](http://go.microsoft.com/fwlink/?LinkId=263662)

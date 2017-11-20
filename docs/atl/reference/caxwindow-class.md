@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAxWindow
 - ATLWIN/ATL::CAxWindow
 - ATLWIN/ATL::AttachControl
-- ATLWIN/ATL::CAxWindow
 - ATLWIN/ATL::CreateControl
 - ATLWIN/ATL::CreateControlEx
 - ATLWIN/ATL::GetWndClassName
@@ -20,42 +18,26 @@ f1_keywords:
 - ATLWIN/ATL::QueryHost
 - ATLWIN/ATL::SetExternalDispatch
 - ATLWIN/ATL::SetExternalUIHandler
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 202c68fa4044a7c7a6c47c52b8095c5e7227b56d
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 46a9a69cf584e769e6ba716b81d21ac9822e78d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="caxwindow-class"></a>Clase CAxWindow
-Esta clase proporciona métodos para manipular una ventana que hospeda un control ActiveX.  
+Esta clase proporciona métodos para manipular una ventana de alojar un control ActiveX.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,9 +55,9 @@ class CAxWindow : public CWindow
 |[CAxWindow](#caxwindow)|Construye un objeto `CAxWindow`.|  
 |[CreateControl](#createcontrol)|Crea un control ActiveX, lo inicializa y lo hospeda en el `CAxWindow` ventana.|  
 |[CreateControlEx](#createcontrolex)|Crea un control ActiveX y recupera un puntero de interfaz (o punteros) del control.|  
-|[GetWndClassName](#getwndclassname)|(Estático) Recupera el nombre de la clase predefinida de la `CAxWindow` objeto.|  
+|[GetWndClassName](#getwndclassname)|(Estático) Recupera el nombre de clase predefinido la `CAxWindow` objeto.|  
 |[QueryControl](#querycontrol)|Recupera el **IUnknown** del control ActiveX hospedado.|  
-|[QueryHost](#queryhost)|Recupera el **IUnknown** el puntero de la `CAxWindow` objeto.|  
+|[QueryHost](#queryhost)|Recupera el **IUnknown** puntero de la `CAxWindow` objeto.|  
 |[SetExternalDispatch](#setexternaldispatch)|Establece la interfaz de envío externo utilizada por el `CAxWindow` objeto.|  
 |[SetExternalUIHandler](#setexternaluihandler)|Establece la externa **IDocHostUIHandler** interfaz utilizada por el `CAxWindow` objeto.|  
   
@@ -83,10 +65,10 @@ class CAxWindow : public CWindow
   
 |||  
 |-|-|  
-|[operador =](#operator_eq)|Asigna un **HWND** a un archivo **CAxWindow** objeto.|  
+|[operador =](#operator_eq)|Asigna un **HWND** en una existente **CAxWindow** objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona métodos para manipular una ventana que hospeda un control ActiveX. Es el proceso de hospedaje proporcionada por " **AtlAxWin80"**, que se incluye en `CAxWindow`.  
+ Esta clase proporciona métodos para manipular una ventana que hospeda un control ActiveX. El proceso de hospedaje proporcionado por " **AtlAxWin80"**, que se ajusta mediante `CAxWindow`.  
   
  Clase `CAxWindow` se implementa como una especialización de la `CAxWindowT` clase. Esta especialización se declara como:  
   
@@ -98,7 +80,7 @@ class CAxWindow : public CWindow
  **Encabezado:** atlwin.h  
   
 ##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
- Crea un nuevo objeto de host si no está presente y se asocia el control especificado al host.  
+ Crea un nuevo objeto de host si ya no está presente y se asocia el control especificado en el host.  
   
 ```
 HRESULT AttachControl(
@@ -117,7 +99,7 @@ HRESULT AttachControl(
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- El objeto de control que se va a asociar debe inicializarse correctamente antes de llamar a `AttachControl`.  
+ El objeto de control que se va a adjuntar debe inicializarse correctamente antes de llamar a `AttachControl`.  
   
 ##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
  Construye un `CAxWindow` objeto mediante un identificador de objeto de ventana existente.  
@@ -128,7 +110,7 @@ CAxWindow(HWND hWnd = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  `hWnd`  
- Identificador de un objeto de ventana existente.  
+ Un identificador a un objeto de ventana existente.  
   
 ##  <a name="createcontrol"></a>CAxWindow::CreateControl  
  Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada.  
@@ -157,34 +139,34 @@ HRESULT CreateControl(
   
 -   Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"  
   
--   Un fragmento de HTML, como "MSHTML:\<HTML >\<cuerpo > se trata de una línea de texto\<corporal >\</HTML >"  
+-   Un fragmento de HTML, como "MSHTML:\<HTML >\<cuerpo > se trata de una línea de texto\</cuerpo >\</HTML más externas >"  
   
     > [!NOTE]
-    >  "MSHTML:" debe preceder el fragmento de HTML para que se designa como una secuencia MSHTML. Sólo los ProgID y CLSID se admiten en las plataformas Windows Mobile. Windows CE incrustado plataformas, que no sea de Windows Mobile con compatibilidad para soporte técnico de IE CE todos los tipos incluidos ProgID, CLSID, URL, hacer referencia al documento activo y el fragmento de HTML.  
+    >  "MSHTML:" debe preceder el fragmento HTML para que se designa como una secuencia MSHTML. Solo los ProgID y CLSID se admiten en plataformas de Windows Mobile. Windows CE incrustados plataformas, que no sea de Windows Mobile con compatibilidad para la compatibilidad con Internet Explorer CE todos los tipos incluidos ProgID, CLSID, dirección URL, hacer referencia al documento activo y el fragmento de HTML.  
   
  `pStream`  
- [in] Puntero a una secuencia que se utiliza para inicializar las propiedades del control. Puede ser **NULL**.  
+ [in] Un puntero a una secuencia que se usa para inicializar las propiedades del control. Puede ser **NULL**.  
   
  `ppUnkContainer`  
- [out] La dirección de un puntero que recibirá la **IUnknown** del contenedor. Puede ser **NULL**.  
+ [out] La dirección de un puntero que va a recibir el **IUnknown** del contenedor. Puede ser **NULL**.  
   
  `dwResID`  
- El identificador de recurso de un recurso HTML. El control WebBrowser y se cargan con el recurso especificado.  
+ El identificador de recurso de un recurso HTML. El control WebBrowser se crea y se carga con el recurso especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Si se utiliza la segunda versión de este método, se crea y se enlaza al recurso identificado por un control HTML `dwResID`.  
+ Si se usa la segunda versión de este método, se crea y se enlaza al recurso identificado por un control HTML `dwResID`.  
   
- Este método proporciona el mismo resultado que la llamada:  
+ Este método proporciona el mismo resultado que llamar al método:  
   
- [!code-cpp[NVC_ATL_Windowing&#42;](../../atl/codesnippet/cpp/caxwindow-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#42](../../atl/codesnippet/cpp/caxwindow-class_1.cpp)]  
   
- Consulte [CAxWindow2T::CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) para crear, inicializar y hospedar un control ActiveX con licencia.  
+ Vea [CAxWindow2T::CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) para crear, inicializar y hospedar un control ActiveX con licencia.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CreateControl`.  
+ Vea [hospedaje de controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CreateControl`.  
   
 ##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
  Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada.  
@@ -219,28 +201,28 @@ HRESULT CreateControlEx(
   
 -   Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"  
   
--   Un fragmento de HTML, como "MSHTML:\<HTML >\<cuerpo > se trata de una línea de texto\<corporal >\</HTML >"  
+-   Un fragmento de HTML, como "MSHTML:\<HTML >\<cuerpo > se trata de una línea de texto\</cuerpo >\</HTML más externas >"  
   
     > [!NOTE]
-    >  "MSHTML:" debe preceder el fragmento de HTML para que se designa como una secuencia MSHTML. Sólo los ProgID y CLSID se admiten en las plataformas Windows Mobile. Windows CE incrustado plataformas, que no sea de Windows Mobile con compatibilidad para soporte técnico de IE CE todos los tipos incluidos ProgID, CLSID, URL, hacer referencia al documento activo y el fragmento de HTML.  
+    >  "MSHTML:" debe preceder el fragmento HTML para que se designa como una secuencia MSHTML. Solo los ProgID y CLSID se admiten en plataformas de Windows Mobile. Windows CE incrustados plataformas, que no sea de Windows Mobile con compatibilidad para la compatibilidad con Internet Explorer CE todos los tipos incluidos ProgID, CLSID, dirección URL, hacer referencia al documento activo y el fragmento de HTML.  
   
  `pStream`  
- [in] Puntero a una secuencia que se utiliza para inicializar las propiedades del control. Puede ser **NULL**.  
+ [in] Un puntero a una secuencia que se usa para inicializar las propiedades del control. Puede ser **NULL**.  
   
  `ppUnkContainer`  
- [out] La dirección de un puntero que recibirá la **IUnknown** del contenedor. Puede ser **NULL**.  
+ [out] La dirección de un puntero que va a recibir el **IUnknown** del contenedor. Puede ser **NULL**.  
   
  `ppUnkControl`  
- [out] La dirección de un puntero que recibirá la **IUnknown** del control. Puede ser **NULL**.  
+ [out] La dirección de un puntero que va a recibir el **IUnknown** del control. Puede ser **NULL**.  
   
  `iidSink`  
- [in] El identificador de la interfaz de la interfaz de salida en el objeto contenido. Puede ser **IID_NULL**.  
+ [in] El identificador de la interfaz de una interfaz de salida en el objeto contenido. Puede ser **IID_NULL**.  
   
  *punkSink*  
- [in] Un puntero a la **IUnknown** interfaz del objeto receptor para conectarse al punto de conexión en el objeto contenido especificado por `iidSink`.  
+ [in] Un puntero a la **IUnknown** interfaz del objeto receptor que se conectará al punto de conexión en el objeto contenido especificado por `iidSink`.  
   
  `dwResID`  
- [in] El identificador de recurso de un recurso HTML. El control WebBrowser y se cargan con el recurso especificado.  
+ [in] El identificador de recurso de un recurso HTML. El control WebBrowser se crea y se carga con el recurso especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
@@ -248,10 +230,10 @@ HRESULT CreateControlEx(
 ### <a name="remarks"></a>Comentarios  
  Este método es similar a [CAxWindow::CreateControl](#createcontrol), pero a diferencia de ese método, `CreateControlEx` también permite recibir un puntero de interfaz al control recién creado y configurado un receptor de eventos para recibir eventos desencadenados por el control.  
   
- Consulte [CAxWindow2T::CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) para crear, inicializar y hospedar un control ActiveX con licencia.  
+ Vea [CAxWindow2T::CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) para crear, inicializar y hospedar un control ActiveX con licencia.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [hospeda controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CreateControlEx`.  
+ Vea [hospedaje de controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo que usa `CreateControlEx`.  
   
 ##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
  Recupera el nombre de la clase de ventana.  
@@ -264,7 +246,7 @@ static LPCTSTR GetWndClassName();
  Un puntero a una cadena que contiene el nombre de la clase de ventana que puede hospedar controles ActiveX sin licencia.  
   
 ##  <a name="operator_eq"></a>CAxWindow::operator =  
- Asigna un `HWND` a un `CAxWindow` objeto.  
+ Asigna un `HWND` en una existente `CAxWindow` objeto.  
   
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -272,7 +254,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
   
 ### <a name="parameters"></a>Parámetros  
  `hWnd`  
- Identificador de una ventana existente.  
+ Un identificador a una ventana existente.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve una referencia al objeto `CAxWindow` actual.  
@@ -291,7 +273,7 @@ HRESULT QueryControl(Q** ppUnk);
  [in] Especifica el IID de la interfaz del control.  
   
  `ppUnk`  
- [out] Puntero a la interfaz del control. En la versión de la plantilla de este método, no hay ninguna necesidad de un identificador de referencia siempre y cuando se pasa una interfaz con un UUID asociado.  
+ [out] Un puntero a la interfaz del control. En la versión de la plantilla de este método, no hay ninguna necesidad de un identificador de referencia siempre y cuando se pasa una interfaz especificada con un UUID asociado.  
   
  `Q`  
  [in] La interfaz que se está consultando para.  
@@ -300,7 +282,7 @@ HRESULT QueryControl(Q** ppUnk);
  Un valor `HRESULT` estándar.  
   
 ##  <a name="queryhost"></a>CAxWindow:: QueryHost  
- Devuelve la interfaz del host especificada.  
+ Devuelve la interfaz especificada del host.  
   
 ```
 HRESULT QueryHost(REFIID iid, void** ppUnk);
@@ -313,7 +295,7 @@ HRESULT QueryHost(Q** ppUnk);
  [in] Especifica el IID de la interfaz del control.  
   
  `ppUnk`  
- [out] Puntero a la interfaz del host. En la versión de la plantilla de este método, no hay ninguna necesidad de un identificador de referencia siempre y cuando se pasa una interfaz con un UUID asociado.  
+ [out] Un puntero a la interfaz en el host. En la versión de la plantilla de este método, no hay ninguna necesidad de un identificador de referencia siempre y cuando se pasa una interfaz especificada con un UUID asociado.  
   
  `Q`  
  [in] La interfaz que se está consultando para.  
@@ -322,10 +304,10 @@ HRESULT QueryHost(Q** ppUnk);
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- La interfaz del host permite el acceso a la funcionalidad subyacente del código de ventana que hospeda, implementada por **AxWin**.  
+ La interfaz del host permite el acceso a la funcionalidad subyacente del código de hospedaje de ventana, implementada por **AxWin**.  
   
 ##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
- Establece la interfaz de envío externo para el `CAxWindow` objeto.  
+ Establece la interfaz de envío externo para la `CAxWindow` objeto.  
   
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -339,7 +321,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
  Un valor `HRESULT` estándar.  
   
 ##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
- Establece la externa [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) de interfaz para el `CAxWindow` objeto.  
+ Establece la externa [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) interfaz para el `CAxWindow` objeto.  
   
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -353,13 +335,12 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
  Un valor `HRESULT` estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- Externo `IDocHostUIHandlerDispatch` interfaz se utiliza controles que consultar el sitio del host de la `IDocHostUIHandlerDispatch` interfaz. WebBrowser (control) es un control que lo haga.  
+ La externa `IDocHostUIHandlerDispatch` interfaz se usa los controles que consultar el sitio del host para el `IDocHostUIHandlerDispatch` interfaz. El control WebBrowser es un control que lo haga.  
   
 ## <a name="see-also"></a>Vea también  
  [ATLCON (ejemplo)](../../visual-cpp-samples.md)   
- [CWindow (clase)](../../atl/reference/cwindow-class.md)   
+ [Clase CWindow](../../atl/reference/cwindow-class.md)   
  [Fundamentos de controles compuestos](../../atl/atl-composite-control-fundamentals.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Información general de clases](../../atl/atl-class-overview.md)   
  [Preguntas más frecuentes sobre la contención de controles](../../atl/atl-control-containment-faq.md)
-
 

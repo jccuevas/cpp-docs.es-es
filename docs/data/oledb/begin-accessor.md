@@ -1,33 +1,32 @@
 ---
-title: "BEGIN_ACCESSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_ACCESSOR (macro)"
-  - "BEGIN_ACCESSOR (macro), sintaxis"
+title: BEGIN_ACCESSOR | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR
+dev_langs: C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR macro, syntax
+- BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74d8d2197553f9fd2b1f5452236b343424d29148
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_ACCESSOR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="beginaccessor"></a>BEGIN_ACCESSOR
 Marca el principio de una entrada de descriptor de acceso.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,24 +38,24 @@ bAuto
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *num*  
- \[in\] El número de cero\- desplazamiento para el descriptor de acceso en este mapa de descriptor de acceso.  
+ [in] El número de desplazamiento cero para el descriptor de acceso en este mapa de descriptor de acceso.  
   
- *bAuto*  
- \[in\] Especifica si este descriptor de acceso es un descriptor de acceso auto o un descriptor de acceso manual.  Si **true**, el descriptor de acceso es auto; si **false**, el descriptor de acceso es manual.  Un descriptor de acceso auto significa que los datos se captura en operaciones de mover.  
+ *bSelección*  
+ [in] Especifica si este descriptor de acceso es un descriptor de acceso automático o un descriptor de acceso manual. Si **true**, el descriptor de acceso es automático; si **false**, el descriptor de acceso es manual. Un descriptor de acceso automático significa datos se capturan automáticamente en las operaciones de movimiento.  
   
-## Comentarios  
- En el caso de múltiples descriptores de acceso en un conjunto de filas, debe especificar `BEGIN_ACCESSOR_MAP` y utilizar la macro de `BEGIN_ACCESSOR` para cada descriptor de acceso individual.  La macro de `BEGIN_ACCESSOR` se completa con la macro de `END_ACCESSOR` .  La macro de `BEGIN_ACCESSOR_MAP` se completa con la macro de `END_ACCESSOR_MAP` .  
+## <a name="remarks"></a>Comentarios  
+ En el caso de varios descriptores de acceso en un conjunto de filas, debe especificar `BEGIN_ACCESSOR_MAP` y usar el `BEGIN_ACCESSOR` macro para cada descriptor de acceso individual. La macro `BEGIN_ACCESSOR` se completa con la macro `END_ACCESSOR` . El `BEGIN_ACCESSOR_MAP` macro se ha completado con el `END_ACCESSOR_MAP` macro.  
   
-## Ejemplo  
- Vea [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)

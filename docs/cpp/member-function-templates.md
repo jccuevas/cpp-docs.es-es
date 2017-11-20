@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates, member functions
+dev_langs: C++
+helpviewer_keywords: function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: bba7b35c08fbc171ddbb4c572285c0aed2f58a3b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 596f7d0ff2efdfa917996a89cbec6b23412a4bab
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="member-function-templates"></a>Plantillas de función miembro
 
@@ -71,8 +67,6 @@ int main()
 ```  
   
 ## <a name="example"></a>Ejemplo
-
- Además, en Visual Studio .NET 2003 y versiones posteriores, las plantillas de miembro también pueden definirse fuera de una clase.  
   
 ```cpp
 // defining_member_templates_outside_class.cpp  
@@ -100,7 +94,7 @@ int main()
   
  Las funciones de plantilla de miembro no pueden ser funciones virtuales y no pueden invalidar funciones virtuales de una clase base cuando se declaran con el mismo nombre que una función virtual de clase base.  
   
- Visual C++ .NET 2003 introdujo la compatibilidad para las conversiones con plantilla definidas por el usuario. El ejemplo siguiente funciona en Visual C++ .NET 2003 según se especifica en el estándar.  
+En el ejemplo siguiente se muestra una conversión definida por el usuario con plantilla:  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -123,4 +117,3 @@ int main()
 ## <a name="see-also"></a>Vea también
 
  [Plantillas de función](../cpp/function-templates.md)
-

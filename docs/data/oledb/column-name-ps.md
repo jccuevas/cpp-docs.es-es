@@ -1,32 +1,30 @@
 ---
-title: "COLUMN_NAME_PS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_NAME_PS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_NAME_PS (macro)"
+title: COLUMN_NAME_PS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_NAME_PS
+dev_langs: C++
+helpviewer_keywords: COLUMN_NAME_PS macro
 ms.assetid: 681795d5-0a95-4c8d-b188-2e6ed121ffaa
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9dbd076184998ce78b8de961dd007f6e885cc74a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# COLUMN_NAME_PS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Representa un enlace en el conjunto de filas a la columna concreta en el conjunto de filas.  Similar a [COLUMN\_NAME](../../data/oledb/column-name.md), salvo que esta macro también toma la precisión y la escala.  
+# <a name="columnnameps"></a>COLUMN_NAME_PS
+Representa un enlace en el conjunto de filas a la columna específica en el conjunto de filas. Similar a [COLUMN_NAME](../../data/oledb/column-name.md), salvo que esta macro también usa la precisión y escala.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,39 +38,39 @@ nScale
 data )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pszName`  
- \[in\] Un puntero al nombre de columna.  El nombre debe ser una cadena Unicode.  Esto se puede lograr poniendo una “l” delante del nombre, por ejemplo: `L"MyColumn"`.  
+ [in] Un puntero al nombre de columna. El nombre debe ser una cadena Unicode. Puede lograr esto colocando un 'L' delante del nombre, por ejemplo: `L"MyColumn"`.  
   
  `nPrecision`  
- \[in\] Precisión máxima de la columna que desea enlazar.  
+ [in] La precisión máxima de la columna que desea enlazar.  
   
  `nScale`  
- \[in\] La escala de la columna que desea enlazar.  
+ [in] La escala de la columna que desea enlazar.  
   
  `data`  
- \[in\] El miembro de datos correspondiente en el registro de usuario.  
+ [in] El miembro de datos correspondiente en el registro de usuario.  
   
-## Comentarios  
- Vea [COLUMN\_NAME](../../data/oledb/column-name.md) para información donde se utilizan macros de **COLUMN\_NAME\_\*** .  
+## <a name="remarks"></a>Comentarios  
+ Vea [COLUMN_NAME](../../data/oledb/column-name.md) para obtener información sobre dónde el **COLUMN_NAME_\***  se utilizan macros.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_NAME](../../data/oledb/column-name.md)   
- [COLUMN\_NAME\_EX](../../data/oledb/column-name-ex.md)   
- [COLUMN\_NAME\_LENGTH](../../data/oledb/column-name-length.md)   
- [COLUMN\_NAME\_LENGTH\_STATUS](../../data/oledb/column-name-length-status.md)   
- [COLUMN\_NAME\_STATUS](../../data/oledb/column-name-status.md)   
- [COLUMN\_NAME\_PS\_LENGTH](../../data/oledb/column-name-ps-length.md)   
- [COLUMN\_NAME\_PS\_STATUS](../../data/oledb/column-name-ps-status.md)   
- [COLUMN\_NAME\_PS\_LENGTH\_STATUS](../../data/oledb/column-name-ps-length-status.md)   
- [COLUMN\_NAME\_TYPE](../../data/oledb/column-name-type.md)   
- [COLUMN\_NAME\_TYPE\_PS](../../data/oledb/column-name-type-ps.md)   
- [COLUMN\_NAME\_TYPE\_SIZE](../../data/oledb/column-name-type-size.md)   
- [COLUMN\_NAME\_TYPE\_STATUS](../../data/oledb/column-name-type-status.md)
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_NAME](../../data/oledb/column-name.md)   
+ [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   
+ [COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)   
+ [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   
+ [COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)   
+ [COLUMN_NAME_PS_LENGTH](../../data/oledb/column-name-ps-length.md)   
+ [COLUMN_NAME_PS_STATUS](../../data/oledb/column-name-ps-status.md)   
+ [COLUMN_NAME_PS_LENGTH_STATUS](../../data/oledb/column-name-ps-length-status.md)   
+ [COLUMN_NAME_TYPE](../../data/oledb/column-name-type.md)   
+ [COLUMN_NAME_TYPE_PS](../../data/oledb/column-name-type-ps.md)   
+ [COLUMN_NAME_TYPE_SIZE](../../data/oledb/column-name-type-size.md)   
+ [COLUMN_NAME_TYPE_STATUS](../../data/oledb/column-name-type-status.md)

@@ -1,28 +1,27 @@
 ---
-title: "Realizar consultas parametrizadas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "consultas de parámetros, ejecutar mediante la clase CCommand"
+title: Realizar consultas parametrizadas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Realizar consultas parametrizadas
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente genera una consulta simple parametrizada que recupera registros con un campo de edad \(mayor que 30\) de una tabla perteneciente a una base de datos de Microsoft Access.  Para admitir el uso del parámetro, el registro de usuario debe tener un mapa adicional.  En el código siguiente, de un proyecto ATL, se usa la clase `CCommand` en lugar de la clase `CTable` utilizada en el ejemplo anterior, [Recorrer un conjunto de filas simple](../../data/oledb/traversing-a-simple-rowset.md).  
+# <a name="issuing-a-parameterized-query"></a>Realizar consultas parametrizadas
+En el ejemplo siguiente, se emite una consulta simple parametrizada que recupera registros con un campo de edad (es decir, mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener un mapa adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- El registro de usuario, `CArtists` , ofrece el siguiente aspecto:  
+ El registro de usuario, `CArtists`, tiene este aspecto:  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

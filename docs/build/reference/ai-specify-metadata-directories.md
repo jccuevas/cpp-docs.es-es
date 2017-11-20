@@ -1,62 +1,62 @@
 ---
-title: "/AI (Especificar directorios de metadatos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.AdditionalUsingDirectories"
-  - "VC.Project.VCNMakeTool.AssemblySearchPath"
-  - "/AI"
-  - "VC.Project.VCCLWCECompilerTool.AdditionalUsingDirectories"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/AI (opción del compilador) [C++]"
-  - "AI (opción del compilador) [C++]"
-  - "-AI (opción del compilador) [C++]"
+title: -AI (especificar directorios de metadatos) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.AdditionalUsingDirectories
+- VC.Project.VCNMakeTool.AssemblySearchPath
+- /AI
+- VC.Project.VCCLWCECompilerTool.AdditionalUsingDirectories
+dev_langs: C++
+helpviewer_keywords:
+- /AI compiler option [C++]
+- AI compiler option [C++]
+- -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 74f8b429d920a070df01e69deab4e570afb6dd72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /AI (Especificar directorios de metadatos)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ai-specify-metadata-directories"></a>/AI (Especificar directorios de metadatos)
 Especifica un directorio en el que el compilador debe buscar para resolver las referencias de archivos que se pasan a la directiva `#using`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /AIdirectory  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `directory`  
  Directorio o ruta de acceso donde debe buscar el compilador.  
   
-## Comentarios  
- Solo se puede pasar un directorio a una invocación de **\/AI**.  Especifique una opción **\/AI** para cada ruta de acceso en la que desea que busque el compilador.  Por ejemplo, para agregar C:\\Project\\Meta y C:\\Common\\Meta a la ruta de búsqueda del compilador en las directivas `#using`, agregue `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` a la línea de comandos del compilador o agregue cada directorio a la propiedad **Directorios \#using adicionales** de Visual Studio.  
+## <a name="remarks"></a>Comentarios  
+ Solo un directorio puede pasarse a una **/AI** invocación. Especifique una **/AI** opción para cada ruta de acceso que desea que el compilador para buscar. Por ejemplo, para agregar C:\Project\Meta y C:\Common\Meta a la ruta de acceso de búsqueda de compilador para `#using` directivas, agregue `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` a la línea de comandos del compilador o agregue cada directorio a la **adicionales # directorios using** propiedad en Visual Studio.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  En el panel de navegación, seleccione **Propiedades de configuración**, **C\/C\+\+** y **General**.  
+2.  En el panel de navegación, seleccione **propiedades de configuración**, **C/C++**, **General**.  
   
-3.  Modifique la propiedad **Directorios \#using adicionales**.  
+3.  Modificar el **adicionales # directorios using** propiedad.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalUsingDirectories%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [\#using \(Directiva\)](../../preprocessor/hash-using-directive-cpp.md)
+ [#using (directiva)](../../preprocessor/hash-using-directive-cpp.md)

@@ -1,64 +1,63 @@
 ---
-title: "Cambios en la funci&#243;n auxiliar de carga retrasada de DLL desde Visual C++ 6.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper2 (función)"
-  - "carga retrasada de archivos DLL, cambios"
-  - "funciones auxiliares, cambios"
-  - "PFromRva (método)"
+title: "Cambios en el archivo DLL de carga retrasan función auxiliar desde Visual C++ 6.0 | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, what's changed
+- PFromRva method
+- __delayLoadHelper2 function
+- helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fb16beb6f2ddb07f57fe9f35c67552348cac56cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Cambios en la funci&#243;n auxiliar de carga retrasada de DLL desde Visual C++ 6.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si tiene varias versiones de Visual C\+\+ en el equipo o ha definido una función auxiliar propia, es posible que le afecten los cambios realizados en la función auxiliar de carga retrasada de la DLL.  Por ejemplo:  
+# <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Cambios en la función auxiliar de carga retrasada de DLL desde Visual C++ 6.0
+Si tiene varias versiones de Visual C++ en el equipo o si ha definido una función auxiliar personalizada, es podrán que tenga problemas con los cambios realizados en el archivo DLL de carga retrasan función auxiliar. Por ejemplo:  
   
--   **\_\_delayLoadHelper** es ahora **\_\_delayLoadHelper2**  
+-   **__delayLoadHelper** es ahora **__delayLoadHelper2**  
   
--   **\_\_pfnDliNotifyHook** es ahora **\_\_pfnDliNotifyHook2**  
+-   **__pfnDliNotifyHook** es ahora **__pfnDliNotifyHook2**  
   
--   **\_\_pfnDliFailureHook** es ahora **\_\_pfnDliFailureHook2**  
+-   **__pfnDliFailureHook** es ahora **__pfnDliFailureHook2**  
   
--   **\_\_FUnloadDelayLoadedDLL** es ahora **\_\_FUnloadDelayLoadedDLL2**  
+-   **__FUnloadDelayLoadedDLL** es ahora **__FUnloadDelayLoadedDLL2**  
   
 > [!NOTE]
->  Si está utilizando la función auxiliar predeterminada, estos cambios no le afectarán.  Además, no se producen cambios relacionados con el modo de llamar al vinculador.  
+>  Si está utilizando la función auxiliar predeterminada, estos cambios no le afectarán. No hay ningún cambio con respecto a cómo invocar al vinculador.  
   
-## Varias versiones de Visual C\+\+  
- Si dispone de varias versiones de Visual C\+\+ en su equipo, asegúrese de que el vinculador coincide con delayimp.lib.  En caso contrario, se producirá un error del vinculador y se indicará que `___delayLoadHelper2@8` o `___delayLoadHelper@8` aparecen como símbolos externos no resueltos.  El primero implica un vinculador nuevo con una versión anterior de delayimp.lib, y el segundo implica un vinculador antiguo con una versión nueva de delayimp.lib.  
+## <a name="multiple-versions-of-visual-c"></a>Varias versiones de Visual C++  
+ Si tiene varias versiones de Visual C++ en el equipo, asegúrese de que el vinculador coincide con delayimp.lib. Si se produce un error de coincidencia, obtendrá un error del vinculador reporting cualquiera `___delayLoadHelper2@8` o `___delayLoadHelper@8` como un símbolo externo sin resolver. El primero implica a un vinculador nuevo con una versión anterior de delayimp.lib, y el segundo implica a un vinculador antiguo con una versión nueva de delayimp.lib.  
   
- Si obtiene un error de vinculador sin resolver, ejecute [dumpbin \/linkermember](../../build/reference/linkermember.md):1 en el archivo delayimp.lib que espera que contenga la función auxiliar para ver qué función auxiliar se define en su lugar.  La función auxiliar también puede estar definida en un archivo objeto; ejecute [dumpbin \/symbols](../../build/reference/symbols.md) y busque `delayLoadHelper(2)`.  
+ Si recibe un error de vinculador sin resolver, ejecute [dumpbin /linkermember](../../build/reference/linkermember.md): 1 en el archivo delayimp.lib que espera que contenga la función auxiliar para ver qué función auxiliar se define en su lugar. La función auxiliar también se podría definir en un archivo objeto; ejecutar [dumpbin /symbols](../../build/reference/symbols.md) y busque `delayLoadHelper(2)`.  
   
- Si sabe que tiene el vinculador de Visual C\+\+ 6.0, entonces:  
+ Si sabe que tiene el vinculador de Visual C++ 6.0, a continuación:  
   
--   Ejecute **dumpbin** en el archivo .lib u .obj de la rutina auxiliar de carga retrasada para determinar si éste define **\_\_delayLoadHelper2**.  En caso contrario, el vínculo producirá un error.  
+-   Ejecute dumpbin en el archivo .lib o .obj de la auxiliar de carga retrasada para determinar si éste define **__delayLoadHelper2**. De lo contrario, se producirá un error en el vínculo.  
   
--   Defina **\_\_delayLoadHelper** en el archivo .lib u .obj de la rutina auxiliar de carga retrasada.  
+-   Definir **__delayLoadHelper** el retardo de cargar el archivo .lib o .obj del Ayudante.  
   
-## Función auxiliar definida por el usuario  
- Si ha definido una función auxiliar propia y está utilizando la versión actual de Visual C\+\+, siga este procedimiento:  
+## <a name="user-defined-helper-function"></a>Función auxiliar definida por el usuario  
+ Si define una función auxiliar personalizada y usa la versión actual de Visual C++, haga lo siguiente:  
   
--   Cambie el nombre de la función auxiliar denominándola **\_\_delayLoadHelper2**.  
+-   Cambiar el nombre de la función auxiliar para **__delayLoadHelper2**.  
   
--   Dado que los punteros en el descriptor de carga retrasada \(ImgDelayDescr en delayimp.h\) se han cambiado de direcciones absolutas \(VA\) a direcciones relativas \(RVA\) para el funcionamiento correcto en los programas de 32 y 64 bits, es necesario convertirlos de nuevo en punteros.  Se ha introducido una nueva función, PFromRva, ubicada en delayhlp.cpp.  Esta función se puede utilizar en cada uno de los campos del descriptor para volver a convertirlos en punteros de 32 ó 64 bits.  La función auxiliar de carga retrasada predeterminada sigue siendo una plantilla excelente para utilizarla como ejemplo.  
+-   Puesto que los punteros en el descriptor de retraso (ImgDelayDescr en delayimp.h) se han cambiado de direcciones absolutas (VAs) para direcciones relativas (RVA) funcionen según lo previsto en ambos programas de 32 y 64 bits, debe convertirlos de nuevo en punteros. Se ha introducido una nueva función: PFromRva, ubicada en delayhlp.cpp. Puede utilizar esta función en cada uno de los campos del descriptor para convertirlos a ambos punteros de 32 bits o de 64 bits. La función de aplicación auxiliar de carga de retraso predeterminado sigue siendo una buena plantilla para usarla como un ejemplo.  
   
-## Cargar todas las importaciones para un archivo DLL de carga retrasada  
- El vinculador puede cargar todas las importaciones de un archivo DLL para el que se ha especificado la carga retrasada.  Vea [Cargar todas las importaciones para un archivo DLL de carga retrasada](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) para obtener más información.  
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Cargar todas las importaciones para un archivo DLL de carga retrasada  
+ El vinculador puede cargar todas las importaciones desde un archivo DLL que especificó para la carga retrasada. Vea [cargar todas las importaciones para un archivo DLL de carga retrasada](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) para obtener más información.  
   
-## Vea también  
- [Understanding the Helper Function](http://msdn.microsoft.com/es-es/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Vea también  
+ [Descripción de la función auxiliar](understanding-the-helper-function.md)

@@ -1,51 +1,51 @@
 ---
-title: "/GF (Eliminar cadenas duplicadas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.StringPooling"
-  - "VC.Project.VCCLWCECompilerTool.StringPooling"
-  - "/gf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GF (opción del compilador) [C++]"
-  - "cadenas duplicadas"
-  - "Eliminar cadenas duplicadas (opción del compilador) [C++]"
-  - "GF (opción del compilador) [C++]"
-  - "-GF (opción del compilador) [C++]"
-  - "agrupar cadenas (opción del compilador) [C++]"
-  - "cadenas [C++], agrupación"
+title: -GF (eliminar cadenas duplicadas) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.StringPooling
+- VC.Project.VCCLWCECompilerTool.StringPooling
+- /gf
+dev_langs: C++
+helpviewer_keywords:
+- duplicate strings
+- Eliminate Duplicate Strings compiler option [C++]
+- pooling strings compiler option [C++]
+- -GF compiler option [C++]
+- /GF compiler option [C++]
+- GF compiler option [C++]
+- strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0aea115254157ae01292511f25e05a10b6366dff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /GF (Eliminar cadenas duplicadas)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Permite al compilador crear una sola copia de cadenas idénticas en la imagen del programa y en la memoria durante la ejecución.  Se trata de una optimización llamada *agrupación de cadenas* que puede crear programas más pequeños.  
+# <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminar cadenas duplicadas)
+Permite al compilador que cree una copia única de cadenas idénticas en la imagen del programa y en la memoria durante la ejecución. Se trata de una optimización denominada *la agrupación de cadenas* que pueden crear programas más pequeños.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /GF  
 ```  
   
-## Comentarios  
- Si utiliza **\/GF**, el sistema operativo no intercambia la parte de cadena de la memoria y permite leer las cadenas otra vez desde el archivo de imagen.  
+## <a name="remarks"></a>Comentarios  
+ Si usa **/GF**, el sistema operativo no intercambia la parte de la cadena de la memoria y puede leer el cadenas que se devuelven desde el archivo de imagen.  
   
- **\/GF** agrupa las cadenas como de sólo lectura.  Si intenta modificar las cadenas bajo **\/GF**, se producirá un error de aplicación.  
+ **/GF** agrupa las cadenas como de solo lectura. Si intenta modificar las cadenas bajo **/GF**, se produce un error de aplicación.  
   
- La agrupación de cadenas permite convertir en varios punteros a un solo búfer lo que inicialmente se diseñó como varios punteros a múltiples búferes.  En el siguiente segmento de código, `s` y `t` se inicializan con la misma cadena.  La agrupación de cadenas hace que éstas señalen a la misma memoria:  
+ La agrupación de cadenas permite lo que estaban previstas como punteros de varios a varios búferes varios punteros a un único búfer. En el código siguiente, `s` y `t` se inicializan con la misma cadena. La agrupación de cadenas hace que señalen a la misma memoria:  
   
 ```  
 char *s = "This is a character buffer";  
@@ -53,27 +53,27 @@ char *t = "This is a character buffer";
 ```  
   
 > [!NOTE]
->  La opción [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md), que se utiliza para Editar y continuar, establece la opción **\/GF** de forma automática.  
+>  El [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción, se utiliza para editar y continuar, establece automáticamente el **/GF** opción.  
   
 > [!NOTE]
->  La opción del compilador **\/GF** crea una sección direccionable para cada cadena única.  Además, de manera predeterminada, un archivo de objeto puede contener hasta 65.536 secciones direccionables.  Si el programa contiene más de 65.536 cadenas, use la opción del compilador [\/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) para crear más secciones.  
+>  El **/GF** opción del compilador crea una sección direccionable para cada cadena única. Y, de forma predeterminada, un archivo objeto puede contener hasta 65.536 secciones direccionables. Si el programa contiene más de 65.536 cadenas, utilice la [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) opción del compilador para crear más secciones.  
   
- **\/GF** está habilitado cuando se utiliza [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o **\/O2**.  
+ **/GF** está habilitada cuando [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o **/O2** se utiliza.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Generación de código**.  
+3.  Haga clic en el **generación de código** página de propiedades.  
   
-4.  Modifique la propiedad **Habilitar agrupación de cadenas**.  
+4.  Modificar el **habilitar la agrupación de cadenas** propiedad.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -1,31 +1,31 @@
 ---
-title: "C&#243;mo: Envolver una clase nativa para utilizarla en C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases [C++], Visual C# y"
-  - "código nativo [C++], Visual C# y"
+title: "Cómo: envolver una clase nativa para utilizarla en C# | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ff0c2a3700c20c78d3cbbf9b67810a65bb89fc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Envolver una clase nativa para utilizarla en C# #
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este ejemplo muestra cómo ajustar una clase de C\+\+ nativa para que la pueda utilizar el código creado en C\#, u otro lenguaje .NET.  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Cómo: Envolver una clase nativa para utilizarla en C#
+Este ejemplo muestra cómo ajustar una clase de C++ nativo, por lo que puede ser utilizado por código creado en C# u otro lenguaje. NET.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +75,5 @@ private:
 };  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

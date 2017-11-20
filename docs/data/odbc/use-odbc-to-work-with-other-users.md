@@ -1,30 +1,29 @@
 ---
-title: "Utilizar ODBC para trabajar con otros usuarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC, trabajar con otros usuarios"
+title: Utilizar ODBC para trabajar con otros usuarios | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ODBC, working with other users
 ms.assetid: 8ff18684-f62b-4027-b9b2-7c3b5d52bd89
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d4d324e16a40db6da5bef20ed5190cdac4f2279
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizar ODBC para trabajar con otros usuarios
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ODBC se utiliza en entornos donde varios usuarios están trabajando con la misma base de datos ODBC.  
+# <a name="use-odbc-to-work-with-other-users"></a>Utilizar ODBC para trabajar con otros usuarios
+Utilizar ODBC en entornos donde varios usuarios están trabajando con la misma base de datos ODBC.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
-## Vea también  
- [Conectividad abierta de bases de datos \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

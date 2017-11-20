@@ -1,38 +1,37 @@
 ---
-title: "C&#243;mo: Calcular las referencias de un tipo de datos VARIANT para ADO.NET (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], calcular las referencias de tipos VARIANT"
-  - "VARIANT"
-  - "VARIANT, calcular las referencias"
+title: "Cómo: calcular las referencias de una variante para ADO.NET (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- VARIANT, marshaling
+- ADO.NET [C++], marshaling VARIANT types
+- VARIANT
 ms.assetid: 67a180a7-5691-48ab-8d85-7f75a68dde91
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 166116f54882048f3cd763b2f61e6b4fd56e5357
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Calcular las referencias de un tipo de datos VARIANT para ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Muestra cómo agregar un tipo de datos `VARIANT` nativo a una base de datos y cómo calcular las referencias de <xref:System.Object?displayProperty=fullName> a partir de una base de datos para un tipo de datos `VARIANT` nativo.  
+# <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Cómo: serializar un tipo de datos VARIANT para ADO.NET (C++/CLI)
+Muestra cómo agregar nativo `VARIANT` a una base de datos y cómo calcular las referencias de un <xref:System.Object?displayProperty=fullName> desde una base de datos nativo `VARIANT`.  
   
-## Ejemplo  
- En este ejemplo, la clase DatabaseClass se crea para interactuar con un objeto <xref:System.Data.DataTable> de ADO.NET.  Tenga en cuenta que esta clase es una `class` de C\+\+ nativa \(si se compara con una `ref class` o `value class`\).  Esto es necesario porque deseamos utilizar esta clase desde código nativo y no se pueden utilizar tipos administrados en código nativo.  Esta clase se compilará para CLR, según indica la directiva `#pragma managed` que precede a la declaración de clase.  Para obtener más información sobre esta directiva, vea [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, la clase DatabaseClass se crea para interactuar con un ADO.NET <xref:System.Data.DataTable> objeto. Tenga en cuenta que esta clase es C++ nativo `class` (en comparación con un `ref class` o `value class`). Esto es necesario porque deseamos utilizar esta clase desde código nativo y no puede usar los tipos administrados en código nativo. Esta clase se compilará para CLR, tal y como se indica mediante el `#pragma managed` directiva que precede a la declaración de clase. Para obtener más información sobre esta directiva, consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
   
- Tenga en cuenta el miembro privado de la clase DatabaseClass: `gcroot<DataTable ^> table`.  Como los tipos nativos no pueden contener tipos administrados, es necesario utilizar la palabra clave `gcroot`.  Para obtener más información sobre `gcroot`, vea [Cómo: Declarar controladores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Tenga en cuenta el miembro privado de la clase DatabaseClass: `gcroot<DataTable ^> table`. Puesto que los tipos nativos no pueden contener tipos administrados, el `gcroot` palabra clave es necesaria. Para obtener más información sobre `gcroot`, consulte [Cómo: declarar controla en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- El resto del código de este ejemplo es código nativo de C\+\+, según indica la directiva `#pragma unmanaged` que precede a `main`.  En este ejemplo, se crea una nueva instancia de DatabaseClass y se llama a sus métodos para crear una tabla y rellenar algunas filas de ésta.  Observe que los tipos `VARIANT` nativos se pasan como valores de la columna de base de datos ObjectCol.  Dentro de DatabaseClass, estos tipos `VARIANT` se convierten en objetos administrados utilizando la funcionalidad de cálculo de referencias que se encuentra en el espacio de nombres <xref:System.Runtime.InteropServices?displayProperty=fullName>.  En concreto, el método <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> se utiliza para calcular las referencias de `VARIANT` para <xref:System.Object> y el método <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> se utiliza para calcular las referencias de <xref:System.Object> para `VARIANT`.  
+ El resto del código de este ejemplo es código C++ nativo, tal y como se indica mediante el `#pragma unmanaged` anterior a la directiva `main`. En este ejemplo, estamos creando una nueva instancia de DatabaseClass y llamando a sus métodos para crear una tabla y rellenar algunas filas de la tabla. Tenga en cuenta que nativo `VARIANT` tipos nativos se pasan como valores para la columna de base de datos ObjectCol. Dentro de DatabaseClass, estos `VARIANT` tipos se convierten en objetos administrados utilizando la funcionalidad de cálculo de referencias en el <xref:System.Runtime.InteropServices?displayProperty=fullName> espacio de nombres. En concreto, el método <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> se utiliza para calcular las referencias de un `VARIANT` a una <xref:System.Object>y el método <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> se utiliza para calcular las referencias de un <xref:System.Object> a una `VARIANT`.  
   
 ```  
 // adonet_marshal_variant.cpp  
@@ -150,22 +149,25 @@ int main()
 }  
 ```  
   
-  **ObjectCol: This is a BSTR in a VARIANT.**  
-**ObjectCol: 42**   
-## Compilar el código  
+```Output  
+ObjectCol: This is a BSTR in a VARIANT.  
+ObjectCol: 42  
+```  
   
--   Para compilar el código desde la línea de comandos, guarde el ejemplo de código en un archivo denominado adonet\_marshal\_variant.cpp y escriba la instrucción siguiente:  
+## <a name="compiling-the-code"></a>Compilar el código  
+  
+-   Para compilar el código desde la línea de comandos, guarde el ejemplo de código en un archivo denominado adonet_marshal_variant.cpp y escriba la siguiente instrucción:  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp  
     ```  
   
-## Seguridad de .NET Framework  
- Para obtener información sobre problemas de seguridad relacionados con ADO.NET, vea [Proteger aplicaciones de ADO.NET](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+ Para obtener información sobre problemas de seguridad que afectan a ADO.NET, vea [proteger aplicaciones de ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices>   
- [Acceso a datos en ASP.NET \(Visual Studio\)](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/es-es/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Acceso a datos mediante ADO.NET (C++ / CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Interoperabilidad](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
  [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)

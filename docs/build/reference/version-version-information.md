@@ -1,67 +1,67 @@
 ---
-title: "/VERSION (Informaci&#243;n de versi&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.Version"
-  - "/version"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/VERSION (opción del vinculador)"
-  - "información de versión (opción del vinculador)"
-  - "VERSION (opción del vinculador)"
-  - "-VERSION (opción del vinculador)"
-  - "números de versión, especificar en .exe"
+title: "-VERSION (información de versión) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.Version
+- /version
+dev_langs: C++
+helpviewer_keywords:
+- -VERSION linker option
+- Version Information linker option
+- version numbers, specifying in .exe
+- /VERSION linker option
+- VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6a0792a3895aac2887e635cb300f8ba9fde67e97
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /VERSION (Informaci&#243;n de versi&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="version-version-information"></a>/VERSION (Información de versión)
 ```  
 /VERSION:major[.minor]  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  donde:  
   
- *major* y *minor*  
- Número de versión que se desea incluir en el encabezado del archivo .exe o .dll.  
+ *principales*y *secundaria*  
+ El número de versión que desee en el encabezado del archivo .exe o. dll.  
   
-## Comentarios  
- La opción \/VERSION indica al vinculador que incluya un número de versión en el encabezado del archivo .exe o .dll.  Para obtener el campo de versión de imagen de OPTIONAL HEADER VALUES y ver el efecto de \/VERSION, puede usarse DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+## <a name="remarks"></a>Comentarios  
+ La opción /VERSION le indica al vinculador que ponga un número de versión en el encabezado del archivo .exe o. dll. Utilice DUMPBIN [/HEADERS](../../build/reference/headers.md) para ver el campo de versión de imagen de los valores de encabezado opcional para ver el efecto de/Version.  
   
- Los argumentos *major* y *minor* son números decimales en el intervalo de 0 a 65535.  El valor predeterminado es la versión 0.0.  
+ El *principal* y *secundaria* argumentos son números decimales comprendidos en el intervalo comprendido entre 0 y 65.535. El valor predeterminado es la versión 0.0.  
   
- La información especificada con \/VERSION no afecta a la información de versión que aparece para una aplicación al ver sus propiedades en el Explorador de archivos.  Dicha información se obtiene de un archivo de recursos utilizado en la compilación de la aplicación.  Para obtener más información, vea [Editor de información de versión](../../mfc/version-information-editor.md).  
+ La información especificada con /VERSION no afecta a la información de versión que aparece para una aplicación cuando ve sus propiedades en el Explorador de archivos. Esa información de versión procede de un archivo de recursos que se utiliza para compilar la aplicación. Vea [Editor de información de versión](../../windows/version-information-editor.md) para obtener más información.  
   
- Otro método para insertar un número de versión es mediante la instrucción de definición de módulos [VERSION](../../build/reference/version-c-cpp.md).  
+ Otra manera de insertar un número de versión es con la [versión](../../build/reference/version-c-cpp.md) instrucción de definición de módulo.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **General**.  
+3.  Haga clic en el **General** página de propiedades.  
   
-4.  Modifique la propiedad **Version**.  
+4.  Modificar el **versión** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

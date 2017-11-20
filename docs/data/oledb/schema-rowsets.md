@@ -1,30 +1,29 @@
 ---
-title: "Conjuntos de filas de esquema | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjuntos de filas de esquema, definición"
+title: Conjuntos de filas de esquema | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b4f19be127a9ffefa985b27a15101308c05c10b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Conjuntos de filas de esquema
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un esquema \(también conocido como metadatos\) es cualquier información sobre la estructura y organización de una base de datos, como por ejemplo información sobre el proveedor, conjunto de filas, tabla, columnas u otros datos que no formen parte del contenido propiamente dicho de la base de datos.  OLE DB permite obtener esta información sin abrir el conjunto de filas usando conjuntos de filas de esquema.  
+# <a name="schema-rowsets"></a>Conjuntos de filas de esquema
+Esquema (o metadatos) son toda la información sobre la estructura o la organización, por ejemplo, información sobre el proveedor, conjunto de filas, tabla, las columnas, de una base de datos u otra información aparte del contenido real de la base de datos. OLE DB permite obtener dicha información sin tener que abrir el conjunto de filas mediante el uso de conjuntos de filas de esquema.  
   
- Para obtener información sobre cómo utilizar los conjuntos de filas de esquema, vea [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+ Para obtener información sobre cómo usar conjuntos de filas de esquema, consulte [obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

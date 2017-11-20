@@ -1,82 +1,86 @@
 ---
-title: "ToAscii, __toascii | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__toascii"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__toascii"
-  - "toascii"
-  - "ctype/toascii"
-  - "ctype/__toascii"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "toascii (función)"
-  - "conversión de cadenas, en caracteres ASCII"
-  - "__toascii (función)"
-  - "Caracteres ASCII, convertir a"
+title: toascii, __toascii | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: __toascii
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- __toascii
+- toascii
+- ctype/toascii
+- ctype/__toascii
+dev_langs: C++
+helpviewer_keywords:
+- toascii function
+- string conversion, to ASCII characters
+- __toascii function
+- ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e8b30b01627f412602805b0ef2648cd7d863ad86
+ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
-# ToAscii, __toascii
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="toascii-toascii"></a>toascii, __toascii
 
-Convierte caracteres ASCII de 7 bits por truncamiento.  
-  
-## Sintaxis  
-  
-```  
-int __toascii(  
-   int c   
-);  
-#define toascii __toascii  
-```  
-  
-#### Parámetros  
- `c`  
- Carácter que se va a convertir.  
-  
-## Valor devuelto  
- `__toascii` Convierte el valor de `c` a ASCII de 7 bits de intervalo y devuelve el resultado. No hay ningún valor devuelto reservado para indicar un error.  
-  
-## Comentarios  
- El `__toascii` rutina convierte el carácter especificado en un carácter ASCII truncando a los bits de orden inferior 7. No se aplica a ninguna otra transformación.  
-  
- El `__toascii` rutina se define como una macro definida la macro de preprocesador de \_CTYPE\_DISABLE\_MACROS. Por motivos de compatibilidad `toascii` se define como una macro solamente cuando [\_\_STDC\_\_](../../preprocessor/predefined-macros.md) no está definido o está definido como 0; de lo contrario, no está definido.  
-  
-## Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`toascii`, `__toascii`|C: \< ctype.h \><br /><br /> C\+\+: \< cctype \> o \< ctype.h \>|  
-  
- El `toascii` macro es una extensión de POSIX, y `__toascii` es una implementación específica de Microsoft de la extensión POSIX. Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## Vea también  
- [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [is, isw \(Rutinas\)](../../c-runtime-library/is-isw-routines.md)   
- [to \(Funciones\)](../../c-runtime-library/to-functions.md)
+Convierte caracteres en ASCII de 7 bits por truncamiento.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int __toascii(
+   int c
+);
+#define toascii __toascii
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*  
+Carácter que se va a convertir.
+
+## <a name="return-value"></a>Valor devuelto
+
+`__toascii`Convierte el valor de *c* para el código ASCII de 7 bits intervalo y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.
+
+## <a name="remarks"></a>Comentarios
+
+La rutina `__toascii` convierte el carácter especificado en un carácter ASCII al truncarlo a los 7 bits de valor inferior. No se aplica ninguna otra transformación.
+
+La rutina `__toascii` se define como una macro, a menos que se defina la macro de preprocesador _CTYPE_DISABLE_MACROS. Por compatibilidad con versiones anteriores, `toascii` se define como una macro solamente cuando [&#95; &#95; STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o se define como 0; en caso contrario, es indefinido.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|`toascii`, `__toascii`|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
+
+La macro `toascii` es una extensión POSIX y `__toascii` es una implementación específica de Microsoft de la extensión POSIX. Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.
+
+## <a name="see-also"></a>Vea también
+
+[Conversión de datos](../../c-runtime-library/data-conversion.md)   
+[is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)   
+[to (Funciones)](../../c-runtime-library/to-functions.md)

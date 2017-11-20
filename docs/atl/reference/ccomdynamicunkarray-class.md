@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,36 +20,20 @@ f1_keywords:
 - ATLCOM/ATL::CComDynamicUnkArray::GetSize
 - ATLCOM/ATL::CComDynamicUnkArray::GetUnknown
 - ATLCOM/ATL::CComDynamicUnkArray::Remove
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 69fc2c9dbb86f88c85461e765182fd88050521e9
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 51ad16bacf147e2bafc1cc2ad1a9bb835067ee40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray (clase)
 Esta clase almacena una matriz de **IUnknown** punteros.  
@@ -74,31 +57,31 @@ class CComDynamicUnkArray
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CComDynamicUnkArray::Add](#add)|Llamar a este método para agregar una `IUnknown` puntero a la matriz.|  
+|[CComDynamicUnkArray::Add](#add)|Llamar a este método para agregar un `IUnknown` puntero a la matriz.|  
 |[CComDynamicUnkArray::begin](#begin)|Devuelve un puntero al primer `IUnknown` puntero en la colección.|  
 |[CComDynamicUnkArray::clear](#clear)|Vacía la matriz.|  
 |[CComDynamicUnkArray::end](#end)|Devuelve un puntero a uno más allá de la última **IUnknown** puntero en la colección.|  
 |[CComDynamicUnkArray::GetAt](#getat)|Recupera el elemento en el índice especificado.|  
 |[CComDynamicUnkArray::GetCookie](#getcookie)|Llamar a este método para obtener la cookie asociada con un determinado **IUnknown** puntero.|  
 |[CComDynamicUnkArray::GetSize](#getsize)|Devuelve la longitud de una matriz.|  
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Llamar a este método para obtener la **IUnknown** puntero asociado a una cookie determinada.|  
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Llamar a este método para obtener el **IUnknown** puntero asociado a una cookie determinada.|  
 |[CComDynamicUnkArray::Remove](#remove)|Llamar a este método para quitar un **IUnknown** puntero de la matriz.|  
   
 ## <a name="remarks"></a>Comentarios  
- **CComDynamicUnkArray** contiene una matriz asignada dinámicamente de **IUnknown** punteros, cada punto de una interfaz en una conexión. **CComDynamicUnkArray** puede utilizarse como un parámetro a la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) clase de plantilla.  
+ **CComDynamicUnkArray** contiene una matriz asignada dinámicamente de **IUnknown** punteros, cada punto de una interfaz en una conexión. **CComDynamicUnkArray** puede usarse como un parámetro a la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) clase de plantilla.  
   
- El **CComDynamicUnkArray** métodos [comenzar](#begin) y [final](#end) puede utilizarse para recorrer en iteración todos los puntos de conexión (por ejemplo, cuando se desencadena un evento).  
+ El **CComDynamicUnkArray** métodos [comenzar](#begin) y [final](#end) puede usarse para recorrer en iteración todos los puntos de conexión (por ejemplo, cuando se desencadena un evento).  
   
- Consulte [agregar puntos de conexión a un objeto](../../atl/adding-connection-points-to-an-object.md) para obtener más información acerca de cómo automatizar la creación de conexión de punto de proxy.  
+ Vea [agregar puntos de conexión a un objeto](../../atl/adding-connection-points-to-an-object.md) para obtener más información acerca de cómo automatizar la creación de la conexión de punto de proxy.  
   
 > [!NOTE]
-> **Nota** la clase **CComDynamicUnkArray** utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<` *n* `>`, donde *n* es el número de puntos de conexión necesarios.  
+> **Tenga en cuenta** la clase **CComDynamicUnkArray** utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<`  *n*  `>`, donde  *n*  es el número de puntos de conexión necesaria.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
 ##  <a name="add"></a>CComDynamicUnkArray::Add  
- Llamar a este método para agregar una **IUnknown** puntero a la matriz.  
+ Llamar a este método para agregar un **IUnknown** puntero a la matriz.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -106,7 +89,7 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Parámetros  
  *pUnk*  
- El **IUnknown** puntero para agregar a la matriz.  
+ El **IUnknown** puntero a agregar a la matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la cookie asociada con el puntero recién agregado.  
@@ -123,9 +106,9 @@ IUnknown**
  Un puntero a un **IUnknown** puntero de interfaz.  
   
 ### <a name="remarks"></a>Comentarios  
- La colección contiene punteros a las interfaces que se almacena localmente como **IUnknown**. Convierte cada **IUnknown** interfaz para el tipo de interfaz real y, a continuación, llamar a través de él. No es necesario consultar la interfaz primero.  
+ La colección contiene punteros a las interfaces que se almacena localmente como **IUnknown**. Convierte cada **IUnknown** interfaz para el tipo de interfaz real y, a continuación, llamar a través de él. No es necesario consultar primero la interfaz.  
   
- Antes de utilizar el **IUnknown** interfaz, debe comprobar que no es **NULL**.  
+ Antes de usar el **IUnknown** interfaz, debe comprobar que no es **NULL**.  
   
 ##  <a name="clear"></a>CComDynamicUnkArray::clear  
  Vacía la matriz.  
@@ -191,10 +174,10 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
  El **IUnknown** puntero para el que se requiere la cookie asociada.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve la cookie asociada con la **IUnknown** puntero, o cero si no hay coincidencia **IUnknown** se encuentra el puntero.  
+ Devuelve la cookie asociada a la **IUnknown** puntero, o cero si no hay coincidencia **IUnknown** se encuentra el puntero.  
   
 ### <a name="remarks"></a>Comentarios  
- Si hay más de una instancia de la misma **IUnknown** puntero, esta función devuelve la cookie de la primera de ellas.  
+ Si hay más de una instancia de la misma **IUnknown** puntero, esta función devuelve la cookie para la primera de ellas.  
   
 ##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
  Devuelve la longitud de una matriz.  
@@ -207,7 +190,7 @@ int GetSize() const;
  Longitud de la matriz.  
   
 ##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
- Llamar a este método para obtener la **IUnknown** puntero asociado a una cookie determinada.  
+ Llamar a este método para obtener el **IUnknown** puntero asociado a una cookie determinada.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -215,7 +198,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
   
 ### <a name="parameters"></a>Parámetros  
  `dwCookie`  
- Para que la cookie de asociado **IUnknown** puntero es necesario.  
+ La cookie para que el asociado **IUnknown** puntero es necesario.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el **IUnknown** puntero, o NULL si no se encuentra ninguna cookie de búsqueda de coincidencias.  
@@ -229,12 +212,11 @@ BOOL Remove(DWORD dwCookie);
   
 ### <a name="parameters"></a>Parámetros  
  `dwCookie`  
- Hacer referencia a la cookie la **IUnknown** puntero va a quitar de la matriz.  
+ La cookie que hacen referencia a la **IUnknown** puntero va a quitar de la matriz.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve TRUE si se quita el puntero; de lo contrario, FALSE.  
+ Devuelve TRUE si se quita el puntero; en caso contrario, FALSE.  
   
 ## <a name="see-also"></a>Vea también  
  [CComUnkArray (clase)](../../atl/reference/ccomunkarray-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

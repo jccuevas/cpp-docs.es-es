@@ -1,54 +1,54 @@
 ---
-title: "/Zl (Omitir nombres de biblioteca predeterminada) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zi"
-  - "VC.Project.VCCLCompilerTool.OmitDefaultLibName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zl (opción del compilador) [C++]"
-  - "bibliotecas predeterminadas, omitir nombres"
-  - "omitir nombre de biblioteca predeterminado (opción del compilador)"
-  - "ZI (opción del compilador)"
-  - "-Zl (opción del compilador) [C++]"
+title: -Zl (omitir nombres de biblioteca predeterminada) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zi
+- VC.Project.VCCLCompilerTool.OmitDefaultLibName
+dev_langs: C++
+helpviewer_keywords:
+- -Zl compiler option [C++]
+- ZI compiler option
+- Omit Default Library Name compiler option
+- /Zl compiler option [C++]
+- default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b0d4f865d060ceaf99a808d87574cb6d088f139
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /Zl (Omitir nombres de biblioteca predeterminada)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Omite el nombre predeterminado de la biblioteca en tiempo de ejecución de C desde el archivo .obj.  De forma predeterminada, el compilador sitúa el nombre de la biblioteca en el archivo .obj para dirigir el vinculador a la biblioteca correcta.  
+# <a name="zl-omit-default-library-name"></a>/Zl (Omitir nombres de biblioteca predeterminada)
+Omite el nombre de biblioteca predeterminado en tiempo de ejecución de C desde el archivo .obj. De forma predeterminada, el compilador sitúa el nombre de la biblioteca en el archivo .obj para dirigir el enlazador hacia la biblioteca correcta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Zl  
 ```  
   
-## Comentarios  
- Para obtener más información acerca de la biblioteca predeterminada, vea [Utilizar la biblioteca en tiempo de ejecución](../../build/reference/md-mt-ld-use-run-time-library.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información acerca de la biblioteca predeterminada, vea [utilizar la biblioteca en tiempo de ejecución](../../build/reference/md-mt-ld-use-run-time-library.md).  
   
- Puede usar **\/Zl** para compilar archivos .obj que piense incluir en una biblioteca.  Aunque la omisión del nombre de la biblioteca sólo guarda una pequeña cantidad de espacio para un archivo .obj individual, el espacio total que se guarda es significativo en una biblioteca que contiene muchos módulos de objetos.  
+ Puede usar **/Zl** para compilar archivos .obj que piense incluir en una biblioteca. Aunque si se omite el nombre de la biblioteca guarda sólo una pequeña cantidad de espacio para un archivo .obj individual, el ahorro de espacio total es significativo en una biblioteca que contiene muchos módulos de objeto.  
   
- Esta es una opción avanzada.  El establecimiento de esta opción quita en parte la compatibilidad de la biblioteca en tiempo de ejecución de C, que podría ser necesaria para la aplicación, por lo que si la aplicación depende de esta compatibilidad, se generarán errores en tiempo de vínculo.  Si utiliza esta opción, debe proporcionar los componentes necesarios de alguna otra manera.  
+ Esta opción es una opción avanzada. Si establece esta opción, quita cierta compatibilidad de biblioteca en tiempo de ejecución de C que puede ser necesaria para la aplicación, lo que produce errores en tiempo de vínculo si su aplicación depende de esta compatibilidad. Si utiliza esta opción debe proporcionar los componentes necesarios de alguna otra manera.  
   
- Uso [\/NODEFAULTLIB \(Omitir bibliotecas\)](../../build/reference/nodefaultlib-ignore-libraries.md). para que el vinculador omitir las referencias de la biblioteca en todos los archivos .obj.  
+ Use [/NODEFAULTLIB (Omitir bibliotecas)](../../build/reference/nodefaultlib-ignore-libraries.md). para dirigir el vinculador para omitir las referencias de biblioteca en todos los archivos .obj.  
   
  Para obtener más información, vea [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).  
   
- Al compilar con **\/Zl**, se define `_VC_NODEFAULTLIB`.  Por ejemplo:  
+ Cuando se compila con **/Zl**, `_VC_NODEFAULTLIB` está definido.  Por ejemplo:  
   
 ```  
 // vc_nodefaultlib.cpp  
@@ -62,20 +62,20 @@ void Test() {
 }  
 ```  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Avanzadas**.  
+3.  Haga clic en el **avanzadas** página de propiedades.  
   
-4.  Modifique la propiedad **Omitir nombres de biblioteca predeterminada**.  
+4.  Modificar el **omitir nombres de biblioteca predeterminada** propiedad.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

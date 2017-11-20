@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&'
-dev_langs:
-- C++
+f1_keywords: '&'
+dev_langs: C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d542c508b84da14d4f628796ae5fd42983db0114
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="address-of-operator-amp"></a>Operador Address-of:&amp;
 ## <a name="syntax"></a>Sintaxis  
@@ -40,7 +36,7 @@ ms.lasthandoff: 09/25/2017
   
  El operador address-of solo se puede aplicar a variables con tipos fundamentales, de estructura, de clase o de unión que se declaren en el nivel de ámbito de archivo o para referencias de matriz de subíndice. En estas expresiones, se puede agregar o quitar de la expresión address-of una expresión constante que no incluya el operador address-of.  
   
- Cuando se aplica a funciones o valores L, el resultado de la expresión es un tipo de puntero (un valor R) derivado del tipo del operando. Por ejemplo, si el operando es de tipo `char`, el resultado de la expresión es de tipo puntero a `char`. El operador address-of, aplicado a **const** o `volatile` los objetos, se evalúa como **const** `type` ** \* ** o `volatile` `type` ** \* **, donde `type` es el tipo del objeto original.  
+ Cuando se aplica a funciones o valores L, el resultado de la expresión es un tipo de puntero (un valor R) derivado del tipo del operando. Por ejemplo, si el operando es de tipo `char`, el resultado de la expresión es de tipo puntero a `char`. El operador address-of, aplicado a **const** o `volatile` los objetos, se evalúa como **const** `type`  **\***  o `volatile` `type`  **\*** , donde `type` es el tipo del objeto original.  
   
  Cuando se aplica el operador address-of a una [nombre completo](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), el resultado depende de si la *nombre calificado* especifica un miembro estático. En ese caso, el resultado es un puntero al tipo especificado en la declaración del miembro. Si el miembro no es estático, el resultado es un puntero al miembro *nombre* de la clase indicada por *qualified-class-name*. (Consulte [expresiones primarias](../cpp/primary-expressions.md) para obtener más información acerca de *qualified-class-name*.) En el fragmento de código siguiente se muestra cómo difiere el resultado, dependiendo de si el miembro es estático:  
   
@@ -121,4 +117,3 @@ int main() {
  [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Declarador de referencia lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Operadores de direccionamiento indirecto y address-of](../c-language/indirection-and-address-of-operators.md)
-

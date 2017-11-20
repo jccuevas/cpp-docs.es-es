@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::push (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push (miembro) [STL/CLR]"
+title: 'priority_queue:: Push (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 317d3feb-0688-4658-866b-a26cae060354
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6f0a938a8f2fb6031ffb731c812ca8645efd20b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::push (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuepush-stlclr"></a>priority_queue::push (STL/CLR)
 Agrega un nuevo elemento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void push(value_type val);  
 ```  
   
-## Comentarios  
- La función miembro inserta un elemento con el valor `val` en la secuencia controlada, y reordena la secuencia controlada para mantener la disciplina de la pila.  Se utiliza para agregar otro elemento a la cola.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro inserta un elemento con el valor `val` en la la secuencia controlada y vuelve a ordenar la secuencia controlada para mantener la disciplina de montón. Utiliza para agregar otro elemento a la cola.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_priority_queue_push.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **c a b**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+c a b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)

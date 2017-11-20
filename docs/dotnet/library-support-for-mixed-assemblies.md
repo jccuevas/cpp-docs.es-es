@@ -1,57 +1,57 @@
 ---
-title: "Compatibilidad con bibliotecas para ensamblados mixtos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bibliotecas [C++], ensamblados mixtos"
-  - "ensamblados mixtos [C++], compatibilidad con bibliotecas"
-  - "msvcm90[d].dll"
-  - "msvcmrt[d].lib"
+title: Compatibilidad con bibliotecas para ensamblados mixtos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- msvcm90[d].dll
+- mixed assemblies [C++], library support
+- msvcmrt[d].lib
+- libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 497900112bedc9c16b88078ab2b682b0357eb9bd
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
-# Compatibilidad con bibliotecas para ensamblados mixtos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ admite el uso de la biblioteca estándar de C\+\+, la biblioteca de Common RunTime \(CRT\), ATL y MFC para aplicaciones compiladas con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  De este modo, las aplicaciones existentes que utilizan estas bibliotecas también pueden usar las características de .NET Framework.  
+# <a name="library-support-for-mixed-assemblies"></a>Compatibilidad con bibliotecas para ensamblados mixtos
+Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca de Common RunTime (CRT), ATL y MFC para aplicaciones compiladas con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Esto permite a las aplicaciones existentes que utilizan estas bibliotecas para utilizar características de .NET Framework también.  
   
- Esta compatibilidad presenta la nueva DLL y las bibliotecas de importación siguientes:  
+ Esta compatibilidad incluye las siguientes nuevas bibliotecas de importación y el archivo DLL:  
   
--   Msvcmrt\[d\].lib si se compila con \/clr.  Vínculos de ensamblados mixtos a esta biblioteca de importación.  
+-   Msvcmrt [d] .lib si se compila con/CLR. Vínculos de ensamblados mixtos a esta biblioteca de importación.  
   
--   Msvcm90\[d\].dll y Msvcurt\[d\].lib si se compila con \/clr:pure.  La DLL es un ensamblado mixto que proporciona compatibilidad con C Run Time \(CRT\) administrada y forma parte de un ensamblado administrado instalado en la caché global de ensamblados \(GAC\).  Los ensamblados puros se vinculan a esta biblioteca de importación y terminan enlazados a Msvcm90.dll.  
+-   Msvcm90 [d] .dll y Msvcurt [d] .lib si se compila con/CLR: pure. El archivo DLL es un ensamblado mixto que proporciona compatibilidad de tiempo de ejecución de C (CRT) administrada y forma parte de un ensamblado administrado instalado en la caché de ensamblados global (GAC). Los ensamblados puros se vinculan a esta biblioteca de importación y terminan enlazados a Msvcm90.dll.  
   
- Esta compatibilidad proporciona algunas ventajas relacionadas:  
+ Esta compatibilidad proporciona que algunas ventajas relacionadas:  
   
--   La biblioteca estándar de C\+\+ y CRT están disponibles tanto para código mixto como puro.  La biblioteca estándar de C\+\+ y CRT proporcionadas no son comprobables; en última instancia, las llamadas se siguen derivando a las mismas biblioteca estándar de C\+\+ y CRT que se utilizan desde el código nativo.  
+-   La biblioteca estándar de C++ y CRT están disponibles para código mixto y puro. CRT y la biblioteca estándar de C++ proporcionadas no son comprobables; en última instancia, las llamadas todavía se enrutan a la misma biblioteca estándar de C++ y CRT usan desde el código nativo.  
   
--   Corrección del control de excepciones unificado en imágenes puras y mixtas.  
+-   Se corrige el control de excepciones unificado en imágenes puras y mixtas.  
   
--   Inicialización estática de variables de C\+\+ en imágenes puras y mixtas.  
+-   Inicialización estática de variables de C++ en imágenes puras y mixtas.  
   
--   Compatibilidad con variables por AppDomain y por proceso en código administrado.  
+-   Compatibilidad con las variables por AppDomain y por proceso en código administrado.  
   
--   Resuelve los problemas de bloqueo del cargador que se aplican a las DLL mixtas en Visual C\+\+ .NET y Visual C\+\+ .NET 2003.  
+-   Resuelve los problemas de bloqueo del cargador que se aplican a las DLL mixtas compiladas en Visual Studio 2003 y versiones anteriores.  
   
- Además, esta compatibilidad tiene las siguientes limitaciones:  
+ Además, esta compatibilidad presenta las siguientes limitaciones:  
   
--   Sólo el modelo de DLL de CRT es compatible \(tanto para código compilado con \/clr como con \/clr:pure\).  
+-   Solo el modelo del archivo DLL de CRT es compatible (tanto para código compilado con /clr o/CLR: pure).  
   
--   Si los objetos utilizan las bibliotecas de Visual C\+\+ \(ya que todos los objetos de una imagen pura deben ser puros\), no se pueden combinar objetos puros y mixtos en una misma imagen.  Si lo hace, recibirá errores en tiempo de vínculo.  
+-   No se pueden mezclar objetos puros y mixtos en una sola imagen si los objetos usan las bibliotecas de Visual C++ (ya que todos los objetos deben ser puros en una imagen pura). Si lo hace, recibirá errores en tiempo de vínculo.  
   
- Es conveniente actualizar Common Language Runtime \(CLR\) a la versión actual, ya que no se garantiza que funcione con versiones anteriores.  El código compilado con estos cambios no se podrá ejecutar en la versión 1.x de CLR.  
+ Debe actualizar common language runtime (CLR) a la versión actual que no se garantiza que funcionan con versiones anteriores. No se ejecutará el código generado con estos cambios en la versión CLR 1.x.  
   
-## Vea también  
- [Ensamblados mixtos \(nativos y administrados\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,35 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4488 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4488"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4488"
+title: Compilador advertencia (nivel 1) C4488 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4488
+dev_langs: C++
+helpviewer_keywords: C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1312d279eb9174e0863cae413a0014cc58710131
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4488
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : requiere que la palabra clave 'palabra clave' implemente el método de interfaz 'método\_de\_interfaz'  
+# <a name="compiler-warning-level-1-c4488"></a>Advertencia del compilador (nivel 1) C4488
+'función': requiere la palabra clave 'palabra clave' para implementar el método de interfaz 'método_de_interfaz'  
   
- Una clase debe implementar todos los miembros de la interfaz de la que se herede directamente.  Un miembro implementado debe tener accesibilidad pública y debe marcarse como virtual.  
+ Una clase debe implementar todos los miembros de una interfaz de la que hereda directamente. Un miembro implementado debe tener accesibilidad pública y debe marcarse como virtual.  
   
-## Ejemplo  
- Puede producirse la advertencia C4488 si un miembro implementado no es público.  El ejemplo siguiente genera el error C4488.  
+## <a name="example"></a>Ejemplo  
+ Puede producirse la advertencia C4488 si un miembro implementado no es público. El ejemplo siguiente genera la advertencia C4488.  
   
 ```  
 // C4488.cpp  
@@ -48,8 +46,8 @@ public:
 };  
 ```  
   
-## Ejemplo  
- Puede producirse la advertencia C4488 si un miembro implementado no está marcado como virtual.  El ejemplo siguiente genera el error C4488.  
+## <a name="example"></a>Ejemplo  
+ Puede producirse la advertencia C4488 si un miembro implementado no está marcado como virtual. El ejemplo siguiente genera la advertencia C4488.  
   
 ```  
 // C4488_b.cpp  

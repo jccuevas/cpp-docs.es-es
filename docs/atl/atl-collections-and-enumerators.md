@@ -1,54 +1,55 @@
 ---
-title: "Colecciones y enumeradores de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces de colección"
-  - "colecciones, clases ATL"
-  - "interfaces de enumerador"
-  - "enumeradores, clases ATL"
+title: Colecciones y enumeradores ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collections, ATL classes
+- enumerators, ATL classes
+- collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Colecciones y enumeradores de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`collection` es un objeto COM que proporciona una interfaz que permite el acceso a un grupo de elementos de datos \(los datos sin formato u otros objetos\).  Una interfaz que sigue las normas para proporcionar acceso a un grupo de objetos se conoce como *interfaz de intercalación*.  
+# <a name="atl-collections-and-enumerators"></a>Colecciones y enumeradores de ATL
+A `collection` es un objeto COM que proporciona una interfaz que permite el acceso a un grupo de elementos de datos (datos sin formato u otros objetos). Una interfaz que sigue las normas para proporcionar acceso a un grupo de objetos se conoce como un *interfaz de colección*.  
   
- Como mínimo, las interfaces de intercalación deben proporcionar una propiedad de **Cuenta** que devuelve el número de elementos de la colección, una propiedad de **Elemento** que devuelve un elemento de la colección basándose en un índice, y una propiedad de `_NewEnum` que devuelve un enumerador para la colección.  Opcionalmente, las interfaces de intercalación pueden proporcionar métodos de **Agregar** y de **Quitar** para permitir que eliminans los elementos son insertados en o de la colección, y un método de **Borrar** para quitar todos los elementos.  
+ Como mínimo, deben proporcionar interfaces de colección una **recuento** propiedad que devuelve el número de elementos de la colección, una **elemento** propiedad que devuelve un elemento de la colección basándose en un índice y un `_NewEnum` propiedad que devuelve un enumerador para la colección. Si lo desea, pueden proporcionar las interfaces de colección **agregar** y **quitar** métodos para permitir que los elementos se inserta o se elimina de la colección y un **desactive** método para quitar todos los elementos.  
   
- `enumerator` es un objeto COM que proporciona una interfaz para recorrer en iteración los elementos de una colección.  Las interfaces de enumeradores proporcionan acceso serie a los elementos de una colección mediante cuatro métodos necesarios: `Next`, **Omitir**, **Restablecer**, y `Clone`.  
+ Un `enumerator` es un objeto COM que proporciona una interfaz para recorrer en iteración los elementos de una colección. Interfaces de enumerador proporcionan acceso de serie a los elementos de una colección a través de cuatro métodos requeridos: `Next`, **omitir**, **restablecer**, y `Clone`.  
   
- Puede obtener más información sobre interfaces de enumerador leyendo sobre la interfaz arquetipo \(pero completamente imaginaria\) de.  
+ Se puede obtener más información sobre las interfaces de enumerador leyendo sobre arquetípico (pero completamente imaginaria) [interfaz IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfaz.  
   
-## En esta sección  
- [Clases de colección y de enumerador ATL](../atl/atl-collection-and-enumerator-classes.md)  
- Describe y proporciona brevemente vínculos a clases ATL que le ayudarán colecciones y enumeradores de implementan.  
+## <a name="in-this-section"></a>En esta sección  
+ [Recopilación de ATL y clases de enumerador](../atl/atl-collection-and-enumerator-classes.md)  
+ Describe brevemente y proporciona vínculos a las clases ATL que le ayudarán a implementan colecciones y enumeradores.  
   
- [Diseño Principles para las interfaces de colección y de enumerador](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- Describe los diversos principios de diseño subyacente de cada tipo de interfaz.  
+ [Principios de diseño para la recopilación e interfaces de enumerador](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+ Describe los principios de diseño diferentes detrás de cada tipo de interfaz.  
   
- [implementar una colección STL\-Basada](../atl/implementing-an-stl-based-collection.md)  
- Un ejemplo ampliado que le guía por la implementación de una plantilla estándar \(STL\) Biblioteca\-basó la colección.  
+ [Implementar una recopilación basada en la biblioteca estándar de C++](../atl/implementing-an-stl-based-collection.md)  
+ Un ejemplo extendido que le guía a través de la implementación de una colección basada en la biblioteca estándar de C++.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Proporciona vínculos a temas conceptuales sobre cómo programar utilizando Active Template Library.  
+ Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.  
   
- [Ejemplo ATLCollections](../top/visual-cpp-samples.md)  
- Un ejemplo que muestra el uso de `ICollectionOnSTLImpl` y de `CComEnumOnSTL`, y la implementación de clases de directivas de copia personalizadas.  
+ [Ejemplo ATLCollections](../visual-cpp-samples.md)  
+ Un ejemplo que muestra el uso de `ICollectionOnSTLImpl` y `CComEnumOnSTL`y la implementación de clases de directivas de copia personalizadas.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)
+

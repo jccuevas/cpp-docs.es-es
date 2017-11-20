@@ -1,48 +1,49 @@
 ---
-title: "Creating Registrar Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, Registro"
-  - "registrar scripts [ATL]"
-  - "scripting, registry scripting"
-  - "scripts, crear"
-  - "scripts, Registrar scripts"
+title: Crear Scripts para el registrador de ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- scripts, Registrar scripts
+- scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Creating Registrar Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un script de registro proporciona controlada por datos, en lugar de API\-controlado, acceso al registro del sistema.  el acceso controlado por datos suele ser más eficaz ya que únicamente acepta uno o dos líneas en un script para agregar una clave en el registro.  
+# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+Una secuencia de comandos del registrador proporciona controladas por datos, en lugar de controlada por la API, acceso al registro del sistema. Acceso controlada por datos es normalmente más eficaz ya que toma solo una o dos líneas en una secuencia de comandos para agregar una clave al registro.  
   
- [Asistente para controles ATL](../atl/reference/atl-control-wizard.md) genera automáticamente un script de registro del servidor COM.  Puede encontrar este script en el archivo .rgs asociado al objeto.  
+ El [Asistente para controles ATL](../atl/reference/atl-control-wizard.md) genera automáticamente una secuencia de comandos del registrador para el servidor COM. Puede encontrar esta secuencia de comandos en el archivo .rgs asociado al objeto.  
   
- El motor de script de registro ATL procesa el script de registro en tiempo de ejecución.  ATL invoca automáticamente el motor de scripts durante la instalación del servidor.  
+ Motor de scripts del registrador de ATL procesa la secuencia de comandos del registrador en tiempo de ejecución. ATL invoca automáticamente el motor de scripts durante la instalación de servidor.  
   
- En este artículo se tratan los siguientes temas relacionados con los scripts del registro:  
+ En este artículo se trata los siguientes temas relacionados con los scripts del registrador:  
   
--   [Sintaxis de comprender el formulario de Backus \(BNF\) Nauer](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
+-   [Comprender la sintaxis de Backus Nauer Form (BNF)](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
   
--   [Árbol de análisis sintácticas de introducción](../atl/understanding-parse-trees.md)  
+-   [Comprender los árboles de análisis](../atl/understanding-parse-trees.md)  
   
--   [Ejemplos de script de registro](../atl/registry-scripting-examples.md)  
+-   [Ejemplos de scripting del registro](../atl/registry-scripting-examples.md)  
   
--   [Usar parámetros reemplazables \(el preprocesador de registro\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+-   [Usar parámetros reemplazables (el preprocesador del registrador)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
   
 -   [Invocar scripts](../atl/invoking-scripts.md)  
   
-## Vea también  
- [Componente de registro \(Registrador\)](../atl/atl-registry-component-registrar.md)
+## <a name="see-also"></a>Vea también  
+ [Componente de registro (registrador)](../atl/atl-registry-component-registrar.md)
+

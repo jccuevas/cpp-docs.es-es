@@ -1,34 +1,33 @@
 ---
-title: "Crear un archivo .Bsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".bsc (archivos), compilar"
-  - "bsc (archivos), compilar"
+title: Crear una. Archivo BSC | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, building
+- bsc files, building
 ms.assetid: 304e240d-692a-4f8b-b9ed-891c01bbb2ad
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1e78ab48d04538901aa8d8e18fc4e13f1343f724
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Crear un archivo .Bsc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE puede generar un nuevo archivo de información de examen a partir de los archivos .sbr recién creados.  También puede mantener un archivo .bsc existente usando archivos .sbr para archivos objeto que han cambiado desde la última compilación.  
+# <a name="building-a-bsc-file"></a>Crear un archivo .Bsc
+BSCMAKE puede generar un nuevo archivo de información de examen de los archivos .sbr recién creado. También puede mantener un archivo .bsc existente usando archivos .sbr para archivos objeto que han cambiado desde la última compilación.  
   
--   [Cómo se crea un archivo .sbr](../../build/reference/creating-an-dot-sbr-file.md)  
+-   [Cómo crear un archivo .sbr](../../build/reference/creating-an-dot-sbr-file.md)  
   
 -   [Cómo compila BSCMAKE un archivo .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)

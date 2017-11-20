@@ -1,46 +1,46 @@
 ---
-title: "Procedimiento para desenredar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Procedimiento para desenredar | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 82c5d0ca-70be-4d1a-a306-bfe01c29159f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c6ecdc6490b3d5792737eed65661ef7d53c54f14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Procedimiento para desenredar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La matriz de códigos de desenredo se organiza en orden descendente.  Cuando se produce una excepción, el sistema operativo almacena el contexto completo en un registro de contexto.  A continuación, se invoca la lógica de envío de excepciones, que ejecuta repetidamente los pasos siguientes para buscar un controlador de excepciones.  
+# <a name="unwind-procedure"></a>Procedimiento para desenredar
+La matriz de códigos de desenredado se ordena en orden descendente. Cuando se produce una excepción, se almacena el contexto completo por el sistema operativo en un registro de contexto. A continuación, se invoca la lógica de envío de excepción, que ejecuta varias veces los pasos siguientes para encontrar un controlador de excepciones.  
   
-1.  Use el valor de RIP actual almacenado en el registro de contexto para buscar una entrada de tabla de RUNTIME\_FUNCTION que describa la función actual \(o la parte de la función, en caso de entradas UNWIND\_INFO encadenadas\).  
+1.  Utilice el valor de RIP actual almacenado en el registro de contexto para buscar una entrada de la tabla RUNTIME_FUNCTION que describe la función actual (o parte de la función, en el caso de entradas UNWIND_INFO encadenadas).  
   
-2.  Si no se encuentra ninguna entrada de tabla de la función, entonces está en una función de hoja y RSP dirigirá directamente el puntero de devolución.  El puntero de devolución en \[RSP\] se almacena en el contexto actualizado, el RSP simulado se incrementa en 8 y se repite el paso 1.  
+2.  Si no se encuentra ninguna entrada de tabla de la función, a continuación, está en una función de hoja y RSP dirigirá directamente el puntero de devolución. El puntero de devolución en [RSP] se almacena en el contexto actualizado, el RSP simulado se incrementa en 8 y se repite el paso 1.  
   
-3.  Si se encuentra una entrada de tabla de la función, el valor de RIP puede estar en tres regiones: a\) en un epílogo, b\) en el prólogo, c\) en un código que puede estar cubierto por un controlador de excepciones.  
+3.  Si se encuentra una entrada de la tabla de función, RIP puede estar en tres regiones (a) en un epílogo, b) en el prólogo o c) en el código que puede estar incluido en un controlador de excepciones.  
   
-    -   Caso a\) Si el valor de RIP está en un epílogo, el control está abandonando la función, no puede haber un controlador de excepciones asociado a esta excepción para esta función y el efecto del epílogo debe continuar para calcular el contexto de la función llamadora.  Para determinar si el valor de RIP está dentro de un epílogo, se examina la secuencia de código a partir de RIP.  Si se puede hacer corresponder esta secuencia de código con la parte final de un epílogo legítimo, se encuentra en un epílogo y la parte restante de éste se simula, con el registro del contexto actualizado a medida que se procesa cada instrucción.  Después de esto, se repite el paso 1.  
+    -   Mayúsculas un) si el valor de RIP está dentro de un epílogo, a continuación, control está abandonando la función, no puede haber ningún controlador de excepciones asociado a esta excepción para esta función y los efectos del epílogo deben continuar para calcular el contexto de la función de llamador. Para determinar si el valor de RIP está dentro de un epílogo, las secuencias de código de RIP en se examina. Si esa secuencia de código puede coincidir con la parte final de un epílogo legítimo, a continuación, se encuentra en un epílogo y la parte restante del epílogo se simula, con el registro de contexto actualizado como cada instrucción se procesa. Después de esto, se repite el paso 1.  
   
-    -   Caso b\) Si el valor de RIP está en el prólogo, el control no ha entrado en la función, no puede haber un controlador de excepciones asociado a esta excepción para esta función y el efecto del prólogo se debe deshacer para calcular el contexto de la función llamadora.  El valor de RIP está en el prólogo si la distancia desde el inicio de la función a RIP es menor o igual que el tamaño del prólogo codificado en la información de desenredo.  El efecto del prólogo se desenreda mediante examen hacia delante por la matriz de códigos de desenredo para la primera entrada con un desplazamiento menor o igual que el desplazamiento del valor de RIP desde el inicio de la función, y luego deshaciendo el efecto de todos los elementos restantes en la matriz de códigos de desenredo.  A continuación, se repite el paso 1.  
+    -   Caso b) si el valor de RIP está en el prólogo, control no ha había entrado en la función, no puede haber ningún controlador de excepciones asociado a esta excepción para esta función y los efectos del prólogo se deben deshacer para calcular el contexto de la función de llamador. El valor de RIP está en el prólogo si la distancia desde el principio de la función a RIP es menor o igual que el tamaño del prólogo codificado en la información de desenredo. Los efectos del prólogo se desenreda mediante exploración hacia delante por la matriz de códigos de desenredo para la primera entrada con un desplazamiento menor o igual que el desplazamiento de RIP desde el principio de la función, y luego deshaciendo el efecto de todos los elementos restantes en la matriz de códigos de desenredado. A continuación, se repite el paso 1.  
   
-    -   Caso c\) Si el valor de RIP no está en el prólogo ni en un epílogo y la función tiene un controlador de excepciones \(UNW\_FLAG\_EHANDLER está establecido\), se llama al controlador específico del lenguaje.  El controlador examina sus datos y llama a funciones filtro según corresponda.  El controlador específico del lenguaje puede indicar que se controló la excepción o que la búsqueda debe continuar.  También puede iniciar un operación de desenredo directamente.  
+    -   Caso c) si el valor de RIP no está dentro de un prólogo o epílogo y la función tiene un controlador de excepciones (UNW_FLAG_EHANDLER está establecido), a continuación, se llama al controlador específico del lenguaje. El controlador examina sus datos y llamadas a funciones filtro según corresponda. Puede devolver el controlador específico del lenguaje que se controló la excepción o que la búsqueda no distingue para continuar. También puede iniciar una operación de desenredo directamente.  
   
-4.  Si el controlador específico del lenguaje devuelve un estado controlado, la ejecución continúa utilizando el registro de contexto original.  
+4.  Si el controlador específico del lenguaje devuelve un estado controlado, a continuación, continuar la ejecución con el registro de contexto original.  
   
-5.  Si no hay un controlador específico del lenguaje o el controlador devuelve un estado de "continuar la búsqueda", se debe desenredar el registro de contexto hasta el estado del llamador.  Esto se consigue procesando todos los elementos de la matriz de códigos de desenredo, deshaciendo el efecto de cada uno de ellos.  A continuación, se repite el paso 1.  
+5.  Si no hay ningún controlador específico del lenguaje o el controlador devuelve un estado de "continuar la búsqueda", el registro de contexto debe ser desenredar en el estado del llamador. Esto se logra mediante el procesamiento de todos los elementos de matriz de código de desenredo, deshaciendo el efecto de cada uno. A continuación, se repite el paso 1.  
   
- Cuando hay información de desenredo encadenada implicada, también se siguen estos pasos básicos.  La única diferencia es que, mientras se recorre la matriz de códigos de desenredo para desenredar el efecto de un prólogo, una vez que se llega al final de la matriz, se establece un vínculo con la información de desenredo principal y se recorre la matriz de códigos de desenredo completa encontrada ahí.  Esta vinculación continúa hasta que se llega a una información de desenredo sin el marcador UNW\_CHAINED\_INFO y se termina de recorrer su matriz de códigos de desenredo.  
+ Cuando se encadena desenredo información está implicada, se siguen estos pasos básicos. La única diferencia es que, al recorrer la matriz de códigos de desenredo para desenredar efectos del prólogo, una vez que se alcanza el final de la matriz,, a continuación, vinculado a la información de desenredo principal y se recorre la matriz de códigos de desenredado todo encuentra allí. Esta vinculación continúa hasta que llegan a una información de desenredo sin el indicador UNW_CHAINED_INFO y termina de recorrer su matriz de códigos de desenredado.  
   
- El conjunto más pequeño de datos de desenredo es de 8 bytes.  Esto representaría una función que sólo asignó 128 bytes de pila o menos, y que posiblemente guardó un registro no variable.  También es el tamaño de una estructura de información de desenredo encadenada correspondiente a un prólogo de longitud cero sin códigos de desenredo.  
+ El conjunto más pequeño de datos de desenredo es de 8 bytes. Esto representaría una función que sólo asignó 128 bytes de pila o menos y que posiblemente guardó un registro no volátil. Esto también es el tamaño de un encadenadas desenredo de la estructura de información para un prólogo de longitud cero con ningún código de desenredado.  
   
-## Vea también  
- [Control de excepciones \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Vea también  
+ [Control de excepciones (x64)](../build/exception-handling-x64.md)

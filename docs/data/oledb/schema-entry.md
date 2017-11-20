@@ -1,32 +1,30 @@
 ---
-title: "SCHEMA_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SCHEMA_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SCHEMA_ENTRY (macro)"
+title: SCHEMA_ENTRY | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SCHEMA_ENTRY
+dev_langs: C++
+helpviewer_keywords: SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0919f2ba6474633d98c73cde758dbe6c81549f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# SCHEMA_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="schemaentry"></a>SCHEMA_ENTRY
 Asocia un GUID a una clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,34 +34,37 @@ Asocia un GUID a una clase.
 );   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `guid`  
- Un conjunto de filas de esquema GUID.  Vea [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) en *la referencia del* programador para obtener una lista de conjuntos de filas de esquema y su GUID.  
+ Un conjunto de filas de esquema GUID. Vea [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.  
   
  *rowsetClass*  
- La clase que se creará para representar el conjunto de filas de esquema.  
+ La clase que va a crear para representar el conjunto de filas de esquema.  
   
-## Comentarios  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) puede ver el mapa para obtener una lista de GUID, o puede crear un conjunto de filas si se da un GUID.  El conjunto de filas de esquema que `IDBSchemaRowsetImpl` crea es similar a `CRowsetImpl`estándar \- clase derivada, a menos que proporcione un método de **Ejecución** que tiene la siguiente firma:  
+## <a name="remarks"></a>Comentarios  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) puede, a continuación, consulta el mapa para obtener una lista de GUID, o puede crear un conjunto de filas si se le asigna un GUID. El conjunto de filas de esquema `IDBSchemaRowsetImpl` crea es similar a un estándar `CRowsetImpl`-clase derivada, salvo que debe proporcionar un **Execute** método que tiene la siguiente firma:  
   
- `HRESULT Execute (LONG* pcRowsAffected, ULONG cRestrictions,`  
+```  
+HRESULT Execute (
+    LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
   
- `const VARIANT* rgRestrictions)`  
-  
- Esta función de **Ejecución** rellena los datos del conjunto de filas.  El asistente para proyectos ATL crea, como se describe en [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) en *la referencia del*programador, tres conjuntos de filas de esquema iniciales del proyecto para cada uno de los tres esquemas obligatorios OLE DB:  
+ Esto **Execute** función rellena los datos del conjunto de filas. Crea el Asistente para proyectos ATL, como se describe en [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) en el *referencia del programador de OLE DB*, tres inicial conjuntos de filas de esquema en el proyecto para cada uno de los tres esquemas de OLE DB obligatorios:  
   
 -   `DBSCHEMA_TABLES`  
   
--   **DBSCHEMA\_COLUMNS**  
+-   **DBSCHEMA_COLUMNS**  
   
--   **DBSCHEMA\_PROVIDER\_TYPES**  
+-   **DBSCHEMA_PROVIDER_TYPES**  
   
- El asistente también agrega tres entradas correspondientes en el mapa de esquema.  Vea [Crear un proveedor de plantillas OLE DB](../../data/oledb/creating-an-ole-db-provider.md) para obtener más información sobre cómo utilizar el asistente para crear un proveedor.  
+ El asistente también agrega tres entradas correspondientes en la asignación de esquema. Vea [crear un proveedor de plantillas OLE DB](../../data/oledb/creating-an-ole-db-provider.md) para obtener más información acerca de cómo utilizar el Asistente para crear un proveedor.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)
+ [BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)

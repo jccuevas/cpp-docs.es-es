@@ -1,30 +1,29 @@
 ---
-title: "C&#243;mo: Solicitar expl&#237;citamente la conversi&#243;n boxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing (conversión), solicitar explícitamente"
+title: "Cómo: solicitar explícitamente la conversión Boxing | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3221075341c188639de6007052d06d2609ab836
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Solicitar expl&#237;citamente la conversi&#243;n boxing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Puede aplicar explícitamente la conversión boxing asignando una variable a una variable de `Object`escrito.  
+# <a name="how-to-explicitly-request-boxing"></a>Cómo: Solicitar explícitamente la conversión boxing
+Puede solicitar explícitamente la conversión boxing asignando una variable a una variable de tipo `Object`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // vcmcppv2_explicit_boxing3.cpp  
@@ -48,8 +47,11 @@ int main() {
 }  
 ```  
   
-  **f \(int i\)**  
-**f \(Object^ o\)**  
-**f \(Object^ o\)**   
-## Vea también  
+```Output  
+f(int i)  
+f(Object^ o)  
+f(Object^ o)  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Conversión boxing](../windows/boxing-cpp-component-extensions.md)

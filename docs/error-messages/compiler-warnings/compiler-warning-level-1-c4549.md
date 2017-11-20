@@ -1,36 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4549 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4549"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4549"
+title: Compilador advertencia (nivel 1) C4549 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4549
+dev_langs: C++
+helpviewer_keywords: C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d05ef4857d7933efe67312e74515135f6262e8d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4549
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operador' : un operador antes de una coma no tiene ningún efecto; ¿realmente pensaba en 'operador'?  
+# <a name="compiler-warning-level-1-c4549"></a>Advertencia del compilador (nivel 1) C4549
+'operador': operador antes de una coma no tiene ningún efecto; ¿ha pensado en 'operador'?  
   
- El compilador ha detectado una expresión de coma mal formada.  
+ El compilador detectó una expresión de coma mal formada.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada. Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- El código siguiente genera el error C4549:  
+ El ejemplo siguiente genera C4549:  
   
 ```  
 // C4549.cpp  

@@ -1,35 +1,34 @@
 ---
-title: "C&#243;mo: Usar propiedades en C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propiedades [C++], simples"
-  - "propiedades simples"
+title: "Cómo: usar propiedades en C++ / CLI | Documentos de Microsoft"
+ms.custom: 
+ms.date: 07/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- simple properties
+- properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70a048669aeba007ee0ca50459f7bbb4b090ea79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Usar propiedades en C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este artículo se muestra cómo utilizar propiedades en C\+\+\/CLI.  
+# <a name="how-to-use-properties-in-ccli"></a>Cómo: Usar propiedades en C++/CLI
+Este artículo muestra cómo utilizar propiedades en C++ / CLI.  
   
-## Propiedades básicas  
- Para propiedad\- esos básicos que simplemente asignación y recupera información privada que miembro\- no tiene que definir explícitamente el obtener y el descriptor de acceso conjunto funciona porque el compilador automáticamente la proporciona cuando se especifica solo el tipo de datos de la propiedad.  Este código muestra una propiedad básica:  
+## <a name="basic-properties"></a>Propiedades básicas  
+ Para las propiedades básicas: aquellos que simplemente asignan y recuperan un miembro de datos privado, no tendrá que definir get y definir las funciones de descriptor de acceso porque el compilador proporciona automáticamente ellos cuando se especifica el tipo de datos de la propiedad explícitamente. Este código muestra una propiedad básica:  
   
-```  
+```cpp  
 // SimpleProperties.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -46,13 +45,14 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **C tamaño\>\= 111**   
-## Propiedades estáticas  
- Este ejemplo de código se muestra cómo declarar y utilizar una propiedad estática.  Una propiedad estática puede tener acceso a los miembros estáticos de la clase.  
-  
+```Output  
+c->Size = 111  
 ```  
+  
+## <a name="static-properties"></a>Propiedades estáticas  
+ Este ejemplo de código muestra cómo declarar y utilizar una propiedad estática.  Una propiedad estática solo puede tener acceso a los miembros estáticos de su clase.  
+  
+```cpp  
 // mcppv2_property_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,22 +84,21 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **96**  
-**47**   
-## Propiedades indizadas  
- Una propiedad indizada expone normalmente una estructura de datos que se usa un operador suscrito.  
-  
- Si utiliza una propiedad indizada predeterminada, puede tener acceso a la estructura de datos simplemente haciendo referencia al nombre de clase, pero si utiliza una propiedad indizada definido por el usuario, debe especificar el nombre de propiedad para tener acceso a la estructura de datos.  
-  
- Para obtener información sobre cómo tener acceso a un indizador predeterminado utilizando el puntero de `this` , vea [Semántica del puntero this en los tipos de valor y de referencia](../misc/semantics-of-the-this-pointer-in-value-and-reference-types.md).  
-  
- Para obtener información sobre cómo consumir un indizador escrita en C\#, vea [Cómo: Consumir un indizador de C\#](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).  
-  
- Este ejemplo de código se muestra cómo utilizar propiedades indizadas predeterminadas y definido por el usuario:  
-  
+```Output  
+96  
+47  
 ```  
+  
+## <a name="indexed-properties"></a>Propiedades indizadas  
+ Normalmente, una propiedad indizada expone una estructura de datos que se accede mediante un operador de subíndice.  
+  
+ Si usa una propiedad indizada predeterminada, puede tener acceso a la estructura de datos simplemente haciendo referencia al nombre de clase, pero si utiliza una propiedad indizada definida por el usuario, debe para especificar el nombre de propiedad para tener acceso a la estructura de datos.  
+  
+ Para obtener información acerca de cómo consumir un indizador que se escribe en C#, vea [Cómo: consumir un indizador de C# (C++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).  
+  
+ Este ejemplo de código muestra cómo utilizar propiedades indizadas definidas por el usuario y predeterminados:  
+  
+```cpp  
 // mcppv2_property_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -155,12 +154,14 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **\[ 0 1 2 3 4 \]**  
-**\[ 0 2 4 6 8 \]** El ejemplo siguiente se muestra cómo llamar al indizador predeterminado utilizando el puntero de `this` .  
-  
+```Output  
+[ 0 1 2 3 4 ]  
+[ 0 2 4 6 8 ]  
 ```  
+  
+ En el ejemplo siguiente muestra cómo llamar al indizador predeterminado mediante el uso de la `this` puntero.  
+  
+```cpp  
 // call_default_indexer_through_this_pointer.cpp  
 // compile with: /clr /c  
 value class Position {  
@@ -184,7 +185,7 @@ private:
   
  Este ejemplo muestra cómo utilizar <xref:System.Reflection.DefaultMemberAttribute> para especificar el indizador predeterminado:  
   
-```  
+```cpp  
 // specify_default_indexer.cpp  
 // compile with: /LD /clr  
 using namespace System;  
@@ -198,9 +199,9 @@ public ref struct Squares {
 };  
 ```  
   
- El ejemplo siguiente utiliza los metadatos que se crea en el ejemplo anterior.  
+ El ejemplo siguiente utiliza los metadatos que se crean en el ejemplo anterior.  
   
-```  
+```cpp  
 // consume_default_indexer.cpp  
 // compile with: /clr  
 #using "specify_default_indexer.dll"  
@@ -210,13 +211,14 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
- **9**   
-## Propiedades virtuales  
- Este ejemplo de código se muestra cómo declarar y utilizar propiedades virtuales:  
-  
+```Output  
+9  
 ```  
+  
+## <a name="virtual-properties"></a>Propiedades virtuales  
+ Este ejemplo de código muestra cómo declarar y usar propiedades virtuales:  
+  
+```cpp  
 // mcppv2_property_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -255,16 +257,17 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **93**  
-**43**   
-## Propiedades abstractas y selladas  
- Aunque se especifican las palabras clave de [abstractas](../windows/abstract-cpp-component-extensions.md) y de [sellado](../windows/sealed-cpp-component-extensions.md) como válido en la especificación de ECMA C\+\+\/CLI, para el compilador de Visual C\+\+, no puede especificarlos en propiedades triviales, ni en la declaración de propiedad de una propiedad no trivial.  
-  
- Para declarar una propiedad sealed o abstracta, debe definir una propiedad no trivial y especificar la palabra clave de `abstract` o de `sealed` en el descriptor de acceso get y set funciona.  
-  
+```Output  
+93  
+43  
 ```  
+  
+## <a name="abstract-and-sealed-properties"></a>Propiedades abstractas y sealed  
+ Aunque la [abstracta](../windows/abstract-cpp-component-extensions.md) y [sellado](../windows/sealed-cpp-component-extensions.md) palabras clave se especifica como válidos en ECMA C + / especificación de CLI, para que el compilador de Visual C++, no puede especificarlos en propiedades triviales, ni en la propiedad declaración de una propiedad no trivial.  
+  
+ Para declarar una propiedad sealed o abstract, debe definir una propiedad no trivial y, a continuación, especifique la `abstract` o `sealed` palabra clave en la operación get y definir las funciones de descriptor de acceso.  
+  
+```cpp  
 // properties_abstract_sealed.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -320,14 +323,15 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **86**  
-**87**   
-## Propiedades multidimensionales  
- Puede utilizar las propiedades multidimensionales para definir los métodos de descriptor de acceso de la propiedad que toman un número no estándar de parámetros.  
-  
+```Output  
+86  
+87  
 ```  
+  
+## <a name="multidimensional-properties"></a>Propiedades multidimensionales  
+ Puede utilizar propiedades multidimensionales para definir métodos de descriptor de acceso de propiedad que toman un número de parámetros no estándar.  
+  
+```cpp  
 // mcppv2_property_5.cpp  
 // compile with: /clr  
 ref class X {  
@@ -363,13 +367,14 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
-  **1.1**   
-## Sobrecargar descriptores de acceso de propiedad  
- El ejemplo siguiente se muestra cómo sobrecargar propiedades indizadas.  
-  
+```Output  
+1.1  
 ```  
+  
+## <a name="overloading-property-accessors"></a>Sobrecarga de descriptores de acceso de propiedad  
+ En el ejemplo siguiente se muestra cómo sobrecargar las propiedades indizadas.  
+  
+```cpp  
 // mcppv2_property_6.cpp  
 // compile with: /clr  
 ref class X {  
@@ -399,9 +404,10 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+```Output  
+3.4  
+6.8  
+```  
   
-  **3.4**  
-**6.8**   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [propiedad](../windows/property-cpp-component-extensions.md)

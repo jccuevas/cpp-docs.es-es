@@ -4,49 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAutoPtrArray
 - ATLCOLL/ATL::CAutoPtrArray
 - ATLCOLL/ATL::CAutoPtrArray::CAutoPtrArray
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrArray class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 58ee329c7a3925fe3a29cf9738670cfa71df6777
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 952f6a6d9fa06c0f0c34e5769b4302c6230abb43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautoptrarray-class"></a>Clase CAutoPtrArray
 Esta clase proporciona métodos útiles para construir una matriz de punteros inteligentes.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,7 +52,7 @@ class CAutoPtrArray : public CAtlArray<
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|El constructor.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona un constructor y se deriva de métodos de [CAtlArray](../../atl/reference/catlarray-class.md) y [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección almacena punteros inteligentes.  
+ Esta clase proporciona un constructor y se deriva de métodos de [CAtlArray](../../atl/reference/catlarray-class.md) y [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para facilitar la creación de un objeto de clase de colección almacenar punteros inteligentes.  
   
  Para obtener más información, consulte [clases de colección ATL](../../atl/atl-collection-classes.md).  
   
@@ -96,5 +78,4 @@ CAutoPtrArray() throw();
  [Clase CAtlArray](../../atl/reference/catlarray-class.md)   
  [Clase CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
  [Clase CAutoPtrList](../../atl/reference/cautoptrlist-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

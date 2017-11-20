@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -84,35 +83,18 @@ f1_keywords:
 - ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
 - ATLCTL/ATL::CComControlBase::m_spInPlaceSite
 - ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComControlBase class
+dev_langs: C++
+helpviewer_keywords: CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7ad253d42c916ec957ef1e6f5067027696103c79
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 8e7e3ab049a7fc7935b9027746fc4cdebb3428cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcontrolbase-class"></a>Clase CComControlBase
 Esta clase proporciona métodos para crear y administrar los controles ATL.  
@@ -155,7 +137,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Recupera **DISPID_AMBIENT_BACKCOLOR**, el color de fondo ambiente para todos los controles, definidos por el contenedor.|  
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Recupera **DISPID_AMBIENT_CHARSET**, el ambiente juego de caracteres para todos los controles, definidos por el contenedor.|  
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Recupera **DISPID_AMBIENT_CODEPAGE**, el ambiente juego de caracteres para todos los controles, definidos por el contenedor.|  
-|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, una marca que es **TRUE** si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto, un control de botón debe dibujarse a sí mismo con un marco más grueso.|  
+|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, una marca que es **TRUE** si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto debe dibujarse un control de botón con un marco más grueso.|  
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Recupera **DISPID_AMBIENT_DISPLAYNAME**, el nombre del contenedor se ha proporcionado para el control.|  
 |[CComControlBase::GetAmbientFont](#getambientfont)|Recupera un puntero al contenedor del ambiente `IFont` interfaz.|  
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Recupera un puntero al contenedor del ambiente **IFontDisp** interfaz de envío.|  
@@ -283,7 +265,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
  Solo administra interfaces de la tabla de asignación COM.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM #15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
 ##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
  Comprueba que la `iVerb` parámetro utilizado por `IOleObjectImpl::DoVerb` una interfaz de usuario del control se activa ( `iVerb` es igual a `OLEIVERB_UIACTIVATE`), define la acción realizada cuando el usuario hace doble clic en el control ( `iVerb` es igual a `OLEIVERB_PRIMARY`), muestra el control ( `iVerb` es igual a `OLEIVERB_SHOW`), o activa el control ( `iVerb` es igual a **OLEIVERB_INPLACEACTIVATE**).  
@@ -334,9 +316,9 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
  Uno de los valores HRESULT estándar.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM #19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
   
- [!code-cpp[NVC_ATL_COM Nº 20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
 ##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
  Llamar a este método para indicar el contenedor para volver a dibujar el control, o para notificar a los receptores de notificación registrados que ha cambiado la vista del control.  
@@ -352,7 +334,7 @@ HRESULT FireViewChange();
  Si el control está activo (el miembro de datos de la clase de control [CComControlBase::m_bInPlaceActive](#m_binplaceactive) es **TRUE**), notifica al contenedor que desea volver a dibujar todo el control. Si el control está inactivo, el control del registrado notifica a receptores con notificación (a través del miembro de datos de la clase de control [CComControlBase::m_spAdviseSink](#m_spadvisesink)) que ha cambiado la vista del control.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM #21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
 ##  <a name="getambientappearance"></a>CComControlBase:: GetAmbientAppearance  
  Recupera **DISPID_AMBIENT_APPEARANCE**, la configuración para el control de presentación actual: 0 para plana y 1 para 3D.  
@@ -369,7 +351,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
  Uno de los valores HRESULT estándar.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_COM #22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
+ [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
 ##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
  Recupera **DISPID_AMBIENT_AUTOCLIP**, una marca que indica si el contenedor admite recorte automática del área de presentación del control.  
@@ -428,7 +410,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ##  <a name="getambientdisplayasdefault"></a>CComControlBase:: GetAmbientDisplayAsDefault  
- Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, una marca que es **TRUE** si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto, un control de botón debe dibujarse a sí mismo con un marco más grueso.  
+ Recupera **DISPID_AMBIENT_DISPLAYASDEFAULT**, una marca que es **TRUE** si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto debe dibujarse un control de botón con un marco más grueso.  
   
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
@@ -744,7 +726,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 ### <a name="remarks"></a>Comentarios  
  Antes de la activación, este método comprueba que el control tiene un sitio de cliente, comprueba la cantidad del control está visible y obtiene la ubicación del control en la ventana primaria. Después de activa el control, este método activa la interfaz de usuario del control e indica al contenedor para que el control sea visible.  
   
- Este método también recupera un `IOleInPlaceSite`, **IOleInPlaceSiteEx**, o **IOleInPlaceSiteWindowless** puntero de interfaz para el control y lo almacena en el miembro de datos de la clase de control [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Los miembros de datos de la clase de control [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless), y [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) están establecidos en true según corresponda.  
+ Este método también recupera un `IOleInPlaceSite`, **IOleInPlaceSiteEx**, o **IOleInPlaceSiteWindowless** puntero de interfaz para el control y lo almacena en el miembro de datos de la clase de control [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Los miembros de datos de la clase de control [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)y [ CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) están establecidos en true según corresponda.  
   
 ##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
  Llamar a este método para consultar el sitio del control para un puntero a la interfaz identificada.  
@@ -779,7 +761,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Para utilizar a este miembro de datos dentro de la clase de control, debe declararlo como un miembro de datos en la clase del control. La clase del control no heredará a este miembro de datos de la clase base porque se declara dentro de una unión en la clase base.  
   
- Si agrega el **tamaño automático** opción el [propiedades estándar](../../atl/reference/stock-properties-atl-control-wizard.md) ficha del Asistente de Control ATL, el asistente crea este miembro de datos en la clase del control, crea put y automáticamente para la propiedad y es compatible con los métodos get [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) para notificar automáticamente el contenedor cuando cambia la propiedad.  
+ Si agrega el **tamaño automático** opción el [propiedades estándar](../../atl/reference/stock-properties-atl-control-wizard.md) ficha del Asistente de Control ATL, el asistente automáticamente crea este miembro de datos en la clase del control, crea put y los métodos de la propiedad get y es compatible con [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) para notificar automáticamente el contenedor cuando cambia la propiedad.  
   
 ##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
  Marca que indica que `IDataObjectImpl::GetData` y `CComControlBase::GetZoomInfo` debe establecer el tamaño del control de `m_sizeNatural` en lugar de en `m_sizeExtent`.  
@@ -1397,4 +1379,3 @@ void SetDirty(BOOL bDirty);
 ## <a name="see-also"></a>Vea también  
  [Clase CComControl](../../atl/reference/ccomcontrol-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin (miembro) [STL/CLR]"
+title: collection_adapter::begin (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: fba55a3f-c1c6-4679-8c94-54cbb468e44c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cedaf603f3d737f60bf1f1cbc1d18e7f2a13710f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterbegin-stlclr"></a>collection_adapter::begin (STL/CLR)
 Designa el principio de la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator begin();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un iterador de entrada que señala el primer elemento de la secuencia controlada, o simplemente más allá del final de una secuencia vacía.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un iterador de entrada que designa el primer elemento de la secuencia controlada o más allá del final de una secuencia vacía.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_collection_adapter_begin.cpp   
@@ -67,14 +65,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= b**   
-## Requisitos  
- cliext \<\/adaptador de**Encabezado:** \>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/adaptador >  
   
-## Vea también  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::end](../dotnet/collection-adapter-end-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::end (STL/CLR)](../dotnet/collection-adapter-end-stl-clr.md)

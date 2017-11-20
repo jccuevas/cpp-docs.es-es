@@ -1,36 +1,35 @@
 ---
-title: "Cargar todas las importaciones para un archivo DLL de carga retrasada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__HrLoadAllImportsForDll (opción del vinculador)"
+title: Cargar todas las importaciones para una archivo DLL para carga retrasada | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 842b23afe7aec4d66eaf0787976d8e0c5d9a7320
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Cargar todas las importaciones para un archivo DLL de carga retrasada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función **\_\_HrLoadAllImportsForDll**, que se define en delayhlp.cpp, indica al vinculador que cargue todas las importaciones de un archivo DLL especificado con la opción de vinculador [\/delayload](../../build/reference/delayload-delay-load-import.md).  
+# <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Cargar todas las importaciones para un archivo DLL de carga retrasada
+El **__HrLoadAllImportsForDll** función, que se define en delayhlp.cpp, indica al vinculador que cargue todas las importaciones desde un archivo DLL que se especificó con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) opción del vinculador.  
   
- La carga de todas las importaciones permite colocar el control de errores en el código sin tener que utilizarlo en torno a las llamadas reales a las importaciones.  También evita que la aplicación sufra errores parciales como consecuencia de un proceso en el que el código auxiliar no puede cargar una importación.  
+ Cargar todas las importaciones permite colocar en un lugar en el código de control de errores y no tiene que usar alrededor de las llamadas reales a las importaciones de control de excepciones. También se evita una situación donde la aplicación se produce un error parcial a través de un proceso como resultado el código auxiliar que se puede cargar una importación.  
   
- La llamada a **\_\_HrLoadAllImportsForDll** no modifica el comportamiento de los enlaces y del control de errores; vea [Notificación y control de errores](../../build/reference/error-handling-and-notification.md) para obtener más información.  
+ Al llamar a **__HrLoadAllImportsForDll** no cambia el comportamiento de los enlaces y error administrar; vea [notificación y control de errores](../../build/reference/error-handling-and-notification.md) para obtener más información.  
   
- El nombre de DLL que se pasa a **\_\_HrLoadAllImportsForDll** se compara con el nombre almacenado en la propia DLL y distingue entre mayúsculas y minúsculas.  
+ El nombre del archivo DLL pasa a **__HrLoadAllImportsForDll** se compara con el nombre almacenado en el propio archivo DLL y distingue mayúsculas de minúsculas.  
   
- El ejemplo siguiente muestra cómo llamar a **\_\_HrLoadAllImportsForDll**:  
+ En el ejemplo siguiente se muestra cómo llamar a **__HrLoadAllImportsForDll**:  
   
 ```  
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {  
@@ -39,5 +38,5 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)

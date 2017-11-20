@@ -1,32 +1,30 @@
 ---
-title: "unary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate (función) [STL/CLR]"
+title: unary_negate (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_negate
+dev_langs: C++
+helpviewer_keywords: unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 530a75cdebd5799e8c46fd6f8ae1f40d4f785ba6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# unary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor que, cuando se invoca, devuelve la negación lógica de su functor almacenado de uno\- argumento.  Se utiliza especifica un objeto de función en términos de su functor almacenado.  
+# <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
+La clase de plantilla describe un functor que, cuando se llama, devuelve la operación lógica no de su almacenado functor de un argumento. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun>  
@@ -48,33 +46,33 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Debería  
- El tipo de functor almacenado.  
+#### <a name="parameters"></a>Parámetros  
+ Fun  
+ El tipo del functor almacenado.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|argument\_type|El tipo de argumento de functor.|  
-|delegate\_type|El tipo de delegado genérico.|  
-|result\_type|El tipo de resultado de functor.|  
+|---------------------|-----------------|  
+|argument_type|El tipo del argumento functor.|  
+|delegate_type|El tipo de delegado genérico.|  
+|result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|unary\_negate|Construye el functor.|  
+|------------|-----------------|  
+|unary_negate|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|delegate\_type^|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|delegate_type ^|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de uno\- argumento que almacena otro functor de uno\- argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelve la negación lógica de functor almacenado denominado con el argumento.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de un argumento que almacena otro functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no del functor almacenado llamado con el argumento.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_unary_negate.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [not1](../dotnet/not1-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

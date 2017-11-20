@@ -1,45 +1,43 @@
 ---
-title: "reverse_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::reverse_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_copy (función) [STL/CLR]"
+title: reverse_copy (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::reverse_copy
+dev_langs: C++
+helpviewer_keywords: reverse_copy function [STL/CLR]
 ms.assetid: 694e577a-0fa8-44f7-adde-6dd9f45adefd
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 69dbf8a9ff6c240d02e5f38ed4ed4d5f6bfcf072
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# reverse_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Invierte el orden de los elementos dentro de un intervalo de origen mientras la copia en un intervalo de destino.  
+# <a name="reversecopy-stlclr"></a>reverse_copy (STL/CLR)
+Invierte el orden de los elementos dentro de un intervalo de origen mientras los copia a un intervalo de destino.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _BidIt, class _OutIt> inline  
     _OutIt reverse_copy(_BidIt _First, _BidIt _Last, _OutIt _Dest);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `reverse_copy`STL.  Para obtener más información, vea [reverse\_copy](../Topic/reverse_copy.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `reverse_copy`. Para obtener más información, consulte [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

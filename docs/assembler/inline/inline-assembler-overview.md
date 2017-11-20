@@ -1,39 +1,39 @@
 ---
-title: "Informaci&#243;n general del ensamblador alineado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (palabra clave) [C++], invocar ensamblador alineado"
-  - "ensamblador alineado"
-  - "ensamblado en línea, ensamblador alineado"
-  - "invocar ensamblador alineado"
+title: "Información general de ensamblador alineado | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembler
+- __asm keyword [C++], invoking inline assembler
+- invoking inline assembler
+- inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7733398f5a444fa5e7461ea52295624d6d16f9a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Informaci&#243;n general del ensamblador alineado
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inline-assembler-overview"></a>Información general de ensamblador alineado
 **Específicos de Microsoft**  
   
- El ensamblador alineado permite incrustar instrucciones de lenguaje de ensamblado directamente en los programas de origen de C y C\+\+ sin realizar pasos adicionales de ensamblado y vinculación.  El ensamblador alineado se compila en el compilador; por lo tanto, no se necesita un ensamblador independiente como Microsoft Macro Assembler \(MASM\).  
+ El ensamblador alineado permite incrustar instrucciones de lenguaje de ensamblado directamente en los programas de origen de C y C++ sin realizar pasos adicionales de ensamblado y vinculación. El ensamblador alineado se compila en el compilador; por lo tanto, no se necesita un ensamblador independiente como Microsoft Macro Assembler (MASM).  
   
- Dado que el ensamblador alineado no requiere pasos de ensamblado y vínculo independientes y de vínculo, es más aconsejable que un ensamblador independiente.  El código de ensamblado alineado puede utilizar cualquier nombre de variable o de función de C o C\+\+ que esté en el ámbito, por lo que resulta fácil integrarlo con el código C o C\+\+ del programa.  Y, dado que el código de ensamblado se puede combinar con instrucciones de C o C\+\+, puede realizar tareas complicadas o imposibles solo en C o C\+\+.  
+ Dado que el ensamblador alineado no requiere pasos de ensamblado y vínculo independientes y de vínculo, es más aconsejable que un ensamblador independiente. El código de ensamblado alineado puede utilizar cualquier nombre de variable o de función de C o C++ que esté en el ámbito, por lo que resulta fácil integrarlo con el código C o C++ del programa. Y, dado que el código de ensamblado se puede combinar con instrucciones de C o C++, puede realizar tareas complicadas o imposibles solo en C o C++.  
   
- La palabra clave [\_\_asm](../../assembler/inline/asm.md) invoca el ensamblador alineado y puede aparecer siempre que una instrucción de C o C\+\+ sea válida.  No puede aparecer por sí sola.  Debe ir seguida de una instrucción de ensamblado, un grupo de instrucciones entre llaves o, como mínimo, un par de llaves vacío.  El término "bloque `__asm`" aquí hace referencia a cualquier instrucción o grupo de instrucciones, incluido o no entre llaves.  
+ El [__asm](../../assembler/inline/asm.md) palabra clave, se invoca el ensamblador alineado y puede aparecer siempre que una instrucción de C o C++ sea válida. No puede aparecer por sí sola. Debe ir seguida de una instrucción de ensamblado, un grupo de instrucciones entre llaves o, como mínimo, un par de llaves vacío. El término "bloque `__asm`" aquí hace referencia a cualquier instrucción o grupo de instrucciones, incluido o no entre llaves.  
   
- El código siguiente es un bloque `__asm` simple incluido entre llaves. \(El código es una secuencia de prólogo de función personalizada\).  
+ El código siguiente es un bloque `__asm` simple incluido entre llaves. (El código es una secuencia de prólogo de función personalizada).  
   
 ```  
 // asm_overview.cpp  
@@ -71,5 +71,5 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Ensamblador alineado](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblador insertado](../../assembler/inline/inline-assembler.md)

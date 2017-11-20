@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -44,19 +43,17 @@ helpviewer_keywords:
 - C3092
 - C3093
 - C3098
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>C3000 de errores del compilador a través de C3099
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -168,4 +165,3 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3097](compiler-error-c3097.md)|'*atributo*': ámbito del atributo debe ser ' ensamblado:' o ' module:'|  
 |C3098 de Error del compilador|'*identificador*': atributo no tiene ningún constructor definido por el usuario|  
 |[Error del compilador C3099](compiler-error-c3099.md)|'*palabra clave*': utilice [System:: AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] para atributos administrados o WinRT|  
-

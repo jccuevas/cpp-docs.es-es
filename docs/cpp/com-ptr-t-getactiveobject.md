@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_ptr_t::GetActiveObject
-dev_langs:
-- C++
-helpviewer_keywords:
-- GetActiveObject method [C++]
+f1_keywords: _com_ptr_t::GetActiveObject
+dev_langs: C++
+helpviewer_keywords: GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a61e41c750fdf5865a475d92ba9e1def0aefd748
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 153f7ffce400fd09e46706a361eebc87bbe1e1c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Específicos de Microsoft**  
@@ -59,11 +54,11 @@ HRESULT GetActiveObject(
 ## <a name="remarks"></a>Comentarios  
  Estas funciones miembro llaman a `GetActiveObject` para recuperar un puntero a un objeto actual que se ha registrado con OLE y, después, consultan el tipo de interfaz de este puntero inteligente. El puntero resultante se encapsula dentro de este objeto `_com_ptr_t`. **Versión** se llama para disminuir el recuento de referencias para el puntero previamente encapsulado. Esta rutina devuelve `HRESULT` para indicar si la operación se ha realizado de forma correcta o no.  
   
--   **GetActiveObject (**`rclsid`**)** adjunta a una instancia existente de un objeto, dado un **CLSID**.      
+-   **GetActiveObject (**`rclsid`**)** adjunta a una instancia existente de un objeto, dado un **CLSID**.  
   
--   **GetActiveObject (**`clsidString`**)** adjunta a una instancia existente de un objeto que proporciona una cadena Unicode que contiene un **CLSID** (a partir de "**{**") o un **ProgID**.      
+-   **GetActiveObject (**`clsidString`**)** adjunta a una instancia existente de un objeto que proporciona una cadena Unicode que contiene un **CLSID** (a partir de "**{**") o un **ProgID**.  
   
--   **GetActiveObject (**`clsidStringA`**)** adjunta a una instancia existente de un objeto que proporciona una cadena de caracteres multibyte que contiene un **CLSID** (a partir de "**{**") o un **ProgID**.     Llamadas [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), lo que supone que la cadena está en la página de códigos ANSI en lugar de una página de códigos OEM.  
+-   **GetActiveObject (**`clsidStringA`**)** adjunta a una instancia existente de un objeto que proporciona una cadena de caracteres multibyte que contiene un **CLSID** (a partir de "**{**") o un **ProgID**. Llamadas [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), lo que supone que la cadena está en la página de códigos ANSI en lugar de una página de códigos OEM.  
   
  **FIN de Específicos de Microsoft**  
   

@@ -1,31 +1,31 @@
 ---
-title: "Descargar un archivo DLL de carga retrasada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "carga retrasada de archivos DLL, descargar"
+title: Descargar una archivo DLL de carga retrasada | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0962059e6e55ce68133960cc9f8d1de8c7f0ef61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Descargar un archivo DLL de carga retrasada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La rutina auxiliar de carga retrasada que se proporciona de forma predeterminada comprueba si los descriptores de carga retrasada tienen un puntero y una copia de la tabla de direcciones de importación \(IAT\) original en el campo pUnloadIAT.  Si es así, guardará un puntero en una lista para el descriptor de importación de carga retrasada.  De este modo, la función auxiliar puede buscar la DLL por el nombre y permitir que se descargue de forma explícita.  
+# <a name="unloading-a-delay-loaded-dll"></a>Descargar un archivo DLL de carga retrasada
+La aplicación auxiliar de carga retrasada proporciona de forma predeterminada se comprueba para ver si los descriptores de carga retrasada tienen un puntero y una copia de la tabla de direcciones de importación (IAT) original en el campo pUnloadIAT. Si es así, guardará un puntero en una lista para el descriptor de retraso de importación. Esto permite que la función auxiliar buscar el archivo DLL por nombre para admitir la descarga explícitamente ese archivo DLL.  
   
- Estas son las estructuras y funciones asociadas para la descarga explícita de una DLL de carga retrasada:  
+ Estas son las estructuras y funciones asociadas para descargar explícitamente una archivo DLL de carga retrasada:  
   
 ```  
 //  
@@ -52,21 +52,21 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- La estructura UnloadInfo se implementa mediante una clase de C\+\+ que utiliza las implementaciones **LocalAlloc** y **LocalFree** como operador **new** y operador **delete**, respectivamente.  Estas opciones se conservan en una lista vinculada estándar utilizando \_\_puiHead como encabezado de la lista.  
+ La estructura UnloadInfo se implementa mediante una clase de C++ que utiliza **LocalAlloc** y **LocalFree** implementaciones como su operador **nueva** and (operador)  **eliminar** respectivamente. Estas opciones se mantienen en una lista vinculada estándar utilizando __puiHead como el encabezado de la lista.  
   
- La llamada a \_\_FUnloadDelayLoadedDLL intentará encontrar el nombre proporcionado en la lista de las DLL cargadas \(se requiere una coincidencia exacta\).  Si se encuentra, la copia de la tabla IAT en pUnloadIAT se copia al principio de la tabla IAT en ejecución para restaurar los punteros del thunk, la biblioteca se libera con **FreeLibrary**, el registro coincidente de **UnloadInfo** se desvincula de la lista y se elimina, y se devuelve TRUE.  
+ Llamada a __FUnloadDelayLoadedDLL intentará encontrar el nombre proporcionado en la lista de las DLL cargadas (se requiere una coincidencia exacta). Si se encuentra, se copia la copia de la tabla IAT en pUnloadIAT sobre la parte superior de la ejecución IAT para restaurar los punteros del thunk, la biblioteca se libera con **FreeLibrary**, la búsqueda de coincidencias **UnloadInfo** registro se desvincula de la lista y elimina y se devuelve TRUE.  
   
- El argumento de la función \_\_FUnloadDelayLoadedDLL2 hace distinción entre mayúsculas y minúsculas.  Por ejemplo, se debe especificar:  
+ El argumento de la función __FUnloadDelayLoadedDLL2 distingue mayúsculas de minúsculas. Por ejemplo, debe especificar:  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
 ```  
   
- y no:  
+ y que no:  
   
 ```  
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## Vea también  
- [Understanding the Helper Function](http://msdn.microsoft.com/es-es/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Vea también  
+ [Descripción de la función auxiliar](understanding-the-helper-function.md)

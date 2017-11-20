@@ -1,63 +1,63 @@
 ---
-title: "Extensiones de Microsoft para C y C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! (operador), extensión de C++"
-  - "!= (operador)"
-  - "& (operador), extensiones para C/C++"
-  - "&amp;&amp; (operador)"
-  - "&= (operador)"
-  - "^ (operador), extensiones para C/C++"
-  - "^= (operador), extensiones para C++"
-  - "| (operador), extensiones"
-  - "|| (operador)"
-  - "|= (operador)"
-  - "~ (operador), extensiones para C/C++"
-  - "And (operador), extensiones para C/C++"
-  - "and_eq (operador)"
-  - "compl (método)"
-  - "extensiones"
-  - "extensiones, lenguaje C"
-  - "iso646.h (encabezado)"
-  - "extensiones para C/C++ de Microsoft"
-  - "NOT (operador)"
-  - "not_eq (operador)"
-  - "Or (operador), extensiones para C/C++ de Microsoft"
-  - "or_eq (operador)"
-  - "Visual C, extensiones para Microsoft"
-  - "Visual C++, extensiones para C/C++"
-  - "Xor (operador), extensiones para C/C++ de Microsoft"
-  - "xor_eq (operador)"
+title: Extensiones de Microsoft para C y C++ | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- or_eq operator
+- ~ operator, extensions to C/C++
+- '& operator, extensions to C/C++'
+- '&= operator'
+- iso646.h header
+- Xor operator, Microsoft extensions to C/C++
+- '!= operator'
+- '! operator, extension to C++'
+- Or operator, Microsoft extensions to C/C++
+- ^ operator, extensions to C/C++
+- ^= operator, C++ extensions
+- xor_eq operator
+- and_eq operator
+- Microsoft extensions to C/C++
+- '|= operator'
+- '|| operator'
+- And operator, extensions to C/C++
+- NOT operator
+- '&& operator'
+- extensions, C language
+- Visual C++, extensions to C/C++
+- '| operator, extensions'
+- not_eq operator
+- Visual C, Microsoft extensions
+- extensions
+- compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e349f9656a6ae0d7f1ae78abbee13ca4bed5f52d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Extensiones de Microsoft para C y C++
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ extiende los estándares ANSI C y ANSI C\+\+ de la forma siguiente.  
+# <a name="microsoft-extensions-to-c-and-c"></a>Extensiones de Microsoft para C y C++
+Visual C++ extiende los estándares ANSI C y ANSI C++ de la forma siguiente.  
   
-## Palabras clave  
- Se han agregado varias palabras clave.  En la lista de [Palabras clave de C\+\+](../../cpp/keywords-cpp.md), las palabras clave que tienen dos subrayados iniciales son extensiones de Visual C\+\+.  
+## <a name="keywords"></a>Palabras clave  
+ Se han agregado varias palabras clave. En la lista de [palabras clave](../../cpp/keywords-cpp.md), las palabras clave que tienen dos caracteres de subrayado iniciales son extensiones de Visual C++.  
   
-## Definición fuera de la clase de miembros de tipo entero \(o enum\) estáticos y constantes  
- Bajo el estándar \(**\/Za**\), debe crear una definición fuera de la clase para los miembros de datos, como se muestra aquí:  
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Definición fuera de la clase de miembros de tipo entero (o enum) estáticos y constantes  
+ En el estándar (**/Za**), debe crear una definición de fuera de la clase para los miembros de datos, como se muestra aquí:  
   
 ```  
-class CMyClass  {  
+  
+      class CMyClass  {  
    static const int max = 5;  
    int m_array[max];  
 }  
@@ -65,18 +65,18 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition  
 ```  
   
- En **\/Ze**, la definición fuera de la clase es opcional para los miembros de datos estáticos, de tipo entero constantes y de enumeración de constantes.  Solamente los miembros enteros y de enumeración de tipo static y const pueden tener inicializadores en una clase; la expresión de inicialización debe ser una expresión de constante.  
+ En **/Ze**, la definición de la clase es opcional para los miembros de datos de enumeración enteros y const estáticos, const. Solamente los miembros enteros y de enumeración de tipo static y const pueden tener inicializadores en una clase; la expresión de inicialización debe ser una expresión de constante.  
   
- Para evitar errores cuando se proporciona una definición fuera de la clase en un archivo de encabezado y este se incluye en varios archivos de código fuente, utilice [selectany](../../cpp/selectany.md).  Por ejemplo:  
+ Para evitar errores cuando una definición de la clase se proporcione en un encabezado de archivo y el archivo de encabezado se incluye en varios archivos de origen, use [selectany](../../cpp/selectany.md). Por ejemplo:  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
 ```  
   
-## Conversiones  
- El compilador de C y el de C\+\+ admiten estos tipos de conversiones no ANSI:  
+## <a name="casts"></a>Conversiones  
+ El compilador de C y el de C++ admiten estos tipos de conversiones no ANSI:  
   
--   Conversiones no ANSI para generar valores L.  Por ejemplo:  
+-   Conversiones no ANSI para generar valores L. Por ejemplo:  
   
     ```  
     char *p;  
@@ -84,7 +84,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     ```  
   
     > [!NOTE]
-    >  Esta extensión solo está disponible en el lenguaje C.  Puede utilizar el siguiente formato estándar ANSI C en el código de C\+\+ para modificar un puntero como si fuera un puntero a un tipo diferente.  
+    >  Esta extensión solo está disponible en el lenguaje C. Puede utilizar el siguiente formato estándar ANSI C en el código de C++ para modificar un puntero como si fuera un puntero a un tipo diferente.  
   
      El ejemplo anterior podría modificarse de la forma siguiente para adaptarlo al estándar ANSI C.  
   
@@ -92,7 +92,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   Conversiones no ANSI de un puntero de función en un puntero de datos.  Por ejemplo:  
+-   Conversiones no ANSI de un puntero de función en un puntero de datos. Por ejemplo:  
   
     ```  
     int ( * pfunc ) ();   
@@ -106,8 +106,8 @@ __declspec(selectany) const int CMyClass::max = 5;
     pdata = ( int * ) (uintptr_t) pfunc;  
     ```  
   
-## Listas de argumentos de longitud variable  
- El compilador de C\+\+ y el de C admiten un declarador de función que especifica un número de argumentos variable, seguido de una definición de función que proporciona un tipo en su lugar:  
+## <a name="variable-length-argument-lists"></a>Listas de argumentos de longitud variable  
+ El compilador de C++ y el de C admiten un declarador de función que especifica un número de argumentos variable, seguido de una definición de función que proporciona un tipo en su lugar:  
   
 ```  
 void myfunc( int x, ... );  
@@ -115,14 +115,14 @@ void myfunc( int x, char * c )
 { }  
 ```  
   
-## Comentarios en una sola línea  
- El compilador de C acepta comentarios en una sola línea, que se introducen mediante dos caracteres de barra diagonal \(\/\/\):  
+## <a name="single-line-comments"></a>Comentarios en una sola línea  
+ El compilador de C acepta comentarios en una sola línea, que se introducen mediante dos caracteres de barra diagonal (//):  
   
 ```  
 // This is a single-line comment.  
 ```  
   
-## Ámbito  
+## <a name="scope"></a>Ámbito  
  El compilador de C acepta las siguientes características relacionadas con el ámbito.  
   
 -   Redefiniciones de elementos extern como static:  
@@ -172,7 +172,7 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## Declaraciones y definiciones de datos  
+## <a name="data-declarations-and-definitions"></a>Declaraciones y definiciones de datos  
  El compilador de C admite las siguientes características de declaración y definición de datos.  
   
 -   Constantes de caracteres y cadenas mezcladas en un inicializador:  
@@ -181,7 +181,7 @@ void myfunc( int x, char * c )
     char arr[5] = {'a', 'b', "cde"};  
     ```  
   
--   Campos de bit que tienen tipos base distintos de **unsigned int** o **signed int**.  
+-   Campos de bit que tienen tipos base distintos de **int sin signo** o **firmado int**.  
   
 -   Declaradores que no tienen un tipo:  
   
@@ -203,7 +203,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   Estructuras sin nombre \(anónimas\):  
+-   Estructuras sin nombre (anónimas):  
   
     ```  
     struct  
@@ -213,7 +213,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   Uniones sin nombre \(anónimas\):  
+-   Uniones sin nombre (anónimas):  
   
     ```  
     union  
@@ -233,11 +233,11 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## Funciones intrínsecas de punto flotante  
- El compilador de C\+\+ y el de C admiten la generación alineada **x86 Specific \>** de las funciones `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt` y `tan` **END x86 Specific** cuando se especifica **\/Oi**.  Para el compilador de C, la conformidad con ANSI se pierde cuando se utilizan estas funciones intrínsecas, puesto que no definen la variable `errno`.  
+## <a name="intrinsic-floating-point-functions"></a>Funciones intrínsecas de punto flotante  
+ El compilador de C++ y el compilador de C admiten insertados, generación **x86 específico >** de la `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, y `tan` funciones **final x86 específico** cuando **/Oi** se especifica. Para el compilador de C, la conformidad con ANSI se pierde cuando se utilizan estas funciones intrínsecas, puesto que no definen la variable `errno`.  
   
-## Pasar un parámetro de puntero que no sea const a una función que espera una referencia a un parámetro de puntero const  
- Esto es una extensión de C\+\+.  Este código se compilará con **\/Ze**:  
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Pasar un parámetro de puntero que no sea const a una función que espera una referencia a un parámetro de puntero const  
+ Esto es una extensión de C++. Este código se compilará con **/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -259,33 +259,33 @@ void func ()
 }  
 ```  
   
-## ISO646.H no habilitado  
- En **\/Ze** debe incluir iso646.h si desea usar formas de texto de los operadores siguientes:  
+## <a name="iso646h-not-enabled"></a>ISO646.H no habilitado  
+ En **/Ze**, debe incluir iso646.h si desea usar formas de texto de los operadores siguientes:  
   
--   && \(and\)  
+-   && (and)  
   
--   &\= \(and\_eq\)  
+-   &= (and_eq)  
   
--   & \(bitand\)  
+-   & (bitand)  
   
--   &#124; \(bitor\)  
+-   &#124; (bitor)  
   
--   ~ \(compl\)  
+-   ~ (compl)  
   
--   \! \(not\)  
+-   ! (not)  
   
--   \!\= \(not\_eq\)  
+-   != (not_eq)  
   
--   &#124;&#124; \(or\)  
+-   &#124; &#124; (o)  
   
--   &#124;\= \(or\_eq\)  
+-   &#124; = (or_eq)  
   
--   ^ \(xor\)  
+-   ^ (xor)  
   
--   ^\= \(xor\_eq\)  
+-   ^= (xor_eq)  
   
-## La dirección de un literal de cadena tiene el tipo const char \[\], no const char \(\*\) \[\]  
- El siguiente ejemplo escribirá char const \(\*\)\[4\] con la opción **\/Za** y char const \[4\] con **\/Ze**.  
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>La dirección de un literal de cadena tiene el tipo const char [], no const char (*) []  
+ El siguiente ejemplo escribirá char const (\*) [4] en **/Za**, y char const [4] en **/Ze**.  
   
 ```  
 #include <stdio.h>  
@@ -297,7 +297,7 @@ int main()
 }  
 ```  
   
-## Vea también  
- [\/Za, \/Ze \(Deshabilitar extensiones de lenguaje\)](../../build/reference/za-ze-disable-language-extensions.md)   
+## <a name="see-also"></a>Vea también  
+ [/ Za, /Ze (deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

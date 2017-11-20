@@ -1,51 +1,51 @@
 ---
-title: "/RTC (Comprobaciones de errores en tiempo de ejecuci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rtc"
-  - "VC.Project.VCCLCompilerTool.SmallerTypeCheck"
-  - "VC.Project.VCCLCompilerTool.UninitializedVariableCheck"
-  - "VC.Project.VCCLCompilerTool.StackFrameCheck"
-  - "VC.Project.VCCLCompilerTool.BasicRuntimeChecks"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RTC1 (opción del compilador) [C++]"
-  - "/RTCc (opción del compilador) [C++]"
-  - "/RTCs (opción del compilador) [C++]"
-  - "/RTCu (opción del compilador) [C++]"
-  - "__MSVC_RUNTIME_CHECKS (macro)"
-  - "RTC1 (opción del compilador)"
-  - "-RTC1 (opción del compilador) [C++]"
-  - "RTCc (opción del compilador)"
-  - "-RTCc (opción del compilador) [C++]"
-  - "RTCs (opción del compilador)"
-  - "-RTCs (opción del compilador) [C++]"
-  - "RTCu (opción del compilador)"
-  - "-RTCu (opción del compilador) [C++]"
-  - "comprobaciones en tiempo de ejecución, /RTC (opción)"
-  - "errores en tiempo de ejecución, comprobaciones de errores"
-  - "errores en tiempo de ejecución, comprobaciones en tiempo de ejecución"
+title: "-/RTC (comprobaciones de errores en tiempo de ejecución) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /rtc
+- VC.Project.VCCLCompilerTool.SmallerTypeCheck
+- VC.Project.VCCLCompilerTool.UninitializedVariableCheck
+- VC.Project.VCCLCompilerTool.StackFrameCheck
+- VC.Project.VCCLCompilerTool.BasicRuntimeChecks
+dev_langs: C++
+helpviewer_keywords:
+- /RTCs compiler option [C++]
+- -RTC1 compiler option [C++]
+- run-time errors, error checks
+- -RTCu compiler option [C++]
+- /RTC1 compiler option [C++]
+- /RTCc compiler option [C++]
+- /RTCu compiler option [C++]
+- __MSVC_RUNTIME_CHECKS macro
+- -RTCs compiler option [C++]
+- RTCs compiler option
+- RTC1 compiler option
+- run-time errors, run-time checks
+- run-time checks, /RTC option
+- RTCu compiler option
+- RTCc compiler option
+- -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 53581ad182a451adf3dde28ba463985ab82dd34e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /RTC (Comprobaciones de errores en tiempo de ejecuci&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se utiliza para habilitar y deshabilitar la característica de comprobaciones de errores en tiempo de ejecución, junto con el pragma [runtime\_checks](../../preprocessor/runtime-checks.md).  
+# <a name="rtc-run-time-error-checks"></a>/RTC (Comprobaciones de errores en tiempo de ejecución)
+Usar para habilitar y deshabilitar la característica de comprobaciones de errores de tiempo de ejecución, junto con el [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /RTC1  
@@ -54,14 +54,14 @@ Se utiliza para habilitar y deshabilitar la característica de comprobaciones de
 /RTCu  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `1`  
- Equivalente a **\/RTC**`su`.  
+ Equivalente de **/RTC**`su`.  
   
  `c`  
- Comunica los casos en que se asigna un valor a un tipo de datos más pequeño y causa una pérdida de datos.  Por ejemplo, si un valor de tipo `short 0x101` se asigna a una variable de tipo `char`.  
+ Informes cuando un valor que se asigna a un tipo de datos más pequeño y da como resultado una pérdida de datos. Por ejemplo, si un valor de tipo `short 0x101` se asigna a una variable de tipo `char`.  
   
- Esta opción informa de situaciones en las que se pretende truncar, por ejemplo, si se desea devolver los ocho primeros bits de un valor `int` como `char`.  Dado que **\/RTC**`c` causa un error en tiempo de ejecución si se pierde información como consecuencia de la asignación, es posible enmascarar la información que necesite para evitarse errores en tiempo de ejecución como resultado de **\/RTC**`c`.  Por ejemplo:  
+ Esta opción informa de situaciones en que se va a truncar datos, por ejemplo, si desea que los ocho primeros bits de un `int` formando una `char`. Dado que **/RTC** `c` provoca un error de tiempo de ejecución si toda la información se pierde como resultado de la asignación, puede enmascarar la información que necesita para evitar un error en tiempo de ejecución como resultado de **/RTC** `c`. Por ejemplo:  
   
 ```  
 #include <crtdbg.h>  
@@ -79,52 +79,52 @@ int main() {
 ```  
   
  `s`  
- Habilita las comprobaciones de errores en tiempo de ejecución en el marco de pila, como se indica a continuación:  
+ Habilita la comprobación de la pila marco error de tiempo de ejecución, como se indica a continuación:  
   
--   Inicialización de variables locales a un valor distinto de cero.  Ayuda a identificar los errores que no aparecen durante la ejecución en modo de depuración.  La posibilidad de que las variables de pila sigan siendo cero es mayor en una generación de depuración si se compara con una generación de lanzamiento, a causa de las optimizaciones por el compilador de las variables de pila en una generación de lanzamiento.  Cuando un programa ha utilizado un área de su pila, el compilador nunca la repone a 0.  Por lo tanto, las variables de pila posteriores sin inicializar que usen la misma área de la pila pueden devolver valores que permanecen desde el uso anterior de esta memoria de pila.  
+-   Inicialización de variables locales a un valor distinto de cero. Esto ayuda a identificar los errores que no aparecen cuando se ejecuta en modo de depuración. Hay una mayor probabilidad de que las variables de pila sigan siendo cero en una compilación de depuración en comparación con una versión de lanzamiento debido a optimizaciones del compilador de las variables de pila en una versión de lanzamiento. Una vez que un programa ha utilizado un área de la pila, nunca se restablece a 0 por el compilador. Por lo tanto, las variables de pila posteriores sin inicializar que usen la misma área de pila pueden devolver valores restantes de las ejecuciones anteriores de la memoria de la pila.  
   
--   Detección de sobrecargas y ejecuciones insuficientes de variables locales como matrices.  **\/RTC**`s` no detectará las sobrecargas al tener acceso a la memoria que es el resultado del relleno del compilador dentro de una estructura.  El relleno podría producirse por el uso de [align](../../cpp/align-cpp.md), [\/Zp \(Alineación de miembros de estructura\)](../../build/reference/zp-struct-member-alignment.md) o [pack](../../preprocessor/pack.md), o bien si se ordenan elementos de la estructura de tal forma que ello exija al compilador agregar relleno.  
+-   Detección de saturaciones y agotamientos de variables locales como matrices. **/ RTC** `s` no detecta las saturaciones cuando obtiene acceso a memoria que es el resultado del relleno del compilador dentro de una estructura. Relleno podría producir mediante [alinear](../../cpp/align-cpp.md), [/Zp (alineación de miembros de Struct)](../../build/reference/zp-struct-member-alignment.md), o [pack](../../preprocessor/pack.md), o si se ordenan los elementos de estructura de manera que se exija al compilador agregar relleno.  
   
--   Comprobación de punteros de pila, que detecta los daños en los punteros de pila.  Dichos daños podrían deberse a un error de coincidencia en la convención de llamadas.  Por ejemplo, cuando se utiliza un puntero a función, puede llamar a una función de un archivo DLL que se exporta como [\_\_stdcall](../../cpp/stdcall.md), pero el puntero a la función se declara como [\_\_cdecl](../../cpp/cdecl.md).  
+-   Comprobación del puntero de pila, que detecta los daños de puntero de pila. Daños en el puntero pila pueden deberse a una incoherencia de convención de llamada. Por ejemplo, utiliza un puntero a función, puede llamar a una función en un archivo DLL que se exporta como [__stdcall](../../cpp/stdcall.md) , pero el puntero a la función que se declara [__cdecl](../../cpp/cdecl.md).  
   
  `u`  
- Informa cuándo se usa una variable sin haberse inicializado.  Por ejemplo, una instrucción que genera `C4701` también puede generar un error en tiempo de ejecución bajo **\/RTC**`u`.  Cualquier instrucción que genere [Advertencia del compilador \(niveles 1 y 4\) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) generará un error en tiempo de ejecución bajo **\/RTC**`u`.  
+ Informes cuando se usa una variable sin haberse inicializado. Por ejemplo, una instrucción que genera `C4701` también se puede generar un error en tiempo de ejecución bajo **/RTC**`u`. Cualquier instrucción que genere [advertencia del compilador (niveles 1 y 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) generará un error en tiempo de ejecución bajo **/RTC**`u`.  
   
- Sin embargo, considere el fragmento de código siguiente:  
+ Sin embargo, tenga en cuenta el siguiente fragmento de código:  
   
-```  
+```cpp  
 int a, *b, c;  
 if ( 1 )  
 b = &a;  
 c = a;  // No run-time error with /RTCu  
 ```  
   
- Si se hubiera podido inicializar una variable, no habría sido detectada en tiempo de ejecución por **\/RTC**`u`.  Por ejemplo, después de crear un alias de una variable por medio de un puntero, el compilador no hace un seguimiento de la variable ni comunica los usos sin inicialización.  En realidad, puede inicializar una variable si toma su dirección.  & El operador funciona como un operador de asignaciones en esta situación.  
+ Si una variable se ha inicializado, no se notificarán en tiempo de ejecución por **/RTC**`u`. Por ejemplo, después de una variable es un alias a través de un puntero, el compilador se realizar un seguimiento de la variable no y de informes utiliza sin inicializar. De hecho, se puede inicializar una variable al tomar su dirección. La & operador funciona como un operador de asignación en esta situación.  
   
-## Comentarios  
- Las comprobaciones de errores en tiempo de ejecución son una manera de identificar problemas en el código en ejecución. Para obtener más información, vea [Cómo: Utilizar comprobaciones nativas en tiempo de ejecución](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md).  
+## <a name="remarks"></a>Comentarios  
+ Comprobaciones de errores en tiempo de ejecución son una manera de buscar problemas en el código en ejecución. Para obtener más información, consulte [Cómo: uso de comprobaciones en tiempo de ejecución nativo](/visualstudio/debugger/how-to-use-native-run-time-checks).  
   
- Si compila un programa en la línea de comandos con cualquiera de las opciones del compilador **\/RTC**, las instrucciones de pragma [optimize](../../preprocessor/optimize.md) del código producirán un error sin comunicarlo.  Esto ocurre porque las comprobaciones de errores en tiempo de ejecución no son válidas en una versión de lanzamiento \(optimizada\).  
+ Si compila el programa en la línea de comandos mediante cualquiera de los **/RTC** opciones del compilador, cualquier directiva pragma [optimizar](../../preprocessor/optimize.md) instrucciones en el código en modo silencioso se producirá un error. Esto es porque las comprobaciones de errores en tiempo de ejecución no son válidas en una compilación de versión (optimizado).  
   
- Debe utilizar **\/RTC** para compilaciones de desarrollo; no se debe utilizar **\/RTC** para una versión comercial.  **\/RTC** no se puede utilizar con optimizaciones del compilador \([\/O \(Opciones\) \(Optimizar código\)](../../build/reference/o-options-optimize-code.md)\).  Una imagen de un programa compilada con **\/RTC** tendrá un tamaño ligeramente mayor y será un poco más lenta que otra compilada con **\/Od** \(hasta un 5 por ciento más lenta que una versión de **\/Od**\).  
+ Debe usar **/RTC** para las compilaciones de desarrollo; **/RTC** no debe usarse para una compilación comercial. **/ RTC** no se puede usar con las optimizaciones del compilador ([opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)). Crea una imagen de programa con **/RTC** será ligeramente mayor y ligeramente más lenta que una imagen creada con **/Od** (hasta 5 por ciento más lenta que una **/Od** compilar).  
   
- La directiva de preprocesador \_\_MSVC\_RUNTIME\_CHECKS se define al utilizar una de las opciones **\/RTC** o [\/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).  
+ Cuando se utiliza alguno, se definirá la directiva de preprocesador __MSVC_RUNTIME_CHECKS **/RTC** opción o [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Generación de código**.  
+3.  Haga clic en el **generación de código** página de propiedades.  
   
-4.  Modifique una o las dos propiedades siguientes: **Comprobaciones básicas en tiempo de ejecución** o **Comprobación de tipos más pequeños**.  
+4.  Modificar una o ambas de las siguientes propiedades: **comprobaciones en tiempo de ejecución básicas** o **comprobación de tipos más pequeños**.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea las propiedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> y <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
- [RTC sample](http://msdn.microsoft.com/es-es/b3415b09-f6fd-43dc-8c02-9a910bc2574e)
+ [Cómo: Usar comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks)

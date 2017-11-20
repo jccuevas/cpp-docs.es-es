@@ -1,32 +1,30 @@
 ---
-title: "BLOB_ENTRY_LENGTH_STATUS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BLOB_ENTRY_LENGTH_STATUS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB_ENTRY_LENGTH_STATUS (macro)"
+title: BLOB_ENTRY_LENGTH_STATUS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BLOB_ENTRY_LENGTH_STATUS
+dev_langs: C++
+helpviewer_keywords: BLOB_ENTRY_LENGTH_STATUS macro
 ms.assetid: 09da67de-421b-4853-9a26-760e38324502
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed99a2834ace8809bcc2a4bd2fd784f7bd454d7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# BLOB_ENTRY_LENGTH_STATUS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se utiliza con `BEGIN_COLUMN_MAP` y `END_COLUMN_MAP` para enlazar un objeto binario grande \([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\).  Similar a [BLOB\_ENTRY](../../data/oledb/blob-entry.md), salvo que esta macro también obtiene la longitud y el estado de la columna del BLOB.  
+# <a name="blobentrylengthstatus"></a>BLOB_ENTRY_LENGTH_STATUS
+Usar con `BEGIN_COLUMN_MAP` y `END_COLUMN_MAP` para enlazar un objeto binario grande ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Similar a [BLOB_ENTRY](../../data/oledb/blob-entry.md), salvo que esta macro también obtiene la longitud y el estado de la columna BLOB.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,36 +39,36 @@ data
 , length, status )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nOrdinal`  
- \[in\] El número de columnas.  
+ [in] El número de columna.  
   
  *IID*  
- \[in\] Interfaz GUID, como **IDD\_ISequentialStream**, utilizado para recuperar BLOB.  
+ [in] Interfaz GUID, como **IDD_ISequentialStream**, que se usa para recuperar el BLOB.  
   
  `flags`  
- \[in\] marcas de Almacenamiento\- modo definida por el modelo de almacenamiento estructurado OLE \(por ejemplo, **STGM\_READ**\).  
+ [in] Marcas de modo de almacenamiento tal como se define por el modelo de almacenamiento estructurado OLE (por ejemplo, **STGM_READ**).  
   
  `data`  
- \[in\] El miembro de datos correspondiente en el registro de usuario.  
+ [in] El miembro de datos correspondiente en el registro de usuario.  
   
  *length*  
- \[out\] La longitud \(real\) en bytes de la columna del BLOB.  
+ [out] La longitud en bytes (real) de la columna BLOB.  
   
  *status*  
- \[out\] El estado de la columna de datos BLOB.  
+ [out] El estado de la columna de datos BLOB.  
   
-## Ejemplo  
- Vea [¿Cómo Poder recupero BLOB?](../../data/oledb/retrieving-a-blob.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [¿cómo puedo recuperar un objeto BLOB?](../../data/oledb/retrieving-a-blob.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [BLOB\_ENTRY](../../data/oledb/blob-entry.md)   
- [BLOB\_ENTRY\_LENGTH](../../data/oledb/blob-entry-length.md)   
- [BLOB\_ENTRY\_STATUS](../../data/oledb/blob-entry-status.md)
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB_ENTRY](../../data/oledb/blob-entry.md)   
+ [BLOB_ENTRY_LENGTH](../../data/oledb/blob-entry-length.md)   
+ [BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)

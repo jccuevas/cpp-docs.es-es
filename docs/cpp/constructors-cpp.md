@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 Un constructor es una especie de función miembro que inicializa una instancia de su clase. Un constructor tiene el mismo nombre que la clase y no devuelve ningún valor. Los constructores pueden tener un número indeterminado de parámetros y, a su vez, una clase puede tener un número indeterminado de constructores sobrecargados. Los constructores pueden tener cualquier tipo de accesibilidad, ya sea pública, protegida o privada. Si no define ningún constructor, el compilador generará un constructor predeterminado que no toma ningún parámetro; puede invalidar este comportamiento declarando un constructor predeterminado como eliminado.  
@@ -613,7 +610,7 @@ class Derived : T {
   
  Un constructor generado por el compilador configura un nuevo objeto y realiza una copia miembro a miembro del contenido del objeto que se va a copiar. Si existen constructores miembro o de clase base, se llaman; de lo contrario, se realiza una copia bit a bit.  
   
- Si todas las clases base y miembro de una clase `type` tienen constructores de copias que aceptan un **const** argumento, el constructor de copias generado por el compilador acepta un único argumento de tipo **const** `type` **&**. En caso contrario, el constructor de copias generado por el compilador acepta un único argumento de tipo `type` ** & **.  
+ Si todas las clases base y miembro de una clase `type` tienen constructores de copias que aceptan un **const** argumento, el constructor de copias generado por el compilador acepta un único argumento de tipo **const** `type` **&**. En caso contrario, el constructor de copias generado por el compilador acepta un único argumento de tipo `type`  **&** .  
   
  Puede utilizar un constructor para inicializar una **const** o `volatile` objeto, pero el constructor en sí no se pueden declarar como **const** o `volatile`. La clase de almacenamiento válida solo para un constructor es **en línea**; el uso de cualquier otro modificador de clase de almacenamiento, incluido el `__declspec` (palabra clave), con un constructor produce un error del compilador.  
   
@@ -699,4 +696,3 @@ int main()
   
  `Base::Base` llama a la función `f`, que es una función virtual. Normalmente se llamaría a `Derived::f`, porque el objeto `d` es de tipo `Derived`. Dado que la función `Base::Base` es un constructor, el objeto no es todavía de tipo `Derived` y se llama a `Base::f`.  
   
-

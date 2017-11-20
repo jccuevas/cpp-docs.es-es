@@ -1,32 +1,30 @@
 ---
-title: "list::splice (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::splice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "splice (miembro) [STL/CLR]"
+title: 'List:: splice (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::splice
+dev_langs: C++
+helpviewer_keywords: splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bbc7517013edd4c7af7c40c3787d8ec7749df32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# list::splice (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vínculos de Restitch entre nodos.  
+# <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
+Restitch vínculos entre nodos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void splice(iterator where, list<Value>% right);  
@@ -36,27 +34,27 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo a insertar.  
+ Comienzo del intervalo que se va a unir.  
   
  last  
- Final del intervalo a insertar.  
+ Final del intervalo que se va a unir.  
   
- right  
- Contenedor a insertar de.  
+ derecha  
+ Contenedor que se va a unir de.  
   
  donde  
- Donde en el contenedor insertar antes.  
+ WHERE contenedor splice antes.  
   
-## Comentarios  
- La primera función miembro inserta la secuencia controlada por `right` antes del elemento de la secuencia controlada designada por a `where`.  También quita todos los elementos de `right`. \(`%``right` no debe ser igual a `this`.\) Se utiliza para insertar todo el una lista en otro.  
+## <a name="remarks"></a>Comentarios  
+ La primera función miembro inserta la secuencia controlada por `right` antes del elemento de la secuencia controlada señalada por `where`. También quita todos los elementos de `right`. (`%right` no deben ser iguales `this`.) Usa para splice todas de una lista a otro.  
   
- La segunda función miembro quita el elemento indicada por `first` en la secuencia controlada por `right` y se inserta antes del elemento de la secuencia controlada designada por a `where`. \(Si `where` `==` `first` `||` `where` `== ++``first`, no se produce ningún cambio.\) Se utiliza para insertar un único elemento de una lista en otro.  
+ La segunda función miembro quita el elemento indicado por `first` en la secuencia controlada por `right` y lo inserta delante del elemento de la secuencia controlada que señala `where`. (Si `where` `==` `first` `||` `where` `== ++first`, se produce ningún cambio.) Se usar para insertar un único elemento de una lista a otro.  
   
- La tercera función miembro inserta el subrango designado por `[``first``,` `last``)` de la secuencia controlada por `right` antes del elemento de la secuencia controlada designada por a `where`.  También quita el subrango original de la secuencia controlada por `right`. \(Si `right` `==` `this`, el intervalo `[``first``,` `last``)` no debe incluir el elemento indicada por `where`.\) Se utiliza para insertar un subsequence de cero o más elementos a partir de una lista de otro.  
+ La tercera función miembro inserta el subintervalo designado por [`first`, `last`) de la secuencia controlada por `right` antes del elemento de la secuencia controlada señalada por `where`. También quita el subintervalo original de la secuencia controlada por `right`. (If `right` `==` `this`, el intervalo [`first`, `last`) no se debe incluir el elemento indicado por `where`.) Se usar para insertar una subsecuencia de cero o más elementos de una lista a otro.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_splice.cpp   
@@ -104,20 +102,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**c1.size\(\) \= 0**  
- **a b c**  
- **a**  
- **b c**  
- **c a b**  
-**c2.size\(\) \= 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List:: Insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)   
+ [list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)

@@ -1,33 +1,33 @@
 ---
-title: "Sellar una funci&#243;n virtual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__sealed (palabra clave)"
-  - "clases derivadas, funciones virtuales"
-  - "sealed (palabra clave) [C++]"
-  - "funciones virtuales, sellar"
+title: "Sellar una función Virtual | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sealed keyword [C++]
+- derived classes, virtual functions
+- virtual functions, sealing
+- __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 500e5b5e6014b7141c000a4e453341ceb5e822d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Sellar una funci&#243;n virtual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintaxis para sellar una función virtual ha cambiado de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="sealing-a-virtual-function"></a>Sellar una función virtual
+La sintaxis para sellar una función virtual ha cambiado de extensiones administradas para C++ a Visual C++.  
   
- La palabra clave `__sealed` se utiliza en Extensiones administradas para modificar un tipo de referencia, lo que deshabilita la derivación posterior de él \(vea [Declaración de un tipo de clase administrada](../dotnet/declaration-of-a-managed-class-type.md)\), o para modificar una función virtual, lo que deshabilita el reemplazo posterior del método en una clase derivada.  Por ejemplo:  
+ El `__sealed` palabra clave se usa en extensiones administradas para modificar un tipo de referencia, no se permiten derivación posterior de él (vea [declaración de un tipo de clase administrada](../dotnet/declaration-of-a-managed-class-type.md)), o para modificar una función virtual, no se permiten reemplazo del método en una clase derivada posterior. Por ejemplo:  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -37,9 +37,9 @@ public:
 };  
 ```  
   
- En este ejemplo, `derived::f()` reemplaza a la instancia `base::f()` basada en la coincidencia exacta del prototipo de función.  La palabra clave `__sealed` indica que una clase posterior heredada de la clase derivada no puede proporcionar un reemplazo de `derived::f()`.  
+ En este ejemplo, `derived::f()` invalida la `base::f()` instancia a partir de la coincidencia exacta del prototipo de función. El `__sealed` palabra clave indica que una clase subsiguientes se hereda de la clase derivada no puede proporcionar una invalidación de `derived::f()`.  
   
- En la nueva sintaxis, `sealed` se coloca después de la firma en lugar de que pueda aparecer en cualquier parte antes del prototipo de función real, tal como se permitía anteriormente.  Además, el uso de `sealed` también requiere un uso explícito de la palabra clave `virtual`.  Es decir, la traducción correcta de `derived`, anteriormente, es como sigue:  
+ En la nueva sintaxis, `sealed` se coloca después de la firma en lugar de que se puedan aparecer en cualquier lugar antes del prototipo de función real, tal y como se permitían anteriormente. Además, el uso de `sealed` requiere un uso explícito de la `virtual` también la palabra clave. Es decir, la traducción adecuada de `derived`anteriormente, es como sigue:  
   
 ```  
 ref class derived: public base {  
@@ -48,7 +48,7 @@ public:
 };  
 ```  
   
- La ausencia de la palabra clave `virtual` en esta instancia produce un error.  En la nueva sintaxis, la palabra clave contextual `abstract` se puede utilizar en lugar de `=0` para indicar una función virtual pura.  Esto no estaba admitido en Extensiones administradas.  Por ejemplo:  
+ La ausencia de la `virtual` palabra clave en esta instancia produce un error. En la nueva sintaxis, la palabra clave contextual `abstract` puede usarse en lugar de la `=0` para indicar una función virtual pura. Esto no estaba admitido en extensiones administradas. Por ejemplo:  
   
 ```  
 __gc class base { public: virtual void f()=0; };  
@@ -60,6 +60,6 @@ __gc class base { public: virtual void f()=0; };
 ref class base { public: virtual void f() abstract; };  
 ```  
   
-## Vea también  
- [Declaraciones de miembros en una clase o interfaz \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [sellado](../windows/sealed-cpp-component-extensions.md)
+## <a name="see-also"></a>Vea también  
+ [Declaraciones de miembros en una clase o interfaz (C++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [sealed](../windows/sealed-cpp-component-extensions.md)

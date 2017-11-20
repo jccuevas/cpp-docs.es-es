@@ -1,68 +1,68 @@
 ---
-title: "/INCLUDE (Forzar referencias de s&#237;mbolos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/include"
-  - "VC.Project.VCLinkerTool.ForceSymbolReferences"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INCLUDE (opción del vinculador)"
-  - "forzar referencias de símbolos (opción del vinculador)"
-  - "INCLUDE (opción del vinculador)"
-  - "-INCLUDE (opción del vinculador)"
-  - "forzar referencias de símbolos (vinculador)"
-  - "símbolos, agregar a tabla de símbolos"
+title: "-INCLUDE (forzar referencias de símbolos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /include
+- VC.Project.VCLinkerTool.ForceSymbolReferences
+dev_langs: C++
+helpviewer_keywords:
+- INCLUDE linker option
+- force symbol references linker option
+- symbol references linker force
+- /INCLUDE linker option
+- symbols, add to symbol table
+- -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 85fe7b45d17ea7263ca2445aaa97cbf007532e4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /INCLUDE (Forzar referencias de s&#237;mbolos)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="include-force-symbol-references"></a>/INCLUDE (Forzar referencias de símbolos)
 ```  
 /INCLUDE:symbol  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  donde:  
   
  `symbol`  
- Especifica un símbolo que se ha de agregar a la tabla de símbolos.  
+ Especifica un símbolo que debe agregarse a la tabla de símbolos.  
   
-## Comentarios  
- La opción \/INCLUDE indica al vinculador que agregue un símbolo especificado a la tabla de símbolos.  
+## <a name="remarks"></a>Comentarios  
+ La opción /INCLUDE le indica al vinculador para agregar un símbolo especificado a la tabla de símbolos.  
   
- Para especificar varios símbolos, escriba una coma \(,\), un punto y coma \(;\) o un espacio entre sus nombres.  En la línea de comandos, especifique \/INCLUDE:`symbol` una vez para cada símbolo.  
+ Para especificar varios símbolos, escriba una coma (,), un punto y coma (;) o un espacio entre los nombres de símbolo. En la línea de comandos, especifique/include:`symbol` una vez para cada símbolo.  
   
- Para resolver `symbol`, el vinculador agregará al programa el objeto que contenga la definición de cada símbolo.  Esta característica resulta útil para incluir un objeto de biblioteca que, de otra manera, no se vincularía con el programa.  
+ El vinculador resuelve `symbol` agregando el objeto que contiene la definición del símbolo para el programa. Esta característica resulta útil para incluir un objeto de biblioteca que de lo contrario no podría vinculado al programa.  
   
- La especificación de un símbolo con esta opción reemplaza la eliminación del símbolo mediante [\/OPT:REF](../../build/reference/opt-optimizations.md).  
+ Especificación de un símbolo con esta opción reemplaza la eliminación del símbolo mediante [/OPT: ref](../../build/reference/opt-optimizations.md).  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Entrada**.  
+3.  Haga clic en el **entrada** página de propiedades.  
   
-4.  Modifique la propiedad **Forzar referencias de símbolos**.  
+4.  Modificar el **forzar referencias de símbolos** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

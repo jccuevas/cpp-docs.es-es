@@ -1,70 +1,69 @@
 ---
-title: "CDynamicParameterAccessor::SetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicParameterAccessor.SetParamString"
-  - "ATL::CDynamicParameterAccessor::SetParamString"
-  - "SetParamString"
-  - "CDynamicParameterAccessor::SetParamString"
-  - "CDynamicParameterAccessor.SetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParamString (método)"
+title: 'CDynamicParameterAccessor:: Setparamstring | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicParameterAccessor.SetParamString
+- ATL::CDynamicParameterAccessor::SetParamString
+- SetParamString
+- CDynamicParameterAccessor::SetParamString
+- CDynamicParameterAccessor.SetParamString
+dev_langs: C++
+helpviewer_keywords: SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ff96f451bc60469df0469d6a002ec51d91743b89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::SetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
 Establece los datos de cadena del parámetro especificado almacenado en el búfer.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      bool SetParamString(   
-   DBORDINAL nParam,   
-   const CHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
+      bool SetParamString(   
+   DBORDINAL nParam,   
+   const CHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK    
 ) throw( );  
-bool SetParamString(   
-   DBORDINAL nParam,   
-   const WCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK    
+bool SetParamString(   
+   DBORDINAL nParam,   
+   const WCHAR* pString,   
+   DBSTATUS status = DBSTATUS_S_OK    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nParam`  
- \[in\] El parámetro número \(desplazamiento desde 1\).  El parámetro 0 se reserva por valores devueltos.  El parámetro número es el índice del parámetro basándose en su orden de SQL o la llamada a un procedimiento almacenado.  Vea [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
+ [in] El número de parámetro (desplazamiento de 1). Parámetro 0 está reservado para los valores devueltos. El número de parámetro es el índice del parámetro basándose en su orden en el SQL o una llamada al procedimiento almacenado. Vea [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
   
  `pString`  
- \[in\] Un puntero a los datos de cadena ANSI \(**char**\) o Unicode \(**WCHAR**\) del parámetro especificado.  Vea `DBSTATUS` en oledb.h.  
+ [in] Un puntero a ANSI (**CHAR**) o Unicode (**WCHAR**) los datos del parámetro especificado de cadena. Vea `DBSTATUS` en oledb.h.  
   
  *status*  
- \[in\] El estado de `DBSTATUS` del parámetro especificado.  Para obtener información sobre los valores de `DBSTATUS` , vea [Estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en *la referencia del*programador, o la búsqueda de `DBSTATUS` en oledb.h.  
+ [in] El `DBSTATUS` estado del parámetro especificado. Para obtener información sobre `DBSTATUS` valores, consulte [estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en el *referencia del programador de OLE DB*, o busque `DBSTATUS` en oledb.h.  
   
-## Comentarios  
- Devuelve **true** en correctamente o **false** en el error.  
+## <a name="remarks"></a>Comentarios  
+ Devuelve **true** en caso de éxito o **false** en caso de error.  
   
- `SetParamString` generará un error si se intenta establecer una cadena que es mayor que el tamaño máximo especificado para `pString`.  
+ `SetParamString`se producirá un error si intenta establecer una cadena que es mayor que el tamaño máximo especificado para `pString`.  
   
- Utilice `SetParamString` para establecer datos de parámetro de cadena en el búfer.  Utilice [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para establecer datos recursos de parámetro en el búfer.  
+ Use `SetParamString` para establecer los datos de parámetro de cadena en el búfer. Use [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para establecer los datos de parámetro que no sean en el búfer.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicParameterAccessor \(Clase\)](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)

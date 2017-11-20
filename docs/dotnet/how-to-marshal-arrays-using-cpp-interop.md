@@ -1,38 +1,37 @@
 ---
-title: "C&#243;mo: Calcular las referencias de matrices mediante la interoperabilidad de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], calcular las referencias"
-  - "interoperabilidad de C++, matrices"
-  - "cálculo de referencias de datos [C++], matrices"
-  - "interoperabilidad [C++], matrices"
-  - "calcular las referencias [C++], matrices"
+title: "Cómo: serializar matrices mediante la interoperabilidad de C++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 605e3ba14af37fd13b3d6eac75f76610cf29af65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Calcular las referencias de matrices mediante la interoperabilidad de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra un aspecto de la interoperabilidad de Visual C\+\+.  Para obtener más información, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Cómo: serializar matrices mediante la interoperabilidad de C++
+En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- En los siguientes ejemplos de código, se utilizan las directivas \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero sin que éstas dejen de interactuar como si se hubieran definido en archivos separados.  No es necesario compilar con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) los archivos que contienen únicamente funciones no administradas.  
+ El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. No es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo pasar una matriz administrada a una función no administrada.  La función administrada utiliza [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) para suprimir la recolección de elementos no utilizados para la matriz antes de llamar a la función no administrada.  Si se proporciona la función no administrada con un puntero anclado en el montón GC, la sobrecarga de crear una copia de la matriz se puede evitar.  Para mostrar que la función no administrada tiene acceso a la memoria del montón GC, modifica el contenido de la matriz y los cambios se reflejan cuando la función administrada reanuda el control.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo pasar una matriz administrada a una función no administrada. Usa la función administrada [pin_ptr (C++ / CLI)](../windows/pin-ptr-cpp-cli.md) para suprimir la recolección de la matriz antes de llamar a la función no administrada. Si se proporciona la función no administrada con un puntero anclado en el montón del GC, se puede evitar la sobrecarga que supone realizar una copia de la matriz. Para mostrar que la función no administrada tiene acceso a la memoria en montón GC, modifica el contenido de la matriz y los cambios son refleja cuando la función administrada reanuda el control.  
   
 ```  
 // PassArray1.cpp  
@@ -89,8 +88,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente muestra el paso de una matriz no administrada a una función administrada.  La función administrada tiene acceso a la memoria de la matriz directamente \(al contrario que si se crea una matriz administrada y se copia el contenido de la matriz\), lo que permite reflejar los cambios realizados mediante la función administrada en la función no administrada cuando recupera el control.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo pasar una matriz no administrada a una función administrada. La función administrada tiene acceso a la memoria de matriz directamente (en lugar de crear una matriz administrada y copia el contenido de la matriz), lo que permite que los cambios realizados por la función administrada para que se refleje en la función no administrada cuando recupera el control.  
   
 ```  
 // PassArray2.cpp  
@@ -136,5 +135,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

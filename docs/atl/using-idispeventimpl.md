@@ -1,45 +1,43 @@
 ---
-title: "Using IDispEventImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDispEventImpl class, utilizar"
+title: "¡Con IDispEventImpl (ATL) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventImpl
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b469facafd4f386b97b5cfbc5d1661cdb6f5d3ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Using IDispEventImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Al utilizar `IDispEventImpl` para controlar eventos, necesitará:  
+# <a name="using-idispeventimpl"></a>¡Con IDispEventImpl
+Cuando se usa `IDispEventImpl` para controlar los eventos, deberá:  
   
--   derive la clase de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
+-   Derive la clase de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   agregue [mapa de receptor de eventos](../Topic/BEGIN_SINK_MAP.md) a la clase.  
+-   Agregue un mapa de receptores de eventos a la clase.  
   
--   Agregue las entradas al receptor de eventos asignado mediante la macro de [SINK\_ENTRY](../Topic/SINK_ENTRY.md) o de [SINK\_ENTRY\_EX](../Topic/SINK_ENTRY_EX.md) .  
+-   Agregar entradas en el mapa de receptor de eventos mediante el [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) macro.  
   
--   Implemente los métodos que está interesado en administrar.  
+-   Implemente los métodos que está interesado en el control.  
   
--   Advise y unadvise el origen de eventos.  
+-   Aconsejar y desaconsejar el origen del evento.  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo controlar el evento de **DocumentChange** desencadenado por el objeto de **Aplicación** de word.  Este evento se define como un método en el dispinterface de **ApplicationEvents** .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente muestra cómo controlar la **DocumentChange** eventos desencadenados por de Word **aplicación** objeto. Este evento se define como un método en el **ApplicationEvents** dispinterface.  
   
- el ejemplo es de [Ejemplo ATLEventHandling](../top/visual-cpp-samples.md).  
+ El ejemplo está tomado del [ejemplo ATLEventHandling](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -69,14 +67,15 @@ Al utilizar `IDispEventImpl` para controlar eventos, necesitará:
   
  `};`  
   
- El ejemplo utiliza `#import` para generar los archivos de encabezado necesarios de la biblioteca de tipos de word.  Si desea utilizar este ejemplo con otras versiones de word, debe especificar el archivo correcto DLL mso.  Por ejemplo, Office 2000 proporciona mso9.dll y Office XP proporciona mso.dll.  Este código se simplifica stdafx.h:  
+ El ejemplo se utiliza `#import` para generar los archivos de encabezado necesarios desde la biblioteca de tipos de Word. Si desea utilizar este ejemplo con otras versiones de Word, debe especificar el archivo mso dll correcto. Por ejemplo, Office 2000 proporciona mso9.dll y OfficeXP proporciona mso.dll. Este código se ha simplificado de stdafx.h:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/CPP/using-idispeventimpl_1.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- el código siguiente aparece en NotSoSimple.h.  El código pertinente es anotado por comentarios:  
+ Aparece el siguiente código en NotSoSimple.h. El código relevante se anota mediante comentarios:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/CPP/using-idispeventimpl_2.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de eventos](../atl/event-handling-and-atl.md)   
- [Ejemplo ATLEventHandling](../top/visual-cpp-samples.md)
+ [Ejemplo ATLEventHandling](../visual-cpp-samples.md)
+

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,33 +61,17 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: es-es
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Error del compiladors C2300 Through C2399
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -108,10 +91,10 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2305 de Error del compilador|'*archivo*' no contiene información de depuración para este módulo|  
 |C2306 de Error del compilador|'*archivo*' no contiene la información de depuración más reciente para este módulo|  
 |[Error del compilador C2307](compiler-error-c2307.md)|pragma *directiva* se debe mover fuera de la función si la compilación incremental está habilitada|  
-|[Error del compilador C2308](compiler-error-c2308.md)|concatenación de cadenas no coincidentes|  
-|[Error del compilador C2309](compiler-error-c2309.md)|el controlador de tipo catch esperaba una declaración de excepción entre paréntesis|  
-|[Error del compilador C2310](compiler-error-c2310.md)|los controladores de tipo catch deben especificar un tipo|  
-|[Error del compilador C2311](compiler-error-c2311.md)|'*tipo*': ha sido detectado por '...' en línea *número*|  
+|[Error del compilador C2308](compiler-error-c2308.md)|concatenación de cadenas que no coincidentes|  
+|[Error del compilador C2309](compiler-error-c2309.md)|controlador catch esperaba una declaración de excepción entre paréntesis|  
+|[Error del compilador C2310](compiler-error-c2310.md)|controladores catch deben especificar un tipo|  
+|[Error del compilador C2311](compiler-error-c2311.md)|'*tipo*': ha sido detectado por '...' en la línea *número*|  
 |[Error del compilador C2312](compiler-error-c2312.md)|'*type1*': ha sido detectado por '*type2*' en línea *número*|  
 |[Error del compilador C2313](compiler-error-c2313.md)|'*type1*': se detecta por referencia ('*type2*') en línea *número*|  
 |C2314 de Error del compilador|palabra clave '*palabraclave1*' está en desuso: utilice '*palabraclave2*' en su lugar|  
@@ -130,7 +113,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2327](compiler-error-c2327.md)|'*identificador*': no es un nombre de tipo, estático o enumerador|  
 |C2328 de Error del compilador|'*palabra clave*': no se admite todavía (palabra clave)|  
 |C2329 de Error del compilador|'*identificador*': __ptr64 no está disponible para punteros a funciones|  
-|C2330 de Error del compilador|'implementation_key( )' solo es válida en una región delimitada por #pragma start_map_region/stop_map_region|  
+|C2330 de Error del compilador|'implementation_key ()' solo es válida en una región delimitada por #pragma start_map_region/stop_map_region|  
 |C2331 de Error del compilador|el acceso a '*identificador*"ahora está definido como"*accessibility1*', previamente se definió para ser'*accessibility2*'|  
 |[Error del compilador C2332](compiler-error-c2332.md)|'*typedef*': falta el nombre de etiqueta|  
 |[Error del compilador C2333](compiler-error-c2333.md)|'*función*': error en la declaración de función; omitiendo el cuerpo de la función|  
@@ -142,7 +125,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2339 de Error del compilador|'*identificador*': tipo no válido en IDL incrustado|  
 |C2340 de Error del compilador|'*identificador*': 'static' solo puede usarse dentro de una definición de clase|  
 |[Error del compilador C2341](compiler-error-c2341.md)|'*sección*': se debe definir el segmento utilizando #pragma data_seg, code_seg o sección anterior para usar|  
-|C2342 de Error del compilador|error de sintaxis: calificadores de tipo conflictivos|  
+|C2342 de Error del compilador|error de sintaxis: calificadores de tipo en conflicto|  
 |C2343 de Error del compilador|'*sección*': atributos de sección incompatibles|  
 |[Error del compilador C2344](compiler-error-c2344.md)|Alinear (*número*): alineación debe ser potencia de dos|  
 |[Error del compilador C2345](compiler-error-c2345.md)|Alinear (*número*): valor de alineación no válido|  
@@ -151,11 +134,11 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2348](compiler-error-c2348.md)|'*tipo*': no es un agregado de estilo C, no se puede exportar en IDL incrustado|  
 |[Error del compilador C2349](compiler-error-c2349.md)|'*función*' no se pueden compilar como administrado: '*explicación*'; Utilice #pragma no administrado|  
 |[Error del compilador C2350](compiler-error-c2350.md)|'*identificador*' no es un miembro estático|  
-|[Error del compilador C2351](compiler-error-c2351.md)|sintaxis de inicialización del constructor de C++ obsoleta|  
+|[Error del compilador C2351](compiler-error-c2351.md)|sintaxis de inicialización de constructor de C++ obsoleta|  
 |[Error del compilador C2352](compiler-error-c2352.md)|'*identificador*': llamada no válida de función miembro no estática|  
-|[Error del compilador C2353](compiler-error-c2353.md)|no se permite la especificación de excepciones|  
+|[Error del compilador C2353](compiler-error-c2353.md)|no se permite la especificación de excepción|  
 |C2354 de Error del compilador|Obsoleto.|  
-|[Error del compilador C2355](compiler-error-c2355.md)|'this': solo se puede hacer referencia a this en funciones miembro no estáticas o inicializadores de miembro de datos no estáticos|  
+|[Error del compilador C2355](compiler-error-c2355.md)|'this': solo puede hacer referencia en funciones miembro no estáticas o inicializadores de miembro de datos no estáticos|  
 |[Error del compilador C2356](compiler-error-c2356.md)|el segmento de inicialización no debe cambiar durante la unidad de traducción|  
 |[Error del compilador C2357](compiler-error-c2357.md)|'*identificador*': debe ser una función de tipo '*tipo*'|  
 |C2358 de Error del compilador|'*identificador*': no se puede definir una propiedad estática fuera de una definición de clase|  
@@ -200,4 +183,3 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2397](compiler-error-c2397.md)|conversión de '*type1*'to'*type2*' requiere una conversión de restricción|  
 |C2398 de Error del compilador|Elemento '*número*': conversión de '*type1*'to'*type2*' requiere una conversión de restricción|  
 |C2399 de Error del compilador|Obsoleto.|  
-

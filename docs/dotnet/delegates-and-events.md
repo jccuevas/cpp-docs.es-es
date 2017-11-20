@@ -1,35 +1,35 @@
 ---
-title: "Delegados y eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delegate (palabra clave)"
-  - "__event (palabra clave) [C++]"
-  - "delegate (palabra clave) [C++]"
-  - "delegados [C++], actualizar desde Extensiones administradas para C++"
-  - "event (palabra clave) [C++]"
-  - "eventos [C++], actualizar desde Extensiones administradas para C++"
+title: Delegados y eventos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __event keyword [C++]
+- delegate keyword [C++]
+- delegates [C++], upgrading from Managed Extensions for C++
+- __delegate keyword
+- events [C++], upgrading from Managed Extensions for C++
+- event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28abb6daf5d778cf2cc7c904440808fd7ca7e48e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Delegados y eventos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La manera de declarar delegados y eventos ha cambiado de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="delegates-and-events"></a>Delegados y eventos
+La manera de declarar delegados y eventos ha cambiado de extensiones administradas para C++ a Visual C++.  
   
- Ya no es necesario el subrayado doble, tal y como se muestra en el siguiente ejemplo.  A continuación, se muestra un código de ejemplo en Extensiones administradas:  
+ Ya no es necesario el carácter de subrayado doble, como se muestra en el ejemplo siguiente. Aquí un código de ejemplo en extensiones administradas:  
   
 ```  
 __delegate void ClickEventHandler(int, double);  
@@ -41,7 +41,7 @@ __gc class EventSource {
 };  
 ```  
   
- Este mismo código presenta el siguiente aspecto en la nueva sintaxis:  
+ El mismo código en la nueva sintaxis tiene el siguiente aspecto:  
   
 ```  
 delegate void ClickEventHandler( int, double );  
@@ -53,9 +53,9 @@ ref class EventSource {
 };  
 ```  
   
- Los eventos \(y delegados\) son tipos de referencia, lo que queda más claro en la nueva sintaxis debido al uso del acento circunflejo \(`^`\).  Los eventos admiten una sintaxis de declaración explícita, así como el formulario trivial mostrado en el código anterior.  En el formulario explícito, el usuario especifica los métodos `add`, `raise` y `remove` asociados al evento. \(Se requieren sólo métodos `add` y `remove`; el método `raise` es opcional.\)  
+ Eventos (y delegados) son tipos de referencia, que es claro en la nueva sintaxis debido al uso del acento circunflejo (`^`).  Los eventos admiten una sintaxis de declaración explícita y la forma trivial que se muestra en el código anterior. En el formulario explícito, el usuario especifica la `add`, `raise`, y `remove` métodos asociados al evento. (Solo la `add` y `remove` se requieren métodos; el `raise` método es opcional.)  
   
- Si proporciona estos métodos en Extensiones administradas, no debe proporcionar una declaración de eventos explícita, pero debe decidir un nombre para el evento que no esté presente.  Cada método se especifica en el formulario `add_EventName`, `raise_EventName` y `remove_EventName`, tal y como se muestra en el siguiente ejemplo tomado de la especificación de Extensiones administradas:  
+ En extensiones administradas, si proporciona estos métodos, no se proporciona también una declaración de evento explícita, pero debe decidir un nombre para el evento que no está presente. Cada método se especifica en el formulario `add_EventName`, `raise_EventName`, y `remove_EventName`, como en el siguiente ejemplo está tomado de la especificación de extensiones administradas:  
   
 ```  
 // explicit implementations of add, remove, raise  
@@ -88,7 +88,7 @@ protected:
 };  
 ```  
   
- La nueva sintaxis simplifica la declaración, tal y como demuestra la siguiente traducción.  Un evento especifica los dos o tres métodos incluidos entre un par de llaves y colocados inmediatamente después de la declaración del evento y su tipo de delegado asociado, tal y como se muestra a continuación:  
+ La nueva sintaxis simplifica la declaración, como se muestra en la siguiente traducción. Un evento especifica los dos o tres métodos se incluyen en un par de llaves y se colocan inmediatamente después de la declaración del evento y su tipo de delegado asociado, como se muestra aquí:  
   
 ```  
 public delegate void f( int );  
@@ -130,7 +130,7 @@ public:
 };  
 ```  
   
-## Vea también  
- [Declaraciones de miembros en una clase o interfaz \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [delegado](../windows/delegate-cpp-component-extensions.md)   
+## <a name="see-also"></a>Vea también  
+ [Declaraciones de miembros en una clase o interfaz (C++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [Delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)   
  [event](../windows/event-cpp-component-extensions.md)

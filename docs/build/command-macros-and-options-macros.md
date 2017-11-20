@@ -1,40 +1,40 @@
 ---
-title: "Macros de comando y macros de opciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros de comandos en NMAKE"
-  - "macros, macros de comandos"
-  - "macros, macros de opciones"
-  - "macros de opciones"
+title: Macros de comando y Macros de opciones | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- options macros
+- command macros in NMAKE
+- macros, options macros
+- macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 22afb96f3bc20ab769f3ef18015c721218ea7339
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Macros de comando y macros de opciones
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las macros de comando están predefinidas para productos de Microsoft.  Las macros de opciones representan opciones para estos productos y no están definidas de forma predeterminada.  Ambos tipos de macros se usan en reglas de inferencia predefinidas y se pueden utilizar en bloques de descripción o en reglas de inferencia definidas por el usuario.  Las macros de comando se pueden volver a definir para representar una parte o la totalidad de una línea de comandos, incluidas las opciones.  Las macros de opciones generan una cadena nula si se dejan sin definir.  
+# <a name="command-macros-and-options-macros"></a>Macros de comando y macros de opciones
+Las macros de comando están predefinidas para productos de Microsoft. Macros de opciones representan opciones para estos productos y no están definidas de forma predeterminada. Ambos se usan en las reglas de inferencia predefinidas y se pueden usar en bloques de descripción o las reglas de inferencia definidas por el usuario. Pueden volver a definir las macros de comando para representar la parte o la totalidad de una línea de comandos, incluidas las opciones. Macros de opciones generan una cadena nula si ha dejado sin definir.  
   
-|Producto Microsoft|Macro de comando|Definida como|Macro de opciones|  
-|------------------------|----------------------|-------------------|-----------------------|  
-|Macro Assembler|**AS**|ml|**AFLAGS**|  
-|Compilador de Basic|**BC**|bc|**BFLAGS**|  
-|Compilador C|**CC**|cl|**CFLAGS**|  
-|Compilador de C\+\+|**CPP**|cl|**CPPFLAGS**|  
-|Compilador de C\+\+|**CXX**|cl|**CXXFLAGS**|  
-|Compilador de recursos|**RC**|cr|**RFLAGS**|  
+|Producto de Microsoft|Macros de comando|Definido como|Macros de opciones|  
+|-----------------------|-------------------|----------------|-------------------|  
+|Macro Assembler|**AL IGUAL QUE**|ml|**AFLAGS**|  
+|Compilador básica|**CONTINUIDAD DEL NEGOCIO**|continuidad del negocio|**BFLAGS**|  
+|Compilador de C|**CC**|CL|**CFLAGS**|  
+|Compilador C++|**CPP**|CL|**CPPFLAGS**|  
+|Compilador C++|**CXX**|CL|**CXXFLAGS**|  
+|compilador de recursos|**RC**|rc|**RFLAGS**|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros NMAKE especiales](../build/special-nmake-macros.md)

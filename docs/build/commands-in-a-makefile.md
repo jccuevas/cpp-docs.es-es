@@ -1,45 +1,44 @@
 ---
-title: "Comandos en un archivo MAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "comandos, Make (archivos)"
+title: Comandos en un archivo MAKE | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Comandos en un archivo MAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un bloque de descripción o una regla de inferencia especifica la ejecución de un bloque de comandos si la dependencia no está actualizada.  NMAKE muestra cada comando antes de ejecutarlo, a menos que se utilice \/S, **.SILENT**, **\!CMDSWITCHES** o @.  NMAKE busca una regla de inferencia coincidente si un bloque de descripción no va seguido de un bloque de comandos.  
+# <a name="commands-in-a-makefile"></a>Comandos en un archivo MAKE
+Una regla de inferencia o bloques de descripción Especifica un bloque de comandos que se ejecutarán si la dependencia no está actualizada. NMAKE muestra cada comando antes de ejecutarlo, a menos que/s, **. SILENCIOSA**, **! CMDSWITCHES**, o se utiliza @. NMAKE busca una regla de inferencia coincidente si un bloque de descripción no va seguido de un bloque de comandos.  
   
- Un bloque de comandos contiene uno o varios comandos, cada uno en su propia línea.  No puede haber una línea en blanco entre la dependencia o la regla y el bloque de comandos.  Sin embargo, puede haber una línea que sólo tenga espacios o tabulaciones; esta línea se interpreta como un comando nulo y no se produce ningún error.  Se permiten líneas en blanco entre líneas de comandos.  
+ Un bloque de comandos contiene uno o varios comandos, cada uno en su propia línea. No puede aparecer ninguna línea en blanco entre la dependencia o la regla y el bloque de comandos. Sin embargo, puede aparecer una línea que contiene solo espacios ni tabulaciones; Esta línea se interpreta como un comando null y se produce ningún error. Se permiten las líneas en blanco entre líneas de comandos.  
   
- Una línea de comandos empieza por uno o varios espacios o tabulaciones.  Una barra inversa \(\\\) seguida de un carácter de nueva línea se interpreta como un espacio en el comando; se ha de utilizar una barra inversa al final de una línea para continuar un comando en la línea siguiente.  NMAKE interpreta la barra inversa literalmente si a continuación de ella hay otro carácter, incluido un espacio o una tabulación.  
+ Una línea de comandos comienza con uno o más espacios o tabulaciones. Una barra invertida (\) seguida por un carácter de nueva línea se interpreta como un espacio en el comando; usar una barra diagonal inversa al final de una línea para continuar un comando en la línea siguiente. NMAKE interpreta la barra diagonal inversa literalmente si cualquier otro carácter, incluido un espacio o tabulación, sigue a la barra diagonal inversa.  
   
- Un comando precedido de un punto y coma \(;\) puede aparecer en una línea de dependencia o en una regla de inferencia, independientemente de que le siga o no un bloque de comandos:  
+ Un comando precedido por un punto y coma (;) puede aparecer en una regla de inferencia o línea de dependencia, si no sigue un bloque de comandos:  
   
 ```  
 project.obj : project.c project.h ; cl /c project.c  
 ```  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
  [Modificadores de comandos](../build/command-modifiers.md)  
   
- [Sintaxis de las partes de un nombre de archivo](../build/filename-parts-syntax.md)  
+ [Sintaxis de partes del nombre de archivo](../build/filename-parts-syntax.md)  
   
  [Archivos en línea en un archivo MAKE](../build/inline-files-in-a-makefile.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de NMAKE](../build/nmake-reference.md)

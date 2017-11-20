@@ -1,56 +1,55 @@
 ---
-title: "/DEBUGTYPE (Opciones de informaci&#243;n de depuraci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/debugtype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Opción del enlazador /DEBUGTYPE"
-  - "Opción del enlazador DEBUGTYPE"
-  - "Opción del enlazador -DEBUGTYPE"
+title: "-DEBUGTYPE (opciones de información de depuración) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /debugtype
+dev_langs: C++
+helpviewer_keywords:
+- /DEBUGTYPE linker option
+- DEBUGTYPE linker option
+- -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7532f0ceb39db4ff2ff44a6cca9076034ece3114
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /DEBUGTYPE (Opciones de informaci&#243;n de depuraci&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La opción \/DEBUGTYPE especifica los tipos de información de depuración generados por la opción \/DEBUG.  
+# <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (Opciones de información de depuración)
+La opción /DEBUGTYPE especifica los tipos de información de depuración generados por la opción /DEBUG.  
   
 ```  
 /DEBUGTYPE:[CV | PDATA | FIXUP]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  CV  
- Indica al enlazador que emita la información de depuración de símbolos, números de línea y demás información de compilación de objetos en el archivo PDB.  De forma predeterminada, esta opción está habilitada cuando se especifica **\/DEBUG** y **\/DEBUGTYPE** no se ha especificado.  
+ Indica al enlazador que emita la información de depuración de símbolos, números de línea y demás información de compilación de objetos en el archivo PDB. De forma predeterminada, esta opción está habilitada cuando **/DEBUG** se especifica y **/DEBUGTYPE** no se ha especificado.  
   
  PDATA  
- Indica al enlazador que agregue entradas .pdata y .xdata a la información de flujo de depuración en el archivo PDB.  Esta opción está habilitada de forma predeterminada si se han especificado las opciones **\/DEBUG** y **\/DRIVER**.  Si **\/DEBUGTYPE:PDATA** se especifica por sí misma, el enlazador incluye automáticamente símbolos de depuración en el archivo PDB.  Si **\/DEBUGTYPE:PDATA,FIXUP** se especifica por sí misma, el enlazador no incluye símbolos de depuración en el archivo PDB.  
+ Indica al enlazador que agregue entradas .pdata y .xdata a la información de flujo de depuración en el archivo PDB. De forma predeterminada, esta opción está habilitada cuando tanto el **/DEBUG** y **Driver/Driver** se especifican opciones. Si **/DEBUGTYPE:PDATA** se especifica por sí mismo, el enlazador incluye automáticamente símbolos de depuración en el archivo PDB. Si **/DEBUGTYPE:PDATA, corrección** se especifica, el vinculador no incluye símbolos de depuración en el archivo PDB.  
   
  FIXUP  
- Indica al enlazador que agregue entradas de la tabla de reubicación a la información de flujo de depuración en el archivo PDB.  Esta opción está habilitada de forma predeterminada si se han especificado las opciones **\/DEBUG** y **\/PROFILE**.  Si se especifica **\/DEBUGTYPE:FIXUP** o **\/DEBUGTYPE:FIXUP,PDATA**, el enlazador no incluye símbolos de depuración en el archivo PDB.  
+ Indica al enlazador que agregue entradas de la tabla de reubicación a la información de flujo de depuración en el archivo PDB. De forma predeterminada, esta opción está habilitada cuando tanto el **/DEBUG** y **/PROFILE** se especifican opciones. Si **/DEBUGTYPE:FIXUP** o **/DEBUGTYPE:FIXUP, PDATA** se especifica, el vinculador no incluye símbolos de depuración en el archivo PDB.  
   
- Los argumentos de **\/DEBUGTYPE** se pueden combinar en cualquier orden separándolos mediante una coma.  La opción **\/DEBUGTYPE** y sus argumentos no distinguen mayúsculas de minúsculas.  
+ Argumentos de **/DEBUGTYPE** se pueden combinar en cualquier orden separándolos con una coma. El **/DEBUGTYPE** opción y sus argumentos no distinguen entre mayúsculas y minúsculas.  
   
-## Comentarios  
- Use la opción **\/DEBUGTYPE** para especificar la inclusión de datos de la tabla de reubicación o información de encabezado .pdata y .xdata en el flujo de depuración.  Esto hace que el enlazador incluya información sobre el código de modo de usuario que está visible en un depurador de kernel cuando se produce una interrupción en el código en modo kernel.  Para hacer que los símbolos de depuración estén disponibles cuando se especifica **FIXUP**, incluya el argumento **CV**.  
+## <a name="remarks"></a>Comentarios  
+ Use la **/DEBUGTYPE** opción para especificar la inclusión de información de encabezado de datos o .pdata y .xdata para la tabla de reubicación en el flujo de depuración. Esto hace que el enlazador incluya información sobre el código de modo de usuario que está visible en un depurador de kernel cuando se produce una interrupción en el código en modo kernel. Para hacer que los símbolos de depuración estén disponibles cuando **corrección** está especificado, incluya el **CV** argumento.  
   
- Para depurar el código en modo de usuario, que es típico en el caso de las aplicaciones, no se necesita la opción **\/DEBUGTYPE**.  De forma predeterminada, los modificadores del compilador que especifican la salida de depuración \([\/Z7, \/Zi, \/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)\) emiten toda la información que necesita el depurador de Visual Studio.  Use **\/DEBUGTYPE:PDATA** o **\/DEBUGTYPE:CV,PDATA,FIXUP** para depurar código que combine componentes de modo usuario y de modo kernel, como es el caso de una aplicación de configuración para un controlador de dispositivo.  Para obtener más información sobre los depuradores de modo kernel, vea [Herramientas de depuración para Windows \(WinDbg, KD, CDB, NTSD\)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
+ Para depurar código en modo de usuario, que es típico para las aplicaciones, el **/DEBUGTYPE** opción no es necesaria. De forma predeterminada, los modificadores de compilador que especifican la depuración de salida ([/Z7, / Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) emitir todo la información necesaria de Visual Studio del depurador. Use **/DEBUGTYPE:PDATA** o **/DEBUGTYPE:CV, PDATA, corrección** para depurar el código que combine componentes de modo usuario y modo de kernel, como una aplicación de configuración para un controlador de dispositivo. Para obtener más información sobre los depuradores de modo kernel, vea [herramientas de depuración para Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)  
   
-## Vea también  
- [\/DEBUG \(Generar información de depuración\)](../../build/reference/debug-generate-debug-info.md)   
- [\/DRIVER \(Controlador de modo kernel de Windows NT\)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
- [\/PROFILE \(Generador de perfiles de Herramientas de rendimiento\)](../../build/reference/profile-performance-tools-profiler.md)   
- [Herramientas de depuración para Windows \(WinDbg, KD, CDB, NTSD\)](http://go.microsoft.com/fwlink/p?LinkID=285651)
+## <a name="see-also"></a>Vea también  
+ [/Debug (generar información de depuración)](../../build/reference/debug-generate-debug-info.md)   
+ [/Driver (controlador de modo Kernel de Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
+ [/Profile (generador de perfiles de herramientas de rendimiento)](../../build/reference/profile-performance-tools-profiler.md)   
+ [Herramientas de depuración para Windows (WinDbg, KD, CDB, NTSD)](http://go.microsoft.com/fwlink/p?LinkID=285651)

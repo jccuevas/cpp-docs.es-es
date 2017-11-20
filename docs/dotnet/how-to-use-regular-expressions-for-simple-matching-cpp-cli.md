@@ -1,35 +1,34 @@
 ---
-title: "C&#243;mo: Utilizar expresiones regulares para buscar coincidencias simples (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsMatch (método)"
-  - "expresiones regulares [C++], coincidencias simples"
-  - "buscar, coincidencias exactas de subcadenas"
-  - "cadenas [C++], coincidencias exactas de subcadenas"
-  - "subcadenas, coincidencias simples"
+title: "Cómo: utilizar expresiones regulares para buscar coincidencias simples (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- substrings, simple matches
+- searching, exact substring matches
+- strings [C++], exact substring matching
+- regular expressions [C++], simple matching
+- IsMatch method
 ms.assetid: 4661f6f3-0f6d-48f2-abe4-cb4770bf9bd5
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c0765dde0ee0e910fe9bc865f68e0d4edeeb67e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Utilizar expresiones regulares para buscar coincidencias simples (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el siguiente ejemplo de código se utilizan expresiones regulares para buscar coincidencias exactas de subcadenas.  La búsqueda se realiza mediante el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> estático, que toma dos cadenas como entrada.  La primera corresponde a la cadena que se va a buscar y la segunda corresponde al modelo que se va a buscar.  
+# <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Cómo: Utilizar expresiones regulares para buscar coincidencias simples (C++/CLI)
+En el ejemplo de código siguiente se utiliza expresiones regulares para buscar coincidencias exactas de subcadenas. La búsqueda se realiza mediante el método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> método, que toma dos cadenas como entrada. La primera es la cadena que se va a buscar y el segundo es el patrón que se va a buscar.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // regex_simple.cpp  
@@ -63,6 +62,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Expresiones regulares de .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Expresiones regulares de .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

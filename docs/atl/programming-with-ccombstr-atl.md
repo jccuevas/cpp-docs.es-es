@@ -1,31 +1,31 @@
 ---
-title: "Programar con CComBSTR (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComBSTR (clase), programar"
-  - "Unicode, usar CComBSTR [ATL]"
+title: Programar con CComBSTR (ATL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComBSTR class, programming with
+- Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d75d2df47f69384ead62712836eee057aed94f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Programar con CComBSTR (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase [CComBSTR](../atl/reference/ccombstr-class.md) ATL proporciona un contenedor alrededor del tipo de datos de `BSTR` .  Mientras `CComBSTR` es una herramienta útil, hay varias situaciones que requieren precaución.  
+# <a name="programming-with-ccombstr-atl"></a>Programar con CComBSTR (ATL)
+La clase ATL [CComBSTR](../atl/reference/ccombstr-class.md) proporciona un contenedor alrededor del `BSTR` tipo de datos. Mientras `CComBSTR` es una herramienta útil, hay varias situaciones que requieren precaución.  
   
--   [problemas de conversión](#programmingwithccombstr_conversionissues)  
+-   [Problemas de conversión](#programmingwithccombstr_conversionissues)  
   
 -   [Problemas de ámbito](#programmingwithccombstr_scopeissues)  
   
@@ -33,50 +33,51 @@ La clase [CComBSTR](../atl/reference/ccombstr-class.md) ATL proporciona un conte
   
 -   [Utilizar objetos CComBSTR en bucles](#programmingwithccombstr_usingloops)  
   
--   [Problemas de pérdida de memoria](#programmingwithccombstr_memoryleaks)  
+-   [Problemas de pérdidas de memoria](#programmingwithccombstr_memoryleaks)  
   
-##  <a name="programmingwithccombstr_conversionissues"></a> problemas de conversión  
- Aunque varios métodos de `CComBSTR` automáticamente convierten un argumento de cadena ANSI en Unicode, los métodos devolverán siempre las cadenas de formato Unicode.  Para convertir la cadena de resultados a ANSI, utilice una clase de conversión de ATL.  Para obtener más información sobre los tipos de conversión ATL, vea [Macros de conversión de cadena ATL y MFC](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md).  
+##  <a name="programmingwithccombstr_conversionissues"></a>Problemas de conversión  
+ Aunque varias `CComBSTR` métodos convertirán automáticamente un argumento de cadena ANSI a Unicode, los métodos siempre devolverán cadenas de formato Unicode. Para convertir la cadena de salida a ANSI, use una clase de conversión de ATL. Para obtener más información sobre las clases de conversión de ATL, vea [Macros de conversión de cadena de MFC y ATL](reference/string-conversion-macros.md).  
   
-### Ejemplo  
- [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/CPP/programming-with-ccombstr-atl_1.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Utilities#114](../atl/codesnippet/cpp/programming-with-ccombstr-atl_1.cpp)]  
   
- Si está utilizando un literal de cadena para modificar un objeto de `CComBSTR` , utilice cadenas de caracteres anchos.  esto reducirá conversiones innecesarias.  
+ Si utilizas un literal de cadena para modificar un `CComBSTR` objeto, utilice las cadenas de caracteres anchos. Esto reducirá las conversiones innecesarias.  
   
-### Ejemplo  
- [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/CPP/programming-with-ccombstr-atl_2.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Utilities#115](../atl/codesnippet/cpp/programming-with-ccombstr-atl_2.cpp)]  
   
-##  <a name="programmingwithccombstr_scopeissues"></a> Problemas de ámbito  
- Como con cualquier buena clase, `CComBSTR` libere los recursos cuando sale del ámbito.  Si una función devuelve un puntero a la cadena de `CComBSTR` , pueden producirse problemas, como el puntero hará referencia a memoria que ya se ha liberado.  En estos casos, utilice el método de **Copiar** , como se muestra a continuación.  
+##  <a name="programmingwithccombstr_scopeissues"></a>Problemas de ámbito  
+ Al igual que con cualquier clase con buen comportamiento, `CComBSTR` liberará sus recursos cuando sale del ámbito. Si una función devuelve un puntero a la `CComBSTR` cadena, esto puede causar problemas, como el puntero hará referencia a memoria que ya se ha liberado. En estos casos, use la **copia** método, tal y como se muestra a continuación.  
   
-### Ejemplo  
- [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/CPP/programming-with-ccombstr-atl_3.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Utilities#116](../atl/codesnippet/cpp/programming-with-ccombstr-atl_3.cpp)]  
   
-##  <a name="programmingwithccombstr_explicitlyfreeing"></a> Liberar explícitamente el objeto CComBSTR  
- Es posible liberar explícitamente la cadena contenida en el objeto de `CComBSTR` antes de que el objeto ámbito.  Si se libera la cadena, el objeto de `CComBSTR` no es válido.  
+##  <a name="programmingwithccombstr_explicitlyfreeing"></a>Liberar explícitamente el objeto CComBSTR  
+ Es posible liberar explícitamente la cadena contenida en el `CComBSTR` objeto antes de que el objeto queda fuera de ámbito. Si la cadena se libera, el `CComBSTR` objeto no es válido.  
   
-### Ejemplo  
- [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/CPP/programming-with-ccombstr-atl_4.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Utilities#117](../atl/codesnippet/cpp/programming-with-ccombstr-atl_4.cpp)]  
   
-##  <a name="programmingwithccombstr_usingloops"></a> Utilizar objetos CComBSTR en bucles  
- Como la clase de `CComBSTR` asigna un búfer para realizar ciertas operaciones, como el operador de `+=` o el método de **Anexar** , no se recomienda realiza la manipulación de cadenas dentro de un bucle ajustado.  en estas situaciones, `CStringT` proporciona mejor rendimiento.  
+##  <a name="programmingwithccombstr_usingloops"></a>Utilizar objetos CComBSTR en bucles  
+ Como el `CComBSTR` clase asigna un búfer para realizar ciertas operaciones, como el `+=` operador o **anexado** método, no se recomienda que lleva a cabo la manipulación de cadenas dentro de un bucle ajustado. En estas situaciones, `CStringT` proporciona un mejor rendimiento.  
   
-### Ejemplo  
- [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/CPP/programming-with-ccombstr-atl_5.cpp)]  
+### <a name="example"></a>Ejemplo  
+ [!code-cpp[NVC_ATL_Utilities#118](../atl/codesnippet/cpp/programming-with-ccombstr-atl_5.cpp)]  
   
-##  <a name="programmingwithccombstr_memoryleaks"></a> Problemas de pérdida de memoria  
- Pasar a la dirección de `CComBSTR` inicializarse con una función como parámetro de **\[out\]** provoca una pérdida de memoria.  
+##  <a name="programmingwithccombstr_memoryleaks"></a>Problemas de pérdidas de memoria  
+ Pasa la dirección de un inicializado `CComBSTR` a una función como un **[out]** parámetro provoca una pérdida de memoria.  
   
- En el ejemplo siguiente, la cadena asignada para contener la cadena `"Initialized"` se bloquee cuando la función `MyGoodFunction` reemplaza la cadena.  
+ En el ejemplo siguiente, se asigna la cadena para contener la cadena `"Initialized"` se ha filtrado cuando la función `MyGoodFunction` reemplaza la cadena.  
   
- [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/CPP/programming-with-ccombstr-atl_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#119](../atl/codesnippet/cpp/programming-with-ccombstr-atl_6.cpp)]  
   
- Para evitar la pérdida, llame al método de **Vacío** en los objetos existentes de `CComBSTR` antes de pasar la dirección como parámetro de **\[out\]** .  
+ Para evitar la pérdida, llame a la **vacía** método existente `CComBSTR` objetos antes de pasar la dirección como un **[out]** parámetro.  
   
- Observe que el mismo código no produciría un escape si el parámetro de la función es **\[in, out\]**.  
+ Tenga en cuenta que el mismo código no podría causar una pérdida de si el parámetro de la función era **[en, out]**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)   
- [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)   
- [wstring](../Topic/wstring.md)   
- [String Conversion Macros](../atl/reference/string-conversion-macros.md)
+ [CStringT (clase)](../atl-mfc-shared/reference/cstringt-class.md)   
+ [wstring](../standard-library/basic-string-class.md)   
+ [Macros de conversión de cadena](../atl/reference/string-conversion-macros.md)
+

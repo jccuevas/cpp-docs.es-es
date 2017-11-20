@@ -1,48 +1,48 @@
 ---
-title: "Enlazar columnas din&#225;micamente en un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "columnas [C++], enlace dinámico de columnas"
-  - "enlace dinámico de columnas"
-  - "proveedores [C++], enlace dinámico de columnas"
+title: "Enlazar columnas dinámicamente en un proveedor | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d942ea203b018e39a98bd731fe2ca9e89b55d3e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Enlazar columnas din&#225;micamente en un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Decida si necesita realmente el enlace dinámico a columnas.  Puede necesitarlo si:  
+# <a name="dynamically-binding-columns-in-your-provider"></a>Enlazar columnas dinámicamente en un proveedor
+Asegúrese de que realmente necesita enlace dinámico de columnas. Puede necesitarlo si:  
   
--   Las columnas del conjunto de filas no se definen en tiempo de compilación.  
+-   Las columnas de conjunto de filas no están definidas en tiempo de compilación.  
   
--   Va a ofrecer compatibilidad con elementos como marcadores que agregan columnas.  
+-   Admite un elemento, como marcadores que agrega las columnas.  
   
-### Para implementar el enlace dinámico a columnas  
+### <a name="to-implement-dynamic-column-binding"></a>Para implementar el enlace dinámico de columnas  
   
-1.  Quite del código las macros **PROVIDER\_COLUMN\_MAP**.  
+1.  Quite cualquier **PROVIDER_COLUMN_MAP**s desde el código.  
   
-2.  En el registro de usuario \(su estructura\), agregue la siguiente declaración:  
+2.  En el registro de usuario (su estructura), agregue la siguiente declaración:  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implemente la función `GetColumnInfo`.  Esta función establece la forma de almacenar la información.  Puede que tenga que obtener propiedades u otra información para esta función.  Es posible que desee crear una macro, similar a la macro [COLUMN\_ENTRY](../../data/oledb/column-entry.md), para agregar su propia información.  
+3.  Implemente el `GetColumnInfo` función. Esta función establece cómo se almacena la información. Debe obtener propiedades u otra información para esta función. Desea crear una macro, similar a la [COLUMN_ENTRY](../../data/oledb/column-entry.md) macro, para agregar su propia información.  
   
-     En el ejemplo siguiente se muestra una función `GetColumnInfo`.  
+     El ejemplo siguiente muestra un `GetColumnInfo` función.  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +95,5 @@ Decida si necesita realmente el enlace dinámico a columnas.  Puede necesitarlo 
     }  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

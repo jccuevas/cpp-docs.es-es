@@ -1,32 +1,32 @@
 ---
-title: "Interfaces del objeto de comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces del objeto de comando [C++]"
-  - "objetos de comando [OLE DB]"
-  - "OLE DB [C++], interfaces del objeto de comando"
+title: Interfaces del objeto de comando | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command object interfaces [C++]
+- command objects [OLE DB]
+- OLE DB [C++], command object interfaces
 ms.assetid: dacff5ae-252c-4f20-9ad7-4e602cc48536
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 734018229eff0db3a1ed1a779be39e59b75447f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces del objeto de comando
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El objeto de comando utiliza la interfaz `IAccessor` para especificar enlaces de parámetros.  El consumidor llama a `IAccessor::CreateAccessor` y le pasa una matriz de estructuras `DBBINDING`.  `DBBINDING` contiene información acerca de los enlaces de columnas \(por ejemplo, tipo y longitud\).  El proveedor recibe la estructura y determina cómo deben transferirse los datos y si es necesario realizar conversiones.  
+# <a name="command-object-interfaces"></a>Interfaces del objeto de comando
+El objeto de comando utiliza el `IAccessor` interfaz para especificar enlaces de parámetros. El consumidor llama `IAccessor::CreateAccessor`, pasando una matriz de `DBBINDING` estructuras. `DBBINDING`contiene información acerca de los enlaces de columna (por ejemplo, tipo y longitud). El proveedor recibe las estructuras y determina cómo se deben transferir los datos y si las conversiones son necesarias.  
   
- La interfaz `ICommandText` proporciona una forma de especificar un comando de texto.  La interfaz `ICommandProperties` controla todas las propiedades del comando.  
+ El `ICommandText` interfaz proporciona una manera de especificar un comando de texto. El `ICommandProperties` interfaz controla todas las propiedades de comando.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

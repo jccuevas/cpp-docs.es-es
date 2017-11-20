@@ -1,32 +1,30 @@
 ---
-title: "lexicographical_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::lexicographical_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lexicographical_compare (función) [STL/CLR]"
+title: lexicographical_compare (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::lexicographical_compare
+dev_langs: C++
+helpviewer_keywords: lexicographical_compare function [STL/CLR]
 ms.assetid: 9ec217f3-5523-4f90-a0cc-8fb7dbe4946b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4991994ddd7dc6ea5205434aada4c513593be9f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# lexicographical_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Compara el elemento por elemento entre dos secuencias para determinar qué es menor de los dos.  
+# <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare (STL/CLR)
+Compara dos secuencias elemento a elemento para determinar cuál es menor de los dos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt1, class _InIt2> inline  
@@ -37,13 +35,13 @@ template<class _InIt1, class _InIt2, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `lexicographical_compare`STL.  Para obtener más información, vea [lexicographical\_compare](../Topic/lexicographical_compare.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `lexicographical_compare`. Para obtener más información, consulte [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,32 +1,32 @@
 ---
-title: "Utilizar un conjunto de registros ADO existente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjuntos de registros ADO [C++]"
-  - "plantillas de consumidor OLE DB, conjuntos de registros ADO"
-  - "conjuntos de registros [C++], utilizar en OLE DB"
+title: Con un conjunto de registros ADO existente | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ADO recordsets [C++]
+- OLE DB consumer templates, ADO recordsets
+- recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6331bd40cd65fb7b367a3958aa4fb00a2f123958
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizar un conjunto de registros ADO existente
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para combinar plantillas de consumidor OLE DB con la tecnología Active Data Objects \(ADO\), use ADO para abrir un conjunto de registros \(equivalente al conjunto de filas de las plantillas de consumidor OLE DB\).  Cuando tenga un conjunto de registros, haga lo siguiente para conectar con un conjunto de filas OLE DB:  
+# <a name="using-an-existing-ado-recordset"></a>Utilizar un conjunto de registros ADO existente
+Para mezclar las plantillas de consumidor OLE DB y Active Data Objects (ADO), use ADO para abrir un conjunto de registros (correspondiente a un conjunto de filas en las plantillas de consumidor OLE DB). Cuando tenga un conjunto de registros, haga lo siguiente para conectarse a un conjunto de filas de OLE DB:  
   
-1.  Llame a `QueryInterface` para los punteros `IRowset` e `IAccessor`.  
+1.  Llame a `QueryInterface` para el `IRowset` y `IAccessor` punteros.  
   
     ```  
     IRowset* lpRowset = NULL;  
@@ -36,9 +36,9 @@ Para combinar plantillas de consumidor OLE DB con la tecnología Active Data Obj
     ```  
   
     > [!NOTE]
-    >  *lpUnk* señala al objeto **IUnknown** del conjunto de registros ADO.  
+    >  *lpUnk* apunta a la **IUnknown** objeto del conjunto de registros ADO.  
   
-2.  Asocie el descriptor de acceso y el conjunto de filas a sus clases correspondientes de plantillas de consumidor OLE DB.  
+2.  Asociar el descriptor de acceso y el conjunto de filas a sus clases de plantillas de consumidor OLE DB adecuados.  
   
     ```  
     CRowset rs;  
@@ -49,5 +49,5 @@ Para combinar plantillas de consumidor OLE DB con la tecnología Active Data Obj
     rs.SetAccessor(accessor);  
     ```  
   
-## Vea también  
- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vea también  
+ [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

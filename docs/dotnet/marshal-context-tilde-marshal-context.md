@@ -1,53 +1,51 @@
 ---
-title: "marshal_context::~marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_context::~marshal_context"
-  - "msclr.interop.marshal_context.~marshal_context"
-  - "marshal_context.~marshal_context"
-  - "msclr::interop::marshal_context::~marshal_context"
-  - "~marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context (clase) [C++], operaciones"
+title: 'serializar_context:: ~ serializar_context | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_context::~marshal_context
+- msclr.interop.marshal_context.~marshal_context
+- marshal_context.~marshal_context
+- msclr::interop::marshal_context::~marshal_context
+- ~marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cb052c27888bf168206c80fc06edd24034880433
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# marshal_context::~marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="marshalcontextmarshalcontext"></a>serializar_context::~serializar_context
 Destruye un objeto `marshal_context`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 ~marshal_context();  
 ```  
   
-## Comentarios  
- Algunas conversiones de datos requieren un contexto de cálculo de referencias.  Vea [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) para obtener más información acerca de las traducciones requieren un contexto y la que tiene que incluir el archivo de cálculo de referencias en la aplicación.  
+## <a name="remarks"></a>Comentarios  
+ Algunas conversiones de datos requieren un contexto de cálculo de referencias. Vea [información general de serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md) para obtener más información acerca de qué traducciones requieren un contexto y el archivo de cálculo de referencias que debe incluirse en la aplicación.  
   
- Eliminar un objeto de `marshal_context` reemplazará los datos convertidos por ese contexto.  Si desea conservar los datos después de que se destruya un objeto de `marshal_context` , debe copiar manualmente los datos a una variable que se conserva.  
+ Eliminar un `marshal_context` objeto invalidará los datos convertidos por ese contexto. Si desea conservar los datos después de un `marshal_context` se destruye el objeto, debe copiar manualmente los datos a una variable que se conservará.  
   
-## Requisitos  
- **Archivo de encabezado:** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\>, o \<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado:** \<msclr\marshal. h >, \<msclr\serializar_windows. h >, \<msclr\serializar_cppstd. h >, o \<msclr\serializar_atl. h >  
   
- **Espacio de nombres:** msclr::interop  
+ **Namespace:** msclr:: Interop  
   
-## Vea también  
- [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context \(Clase\)](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>Vea también  
+ [Información general de la serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context (Clase)](../dotnet/marshal-context-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "mismatch (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::mismatch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mismatch (función) [STL/CLR]"
+title: Error de coincidencia (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::mismatch
+dev_langs: C++
+helpviewer_keywords: mismatch function [STL/CLR]
 ms.assetid: 77876875-44bb-4476-afd9-390da4eaac16
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 373ef101bfd764ccae7b4de8cb11caf11e1ff142
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# mismatch (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Compara el elemento de dos intervalos para el elemento de igualdad o su equivalente en cierto modo especificado por un predicado binario y busque la primera posición donde una diferencia aparece.  
+# <a name="mismatch-stlclr"></a>mismatch (STL/CLR)
+Compara dos intervalos elemento a elemento para ver si son iguales o equivalentes según lo especificado por un predicado binario y busca la primera posición donde se produce una diferencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt1, class _InIt2> inline  
@@ -38,13 +36,13 @@ template<class _InIt1, class _InIt2, class _Pr> inline
             _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `mismatch`STL.  Para obtener más información, vea [mismatch](../Topic/mismatch.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `mismatch`. Para obtener más información, consulte [error de coincidencia de](../standard-library/algorithm-functions.md#mismatch).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

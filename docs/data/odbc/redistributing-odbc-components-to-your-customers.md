@@ -1,41 +1,39 @@
 ---
-title: "Redistribuir componentes ODBC a los clientes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "componentes [C++]"
-  - "componentes [C++], distribuir"
-  - "componentes [C++], redistribuir"
-  - "Administrador de ODBC"
-  - "componentes de ODBC, redistribuir"
-  - "ODBC, distribuir componentes"
+title: Redistribuir componentes ODBC a los clientes | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC components, redistributing
+- ODBC, distributing components
+- components [C++], distributing
+- ODBC Administrator
+- components [C++]
+- components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 861eceef234b77b96179c51979cb7d1c0d09eeeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Redistribuir componentes ODBC a los clientes
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si se incorpora la funcionalidad de los programas del Administrador de ODBC en la aplicación, deben distribuirse también a los usuarios los archivos que ejecutan estos programas.  Estos archivos ODBC residen en el directorio \\OS\\System del CD\-ROM de Visual C\+\+.  En el mismo directorio se encuentran el archivo Redistrb.wri y el contrato de licencia, que contienen una lista de los archivos ODBC que se pueden redistribuir.  
+# <a name="redistributing-odbc-components-to-your-customers"></a>Redistribuir componentes ODBC a los clientes
+Si se incorpora la funcionalidad de los programas de administrador de ODBC en la aplicación, también debe distribuir a los usuarios los archivos que se ejecutan estos programas. Estos archivos ODBC residen en el directorio \OS\System del CD-ROM Visual C++. El archivo Redistrb.wri y el contrato de licencia en el mismo directorio contienen una lista de los archivos ODBC que se pueden redistribuir.  
   
- Si desea incluir controladores ODBC, consulte la documentación correspondiente.  Es necesario determinar las DLL y los archivos que se deseen incluir.  
+ Consulte la documentación para los controladores ODBC que se va a enviar. Debe determinar qué archivos DLL y otros archivos para enviar. También debe leer [Redistribuir componentes ODBC a los clientes](../../data/odbc/redistributing-odbc-components-to-your-customers.md), que explica cómo redistribuir los componentes de ODBC.  
   
- También debería leer [Instalar compatibilidad con bases de datos](../../data/installing-database-support-mfc-atl.md) para obtener información sobre los componentes y controladores ODBC y [Redistribuir controles](../../data/ado-rdo/redistributing-controls.md), que explica cómo redistribuir controles ActiveX.  
+ Además, debe incluir otro archivo en la mayoría de los casos. El archivo Odbccr32.dll es la biblioteca de cursores ODBC. Esta biblioteca proporciona a los controladores de nivel 1 la capacidad de desplazamiento hacia delante y hacia atrás. También proporciona la capacidad de admitir instantáneas. Para obtener más información acerca de la biblioteca de cursores ODBC, vea [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Asimismo, en la mayoría de los casos es necesario incluir otro archivo más.  El archivo Odbccr32.dll es la biblioteca de cursores ODBC.  Esta biblioteca proporciona a los controladores de nivel 1 la capacidad de desplazarse hacia delante y hacia atrás.  También proporciona la capacidad de admitir instantáneas.  Para obtener más información sobre la biblioteca de cursores ODBC, vea [ODBC: Biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
-  
- Los siguientes temas proporcionan más información sobre cómo se utiliza ODBC con las clases de base de datos:  
+ Los temas siguientes proporcionan más información sobre el uso de ODBC con las clases de base de datos:  
   
 -   [ODBC: Biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
@@ -43,6 +41,6 @@ Si se incorpora la funcionalidad de los programas del Administrador de ODBC en l
   
 -   [ODBC: Llamar directamente a funciones de la API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos básicos de ODBC](../../data/odbc/odbc-basics.md)   
  [Administrador de ODBC](../../data/odbc/odbc-administrator.md)

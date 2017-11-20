@@ -1,35 +1,34 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (método)"
+title: 'CRestrictions:: Open | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 907609807b8e152f1fab737d7d336a4fd999b554
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve un conjunto de resultados según las restricciones usuario\- proporcionadas.  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+Devuelve un resultado que se establece de acuerdo con las restricciones proporcionadas por el usuario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -46,27 +45,27 @@ Devuelve un conjunto de resultados según las restricciones usuario\- proporcion
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `session`  
- \[in\] Especifica un objeto de sesión existente utilizado para conectarse al origen de datos.  
+ [in] Especifica un objeto de sesión existente que usa para conectarse al origen de datos.  
   
  *lpszParam*  
- \[in\] Especifica las restricciones del conjunto de filas de esquema.  
+ [in] Especifica las restricciones en el conjunto de filas de esquema.  
   
  `bBind`  
- \[in\] Especifica si enlazar la columna asignan automáticamente.  El valor predeterminado es **true**, que hace que la columna asignada para el enlace automáticamente.  El valor `bBind` a **false** evita el enlace automático de la columna asignada para poder enlazar manualmente. \(El enlace manual resulta especialmente interesante para los usuarios de OLAP\).  
+ [in] Especifica si se debe enlazar automáticamente la asignación de columna. El valor predeterminado es **true**, lo que hace que el mapa de columnas enlazar automáticamente. Establecer `bBind` a **false** evita que el enlace automático de la asignación de columna para que pueda enlazar manualmente. (Enlace manual es de particular interés para los usuarios OLAP).  
   
-## Valor devuelto  
- Uno de los valores estándar de `HRESULT` .  
+## <a name="return-value"></a>Valor devuelto  
+ Uno de los estándar `HRESULT` valores.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Puede especificar un máximo de siete restricciones en un conjunto de filas de esquema.  
   
- Vea [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) para obtener información sobre restricciones definido en cada conjunto de filas de esquema.  
+ Vea [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) para obtener información acerca de las restricciones definidas en cada conjunto de filas de esquema.  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CRestrictions (clase)](../../data/oledb/crestrictions-class.md)   
  [Clases de conjunto de filas de esquema y clases typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -1,35 +1,35 @@
 ---
-title: "C&#243;mo: Detectar excepciones en c&#243;digo nativo iniciadas desde MSIL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "detectar excepciones, producidas a partir de MSIL"
-  - "excepciones, detectar"
-  - "MSIL, detectar excepciones en código nativo"
+title: "Cómo: detectar excepciones en código nativo iniciado desde MSIL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exceptions, catching
+- catching exceptions, thrown from MSIL
+- MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbb17c9ed16f771f60054bcde1f8ea5145047c35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Detectar excepciones en c&#243;digo nativo iniciadas desde MSIL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En código nativo, puede detectar excepciones de C\+\+ nativo de MSIL.  Puede detectar las excepciones de CLR con `__try` y `__except`.  
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Cómo: Detectar excepciones en código nativo iniciadas desde MSIL
+En código nativo, puede detectar las excepciones de C++ nativo de MSIL.  Puede capturar excepciones de CLR con `__try` y `__except`.  
   
- Para obtener más información, vea [Control de excepciones estructurado](../cpp/structured-exception-handling-c-cpp.md) y [Control de excepciones de C\+\+](../cpp/cpp-exception-handling.md).  
+ Para obtener más información, consulte [control de excepciones estructurado (C/C ++)](../cpp/structured-exception-handling-c-cpp.md) y [control de excepciones de C++](../cpp/cpp-exception-handling.md).  
   
-## Ejemplo  
- El ejemplo siguiente se define un módulo con dos funciones, una que produce una excepción nativa, y otra que produce una excepción de MSIL.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente define un módulo con dos funciones, uno que produce una excepción nativo y otro que produce una excepción de MSIL.  
   
 ```  
 // catch_MSIL_in_native.cpp  
@@ -43,8 +43,8 @@ void Test2() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente define un módulo que detecte un natural y una excepción de MSIL.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente define un módulo que detecta un nativo y la excepción de MSIL.  
   
 ```  
 // catch_MSIL_in_native_2.cpp  
@@ -79,7 +79,10 @@ int main() {
 }  
 ```  
   
-  **error**  
-**cogió una excepción**   
-## Vea también  
+```Output  
+error  
+caught an exception  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Control de excepciones](../windows/exception-handling-cpp-component-extensions.md)

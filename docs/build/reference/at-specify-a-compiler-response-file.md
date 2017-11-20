@@ -1,59 +1,57 @@
 ---
-title: "@ (Especificar un archivo de respuesta del compilador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@ (opción del compilador)"
-  - "cl.exe (compilador), especificar archivos de respuesta"
-  - "archivos de respuesta, compilador de C/C++"
+title: '@ (Especificar un archivo de respuesta del compilador) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@'
+dev_langs: C++
+helpviewer_keywords:
+- response files, C/C++ compiler
+- '@ compiler option'
+- cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fcbadb55b2116b0939bbb954e4f544c40caacebb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# @ (Especificar un archivo de respuesta del compilador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="-specify-a-compiler-response-file"></a>@ (Especificar un archivo de respuesta del compilador)
 Especifica un archivo de respuesta del compilador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 @response_file  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `response_file`  
- Archivo de texto que contiene comandos del compilador.  
+ Un archivo de texto que contiene comandos del compilador.  
   
-## Comentarios  
- Un archivo de respuesta puede contener cualquier comando que pueda especificarse en la línea de comandos.  Esto puede ser útil si los argumentos de la línea de comandos superen los 127 caracteres.  
+## <a name="remarks"></a>Comentarios  
+ Un archivo de respuesta puede contener cualquier comando que debe especificar en la línea de comandos. Esto puede resultar útil si los argumentos de línea de comandos superan los 127 caracteres.  
   
- No puede especificarse la opción **@** desde un archivo de respuesta.  Es decir, un archivo de respuesta no puede contener a otro archivo de respuesta.  
+ No es posible especificar el  **@**  opción desde dentro de un archivo de respuesta. Es decir, un archivo de respuesta no puede incrustar otro archivo de respuesta.  
   
- Desde la línea de comandos puede especificar tantas opciones de archivo de respuesta como desee \(por ejemplo, `@respfile.1 @respfile.2`\).  
+ Desde la línea de comandos puede especificar tantas opciones de archivo de respuesta (por ejemplo, `@respfile.1 @respfile.2`) como desee.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
--   Un archivo de respuesta no puede especificarse desde el entorno de desarrollo, sino que debe especificarse en la línea de comandos.  
+-   Un archivo de respuesta no puede especificarse desde el entorno de desarrollo y debe especificarse en la línea de comandos.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
--   Esta opción del compilador no se puede modificar mediante programación.  
+-   Esta opción del compilador no se puede cambiar mediante programación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

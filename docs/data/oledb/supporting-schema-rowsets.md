@@ -1,33 +1,33 @@
 ---
-title: "Admitir conjuntos de filas de esquema | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas de consumidor OLE DB, conjuntos de filas de esquema"
-  - "proveedores OLE DB, conjuntos de filas de esquema"
-  - "OLE DB, conjuntos de filas de esquema"
-  - "conjuntos de filas de esquema"
+title: Admitir conjuntos de filas de esquema | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- schema rowsets
+- OLE DB consumer templates, schema rowsets
+- OLE DB providers, schema rowsets
+- OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Admitir conjuntos de filas de esquema
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Los conjuntos de filas de esquema permiten a los consumidores obtener información acerca de un almacén de datos si conoce su estructura subyacente, o esquema.  Por ejemplo, un almacén de datos puede tener las tablas organizadas en una jerarquía definida por el usuario, por lo que no habría forma de garantizar el conocimiento del esquema sin leerlo. Como otro ejemplo, observe que los asistentes de Visual C\+\+ utilizan conjuntos de filas de esquema para generar descriptores de acceso para el consumidor. Para permitir al consumidor hacer esto, el objeto de sesión del proveedor expone los métodos en la interfaz [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx).  En las aplicaciones de Visual C\+\+ se utiliza la clase [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) para implementar **IDBSchemaRowset**.  
+# <a name="supporting-schema-rowsets"></a>Admitir conjuntos de filas de esquema
+Conjuntos de filas de esquema que los consumidores puedan obtener información acerca de un almacén de datos sin conocer su estructura subyacente, o esquema. Por ejemplo, un almacén de datos podría tener tablas organizadas en una jerarquía definida por el usuario, por lo que no habría ninguna manera de asegurarse de conocimiento del esquema sin leerlo. (Como otro ejemplo, observe que los asistentes de Visual C++ utilizan conjuntos de filas de esquema para generar descriptores de acceso para el consumidor). Para permitir que el consumidor hacer esto, objeto de sesión del proveedor expone los métodos en el [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaz. En las aplicaciones de Visual C++, usas la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) clase para implementar **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl` admite los métodos siguientes:  
+ `IDBSchemaRowsetImpl`admite los siguientes métodos:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) comprueba la validez de las restricciones en un conjunto de filas de esquema.  
   
@@ -35,38 +35,38 @@ Los conjuntos de filas de esquema permiten a los consumidores obtener informaci�
   
 -   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) especifica qué restricciones se admiten en un conjunto de filas de esquema determinado.  
   
--   [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) devuelve un conjunto de filas de esquema \(heredado de la interfaz\).  
+-   [IDBSchemaRowset:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) devuelve un conjunto de filas de esquema (que se hereda de la interfaz).  
   
--   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) devuelve una lista de conjuntos de filas de esquema, accesibles para `IDBSchemaRowsetImpl::GetRowset` \(heredado de la interfaz\).  
+-   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) devuelve una lista de conjuntos de filas de esquema accesibles por `IDBSchemaRowsetImpl::GetRowset` (que se hereda de la interfaz).  
   
-## Compatibilidad con el Asistente para proveedores OLE DB ATL  
+## <a name="atl-ole-db-provider-wizard-support"></a>Asistente para compatibilidad ATL OLE DB proveedor  
  El Asistente para proveedores OLE DB ATL crea tres clases de esquema en el archivo de encabezado de sesión:  
   
--   **C** *Nombre\_corto* **SessionTRSchemaRowset**  
+-   **C** *ShortName* **SessionTRSchemaRowset**  
   
--   **C** *Nombre\_corto* **SessionColSchemaRowset**  
+-   **C** *ShortName* **SessionColSchemaRowset**  
   
--   **C** *Nombre\_corto* **SessionPTSchemaRowset**  
+-   **C** *ShortName* **SessionPTSchemaRowset**  
   
- Estas clases responden a las solicitudes de información sobre el esquema realizadas por el consumidor; tenga en cuenta que la especificación de OLE DB requiere que se admitan los tres conjuntos de filas de esquema siguientes:  
+ Estas clases responden a las solicitudes de consumidor para obtener información de esquema; Tenga en cuenta que la especificación OLE DB requiere que estos conjuntos de filas de tres esquema sean compatibles:  
   
--   **C** *Nombre\_corto* **SessionTRSchemaRowset** controla las solicitudes de información de tablas \(el conjunto de filas de esquema `DBSCHEMA_TABLES`\).  
+-   **C** *ShortName* **SessionTRSchemaRowset** administra las solicitudes de información de la tabla (la `DBSCHEMA_TABLES` de filas de esquema).  
   
--   **C** *Nombre\_corto* **SessionColSchemaRowset** controla las solicitudes de información de columnas \(el conjunto de filas de esquema **DBSCHEMA\_COLUMNS**\).  El asistente suministra implementaciones de ejemplo para estas clases, que devuelven información de esquema para un proveedor de DOS.  
+-   **C** *ShortName* **SessionColSchemaRowset** administra las solicitudes de información de columna (la **DBSCHEMA_COLUMNS** de filas de esquema). El asistente proporciona implementaciones de ejemplo para estas clases, que devuelven información de esquema para un proveedor de DOS.  
   
--   **C** *Nombre\_corto* **SessionPTSchemaRowset** controla las solicitudes de información de esquema sobre el tipo de proveedor \(el conjunto de filas de esquema **DBSCHEMA\_PROVIDER\_TYPES**\).  La implementación predeterminada proporcionada por el asistente devuelve `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** administra las solicitudes de información de esquema sobre el tipo de proveedor (el **DBSCHEMA_PROVIDER_TYPES** conjunto de filas de esquema). La implementación predeterminada proporcionada por el asistente devuelve `S_OK`.  
   
  Puede personalizar estas clases para controlar la información de esquema apropiada para el proveedor:  
   
--   En **C***Nombre\_corto***SessionTRSchemaRowset**, debe rellenar los campos de catálogo, tabla y descripción \(**trData.m\_szType**, **trData.m\_szTable** y **trData.m\_szDesc**\).  El ejemplo generado por el asistente sólo utiliza una fila \(tabla\).  Otros proveedores pueden devolver varias tablas.  
+-   En **C***ShortName***SessionTRSchemaRowset**, debe rellenar los campos de catálogo, tabla y descripción (**trData.m_szType**, **trData.m_szTable**, y **trData.m_szDesc**). El ejemplo generados por el asistente utiliza una sola fila (tabla). Otros proveedores pueden devolver más de una tabla.  
   
--   En **C***Nombre\_corto***SessionColSchemaRowset**, debe pasar el nombre de la tabla como un identificador **DBID**.  
+-   En **C***ShortName***SessionColSchemaRowset**, pase el nombre de la tabla como un **DBID**.  
   
-## Establecer restricciones  
- Un concepto importante en un conjunto de filas de esquema es establecer restricciones, lo que se hace mediante `SetRestrictions`.  Las restricciones permiten a los consumidores buscar únicamente las fichas coincidentes \(por ejemplo, buscar todas las columnas de la tabla "MyTable"\).  Las restricciones son opcionales y, en caso de que no se admita ninguna \(comportamiento predeterminado\), se devuelven siempre todos los datos.  Si desea examinar un ejemplo de proveedor que admite restricciones, vea el ejemplo [UpdatePV](http://msdn.microsoft.com/es-es/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+## <a name="setting-restrictions"></a>Establecer restricciones  
+ Un concepto importante en la compatibilidad de conjunto de filas de esquema es establecer restricciones, lo que hacer utilizando `SetRestrictions`. Las restricciones permiten a los clientes obtener solo las filas coincidentes (por ejemplo, buscar todas las columnas de la tabla "MyTable"). Las restricciones son opcionales y, en caso de que no se admita ninguna (comportamiento predeterminado), se devuelven siempre todos los datos. Para obtener un ejemplo de un proveedor que admite restricciones, vea el [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ejemplo.  
   
-## Configurar el mapa de esquema  
- Configure un mapa de esquema como el siguiente, incluido en el archivo Session.h de UpdatePV:  
+## <a name="setting-up-the-schema-map"></a>Cómo configurar la asignación de esquema  
+ Configurar una asignación de esquema, como en el archivo Session.h de UpdatePV:  
   
 ```  
 BEGIN_SCHEMA_MAP(CUpdateSession)  
@@ -76,9 +76,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()  
 ```  
   
- Para ofrecer compatibilidad con **IDBSchemaRowset**, debe ofrecer compatibilidad con `DBSCHEMA_TABLES`, **DBSCHEMA\_COLUMNS** y **DBSCHEMA\_PROVIDER\_TYPES**.  Puede agregar los conjuntos de filas de esquema adicionales que desee.  
+ Para admitir **IDBSchemaRowset**, debe ser compatible con `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, y **DBSCHEMA_PROVIDER_TYPES**. Puede agregar conjuntos de filas de esquema adicional a su entera discreción.  
   
- Declare una clase de conjunto de filas con un método `Execute`, como `CUpdateSessionTRSchemaRowset`, en UpdatePV:  
+ Declarar una clase de conjunto de filas de esquema con un `Execute` método como `CUpdateSessionTRSchemaRowset` en UpdatePV:  
   
 ```  
 class CUpdateSessionTRSchemaRowset :   
@@ -90,32 +90,32 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)  
 ```  
   
- Tenga en cuenta que `CUpdateSession` hereda de `IDBSchemaRowsetImpl`, por lo que tiene todos los métodos de control de restricciones.  Utilice `CSchemaRowsetImpl` para declarar tres clases secundarias \(citadas en el mapa de esquema anterior\): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, `CUpdateSessionPTSchemaRowset`.  Cada una de estas clases secundarias tiene un método `Execute` que controla su conjunto de restricciones correspondiente \(criterios de búsqueda\).  Cada método `Execute` compara los valores de los parámetros `cRestrictions` y `rgRestrictions`.  Vea la descripción de estos parámetros en [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
+ Tenga en cuenta que `CUpdateSession` hereda de `IDBSchemaRowsetImpl`, por lo que tiene todos los métodos de control de restricciones. Usar `CSchemaRowsetImpl`, declarar tres clases secundarias (que se muestran en el mapa de esquema anterior): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, y `CUpdateSessionPTSchemaRowset`. Cada una de estas clases secundarias tiene un `Execute` método que controla su conjunto de restricciones (criterios de búsqueda) correspondiente. Cada `Execute` método compara los valores de la `cRestrictions` y `rgRestrictions` parámetros. Vea la descripción de estos parámetros en [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Para obtener más información acerca de qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla de GUID del conjunto de filas de esquema incluida en [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx), en la *Referencia del programador de OLE DB* de [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+ Para obtener más información acerca de qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla del conjunto de filas de esquema GUID en [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) en el *referencia del programador de OLE DB* en el SDK de Windows.  
   
- Por ejemplo, si admite la restricción **TABLE\_NAME** en `DBSCHEMA_TABLES`, debe hacer lo siguiente:  
+ Por ejemplo, si admite la **TABLE_NAME** restricción en `DBSCHEMA_TABLES`, podría hacer lo siguiente:  
   
- En primer lugar, busque `DBSCHEMA_TABLES` y vea si admite cuatro restricciones \(por orden\).  
+ En primer lugar, buscar `DBSCHEMA_TABLES` y vea si admite cuatro restricciones (en orden).  
   
-|Restricción de conjunto de filas de esquema|Valores de la restricción|  
-|-------------------------------------------------|-------------------------------|  
-|**TABLE\_CATALOG**|0x1 \(binario 1\)|  
-|**TABLE\_SCHEMA**|0x2 \(binario 10\)|  
-|**TABLE\_NAME**|0x4 \(binario 100\)|  
-|**TABLE\_TYPE**|0x8 \(binario 1000\)|  
+|Restricción de conjunto de filas de esquema|Valor de restricción|  
+|-------------------------------|-----------------------|  
+|**TABLE_CATALOG**|0 x 1 (binario 1)|  
+|**TABLE_SCHEMA**|0 x 2 (binario 10)|  
+|**TABLE_NAME**|0 x 4 (binario 100)|  
+|**TABLE_TYPE**|0 x 8 (binario 1000)|  
   
- A continuación, observe que hay un bit para cada restricción.  Como desea ofrecer compatibilidad con **TABLE\_NAME** únicamente, debe devolver 0x4 en el elemento `rgRestrictions`.  Si admite **TABLE\_CATALOG** y **TABLE\_NAME**, debe devolver 0x5 \(binario 101\).  
+ A continuación, tenga en cuenta que hay un bit por cada restricción. Dado que desea admitir **TABLE_NAME** solo, devolvería 0 x 4 en el `rgRestrictions` elemento. Si admite **TABLE_CATALOG** y **TABLE_NAME**, se devolvería 0 x 5 (binario 101).  
   
- De manera predeterminada, la implementación devuelve 0 \(no admite ninguna restricción\) para cualquier solicitud.  UpdatePV es un ejemplo de proveedor que admite restricciones.  
+ De forma predeterminada, la implementación devuelve 0 (no admite ninguna restricción) para cualquier solicitud. UpdatePV es un ejemplo de un proveedor que admite restricciones.  
   
-### Ejemplo  
- Este código se extrae del ejemplo [UpdatePV](http://msdn.microsoft.com/es-es/c8bed873-223c-4a7d-af55-f90138c6f38f).  UpdatePv admite los tres conjuntos de filas de esquema requeridos: `DBSCHEMA_TABLES`, **DBSCHEMA\_COLUMNS** y **DBSCHEMA\_PROVIDER\_TYPES**.  Como ejemplo de método para implementar la compatibilidad con esquemas en el proveedor, este tema le guía para implementar el conjunto de filas **DBSCHEMA\_TABLE**.  
+### <a name="example"></a>Ejemplo  
+ Este código se toma de la [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ejemplo. UpdatePv admite los tres conjuntos de filas de esquema requeridos: `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, y **DBSCHEMA_PROVIDER_TYPES**. Como ejemplo de cómo implementar la compatibilidad con el esquema en un proveedor, este tema le guía para implementar el **DBSCHEMA_TABLE** conjunto de filas.  
   
 > [!NOTE]
->  El código del ejemplo puede ser diferente del mostrado aquí; debe considerar el código del ejemplo como la versión más actualizada.  
+>  El código de ejemplo puede diferir de lo que se muestre aquí; el ejemplo de código se debe considerar como la versión más actualizada.  
   
- El primer paso para agregar compatibilidad con esquemas es determinar para qué restricciones se va a ofrecer compatibilidad.  Para determinar las restricciones que están disponibles para el conjunto de filas de esquema, consulte la definición de **IDBSchemaRowset** en la especificación de OLE DB.  Después de la definición principal, aparece una tabla que contiene el nombre del conjunto de filas de esquema, el número de restricciones y las columnas de restricción.  Seleccione el conjunto de filas de esquema para el que desee proporcionar compatibilidad y anote el número de restricciones y las columnas de restricción.  Por ejemplo, `DBSCHEMA_TABLES` admite cuatro restricciones \(**TABLE\_CATALOG**, **TABLE\_SCHEMA**, **TABLE\_NAME** y **TABLE\_TYPE**\):  
+ El primer paso para agregar compatibilidad con esquemas es determinar qué restricciones se va a admitir. Para determinar las restricciones que están disponibles para el conjunto de filas de esquema, examine la especificación de OLE DB para la definición de **IDBSchemaRowset**. Después de la definición principal, verá una tabla que contiene el nombre del conjunto de filas de esquema, el número de restricciones y las columnas de restricción. Seleccione el conjunto de filas de esquema que desea admitir y tome nota del número de restricciones y las columnas de restricción. Por ejemplo, `DBSCHEMA_TABLES` admite cuatro restricciones (**TABLE_CATALOG**, **TABLE_SCHEMA**, **TABLE_NAME**, y **TABLE_TYPE** ):  
   
 ```  
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,   
@@ -134,25 +134,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }  
 ```  
   
- Cada columna de restricción se representa mediante un bit.  Si desea admitir una restricción \(es decir, poder realizar consultas teniéndola en cuenta\), asigne el valor 1 a ese bit.  En caso contrario, asigne el valor 0.  Mediante la línea de código anterior, UpdatePV admite las restricciones **TABLE\_NAME** y **TABLE\_TYPE** en el conjunto de filas `DBSCHEMA_TABLES`.  Equivalen a la tercera restricción \(máscara de bits 100\) y la cuarta restricción \(máscara de bits 1000\).  Por tanto, la máscara de bits para UpdatePv es 1100 \(ó 0x0C\):  
+ Un bit representa cada columna de restricción. Si desea admitir una restricción (es decir, puede realizar consultas en él), establezca ese bit en 1. Si no desea admitir una restricción, establezca ese bit en cero. Desde la línea de código anterior, UpdatePV admite la **TABLE_NAME** y **TABLE_TYPE** restricciones en la `DBSCHEMA_TABLES` conjunto de filas. Se trata de la tercera (máscara de bits 100) y la cuarta restricciones (máscara de bits 1000). Por lo tanto, la máscara de bits para UpdatePv es 1100 (ó 0x0C):  
   
 ```  
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))  
     rgRestrictions[l] = 0x0C;  
 ```  
   
- La siguiente función `Execute` es similar a las funciones de los conjuntos de filas normales.  Tiene tres argumentos: `pcRowsAffected`, `cRestrictions` y `rgRestrictions`.  La variable `pcRowsAffected` es un parámetro de salida que el proveedor puede devolver con el número de filas del conjunto de filas de esquema.  El parámetro `cRestrictions` es un parámetro de entrada que contiene el número de restricciones pasadas por el consumidor al proveedor.  El parámetro `rgRestrictions` es una matriz de valores de tipo **VARIANT** que contiene los valores de las restricciones.  
+ El siguiente `Execute` función es similar a los conjuntos de filas normales. Tiene tres argumentos: `pcRowsAffected`, `cRestrictions`, y `rgRestrictions`. El `pcRowsAffected` variable es un parámetro de salida que el proveedor puede devolver el recuento de filas en el conjunto de filas de esquema. El `cRestrictions` parámetro es un parámetro de entrada que contiene el número de restricciones pasadas por el consumidor al proveedor. El `rgRestrictions` parámetro es una matriz de **VARIANT** valores que contienen los valores de restricción.  
   
 ```  
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,   
                 const VARIANT* rgRestrictions)  
 ```  
   
- La variable `cRestrictions` se basa en el número total de restricciones para un conjunto de filas de esquema, independientemente de si el proveedor las admite o no.  Puesto que UpdatePv admite dos restricciones \(la tercera y la cuarta\), este código sólo busca un valor de `cRestrictions` mayor o igual que tres.  
+ El `cRestrictions` variable se basa en el número total de restricciones para un conjunto de filas de esquema, independientemente de si el proveedor admite. Puesto que UpdatePv admite dos restricciones (la tercera y cuarta), este código sólo busca un `cRestrictions` valor mayor o igual que tres.  
   
- El valor de la restricción **TABLE\_NAME** se almacena en `rgRestrictions[2]` \(de nuevo, la tercera restricción de una matriz basada en cero es 2\).  Tiene que comprobar que la restricción no es `VT_EMPTY` para admitirla realmente.  Tenga en cuenta que **VT\_NULL** no es igual a `VT_EMPTY`.  **VT\_NULL** especifica un valor de restricción válido.  
+ El valor de la **TABLE_NAME** restricción se almacena en `rgRestrictions[2]` (de nuevo, la tercera restricción de una matriz basada en cero es 2). Deberá comprobar que la restricción no es `VT_EMPTY` para admitirla realmente. Tenga en cuenta que **VT_NULL** no es igual a `VT_EMPTY`. **VT_NULL** especifica un valor de restricción válida.  
   
- La definición UpdatePv de un nombre de tabla es el nombre de la ruta de archivo completa de un archivo de texto.  Extraiga el valor de la restricción y después intente abrir el archivo para asegurarse de que el archivo existe realmente.  Si el archivo no existe, devuelve `S_OK`.  Esto puede parecer un poco al revés en cierto modo, pero lo que el código indica realmente al consumidor es que no había tablas compatibles con el nombre especificado.  El valor devuelto, `S_OK`, significa que el código se ejecutó correctamente.  
+ La definición UpdatePv de un nombre de tabla es un nombre de ruta de acceso completa a un archivo de texto. Extraer el valor de restricción y, a continuación, intente abrir el archivo para asegurarse de que el archivo existe realmente. Si el archivo no existe, devuelve `S_OK`. Esto puede parecer un poco hacia atrás, pero lo que el código indica realmente al consumidor es que no había ninguna tabla admitida por el nombre especificado. El `S_OK` retorno significa que el código que se ejecutó correctamente.  
   
 ```  
 USES_CONVERSION;  
@@ -189,7 +189,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }  
 ```  
   
- El resultado de admitir la cuarta restricción \(**TABLE\_TYPE**\) es similar a utilizar la tercera.  Compruebe que el valor no es `VT_EMPTY`.  Esta restricción sólo devuelve el tipo de la tabla, **TABLE**.  Para determinar los valores válidos para `DBSCHEMA_TABLES`, busque en el Apéndice B de la *Referencia del programador de OLE DB*, en la sección del conjunto de filas **TABLES**.  
+ Admitir la cuarta restricción (**TABLE_TYPE**) es similar a la tercera restricción. Compruebe que el valor no es `VT_EMPTY`. Esta restricción sólo devuelve el tipo de tabla, **tabla**. Para determinar los valores válidos para la `DBSCHEMA_TABLES`, busque en el apéndice B de la *referencia del programador de OLE DB* en el **tablas** sección del conjunto de filas.  
   
 ```  
 // TABLE_TYPE restriction:  
@@ -208,7 +208,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }  
 ```  
   
- Es aquí donde se crea realmente una entrada de fila para el conjunto de filas.  La variable `trData` corresponde a **CTABLESRow**, una estructura definida en las plantillas de proveedor OLE DB.  **CTABLESRow** corresponde a la definición del conjunto de filas **TABLES** incluida en el Apéndice B de la especificación de OLE DB.  Sólo tiene una fila para agregar, ya que sólo puede admitir una tabla cada vez.  
+ Esto es donde se crea realmente una entrada de fila para el conjunto de filas. La variable `trData` corresponde a **CTABLESRow**, una estructura definida en las plantillas de proveedor OLE DB. **CTABLESRow** corresponde a la **tablas** definición de conjunto de filas en el apéndice B de la especificación de OLE DB. Sólo tiene una fila para agregar porque solo puede admitir una tabla a la vez.  
   
 ```  
 // Bring over the data:  
@@ -217,7 +217,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
- UpdatePV sólo establece tres columnas: **TABLE\_NAME**, **TABLE\_TYPE** y **DESCRIPTION**.  Debe anotar las columnas para las que devuelve información, ya que necesita estos datos para implementar `GetDBStatus`:  
+ UpdatePV sólo establece tres columnas: **TABLE_NAME**, **TABLE_TYPE**, y **descripción**. Debe realizar una nota de las columnas para las que devuelve información, ya que necesitará esta información al implementar `GetDBStatus`:  
   
 ```  
     _ATLTRY  
@@ -235,7 +235,7 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }  
 ```  
   
- La función `GetDBStatus` es muy importante para el correcto funcionamiento del conjunto de filas de esquema.  Como no devuelve datos para cada columna del conjunto de filas **TABLES**, debe especificar para qué columnas devuelve datos y para cuáles no.  
+ El `GetDBStatus` función es muy importante para el correcto funcionamiento del conjunto de filas de esquema. Como no devuelve datos para cada columna de la **tablas** conjunto de filas, debe especificar qué columnas se devuelven datos de y cuáles no.  
   
 ```  
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)  
@@ -256,13 +256,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }  
 ```  
   
- Como la función `Execute` devuelve datos para los campos **TABLE\_NAME**, **TABLE\_TYPE** y **DESCRIPTION** del conjunto de filas **TABLES**, puede consultar el Apéndice B de la especificación de OLE DB y determinar \(contando de arriba a abajo\) que son los ordinales 3, 4 y 6.  Para cada una de esas columnas, devuelva **DBSTATUS\_S\_OK**.  Para todas las demás columnas, devuelva **DBSTATUS\_S\_ISNULL**.  Es importante devolver este estado, ya que un consumidor puede no comprender que el valor que devuelva sea **NULL** o de otro tipo.  Aquí también, tenga en cuenta que **NULL** no es equivalente a valor en blanco.  
+ Dado que su `Execute` función devuelve datos para el **TABLE_NAME**, **TABLE_TYPE**, y **descripción** campos desde el **tablas**conjunto de filas, puede buscar en el apéndice B de la especificación de OLE DB y determinar (contando de arriba hacia abajo) que son los ordinales 3, 4 y 6. Para cada una de esas columnas, devuelva **DBSTATUS_S_OK**. Para todas las demás columnas, devuelva **DBSTATUS_S_ISNULL**. Es importante devolver este estado, ya que un consumidor no puede comprender que es el valor que devuelva **NULL** u otra cosa. Una vez más, observe que **NULL** no es equivalente a vacía.  
   
- Para obtener más información acerca de la interfaz de conjuntos de filas de esquema OLE DB, vea la interfaz [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) en la Referencia del programador de OLE DB.  
+ Para obtener más información acerca de la interfaz de conjunto de filas de esquema OLE DB, vea el [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interfaz en la referencia de la base de datos del programador de OLE.  
   
- Para obtener más información sobre cómo pueden utilizar los consumidores los métodos **IDBSchemaRowset**, vea [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+ Para obtener información acerca de cómo pueden usar los consumidores **IDBSchemaRowset** métodos, vea [obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
- Si desea examinar un ejemplo de proveedor que admite conjuntos de filas de esquema, vea el ejemplo [UpdatePV](http://msdn.microsoft.com/es-es/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+ Para obtener un ejemplo de un proveedor que admite conjuntos de filas de esquema, consulte el [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ejemplo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Técnicas avanzadas para proveedores](../../data/oledb/advanced-provider-techniques.md)

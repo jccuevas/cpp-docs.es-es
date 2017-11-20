@@ -1,50 +1,45 @@
 ---
-title: "Referencia del lenguaje Visual C++ (C++-CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Referencia del lenguaje de Visual C++ (C++ / CX) | Documentos de Microsoft
+ms.custom: 
+ms.date: 09/15/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 27
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 55d890fa369bade254d145ca4935911fef367159
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Referencia del lenguaje Visual C++ (C++-CX)
-[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) es un conjunto de extensiones del lenguaje C\+\+ que permite la creación de aplicaciones de Windows y componentes de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] en un idioma lo más próximo posible al lenguaje C\+\+ moderno. Use [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] para escribir aplicaciones y componentes de Windows en código nativo que interactúen fácilmente con Visual C\#, Visual Basic y JavaScript, y otros lenguajes que admitan [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]. En los pocos casos en que se necesite acceso directo a las interfaces COM sin procesar, o a código no excepcional, puedes usar [Biblioteca de plantillas de Windows Runtime C\+\+ \(WRL\)](http://msdn.microsoft.com/library/b915afce-553b-44a7-b8dc-0ab601758eb0).  
-  
- El nuevo modelo representa la siguiente generación de programación de C\+\+ nativo en Windows. Mediante su uso, puedes crear:  
-  
--   Aplicaciones de Windows en C\+\+ que usan XAML para definir la interfaz de usuario y la pila nativa. Para obtener más información, vea [Create a "hello world" app in C\+\+ \(Windows 10\)](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx) \[Crear una aplicación "hola a todos" en C\+\+ \(Windows 10\)\].  
-  
--   Componentes de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] en C\+\+ que pueden utilizarse en aplicaciones de Windows basadas en JavaScript. Para obtener más información, vea [Crear componentes de Windows en tiempo de ejecución en C\+\+](http://msdn.microsoft.com/library/hh441569.aspx)[Crear componentes de Windows en tiempo de ejecución en C\+\+](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf).  
-  
--   Aplicaciones con numerosos gráficos y juegos DirectX de Windows. Para obtener más información, vea [Crear un juego de Plataforma universal de Windows \(UWP\) simple con DirectX](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx).  
-  
-## Artículos relacionados  
-  
-|||  
-|-|-|  
-|[Referencia rápida](../cppcx/quick-reference-c-cx.md)|Tabla de palabras clave y operadores para [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\).|  
-|[Sistema de tipos](../cppcx/type-system-c-cx.md)|Describe los tipos básicos de [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] y las construcciones de programación, así como la forma de utilizar [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] para utilizar y crear tipos de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)].|  
-|[Compilar aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Explica cómo utilizar el IDE para compilar aplicaciones y vincular a bibliotecas estáticas y archivos DLL.|  
-|[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)|Explica cómo los componentes que se escriben [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] se pueden usar con los componentes que se escriben en JavaScript, cualquier lenguaje administrado o [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|  
-|[Subprocesamiento y cálculo de referencias](../cppcx/threading-and-marshaling-c-cx.md)|Describe cómo especificar el comportamiento de subprocesamiento y cálculo de referencias de los componentes que crees.|  
-|[Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)|Hace referencia a documentación para el espacio de nombres predeterminado, el espacio de nombres Platform, Platform::Collections y los espacios de nombres relacionados.|  
-|[Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Enumera las funciones de CRT que no se pueden usar en aplicaciones de Windows Runtime.|  
-|[Guías de procedimientos para las aplicaciones de Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Proporcionan orientación de alto nivel sobre las aplicaciones de Windows 10 y vínculos a más información.|  
-  
-1.  [C\+\+\/CX Part 0 of \[n\]: An Introduction \(C\+\+\/CX Parte 0 de \[n\]: introducción\)](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-2.  [C\+\+\/CX Part 0 of \[n\]: An Introduction \(C\+\+\/CX Parte 0 de \[n\]: introducción\)](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-3.  [C\+\+\/CX Part 2 of \[n\]: Types That Wear Hats \(C\+\+\/CX Parte 2 de \[n\]: tipos que llevan sombreros\)](http://blogs.msdn.com/b/vcblog/archive/2012/09/17/cxxcxpart02typesthatwearhats.aspx)  
-  
-4.  [C\+\+\/CX Part 3 of \[n\]: Under Construction \(C\+\+\/CX Parte 3 de \[n\]: en construcción\)](http://blogs.msdn.com/b/vcblog/archive/2012/10/05/cxxcxpart03underconstruction.aspx)  
-  
-5.  [C\+\+\/CX Part 4 of \[n\]: Static Member Functions \(C\+\+\/CX Parte 4 de \[n\]: funciones miembro estáticas\)](http://blogs.msdn.com/b/vcblog/archive/2012/10/19/cxxcxpart04staticmemberfunctions.aspx)
+# <a name="visual-c-language-reference-ccx"></a>Referencia del lenguaje Visual C++ (C++/CX)
+
+C++ / CX es un conjunto de extensiones del lenguaje C++ que permite la creación de aplicaciones de Windows y componentes de Windows Runtime en una locución que sea lo más parecida posible a moderna de C++. Utilizar C++ / CX para escribir aplicaciones de Windows y componentes en código nativo que interactúen fácilmente con Visual C#, Visual Basic y JavaScript y otros lenguajes que admitan el tiempo de ejecución de Windows. En los pocos casos que requieren acceso directo a las interfaces COM sin procesar, o a código no excepcional, puede usar el [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).
+
+El nuevo modelo representa la siguiente generación de programación de C++ nativo en Windows. Mediante su uso, puedes crear:
+
+- Aplicaciones de plataforma Universal de Windows (UWP) de C++ que usan XAML para definir el usuario de la interfaz y la pila nativa. Para obtener más información, consulte [crear una aplicación "hello world" en C++ (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
+
+- Componentes de tiempo de ejecución de Windows de C++ que pueden utilizarse en aplicaciones de Windows basadas en JavaScript. Para obtener más información, consulte [crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+
+- Aplicaciones con numerosos gráficos y juegos DirectX de Windows. Para obtener más información, consulte [crear un juego de UWP simple con DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+
+## <a name="related-articles"></a>Artículos relacionados
+
+|||
+|-|-|
+|[Referencia rápida](../cppcx/quick-reference-c-cx.md)|Tabla de palabras clave y operadores de C++ / CX.|
+|[Sistema de tipos](../cppcx/type-system-c-cx.md)|Describe básico de C++ / CX tipos y construcciones de programación y cómo utilizar C++ / CX para utilizar y crear tipos en tiempo de ejecución de Windows.|
+|[Compilar aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Explica cómo utilizar el IDE para compilar aplicaciones y vincular a bibliotecas estáticas y archivos DLL.|
+|[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)|Describe cómo los componentes que se escriben con C++ / CX puede utilizarse con componentes que se escriben en JavaScript, cualquier lenguaje administrado o la [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)].|
+|[Subprocesamiento y cálculo de referencias](../cppcx/threading-and-marshaling-c-cx.md)|Describe cómo especificar el comportamiento de subprocesamiento y cálculo de referencias de los componentes que crees.|
+|[Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)|Hace referencia a documentación para el espacio de nombres predeterminado, el espacio de nombres Platform, Platform::Collections y los espacios de nombres relacionados.|
+|[Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Enumera las funciones de CRT que no se pueden usar en aplicaciones de Windows Runtime.|
+|[Guías de procedimientos para las aplicaciones de Windows 10](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Proporcionan orientación de alto nivel sobre las aplicaciones de Windows 10 y vínculos a más información.|
+|[C++ / CX parte 0 de \[ n \]: Introducción](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++ / CX parte 1 de \[ n \]: una clase Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++ / CX parte 2 de \[ n \]: tipos que usan sombreros](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++ / CX parte 3 de \[ n \]: en construcción](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++ / CX parte 4 de \[ n \]: las funciones miembro estáticas](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Una serie de blogs de Visual C++ introductoria en C++ / CX.|

@@ -1,36 +1,34 @@
 ---
-title: "lock::operator!= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock.operator!="
-  - "msclr.lock.operator!="
-  - "msclr::lock::operator!="
-  - "lock::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator!="
+title: Lock::operator! = | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock.operator!=
+- msclr.lock.operator!=
+- msclr::lock::operator!=
+- lock::operator!=
+dev_langs: C++
+helpviewer_keywords: lock::operator!=
 ms.assetid: ed1d674e-9ee9-4257-8a7e-2e3567d50222
-caps.latest.revision: 6
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 090d461a8f11d47d25119f5949f9f570093244fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# lock::operator!=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lockoperator"></a>lock::operator!=
 Operador de desigualdad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class T> bool operator!=(  
@@ -38,14 +36,14 @@ template<class T> bool operator!=(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `t`  
- El objeto que se compara para la desigualdad.  
+ El objeto para comparar la desigualdad.  
   
-## Valor devuelto  
- Devuelve `true` si `t` difiere del objeto de bloqueo, `false` de otra manera.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si `t` difiere de un objeto del bloqueo, `false` en caso contrario.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_lock_op_ineq.cpp  
@@ -66,12 +64,15 @@ int main () {
 }  
 ```  
   
-  **¡Desigual\!**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+Inequal!  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
- [lock::operator\=\=](../dotnet/lock-operator-equality.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
+ [lock::operator==](../dotnet/lock-operator-equality.md)

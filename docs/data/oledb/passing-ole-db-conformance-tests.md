@@ -1,42 +1,42 @@
 ---
-title: "Superar las pruebas de conformidad de OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pruebas de conformidad"
-  - "pruebas de conformidad [OLE DB]"
-  - "proveedores OLE DB, pruebas"
-  - "probar proveedores"
-  - "pruebas, proveedores OLE DB"
+title: Pasar las pruebas de conformidad de OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- conformance testing
+- conformance testing [OLE DB]
+- OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Superar las pruebas de conformidad de OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para conseguir que los proveedores sean más coherentes, el SDK de Data Access proporciona un conjunto de pruebas de conformidad de OLE DB.  Las pruebas comprueban todos los aspectos del proveedor y proporcionan una garantía razonable de que el proveedor funciona de la manera esperada.  Puede encontrar las pruebas de conformidad con OLE DB en el SDK de Microsoft Data Access.  Esta sección está centrada en lo que hay que hacer para superar las pruebas de conformidad.  Para obtener información sobre la realización de las pruebas de conformidad con OLE DB, vea el SDK.  
+# <a name="passing-ole-db-conformance-tests"></a>Superar las pruebas de conformidad de OLE DB
+Para que los proveedores de forma que sea más homogénea, el SDK de Data Access proporciona un conjunto de pruebas de conformidad de OLE DB. Las pruebas comprueban todos los aspectos de su proveedor y proporcionan una garantía razonable que el proveedor funciona como se esperaba. Puede encontrar las pruebas de conformidad de OLE DB en el SDK de Microsoft Data Access. En esta sección se centra en lo que se debe hacer para pasar las pruebas de conformidad. Para obtener información acerca de cómo ejecutar las pruebas de conformidad de OLE DB, vea el SDK.  
   
-## Realizar las pruebas de conformidad  
- En Visual C\+\+ 6.0, las plantillas de proveedor OLE DB agregaban varias funciones de enlace para permitir la comprobación de valores y propiedades.  La mayoría de estas funciones se agregaron a causa de las pruebas de conformidad.  
+## <a name="running-the-conformance-tests"></a>Ejecuta las pruebas de conformidad  
+ En Visual C++ 6.0, las plantillas de proveedor OLE DB agregan una serie de funciones de enlace para que pueda comprobar valores y propiedades. La mayoría de estas funciones se agregaron en respuesta a las pruebas de conformidad.  
   
 > [!NOTE]
->  Debe agregar varias funciones de validación para que el proveedor supere las pruebas de conformidad con OLE DB.  
+>  Debe agregar varias funciones de validación para el proveedor pasar las pruebas de conformidad de OLE DB.  
   
- Este proveedor requiere dos rutinas de validación.  La primera rutina, `CRowsetImpl::ValidateCommandID`, forma parte de la clase de conjunto de filas.  Las plantillas de proveedor llaman a esta rutina durante la creación del conjunto de filas.  El ejemplo utiliza esta rutina para indicar a los consumidores que no admite índices.  La primera llamada se hace a `CRowsetImpl::ValidateCommandID` \(tenga en cuenta que el proveedor utiliza la definición de tipo **\_RowsetBaseClass** agregada en el mapa de interfaz para `CMyProviderRowset` de [Compatibilidad del proveedor con los marcadores](../../data/oledb/provider-support-for-bookmarks.md), de forma que no tenga que escribir esa larga línea de argumentos de plantilla\).  A continuación, devuelva **DB\_E\_NOINDEX** si el parámetro de índice no es de tipo **NULL** \(es decir, el consumidor desea utilizar un índice en el proveedor\).  Para obtener más información sobre identificadores de comandos, busque **IOpenRowset::OpenRowset** en las especificaciones de OLE DB.  
+ Este proveedor requiere dos rutinas de validación. La primera rutina, `CRowsetImpl::ValidateCommandID`, forma parte de la clase de conjunto de filas. Se llama durante la creación del conjunto de filas mediante las plantillas del proveedor. El ejemplo utiliza esta rutina para indicar a los consumidores que no admite índices. Es la primera llamada `CRowsetImpl::ValidateCommandID` (tenga en cuenta que el proveedor utiliza la **_RowsetBaseClass** typedef agregada en el mapa de interfaz para `CMyProviderRowset` en [compatibilidad del proveedor con los marcadores](../../data/oledb/provider-support-for-bookmarks.md), por lo que no es necesario escribir esa larga línea de argumentos de plantilla). A continuación, devolver **DB_E_NOINDEX** si el parámetro de índice no es **NULL** (Esto indica el consumidor desea utilizar un índice en). Para obtener más información sobre identificadores de comando, vea la especificación de OLE DB y busque **IOpenRowset:: OpenRowset**.  
   
- El código siguiente es la rutina de validación de **ValidateCommandID**:  
+ El código siguiente es el **ValidateCommandID** rutina de validación:  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -56,30 +56,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- Las plantillas de proveedor llaman al método `OnPropertyChanged` siempre que alguien cambie el valor de una propiedad del grupo **DBPROPSET\_ROWSET**.  Si desea controlar propiedades de otros grupos, agréguelas al objeto apropiado \(es decir, las comprobaciones de **DBPROPSET\_SESSION** corresponden a la clase `CMyProviderSession`\).  
+ La llamada de plantillas de proveedor la `OnPropertyChanged` método cada vez que alguien cambie una propiedad en el **DBPROPSET_ROWSET** grupo. Si desea controlar propiedades de otros grupos, se agrega al objeto apropiado (es decir, **DBPROPSET_SESSION** comprobaciones de la `CMyProviderSession` clase).  
   
- En primer lugar, el código comprueba si la propiedad está vinculada a otra propiedad.  Si se está encadenando la propiedad, se establece el valor de la propiedad **DBPROP\_BOOKMARKS** en True.  El Apéndice C de la especificación de OLE DB contiene información acerca de las propiedades.  Esta información también le indica si la propiedad está encadenada a otra.  
+ El código comprueba primero si la propiedad está vinculada a otra. Si se está encadenando la propiedad, Establece la **DBPROP_BOOKMARKS** propiedad en True. Apéndice C de la especificación de OLE DB contiene información acerca de las propiedades. Esta información también indica si la propiedad está encadenada a otra.  
   
- Puede que también desee agregar al código la rutina `IsValidValue`.  Las plantillas llaman a `IsValidValue` al intentar establecer una propiedad.  Si requiere procesamiento adicional al establecer el valor de una propiedad, debe reemplazar este método.  Puede tener uno de estos métodos para cada conjunto de propiedades.  
+ También puede agregar el `IsValidValue` rutinarias en el código. La llamada de plantillas `IsValidValue` al intentar establecer una propiedad. Debe reemplazar este método si requieren un procesamiento adicional cuando se establece un valor de propiedad. Puede tener uno de estos métodos para cada conjunto de propiedades.  
   
-## Cuestiones de subprocesamiento  
- De manera predeterminada, el Asistente para proveedores OLE DB del Asistente para proveedores OLE DB ATL generará código para que el proveedor se ejecute en un modelo apartamento.  Si intenta ejecutar este código con las pruebas de conformidad, inicialmente se producirán errores.  Esto se debe a que Ltm.exe, la herramienta utilizada para ejecutar las pruebas de conformidad de OLE DB, utiliza de manera predeterminada el subproceso libre.  El código del Asistente para proveedores OLE DB utiliza de manera predeterminada el modelo apartamento para obtener mejor rendimiento y facilitar su uso.  
+## <a name="threading-issues"></a>Problemas con el subprocesamiento  
+ De forma predeterminada, el proveedor de Asistente para OLE DB en el Asistente para proveedores OLE DB ATL genera código para el proveedor se ejecute en un modelo de apartamento. Si intenta ejecutar este código con las pruebas de conformidad, inicialmente se producen errores. Esto es porque el valor predeterminado es Ltm.exe, la herramienta utilizada para ejecutar las pruebas de conformidad de OLE DB, para liberar un subproceso. El código de Asistente para proveedores OLE DB tiene como valor predeterminado para el modelo de apartamento de rendimiento y facilidad de uso.  
   
- Para solucionar este problema, puede cambiar LTM o el proveedor.  
+ Para corregir este problema, puede cambiar LTM o cambiar el proveedor.  
   
-#### Para cambiar LTM de forma que se ejecute en modo de subproceso de apartamento  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>Para cambiar LTM para ejecutarse en el apartamento de subproceso modo  
   
-1.  En el menú principal de LTM, haga clic en **Herramientas** y, a continuación, en **Opciones**.  
+1.  En el menú principal de LTM, haga clic en **herramientas**y, a continuación, haga clic en **opciones**.  
   
-2.  En la ficha **General**, cambie el modelo de subprocesos de **Subproceso libre** a **Subproceso de apartamento**.  
+2.  En el **General** , modifique el modelo de subprocesamiento de **subproceso libre** a **Apartment Threaded**.  
   
- Para cambiar el proveedor de forma que se ejecute en modo de subproceso libre:  
+ Para cambiar el proveedor se ejecute en modo de subprocesamiento libre:  
   
--   En el proyecto de proveedor, busque todas las instancias de `CComSingleThreadModel` y reemplácelas por `CComMultiThreadModel`, que debe estar en los encabezados de origen de datos, sesión y conjunto de filas.  
+-   En el proyecto de proveedor, busque todas las instancias de `CComSingleThreadModel` y sustituirlo por `CComMultiThreadModel`, que debe estar en los encabezados de origen, la sesión y el conjunto de filas de datos.  
   
--   Cambie en el archivo .rgs el modelo de subprocesos de **Apartamento** a **Combinado**.  
+-   En el archivo .rgs, cambie el modelo de subprocesamiento de **apartamento** a **ambos**.  
   
--   Siga las normas de programación correctas para la programación de subproceso libre \(es decir, bloqueo al escribir\).  
+-   Programación multiproceso de forma gratuita (es decir, el bloqueo en las escrituras) de reglas de programación correcto de seguimiento.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Técnicas avanzadas para proveedores](../../data/oledb/advanced-provider-techniques.md)

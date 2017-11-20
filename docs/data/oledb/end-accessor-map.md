@@ -1,32 +1,30 @@
 ---
-title: "END_ACCESSOR_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "END_ACCESSOR_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "END_ACCESSOR_MAP (macro)"
+title: END_ACCESSOR_MAP | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: END_ACCESSOR_MAP
+dev_langs: C++
+helpviewer_keywords: END_ACCESSOR_MAP macro
 ms.assetid: ede813c7-46c9-48a6-aa1a-8ebf38e92023
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7cbad12a88374b3f6aa23f54f92ed55f0d827ef1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# END_ACCESSOR_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca el final de las entradas del mapa del descriptor.  
+# <a name="endaccessormap"></a>END_ACCESSOR_MAP
+Marca el final de las entradas del mapa de descriptor de acceso.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,16 +32,16 @@ END_ACCESSOR_MAP( )
   
 ```  
   
-## Comentarios  
- Para múltiples descriptores de acceso en un conjunto de filas, debe especificar `BEGIN_ACCESSOR_MAP` y utilizar la macro de `BEGIN_ACCESSOR` para cada descriptor de acceso individual.  La macro de `BEGIN_ACCESSOR` se completa con la macro de `END_ACCESSOR` .  La macro de `BEGIN_ACCESSOR_MAP` se completa con la macro de `END_ACCESSOR_MAP` .  
+## <a name="remarks"></a>Comentarios  
+ Para varios descriptores de acceso en un conjunto de filas, debe especificar `BEGIN_ACCESSOR_MAP` y usar el `BEGIN_ACCESSOR` macro para cada descriptor de acceso individual. La macro `BEGIN_ACCESSOR` se completa con la macro `END_ACCESSOR` . El `BEGIN_ACCESSOR_MAP` macro se ha completado con el `END_ACCESSOR_MAP` macro.  
   
-## Ejemplo  
- Vea [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)

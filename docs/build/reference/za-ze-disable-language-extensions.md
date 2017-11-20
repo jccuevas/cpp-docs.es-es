@@ -1,79 +1,78 @@
 ---
-title: "/Za, /Ze (Deshabilitar extensiones de lenguaje) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions"
-  - "/za"
-  - "/ze"
-  - "VC.Project.VCCLCompilerTool.DisableLanguageExtensions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Za (opción del compilador) [C++]"
-  - "/Ze (opción del compilador) [C++]"
-  - "Deshabilitar extensiones de lenguaje (opción del compilador)"
-  - "habilitar extensiones de lenguaje"
-  - "extensiones de lenguaje"
-  - "extensiones de lenguaje, deshabilitar en el compilador"
-  - "Za (opción del compilador) [C++]"
-  - "-Za (opción del compilador) [C++]"
-  - "Ze (opción del compilador) [C++]"
-  - "-Ze (opción del compilador) [C++]"
+title: -Za, - Ze (deshabilitar extensiones de lenguaje) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
+- /za
+- /ze
+- VC.Project.VCCLCompilerTool.DisableLanguageExtensions
+dev_langs: C++
+helpviewer_keywords:
+- -Za compiler option [C++]
+- Za compiler option [C++]
+- language extensions, disabling in compiler
+- -Ze compiler option [C++]
+- language extensions
+- enable language extensions
+- /Za compiler option [C++]
+- /Ze compiler option [C++]
+- Disable Language Extensions compiler option
+- Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1e1d0c5f76c0eb71b631ef9bffbc1e60e5ceb069
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /Za, /Ze (Deshabilitar extensiones de lenguaje)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La opción **\/Za** del compilador emite un error para las construcciones de lenguaje que no son compatibles con ANSI C o ANSI C\+\+.  La opción **\/Ze** del compilador, que es el valor predeterminado, habilita las extensiones de Microsoft.  
+# <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Deshabilitar extensiones de lenguaje)
+El **/Za** opción del compilador emite un error para las construcciones de lenguaje que no son compatibles con ANSI C89 o ISO C ++ 11. El **/Ze** opción del compilador, que está activado de forma predeterminada, habilita las extensiones de Microsoft.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Za  
 /Ze  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  La opción **\/Ze** está desusada.  Para obtener más información, vea [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/es-es/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+>  El **/Ze** opción está en desuso porque su comportamiento está de forma predeterminada. Le recomendamos que use la [/Zc (ajuste)](../../build/reference/zc-conformance.md) opciones del compilador para controlar las características de extensión de idioma específico. Para obtener una lista de opciones del compilador en desuso, consulte el **en desuso y quitar opciones de compilador** sección [opciones de compilador enumerados por categoría](../../build/reference/compiler-options-listed-by-category.md).  
   
- El compilador de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ofrece varias características aparte de las especificadas en los estándares ANSI C o ANSI C\+\+.  Dichas características se conocen colectivamente como extensiones de Microsoft para C y C\+\+.  Estas extensiones están disponibles cuando se especifica la opción **\/Ze**, y no lo están cuando se especifica la opción **\/Za**.  Para obtener más información, vea [Extensiones de Microsoft para C y C\+\+](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
+ El [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] compilador ofrece una serie de características más allá de los especificados en los estándares ANSI C89, ISO C99 o ISO C++. Estas características se conocen colectivamente como extensiones de Microsoft para C y C++. Estas extensiones están disponibles de forma predeterminada y no está disponible cuando la **/Za** se especifica la opción. Para obtener más información acerca de extensiones específicas, consulte [Extensions Microsoft para C y C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
   
- Deshabilite las extensiones de lenguaje si desea trasladar un programa a otros entornos.  El compilador trata las palabras clave extendidas como simples identificadores, deshabilita las demás extensiones de Microsoft y define automáticamente la macro predefinida `__STDC__` para los programas de C.  
+ Se recomienda deshabilitar extensiones de lenguaje mediante la especificación de la **/Za** opción si piensa migrar el programa a otros entornos. Cuando **/Za** se especifica, el compilador trata las palabras clave como identificadores simples de extendidas de Microsoft, deshabilita las demás extensiones de Microsoft y define automáticamente el `__STDC__` macro predefinida para programas de C.  
   
- Otras opciones del compilador utilizadas con **\/Za** pueden afectar a cómo el compilador garantiza la compatibilidad con ANSI.  Por ejemplo, **\/Za** y [\/fp \(Especificar comportamiento de punto flotante\)](../../build/reference/fp-specify-floating-point-behavior.md) pueden dar como resultado un comportamiento inesperado.  
+ Otras opciones del compilador utilizadas con **/Za** pueden afectar a cómo el compilador garantiza el cumplimiento de los estándares. Por ejemplo, **/Za** y [/fp (Especificar comportamiento de punto flotante)](../../build/reference/fp-specify-floating-point-behavior.md) pueden dar en el comportamiento de la promoción de tipo de punto flotante que no se ajusta a ISO C99 o C ++ 11 estándares.  
   
- Vea la opción [\/Zc](../../build/reference/zc-conformance.md) del compilador para saber cómo conseguir un comportamiento estándar con **\/Za**.  
+ Para que ver las formas especificar la configuración de comportamiento de estándares específicos, consulte la [/Zc](../../build/reference/zc-conformance.md) opción del compilador.  
   
- Para obtener más información sobre los problemas de compatibilidad con [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], vea [Problemas de compatibilidad y conformidad en Visual C\+\+](../../misc/compatibility-and-compliance-issues-in-visual-cpp.md).  
+ Para obtener más información acerca de los problemas de conformidad con [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], consulte [comportamiento no estándar](../../cpp/nonstandard-behavior.md).  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  En el panel de navegación, elija **propiedades de configuración**, **C/C++**, **lenguaje**.  
   
-3.  Haga clic en la página de propiedades **Lenguaje**.  
+3.  Modificar el **deshabilitar extensiones de lenguaje** propiedad.  
   
-4.  Modifique la propiedad **Deshabilitar extensiones de lenguaje**.  
-  
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+ [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
+ [/Zc (ajuste)](../../build/reference/zc-conformance.md)

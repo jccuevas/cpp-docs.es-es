@@ -1,73 +1,72 @@
 ---
-title: "CArrayRowset (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CArrayRowset<TAccessor>"
-  - "ATL.CArrayRowset"
-  - "CArrayRowset"
-  - "ATL::CArrayRowset"
-  - "ATL::CArrayRowset<TAccessor>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArrayRowset (clase)"
+title: CArrayRowset (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CArrayRowset<TAccessor>
+- ATL.CArrayRowset
+- CArrayRowset
+- ATL::CArrayRowset
+- ATL::CArrayRowset<TAccessor>
+dev_langs: C++
+helpviewer_keywords: CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82c209938c7d124e787310cb859aeb6191f32c8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CArrayRowset (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso a los elementos de un conjunto de filas con sintaxis de matriz.  
+# <a name="carrayrowset-class"></a>CArrayRowset (Clase)
+Elementos de accesos de un conjunto de filas utilizando la sintaxis de la matriz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template < class TAccessor >  
 class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+   public CVirtualBuffer <TAccessor>,   
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TAccessor`  
- El tipo de clase de descriptor de acceso que desea que el conjunto de filas para utilizar.  
+ El tipo de clase de descriptor de acceso que desea que las filas que se va a usar.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
 |[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|Constructor.|  
-|[Instantánea](../../data/oledb/carrayrowset-snapshot.md)|Lee el conjunto de filas completo en memoria.|  
+|[Instantánea](../../data/oledb/carrayrowset-snapshot.md)|Lee el conjunto de filas completo en la memoria.|  
   
-### Operadores  
-  
-|||  
-|-|-|  
-|[Operador &#91;&#93;](../../data/oledb/carrayrowset-operator.md)|Tiene acceso a un elemento de conjunto de filas.|  
-  
-### Miembros de datos  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[CArrayRowset::m\_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|El número de filas lee ya.|  
+|[Operador &#91; &#93;](../../data/oledb/carrayrowset-operator.md)|Tiene acceso a un elemento del conjunto de filas.|  
   
-## Requisitos  
- **Header:** atldbcli.h  
+### <a name="data-members"></a>Miembros de datos  
   
-## Vea también  
+|||  
+|-|-|  
+|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|El número de filas ya leídos.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
+  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)
+ [CRowset (Clase)](../../data/oledb/crowset-class.md)

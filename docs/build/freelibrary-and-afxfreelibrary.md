@@ -1,53 +1,53 @@
 ---
-title: "FreeLibrary y AfxFreeLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FreeLibrary"
-  - "AfxFreeLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "archivos DLL de extensión [C++], descargar"
-  - "AfxFreeLibrary (método)"
-  - "descargar DLLs"
-  - "FreeLibrary (método)"
-  - "archivos DLL [C++], vincular"
-  - "vinculación explícita [C++]"
-  - "archivos DLL [C++], descargar"
+title: FreeLibrary y AfxFreeLibrary | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FreeLibrary
+- AfxFreeLibrary
+dev_langs: C++
+helpviewer_keywords:
+- extension DLLs [C++], unloading
+- AfxFreeLibrary method
+- unloading DLLs
+- FreeLibrary method
+- DLLs [C++], linking
+- explicit linking [C++]
+- DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 276d93489a714dda5edd721c532c28c03b3ca41f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# FreeLibrary y AfxFreeLibrary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Procesos que se vinculen explícitamente a un archivo DLL llaman a la función [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) cuando el módulo del archivo DLL ya no se necesita.  Esta función reduce el número de referencias del módulo y, si dicho número es cero, elimina la asignación del espacio de direcciones del proceso.  
+# <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary y AfxFreeLibrary
+Procesos que se vinculan explícitamente a una llamada DLL el [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) funcionar cuando el módulo del archivo DLL ya no es necesario. Esta función disminuye recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.  
   
- En una aplicación MFC, utilice [AfxFreeLibrary](../Topic/AfxFreeLibrary.md) en lugar de `FreeLibrary` para descargar un archivo DLL de extensión.  La interfaz \(prototipo de función\) de `AfxFreeLibrary` es la misma que para `FreeLibrary`.  
+ En una aplicación MFC, utilice [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) en lugar de `FreeLibrary` para descargar un archivo DLL de extensión MFC. La interfaz (prototipo de función) para `AfxFreeLibrary` es el mismo que `FreeLibrary`.  
   
-## ¿Qué desea hacer?  
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
   
--   [Vincular de forma implícita](../build/linking-implicitly.md)  
+-   [Cómo vincular implícitamente a un archivo DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Determinar el método de vinculación que se va a utilizar](../build/determining-which-linking-method-to-use.md)  
+-   [Determinar qué método de vinculación para usar](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
 -   [LoadLibrary y AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## Vea también  
- [Archivos DLL en Visual C\+\+](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)   
  [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
- [AfxFreeLibrary](../Topic/AfxFreeLibrary.md)
+ [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

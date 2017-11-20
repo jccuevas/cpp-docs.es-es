@@ -1,38 +1,35 @@
 ---
-title: "Informaci&#243;n del cat&#225;logo (acceso a datos MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "base de datos con información de catálogo [C++]"
-  - "DAO [C++], información de catálogo"
-  - "bases de datos [C++], base de datos con información de catálogo"
-  - "ODBC [C++], información de catálogo"
-  - "tablas [C++]"
-  - "tablas [C++], información de catálogo"
+title: "(Acceso a datos MFC) de la información del catálogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tables [C++], catalog information
+- tables [C++]
+- ODBC [C++], catalog information
+- catalog information database [C++]
+- databases [C++], catalog information database
 ms.assetid: c184e80f-ff17-409f-9df8-05275080bb8d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21200db5e023f53407304d99946b6dd8575a7c1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Informaci&#243;n del cat&#225;logo (acceso a datos MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="catalog-information--mfc-data-access"></a>Información del catálogo (acceso a datos MFC)
 La información sobre las tablas de un origen de datos puede incluir los nombres de las tablas y las columnas, los privilegios de tabla, los nombres de claves principales y externas, información sobre consultas predefinidas o procedimientos almacenados, información sobre los índices de tablas y estadísticas sobre las tablas.  
   
- Para obtener más información, consulte [Origen de datos: determinar el esquema del origen de datos \(ODBC\)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
+ Para obtener más información, consulte [origen de datos: determinar el esquema de origen de datos (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).  
   
-> [!NOTE]
->  En las clases DAO de MFC, puede obtener información del catálogo de la siguiente manera: Use [CDaoDatabase::GetTableDefCount](../Topic/CDaoDatabase::GetTableDefCount.md) y [CDaoDatabase::GetTableDefInfo](../Topic/CDaoDatabase::GetTableDefInfo.md) para enumerar las tablas de la base de datos y obtener información sobre cada tabla en una estructura [CDaoTableDefInfo](../mfc/reference/cdaotabledefinfo-structure.md).  
   
-## Vea también  
- [Programación del acceso a datos \(MFC\/ATL\)](../data/data-access-programming-mfc-atl.md)
+## <a name="see-also"></a>Vea también  
+ [Acceso a los datos de programación (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -1,63 +1,45 @@
 ---
-title: Arquetipo de trabajo | Documentos de Microsoft
+title: Trabajo Arquetipo | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- Worker archetype
+dev_langs: C++
+helpviewer_keywords: Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="worker-archetype"></a>Arquetipo de trabajo
-Las clases que se ajusten a la *trabajo* Arquetipo de proporcionar el código para procesar elementos de trabajo en cola en un grupo de subprocesos.  
+Las clases que se ajustan a la *trabajo* Arquetipo proporcionar el código para procesar elementos de trabajo en cola en un grupo de subprocesos.  
   
  **Implementación**  
   
- Para implementar una clase que se ajuste a esta Arquetipo, la clase debe proporcionar las siguientes características:  
+ Para implementar una clase conforme a este Arquetipo, la clase debe proporcionar las siguientes características:  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Inicializar](#initialize)|Se llama para inicializar el objeto de trabajo antes de pasan las solicitudes [Execute](#execute).|  
+|[Inicializar](#initialize)|Se llama para inicializar el objeto de trabajo antes de que las solicitudes se pasan a [Execute](#execute).|  
 |[Ejecutar](#execute)|Se llama para procesar un elemento de trabajo.|  
-|[Finalizar](#terminate)|Llamado para cancelar la inicialización del objeto de trabajo después de que todas las solicitudes se han pasado a [Execute](#execute).|  
+|[Finalizar](#terminate)|Llamado para cancelar la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al [Execute](#execute).|  
   
 |Definición de tipo|Descripción|  
 |-------------|-----------------|  
-|[RequestType](#requesttype)|Definición de tipos para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.|  
+|[RequestType](#requesttype)|Una definición de tipo para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.|  
   
  Una típica *trabajo* clase tiene el siguiente aspecto:  
   
- [!code-cpp[NVC_ATL_Utilities&#137;](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]  
   
  **Implementaciones existentes**  
   
@@ -65,13 +47,13 @@ Las clases que se ajusten a la *trabajo* Arquetipo de proporcionar el código pa
   
 |Clase|Descripción|  
 |-----------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Recibe solicitudes del grupo de subprocesos y pasa un objeto de trabajo que se crea y se destruye para cada solicitud.|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Recibe las solicitudes del grupo de subprocesos y los pasa a un objeto de trabajo que se crea y destruye para cada solicitud.|  
   
  **Uso**  
   
- Estos parámetros de plantilla esperar que la clase que se ajuste a esta Arquetipo:  
+ Estos parámetros de plantilla esperar que la clase para que coincida con este Arquetipo:  
   
-|Nombre del parámetro|Utilizada por|  
+|Nombre de parámetro|Utilizada por|  
 |--------------------|-------------|  
 |*Trabajo*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|  
 |*Trabajo*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
@@ -93,39 +75,39 @@ void Execute(
   
 #### <a name="parameters"></a>Parámetros  
  `request`  
- El elemento de trabajo que se va a procesar. El elemento de trabajo es del mismo tipo como `RequestType`.  
+ El elemento de trabajo para procesarse. El elemento de trabajo es del mismo tipo que `RequestType`.  
   
  `pvWorkerParam`  
- Un parámetro personalizado que entiende la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `Terminate`.  
+ Un parámetro personalizado que se entiende por la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `Terminate`.  
   
  `pOverlapped`  
- Un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura utilizada para crear la cola de qué elementos se pusieron en cola.  
+ Un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura que se utiliza para crear la cola en qué trabajo se pusieron en cola los elementos.  
   
 ## <a name="initialize"></a>WorkerArchetype::Initialize
-Se llama para inicializar el objeto de trabajo antes de pasan las solicitudes `WorkerArchetype::Execute`.  
+Se llama para inicializar el objeto de trabajo antes de que las solicitudes se pasan a `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>Parámetros  
  `pvParam`  
- Un parámetro personalizado que entiende la clase de trabajo. También pasa a `WorkerArchetype::Terminate` y `WorkerArchetype::Execute`.  
+ Un parámetro personalizado que se entiende por la clase de trabajo. También pasa a `WorkerArchetype::Terminate` y `WorkerArchetype::Execute`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devolver **TRUE** correctamente, **FALSE** en caso de error.  
+ Devolver **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
 ## <a name="requesttype"></a>WorkerArchetype::RequestType
-Definición de tipos para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.  
+Una definición de tipo para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.  
   
 ```  
 typedef MyRequestType RequestType;    
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este tipo debe usarse como primer parámetro de `WorkerArchetype::Execute` y debe ser capaz de que se va a convertir a y desde un ULONG_PTR.  
+ Este tipo debe usarse como el primer parámetro de `WorkerArchetype::Execute` y debe ser capaz de que se va a convertir a y desde un ULONG_PTR.  
   
 ## <a name="terminate"></a>WorkerArchetype::Terminate
-Llamado para cancelar la inicialización del objeto de trabajo después de que todas las solicitudes se han pasado a `WorkerArchetype::Execute`).  
+Llamado para cancelar la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al `WorkerArchetype::Execute`).  
     
 ``` 
 void Terminate(void* pvParam) throw();
@@ -133,13 +115,12 @@ void Terminate(void* pvParam) throw();
   
 #### <a name="parameters"></a>Parámetros  
  `pvParam`  
- Un parámetro personalizado que entiende la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `WorkerArchetype::Execute`.  
+ Un parámetro personalizado que se entiende por la clase de trabajo. También pasa a `WorkerArchetype::Initialize` y `WorkerArchetype::Execute`.  
   
 ## <a name="see-also"></a>Vea también  
- [Arquetipos](../../atl/reference/atl-archetypes.md)   
+ [Archetypes](../../atl/reference/atl-archetypes.md)   
  [Conceptos](../../atl/active-template-library-atl-concepts.md)   
- [Componentes de escritorio de COM de ATL](../../atl/atl-com-desktop-components.md)
-
+ [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)
 
 
 

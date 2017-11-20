@@ -1,58 +1,57 @@
 ---
-title: "CDataSource::OpenFromFileName | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource::OpenFromFileName"
-  - "ATL::CDataSource::OpenFromFileName"
-  - "OpenFromFileName"
-  - "CDataSource.OpenFromFileName"
-  - "ATL.CDataSource.OpenFromFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenFromFileName (método)"
+title: 'CDataSource:: Openfromfilename | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource::OpenFromFileName
+- ATL::CDataSource::OpenFromFileName
+- OpenFromFileName
+- CDataSource.OpenFromFileName
+- ATL.CDataSource.OpenFromFileName
+dev_langs: C++
+helpviewer_keywords: OpenFromFileName method
 ms.assetid: c4226de6-59da-4368-9c15-c5afab86f68b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c807ead64a068a9797b49606d41d16664b6331e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::OpenFromFileName
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdatasourceopenfromfilename"></a>CDataSource::OpenFromFileName
 Abre un origen de datos desde un archivo especificado por el nombre de archivo proporcionado por el usuario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-        HRESULT OpenFromFileName(   
-   LPCOLESTR szFileName    
+      HRESULT OpenFromFileName(   
+   LPCOLESTR szFileName    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `szFileName`  
- \[in\] El nombre de un archivo, normalmente una conexión de origen de datos. Archivo \(.UDL\).  
+ [in] El nombre de un archivo, normalmente una conexión de origen de datos. Archivo (.UDL).  
   
- Para obtener más información acerca de los archivos de vínculo de datos \(archivos .udl\), vea [Información general sobre la API de vínculos de datos](https://msdn.microsoft.com/en-us/library/ms718102.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obtener más información acerca de los archivos de vínculo de datos (archivos .udl), consulte [información general sobre la API de vínculos de datos](https://msdn.microsoft.com/en-us/library/ms718102.aspx) del SDK de Windows.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio como la agrupación de recursos y la inscripción automática de transacciones, entre otras.  Para más información, vea "Servicios OLE DB" en la Referencia del programador de OLE DB de [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/oledb\/htm\/oledbole\_db\_services.asp?frame\=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+## <a name="remarks"></a>Comentarios  
+ Este método abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio, como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB de [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDataSource \(Clase\)](../../data/oledb/cdatasource-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDataSource (Clase)](../../data/oledb/cdatasource-class.md)

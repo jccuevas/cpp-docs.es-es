@@ -1,43 +1,41 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4683"
+title: Compilador advertencia (nivel 1) C4683 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4683
+dev_langs: C++
+helpviewer_keywords: C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 120da429e4f296b6be1881da806434f7548383ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4683"></a>Advertencia del compilador (nivel 1) C4683
 **'**   
- ***función* ': el origen de eventos tiene un parámetro 'out'; tenga cuidado al enlazar controladores de eventos múltiples**  
+ ***función* ': origen de eventos tiene un 'out': parámetro; tenga cuidado al enlazar varios controladores de eventos**  
   
- Si hay más de un receptor de eventos escuchando un origen de eventos COM, puede que se pase por alto el valor de un parámetro out.  
+ Si más de un receptor de eventos está realizando escuchas para un origen de eventos COM, se puede omitir el valor de un parámetro de salida.  
   
- Tenga en cuenta que se producirá una pérdida de memoria en las situaciones siguientes:  
+ Tenga en cuenta que se producirá una pérdida de memoria en la situación siguiente:  
   
-1.  Si un método tiene un parámetro out asignado internamente, por ejemplo BSTR \*.  
+1.  Si un método tiene un parámetro out asignado internamente, por ejemplo una cadena BSTR *.  
   
-2.  Si el evento tiene más de un controlador \(evento de multidifusión\).  
+2.  Si el evento tiene más de un controlador (es un evento de multidifusión)  
   
- El motivo de la pérdida de memoria es que el parámetro out está establecido mediante más de un controlador, pero sólo el último controlador lo devuelve al emplazamiento de la llamada.  
+ El motivo de la pérdida de es que el parámetro de salida se definido por más de un controlador, pero para el sitio de llamada sólo devuelve el último controlador.  
   
- El código siguiente genera el error C4683:  
+ El ejemplo siguiente genera C4683:  
   
 ```  
 // C4683.cpp  

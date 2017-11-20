@@ -1,68 +1,67 @@
 ---
-title: "_set_errno | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_errno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_errno"
-  - "_set_errno"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_errno (función)"
-  - "errno (variable global)"
-  - "set_errno (función)"
+title: _set_errno | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _set_errno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_errno
+- _set_errno
+dev_langs: C++
+helpviewer_keywords:
+- errno global variable
+- set_errno function
+- _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2353929ea112777561697928c4f12b3e8f80a47a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# _set_errno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Establezca el valor de la variable global de `errno` .  
+# <a name="seterrno"></a>_set_errno
+Establezca el valor de la variable global `errno`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-errno_t _set_errno(   
-   int value   
+errno_t _set_errno(   
+   int value   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `value`  
- Nuevo valor de `errno`.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `value`  
+ Valor nuevo de `errno`.  
   
-## Valor devuelto  
- Devuelve cero si correctamente.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve cero si es correcto.  
   
-## Comentarios  
- Los valores posibles se definen en Errno.h.  Vea también [errno \(Constantes\)](../../c-runtime-library/errno-constants.md).  
+## <a name="remarks"></a>Comentarios  
+ Los valores posibles se definen en Errno.h. Vea también [errno (Constantes)](../../c-runtime-library/errno-constants.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_set_errno.c  
@@ -76,15 +75,18 @@ int main()
 }  
 ```  
   
-  **Oops: Secuencia no válida de byte**   
-## Requisitos  
+```Output  
+Oops: Illegal byte sequence  
+```  
+  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|Encabezado opcional|  
-|------------|--------------------------|-------------------------|  
-|`_set_errno`|\<stdlib.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_set_errno`|\<stdlib.h>|\<errno.h>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Vea también  
- [\_get\_errno](../../c-runtime-library/reference/get-errno.md)   
- [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+## <a name="see-also"></a>Vea también  
+ [_get_errno](../../c-runtime-library/reference/get-errno.md)   
+ [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

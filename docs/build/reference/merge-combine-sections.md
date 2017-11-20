@@ -1,60 +1,60 @@
 ---
-title: "/MERGE (Combinar secciones) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/merge"
-  - "VC.Project.VCLinkerTool.MergeSections"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MERGE (opción del vinculador)"
-  - "MERGE (opción del vinculador)"
-  - "-MERGE (opción del vinculador)"
-  - "secciones"
-  - "secciones, combinar"
-  - "secciones, asignar nombre"
+title: -MERGE (combinar secciones) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /merge
+- VC.Project.VCLinkerTool.MergeSections
+dev_langs: C++
+helpviewer_keywords:
+- sections, combining
+- /MERGE linker option
+- sections, naming
+- sections
+- -MERGE linker option
+- MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 936af84fea09f129cd5f455a0b57731393600e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /MERGE (Combinar secciones)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="merge-combine-sections"></a>/MERGE (Combinar secciones)
 ```  
 /MERGE:from=to  
 ```  
   
-## Comentarios  
- La opción \/MERGE combina la primera sección \(*from*\) con la segunda \(*to*\), y le asigna a la sección resultante el nombre de *to*.  Por ejemplo, `/merge:.rdata=.text`.  
+## <a name="remarks"></a>Comentarios  
+ La opción /MERGE combina la primera sección (*de*) con la segunda sección (*a*), la sección resultante de nomenclatura *a*. Por ejemplo: `/merge:.rdata=.text`.  
   
- Si la segunda sección no existe, LINK sustituirá el nombre de la sección *from* por *to*.  
+ Si la segunda sección no existe, vínculo cambia el nombre de la sección *de* como *a*.  
   
- Esta opción puede ser útil para crear controladores VxD y reemplazar los nombres de sección generados por el compilador.  
+ La opción /MERGE es útil para crear controladores VxD y reemplazar los nombres de sección generados por el compilador.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Avanzadas**.  
+3.  Haga clic en el **avanzadas** página de propiedades.  
   
-4.  Modifique la propiedad **Combinar secciones**.  
+4.  Modificar el **combinar secciones** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

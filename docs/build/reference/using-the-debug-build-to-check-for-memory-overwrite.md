@@ -1,42 +1,41 @@
 ---
-title: "Utilizar la versi&#243;n de depuraci&#243;n para comprobar si se ha sobrescrito la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memoria, sobrescrituras"
+title: "Con la versión de depuración para comprobar si se ha sobrescrito memoria | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7b8fc223a1e4e1162ce99bb3275152c49828aa99
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizar la versi&#243;n de depuraci&#243;n para comprobar si se ha sobrescrito la memoria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si desea utilizar la versión de depuración para comprobar si se ha sobrescrito la memoria, primero debe recompilar el proyecto para depuración.  A continuación, vaya al principio de la función `InitInstance` de la aplicación y agregue la siguiente línea:  
+# <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizar la versión de depuración para comprobar si se ha sobrescrito la memoria
+Para usar la versión de depuración para comprobar si se ha sobrescrito de memoria, se debe recompilar el proyecto para la depuración. A continuación, ir al principio de la aplicación `InitInstance` funcione y agregue la siguiente línea:  
   
 ```  
 afxMemDF |= checkAlwaysMemDF;  
 ```  
   
- El asignador de memoria de depuración coloca bytes de protección para todas las asignaciones de memoria.  No obstante, estos bytes de protección no proporcionan ningún beneficio, a menos que se compruebe si han cambiado \(lo cual indicaría una sobrescritura en memoria\).  De lo contrario, sólo se dispondría de un búfer que podría, de hecho, permitirle seguir adelante con una sobrescritura en memoria.  
+ El asignador de memoria de depuración coloca bytes de protección para todas las asignaciones de memoria. Sin embargo, estos bytes de protección no proporcionan ningún beneficio, a menos que se compruebe si se han cambiado (lo que podría indicar una sobrescritura en memoria). En caso contrario, esto simplemente proporciona un búfer que podría, de hecho, permitirle seguir adelante con una sobrescritura en memoria.  
   
- Si activa `checkAlwaysMemDF`, forzará a MFC a hacer una llamada a la función `AfxCheckMemory` cada vez que se realice una llamada a **new** o **delete**.  Si se detectara una sobrescritura en memoria, se generaría un mensaje TRACE con un aspecto similar al siguiente:  
+ Activando el `checkAlwaysMemDF`, forzará MFC para realizar una llamada a la `AfxCheckMemory` cada vez que una llamada a la función para **nueva** o **eliminar** se realiza. Si se ha detectado una sobrescritura en memoria, generará un mensaje de seguimiento que tiene un aspecto similar al siguiente:  
   
 ```  
 Damage Occurred! Block=0x5533  
 ```  
   
- Si recibe alguno de estos mensajes, deberá examinar el código para determinar dónde se produjo el daño.  Para determinar con mayor precisión dónde se produjo la sobrescritura en memoria, puede realizar llamadas explícitas a `AfxCheckMemory`.  Por ejemplo:  
+ Si ve alguno de estos mensajes, debe recorrer el código para determinar dónde se produjo el daño. Para aislar con mayor precisión dónde se produjo la sobrescritura de memoria, puede realizar llamadas explícitas a `AfxCheckMemory` usted mismo. Por ejemplo:  
   
 ```  
 ASSERT(AfxCheckMemory());  
@@ -44,9 +43,9 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());  
 ```  
   
- Si el primer ASSERT se realiza correctamente y el segundo no, significa que la sobrescritura en memoria debe haber ocurrido en la función entre las dos llamadas.  
+ Si el primer ASSERT se realiza correctamente y la segunda se produce un error, significa que la sobrescritura en memoria debe haber ocurrido en la función entre las dos llamadas.  
   
- Según la naturaleza de la aplicación, puede encontrarse con que `afxMemDF` hace que el programa se ejecute muy lentamente, incluso para pruebas.  La variable `afxMemDF` hace que se llame a `AfxCheckMemory` para cada llamada a **new** y **delete**.  En ese caso, debería separar las llamadas a `AfxCheckMemory`\( \) como se indicó anteriormente y tratar de aislar la sobrescritura en memoria de ese modo.  
+ Según la naturaleza de la aplicación, es posible que `afxMemDF` hace que el programa se ejecute muy lentamente, incluso para pruebas. El `afxMemDF` variable hace `AfxCheckMemory` llamará para todas las llamadas a las nuevas y eliminar. En ese caso, debería separar sus propias llamadas a `AfxCheckMemory`() como se indicó anteriormente e intente aislar la memoria sobrescriben de ese modo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Solucionar problemas de versiones de lanzamiento](../../build/reference/fixing-release-build-problems.md)

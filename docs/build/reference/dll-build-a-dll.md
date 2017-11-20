@@ -1,68 +1,67 @@
 ---
-title: "/DLL (Compilar un archivo DLL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DLL (opción del vinculador) [C++]"
-  - "-DLL (opción del vinculador)"
-  - "DLL (opción del vinculador) [C++]"
-  - "DLL [C++], compilar"
-  - "exportar DLL [C++], especificar exportaciones"
+title: -DLL (compilar un archivo DLL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dll
+dev_langs: C++
+helpviewer_keywords:
+- -DLL linker option
+- /DLL linker option [C++]
+- exporting DLLs [C++], specifying exports
+- DLLs [C++], building
+- DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6ca732d96eaa0ae7e4ffd805063156be519d41ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /DLL (Compilar un archivo DLL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dll-build-a-dll"></a>/DLL (Compilar un archivo DLL)
 ```  
 /DLL  
 ```  
   
-## Comentarios  
- La opción \/DLL compila una DLL como archivo de salida principal.  Las DLL normalmente contienen exportaciones que pueden utilizar otros programas.  Hay tres métodos para especificar exportaciones, que se muestran a continuación en el orden recomendado de uso:  
+## <a name="remarks"></a>Comentarios  
+ La opción /DLL genera un archivo DLL como el archivo de salida principal. Normalmente, un archivo DLL contiene exportaciones que pueden ser utilizadas por otro programa. Existen tres métodos para especificar exportaciones, aparecen en el orden recomendado de uso:  
   
-1.  [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) en el código fuente.  
+1.  [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) en el código fuente  
   
-2.  Una instrucción [EXPORTS](../../build/reference/exports.md) en un archivo .def.  
+2.  Un [exportaciones](../../build/reference/exports.md) instrucción en un archivo .def  
   
-3.  Una especificación [\/EXPORT](../../build/reference/export-exports-a-function.md) en un comando LINK.  
+3.  Un [/exportación](../../build/reference/export-exports-a-function.md) especificación en un comando de LINK  
   
- Un programa puede utilizar más de un método.  
+ Un programa puede usar más de un método.  
   
- Otro método para compilar una DLL es la instrucción de definición de módulos **LIBRARY**.  Las opciones \/BASE y \/DLL juntas equivalen a la instrucción **LIBRARY**.  
+ Otra manera de generar un archivo DLL es con el **biblioteca** instrucción de definición de módulo. Las opciones /BASE y /DLL juntas equivalen a la **biblioteca** instrucción.  
   
- Esta opción sólo debe usarse en la línea de comandos: no puede especificarse en el entorno de desarrollo.  Esta opción se establece cuando se crea un proyecto de DLL con el Asistente para aplicaciones.  
+ No se especifica esta opción en el entorno de desarrollo; Esta opción es para su uso solo en la línea de comandos. Esta opción se establece cuando se crea un proyecto DLL con un Asistente para aplicaciones.  
   
- Observe que si crea la biblioteca de importación en un paso preliminar, antes de crear la .dll, debe pasar el mismo conjunto de archivos objeto cuando genere la .dll que cuando generó la biblioteca de importación.  
+ Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar, antes de crear el archivo .dll, debe pasar el mismo conjunto de archivos de objeto al crear el archivo .dll, tal y como se haya pasado al crear la biblioteca de importación.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Propiedades de configuración**.  
+2.  Haga clic en el **propiedades de configuración** carpeta.  
   
-3.  Haga clic en la página de propiedades **General**.  
+3.  Haga clic en el **General** página de propiedades.  
   
-4.  Modifique la propiedad **Tipo de configuración**.  
+4.  Modificar el **tipo de configuración** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

@@ -1,31 +1,30 @@
 ---
-title: "Sincronizaci&#243;n (Clase lock) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock (clase)"
+title: "Sincronización (clase lock) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db715fd7edad7083469a1642e1e5aaa92a5181d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Sincronizaci&#243;n (Clase lock)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona un mecanismo para automatizar tomar un bloqueo que sincronizar el acceso a un objeto.  
+# <a name="synchronization-lock-class"></a>Sincronización (Clase lock)
+Proporciona un mecanismo para automatizar tomar un bloqueo que sincroniza el acceso a un objeto.  
   
-## En esta sección  
- [bloquear](../dotnet/lock.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [lock](../dotnet/lock.md)  
   
-## Vea también  
- [Biblioteca de compatibilidad de C\+\+](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>Vea también  
+ [Biblioteca de compatibilidad de C++](../dotnet/cpp-support-library.md)

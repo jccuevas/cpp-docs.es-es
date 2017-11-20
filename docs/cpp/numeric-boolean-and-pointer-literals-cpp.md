@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literales numéricos, booleanos y puntero (C++)
 Un literal es un elemento de programa que representa directamente un valor. En este artículo se tratan los literales de tipo entero, de punto flotante, booleanos y de puntero. Para obtener información sobre los literales de cadena y carácter, vea [cadena y literales de carácter (C++)](../cpp/string-and-character-literals-cpp.md). También puede definir sus propios literales basándose en cualquiera de estas categorías; Para obtener más información consulte [literales definidos por el usuario (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +105,7 @@ long long i = 24'847'458'121
   
  El exponente se puede especificar mediante **e** o **E**, que tienen el mismo significado, seguido por un signo opcional (+ o -) y una secuencia de dígitos.  Si un exponente está presente, el separador decimal final es innecesario en los números enteros como `18E0`.  
   
- Literales de punto flotante como tipo predeterminado **doble**. Mediante el uso de los sufijos **f** o **l** (o **F** o **L** , el sufijo no distingue mayúsculas de minúsculas), el literal se puede especificar como ** float** o `long double`, respectivamente.  
+ Literales de punto flotante como tipo predeterminado **doble**. Mediante el uso de los sufijos **f** o **l** (o **F** o **L** , el sufijo no distingue mayúsculas de minúsculas), el literal se puede especificar como  **float** o `long double`, respectivamente.  
   
  Aunque `long double` y **doble** tienen la misma representación, no son del mismo tipo. Por ejemplo, puede haber funciones sobrecargadas como  
   

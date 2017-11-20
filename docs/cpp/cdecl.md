@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __cdecl_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __cdecl keyword [C++]
+f1_keywords: __cdecl_cpp
+dev_langs: C++
+helpviewer_keywords: __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5216462ad00d332aec2d00eba78f5d84cdfd7c82
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f11414914bb1682c0bd5e05d80ab2ebbbe3ae72a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Específicos de Microsoft**  
@@ -41,7 +36,7 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  Para obtener información relacionada, consulte [nombres representativos](../build/reference/decorated-names.md).  
   
- Coloque el modificador `__cdecl` delante de una variable o nombre de función. Dado que las convenciones de llamada y nomenclatura de C son el valor predeterminado, la única vez debe usar `__cdecl` en x86 código es cuando se haya especificado la **GV** (vectorcall), **/Gz** (stdcall) o ** / GR** opción del compilador (fastcall). El [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) compilador opción fuerza el `__cdecl` convención de llamada.  
+ Coloque el modificador `__cdecl` delante de una variable o nombre de función. Dado que las convenciones de llamada y nomenclatura de C son el valor predeterminado, la única vez debe usar `__cdecl` en x86 código es cuando se haya especificado la **GV** (vectorcall), **/Gz** (stdcall) o  **/ GR** opción del compilador (fastcall). El [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) compilador opción fuerza el `__cdecl` convención de llamada.  
   
  En los procesadores ARM y x64, se acepta el uso de `__cdecl`, pero el compilador lo omite normalmente. Por convención en ARM y x64, los argumentos se pasan en registros siempre que es posible y los argumentos subsiguientes se pasan en la pila. En x64 de código, use `__cdecl` para invalidar la **GV** opción del compilador y usar la convención llamada predeterminada x64.  
   

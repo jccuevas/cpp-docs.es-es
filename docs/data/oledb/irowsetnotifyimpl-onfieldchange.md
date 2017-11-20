@@ -1,38 +1,37 @@
 ---
-title: "IRowsetNotifyImpl::OnFieldChange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetNotifyImpl.OnFieldChange"
-  - "IRowsetNotifyImpl::OnFieldChange"
-  - "OnFieldChange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnFieldChange (método)"
+title: 'IRowsetNotifyImpl:: Onfieldchange | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetNotifyImpl.OnFieldChange
+- IRowsetNotifyImpl::OnFieldChange
+- OnFieldChange
+dev_langs: C++
+helpviewer_keywords: OnFieldChange method
 ms.assetid: f26b492c-c86e-423b-9374-175e510a2860
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6816ca96d3fe00e48d0fdca7b560eb628150d4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyImpl::OnFieldChange
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Notifica al consumidor cualquier cambio en el valor de una columna.  
+# <a name="irowsetnotifyimplonfieldchange"></a>IRowsetNotifyImpl::OnFieldChange
+Notifica al consumidor de cualquier cambio en el valor de una columna.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-STDMETHOD(OnFieldChange)(   
+STDMETHOD(OnFieldChange)(   
 /* [in] */ IRowset* /* pRowset */,  
 /* [in] */ HROW /* hRow */,  
 /* [in] */ DBORDINAL /* cColumns */,  
@@ -42,18 +41,18 @@ STDMETHOD(OnFieldChange)( 
 /* [in] */ BOOL /* fCantDeny */)  
 ```  
   
-#### Parámetros  
- Vea [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) para las descripciones del parámetro.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) para descripciones de parámetros.  
   
-## Valor devuelto  
- Vea [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) para las descripciones del valor devuelto.  
+## <a name="return-value"></a>Valor devuelto  
+ Vea [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) para descripciones de los valores de retorno.  
   
-## Comentarios  
- Este método encapsula el método de [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) .  Vea que la descripción del método en la referencia del programador para obtener detalles.  
+## <a name="remarks"></a>Comentarios  
+ Este método ajusta el [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) método. Consulte la descripción de ese método en la referencia del programador de OLE DB para obtener más información.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [IRowsetNotifyImpl \(Clase\)](../../data/oledb/irowsetnotifyimpl-class.md)   
+## <a name="see-also"></a>Vea también  
+ [IRowsetNotifyImpl (clase)](../../data/oledb/irowsetnotifyimpl-class.md)   
  [IRowsetNotify::OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)

@@ -1,67 +1,68 @@
 ---
-title: "Clases de m&#243;dulo de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, clases module"
-  - "CComModule (clase), cambios"
-  - "clases module"
+title: "Clases de módulo ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComModule class, what's changed
+- ATL, module classes
+- module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7558ca9deb6fd915d902b761e001d3d97472e86c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Clases de m&#243;dulo de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema describe las clases del módulo que eran nuevas en ATL 7,0.  
+# <a name="atl-module-classes"></a>Clases de módulo de ATL
+Este tema describen las clases de módulo que se introdujeron en ATL 7.0.  
   
-## Clases de reemplazo de CComModule  
- versiones anteriores de `CComModule`utilizado ATL.  En ATL 7,0, la funcionalidad de `CComModule` se reemplaza por varias clases:  
+## <a name="ccommodule-replacement-classes"></a>Clases de reemplazo de CComModule  
+ Las versiones anteriores de ATL usa `CComModule`. En ATL 7.0, `CComModule` funcionalidad se ha reemplazado por varias clases:  
   
--   Información de[CAtlBaseModule](../atl/reference/catlbasemodule-class.md) Contains requerida por la mayoría de las aplicaciones que utilizan ATL.  Contiene el HINSTANCE del módulo y de la instancia de recursos.  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) contiene información requerida por la mayoría de las aplicaciones que utilizan ATL. Contiene la HINSTANCE del módulo y la instancia del recurso.  
   
--   Información de[CAtlComModule](../atl/reference/catlcommodule-class.md) Contains requerida por las clases COM de ATL.  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md) contiene información requerida por las clases COM de ATL.  
   
--   La información de[CAtlWinModule](../atl/reference/catlwinmodule-class.md) Contains requerida por la visualización en una ventana ordena en ATL.  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) contiene información requerida por las clases de ventana de ATL.  
   
--   Compatibilidad de[CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) Contains para la depuración de la interfaz.  
+-   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) contiene compatibilidad para la depuración de interfaz.  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) The que sigue `CAtlModule`\- clases derivadas están personalizados para contener la información necesaria en un tipo de aplicación determinado.  La mayoría de los miembros de estas clases se pueden reemplazar:  
+-   [CAtlModule](../atl/reference/catlmodule-class.md) siguiente `CAtlModule`-clases derivadas están personalizadas para que contenga la información necesaria en un tipo de aplicación en particular. Se puede invalidar la mayoría de los miembros de estas clases:  
   
-    -   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) utilizado en aplicaciones de DLL.  Proporciona código para exportaciones estándar.  
+    -   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) usar en aplicaciones de DLL. Proporciona código para las exportaciones estándares.  
   
-    -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) utilizado en aplicaciones EXE.  Proporciona el código necesario en EXE.  
+    -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) utilizado en las aplicaciones EXE. Proporciona el código requerido en un archivo EXE.  
   
-    -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) permite crear Windows NT y Windows 2000 Services.  
+    -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) proporciona compatibilidad para crear servicios Windows NT y Windows 2000.  
   
- `CComModule` aún está disponible para la compatibilidad con versiones anteriores.  
+ `CComModule`sigue estando disponible para compatibilidad con versiones anteriores.  
   
-## Razones para distribuir la funcionalidad de CComModule  
- La funcionalidad de `CComModule` se distribuida en varias clases nuevas por las razones siguientes:  
+## <a name="reasons-for-distributing-ccommodule-functionality"></a>Motivos para la distribución de la funcionalidad de CComModule  
+ La funcionalidad de `CComModule` se ha distribuido en varias clases nuevas para los siguientes motivos:  
   
--   Cree la funcionalidad en `CComModule` concreta.  
+-   Realizar la funcionalidad de `CComModule` granular.  
   
-     Compatibilidad con COM, las operaciones de ventanas, la depuración de interfaz, y \(DLL o EXE\) características específicas de la aplicación es ahora en clases independientes.  
+     Compatibilidad con COM, basado en ventanas, depuración de interfaces y características de específicos de la aplicación (DLL o EXE) se encuentra ahora en clases independientes.  
   
--   automáticamente declare la instancia global de cada uno de estos módulos.  
+-   Declarar automáticamente la instancia global de cada uno de estos módulos.  
   
-     Una instancia global de las clases necesarias de módulo se vincula en el proyecto.  
+     Una instancia global de las clases de módulo requeridas está vinculada en el proyecto.  
   
--   Quite la necesidad de llamar a los métodos de Init y el término.  
+-   Eliminar la necesidad de llamar a los métodos Init y Term.  
   
-     Los métodos de Init y el término se han movido a los constructores y destructores para las clases del módulo; ya no existe una necesidad de llamar a Init y término.  
+     Los métodos Init y Term han movido a los constructores y destructores para las clases de módulo; ya no es necesario llamar a Init y Term.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)   
- [Class Overview](../atl/atl-class-overview.md)
+ [Información general de clases](../atl/atl-class-overview.md)
+

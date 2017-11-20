@@ -1,32 +1,30 @@
 ---
-title: "ELSE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "else"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ELSE directive"
+title: ELSE (MASM) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: else
+dev_langs: C++
+helpviewer_keywords: ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fe8a8fd725b0ee90f9a9bc2ab2dba47071498a7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ELSE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca el principio de alternan el bloque dentro de un bloque condicional.  
+# <a name="else-masm"></a>ELSE (MASM)
+Marca el principio de un bloque alternativo dentro de un bloque condicional.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,8 +32,8 @@ ELSE
   
 ```  
   
-## Comentarios  
- Vea [IF &#91;SQL2008&#93;](../../assembler/masm/if-masm.md).  
+## <a name="remarks"></a>Comentarios  
+ Vea [IF](../../assembler/masm/if-masm.md).  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

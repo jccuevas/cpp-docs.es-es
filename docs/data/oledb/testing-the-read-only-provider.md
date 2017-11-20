@@ -1,54 +1,54 @@
 ---
-title: "Probar el proveedor de s&#243;lo lectura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proveedores OLE DB, llamar"
-  - "proveedores OLE DB, pruebas"
-  - "probar proveedores"
-  - "pruebas, proveedores OLE DB"
+title: "Probar el proveedor de sólo lectura | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, calling
+- OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Probar el proveedor de s&#243;lo lectura
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para probar un proveedor, necesita un consumidor.  Será una ventaja que el consumidor se corresponda con el proveedor.  Las plantillas de consumidor OLE DB son un contenedor delgado de OLE DB que se corresponden con los objetos COM del proveedor.  Como el código fuente se distribuye con las plantillas de consumidor, es fácil utilizarlas para depurar un proveedor.  Las plantillas de consumidor también representan una forma muy reducida y rápida de desarrollar aplicaciones para consumidores.  
+# <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
+Para probar un proveedor, se necesita un consumidor. Resulta útil si el consumidor puede coincide con el proveedor. Las plantillas de consumidor OLE DB son un contenedor fino alrededor de OLE DB y coinciden con los objetos COM del proveedor. Dado que el origen se incluye con las plantillas de consumidor, es fácil de depurar un proveedor con ellos. Las plantillas de consumidor también son una forma muy pequeña y rápida para desarrollar aplicaciones de consumidor.  
   
- En el ejemplo de este tema se crea una aplicación predeterminada del Asistente para aplicaciones MFC para un consumidor de prueba.  La aplicación de prueba es un cuadro de diálogo sencillo con el código de una plantilla de consumidor OLE DB agregado.  
+ El ejemplo de este tema, crea una aplicación de Asistente para aplicaciones MFC predeterminada para un consumidor de prueba. La aplicación de prueba es un cuadro de diálogo simple con código de plantilla de consumidor OLE DB agregado.  
   
-### Para crear la aplicación de prueba  
+### <a name="to-create-the-test-application"></a>Para crear la aplicación de prueba  
   
-1.  En el menú **Archivo**, haga clic en **Nuevo** y, a continuación, haga clic en **Proyecto**.  
+1.  En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.  
   
-2.  En el panel Tipos de proyecto, seleccione la carpeta **Proyectos de Visual C\+\+**.  En el panel Plantillas, seleccione **Aplicación MFC**.  
+2.  En el panel tipos de proyecto, seleccione la **proyectos de Visual C++** carpeta. En el panel Plantillas, seleccione **aplicación MFC**.  
   
-3.  Como nombre de proyecto, escriba **TestProv** y haga clic en **Aceptar**.  
+3.  Para el nombre del proyecto, escriba **TestProv**y, a continuación, haga clic en **Aceptar**.  
   
      Aparece el Asistente para aplicaciones MFC.  
   
-4.  En la página **Tipo de aplicación**, active **Basada en cuadros de diálogo**.  
+4.  En el **tipo de aplicación** página, seleccione **diálogo según**.  
   
-5.  En la página **Características avanzadas**, seleccione **Automatización** y, a continuación, haga clic en **Finalizar**.  
+5.  En el **características avanzadas** página, seleccione **automatización**y, a continuación, haga clic en **finalizar**.  
   
 > [!NOTE]
->  La aplicación no requiere compatibilidad con la Automatización si agrega **CoInitialize** en **CTestProvApp::InitInstance**.  
+>  La aplicación no requiere compatibilidad con la automatización si agrega **CoInitialize** en **CTestProvApp:: InitInstance**.  
   
- Puede ver y editar el cuadro de diálogo TestProv \(IDD\_TESTPROV\_DIALOG\) seleccionándolo en la Vista de recursos.  Coloque dos cuadros de lista en el cuadro de diálogo, uno para cada cadena del conjunto de filas.  Desactive la propiedad Sort para los dos cuadros de lista; para ello, presione ALT\+Entrar con un cuadro de lista seleccionado, haga clic en la ficha **Estilos** y desactive la casilla **Ordenar**.  Coloque también un botón **Ejecutar** en el cuadro de diálogo para buscar el archivo.  El cuadro de diálogo finalizado de TestProv debe tener dos cuadros de lista con las etiquetas "String 1" y "String 2", respectivamente; también tiene botones **Aceptar**, **Cancelar** y **Ejecutar**.  
+ Puede ver y editar el cuadro de diálogo TestProv (IDD_TESTPROV_DIALOG), selecciónelo en la vista de recursos. Coloque dos cuadros de lista, uno para cada cadena del conjunto de filas, en el cuadro de diálogo. Desactivar la propiedad de ordenación para los cuadros de lista presionando ALT + ENTRAR cuando se selecciona un cuadro de lista, haga clic en el **estilos** pestaña y borrar el **ordenación** casilla de verificación. Además, coloque un **ejecutar** botón en el cuadro de diálogo para buscar el archivo. El cuadro de diálogo finalizado de TestProv debe tener dos cuadros de lista con las etiquetas "String 1" y "String 2", respectivamente; También tiene **Aceptar**, **cancelar**, y **ejecutar** botones.  
   
- Abra el archivo de encabezado para la clase de cuadro de diálogo \(en este caso, TestProvDlg.h\).  Agregue las siguientes líneas de código al archivo de encabezado \(fuera de las declaraciones de clase\):  
+ Abra el archivo de encabezado para la clase de cuadro de diálogo (en este caso, TestProvDlg.h). Agregue el código siguiente al archivo de encabezado (fuera de cualquier declaración de clase):  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -69,9 +69,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- El código representa un registro de usuario que define las columnas que deben estar en el conjunto de filas.  Cuando el cliente llama a **IAccessor::CreateAccessor**, utiliza estas entradas para especificar las columnas que hay que enlazar.  Las plantillas de consumidor de OLE DB también permiten enlazar columnas dinámicamente.  Las macros COLUMN\_ENTRY son la versión para el cliente de las macros PROVIDER\_COLUMN\_ENTRY.  Las dos macros COLUMN\_ENTRY especifican el ordinal, el tipo, la longitud y el miembro de datos para las dos cadenas.  
+ El código representa un registro de usuario que define qué columnas se quedan en el conjunto de filas. Cuando el cliente llama **IAccessor:: CreateAccessor**, utiliza estas entradas para especificar las columnas que desea enlazar. Las plantillas de consumidor OLE DB también permiten enlazar columnas dinámicamente. Las macros COLUMN_ENTRY son la versión de cliente de las macros PROVIDER_COLUMN_ENTRY. Las dos macros COLUMN_ENTRY especifican el ordinal, el tipo, longitud y miembro de datos para las dos cadenas.  
   
- Agregue una función controladora para el botón **Ejecutar**; para ello, presione CTRL y haga doble clic en el botón **Ejecutar**.  Coloque las siguientes líneas de código en la función:  
+ Agregar una función de controlador para el **ejecutar** botón presionando CTRL y haga doble clic en el **ejecutar** botón. Coloque el código siguiente en la función:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -100,7 +100,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- Las clases `CCommand`, `CDataSource` y `CSession` pertenecen a las plantillas de consumidor de OLE DB.  Cada clase emula un objeto COM en el proveedor.  El objeto `CCommand` utiliza la clase `CProvider`, declarada en el archivo de encabezado, como un parámetro de plantilla.  El parámetro `CProvider` representa enlaces que utiliza para tener acceso a los datos desde el proveedor.  A continuación se muestra el código de `Open` para el origen de datos, la sesión, y el comando:  
+ El `CCommand`, `CDataSource`, y `CSession` clases todas pertenecen a las plantillas de consumidor OLE DB. Cada clase emula un objeto COM en el proveedor. El `CCommand` objeto toma la `CProvider` (clase), declarado en el archivo de encabezado, como un parámetro de plantilla. El `CProvider` parámetro representa enlaces que utilizan para tener acceso a los datos del proveedor. Este es el `Open` código para el origen de datos, la sesión y el comando:  
   
 ```  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -113,13 +113,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor.  Para buscar el proveedor, utilice su ProgID.  Puede obtener el ProgID en el Registro del sistema o buscar en el archivo MyProvider.rgs \(abra el directorio del proveedor y busque la clave ProgID\).  
+ Las líneas para abrir cada una de las clases crean cada objeto COM en el proveedor. Para buscar el proveedor, utilice el ProgID del proveedor. Puede obtener el ProgID del registro del sistema o mediante una búsqueda en el archivo MyProvider.rgs (abra el proveedor directorio y busque la clave ProgID).  
   
- El archivo MyData.txt se incluye en el ejemplo MyProv.  Para crear un archivo propio, utilice un editor y escriba un número par de cadenas, presionando ENTRAR después de escribir cada cadena.  Si mueve el archivo, cambie el nombre de la ruta de acceso.  
+ El archivo MyData.txt se incluye en el ejemplo MyProv. Para crear un archivo de su propio, utilice un editor y escriba un número par de cadenas, presione la tecla ENTRAR entre cada cadena. Cambie el nombre de ruta de acceso si mueve el archivo.  
   
- Pase la cadena "c:\\\\samples\\\\myprov\\\\MyData.txt" en la línea `table.Open`.  Si recorre paso a paso la llamada `Open`, puede ver que se pasa esta cadena al método `SetCommandText` del proveedor.  Tenga en cuenta que el método `ICommandText::Execute` utilizó esa cadena.  
+ Pase la cadena "c:\\\samples\\\myprov\\\MyData.txt" en la `table.Open` línea. Si se encuentra en la `Open` llamada, verá que esta cadena se pasa a la `SetCommandText` método del proveedor. Tenga en cuenta que el `ICommandText::Execute` método utilizó esa cadena.  
   
- Para obtener los datos, llame a `MoveNext` en la tabla.  `MoveNext` llama a las funciones **IRowset::GetNextRows**, `GetRowCount` y `GetData`.  Cuando no queden filas \(es decir, cuando la posición actual del conjunto de filas sea mayor que `GetRowCount`\), finalizará el bucle:  
+ Para capturar los datos, llame a `MoveNext` en la tabla. `MoveNext`llamadas a la **IRowset:: GetNextRows**, `GetRowCount`, y `GetData` funciones. Cuando no haya más filas (es decir, la posición actual en el conjunto de filas es mayor que `GetRowCount`), el bucle finaliza:  
   
 ```  
 while (table.MoveNext() == S_OK)  
@@ -129,9 +129,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- Tenga en cuenta que cuando no queden filas, los proveedores devolverán **DB\_S\_ENDOFROWSET**.  El valor de **DB\_S\_ENDOFROWSET** no es un error.  Debe comprobar siempre el valor de `S_OK` para cancelar un bucle de búsqueda de datos y no utilizar la macro SUCCEEDED.  
+ Tenga en cuenta que cuando no haya más filas, los proveedores devolverán **DB_S_ENDOFROWSET**. El **DB_S_ENDOFROWSET** valor no es un error. Siempre debe comprobar con `S_OK` para cancelar un bucle de recopilación de datos y no utilizar la macro SUCCEEDED.  
   
- Ahora podrá compilar y probar el programa.  
+ Ahora puede compilar y probar el programa.  
   
-## Vea también  
- [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Vea también  
+ [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -1,46 +1,47 @@
 ---
-title: "Reference Counting | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRef method [C++]"
-  - "AddRef method [C++], reference counting"
-  - "reference counting"
-  - "reference counts"
-  - "referencias, contar"
+title: Referencia de recuento (ATL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- AddRef method [C++], reference counting
+- reference counting
+- AddRef method [C++]
+- reference counts
+- references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Reference Counting
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM propio automáticamente no intenta quitar un objeto de memoria si piensa que el objeto ya no se utiliza.  En su lugar, el programador del objeto debe quitar el objeto no.  El programador determina si un objeto se puede quitar basándose en un recuento de referencia.  
+# <a name="reference-counting"></a>Recuento de referencias
+COM en sí mismo no automáticamente intenta quitar un objeto de la memoria cuando piensa que el objeto ya no está usándola. En su lugar, el programador de objetos debe quitar el objeto no utilizado. El programador determina si un objeto se puede quitar en función de un recuento de referencias.  
   
- COM usan métodos de **IUnknown** , [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) y [Liberar](http://msdn.microsoft.com/library/windows/desktop/ms682317), administrar el recuento de referencias de interfaces en un objeto.  Las reglas generales para llamar a estos métodos son:  
+ COM usa la **IUnknown** métodos, [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) y [versión](http://msdn.microsoft.com/library/windows/desktop/ms682317), para administrar el recuento de referencias de las interfaces en un objeto. Las reglas generales para llamar a estos métodos son:  
   
--   Cuando un cliente recibe un puntero de interfaz, `AddRef` se debe llamar a la interfaz.  
+-   Cada vez que un cliente recibe un puntero de interfaz, `AddRef` se debe llamar en la interfaz.  
   
--   Siempre que el cliente ha terminado de utilizar el puntero de interfaz, debe llamar a **Liberar**.  
+-   Cada vez que el cliente ha terminado de usar el puntero de interfaz, debe llamar a **versión**.  
   
- En una implementación simple, incrementos de cada llamada de `AddRef` y disminuye de cada llamada de **Liberar** una variable de contador dentro del objeto.  Cuando las actualizaciones a cero de recuento, la interfaz dejan de cualquier usuario y están libres de quitarse de memoria.  
+ En una implementación simple, cada `AddRef` llamar a incrementos y cada uno de ellos **versión** llamadas disminuye una variable de contador dentro del objeto. Cuando el recuento vuelve a cero, la interfaz ya no tiene ningún usuario y puede quitarse de la memoria.  
   
- El recuento de referencias también puede implementarse para contar cada referencia al objeto \(no una interfaz individual\).  En este caso, los delegados cada `AddRef` y llamada de **Liberar** a una implementación central en el objeto, y **Liberar** libera el objeto completo cuando su recuento de referencias llega a cero.  
+ Recuento de referencias también se puede implementar para que se cuentan todas las referencias al objeto (no a una interfaz individual). En este caso, cada `AddRef` y **versión** llamar a delegados para una implementación central en el objeto, y **versión** libera el objeto completo cuando su recuento de referencias llega a cero.  
   
 > [!NOTE]
->  Cuando `CComObject`\- el objeto derivado se construyen mediante el operador de **nuevo** , el recuento de referencias es 0.  Por consiguiente, una llamada a `AddRef` debe ser realizada después correctamente de crear `CComObject`\- objeto derivado.  
+>  Cuando un `CComObject`-objeto derivado se construye utilizando el **nueva** (operador), el recuento de referencias es 0. Por lo tanto, una llamada a `AddRef` se deben realizar después de crear correctamente el `CComObject`-objeto derivado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Introducción a COM](../atl/introduction-to-com.md)   
- [Managing Object Lifetimes through Reference Counting](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+ [Administrar la duración de los objetos a través de recuento de referencias](http://msdn.microsoft.com/library/windows/desktop/ms687260)
+

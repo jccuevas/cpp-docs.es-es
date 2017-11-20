@@ -1,70 +1,69 @@
 ---
-title: "CAccessorRowset (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorRowset"
-  - "ATL.CAccessorRowset"
-  - "ATL::CAccessorRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessorRowset (clase)"
+title: CAccessorRowset (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorRowset
+- ATL.CAccessorRowset
+- ATL::CAccessorRowset
+dev_langs: C++
+helpviewer_keywords: CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b7340baabb24ef18806442504a4bd5dadf73a41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorRowset (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="caccessorrowset-class"></a>CAccessorRowset (Clase)
 Encapsula un conjunto de filas y sus descriptores de acceso asociados en una sola clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <   
-   class TAccessor = CNoAccessor,    
-   template <typename T> class TRowset = CRowset    
+   class TAccessor = CNoAccessor,    
+   template <typename T> class TRowset = CRowset    
 >  
 class CAccessorRowset :   
-   public TAccessor,    
+   public TAccessor,    
    public TRowset<TAccessor>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TAccessor`  
  Una clase de descriptor de acceso.  
   
  `TRowset`  
  Una clase de conjunto de filas.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[Bind](../../data/oledb/caccessorrowset-bind.md)|Crea los enlaces \(utilizados cuando **bBind** se especifica como false en [CCommand::Open](../../data/oledb/ccommand-open.md)\).|  
+|[Enlazar](../../data/oledb/caccessorrowset-bind.md)|Crea enlaces (se usa cuando **bBind** se especifica como false en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|Constructor.|  
-|[Cerrar](../../data/oledb/caccessorrowset-close.md)|Cierre el conjunto de filas y los descriptores de acceso.|  
-|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Libera cualquier columna del registro actual que necesita ser liberado.|  
-|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementa [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[Cerrar](../../data/oledb/caccessorrowset-close.md)|Cierra el conjunto de filas y los descriptores de acceso.|  
+|[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|Libera las columnas en el registro actual que deben ser liberados.|  
+|[GetColumnInfo](../../data/oledb/caccessorrowset-getcolumninfo.md)|Implementa [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
   
-## Comentarios  
- La clase `TAccessor` administra el descriptor de acceso.  La clase *TRowset* administra el conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Clase `TAccessor` administra el descriptor de acceso. Clase *TRowset* administra el conjunto de filas.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

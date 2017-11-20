@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Convierte una cadena de caracteres multibyte en la configuración regional actual en su representación de cadena de caracteres anchos. Versión de [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +103,13 @@ errno_t mbsrtowcs_s(
   
  Si `count` es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `mbsrtowcs_s` convierte tanto de la cadena como cabe en el búfer de destino, dejando espacio para un terminador nulo.  
   
- Si `mbsrtowcs_s` convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida y establece el terminador nulo en `*``pReturnValue`, siempre que `pReturnValue` no sea un puntero nulo. Esto ocurre incluso si el argumento `wcstr` es un puntero nulo y le permite determinar el tamaño de búfer necesario. Tenga en cuenta que si `wcstr` es un puntero nulo, `count` se ignora.  
+ Si `mbsrtowcs_s` convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida y establece el terminador nulo en `*pReturnValue`, siempre que `pReturnValue` no sea un puntero nulo. Esto ocurre incluso si el argumento `wcstr` es un puntero nulo y le permite determinar el tamaño de búfer necesario. Tenga en cuenta que si `wcstr` es un puntero nulo, `count` se ignora.  
   
  Si `wcstr` no es un puntero nulo, al objeto de puntero señalado por `mbstr` se le asigna un puntero nulo si la conversión se detuvo por encontrarse un carácter nulo de terminación. De lo contrario, se le asigna la dirección inmediatamente posterior al último carácter multibyte convertido, de haberlo. Esto permite que una llamada de función subsiguiente reinicie la conversión en el punto en que se detuvo esta llamada.  
   
  Si `mbstate` es un puntero nulo, se utiliza el objeto de estado de la conversión estático interno de biblioteca `mbstate_t`. Dado que este objeto estático interno no es seguro para subprocesos, le recomendamos pasar siempre su propio valor para `mbstate`.  
   
- Si `mbsrtowcs_s` encuentra un carácter multibyte no válido en la configuración regional actual, pone -1 en `*``pReturnValue`, establece el búfer de destino `wcstr` a una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
+ Si `mbsrtowcs_s` encuentra un carácter multibyte no válido en la configuración regional actual, pone -1 en `*pReturnValue`, establece el búfer de destino `wcstr` a una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
   
  Si las secuencias señaladas por `mbstr` y `wcstr` se superponen, el comportamiento de `mbsrtowcs_s` no está definido. `mbsrtowcs_s` se ve afectado por la categoría LC_TYPE de la configuración regional actual.  
   

@@ -1,57 +1,58 @@
 ---
-title: "cexp, cexpf, cexpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-  - "complex/cepx"
-  - "complex/cexpf"
-  - "complex/cexpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cexp (función)"
-  - "cexpl (función)"
-  - "cexpf (función)"
+title: cexp, cexpf, cexpl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cexp
+- cexpf
+- cexpl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cexp
+- cexpf
+- cexpl
+- complex/cepx
+- complex/cexpf
+- complex/cexpl
+dev_langs: C++
+helpviewer_keywords:
+- cexp function
+- cexpl function
+- cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6fb1a26b4e461e0d542794425008ec81191000b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# cexp, cexpf, cexpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 Calcula el valor exponencial de base e de un número complejo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _Dcomplex cexp(   
@@ -71,26 +72,26 @@ _Lcomplex cexpl(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `z`  
  Número complejo que representa el exponente.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Valor de `e` elevado a la potencia de `z`.  
   
-## Comentarios  
- Puesto que C\+\+ permite las sobrecargas, es posible llamar a las sobrecargas de `cexp` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `cexp` siempre toma y devuelve un valor `_Dcomplex`.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cexp` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `cexp` siempre toma y devuelve un valor `_Dcomplex` .  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rutina|Encabezado C|Encabezado C\+\+|  
-|------------|------------------|----------------------|  
-|`cexp`, `cexpf`, `cexpl`|\<complex.h\>|\<complex.h\>|  
+|Rutina|Encabezado C|Encabezado C++|  
+|-------------|--------------|------------------|  
+|`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
- Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
  [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
- [CLOG, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)
+ [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

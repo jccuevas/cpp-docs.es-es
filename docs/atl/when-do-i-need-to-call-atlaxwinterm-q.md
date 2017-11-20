@@ -1,32 +1,30 @@
 ---
-title: "When Do I Need to Call AtlAxWinTerm? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AtlAxWinTerm"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AtlAxWinTerm method"
+title: "¿Cuándo es necesario llamar a AtlAxWinTerm? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: AtlAxWinTerm
+dev_langs: C++
+helpviewer_keywords: AtlAxWinTerm method
 ms.assetid: 0088d494-2d8d-45b4-b582-2af726bd6cbd
-caps.latest.revision: 12
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cdba5255560f220a80a016f17e574721b12f486d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# When Do I Need to Call AtlAxWinTerm?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anula de[AtlAxWinTerm](../Topic/AtlAxWinTerm.md) la clase de ventana de **"AtlAxWin80"** .  Se debe llamar a las ventanas hospedadas existentes de esta función \(si ya no es necesario crear para hospedar las ventanas\) después de todo se ha destruido.  Si no se llama a esta función, la clase de ventana no estará registrada automáticamente cuando el proceso finaliza.  
+# <a name="when-do-i-need-to-call-atlaxwinterm"></a>¿Cuándo es necesario llamar a AtlAxWinTerm?
+[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) anula el registro de la **"AtlAxWin80"** clase de ventana. Debería llamar a esta función (si ya no tiene que crear ventanas host) después de que se hayan destruido todas las ventanas de host existente. Si no llama a esta función, la clase de ventana será anular el registro automáticamente cuando finaliza el proceso.  
   
-## Vea también  
- [When Do I Need to Call AtlAxWinInit?](../atl/when-do-i-need-to-call-atlaxwininit-q.md)   
- [Preguntas más frecuentes sobre contención de controles](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Vea también  
+ Cuando es necesario llamar a AtlAxWinInit  
+[Preguntas más frecuentes sobre la contención de controles](../atl/atl-control-containment-faq.md)
+

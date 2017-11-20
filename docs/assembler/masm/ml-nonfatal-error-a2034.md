@@ -1,46 +1,44 @@
 ---
-title: "ML Nonfatal Error A2034 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2034"
+title: Error recuperable A2034 de ML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2034
+dev_langs: C++
+helpviewer_keywords: A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b71ac6c5c89b8c1e256b3f47423e1a897d2942c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2034
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**debe estar en bloques de segmento**  
+# <a name="ml-nonfatal-error-a2034"></a>Error recuperable A2034 de ML
+**debe estar en el bloque de segmento**  
   
- Uno de los siguientes se encontró fuera de un segmento bloqueado:  
+ Fuera de un bloque de segmento se encontró una de las siguientes acciones:  
   
--   una instrucción  
+-   Una instrucción  
   
 -   Una definición de etiqueta  
   
--   un operador de [THIS](../../assembler/masm/operator-this.md)  
+-   A [THIS](../../assembler/masm/operator-this.md) (operador)  
   
--   un operador de [$](../../assembler/masm/dollar.md)  
+-   A [ $ ](../../assembler/masm/dollar.md) (operador)  
   
--   una definición de procedimiento  
+-   Una definición de procedimiento  
   
--   una directiva de [Alinear](../../assembler/masm/align-masm.md)  
+-   Un [alinear](../../assembler/masm/align-masm.md) directiva  
   
--   una directiva de [ORGANIZACIÓN](../../assembler/masm/org.md)  
+-   Un [ORG](../../assembler/masm/org.md) directiva  
   
-## Vea también  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Vea también  
+ [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)

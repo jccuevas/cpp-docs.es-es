@@ -1,55 +1,55 @@
 ---
-title: "/NOLOGO (Suprimir el titular de inicio) (Vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SuppressStartupBanner"
-  - "/nologo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOLOGO (opción del vinculador)"
-  - "titulares, suprimir inicio"
-  - "mensaje de copyright"
-  - "NOLOGO (opción del vinculador)"
-  - "-NOLOGO (opción del vinculador)"
-  - "suprimir el titular de inicio (opción del vinculador)"
-  - "números de versión, impedir la presentación del vinculador"
+title: -NOLOGO (suprimir el titular de inicio) (vinculador) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SuppressStartupBanner
+- /nologo
+dev_langs: C++
+helpviewer_keywords:
+- suppress startup banner linker option
+- -NOLOGO linker option
+- /NOLOGO linker option
+- copyright message
+- version numbers, preventing linker display
+- banners, suppressing startup
+- NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1460563303f6a619d316a1b3ff4f885a31247a72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /NOLOGO (Suprimir el titular de inicio) (Vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Suprimir el titular de inicio) (Vinculador)
 ```  
 /NOLOGO  
 ```  
   
-## Comentarios  
- La opción \/NOLOGO impide que se muestre el mensaje de copyright y el número de versión.  
+## <a name="remarks"></a>Comentarios  
+ La opción/nologo evita que la visualización del número de versión y de mensaje de copyright.  
   
- También suprime la repetición de los archivos de comandos.  Para obtener más información, vea [Archivos de comandos de LINK](../../build/reference/link-command-files.md).  
+ Esta opción también suprime la repetición de archivos de comandos. Para obtener más información, consulte [archivos de comandos LINK](../../build/reference/link-command-files.md).  
   
- De forma predeterminada, el vinculador envía esta información a la Ventana de salida.  En la línea de comandos, la información se envía a la salida estándar y puede redirigirse a un archivo.  
+ De forma predeterminada, esta información se envía mediante el enlazador para la ventana de salida. En la línea de comandos que se envía a la salida estándar y puede redirigirse a un archivo.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Esta opción sólo debe utilizarse desde la línea de comandos.  
+1.  Esta opción solo debe utilizarse desde la línea de comandos.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
-1.  Esta opción del vinculador no puede variarse por medio de programación.  
+1.  Esta opción del vinculador no se puede cambiar mediante programación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

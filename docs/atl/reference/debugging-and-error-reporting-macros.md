@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de informes de errores y depuración
 Estas macros proporcionan funciones de seguimiento y depuración útiles.  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  La diferencia entre **ATLENSURE** y `ATLASSERT` es que **ATLENSURE** produce una excepción en la versión se compila, así como en compilaciones de depuración.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
@@ -156,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
  En versiones de lanzamiento, simplemente devuelve **E_NOTIMPL**.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities número 127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atltrace.h 
@@ -254,17 +243,17 @@ ATLTRACE2(
   
  Para declarar una categoría de seguimiento personalizada, declare una instancia global de la `CTraceCategory` clase como sigue:  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  El nombre de categoría, `MY_CATEGORY` en este ejemplo, es el nombre que especifique para el `category` parámetro. El primer parámetro es el nombre de categoría que va a aparecer en la herramienta de seguimiento ATL/MFC. El segundo parámetro es el nivel de seguimiento predeterminado. Este parámetro es opcional y el nivel de seguimiento predeterminado es 0.  
   
  Para usar una categoría definida por el usuario:  
   
- [!code-cpp[NVC_ATL_Utilities #110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  Para especificar que desea filtrar los mensajes de seguimiento, inserte las definiciones de estas macros en Stdafx.h antes de la `#include <atlbase.h>` instrucción.  
   
- Como alternativa, puede establecer el filtro en las directivas de preprocesador en el **páginas de propiedades** cuadro de diálogo. Haga clic en el **preprocesador** ficha y, a continuación, inserte la información global en el **definiciones de preprocesador** cuadro de edición.  
+ Como alternativa, puede establecer el filtro en las directivas de preprocesador en el **páginas de propiedades** cuadro de diálogo. Haga clic en el **preprocesador** ficha y, a continuación, insertar global en el **definiciones de preprocesador** cuadro de edición.  
   
  Atlbase.h contiene las definiciones predeterminadas de la `ATLTRACE2` macros y estas definiciones se utilizarán si no los defines estos símbolos antes de que se procese atlbase.h.  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE** y `ATLTRACE2` tienen el mismo comportamiento, **ATLTRACE** se incluye por compatibilidad con versiones anteriores.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>Vea también  
  [Macros](../../atl/reference/atl-macros.md)   
  [Funciones globales de depuración e informe de errores](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

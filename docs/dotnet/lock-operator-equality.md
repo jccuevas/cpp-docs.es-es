@@ -1,36 +1,34 @@
 ---
-title: "lock::operator== | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::operator=="
-  - "msclr.lock.operator=="
-  - "msclr::lock::operator=="
-  - "lock.operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator=="
+title: Lock::operator == | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::operator==
+- msclr.lock.operator==
+- msclr::lock::operator==
+- lock.operator==
+dev_langs: C++
+helpviewer_keywords: lock::operator==
 ms.assetid: 3dcf1e5a-53fc-495d-9df5-d7849a41c36c
-caps.latest.revision: 6
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33e372deb0bbae86efdf1a7c928d45e673e0b334
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# lock::operator==
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lockoperator"></a>lock::operator==
 Operador de igualdad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class T> bool operator==(  
@@ -38,14 +36,14 @@ template<class T> bool operator==(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `t`  
- El objeto cuya igualdad se va a comparar.  
+ El objeto para comparar la igualdad.  
   
-## Valor devuelto  
- Devuelve `true` si `t` es igual que el objeto de bloqueo, `false` de otra manera.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve `true` si `t` es el mismo que el objeto del bloqueo, `false` en caso contrario.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_lock_op_eq.cpp  
@@ -65,12 +63,15 @@ int main () {
 }  
 ```  
   
-  **¡Igual\!**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+Equal!  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
- [lock::operator\!\=](../dotnet/lock-operator-inequality.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
+ [lock::operator!=](../dotnet/lock-operator-inequality.md)

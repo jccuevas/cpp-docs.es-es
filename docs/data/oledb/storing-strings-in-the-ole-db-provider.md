@@ -1,28 +1,27 @@
 ---
-title: "Almacenar cadenas en el proveedor OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registros de usuario, editar"
+title: Almacenar cadenas en el proveedor OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Almacenar cadenas en el proveedor OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En MyProviderRS.h, el Asistente para proveedores OLE DB ATL crea un registro de usuario predeterminado denominado `CWindowsFile`.  Para controlar las dos cadenas, modifique `CWindowsFile` o agregue su propio registro de usuario, de la forma indicada en el siguiente fragmento de código:  
+# <a name="storing-strings-in-the-ole-db-provider"></a>Almacenar cadenas en el proveedor OLE DB
+En MyProviderRS.h, el Asistente para proveedores OLE DB ATL crea un registro de usuario predeterminado denominado `CWindowsFile`. Para controlar las dos cadenas, modifique `CWindowsFile` o agregue su propio registro de usuario tal como se muestra en el código siguiente:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +48,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Los miembros de datos `szCommand` y `szText` representan las dos cadenas, y `szCommand2` y `szText2` proporcionan columnas adicionales si es necesario.  El miembro de datos `dwBookmark` no es necesario para el proveedor sencillo de sólo lectura, pero se utiliza posteriormente para agregar una interfaz `IRowsetLocate`; vea [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  El operador `==` compara instancias \(la implementación de este operador es opcional\).  
+ Los miembros de datos `szCommand` y `szText` representan las dos cadenas, con `szCommand2` y `szText2` proporcionan columnas adicionales si es necesario. El miembro de datos `dwBookmark` no es necesario para este proveedor sencillo de sólo lectura, pero se utiliza más adelante para agregar una `IRowsetLocate` interfaz; vea [mejorar lectura solo un proveedor sencillo](../../data/oledb/enhancing-the-simple-read-only-provider.md). El `==` operador compara instancias (la implementación de este operador es opcional).  
   
- Cuando se haga esto, el proveedor deberá estar preparado para compilar y ejecutar.  Para probar el proveedor, se necesita un consumidor con funcionalidad coincidente.  [Implementar un consumidor simple](../../data/oledb/implementing-a-simple-consumer.md) muestra la forma de crear un consumidor de prueba de este tipo.  Ejecute el consumidor de prueba con el proveedor.  Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor cuando haga clic en el botón **Ejecutar** en el cuadro de diálogo **Consumidor de prueba**.  
+ Cuando esto sucede, el proveedor debería estar listo para compilarse y ejecutarse. Para probar el proveedor, se necesita un consumidor con funcionalidad de coincidencia. [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md) muestra cómo crear un consumidor de prueba de este tipo. Ejecute el consumidor de prueba con el proveedor. Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor al hacer clic en el **ejecutar** botón en el **consumidor de prueba** cuadro de diálogo.  
   
- Cuando haya probado con éxito el proveedor, puede que desee ampliar su funcionalidad mediante la implementación de interfaces adicionales.  Se muestra un ejemplo en [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+ Cuando haya probado con éxito el proveedor, puede ampliar su funcionalidad mediante la implementación de interfaces adicionales. Se muestra un ejemplo en [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
-## Vea también  
- [Implementar un proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Vea también  
+ [Implementar un proveedor sencillo de solo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md)

@@ -4,36 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: df873b168c4257f9bfa05c9a382c4412627fe4bb
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
 C++ admite la asignación dinámica de asignación y desasignación de objetos mediante el [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores. Estos operadores asignan memoria para los objetos de un conjunto denominado almacén libre. El `new` operador llama a la función especial [new (operador)](../cpp/new-operator-cpp.md)y el `delete` operador llama a la función especial [operador delete](../cpp/delete-operator-cpp.md).  
   
- En Visual C++ .NET 2002, el `new` función de la biblioteca estándar de C++ admitirá el comportamiento especificado en el estándar de C++, que consiste en producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de `new`, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado `operator new` en la biblioteca estándar de C++ deja de funcionar.  
+ El `new` función de la biblioteca estándar de C++ admite el comportamiento especificado en el estándar de C++, que consiste en producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de `new`, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado `operator new` en la biblioteca estándar de C++ deja de funcionar.  
   
  Para obtener una lista de los archivos de biblioteca que componen la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++, vea [características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
@@ -58,7 +55,7 @@ Los dos ámbitos para las funciones `operator new` se describen en la tabla sigu
 |**:: new (operador)**|Global|  
 |*nombre de la clase* **:: new (operador)**|Clase|  
   
- El primer argumento **new (operador)** debe ser de tipo **size_t** (es decir, un tipo definido en STDDEF. (H) y el tipo de valor devuelto es siempre **void \* **.  
+ El primer argumento **new (operador)** debe ser de tipo **size_t** (es decir, un tipo definido en STDDEF. (H) y el tipo de valor devuelto es siempre **void \*** .  
   
  Global **new (operador)** función se llama cuando el **nueva** operador se usa para asignar objetos de los tipos integrados, objetos de tipo de clase que no contienen definidos por el usuario **new (operador)** funciones y matrices de cualquier tipo. Cuando el **nueva** operador se usa para asignar objetos de un tipo de clase donde un **new (operador)** se define, esa clase **new (operador)** se llama.  
   
@@ -155,7 +152,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Solo una de las dos formas anteriores puede estar presente para una clase determinada. La primera forma toma un solo argumento de tipo **void \* **, que contiene un puntero al objeto que se va a desasignar. El segundo formulario: desasignación de tamaño: toma dos argumentos, el primero de los cuales es un puntero al bloque de memoria para cancelar la asignación y el segundo de los cuales es el número de bytes que se va a desasignar. Es el tipo de valor devuelto de ambas formas `void` (**operador delete** no puede devolver un valor).  
+ Solo una de las dos formas anteriores puede estar presente para una clase determinada. La primera forma toma un solo argumento de tipo **void \*** , que contiene un puntero al objeto que se va a desasignar. El segundo formulario: desasignación de tamaño: toma dos argumentos, el primero de los cuales es un puntero al bloque de memoria para cancelar la asignación y el segundo de los cuales es el número de bytes que se va a desasignar. Es el tipo de valor devuelto de ambas formas `void` (**operador delete** no puede devolver un valor).  
   
  El propósito de la segunda forma es acelerar la búsqueda de la categoría de tamaño correcto del objeto que se puede eliminar, que a menudo no se almacenan unos junto a la asignación de sí mismo y probablemente sin almacenar en caché; la segunda forma es especialmente útil cuando un **operador delete** función de una clase base se utiliza para eliminar un objeto de una clase derivada.  
   
@@ -232,5 +229,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

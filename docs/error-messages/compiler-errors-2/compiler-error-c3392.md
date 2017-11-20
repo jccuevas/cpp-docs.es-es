@@ -1,45 +1,25 @@
 ---
-title: C3392 de Error del compilador | Documentos de Microsoft
+title: Error del compilador C3392 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3392
+f1_keywords: C3392
+dev_langs: C++
+helpviewer_keywords: C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: ca0d37c75c61e1280c0f13ef6a26cd4ab920d1d9
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 12ed6dbcc7351926d51df4aa9e3397f3bb598f10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3392"></a>Error del compilador C3392
 'arg_tipo': argumento de tipo no válido para el parámetro genérico 'parámetro' del 'tipo_genérico' genérico, debe tener un constructor sin parámetros público.  
@@ -47,7 +27,7 @@ ms.lasthandoff: 02/24/2017
  Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Ejemplo  
-El siguiente ejemplo usa C# para crear un componente que contiene un tipo genérico que tiene ciertas limitaciones que no se admiten al crear tipos genéricos en C++ / CLI. Para obtener más información, consulte [Constraints on Type Parameters](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+El ejemplo siguiente utiliza C# para crear un componente que contiene un tipo genérico que tiene ciertas restricciones que no se admiten al crear tipos genéricos en C++ / CLI. Para obtener más información, vea [Restricciones de tipos de parámetros](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3392.cs  
@@ -59,7 +39,7 @@ where V : struct
 where N : new() {}  
 ```  
   
-Cuando el componente C3392.dll está disponible, el ejemplo siguiente genera C3392.  
+Cuando el componente C3392.dll está disponible, el ejemplo siguiente genera la advertencia C3392.  
   
 ```cpp  
 // C3392_b.cpp  

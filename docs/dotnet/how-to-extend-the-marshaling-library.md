@@ -1,50 +1,49 @@
 ---
-title: "C&#243;mo: Extender la biblioteca de c&#225;lculo de referencias | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "biblioteca de cálculo de referencias, extender"
+title: "Cómo: Extender la biblioteca de serialización | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3133a8329dac0e20eeb5c3b3c8141e15a65aefe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Extender la biblioteca de c&#225;lculo de referencias
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se explica cómo extender la biblioteca de cálculo de referencias para proporcionar más conversiones entre los tipos de datos.  Los usuarios pueden extender la biblioteca de cálculo de referencias para cualquier conversión de datos no admitida actualmente por la biblioteca.  
+# <a name="how-to-extend-the-marshaling-library"></a>Cómo: Extender la biblioteca de serialización
+En este tema se explica cómo extender la biblioteca de cálculo de referencias para proporcionar más conversiones entre tipos de datos. Los usuarios pueden extender la biblioteca de cálculo de referencias para las conversiones de datos no admitidas actualmente por la biblioteca.  
   
- Puede extender la biblioteca de cálculo de referencias de una de estas dos formas: con o sin [marshal\_context \(Clase\)](../dotnet/marshal-context-class.md).  Revise el tema [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) para determinar si una nueva conversión requiere un contexto.  
+ Puede extender la biblioteca de cálculo de referencias de una de dos maneras: con o sin un [marshal_context (clase)](../dotnet/marshal-context-class.md). Revise el [información general de serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md) tema para determinar si una nueva conversión requiere un contexto.  
   
- En ambos casos, cree primero un archivo para las nuevas conversiones de cálculo de referencias.  Esto se hace para conservar la integridad de los archivos de la biblioteca de cálculo de referencias estándar.  Si desea trasladar un proyecto a otro equipo o a otro programador, debe copiar el nuevo archivo de cálculo de referencias junto con el resto del proyecto.  De esta manera, el usuario que recibe el proyecto tendrá la garantía de recibir las nuevas conversiones y no tendrá que modificar ningún archivo de biblioteca.  
+ En ambos casos, crea primero un archivo para nuevas conversiones de cálculo de referencias. Puede hacerlo para mantener la integridad del estándar de archivos de la biblioteca de cálculo de referencias. Si desea trasladar un proyecto a otro equipo o a otro programador, debe copiar el nuevo archivo de cálculo de referencias junto con el resto del proyecto. De esta manera, el usuario recibe el proyecto tendrá la garantía de recibir las nuevas conversiones y no tendrá que modificar los archivos de biblioteca.  
   
-### Para Extender la biblioteca de cálculo de referencias con una conversión que no requiere un contexto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Para extender la biblioteca de cálculo de referencias con una conversión que no requiere un contexto  
   
-1.  Cree un archivo para almacenar las nuevas funciones de cálculo de referencias, por ejemplo, MyMarshal.h.  
+1.  Crear un archivo para almacenar las nuevas funciones de cálculo de referencias, por ejemplo, referencias.  
   
-2.  Incluya uno o varios archivos de la biblioteca de cálculo de referencias:  
+2.  Incluir uno o varios de los archivos de biblioteca de cálculo de referencias:  
   
-    -   marshal.h para los tipos base.  
+    -   Marshal.h para los tipos base.  
   
-    -   marshal\_windows.h para tipos de datos de ventanas.  
+    -   marshal_windows.h para tipos de datos de windows.  
   
-    -   marshal\_cppstd.h para tipos de datos de STL.  
+    -   marshal_cppstd.h para tipos de datos de la biblioteca estándar de C++.  
   
-    -   marshal\_atl.h para tipos de datos de ATL.  
+    -   marshal_atl.h para tipos de datos ATL.  
   
-3.  Utilice el código que se muestra al final de estos pasos para escribir la función de conversión.  En este código, TO es el tipo al que se convierte, FROM es el tipo desde el que se convierte, y `from` es el parámetro que se va a convertir.  
+3.  Utilice el código al final de estos pasos para escribir la función de conversión. En este código, es el tipo para convertir en, FROM es el tipo para convertir de, y `from` es el parámetro que se va a convertir.  
   
-4.  Reemplace el comentario sobre la lógica de la conversión con código para convertir el parámetro `from` en un objeto de tipo TO y devuelva el objeto convertido.  
+4.  Reemplace el comentario acerca de la lógica de conversión con código para convertir el `from` parámetro en un objeto de para escribir y devolver el objeto convertido.  
   
 ```  
 namespace msclr {  
@@ -57,29 +56,29 @@ namespace msclr {
 }  
 ```  
   
-### Para extender la biblioteca de cálculo de referencias con una conversión que requiere un contexto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Para extender la biblioteca de cálculo de referencias con una conversión que requiere un contexto  
   
-1.  Cree un archivo para almacenar las nuevas funciones de cálculo de referencias; por ejemplo, MyMarshal.h  
+1.  Crear un archivo para almacenar las nuevas funciones de cálculo de referencias, por ejemplo, referencias  
   
-2.  Incluya uno o varios archivos de la biblioteca de cálculo de referencias:  
+2.  Incluir uno o varios de los archivos de biblioteca de cálculo de referencias:  
   
-    -   marshal.h para los tipos base.  
+    -   Marshal.h para los tipos base.  
   
-    -   marshal\_windows.h para tipos de datos de ventanas.  
+    -   marshal_windows.h para tipos de datos de windows.  
   
-    -   marshal\_cppstd.h para tipos de datos de STL.  
+    -   marshal_cppstd.h para tipos de datos de la biblioteca estándar de C++.  
   
-    -   marshal\_atl.h para tipos de datos de ATL.  
+    -   marshal_atl.h para tipos de datos ATL.  
   
-3.  Utilice el código que se muestra al final de estos pasos para escribir la función de conversión.  En este código, TO es el tipo al que se convierte, FROM es el tipo desde el que se convierte, `toObject` es un puntero en el que se almacena el resultado, y `fromObject` es el parámetro que se va a convertir.  
+3.  Utilice el código al final de estos pasos para escribir la función de conversión. En este código, es el tipo para convertir en, FROM es el tipo que convierte de `toObject` es un puntero en el que se va a almacenar el resultado, y `fromObject` es el parámetro que se va a convertir.  
   
-4.  Reemplace el comentario sobre la inicialización con código para inicializar `toPtr` con el valor vacío adecuado.  Por ejemplo, si es un puntero, establézcalo en `NULL`.  
+4.  Reemplace el comentario sobre la inicialización con código para inicializar el `toPtr` al valor vacío adecuado. Por ejemplo, si es un puntero, establézcalo en `NULL`.  
   
-5.  Reemplace el comentario sobre la lógica de conversión con código para convertir el parámetro de `from` en un objeto de tipo de *TO* .  Este objeto convertido se almacenará en `toPtr`.  
+5.  Reemplace el comentario acerca de la lógica de conversión con código para convertir el `from` parámetro en un objeto de *TO* tipo. Este objeto convertido se almacenará en `toPtr`.  
   
-6.  Reemplace el comentario sobre cómo configurar `toObject` con código para establecer `toObject` en el objeto convertido.  
+6.  Reemplace el comentario sobre la configuración de `toObject` con el código para establecer `toObject` en el objeto convertido.  
   
-7.  Reemplace el comentario sobre cómo limpiar los recursos nativos con código para liberar la memoria asignada por `toPtr`.  Si `toPtr` asignó memoria mediante `new`, utilice `delete` para liberar la memoria.  
+7.  Reemplace el comentario sobre cómo limpiar los recursos nativos con código para liberar la memoria asignada por `toPtr`. Si `toPtr` memoria asignada mediante el uso de `new`, use `delete` para liberar la memoria.  
   
 ```  
 namespace msclr {  
@@ -110,8 +109,8 @@ namespace msclr {
 }   
 ```  
   
-## Ejemplo  
- El ejemplo siguiente extiende la biblioteca de cálculo de referencias con una conversión que no requiere un contexto.  En este ejemplo, el código convierte la información de empleado \(employee\) desde un tipo de datos nativo a un tipo de datos administrados.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se amplía la biblioteca de cálculo de referencias con una conversión que no requiere un contexto. En este ejemplo, el código convierte la información del empleado de un tipo de datos nativo a un tipo de datos administrados.  
   
 ```  
 // MyMarshalNoContext.cpp  
@@ -163,13 +162,16 @@ int main() {
 }  
 ```  
   
- En el ejemplo anterior, la función `marshal_as` devuelve un identificador a los datos convertidos.  Esto se ha hecho así para evitar la creación de una copia adicional de los datos.  Devolver directamente la variable hubiera tenido un coste de rendimiento innecesario.  
+ En el ejemplo anterior, el `marshal_as` función devuelve un identificador a los datos convertidos. Esto se lleva a cabo para impedir la creación de una copia adicional de los datos. Devolver directamente la variable habría un costo de rendimiento innecesarios asociado a él.  
   
-  **Nombre administrado: Jeff Smith**  
-**Dirección administrada: 123 Main Street**  
-**Código postal administrado: 98111**   
-## Ejemplo  
- El siguiente ejemplo convierte la información de empleado desde un tipo de datos administrados a un tipo de datos nativos.  Esta conversión requiere un contexto de cálculo de referencias.  
+```Output  
+Managed name: Jeff Smith  
+Managed address: 123 Main Street  
+Managed zip code: 98111  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se convierte la información del empleado de un tipo de datos administrados a un tipo de datos nativos. Esta conversión requiere un contexto de serialización.  
   
 ```  
 // MyMarshalContext.cpp  
@@ -263,8 +265,11 @@ int main() {
 }  
 ```  
   
-  **Nombre nativo: Jeff Smith**  
-**Dirección nativa: 123 Main Street**  
-**Código postal nativo: 98111**   
-## Vea también  
- [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)
+```Output  
+Native name: Jeff Smith  
+Native address: 123 Main Street  
+Native zip code: 98111  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Información general de la serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md)

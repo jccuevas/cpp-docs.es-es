@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 2) C4094 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4094"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4094"
+title: Compilador advertencia (nivel 2) C4094 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4094
+dev_langs: C++
+helpviewer_keywords: C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 01b52b13876e30528632dec13dbaee60acf886fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 2) C4094
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'símbolo \(token\)' sin etiqueta no ha declarado ningún símbolo  
+# <a name="compiler-warning-level-2-c4094"></a>Compilador C4094 de advertencia (nivel 2)
+no etiquetado 'token' no ha declarado símbolos  
   
- El compilador detectó una declaración vacía que utilizaba una estructura, unión o clase sin etiquetas.  Se omite la declaración.  
+ El compilador detectó una declaración vacía mediante una estructura no etiquetado, unión o clase. Se omite la declaración.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C4094.cpp  
@@ -42,4 +40,4 @@ int main()
 }  
 ```  
   
- Estas definiciones generan un error en condiciones de compatibilidad con ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).
+ Esta situación genera un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

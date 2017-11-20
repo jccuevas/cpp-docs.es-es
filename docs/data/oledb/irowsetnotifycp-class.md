@@ -1,32 +1,30 @@
 ---
-title: "IRowsetNotifyCP (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetNotifyCP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetNotifyCP (clase)"
+title: IRowsetNotifyCP (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetNotifyCP
+dev_langs: C++
+helpviewer_keywords: IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d110b3bc304664681532ae7511a9e886a05058b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyCP (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementa el sitio del proveedor para la interfaz [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)de punto de conexión.  
+# <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP (Clase)
+Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -42,45 +40,44 @@ class IRowsetNotifyCP :
    public ReentrantEventSync  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Una clase derivada de `IRowsetNotifyCP`.  
   
  `ReentrantEventSync`  
- Una clase mutex que admite el entrar \(el valor predeterminado es **CComSharedMutex**\).  Una exclusión mutua es un objeto de sincronización que permite que un subproceso tenga \- acceso exclusivo a un recurso.  
+ Una clase de exclusión mutua que admite la reentrada (el valor predeterminado es **CComSharedMutex**). Una exclusión mutua es un objeto de sincronización que permite que un subproceso tenga acceso mutuamente exclusivo a un recurso.  
   
  `piid`  
- Un puntero de identificador de interfaz \(**IID\***\) para una interfaz de puntos de conexión de **IRowsetNotify** .  El valor predeterminado es **&\_\_uuidof\(IRowsetNotify\)**.  
+ Un puntero de identificador de interfaz (**IID\***) para un **IRowsetNotify** interfaz puntos de conexión. El valor predeterminado es **& __uuidof(IRowsetNotify)**.  
   
  `DynamicUnkArray`  
- Una matriz de [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)escrito, que es una matriz dinámicamente asignado de punteros de **IUnknown** a las interfaces de receptor de cliente.  
+ Una matriz de tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que es una matriz asignada dinámicamente de **IUnknown** interfaces de receptor de punteros al cliente.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[Fire\_OnFieldChange](../../data/oledb/irowsetnotifycp-fire-onfieldchange.md)|Notifica al consumidor de un cambio del valor de una columna.|  
-|[Fire\_OnRowChange](../../data/oledb/irowsetnotifycp-fire-onrowchange.md)|Notifica al consumidor de un cambio que afecta a las filas.|  
-|[Fire\_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|Notifica al consumidor de un cambio que afecta al conjunto de filas completo.|  
+|[Fire_OnFieldChange](../../data/oledb/irowsetnotifycp-fire-onfieldchange.md)|Notifica al consumidor de un cambio en el valor de una columna.|  
+|[Fire_OnRowChange](../../data/oledb/irowsetnotifycp-fire-onrowchange.md)|Notifica al consumidor de un cambio que afecta a las filas.|  
+|[Fire_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|Notifica al consumidor de un cambio que afecta a todo el conjunto de filas.|  
   
-## Comentarios  
- `IRowsetNotifyCP` implementa funciones de difusión para advertir a los agentes de escucha del punto de conexión **IID\_IRowsetNotify** sobre cambios en el contenido del conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ `IRowsetNotifyCP`implementa las funciones para indicar que los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas.  
   
- Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor \(también conocido como “receptor”\) mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) de modo que el consumidor pueda controlar notificaciones.  Vea [Recibir notificaciones](../../data/oledb/receiving-notifications.md) sobre la implementación de la interfaz de punto de conexión en el consumidor.  
+ Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como el "receptor") mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor pueda controlar las notificaciones. Vea [recibir notificaciones](../../data/oledb/receiving-notifications.md) acerca de cómo implementar la interfaz de punto de conexión en el consumidor.  
   
- Para obtener información detallada sobre cómo implementar notificaciones, vea “admitir notificaciones” en [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md).  
+ Para obtener información detallada sobre la implementación de las notificaciones, vea "Compatibilidad con notificaciones" en [crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Notifications \(COM\)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   
- [Overview of Notifications \(OLE DB\)](https://msdn.microsoft.com/en-us/library/ms725406.aspx)   
- [BEGIN\_CONNECTION\_POINT\_MAP](../Topic/BEGIN_CONNECTION_POINT_MAP.md)   
- [END\_CONNECTION\_POINT\_MAP](../Topic/END_CONNECTION_POINT_MAP.md)   
- [CONNECTION\_POINT\_ENTRY](../Topic/CONNECTION_POINT_ENTRY.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Notificaciones (COM)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   
+ [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)   
+ [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)   
+ [CONNECTION_POINT_ENTRY](../../atl/reference/connection-point-macros.md#connection_point_entry)   
  [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md)

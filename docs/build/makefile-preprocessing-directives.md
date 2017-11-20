@@ -1,104 +1,104 @@
 ---
-title: "Directivas de preprocesamiento de archivos MAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "!UNDEF"
-  - "!INCLUDE"
-  - "!IFNDEF"
-  - "!MESSAGE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "!CMDSWITCHES (directiva)"
-  - "!ELSE (directiva)"
-  - "!ELSEIF (directiva)"
-  - "!ELSEIFDEF (directiva)"
-  - "!ELSEIFNDEF (directiva)"
-  - "!ENDIF (directiva)"
-  - "!ERROR (directiva)"
-  - "!IF (directiva)"
-  - "!IFDEF (directiva)"
-  - "!IFNDEF (directiva)"
-  - "!INCLUDE (directiva)"
-  - "!MESSAGE (directiva)"
-  - "!UNDEF (directiva)"
-  - "CMDSWITCHES (directiva)"
-  - "directivas, preprocesamiento de archivos make"
-  - "ELSE (directiva)"
-  - "ELSEIF (directiva)"
-  - "ELSEIFDEF (directiva)"
-  - "ELSEIFNDEF (directiva)"
-  - "ENDIF (directiva)"
-  - "ERROR (directiva)"
-  - "IF (directiva)"
-  - "IFDEF (directiva)"
-  - "IFNDEF (directiva)"
-  - "INCLUDE (directiva)"
-  - "Make (archivos), preprocesar directivas"
-  - "MESSAGE (directiva)"
-  - "NMAKE (programa), expresiones"
-  - "NMAKE (programa), directivas de preprocesador"
-  - "preprocesar directivas, Make (archivos)"
-  - "UNDEF (directiva)"
+title: Directivas de preprocesamiento de archivos MAKE | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- '!UNDEF'
+- '!INCLUDE'
+- '!IFNDEF'
+- '!MESSAGE'
+dev_langs: C++
+helpviewer_keywords:
+- ERROR directive
+- '!MESSAGE directive'
+- IF directive
+- '!UNDEF directive'
+- IFDEF directive
+- '!ELSEIF directive'
+- '!IFDEF directive'
+- '!IF directive'
+- UNDEF directive
+- '!CMDSWITCHES directive'
+- ENDIF directive
+- directives, makefile preprocessing
+- INCLUDE directive
+- IFNDEF directive
+- preprocessing directives, makefiles
+- '!IFNDEF directive'
+- ELSEIFNDEF directive
+- NMAKE program, expressions
+- ELSEIF directive
+- '!ERROR directive'
+- '!ENDIF directive'
+- MESSAGE directive
+- '!INCLUDE directive'
+- '!ELSEIFNDEF directive'
+- CMDSWITCHES directive
+- '!ELSEIFDEF directive'
+- '!ELSE directive'
+- NMAKE program, preprocessor directives
+- makefiles, preprocessing directives
+- ELSE directive
+- ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 742faea629cb085c203e231c29ab9e512b9c2812
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Directivas de preprocesamiento de archivos MAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las directivas de preprocesamiento no distinguen entre mayúsculas y minúsculas.  El signo de exclamación de cierre \(\!\) debe aparecer al comienzo de la línea.  Puede haber varios espacios o tabulaciones, o ninguno, a continuación del signo de exclamación para aplicar sangría.  
+# <a name="makefile-preprocessing-directives"></a>Directivas de preprocesamiento de archivos MAKE
+Las directivas de preprocesamiento no distinguen mayúsculas de minúsculas. El punto inicial de signo de exclamación (!) debe aparecer al principio de la línea. Cero o más espacios o tabulaciones pueden aparecer después del punto de exclamación, para la sangría.  
   
- **\!CMDSWITCHES**  
- {**\+**&#124; **–**}*opción*...  Activa o desactiva cada argumento *option* enumerado.  Los espacios o tabulaciones deben estar delante del operador \+ o –; no pueden estar entre el operador y las [letras de opción](../build/nmake-options.md).  Las letras no distinguen entre mayúsculas y minúsculas, y se especifican sin una barra oblicua \(\/\).  Para activar unas opciones y desactivar otras, se han de utilizar especificaciones independientes de **\!CMDSWITCHES**.  
+ **! CMDSWITCHES**  
+ {**+**&#124;  **-** }*opción*... Convierte a cada uno *opción* aparece activado o desactivado. Deben haber espacios ni tabulaciones antes el + o - operador. no pueden estar entre el operador y el [opción letras](../build/nmake-options.md). Letras no distinguen mayúsculas de minúsculas y se especifican sin una barra diagonal (/). Para activar unas opciones y desactivar otras, utilizar especificaciones independientes de **! CMDSWITCHES**.  
   
- Sólo \/D, \/I, \/N y \/S se pueden usar en un archivo MAKE.  En Tools.ini, están permitidas todas las opciones excepto \/F, \/HELP, \/NOLOGO, \/X y \/?.  Los cambios especificados en un bloque de descripción no tienen efecto hasta el siguiente bloque de descripción.  Esta directiva actualiza **MAKEFLAGS**; los cambios se heredan durante la recursividad si se especifica **MAKEFLAGS**.  
+ Sólo/d, / I, /N y /S se pueden usar en un archivo MAKE. En Tools.ini, se admiten todas las opciones excepto/f, / Help, / nologo, / X, y /?. Cambios especificados en un bloque de descripción no surtirán efecto hasta el siguiente bloque de descripción. Esta directiva actualiza **MAKEFLAGS**; los cambios se heredan durante la recursividad si **MAKEFLAGS** se especifica.  
   
- **\!ERROR**  *texto*  
- Muestra *text* en el error U1050 y después interrumpe NMAKE, aunque se utilicen \/K, \/I, **.IGNORE**, **\!CMDSWITCHES** o el modificador de comando guión \(–\).  Los espacios o tabulaciones delante de *text* se omiten.  
+ **! ERROR***texto*   
+ Muestra *texto* en error U1050 y después interrumpe NMAKE, aunque se utilicen/k, / I, **. OMITIR**, **! CMDSWITCHES**, o se utiliza el modificador de comando guión (-). Los espacios o tabulaciones antes *texto* se omiten.  
   
- **\!MESSAGE**  *texto*  
- Muestra *text* para la salida estándar.  Los espacios o tabulaciones delante de *text* se omiten.  
+ **! MENSAJE***texto*   
+ Muestra *texto* a la salida estándar. Los espacios o tabulaciones antes *texto* se omiten.  
   
- *nombre de archivo de* **\!include**\[ **\<**\] \[ **\>**\]  
- Lee *filename* como un archivo MAKE y después continúa con el archivo MAKE actual.  Búsquedas de NMAKE para *el nombre de archivo* primero en de forma recursiva especificado o actual el directorio, recorre los directorios de cualquier archivo MAKE primarios, a continuación, si *el nombre de archivo* está incluido entre corchetes angulares \(\< \>\), en los directorios especificados por la macro de **include** , que se establece inicialmente a la variable de entorno INCLUDE.  Es útil para pasar valores de **.SUFFIXES**, **.PRECIOUS** y reglas de inferencia a los archivos MAKE recursivos.  
+ **! INCLUIR**[  **\<** ] *filename*[  **>** ]  
+ Lee *filename* como un archivo MAKE, a continuación, continúa con el archivo MAKE actual. NMAKE busca *filename* primero en el directorio actual o especificado, a continuación, recursiva en los directorios de cualquier principal MAKE (archivos), a continuación, si *filename* está incluido entre corchetes angulares (\<>), en los directorios especificados por la **INCLUDE** macro, que inicialmente se establece en la variable de entorno INCLUDE. Es útil para pasar **. SUFIJOS** configuración, **. Muy VALIOSO**y las reglas de inferencia para archivos MAKE recursivos.  
   
- **\!IF**  `constantexpression`  
- Procesa instrucciones entre **\!IF** y la siguiente instrucción **\!ELSE** o `!ENDIF` si `constantexpression` se evalúa como un valor distinto de cero.  
+ **! IF**  `constantexpression`  
+ ¡Procesa instrucciones entre **! IF** y la siguiente instrucción **! ELSE** o `!ENDIF` si `constantexpression` se evalúa como un valor distinto de cero.  
   
- **\!IFDEF**  *nombreDeMacro*  
- Procesa instrucciones entre `!IFDEF` y la siguiente instrucción **\!ELSE** o `!ENDIF` si el argumento *macroname* está definido.  Una macro nula se considera que está definida.  
+ **! IFDEF***Nombredelamacro*   
+ ¡Procesa instrucciones entre `!IFDEF` y la siguiente instrucción **! ELSE** o `!ENDIF` si *Nombredelamacro* está definido. Una macro null se considera que está definida.  
   
- **\!IFNDEF**  *nombreDeMacro*  
- Procesa instrucciones entre **\!IFNDEF** y la siguiente instrucción **\!ELSE** o `!ENDIF` si el argumento *macroname* no está definido.  
+ **! IFNDEF***Nombredelamacro*   
+ ¡Procesa instrucciones entre **! IFNDEF** y la siguiente instrucción **! ELSE** o `!ENDIF` si *Nombredelamacro* no está definido.  
   
- **\!ELSE**\[**IF** *expresiónConstante* &#124; **IFDEF** *nombreDeMacro*&#124; **IFNDEF** *nombreDeMacro*\]  
- Procesa instrucciones entre **\!ELSE** y la siguiente instrucción `!ENDIF` si la instrucción **\!IF**, `!IFDEF` o **\!IFNDEF** anterior se evalúa como cero.  Las palabras clave opcionales ofrecen un control de preprocesamiento superior.  
+ **! ELSE**[**IF** *constantexpression* &#124; **IFDEF** *Nombredelamacro*&#124; **IFNDEF** *Nombredelamacro*]  
+ ¡Procesa instrucciones entre **! ELSE** y el siguiente `!ENDIF` si anterior **! IF**, `!IFDEF`, o **! IFNDEF** instrucción que se evalúa como cero. Las palabras clave opcionales ofrecen un control de preprocesamiento.  
   
- **\!ELSEIF**  
- Sinónimo de **\!ELSE IF**.  
+ **! ELSEIF**  
+ Sinónimo de **! ELSE IF**.  
   
- **\!ELSEIFDEF**  
- Sinónimo de **\!ELSE IFDEF**.  
+ **! ELSEIFDEF**  
+ Sinónimo de **! ELSE IFDEF**.  
   
- **\!ELSEIFNDEF**  
- Sinónimo de **\!ELSE IFNDEF**.  
+ **! ELSEIFNDEF**  
+ Sinónimo de **! IFNDEF ELSE**.  
   
  `!ENDIF`  
- Marca el final de un bloque **\!IF**, `!IFDEF` o **\!IFNDEF**.  El texto que sigue a continuación de `!ENDIF` en la misma línea se omite.  
+ Marca el final de un **! IF**, `!IFDEF`, o **! IFNDEF** bloque. Cualquier texto situado tras `!ENDIF` se omite en la misma línea.  
   
- **\!UNDEF**  *nombreDeMacro*  
- Deja sin definir *macroname*.  
+ **! UNDEF***Nombredelamacro*   
+ Anula la definición de *Nombredelamacro*.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Preprocesamiento de archivos MAKE](../build/makefile-preprocessing.md)

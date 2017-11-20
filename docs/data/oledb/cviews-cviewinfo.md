@@ -1,73 +1,73 @@
 ---
-title: "CViews, CViewInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_bCheckOption"
-  - "CViews"
-  - "CHECK_OPTION"
-  - "CViewInfo"
-  - "m_szTableCatalog"
-  - "IS_UPDATABLE"
-  - "m_szDefinition"
-  - "m_szTableName"
-  - "m_bIsUpdatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHECK_OPTION"
-  - "CViewInfo (clase de parámetro)"
-  - "CViews (clase de definiciones de tipo)"
-  - "DESCRIPTION (miembro de datos de clase)"
-  - "IS_UPDATABLE"
-  - "m_bCheckOption"
-  - "m_bIsUpdatable"
-  - "m_szDefinition"
-  - "m_szDescription"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CViews, CViewInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_bCheckOption
+- CViews
+- CHECK_OPTION
+- CViewInfo
+- m_szTableCatalog
+- IS_UPDATABLE
+- m_szDefinition
+- m_szTableName
+- m_bIsUpdatable
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- CHECK_OPTION
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- m_bCheckOption
+- TABLE_SCHEMA
+- m_szTableCatalog
+- m_szDescription
+- m_szDefinition
+- m_szTableName
+- CViewInfo parameter class
+- m_bIsUpdatable
+- IS_UPDATABLE
+- CViews typedef class
 ms.assetid: ad864181-4fab-4919-b0fd-45df5da230d9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d724ce89deadc6900f3d622763ce1895109af230
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CViews, CViewInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Asigne a la clase **CViews** typedef para implementar la clase **CViewInfo**del parámetro.  
+# <a name="cviews-cviewinfo"></a>CViews, CViewInfo
+Llamar a la clase de typedef **CViews** para implementar su clase de parámetro **CViewInfo**.  
   
-## Comentarios  
- Vea [Clases de conjunto de filas de esquema y clases de Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre cómo utilizar clases typedef.  
+## <a name="remarks"></a>Comentarios  
+ Vea [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre el uso de clases typedef.  
   
- Esta clase identifica las tablas en las que vio tablas, definido en el catálogo y que pertenecen a un usuario determinado, depende.  
+ Esta clase identifica las tablas en que se ven tablas, definidas en el catálogo y pertenecen a un usuario determinado, son dependientes.  
   
- La tabla siguiente se enumeran los miembros de datos de la clase y sus columnas correspondientes de OLE DB.  Vea [Conjunto de filas OPINIÓNES](https://msdn.microsoft.com/en-us/library/ms723122.aspx) en *la referencia del* programador para obtener más información sobre el esquema y las columnas.  
+ En la tabla siguiente se enumera los miembros de datos de la clase y sus columnas OLE DB correspondiente. Vea [conjunto de filas VIEWS](https://msdn.microsoft.com/en-us/library/ms723122.aspx) en el *referencia del programador de OLE DB* para obtener más información sobre el esquema y las columnas.  
   
 |Miembros de datos|Columnas de OLE DB|  
-|-----------------------|------------------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szDefinition|VIEW\_DEFINITION|  
-|m\_bCheckOption|CHECK\_OPTION|  
-|m\_bIsUpdatable|IS\_UPDATABLE|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szDefinition|VIEW_DEFINITION|  
+|m_bCheckOption|CHECK_OPTION|  
+|m_bIsUpdatable|IS_UPDATABLE|  
+|m_szDescription|DESCRIPCIÓN|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRestrictions (Clase)](../../data/oledb/crestrictions-class.md)

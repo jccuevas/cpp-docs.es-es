@@ -1,49 +1,48 @@
 ---
-title: "fetestexcept1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fetestexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fetestexcept"
-  - "fenv/fetestexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fetestexept (función)"
+title: fetestexcept1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fetestexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fetestexcept
+- fenv/fetestexcept
+dev_langs: C++
+helpviewer_keywords: fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a2fa4448bc71fc8b01abffaa0655f63e6ef474a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# fetestexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determina cuál de los indicadores de estado de excepción de punto flotante especificado actualmente establecidos.  
+# <a name="fetestexcept"></a>fetestexcept
+Determina cuáles de las marcas de estado de excepción de punto flotante están establecidas actualmente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int fetestexcept(  
@@ -52,38 +51,38 @@ int fetestexcept(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `excepts`  
- OR bit a bit de los indicadores de estado de punto flotante para probar.  
+ Operación OR bit a bit de las marcas de estado de punto flotante que se van a probar.  
   
-## Valor devuelto  
- Si se ejecuta correctamente, devuelve una máscara de bits que contiene una operación OR bit a bit de las macros de excepción de punto flotante que se corresponden con los indicadores de estado de excepción actualmente establecido. Devuelve 0 si ninguna de las excepciones se establece.  
+## <a name="return-value"></a>Valor devuelto  
+ Si se ejecuta correctamente, devuelve una máscara de bits que contiene una operación OR bit a bit de las macros de excepción de punto flotante que se corresponden con las marcas de estado de excepción actualmente establecidas. Devuelve 0 si no se establece ninguna de las excepciones.  
   
-## Comentarios  
- Utilice la función fetestexcept para determinar las excepciones producidas por un flotante operación de punto. Utilice el `excepts` para especificar qué marcas de estado de excepción para probar. El `fetestexcept` función usa estas macros de excepción definidas en \< fenv.h \> `excepts` y el valor devuelto:  
+## <a name="remarks"></a>Comentarios  
+ Use la función fetestexcept para determinar las excepciones que ha generado una operación de punto flotante. Use el parámetro `excepts` para especificar las marcas de estado de excepción que se deben probar. La función `fetestexcept` usa estas macros de excepción definidas en \<fenv.h> in `excepts` y el valor devuelto:  
   
-|Macros de excepción|Descripción|  
-|-------------------------|-----------------|  
-|FE\_DIVBYZERO|Se produjo un error de singularidad o polo en una operación punto flotante anteriormente; se creó un valor infinito.|  
-|FE\_INEXACT|Se forzó la función redondear el resultado de una operación de punto flotante anteriormente almacenado.|  
-|FE\_INVALID|Se produjo un error de dominio en una operación de punto flotante anteriormente.|  
-|FE\_OVERFLOW|Se produjo un error de intervalo; un resultado de la operación de punto flotante anterior era demasiado grande para representarse.|  
-|FE\_UNDERFLOW|Un resultado de la operación de punto flotante anterior era demasiado pequeño para representarlo en precisión completa; se creó un valor desnormalizados.|  
-|FE\_ALLEXCEPT|La operación OR bit a bit de todos los admite excepciones de punto flotante.|  
+|Macro de excepción|Descripción|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Se ha producido un error de singularidad o de polo en una operación de punto flotante anterior; se ha creado un valor infinito.|  
+|FE_INEXACT|Se ha forzado la función a redondear el resultado almacenado de una operación de punto flotante anterior.|  
+|FE_INVALID|Se ha producido un error de dominio en una operación de punto flotante anterior.|  
+|FE_OVERFLOW|Se ha producido un error de intervalo; el resultado de una operación de punto flotante anterior era demasiado grande para representarse.|  
+|FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|  
+|FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|  
   
- Especificado `excepts` argumento puede ser 0, una de las macros de excepción de punto flotante compatibles o bit a bit o de dos o más de las macros. El efecto de cualquier otro `excepts` el valor del argumento es indefinido.  
+ El argumento `excepts` especificado puede ser 0, una de las macros de excepción de punto flotante admitidas o la operación OR bit a bit de dos o más de las macros. El efecto de cualquier otro valor de argumento `excepts` es indefinido.  
   
- Para utilizar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante el uso de la `#pragma fenv_access(on)` Directiva antes de la llamada. Para obtener más información, consulta [fenv\_access](../../preprocessor/fenv-access.md).  
+ Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulte [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`fetestexcept`|\<fenv.h\>|\<cfenv\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`fetestexcept`|\<fenv.h>|\<cfenv>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)

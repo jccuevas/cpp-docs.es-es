@@ -1,35 +1,35 @@
 ---
-title: "Descargar expl&#237;citamente un archivo DLL de carga retrasada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAY:UNLOAD (opción del vinculador)"
-  - "__FUnloadDelayLoadedDLL2"
-  - "DELAY:UNLOAD (opción del vinculador)"
-  - "carga retrasada de archivos DLL, descargar"
+title: "Descargar explícitamente una archivo DLL de carga retrasada | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /DELAY:UNLOAD linker option
+- DELAY:UNLOAD linker option
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Descargar expl&#237;citamente un archivo DLL de carga retrasada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La opción de vinculador [\/delay](../../build/reference/delay-delay-load-import-settings.md):unload permite descargar un archivo DLL de carga retrasada.  De forma predeterminada, cuando el código descarga la DLL \(mediante \/delay:unload y **\_\_FUnloadDelayLoadedDLL2**\), las importaciones de carga retrasada permanecen en la tabla de direcciones de importación \(IAT\).  Sin embargo, si se utiliza el modificador \/delay:unload en la línea de comandos del vinculador, la función auxiliar admitirá la descarga explícita del archivo DLL, restableciendo el formato original en la tabla IAT; se sobrescribirán los punteros que no son válidos actualmente.  La tabla IAT es un campo de [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) que contiene la dirección de una copia de la tabla IAT original \(si existe\).  
+# <a name="explicitly-unloading-a-delay-loaded-dll"></a>Descargar explícitamente un archivo DLL de carga retrasada
+El [/delay](../../build/reference/delay-delay-load-import-settings.md): opción de vinculador unload permite descargar un archivo DLL de carga retrasada. De forma predeterminada, cuando el código descarga la DLL (mediante/delay: unload y **__FUnloadDelayLoadedDLL2**), las importaciones de carga retrasada permanecen en la tabla de direcciones de importación (IAT). Sin embargo, si utiliza/Delay: Unload en la línea de comandos del vinculador, la función auxiliar admitirá la descarga explícita de la DLL, restableciendo la IAT a su forma original; se sobrescribirán los punteros no son válidos ahora. La tabla IAT es un campo en el [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) que contiene la dirección de una copia de la tabla IAT original (si existe).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD  
@@ -56,14 +56,14 @@ int main()
 }  
 ```  
   
-### Comentarios  
- Notas importantes sobre la descarga de una DLL de carga retrasada:  
+### <a name="comments"></a>Comentarios  
+ Notas importantes sobre la descarga de un archivo DLL de carga retrasada:  
   
--   La implementación de la función **\_\_FUnloadDelayLoadedDLL2** se puede encontrar en el archivo \\VC7\\INCLUDE\\DELAYHLP.CPP.  
+-   Puede encontrar la implementación de la **__FUnloadDelayLoadedDLL2** función en el archivo \VC7\INCLUDE\DELAYHLP. CPP.  
   
--   El parámetro de nombre de la función **\_\_FUnloadDelayLoadedDLL2** debe coincidir exactamente \(incluidas mayúsculas y minúsculas\) con el contenido de la biblioteca de importación \(esa cadena se encuentra también en la tabla de importación de la imagen\).  Puede ver el contenido de la biblioteca de importación mediante [DUMPBIN \/DEPENDENTS](../../build/reference/dependents.md).  Si se desea una coincidencia de cadenas sin distinguir entre mayúsculas y minúsculas, puede actualizar **\_\_FUnloadDelayLoadedDLL2** para que utilice una de las funciones de cadena CRT o una llamada API de Windows.  
+-   El parámetro de nombre de la **__FUnloadDelayLoadedDLL2** función debe coincidir exactamente con (incluidas las mayúsculas) lo que la biblioteca de importación contiene (esa cadena se encuentra también en la tabla de importación de la imagen). Puede ver el contenido de la biblioteca de importación con [DUMPBIN /DEPENDENTS](../../build/reference/dependents.md). Si se desea una coincidencia de cadenas entre mayúsculas y minúsculas, puede actualizar **__FUnloadDelayLoadedDLL2** utilizar una de las funciones de cadena CRT o una llamada de API de Windows.  
   
- Vea [Descargar un archivo DLL de carga retrasada](../../build/reference/unloading-a-delay-loaded-dll.md) para obtener más información.  
+ Vea [descargar un archivo DLL de carga retrasada](../../build/reference/unloading-a-delay-loaded-dll.md) para obtener más información.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)

@@ -1,58 +1,57 @@
 ---
-title: "CDynamicAccessor::GetColumnType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnType"
-  - "CDynamicAccessor::GetColumnType"
-  - "GetColumnType"
-  - "CDynamicAccessor.GetColumnType"
-  - "ATL::CDynamicAccessor::GetColumnType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnType (método)"
+title: 'CDynamicAccessor:: Getcolumntype | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnType
+- CDynamicAccessor::GetColumnType
+- GetColumnType
+- CDynamicAccessor.GetColumnType
+- ATL::CDynamicAccessor::GetColumnType
+dev_langs: C++
+helpviewer_keywords: GetColumnType method
 ms.assetid: ac96a2e9-6049-4eb5-9718-9f5f5446b74e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c205d11cd71d717bd2ad67d2d271aa421534505a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetColumnType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetcolumntype"></a>CDynamicAccessor::GetColumnType
 Recupera el tipo de datos de una columna especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      bool GetColumnType(   
-   DBORDINAL nColumn,   
-   DBTYPE* pType    
+      bool GetColumnType(   
+   DBORDINAL nColumn,   
+   DBTYPE* pType    
 ) const throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nColumn`  
- \[in\] El número de columnas.  Los números de columnas empiezan por 1.  Un valor de 0 hace referencia a la columna de marcador, si la hay.  
+ [in] El número de columna. Números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si lo hay.  
   
  `pType`  
- \[out\] Un puntero al tipo de datos de la columna especificada.  
+ [out] Un puntero al tipo de datos de la columna especificada.  
   
-## Valor devuelto  
- Devuelve **true** en correctamente o **false** en el error.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve **true** en caso de éxito o **false** en caso de error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicAccessor \(Clase\)](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CDynamicAccessor (clase)](../../data/oledb/cdynamicaccessor-class.md)   
  [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)
