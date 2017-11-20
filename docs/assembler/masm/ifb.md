@@ -1,32 +1,30 @@
 ---
-title: "IFB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IFB"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IFB directive"
+title: IFB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IFB
+dev_langs: C++
+helpviewer_keywords: IFB directive
 ms.assetid: 6395e313-e590-41b3-824c-577f200faf80
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 66f1e68a0f4bd2774a1ba66d21fc5cace8890d40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IFB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Concede al ensamblado si *el textitem* está en blanco.  
+# <a name="ifb"></a>IFB
+Concede al ensamblado si *textitem* está en blanco.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,8 +33,8 @@ textitem
   
 ```  
   
-## Comentarios  
- Vea [IF &#91;SQL2008&#93;](../../assembler/masm/if-masm.md) para la sintaxis completa.  
+## <a name="remarks"></a>Comentarios  
+ Vea [IF](../../assembler/masm/if-masm.md) para consultar la sintaxis completa.  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

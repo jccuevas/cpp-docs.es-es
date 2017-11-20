@@ -1,34 +1,34 @@
 ---
-title: "Llamar a funciones de C++ en ensamblados alineados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (palabra clave) [C++], llamar a funciones"
-  - "llamadas a funciones, funciones de C++"
-  - "llamadas a funciones, en ensamblado alineado"
-  - "funciones [C++], llamar en ensamblado alineado"
-  - "ensamblado en línea, llamar a funciones"
-  - "Visual C++, funciones"
+title: "Las funciones que realiza la llamada C en código ensamblador en línea | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- function calls, C functions
+- function calls, in inline assembly
+- functions [C], calling in inline assembly
+- Visual C, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cd162026792bf8458c3725011b583d1eeb00772
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Llamar a funciones de C en ensamblados alineados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específicos de Microsoft  
- Un bloque `__asm` puede llamar a las funciones de C, incluidas las rutinas de la biblioteca de C.  El ejemplo siguiente llama a la rutina de biblioteca `printf`:  
+# <a name="calling-c-functions-in-inline-assembly"></a>Llamada a funciones C en el ensamblado alineado
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ Un bloque `__asm` puede llamar a las funciones de C, incluidas las rutinas de la biblioteca de C. El ejemplo siguiente llama a la rutina de biblioteca `printf`:  
   
 ```  
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
@@ -58,7 +58,7 @@ int main( void )
 }  
 ```  
   
- Dado que los argumentos de la función se pasan en la pila, inserte simplemente los argumentos necesarios \(los punteros de cadena en el ejemplo anterior\) antes de llamar a la función.  Los argumentos se insertan en el orden inverso, de modo que dejan la pila en el orden deseado.  Para emular la instrucción de C  
+ Dado que los argumentos de la función se pasan en la pila, inserte simplemente los argumentos necesarios (los punteros de cadena en el ejemplo anterior) antes de llamar a la función. Los argumentos se insertan en el orden inverso, de modo que dejan la pila en el orden deseado. Para emular la instrucción de C  
   
 ```  
 printf( format, hello, world );  
@@ -68,5 +68,5 @@ printf( format, hello, world );
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Ensamblador alineado](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblador insertado](../../assembler/inline/inline-assembler.md)

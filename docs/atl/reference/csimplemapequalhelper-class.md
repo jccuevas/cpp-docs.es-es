@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSimpleMapEqualHelper class
+dev_langs: C++
+helpviewer_keywords: CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: ddb793889748446b9613c91ce6fcefe28da32eb3
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 42c6ef6562b737952782edfac41d3ba405a60ed1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimplemapequalhelper-class"></a>Clase CSimpleMapEqualHelper
 Esta clase es una aplicación auxiliar para la [CSimpleMap](../../atl/reference/csimplemap-class.md) clase.  
@@ -55,7 +37,7 @@ class CSimpleMapEqualHelper
   
 #### <a name="parameters"></a>Parámetros  
  `TKey`  
- El elemento clave.  
+ El elemento key.  
   
  `TVal`  
  El elemento de valor.  
@@ -70,7 +52,7 @@ class CSimpleMapEqualHelper
 |[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Estático) Comprueba la igualdad de dos valores.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase de rasgos es un suplemento de la `CSimpleMap` clase. Proporciona métodos para comparar dos `CSimpleMap` elementos (en concreto, los componentes clave y valor) para la igualdad del objeto. De forma predeterminada, las claves y valores se comparan mediante `operator==()`, pero si el mapa contiene tipos de datos complejos que no tienen su propio operador de igualdad, se puede invalidar esta clase para proporcionar la funcionalidad adicional necesaria.  
+ Esta clase de rasgos es un complemento para el `CSimpleMap` clase. Proporciona métodos para comparar dos `CSimpleMap` elementos (en concreto, los componentes clave y valor) para la igualdad de objetos. De forma predeterminada, los valores y claves se comparan mediante `operator==()`, pero si el objeto map contiene tipos de datos complejos que no tienen su propio operador de igualdad, se puede invalidar esta clase para proporcionar la funcionalidad adicional necesaria.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsimpcoll.h  
@@ -90,7 +72,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
  La segunda clave.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si las claves de lo contrario, son iguales, false.  
+ Devuelve true si las claves en caso contrario, son iguales, false.  
   
 ##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
  Comprueba la igualdad de dos valores.  
@@ -107,9 +89,8 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
  Segundo valor.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve true si los valores equivalen, false en caso contrario.  
+ Devuelve true si los valores en caso contrario, son iguales, false.  
   
 ## <a name="see-also"></a>Vea también  
  [Clase CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

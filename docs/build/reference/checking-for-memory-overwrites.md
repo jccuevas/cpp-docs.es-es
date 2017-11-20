@@ -1,41 +1,40 @@
 ---
-title: "Comprobar si se ha sobrescrito la memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memoria, sobrescrituras"
+title: Comprobar la memoria sobrescribe | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4560fb580d3d1b24feccf84dc07bde7dc38458c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Comprobar si se ha sobrescrito la memoria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si se obtiene una infracción de acceso en una llamada a una función de manipulación del montón, puede ser que el programa haya dañado el montón.  Un síntoma habitual de esta situación sería:  
+# <a name="checking-for-memory-overwrites"></a>Comprobar si se ha sobrescrito la memoria
+Si se produce una infracción de acceso en una llamada a una función de manipulación de montón, es posible que el programa haya dañado el montón. Un síntoma común de esta situación sería:  
   
 ```  
 Access Violation in _searchseg  
 ```  
   
- La función [\_heapchk](../../c-runtime-library/reference/heapchk.md) está disponible tanto en versiones de depuración como de lanzamiento \(sólo en Windows NT\) para comprobar la integridad del montón de la biblioteca en tiempo de ejecución.  Se puede utilizar `_heapchk` de forma análoga a la función `AfxCheckMemory` para aislar una sobrescritura en el montón; por ejemplo:  
+ El [_heapchk](../../c-runtime-library/reference/heapchk.md) función está disponible en ambas versiones de depuración y de lanzamiento (sólo en Windows NT) para comprobar la integridad del montón de la biblioteca de tiempo de ejecución. Puede usar `_heapchk` de la misma manera como el `AfxCheckMemory` función para aislar una sobrescritura en el montón, por ejemplo:  
   
 ```  
 if(_heapchk()!=_HEAPOK)  
    DebugBreak();  
 ```  
   
- Si esta función produce un error en algún momento, se deberá aislar el punto en el que el montón resultó dañado.  
+ Si esta función nunca se produce un error, debe aislar punto en el que se ha dañado el montón.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Solucionar problemas de versiones de lanzamiento](../../build/reference/fixing-release-build-problems.md)

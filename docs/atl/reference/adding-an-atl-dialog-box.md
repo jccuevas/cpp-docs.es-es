@@ -1,47 +1,48 @@
 ---
-title: "Adding an ATL Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL projects, agregar recursos de cuadro de diálogo"
-  - "cuadros de diálogo, ATL"
-  - "cuadros de diálogo de MFC, cuadros de diálogo ATL"
+title: "Agregar un cuadro de diálogo ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, adding dialog resources
+- MFC dialog boxes, ATL dialogs
+- dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74eb8615a3dcda140713c9ecab8ab9a3400bf0bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Adding an ATL Dialog Box
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para agregar un cuadro de diálogo ATL a un proyecto, éste debe ser un proyecto ATL o bien un proyecto MFC que sea compatible con ATL.  Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL o [agregar un objeto ATL a una aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad de una aplicación MFC con ATL.  
+# <a name="adding-an-atl-dialog-box"></a>Agregar un cuadro de diálogo ATL
+Para agregar un cuadro de diálogo ATL al proyecto, el proyecto debe ser un proyecto ATL o un proyecto MFC que incluye compatibilidad con ATL. Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, o [agregar un objeto ATL a una aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.  
   
- De manera predeterminada, el Asistente para cuadros de diálogo ATL implementa un cuadro de diálogo derivado de [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md).  Esta clase incluye compatibilidad para hospedar controles ActiveX y controles de Windows.  Para no sobrecargar la compatibilidad con controles ActiveX, cuando el asistente genere el código, reemplace todas las instancias de `CAxDialogImpl` con [CSimpleDialog](../../atl/reference/csimpledialog-class.md) o [CDialogImpl](../../atl/reference/cdialogimpl-class.md) como clase base.  
+ De forma predeterminada, el Asistente de cuadro de diálogo ATL implementa un cuadro de diálogo derivado de [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Esta clase incluye compatibilidad para hospedar controles ActiveX y Windows. Si no desea que la sobrecarga de la compatibilidad con el control ActiveX, una vez que el asistente ha generado el código, reemplace todas las instancias de `CAxDialogImpl` con cualquiera [CSimpleDialog](../../atl/reference/csimpledialog-class.md) o [CDialogImpl](../../atl/reference/cdialogimpl-class.md) como su clase base .  
   
 > [!NOTE]
->  `CSimpleDialog` solo crea cuadros de diálogo modales que admiten únicamente controles comunes de Windows.  `CDialogImpl` crea cuadros de diálogo modales o no modales.  
+>  `CSimpleDialog`crea cuadros de diálogo modales que admiten únicamente controles comunes de Windows. `CDialogImpl`crea cuadros de diálogo modal o no modal.  
   
-### Para agregar un recurso de cuadro de diálogo ATL a un proyecto  
+### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Para agregar un recurso de cuadro de diálogo ATL al proyecto  
   
-1.  Cree un proyecto ATL mediante el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md).  
+1.  Crear un proyecto ATL mediante el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md).  
   
-2.  En la [Vista de clases](http://msdn.microsoft.com/es-es/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic con el botón secundario del mouse en el nombre del proyecto y después haga clic en **Agregar** en el menú contextual.  Haga clic en **Agregar clase**.  
+2.  De [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), haga clic en el nombre del proyecto y haga clic en **agregar** en el menú contextual. Haga clic en **Agregar clase**.  
   
-3.  En el panel Plantillas del cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md), haga clic en **Cuadro de diálogo ATL**.  Haga clic en **Abrir** para mostrar el [Asistente para cuadros de diálogo ATL](../../atl/reference/atl-dialog-wizard.md).  
+3.  En el panel de plantillas de la [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, haga clic en **cuadro de diálogo ATL**. Haga clic en **abiertos** para mostrar la [Asistente de cuadro de diálogo ATL](../../atl/reference/atl-dialog-wizard.md).  
   
- Para obtener más información, vea [Implementar un cuadro de diálogo](../../atl/implementing-a-dialog-box.md).  
+ Para obtener más información, consulte [implementa un cuadro de diálogo](../../atl/implementing-a-dialog-box.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)   
- [Clases de ventanas](../../atl/atl-window-classes.md)   
- [Message Maps](../../atl/message-maps-atl.md)
+ [Clases de ventana](../../atl/atl-window-classes.md)   
+ [Mapas de mensajes](../../atl/message-maps-atl.md)
+

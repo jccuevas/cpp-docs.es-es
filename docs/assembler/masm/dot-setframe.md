@@ -1,49 +1,46 @@
 ---
-title: ".SETFRAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SETFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SETFRAME directive"
+title: . SETFRAME | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SETFRAME
+dev_langs: C++
+helpviewer_keywords: .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .SETFRAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Completa de cuadro información de desenredo mediante el registro especificado \(`reg`\) y el desplazamiento del registro el campo y el desplazamiento en \(`offset`\).  El desplazamiento debe ser múltiplo de 16 y menor o igual que 240.  Esta directiva también genera `UWOP_SET_FPREG` desenreda la entrada del registro especificado utilizando el desplazamiento actual de prólogo.  
+# <a name="setframe"></a>.SETFRAME
+Rellenos en el marco de registrar el campo y el desplazamiento en la información de desenredo mediante el registro especificado (`reg`) y el desplazamiento (`offset`). El desplazamiento debe ser un múltiplo de 16 y menor o igual que 240. Esta directiva también genera una `UWOP_SET_FPREG` entrada al código de desenredo para registra especificado utilizando el desplazamiento actual del prólogo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 .SETFRAME reg, offset  
 ```  
   
-## Comentarios  
- .SETFRAME Permite a los usuarios de ml64.exe especifican cómo una función de cuadro desenredo, y sólo se permite en el prólogo, que extiende de declaración FRAME de [PROC](../../assembler/masm/proc.md) a la directiva de [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) .  estas directivas no generan código; generan solo `.xdata` y `.pdata`.  .SETFRAME Deben ir precedidas por las instrucciones que implementan realmente acciones para ser desenrollado.  Es aconsejable ajustar las directivas de desenredo y el código que está pensada desenrede en una macro para garantizar el contrato.  
+## <a name="remarks"></a>Comentarios  
+ . SETFRAME permite a los usuarios de ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que abarca desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . SETFRAME debe ir precedida de instrucciones que realmente se implementan las acciones que puede desenredar. Es una buena práctica para ajustar las directivas de desenredado y el código que están concebidos para desenredar en una macro para asegurarse de acuerdo.  
   
- Para obtener más información, vea [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Para obtener más información, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Ejemplo  
+## <a name="sample"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente se muestra cómo utilizar un puntero de marco:  
+### <a name="description"></a>Descripción  
+ El ejemplo siguiente muestra cómo utilizar un puntero de marco:  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 ; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
@@ -72,5 +69,5 @@ _text ENDS
 END  
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)
