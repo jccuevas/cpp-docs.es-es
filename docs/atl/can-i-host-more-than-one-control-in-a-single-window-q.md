@@ -1,30 +1,30 @@
 ---
-title: "Can I Host More Than One Control in a Single Window? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [ATL], hosting multiple"
-  - "windows [C++], hosting multiple controls"
+title: "¿Se puede alojar más de un Control en una sola ventana? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [ATL], hosting multiple
+- windows [C++], hosting multiple controls
 ms.assetid: 3a967a1a-7e7e-42e3-8eed-f7bde912363f
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fa1a1b914d7d9725e8f2d9858f0481bb7aa24a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Can I Host More Than One Control in a Single Window?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-No es posible hospedar más de un control en una sola ventana host ATL.  Cada ventana hospedada está diseñado para contener exactamente un control al mismo tiempo \(esto permite un mecanismo simple para administrar la reflexión de mensaje y propiedades de ambiente de la por\- CONTROL\).  Sin embargo, si necesita al usuario ver varios controles en una sola ventana, es algo fácil crear ventanas host se crean como elementos secundarios de esa ventana.  
+# <a name="can-i-host-more-than-one-control-in-a-single-window"></a>¿Se puede alojar más de un Control en una sola ventana?
+No es posible hospedar más de un control en una sola ventana de host ATL. Cada ventana host está diseñada para alojar exactamente un control cada vez (Esto permite que un mecanismo sencillo para administrar las propiedades ambiente de reflexión y por control de mensajes). Sin embargo, si necesita que el usuario vea varios controles en una sola ventana, resulta sencillo crear múltiples ventanas host como elementos secundarios de esa ventana.  
   
-## Vea también  
- [Preguntas más frecuentes sobre contención de controles](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Vea también  
+ [Preguntas más frecuentes sobre la contención de controles](../atl/atl-control-containment-faq.md)
+

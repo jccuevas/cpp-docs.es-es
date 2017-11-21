@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_nothrow_move_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_move_constructible
+f1_keywords: type_traits/std::is_nothrow_move_constructible
+dev_langs: C++
+helpviewer_keywords: is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d847b10fb5a8791701b20833503040dbc37dcce8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b679a66c19f98cde98fcd134445e1fcea3d12f3e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnothrowmoveconstructible-class"></a>Clase is_nothrow_move_constructible
 Comprueba si el tipo tiene un constructor de movimiento **nothrow**.  
@@ -50,7 +45,6 @@ struct is_nothrow_move_constructible;
   
 ## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

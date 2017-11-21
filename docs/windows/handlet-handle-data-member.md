@@ -1,41 +1,39 @@
 ---
-title: "HandleT::handle_ (Miembro de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::handle_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "handle_ (miembro de datos)"
+title: Miembro de datos Handle_ | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::handle_
+dev_langs: C++
+helpviewer_keywords: handle_ data member
 ms.assetid: 3a313c6a-f80c-449b-b0fd-41f9a6a4bd8c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4466adbf4d122644f95ea855a8355a1208cb963a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# HandleT::handle_ (Miembro de datos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Contiene el id representado por el objeto de HandleT.  
+# <a name="handlethandle-data-member"></a>HandleT::handle_ (Miembro de datos)
+Contiene el identificador que se representa mediante el objeto HandleT.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typename HandleTraits::Type handle_;  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [HandleT \(Clase\)](../Topic/HandleT%20Class.md)
+## <a name="see-also"></a>Vea también  
+ [HandleT (clase)](../windows/handlet-class.md)

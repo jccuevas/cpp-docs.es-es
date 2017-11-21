@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3353
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3353
+f1_keywords: C3353
+dev_langs: C++
+helpviewer_keywords: C3353
 ms.assetid: 5699c04b-d504-46ce-bf71-c200318fed71
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 47a0231a161a2502c26786fceeb1b3634b236eaf
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3353"></a>Error del compilador C3353
 'delegado': un delegado solo se puede crear desde una función global o una función miembro de un tipo WinRT o administrado  

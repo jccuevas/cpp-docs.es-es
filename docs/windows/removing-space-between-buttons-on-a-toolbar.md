@@ -1,42 +1,43 @@
 ---
-title: "Removing Space Between Buttons on a Toolbar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Toolbar editor, spacing toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), space between buttons"
+title: Eliminar el espacio entre los botones de una barra de herramientas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Toolbar editor, spacing toolbar buttons
+- toolbar buttons (in Toolbar editor), space between buttons
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 914ceea724928cedf289db6f879e18252e8fb167
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Removing Space Between Buttons on a Toolbar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El siguiente procedimiento muestra cómo quitar un espacio entre dos botones de una barra de herramientas.  
+# <a name="removing-space-between-buttons-on-a-toolbar"></a>Eliminar el espacio entre los botones de una barra de herramientas
+El siguiente procedimiento muestra cómo quitar un espacio entre los botones de una barra de herramientas.  
   
-### Para quitar un espacio entre dos botones de una barra de herramientas  
+### <a name="to-remove-a-space-between-buttons-on-a-toolbar"></a>Para quitar un espacio entre los botones de una barra de herramientas  
   
-1.  Arrastre el botón de un lado del espacio hacia el botón del otro lado, hasta que se superponga con el botón siguiente aproximadamente hasta la mitad.  
+1.  Arrastre el botón en un lado del espacio hacia el botón en el lado opuesto del espacio hasta que se superponga con el botón siguiente aproximadamente hasta la mitad.  
   
-     Si no hay espacio en el lado del botón del que está separando éste, y arrastra el botón más de la mitad pasado el botón adyacente, el Editor de barras de herramientas también inserta un espacio en el lado opuesto del botón arrastrado.  
+     Si no hay ningún espacio en el lado del botón que se va a arrastrar fuera de y arrastra el botón más de la mitad pasado el botón adyacente, el editor de la barra de herramientas también inserta un espacio en el lado opuesto del botón que se va a arrastrar.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  MFC o ATL  
   
-## Vea también  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Crear, mover y editar botones de barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Editor de barras de herramientas](../windows/toolbar-editor.md)
+

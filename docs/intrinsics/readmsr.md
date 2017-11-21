@@ -1,64 +1,63 @@
 ---
-title: "__readmsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readmsr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Leer el registro específico del modelo"
-  - "rdmsr (instrucción)"
-  - "__readmsr (función intrínseca)"
+title: __readmsr | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readmsr
+dev_langs: C++
+helpviewer_keywords:
+- Read Model Specific Register
+- rdmsr instruction
+- __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: afea34f438770fb1faace8ecc40eaadf084d8028
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __readmsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readmsr"></a>__readmsr
 **Específicos de Microsoft**  
   
- Genera la instrucción de `rdmsr` , que lee el registro modelo\-específico especificado por `register` y devuelve su valor.  
+ Genera el `rdmsr` instrucción, que lee el registro específica del modelo especificado por `register` y devuelve su valor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-__int64 __readmsr(   
-   int register   
+__int64 __readmsr(   
+   int register   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `register`  
- El registro concreto modelo a leer.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `register`  
+ El registro específico del modelo para leer.  
   
-## Valor devuelto  
- El valor del registro especificado.  
+## <a name="return-value"></a>Valor devuelto  
+ El valor en el registro especificado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__readmsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Esta función solo está disponible en modo kernel, y la rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Esta función sólo está disponible en modo kernel y la rutina solo está disponible como función intrínseca.  
   
- Para obtener más información, vea la documentación de AMD.  
+ Para obtener más información, consulte la documentación de AMD.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

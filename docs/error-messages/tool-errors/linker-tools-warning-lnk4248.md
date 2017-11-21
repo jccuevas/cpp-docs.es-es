@@ -1,47 +1,45 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4248"
+title: Las herramientas del vinculador LNK4248 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4248
+dev_langs: C++
+helpviewer_keywords: LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dc49b42a0a75505cb8a89246e187aac4f4a0e4e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-símbolo \(token\) de typeref sin resolver \(token\) para 'tipo'; no se puede ejecutar la imagen  
+# <a name="linker-tools-warning-lnk4248"></a>Advertencia de las herramientas del vinculador LNK4248
+símbolo (token) de typeref sin resolver para 'type'; no puede ejecutar la imagen  
   
- Un tipo no tiene una definición en metadatos de MSIL.  
+ Un tipo no tiene una definición en metadatos MSIL.  
   
- La advertencia LNK4282 se puede producir cuando sólo hay una declaración adelantada para un tipo en un módulo MSIL \(compilado con **\/clr**\), donde se hace referencia al tipo en el módulo MSIL, y donde el módulo MSIL está vinculado con un módulo nativo que tiene una definición para el tipo.  
+ LNK4248 puede producirse cuando hay solo una declaración adelantada para un tipo en un módulo MSIL (compilado con **/CLR**), donde se hace referencia al tipo en el módulo MSIL y donde el módulo MSIL está vinculado con un módulo nativo que tiene una definición para el tipo.  
   
- En esta situación, el vinculador proporcionará la definición de tipos nativos en los metadatos de MSIL, lo que puede favorecer el comportamiento correcto.  
+ En esta situación, el vinculador proporcionará la definición de tipo nativo en los metadatos MSIL y se pueden proporcionar el comportamiento correcto.  
   
- Sin embargo, si una declaración de tipos adelantada es de tipo CLR, la definición de tipo nativo del vinculador podría no ser correcta.  
+ Sin embargo, si una declaración de tipo de enrutamiento es un tipo CLR, a continuación, definición de tipo nativo del vinculador puede no ser correcto  
   
- Para obtener más información, vea [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Proporcione la definición de tipos en el módulo MSIL.  
+1.  Proporcionar la definición de tipo en el módulo MSIL.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error LNK4248.  Defina el struct A para resolver.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera la advertencia LNK4248. Defina el struct A resolver.  
   
 ```  
 // LNK4248.cpp  
@@ -55,7 +53,7 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente tiene una definición adelantada de un tipo.  
   
 ```  
@@ -71,8 +69,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error LNK4248.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera la advertencia LNK4248.  
   
 ```  
 // LNK4248_3.cpp  

@@ -1,48 +1,46 @@
 ---
-title: "ComPtrRef::GetAddressOf (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetAddressOf (método)"
+title: "Comptrref:: Getaddressof (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf
+dev_langs: C++
+helpviewer_keywords: GetAddressOf method
 ms.assetid: 797df323-a2fa-412b-ab60-32cce3721096
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f82aa0908206c24dd4ebbbfd19d71bb567d2898f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRef::GetAddressOf (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 InterfaceType* const * GetAddressOf() const;  
 ```  
   
-## Valor devuelto  
- Dirección de un puntero a la interfaz representada por el objeto actual de ComPtrRef.  
+## <a name="return-value"></a>Valor devuelto  
+ Dirección de un puntero a la interfaz representada por el objeto ComPtrRef actual.  
   
-## Comentarios  
- Recupera la dirección de un puntero a la interfaz representada por el objeto actual de ComPtrRef.  
+## <a name="remarks"></a>Comentarios  
+ Recupera la dirección de un puntero a la interfaz representada por el objeto ComPtrRef actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [ComPtrRef \(Clase\)](../Topic/ComPtrRef%20Class.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtrRef (clase)](../windows/comptrref-class.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

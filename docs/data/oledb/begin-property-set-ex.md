@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PROPERTY_SET_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPERTY_SET_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPERTY_SET_EX (macro)"
+title: BEGIN_PROPERTY_SET_EX | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPERTY_SET_EX
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPERTY_SET_EX macro
 ms.assetid: c95e7fab-edce-47b8-b282-200e53a2ea8a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 57e1b6b75404bf2ccef7cff76adc3d23a3609b1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROPERTY_SET_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca el principio de una propiedad establecida en un mapa del conjunto de propiedades.  
+# <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
+Mapa del conjunto de marcas de que establece el principio de una propiedad en una propiedad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,21 +33,21 @@ guid
 , flags )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `guid`  
- \[in\] La propiedad GUID.  
+ [in] El GUID de la propiedad.  
   
  `flags`  
- \[in\] **UPROPSET\_HIDDEN** para los conjuntos de propiedades que no desea que la exposición, o **UPROPSET\_PASSTHROUGH** para un proveedor que expone las propiedades definidas fuera del ámbito del proveedor.  
+ [in] **UPROPSET_HIDDEN** para los conjuntos de propiedades que no desea exponer, o **UPROPSET_PASSTHROUGH** para un proveedor de exponer propiedades definidas fuera del ámbito del proveedor.  
   
-## Ejemplo  
- Vea [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,39 +1,37 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4366 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4366"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4366"
+title: Compilador advertencia (nivel 4) C4366 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4366
+dev_langs: C++
+helpviewer_keywords: C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d610bfcf2e432870fc081298d3dfc3a60c73bd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4366
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El resultado del operador 'operador' unario se puede desalinear  
+# <a name="compiler-warning-level-4-c4366"></a>Advertencia del compilador (nivel 4) C4366
+El resultado del operador 'operador' unario puede desalineado  
   
- Si un miembro de una estructura se desalinea alguna vez debido al empaquetado, el compilador avisará cuando la dirección de ese miembro se asigne a un puntero alineado.  De forma predeterminada, todos los punteros están alineados.  
+ Si un miembro de estructura alguna vez podría ser desalineado debido al empaquetado, el compilador generará una advertencia cuando que la dirección del miembro se asigna a un puntero alineado. De forma predeterminada, todos los punteros están alineados.  
   
- Para solucionar el problema que origina la advertencia C4366, cambie la alineación de la estructura o declare el puntero con la palabra clave [\_\_unaligned](../../cpp/unaligned.md).  
+ Para resolver C4366, cambiar la alineación de la estructura o declare el puntero con el [__unaligned](../../cpp/unaligned.md) palabra clave.  
   
- Para obtener más información, vea \_\_unaligned y [pack](../../preprocessor/pack.md).  
+ Para obtener más información, vea __unaligned y [pack](../../preprocessor/pack.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4366.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4366.  
   
 ```  
 // C4366.cpp  

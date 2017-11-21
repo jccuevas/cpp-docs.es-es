@@ -1,61 +1,60 @@
 ---
-title: "__vmx_vmptrst | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrst"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrst (función intrínseca)"
-  - "VMPTRST (instrucción)"
+title: __vmx_vmptrst | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrst
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrst intrinsic
+- VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebd990da1520af7d15d4c993050eaefd92c48e26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmptrst
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Específicos de Microsoft**  
   
- Almacena el puntero a la estructura de control actual de la máquina virtual \(VMCS\) en la dirección especificada.  
+ Almacena el puntero a la estructura de control de máquina virtual (VMCS) actual en la dirección especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
+void __vmx_vmptrst(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### Parámetros  
- \[in\] \*`VmcsPhysicalAddress`  
- La dirección donde se almacena el puntero de la actual VMCS.  
+#### <a name="parameters"></a>Parámetros  
+ [in] *`VmcsPhysicalAddress`  
+ La dirección donde se almacena el puntero VMCS actual.  
   
-## Comentarios  
- El puntero de VMCS es una dirección física de 64 bits.  
+## <a name="remarks"></a>Comentarios  
+ El puntero VMCS es una dirección física de 64 bits.  
   
- La función de `__vmx_vmptrst` es equivalente a la instrucción máquina de `VMPTRST` .  Esta función admite la interacción de la máquina virtual monitor de un host con un sistema operativo invitado y las aplicaciones.  Para obtener más información, busque el documento, “especificación de Intel Virtualization Técnico para la arquitectura de IA\-32 Intel,” número de documento C97063\-002, en [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) el sitio.  
+ El `__vmx_vmptrst` función es equivalente a la `VMPTRST` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sitio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrld](../intrinsics/vmx-vmptrld.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

@@ -1,36 +1,36 @@
 ---
-title: "Probar un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proveedores OLE DB, pruebas"
-  - "probar proveedores"
-  - "pruebas, proveedores OLE DB"
+title: Probar un proveedor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1c97db59b88672f390fc88b78f8d5f843ca7099
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Probar un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Antes de liberar un proveedor deberá realizar las pruebas siguientes, en el orden indicado.  Estas pruebas garantizan que el proveedor funciona correctamente para la mayoría de los posibles usuarios.  
+# <a name="testing-your-provider"></a>Probar un proveedor
+Antes de liberar un proveedor, deberá realizar las pruebas siguientes, en el orden indicado. Estas pruebas garantizan el proveedor funciona correctamente para la mayoría de los usuarios potencial.  
   
-1.  Pruebe el proveedor mediante una aplicación [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) programada con las plantillas de consumidor OLE DB.  El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor \(todo el código que haya agregado o modificado\).  
+1.  Pruebe el proveedor mediante una [consumidor](../../data/oledb/creating-an-ole-db-consumer.md) aplicación escrita con las plantillas de consumidor OLE DB. El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor (todo el código que se ha agregado o modificado).  
   
-2.  Pruebe el proveedor con una aplicación de consumidor programada con ADO.  La mayoría de los programadores \(especialmente los que utilizan Microsoft Visual Basic y Microsoft C\#\) utilizan ADO o ADO.NET para las aplicaciones de consumidor.  El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor.  Si desea examinar un ejemplo de aplicación de consumidor ADO, vea [Ejemplos de código ADO en Microsoft Visual Basic](https://msdn.microsoft.com/en-us/library/ms807514.aspx).  
+2.  Probar el proveedor mediante una aplicación de consumidor programada con ADO. Mayoría de los desarrolladores (sobre todo los desarrolladores de Microsoft Visual Basic y C# de Microsoft) usa ADO o ADO.NET para aplicaciones de consumidor. El consumidor de prueba debe cubrir todas las áreas funcionales del proveedor. Para obtener un ejemplo de una aplicación de consumidor ADO, vea [ejemplos de código ADO en Microsoft Visual Basic](https://msdn.microsoft.com/en-us/library/ms807514.aspx).  
   
-3.  Ejecute las pruebas de conformidad de OLE DB \(incluidas las pruebas de conformidad de ADO\) para asegurarse de que el proveedor satisface el estándar de nivel 0 para proveedores de OLE DB. \(Para obtener una explicación del nivel 0, busque “nivel 0 Conformance OLE DB test” en [La guía del programador de OLE DB](http://go.microsoft.com/fwlink/?LinkId=121548).  Estas pruebas y la documentación asociada se incluyen en Visual C\+\+, en el SDK de Data Access.  Estas pruebas también le ayudarán a asegurarse de que el proveedor se ejecuta correctamente cuando se agrega a través de otros [proveedores de servicios](../../data/oledb/ole-db-resource-pooling-and-services.md) y son especialmente útiles si modifica o agrega propiedades.  Para obtener más información acerca de las pruebas de conformidad, vea el archivo Léame del SDK de Data Access, que se encuentra en uno de los CD de Visual Studio.  
+3.  Ejecute las pruebas de conformidad de OLE DB (incluidas las pruebas de conformidad de ADO) para asegurarse de que el proveedor cumple el estándar de nivel 0 para proveedores OLE DB. (Para obtener una explicación del nivel 0, busque "OLE DB Level 0 Conformance Tests" en [Guía del programador de OLE DB](http://go.microsoft.com/fwlink/?linkid=121548). Estas pruebas y la documentación asociada se incluyen con Visual C++ en el SDK de Data Access. Estas pruebas también ayudan a garantizar que el proveedor se ejecuta correctamente cuando se agrega por otro [proveedores de servicios](../../data/oledb/ole-db-resource-pooling-and-services.md) y son especialmente útiles si modifica o agrega propiedades. Para obtener más información acerca de las pruebas de conformidad, vea el archivo Léame para el SDK de Data Access, que se encuentra en uno de los CDs de Visual Studio.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

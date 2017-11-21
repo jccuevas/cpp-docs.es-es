@@ -1,56 +1,56 @@
 ---
-title: "/Qvec-report (Nivel de informaci&#243;n de vectorizador autom&#225;tico) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-Qvec-report (nivel de información de Vectorizador automático) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e0df8e487f2f79029c73adfbf44cb3873bcfcaa3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /Qvec-report (Nivel de informaci&#243;n de vectorizador autom&#225;tico)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Habilita la característica de informe de errores del compilador [Auto\-Vectorizer](../../parallel/auto-parallelization-and-auto-vectorization.md) y especifica el nivel de mensajes informativos de salida durante la compilación.  
+# <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Nivel de información de vectorizador automático)
+Habilita la característica de informes del compilador [Vectorizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) y especifica el nivel de mensajes informativos de salida durante la compilación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Qvec-report:{1}{2}  
 ```  
   
-## Comentarios  
- **\/Qvec\-report:1**  
- Genera un mensaje informativo para bucles que son vectorizados.  
+## <a name="remarks"></a>Comentarios  
+ **/ Qvec-report: 1**  
+ Genera un mensaje informativo para los bucles que se vectorizado.  
   
- **\/Qvec\-report:2**  
- Genera un mensaje informativo para bucles que son vectorizados y bucles for que no son vectorizados, así como un código de error.  
+ **/ Qvec-report: 2**  
+ Genera un mensaje informativo para los bucles que se vectorizado y para los bucles que no vectorizados, junto con un código de motivo.  
   
- Para obtener información sobre los códigos de causa y mensajes, vea [Mensajes del vectorizador y paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
+ Para obtener información sobre los códigos de motivo y mensajes, vea [mensajes del Vectorizador y Paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).  
   
-### Para establecer la opción del compilador \/Qvec\-report en Visual Studio  
+### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Para establecer la opción del compilador /Qvec-report en Visual Studio  
   
 1.  En el **Explorador de soluciones**, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.  
   
-2.  En el cuadro de diálogo de **Páginas de propiedades** , en **C\/C\+\+**, seleccione **Línea de comandos**.  
+2.  En el **páginas de propiedades** cuadro de diálogo **C/C++**, seleccione **línea de comandos**.  
   
-3.  En el cuadro de **Opciones adicionales** , entre en `/Qvec-report: 1` o `/Qvec-report: 2`.  
+3.  En el **opciones adicionales** cuadro, escriba `/Qvec-report:1` o `/Qvec-report:2`.  
   
-### Para establecer la opción del compilador \/Qvec\-report mediante programación  
+### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>Para establecer la opción del compilador /Qvec-report mediante programación  
   
--   Utilice el ejemplo de código en <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
+-   Use el ejemplo de código de <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vea también  
- [\/Q \(Opciones\) \(Operaciones de bajo nivel\)](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>Vea también  
+ [Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
  [Programación paralela en código nativo](http://go.microsoft.com/fwlink/?LinkId=263662)

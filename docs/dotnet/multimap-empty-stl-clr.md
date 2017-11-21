@@ -1,41 +1,39 @@
 ---
-title: "multimap::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (miembro) [STL/CLR]"
+title: 'multimap:: Empty (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 6214279b-289a-4843-a52a-2034667a2ba3
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a0b4380feebf5e2e3875dc8e21c3f3cbb1894050
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba si no hay elementos presentes.  
+# <a name="multimapempty-stlclr"></a>multimap::empty (STL/CLR)
+Comprueba si no hay ningún elemento presente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool empty();  
 ```  
   
-## Comentarios  
- La función miembro devuelve true para una secuencia controlada vacía.  Es equivalente a [multimap::size](../dotnet/multimap-size-stl-clr.md)`() == 0`.  Se utiliza para probar si el multimap está vacío.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve true para una secuencia controlada vacía. Es equivalente a [multimap:: Size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`. Se usa para comprobar si la asignación múltiple está vacía.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_multimap_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::size](../dotnet/multimap-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)

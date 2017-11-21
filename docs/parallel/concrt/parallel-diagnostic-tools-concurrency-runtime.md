@@ -1,73 +1,74 @@
 ---
-title: "Herramientas de diagn&#243;stico paralelo (Runtime de simultaneidad) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Herramientas de diagnóstico paralelo [Runtime de simultaneidad]"
+title: "Herramientas de diagnóstico (Runtime de simultaneidad) en paralelo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Herramientas de diagn&#243;stico paralelo (Runtime de simultaneidad)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] proporciona amplia compatibilidad con la depuración y la generación de perfiles de las aplicaciones multiproceso.  
+# <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Herramientas de diagnóstico paralelo (Runtime de simultaneidad)
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
   
-## Depuración  
- El depurador de Visual Studio incluye la ventana de **Pilas paralelas** , la ventana de **Tareas paralelas** , y la ventana de **Inspección paralela** .  Para obtener más información, vea [Tutorial: Depurar una aplicación paralela](../Topic/Walkthrough:%20Debugging%20a%20Parallel%20Application.md) y [Cómo: Utilizar la Ventana Inspección paralela](../Topic/How%20to:%20Use%20the%20Parallel%20Watch%20Window.md).  
+## <a name="debugging"></a>Depuración  
+ El depurador de Visual Studio incluye la **pilas paralelas** ventana, **tareas paralelas** ventana, y **inspección paralela** ventana. Para obtener más información, consulte [Tutorial: depurar una aplicación paralela](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) y [Cómo: utilizar la ventana Inspección paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window).  
   
-## Generación de perfiles  
- Las herramientas de generación de perfiles proporcionan tres vistas de datos que muestran información numérica, gráfica y tabular sobre cómo una aplicación multithreading interactúa con sí misma y con otros programas.  Las vistas le permiten identificar áreas problemáticas rápidamente y navegar de los puntos en las presentaciones gráficas a las pilas de llamadas, sitios de llamada y código fuente.  Para obtener más información, vea [Visualizador de simultaneidad](../Topic/Concurrency%20Visualizer.md).  
+## <a name="profiling"></a>Generación de perfiles  
+ Las herramientas de generación de perfiles proporcionan tres vistas de datos que mostrar gráfica, tabular y numérica información sobre cómo una aplicación multiproceso consigo misma y con otros programas. Las vistas le permiten identificar rápidamente las áreas problemáticas y para navegar de puntos en las pantallas gráficas a pilas de llamadas, sitios de llamada y código fuente. Para más información, consulte [Visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer).  
   
-## Seguimiento de eventos  
- El runtime de simultaneidad usa el [seguimiento de eventos para Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) \(ETW\) para notificar a las herramientas de instrumentación, por ejemplo, a los generadores de perfiles, cuándo tienen lugar los distintos eventos.  Estos eventos incluyen cuando se activa o desactiva un programador, cuando se inicia, finaliza, se bloquea, se desbloquea o produce resultados un contexto y cuando se inicia o finaliza un algoritmo paralelo.  
+## <a name="event-tracing"></a>Seguimiento de eventos  
+ El Runtime de simultaneidad usa [seguimiento de eventos para Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) para notificar a las herramientas de instrumentación, como los generadores de perfiles, cuando se producen varios eventos. Estos eventos incluyen cuando se activa o desactiva un programador, cuando un contexto comienza, finaliza, se bloquea, desbloquea o da como resultado, y cuando un algoritmo paralelo empieza o termina.  
   
- Las herramientas como [Visualizador de simultaneidad](../Topic/Concurrency%20Visualizer.md) utilizan esta funcionalidad; por consiguiente, no suele ser necesario trabajar con estos eventos directamente.  Sin embargo, estos eventos son útiles cuando se está desarrollando un generador personalizado o cuando se usan las herramientas de seguimiento de eventos como. [Xperf](http://go.microsoft.com/fwlink/?LinkID=160628)  
+ Herramientas como el [visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidad; por lo tanto, normalmente no tendrá que trabajar directamente con estos eventos. Sin embargo, estos eventos son útiles cuando se está desarrollando un generador de perfiles personalizado o cuando se usan herramientas de traza de eventos como [Xperf](http://go.microsoft.com/fwlink/linkid=160628).  
   
- El runtime de simultaneidad genera estos eventos solo cuando está habilitado el seguimiento.  Llame a la función de [el concurrency::EnableTracing](../Topic/EnableTracing%20Function.md) para habilitar la traza de eventos y la función de [el concurrency::DisableTracing](../Topic/DisableTracing%20Function.md) para deshabilitar el seguimiento.  
+ El Runtime de simultaneidad genera estos eventos solo cuando se habilita el seguimiento. Llame a la [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) función para habilitar el seguimiento de eventos y el [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) función para deshabilitar el seguimiento.  
   
- En la tabla siguiente se describen los eventos que genera el runtime cuando se habilita el seguimiento de eventos:  
+ En la tabla siguiente se describe los eventos que el tiempo de ejecución que se genera cuando se habilita el seguimiento de eventos:  
   
 |Evento|Descripción|Valor|  
-|------------|-----------------|-----------|  
-|[concurrency::ConcRT\_ProviderGuid](../Topic/ConcRT_ProviderGuid%20Constant.md)|Identificador del proveedor ETW del runtime de simultaneidad.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  
-|[concurrency::ContextEventGuid](../Topic/ContextEventGuid%20Constant.md)|Marca los eventos relacionados con los contextos.|`5727a00f-50be-4519-8256-f7699871fecb`|  
-|[concurrency::PPLParallelForEventGuid](../Topic/PPLParallelForEventGuid%20Constant.md)|Marca la entrada y la salida de las llamadas al algoritmo de [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) .|`31c8da6b-6165-4042-8b92-949e315f4d84`|  
-|[concurrency::PPLParallelForeachEventGuid](../Topic/PPLParallelForeachEventGuid%20Constant.md)|Marca la entrada y la salida de las llamadas al algoritmo de [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) .|`5cb7d785-9d66-465d-bae1-4611061b5434`|  
-|[concurrency::PPLParallelInvokeEventGuid](../Topic/PPLParallelInvokeEventGuid%20Constant.md)|Marca la entrada y la salida de las llamadas al algoritmo de [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) .|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|  
-|[concurrency::SchedulerEventGuid](../Topic/SchedulerEventGuid%20Constant.md)|Marca los eventos relacionados con el [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|  
-|[concurrency::VirtualProcessorEventGuid](../Topic/VirtualProcessorEventGuid%20Constant.md)|Marca los eventos relacionados con los procesadores virtuales.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|  
+|-----------|-----------------|-----------|  
+
+|[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)| El identificador del proveedor de ETW para el Runtime de simultaneidad. |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  
+|[Concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)| Marca los eventos que están relacionados con contextos. |`5727a00f-50be-4519-8256-f7699871fecb`|  
+|[Concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)| Marca la entrada y salida en llamadas a la [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo. |`31c8da6b-6165-4042-8b92-949e315f4d84`|  
+|[Concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)| Marca la entrada y salida en llamadas a la [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo. |`5cb7d785-9d66-465d-bae1-4611061b5434`|  
+|[Concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)| Marca la entrada y salida en llamadas a la [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo. |`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|  
+|[Concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)| Marca los eventos que están relacionados con el [programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md). |`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|  
+|[Concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)| Marca los eventos que están relacionados con los procesadores virtuales. |`2f27805f-1676-4ecc-96fa-7eb09d44302f`|  
   
- El runtime de simultaneidad define, pero no genera realmente, los siguientes eventos.  El runtime reserva estos eventos para uso futuro:  
+ El Runtime de simultaneidad se define, pero no actualmente generar, los siguientes eventos. El tiempo de ejecución reserva estos eventos para un uso futuro:  
   
--   [concurrency::ConcRTEventGuid](../Topic/ConcRTEventGuid%20Constant.md)  
+-   [Concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)  
   
--   [concurrency::ScheduleGroupEventGuid](../Topic/SchedulerEventGuid%20Constant.md)  
+-   [Concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)  
   
--   [concurrency::ChoreEventGuid](../Topic/ChoreEventGuid%20Constant.md)  
+-   [Concurrency::ChoreEventGuid](reference/concurrency-namespace-constants1.md#choreeventguid)  
   
--   [concurrency::LockEventGuid](../Topic/LockEventGuid%20Constant.md)  
+-   [Concurrency::LockEventGuid](reference/concurrency-namespace-constants1.md#lockeventguid)  
   
--   [concurrency::ResourceManagerEventGuid](../Topic/ResourceManagerEventGuid%20Constant.md)  
+-   [Concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)  
   
- La enumeración de [concurrency::ConcRT\_EventType](../Topic/ConcRT_EventType%20Enumeration.md) especifica las posibles operaciones que un evento sigue.  Por ejemplo, en la entrada del algoritmo `parallel_for`, el runtime genera el evento `PPLParallelForEventGuid` y proporciona `CONCRT_EVENT_START` como la operación.  Antes de que el algoritmo `parallel_for` devuelva un resultado, el runtime genera el evento `PPLParallelForEventGuid` y proporciona `CONCRT_EVENT_END` como la operación.  
+ El [concurrency::ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) enumeración especifica las posibles operaciones que realiza el seguimiento de un evento. Por ejemplo, en la entrada de la `parallel_for` algoritmo, el tiempo de ejecución genera el `PPLParallelForEventGuid` eventos y proporciona `CONCRT_EVENT_START` como la operación. Antes de la `parallel_for` devuelve el algoritmo, el tiempo de ejecución genera de nuevo el `PPLParallelForEventGuid` eventos y proporciona `CONCRT_EVENT_END` como la operación.  
   
- En el ejemplo siguiente se muestra cómo habilitar el seguimiento para una llamada a `parallel_for`.  El runtime no realiza el seguimiento de la primera llamada a `parallel_for` porque el seguimiento no está habilitado.  La llamada a `EnableTracing` permite al runtime hacer un seguimiento de la segunda llamada a `parallel_for`.  
+ En el ejemplo siguiente se muestra cómo habilitar el seguimiento de una llamada a `parallel_for`. El tiempo de ejecución no realizar el seguimiento de la primera llamada a `parallel_for` porque el seguimiento no está habilitado. La llamada a `EnableTracing` permite que el tiempo de ejecución realizar el seguimiento de la segunda llamada a `parallel_for`.  
   
- [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/CPP/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]  
+ [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]  
   
- El runtime realiza el seguimiento del número de veces que se llama a `EnableTracing` y `DisableTracing`.  Por consiguiente, si se llama a `EnableTracing` varias veces, se debe llamar a `DisableTracing` el mismo número de veces para deshabilitar el seguimiento.  
+ El tiempo de ejecución realiza un seguimiento del número de veces que se llama a `EnableTracing` y `DisableTracing`. Por lo tanto, si se llama a `EnableTracing` varias veces, debe llamar a `DisableTracing` el mismo número de veces con el fin de deshabilitar el seguimiento.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime.md)
+

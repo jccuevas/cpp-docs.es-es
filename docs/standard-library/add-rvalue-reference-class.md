@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::add_rvalue_reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- add_rvalue_reference Class
+f1_keywords: type_traits/std::add_rvalue_reference
+dev_langs: C++
+helpviewer_keywords: add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 0985459e74586151ef0dbe12f9d46ec87728c6ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ba7959b602a18ab4072dfb84238e95077337be3d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference (clase)
 Si es un tipo de objeto o función, crea un tipo de referencia a un valor R del parámetro de plantilla. De lo contrario, debido a la semántica de contracción de referencias, el tipo es el mismo que el parámetro de plantilla.  
@@ -85,4 +80,3 @@ All static_assert tests of add_rvalue_reference passed.
  [<type_traits>](../standard-library/type-traits.md)   
  [Clase add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)   
  [is_rvalue_reference (Clase)](../standard-library/is-rvalue-reference-class.md)
-

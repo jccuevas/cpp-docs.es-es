@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvttss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvttss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_cvttss_si64x (función intrínseca)"
-  - "cvttss2si (instrucción)"
+title: _mm_cvttss_si64x | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvttss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- _mm_cvttss_si64x intrinsic
+- cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa5dee3ee67678f561a80042c1dc0aab2403a555
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvttss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
 **Específicos de Microsoft**  
   
- Emite x64 extendidas versión convert con el número de punto flotante de precisión sencilla de Truncation a la instrucción entera de 64 bits \(de`cvttss2si`\).  
+ Emite el x64 extendidos versión de la función Convert con el número de punto flotante de precisión sencilla de truncamiento en el entero de 64 bits (`cvttss2si`) instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-__int64 _mm_cvttss_si64x(   
-   __m128 value   
+__int64 _mm_cvttss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `value`  
- Una estructura de `__m128` que contiene valores de punto flotante de precisión simple.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `value`  
+ Un `__m128` estructura que contiene los valores de punto flotante de precisión sencilla.  
   
-## Valor devuelto  
- El resultado de la conversión del primer valor de punto flotante a un entero de 64 bits.  
+## <a name="return-value"></a>Valor devuelto  
+ El resultado de la conversión del primer valor de punto flotante en un entero de 64 bits.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Intrínseco diferencia de `_mm_cvtss_si64x` sólo en que las conversiones inexactas se truncadas hacia cero.  Dado que la estructura de `__m128` representa un registro de XMM, la instrucción generada se mueve datos de un registro de XMM a la memoria del sistema.  
+## <a name="remarks"></a>Comentarios  
+ Difiere de la función intrínseca de `_mm_cvtss_si64x` sólo en esa inexactos conversiones se truncan hacia cero. Dado que el `__m128` estructura representa un registro de registros de XMM, la instrucción genera mueve los datos de un registro XMM en la memoria del sistema.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // _mm_cvttss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Específico de Microsoft de FINAL  
+```Output  
+101  
+```  
   
-## Vea también  
- [\_\_m128](../cpp/m128.md)   
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
+ [__m128](../cpp/m128.md)   
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

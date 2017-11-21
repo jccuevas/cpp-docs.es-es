@@ -1,36 +1,36 @@
 ---
-title: "__ll_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_rshift_cpp"
-  - "__ll_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__ll_rshift (función intrínseca)"
-  - "ll_rshift (función intrínseca)"
+title: __ll_rshift | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_rshift_cpp
+- __ll_rshift
+dev_langs: C++
+helpviewer_keywords:
+- __ll_rshift intrinsic
+- ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b247be12c40746cb8662093518be1eb8eeff2fa1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __ll_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="llrshift"></a>__ll_rshift
 **Específicos de Microsoft**  
   
- Desplaza un valor 64 bits especificado por el primer parámetro a la derecha por varios bits especificado por el segundo parámetro.  
+ Desplaza un valor de 64 bits especificado por el primer parámetro a la derecha el número de bits especificado por el segundo parámetro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __int64 __ll_rshift(  
@@ -39,28 +39,28 @@ __int64 __ll_rshift(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Mask`  
- El valor entero de 64 bits para desplazar la derecha.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Mask`  
+ El valor del entero de 64 bits para desplazamiento a la derecha.  
   
- \[in\] `nBit`  
- El número de bits para desplazarse, el módulo 64 en x64, el módulo y 32 en x86.  
+ [in] `nBit`  
+ El número de bits de desplazamiento, módulo 64 en x64 y módulo 32 en x86.  
   
-## Valor devuelto  
- La máscara se desplaza por los bits de `nBit` .  
+## <a name="return-value"></a>Valor devuelto  
+ Desplace hacia la máscara `nBit` bits.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Si el segundo parámetro es mayor que 64 en x64 \(32 en x86\), ese número es el módulo tomado 64 \(32 en x86\) para determinar el número de bits para desplazarse.  El prefijo de `ll` indica que es una operación en `long long`, otro nombre para `__int64`, el tipo con signo de 64 bits de entero.  
+## <a name="remarks"></a>Comentarios  
+ Si el segundo parámetro es mayor que 64 en x64 (32 en x86), ese número se toma módulo 64 (32 en x86) para determinar el número de bits de desplazamiento. El `ll` prefijo indica que esta es una operación en `long long`, otro nombre para `__int64`, el tipo entero con signo de 64 bits.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // ll_rshift.cpp  
@@ -84,7 +84,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Resultado  
   
 ```  
 ffffffffffffff00  
@@ -93,11 +93,11 @@ fffffffffffffff0
  - 10  
 ```  
   
- **nota** si se ha utilizado `_ull_rshift` , el MSB de valor derecho\-desplazado habría cero, por lo que el resultado deseado no se obtendrían en el caso de un valor negativo.  
+ **Tenga en cuenta** si `_ull_rshift` ha sido utilizado, el MSB desplazado a la derecha del valor de la habría sido cero, por lo que el resultado deseado no habría obtenido en el caso de un valor negativo.  
   
-### Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)

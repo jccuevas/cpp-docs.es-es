@@ -1,47 +1,46 @@
 ---
-title: "3.1.7 omp_set_dynamic Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.7 omp_set_dynamic (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1fba961b-b82c-4a1e-ab0f-e4be826e50ab
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1569235e807fb8e6981c45d7547cae7bd6f70c56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.7 omp_set_dynamic Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de **omp\_set\_dynamic** habilita o deshabilita el ajuste dinámico de subprocesos disponibles para la ejecución de las regiones paralelas.  El formato es como se detalla a continuación:  
+# <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic (Función)
+El **omp_set_dynamic ()** función habilita o deshabilita el ajuste dinámico del número de subprocesos disponibles para la ejecución de regiones en paralelo. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
 void omp_set_dynamic(int dynamic_threads);  
 ```  
   
- Si *los dynamic\_threads* se evalúan como un valor distinto de cero, el número de subprocesos que se utilizan para ejecutar las regiones paralelas subsiguientes se puede ajustar automáticamente el entorno en tiempo de ejecución el mejor utiliza recursos del sistema.  En consecuencia, el número de subprocesos especificados por el usuario es el número de subprocesos máximo.  El número de subprocesos del equipo que ejecuta una región paralela permanece fijo para la duración de esa región paralela y es compatible con la función de **omp\_get\_num\_threads** .  
+ Si *dynamic_threads* se evalúa como un valor distinto de cero, se puede ajustar el número de subprocesos que se usan para ejecutar las siguientes regiones en paralelo automáticamente por el entorno de tiempo de ejecución para utilizar mejor los recursos del sistema. En consecuencia, el número de subprocesos especificados por el usuario es el número máximo de subprocesos. El número de subprocesos en el equipo que ejecuta una región paralela permanece fijo durante la duración de esa región paralela y notifica el **omp_get_num_threads ()** (función).  
   
- si los *dynamic\_threads* evalúan a 0, se deshabilita el ajuste dinámico.  
+ Si *dynamic_threads* se evalúa como 0, realizar un ajuste dinámico está deshabilitado.  
   
- Esta función tiene efectos descritos anteriormente cuando se denomina de una parte del programa donde la función de **omp\_in\_parallel** devuelve cero.  Si se llama de una parte del programa donde la función de **omp\_in\_parallel** devuelve un valor distinto de cero, el comportamiento de esta función es indefinido.  
+ Esta función tiene los efectos que se ha descrito anteriormente, cuando se llama desde una parte del programa donde la **omp_in_parallel ()** función devuelve cero. Si se llama desde una parte del programa donde la **omp_in_parallel ()** función devuelve un valor distinto de cero, el comportamiento de esta función es indefinido.  
   
- Una llamada a **omp\_set\_dynamic** tiene prioridad sobre la variable de entorno **OMP\_DYNAMIC** .  
+ Una llamada a **omp_set_dynamic ()** tiene prioridad sobre la **OMP_DYNAMIC** variable de entorno.  
   
- El valor predeterminado para el ajuste dinámico de subprocesos es implementación\-definido.  Como resultado, el código de usuario que dependen de un número concreto de subprocesos para la ejecución correcta deben deshabilitar explícitamente los subprocesos dinámicos.  Las implementaciones no deben proporcionar la capacidad de ajustar dinámicamente el número de subprocesos, pero se requieren para proporcionar la interfaz para admitir portabilidad en todas las plataformas.  
+ El valor predeterminado para el ajuste dinámico de subprocesos es definido por la implementación. Como resultado, los códigos de usuario que dependen de un número específico de subprocesos para su ejecución correcta deben deshabilitar explícitamente subprocesos dinámicos. Las implementaciones no son necesarias para garantizar la capacidad de ajuste dinámicamente el número de subprocesos, pero que son necesarias para proporcionar la interfaz para admitir la portabilidad en todas las plataformas.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   la función de**omp\_get\_num\_threads** , vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en la página 37.  
+-   **omp_get_num_threads ()** función, vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en página 37.  
   
--   La variable de entorno**OMP\_DYNAMIC** , vea [sección 4,3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49.  
+-   **OMP_DYNAMIC** vea variable de entorno [sección 4.3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49.  
   
--   la función de**omp\_in\_parallel** , vea [sección 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) en la página 38.
+-   **omp_in_parallel ()** función, vea [sección 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) en página 38.

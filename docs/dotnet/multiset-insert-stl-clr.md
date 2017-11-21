@@ -1,32 +1,30 @@
 ---
-title: "multiset::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert (miembro) [STL/CLR]"
+title: 'MULTISET:: Insert (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 7a3b1cc8-ec60-4ed0-ace5-46cb5872e6e7
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: afa72c6fb78523326c26249a262105383acc38b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetinsert-stlclr"></a>multiset::insert (STL/CLR)
 Agrega elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator insert(value_type val);  
@@ -36,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo que se va a insertar.  
+ Comienzo del intervalo que se va a insertar.  
   
  last  
  Final del intervalo que se va a insertar.  
   
- right  
- Enumeración que se va a insertar.  
+ derecha  
+ Enumeración para insertar.  
   
- val  
- Valor de clave que se va a insertar.  
+ Val  
+ Valor de clave para insertar.  
   
  donde  
- Donde en el contenedor insertar \(sugerencia sólo\).  
+ WHERE en el contenedor para insertar (solo sugerencia).  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Cada una de las funciones miembro inserta una secuencia especificada por los operandos restantes.  
   
- La primera función miembro inserta un elemento con el valor `val`, y devuelve un iterador que señala el elemento insertado recientemente.  Se utiliza para insertar un solo elemento.  
+ La primera función miembro inserta un elemento con el valor `val`y devuelve un iterador que designa el elemento recién insertado. Se usar para insertar un elemento único.  
   
- La segunda función miembro inserta un elemento con el valor `val`, mediante `where` como sugerencia \(mejorar rendimiento\), y devuelve un iterador que señala el elemento insertado recientemente.  Se utiliza para insertar un solo elemento que podría estar junto a un elemento que sabe.  
+ La segunda función miembro inserta un elemento con el valor `val`con `where` como una sugerencia (para mejorar el rendimiento) y devuelve un iterador que designa el elemento recién insertado. Se usar para insertar un elemento único que podría estar adyacente a un elemento que se conoce.  
   
- La tercera función miembro inserta la secuencia `[``first``,` `last``)`.  Se utiliza para insertar cero o más elementos copiado de otra secuencia.  
+ La tercera función miembro inserta la secuencia [`first`, `last`). Usa para insertar cero o más de los elementos copiados desde otra secuencia.  
   
- La cuarta función miembro inserta la secuencia indicada por `right`.  Se utiliza para insertar una secuencia descrita por un enumerador.  
+ La cuarta función miembro inserta la secuencia designada por el `right`. Usa para insertar una secuencia descrita por un enumerador.  
   
- Cada inserción de elementos lleva tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.  Inserción puede aparecer en el tiempo constante amortizado, sin embargo, dada una sugerencia que señale un elemento adyacente al punto de inserción.  
+ Cada inserción elemento lleva tiempo proporcional al logaritmo del número de elementos de la secuencia controlada. Inserción se puede realizar en tiempo constante amortizado, sin embargo, dada una sugerencia que designa un elemento adyacente al punto de inserción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_multiset_insert.cpp   
@@ -123,18 +121,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**inserción \(L'x\) \= x**  
-**inserción \(L'b\) \= b**  
- **una c x b b**  
-**insert\(begin\(\), L'y\) \= y**  
- **una y c x b b**  
- **una c x b b**  
- **una y c x b b**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+ a b c  
+insert(L'x') = x  
+insert(L'b') = b  
+ a b b c x  
+insert(begin(), L'y') = y  
+ a b b c x y  
+ a b b c x  
+ a b b c x y  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [multiset](../dotnet/multiset-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

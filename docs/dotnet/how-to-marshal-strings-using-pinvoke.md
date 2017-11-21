@@ -1,40 +1,40 @@
 ---
-title: "C&#243;mo: Calcular las referencias de cadenas mediante PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cálculo de referencias de datos [C++], cadenas"
-  - "interoperabilidad [C++], cadenas"
-  - "calcular las referencias [C++], cadenas"
-  - "invocación de plataforma [C++], cadenas"
+title: "Cómo: serializar cadenas mediante PInvoke | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0047c76000d336ce18d2bbbab741dc965c1fbc59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Calcular las referencias de cadenas mediante PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema, se explica cómo se puede llamar a funciones nativas que aceptan cadenas de lenguaje C mediante el tipo de cadena de CLR System::String utilizando la compatibilidad de invocación de plataforma \(P\/Invoke\) de .NET Framework.  Se aconseja a los programadores de Visual C\+\+ que utilicen las características de interoperabilidad de C\+\+ en lugar de lo indicado \(cuando sea posible\), ya que P\/Invoke proporciona pocos informes de errores en tiempo de compilación, no tiene seguridad de tipos y su implementación puede resultar tediosa.  Si la API no administrada se empaqueta como archivo DLL y el código fuente no está disponible, P\/Invoke es la única opción \(en caso contrario, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\).  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Cómo: serializar cadenas mediante PInvoke
+Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante la cadena CLR escriba System:: String utilizando el soporte de invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) debido a que P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción, pero en caso contrario, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Las cadenas administradas y las no administradas se distribuyen de manera diferente en la memoria, por lo que, para pasar cadenas de funciones administradas a no administradas, es necesario que el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> indique al compilador que inserte los mecanismos de conversión requeridos para el cálculo de referencias de los datos de cadenas de manera correcta y segura.  
+ Las cadenas administradas y están dispuestas de forma diferente en la memoria, por lo que pasar cadenas de funciones no administradas a no administrado requiere el <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para indicar al compilador que inserte los mecanismos de conversión necesaria para el cálculo de referencias de los datos de cadena correctamente y segura.  
   
- Del mismo modo que con las funciones que sólo utilizan tipos de datos intrínsecos, <xref:System.Runtime.InteropServices.DllImportAttribute> se utiliza para declarar puntos de entrada administrados en las funciones nativas, pero para pasar cadenas, en lugar de definir estos puntos de entrada como si tomasen cadenas de lenguaje C, se puede utilizar un identificador al tipo <xref:System.String>.  De este modo, se solicita al compilador que inserte el código que realice la conversión necesaria.  Para cada argumento de función en una función no administrada que toma una cadena, se debe usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para indicar que se deben calcular las referencias del objeto String respecto a la función nativa como cadena de lenguaje C.  
+ Al igual que con las funciones que usan solo los tipos de datos intrínsecos, <xref:System.Runtime.InteropServices.DllImportAttribute> se utiliza para declarar puntos de entrada administrado en las funciones nativas, pero para pasar cadenas, en lugar de definir estos puntos de entrada que toma las cadenas de estilo C, un identificador de la <xref:System.String> tipo puede utilizarse en su lugar. Esto indica al compilador que inserte código que realiza la conversión necesaria. Para cada argumento de función en una función no administrada que toma una cadena, la <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo debe usarse para indicar que se debería serializar el objeto de cadena a la función nativa como una cadena de estilo C.  
   
-## Ejemplo  
- El código siguiente está compuesto por un módulo administrado y en uno no administrado.  El módulo no administrado es un archivo DLL que define una función llamada TakesAString, que acepta una cadena ANSI de lenguaje C en forma de char\*.  El módulo administrado es una aplicación de línea de comandos que importa la función TakesAString, pero la define como que toma una cadena System.String administrada en lugar de char\*.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> se utiliza para indicar cómo se deberían calcular las referencias de la cadena administrada cuando se llama a TakesAString.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente consta de un no administrado y un módulo administrado. El módulo no administrado es un archivo DLL que define una función llamada TakesAString, que acepta una cadena de estilo C ANSI en forma de char *. El módulo administrado es una aplicación de línea de comandos que importa la función TakesAString, pero define que toma una System.String administrado en lugar de un valor char\*. El <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo se utiliza para indicar cómo se debería serializar la cadena administrada cuando se llama a TakesAString.  
   
- El módulo administrado se compila con \/clr, pero \/clr:pure también funciona.  
+ El módulo administrado se compila con/CLR, pero/CLR: pure también funciona.  
   
 ```  
 // TraditionalDll2.cpp  
@@ -82,9 +82,9 @@ int main() {
 }  
 ```  
   
- Esta técnica provoca la construcción de una copia de la cadena en el montón no administrado, de modo que los cambios en la cadena realizados mediante la función nativa no se reflejarán en la copia administrada de la cadena.  
+ Esta técnica hace una copia de la cadena debe crearse en el montón no administrado, por lo que los cambios realizados en la cadena mediante la función nativa no se reflejarán en la copia administrada de la cadena.  
   
- Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional directiva \#include.  De hecho, sólo se puede obtener acceso al archivo DLL en tiempo de ejecución, por lo que no se detectarán problemas con funciones importadas con `DllImport` en tiempo de compilación.  
+ Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional #include (directiva). De hecho, se tiene acceso a la DLL en tiempo de ejecución, por lo que los problemas con las funciones que se importan con `DllImport` no se detectarán durante la compilación.  
   
-## Vea también  
- [Utilizar un elemento PInvoke explícito en C\+\+ \(Atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vea también  
+ [Usar un elemento PInvoke explícito en C++ (Atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

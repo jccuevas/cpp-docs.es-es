@@ -1,38 +1,38 @@
 ---
-title: "Requisitos del controlador ODBC para conjuntos de registros din&#225;micos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controladores, para conjuntos de registros dinámicos"
-  - "controladores, ODBC"
-  - "conjuntos de registros dinámicos"
-  - "controladores ODBC, conjuntos de registros dinámicos"
-  - "conjuntos de registros ODBC, conjuntos de registros dinámicos"
-  - "conjuntos de registros, conjuntos de registros dinámicos"
+title: "Requisitos del controlador ODBC para conjuntos de registros dinámicos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, dynasets
+- drivers, for dynasets
+- drivers, ODBC
+- recordsets, dynasets
+- dynasets
+- ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 387520b478be07cd1829f9665663173cfa15efcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Requisitos del controlador ODBC para conjuntos de registros din&#225;micos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En las clases de base de datos ODBC de MFC, los conjuntos de registros dinámicos son conjuntos de registros con propiedades dinámicas; permanecen sincronizados con el origen de datos de determinadas maneras.  Los conjuntos de registros dinámicos de MFC \(pero no los conjuntos de registros sólo hacia delante\) necesitan un controlador ODBC que sea compatible con la API de nivel 2.  Si el controlador del [origen de datos](../../data/odbc/data-source-odbc.md) es compatible con la API de nivel 1, se pueden seguir utilizando tanto instantáneas actualizables y de sólo lectura como conjuntos de registros sólo hacia delante, pero no conjuntos de registros dinámicos.  No obstante, un controlador de nivel 1 puede admitir conjuntos de registros dinámicos si admite obtención extendida y cursores dirigidos por conjuntos de claves.  
+# <a name="odbc-driver-requirements-for-dynasets"></a>Requisitos del controlador ODBC para conjuntos de registros dinámicos
+En las clases de base de datos ODBC de MFC, conjuntos de registros dinámicos son conjuntos de registros con propiedades dinámicas; permanecen sincronizados con el origen de datos de ciertas formas. Conjuntos de registros dinámicos MFC (pero no sea de sólo avance de conjuntos de registros) necesitan un controlador ODBC compatible con la API de nivel 2. Si el controlador para el [origen de datos](../../data/odbc/data-source-odbc.md) se ajusta a la API de nivel 1 conjunto, puede seguir utilizar tanto instantáneas actualizables y de sólo lectura y conjuntos de registros solo hacia delante, pero no los dynasets. Sin embargo, un controlador de nivel 1 puede admitir conjuntos de registros dinámicos si admite obtención extendida y cursores dinámicos.  
   
- En terminología ODBC, los conjuntos de registros dinámicos y las instantáneas se denominan cursores.  Un cursor es un mecanismo utilizado para mantener el seguimiento de su posición en un conjunto de registros.  Para obtener más información sobre los requisitos de controladores para los conjuntos de registros dinámicos, vea [Conjunto de registros dinámicos](../../data/odbc/dynaset.md).  Para obtener más información sobre cursores, vea el SDK de [Conectividad abierta de bases de datos \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) en la documentación de MSDN.  
+ En la terminología ODBC, conjuntos de registros dinámicos y las instantáneas se denominan cursores. Un cursor es un mecanismo utilizado para realizar el seguimiento de su posición en un conjunto de registros. Para obtener más información sobre los requisitos del controlador para conjuntos de registros dinámicos, vea [Dynaset](../../data/odbc/dynaset.md). Para obtener más información acerca de los cursores, vea el [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK en la documentación de MSDN.  
   
 > [!NOTE]
->  Para los conjuntos de registros actualizables, el controlador ODBC debe admitir instrucciones de actualización con ubicación o la función de la API de ODBC **::SQLSetPos**.  Si se admiten ambas, MFC utiliza **::SQLSetPos** porque es más eficaz.  De forma alternativa, para las instantáneas, se puede utilizar la biblioteca de cursores, que proporciona la compatibilidad requerida para las instantáneas actualizables \(cursores estáticos e instrucciones de actualización con ubicación\).  
+>  Para conjuntos de registros actualizables, el controlador ODBC debe admitir instrucciones de actualización por posición o el **:: SQLSetPos** función de la API de ODBC. Si se admiten ambas, MFC utiliza **:: SQLSetPos** para mejorar la eficacia. O bien, para las instantáneas, puede usar la biblioteca de cursores, que proporciona la compatibilidad requerida para las instantáneas actualizables (cursores estáticos y las instrucciones update posicionadas).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos básicos de ODBC](../../data/odbc/odbc-basics.md)

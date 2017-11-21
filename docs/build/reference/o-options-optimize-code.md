@@ -1,57 +1,60 @@
 ---
-title: "/O (Opciones) (Optimizar c&#243;digo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.Optimization"
-  - "/o"
-  - "VC.Project.VCCLWCECompilerTool.Optimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilador), rendimiento"
-  - "rendimiento, cle.exe (compilador)"
+title: "-O opciones) (optimizar código) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.Optimization
+- /o
+- VC.Project.VCCLWCECompilerTool.Optimization
+dev_langs: C++
+helpviewer_keywords:
+- performance, cle.exe compiler
+- cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 58f8aeda2570fef394b5a47d49c5dda090d8e1ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /O (Opciones) (Optimizar c&#243;digo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="o-options-optimize-code"></a>/O (Opciones) (Optimizar código)
 
-Las opciones **\/O** controlan diversas optimizaciones que facilitan la creación de código para alcanzar la máxima velocidad o reducir el tamaño al mínimo.  
-  
--   [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) optimiza el código para reducir el tamaño al mínimo.  
-  
--   [\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) optimiza el código para obtener la máxima velocidad.  
-  
--   [\/Ob](../../build/reference/ob-inline-function-expansion.md) controla la expansión de funciones alineadas.  
-  
--   [\/Od](../../build/reference/od-disable-debug.md) deshabilita la optimización, lo que acelera la compilación y simplifica la depuración.  
-  
--   [\/Og](../../build/reference/og-global-optimizations.md) habilita las optimizaciones globales.  
-  
--   [\/Oi](../../build/reference/oi-generate-intrinsic-functions.md) genera funciones intrínsecas para las llamadas de función apropiadas.  
-  
--   [\/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño sobre las de velocidad.  
-  
--   [\/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) \(valor predeterminado\) indica al compilador que dé prioridad a las optimizaciones de velocidad sobre las de tamaño.  
-  
--   [\/Ox](../../build/reference/ox-full-optimization.md) selecciona la optimización completa.  
-  
--   [\/Oy](../../build/reference/oy-frame-pointer-omission.md) suprime la creación de punteros de marco en la pila de llamadas para acelerar las llamadas a las funciones.  
-  
-## Comentarios  
- También puede combinar varias opciones de **\/O** en una sola instrucción option.  Por ejemplo, `/Odi` es igual que `/Od /Oi`.  
-  
-## Vea también  
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+El **/O** opciones controlan diversas optimizaciones que le ayudarán a creación código para la velocidad máxima o el tamaño mínimo.
+
+- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de las optimizaciones que generan código de tamaño mínimo.
+
+- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) establece una combinación de las optimizaciones que optimiza el código para la velocidad máxima.
+
+- [/Ob](../../build/reference/ob-inline-function-expansion.md) controla la expansión de funciones inline.
+
+- [/Od](../../build/reference/od-disable-debug.md) deshabilita la optimización, para acelerar la compilación y simplificar la depuración.
+
+- [/ Og](../../build/reference/og-global-optimizations.md) habilita las optimizaciones globales.
+
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) genera funciones intrínsecas para las llamadas de función correspondiente.
+
+- [/OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) indica al compilador que dé prioridad a las optimizaciones de tamaño sobre las optimizaciones para acelerar el proceso.
+
+- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (valor predeterminado) indica al compilador que dé prioridad a las optimizaciones de velocidad sobre las optimizaciones de tamaño.
+
+- [/Ox](../../build/reference/ox-full-optimization.md) es una opción de combinación que selecciona varias de las optimizaciones con énfasis en la velocidad. Es un subconjunto estricto de la **/O2** optimizaciones.
+
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md) suprime la creación de punteros de marco en la pila de llamadas para acelerar las llamadas a función.
+
+## <a name="remarks"></a>Comentarios
+
+Puede combinar varios **/O** opciones en una instrucción única opción. Por ejemplo, **/Odi** es el mismo que **/Od /Oi**. Algunas opciones son mutuamente excluyentes y producen un error del compilador si se usan juntos. Vea el individuo **/O** opciones para obtener más información.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)   
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

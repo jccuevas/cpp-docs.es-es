@@ -1,34 +1,33 @@
 ---
-title: "C&#243;mo: Leer datos en el Registro de Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Registro, leer"
-  - "Visual C++, leer en el Registro de Windows"
+title: "Cómo: leer datos del registro de Windows (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, reading from Windows Registry
+- registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25ab4b9cdba5a9a71d1258960e4da89d2d5e657d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Leer datos en el Registro de Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente utiliza la clave <xref:Microsoft.Win32.Registry.CurrentUser> para leer los datos del Registro de Windows.  Primero, se enumeran las subclaves utilizando el método <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> y, a continuación, se abre la subclave Identities utilizando el método <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>.  Del mismo modo que las claves raíz, cada subclave se representa mediante la clase <xref:Microsoft.Win32.RegistryKey>.  Finalmente, el nuevo objeto <xref:Microsoft.Win32.RegistryKey> se utiliza para enumerar los pares clave\/valor.  
+# <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Cómo: Leer datos en el Registro de Windows (C++/CLI)
+El ejemplo de código siguiente utiliza la clave <xref:Microsoft.Win32.Registry.CurrentUser> para leer los datos del Registro de Windows. En primer lugar, se enumeran las subclaves utilizando el <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> método y, a continuación, en la subclave Identities se abre mediante el <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> método. Del mismo modo que las claves raíz, cada subclave se representa mediante la clase <xref:Microsoft.Win32.RegistryKey>. Finalmente, el nuevo objeto <xref:Microsoft.Win32.RegistryKey> se utiliza para enumerar los pares clave/valor.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // registry_read.cpp  
@@ -67,14 +66,14 @@ int main( )
 }  
 ```  
   
-## Comentarios  
- La clase <xref:Microsoft.Win32.Registry> es simplemente un contenedor para instancias estáticas de <xref:Microsoft.Win32.RegistryKey>.  Cada instancia representa un nodo de Registro raíz.  Las instancias son <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> y <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Comentarios  
+ La clase <xref:Microsoft.Win32.Registry> es simplemente un contenedor para instancias estáticas de <xref:Microsoft.Win32.RegistryKey>. Cada instancia representa un nodo de Registro raíz. Las instancias son <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> y <xref:Microsoft.Win32.Registry.Users>.  
   
- Además de ser estáticos, los objetos incluidos en la clase <xref:Microsoft.Win32.Registry> son de sólo lectura.  Por otra parte, las instancias de la clase <xref:Microsoft.Win32.RegistryKey> que se crean para tener acceso al contenido de los objetos del Registro también son de sólo lectura.  Para obtener un ejemplo de cómo hacer caso omiso de este comportamiento, vea [Cómo: Escribir datos en el Registro de Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).  
+ Además de ser estáticos, los objetos incluidos en la clase <xref:Microsoft.Win32.Registry> son de sólo lectura. Por otra parte, las instancias de la clase <xref:Microsoft.Win32.RegistryKey> que se crean para tener acceso al contenido de los objetos del Registro también son de sólo lectura. Para obtener un ejemplo de cómo invalidar este comportamiento, consulte [Cómo: escribir datos en el registro de Windows (C++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).  
   
- Hay dos objetos adicionales en la clase <xref:Microsoft.Win32.Registry>: <xref:Microsoft.Win32.Registry.DynData> y <xref:Microsoft.Win32.Registry.PerformanceData>.  Los dos son instancias de la clase <xref:Microsoft.Win32.RegistryKey>.  El objeto <xref:Microsoft.Win32.Registry.DynData> contiene información dinámica del Registro, que solo se admite en Windows 98 y Windows Me.  El objeto <xref:Microsoft.Win32.Registry.PerformanceData> se puede usar para tener acceso a información del contador de rendimiento para aplicaciones que usan el sistema de supervisión de rendimiento de Windows.  El nodo <xref:Microsoft.Win32.Registry.PerformanceData> representa información que no está almacenada realmente en el Registro y, por consiguiente, no se puede ver utilizando Regedit.exe.  
+ Hay dos objetos adicionales en la clase <xref:Microsoft.Win32.Registry>: <xref:Microsoft.Win32.Registry.DynData> y <xref:Microsoft.Win32.Registry.PerformanceData>. Los dos son instancias de la clase <xref:Microsoft.Win32.RegistryKey>. La <xref:Microsoft.Win32.Registry.DynData> objeto contiene información dinámica del registro, que solo se admite en Windows 98 y Windows Millennium Edition. El objeto <xref:Microsoft.Win32.Registry.PerformanceData> se puede usar para tener acceso a información del contador de rendimiento para aplicaciones que usan el sistema de supervisión de rendimiento de Windows. El <xref:Microsoft.Win32.Registry.PerformanceData> nodo representa información que no está almacenada realmente en el registro y, por tanto, no se puede ver utilizando Regedit.exe.  
   
-## Vea también  
- [Cómo: Escribir datos en el Registro de Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
- [Operaciones de Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Cómo: escribir datos en el registro de Windows (C++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
+ [Operaciones de Windows (C++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

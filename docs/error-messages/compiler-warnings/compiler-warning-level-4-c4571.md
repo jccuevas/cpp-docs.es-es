@@ -1,49 +1,47 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4571"
+title: Compilador advertencia (nivel 4) C4571 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4571
+dev_langs: C++
+helpviewer_keywords: C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 293a3ffa2ddb14292b33ed222f18ca6f8dc6faec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Información: la semántica de catch\(...\) cambió desde Visual C\+\+ 7.1; ya no se detectan excepciones estructuradas \(SEH\)  
+# <a name="compiler-warning-level-4-c4571"></a>Advertencia del compilador (nivel 4) C4571
+Informativo: la semántica de catch cambiada desde Visual C++ 7.1; ya no se detectan excepciones estructuradas (SEH)  
   
- La advertencia C4571 se genera para cada bloque catch\(...\) al compilar con **\/EHs**.  
+ C4571 se genera para cada bloque catch (...) al compilar con **/EHs**.  
   
- Cuando se compila con **\/EHs**, un bloque catch\(...\) no detecta una excepción estructurada \(por ejemplo, dividir por cero, o un puntero nulo\); un bloque catch\(...\) únicamente detectará excepciones de C\+\+ que se hayan producido explícitamente.  Para obtener más información, vea [Control de excepciones](../../cpp/exception-handling-in-visual-cpp.md).  
+ Cuando se compila con **/EHs**, un bloque catch (...) no detecta una excepción estructurada (división por cero, un puntero nulo, por ejemplo); una catch (...) bloque will solo catch producida explícitamente, las excepciones de C++.  Para más información, consulte [Control de excepciones](../../cpp/exception-handling-in-visual-cpp.md).  
   
- De forma predeterminada, esta advertencia está desactivada.  Active esta advertencia para garantizar que cuando se compile con **\/EHs**, los bloques catch\(...\) no tratarán de detectar excepciones estructuradas.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada.  Active esta advertencia para asegurarse de que cuando se compila con **/EHs** los bloques catch (...) no tiene intención de detectar las excepciones estructuradas.  Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
- Para resolver la advertencia C4571, siga uno de estos procedimientos:  
+ Resolver la advertencia C4571 en uno de los siguientes métodos,  
   
--   Compile con **\/EHa** si todavía desea que los bloques catch\(...\) detecten excepciones estructuradas.  
+-   Compile con **/EHa** si todavía desea que los bloques catch (...) para detectar las excepciones estructuradas.  
   
--   No habilite C4571 si no quiere que los bloques catch\(...\) detecten excepciones estructuradas, pero todavía desea utilizar bloques catch\(...\).  Puede detectar las excepciones estructuradas mediante las palabras clave de control de excepciones estructuradas \(**\_\_try**, **\_\_except** y **\_\_finally**\).  Pero recuerde que, después de la compilación, sólo se llamará a los destructores **\/EHs** cuando se produzca una excepción de C\+\+, no cuando se produzca una excepción SEH.  
+-   No habilite C4571 si no desea que los bloques catch (...) para detectar las excepciones estructuradas, pero desea utilizar los bloques catch (...).  Todavía puede detectar las excepciones estructuradas mediante las palabras clave de control de excepciones estructuradas (**__try**, **__except**, y **__finally**).  Pero recuerde que, cuando se compila **/EHs** destructores solo se llamará cuando se produce una excepción de C++, no cuando se produce una excepción SEH.  
   
--   Reemplace el bloque catch\(...\) por bloques catch para excepciones de C\+\+ específicas y, si lo desea, agregue un control de excepciones estructuradas en torno al control de excepciones de C\+\+ \(**\_\_try**, **\_\_except** y **\_\_finally**\).  Para obtener más información, vea [Control de excepciones estructurado](../../cpp/structured-exception-handling-c-cpp.md).  
+-   Reemplace el bloque catch (...) por bloques catch para excepciones concretas de C++ y, opcionalmente, agregue el control en el control de excepciones de C++ estructurado de excepciones (**__try**, **__except**, y **_ _finally**).  Vea [control de excepciones estructurado (C/C ++)](../../cpp/structured-exception-handling-c-cpp.md) para obtener más información.  
   
- Para obtener más información, vea [\/EH \(Modelo de control de excepciones\)](../../build/reference/eh-exception-handling-model.md).  
+ Vea [/EH (modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md) para obtener más información.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4571.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4571.  
   
 ```  
 // C4571.cpp  

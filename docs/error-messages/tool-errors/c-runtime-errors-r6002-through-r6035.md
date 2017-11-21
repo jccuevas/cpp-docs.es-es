@@ -1,30 +1,29 @@
 ---
-title: "Errores en tiempo de ejecuci&#243;n de C de R6002 a R6035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c.errors"
-dev_langs: 
-  - "C++"
+title: "En tiempo de ejecución de C errores ejecución R6002 a R6035 | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c.errors
+dev_langs: C++
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 868b73152c90fbccaf79374dbb8c8af07795b197
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Errores en tiempo de ejecuci&#243;n de C de R6002 a R6035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En esta sección se hace referencia a los errores que puede generar la biblioteca en tiempo de ejecución de C \(CRT\) cuando se carga o se ejecuta la aplicación. Se trata de errores que indican un error en el código de la aplicación o una condición que la biblioteca en tiempo de ejecución no puede procesar, como memoria insuficiente. Los usuarios finales de la aplicación podrían ver estos errores si no codifica la aplicación de modo que se eviten las condiciones que los provocan.  
+# <a name="c-runtime-errors-r6002-through-r6035"></a>Errores en tiempo de ejecución de C de R6002 a R6035
+En esta sección se hace referencia a los errores que puede generar la biblioteca en tiempo de ejecución de C (CRT) cuando se carga o se ejecuta la aplicación. Se trata de errores que indican un error en el código de la aplicación o una condición que la biblioteca en tiempo de ejecución no puede procesar, como memoria insuficiente. Los usuarios finales de la aplicación podrían ver estos errores si no codifica la aplicación de modo que se eviten las condiciones que los provocan.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Error en tiempo de ejecución de C R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)  
   
  [Error en tiempo de ejecución de C R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)  
@@ -55,5 +54,5 @@ En esta sección se hace referencia a los errores que puede generar la bibliotec
   
  [Error en tiempo de ejecución de C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)  
   
-## Vea también  
- [Errores de compilación de C\/C\+\+](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+## <a name="see-also"></a>Vea también  
+ [Errores de compilación de C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

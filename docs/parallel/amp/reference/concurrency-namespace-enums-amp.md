@@ -1,5 +1,5 @@
 ---
-title: Enumeraciones del espacio de nombres de simultaneidad (AMP) | Documentos de Microsoft
+title: Enumeraciones de espacio de nombres de simultaneidad (AMP) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,20 +9,19 @@ ms.topic: article
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b9555023e01cb765ca943fcaaf785cdc2b4e2d0d
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 809ea614924444b4f753153f821118cee6d29e6a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="concurrency-namespace-enums-amp"></a>Enumeraciones del espacio de nombres de simultaneidad (AMP)
+# <a name="concurrency-namespace-enums-amp"></a>Enumeraciones de espacio de nombres de simultaneidad (AMP)
 |||  
 |-|-|  
 |[access_type (enumeración)](#access_type)|[queuing_mode (enumeración)](#queuing_mode)|  
@@ -37,10 +36,10 @@ enum access_type;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`access_type_auto`|Elige automáticamente la mejor `access_type` para el acelerador.|  
+|`access_type_auto`|Seleccionar automáticamente el mejor `access_type` para el acelerador.|  
 |`access_type_none`|Dedicado. La asignación solo es accesible en el acelerador y no en la CPU.|  
-|`access_type_read`|Compartir. La asignación es accesible en el acelerador y es legible en la CPU.|  
-|`access_type_read_write`|Compartir. La asignación es accesible en el acelerador y admite la escritura en la CPU.|  
+|`access_type_read`|Compartir. La asignación es accesible en el acelerador y se puede leer en la CPU.|  
+|`access_type_read_write`|Compartir. La asignación es accesible en el acelerador y es grabable en la CPU.|  
 |`access_type_write`|Compartir. La asignación es accesible en el acelerador y es de lectura y escritura en la CPU.|  
 
   
@@ -54,9 +53,8 @@ enum queuing_mode;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`queuing_mode_immediate`|Por ejemplo, si el modo de cola especifica que cualquier comandos [parallel_for_each (función) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), se envían al dispositivo acelerador correspondiente en cuanto se devuelven al llamador.|  
-|`queuing_mode_automatic`|Un modo de cola que especifica que comandos pondrán en cola en una cola de comando que corresponde a la [accelerator_view](accelerator-view-class.md) objeto. Comandos que se envían al dispositivo cuando [accelerator_view:: Flush](accelerator-view-class.md#flush) se llama.|   
+|`queuing_mode_immediate`|Por ejemplo, un modo de puesta en cola que especifica que cualquier comandos [parallel_for_each (función) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), se envían al dispositivo acelerador correspondiente en cuanto se devuelven al llamador.|  
+|`queuing_mode_automatic`|Un modo de puesta en cola que especifica que comandos pondrán en cola en una cola de comando que corresponde a la [accelerator_view](accelerator-view-class.md) objeto. Comandos se envían al dispositivo cuando [accelerator_view:: Flush](accelerator-view-class.md#flush) se llama.|   
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

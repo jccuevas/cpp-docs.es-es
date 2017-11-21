@@ -1,31 +1,29 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4048 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4048"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4048"
+title: Compilador advertencia (nivel 1) C4048 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4048
+dev_langs: C++
+helpviewer_keywords: C4048
 ms.assetid: 8429f513-4732-40f1-8e56-4c224e723bcb
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 294e6b9d31f5740ee70e0d5fb67ad35215dea85b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4048
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-distintos subíndices de matriz declarados : 'identifier1' y 'identifier2'  
+# <a name="compiler-warning-level-1-c4048"></a>Compilador advertencia (nivel 1) C4048
+diferentes subíndices de matriz declaran: 'identificador1' y 'identificador2'  
   
- Una expresión contiene punteros a matrices de tamaño diferente.  Los punteros se utilizan sin conversión.  
+ Una expresión contiene punteros a matrices de tamaño diferente. Los punteros se usan sin conversión.  
   
- Se puede corregir esta advertencia si convierte explícitamente las matrices al mismo tipo o uno equivalente.
+ Esta advertencia se puede corregir si convierte explícitamente las matrices al tipo iguales o equivalente.

@@ -1,58 +1,57 @@
 ---
-title: "/SECTION (Especificar los atributos de la secci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SECTION (opción del vinculador)"
-  - "atributos de sección"
-  - "SECTION (opción del vinculador)"
-  - "-SECTION (opción del vinculador)"
+title: "-SECCIÓN (especificar atributos de sección) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /section
+dev_langs: C++
+helpviewer_keywords:
+- SECTION linker option
+- -SECTION linker option
+- section attributes
+- /SECTION linker option
 ms.assetid: 92b69d81-e421-462e-b46f-7d0dff9b9d16
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e3fd7e844d77b9a92408c0708542a4f8f5edf304
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /SECTION (Especificar los atributos de la secci&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="section-specify-section-attributes"></a>/SECTION (Especificar los atributos de la sección)
 ```  
 /SECTION:name,[[!]{DEKPRSW}][,ALIGN=#]  
 ```  
   
-## Comentarios  
- La opción \/SECTION cambia los atributos de una sección mediante la invalidación de los atributos establecidos al compilarse el archivo .obj para la sección.  
+## <a name="remarks"></a>Comentarios  
+ La opción/Section cambia los atributos de una sección reemplazando los atributos establecidos cuando se compiló el archivo .obj para la sección.  
   
- Una sección de un archivo portable ejecutable \(PE\) es el equivalente aproximado de un segmento o de los recursos de un archivo ejecutable nuevo \(NE\).  Las secciones contienen o código o datos.  A diferencia de los segmentos, las secciones son bloques de memoria contigua sin restricciones de tamaño.  Algunas secciones contienen código o datos que el programa declara y utiliza directamente, mientras que otras, denominadas secciones de datos y creadas por el vinculador y el administrador de bibliotecas \(lib.exe\), contienen información vital para el sistema operativo.  Para obtener más información sobre los archivos NE, consulte el artículo de Knowledge Base "Executable\-File Header Format" \(Q65122\).  Encontrará artículos de Knowledge Base en MSDN Library, o en [http:\/\/support.microsoft.com](http://support.microsoft.com).  
+ Una sección en un archivo de archivo ejecutable portable (PE) es prácticamente equivalente a un segmento o los recursos en un nuevo archivo ejecutable de (NE). Secciones contienen código o datos. A diferencia de los segmentos, las secciones son bloques de memoria contigua sin restricciones de tamaño. Algunas secciones contienen código o datos que el programa declara y utiliza directamente, mientras que otras secciones de datos se crean para el vinculador y el Administrador de bibliotecas (lib.exe) y contienen información fundamental para el sistema operativo. Para obtener más información sobre los archivos NE, consulte "Executable-File Header Format" (Q65122) del artículo de Knowledge Base. Encontrará artículos de Knowledge Base en MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com).  
   
- Escriba el signo de dos puntos \(:\) y el nombre \(*name*\) de la sección.  En *name* se hará distinción entre mayúsculas y minúsculas.  
+ Especifique un signo de dos puntos (:) y una sección *nombre*. El *nombre* distingue mayúsculas de minúsculas.  
   
- No se podrán utilizar los nombres siguientes, pues causarían conflictos con los nombres estándar.  Por ejemplo, .sdata se utiliza en las plataformas RISC:  
+ No utilice los siguientes nombres, tal y como se crearán un conflicto con los nombres estándar. Por ejemplo, .sdata se utiliza en plataformas RISC:  
   
 -   .arch  
   
--   .bss  
+-   BSS  
   
--   .data  
+-   .Data  
   
 -   .edata  
   
--   .idata  
+-   .IData  
   
 -   .pdata  
   
--   .rdata  
+-   rdata  
   
 -   .reloc  
   
@@ -64,44 +63,44 @@ caps.handback.revision: 11
   
 -   .srdata  
   
--   .text  
+-   Text  
   
--   .xdata  
+-   .XData  
   
- Es posible especificar uno o varios atributos para la sección.  En estos atributos, mostrados a continuación, no se distingue entre mayúsculas y minúsculas.  Es necesario especificar todos los atributos que deba contener la sección; la omisión de algún carácter causará la desactivación del bit del atributo.  Si no se especifica R, W o E, el estado de lectura, escritura o ejecución existente permanecerá inalterado.  
+ Especifique uno o más atributos de la sección. Los caracteres de atributo, que se muestran a continuación, no distinguen mayúsculas de minúsculas. Debe especificar todos los atributos que desea que la sección tener; el carácter de un atributo se omite hace bit del atributo se ha desactivado. Si no se especifica R, W o E, existente lectura, escritura o estado ejecutable permanece sin cambios.  
   
- Para negar un atributo, su carácter deberá ir precedido por un signo de admiración \(\!\).  A continuación se explica el significado de los caracteres de atributo.  
+ Para invalidar un atributo, preceden su carácter con un signo de exclamación (!). A continuación se muestran los significados de los caracteres de atributo.  
   
 |Carácter|Atributo|Significado|  
-|--------------|--------------|-----------------|  
+|---------------|---------------|-------------|  
 |E|Ejecutar|La sección es ejecutable|  
-|R|Leer|Permite operaciones de lectura en los datos|  
-|W|Escritura|Permite operaciones de escritura en los datos|  
-|S|Shared|Comparte la sección entre todos los procesos que cargan la imagen|  
-|D|Discardable|Marca la sección como descartable|  
-|K|Cacheable|Marca la sección como no válida para almacenarse en caché|  
-|P|Pageable|Marca la sección como no paginable|  
+|R|Leer|Permite operaciones de lectura en datos|  
+|W|Write|Permite operaciones de escritura en los datos|  
+|S|Compartido|Comparte la sección entre todos los procesos que cargan la imagen|  
+|D|Descartable|Marca la sección como no descartable|  
+|K|Almacenable en caché|Marca la sección como no almacenable en caché|  
+|P|Paginable|Marca la sección como no paginable|  
   
- K y P tienen una peculiaridad: los marcadores de sección que les corresponden tienen un sentido negativo.  Si se especifica uno de ellos en la sección .text \(\/SECTION:.text,K\), no existirá diferencia en los marcadores de sección al ejecutar [DUMPBIN](../../build/reference/dumpbin-options.md) con la opción [\/HEADERS](../../build/reference/headers.md), pues ya estaba en caché de forma implícita.  Para quitar el valor predeterminado, se deberá especificar \/SECTION:.text,\!K, con lo que DUMPBIN revelará todas las características de la sección, incluyendo "no almacenada en caché".  
+ K y P tienen peculiar en que los indicadores de sección que les corresponden tienen un sentido negativo. Si se especifica uno de ellos en la sección .text (/ SECTION:. Text, K), no habrá ninguna diferencia en los indicadores de sección al ejecutar [DUMPBIN](../../build/reference/dumpbin-options.md) con el [/HEADERS](../../build/reference/headers.md) opción; ya implícitamente se almacenó en caché. Para quitar el valor predeterminado, especifique Text! K y DUMPBIN revelará las características de sección, incluyendo "No almacenado en caché."  
   
- Una sección en el archivo PE que no tenga establecido E, R o W probablemente no será válida.  
+ Una sección del archivo PE que no tenga E, R o W establecido es probablemente no será válida.  
   
- ALIGN*\=\#* permite especificar un valor de alineación para una sección concreta.  Para obtener más información, vea [\/ALIGN](../../build/reference/align-section-alignment.md).  
+ La alineación *=#*  le permite especificar un valor de alineación para una sección concreta. Vea [/alinear](../../build/reference/align-section-alignment.md) para obtener más información.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción en la **opciones adicionales** cuadro.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

@@ -1,39 +1,38 @@
 ---
-title: "/FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fpo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FPO (opción de dumpbin)"
-  - "FPO (opción de dumpbin)"
-  - "-FPO (opción de dumpbin)"
+title: -FPO | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fpo
+dev_langs: C++
+helpviewer_keywords:
+- /FPO dumpbin option
+- -FPO dumpbin option
+- FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b7bc3737f7a86bca3f06fb54f3ea70df07b4d64d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpo"></a>/FPO
 ```  
 /FPO  
 ```  
   
-## Comentarios  
- Esta opción muestra registros de optimización de punteros de marco \(FPO, *frame pointer optimization*\).  
+## <a name="remarks"></a>Comentarios  
+ Esta opción muestra registros de optimización (FPO) de puntero de marco.  
   
- En los archivos producidos con la opción de compilador [\/GL](../../build/reference/gl-whole-program-optimization.md) sólo está disponible la opción [\/HEADERS](../../build/reference/headers.md) de DUMPBIN.  
+ Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

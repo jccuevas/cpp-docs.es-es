@@ -1,38 +1,38 @@
 ---
-title: "Definir bloques __asm como macros de C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (palabra clave) [C++], como macros de C"
-  - "macros, __asm (bloques)"
-  - "Visual C, macros"
+title: "Definición de bloques __asm como Macros de C | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, __asm blocks
+- Visual C, macros
+- __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7b2751e966f93b760898b6869ffa684f4fed323c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Definir bloques __asm como macros de C
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defining-asm-blocks-as-c-macros"></a>Definición de bloques __asm como macros de C
 **Específicos de Microsoft**  
   
- Las macros de C proporcionan una forma cómoda de insertar código de ensamblado en el código fuente, pero exigen especial cuidado, ya que una macro se expande en una sola línea lógica.  Para crear macros sin problemas, siga estas reglas:  
+ Las macros de C proporcionan una forma cómoda de insertar código de ensamblado en el código fuente, pero exigen especial cuidado, ya que una macro se expande en una sola línea lógica. Para crear macros sin problemas, siga estas reglas:  
   
 -   Incluya el bloque `__asm` entre llaves.  
   
 -   Coloque la palabra clave `__asm` delante de cada instrucción de ensamblado.  
   
--   Utilice comentarios de C de estilo antiguo \( `/* comment */`\) en lugar de comentarios de estilo de ensamblado \( `; comment`\) o comentarios de C de una sola línea \( `// comment`\).  
+-   Utilice comentarios de C de estilo antiguo ( `/* comment */`) en lugar de comentarios de estilo de ensamblado ( `; comment`) o comentarios de C de una sola línea ( `// comment`).  
   
  En el ejemplo siguiente se define una macro sencilla a modo de ilustración:  
   
@@ -46,23 +46,23 @@ caps.handback.revision: 7
 }  
 ```  
   
- A primera vista, las tres palabras clave `__asm` parecen superfluas.  Sin embargo, son necesarias, ya que la macro se expande en una sola línea:  
+ A primera vista, las tres palabras clave `__asm` parecen superfluas. Sin embargo, son necesarias, ya que la macro se expande en una sola línea:  
   
 ```  
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
 ```  
   
- La tercera y la cuarta palabras clave `__asm` son necesarias como separadores de la instrucción.  Los únicos separadores de instrucción reconocidos en los bloques `__asm` son el carácter de nueva línea y la palabra clave `__asm`.  Como un bloque definido como una macro es una línea lógica, debe separar cada instrucción con `__asm`.  
+ La tercera y la cuarta palabras clave `__asm` son necesarias como separadores de la instrucción. Los únicos separadores de instrucción reconocidos en los bloques `__asm` son el carácter de nueva línea y la palabra clave `__asm`. Como un bloque definido como una macro es una línea lógica, debe separar cada instrucción con `__asm`.  
   
- Las llaves también son esenciales.  Si las omite, las instrucciones de C o C\+\+ situadas en la misma línea a la derecha de la llamada a la macro pueden confundir al compilador.  Sin la llave de cierre, el compilador no puede saber dónde se detiene el código de ensamblado, e interpretará las instrucciones de C o C\+\+ detrás del bloque `__asm` como instrucciones de ensamblado.  
+ Las llaves también son esenciales. Si las omite, las instrucciones de C o C++ situadas en la misma línea a la derecha de la llamada a la macro pueden confundir al compilador. Sin la llave de cierre, el compilador no puede saber dónde se detiene el código de ensamblado, e interpretará las instrucciones de C o C++ detrás del bloque `__asm` como instrucciones de ensamblado.  
   
- Los comentarios de estilo de ensamblado que comienzan con un punto y coma \(**;**\) continúan hasta el final de la línea.  Esto causa problemas en las macros porque el compilador omite todo lo que aparece detrás del comentario, hasta el final de la línea lógica.  Lo mismo ocurre con los comentarios de C o C\+\+ de una sola línea \( `// comment`\).  Para evitar errores, utilice comentarios de C de estilo antiguo \( `/* comment */`\) en los bloques `__asm` definidos como macros.  
+ Comentarios de estilo de ensamblado que comienzan con un punto y coma (**;**) continúan hasta el final de la línea. Esto causa problemas en las macros porque el compilador omite todo lo que aparece detrás del comentario, hasta el final de la línea lógica. Lo mismo ocurre con los comentarios de C o C++ de una sola línea ( `// comment`). Para evitar errores, utilice comentarios de C de estilo antiguo ( `/* comment */`) en los bloques `__asm` definidos como macros.  
   
- Un bloque `__asm` escrito como una macro de C puede aceptar argumentos.  A diferencia de las macros de C normales, una macro `__asm` no puede devolver un valor.  Así que no puede utilizar estas macros en expresiones de C o C\+\+.  
+ Un bloque `__asm` escrito como una macro de C puede aceptar argumentos. A diferencia de las macros de C normales, una macro `__asm` no puede devolver un valor. Así que no puede utilizar estas macros en expresiones de C o C++.  
   
- Procure no llamar a macros de este tipo de forma indiscriminada.  Por ejemplo, la llamada a una macro del lenguaje de ensamblado en una función declarada con la convención `__fastcall` puede producir resultados inesperados. \(Vea [Uso y conservación de registros en un ensamblado insertado](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)\).  
+ Procure no llamar a macros de este tipo de forma indiscriminada. Por ejemplo, la llamada a una macro del lenguaje de ensamblado en una función declarada con la convención `__fastcall` puede producir resultados inesperados. (Consulte [uso y conservación de registros en un ensamblado en línea](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Ensamblador alineado](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblador insertado](../../assembler/inline/inline-assembler.md)

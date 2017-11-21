@@ -1,72 +1,71 @@
 ---
-title: "Macros para plantillas de proveedores OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros, Plantillas de proveedores OLE DB"
-  - "macros para plantillas de proveedores OLE DB"
-  - "plantillas del proveedor OLE DB, macros"
-  - "macros para plantillas de proveedores (OLE DB)"
+title: Macros para plantillas de proveedores OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB provider templates, macros
+- macros, OLE DB Provider Templates
+- Provider Template macros (OLE DB)
+- OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11a5ae3d0ba5c3da517a380adf795e579d0dce51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Macros para plantillas de proveedores OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las macros de proveedor de plantillas OLE DB proporcionan funcionalidad en las categorías siguientes:  
+# <a name="macros-for-ole-db-provider-templates"></a>Macros para plantillas de proveedores OLE DB
+Las macros de plantillas del proveedor OLE DB proporcionan funcionalidad en las siguientes categorías:  
   
-### Macros de mapa del conjunto de propiedades  
+### <a name="property-set-map-macros"></a>Macros de mapa de conjunto de propiedades  
   
 |||  
 |-|-|  
-|[BEGIN\_PROPERTY\_SET](../../data/oledb/begin-property-set.md)|Marca el principio de un conjunto de propiedades.|  
-|[BEGIN\_PROPERTY\_SET\_EX](../../data/oledb/begin-property-set-ex.md)|Marca el principio de un conjunto de propiedades.|  
-|[BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md)|Marca el principio de una propiedad establecida que se puede ocultar o definir fuera del ámbito del proveedor.|  
-|[CHAIN\_PROPERTY\_SET](../../data/oledb/chain-property-set.md)|Grupos de propiedades de cadenas juntas.|  
-|[END\_PROPERTY\_SET](../../data/oledb/end-property-set.md)|Marca el final de un conjunto de propiedades.|  
-|[END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md)|Marca el final de un mapa del conjunto de propiedades.|  
-|[PROPERTY\_INFORMATION\_ENTRY](../../data/oledb/property-info-entry.md)|Establece una propiedad específica en una propiedad establecida en un valor predeterminado.|  
-|[PROPERTY\_INFORMATION\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md)|Establece una propiedad específica en una propiedad establecida en un valor proporcionado por el usuario.  También permite establecer marcadores y opciones.|  
-|[PROPERTY\_INFORMATION\_ENTRY\_VALUE](../../data/oledb/property-info-entry-value.md)|Establece una propiedad específica en una propiedad establecida en un valor proporcionado por el usuario.|  
+|[BEGIN_PROPERTY_SET](../../data/oledb/begin-property-set.md)|Marca el principio de un conjunto de propiedades.|  
+|[BEGIN_PROPERTY_SET_EX](../../data/oledb/begin-property-set-ex.md)|Marca el principio de un conjunto de propiedades.|  
+|[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)|El principio de una propiedad que establece las marcas se pueden ocultas o definidas fuera del ámbito del proveedor.|  
+|[CHAIN_PROPERTY_SET](../../data/oledb/chain-property-set.md)|Grupos de propiedades de cadenas juntos.|  
+|[END_PROPERTY_SET](../../data/oledb/end-property-set.md)|Marca el final de un conjunto de propiedades.|  
+|[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)|Marca el final de una asignación de conjunto de propiedades.|  
+|[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)|Establece una propiedad específica en una propiedad establecida en un valor predeterminado.|  
+|[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)|Establece una propiedad específica en una propiedad establecida en un valor proporcionado por el usuario. También permite establecer las opciones y marcas.|  
+|[PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)|Establece una propiedad específica en una propiedad establecida en un valor proporcionado por el usuario.|  
   
-### Macros de mapa de columnas  
-  
-|||  
-|-|-|  
-|[BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)|Marca el principio de las entradas del mapa de columnas del proveedor.|  
-|[END\_PROVIDER\_COLUMN\_MAP](../../data/oledb/end-provider-column-map.md)|Marca el final de las entradas del mapa de columnas del proveedor.|  
-|[PROVIDER\_COLUMN\_ENTRY](../../data/oledb/provider-column-entry.md)|Representa una columna concreta admitida por el proveedor.|  
-|[PROVIDER\_COLUMN\_ENTRY\_GN](../../data/oledb/provider-column-entry-gn.md)|Representa una columna concreta admitida por el proveedor.  Puede especificar el tamaño, el tipo de datos, la precisión, escala, y el conjunto de filas de esquema GUID de la columna.|  
-|[PROVIDER\_COLUMN\_ENTRY\_FIXED](../../data/oledb/provider-column-entry-fixed.md)|Representa una columna concreta admitida por el proveedor.  Puede especificar el tipo de datos de columna.|  
-|[PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md)|Representa una columna concreta admitida por el proveedor.  Puede especificar el tamaño de columna.|  
-|[PROVIDER\_COLUMN\_ENTRY\_STR](../../data/oledb/provider-column-entry-str.md)|Representa una columna concreta admitida por el proveedor.  Supone que el tipo de columna es una cadena.|  
-|[PROVIDER\_COLUMN\_ENTRY\_TYPE\_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|Representa una columna concreta admitida por el proveedor.  Como PROVIDER\_COLUMN\_ENTRY\_LENGTH, pero también permite especificar el tipo de datos así como el tamaño de la columna.|  
-|[PROVIDER\_COLUMN\_ENTRY\_WSTR](../../data/oledb/provider-column-entry-wstr.md)|Representa una columna concreta admitida por el proveedor.  Supone que el tipo de columna es una cadena de caracteres Unicode.|  
-  
-### Macros de conjunto de filas de esquema  
+### <a name="column-map-macros"></a>Macros de asignación de columna  
   
 |||  
 |-|-|  
-|[BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)|Marca el principio de un mapa de esquema.|  
-|[SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)|Asocia un GUID a una clase.|  
-|[END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)|Marca el final de un mapa de esquema.|  
+|[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)|Marca el principio de las entradas de asignación de columna de proveedor.|  
+|[END_PROVIDER_COLUMN_MAP](../../data/oledb/end-provider-column-map.md)|Marca el final de las entradas de asignación de columna de proveedor.|  
+|[PROVIDER_COLUMN_ENTRY](../../data/oledb/provider-column-entry.md)|Representa una columna específica admitida por el proveedor.|  
+|[PROVIDER_COLUMN_ENTRY_GN](../../data/oledb/provider-column-entry-gn.md)|Representa una columna específica admitida por el proveedor. Puede especificar el tamaño de la columna, tipo de datos, precisión, escala y GUID del conjunto de filas de esquema.|  
+|[PROVIDER_COLUMN_ENTRY_FIXED](../../data/oledb/provider-column-entry-fixed.md)|Representa una columna específica admitida por el proveedor. Puede especificar el tipo de datos de columna.|  
+|[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)|Representa una columna específica admitida por el proveedor. Puede especificar el tamaño de columna.|  
+|[PROVIDER_COLUMN_ENTRY_STR](../../data/oledb/provider-column-entry-str.md)|Representa una columna específica admitida por el proveedor. Se supone que el tipo de columna es una cadena.|  
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|Representa una columna específica admitida por el proveedor. Al igual que PROVIDER_COLUMN_ENTRY_LENGTH, pero también le permite especificar el tipo de datos de la columna, así como el tamaño.|  
+|[PROVIDER_COLUMN_ENTRY_WSTR](../../data/oledb/provider-column-entry-wstr.md)|Representa una columna específica admitida por el proveedor. Se supone que el tipo de columna es una cadena de caracteres Unicode.|  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+### <a name="schema-rowset-macros"></a>Macros de conjunto de filas de esquema  
+  
+|||  
+|-|-|  
+|[BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)|Marca el principio de una asignación de esquema.|  
+|[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|Asocia un GUID a una clase.|  
+|[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|Marca el final de una asignación de esquema.|  
+  
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)   
  [Referencia de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)

@@ -1,50 +1,57 @@
 ---
-title: "Redistribuir una aplicaci&#243;n ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, redistribuir"
-  - "plantillas OLE DB, redistribuir"
-  - "redistribuir ATL"
-  - "redistribuir plantillas OLE DB"
+title: "Redistribuir una aplicación ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, redistributing
+- redistributing ATL
+- redistributing OLE DB templates
+- OLE DB templates, redistributing
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2e5a91ffb267d413c980d2313efbf9b0c41c0932
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Redistribuir una aplicaci&#243;n ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A partir de Visual Studio 2012, Active Template Library \(ATL\) es una biblioteca solo de encabezado.  Los proyectos ATL no tienen un vínculo dinámico a la opción de ATL.  No se necesita ninguna biblioteca ATL redistribuible.  
+# <a name="redistributing-an-atl-application"></a>Redistribuir una aplicación ATL
+A partir de Visual Studio 2012, Active Template Library (ATL) es una biblioteca solo de encabezado. Los proyectos ATL no tienen un vínculo dinámico a la opción de ATL. No se necesita ninguna biblioteca ATL redistribuible.  
   
- Si redistribuye una aplicación ejecutable ATL, debe registrar el archivo .exe \(y cualquier control que contenga\) ejecutando el siguiente comando:  
+ Si redistribuye una aplicación ejecutable ATL, debe registrar el archivo .exe (y cualquier control que contenga) ejecutando el siguiente comando:  
   
 ```  
 filename /regserver  
-  
 ```  
   
  donde `filename` es el nombre del archivo ejecutable.  
   
- En Visual Studio 2010, puede generarse un proyecto ATL para una configuración MinDependency o MinSize.  La configuración MinDependency es lo que se obtiene al establecer la propiedad **Uso de ATL** en **Vínculo estático a ATL** en la página de propiedades **General** y al establecer la propiedad **Biblioteca en tiempo de ejecución** en **Multiproceso \(\/MT\)** en la página de propiedades **Generación de código** \(carpeta C\/C\+\+\).  
+ En Visual Studio 2010, puede generarse un proyecto ATL para una configuración MinDependency o MinSize. Una configuración MinDependency es lo que se obtiene al establecer la **uso de ATL** propiedad **vínculo estático a ATL** en el **General** página de propiedades y establezca el  **Biblioteca en tiempo de ejecución** propiedad **multiproceso (/ MT)** en el **generación de código** página de propiedades (carpeta C/C ++).  
   
- La configuración MinSize es lo que se obtiene al establecer la propiedad **Uso de ATL** en **Vínculo dinámico a ATL** en la página de propiedades **General**, o al establecer la propiedad **Biblioteca en tiempo de ejecución** en **DLL multiproceso \(\/MD\)** en la página de propiedades **Generación de código** \(carpeta C\/C\+\+\).  
+ Una configuración MinSize es lo que se obtiene al establecer la **uso de ATL** propiedad **vínculo dinámico a ATL** en el **General** página de propiedades, o un conjunto el **en tiempo de ejecución Biblioteca** propiedad **DLL multiproceso (/ MD)** en el **generación de código** página de propiedades (carpeta C/C ++).  
   
- MinSize hace que el archivo de salida sea lo menor posible, pero requiere la presencia de los archivos ATL100.dll y Msvcr100.dl \(si seleccionó la opción **DLL multiproceso \(\/MD\)**\) en el equipo de destino.  ATL100.dll debe registrarse en el equipo de destino para garantizar que esté presente toda la funcionalidad de ATL.  ATL100.dll contiene exportaciones ANSI y Unicode.  
+ MinSize hace que la salida de archivo más pequeño posible, pero requiere que ATL100.dll y Msvcr100.DL (si seleccionó la **DLL multiproceso (/ MD)** opción) están en el equipo de destino. ATL100.dll debe registrarse en el equipo de destino para garantizar que esté presente toda la funcionalidad de ATL. ATL100.dll contiene exportaciones ANSI y Unicode.  
   
  Si compila el proyecto de plantillas ATL u OLE DB para un destino MinDependency, no tendrá que instalar ni registrar ATL100.dll en el equipo de destino, si bien puede obtener una imagen de programa de mayor tamaño.  
   
- Para las aplicaciones de plantillas OLE DB, asegúrese de que el equipo de destino tenga las últimas versiones de los archivos de MDAC \(Microsoft Data Access Components\).  Para más información, vea [Redistribuir archivos de compatibilidad con bases de datos](../ide/redistributing-database-support-files.md).  
+ Si redistribuye una aplicación ejecutable ATL, debe registrar el archivo .exe (y cualquier control que contenga) ejecutando el siguiente comando:  
   
-## Vea también  
- [Redistribuir archivos de Visual C\+\+](../ide/redistributing-visual-cpp-files.md)
+```  
+filename /regserver  
+```  
+  
+ donde `filename` es el nombre del archivo ejecutable.  
+  
+ Para las aplicaciones de plantillas OLE DB, asegúrese de que el equipo de destino tenga las últimas versiones de los archivos de MDAC (Microsoft Data Access Components). Para obtener más información, consulte [redistribuir archivos de compatibilidad de base de datos](../ide/redistributing-database-support-files.md).  
+  
+## <a name="see-also"></a>Vea también  
+ [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md)

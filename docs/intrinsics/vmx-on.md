@@ -1,35 +1,34 @@
 ---
-title: "__vmx_on | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_on"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMXON (instrucción)"
-  - "__vmx_on (función intrínseca)"
+title: __vmx_on | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_on
+dev_langs: C++
+helpviewer_keywords:
+- VMXON instruction
+- __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 364b883e9106d8356c1f68bead6a9ba0d00dafe2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_on
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxon"></a>__vmx_on
 **Específicos de Microsoft**  
   
- Provoca la operación de las extensiones de la máquina virtual \(VMX\) del procesador.  
+ Activa la operación de extensiones (VMX) de la máquina virtual en el procesador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unsigned char __vmx_on(  
@@ -37,30 +36,30 @@ unsigned char __vmx_on(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `VmsSupportPhysicalAddress`  
- Un puntero a una dirección física 64 bits que apunta a una estructura de control de la máquina \(VMCS\) virtual.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `VmsSupportPhysicalAddress`  
+ Un puntero a una dirección física de 64 bits que señala a una estructura de control de máquina virtual (VMCS).  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
 |Valor|Significado|  
-|-----------|-----------------|  
-|0|La operación correcta.|  
-|1|Se produjo un error en la operación con el estado extendido disponibles en `VM-instruction error field` actual de VMCS.|  
-|2|Se produjo un error en la operación sin el estado disponibles.|  
+|-----------|-------------|  
+|0|La operación se realizó correctamente.|  
+|1|Error en la operación con el estado extendido disponible en el `VM-instruction error field` de la VMCS actual.|  
+|2|Error en la operación sin estado disponible.|  
   
-## Comentarios  
- La función de `__vmx_on` corresponde a la instrucción máquina de `VMXON` .  Esta función admite la interacción de la máquina virtual monitor de un host con un sistema operativo invitado y las aplicaciones.  Para obtener más información, busque el documento, “especificación de Intel Virtualization Técnico para la arquitectura de IA\-32 Intel,” número de documento C97063\-002, en [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) el sitio.  
+## <a name="remarks"></a>Comentarios  
+ El `__vmx_on` función corresponde a la `VMXON` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sitio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::Release (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release (método)"
+title: "Activationfactory:: Release (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 5bc25ff0-ee3c-4a2d-a9b6-2d8f158033ad
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d720bcae929a0fe4f6979bfd32639eb62862ee51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::Release (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Disminuye el recuento de referencias del objeto actual de ActivationFactory.  
+# <a name="activationfactoryrelease-method"></a>ActivationFactory::Release (Método)
+Disminuye el recuento de referencias del objeto ActivationFactory actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD_(  
@@ -35,13 +33,13 @@ STDMETHOD_(
 )();  
 ```  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que describe el error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ActivationFactory \(Clase\)](../windows/activationfactory-class.md)
+## <a name="see-also"></a>Vea también  
+ [ActivationFactory (clase)](../windows/activationfactory-class.md)

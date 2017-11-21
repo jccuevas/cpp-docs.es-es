@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4202 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4202"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4202"
+title: Compilador advertencia (nivel 4) C4202 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4202
+dev_langs: C++
+helpviewer_keywords: C4202
 ms.assetid: 253293aa-97a3-4878-a2e8-c6cc9e20b1cb
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d23d417b89f2b810fcf78c141bd51eb7ef4b311d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4202
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se ha utilizado una extensión no estándar: '...': el parámetro de prototipos de la lista de nombres no es válido  
+# <a name="compiler-warning-level-4-c4202"></a>Advertencia del compilador (nivel 4) C4202
+ha utilizado una extensión no estándar: '...': parámetro de prototipo en permitido de lista de nombre  
   
- Una definición de función del estilo tradicional contiene argumentos variables.  Estas definiciones generan un error en condiciones de compatibilidad con ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Una definición de función de estilo antiguo contiene argumentos de variable. Estas definiciones generan un error en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C4202.c  

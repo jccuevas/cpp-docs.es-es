@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::QueryInterface (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (método)"
+title: "Activationfactory:: QueryInterface (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 2a9b71aa-61c0-43f7-aa35-00f0ee0af031
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34c11ad9b70f1669bec623f017b08c0deeeab3ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::QueryInterface (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface (Método)
 Recupera un puntero a la interfaz especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,20 +32,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- Un identificador de interfaz  
+ Id. de interfaz.  
   
  `ppvObject`  
- Cuando se completa esta operación, un puntero a la interfaz especificada por el parámetro `riid`.  
+ Cuando esta operación está completa, un puntero a la interfaz especificada por el parámetro `riid`.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que describe el error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ActivationFactory \(Clase\)](../windows/activationfactory-class.md)
+## <a name="see-also"></a>Vea también  
+ [ActivationFactory (clase)](../windows/activationfactory-class.md)

@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c6b19eb0c4f8d63ce288ce47a759e949714daf5e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; (operadores)
 |||  
@@ -74,7 +72,6 @@ bool operator==(
   
 ## <a name="see-also"></a>Vea también  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

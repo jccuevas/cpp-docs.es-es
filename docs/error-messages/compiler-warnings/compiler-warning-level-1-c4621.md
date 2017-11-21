@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4621"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4621"
+title: Compilador advertencia (nivel 1) C4621 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4621
+dev_langs: C++
+helpviewer_keywords: C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4a9252e615ad0fe1ede02e374294e03db38eca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4621
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se encontró ninguna forma postfija de 'operator \-\-' para el tipo 'tipo'; se utiliza la forma de prefijo  
+# <a name="compiler-warning-level-1-c4621"></a>Advertencia del compilador (nivel 1) C4621
+ninguna forma postfija de 'operator': se encontró para el tipo 'tipo', con formato de prefijo  
   
- No hay operador de decremento postfijo definido para el tipo dado.  El compilador utilizó el operador prefijo sobrecargado.  
+ Se ha producido ningún operador de decremento postfijo definido para el tipo dado. El compilador usa el operador prefijo sobrecargado.  
   
- Esta advertencia puede evitarse definiendo un operador `--` postfijo.  Cree una versión de dos argumentos del operador `--` como se indica a continuación:  
+ Esta advertencia puede evitarse definiendo un sufijo `--` operador. Crear una versión de dos argumentos de la `--` operador tal y como se muestra a continuación:  
   
 ```  
 // C4621.cpp  

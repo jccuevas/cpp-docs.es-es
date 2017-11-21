@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,34 +18,18 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_priority_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue (Clase)
 La clase `concurrent_priority_queue` es un contenedor que permite que varios subprocesos inserten y extraigan elementos de forma simultánea. Los elementos se extraen en orden de prioridad donde la prioridad viene determinada por un functor proporcionado como un argumento de plantilla.  
@@ -66,10 +49,10 @@ template <typename T,
  El tipo de datos de los elementos que se almacenará en la cola de prioridad.  
   
  `_Compare`  
- El tipo de objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la cola de prioridad. Este argumento es opcional y el predicado binario `less<``T``>` es el valor predeterminado.  
+ El tipo de objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la cola de prioridad. Este argumento es opcional y el predicado binario `less<T>` es el valor predeterminado.  
   
  `_Ax`  
- El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para la cola de prioridad simultáneas. Este argumento es opcional y el valor predeterminado es `allocator<``T``>`.  
+ El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para la cola de prioridad simultáneas. Este argumento es opcional y el valor predeterminado es `allocator<T>`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -78,23 +61,23 @@ template <typename T,
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`allocator_type`|Tipo que representa la clase de asignador de la cola de prioridad simultáneas.|  
-|`const_reference`|Tipo que representa una constante hacen referencia a un elemento del tipo almacenados en una cola de prioridad simultáneas.|  
+|`const_reference`|Un tipo que representa una variable const hacen referencia a un elemento del tipo almacenados en una cola de prioridad simultáneas.|  
 |`reference`|Tipo que representa una referencia a un elemento del tipo almacenados en una cola de prioridad simultáneas.|  
-|`size_type`|Un tipo que cuenta el número de elementos de una cola de prioridad simultáneas.|  
+|`size_type`|Tipo que cuenta el número de elementos de una cola de prioridad simultáneas.|  
 |`value_type`|Tipo que representa el tipo de datos almacenados en una cola de prioridad simultáneas.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[concurrent_priority_queue](#ctor)|Sobrecargado. Crea una cola de prioridad simultáneas.|  
+|[concurrent_priority_queue)](#ctor)|Sobrecargado. Crea una cola de prioridad simultáneas.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[clear](#clear)|Borra todos los elementos de la prioridad simultánea. Este método no es seguro para la simultaneidad.|  
-|[empty](#empty)|Comprueba si la cola de prioridad simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
+|[empty](#empty)|Comprueba si la cola de prioridad simultáneas está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
 |[get_allocator](#get_allocator)|Devuelve una copia del asignador usada para construir la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
 |[push](#push)|Sobrecargado. Agrega un elemento a la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
 |[size](#size)|Devuelve el número de elementos en la cola de prioridad simultáneas. Este método es seguro para simultaneidad.|  
@@ -108,7 +91,7 @@ template <typename T,
 |[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_priority_queue` a este. Este método no es seguro para la simultaneidad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener información detallada sobre la `concurrent_priority_queue` de clases, consulte [objetos y contenedores paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obtener información detallada sobre la `concurrent_priority_queue` de clases, consulte [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `concurrent_priority_queue`  
@@ -127,9 +110,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `clear`no es seguro para simultaneidad. Debe asegurarse de que ningún otro subproceso invoca métodos en la cola de prioridad simultáneas cuando se llama a este método. `clear`no se libera memoria.  
+ `clear`no es seguro para simultaneidad. Debe asegurarse de que ningún otro subproceso invoca métodos en la cola de prioridad simultáneas cuando se llama a este método. `clear`no libera memoria.  
   
-##  <a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a>concurrent_priority_queue) 
 
  Crea una cola de prioridad simultáneas.  
   
@@ -183,7 +166,7 @@ concurrent_priority_queue(
 ### <a name="remarks"></a>Comentarios  
  Todos los constructores almacenan un objeto de asignador `_Al` e inicializar la cola de prioridad.  
   
- El primer constructor especifica una cola de prioridad inicial vacío y, opcionalmente, especifica un asignador.  
+ El primer constructor especifica una cola de prioridad inicial vacía y, opcionalmente, especifica un asignador.  
   
  El segundo constructor especifica una cola de prioridad con una capacidad inicial `_Init_capacity` y, opcionalmente, especifica un asignador.  
   
@@ -195,14 +178,14 @@ concurrent_priority_queue(
   
 ##  <a name="empty"></a>vacía 
 
- Comprueba si la cola de prioridad simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.  
+ Comprueba si la cola de prioridad simultáneas está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si la cola de prioridad estaba vacía en el momento en que se llama a la función, `false` en caso contrario.  
+ `true`Si la cola de prioridad estaba vacía en el momento en que se llamó a la función, `false` en caso contrario.  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
@@ -244,7 +227,7 @@ void push(value_type&& _Elem);
   
 ### <a name="parameters"></a>Parámetros  
  `_Elem`  
- El elemento que se agregarán a la cola de prioridad simultáneas.  
+ Elemento que se va a agregarse a la cola de prioridad simultáneas.  
   
 ##  <a name="size"></a>tamaño 
 
@@ -258,9 +241,9 @@ size_type size() const;
  El número de elementos en esta `concurrent_priority_queue` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- El tamaño devuelto está garantizado para incluir todos los elementos agregados mediante llamadas a la función `push`. Sin embargo, no pueden reflejar los resultados de operaciones simultáneas pendientes.  
+ El tamaño devuelto está garantizado para incluir todos los elementos agregados mediante llamadas a la función `push`. Sin embargo, no pueden reflejar los resultados de las operaciones simultáneas pendientes.  
   
-##  <a name="swap"></a>intercambio 
+##  <a name="swap"></a>swap 
 
  Intercambia el contenido de dos colas de prioridad simultáneas. Este método no es seguro para la simultaneidad.  
   
@@ -282,7 +265,7 @@ bool try_pop(reference _Elem);
   
 ### <a name="parameters"></a>Parámetros  
  `_Elem`  
- Una referencia a una variable que se rellenará con el elemento de prioridad más alta, si la cola no está vacía.  
+ Una referencia a una variable que se rellenará con el elemento de prioridad más alto, si la cola no está vacía.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `true`Si se extrae un valor, `false` en caso contrario.  
@@ -290,7 +273,6 @@ bool try_pop(reference _Elem);
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-
 
 
 

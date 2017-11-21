@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::GetIids (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids (método)"
+title: "Activationfactory:: Getiids (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 0983d709-d155-4d65-aae4-5b2c8bb0fede
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fb9d71da187e12f119dd9b020e1bbab730855c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::GetIids (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera una matriz de id. implementados de la interfaz.  
+# <a name="activationfactorygetiids-method"></a>ActivationFactory::GetIids (Método)
+Recupera una matriz de identificadores de interfaz implementado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,20 +32,20 @@ STDMETHOD(
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `iidCount`  
- Cuando esta operación finaliza, el número de id. de interace en la matriz de `iids` .  
+ Cuando se completa esta operación, el número de identificadores interace en el `iids` matriz.  
   
  `iids`  
- Cuando esta operación finaliza, una matriz de id. implementados de la interfaz.  
+ Cuando se complete esta operación, una matriz de había implementada identificadores de interfaz.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que describe el error.  E\_OUTOFMEMORY es un posible error HRESULT.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error. E_OUTOFMEMORY es un valor HRESULT de error posibles.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ActivationFactory \(Clase\)](../windows/activationfactory-class.md)
+## <a name="see-also"></a>Vea también  
+ [ActivationFactory (clase)](../windows/activationfactory-class.md)

@@ -1,32 +1,31 @@
 ---
-title: "Tipos administrados y la funci&#243;n main (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "main (función), en aplicaciones administradas"
-  - "código administrado, main() (función)"
+title: "Tipos administrados y la función main (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- main function, in managed applications
+- managed code, main() function
 ms.assetid: 9d0e9620-58c4-4dac-a0e1-ffeb95f80fa5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1a6d8b330108c5fba953567493551894036a7a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos administrados y la funci&#243;n main (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se escribe una aplicación utilizando **\/clr**, los argumentos de la función **main\(\)** no pueden ser de un tipo administrado.  
+# <a name="managed-types-and-the-main-function-ccli"></a>Tipos administrados y la función main (C++/CLI)
+Al escribir una aplicación con **/CLR**, los argumentos de la **main()** función no puede ser de un tipo administrado.  
   
- El siguiente ejemplo muestra una firma correcta:  
+ Un ejemplo de una firma correcta es:  
   
 ```  
 // managed_types_and_main.cpp  
@@ -34,5 +33,5 @@ Cuando se escribe una aplicación utilizando **\/clr**, los argumentos de la fun
 int main(int, char*[], char*[]) {}  
 ```  
   
-## Vea también  
- [Tipos administrados](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Tipos administrados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

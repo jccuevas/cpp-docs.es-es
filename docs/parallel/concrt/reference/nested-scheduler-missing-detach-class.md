@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- nested_scheduler_missing_detach class
+dev_langs: C++
+helpviewer_keywords: nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 78939c1146ec00bf2c4723b17caa294ea00c2f84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach (Clase)
 Esta clase describe una excepción que se produce cuando el runtime de simultaneidad detecta que se dejó de llamar al método `CurrentScheduler::Detach` en un contexto adjunto a un segundo programador mediante el método `Attach` del objeto `Scheduler`.  
@@ -57,10 +39,10 @@ class nested_scheduler_missing_detach : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[nested_scheduler_missing_detach](#ctor)|Sobrecargado. Construye un objeto `nested_scheduler_missing_detach`.|  
+|[nested_scheduler_missing_detach)](#ctor)|Sobrecargado. Construye un objeto `nested_scheduler_missing_detach`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Se produce esta excepción cuando se anida un programador dentro de otro llamando a la `Attach` método de una `Scheduler` objeto en un contexto que ya es propiedad de o se adjunta a otro programador. El Runtime de simultaneidad produce esta excepción según la ocasión cuando puede detectar el escenario como ayuda para localizar el problema. No todas las instancias de no especifican la llamada la `CurrentScheduler::Detach` se garantiza que el método produce esta excepción.  
+ Se produce esta excepción cuando se anida un programador dentro de otra mediante una llamada a la `Attach` método de una `Scheduler` objeto en un contexto que ya es propiedad de o adjunta a otro programador. El Runtime de simultaneidad produce esta excepción según la ocasión cuando puede detectar el escenario como una ayuda para localizar el problema. No todas las instancias de olvida llamar a la `CurrentScheduler::Detach` método se garantiza que producen esta excepción.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -72,7 +54,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a>nested_scheduler_missing_detach) 
 
  Construye un objeto `nested_scheduler_missing_detach`.  
   
@@ -89,4 +71,3 @@ nested_scheduler_missing_detach() throw();
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [Scheduler (clase)](scheduler-class.md)
-

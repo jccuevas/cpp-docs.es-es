@@ -1,42 +1,40 @@
 ---
-title: "Error de la l&#237;nea de comandos D8027 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D8027"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D8027"
+title: "Error de línea de comandos D8027 | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D8027
+dev_langs: C++
+helpviewer_keywords: D8027
 ms.assetid: f228220f-0c7f-49a6-a6e0-1f7bd4745aa6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8e52c3c3029a8828aef11637a21f862cbe33cf9f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de la l&#237;nea de comandos D8027
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="command-line-error-d8027"></a>Error de la línea de comandos D8027
 no se puede ejecutar 'componente'  
   
- El compilador no puede ejecutar el componente del compilador dado o vinculador.  
+ El compilador no pudo ejecutar el componente del compilador dado o vinculador.  
   
-### Posibles causas del error:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
   
-1.  Memoria insuficiente para cargar el componente.  Si NMAKE invocó el compilador, ejecute el compilador fuera del archivo MAKE.  
+1.  No hay suficiente memoria para cargar el componente. Si NMAKE invoca el compilador, ejecute el compilador fuera del archivo MAKE.  
   
-2.  El sistema operativo actual no puede ejecutar el componente.  Asegúrese de que la ruta de acceso señala a los archivos ejecutables adecuados para el sistema operativo.  
+2.  El sistema operativo actual no pudo ejecutar el componente. Asegúrese de que los puntos de ruta de acceso a los archivos ejecutables adecuados para su sistema operativo.  
   
-3.  El componente está dañado.  Vuelva a copiar el componente de los discos de distribución mediante el programa de instalación.  
+3.  El componente está dañado. Volver a copiar el componente de los discos de distribución mediante el programa de instalación.  
   
-4.  Se ha especificado una opción incorrectamente.  Por ejemplo:  
+4.  Se especificó una opción incorrectamente. Por ejemplo:  
   
     ```  
     cl /B1 file1.c  

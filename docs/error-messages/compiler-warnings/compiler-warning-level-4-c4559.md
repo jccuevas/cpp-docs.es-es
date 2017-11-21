@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4559 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4559"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4559"
+title: Compilador advertencia (nivel 4) C4559 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4559
+dev_langs: C++
+helpviewer_keywords: C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 046a3186554603d4a33b2eec78084dd76ec64e40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4559
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : redefinición; la función gains \_\_declspec\(modificador\)  
+# <a name="compiler-warning-level-4-c4559"></a>Advertencia del compilador (nivel 4) C4559
+'función': nueva definición; la función gana __declspec (modificador)  
   
- Se volvió a definir o a declarar una función y la segunda definición o declaración agregó un modificador \_\_**declspec**\(***modificador***\).  Esta advertencia sólo tiene valor informativo.  Para corregir esta advertencia, elimine una de las definiciones.  
+ Se vuelve a definir o se volvió a declarar una función y la segunda definición o declaración agregó un __**modificador declspec** modificador (***modificador***). La advertencia es informativa. Para corregir esta advertencia, elimine una de las definiciones.  
   
- El código siguiente genera el error C4559:  
+ El ejemplo siguiente genera C4559:  
   
 ```  
 // C4559.cpp  

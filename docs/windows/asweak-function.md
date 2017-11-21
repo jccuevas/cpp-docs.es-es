@@ -1,32 +1,30 @@
 ---
-title: "AsWeak (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak (función)"
+title: "AsWeak (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36cf91b969ac1c180f7060c2518e626a22a08284
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# AsWeak (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera una referencia parcial a una instancia especificada.  
+# <a name="asweak-function"></a>AsWeak (función)
+Recupera una referencia débil a una instancia especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -38,7 +36,7 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Un puntero al tipo de parámetro `p`.  
   
@@ -46,15 +44,15 @@ HRESULT AsWeak(
  Una instancia de un tipo.  
   
  `pWeak`  
- Cuando esta operación finaliza, un puntero a una referencia parcial al parámetro `p`.  
+ Cuando se completa esta operación, un puntero a una referencia débil al parámetro `p`.  
   
-## Valor devuelto  
- S\_OK, si esta operación es correcta; si no, un error HRESULT que indica la causa del error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si esta operación se realiza correctamente; en caso contrario, un error HRESULT que indica la causa del error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

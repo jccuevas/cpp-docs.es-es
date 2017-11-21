@@ -1,32 +1,31 @@
 ---
-title: "ID Property | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ID property"
+title: Id. de propiedad | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ID property
 ms.assetid: 756ea7ad-d39b-490d-a2ba-163c434577f0
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e26a36d313e2ddcc0e9a6bd81d5369fb77cd382
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ID Property
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La propiedad ID hace referencia a la entrada en código de programa de cada tabla de aceleradores.  Es el valor de comando que recibirá el programa cada vez que un usuario presione la tecla de aceleración o una combinación de teclas.  Para que un acelerador equivalga a un elemento de menú deberá asignarles el mismo identificador, para lo que el identificador de la tabla de aceleradores y el del recurso de menú también deberán coincidir.  
+# <a name="id-property"></a>ID (Propiedad)
+La propiedad ID hace referencia a cada entrada de la tabla de aceleradores en código de programa. Este es el valor de comando que va a recibir el programa cuando el usuario presiona la tecla de aceleración o una combinación de teclas. Para realizar un acelerador igual que un elemento de menú, realice sus identificadores de los mismos (siempre y cuando el identificador de la tabla de aceleradores es el mismo que el identificador para el recurso de menú).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Establecer las propiedades de Acelerador](../windows/setting-accelerator-properties.md)   
+ [Editor de aceleradores](../windows/accelerator-editor.md)

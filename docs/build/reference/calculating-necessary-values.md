@@ -1,30 +1,29 @@
 ---
-title: "Calcular valores necesarios | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funciones auxiliares, calcular valores necesarios"
+title: Calcular valores necesarios | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6351de62aa9141d98c5afabe1425d4586ca54371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Calcular valores necesarios
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Hay dos partes esenciales de información que tiene que calcular la rutina auxiliar de carga retrasada.  Hay dos funciones inline en delayhlp.cpp que se utilizan para calcular esta información.  
+# <a name="calculating-necessary-values"></a>Calcular valores necesarios
+Dos partes esenciales de información deben calcularse por la rutina de la aplicación auxiliar de retraso. Para ello, hay dos funciones inline en delayhlp.cpp para calcular esta información.  
   
--   La primera calcula el índice de la importación actual en las tres diferentes tablas \(tabla de direcciones de importación \(IAT\), tabla de direcciones de importación enlazadas \(BIAT\) y tabla de direcciones de importación no enlazadas \(UIAT\)\).  
+-   La primera calcula el índice de la importación actual en las tres tablas diferentes (importar la tabla de direcciones (IAT), tabla de direcciones de importación enlazadas (BIAT) y tabla de direcciones de importación independiente (UIAT)).  
   
 -   La segunda cuenta el número de importaciones de una IAT válida.  
   
@@ -50,5 +49,5 @@ CountOfImports(PCImgThunkData pitdBase) {
     }  
 ```  
   
-## Vea también  
- [Understanding the Helper Function](http://msdn.microsoft.com/es-es/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Vea también  
+ [Descripción de la función auxiliar](understanding-the-helper-function.md)

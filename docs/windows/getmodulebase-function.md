@@ -1,47 +1,46 @@
 ---
-title: "GetModuleBase (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::GetModuleBase"
-dev_langs: 
-  - "C++"
+title: "GetModuleBase (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::GetModuleBase
+dev_langs: C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30ff77fd81b63019f9c6c3bcfc8c6b676a1351f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# GetModuleBase (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntero de [ModuleBase](../windows/modulebase-class.md) que permite aumentar y disminuir el recuento de referencias de un objeto de [RuntimeClass](../windows/runtimeclass-class.md) .  
+# <a name="getmodulebase-function"></a>GetModuleBase (Función)
+Recupera un [ModuleBase](../windows/modulebase-class.md) puntero que permite aumentar y disminuir el recuento de referencias de un [RuntimeClass](../windows/runtimeclass-class.md) objeto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 inline Details::ModuleBase* GetModuleBase() throw()  
 ```  
   
-## Valor devuelto  
- Un puntero a un objeto de `ModuleBase` .  
+## <a name="return-value"></a>Valor devuelto  
+ Un puntero a un `ModuleBase` objeto.  
   
-## Comentarios  
- Esta función se utiliza internamente para incrementar y para reducir los recuentos de referencia de objeto.  
+## <a name="remarks"></a>Comentarios  
+ Esta función se usa internamente para aumentar y disminuir recuentos de referencias de objeto.  
   
- Puede utilizar esta función para controlar los recuentos de referencias llamando a [ModuleBase::IncrementObjectCount](../windows/modulebase-incrementobjectcount-method.md) y [ModuleBase::DecrementObjectCount](../Topic/ModuleBase::DecrementObjectCount%20Method.md).  
+ Puede usar esta función para controlar los recuentos de referencia mediante una llamada a [modulebase:: Incrementobjectcount](../windows/modulebase-incrementobjectcount-method.md) y [modulebase:: Decrementobjectcount](../windows/modulebase-decrementobjectcount-method.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

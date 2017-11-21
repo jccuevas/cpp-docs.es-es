@@ -1,36 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4103 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4103"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4103"
+title: Compilador advertencia (nivel 1) C4103 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4103
+dev_langs: C++
+helpviewer_keywords: C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1ac53a33d64bede8351d3b981b9c2a7e324e3f1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4103
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'nombre de archivo' : se ha cambiado la alineación después de incluir el encabezado; puede ser que falte \#pragma pack\(pop\)  
+# <a name="compiler-warning-level-1-c4103"></a>Compilador advertencia (nivel 1) C4103
+'filename': cambiado la alineación después de incluir el encabezado puede ser debido a que faltan #pragma pack(pop)  
   
- El empaquetado afecta al diseño de clases, y normalmente, si el empaquetado cambia de unos archivos de encabezado a otros, puede haber problemas.  
+ Empaquetado afecta al diseño de clases y, normalmente, si el empaquetado cambia a través de los archivos de encabezado, puede haber problemas.  
   
- Utilice \#pragma [pack](../../preprocessor/pack.md)\(pop\) antes de salir del archivo de encabezado para solucionar esta advertencia.  
+ Utilice #pragma [pack](../../preprocessor/pack.md)(pop) antes de terminar el archivo de encabezado para resolver esta advertencia.  
   
- El código siguiente genera el error C4103:  
+ El ejemplo siguiente genera C4103:  
   
 ```  
 // C4103.h  
@@ -42,7 +40,7 @@ caps.handback.revision: 7
 // #pragma pack(pop)  
 ```  
   
- Y, a continuación,  
+ Y luego,  
   
 ```  
 // C4103.cpp  

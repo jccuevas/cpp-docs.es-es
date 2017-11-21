@@ -1,32 +1,32 @@
 ---
-title: "C&#243;mo: Modificar la clase de referencia en una funci&#243;n nativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invocación de plataforma, clase de referencia"
-  - "tipos de referencia, modificar en una función nativa de C++"
+title: "Cómo: modificar la clase de referencia en una función nativa | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Modificar la clase de referencia en una funci&#243;n nativa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Puede pasar una clase de referencia con una matriz CLR a una función nativa y modificar la clase utilizando los servicios PInvoke.  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Cómo: Modificar la clase de referencia en una función nativa
+Puede pasar una clase de referencia con una matriz de CLR a una función nativa y modificar la clase utilizando los servicios PInvoke.  
   
-## Ejemplo  
- Compilar la biblioteca nativa siguiente.  
+## <a name="example"></a>Ejemplo  
+ Compile la biblioteca nativa siguiente.  
   
 ```  
 // modify_ref_class_in_native_function.cpp  
@@ -54,7 +54,7 @@ extern "C"  {
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Compilar el ensamblado siguiente.  
   
 ```  
@@ -89,8 +89,11 @@ int main() {
 }  
 ```  
   
-  **cadena: Hello**  
-**En código nativo: intarr: 100, 200**  
-**En código administrado: intarr: 300, 400**   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

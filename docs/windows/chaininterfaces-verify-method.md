@@ -1,47 +1,45 @@
 ---
-title: "ChainInterfaces::Verify (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::Verify"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verify (método)"
+title: "Chaininterfaces:: Verify (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::Verify
+dev_langs: C++
+helpviewer_keywords: Verify method
 ms.assetid: c591e130-8686-4130-ba69-1aaedc250038
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f6cd836d946265f26925e6bc7a9ef8191df93b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ChainInterfaces::Verify (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba que cada interfaz definida por los parámetros `I0` de plantilla con `I9` hereda de IUnknown o de IInspectable, y que `I0` hereda de `I1` con `I9`.  
+# <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify (Método)
+Comprueba que cada interfaz definido por los parámetros de plantilla `I0` a través de `I9` hereda de IUnknown o IInspectable y que `I0` hereda de `I1` a través de `I9`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW __forceinline static void Verify();  
 ```  
   
-## Comentarios  
- Si se produce un error en la operación de comprobación, `static_assert` emite un mensaje de error que describe el error.  
+## <a name="remarks"></a>Comentarios  
+ Si se produce un error en la operación de comprobación, un `static_assert` emite un mensaje de error que describe el error.  
   
-## Comentarios  
- Se requieren los parámetros `I0` y `I1` de la plantilla, y los parámetros `I2` con `I9` son opcionales.  
+## <a name="remarks"></a>Comentarios  
+ Parámetros de plantilla `I0` y `I1` son necesarios y los parámetros `I2` a través de `I9` son opcionales.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ChainInterfaces \(Estructura\)](../windows/chaininterfaces-structure.md)
+## <a name="see-also"></a>Vea también  
+ [ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)

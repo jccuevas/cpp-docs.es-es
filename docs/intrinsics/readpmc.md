@@ -1,62 +1,61 @@
 ---
-title: "__readpmc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readpmc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Instrucción para leer los contadores de supervisión de rendimiento"
-  - "__readpmc (función intrínseca)"
-  - "rdpmc (instrucción)"
+title: __readpmc | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readpmc
+dev_langs: C++
+helpviewer_keywords:
+- Read Performance Monitoring Counters instruction
+- __readpmc intrinsic
+- rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 323ad8624db725a779110c89f1e8972f74da5060
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __readpmc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readpmc"></a>__readpmc
 **Específicos de Microsoft**  
   
- Genera la instrucción de `rdpmc` , que lee el contador del monitor de rendimiento especificado por `counter`.  
+ Genera el `rdpmc` instrucción, que lee la supervisión especificado por el contador de rendimiento `counter`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
+unsigned __int64 __readpmc(   
+   unsigned long counter   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `counter`  
- El contador de rendimiento con la lectura.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `counter`  
+ El contador de rendimiento para leer.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  El valor del contador de rendimiento especificado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Este intrínseco está disponible en modo kernel únicamente, y la rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Esta función intrínseca está disponible en modo de kernel solo, y la rutina solo está disponible como función intrínseca.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

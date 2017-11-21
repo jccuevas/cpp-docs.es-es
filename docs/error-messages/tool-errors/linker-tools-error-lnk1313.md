@@ -1,34 +1,32 @@
 ---
-title: "Error de las herramientas del vinculador LNK1313 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1313"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1313"
+title: Las herramientas del vinculador LNK1313 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1313
+dev_langs: C++
+helpviewer_keywords: LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b051cff464a7aa7736b8ff7ac9f9e1a33731832
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1313
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-módulo ijw\/native detectado; no se puede vincular con módulos puros  
+# <a name="linker-tools-error-lnk1313"></a>Error de las herramientas del vinculador LNK1313
+módulo ijw/native detectado; no se puede vincular con módulos puros  
   
- La versión actual de Visual C\+\+ no admite la vinculación de archivos .obj administrados\/nativos en modo nativo o mixto con archivos .obj compilados con **\/clr:pure**.  
+ La versión actual de Visual C++ no admite la vinculación de archivos .obj administrados o nativos nativo o mixto con archivos .obj compilados con **/CLR: pure**.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // LNK1313.cpp  
@@ -37,7 +35,7 @@ módulo ijw\/native detectado; no se puede vincular con módulos puros
 int main() {}  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // LNK1313_b.cpp  
@@ -46,7 +44,7 @@ int main() {}
 void test(){}  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente generará el error LNK1313.  
   
 ```  

@@ -1,34 +1,33 @@
 ---
-title: "ICommandImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::CreateRowset"
-  - "ICommandImpl.CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRowset (método)"
+title: 'ICommandImpl:: CreateRowset | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::CreateRowset
+- ICommandImpl.CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 510f222972b8d9306f7b248799679f0dd499288a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Llamado por [Ejecución](../../data/oledb/icommandimpl-execute.md) para crear un único conjunto de filas.  
+# <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
+Llamado por el método [Execute](../../data/oledb/icommandimpl-execute.md) para crear un único conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -45,38 +44,38 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `RowsetClass`  
- Un miembro de la clase de plantilla que representa la clase de conjunto de filas del usuario.  Generado normalmente por el asistente.  
+ Un miembro de clase de plantilla que representa la clase de conjunto de filas del usuario. Normalmente, generado por el asistente.  
   
  `pUnkOuter`  
- \[in\] Un puntero a la interfaz de **IUnknown** que controla si se está creando el conjunto de filas como parte de un agregado; de lo contrario, es null.  
+ [in] Un puntero a controlar **IUnknown** interfaz si se está creando el conjunto de filas como parte de un agregado; en caso contrario, es null.  
   
  `riid`  
- \[in\] Corresponde a `riid` en `ICommand::Execute`.  
+ [in] Corresponde a `riid` en `ICommand::Execute`.  
   
  `pParams`  
- \[in\/out\] Corresponde a `pParams` en `ICommand::Execute`.  
+ [los in/out] Corresponde a `pParams` en `ICommand::Execute`.  
   
  `pcRowsAffected`  
  Corresponde a `pcRowsAffected` en `ICommand::Execute`.  
   
  `ppRowset`  
- \[in\/out\] Corresponde a `ppRowset` en `ICommand::Execute`.  
+ [los in/out] Corresponde a `ppRowset` en `ICommand::Execute`.  
   
  `pRowsetObj`  
- \[out\] Un puntero a un objeto de conjunto de filas.  Este parámetro no se utiliza normalmente, pero se puede utilizar si debe realizar más trabajo en el conjunto de filas antes de pasarla a un objeto COM.  La duración de `pRowsetObj` está enlazado por `ppRowset`.  
+ [out] Un puntero a un objeto de conjunto de filas. Normalmente no se utiliza este parámetro, pero se puede usar si debe realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de `pRowsetObj` está limitado por `ppRowset`.  
   
-## Valor devuelto  
- Un valor estándar de `HRESULT` .  Vea `ICommand::Execute` para una lista de valores típicos.  
+## <a name="return-value"></a>Valor devuelto  
+ Un valor `HRESULT` estándar. Consulte `ICommand::Execute` para obtener una lista de los valores típicos.  
   
-## Comentarios  
- Para crear a más de un conjunto de filas, o proporcionarlo dispone las condiciones para crear diferentes conjuntos de filas, varias llamadas de lugar a `CreateRowset` dentro de **Ejecución**.  
+## <a name="remarks"></a>Comentarios  
+ Para crear más de un conjunto de filas, o para proporcionar sus propias condiciones para la creación de conjuntos de filas diferentes, realizar llamadas diferentes a `CreateRowset` desde **Execute**.  
   
- Vea [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) en *la referencia del programador.*  
+ Vea [ICommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) en el *referencia del programador OLE DB.*  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [ICommandImpl \(Clase\)](../../data/oledb/icommandimpl-class.md)
+## <a name="see-also"></a>Vea también  
+ [ICommandImpl (Clase)](../../data/oledb/icommandimpl-class.md)

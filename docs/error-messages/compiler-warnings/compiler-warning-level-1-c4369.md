@@ -1,35 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4369 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4369"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4369"
+title: Compilador advertencia (nivel 1) C4369 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4369
+dev_langs: C++
+helpviewer_keywords: C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6e3150b60de6019968680a5a7350f09868dd5564
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4369
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'enumerador' : el valor del enumerador 'valor' no se puede representar como 'tipo', el valor es 'new\_value'  
+# <a name="compiler-warning-level-1-c4369"></a>Advertencia del compilador (nivel 1) C4369
+'enumerador': no se puede representar el valor del enumerador 'valor' como 'type', el valor es 'new_value'  
   
- Un enumerador se calculó para ser mayor que el valor máximo para el tipo subyacente especificado.  Esto produjo un desbordamiento y el compilador ajustó el valor del enumerador al valor más bajo posible para el tipo.  
+ Un enumerador se calculó para ser mayor que el valor máximo para el tipo subyacente especificado.  Esto produjo un desbordamiento y el compilador ajustó el valor del enumerador para el valor más bajo posible para el tipo.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4369.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4369.  
   
 ```  
 // C4369.cpp  

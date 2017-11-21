@@ -1,58 +1,58 @@
 ---
-title: "P&#225;ginas de propiedades HLSL: archivos de salida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.AssemblerOutput"
-  - "VC.Project.FXCompilerTool.ObjectFileOutput"
-  - "VC.Project.FXCompilerTool.HeaderFileOutput"
-  - "VC.Project.FXCompilerTool.VariableName"
-  - "VC.Project.FXCompilerTool.AssemblerOutputFile"
-dev_langs: 
-  - "C++"
+title: "Páginas de propiedades HLSL: Archivos de salida | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.FXCompilerTool.AssemblerOutput
+- VC.Project.FXCompilerTool.ObjectFileOutput
+- VC.Project.FXCompilerTool.HeaderFileOutput
+- VC.Project.FXCompilerTool.VariableName
+- VC.Project.FXCompilerTool.AssemblerOutputFile
+dev_langs: C++
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
-caps.latest.revision: 5
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0d41e6f1fd4cf66b45d4f79f4f1b27b3fc4d67a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# P&#225;ginas de propiedades HLSL: archivos de salida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Para configurar las propiedades siguientes del compilador de HLSL \(fxc.exe\), utilice la propiedad **ARCHIVOS DE SALIDA** .  Para obtener información sobre cómo tener acceso a la página de propiedades **ARCHIVOS DE SALIDA** en la carpeta de HLSL, vea [Cómo: Especificar propiedades de proyecto con páginas de propiedades](../misc/how-to-specify-project-properties-with-property-pages.md).  
+# <a name="hlsl-property-pages-output-files"></a>Páginas de propiedades HLSL: archivos de salida
+Para configurar las siguientes propiedades del compilador HLSL (fxc.exe), use su **archivos de salida** propiedad. Para obtener información sobre cómo obtener acceso a la **archivos de salida** página de propiedades en la carpeta HLSL, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
   
-## Lista de UIElement  
- **Nombre de la variable de encabezado**  
- Especifica el nombre de una matriz que es código objeto codificadas utilizado de HLSL.  La matriz se incluye en un archivo de encabezado generado por el compilador de HLSL.  El nombre del archivo de encabezado se especifica mediante la propiedad **Nombre del archivo de encabezado** .  
+## <a name="uielement-list"></a>Lista de UIElement  
+ **Nombre de Variable de encabezado**  
+ Especifica el nombre de una matriz que se usa para código de objeto HLSL codificado. La matriz se encuentra en un archivo de encabezado que se genera el compilador de HLSL. El nombre del archivo de encabezado se especifica mediante la **nombre de archivo de encabezado** propiedad.  
   
- Esta propiedad corresponde a **\/Vn\[name\]** el argumento de línea de comandos.  
+ Esta propiedad se corresponde con el **/Vn [name]** argumento de línea de comandos.  
   
- **Nombre del archivo de encabezado**  
- Especifica el nombre del archivo de encabezado generado por el compilador de HLSL.  El encabezado contiene el código objeto de HLSL que se codifica en una matriz.  El nombre de la matriz es especificado por la propiedad **Nombre de la variable de encabezado** .  
+ **Nombre de archivo de encabezado**  
+ Especifica el nombre del archivo de encabezado generado por el compilador HLSL. El encabezado contiene código de objeto HLSL que se codifica en una matriz. El nombre de la matriz especificado por el **nombre de Variable de encabezado** propiedad.  
   
- Esta propiedad corresponde a **\/Fh\[name\]** el argumento de línea de comandos.  
+ Esta propiedad se corresponde con el **/Fh [name]** argumento de línea de comandos.  
   
  **Nombre de archivo de objeto**  
- Especifica el nombre del archivo objeto generado por el compilador de HLSL.  De forma predeterminada, el valor es **% $ \(OutDir\) \(filename\) .cso**.  
+ Especifica el nombre del archivo objeto generado por el compilador HLSL. De forma predeterminada, el valor es **$(OutDir) % (Filename) .cso**.  
   
- Esta propiedad corresponde a **\/Fo\[name\]** el argumento de línea de comandos.  
+ Esta propiedad se corresponde con el **/fo [name]** argumento de línea de comandos.  
   
- **Salida de código ensamblador**  
- **Lista de ensamblado \- solo \(\/Fc\)** para generar simplemente instrucciones en lenguaje de ensamblado.  **Código y hex. \(\/Fx\) del ensamblado** para generar instrucciones de lenguaje de ensamblado y el Op. Sys. \- código correspondiente en hexadecimal.  De forma predeterminada, no se genera ninguna lista.  
+ **Resultado del ensamblador**  
+ **Lista de sólo ensamblador (/ Fc)** a las instrucciones de lenguaje de ensamblado de salida. **Código de ensamblado y Hex (/ Fx)** para generar las instrucciones de lenguaje de ensamblado y el código de operación correspondiente en formato hexadecimal. De forma predeterminada, ninguna lista es de salida.  
   
- **Archivo de salida de código ensamblador**  
- Especifica el nombre de archivo de la lista de ensamblado generado por el compilador de HLSL.  
+ **Archivo de salida del ensamblador**  
+ Especifica el nombre del archivo de lista de ensamblado generado por el compilador HLSL.  
   
- Esta propiedad corresponde a los argumentos de línea de comandos de **\/Fc\[name\]** y de **\/Fx \[name\]** .  
+ Esta propiedad se corresponde con el **/Fc [name]** y **/Fx [name]** argumentos de línea de comandos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Páginas de propiedades HLSL](../ide/hlsl-property-pages.md)   
  [Páginas de propiedades HLSL: General](../ide/hlsl-property-pages-general.md)   
  [Páginas de propiedades HLSL: Avanzadas](../ide/hlsl-property-pages-advanced.md)

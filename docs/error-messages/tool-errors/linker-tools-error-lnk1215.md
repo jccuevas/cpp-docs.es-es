@@ -1,33 +1,31 @@
 ---
-title: "Error de las herramientas del vinculador LNK1215 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1215"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1215"
+title: Las herramientas del vinculador LNK1215 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1215
+dev_langs: C++
+helpviewer_keywords: LNK1215
 ms.assetid: 0774d8e6-f0c1-4efb-8723-7e1be6863d81
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8685cbf849aed56b1b7ce1a6cebd78c161f70ca7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1215
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-error en la operación con metadatos \(HRESULT\) : error  
+# <a name="linker-tools-error-lnk1215"></a>Error de las herramientas del vinculador LNK1215
+Error en la operación de metadatos (HRESULT): error  
   
- El vinculador recibió un error del motor en tiempo de ejecución .NET al intentar realizar una actualización de metadatos a través de él.  
+ El vinculador recibió un error del tiempo de ejecución .NET al intentar realizar una actualización de metadatos mediante el tiempo de ejecución. NET.  
   
- `HRESULT` en el valor HRESULT del método del runtime de .NET.  `error` es el texto proporcionado por .NET.  
+ `HRESULT`es el valor HRESULT del método de .NET en tiempo de ejecución. `error`es el. Texto proporcionado por el NET.  
   
- Probablemente el vinculador y el motor en tiempo de ejecución de .NET no coincidan; vuelva a instalar Visual C\+\+.
+ Es probable que tenga un vinculador y no coincidan en tiempo de ejecución. NET; Vuelva a instalar Visual C++.

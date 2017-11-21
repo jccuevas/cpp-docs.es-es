@@ -1,67 +1,74 @@
 ---
-title: "_bittestandcomplement, _bittestandcomplement64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandcomplement64"
-  - "_bittestandcomplement64_cpp"
-  - "_bittestandcomplement_cpp"
-  - "_bittestandcomplement"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandcomplement intrinsic"
-  - "_bittestandcomplement64 intrinsic"
-  - "btc instruction"
+title: _bittestandcomplement, _bittestandcomplement64 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandcomplement64
+- _bittestandcomplement64_cpp
+- _bittestandcomplement_cpp
+- _bittestandcomplement
+dev_langs: C++
+helpviewer_keywords:
+- btc instruction
+- _bittestandcomplement intrinsic
+- _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f25141a548061afbb59164d93214bc05c8dccbbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# _bittestandcomplement, _bittestandcomplement64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 **Específicos de Microsoft**  
   
  Generar una instrucción que examina el bit `b` de la dirección `a`, devuelve su valor actual y establece el bit en su complemento  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-unsigned char _bittestandcomplement(    long *a,    long b ); unsigned char _bittestandcomplement64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandcomplement(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandcomplement64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### Parámetros  
- \[in, out\] `a`  
+#### <a name="parameters"></a>Parámetros  
+ [in, out] `a`  
  Puntero a la memoria que se va a examinar.  
   
- \[in\] `b`  
+ [in] `b`  
  La posición de bit que se va a probar.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  El bit en la posición especificada.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|  
-|------------------------|------------------|  
+|---------------|------------------|  
 |`_bittestandcomplement`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandcomplement64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // bittestandcomplement.cpp  
@@ -91,7 +98,7 @@ int main()
 }  
 ```  
   
-## Resultados del ejemplo  
+## <a name="sample-output"></a>Resultados del ejemplo  
   
 ```  
 Initial value: 1  
@@ -101,7 +108,7 @@ Testing bit 0
 Value changed to 0, Result: 1  
 ```  
   
-### FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

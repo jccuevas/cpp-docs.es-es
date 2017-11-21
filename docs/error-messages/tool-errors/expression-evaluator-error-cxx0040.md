@@ -1,32 +1,31 @@
 ---
-title: "Error del evaluador de expresiones CXX0040 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0040"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0040"
-  - "CXX0040"
+title: Error del evaluador de expresiones CXX0040 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0040
+dev_langs: C++
+helpviewer_keywords:
+- CXX0040
+- CAN0040
 ms.assetid: 1914e605-d80b-4abc-9e8f-dbcbefec095b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9a49bf13c9f4a5c5006de8dc3ccc485085c03e65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error del evaluador de expresiones CXX0040
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la función requiere conversión implícita  
+# <a name="expression-evaluator-error-cxx0040"></a>Error del evaluador de expresiones CXX0040
+función requiere conversión implícita  
   
- El evaluador de la expresión C no admite conversiones implícitas que impliquen llamadas de constructor.  
+ El evaluador de expresiones de C no admite conversiones implícitas que impliquen llamadas de constructor.  
   
- Este error es idéntico a CAN00040.
+ Este error es idéntico a CAN0040.

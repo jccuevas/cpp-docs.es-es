@@ -1,57 +1,54 @@
 ---
-title: "__identifier (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__identifier"
-  - "__identifier_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__identifier (palabra clave) [C++]"
+title: __identifier (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __identifier
+- __identifier_cpp
+dev_langs: C++
+helpviewer_keywords: __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9eca3bf99c0a798fd31dfa70e00769274a379b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __identifier (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Habilita el uso de las palabras clave de Visual C\+\+ como identificadores.  
+# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+Habilita el uso de palabras clave de Visual C++ como identificadores.  
   
-## Todas las plataformas  
- **Sintaxis**  
+## <a name="all-platforms"></a>Todas las plataformas  
+**Sintaxis**  
   
 ```  
-  
 __identifier(  
 Visual_C++_keyword  
 )  
   
 ```  
   
- **Comentarios**  
+**Comentarios**  
   
- El uso de la palabra clave de `__identifier` para los identificadores que no son palabras clave se permite, pero no es recomendable por motivos de estilo.  
+El uso de la `__identifier` palabra clave para los identificadores que no son palabras clave está permitido, pero no se recomienda por cuestión de estilo.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo siguiente, una clase denominada `template` se crea en C\# y se distribuye como un archivo DLL.  En un programa de Visual C\+\+ que usa la clase de `template` , la palabra clave de `__identifier` oculta el hecho de que `template` es una palabra clave estándar de C\+\+.  
+ En el ejemplo siguiente, una clase denominada `template` se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el `template` (clase), el `__identifier` palabra clave oculta el hecho de que `template` es una palabra clave de C++ estándar.  
   
 ```  
 // identifier_template.cs  
@@ -71,18 +68,18 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- La palabra clave de `__identifier` es válida con las opciones del compilador de **\/clr** y de **\/clr:oldSyntax** .  
+ El `__identifier` palabra clave es válida con el **/CLR** opción del compilador.  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo siguiente, una clase denominada `template` se crea en C\# y se distribuye como un archivo DLL.  En un programa de Visual C\+\+ que usa la clase de `template` , la palabra clave de `__identifier` oculta el hecho de que `template` es una palabra clave estándar de C\+\+.  
+ En el ejemplo siguiente, una clase denominada `template` se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el `template` (clase), el `__identifier` palabra clave oculta el hecho de que `template` es una palabra clave de C++ estándar.  
   
 ```  
 // identifier_template.cs  
@@ -103,6 +100,6 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)   
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

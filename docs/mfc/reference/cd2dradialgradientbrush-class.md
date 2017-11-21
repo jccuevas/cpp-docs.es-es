@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], CD2DRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], Attach
@@ -47,16 +45,15 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: a190bbe75a7b0d0f26d210e299d58e8b6ba6caa7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: f44927e2882e168f1e466deab29b56f32a6c5c9e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Clase CD2DRadialGradientBrush
 Un contenedor para ID2D1RadialGradientBrush.  
@@ -330,4 +327,3 @@ void SetRadiusY(FLOAT radiusY);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

@@ -1,71 +1,67 @@
 ---
-title: "Ensamblados de confianza (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ensamblados de confianza,Visual C++"
+title: Friend (ensamblados) (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Ensamblados de confianza (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Por runtime aplicables, la característica del lenguaje de ensamblado *de confianza* hace tipos que están en el ámbito de espacio de nombres o el ámbito global en un componente de ensamblado accesible a uno o más ensamblados de cliente o .netmodules.  
+# <a name="friend-assemblies-c"></a>Ensamblados de confianza (C++)
+Para tiempos de ejecución es aplicable, el *friend (ensamblados)* característica de lenguaje, tipos que están en el ámbito de espacio de nombres o ámbito global en un componente de ensamblado puede tener acceso a uno o más ensamblados de cliente o elementos .netmodule.  
   
-## Todos los runtimes  
+## <a name="all-runtimes"></a>Todos los runtimes  
  **Comentarios**  
   
- \(Esta característica de lenguaje no se admite en todos los runtimes.\)  
+ (Esta característica de lenguaje no se admite en todos los runtimes.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  **Comentarios**  
   
- \(Esta característica de lenguaje no se admite en [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].\)  
+ (Esta característica de lenguaje no se admite en el tiempo de ejecución de Windows).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
-#### Para hacer que los tipos en el ámbito o el ámbito global del espacio de nombres en un componente de ensamblado accesible para un ensamblado de cliente o un .netmodule  
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Para que los tipos en el ámbito de espacio de nombres o ámbito global en un componente de ensamblado puede tener acceso a un ensamblado de cliente o un archivo .netmodule  
   
-1.  En el componente, especifique un atributo assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, y pase el nombre del ensamblado de cliente o de .netmodule que tendrán acceso a tipos en el ámbito o el ámbito global del espacio de nombres en el componente.  Puede especificar varios ensamblados de cliente o .netmodules especificando atributos adicionales.  
+1.  En el componente, especificar un atributo de ensamblado <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>y pase el nombre del ensamblado de cliente o .netmodule que tendrá acceso a tipos en el ámbito de espacio de nombres o un ámbito global en el componente.  Puede especificar varios ensamblados de cliente o elementos .netmodule mediante la especificación de atributos adicionales.  
   
-2.  En el ensamblado de cliente o el .netmodule, cuando haga referencia al ensamblado de componente mediante `#using`, pase el atributo de `as_friend` .  Si se especifica el atributo de `as_friend` para un ensamblado que no especifique `InternalsVisibleToAttribute`, una excepción en tiempo de ejecución se producirá si intenta tener acceso a un tipo en el ámbito de espacio de nombres o el ámbito global en el componente.  
+2.  En el ensamblado de cliente o un archivo .netmodule, cuando se hace referencia el ensamblado de componente mediante el uso de `#using`, pasar la `as_friend` atributo.  Si especifica la `as_friend` atributo de un ensamblado que no especifica `InternalsVisibleToAttribute`, se producirá una excepción en tiempo de ejecución si se intenta acceder a un tipo en el ámbito de espacio de nombres o un ámbito global en el componente.  
   
- Un error de compilación se producirá si el ensamblado que contiene el atributo de <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no tiene un nombre seguro pero el cliente que el ensamblado que utiliza el atributo de `as_friend` .  
+ Se producirá un error de compilación si el ensamblado que contiene el <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atributo no tiene un nombre seguro, pero el ensamblado de cliente que usa el `as_friend` atributo hace.  
   
- Aunque los tipos en el ámbito y el ámbito global del espacio de nombres pueden ser conocidos a un ensamblado de cliente o un .netmodule, la accesibilidad del miembro continúa en vigor.  Por ejemplo, no puede tener acceso a un miembro privado.  
+ Aunque pueden ser conocidos tipos en el ámbito de espacio de nombres y el ámbito global a un ensamblado de cliente o un archivo .netmodule, accesibilidad de miembros es siguen en vigor.  Por ejemplo, no se puede tener acceso a un miembro privado.  
   
- Acceso a todos los tipos en un ensamblado debe explícitamente conceder.  Por ejemplo, el ensamblado C no tiene acceso a todos los ensamblados A los tipos de si el ensamblado c hace referencia al ensamblado b y el ensamblado b tiene acceso a todo el ensamblado. de los tipos.  
+ Acceso a todos los tipos en un ensamblado se debe conceder explícitamente.  Por ejemplo, el ensamblado C no tiene acceso a todos los tipos en el ensamblado A Si el ensamblado C hace referencia al ensamblado B y el ensamblado B tiene acceso a todos los tipos de ensamblado A.  
   
- Para obtener información sobre cómo especificar la accesibilidad de tipos fuera de un ensamblado, vea [Visibilidad de tipos](../misc/type-visibility.md).  
+ Para obtener información acerca de cómo iniciar sesión, es decir, cómo asignar un nombre seguro para: un ensamblado que se compila mediante el compilador de Visual C++, vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
- Para obtener información sobre cómo se signo\- que es, cómo dar un nombre seguro \- uno al ensamblado que se compila con el compilador de Visual C\+\+, vea [Ensamblados de nombre seguro \(Firma de ensamblados\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Como alternativa al uso de la característica de ensamblados de confianza, puede utilizar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir el acceso a los tipos individuales.  
   
- Como una alternativa a utilizar ensamblados característica, es de confianza puede utilizar <xref:System.Security.Permissions.StrongNameIdentityPermission> para restringir el acceso a los tipos individuales.  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="examples"></a>Ejemplos  
+ En el ejemplo de código siguiente se define un componente que especifica un ensamblado de cliente que tiene acceso a los tipos en el componente.  
   
-### Ejemplos  
- El ejemplo de código siguiente define un componente que especifica un ensamblado de cliente que tiene acceso a los tipos del componente.  
-  
-```  
+```cpp  
 // friend_assemblies.cpp  
 // compile by using: /clr /LD  
 using namespace System::Runtime::CompilerServices;  
@@ -81,9 +77,9 @@ public:
 };  
 ```  
   
- El ejemplo de código siguiente tiene acceso a un tipo privado del componente.  
+ En el ejemplo de código siguiente se obtiene acceso a un tipo privado en el componente.  
   
-```  
+```cpp  
 // friend_assemblies_2.cpp  
 // compile by using: /clr  
 #using "friend_assemblies.dll" as_friend  
@@ -94,15 +90,15 @@ int main() {
 }  
 ```  
   
- **Resultados**  
-  
- `Class1::Test_Public`  
-  
- El ejemplo de código siguiente define un componente pero no especifica un ensamblado de cliente que tiene acceso a los tipos del componente.  
-  
- Observe que vinculan al componente mediante **\/opt:noref**.  El garantiza que se emitan a los tipos privados en los metadatos del componente, que no es necesaria si el atributo de `InternalsVisibleTo` está presente.  Para obtener más información, vea [\/OPT \(Optimizaciones\)](../build/reference/opt-optimizations.md).  
-  
+```Output  
+Class1::Test_Public  
 ```  
+  
+ En el ejemplo de código siguiente se define un componente, pero no especifica un ensamblado de cliente que tendrá acceso a los tipos en el componente.  
+  
+ Tenga en cuenta que el componente se vincula con **/ opt: noref**. Esto garantiza que los tipos privados se emiten en los metadatos del componente, que no es necesaria cuando el `InternalsVisibleTo` atributo está presente. Para obtener más información, consulte [especificación /OPT (optimizaciones)](../build/reference/opt-optimizations.md).  
+  
+```cpp  
 // friend_assemblies_3.cpp  
 // compile by using: /clr /LD /link /opt:noref  
 using namespace System;  
@@ -115,9 +111,9 @@ public:
 };  
 ```  
   
- El ejemplo de código siguiente define un cliente que intenta obtener acceso a un private escribir en un componente que no de acceso a los tipos privados.  Debido al comportamiento en tiempo de ejecución, si desea detectar la excepción, debe intentar obtener acceso a un tipo privado en una función auxiliar.  
+ En el ejemplo de código siguiente se define a un cliente que intenta obtener acceso a un tipo privado en un componente que no le otorga acceso a sus tipos privados. Debido al comportamiento del tiempo de ejecución, si desea capturar la excepción, debe intentar obtener acceso a un tipo privado en una función auxiliar.  
   
-```  
+```cpp  
 // friend_assemblies_4.cpp  
 // compile by using: /clr  
 #using "friend_assemblies_3.dll" as_friend  
@@ -138,13 +134,13 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+```Output  
+caught an exception  
+```
   
- `caught an exception`  
+ En el ejemplo de código siguiente se muestra cómo crear un componente de nombre seguro que especifica un ensamblado de cliente que tendrá acceso a los tipos en el componente.  
   
- El ejemplo de código siguiente se muestra cómo crear un componente de nombre seguro que especifica un ensamblado de cliente que tiene acceso a los tipos del componente.  
-  
-```  
+```cpp  
 // friend_assemblies_5.cpp  
 // compile by using: /clr /LD /link /keyfile:friend_assemblies.snk  
 using namespace System::Runtime::CompilerServices;  
@@ -161,21 +157,21 @@ public:
 };  
 ```  
   
- Observe que el componente debe especificar la clave pública.  Recomendamos que ejecute los siguientes comandos secuencialmente en un símbolo del sistema para crear un par de claves y obtener la clave pública:  
+ Tenga en cuenta que el componente debe especificar su clave pública. Se recomienda que ejecute los siguientes comandos de forma secuencial en un símbolo del sistema para crear un par de claves y obtener la clave pública:  
   
- **sn \-d friend\_assemblies.snk**  
+ **sn -d friend_assemblies.snk**  
   
- **sn \-k friend\_assemblies.snk**  
+ **sn -k friend_assemblies.snk**  
   
- **sn \-i friend\_assemblies.snk friend\_assemblies.snk**  
+ **sn -i friend_assemblies.snk friend_assemblies.snk**  
   
- **sn \-pc friend\_assemblies.snk key.publickey**  
+ **sn -pc friend_assemblies.snk key.publickey**  
   
- **sn \-tp key.publickey**  
+ **sn - tp key.publickey**  
   
- El ejemplo de código siguiente tiene acceso a un tipo privado en el componente de nombre seguro.  
+ En el ejemplo de código siguiente se obtiene acceso a un tipo privado en el componente de nombre seguro.  
   
-```  
+```cpp  
 // friend_assemblies_6.cpp  
 // compile by using: /clr /link /keyfile:friend_assemblies.snk  
 #using "friend_assemblies_5.dll" as_friend  
@@ -186,9 +182,9 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+```Output  
+Class1::Test_Public  
+```  
   
- `Class1::Test_Public`  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

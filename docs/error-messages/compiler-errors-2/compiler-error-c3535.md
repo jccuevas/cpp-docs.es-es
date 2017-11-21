@@ -1,42 +1,40 @@
 ---
-title: "Error del compilador C3535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3535"
+title: Error del compilador C3535 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3535
+dev_langs: C++
+helpviewer_keywords: C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error del compilador C3535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se puede deducir el tipo para "tipo1" de "tipo2"  
+# <a name="compiler-error-c3535"></a>Error del compilador C3535
+no se puede deducir el tipo de 'type1' en 'type2'  
   
- El tipo de variable declarada por la palabra clave `auto` no se puede deducir del tipo de expresión de inicialización.  Por ejemplo, este error se produce si la expresión de inicialización se evalúa como `void`, que no es un tipo.  
+ El tipo de la variable declarada por el `auto` palabra clave no se puede deducir el tipo de la expresión de inicialización. Por ejemplo, este error se produce si se evalúa la expresión de inicialización en `void`, que no es un tipo.  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Asegúrese de que el tipo de expresión de inicialización no es `void`.  
+1.  Asegúrese de que el tipo de la expresión de inicialización no es `void`.  
   
-2.  Asegúrese de que la declaración no es un puntero a un tipo fundamental.  Para obtener más información, vea [Tipos fundamentales](../../cpp/fundamental-types-cpp.md).  
+2.  Asegúrese de que la declaración no es un puntero a un tipo fundamental. Para obtener más información, consulte [tipos fundamentales](../../cpp/fundamental-types-cpp.md).  
   
-3.  Asegúrese de que, si la declaración es un puntero a un tipo, la expresión de inicialización sea un tipo de puntero.  
+3.  Asegúrese de que, si la declaración es un puntero a un tipo, la expresión de inicialización es un tipo de puntero.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se genera el error C3535 porque la expresión de inicialización se evalúa como `void`.  
   
 ```  
@@ -50,8 +48,8 @@ int main()
 }  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3535 porque la instrucción declara la variable `x` como puntero a un tipo deducido, pero el tipo de la expresión de inicializador es doble.  Por consiguiente, el compilador no puede deducir el tipo de la variable.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3535 porque la instrucción declara la variable `x` como un puntero a un tipo deducido, pero el tipo del inicializador de la expresión es doble. Por lo tanto, el compilador no puede deducir el tipo de la variable.  
   
 ```  
 // C3535b.cpp  
@@ -63,8 +61,8 @@ int main()
 }  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3535 porque la variable `p` declara un puntero a un tipo deducido, pero la expresión de inicialización no es un tipo de puntero.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3535 porque variable `p` declara un puntero a un tipo deducido, pero la expresión de inicialización no es un tipo de puntero.  
   
 ```  
 // C3535c.cpp  
@@ -74,6 +72,6 @@ A x;
 auto *p = x;  // C3535  
 ```  
   
-## Vea también  
- [auto \(Palabra clave\)](../../cpp/auto-keyword.md)   
+## <a name="see-also"></a>Vea también  
+ [Auto (palabra clave)](../../cpp/auto-keyword.md)   
  [Tipos fundamentales](../../cpp/fundamental-types-cpp.md)

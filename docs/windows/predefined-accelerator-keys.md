@@ -1,92 +1,91 @@
 ---
-title: "Predefined Accelerator Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.accelerator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accelerator keys"
-  - "keyboard shortcuts"
-  - "keyboard shortcuts, predefined"
+title: "Teclas de aceleración predefinidas | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.accelerator
+dev_langs: C++
+helpviewer_keywords:
+- accelerator keys
+- keyboard shortcuts
+- keyboard shortcuts, predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee7aed9bfcbc105892e647c5e59b45805120ba39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Predefined Accelerator Keys
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Hay una serie de teclas de aceleración predefinidas que pueden formar parte de un proyecto de aplicación de Windows.  Algunas de estas teclas virtuales se destinan al entorno de Windows.  Otras admiten exploradores o aplicaciones Unicode.  Puede usar una de estas teclas en cualquier acelerador.  
+# <a name="predefined-accelerator-keys"></a>Teclas de aceleración predefinidas
+Hay una serie de teclas de aceleración predefinidas que pueden formar parte de un proyecto de aplicación de Windows. Algunas de estas teclas virtuales se destinan al entorno de Windows. Otras admiten exploradores o aplicaciones Unicode. Puede usar una de estas teclas en cualquier acelerador.  
   
 |Tecla|Descripción|  
-|-----------|-----------------|  
-|VK\_ACCEPT|Aceptación de IME|  
-|VK\_BROWSER\_BACK|Windows: tecla Atrás del explorador|  
-|VK\_BROWSER\_FAVORITES|Windows: tecla Favoritos del explorador|  
-|VK\_BROWSER\_FORWARD|Windows: tecla Adelante del explorador|  
-|VK\_BROWSER\_HOME|Windows: tecla Inicio e inicio del explorador|  
-|VK\_BROWSER\_REFRESH|Windows: tecla Actualizar del explorador|  
-|VK\_BROWSER\_SEARCH|Windows: tecla Buscar del explorador|  
-|VK\_BROWSER\_STOP|Windows: tecla Detener del explorador|  
-|VK\_CONVERT|Conversión de IME|  
-|VK\_FINAL|Modo final de IME|  
-|VK\_HANGUEL|Modo Hanguel de IME \(se mantiene por compatibilidad; use VK\_HANGUL\)|  
-|VK\_HANGUL|Modo Hangul de IME|  
-|VK\_HANJA|Modo Hanja de IME|  
-|VK\_JUNJA|Modo Junja de IME|  
-|VK\_KANA|Modo Kana de IME|  
-|VK\_KANJI|Modo Kanji de IME|  
-|VK\_LAUNCH\_APP1|Windows: Tecla Iniciar aplicación 1|  
-|VK\_LAUNCH\_APP2|Windows: Tecla Iniciar aplicación 2|  
-|VK\_LAUNCH\_MAIL|Windows: tecla Iniciar correo electrónico|  
-|VK\_LAUNCH\_MEDIA\_SELECT|Windows: tecla Seleccionar medio|  
-|VK\_LCONTROL|Tecla CONTROL izquierda|  
-|VK\_LMENU|Tecla MENÚ izquierda|  
-|VK\_LSHIFT|Tecla MAYÚS izquierda|  
-|VK\_MEDIA\_NEXT\_TRACK|Windows: tecla Pista siguiente|  
-|VK\_MEDIA\_PLAY\_PAUSE|Windows: tecla Reproducir\/Pausar medio|  
-|VK\_MEDIA\_PREV\_TRACK|Windows: tecla Pista anterior|  
-|VK\_MEDIA\_STOP|Windows: tecla Detener medios|  
-|VK\_MODECHANGE|Solicitud de cambio del modo IME|  
-|VK\_NONCONVERT|No conversión IME|  
-|VK\_OEM\_1|Windows: para el teclado estándar de Estados Unidos, la tecla ';:'|  
-|VK\_OEM\_102|Windows: la tecla de corchete angular o la tecla de barra diagonal inversa del teclado de 102 teclas RT|  
-|VK\_OEM\_2|Windows: para el teclado estándar de Estados Unidos, la tecla '\/?'|  
-|VK\_OEM\_3|Windows: para el teclado estándar de Estados Unidos, la tecla '\`~'|  
-|VK\_OEM\_4|Windows: para el teclado estándar de Estados Unidos, la tecla '\[{'|  
-|VK\_OEM\_5|Windows: para el teclado estándar de Estados Unidos, la tecla '\\&#124;'|  
-|VK\_OEM\_6|Windows: para el teclado estándar de Estados Unidos, la tecla '\]}'|  
-|VK\_OEM\_7|Windows: para el teclado estándar de Estados Unidos, la tecla 'comilla simple\/comilla doble'|  
-|VK\_OEM\_COMMA|Windows: para cualquier país o región, la tecla ','|  
-|VK\_OEM\_MINUS|Windows: para cualquier país o región, la tecla '\-'|  
-|VK\_OEM\_PERIOD|Windows: para cualquier país o región, la tecla '.'|  
-|VK\_OEM\_PLUS|Windows: para cualquier país o región, la tecla '\+'|  
-|VK\_PACKET|Windows: se usa para pasar caracteres Unicode como si fueran pulsaciones de teclas.|  
-|VK\_RCONTROL|Tecla CONTROL derecha|  
-|VK\_RMENU|Tecla MENÚ derecha|  
-|VK\_RSHIFT|Tecla MAYÚS derecha|  
-|VK\_SLEEP|Tecla Equipo suspendido|  
-|VK\_VOLUME\_DOWN|Windows: tecla Bajar volumen|  
-|VK\_VOLUME\_MUTE|Windows: tecla Silenciar volumen|  
-|VK\_VOLUME\_UP|Windows: tecla Subir volumen|  
-|VK\_XBUTTON1|Windows: botón del mouse X 1|  
-|VK\_XBUTTON2|Windows: botón del mouse X 2|  
+|---------|-----------------|  
+|VK_ACCEPT|Aceptación de IME|  
+|VK_BROWSER_BACK|Windows: tecla Atrás del explorador|  
+|VK_BROWSER_FAVORITES|Windows: tecla Favoritos del explorador|  
+|VK_BROWSER_FORWARD|Windows: tecla Adelante del explorador|  
+|VK_BROWSER_HOME|Windows: tecla Inicio e inicio del explorador|  
+|VK_BROWSER_REFRESH|Windows: tecla Actualizar del explorador|  
+|VK_BROWSER_SEARCH|Windows: tecla Buscar del explorador|  
+|VK_BROWSER_STOP|Windows: tecla Detener del explorador|  
+|VK_CONVERT|Conversión de IME|  
+|VK_FINAL|Modo final de IME|  
+|VK_HANGUEL|Modo Hanguel de IME (se mantiene por compatibilidad; use VK_HANGUL)|  
+|VK_HANGUL|Modo Hangul de IME|  
+|VK_HANJA|Modo Hanja de IME|  
+|VK_JUNJA|Modo Junja de IME|  
+|VK_KANA|Modo Kana de IME|  
+|VK_KANJI|Modo Kanji de IME|  
+|VK_LAUNCH_APP1|Windows: Tecla Iniciar aplicación 1|  
+|VK_LAUNCH_APP2|Windows: Tecla Iniciar aplicación 2|  
+|VK_LAUNCH_MAIL|Windows: tecla Iniciar correo electrónico|  
+|VK_LAUNCH_MEDIA_SELECT|Windows: tecla Seleccionar medio|  
+|VK_LCONTROL|Tecla CONTROL izquierda|  
+|VK_LMENU|Tecla MENÚ izquierda|  
+|VK_LSHIFT|Tecla MAYÚS izquierda|  
+|VK_MEDIA_NEXT_TRACK|Windows: tecla Pista siguiente|  
+|VK_MEDIA_PLAY_PAUSE|Windows: tecla Reproducir/Pausar medio|  
+|VK_MEDIA_PREV_TRACK|Windows: tecla Pista anterior|  
+|VK_MEDIA_STOP|Windows: tecla Detener medios|  
+|VK_MODECHANGE|Solicitud de cambio del modo IME|  
+|VK_NONCONVERT|No conversión IME|  
+|VK_OEM_1|Windows: para el teclado estándar de Estados Unidos, la tecla ';:'|  
+|VK_OEM_102|Windows: la tecla de corchete angular o la tecla de barra diagonal inversa del teclado de 102 teclas RT|  
+|VK_OEM_2|Windows: para el teclado estándar de Estados Unidos, la '/?' key|  
+|VK_OEM_3|Windows: para el teclado estándar de Estados Unidos, la tecla '`~'|  
+|VK_OEM_4|Windows: para el teclado estándar de Estados Unidos, la tecla '[{'|  
+|VK_OEM_5|Windows: para el teclado estándar de Estados Unidos, la '\\&#124;' clave|  
+|VK_OEM_6|Windows: para el teclado estándar de Estados Unidos, la tecla ']}'|  
+|VK_OEM_7|Windows: para el teclado estándar de Estados Unidos, la tecla 'comilla simple/comilla doble'|  
+|VK_OEM_COMMA|Windows: para cualquier país o región, la tecla ','|  
+|VK_OEM_MINUS|Windows: para cualquier país o región, la tecla '-'|  
+|VK_OEM_PERIOD|Windows: para cualquier país o región, la tecla '.'|  
+|VK_OEM_PLUS|Windows: para cualquier país o región, la tecla '+'|  
+|VK_PACKET|Windows: se usa para pasar caracteres Unicode como si fueran pulsaciones de teclas.|  
+|VK_RCONTROL|Tecla CONTROL derecha|  
+|VK_RMENU|Tecla MENÚ derecha|  
+|VK_RSHIFT|Tecla MAYÚS derecha|  
+|VK_SLEEP|Tecla Equipo suspendido|  
+|VK_VOLUME_DOWN|Windows: tecla Bajar volumen|  
+|VK_VOLUME_MUTE|Windows: tecla Silenciar volumen|  
+|VK_VOLUME_UP|Windows: tecla Subir volumen|  
+|VK_XBUTTON1|Windows: botón del mouse X 1|  
+|VK_XBUTTON2|Windows: botón del mouse X 2|  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*.  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.*  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Accelerator Editor](../mfc/accelerator-editor.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Vea también  
+ [Editor de aceleradores](../windows/accelerator-editor.md)   
+ [Editores de recursos](../windows/resource-editors.md)

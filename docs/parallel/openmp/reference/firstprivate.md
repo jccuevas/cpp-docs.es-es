@@ -1,60 +1,58 @@
 ---
-title: "firstprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "firstprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "firstprivate OpenMP clause"
+title: firstprivate | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: firstprivate
+dev_langs: C++
+helpviewer_keywords: firstprivate OpenMP clause
 ms.assetid: db479766-6d3b-4bbd-b28e-b192d826788c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0645eee74ab162c444531c141b297665653907b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# firstprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que cada subproceso debe tener una instancia de una variable, y que la variable se debe inicializar con el valor de la variable, porque existe antes de la construcción paralela.  
+# <a name="firstprivate"></a>firstprivate
+Especifica que cada subproceso debe tener su propia instancia de una variable, y que se debe inicializar la variable con el valor de la variable, porque existe antes de la construcción paralela.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 firstprivate(var)  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|`var`|La variable para tener instancias en cada subproceso y que se inicializa con el valor de la variable, porque existe antes de la construcción paralela.  Si se especifica más de una variable, los nombres de variable separados por una coma.|  
+|`var`|La variable tener instancias en cada subproceso y que se inicializará con el valor de la variable, porque existe antes de la construcción paralela. Si se especifica más de una variable, separe los nombres de variable con una coma.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
-## Comentarios  
- `firstprivate` se aplica a las siguientes directivas:  
+## <a name="remarks"></a>Comentarios  
+ `firstprivate`se aplica a las siguientes directivas:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [secciones](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- Para obtener más información, vea [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).  
+ Para obtener más información, consulte [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).  
   
-## Ejemplo  
- Para obtener un ejemplo de `firstprivate`utilizando, vea el ejemplo de [private](../../../parallel/openmp/reference/private-openmp.md).  
+## <a name="example"></a>Ejemplo  
+ Para obtener un ejemplo del uso de `firstprivate`, vea el ejemplo de [privada](../../../parallel/openmp/reference/private-openmp.md).  
   
-## Vea también  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>Vea también  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

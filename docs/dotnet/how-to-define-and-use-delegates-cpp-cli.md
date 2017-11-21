@@ -1,38 +1,37 @@
 ---
-title: "C&#243;mo: Definir y utilizar delegados (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delegados"
+title: "Cómo: definir y utilizar delegados (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Definir y utilizar delegados (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este artículo se muestra cómo definir y utilizar los delegados de [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-define-and-use-delegates-ccli"></a>Cómo: Definir y utilizar delegados (C++/CLI)
+Este artículo muestra cómo definir y utilizar delegados en C++ / CLI.  
   
- Aunque .NET Framework proporciona varios delegados, quizás tenga que a veces definir nuevos delegados.  
+ A veces, aunque .NET Framework proporciona un número de delegados, tendrá que definir a nuevos delegados.  
   
- El ejemplo de código siguiente se define un delegado denominado `MyCallback`.  La función de código \- de control de eventos que se llama cuando es este nuevo delegado desencadenar\- debe tener un tipo de valor devuelto de `void` y tomar una referencia de <xref:System.String> .  
+ En el ejemplo de código siguiente se define un delegado que se denomina `MyCallback`. El código de control de eventos, la función que se llama cuando se activa este nuevo delegado, debe tener un tipo de valor devuelto de `void` y tomar un <xref:System.String> referencia.  
   
- La función principal utiliza un método estático definido por `SomeClass` para crear instancias del delegado de `MyCallback` .  El delegado haga otro método de llamar a esta función, como muestra enviando la cadena “single” el objeto delegado.  Se vincula juntos y después ejecuta el Siguiente, instancias adicionales de `MyCallback` por una llamada al objeto delegado.  
+ La función principal utiliza un método estático que se define mediante `SomeClass` para crear instancias de la `MyCallback` delegar. El delegado, a continuación, se convierte en un método alternativo para llamar a esta función, como se muestra mediante el envío de la cadena "simple" para el objeto de delegado. A continuación, más instancias de `MyCallback` están vinculadas entre sí y, a continuación, se ejecuta mediante una llamada al objeto de delegado.  
   
 ```  
-// use_delegate.cpp  
+  
+      // use_delegate.cpp  
 // compile with: /clr  
 using namespace System;  
   
@@ -83,13 +82,17 @@ int main( )
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **SomeClass::Func estático \- single**  
-**SomeClass::Func estático \- encadenado**  
-**SomeClass::Func estático \- encadenado**  
-**OtherClass::Method \- encadenado, \= 99 numéricos**  
-**OtherClass::Method \- encadenado, \= 100 numéricos** El ejemplo de código siguiente se muestra cómo asociar un delegado con un miembro de una clase de valor.  
+```Output  
+static SomeClass::Func - single  
+static SomeClass::Func - chained  
+static SomeClass::Func - chained  
+OtherClass::Method - chained, num = 99  
+OtherClass::Method - chained, num = 100  
+```  
+  
+ El ejemplo de código siguiente muestra cómo asociar a un delegado a un miembro de una clase de valor.  
   
 ```  
 // mcppv2_del_mem_value_class.cpp  
@@ -114,12 +117,15 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **prueba**  
-**prueba**   
-## Cómo crear delegados  
- Puede utilizar el operador de “`-`” para quitar un delegado componente de un delegado compuesto.  
+```Output  
+test  
+test  
+```  
+  
+## <a name="how-to-compose-delegates"></a>Cómo crear delegados  
+ Puede usar el "`-`" operador que se va a quitar un delegado componente de un delegado compuesto.  
   
 ```  
 // mcppv2_compose_delegates.cpp  
@@ -157,19 +163,22 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **Invocar el delegado a:**  
-**¡Hola, A\!**  
-**Invocar b delegado:**  
- **¡Adiós, b\!**  
-**Invocar c delegado:**  
-**¡Hola, C\!**  
- **¡Adiós, C\!**  
-**Invocar d delegado:**  
- **¡Adiós, d\!**   
-## Pase un delegate^ a una función nativa que espera recibir un puntero a función  
- De un componente administrado puede llamar a una función nativa con parámetros de puntero a función donde la función nativa a continuación puede llamar a la función miembro de delegado del componente administrado.  
+```Output  
+Invoking delegate a:  
+Hello, A!  
+Invoking delegate b:  
+  Goodbye, B!  
+Invoking delegate c:  
+Hello, C!  
+  Goodbye, C!  
+Invoking delegate d:  
+  Goodbye, D!  
+```  
+  
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Pasar un delegado ^ a una función nativa que espera un puntero a función  
+ Desde un componente administrado puede llamar una función nativa con función de los parámetros de puntero donde la función nativa, a continuación, puede llamar a la función miembro del delegado del componente administrado.  
   
  Este ejemplo crea el archivo .dll que exporta la función nativa:  
   
@@ -185,7 +194,7 @@ extern "C" {
 }  
 ```  
   
- El ejemplo siguiente utiliza el archivo .dll y pasa un identificador delegado a la función nativa que espera un puntero a función.  
+ En el ejemplo siguiente utiliza el archivo .dll y pasa un identificador de delegado a la función nativa que espera un puntero a función.  
   
 ```  
 // delegate_to_native_function_2.cpp  
@@ -211,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **Llamada a la función administrada**   
-## Para asociar delegados con funciones no administradas  
- Para asociar un delegado a una función nativa, debe ajustar la función nativa en un tipo administrado y declarar la función que se invoque con `PInvoke`.  
+```Output  
+Call to Managed Function  
+```  
+  
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>Para asociar delegados a funciones no administradas  
+ Para asociar un delegado a una función nativa, debe ajustar la función nativa en un tipo administrado y declare la función que se debe invocar a través de `PInvoke`.  
   
 ```  
 // mcppv2_del_to_umnangd_func.cpp  
@@ -251,23 +263,26 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **hello**   
-## Para utilizar delegados independientes  
- Puede utilizar un delegado independiente para pasar una instancia del tipo cuya función desea llamar cuando se llama al delegado.  
+```Output  
+hello  
+```  
   
- Los delegados independientes son especialmente útiles si desea recorrer en iteración los objetos en un colección\- por utilizar [for each, in](../dotnet/for-each-in.md) palabra clave\- y llamar a una función miembro en cada instancia.  
+## <a name="to-use-unbound-delegates"></a>Usar delegados sin enlazar  
+ Puede utilizar a un delegado sin enlazar para pasar una instancia del tipo cuya función que desea llamar cuando se llama al delegado.  
   
- Aquí es cómo declarar, crear instancias, y llamar el límite y delegados independientes:  
+ Delegados sin enlazar son especialmente útiles si desea recorrer en iteración los objetos de una colección, mediante el uso de [para cada uno, en](../dotnet/for-each-in.md) palabras clave y llamar a una función miembro en cada instancia.  
   
-|Acción|Delegados de límite|Delegados independientes|  
-|------------|-------------------------|------------------------------|  
-|Declare|La firma del delegado debe coincidir con la de la función que desea llamar a través del delegado.|El primer parámetro de la firma del delegado es el tipo de `this` para el objeto que desea llamar.<br /><br /> Después del primer parámetro, la firma del delegado debe coincidir con la de la función que desea llamar a través del delegado.|  
-|Instantiate|Al crear instancias de un delegado enlazado, puede especificar una función de instancia, o una función global o estática del miembro.<br /><br /> Para especificar una función de instancia, el primer parámetro es una instancia del tipo cuyo miembro la función que desea llamar y el segundo parámetro es la dirección de la función que desea llamar.<br /><br /> Si desea llamar una función global o miembro static, simplemente pase el nombre de una función global o de la función miembro estática.|Al crear instancias de un delegado independiente, simplemente pase la dirección de la función que desea llamar.|  
-|Call|Cuando se llama a un delegado enlazado, simplemente pase los parámetros requeridos por la firma de delegado.|Igual que un delegado enlazado, pero recuerdan que el primer parámetro debe ser una instancia del objeto que contiene la función que desea llamar.|  
+ Aquí se muestra cómo declarar, crear instancias y llamada dependientes e independientes a delegados:  
   
- Este ejemplo muestra cómo declarar, crear instancias, y llamar a delegados independientes:  
+|Acción|Enlazar delegados|Delegados sin enlazar|  
+|------------|---------------------|-----------------------|  
+|Declarar|La firma del delegado debe coincidir con la firma de la función que desea llamar a través del delegado.|El primer parámetro de la firma de delegado es el tipo de `this` para el objeto que desea llamar.<br /><br /> Tras el primer parámetro, la firma del delegado debe coincidir con la firma de la función que desea llamar a través del delegado.|  
+|Crear una instancia de|Cuando crea una instancia de un delegado enlazado, puede especificar una función de instancia o una función miembro estática o global.<br /><br /> Para especificar una función de instancia, el primer parámetro es una instancia del tipo cuya función miembro que desea llamar y el segundo parámetro es la dirección de la función que desea llamar.<br /><br /> Si desea llamar a una función miembro globales o estáticos, simplemente pase el nombre de una función global o el nombre de la función miembro estática.|Cuando crea una instancia de un delegado sin enlazar, simplemente pase la dirección de la función que desea llamar.|  
+|Llamar a|Cuando se llama a un delegado enlazado, simplemente pase los parámetros requeridos por la firma de delegado.|Igual que un límite de delegado, pero recuerde que el primer parámetro debe ser una instancia del objeto que contiene la función que desea llamar.|  
+  
+ Este ejemplo muestra cómo declarar, crear instancias y llamar a delegados sin enlazar:  
   
 ```  
 // unbound_delegates.cpp  
@@ -330,18 +345,22 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **2**  
-**3**  
-**2**  
-**3**  
-**2**  
-**7**  
-**8**  
-**7**  
-**8**  
-**7** El ejemplo siguiente se muestra cómo utilizar delegados independientes y las palabras clave de [for each, in](../dotnet/for-each-in.md) para recorrer de objetos en una colección y llamar a una función miembro en cada instancia.  
+```Output  
+2  
+3  
+2  
+3  
+2  
+7  
+8  
+7  
+8  
+7  
+```  
+  
+ El ejemplo siguiente muestra cómo utilizar delegados sin enlazar y [para cada uno, en](../dotnet/for-each-in.md) palabras clave para recorrer en iteración los objetos de una colección y llamar a una función miembro en cada instancia.  
   
 ```  
 // unbound_delegates_2.cpp  
@@ -373,7 +392,7 @@ int main() {
 }  
 ```  
   
- Este ejemplo crea un delegado sin enlazar a las funciones del descriptor de acceso de una propiedad:  
+ Este ejemplo crea a un delegado sin enlazar a las funciones de descriptor de acceso de una propiedad:  
   
 ```  
 // unbound_delegates_3.cpp  
@@ -402,9 +421,13 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **11** El ejemplo siguiente se muestra cómo invocar un delegado de multidifusión, donde se ha enlazado una instancia y una instancia está sin enlazar.  
+```Output  
+11  
+```  
+  
+ El ejemplo siguiente muestra cómo invocar a un delegado multidifusión, donde se enlaza a una instancia y una instancia es independiente.  
   
 ```  
 // unbound_delegates_4.cpp  
@@ -437,10 +460,14 @@ int main() {
 };  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **en f \(^ de r r\)**  
-**en f\(\)** El ejemplo siguiente muestra cómo crear y llamar a un delegado genérico independiente.  
+```Output  
+in f(R ^ r)  
+in f()  
+```  
+  
+ El ejemplo siguiente muestra cómo crear y llamar a un delegado genérico sin enlazar.  
   
 ```  
 // unbound_delegates_5.cpp  
@@ -477,9 +504,12 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **12**  
-**14**   
-## Vea también  
- [delegado](../windows/delegate-cpp-component-extensions.md)
+```Output  
+12  
+14  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)

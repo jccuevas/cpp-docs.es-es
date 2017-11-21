@@ -1,36 +1,36 @@
 ---
-title: "Macros vari&#225;dicas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macros variádicas [C++]"
-  - "__VA_ARGS__ (especificador de macro variádica)"
+title: "Macros Variádicas | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- variadic macros [C++]
+- __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9913c9413659c0d2491588642a32482fa203e106
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Macros vari&#225;dicas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="variadic-macros"></a>Macros variádicas
 Las macros variádicas son macros estilo funciones que contienen un número variable de argumentos.  
   
-## Comentarios  
- Para utilizar macros variádicas, los puntos suspensivos se pueden especificar como el último argumento formal de una definición de macro y el identificador de reemplazo `__VA_ARGS__` se puede utilizar en la definición para insertar los argumentos adicionales. `__VA_ARGS__` se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluidas las comas entre ellos.  
+## <a name="remarks"></a>Comentarios  
+ Para usar macros variádicas, se pueden especificar los puntos suspensivos como argumento formal final en una definición de macro y el identificador de reemplazo `__VA_ARGS__` puede utilizarse en la definición para insertar los argumentos adicionales.  `__VA_ARGS__`se reemplaza por todos los argumentos que coinciden con los puntos suspensivos, incluyendo comas entre ellos.  
   
- El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para garantizar que la macro no se resuelva en una expresión con una coma final.  La implementación de Visual C\+\+ suprimirá una coma final si no se pasa ningún argumento a los puntos suspensivos.  
+ El estándar de C especifica que se debe pasar al menos un argumento a los puntos suspensivos para garantizar que la macro no se resuelva en una expresión con una coma final.  La implementación de Visual C++ suprimirá una coma final si no se pasa ningún argumento a los puntos suspensivos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```cpp  
 // variadic_macros.cpp  
@@ -59,7 +59,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Salida  
   
 ```  
 here are some varargs1(1)  
@@ -67,8 +67,7 @@ here are some varargs2(4)
 here are some varargs3(5)  
 hello, world  
 error  
-  
 ```  
   
-## Vea también  
- [Macros](../preprocessor/macros-c-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Macros (C/C++)](../preprocessor/macros-c-cpp.md)

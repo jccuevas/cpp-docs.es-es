@@ -1,67 +1,66 @@
 ---
-title: "_mm_cvtsi64x_ss | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtsi64x_ss"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtsi2ss (instrucción)"
-  - "_mm_cvtsi64x_ss (función intrínseca)"
+title: _mm_cvtsi64x_ss | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtsi64x_ss
+dev_langs: C++
+helpviewer_keywords:
+- cvtsi2ss instruction
+- _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aecb28648e32e099d2381fa49b1b7f5a42618543
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtsi64x_ss
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Específicos de Microsoft**  
   
- Genera [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] extendidas versión de entero de 64 bits convert a la instrucción de valor de punto flotante de precisión sencilla de Escalar \(`cvtsi2ss`\).  
+ Genera el [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versión extendida del entero convertir 64 bits para el valor de punto flotante de precisión sencilla escalar (`cvtsi2ss`) instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-__m128 _mm_cvtsi64x_ss(   
-   __m128 a,   
-   __int64 b   
+__m128 _mm_cvtsi64x_ss(   
+   __m128 a,   
+   __int64 b   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `a`  
- Una estructura de `__m128` que contiene cuatro valores de punto flotante de precisión simple.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `a`  
+ Un `__m128` estructura que contiene cuatro valores de punto flotante de precisión sencilla.  
   
- \[in\] `b`  
- Un entero de 64 bits que se convertirá en un valor de punto flotante.  
+ [in] `b`  
+ Un entero de 64 bits se convierta en un valor de punto flotante.  
   
-## Valor devuelto  
- Una estructura de `__m128` cuyo primer valor de punto flotante es el resultado de la conversión.  Los otros tres valores se copian sin cambiar de `a`.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `__m128` cuyo primer valor de punto flotante es el resultado de la conversión de estructura. Los otros tres valores se copian en `a`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`_mm_cvtsi64x_ss`|x64|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- La estructura de `__m128` representa un registro de XMM, por lo que este intrínseco permite que el valor `b` memoria del sistema es movido a un registro de XMM.  
+## <a name="remarks"></a>Comentarios  
+ El `__m128` estructura representa un registro de registros de XMM, por lo que esta función intrínseca permite que el valor `b` de la memoria del sistema para trasladarlas un registros de XMM registrar.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // _mm_cvtsi64x_ss.cpp  
@@ -89,9 +88,12 @@ int main()
 }  
 ```  
   
-  **54.000000 0.000000 0.000000 0.000000**   
-## Específico de Microsoft de FINAL  
+```Output  
+54.000000 0.000000 0.000000 0.000000  
+```  
   
-## Vea también  
- [\_\_m128](../cpp/m128.md)   
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
+ [__m128](../cpp/m128.md)   
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

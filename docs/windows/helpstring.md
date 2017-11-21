@@ -1,32 +1,30 @@
 ---
-title: "helpstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstring attribute [C++]"
+title: helpstring | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstring
+dev_langs: C++
+helpviewer_keywords: helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27cf95f5017775fbf7a0315341cea19931f64068
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# helpstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.  
+# <a name="helpstring"></a>helpstring
+Especifica una cadena de caracteres que se utiliza para describir el elemento al que se aplica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,35 +33,34 @@ Especifica una cadena de caracteres que se usa para describir el elemento al que
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `string`  
  El texto de la cadena de ayuda.  
   
-## Comentarios  
- el atributo de **helpstring** C\+\+ tiene la misma funcionalidad que el atributo de [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **helpstring** atributo C++ tiene la misma funcionalidad que la [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) atributo MIDL.  
   
-## Ejemplo  
- Vea el ejemplo para [defaultvalue](../Topic/defaultvalue.md) para obtener un ejemplo de cómo utilizar **helpstring**.  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para obtener un ejemplo de cómo usar **helpstring**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|`interface`, `typedef`, **clase**, método, propiedad|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../Topic/helpfile.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interfaz](../windows/interface-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

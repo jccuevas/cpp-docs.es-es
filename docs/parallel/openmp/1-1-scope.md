@@ -1,24 +1,23 @@
 ---
-title: "1.1 Scope | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.1 ámbito | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a8570a3c-1dd6-4c3d-b368-a10fcb3534a6
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b4f348f55cb956802bab9651b22804c941c53cdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 1.1 Scope
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Esta especificación se cubre solo la paralelización usuario\-dirigida, donde el usuario especifica explícitamente las acciones que se realizarán por el compilador y el sistema en tiempo de ejecución para ejecutar el programa en paralelo.  Las implementaciones de OpenMP c y C\+\+ no es necesario comprobar si hay dependencias, conflictos, interbloqueos, condiciones de carrera, u otros problemas que den lugar a la ejecución del programa incorrecta.  El usuario es responsable de garantizar que la aplicación utilizando las construcciones de OpenMP c y C\+\+ API se ejecuta correctamente.  la paralelización y directivas automáticas Compilador\-generadas al compilador para ayudar a tal paralelización no se cubren en este documento.
+# <a name="11-scope"></a>1.1 Ámbito
+Esta especificación cubre dirigido por el usuario sólo la ejecución en paralelo, en el que el usuario especifica explícitamente las acciones a emprender por el compilador y el sistema en tiempo de ejecución con el fin de ejecutar el programa en paralelo. Implementaciones de OpenMP C y C++ no tienen que buscar dependencias, está en conflicto, interbloqueos, condiciones de carrera u otros problemas que son el resultado de la ejecución del programa incorrecto. El usuario es responsable de garantizar que la aplicación con las construcciones OpenMP C y C++ API se ejecuta correctamente. Ejecución en paralelo automática generada por el compilador y directivas para el compilador para ayudar a dicha ejecución en paralelo no se tratan en este documento.

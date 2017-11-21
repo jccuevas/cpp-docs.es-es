@@ -1,32 +1,30 @@
 ---
-title: "FtmBase (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FtmBase (clase)"
+title: FtmBase (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase
+dev_langs: C++
+helpviewer_keywords: FtmBase class
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a5d9fb768c4c1030a43094565aae5f88fdabf4eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Representa un objeto libre\- con el contador.  
+# <a name="ftmbase-class"></a>FtmBase (clase)
+Representa un objeto de cálculo de referencias con subprocesamiento libre.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,42 +33,42 @@ class FtmBase : public Microsoft::WRL::Implements<
    Microsoft::WRL::CloakedIid< IMarshal > >;  
 ```  
   
-## Comentarios  
- Para obtener más información, vea el tema “IMarshal” en el subtema “las interfaces COM” del tema de “referencia COM” en MSDN Library.  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información, vea el tema "IMarshal" en el tema "Interfaces COM" del tema "Referencia de COM" en MSDN Library.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[FtmBase::FtmBase \(Constructor\)](../windows/ftmbase-ftmbase-constructor.md)|Inicializa una nueva instancia de la clase de FtmBase.|  
+|[FtmBase::FtmBase (constructor)](../windows/ftmbase-ftmbase-constructor.md)|Inicializa una nueva instancia de la clase FtmBase.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[FtmBase::CreateGlobalInterfaceTable \(Método\)](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabla global \(GIT\) de interfaz.|  
-|[FtmBase::DisconnectObject \(Método\)](../windows/ftmbase-disconnectobject-method.md)|Fuertemente libera todos conexiones externas a un objeto.  El servidor del objeto llama a la implementación de este método antes del cierre.|  
-|[FtmBase::GetMarshalSizeMax \(Método\)](../windows/ftmbase-getmarshalsizemax-method.md)|Obtiene el límite superior en el número de bytes necesarios para formar el puntero de interfaz especificado en el objeto especificado.|  
-|[FtmBase::GetUnmarshalClass \(Método\)](../windows/ftmbase-getunmarshalclass-method.md)|Obtiene el CLSID que utiliza COM para encontrar un archivo DLL que contiene el código para el proxy correspondiente.  COM carga esta DLL para crear una instancia no inicializada del proxy.|  
-|[FtmBase::MarshalInterface \(Método\)](../Topic/FtmBase::MarshalInterface%20Method.md)|Escribe en una secuencia los datos necesarios para inicializar un objeto proxy en un proceso de cliente.|  
-|[FtmBase::ReleaseMarshalData \(Método\)](../Topic/FtmBase::ReleaseMarshalData%20Method.md)|Destruye un paquete de datos formado.|  
-|[FtmBase::UnmarshalInterface \(Método\)](../windows/ftmbase-unmarshalinterface-method.md)|Inicializa un proxy creado recientemente y devuelve un puntero de interfaz a ese proxy.|  
+|[FtmBase::CreateGlobalInterfaceTable (método)](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabla de interfaz global (GIT).|  
+|[FtmBase::DisconnectObject (método)](../windows/ftmbase-disconnectobject-method.md)|Forzosamente libera todas las conexiones externas a un objeto. Servidor del objeto llama a la implementación del objeto de este método antes de apagar.|  
+|[FtmBase::GetMarshalSizeMax (método)](../windows/ftmbase-getmarshalsizemax-method.md)|Obtiene el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.|  
+|[FtmBase::GetUnmarshalClass (método)](../windows/ftmbase-getunmarshalclass-method.md)|Obtiene el CLSID que utiliza COM para encontrar el archivo DLL que contiene el código para el proxy correspondiente. COM carga este archivo DLL para crear una instancia no inicializada del proxy.|  
+|[FtmBase::MarshalInterface (método)](../windows/ftmbase-marshalinterface-method.md)|Escribe en una secuencia los datos necesarios para inicializar un objeto de proxy en algún proceso de cliente.|  
+|[FtmBase::ReleaseMarshalData (método)](../windows/ftmbase-releasemarshaldata-method.md)|Destruye un paquete de calcular las referencias de datos.|  
+|[FtmBase::UnmarshalInterface (método)](../windows/ftmbase-unmarshalinterface-method.md)|Inicializa a un proxy recién creado y devuelve un puntero de interfaz a ese proxy.|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[FtmBase::marshaller\_ \(Miembro de datos\)](../windows/ftmbase-marshaller-data-member.md)|Contiene una referencia al contador de subproceso libre.|  
+|[FtmBase::marshaller_ (miembro de datos)](../windows/ftmbase-marshaller-data-member.md)|Contiene una referencia para el contador de referencias de subprocesamiento libre.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `FtmBase`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** ftm.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

@@ -1,120 +1,118 @@
 ---
-title: "Referencia de plantillas de proveedores OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas del proveedor OLE DB"
+title: Referencia de plantillas del proveedor OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b8271e7a5a69c91612a3bda13ad4b1cc817f012
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Referencia de plantillas de proveedores OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las clases e interfaces para las plantillas de proveedor OLE DB se pueden agrupar en las categorías siguientes.  El material de referencia también incluye información sobre [macros para las plantillas de proveedor OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
+# <a name="ole-db-provider-templates-reference"></a>Referencia de plantillas de proveedores OLE DB
+Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse en las siguientes categorías. El material de referencia también incluye información sobre la [macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
   
- Las clases utilizan la convención de nomenclatura siguiente: una clase denominada con el modelo **IWidgetImpl** proporcionaría una implementación de la interfaz **IWidget**.  
+ Las clases utilizan la convención de nomenclatura siguiente: una clase denominada con el patrón **IWidgetImpl** podría proporcionar una implementación de la interfaz **IWidget**.  
   
-## Clases de sesión  
+## <a name="session-classes"></a>Clases de sesión  
  [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)  
- Crea una nueva sesión del objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.  Interfaz de enlace en objetos de origen de datos.  
+ Crea una nueva sesión desde el objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada. Interfaz obligatoria en los objetos de origen de datos.  
   
  [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)  
- Implementar propiedades de sesión llamando a una función estática definida por el mapa del conjunto de propiedades.  El mapa del conjunto de propiedades se debe especificar en la clase de sesión.  Interfaz de enlace en sesiones.  
+ Implementa las propiedades de la sesión mediante una llamada a una función estática definida en la asignación de conjunto de propiedades. La asignación de conjunto de propiedad debe especificarse en la clase de sesión. Interfaz obligatoria en las sesiones.  
   
-## Clases de conjuntos de filas  
+## <a name="rowset-classes"></a>Clases de conjunto de filas  
  [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)  
   
- Proporciona una implementación de conjunto de filas OLE DB sin requerir la herencia múltiple de las interfaces de implementación.  El único método para el que debe proporcionar la implementación es **Ejecución**.  
+ Proporciona una implementación de conjunto de filas de OLE DB estándar sin necesidad de herencia múltiple de las interfaces de implementación. El único método para el que debe proporcionar la implementación es **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en la clase de `IRowsetImpl` .  Un identificador de fila es lógicamente etiqueta única para una fila de resultados.  `IRowsetImpl` crea nuevo `CSimpleRow` para cada fila solicitada en `IRowsetImpl::GetNextRows`.  
+ Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en la `IRowsetImpl` clase. Un identificador de fila es, lógicamente, una etiqueta única para una fila de resultados. `IRowsetImpl`crea un nuevo `CSimpleRow` para todas las filas solicitaron en `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
- OLE DB requiere los proveedores implementar **HACCESSOR**, que es una etiqueta a una matriz de estructuras de **DBBINDING** .  Proporciona s para **HACCESSOR**que es direcciones de estructuras de **BindType** .  Obligatorio en conjuntos de filas y los comandos.  
+ OLE DB requiere que los proveedores implementar un **HACCESSOR**, que es una etiqueta a una matriz de **DBBINDING** estructuras. Proporciona **HACCESSOR**s que son direcciones de la **BindType** estructuras. Obligatoria en los conjuntos de filas y comandos.  
   
  [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
- Delegados a una función estática definida por el mapa de columnas del proveedor.  Interfaz de enlace en conjuntos de filas y los comandos.  
+ Delegados a una función estática definida en la asignación de columna de proveedor. Interfaz obligatoria en conjuntos de filas y comandos.  
   
  [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
- Proporciona información sobre la disponibilidad de conversiones de tipos en un comando o en un conjunto de filas.  Obligatorio en comandos, conjuntos de filas, y conjuntos de filas de índice.  Implementa la interfaz de **IConvertType** delegando a la conversión del objeto proporcionado por OLE DB.  
+ Proporciona información sobre la disponibilidad de las conversiones de tipos en un comando o en un conjunto de filas. Obligatoria en los conjuntos de filas de índice, comandos y conjuntos de filas. Implementa el **IConvertType** interfaz mediante la delegación para el objeto de conversión proporcionado por OLE DB.  
   
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)  
- Implementa la interfaz y la función templatized `CreateSchemaRowset`de **IDBSchemaRowset** de generador.  
+ Implementa el **IDBSchemaRowset** interfaz y la función de creador de plantillas `CreateSchemaRowset`.  
   
  [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)  
- Abre y devuelve un conjunto de filas que incluya todas las filas de una sola tabla o índice.  Interfaz de enlace para un objeto de sesión.  
+ Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice. Interfaz obligatoria para un objeto de sesión.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementa la interfaz OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) , que permite actualizar de los valores de las columnas en las filas existentes, eliminando filas, e insertar nuevas filas.  
+ Implementa OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfaz, lo que permite la actualización de los valores de columnas en las filas existentes, eliminar filas e insertar nuevas filas.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Esta clase hereda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) y reemplaza [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  `IRowsetCreatorImpl` realiza las mismas funciones que `IObjectWithSite` pero también habilita las propiedades **DBPROPCANSCROLLBACKWARDS** y **DBPROPCANFETCHBACKWARDS**OLE DB.  
+ Esta clase hereda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) e invalida [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`realiza las mismas funciones que `IObjectWithSite` , pero también permite que las propiedades de OLE DB **DBPROPCANSCROLLBACKWARDS** y **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
- Implementa la interfaz de **IRowsetIdentity** , que permite comparar si dos filas de datos sean idénticas o no.  
+ Implementa el **IRowsetIdentity** interfaz, que le permite comparar si dos filas de datos son idénticos o no.  
   
  [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)  
- Proporciona una implementación de la interfaz de `IRowset` , que es la interfaz base de conjunto de filas.  
+ Proporciona una implementación de la `IRowset` interfaz, que es la interfaz de conjunto de filas base.  
   
  [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)  
- Implementa las propiedades del conjunto de filas utilizando el mapa del conjunto de propiedades definido en la clase de comando.  Interfaz de enlace en conjuntos de filas.  
+ Implementa las propiedades del conjunto de filas mediante la propiedad de asignación definida en la clase de comando Set. Interfaz obligatoria en conjuntos de filas.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementa la interfaz OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) , que captura filas arbitrarias de un conjunto de filas.  Para admitir los marcadores de OLE DB en un conjunto de filas, haga que el conjunto de filas heredan de esta clase.  
+ Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz, que captura filas arbitrarias desde un conjunto de filas. Para admitir marcadores de OLE DB en un conjunto de filas, haga que el conjunto de filas herede de esta clase.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Implementa funciones de difusión para advertir a los agentes de escucha del punto de conexión **IID\_IRowsetNotify** de cambios en el contenido del conjunto de filas.  Los consumidores que controlan notificaciones implementan [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) y se registran en ese punto de conexión.  
+ Implementa las funciones para informar de los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas. Los consumidores que administrar notificaciones implementan [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) y regístrelo en ese punto de conexión.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementa la interfaz OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) , que permite a los consumidores para retrasar la transmisión de los cambios realizados con [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) al origen de datos y deshacer cambia antes de la transmisión.  
+ Implementa OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interfaz, que permite a los consumidores retrasar la transmisión de los cambios realizados con [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) al origen de datos y deshacer los cambios antes de la transmisión.  
   
-## Clases de comando  
+## <a name="command-classes"></a>Clases de comandos  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
- Proporciona una implementación de la interfaz `ICommand`.  Esta interfaz no está visible, pero es administrada por **ICommandTextImpl**.  Una interfaz de enlace en el objeto de comando.  
+ Proporciona una implementación de la `ICommand` interfaz. Esta interfaz no está visible, pero se controla mediante **ICommandTextImpl**. Una interfaz obligatoria en el objeto de comando.  
   
  [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)  
- Esta implementación de la interfaz de **ICommandProperties** proporciona una función estática definida por la macro de `BEGIN_PROPSET_MAP` .  Obligatorio de comandos.  
+ Esta implementación de la **ICommandProperties** interfaz proporciona una función estática definida por el `BEGIN_PROPSET_MAP` macro. Obligatoria en los comandos.  
   
  [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)  
- Los conjuntos, almacenan, y devuelve el texto del comando.  Obligatorio de comandos.  
+ Establece, almacena y devuelve el texto del comando. Obligatoria en los comandos.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  
- Crea un nuevo comando del objeto de sesión y devuelve la interfaz solicitada en el comando creado recientemente.  Interfaz opcional en objetos de sesión.  
+ Crea un nuevo comando desde el objeto de sesión y devuelve la interfaz solicitada en el comando recién creado. Interfaz opcional en objetos de sesión.  
   
- Otras clases de comando son `IColumnsInfoImpl` y `IAccessorImpl`, descritos en la sección de las clases de conjunto de filas anteriormente.  
+ Otras clases de comando son `IColumnsInfoImpl` y `IAccessorImpl`, que se describen en la sección de las clases de conjunto de filas anterior.  
   
-## Clases de origen de datos  
+## <a name="data-source-classes"></a>Clases de origen de datos  
  [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)  
- Crea y elimina la conexión con el consumidor.  Interfaz de enlace en objetos de origen de datos y interfaz opcional de enumeradores.  
+ Crea y elimina la conexión con el consumidor. Interfaz obligatoria en los objetos de origen de datos y la interfaz opcional sobre los enumeradores.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties` es una interfaz de enlace para los objetos de origen de datos y una interfaz opcional para los enumeradores.  Sin embargo, si un enumerador expone **IDBInitialize**, debe exponer `IDBProperties` \(propiedades del origen de datos\).  
+ `IDBProperties`es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador **IDBInitialize**, debe exponer `IDBProperties` (propiedades del origen de datos).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
- Obtiene un puntero de interfaz al objeto de origen de datos.  Interfaz de enlace en la sesión.  
+ Obtiene un puntero de interfaz al objeto de origen de datos. Interfaz obligatoria en la sesión.  
   
-## Otras clases  
+## <a name="other-classes"></a>Otras clases  
  [CUtlProps](../../data/oledb/cutlprops-class.md)  
- Implementa las propiedades de una variedad de interfaces de propiedades OLE DB \(por ejemplo, `IDBProperties`, **ISessionProperties**, y `IRowsetInfo`\).  
+ Implementa las propiedades para una variedad de interfaces de la propiedad de OLE DB (por ejemplo, `IDBProperties`, **ISessionProperties**, y `IRowsetInfo`).  
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementa la interfaz OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) , agregando registros a y recuperar los registros de un miembro de datos.  
+ Implementa OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interfaz, agregar registros a y recuperar los registros de un miembro de datos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [plantillas OLE DB](../../data/oledb/ole-db-templates.md)
+ [Plantillas OLE DB](../../data/oledb/ole-db-templates.md)

@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::get_ErrorCode (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::get_ErrorCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_ErrorCode (método)"
+title: "Asyncbase:: Get_errorcode (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::get_ErrorCode
+dev_langs: C++
+helpviewer_keywords: get_ErrorCode method
 ms.assetid: 50b4f8a2-9a21-4ea0-bb5d-7ff524d62aea
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f06caf3dd5fb4d416a91848b0c39fcc76e3c89bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::get_ErrorCode (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera el código de error para la operación asincrónica actual.  
+# <a name="asyncbasegeterrorcode-method"></a>AsyncBase::get_ErrorCode (Método)
+Recupera el código de error de la operación asincrónica actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(HRESULT* errorCode) override;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `errorCode`  
  La ubicación donde se almacena el código de error actual.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, E\_ILLEGAL\_METHOD\_CALL si se cierra la operación asincrónica actual.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, E_ILLEGAL_METHOD_CALL si se cierra la operación asincrónica actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [AsyncBase \(Clase\)](../windows/asyncbase-class.md)
+## <a name="see-also"></a>Vea también  
+ [AsyncBase (clase)](../windows/asyncbase-class.md)

@@ -1,49 +1,46 @@
 ---
-title: ".ALLOCSTACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ALLOCSTACK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ALLOCSTACK directive"
+title: . ALLOCSTACK | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ALLOCSTACK
+dev_langs: C++
+helpviewer_keywords: .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b4e78703a979bb89078d9bb53e0c8093501446d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .ALLOCSTACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Genera **UWOP\_ALLOC\_SMALL** o **UWOP\_ALLOC\_LARGE** con el tamaño especificado para el desplazamiento actual en el prólogo.  
+# <a name="allocstack"></a>.ALLOCSTACK
+Genera un **UWOP_ALLOC_SMALL** o un **UWOP_ALLOC_LARGE** con el tamaño especificado para el desplazamiento actual en el prólogo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 .ALLOCSTACK size  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  MASM elegirá la codificación más eficaz para un tamaño determinado.  
   
- .ALLOCSTACK Permite a los usuarios de ml64.exe especifican cómo una función de cuadro desenredo y sólo se permite en el prólogo, que extiende de declaración FRAME de [PROCEDURE](../../assembler/masm/proc.md) a la directiva de [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) .  estas directivas no generan código; generan solo `.xdata` y `.pdata`.  .ALLOCSTACK Deben ir precedidas por las instrucciones que implementan realmente acciones para ser desenrollado.  Es aconsejable ajustar las directivas de desenredo y el código que está pensada desenrede en una macro para garantizar el contrato.  
+ . ALLOCSTACK permite a los usuarios ml64.exe especificar cómo se desenreda una función de marco y solo se permite en el prólogo, que abarca desde el [PROC](../../assembler/masm/proc.md) declaración de marco para el [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva. Estas directivas no generan código; solo generan `.xdata` y `.pdata`. . ALLOCSTACK debe ir precedida de instrucciones que realmente se implementan las acciones que puede desenredar. Es una buena práctica para ajustar las directivas de desenredado y el código que están concebidos para desenredar en una macro para asegurarse de acuerdo.  
   
- el operando de `size` debe ser un múltiplo de 8.  
+ El `size` operando debe ser un múltiplo de 8.  
   
- Para obtener más información, vea [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Para obtener más información, vea [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo especificar un desenredo y un controlador de excepciones:  
+## <a name="sample"></a>Ejemplo  
+ El ejemplo siguiente muestra cómo especificar un controlador de excepciones/desenredo:  
   
 ```  
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console  
@@ -73,5 +70,5 @@ text ENDS
 END  
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

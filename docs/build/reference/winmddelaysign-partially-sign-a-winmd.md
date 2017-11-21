@@ -1,48 +1,45 @@
 ---
-title: "/WINMDDELAYSIGN (firmar parcialmente un archivo winmd) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.WINMDDelaySign"
-dev_langs: 
-  - "C++"
+title: -WINMDDELAYSIGN (firmar parcialmente un archivo winmd) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.WINMDDelaySign
+dev_langs: C++
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 18f168c9a3faf4a6bc2676e142a35ee6314db391
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /WINMDDELAYSIGN (firmar parcialmente un archivo winmd)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Habilita la firma parcial de un archivo de metadatos en tiempo de ejecución de Windows \(.winmd\) colocando la clave pública del archivo.  
+# <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (firmar parcialmente un archivo winmd)
+Habilita la firma parcial de un archivo de metadatos en tiempo de ejecución de Windows (.winmd) colocando la clave pública en el archivo.  
   
 ```  
-  
 /WINMDDELAYSIGN[:NO]  
-  
 ```  
   
-## Comentarios  
- Es similar a la opción del vinculador [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) que se aplica al archivo de .winmd.  Utilice **\/WINMDDELAYSIGN** si desea colocar sólo la clave pública del archivo de .winmd.  De forma predeterminada, el vinculador actúa como si **\/WINMDDELAYSIGN:NO** fuera especificado; es decir, no firma el archivo de winmd.  
+## <a name="remarks"></a>Comentarios  
+ Es similar a la [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) opción del vinculador que se aplica el archivo .winmd. Use **/WINMDDELAYSIGN** si desea incluir sólo la clave pública en el archivo .winmd. De forma predeterminada, el vinculador actúa como si **/WINMDDELAYSIGN:NO** se especificaron; es decir, no firma el archivo winmd.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Seleccione la carpeta **Vinculador**.  
+2.  Seleccione el **vinculador** carpeta.  
   
-3.  Seleccione la página de propiedades **Metadatos de Windows**.  
+3.  Seleccione el **metadatos de Windows** página de propiedades.  
   
-4.  En el cuadro de lista desplegable de **Retrasar firma de metadatos de Windows** , seleccione la opción que desee.  
+4.  En el **signo de retraso de metadatos de Windows** lista desplegable, seleccione la opción que desee.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

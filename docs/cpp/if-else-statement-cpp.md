@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
 - if_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-else-statement-c"></a>if-else (Instrucción) (C++)
 Controla la bifurcación condicional. Las instrucciones de la *bloque if* se ejecuta sólo si el *expresión if* se evalúa como un valor distinto de cero (o `true`). Si el valor de *expresión* es distinto de cero, *statement1* y cualquier otra instrucción en el bloque se ejecutan y el bloque-else, si está presente, se omite. Si el valor de *expresión* es cero, a continuación, se omite el bloque if y el bloque-else, si está presente, se ejecuta. Las expresiones que se evalúan como distinto de cero son

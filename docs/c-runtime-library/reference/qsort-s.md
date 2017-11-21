@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- qsort_s
+apiname: qsort_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- qsort_s
-dev_langs:
-- C++
+f1_keywords: qsort_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [C++], sorting
 - quick-sort algorithm
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 834441e90cb6656f308673e8475b1cc2e38fd3a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="qsorts"></a>qsort_s
 Realiza una ordenación rápida. Versión de [qsort](../../c-runtime-library/reference/qsort.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -117,7 +98,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |cualquiera|cualquiera|cualquiera|any|<= 0|`EINVAL`|  
 |cualquiera|cualquiera|`NULL`|cualquiera|cualquiera|`EINVAL`|  
   
- `qsort_s` tiene el mismo comportamiento que `qsort`, pero tiene el parámetro `context` y establece `errno`. Si se pasa un parámetro `context`, las funciones de comparación pueden usar un puntero de objeto para obtener acceso a la funcionalidad del objeto o a otra información que no es accesible a través de un puntero de elemento. La adición de la `context` parámetro hace `qsort_s` más segura porque `context` puede utilizarse para evitar errores de reentrada provocados por el uso de variables estáticas para disponer de información compartida para el `compare` la función.  
+ `qsort_s` tiene el mismo comportamiento que `qsort`, pero tiene el parámetro `context` y establece `errno`. Si se pasa un parámetro `context`, las funciones de comparación pueden usar un puntero de objeto para obtener acceso a la funcionalidad del objeto o a otra información que no es accesible a través de un puntero de elemento. La adición de la `context` parámetro hace `qsort_s` más segura porque `context` puede usarse para evitar errores de reentrada introducidos mediante el uso de variables estáticas que estén disponibles para la información compartida la `compare` función.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -130,7 +111,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
  **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `context` parámetro en el `qsort_s` la función. El parámetro `context` facilita la ejecución de ordenaciones seguras para los subprocesos. En lugar de usar variables estáticas que deben estar sincronizadas para garantizar la seguridad de los subprocesos, pase otro parámetro `context` en cada ordenación. En este ejemplo, se usa un objeto de configuración regional como parámetro `context`.  
+ En el ejemplo siguiente se muestra cómo utilizar el `context` parámetro en el `qsort_s` (función). El parámetro `context` facilita la ejecución de ordenaciones seguras para los subprocesos. En lugar de usar variables estáticas que deben estar sincronizadas para garantizar la seguridad de los subprocesos, pase otro parámetro `context` en cada ordenación. En este ejemplo, se usa un objeto de configuración regional como parámetro `context`.  
   
 ```  
 // crt_qsort_s.cpp  

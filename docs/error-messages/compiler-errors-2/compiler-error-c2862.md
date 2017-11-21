@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2862
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2862
+f1_keywords: C2862
+dev_langs: C++
+helpviewer_keywords: C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: d39cce24f46b8b0ef1ed21ac603feb95684b2f02
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2862"></a>Error del compilador C2862
 'interfaz': una interfaz solo puede tener miembros públicos  

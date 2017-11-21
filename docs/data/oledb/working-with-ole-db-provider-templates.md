@@ -1,31 +1,31 @@
 ---
-title: "Trabajar con plantillas de proveedores OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proveedores OLE DB, plantillas"
-  - "OLE DB, plantillas de proveedores"
-  - "referencia, plantillas del proveedor OLE DB"
-  - "plantillas, proveedor OLE DB"
+title: Trabajar con plantillas de proveedores OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Trabajar con plantillas de proveedores OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para aprender a trabajar con plantillas de proveedor OLE DB, vea los temas siguientes:  
+# <a name="working-with-ole-db-provider-templates"></a>Trabajar con plantillas de proveedores OLE DB
+Para obtener información sobre cómo trabajar con las plantillas de proveedor OLE DB, vea los temas siguientes:  
   
 -   [Agregar una interfaz a un proveedor](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
@@ -43,6 +43,6 @@ Para aprender a trabajar con plantillas de proveedor OLE DB, vea los temas sigui
   
 -   [Convertir datos no compatibles con el proveedor](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## Vea también  
- [Referencia de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

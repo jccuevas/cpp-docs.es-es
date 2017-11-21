@@ -1,50 +1,50 @@
 ---
-title: "Optimizar el c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe (compilador), rendimiento"
-  - "código, optimizar"
-  - "optimización"
-  - "optimización, código C++"
-  - "rendimiento, compilador"
-  - "rendimiento, optimizar código"
+title: "Optimizar el código | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance, optimizing code
+- optimization
+- cl.exe compiler, performance
+- optimization, C++ code
+- code, optimizing
+- performance, compiler
 ms.assetid: 4f33e6c7-9870-43b3-9c2f-d7e44f764971
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3da29e9a0269c4748f10d9e8ba926103305239e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Optimizar el c&#243;digo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si optimiza un ejecutable, puede lograr un equilibrio entre una velocidad de ejecución rápida y un tamaño de código pequeño.  En este tema se analizan algunos mecanismos que proporciona Visual C\+\+ para ayudarle a optimizar el código.  
+# <a name="optimizing-your-code"></a>Optimizar el código
+Al optimizar un archivo ejecutable, puede lograr un equilibrio entre la velocidad de ejecución rápida y tamaño de código pequeño. Este tema describen algunos de los mecanismos proporcionados por Visual C++ para ayudarle a optimizar el código.  
   
-## Características del lenguaje  
- En los siguientes temas se describen algunas de las características de optimización del lenguaje de C\/C\+\+.  
+## <a name="language-features"></a>Características del lenguaje  
+ Los temas siguientes describen algunas de las características de optimización en el lenguaje C o C++.  
   
  [Directivas pragma y palabras clave de optimización](../../build/reference/optimization-pragmas-and-keywords.md)  
- Una lista de palabras clave y pragmas que puede utilizar en el código para mejorar el rendimiento.  
+ Una lista de palabras clave y directivas pragma que puede usar en el código para mejorar el rendimiento.  
   
  [Opciones del compilador por categoría](../../build/reference/compiler-options-listed-by-category.md)  
- Una lista de opciones del compilador **\/O** que afectan específicamente a la velocidad de ejecución o al tamaño del código.  
+ Una lista de **/O** opciones del compilador que específicamente afectan al tamaño de velocidad o el código de ejecución.  
   
  [Declarador de referencia a un valor R: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
- Las referencias a valor R \(Rvalue\) admiten la implementación de la *semántica de transferencia de recursos*.  Si se utiliza la semántica de transferencia de recursos para implementar las bibliotecas de plantillas, el rendimiento de las aplicaciones que utilizan esas plantillas puede mejorar significativamente.  
+ Referencias a valor r admiten la implementación de *semántica de transferencia de*. Si puede mejorar significativamente el movimiento semántica se usa para implementar las bibliotecas de plantillas, el rendimiento de las aplicaciones que usan las plantillas.  
   
-### La directiva pragma Optimize  
- Si una sección optimizada del código origina errores o ralentiza la ejecución, puede utilizar la directiva pragma [optimize](../../preprocessor/optimize.md) para desactivar la optimización en esa sección.  
+### <a name="the-optimize-pragma"></a>La directiva Pragma optimize  
+ Si una sección optimizada del código origina errores o ralentiza la ejecución, puede utilizar el [optimizar](../../preprocessor/optimize.md) pragma para desactivar la optimización en esa sección.  
   
- Limite la sección de código con dos directivas pragma, según se indica a continuación.  
+ Inserte el código entre dos directivas pragma, como se indica a continuación.  
   
 ```  
 #pragma optimize("", off)  
@@ -52,49 +52,49 @@ Si optimiza un ejecutable, puede lograr un equilibrio entre una velocidad de eje
 #pragma optimize("", on)  
 ```  
   
-## Programar prácticas  
- Puede que vea algunos mensajes de advertencia adicionales al compilar el código con optimización.  Este es el comportamiento previsto, ya que algunas advertencias solo están relacionadas con el código optimizado.  Puede evitar muchos problemas de optimización si tiene en cuenta estas advertencias.  
+## <a name="programming-practices"></a>Prácticas recomendadas de programación  
+ Verá mensajes de advertencia adicionales al compilar el código con la optimización. Este comportamiento es el esperado porque algunas advertencias solo están relacionadas con el código optimizado. Puede evitar muchos problemas de optimización si tiene en cuenta estas advertencias.  
   
- Paradójicamente, la optimización de un programa para aumentar la velocidad, puede hacer que el código se ejecute más despacio.  Esto se debe a que algunas optimizaciones de velocidad aumentan el tamaño del código.  Por ejemplo, al poner las funciones en línea se elimina la sobrecarga de las llamadas de función.  Sin embargo, incluir demasiadas funciones en línea podría hacer su programa tan grande que el número de errores de página de memoria virtual aumentase.  Así, la velocidad ganada al eliminar las llamadas a funciones puede perderse a causa del intercambio de memoria.  
+ Paradójicamente, la optimización de un programa para acelerar el proceso podría provocar código se ejecuten más lentamente. Esto es porque algunas optimizaciones para acelerar el proceso de aumentar el tamaño del código. Por ejemplo, las funciones de inclusión elimina la sobrecarga de llamadas a función. Sin embargo, la inclusión demasiado código podría hacer que su programa tan grande que aumente el número de página de memoria virtual errores. Por lo tanto, la velocidad obtenida al eliminar las llamadas a funciones puede perderse del intercambio de memoria.  
   
- En los siguientes temas se analizan procedimientos de programación adecuados.  
+ Los temas siguientes tratan sobre prácticas recomendadas de programación.  
   
  [Sugerencias para mejorar código en el que la velocidad de ejecución es importante](../../build/reference/tips-for-improving-time-critical-code.md)  
- Técnicas mejores de codificación pueden producir mejor rendimiento.  En este tema se sugieren técnicas de codificación que pueden ayudarle a asegurarse de que las partes del código que llevan mucho tiempo funcionan correctamente.  
+ Técnicas de codificación mejor pueden mejorar el rendimiento. Este tema sugieren técnicas de codificación que le ayudarán a asegurarse de que las partes del código crítico en el tiempo se ejecutan correctamente.  
   
  [Procedimientos recomendados para la optimización](../../build/reference/optimization-best-practices.md)  
- Proporciona directrices generales sobre la mejor forma de optimizar la aplicación.  
+ Proporciona directrices generales sobre la mejor manera de optimizar la aplicación.  
   
-## Depurar código optimizado  
- Dado que la optimización puede cambiar el código creado por el compilador, se recomienda depurar la aplicación y medir su rendimiento antes y después de optimizar el código.  
+## <a name="debugging-optimized-code"></a>Depurar código optimizado  
+ Dado que la optimización puede cambiar el código creado por el compilador, se recomienda depurar la aplicación y medir su rendimiento y, a continuación, optimizar el código.  
   
  Los temas siguientes proporcionan información básica sobre cómo depurar.  
   
--   [Depurar en Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md)  
+-   [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
   
 -   [Problemas comunes al crear versiones de lanzamiento](../../build/reference/common-problems-when-creating-a-release-build.md)  
   
- En los temas siguientes se ofrece información más avanzada sobre cómo depurar.  
+ Los temas siguientes proporcionan información más avanzada sobre cómo se depuran.  
   
--   [Cómo: Depurar código optimizado](../Topic/How%20to:%20Debug%20Optimized%20Code.md)  
+-   [Cómo: Depurar código optimizado](/visualstudio/debugger/how-to-debug-optimized-code)  
   
 -   [Por qué los números de punto flotante pierden precisión](../../build/reference/why-floating-point-numbers-may-lose-precision.md)  
   
- El siguiente gran variedad de temas proporciona información sobre cómo optimizar la compilación, la carga y ejecutar el código.  
+ La variedad de temas siguiente proporcionan información acerca de cómo optimizar generar, cargar y ejecutar el código.  
   
 -   [Mejorar el rendimiento del compilador](../../build/reference/improving-compiler-throughput.md)  
   
--   [La utilización de un nombre de función sin \(\) no genera código](../../build/reference/using-function-name-without-parens-produces-no-code.md)  
+-   [Uso de un nombre de función sin () no genera código](../../build/reference/using-function-name-without-parens-produces-no-code.md)  
   
--   [Optimizar un ensamblado alineado](../../assembler/inline/optimizing-inline-assembly.md)  
+-   [Optimización de un ensamblado insertado](../../assembler/inline/optimizing-inline-assembly.md)  
   
--   [Especificar optimizaciones del compilador para un proyecto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
+-   [Especificación de optimización del compilador para un proyecto ATL](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
--   [¿Qué técnicas de optimización se deben utilizar para mejorar el rendimiento de las aplicaciones cliente al cargarlas?](../../build/what-optimization-techniques-should-i-use.md)  
+-   [¿Qué técnicas de optimización debo usar para mejorar el rendimiento de la aplicación cliente al cargarlas?](../../build/dll-frequently-asked-questions.md#mfc_optimization)  
   
--   [!INCLUDE[crabout](../../build/reference/includes/crabout_md.md)] cómo reducir el tiempo de carga de métodos DLL, vea “optimizing DLL load time performance” en la columna “Under the Hood” de “MSDN Magazine” en[MSDN Library](http://go.microsoft.com/fwlink/?linkid=556) el sitio Web.  
+-   [!INCLUDE[crabout](../../build/reference/includes/crabout_md.md)]Cómo reducir el tiempo de carga de métodos DLL, vea "Optimizar DLL Load Time Performance" en la columna "Under the Hood" de "MSDN Magazine" en la [MSDN Library](http://go.microsoft.com/fwlink/?linkid=556) sitio Web.  
   
--   [!INCLUDE[crabout](../../build/reference/includes/crabout_md.md)] cómo minimizar la paginación en aplicaciones, vea “rendimiento en tiempo de ejecución de Artículos con la herramienta suavizado del espacio de trabajo” y “rendimiento en tiempo de ejecución de Artículos con la herramienta \- Part suavizado 2 " del espacio de trabajo en la columna “Bugslayer” de “MSDN Magazine” en[MSDN Library](http://go.microsoft.com/fwlink/?linkid=556) el sitio Web.  
+-   [!INCLUDE[crabout](../../build/reference/includes/crabout_md.md)]cómo minimizar la paginación en aplicaciones, consulte "Mejorar el tiempo de ejecución Performance with the Smooth trabajar establecer Tool" y "Improving Runtime Performance with the Smooth Working Set Tool: parte 2" en la columna "Bugslayer" de "MSDN Magazine" en la [MSDN Biblioteca](http://go.microsoft.com/fwlink/?linkid=556) sitio Web.  
   
-## Vea también  
- [Referencia de compilación de C\/C\+\+](../../build/reference/c-cpp-building-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)

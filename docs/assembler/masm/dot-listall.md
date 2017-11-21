@@ -1,33 +1,30 @@
 ---
-title: ".LISTALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTALL directive"
+title: . LISTALL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTALL
+dev_langs: C++
+helpviewer_keywords: .LISTALL directive
 ms.assetid: fccb5117-542d-4ae3-869b-40cc2ab55ecb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a7b7416205b9844146ed21c25f1d871afa2ac313
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .LISTALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Inicia la lista de todas las instrucciones.  
+# <a name="listall"></a>.LISTALL
+Inicia el listado de todas las instrucciones.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,8 +32,8 @@ Inicia la lista de todas las instrucciones.
   
 ```  
   
-## Comentarios  
- equivalente a la combinación de [.LIST](../../assembler/masm/dot-list.md), de [.LISTIF](../../assembler/masm/dot-listif.md), y de [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
+## <a name="remarks"></a>Comentarios  
+ Equivalente a la combinación de [. LISTA](../../assembler/masm/dot-list.md), [. LISTASI](../../assembler/masm/dot-listif.md), y [. LISTMACROALL](../../assembler/masm/dot-listmacroall.md).  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

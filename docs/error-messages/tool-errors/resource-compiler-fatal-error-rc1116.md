@@ -1,29 +1,27 @@
 ---
-title: "Error irrecuperable del compilador de recursos RC1116 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1116"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1116"
+title: Error irrecuperable del compilador de recursos RC1116 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1116
+dev_langs: C++
+helpviewer_keywords: RC1116
 ms.assetid: 1eacc5c3-d946-4615-83e4-1b8ebd472139
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 31213ff8fdc0b6c977edb9d99e0f16db45287439
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error irrecuperable del compilador de recursos RC1116
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-fatal-error-rc1116"></a>Error irrecuperable del compilador de recursos RC1116
 RC va a finalizar después de errores de preprocesador  
   
- El compilador de recursos se detuvo debido a otros errores.  Corrija los demás errores y vuelva a compilar.
+ El compilador de recursos se detuvo debido a otros errores. Corrija los demás errores y vuelva a compilar.

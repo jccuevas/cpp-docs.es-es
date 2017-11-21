@@ -1,45 +1,44 @@
 ---
-title: "4. Environment Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4. Las Variables de entorno | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fcd308f21d66535a983e70506fe91afb5c7042f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 4. Environment Variables
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este capítulo describe las variables de entorno de OpenMP c y C\+\+ API \(o los mecanismos específicos de la plataforma equivalentes\) que controlan la ejecución de código paralelo.  Los nombres de variables de entorno deben estar en mayúsculas.  Los valores asignados a ellas no distinguen entre mayúsculas y minúsculas y pueden tener espacio en blanco inicial y final.  Las modificaciones en los valores después de programa han iniciado se omiten.  
+# <a name="4-environment-variables"></a>4. Variables de entorno
+Este capítulo describen las variables de entorno de OpenMP C y C++ API (o equivalente mecanismos específicos de la plataforma) que controlan la ejecución de código paralelo.  Los nombres de variables de entorno deben estar en mayúsculas. Los valores asignados a ellos distinguen mayúsculas de minúsculas y pueden tener espacios en blanco iniciales y finales.  Se omiten las modificaciones realizadas en los valores después de que ha iniciado el programa.  
   
  Las variables de entorno son los siguientes:  
   
--   **OMP\_SCHEDULE** establece el tipo de programación en tiempo de ejecución y el tamaño del fragmento.  
+-   **OMP_SCHEDULE** establece el tamaño de tipo y el fragmento de la programación de tiempo de ejecución.  
   
--   **OMP\_NUM\_THREADS** establece el número de subprocesos que se utilizarán durante la ejecución.  
+-   **OMP_NUM_THREADS** establece el número de subprocesos que se utilizarán durante la ejecución.  
   
--   Los permisos de**OMP\_DYNAMIC** o deshabilita el ajuste dinámico de subprocesos.  
+-   **OMP_DYNAMIC** habilita o deshabilita el ajuste dinámico del número de subprocesos.  
   
--   Los permisos de**OMP\_NESTED** o deshabilita paralelismo anidados.  
+-   **OMP_NESTED** habilita o deshabilita el paralelismo anidado.  
   
- Los ejemplos de este capítulo muestran solo cómo estas variables se pueden establecer en entornos del shell de UNIX C \(csh\).  En el shell de Korn y entornos de DOS acciones son similares, como sigue:  
+ Los ejemplos de este capítulo solo muestran cómo se podrían establecer estas variables en entornos de shell (csh) de C Unix. En Korn shell y entornos de DOS de las acciones son similares, como se indica a continuación:  
   
  csh:  
- setenv OMP\_SCHEDULE “dynamic”  
+ setenv OMP_SCHEDULE "dinámico"  
   
  ksh:  
- exportación OMP\_SCHEDULE\= " dynamic”  
+ Exportar OMP_SCHEDULE = "dinámico"  
   
  DOS:  
- establezca OMP\_SCHEDULE\= " dynamic”
+ establecer OMP_SCHEDULE = "dinámico"

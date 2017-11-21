@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 72fc5157bb1863fe3aebe99b2a9d59ee965cf563
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>Error de las herramientas del vinculador LNK2005
 *símbolo* ya definido en objeto  
@@ -49,7 +30,7 @@ Este error se sigue por error irrecuperable [LNK1169](../../error-messages/tool-
   
 ### <a name="possible-causes-and-solutions"></a>Posibles causas y soluciones  
   
-Por lo general, este error significa que han interrumpido la *regla de una definición*, lo que permite una única definición para cualquier plantilla utilizada, la función, el tipo o el objeto en un archivo de objeto determinado y solo una definición en el archivo ejecutable completo para los objetos visibles externamente o funciones.  
+Por lo general, este error significa que han interrumpido la *regla de una definición*, lo que permite una única definición para cualquier plantilla utilizada, la función, el tipo o el objeto en un archivo de objeto determinado y solo una definición en el archivo ejecutable completo para objetos visibles externamente o funciones.  
   
 Estos son algunas causas comunes de este error.  
   
@@ -118,7 +99,7 @@ Estos son algunas causas comunes de este error.
   
 -   Este error puede producirse si crea un vínculo más de una versión de la biblioteca estándar o CRT. Por ejemplo, si se intenta vincular tanto la versión comercial y bibliotecas de depuración de CRT o las versiones estáticas y dinámicas de una biblioteca o dos versiones diferentes de una biblioteca estándar a su archivo ejecutable, este puede aparecer el error muchas veces. Para corregir este problema, quite todo menos una copia de cada biblioteca de comando de link. No se recomienda mezclar comercial y depurar las bibliotecas o distintas versiones de una biblioteca, en el mismo archivo ejecutable.  
   
-    Para indicar al vinculador que utilice bibliotecas distintas de los valores predeterminados, en la línea de comandos, especifique las bibliotecas para usar y usar el [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) opción para deshabilitar las bibliotecas predeterminadas. En el IDE, agregue referencias al proyecto para especificar las bibliotecas para usar y, a continuación, abra el **páginas de propiedades** cuadro de diálogo para el proyecto y en el **vinculador**, **entrada** página de propiedades, establecer **omitir todas las bibliotecas predeterminadas**, o **omitir determinadas bibliotecas predeterminado** propiedades para deshabilitar las bibliotecas predeterminadas.   
+    Para indicar al vinculador que utilice bibliotecas distintas de los valores predeterminados, en la línea de comandos, especifique las bibliotecas para usar y usar el [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) opción para deshabilitar las bibliotecas predeterminadas. En el IDE, agregue referencias al proyecto para especificar las bibliotecas para usar y, a continuación, abra el **páginas de propiedades** cuadro de diálogo para el proyecto y en el **vinculador**, **entrada** propiedad página, establecer **omitir todas las bibliotecas predeterminadas**, o **omitir determinadas bibliotecas predeterminado** propiedades para deshabilitar las bibliotecas predeterminadas.   
   
 -   Este error puede producirse si usa las bibliotecas estáticas y dinámicas de mezcla cuando se usa el [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opción. Por ejemplo, este error puede producirse si compila un archivo DLL para usarlo en su archivo ejecutable que se vincula en CRT estático. Para corregir este problema, use sólo bibliotecas estáticas o bibliotecas de dinámicos para todo el ejecutable y para cualquier biblioteca de que compilación para usar en el archivo ejecutable.  
   
@@ -147,4 +128,3 @@ Si está utilizando una versión anterior del conjunto de herramientas, vea esto
   
 -   [Recibe errores LNK2005 cuando se compila un proyecto de archivo ejecutable (.exe) de ATL de Visual C++](https://support.microsoft.com/kb/184235).  
   
-

@@ -1,46 +1,45 @@
 ---
-title: "lock::is_locked | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "is_locked"
-  - "msclr::lock::is_locked"
-  - "lock::is_locked"
-  - "msclr::lock.is_locked"
-  - "lock.is_locked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::is_locked"
+title: Lock::is_locked | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- is_locked
+- msclr::lock::is_locked
+- lock::is_locked
+- msclr::lock.is_locked
+- lock.is_locked
+dev_langs: C++
+helpviewer_keywords: lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bd0865b66d934920a1c74912d482a3d57030a115
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# lock::is_locked
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica si se mantiene un bloqueo.  
+# <a name="lockislocked"></a>lock::is_locked
+Indica si se encuentra un bloqueo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool is_locked();  
 ```  
   
-## Valor devuelto  
- `true` si se mantiene un bloqueo, `false` de otra manera.  
+## <a name="return-value"></a>Valor devuelto  
+ `true`Si se mantiene un bloqueo, `false` en caso contrario.  
   
-## Ejemplo  
- Este ejemplo utiliza una sola instancia de una clase a través de varios subprocesos.  La clase utiliza un bloqueo en sí misma para garantizar que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase compruebe periódicamente para ver si todavía existen algunos subprocesos de trabajo, y espera para salir hasta que todos los subprocesos de trabajo completen sus tareas.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo seguirán existan y espera hasta salir hasta que todos los subprocesos de trabajo ha completado sus tareas.  
   
 ```  
 // msl_lock_is_locked.cpp  
@@ -115,22 +114,25 @@ int main() {
 }  
 ```  
   
-  **En el subproceso 3, contador \= 0**  
-**En el subproceso 3, contador \= 10**  
-**En el subproceso 5, contador \= 0**  
-**En el subproceso 5, contador \= 10**  
-**En el subproceso 4, contador \= 0**  
-**En el subproceso 4, contador \= 10**  
-**En el subproceso 7, contador \= 0**  
-**En el subproceso 7, contador \= 10**  
-**En el subproceso 6, contador \= 0**  
-**En el subproceso 6, contador \= 10**  
-**Todos los subprocesos completos.**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
  [lock::operator bool](../dotnet/lock-operator-bool.md)

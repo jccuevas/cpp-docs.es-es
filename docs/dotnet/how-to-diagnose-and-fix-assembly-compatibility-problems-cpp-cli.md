@@ -1,53 +1,52 @@
 ---
-title: "C&#243;mo: Diagnosticar y resolver los problemas de compatibilidad de los ensamblados (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compatibilidad, entre ensamblados"
-  - "excepciones, diagnosticar un comportamiento extraño"
-  - "control de versiones"
-  - "control de versiones, diagnosticar conflictos"
+title: "Cómo: diagnosticar y resolver los problemas de compatibilidad de ensamblados (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Diagnosticar y resolver los problemas de compatibilidad de los ensamblados (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se explica lo que sucede cuando la versión de un ensamblado al que se hace referencia en el tiempo de compilación no coincide con la versión del ensamblado al que se hace referencia en el tiempo de ejecución, y cómo evitar el problema.  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Cómo: Diagnosticar y resolver los problemas de compatibilidad de los ensamblados (C++/CLI)
+Este tema explica lo que puede suceder cuando la versión de un ensamblado al que hace referencia en tiempo de compilación no coincide con la versión del ensamblado al que hace referencia en tiempo de ejecución y cómo evitar el problema.  
   
- Cuando se compila un ensamblado, se puede hacer referencia a otros ensamblados con la sintaxis `#using`.  Durante la compilación, el compilador tiene acceso a estos ensamblados.  La información de estos ensamblados se utiliza para tomar decisiones de optimización.  
+ Cuando se compila un ensamblado, se pueden hacer referencia a otros ensamblados con el `#using` sintaxis. Durante la compilación, se obtiene acceso a estos ensamblados por el compilador. Información de estos ensamblados se utiliza para tomar decisiones de optimización.  
   
- No obstante, si se cambia y compila el ensamblado al que se hace referencia, y no se vuelve a compilar el ensamblado que hace referencia y que es dependiente de él, es posible que los ensamblados sigan sin ser compatibles.  Las decisiones de optimización que eran válidas al principio pueden no ser correctas con respecto a la nueva versión de ensamblado.  Pueden producirse distintos errores en tiempo de ejecución debido a estas incompatibilidades.  No hay ninguna excepción concreta que se genere en casos como éste.  La manera en que se informa del error en tiempo de ejecución depende de la naturaleza del cambio de código que produjo el problema.  
+ Sin embargo, si se cambia y se vuelve a compilar el ensamblado que se hace referencia, y no se vuelve a compilar el ensamblado de referencia que depende de él, los ensamblados podrían no ser compatible. Las decisiones de optimización que eran válidas en primer lugar pueden no ser correctas con respecto a la nueva versión del ensamblado. Pueden producir varios errores de tiempo de ejecución debido a estas incompatibilidades. No hay ninguna excepción concreta que se producirán en esos casos. La manera en que se notifica el error en tiempo de ejecución depende de la naturaleza del cambio de código que provocó el problema.  
   
- Estos errores no deberían ser un problema en el código de producción final siempre que se recompile toda la aplicación para la versión de lanzamiento del producto.  Los ensamblados que se venden al público deben estar marcados con un número de versión oficial que garantice que se han evitado estos problemas.  Para obtener más información, vea [Versiones de los ensamblados](../Topic/Assembly%20Versioning.md).  
+ Estos errores no deberían ser un problema en el código de producción final siempre y cuando se vuelve a generar toda la aplicación para la versión de lanzamiento del producto. Los ensamblados que se publican para el público deben marcarse con un número de versión oficial, lo que asegurará que se eviten todos estos problemas. Para obtener más información, vea [Versiones de los ensamblados](/dotnet/framework/app-domains/assembly-versioning).  
   
-### Diagnosticar y corregir un error de incompatibilidad  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnosticar y corregir un error de incompatibilidad  
   
-1.  Si se encuentra con excepciones en tiempo de ejecución u otras condiciones de error que se producen en el código que hace referencia a otro ensamblado, y que no tienen otra causa identificada, es posible que se trate de un ensamblado no actualizado.  
+1.  Si encuentra con excepciones en tiempo de ejecución u otras condiciones de error que se producen en el código que hace referencia a otro ensamblado y tener ninguna otra causa identificada, puede tratar con un ensamblado no está actualizado.  
   
-2.  En primer lugar, aísle y reproduzca la excepción u otra condición de error.  Un problema que surge debido a una excepción no actualizada debería ser reproducible.  
+2.  En primer lugar, aísle y reproduzca la excepción u otra condición de error. Un problema que se produce debido a una excepción no actualizada debería ser reproducible.  
   
-3.  Compruebe la marca de tiempo de cualquier ensamblado al que se hace referencia en la aplicación.  
+3.  Compruebe la marca de tiempo de cualquier ensamblado al que hace referencia en la aplicación.  
   
-4.  Si las marcas de tiempo de cualquier ensamblado al que se hace referencia son posteriores a la marca de tiempo de la última compilación de la aplicación, entonces la aplicación no está actualizada.  Si ocurre esto, vuelva a compilar la aplicación con el ensamblado más reciente y haga los cambio de código necesarios.  
+4.  Si las marcas de tiempo de todos los ensamblados que se hace referencia son posteriores a la marca de tiempo de la última compilación de la aplicación, la aplicación es obsoleta. Si esto ocurre, vuelva a compilar la aplicación con el ensamblado más reciente y realice los cambios de código necesarios.  
   
-5.  Vuelva a ejecutar la aplicación, siga los pasos que reproducen el problema y compruebe que ya no se produce la excepción.  
+5.  Vuelva a ejecutar la aplicación, lleve a cabo los pasos que reproducen el problema y compruebe que no se produce la excepción.  
   
-## Ejemplo  
- El programa siguiente muestra el problema al reducir la accesibilidad de un método e intentar obtener acceso a ese método en otro ensamblado sin volver a compilar.  Intente compilar `changeaccess.cpp` primero.  Éste es el ensamblado al que se hace referencia que cambiará.  A continuación, compile `referencing.cpp`.  La compilación se realiza correctamente.  Ahora, reduzca la accesibilidad del método llamado.  Vuelva a compilar `changeaccess.cpp` con el marcador `/DCHANGE_ACCESS`.  Esto hace que el método sea protegido, en lugar de privado, por lo que se le puede llamar de manera válida durante más tiempo.  Sin volver a compilar `referencing.exe`, vuelva a ejecutar la aplicación.  Se producirá una excepción <xref:System.MethodAccessException>.  
+## <a name="example"></a>Ejemplo  
+ El programa siguiente muestra el problema al reducir la accesibilidad de un método e intentando obtener acceso a ese método en otro ensamblado sin volver a compilar. Intente compilarla `changeaccess.cpp` primero. Esto es el ensamblado que se hace referencia que cambiará. A continuación, compile `referencing.cpp`. La compilación se realiza correctamente. Ahora, reduzca la accesibilidad del método llamado. Volver a compilar `changeaccess.cpp` con la marca `/DCHANGE_ACCESS`. Esto hace que el método protegido, en lugar de privado, por lo que ya puede llamarse legalmente. Sin tener que recompilar `referencing.exe`, vuelva a ejecutar la aplicación. Una excepción <xref:System.MethodAccessException> dará como resultado.  
   
 ```  
 // changeaccess.cpp  
@@ -100,6 +99,6 @@ int main() {
   
 ```  
   
-## Vea también  
- [\#using \(Directiva\)](../preprocessor/hash-using-directive-cpp.md)   
- [Tipos administrados](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [#using (directiva)](../preprocessor/hash-using-directive-cpp.md)   
+ [Tipos administrados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

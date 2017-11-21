@@ -4,56 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4412
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4412
+f1_keywords: C4412
+dev_langs: C++
+helpviewer_keywords: C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 92aa12514088d0fbffbe826a495d76b49ab311d1
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 2cac6336997ee7ff7a72264ad8449b7d6190255e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Advertencia del compilador (nivel 2) C4412
-'función': firma de la función contiene el tipo 'tipo'; Objetos de C++ son seguro pasar entre código puro y mixto o nativo.  
+'función': firma de la función contiene el tipo 'tipo'; Los objetos de C++ son no es seguro pasar entre código puro y mixto o nativo.  
   
- El **/CLR: pure** opción del compilador está desusada en Visual Studio 2015.  
+ El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015.  
   
- El compilador detectó una situación potencialmente no segura que podría producir un error en tiempo de ejecución: se está realizando una llamada desde una **/CLR: pure** compilando una función que se importó mediante dllimport y la firma de función contiene un tipo no seguro. Un tipo no es seguro si contiene una función miembro o si tiene un miembro de datos es un tipo no seguro o un direccionamiento indirecto a un tipo no seguro.  
+ El compilador detectó una situación potencialmente inseguro que podría producir un error en tiempo de ejecución: se está realizando una llamada desde un **/CLR: pure** compiland a una función que se importó mediante dllimport y la firma de función contiene un tipo no seguro . Un tipo no es seguro si contiene una función miembro o tiene un miembro de datos que es un tipo no seguro o un direccionamiento indirecto a un tipo no seguro.  
   
- Esto no es seguro debido a la diferencia en el valor predeterminado llamando a convenciones entre código puro y nativo (o mixto nativo y administrado). Al importar (a través de `dllimport`) una función en una **/CLR: pure** proceso de compilación, asegúrese de que las declaraciones de cada tipo en la firma son idénticas a las de la operación de compilación que exporta la función (con especial atención en las diferencias en las convenciones de llamada implícitas).  
+ Esto no es seguro debido a la diferencia en el valor predeterminado al llamar a las convenciones entre código puro y nativo (o mixto nativo y administrado). Al importar (a través de `dllimport`) una función en un **/CLR: pure** proceso de compilación, asegúrese de que las declaraciones de cada tipo en la firma son idénticas a las de la operación de compilación que exporta la función (tenga especial cuidado al diferencias en las convenciones de llamada implícita).  
   
- Una función miembro virtual es especialmente propensa a proporcionar resultados inesperados.  Sin embargo, incluso una función no virtual debe probarse para asegurarse de que obtiene los resultados correctos. Si está seguro de que está obteniendo los resultados correctos, puede omitir esta advertencia.  
+ Una función miembro virtual es especialmente propensa a proporcionar resultados inesperados.  Sin embargo, incluso una función no virtual deberá probarse para asegurarse de que obtiene los resultados correctos. Si estás seguro de que está obteniendo los resultados correctos, puede omitir esta advertencia.  
   
  Para obtener más información sobre **/CLR: puro**, consulte [Cómo: migrar a/CLR: pure (C++ / CLI)](../../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md).  
   
- C4412 está desactivada de forma predeterminada. Consulte [advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) y [dllexport, dllimport](../../cpp/dllexport-dllimport.md) para obtener más información.  
+ C4412 está desactivada de forma predeterminada. Vea [advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) y [dllexport, dllimport](../../cpp/dllexport-dllimport.md) para obtener más información.  
   
  Para resolver esta advertencia, quite todas las funciones del tipo.  
   
@@ -85,7 +66,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente es un archivo de encabezado que declara dos tipos. El `Unsafe` tipo no es seguro porque tiene una función miembro.  
+ El ejemplo siguiente es un archivo de encabezado que declara dos tipos. El `Unsafe` tipo no es seguro porque tiene una función miembro.  
   
 ```  
 // C4412.h  
@@ -120,7 +101,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El valor predeterminado la convención de llamada un **/CLR: pure** compilación es diferente de una compilación nativa.  Cuando se incluye, C4412.h `Test` predeterminado es `__clrcall`. Si compila y ejecuta este programa (no utilice **/c**), el programa iniciará una excepción.  
+ El valor predeterminado convención de llamada un **/CLR: pure** compilación es diferente de una compilación nativa.  Cuando se incluye, C4412.h `Test` tiene como valor predeterminado `__clrcall`. Si se compila y ejecuta este programa (no utilice **/c**), el programa iniciará una excepción.  
   
  El ejemplo siguiente genera C4412.  
   

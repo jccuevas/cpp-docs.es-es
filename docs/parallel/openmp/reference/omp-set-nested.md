@@ -1,32 +1,30 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: omp_set_nested () | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b0d04a0eb9813a3829b0f435972c7922bf77d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Paralelismo anidado de permisos.  
+# <a name="ompsetnested"></a>omp_set_nested
+Habilita el paralelismo anidado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void omp_set_nested(  
@@ -34,24 +32,24 @@ void omp_set_nested(
 );  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
  `val`  
- Si es distinto de cero, los permisos anidados paralelismo.  Si cero, deshabilita paralelismo anidados.  
+ Si es distinto de cero, habilita el paralelismo anidado. Si es cero, deshabilita paralelismo anidado.  
   
-## Comentarios  
- El paralelismo anidados OMP se puede convertir con `omp_set_nested`, o estableciendo la variable de entorno [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md) .  
+## <a name="remarks"></a>Comentarios  
+ OMP anidado pueden activar paralelismo con `omp_set_nested`, o estableciendo la [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) variable de entorno.  
   
- El valor de `omp_set_nested` reemplazará el valor de la variable de entorno `OMP_NESTED` .  
+ La configuración de `omp_set_nested` sobrescribirá la configuración de la `OMP_NESTED` variable de entorno.  
   
- Cuando está habilitada, la variable de entorno puede interrumpir un programa de otro modo operativo porque el número de subprocesos aumenta exponencialmente al anidar regiones paralelas.  Como una función de que el tal forma que 6 medir el tiempo con el número de subprocesos de OMP establecidos en 4 requiere 4.096 \(4 a la potencia 6\) de los subprocesos En General, que el rendimiento de la aplicación degradará si el número de subproceso supera el número de procesadores.  una excepción a esto sería aplicaciones enlazadas E\/S.  
+ Cuando se habilita, la variable de entorno puede interrumpir un programa operativo en caso contrario, porque el número de subprocesos aumenta exponencialmente cuando se anidan regiones en paralelo.  Por ejemplo, una función que recorre 6 veces con el número de subprocesos OMP establecido en 4 requiere 4096 (4 a la potencia de 6) subprocesos por lo general, el rendimiento de la aplicación se verá afectado si el número de subprocesos supera el número de procesadores. Una excepción a esto sería que e/s enlaza las aplicaciones.  
   
- Utilice [omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md) para mostrar la configuración actual de `omp_set_nested`.  
+ Use [omp_get_nested ()](../../../parallel/openmp/reference/omp-get-nested.md) para mostrar la configuración actual de `omp_set_nested`.  
   
- Para obtener más información, vea [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
+ Para obtener más información, consulte [3.1.9 omp_set_nested (función)](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_set_nested.cpp  
@@ -72,7 +70,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## Vea también  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Funciones](../../../parallel/openmp/reference/openmp-functions.md)

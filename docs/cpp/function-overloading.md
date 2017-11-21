@@ -4,32 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Estas funciones reciben el nombre de funciones sobrecargadas y se describen detalladamente en el tema Sobrecarga. Las funciones sobrecargadas permiten a los programadores proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos.  
   
- Por ejemplo, un **imprimir** función que toma una cadena (o **char \* **) argumento realizará tareas muy diferentes que una que toma un argumento de tipo **doble** . La sobrecarga permite usar una nomenclatura uniforme y evita que los programadores tengan que inventarse nombres como `print_sz` o `print_d`. En la tabla siguiente se muestran las partes de una declaración de función que usa C++ para distinguir entre grupos de funciones con el mismo nombre en el mismo ámbito.  
+ Por ejemplo, un **imprimir** función que toma una cadena (o **char \*** ) argumento realizará tareas muy diferentes que una que toma un argumento de tipo **doble** . La sobrecarga permite usar una nomenclatura uniforme y evita que los programadores tengan que inventarse nombres como `print_sz` o `print_d`. En la tabla siguiente se muestran las partes de una declaración de función que usa C++ para distinguir entre grupos de funciones con el mismo nombre en el mismo ámbito.  
   
 ### <a name="overloading-considerations"></a>Consideraciones sobre la sobrecarga  
   
@@ -183,7 +180,7 @@ F1 = Add( 3, 6 );
   
  Observe que la intersección entre estos dos conjuntos está vacía. Por lo tanto, el compilador genera un mensaje de error.  
   
- Para la coincidencia de argumentos, una función con * n * argumentos predeterminados se trata como * n *funciones de + 1 separadas, cada uno con un número diferente de argumentos.  
+ Para la coincidencia de argumentos, una función con  *n*  argumentos predeterminados se trata como  *n* funciones de + 1 separadas, cada uno con un número diferente de argumentos.  
   
  Los puntos suspensivos (...) actúan como comodín; coinciden con cualquier argumento real. Esto puede conducir a muchos conjuntos ambiguos, si no se diseñan los conjuntos de funciones sobrecargadas con extremo cuidado.  
   
@@ -259,7 +256,7 @@ volatile Over&
 |*nombre de tipo*|*nombre de tipo***&**|  
 |*nombre de tipo***&**|*nombre de tipo*|  
 |*nombre de tipo* **]**|*nombre de tipo\**|  
-|*nombre de tipo* **(** *lista de argumentos* **)**|**(** * \*nombre-tipo* **) (** *lista de argumentos* **)**|  
+|*nombre de tipo* **(** *lista de argumentos* **)**|**(**  *\*nombre-tipo* **) (** *lista de argumentos* **)**|  
 |*nombre de tipo*|**Const** *nombre de tipo*|  
 |*nombre de tipo*|`volatile`*nombre de tipo*|  
 |*nombre de tipo\**|**Const** *nombre de tipo\**|  
@@ -269,19 +266,19 @@ volatile Over&
   
 1.  Coincidencia exacta. Una coincidencia exacta entre los tipos con los que se llama a la función y los tipos declarados en el prototipo de función siempre es la mejor coincidencia. Las secuencias de conversiones triviales se clasifican como coincidencias exactas. Sin embargo, las secuencias que no realizan ninguna de estas conversiones se consideran mejores que las secuencias que convierten:  
   
-    -   De puntero, puntero a **const** (`type` ** \* ** a **const** `type` ** \* ** ).  
+    -   De puntero, puntero a **const** (`type`  **\***  a **const** `type`  **\***  ).  
   
-    -   De puntero, puntero a `volatile` (`type` ** \* ** a `volatile` `type` ** \* **).  
+    -   De puntero, puntero a `volatile` (`type`  **\***  a `volatile` `type`  **\*** ).  
   
-    -   De referencia, en referencia a **const** (`type` ** & ** a **const** `type` ** & **).  
+    -   De referencia, en referencia a **const** (`type`  **&**  a **const** `type`  **&** ).  
   
-    -   De referencia, en referencia a `volatile` (`type` ** & ** a `volatile` `type` ** & **).  
+    -   De referencia, en referencia a `volatile` (`type`  **&**  a `volatile` `type`  **&** ).  
   
 2.  Coincidencia mediante promociones. Cualquier secuencia no clasificada como coincidencia exacta que contiene solo promociones de enteros, conversiones de **float** a **doble**, y conversiones triviales se clasifica como coincidencia mediante promociones. Aunque no es una coincidencia tan buena como cualquier coincidencia exacta, una coincidencia mediante promociones es mejor que una coincidencia mediante conversiones estándar.  
   
 3.  Coincidencia mediante conversiones estándar. Cualquier secuencia no clasificada como coincidencia exacta o una coincidencia mediante promociones que contenga solo conversiones estándar y conversiones triviales se clasifica como coincidencia mediante conversiones estándar. Dentro de esta categoría, se aplican las reglas siguientes:  
   
-    -   Conversión de un puntero a una clase derivada, en un puntero a una clase base directa o indirecta es preferible a la conversión a **void \* ** o **const void \* **.  
+    -   Conversión de un puntero a una clase derivada, en un puntero a una clase base directa o indirecta es preferible a la conversión a **void \***  o **const void \*** .  
   
     -   La conversión de un puntero a una clase derivada, a un puntero a una clase base, genera una coincidencia mejor cuanto más cerca esté la clase base de una clase base directa. Supongamos que la jerarquía de clases es tal y como se muestra en la ilustración siguiente.  
   
@@ -426,7 +423,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR`es un sinónimo de tipo **char \* **. En el ámbito del miembro, este código genera un error.  
+     Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR`es un sinónimo de tipo **char \*** . En el ámbito del miembro, este código genera un error.  
   
 -   Los tipos enumerados son tipos distintos y se pueden utilizar para diferenciar funciones sobrecargadas.  
   

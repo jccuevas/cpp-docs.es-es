@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4564 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4564"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4564"
+title: Compilador advertencia (nivel 4) C4564 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4564
+dev_langs: C++
+helpviewer_keywords: C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43462a2ea15ea50306b346d02a149a185cee902f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4564
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-el método 'método' de clase 'clase' define un parámetro 'parámetro' predeterminado no compatible  
+# <a name="compiler-warning-level-4-c4564"></a>Advertencia del compilador (nivel 4) C4564
+el método 'método' de clase 'class' define de forma predeterminada no admitido ' parámetro '  
   
- El compilador detectó un método con uno o varios parámetros con valores predeterminados.  El valor o valores predeterminados de los parámetros se omitirá al invocar el método; especifique valores para esos parámetros de forma explícita.  De no hacerlo, el compilador de C\+\+ generará un error.  
+ El compilador detectó un método con uno o varios parámetros con valores predeterminados. Se pasará por alto los valores predeterminados para los parámetros cuando se invoca el método; especificar explícitamente los valores para esos parámetros. Si no especifica valores para esos parámetros explícitamente, el compilador de C++ generará un error.  
   
- Dado el siguiente archivo .dll creado con Visual Basic, que permite parámetros predeterminados en argumentos de métodos:  
+ Dado el siguiente archivo .dll creado con Visual Basic, que permite parámetros predeterminados en argumentos de método:  
   
 ```  
 ' C4564.vb  
@@ -40,7 +38,7 @@ Public class TestClass
 End class  
 ```  
   
- Y el ejemplo siguiente de C\+\+, que utiliza la DLL creada con Visual Basic,  
+ El siguiente ejemplo de C++ que utiliza la DLL creada con Visual Basic, y  
   
 ```  
 // C4564.cpp  

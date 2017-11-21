@@ -1,74 +1,73 @@
 ---
-title: "IDBInitializeImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IDBInitializeImpl<T>"
-  - "ATL::IDBInitializeImpl<T>"
-  - "IDBInitializeImpl"
-  - "ATL::IDBInitializeImpl"
-  - "ATL.IDBInitializeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBInitializeImpl (clase)"
+title: IDBInitializeImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IDBInitializeImpl<T>
+- ATL::IDBInitializeImpl<T>
+- IDBInitializeImpl
+- ATL::IDBInitializeImpl
+- ATL.IDBInitializeImpl
+dev_langs: C++
+helpviewer_keywords: IDBInitializeImpl class
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7a51023f167eee5fbd4082486409f4e11a15547
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IDBInitializeImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona una implementación de la interfaz de [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) .  
+# <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
+Proporciona una implementación para el [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- La clase, derivada de `IDBInitializeImpl`.  
+ La clase derivada de `IDBInitializeImpl`.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|Constructor.|  
+|[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|El constructor.|  
   
-### Métodos de interfaz  
+### <a name="interface-methods"></a>Métodos de interfaz  
   
 |||  
 |-|-|  
 |[Inicializar](../../data/oledb/idbinitializeimpl-initialize.md)|Inicia el proveedor.|  
-|[Desinicialice](../../data/oledb/idbinitializeimpl-uninitialize.md)|Detiene el proveedor.|  
+|[Cancelar la inicialización](../../data/oledb/idbinitializeimpl-uninitialize.md)|Detiene el proveedor.|  
   
-### Miembros de datos  
+### <a name="data-members"></a>Miembros de datos  
   
 |||  
 |-|-|  
-|[m\_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Marcas de origen de datos.|  
-|[m\_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Un puntero a la implementación de la información de las propiedades de DB.|  
+|[m_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Marcas del origen de datos.|  
+|[m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Un puntero a la implementación de la información de propiedades de la base de datos.|  
   
-## Comentarios  
- Una interfaz de enlace en objetos de origen de datos y interfaz opcional de enumeradores.  
+## <a name="remarks"></a>Comentarios  
+ Una interfaz obligatoria en los objetos de origen de datos y la interfaz opcional sobre los enumeradores.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

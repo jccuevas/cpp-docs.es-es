@@ -1,60 +1,60 @@
 ---
-title: "Arquitectura de plantillas de proveedores OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "arquitectura [C++], proveedor OLE DB"
-  - "OLE DB [C++], modelo de objetos"
-  - "plantillas del proveedor OLE DB, modelo de objetos"
+title: Arquitectura de la plantilla de proveedores OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB [C++], object model
+- architecture [C++], OLE DB Provider
+- OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Arquitectura de plantillas de proveedores OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Orígenes de datos y sesiones  
- La arquitectura de proveedor OLE DB incluye un objeto de origen de datos y una o más sesiones.  El objeto de origen de datos es el objeto de inicio del que todo proveedor debe crear una instancia.  Cuando una aplicación de consumidor necesita datos, participa en la creación del objeto de origen de datos para iniciar el proveedor.  El objeto de origen de datos crea un objeto de sesión \(mediante la interfaz **IDBCreateSession**\) a través del cuál el consumidor se conecta al objeto de origen de datos.  Los programadores de ODBC pueden considerar que el objeto de origen de datos es equivalente a **HENV** y el objeto de sesión, equivalente a **HDBC**.  
+# <a name="ole-db-provider-template-architecture"></a>Arquitectura de plantillas de proveedores OLE DB
+## <a name="data-sources-and-sessions"></a>Orígenes de datos y sesiones  
+ La arquitectura del proveedor OLE DB incluye un objeto de origen de datos y una o varias sesiones. El objeto de origen de datos es el objeto inicial que debe crear una instancia de cada proveedor. Cuando una aplicación de consumidor necesita datos, compartir crea el objeto de origen de datos para iniciar el proveedor. El objeto de origen de datos crea un objeto de sesión (mediante el **IDBCreateSession** interfaz) a través de que el consumidor se conecta al objeto de origen de datos. Los programadores ODBC pueden considerar del objeto de origen de datos es equivalente a la **HENV** y el objeto de sesión como equivalente a la **HDBC**.  
   
- ![Arquitectura de proveedor](../../data/oledb/media/vc4twb1.png "vc4TWB1")  
+ ![Arquitectura de proveedor](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Junto con los archivos de código fuente creados por el Asistente para proveedores OLE DB, las plantillas OLE DB implementan un objeto de origen de datos.  Una sesión es un objeto que corresponde al **TSession** de OLE DB.  
+ Junto con los archivos de origen creados por el Asistente para proveedores OLE DB, las plantillas OLE DB implementan un objeto de origen de datos. Una sesión es un objeto que corresponde a OLE DB **TSession**.  
   
-## Interfaces obligatorias e interfaces opcionales  
- Las plantillas de proveedor OLE DB proporcionan implementaciones ya preparadas para todas las interfaces necesarias.  OLE DB define interfaces obligatorias e interfaces opcionales para varios tipos de objetos:  
+## <a name="mandatory-and-optional-interfaces"></a>Interfaces obligatorias y opcionales  
+ Las plantillas de proveedor OLE DB proporcionan implementaciones ya preparadas para todas las interfaces requeridas. Interfaces obligatorias y opcionales se definen por OLE DB para varios tipos de objetos:  
   
 -   [Origen de datos](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Session](../../data/oledb/session-object-interfaces.md)  
+-   [Sesión](../../data/oledb/session-object-interfaces.md)  
   
 -   [Conjunto de filas](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Command](../../data/oledb/command-object-interfaces.md)  
+-   [Comando](../../data/oledb/command-object-interfaces.md)  
   
 -   [Transacción](../../data/oledb/transaction-object-interfaces.md)  
   
  Tenga en cuenta que las plantillas de proveedor OLE DB no implementan los objetos de fila y de almacenamiento.  
   
- En la tabla siguiente se muestran las interfaces obligatorias y opcionales para los objetos anteriores, según la [Documentación del SDK de OLE DB 2.6](https://msdn.microsoft.com/en-us/library/ms722784.aspx).  
+ En la tabla siguiente se enumera las interfaces obligatorias y opcionales para los objetos enumerados anteriormente, según la [documentación del SDK de OLE DB 2.6](https://msdn.microsoft.com/en-us/library/ms722784.aspx).  
   
-|Componente|Interfaz|Comment|  
-|----------------|--------------|-------------|  
-|[Origen de datos](../../data/oledb/data-source-object-interfaces.md) \([CDataSource](../../data/oledb/cdatasource-class.md)\)|\[obligatoria\] **IDBCreateSession**<br /><br /> \[obligatoria\] **IDBInitialize**<br /><br /> \[obligatoria\] `IDBProperties`<br /><br /> \[obligatoria\] `IPersist`<br /><br /> \[opcional\] **IConnectionPointContainer**<br /><br /> \[opcional\] **IDBAsynchStatus**<br /><br /> \[opcional\] **IDBDataSourceAdmin**<br /><br /> \[opcional\] **IDBInfo**<br /><br /> \[opcional\] `IPersistFile`<br /><br /> \[opcional\] **ISupportErrorInfo**|Conexión desde el consumidor al proveedor.  El objeto se utiliza para especificar propiedades en la conexión, como el identificador de usuario, la contraseña y el nombre del origen de datos.  También se puede utilizar el objeto para administrar un origen de datos \(crear, actualizar, eliminar, tablas, etc.\).|  
-|[Sesión](../../data/oledb/session-object-interfaces.md) \([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md)\)|\[obligatoria\] **IGetDataSource**<br /><br /> \[obligatoria\] `IOpenRowset`<br /><br /> \[obligatoria\] **ISessionProperties**<br /><br /> \[opcional\] **IAlterIndex**<br /><br /> \[opcional\] **IAlterTable**<br /><br /> \[opcional\] **IBindResource**<br /><br /> \[opcional\] **ICreateRow**<br /><br /> \[opcional\] **IDBCreateCommand**<br /><br /> \[opcional\] **IDBSchemaRowset**<br /><br /> \[opcional\] **IIndexDefinition**<br /><br /> \[opcional\] **ISupportErrorInfo**<br /><br /> \[opcional\] **ITableCreation**<br /><br /> \[opcional\] **ITableDefinition**<br /><br /> \[opcional\] **ITableDefinitionWithConstraints**<br /><br /> \[opcional\] **ITransaction**<br /><br /> \[opcional\] **ITransactionJoin**<br /><br /> \[opcional\] **ITransactionLocal**<br /><br /> \[opcional\] **ITransactionObject**|El objeto de sesión representa una sola conversación entre un consumidor y un proveedor.  Se parece en cierto modo al **HSTMT** de ODBC en el que puede haber muchas sesiones activas simultáneamente.<br /><br /> El objeto de sesión es el vínculo principal para obtener la funcionalidad de OLE DB.  Para obtener un objeto de comando, de transacción o de conjunto de filas, debe utilizar el objeto de sesión.|  
-|[Conjunto de filas](../../data/oledb/rowset-object-interfaces.md) \([CRowset](../../data/oledb/crowset-class.md)\)|\[obligatoria\] `IAccessor`<br /><br /> \[obligatoria\] `IColumnsInfo`<br /><br /> \[obligatoria\] **IConvertType**<br /><br /> \[obligatoria\] `IRowset`<br /><br /> \[obligatoria\] `IRowsetInfo`<br /><br /> \[opcional\] **IChapteredRowset**<br /><br /> \[opcional\] **IColumnsInfo2**<br /><br /> \[opcional\] **IColumnsRowset**<br /><br /> \[opcional\] **IConnectionPointContainer**<br /><br /> \[opcional\] **IDBAsynchStatus**<br /><br /> \[opcional\] **IGetRow**<br /><br /> \[opcional\] `IRowsetChange`<br /><br /> \[opcional\] **IRowsetChapterMember**<br /><br /> \[opcional\] **IRowsetCurrentIndex**<br /><br /> \[opcional\] **IRowsetFind**<br /><br /> \[opcional\] **IRowsetIdentity**<br /><br /> \[opcional\] **IRowsetIndex**<br /><br /> \[opcional\] `IRowsetLocate`<br /><br /> \[opcional\] **IRowsetRefresh**<br /><br /> \[opcional\] `IRowsetScroll`<br /><br /> \[opcional\] `IRowsetUpdate`<br /><br /> \[opcional\] **IRowsetView**<br /><br /> \[opcional\] **ISupportErrorInfo**<br /><br /> \[opcional\] **IRowsetBookmark**|El objeto de conjunto de filas representa los datos del origen de datos.  Este objeto se encarga de los enlaces de esos datos y de las operaciones básicas \(actualización, búsqueda, transferencia, entre otras\) realizadas con los datos.  Siempre tiene un objeto de conjunto de filas para contener y manipular datos.|  
-|[Comando](../../data/oledb/command-object-interfaces.md) \([CCommand](http://msdn.microsoft.com/es-es/52bef5da-c1a0-4223-b4e6-9e464b6db409)\)|\[obligatoria\] `IAccessor`<br /><br /> \[obligatoria\] `IColumnsInfo`<br /><br /> \[obligatoria\] `ICommand`<br /><br /> \[obligatoria\] **ICommandProperties**<br /><br /> \[obligatoria\] `ICommandText`<br /><br /> \[obligatoria\] **IConvertType**<br /><br /> \[opcional\] **IColumnsRowset**<br /><br /> \[opcional\] **ICommandPersist**<br /><br /> \[opcional\] **ICommandPrepare**<br /><br /> \[opcional\] `ICommandWithParameters`<br /><br /> \[opcional\] **ISupportErrorInfo**<br /><br /> \[opcional\] **ICommandStream**|El objeto de comando controla operaciones realizadas con los datos, tales como consultas.  Puede controlar instrucciones parametrizadas e instrucciones no parametrizadas.<br /><br /> El objeto de comando también se encarga de controlar los enlaces para parámetros y columnas de resultados.  Un enlace es una estructura que contiene información sobre cómo recuperar una columna de un conjunto de filas.  Contiene información como, por ejemplo, el ordinal, el tipo de datos, la longitud y el estado.|  
-|[Transacción](../../data/oledb/transaction-object-interfaces.md) \(opcional\)|\[obligatoria\] **IConnectionPointContainer**<br /><br /> \[obligatoria\] **ITransaction**<br /><br /> \[opcional\] **ISupportErrorInfo**|El objeto de transacción define una unidad atómica de trabajo en un origen de datos y determina la relación entre las unidades de trabajo.  Las plantillas de proveedor OLE DB no ofrecen directamente compatibilidad con este objeto \(es decir, el programador debe crear su propio objeto\).|  
+|Componente|Interfaz|Comentario|  
+|---------------|---------------|-------------|  
+|[Origen de datos](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[obligatorio] **IDBCreateSession**<br /><br /> [obligatorio] **IDBInitialize**<br /><br /> [obligatorio]`IDBProperties`<br /><br /> [obligatorio]`IPersist`<br /><br /> [opcional] **IConnectionPointContainer**<br /><br /> [opcional] **IDBAsynchStatus**<br /><br /> [opcional] **IDBDataSourceAdmin**<br /><br /> [opcional] **IDBInfo**<br /><br /> [opcional]`IPersistFile`<br /><br /> [opcional] **ISupportErrorInfo**|Conexión del consumidor al proveedor. El objeto se usa para especificar las propiedades de la conexión como nombre de origen de datos, la contraseña y el Id. de usuario. El objeto también puede utilizarse para administrar un origen de datos (crear, actualizar, eliminar, tablas y así sucesivamente).|  
+|[Sesión](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[obligatorio] **IGetDataSource**<br /><br /> [obligatorio]`IOpenRowset`<br /><br /> [obligatorio] **ISessionProperties**<br /><br /> [opcional] **IAlterIndex**<br /><br /> [opcional] **IAlterTable**<br /><br /> [opcional] **IBindResource**<br /><br /> [opcional] **ICreateRow**<br /><br /> [opcional] **IDBCreateCommand**<br /><br /> [opcional] **IDBSchemaRowset**<br /><br /> [opcional] **IIndexDefinition**<br /><br /> [opcional] **ISupportErrorInfo**<br /><br /> [opcional] **ITableCreation**<br /><br /> [opcional] **ITableDefinition**<br /><br /> [opcional] **ITableDefinitionWithConstraints**<br /><br /> [opcional] **ITransaction**<br /><br /> [opcional] **ITransactionJoin**<br /><br /> [opcional] **ITransactionLocal**<br /><br /> [opcional] **ITransactionObject**|El objeto de sesión representa una sola conversación entre un consumidor y proveedor. Es similar a ODBC **HSTMT** en que puede haber muchas sesiones simultáneas activas.<br /><br /> El objeto de sesión es el vínculo principal para llegar a la funcionalidad de OLE DB. Para llegar a un comando, la transacción o el objeto de conjunto de filas, vaya a través del objeto de sesión.|  
+|[Conjunto de filas](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[obligatorio]`IAccessor`<br /><br /> [obligatorio]`IColumnsInfo`<br /><br /> [obligatorio] **IConvertType**<br /><br /> [obligatorio]`IRowset`<br /><br /> [obligatorio]`IRowsetInfo`<br /><br /> [opcional] **IChapteredRowset**<br /><br /> [opcional] **IColumnsInfo2**<br /><br /> [opcional] **IColumnsRowset**<br /><br /> [opcional] **IConnectionPointContainer**<br /><br /> [opcional] **IDBAsynchStatus**<br /><br /> [opcional] **IGetRow**<br /><br /> [opcional]`IRowsetChange`<br /><br /> [opcional] **IRowsetChapterMember**<br /><br /> [opcional] **IRowsetCurrentIndex**<br /><br /> [opcional] **IRowsetFind**<br /><br /> [opcional] **IRowsetIdentity**<br /><br /> [opcional] **IRowsetIndex**<br /><br /> [opcional]`IRowsetLocate`<br /><br /> [opcional] **IRowsetRefresh**<br /><br /> [opcional]`IRowsetScroll`<br /><br /> [opcional]`IRowsetUpdate`<br /><br /> [opcional] **IRowsetView**<br /><br /> [opcional] **ISupportErrorInfo**<br /><br /> [opcional] **IRowsetBookmark**|El objeto de conjunto de filas representa los datos del origen de datos. El objeto es responsable de los enlaces de datos y las operaciones básicas (actualización, fetch, movimiento y otros) en los datos. Siempre que un objeto de conjunto de filas para contener y manipular datos.|  
+|[Comando](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[obligatorio]`IAccessor`<br /><br /> [obligatorio]`IColumnsInfo`<br /><br /> [obligatorio]`ICommand`<br /><br /> [obligatorio] **ICommandProperties**<br /><br /> [obligatorio]`ICommandText`<br /><br /> [obligatorio] **IConvertType**<br /><br /> [opcional] **IColumnsRowset**<br /><br /> [opcional] **ICommandPersist**<br /><br /> [opcional] **ICommandPrepare**<br /><br /> [opcional]`ICommandWithParameters`<br /><br /> [opcional] **ISupportErrorInfo**<br /><br /> [opcional] **ICommandStream**|El objeto de comando controla las operaciones en los datos como las consultas. Puede controlar las instrucciones con parámetros o sin parámetros.<br /><br /> El objeto de comando también es responsable de controlar los enlaces para los parámetros y columnas de salida. Un enlace es una estructura que contiene información sobre cómo se debe recuperar una columna de un conjunto de filas. Contiene información como ordinal, tipo de datos, longitud y estado.|  
+|[Transacción](../../data/oledb/transaction-object-interfaces.md) (opcional)|[obligatorio] **IConnectionPointContainer**<br /><br /> [obligatorio] **ITransaction**<br /><br /> [opcional] **ISupportErrorInfo**|El objeto de transacción define una unidad atómica de trabajo en un origen de datos y determina cómo se relacionan entre sí las unidades de trabajo. Este objeto no es compatible directamente con las plantillas de proveedor OLE DB (es decir, crear su propio objeto).|  
   
  Para obtener más información, vea los temas siguientes:  
   
@@ -62,6 +62,6 @@ caps.handback.revision: 7
   
 -   [El registro de usuario](../../data/oledb/user-record.md)  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB Interfaces](https://msdn.microsoft.com/en-us/library/ms709709.aspx)
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Interfaces OLE DB](https://msdn.microsoft.com/en-us/library/ms709709.aspx)

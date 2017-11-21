@@ -1,32 +1,30 @@
 ---
-title: "helpcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpcontext attribute"
+title: HelpContext | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpcontext
+dev_langs: C++
+helpviewer_keywords: helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46611a2cd25f6154d183f44da0c8333471ea2ae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# helpcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica un Id. de contexto que deje la información de la vista de usuario sobre este elemento en el archivo de Ayuda.  
+# <a name="helpcontext"></a>helpcontext
+Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,35 +33,34 @@ Especifica un Id. de contexto que deje la información de la vista de usuario so
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `id`  
- El Id. de contexto del tema de Ayuda.  Vea [Ayuda HTML: Ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre id. de contexto.  
+ El identificador de contexto del tema de ayuda. Vea [ayuda HTML: ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre identificadores de contexto.  
   
-## Comentarios  
- el atributo de **helpcontext** C\+\+ tiene la misma funcionalidad que el atributo de [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **helpcontext** atributo C++ tiene la misma funcionalidad que la [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) atributo MIDL.  
   
-## Ejemplo  
- Vea el ejemplo para [defaultvalue](../Topic/defaultvalue.md) para obtener un ejemplo de cómo utilizar **helpcontext**.  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [defaultvalue](../windows/defaultvalue.md) para obtener un ejemplo de cómo usar **helpcontext**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|`interface`, `typedef`, **clase**, método, propiedad|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../Topic/helpfile.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interfaz](../windows/interface-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

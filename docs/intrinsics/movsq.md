@@ -1,69 +1,68 @@
 ---
-title: "__movsq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__movsq (función intrínseca)"
-  - "rep movsq (instrucción)"
-  - "movsq (instrucción)"
+title: __movsq | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsq
+dev_langs: C++
+helpviewer_keywords:
+- __movsq intrinsic
+- rep movsq instruction
+- movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2c0211faafad29b24b45297e9221fd375d67c81d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __movsq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="movsq"></a>__movsq
 **Específicos de Microsoft**  
   
- Genera una instrucción repetida de la cadena de movimiento \(`rep movsq`\).  
+ Genera una cadena de mover repetidas (`rep movsq`) instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __movsq(   
-   unsigned char* Dest,   
-   unsigned char* Source,   
-   size_t Count   
+void __movsq(   
+   unsigned char* Dest,   
+   unsigned char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parámetros  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parámetros  
+ [out] `Dest`  
  El destino de la operación.  
   
- \[in\] `Source`  
+ [in] `Source`  
  El origen de la operación.  
   
- \[in\] `Count`  
- El número de quadwords a copiar.  
+ [in] `Count`  
+ El número de palabras cuádruples para copiar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- El resultado es que los primeros quadwords de `Count` indicada por `Source` se copiarán en la cadena de `Dest` .  
+## <a name="remarks"></a>Comentarios  
+ El resultado es que la primera `Count` palabras cuádruples señalada por `Source` se copian en el `Dest` cadena.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // movsq.cpp  
@@ -86,8 +85,11 @@ int main()
 }  
 ```  
   
-  **950 850 750 650 550 450 350 250 150 50**    
-## Específico de Microsoft de FINAL  
+```Output  
+950 850 750 650 550 450 350 250 150 50   
+```  
   
-## Vea también  
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

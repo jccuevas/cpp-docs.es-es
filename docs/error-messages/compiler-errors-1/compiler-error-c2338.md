@@ -4,44 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2338
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2338
+f1_keywords: C2338
+dev_langs: C++
+helpviewer_keywords: C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 516708d97b99fd8fb7acf05a04b42936702b4176
-ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 3b5f8773daa61b2ac7703b1ee0e5672818278e87
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-error-c2338"></a>Error del compilador C2338
-Proveedor de atributos ATL 'identifier'  
+# <a name="compiler-error-c2338"></a>Error del compilador C2338  
   
- El atributo hace referencia a un identificador no declarado. Puede ver este error asociado a [Error del proveedor ATL ATL2010](http://msdn.microsoft.com/en-us/27a25924-b52b-4971-80d3-c3b3e9ffbe41).
+> *Mensaje de error*  
+  
+Este error puede deberse a un `static_assert` error durante la compilación. El mensaje proporcionado por el `static_assert` parámetros.   
+  
+Este mensaje de error también puede generarse por proveedores externos al compilador. En la mayoría de los casos, estos errores notificados por un proveedor de atributos de archivo DLL, por ejemplo, ATLPROV. Algunas formas comunes de este mensaje se incluyen:
+
+> '*atributo*' proveedor de atributos Atl: error ATL*número* *mensaje*  
+  
+> Uso incorrecto del atributo '*atributo*'
+  
+> '*uso*': un formato incorrecto para el atributo 'uso'  
+  
+Estos errores suelen ser irrecuperables y pueden ir seguidos de un error grave del compilador.  
+  
+Para corregir estos problemas, corrija el uso de atributos. Por ejemplo, en algunos casos, los parámetros de atributo deben declararse antes de que se puedan utilizar. Si no se proporciona un número de error ATL, consulte la documentación para dicho error para obtener información más detallada.  

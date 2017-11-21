@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - <system_error>
 - system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error header
+dev_langs: C++
+helpviewer_keywords: system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 7869ba251868241c082080d3485d5a82c492b8f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f5f68b5eb7ca9e4fa9ab29d55fdbaf05c49b786c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 Incluya el encabezado `<system_error>` para definir la clase de excepción `system_error` y las plantillas relacionadas para el procesamiento de errores del sistema de bajo nivel.  
@@ -88,7 +84,6 @@ Incluya el encabezado `<system_error>` para definir la clase de excepción `syst
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

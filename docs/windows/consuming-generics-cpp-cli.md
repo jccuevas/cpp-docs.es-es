@@ -1,43 +1,34 @@
 ---
-title: "Consumir gen&#233;ricos (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "genéricos [C++], utilizar desde lenguajes .NET"
+title: "Consumir genéricos (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Consumir gen&#233;ricos (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los genéricos creados en un lenguaje.NET se pueden utilizar en otros lenguajes.NET.  A diferencia de las plantillas, un genérico en un ensamblado compilado todavía sigue siendo genérico.  Así, se puede crear una instancia del tipo genérico en un ensamblado diferente e incluso en otro idioma que el ensamblado en el que se ha definido el tipo genérico.  
+# <a name="consuming-generics-ccli"></a>Consumir genéricos (C++/CLI)
+Genéricos creados en un lenguaje .NET pueden usarse en otros lenguajes. NET. A diferencia de las plantillas, un tipo genérico en un ensamblado compilado sigue siendo genérico. Por lo tanto, uno puede crear instancias del tipo genérico en un ensamblado diferente e incluso en un idioma distinto del ensamblado en el que se definió el tipo genérico.  
   
-## Comentarios  
- Para obtener más información, vea:  
+## <a name="example"></a>Ejemplo  
   
--   [Introducción a los genéricos](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>Descripción  
+ Este ejemplo muestra una clase genérica definida en C#.  
   
--   [Tipos genéricos en Visual Basic](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## Ejemplo  
-  
-### Descripción  
- Este ejemplo muestra una clase genérica definida en C\#.  
-  
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -95,12 +86,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- Este ejemplo utiliza el ensamblado creado en C\#.  
+### <a name="description"></a>Descripción  
+ En este ejemplo se utiliza el ensamblado creado en C#.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -121,7 +112,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Resultado  
   
 ```  
 90  
@@ -134,5 +125,5 @@ int main() {
 10  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Genéricos](../windows/generics-cpp-component-extensions.md)

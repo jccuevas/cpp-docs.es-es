@@ -1,68 +1,67 @@
 ---
-title: "Utilizar las plantillas Agregar nuevo elemento de Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agregar un nuevo elemento"
-  - "Agregar nuevo elemento (comando)"
-  - "Agregar nuevo elemento (plantillas)"
-  - "plantillas, agregar un nuevo elemento"
+title: Con Visual C++ plantillas Agregar nuevo elemento | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Add New Item
+- Add New Item templates
+- Add New Item command
+- templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ebf163c721d8fd05c5481859cf0158ee22180e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizar las plantillas Agregar nuevo elemento de Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Puede agregar fácilmente elementos de uso común a los proyectos de Visual C\+\+ mediante el comando **Agregar nuevo elemento**.  Cuando se usa el comando **Agregar nuevo elemento**, aparece el cuadro de diálogo `Add New Item` con una lista de plantillas que permiten agregar los archivos apropiados al proyecto.  
+# <a name="using-visual-c-add-new-item-templates"></a>Utilizar las plantillas Agregar nuevo elemento de Visual C++
+Puede agregar fácilmente elementos que son comunes a los proyectos de Visual C++ mediante el uso de la **Agregar nuevo elemento** comando. Cuando se usa el **Agregar nuevo elemento** comando, la `Add New Item` aparece el cuadro de diálogo con una lista de plantillas de elementos, que agregar los archivos apropiados al proyecto.  
   
- En la siguiente tabla, se muestra una lista alfabética de plantillas de Visual C\+\+ para Agregar nuevo elemento.  
+ En la tabla siguiente es una lista alfabética de plantillas Agregar nuevo elemento de Visual C++.  
   
 |Plantilla|Descripción|  
-|---------------|-----------------|  
-|Archivo de recursos de ensamblado \(.resx\)|Crea un archivo que contiene recursos de CLR.|  
-|Archivo de mapa de bits \(.bmp\)|Crea un archivo de mapa de bits de Win32.|  
-|Archivo de C\+\+ \(.cpp\)|Crea un archivo de código fuente de C\+\+|  
-|Diagrama de clases \(.cd\)|Crea un diagrama de clases vacío.|  
-|Conjunto de reglas de análisis de código \(.ruleset\)|Crea un archivo de configuración para configurar el análisis de código.|  
-|Archivo de configuración \(app.config\)|Crea un archivo de configuración vacío.|  
-|Clase de componentes|Agrega una clase de componentes mediante las características CLR.|  
-|Archivo de cursores \(.cur\)|Crea un archivo de cursores de Win32.|  
-|Archivo de detección estática \(.disco\)|Crea un archivo de detección estática, el cual es un documento XML que contiene vínculos a otros recursos que describen el servicio Web XML y permite la detección mediante programación de un servicio Web XML.|  
-|Conjunto de marcos \(.htm\)|Agrega un archivo HTML que hospeda varias páginas HTML.|  
-|Archivo de encabezado \(.h\)|Crea un archivo de encabezado de C\+\+.|  
-|Página HTML \(.htm\)|Crea un archivo HTML en blanco.|  
-|Archivo de icono \(.ico\)|Crea un archivo de icono de Win32.|  
-|Clase del instalador|Agrega una clase que hereda de la [Clase del instalador](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) mediante las características CLR.|  
-|Archivo Midl \(.idl\)|Crea un archivo de Lenguaje de definición de interfaz \(IDL\).|  
-|Archivo de definición de módulo \(.def\)|Crea un archivo de definiciones exportadas desde una DLL.|  
-|Hoja de propiedades \(.props\)|Crea un archivo de hojas de propiedades de Visual C\+\+.|  
-|Script de registro \(.rgs\)|Crea un archivo de script de registro ATL.|  
-|Informe \(.rdlc\)|Crea un archivo de informe.|  
-|Archivo de recursos \(.rc\)|Crea un archivo de recursos de Win32.|  
-|Archivo de plantilla de recursos \(.rct\)|Crea un archivo de plantilla de recursos.|  
-|Cinta \(.mfcribbon\-ms\)|Crea un archivo de cinta.|  
-|Archivo de respuesta de servidor \(.srf\)|Crea un archivo de respuesta de servidor que se utiliza con el servidor ATL.|  
-|Archivo de script SQL \(.sql\)|Crea un archivo de script SQL. **Note:**  Esta plantilla no es una característica de la edición Professional.|  
-|Hoja de estilos \(.css\)|Agrega una hoja de estilos en cascada utilizada para definiciones de estilo HTML enriquecido.|  
-|Archivo de texto \(.txt\)|Agrega un archivo de texto en blanco.|  
-|Control de usuario|Agrega un control de usuario mediante las características CLR.|  
-|Windows Form|Agrega un Windows Form mediante las características CLR.|  
-|Archivo XML \(xml\)|Agrega un archivo XML en blanco.|  
-|Archivo de esquema XML \(.xsd\).|Crea un archivo que se utiliza con el fin de definir un esquema para los documentos XML.|  
-|Archivo XSLT \(.xslt\)|Crea un archivo que se usa para transformar los documentos XML.|  
+|--------------|-----------------|  
+|Archivo de ensamblado de recursos (.resx)|Crea un archivo que contiene recursos CLR.|  
+|Archivo de mapa de bits (.bmp)|Crea un archivo de mapa de bits de Win32.|  
+|Archivo C++ (.cpp)|Crea un archivo de código fuente de C++.|  
+|Diagrama de clases (. CD)|Crea un diagrama de clase vacía.|  
+|Conjunto de reglas de análisis de código (.ruleset)|Crea un archivo de configuración para configurar el análisis de código.|  
+|Archivo de configuración (app.config)|Crea un archivo de configuración vacía.|  
+|Clase de componente|Agrega una clase de componente mediante las funciones CLR.|  
+|Archivo de cursor (.cur)|Crea un archivo de cursor Win32.|  
+|Archivo de detección estática (.disco)|Crea un archivo de detección estática, que es un documento XML que contiene vínculos a otros recursos que describen el servicio Web XML, se habilita la detección mediante programación de un servicio Web XML.|  
+|Conjunto de marcos (.htm)|Agrega un archivo HTML que hospeda varias páginas HTML.|  
+|Archivo de encabezado (. h)|Crea un archivo de encabezado de C++.|  
+|Página HTML (.htm)|Crea un archivo HTML en blanco.|  
+|Archivo de icono (.ico)|Crea un archivo de icono de Win32.|  
+|Clase de instalador|Agrega una clase que hereda de la [clase del instalador](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) mediante las funciones CLR.|  
+|Archivo MIDL (.idl)|Crea un archivo de lenguaje de definición de interfaz.|  
+|Archivo de definición de módulo (.def)|Crea un archivo de definición de exportación DLL.|  
+|Hoja de propiedades (.props)|Crea un archivo de hoja de propiedades de Visual C++.|  
+|Script de registro (.rgs)|Crea un archivo de script de registro ATL.|  
+|Informe (.rdlc)|Crea un archivo de informe.|  
+|Archivo de recursos (.rc)|Crea un archivo de recursos de Win32.|  
+|Archivo de plantilla de recursos (.rct)|Crea un archivo de plantilla de recursos.|  
+|Cinta de opciones (.mfcribbon-ms)|Crea un archivo de la cinta de opciones.|  
+|Archivo de respuesta de servidor (.srf)|Crea un archivo de respuesta de servidor que se usa con el servidor ATL.|  
+|Archivo de Script SQL (. SQL)|Crea un archivo de script SQL. **Nota:** esta plantilla no es una característica de Professional Edition.|  
+|Hoja de estilos (.css)|Agrega una hoja de estilos en cascada utilizada para definiciones de estilo HTML enriquecido.|  
+|Archivo de texto (.txt)|Agrega un archivo de texto en blanco.|  
+|Control de usuario|Agrega un Control de usuario mediante las funciones CLR.|  
+|Formulario Windows Forms|Agrega un formulario Windows Forms mediante las funciones CLR.|  
+|Archivo XML (.xml)|Agrega un archivo XML en blanco.|  
+|Archivo de esquema XML (.xsd)|Crea un archivo que se utiliza para definir un esquema para documentos XML.|  
+|Archivo XSLT (.xslt)|Crea un archivo utilizado para transformar documentos XML.|  
   
-## Vea también  
- [Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)

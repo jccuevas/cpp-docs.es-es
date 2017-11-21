@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - atomic/std::atomic_flag
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: cdc475e674a1316f5e1441adadb6add65a52df5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 94ab743545518fdaa9baa7817b4865673e2d8e56
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atomicflag-structure"></a>atomic_flag (Estructura)
 Describe un objeto que establece y borra una marca `bool` de forma atómica. Las operaciones sobre marcas atómicas nunca tienen bloqueos.  
@@ -81,7 +78,6 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
   
 ## <a name="see-also"></a>Vea también  
  [\<atomic>](../standard-library/atomic.md)
-
 
 
 

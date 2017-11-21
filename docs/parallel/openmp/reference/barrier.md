@@ -1,44 +1,42 @@
 ---
-title: "barrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "barrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barrier OpenMP directive"
+title: barrera | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: barrier
+dev_langs: C++
+helpviewer_keywords: barrier OpenMP directive
 ms.assetid: 5c73ad4f-c768-443a-8f9e-4fd8bc2253c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ce85fce6e4f1611381026bd365760b02d3d174f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# barrier
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-sincroniza todos los subprocesos en un equipo; todos los subprocesos en pausa en la barrera, hasta que todos los subprocesos se ejecuten la barrera.  
+# <a name="barrier"></a>barrier
+Sincroniza todos los subprocesos en un equipo; todos los subprocesos se sitúe en la barrera, hasta que todos los subprocesos ejecutan la barrera.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp barrier  
 ```  
   
-## Comentarios  
- la directiva de `barrier` no admite ninguna cláusula de OpenMP.  
+## <a name="remarks"></a>Comentarios  
+ El `barrier` directiva es compatible con ningún cláusulas de OpenMP.  
   
- Para obtener más información, vea [2.6.3 barrier Directive](../../../parallel/openmp/2-6-3-barrier-directive.md).  
+ Para obtener más información, consulte [2.6.3 barrier (directiva)](../../../parallel/openmp/2-6-3-barrier-directive.md).  
   
-## Ejemplo  
- Para obtener un ejemplo de cómo utilizar `barrier`, vea [master](../../../parallel/openmp/reference/master.md).  
+## <a name="example"></a>Ejemplo  
+ Para obtener un ejemplo de cómo usar `barrier`, consulte [principal](../../../parallel/openmp/reference/master.md).  
   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

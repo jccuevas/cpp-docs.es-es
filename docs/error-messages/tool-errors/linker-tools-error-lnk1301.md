@@ -1,51 +1,49 @@
 ---
-title: "Error de las herramientas del vinculador LNK1301 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1301"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1301"
+title: Las herramientas del vinculador LNK1301 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1301
+dev_langs: C++
+helpviewer_keywords: LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a01d56f0239160a059fb67774916d9d9aa792709
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1301
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LTCG módulos clr encontrados, incompatibles con \/LTCG:parámetro  
+# <a name="linker-tools-error-lnk1301"></a>Error de las herramientas del vinculador LNK1301
+LTCG módulos clr encontrados, incompatibles con/LTCG: parámetro  
   
- Un módulo compilado con \/clr y \/GL se pasó al vinculador junto con uno de los parámetros de optimizaciones guiadas por perfiles \(PGO\) de \/LTCG.  
+ Un módulo compilado con /clr y /GL se pasó al vinculador junto con una de las optimizaciones guiadas por perfiles parámetros (PGO) de/LTCG.  
   
- Las optimizaciones guiadas por perfiles no son compatibles con los módulos \/clr.  
+ Optimizaciones guiadas por perfiles no se admiten para los módulos / CLR.  
   
- Para obtener más información, vea:  
+ Para obtener más información, consulte:  
   
--   [\/GL \(Optimización de todo el programa\)](../../build/reference/gl-whole-program-optimization.md)  
+-   [/GL (optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md)  
   
--   [\/LTCG \(Generación de código en tiempo de enlace\)](../../build/reference/ltcg-link-time-code-generation.md)  
+-   [/LTCG (generación de código en tiempo de vínculo)](../../build/reference/ltcg-link-time-code-generation.md)  
   
--   [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/CLR (compilación de common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  No compile con \/clr ni vincule con uno de los parámetros PGO en \/LTCG.  
+1.  No compile con /clr o no crear vínculo con uno de los parámetros PGO en/LTCG.  
   
-## Ejemplo  
- El código siguiente genera el error LNK1301:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera el error LNK1301:  
   
 ```  
 // LNK1301.cpp  

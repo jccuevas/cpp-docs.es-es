@@ -1,31 +1,31 @@
 ---
-title: "Moving or Copying an Accelerator Table Entry to Another Resource Script File | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accelerator tables [C++], copying entries"
-  - "rc files, moving an accelerator table entry"
-  - ".rc files, moving accelerator table entries"
-  - "accelerator tables [C++], moving entries"
+title: Mover o copiar una entrada de la tabla de aceleradores a otro archivo de Script de recursos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accelerator tables [C++], copying entries
+- rc files, moving an accelerator table entry
+- .rc files, moving accelerator table entries
+- accelerator tables [C++], moving entries
 ms.assetid: 7b4dc149-c972-4ab2-8477-76c52b6feb5b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b51fbaf25861712f0809f8ef0e9b3cb2494621f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Moving or Copying an Accelerator Table Entry to Another Resource Script File
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos  
+# <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>Mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>Para mover o copiar una entrada de una tabla de aceleradores a otro archivo de script de recursos  
   
 1.  Abra las tablas de aceleradores en los dos archivos de script de recursos.  
   
@@ -34,21 +34,21 @@ caps.handback.revision: 9
   
 2.  Seleccione la entrada que desea mover.  
   
-3.  En el menú **Edición**, elija **Copiar** o **Cortar**.  
+3.  Desde el **editar** menú, elija **copia** o **cortar**.  
   
 4.  Seleccione una entrada en el archivo de script de recursos de destino.  
   
-5.  En el menú **Edición**, elija **Pegar**.  
+5.  Desde el **editar** menú, elija **pegar**.  
   
     > [!NOTE]
     >  También puede usar las teclas de método abreviado para copiar y pegar.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [Editing Accelerator Tables](../windows/editing-accelerator-tables.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Editar tablas de aceleradores](../windows/editing-accelerator-tables.md)   
+ [Editor de aceleradores](../windows/accelerator-editor.md)

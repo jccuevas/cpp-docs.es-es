@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3faa0bab0d49eb45ea340528ffc859bc53764d67
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-standard-library-overview"></a>Información general sobre la biblioteca estándar de C++
 Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o varios encabezados estándar. Esta implementación incluye dos encabezados adicionales, `<hash_map>` y `<hash_set>`, que no son necesarios en el estándar de C++. Para obtener una lista completa de los encabezados que admite esta implementación, vea [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md).  
@@ -86,5 +69,4 @@ Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o vari
   
 ## <a name="see-also"></a>Vea también  
  [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
-
 

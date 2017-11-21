@@ -1,184 +1,196 @@
 ---
-title: "Tutorial: Crear una aplicaci&#243;n basada en agente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agentes asincrónicos, crear"
-  - "agent (clase), ejemplo"
+title: "Tutorial: Crear una aplicación basada en agente | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- asynchronous agents, creating
+- agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Tutorial: Crear una aplicaci&#243;n basada en agente
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se describe cómo crear una aplicación basada en agente básica.  En este tutorial, puede crear un agente que lee datos de un archivo de texto de forma asincrónica.  La aplicación utiliza el algoritmo de suma de comprobación Adler\-32 para calcular la suma de comprobación del contenido de ese archivo.  
+# <a name="walkthrough-creating-an-agent-based-application"></a>Tutorial: Crear una aplicación basada en agente
+En este tema se describe cómo crear una aplicación basada en agente básica. En este tutorial, puede crear un agente que lee datos de un archivo de texto de forma asincrónica. La aplicación utiliza el algoritmo de suma de comprobación Adler-32 para calcular la suma de comprobación del contenido de ese archivo.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para completar este tutorial, debe comprender los siguientes temas:  
   
--   [Agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md)  
+- [Agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md)  
   
--   [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)  
+- [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Funciones que pasan mensajes](../../parallel/concrt/message-passing-functions.md)  
+- [Funciones que pasan mensajes](../../parallel/concrt/message-passing-functions.md)  
   
--   [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)  
+- [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)  
   
 ##  <a name="top"></a> Secciones  
  En este tutorial se muestra cómo realizar las tareas siguientes:  
   
--   [Crear la aplicación de consola](#createApplication)  
+- [Crear la aplicación de consola](#createapplication)  
   
--   [Crear la clase file\_reader](#createAgentClass)  
+- [Crear la clase file_reader](#createagentclass)  
   
--   [Usar la clase file\_reader en la aplicación](#useAgentClass)  
+- [Utilice la clase file_reader en la aplicación](#useagentclass)  
   
-##  <a name="createApplication"></a> Crear la aplicación de consola  
- En esta sección se muestra cómo crear una aplicación de consola de Visual C\+\+ que hace referencia a los archivos de encabezado que el programa usará.  
+##  <a name="createapplication"></a>Crear la aplicación de consola  
+ En esta sección se muestra cómo crear una aplicación de consola de Visual C++ que hace referencia a los archivos de encabezado que el programa usará.  
   
-#### Para crear una aplicación Visual C\+\+ utilizando el Asistente para aplicación de consola Win32  
+#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Para crear una aplicación Visual C++ utilizando el Asistente para aplicación de consola Win32  
   
-1.  En el menú **Archivo**, haga clic en **Nuevo** y, a continuación, haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
+1.  En el **archivo** menú, haga clic en **New**y, a continuación, haga clic en **proyecto** para mostrar la **nuevo proyecto** cuadro de diálogo.  
   
-2.  En el cuadro de diálogo **Nuevo proyecto**, en el panel **Tipos de proyecto**, seleccione el nodo **Visual C\+\+** y, a continuación, seleccione **Aplicación de consola Win32** en el panel **Plantillas**.  Escriba un nombre para el proyecto, por ejemplo, `BasicAgent` y, a continuación, haga clic en **Aceptar** para mostrar el **Asistente para aplicación de consola Win32**.  
+2.  En el **nuevo proyecto** cuadro de diálogo, seleccione la **Visual C++** nodo en el **tipos de proyecto** panel y, a continuación, seleccione **aplicación de consola Win32** en el **plantillas** panel. Escriba un nombre para el proyecto, por ejemplo, `BasicAgent`y, a continuación, haga clic en **Aceptar** para mostrar la **Asistente para aplicaciones de consola Win32**.  
   
-3.  En el cuadro de diálogo **Asistente para aplicación de consola Win32**, haga clic en **Finalizar**.  
+3.  En el **Asistente para aplicaciones de consola Win32** cuadro de diálogo, haga clic en **finalizar**.  
   
 4.  En stdafx.h, agregue el código siguiente.  
   
-     [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_1.h)]  
+ [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]  
   
-     El archivo de encabezado agents.h contiene la funcionalidad de la clase [concurrency::agent](../../parallel/concrt/reference/agent-class.md).  
+     El archivo de encabezado agents.h contiene la funcionalidad de la [Concurrency](../../parallel/concrt/reference/agent-class.md) clase.  
   
-5.  Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela.  Para compilar la aplicación, en el menú **Generar**, haga clic en **Generar solución**.  Si la aplicación se compila correctamente, haga clic en **Iniciar depuración** en el menú **Depurar** para ejecutarla.  
+5.  Compruebe que la aplicación se creó correctamente; para ello, compílela y ejecútela. Para compilar la aplicación, en la **generar** menú, haga clic en **generar solución**. Si la aplicación se compila correctamente, ejecute la aplicación haciendo clic en **Iniciar depuración** en el **depurar** menú.  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-##  <a name="createAgentClass"></a> Crear la clase file\_reader  
- En esta sección se muestra cómo crear la clase `file_reader`.  El runtime programa cada agente para realizar el trabajo en su propio contexto.  Por tanto, puede crear un agente que realice el trabajo de forma sincrónica pero que interactúe con otros componentes de forma asincrónica.  La clase `file_reader` lee los datos de un archivo de entrada determinado y los envía desde este archivo a un componente de destino determinado.  
+##  <a name="createagentclass"></a>Crear la clase file_reader  
+ En esta sección se muestra cómo crear la clase `file_reader`. El runtime programa cada agente para realizar el trabajo en su propio contexto. Por tanto, puede crear un agente que realice el trabajo de forma sincrónica pero que interactúe con otros componentes de forma asincrónica. La clase `file_reader` lee los datos de un archivo de entrada determinado y los envía desde este archivo a un componente de destino determinado.  
   
-#### Para crear la clase file\_reader  
+#### <a name="to-create-the-filereader-class"></a>Para crear la clase file_reader  
   
-1.  Agregue un nuevo archivo de encabezado de C\+\+ al proyecto.  Para ello, en el **Explorador de soluciones**, haga clic con el botón secundario en el nodo **Archivos de encabezado**, haga clic en **Agregar** y, a continuación, haga clic en **Nuevo elemento**.  En el panel **Plantillas**, seleccione **Archivo de encabezado \(.h\)**.  En el cuadro de diálogo **Agregar nuevo elemento**, escriba `file_reader.h` en el cuadro **Nombre** y haga clic en **Agregar**.  
+1.  Agregue un nuevo archivo de encabezado de C++ al proyecto. Para ello, haga clic en el **archivos de encabezado** nodo **el Explorador de soluciones**, haga clic en **agregar**y, a continuación, haga clic en **nuevo elemento**. En el **plantillas** panel, seleccione **archivo de encabezado (. h)**. En el **Agregar nuevo elemento** cuadro de diálogo, escriba `file_reader.h` en el **nombre** y, a continuación, haga clic en **agregar**.  
   
-2.  En file\_reader.h, agregue el siguiente código.  
+2.  En file_reader.h, agregue el siguiente código.  
   
-     [!code-cpp[concrt-basic-agent#17](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_2.h)]  
+ [!code-cpp[concrt-basic-agent#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_2.h)]  
   
-3.  En file\_reader.h, cree una clase de nombre `file_reader` que derive de `agent`.  
+3.  En file_reader.h, cree una clase de nombre `file_reader` que derive de `agent`.  
   
-     [!code-cpp[concrt-basic-agent#2](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_3.h)]  
+ [!code-cpp[concrt-basic-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_3.h)]  
   
 4.  Agregue los siguientes miembros de datos a la sección `private` de la clase.  
   
-     [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_4.h)]  
+ [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]  
   
-     El miembro `_file_name` es el nombre de archivo del que lee el agente.  El miembro `_target` es un objeto [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) en el que el agente escribe el contenido del archivo.  El miembro `_error` contiene cualquier error que se produce durante la vida del agente.  
+     El miembro `_file_name` es el nombre de archivo del que lee el agente. El `_target` miembro es una [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) que el agente escribe el contenido del archivo de objeto. El miembro `_error` contiene cualquier error que se produce durante la vida del agente.  
   
 5.  Agregue el código siguiente para los constructores de `file_reader` en la sección `public` de la clase `file_reader`.  
   
-     [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_5.h)]  
+ [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]  
   
-     Cada sobrecarga de constructor establece los miembros de datos de `file_reader`.  La segunda y tercera sobrecarga de constructor permiten que la aplicación use un programador concreto con el agente.  La primera sobrecarga utiliza el programador predeterminado con el agente.  
+     Cada sobrecarga de constructor establece los miembros de datos de `file_reader`. La segunda y tercera sobrecarga de constructor permiten que la aplicación use un programador concreto con el agente. La primera sobrecarga utiliza el programador predeterminado con el agente.  
   
 6.  Agregue el método `get_error` a la sección pública de la clase `file_reader`.  
   
-     [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_6.h)]  
+ [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]  
   
      El método `get_error` recupera cualquier error que se produce durante la vida del agente.  
   
-7.  Implemente el método [concurrency::agent::run](../Topic/agent::run%20Method.md) en la sección `protected` de la clase.  
+
+7.  Implemente el [concurrency::agent::run](reference/agent-class.md#run) método en la `protected` sección de la clase.  
+
   
-     [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_7.h)]  
+ [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]  
   
-     El método `run` abre el archivo y lee sus datos.  El método `run` utiliza el control de excepciones para capturar los errores que se produzcan durante el procesamiento del archivo.  
+El método `run` abre el archivo y lee sus datos. El método `run` utiliza el control de excepciones para capturar los errores que se produzcan durante el procesamiento del archivo.  
   
-     Cada vez que este método lee datos del archivo, llama a la función [concurrency::asend](../Topic/asend%20Function.md) para enviar esos datos al búfer de destino.  Envía la cadena vacía a su búfer de destino para indicar el fin del procesamiento.  
+   Cada vez que este método lee los datos desde el archivo, llama a la [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) función para enviar esos datos en el búfer de destino. Envía la cadena vacía a su búfer de destino para indicar el fin del procesamiento.  
+
   
- En el ejemplo siguiente se muestra el contenido completo de file\_reader.h.  
+ En el ejemplo siguiente se muestra el contenido completo de file_reader.h.  
   
- [!code-cpp[concrt-basic-agent#7](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_8.h)]  
+ [!code-cpp[concrt-basic-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_8.h)]  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-##  <a name="useAgentClass"></a> Usar la clase file\_reader en la aplicación  
- En esta sección se muestra cómo utilizar la clase `file_reader` para leer el contenido de un archivo de texto.  También se muestra cómo crear un objeto [concurrency::call](../../parallel/concrt/reference/call-class.md) que recibe los datos de este archivo y calcula su suma de comprobación Adler\-32.  
+##  <a name="useagentclass"></a>Utilice la clase file_reader en la aplicación  
+ En esta sección se muestra cómo utilizar la clase `file_reader` para leer el contenido de un archivo de texto. También muestra cómo crear un [Concurrency:: call](../../parallel/concrt/reference/call-class.md) objeto que recibe datos de este archivo y calcula su suma de comprobación Adler-32.  
   
-#### Para utilizar la clase file\_reader en la aplicación  
+#### <a name="to-use-the-filereader-class-in-your-application"></a>Para utilizar la clase file_reader en la aplicación  
   
 1.  En BasicAgent.cpp, agregue la siguiente instrucción `#include`.  
   
-     [!code-cpp[concrt-basic-agent#8](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_9.cpp)]  
+ [!code-cpp[concrt-basic-agent#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_9.cpp)]  
   
 2.  En BasicAgent.cpp, agregue las siguientes directivas `using`.  
   
-     [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_10.cpp)]  
+ [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]  
   
-3.  En la función `_tmain`, cree un objeto [concurrency::event](../../parallel/concrt/reference/event-class.md) que indique el fin del procesamiento.  
+3.  En el `_tmain` funcione, cree un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que señala el final del procesamiento.  
   
-     [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_11.cpp)]  
+ [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]  
   
 4.  Cree un objeto `call` que actualice la suma de comprobación cuando reciba datos.  
   
-     [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_12.cpp)]  
+ [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]  
   
      Este objeto `call` también establece el objeto `event` cuando recibe la cadena vacía para señalar el fin del procesamiento.  
   
 5.  Cree un objeto `file_reader` que lea del archivo test.txt y escriba el contenido de este archivo en el objeto `call`.  
   
-     [!code-cpp[concrt-basic-agent#12](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_13.cpp)]  
+ [!code-cpp[concrt-basic-agent#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_13.cpp)]  
   
 6.  Inicie el agente y espere a que finalice.  
   
-     [!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_14.cpp)]  
+ [!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_14.cpp)]  
   
 7.  Espere a que el objeto `call` reciba todos los datos y finalice.  
   
-     [!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_15.cpp)]  
+ [!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_15.cpp)]  
   
-8.  Compruebe los errores del lector del archivo.  Si no se ha producido ningún error, calcule la suma Adler\-32 final e imprímala en la consola.  
+8.  Compruebe los errores del lector del archivo. Si no se ha producido ningún error, calcule la suma Adler-32 final e imprímala en la consola.  
   
-     [!code-cpp[concrt-basic-agent#15](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_16.cpp)]  
+ [!code-cpp[concrt-basic-agent#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_16.cpp)]  
   
  En el ejemplo siguiente se muestra el archivo BasicAgent.cpp completo.  
   
- [!code-cpp[concrt-basic-agent#16](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-agent-based-application_17.cpp)]  
+ [!code-cpp[concrt-basic-agent#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_17.cpp)]  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-## Entrada de ejemplo  
+## <a name="sample-input"></a>Entrada de ejemplo  
  Este es el contenido de ejemplo del archivo de entrada text.txt:  
   
-  **The quick brown fox**  
-**jumps**  
-**over the lazy dog**   
-## Resultados del ejemplo  
+```Output  
+The quick brown fox  
+jumps  
+over the lazy dog  
+```  
+  
+## <a name="sample-output"></a>Resultados del ejemplo  
  Cuando se utiliza con la entrada de ejemplo, este programa produce el siguiente resultado:  
   
-  **Adler\-32 sum is fefb0d75**   
-## Programación sólida  
- Para evitar el acceso simultáneo a los miembros de datos, se recomienda agregar métodos que realicen el trabajo en las secciones `protected` o `private` de la clase.  Agregue únicamente los métodos que envían o reciben mensajes del agente en la sección `public` de la clase.  
+```Output  
+Adler-32 sum is fefb0d75  
+```  
   
- Llame siempre al método [concurrency::agent::done](../Topic/agent::done%20Method.md) para mover el agente al estado completado.  Por lo general se llama a este método antes de volver del método `run`.  
+## <a name="robust-programming"></a>Programación sólida  
+ Para evitar el acceso simultáneo a los miembros de datos, se recomienda agregar métodos que realicen el trabajo en las secciones `protected` o `private` de la clase. Agregue únicamente los métodos que envían o reciben mensajes del agente en la sección `public` de la clase.  
   
-## Pasos siguientes  
- Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).  
+
+ Llame siempre a la [Concurrency:: realiza](reference/agent-class.md#done) método para mover el agente al estado completado. Por lo general se llama a este método antes de volver del método `run`.  
+
   
-## Vea también  
+## <a name="next-steps"></a>Pasos siguientes  
+ Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).  
+  
+## <a name="see-also"></a>Vea también  
  [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)   
  [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Funciones que pasan mensajes](../../parallel/concrt/message-passing-functions.md)   
  [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)   
  [Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
+

@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP (macro)"
+title: BEGIN_PROVIDER_COLUMN_MAP | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROVIDER_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROVIDER_COLUMN_MAP macro
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b93a08a709f09010187a1ed46552c291ecbe166
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROVIDER_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca el principio de las entradas del mapa de columnas del proveedor.  
+# <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
+Marca el principio de las entradas de asignación de columna de proveedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,20 +34,20 @@ theClass
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `theClass`  
- \[in\] El nombre de la clase este mapa pertenece.  
+ [in] El nombre de la clase a la que pertenece este mapa.  
   
-## Ejemplo  
- Ésta es una columna del proveedor de ejemplo asignada:  
+## <a name="example"></a>Ejemplo  
+ Este es un mapa de columnas del proveedor de ejemplo:  
   
- [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/CPP/begin-provider-column-map_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4272 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4272"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4272"
+title: Compilador advertencia (nivel 1) C4272 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4272
+dev_langs: C++
+helpviewer_keywords: C4272
 ms.assetid: 0d6c1de4-2eef-42c4-b861-c221f8b495ef
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8d5709ec229ea3e1bfbb985fa35937c7c26b7646
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4272
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : está marcada con \_\_declspec \(dllimport\); debe especificar la convención de llamadas nativa al importar una función.  
+# <a name="compiler-warning-level-1-c4272"></a>Advertencia del compilador (nivel 1) C4272
+'función': está marcada como __declspec (dllimport); debe especificar la convención de llamada nativa al importar una función.  
   
- Es un error exportar una función marcada con la convención de llamadas [\_\_clrcall](../../cpp/clrcall.md); el compilador emite esta advertencia si se intenta importar una función marcada con `__clrcall`.  
+ Es un error al exportar una función marcada con el [__clrcall](../../cpp/clrcall.md) convención de llamada y el compilador emite esta advertencia si intenta importar una función marcada `__clrcall`.  
   
- El código siguiente genera el error C4272:  
+ El ejemplo siguiente genera C4272:  
   
 ```  
 // C4272.cpp  

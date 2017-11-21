@@ -1,31 +1,31 @@
 ---
-title: "Modificar la herencia de RMyProviderRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "herencia [C++]"
-  - "RMyProviderRowset"
+title: Modificar la herencia de RMyProviderRowset | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RMyProviderRowset
+- inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Modificar la herencia de RMyProviderRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para agregar la interfaz `IRowsetLocate` al ejemplo de proveedor sencillo de sólo lectura, modifique la herencia de **RMyProviderRowset**.  Inicialmente, **RMyProviderRowset** hereda de `CRowsetImpl`.  Debe modificarla para que herede de **CRowsetBaseImpl**.  
+# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modificar la herencia de RMyProviderRowset
+Para agregar el `IRowsetLocate` de la interfaz para el ejemplo de proveedor sencillo de sólo lectura, modifique la herencia de **RMyProviderRowset**. Inicialmente, **RMyProviderRowset** hereda de `CRowsetImpl`. Debe modificar que herede de **CRowsetBaseImpl**.  
   
- Para ello, cree una clase nueva, `CMyRowsetImpl`, en MyProviderRS.h:  
+ Para ello, cree una nueva clase, `CMyRowsetImpl`, en MyProviderRS.h:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -39,7 +39,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Ahora, edite el mapa de la interfaz COM de MyProviderRS.h para convertirlo en el siguiente:  
+ Ahora, edite el mapa de interfaz COM: MyProviderRS.h para ser como sigue:  
   
 ```  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -48,17 +48,17 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- De esta forma, se crea un mapa de interfaz COM que indica a `CMyRowsetImpl` que debe llamar a **QueryInterface**  para las interfaces `IRowset` e `IRowsetLocate`.  Para lograr la implementación completa de las clases de conjunto de filas, el mapa vincula la clase `CMyRowsetImpl` con la clase **CRowsetBaseImpl** definida por las Plantillas OLE DB; el mapa utiliza la macro COM\_INTERFACE\_ENTRY\_CHAIN, que indica a las plantillas OLE DB que deben analizar el mapa COM en **CRowsetBaseImpl** como respuesta a una llamada de `QueryInterface`.  
+ Esto crea un mapa de interfaz COM que indica a `CMyRowsetImpl` para llamar a **QueryInterface** tanto para el `IRowset` y `IRowsetLocate` interfaces. Para obtener toda la implementación para el conjunto de filas de otra clases, los vínculos del mapa la `CMyRowsetImpl` clase de nuevo a la **CRowsetBaseImpl** clase definida por las plantillas OLE DB; el mapa utiliza la macro COM_INTERFACE_ENTRY_CHAIN, que indica a Plantillas OLE DB para examinar el modelo COM se asignan en **CRowsetBaseImpl** en respuesta a un `QueryInterface` llamar.  
   
- Por último, vincule `RAgentRowset` a `CMyRowsetBaseImpl` modificando `RAgentRowset` de forma que herede de `CMyRowsetImpl`, de la manera siguiente:  
+ Por último, vincule `RAgentRowset` a `CMyRowsetBaseImpl` modificando `RAgentRowset` heredar de `CMyRowsetImpl`, como se indica a continuación:  
   
 ```  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` puede utilizar ahora la interfaz `IRowsetLocate` a la vez que aprovecha el resto de la implementación de la clase de conjunto de filas.  
+ `RAgentRowset`Ahora puede usar el `IRowsetLocate` interfaz mientras aprovecha el resto de la implementación de la clase de conjunto de filas.  
   
- Cuando haya hecho esto, puede [determinar dinámicamente las columnas que se devuelven al consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Cuando esto sucede, puede [determinar dinámicamente las columnas que se devuelven al consumidor](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Vea también  
- [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Vea también  
+ [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

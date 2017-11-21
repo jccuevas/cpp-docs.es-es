@@ -1,61 +1,62 @@
 ---
-title: "/ZW (Compilaci&#243;n de Windows en tiempo de ejecuci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.CompileAsWinRT"
-  - "/zw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ZW"
-  - "/ZW (opción del compilador)"
-  - "Windows en tiempo de ejecución (opción del compilador)"
-  - "-ZW"
-  - "-ZW (opción del compilador)"
+title: "-ZW (compilación de Windows en tiempo de ejecución) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.CompileAsWinRT
+- /zw
+dev_langs: C++
+helpviewer_keywords:
+- /ZW
+- -ZW compiler option
+- /ZW compiler option
+- -ZW
+- Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4af8070518cbb35d2f005fd255675ab4fb334b38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /ZW (Compilaci&#243;n de Windows en tiempo de ejecuci&#243;n)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] \([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]\) y poder crear aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  
+# <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows Runtime)
+Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) y poder crear aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  
   
- Cuando use **\/ZW** para compilar, especifique siempre **\/EHsc**.  
+ Cuando usas **/ZW** para compilar, especifique siempre **/EHsc** así.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-/ZW /EHsc /ZW:nostdlib /EHsc  
+/ZW /EHsc  
+/ZW:nostdlib /EHsc  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  nostdlib  
- Indica que Platform.winmd, Windows.Foundation.winmd y otros archivos de metadatos de Windows \(.winmd\) predeterminados no se incluyen automáticamente en la compilación,  sino que se debe usar la opción del compilador [\/FU \(Archivo de \#using de nombre forzado\)](../../build/reference/fu-name-forced-hash-using-file.md) para especificar explícitamente los archivos de metadatos de Windows.  
+ Indica que Platform.winmd, Windows.Foundation.winmd y otros archivos de metadatos de Windows (.winmd) predeterminados no se incluyen automáticamente en la compilación, En su lugar, debe utilizar el [/FU (Name Forced #using archivo)](../../build/reference/fu-name-forced-hash-using-file.md) opción del compilador para especificar explícitamente los archivos de metadatos de Windows.  
   
-## Comentarios  
- Cuando especifica la opción **\/ZW**, el compilador admite estas características:  
+## <a name="remarks"></a>Comentarios  
+ Cuando se especifica la **/ZW** opción, el compilador admite estas características:  
   
--   Los archivos de metadatos necesarios, los espacios de nombres, los tipos de datos y las funciones que requiere la aplicación para ejecutarse en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+-   Los archivos de metadatos necesarios, los espacios de nombres, tipos de datos y funciones que requiere la aplicación para ejecutarse en el tiempo de ejecución de Windows.  
   
--   El recuento de referencias automático de objetos de [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] y el descarte automático de un objeto cuando su recuento de referencias llega a cero.  
+-   Automático recuento de referencias de objetos en tiempo de ejecución de Windows y automática de descarte de un objeto cuando su recuento de referencias llega a cero.  
   
- Dado que el enlazador incremental no admite los metadatos de Windows incluidos en los archivos .obj con la opción **\/ZW**, la opción [\/Gm \(Habilitar recompilación mínima\)](../../build/reference/gm-enable-minimal-rebuild.md) es incompatible con **\/ZW**.  
+ Dado que el vinculador incremental no es compatible con los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) no es compatible con la opción   **/ZW** .  
   
- Para obtener más información, vea [Referencia del lenguaje Visual C\+\+](../Topic/Visual%20C++%20Language%20Reference%20\(C++-CX\).md).  
+ Para obtener más información, consulte [referencia del lenguaje Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

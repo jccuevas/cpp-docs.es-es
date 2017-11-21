@@ -1,27 +1,26 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Ejemplos A.25 de la cláusula de atributo de datos copyprivate | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d141ec66aa7ed0bac53c8242a87d08e092272eaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la cláusula de**ejemplo 1:** The `copyprivate` \([sección 2.7.2.8](../Topic/2.7.2.8%20copyprivate.md) en la página 32\) se puede utilizar para propagar la configuración adquiridos por un subproceso directamente a todas las instancias de las variables privadas de los otros subprocesos.  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 Ejemplos de la cláusula de atributos de datos copyprivate
+**Ejemplo 1:** el `copyprivate` cláusula ([sección 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) en la página 32) puede usarse para difundir valores adquiridos por un único subproceso directamente para todas las instancias de las variables privadas en los demás subprocesos.  
   
 ```  
 float x, y;  
@@ -41,9 +40,9 @@ void init( )
 }  
 ```  
   
- Si *el init* rutinario se denomina de una región en serie, el comportamiento no se ve afectado por la presencia de las directivas.  Después de la llamada a la rutina *de los get\_values* ha sido ejecutada por un subproceso, ningún subproceso sale de la construcción hasta los objetos privados notificados por *a*, *b*, *x*, y *y* en todos los subprocesos ha vuelto a definir con la lectura de valores.  
+ Si la rutina *init* se llama desde una región de la serie, su comportamiento no resulta afectado por la presencia de las directivas. Después de llamar a la *get_values* rutina se ha ejecutado por un subproceso, ningún subproceso abandona la construcción hasta que los objetos privados designados por *una*, *b*, *x*, y *y* en todos los subprocesos se convierten en ha definido con los valores leídos.  
   
- **ejemplo 2:** In Contrast To el ejemplo anterior, supone que la lectura se debe realizar mediante un subproceso determinado, indica el subproceso principal.  En este caso, la cláusula de `copyprivate` no se puede utilizar para hacer la difusión directamente, sino que se puede utilizar para proporcionar acceso a un objeto compartido temporal.  
+ **Ejemplo 2:** a diferencia del ejemplo anterior, suponga que un subproceso determinado, diga el subproceso principal debe realizar la operación de lectura. En este caso, el `copyprivate` cláusula no puede utilizarse para realizar la difusión directamente, pero se puede utilizar para proporcionar acceso a un objeto compartido temporal.  
   
 ```  
 float read_next( )   
@@ -74,7 +73,7 @@ float read_next( )
 }  
 ```  
   
- **ejemplo 3:** Suppose que el número de objetos de bloqueo necesarios dentro de una región paralela no se puede determinar con facilidad antes de escribir.  La cláusula de `copyprivate` se puede utilizar para proporcionar acceso a los objetos compartidos de bloqueo que se asignan en esa región paralela.  
+ **Ejemplo 3:** suponga que el número de objetos de bloqueo necesarios dentro de una región paralela no se puede determinar fácilmente antes de escribir en él. El `copyprivate` cláusula puede usarse para proporcionar acceso a objetos de bloqueo compartido que se asignan dentro de esa región paralela.  
   
 ```  
 #include <omp.h>  

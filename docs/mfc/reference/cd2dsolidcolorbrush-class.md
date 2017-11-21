@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DSolidColorBrush::SetColor
 - AFXRENDERTARGET/CD2DSolidColorBrush::m_colorSolid
 - AFXRENDERTARGET/CD2DSolidColorBrush::m_pSolidColorBrush
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], CD2DSolidColorBrush
 - CD2DSolidColorBrush [MFC], Attach
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 54509981af3222d455a822c99bec506f6a861408
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c381ae5d20c3bfe6cc34f2279c1868cd693670b
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Clase CD2DSolidColorBrush
 Un contenedor para ID2D1SolidColorBrush.  
@@ -242,4 +239,3 @@ void SetColor(D2D1_COLOR_F color);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

@@ -1,41 +1,39 @@
 ---
-title: "list::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size (miembro) [STL/CLR]"
+title: 'List:: Size (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 409e39fb-4468-44bb-b179-52c90e2fa293
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a2bca897bb349b032224639e6b5196582e7feff4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# list::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listsize-stlclr"></a>list::size (STL/CLR)
 Cuenta el número de elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_type size();  
 ```  
   
-## Comentarios  
- La función miembro devuelve la longitud de la secuencia controlada.  Se utiliza para determinar el número de elementos actualmente en la secuencia controlada.  Si todo lo que se utiliza es de si la secuencia tiene un tamaño distinto de cero, vea [list::empty](../dotnet/list-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve la longitud de la secuencia controlada. Usa para determinar el número de elementos actualmente en la secuencia controlada. Si todo lo que le interesa es si la secuencia tiene tamaño distinto de cero, vea [List:: Empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_size.cpp   
@@ -68,15 +66,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 que empiezan por 3**  
-**size\(\) \= 0 después de borrar**  
-**size\(\) \= 2 después de agregar 2**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::empty](../dotnet/list-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)

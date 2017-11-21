@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- functional/std::binary
-- binary
-dev_langs:
-- C++
-helpviewer_keywords:
-- binary_function class
+f1_keywords: functional/std::binary
+dev_langs: C++
+helpviewer_keywords: binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 7fa7e543bbf51583c34ade759112a6e101a06f46
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 39f7ca7d996b8d2949d8bcf04595c9cf7a84f453
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="binaryfunction-struct"></a>binary_function (Struct)
 Un struct base vacío que define los tipos que pueden heredar las clases derivadas que proporciona un objeto de función binario.  
@@ -130,7 +110,6 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

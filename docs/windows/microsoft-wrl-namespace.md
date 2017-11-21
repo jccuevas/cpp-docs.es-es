@@ -1,37 +1,36 @@
 ---
-title: "Microsoft::WRL (Espacio de nombres) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL"
-  - "module/Microsoft::WRL"
-  - "async/Microsoft::WRL"
-  - "internal/Microsoft::WRL"
-  - "event/Microsoft::WRL"
-  - "ftm/Microsoft::WRL"
-  - "client/Microsoft::WRL"
-  - "corewrappers/Microsoft::WRL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "espacio de nombres de WRL"
+title: 'Microsoft:: wrl Namespace | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- implements/Microsoft::WRL
+- module/Microsoft::WRL
+- async/Microsoft::WRL
+- internal/Microsoft::WRL
+- event/Microsoft::WRL
+- ftm/Microsoft::WRL
+- client/Microsoft::WRL
+- corewrappers/Microsoft::WRL
+dev_langs: C++
+helpviewer_keywords: WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b3c3bef713bd63b7b82761ce36ab039556e63c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Microsoft::WRL (Espacio de nombres)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Define los tipos fundamentales que componen el [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)].  
+# <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
+Define los tipos fundamentales que componen la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,14 +54,14 @@ namespace Microsoft::WRL;
 |[AsyncBase (clase)](../windows/asyncbase-class.md)|Implementa la máquina de estados asincrónica de Windows Runtime.|  
 |[ClassFactory (clase)](../windows/classfactory-class.md)|Implementa la funcionalidad básica de la interfaz `IClassFactory`.|  
 |[ComPtr (clase)](../windows/comptr-class.md)|Crea un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. ComPtr mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.|  
-|[Clase DeferrableEventArgs](../windows/deferrableeventargs-class.md)|Una clase de plantilla utilizada para los tipos de argumento de evento de los aplazamientos.|  
+|[DeferrableEventArgs (clase)](../windows/deferrableeventargs-class.md)|Una clase de plantilla utilizada para los tipos de argumento de evento de los aplazamientos.|  
 |[EventSource (clase)](../windows/eventsource-class.md)|Representa un evento. Las funciones miembro `EventSource` agregan, quitan e invocan controladores de eventos.|  
 |[FtmBase (clase)](../windows/ftmbase-class.md)|Representa un objeto de cálculo de referencias con subprocesamiento libre.|  
 |[Module (clase)](../windows/module-class.md)|Representa una colección de objetos relacionados.|  
 |[RuntimeClass (clase)](../windows/runtimeclass-class.md)|Representa una clase con instancias que hereda el número especificado de interfaces y proporciona la compatibilidad especificada con Windows Runtime, COM clásico y referencia débil.|  
 |[SimpleActivationFactory (clase)](../windows/simpleactivationfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base de Windows Runtime o COM clásico.|  
 |[SimpleClassFactory (clase)](../windows/simpleclassfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base.|  
-|[WeakRef (clase)](../windows/weakref-class.md)|Representa un *referencia débil* que se puede utilizar sólo el Runtime de Windows, COM clásico no. Una referencia débil representa un objeto que puede ser o no accesible.|  
+|[WeakRef (clase)](../windows/weakref-class.md)|Representa una *referencia débil* que solo puede usar Windows en tiempo de ejecución, no COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|  
   
 ### <a name="structures"></a>Estructuras  
   
@@ -70,7 +69,7 @@ namespace Microsoft::WRL;
 |----------|-----------------|  
 |[ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)|Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.|  
 |[CloakedIid (estructura)](../windows/cloakediid-structure.md)|Indica a las plantillas RuntimeClass, Implements y ChainInterfaces que la interfaz especificada no es accesible en la lista IID.|  
-|[Implements (estructura)](../Topic/Implements%20Structure.md)|Implementa QueryInterface y GetIid para las interfaces especificadas.|  
+|[Implements (estructura)](../windows/implements-structure.md)|Implementa QueryInterface y GetIid para las interfaces especificadas.|  
 |[MixIn (estructura)](../windows/mixin-structure.md)|Garantiza que una clase Runtime deriva de interfaces de Windows Runtime, si las hubiera, y luego de interfaces de COM clásico.|  
 |[RuntimeClassFlags (estructura)](../windows/runtimeclassflags-structure.md)|Contiene el tipo de una instancia de un [RuntimeClass](../windows/runtimeclass-class.md).|  
   
@@ -79,7 +78,7 @@ namespace Microsoft::WRL;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[AsyncResultType (enumeración)](../windows/asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por el método GetResults().|  
-|[ModuleType (enumeración)](../Topic/ModuleType%20Enumeration.md)|Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.|  
+|[ModuleType (enumeración)](../windows/moduletype-enumeration.md)|Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.|  
 |[RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md)|Especifica el tipo de [RuntimeClass](../windows/runtimeclass-class.md) instancia que se admite.|  
   
 ### <a name="functions"></a>Funciones  
@@ -90,7 +89,7 @@ namespace Microsoft::WRL;
 |[Función de devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|  
 |[CreateActivationFactory (función)](../windows/createactivationfactory-function.md)|Crea un generador que produce instancias de la clase especificada que puede activar Windows Runtime.|  
 |[CreateClassFactory (función)](../windows/createclassfactory-function.md)|Crea un generador que produce instancias de la clase especificada.|  
-|[MAKE (función)](../windows/make-function.md)|Inicializa la clase [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] especificada.|  
+|[Make (función)](../windows/make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
@@ -98,4 +97,4 @@ namespace Microsoft::WRL;
  **Espacio de nombres:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Vea también  
- [Espacio de nombres Wrappers](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+ [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

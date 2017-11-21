@@ -1,36 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: Compilador advertencia (nivel 1) C4730 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c27a63b826249c094b507eb4efb3041ab8147973
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'main': la mezcla de \_m64 y expresiones de punto flotante podría ocasionar código incorrecto  
+# <a name="compiler-warning-level-1-c4730"></a>Advertencia del compilador (nivel 1) C4730
+'main': mezcla de _m64 y expresiones pueden derivar en código incorrecto de punto flotante  
   
- Una función utiliza [\_\_m64](../../cpp/m64.md) y tipos **float**\/**double**.  Ya que los registros MMX y de punto flotante comparten el mismo espacio físico de registros \(no se pueden usar simultáneamente\), utilizar tipos `__m64` y **float**\/**double** en una misma función puede dar como resultado datos dañados, posiblemente causando una excepción.  
+ Una función usa [__m64](../../cpp/m64.md) y **float**/**doble** tipos. Dado que los registros MMX y punto flotante comparten el mismo físico registrar espacio (no se pueden usar simultáneamente), con `__m64` y **float**/**doble** tipos en el mismo función puede producir daños en los datos, lo que podría provocar una excepción.  
   
- Para utilizar a los tipos y los tipos de punto flotante de `__m64` en una misma función, las instrucciones que utilice uno de los tipos debe separar por **\_m\_empty\(\)** \(para MMX\) o intrínsecos de **\_m\_femms\(\)** \(para 3DNow\!\).  
+ Para utilizar de forma segura `__m64` tipos y tipos de punto flotante en la misma función, cada instrucción que usa uno de los tipos debe estar separado por el **_m_empty** (para MMX) o **_m_femms** (para 3DNow!) función intrínseca.  
   
- El código siguiente genera el error C4730:  
+ El ejemplo siguiente genera C4730:  
   
 ```  
 // C4730.cpp  

@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::auto_gcroot"
-  - "auto_gcroot::auto_gcroot"
-  - "auto_gcroot.auto_gcroot"
-  - "msclr.auto_gcroot.auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::auto_gcroot"
+title: auto_gcroot::auto_gcroot | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::auto_gcroot
+- auto_gcroot::auto_gcroot
+- auto_gcroot.auto_gcroot
+- msclr.auto_gcroot.auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::auto_gcroot
 ms.assetid: 27faa42a-64ea-4d31-836f-073a55145735
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3113ea5c2644c3e06a6435b7f088943ff22a2207
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El constructor `auto_gcroot`.  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
+El `auto_gcroot` constructor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 auto_gcroot(  
@@ -44,17 +43,17 @@ auto_gcroot(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `_ptr`  
- El objeto a propio.  
+ El objeto que posea.  
   
  `_right`  
- `auto_gcroot` existente.  
+ Un `auto_gcroot` existente.  
   
-## Comentarios  
- Al crear `auto_gcroot` de `auto_gcroot`existente, libera existentes de `auto_gcroot` el objeto antes de transferir la propiedad del objeto al nuevo `auto_gcroot`.  
+## <a name="remarks"></a>Comentarios  
+ Al construir un `auto_gcroot` desde una existente `auto_gcroot`, existente `auto_gcroot` libera su objeto antes de transferir la propiedad del objeto para el nuevo `auto_gcroot`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_auto_gcroot_auto_gcroot.cpp  
@@ -126,25 +125,28 @@ int main()
 }  
 ```  
   
-  **en el constructor de RefClassA: no administrada**  
-**¡Hola de A no administrada\!**  
-**en RefClassA destructor: no administrada**  
-**en el constructor de RefClassA: primero**  
-**¡Hola primero de A\!**  
-**en RefClassA destructor: primero**  
-**en el constructor de RefClassA: en segundo lugar**  
-**¡Hola a partir de la segunda b\!**  
-**¡Hola a partir de segunda A\!**  
-**¡Hola a partir de segunda A\!**  
-**en RefClassA destructor: en segundo lugar**  
-**done**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in RefClassA constructor: unmanaged  
+Hello from unmanaged A!  
+in RefClassA destructor: unmanaged  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\auto_gcroot.h >  
   
-## Vea también  
- [auto\_gcroot \(Miembros\)](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [auto_gcroot (miembros)](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::Attach](../dotnet/auto-gcroot-attach.md)   
+ [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

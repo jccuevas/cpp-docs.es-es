@@ -1,43 +1,42 @@
 ---
-title: "3.1.9 omp_set_nested Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.9 omp_set_nested (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4afc3aa-bb96-4314-9849-fd5df5f437d9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a70406e42904c40ac81901ffd174991c0ebc54d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.9 omp_set_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de **omp\_set\_nested** habilita o deshabilita el paralelismo anidados.  El formato es como se detalla a continuación:  
+# <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested (Función)
+El **omp_set_nested ()** función habilita o deshabilita el paralelismo anidado. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
 void omp_set_nested(int nested);  
 ```  
   
- Si *es anidados* se evalúa como 0, se deshabilita el paralelismo anidadas, que es el valor predeterminado, y regiones paralelas anidadas son serializadas y ejecutadas por el subproceso actual.  Si *es anidados* se evalúa como un valor distinto de cero, se habilita el paralelismo anidadas, y regiones en paralelo se anidan que pueden implementar subprocesos adicionales para formar a los equipos anidados.  
+ Si *anidada* se evalúa como 0, anidada paralelismo está deshabilitado, que es el valor predeterminado y regiones anidadas en paralelo se serialice y se ejecuta en el subproceso actual. Si *anidada* evalúa en un valor distinto de cero, se habilita el paralelismo anidado y regiones en paralelo que están anidadas pueden implementar subprocesos adicionales para formar equipos anidados.  
   
- Esta función tiene efectos descritos anteriormente cuando se denomina de una parte del programa donde la función de **omp\_in\_parallel** devuelve cero.  Si se llama de una parte del programa donde la función de **omp\_in\_parallel** devuelve un valor distinto de cero, el comportamiento de esta función es indefinido.  
+ Esta función tiene los efectos que se ha descrito anteriormente, cuando se llama desde una parte del programa donde la **omp_in_parallel ()** función devuelve cero. Si se llama desde una parte del programa donde la **omp_in_parallel ()** función devuelve un valor distinto de cero, el comportamiento de esta función es indefinido.  
   
- Esta llamada tiene prioridad sobre la variable de entorno **OMP\_NESTED** .  
+ Esta llamada tiene prioridad sobre la **OMP_NESTED** variable de entorno.  
   
- Cuando se habilita el paralelismo anidado, el número de subprocesos utilizados para ejecutar las regiones paralelas anidadas es implementación\-definido.  Como resultado, las implementaciones de OpenMP\-conforme a se permiten serializar las regiones paralelas anidadas incluso cuando se habilita el paralelismo anidados.  
+ Cuando se habilita el paralelismo anidado, el número de subprocesos utilizados para ejecutar regiones anidadas en paralelo es definido por la implementación. Como resultado, las implementaciones compatibles con OpenMP puedan serializar regiones anidadas en paralelo incluso cuando se habilita el paralelismo anidado.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   La variable de entorno**OMP\_NESTED** , vea [sección 4,4](../Topic/4.4%20OMP_NESTED.md) en la página 49.  
+-   **OMP_NESTED** vea variable de entorno [sección 4.4](../../parallel/openmp/4-4-omp-nested.md) en la página 49.  
   
--   la función de**omp\_in\_parallel** , vea [sección 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) en la página 38.
+-   **omp_in_parallel ()** función, vea [sección 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) en página 38.

@@ -1,51 +1,50 @@
 ---
-title: "&lt;code&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "<code>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<code> (etiqueta XML) [C++]"
-  - "code (etiqueta XML) [C++]"
+title: "&lt;código&gt; (Visual C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- <code>
+dev_langs: C++
+helpviewer_keywords:
+- <code> C++ XML tag
+- code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ce06201d816cb91928f569ef3afe8422d5fecb7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;code&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La etiqueta de \<code\> proporciona una forma de indicar una o más líneas como código.  
+# <a name="ltcodegt-visual-c"></a>&lt;código&gt; (Visual C++)
+La \<código > etiqueta ofrece una manera de indicar una o varias líneas como código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <code>content</code>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `content`  
- Texto que se desea marcar como código.  
+ El texto que quiere marcar como código.  
   
-## Comentarios  
- El uso [\<c\>](../ide/c-visual-cpp.md) para indicar una parte de texto se debe marcar como código.  
+## <a name="remarks"></a>Comentarios  
+ Use [ \<c >](../ide/c-visual-cpp.md) para indicar una parte del texto se debe marcar como código.  
   
- Compile con el parámetro [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con el parámetro [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
   
-## Ejemplo  
- Vea el tema [\<example\>](../ide/example-visual-cpp.md) para obtener un ejemplo sobre la utilización de la etiqueta \<code\>.  
+## <a name="example"></a>Ejemplo  
+ Vea el tema [\<example>](../ide/example-visual-cpp.md) para obtener un ejemplo de cómo usar la etiqueta \<code>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentación de XML](../ide/xml-documentation-visual-cpp.md)

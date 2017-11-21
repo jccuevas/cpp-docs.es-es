@@ -1,47 +1,45 @@
 ---
-title: "Error de las herramientas del vinculador LNK1106 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1106"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1106"
+title: Las herramientas del vinculador LNK1106 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1106
+dev_langs: C++
+helpviewer_keywords: LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b97196ebed51c21e40fa74ab1b80d23f3c49eec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1106
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-archivo no válido o disco lleno: no se puede buscar en location  
+# <a name="linker-tools-error-lnk1106"></a>Error de las herramientas del vinculador LNK1106
+archivo no válido o disco lleno: no se puede buscar en ubicación  
   
- La herramienta no pudo leer ni escribir en `location` en un archivo asignado en memoria.  
+ La herramienta no pudo leer o escribir en `location` en un archivo asignado a memoria.  
   
-### Posibles causas del error:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Posibles causas del error:  
   
-1.  Disco lleno.  
+1.  Disco está lleno.  
   
-     Libere algo de espacio y vuelva a realizar la vinculación.  
+     Libere espacio y volver a vincular.  
   
-2.  Se está intentando realizar la vinculación a través de la red.  
+2.  Intentar vincular a través de una red.  
   
-     Algunas redes no admiten por entero los archivos asignados en memoria que utiliza el vinculador.  Intente realizar la vinculación en su disco local.  
+     Algunas redes no son totalmente compatibles con los archivos asignados a memoria utilizados por el vinculador. Intente vincular en el disco local.  
   
-3.  Bloque defectuoso en el disco.  
+3.  Bloque no válido en el disco.  
   
-     Si bien el sistema operativo y el hardware de disco deberían haber detectado cualquier error, puede resultar conveniente ejecutar un programa de comprobación del disco.  
+     Aunque el sistema operativo y el hardware del disco deben ha detectado un error de este tipo, puede que desee ejecutar un programa de comprobación de disco.  
   
-4.  El espacio en el montón es insuficiente  
+4.  Espacio de montón.  
   
-     Para obtener más información, vea [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md).
+     Vea [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obtener más información.

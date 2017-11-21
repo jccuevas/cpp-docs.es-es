@@ -1,49 +1,47 @@
 ---
-title: "Tutorial: Implementar una aplicaci&#243;n de Visual C++ en una carpeta local de la aplicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implementar aplicaciones de Visual C++"
+title: "Implementar una aplicación de Visual C++ en una carpeta local de la aplicación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ba12271fa4614b5ec0c7c70b3a7773152ebfec3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Tutorial: Implementar una aplicaci&#243;n de Visual C++ en una carpeta local de la aplicaci&#243;n
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Describe cómo implementar una aplicación de Visual C\+\+ copiando los archivos en la carpeta.  
+# <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Tutorial: Implementar una aplicación de Visual C++ en una carpeta local de la aplicación
+Describe cómo implementar una aplicación de Visual C++ copiando archivos en su carpeta.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Un equipo que tiene instalado Visual Studio.  
   
--   Otro equipo que no tenga las bibliotecas de Visual C\+\+.  
+-   Otro equipo que no tenga las bibliotecas de Visual C++.  
   
-### Para implementar una aplicación en una carpeta local de la aplicación  
+### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Para implementar una aplicación a una carpeta local de la aplicación  
   
-1.  Cree y compile una aplicación MFC siguiendo los pasos de [Tutorial: Implementar una aplicación de Visual C\+\+ mediante un proyecto de instalación](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+1.  Crear y compilar una aplicación MFC siguiendo los pasos descritos en [Tutorial: implementar una Visual C++ aplicación mediante un proyecto de instalación](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
   
-2.  Copie MFC y la biblioteca adecuados de \(CRT\) en tiempo de ejecución de C archivo \(el archivo para el ejemplo, en una plataforma y Unicode x86 admiten, copie mfc100u.dll y msvcr100.dll de proyectos de \\Program Files\\Microsoft Visual Studio 10.0\\VC\\redist\\x86\\—y a continuación peguelos en la carpeta \\Release\\ del proyecto de MFC.  Para obtener más información sobre otros archivos que es posible que tenga que copiar, vea [Determinar qué archivos DLL se redistribuirán](../ide/determining-which-dlls-to-redistribute.md).  
+2.  Copie los archivos de biblioteca MFC y tiempo de ejecución de C (CRT) correspondientes, por ejemplo, para un x86 plataforma y compatibilidad con Unicode, copia mfc100u.dll y msvcr100.dll desde \Program Visual Studio 10.0\VC\redist\x86\—and, a continuación, pegan en la carpeta \Release\ de un proyecto MFC. Para obtener más información sobre otros archivos que es posible que deba copiar, consulte [determinar qué archivos DLL se redistribuirán](../ide/determining-which-dlls-to-redistribute.md).  
   
-3.  Ejecute la aplicación MFC en un segundo equipo que no tenga las bibliotecas de Visual C\+\+.  
+3.  Ejecute la aplicación MFC en un segundo equipo que no tenga las bibliotecas de Visual C++.  
   
-    1.  Copie el contenido de \\Release \\ carpeta y péguelos en la carpeta de la aplicación en el segundo equipo.  
+    1.  Copie el contenido de la carpeta \Release\ y péguelos en la carpeta de aplicación en el segundo equipo.  
   
     2.  Ejecute la aplicación en el segundo equipo.  
   
-     La aplicación se ejecuta correctamente porque las bibliotecas de Visual C\+\+ están disponibles en la carpeta de la aplicación local.  
+     La aplicación se ejecuta correctamente porque las bibliotecas de Visual C++ están disponibles en la carpeta local de la aplicación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejemplos de implementación](../ide/deployment-examples.md)

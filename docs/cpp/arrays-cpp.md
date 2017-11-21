@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Un inicializador opcional.  Vea [inicializadores](../cpp/initializers.md).  
   
- El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) elemento, donde * n * es el número de elementos de la matriz puede contener. El *expresión constante* debe ser de un tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida sólo cuando la matriz es el último campo en un `struct` o **union** y cuando están habilitadas las extensiones de Microsoft (/Ze).  
+ El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) elemento, donde  *n*  es el número de elementos de la matriz puede contener. El *expresión constante* debe ser de un tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida sólo cuando la matriz es el último campo en un `struct` o **union** y cuando están habilitadas las extensiones de Microsoft (/Ze).  
   
  En el ejemplo siguiente se muestra cómo definir una matriz en tiempo de ejecución:  
   

@@ -1,46 +1,46 @@
 ---
-title: "Reglas de modo por lotes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reglas de inferencia de procesamiento por lotes en NMAKE"
-  - "reglas de inferencia en NMAKE"
-  - "NMAKE (programa), reglas de inferencia"
+title: Reglas de modo por lotes | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be8c00009e285ec84f42ae6f53c578a3084432de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Reglas de modo por lotes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>Reglas de modo por lotes
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- Las reglas de inferencia de modo por lotes proporcionan sólo una llamada de la regla de inferencia cuando los comandos N pasan por esta regla de inferencia.  Sin las reglas de inferencia de modo por lotes, habría que llamar a comandos N.  N es el número de dependientes que desencadenan la regla de inferencia.  
+ Las reglas de inferencia de modo por lotes proporcionan sólo una llamada de la regla de inferencia cuando los comandos N pasan por esta regla de inferencia. Sin las reglas de inferencia de modo por lotes, se necesitaría comandos N va a invocar. N es el número de dependientes que desencadenan la regla de inferencia.  
   
- Los archivos MAKE que contienen las reglas de inferencia de modo por lotes deben usar la versión 1.62 o superior de NMAKE.  Para comprobar la versión de NMAKE, se ha de ejecutar la macro \_NMAKE\_VER que está disponible con la versión 1.62 o superior de NMAKE.  Esta macro devuelve una cadena que representa la versión de producto de Visual C\+\+.  
+ MAKE (archivos) que contienen las reglas de inferencia de modo por lotes debe usar la versión 1.62 o superior NMAKE. Para comprobar la versión NMAKE, ejecute la macro _NMAKE_VER que está disponible con la versión de NMAKE 1.62 o superior. Esta macro devuelve una cadena que representa la versión de producto de Visual C++.  
   
- La única diferencia sintáctica de la regla de inferencia estándar es que la regla de inferencia de modo por lotes termina con un signo doble de dos puntos \(::\).  
+ La única diferencia sintáctica de la regla de inferencia estándar es que la regla de inferencia de modo por lotes finaliza con un signo de dos puntos doble (::).  
   
 > [!NOTE]
->  La herramienta a la que se llama debe poder controlar varios archivos.  La regla de inferencia de modo por lotes debe usar `$<` como macro para tener acceso a archivos dependientes.  
+>  La herramienta que se va a invocar debe ser capaz de controlar varios archivos. La regla de inferencia de modo por lotes debe usar `$<` como la macro para tener acceso a archivos dependientes.  
   
- Las reglas de inferencia de modo por lotes pueden acelerar el proceso de compilación.  Es más rápido proporcionar archivos al compilador en lotes, dado que sólo se llama una vez al controlador del compilador.  Por ejemplo, el compilador de C y C\+\+ funciona mejor cuando se controla un conjunto de archivos porque puede permanecer en memoria durante el proceso.  
+ Las reglas de inferencia de modo por lotes pueden acelerar el proceso de compilación. Es más rápido proporcionar archivos al compilador en lotes, ya que el controlador de compilador se invoca una sola vez. Por ejemplo, el compilador de C y C++ funciona mejor cuando el control de un conjunto de archivos porque puede permanecer en memoria durante el proceso.  
   
- El siguiente ejemplo muestra cómo se utilizan las reglas de inferencia de modo por lotes:  
+ En el ejemplo siguiente se muestra cómo utilizar las reglas de inferencia de modo por lotes:  
   
 ```  
 #  
@@ -98,5 +98,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Reglas de inferencia](../build/inference-rules.md)

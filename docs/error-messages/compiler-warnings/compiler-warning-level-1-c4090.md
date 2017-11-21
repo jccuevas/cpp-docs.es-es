@@ -1,38 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4090 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4090"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4090"
+title: Compilador advertencia (nivel 1) C4090 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4090
+dev_langs: C++
+helpviewer_keywords: C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b508e27d72454568e26d2f1d173b05c8a65c250
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4090
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operación' : calificadores 'modificador' diferentes  
+# <a name="compiler-warning-level-1-c4090"></a>Compilador advertencia (nivel 1) C4090
+'operación': calificadores 'modificador' diferentes  
   
- Una variable usada en una operación se definió con un modificador especificado que impide que el compilador la modifique sin detectarse.  Se compiló la expresión sin modificaciones.  
+ Se define una variable que se usa en una operación con un modificador especificado que impide que se modifiquen sin ser detectado por el compilador. La expresión se compila sin ninguna modificación.  
   
- Esta advertencia puede aparecer cuando un puntero a un elemento **const** o `volatile` se asigna a un puntero no declarado como puntero a **const** o `volatile`.  
+ Esta advertencia puede producirse cuando un puntero a un **const** o `volatile` elemento se asigna a un puntero no declarado como puntero a **const** o `volatile`.  
   
- Esta advertencia se emite para programas en C.  En un programa en C\+\+, el compilador emite un error: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).  
+ Esta advertencia se emite para programas de C. En un programa de C++, el compilador emite un error: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).  
   
- El código siguiente genera el error C4090:  
+ El ejemplo siguiente genera C4090:  
   
 ```  
 // C4090.c  

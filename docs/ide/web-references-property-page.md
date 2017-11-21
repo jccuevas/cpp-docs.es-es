@@ -1,49 +1,48 @@
 ---
-title: "P&#225;gina de propiedades Referencias Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCSDLTool.Output"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.SuppressStartupBanner"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.Output"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.GeneratedProxyLanguage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Referencias web, propiedades"
+title: "Página de propiedades referencias Web | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCSDLTool.Output
+- VC.Project.VCWebServiceProxyGeneratorTool.SuppressStartupBanner
+- VC.Project.VCWebServiceProxyGeneratorTool.Output
+- VC.Project.VCWebServiceProxyGeneratorTool.GeneratedProxyLanguage
+dev_langs: C++
+helpviewer_keywords: Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5792191a7dcff961b2b5be39c4c15855ca99348
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# P&#225;gina de propiedades Referencias Web
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La página de propiedades **Referencias Web** especifica cómo se generará la clase de proxy de servicio Web XML.  Se generará una clase de proxy de servicio Web XML si agrega una referencia Web al proyecto.  Vea [Agregar referencia Web](http://msdn.microsoft.com/es-es/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) para obtener más información.  
+# <a name="web-references-property-page"></a>Página de propiedades Referencias Web
+El **referencias Web** página de propiedades especifica cómo se generará la clase de proxy de servicio Web XML. Si agrega una referencia web al proyecto, se generará una clase de proxy de servicio Web XML. Vea [Agregar referencia Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) para obtener más información.  
   
- La página de propiedades **Referencias Web** contiene las siguientes propiedades:  
+ El **referencias Web** página de propiedades contiene las siguientes propiedades:  
   
- **Archivo de resultados**  
- El nombre del archivo que contendrá la clase de proxy de servicio Web XML.  
+ **Archivo de salida**  
+ El nombre del archivo que contiene la clase de proxy de servicio Web XML.  
   
- **Suprimir la pancarta de inicio**  
- No se muestra la pancarta de inicio para la Herramienta de Lenguaje de descripción de servicios Web \(Wsdl.exe\).  
+ **Suprimir el titular de inicio**  
+ No se muestran el banner de Web Services Description Language Tool (Wsdl.exe).  
   
- **Espacio de nombres**  
- Especifica el nombre del proxy Web generado.  
+ **Namespace**  
+ Especifica el nombre del proxy web generado.  
   
  **Referencias adicionales**  
- Especifica los archivos DLL adicionales a los que hace referencia el archivo DLL del servidor proxy.  
+ Especifica los archivos DLL adicionales al que hace referencia el archivo DLL de proxy.  
   
- Para obtener información sobre cómo tener acceso a la página de propiedades **Referencia Web**, vea [Cómo: Especificar las propiedades de un proyecto con las páginas de propiedades](../misc/how-to-specify-project-properties-with-property-pages.md).  
+ Para obtener información sobre cómo obtener acceso a la **referencia Web** página de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)

@@ -1,59 +1,58 @@
 ---
-title: "IRowsetNotifyImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetNotifyImpl"
-  - "ATL::IRowsetNotifyImpl"
-  - "IRowsetNotifyImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetNotifyImpl (clase)"
+title: IRowsetNotifyImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetNotifyImpl
+- ATL::IRowsetNotifyImpl
+- IRowsetNotifyImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetNotifyImpl class
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7473e63c7ca67dff200d5cf96f1774ca9a2d6817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementa y registra [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) en el consumidor \(también conocido como “receptor”\) para que pueda controlar notificaciones.  
+# <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl (Clase)
+Implementa y registra [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) en el consumidor (también conocido como "receptor") para que pueda controlar las notificaciones.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[OnFieldChange](../../data/oledb/irowsetnotifyimpl-onfieldchange.md)|Notifica al consumidor cualquier cambio en el valor de una columna.|  
-|[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|Notifica al consumidor el primer cambio en una fila o cualquier cambio que afecte a la fila completa.|  
-|[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|Notifica al consumidor cualquier cambio que afecte al conjunto de filas completo.|  
+|[OnFieldChange](../../data/oledb/irowsetnotifyimpl-onfieldchange.md)|Notifica al consumidor de cualquier cambio en el valor de una columna.|  
+|[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|Notifica al consumidor del primer cambio en una fila o de cualquier cambio que afecta a toda la fila.|  
+|[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|Notifica al consumidor de cualquier cambio que afecte a todo el conjunto de filas.|  
   
-## Comentarios  
- Vea [Recibir notificaciones](../../data/oledb/receiving-notifications.md) sobre la implementación de la interfaz de punto de conexión en el consumidor.  
+## <a name="remarks"></a>Comentarios  
+ Vea [recibir notificaciones](../../data/oledb/receiving-notifications.md) acerca de cómo implementar la interfaz de punto de conexión en el consumidor.  
   
- `IRowsetNotifyImpl` proporciona una implementación ficticia para `IRowsetNotify`, con las funciones vacías para los métodos [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx), y [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx)de `IRowsetNotify` .  Si hereda de esta clase cuando implementa una interfaz de `IRowsetNotify` , puede implementar los métodos que necesita.  También necesita proporcionar implementaciones vacías para los otros métodos usted mismo.  
+ `IRowsetNotifyImpl`Proporciona una implementación ficticia para `IRowsetNotify`, con funciones vacías para la `IRowsetNotify` métodos [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx), [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx), y [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). Si se hereda de esta clase al implementar un `IRowsetNotify` interfaz, puede implementar solo los métodos que necesita. También debe proporcionar implementaciones vacías para los demás métodos usted mismo.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)   
- [IRowsetNotifyCP \(Clase\)](../../data/oledb/irowsetnotifycp-class.md)
+ [IRowsetNotifyCP (Clase)](../../data/oledb/irowsetnotifycp-class.md)

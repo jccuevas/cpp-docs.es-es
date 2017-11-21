@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4731 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4731"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4731"
+title: Compilador advertencia (nivel 1) C4731 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4731
+dev_langs: C++
+helpviewer_keywords: C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bfddf524678da34d514c32bfe86b98b32e87d195
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4731
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'puntero': registro de puntero de marco 'registro' modificado por código de ensamblado en línea  
+# <a name="compiler-warning-level-1-c4731"></a>Advertencia del compilador (nivel 1) C4731
+'pointer': 'registro' modificado por código ensamblador en línea de registro de puntero de marco  
   
- Se modificó un registro de puntero de marco.  Se debe guardar y restaurar el registro en el bloque de ensamblado en línea o variable de marco \(local o de parámetro, según el registro modificado\), o de lo contrario el código podría no funcionar correctamente.  
+ Se ha modificado un registro de puntero de marco. Debe guardar y restaurar el registro en su alineado ensamblado bloque o variable de marco (local o parámetro, según el registro modificado), o el código no funcionen correctamente.  
   
- El código siguiente genera el error C4731:  
+ El ejemplo siguiente genera C4731:  
   
 ```  
 // C4731.cpp  
@@ -48,4 +46,4 @@ void bad(int p) {
 }  
 ```  
   
- EBP es el puntero de marco \(no se permite FPO\) y se está modificando.  Cuando se hace más tarde referencia a `p`, dicha referencia es relativa a `EBP`.  Pero `EBP` ha quedado sobrescrito por el código, por lo que el programa no funcionará correctamente e incluso podría no funcionar en absoluto.
+ EBP es el puntero de marco (no se permite FPO) y se está modificando. Cuando `p` es posterior al que hace referencia, se hace referencia relativa a `EBP`. Pero `EBP` se ha sobrescrito por el código, por lo que el programa no funcionará correctamente e incluso puede producir un error.

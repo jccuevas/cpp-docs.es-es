@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Convierte una cadena de caracteres anchos en su representación de cadena de caracteres multibyte. Versión de [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -124,9 +105,9 @@ errno_t wcsrtombs_s(
   
  Si `count` es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `wcsrtombs_s` convierte la parte de la cadena que quepa en el búfer de destino, a la vez que deja espacio para un carácter nulo final.  
   
- Si `wcsrtombs_s` convierte correctamente la cadena de origen, pone el tamaño en bytes de la cadena convertida, incluido el carácter final nulo, en `*``pReturnValue` (siempre que `pReturnValue` no sea `NULL`). Esto ocurre aunque el argumento `mbstr` sea `NULL` y permite determinar el tamaño de búfer necesario. Observe que si `mbstr` es `NULL`, `count` se omite.  
+ Si `wcsrtombs_s` convierte correctamente la cadena de origen, pone el tamaño en bytes de la cadena convertida, incluido el carácter final nulo, en `*pReturnValue` (siempre que `pReturnValue` no sea `NULL`). Esto ocurre aunque el argumento `mbstr` sea `NULL` y permite determinar el tamaño de búfer necesario. Observe que si `mbstr` es `NULL`, `count` se omite.  
   
- Si `wcsrtombs_s` encuentra un carácter ancho que no pueda convertir en un carácter multibyte, pone -1 en `*``pReturnValue`, establece el búfer de destino en una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
+ Si `wcsrtombs_s` encuentra un carácter ancho que no pueda convertir en un carácter multibyte, pone -1 en `*pReturnValue`, establece el búfer de destino en una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
   
  Si las secuencias señaladas por `wcstr` y `mbstr` se superponen, el comportamiento de `wcsrtombs_s` no está definido. `wcsrtombs_s` se ve afectado por la categoría LC_TYPE de la configuración regional actual.  
   

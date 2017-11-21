@@ -1,48 +1,48 @@
 ---
-title: "Utilizar procedimientos almacenados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas del proveedor OLE DB, procedimientos almacenados"
-  - "OLE DB, procedimientos almacenados"
-  - "procedimientos almacenados, acerca de los procedimientos almacenados"
-  - "procedimientos almacenados, OLE DB"
-  - "procedimientos almacenados, Visual C++"
+title: Usar procedimientos almacenados | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, Visual C++
+- stored procedures, about stored procedures
+- OLE DB provider templates, stored procedures
+- stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b7707234d0a1bf8abd37ae6751060ed7c7109fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizar procedimientos almacenados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un procedimiento almacenado es un objeto ejecutable almacenado en una base de datos.  Llamar a un procedimiento almacenado es similar a invocar un comando SQL.  Usar procedimientos almacenados en un origen de datos \(en lugar de ejecutar o preparar una instrucción en la aplicación de cliente\) puede proporcionarle ventajas como mayor rendimiento, tráfico de red reducido y mejor coherencia y precisión.  
+# <a name="using-stored-procedures"></a>Utilizar procedimientos almacenados
+Un procedimiento almacenado es un objeto ejecutable almacenado en una base de datos. Llamar a un procedimiento almacenado es similar a invocar un comando SQL. Usar procedimientos almacenados en el origen de datos (en lugar de ejecutar o preparar una instrucción en la aplicación cliente) puede proporcionar varias ventajas, incluido un mayor rendimiento, tráfico de red reducido y coherencia mejorada y la precisión.  
   
- Los procedimientos almacenados pueden tener cualquier número de parámetros de entrada o salida \(incluido cero\) y pasar un valor devuelto.  Se puede crear los valores de parámetro mediante código, como valores de datos específicos, o usar un marcador de parámetro \(un signo de interrogación '?'\).  
+ Un procedimiento almacenado puede tener cualquier número de (incluido cero) entrada o parámetros de salida y puede pasar un valor devuelto. Puede crear los valores de parámetro codificar de forma rígida como valores de datos específicos, o usar un marcador de parámetro (un signo de interrogación '?').  
   
 > [!NOTE]
->  Los procedimientos almacenados de CLR de SQL Server creados en Visual C\+\+ se deben compilar con la opción del compilador **\/clr:safe**.  
+>  CLR de SQL Server los procedimientos almacenados creados con Visual C++ deben compilarse con la **/CLR: safe** opción del compilador.  
   
- El proveedor OLE DB para SQL Server \(SQLOLEDB\) admite los siguientes mecanismos que usan los procedimientos almacenados para devolver datos:  
+ El proveedor OLE DB para SQL Server (SQLOLEDB) admite los siguientes mecanismos que usan los procedimientos para devolver los datos almacenan:  
   
 -   Cada instrucción SELECT del procedimiento genera un conjunto de resultados.  
   
--   El procedimiento puede devolver datos mediante parámetros de salida.  
+-   El procedimiento puede devolver datos mediante parámetros output.  
   
--   El procedimiento puede tener un código de devolución de tipo entero.  
+-   El procedimiento puede tener un número entero código de retorno.  
   
 > [!NOTE]
->  No se pueden utilizar procedimientos almacenados con el proveedor OLE DB para Jet, porque ese proveedor no es compatible con los procedimientos almacenados; sólo se permiten constantes en cadenas de consulta.  
+>  No se puede utilizar procedimientos almacenados con el proveedor OLE DB para Jet porque ese proveedor no admite procedimientos almacenados; sólo se permiten constantes en cadenas de consulta.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,76 +1,74 @@
 ---
-title: "nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nextafterf"
-  - "_nextafterf"
-  - "nextafter"
-  - "nextafterl"
-  - "_nextafter"
-  - "nexttoward"
-  - "nexttowardf"
-  - "nexttowardl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nextafter"
-  - "_nextafter"
-  - "nextafterf"
-  - "nextafterl"
-  - "_nextafterf"
-  - "math/nextafter"
-  - "math/nextafterf"
-  - "math/nextafterl"
-  - "nexttoward"
-  - "nexttowardf"
-  - "nexttowardl"
-  - "math/nexttoward"
-  - "math/nexttowardf"
-  - "math/nexttowardl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_nextafter (función)"
-  - "nextafter (función)"
-  - "_nextafterf (función)"
-  - "nextafterf (función)"
-  - "nextafterl (función)"
-  - "nexttoward (función)"
-  - "nexttowardf (función)"
-  - "nexttowardl (función)"
+title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nextafterf
+- _nextafterf
+- nextafter
+- nextafterl
+- _nextafter
+- nexttoward
+- nexttowardf
+- nexttowardl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nextafter
+- _nextafter
+- nextafterf
+- nextafterl
+- _nextafterf
+- math/nextafter
+- math/nextafterf
+- math/nextafterl
+- nexttoward
+- nexttowardf
+- nexttowardl
+- math/nexttoward
+- math/nexttowardf
+- math/nexttowardl
+dev_langs: C++
+helpviewer_keywords:
+- _nextafter function
+- nextafter function
+- _nextafterf function
+- nextafterf function
+- nextafterl function
+- nexttoward function
+- nexttowardf function
+- nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3dad9078ba4c683b4d29d366943559ad8228cb31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve el siguiente valor de punto flotante puede representar.  
+# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
+Devuelve el siguiente valor de punto flotante que se pueda representar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 double nextafter(  
@@ -134,32 +132,32 @@ long double nexttowardl(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`  
- Valor de punto flotante que se va a iniciar desde.  
+ Valor de punto flotante del que se va a comenzar.  
   
  `y`  
- Valor de punto flotante para ir hacia.  
+ Valor de punto flotante al que se va.  
   
-## Valor devuelto  
- Devuelve el siguiente valor de punto flotante puede representar de tipo de valor devuelto después de `x` en la dirección de `y`. Si `x`\=`y`, la función devuelve `y`, convertido en el tipo de valor devuelto con ninguna excepción activada. Si `x` no es igual a `y`, y el resultado es cero o un desnormalizados, se establece el estado de excepción de punto flotante FE\_UNDERFLOW y FE\_INEXACT y se devuelve el resultado correcto. Si el valor `x` o `y` es un NAN, el valor devuelto es uno de los valores de entrada NaN. Si `x` es finito y el resultado es infinito o no se puede representar en el tipo, se devuelve un firmada correctamente infinito ni NAN, se establece el estado de excepción de punto flotante FE\_OVERFLOW y FE\_INEXACT, y `errno` se establece en ERANGE.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve el siguiente valor de punto flotante representable del tipo de valor devuelto después de `x` en la dirección de `y`. Si `x`=`y`, la función devuelve `y`, convertido en el tipo de valor devuelto, sin ninguna excepción activada. Si `x` no es igual a `y` y el resultado es cero o un valor desnormalizado, se establecen los estados de excepción de punto flotante FE_UNDERFLOW y FE_INEXACT y se devuelve el resultado correcto. Si `x` o `y` es un NaN, el valor devuelto es uno de los NaN de entrada. Si `x` es finito y el resultado es infinito o no se puede representar en el tipo, se devuelve un infinito o NaN con el signo correcto, se establecen los estados de excepción de punto flotante FE_OVERFLOW y FE_INEXACT y `errno` se establece en ERANGE.  
   
-## Comentarios  
- El `nextafter` y `nexttoward` familias de función son equivalentes, excepto el tipo de parámetro `y`. Si `x` y `y` son iguales, el valor devuelto es `y` convertir el tipo de valor devuelto.  
+## <a name="remarks"></a>Comentarios  
+ Las familias de las funciones `nextafter` y `nexttoward` son equivalentes, salvo por el tipo de parámetro de `y`. Si `x` y `y` son iguales, el valor devuelto es `y` convertido al tipo de valor devuelto.  
   
- Como C\+\+ permite las sobrecargas, si incluye \< cmath \> puede llamar a las sobrecargas de `nextafter` y `nexttoward` que devuelve `float` y `long double` tipos. En un programa de C, `nextafter` y `nexttoward` siempre devuelven `double`.  
+ Como C++ permite las sobrecargas, si incluye \<cmath>, puede llamar a las sobrecargas de `nextafter` y `nexttoward`, que devuelven los tipos `float` y `long double`. En un programa de C, `nextafter` y `nexttoward` siempre devuelven `double`.  
   
- El `_nextafter` y `_nextafterf` funciones son específicos de Microsoft. El `_nextafterf` función sólo está disponible cuando se compila para x64.  
+ Las funciones `_nextafter` y `_nextafterf` son específicas de Microsoft. La función `_nextafterf` solo está disponible cuando se compila para x64.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rutina|Encabezado necesario \(C\)|Encabezado necesario \(C\+\+\)|  
-|------------|--------------------------------|------------------------------------|  
-|`nextafter`, `nextafterf`, `nextafterl`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`|\<math.h\>|\<math.h\> o \<cmath\>|  
-|`_nextafter`|\<float.h\>|\< float.h \> o \< cfloat \>|  
+|Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|  
+|-------------|---------------------------|-------------------------------|  
+|`nextafter`, `nextafterf`, `nextafterl`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`|\<math.h>|\<math.h> o \<cmath>|  
+|`_nextafter`|\<float.h>|\<float.h> o \<cfloat>|  
   
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [isNaN, \_isnan, \_isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+ [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)

@@ -1,28 +1,27 @@
 ---
-title: "2.7 Data Environment | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7 entorno de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 74e44b3c-e18c-4773-8e78-cd6c4413ae57
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4994b018cfbe8395f453cd5964f1d1733f3117e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7 Data Environment
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Esta sección muestra una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de las regiones paralelas, como sigue:  
+# <a name="27-data-environment"></a>2.7 Entorno de datos
+Esta sección presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de regiones en paralelo, como se indica a continuación:  
   
--   Una directiva de **threadprivate** \(vea la siguiente sección\) se proporciona para que el ámbito del archivo, espacio de nombres\-ámbito, o las variables estáticas de bloque\-ámbito locales de un subproceso.  
+-   A **threadprivate** directiva (vea la sección siguiente) se proporciona para poner el ámbito de archivo, ámbito de espacio de nombres o las variables de ámbito de bloque estática local a un subproceso.  
   
--   Las cláusulas que se pueden especificar en las directivas para controlar los atributos de variables para la duración de las construcciones paralelas o la división del trabajo se describen en [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.
+-   Las cláusulas que se pueden especificar en las directivas para controlar los atributos de uso compartido de variables para la duración de las construcciones paralelas o uso compartido se describen en [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en página 25.

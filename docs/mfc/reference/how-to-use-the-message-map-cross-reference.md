@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.messages
-dev_langs:
-- C++
-helpviewer_keywords:
-- windows [MFC], message maps
+f1_keywords: vc.mfc.messages
+dev_langs: C++
+helpviewer_keywords: windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: ffa7b39962d78476e971750e92569eb14229606b
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Cómo: Usar la referencia cruzada del mapa de mensajes
 En las entradas con la etiqueta \<memberFxn >, escribir su propia función miembro de una derivada [CWnd](../../mfc/reference/cwnd-class.md) clase. Utilizar cualquier nombre que desee para la función. Otras funciones, como `OnActivate`, son funciones miembro de clase `CWnd`. Si se llama, pasan el mensaje a la `DefWindowProc` la función de Windows. Para procesar mensajes de notificación de Windows, reemplace el correspondiente `CWnd` función de la clase derivada. La función debe llamar a la función reemplazada en la clase base para permitir que la clase base y Windows responden al mensaje.  
@@ -41,5 +36,4 @@ En las entradas con la etiqueta \<memberFxn >, escribir su propia función miemb
   
 ## <a name="see-also"></a>Vea también  
  [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
-
 

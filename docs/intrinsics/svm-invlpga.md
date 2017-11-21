@@ -1,35 +1,34 @@
 ---
-title: "__svm_invlpga | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_invlpga"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_invlpga (función intrínseca)"
-  - "INVLPGA (instrucción)"
+title: __svm_invlpga | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_invlpga
+dev_langs: C++
+helpviewer_keywords:
+- __svm_invlpga intrinsic
+- INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 337bca0c446faa36b54e2b033f503f21db4af71d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_invlpga
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="svminvlpga"></a>__svm_invlpga
 **Específicos de Microsoft**  
   
- Invalida la entrada de clonación de direcciones en el búfer de instrucciones \(translation lookaside buffer de traducción automática de.  Los parámetros especifican la dirección virtual y el identificador del espacio de direcciones de la página para reemplazar.  
+ Invalida la entrada de asignación de dirección en el búfer de consulta de traducción del equipo. Los parámetros especifican la dirección virtual y el identificador de espacio de dirección de la página para invalidar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __svm_invlpga(  
@@ -37,25 +36,25 @@ void __svm_invlpga(
      int ASID);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|\[in\] `Va`|La dirección virtual de la página a reemplazar.|  
-|\[in\] `ASID`|El identificador del espacio \(ASID\) de direcciones de la página a reemplazar.|  
+|[in] `Va`|La dirección virtual de la página para invalidar.|  
+|[in] `ASID`|El identificador de espacio de dirección (ASID) de la página para invalidar.|  
   
-## Comentarios  
- La función de `__svm_invlpga` es equivalente a la instrucción máquina de `INVLPGA` .  Esta función admite la interacción de la máquina virtual monitor de un host con un sistema operativo invitado y las aplicaciones.  Para obtener más información, busque el documento, “volumen 2 de Manual del programador de arquitectura AMD64: Programa del sistema,” número de documento 24593, revisión 3,11, en [compañía de AMD](http://go.microsoft.com/fwlink/?LinkId=23746) el sitio.  
+## <a name="remarks"></a>Comentarios  
+ El `__svm_invlpga` función es equivalente a la `INVLPGA` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "volumen de Manual del programador de arquitectura AMD64 2: programación de sistema," número 24593, 3.11, de revisión del documento en el [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) sitio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__svm_invlpga`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

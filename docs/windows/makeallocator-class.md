@@ -1,32 +1,30 @@
 ---
-title: "MakeAllocator (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MakeAllocator (clase)"
+title: MakeAllocator (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator
+dev_langs: C++
+helpviewer_keywords: MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0333dec823cb3996a9546bbfa702b3febf711a61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# MakeAllocator (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="makeallocator-class"></a>MakeAllocator (clase)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -47,43 +45,43 @@ template<
 class MakeAllocator<T, true>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Nombre de tipo.  
   
  `hasWeakReferenceSupport`  
- `true` para asignar memoria para un objeto que admite referencias parciales; `false` para asignar memoria para un objeto que no admite referencias parciales.  
+ `true`asignar memoria para un objeto que admite referencias débiles; `false` asignar memoria para un objeto que no es compatible con referencias débiles.  
   
-## Comentarios  
- Asigna memoria para una clase activatable, con o sin compatibilidad parcial de referencia.  
+## <a name="remarks"></a>Comentarios  
+ Asigna memoria para una clase activable, con o sin compatibilidad con la referencia débil.  
   
- Reemplace la clase de MakeAllocator para implementar un modelo de asignación de memoria definido por el usuario.  
+ Reemplace la clase MakeAllocator para implementar un modelo de asignación de memoria definido por el usuario.  
   
- MakeAllocator se utiliza normalmente para evitar pérdidas de memoria si un objeto produce durante la construcción.  
+ MakeAllocator normalmente se utiliza para evitar pérdidas de memoria si un objeto que se produce durante la construcción.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator \(Constructor\)](../windows/makeallocator-makeallocator-constructor.md)|Inicializa una nueva instancia de la clase de MakeAllocator.|  
-|[MakeAllocator::~MakeAllocator \(Destructor\)](../Topic/MakeAllocator::~MakeAllocator%20Destructor.md)|Desinicializa la instancia actual de la clase de MakeAllocator.|  
+|[MakeAllocator::MakeAllocator (constructor)](../windows/makeallocator-makeallocator-constructor.md)|Inicializa una nueva instancia de la clase MakeAllocator.|  
+|[MakeAllocator::~MakeAllocator (destructor)](../windows/makeallocator-tilde-makeallocator-destructor.md)|Desinicializa la instancia actual de la clase MakeAllocator.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate \(Método\)](../Topic/MakeAllocator::Allocate%20Method.md)|Asigna memoria y la asocia al objeto actual de MakeAllocator.|  
-|[MakeAllocator::Detach \(Método\)](../windows/makeallocator-detach-method.md)|Desasocia la memoria asignada por el método de [Asigna](../Topic/MakeAllocator::Allocate%20Method.md) del objeto actual de MakeAllocator.|  
+|[MakeAllocator::Allocate (método)](../windows/makeallocator-allocate-method.md)|Asigna memoria y lo asocia con el objeto de MakeAllocator actual.|  
+|[MakeAllocator::Detach (método)](../windows/makeallocator-detach-method.md)|Desasocia la memoria asignada por el [Allocate](../windows/makeallocator-allocate-method.md) método MakeAllocator del objeto actual.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `MakeAllocator`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

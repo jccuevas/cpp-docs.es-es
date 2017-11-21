@@ -1,47 +1,48 @@
 ---
-title: "Platform::NullReferenceException (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::NullReferenceException"
-  - "Platform/Platform::NullReferenceException::NullReferenceException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::NullReferenceException"
+title: NullReferenceException (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::NullReferenceException
+- VCCORLIB/Platform::NullReferenceException::NullReferenceException
+dev_langs: C++
+helpviewer_keywords: Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: f66593167058c5eabd80619ce692083e141e18ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::NullReferenceException (Clase)
+# <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException (Clase)
 Se produce cuando se intenta desreferenciar una referencia de un objeto null.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 public ref class NullReferenceException : COMException,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Comentarios  
- Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md).  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulta la clase [COMException](../cppcx/platform-comexception-class.md) .  
   
-## Requisitos  
- **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisitos  
+ **Cliente mínimo admitido:** Windows 8  
   
- **Servidor mínimo admitido:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Servidor mínimo admitido:** Windows Server 2012  
   
  **Espacio de nombres:** Platform  
   
  **Metadatos:** platform.winmd  
   
-## Vea también  
- [Platform::COMException \(Clase\)](../cppcx/platform-comexception-class.md)
+## <a name="see-also"></a>Vea también  
+ [Platform::COMException (Clase)](../cppcx/platform-comexception-class.md)

@@ -1,28 +1,28 @@
 ---
-title: "HStringReference::CopyTo (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Hstringreference:: CopyTo (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 179d9b14-1ced-4b16-b297-19ca1e92a462
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f93dd138490834451a665761f4c575a751bfe7ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# HStringReference::CopyTo (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia el objeto HStringReference actual a un objeto HSTRING.  
+# <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo (Método)
+Copia el HStringReference actual objeto a un objeto HSTRING.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -31,17 +31,17 @@ HRESULT CopyTo(
    ) const throw();  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
- La HSTRING que recibe la copia.  
+ El HSTRING que recibe la copia.  
   
-## Comentarios  
- Este método llama a la función [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx).  
+## <a name="remarks"></a>Comentarios  
+ Este método llama a la [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) (función).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [HStringReference \(Clase\)](../windows/hstringreference-class.md)
+## <a name="see-also"></a>Vea también  
+ [HStringReference (clase)](../windows/hstringreference-class.md)

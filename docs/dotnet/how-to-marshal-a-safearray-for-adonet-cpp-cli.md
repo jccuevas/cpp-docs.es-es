@@ -1,37 +1,36 @@
 ---
-title: "C&#243;mo: Calcular las referencias de una matriz SAFEARRAY de ADO.NET (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], calcular las referencias de tipos SAFEARRAY"
-  - "SAFEARRAY, calcular las referencias"
+title: "Cómo: serializar una matriz SAFEARRAY para ADO.NET (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- SAFEARRAY, marshaling
+- ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: 1034b9d7-ecf1-40f7-a9ee-53180e87a58c
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: abf3df95a41fe3e2ebc0eb15bb4ee9bc0787e96c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Calcular las referencias de una matriz SAFEARRAY de ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Muestra cómo agregar una matriz `SAFEARRAY` nativa a una base de datos y cómo calcular las referencias a una matriz administrada de una base de datos a una matriz `SAFEARRAY` nativa.  
+# <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>Cómo: serializar una matriz SAFEARRAY de ADO.NET (C++/CLI)
+Muestra cómo agregar nativo `SAFEARRAY` a una base de datos y cómo calcular las referencias de una matriz administrada de una base de datos a un native `SAFEARRAY`.  
   
-## Ejemplo  
- En este ejemplo, la clase DatabaseClass se crea para interactuar con un objeto <xref:System.Data.DataTable> de ADO.NET.  Tenga en cuenta que esta clase es una `class` de C\+\+ nativa \(si se compara con una `ref class` o `value class`\).  Esto es necesario porque deseamos utilizar esta clase desde código nativo y no se pueden utilizar tipos administrados en código nativo.  Esta clase se compilará para CLR, según indica la directiva `#pragma managed` que precede a la declaración de clase.  Para obtener más información sobre esta directiva, vea [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, la clase DatabaseClass se crea para interactuar con un ADO.NET <xref:System.Data.DataTable> objeto. Tenga en cuenta que esta clase es C++ nativo `class` (en comparación con un `ref class` o `value class`). Esto es necesario porque deseamos utilizar esta clase desde código nativo y no puede usar los tipos administrados en código nativo. Esta clase se compilará para CLR, tal y como se indica mediante el `#pragma managed` directiva que precede a la declaración de clase. Para obtener más información sobre esta directiva, consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
   
- Tenga en cuenta el miembro privado de la clase DatabaseClass: `gcroot<DataTable ^> table`.  Como los tipos nativos no pueden contener tipos administrados, es necesario utilizar la palabra clave `gcroot`.  Para obtener más información sobre `gcroot`, vea [Cómo: Declarar controladores en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Tenga en cuenta el miembro privado de la clase DatabaseClass: `gcroot<DataTable ^> table`. Puesto que los tipos nativos no pueden contener tipos administrados, el `gcroot` palabra clave es necesaria. Para obtener más información sobre `gcroot`, consulte [Cómo: declarar controla en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- El resto del código de este ejemplo es código nativo de C\+\+, según indica la directiva `#pragma unmanaged` que precede a `main`.  En este ejemplo, se crea una nueva instancia de DatabaseClass y se llama a sus métodos para crear una tabla y rellenar algunas filas de ésta.  Observe que los tipos `SAFEARRAY` nativos se pasan como valores para la columna de base de datos ArrayIntsCol.  Dentro de DatabaseClass, estos tipos `SAFEARRAY` se convierten en objetos administrados utilizando la funcionalidad de cálculo de referencias que encontramos en el espacio de nombres <xref:System.Runtime.InteropServices?displayProperty=fullName>.  En concreto, el método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> se utiliza para calcular las referencias de `SAFEARRAY` para una matriz administrada de enteros, y el método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> para calcular las referencias de una matriz administrada de enteros para `SAFEARRAY`.  
+ El resto del código de este ejemplo es código C++ nativo, tal y como se indica mediante el `#pragma unmanaged` anterior a la directiva `main`. En este ejemplo, estamos creando una nueva instancia de DatabaseClass y llamando a sus métodos para crear una tabla y rellenar algunas filas de la tabla. Tenga en cuenta que nativo `SAFEARRAY` tipos nativos se pasan como valores para la columna de base de datos ArrayIntsCol. Dentro de DatabaseClass, estos `SAFEARRAY` tipos se convierten en objetos administrados utilizando la funcionalidad de cálculo de referencias en el <xref:System.Runtime.InteropServices?displayProperty=fullName> espacio de nombres. En concreto, el método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> se utiliza para calcular las referencias de un `SAFEARRAY` a una matriz administrada de enteros y el método <xref:System.Runtime.InteropServices.Marshal.Copy%2A> se utiliza para serializar una matriz administrada de enteros en un `SAFEARRAY`.  
   
 ```  
 // adonet_marshal_safearray.cpp  
@@ -162,21 +161,24 @@ int main()
 }  
 ```  
   
-  **0 1 2 3 4 5 6 7 8 9**    
-## Compilar el código  
+```Output  
+0 1 2 3 4 5 6 7 8 9   
+```  
   
--   Para compilar el código de la línea de comandos, guarde el ejemplo de código en un archivo denominado adonet\_marshal\_safearray.cpp y escriba la instrucción siguiente:  
+## <a name="compiling-the-code"></a>Compilar el código  
+  
+-   Para compilar el código desde la línea de comandos, guarde el ejemplo de código en un archivo denominado adonet_marshal_safearray.cpp y escriba la siguiente instrucción:  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp  
     ```  
   
-## Seguridad de .NET Framework  
- Para obtener información sobre problemas de seguridad relacionados con ADO.NET, vea [Proteger aplicaciones de ADO.NET](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+ Para obtener información sobre problemas de seguridad que afectan a ADO.NET, vea [proteger aplicaciones de ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.InteropServices>   
- [Acceso a datos en ASP.NET \(Visual Studio\)](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/es-es/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Acceso a datos mediante ADO.NET (C++ / CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Interoperabilidad](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
  [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)

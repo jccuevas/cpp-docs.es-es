@@ -1,56 +1,55 @@
 ---
-title: "/E (Preprocesar para stdout) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/e"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/E (opción del compilador) [C++]"
-  - "-E (opción del compilador) [C++]"
-  - "resultados del preprocesador"
-  - "resultados del preprocesador, copiar a stdout"
+title: -E (Preprocesar para stdout) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /e
+dev_langs: C++
+helpviewer_keywords:
+- -E compiler option [C++]
+- /E compiler option [C++]
+- preprocessor output, copy to stdout
+- preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b3540a2d6d1c32a72d16cdb9bdab19aa18604021
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /E (Preprocesar para stdout)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Preprocesa archivos de código fuente de C y C\+\+ y copia los archivos preprocesados en el dispositivo de salida estándar.  
+# <a name="e-preprocess-to-stdout"></a>/E (Preprocesar para stdout)
+Preprocesa archivos de código fuente de C y C++ y copia los archivos preprocesados en el dispositivo de salida estándar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /E  
 ```  
   
-## Comentarios  
- En esta operación, se procesan todas las directivas del preprocesador y las expansiones de macros, y se quitan los comentarios.  Para conservar los comentarios en el resultado preprocesado, utilice la opción del compilador [\/C \(Conservar los comentarios durante el preprocesamiento\)](../../build/reference/c-preserve-comments-during-preprocessing.md).  
+## <a name="remarks"></a>Comentarios  
+ En este proceso, se realizan todas las directivas de preprocesador, expansiones de macros y se eliminan los comentarios. Para conservar los comentarios en el resultado preprocesado, utilice la [/C (conservar los comentarios durante el preprocesamiento)](../../build/reference/c-preserve-comments-during-preprocessing.md) opción del compilador.  
   
- **\/E** agrega directivas `#line` a los resultados, al principio y al final de cada archivo incluido y alrededor de las líneas quitadas por las directivas del preprocesador para la compilación condicional.  Estas directivas cambian el número de las líneas en el archivo preprocesado.  Como consecuencia, los errores generados durante las fases finales del procesamiento hacen referencia a los números de línea del archivo de código fuente original, no a las del archivo preprocesado.  
+ **/E** agrega `#line` directivas a la salida al principio y al final de cada archivo incluido y alrededor de las líneas eliminadas por las directivas de preprocesador para la compilación condicional. Estas directivas rehacer la numeración de las líneas del archivo preprocesado. Como resultado, los errores generados durante las fases finales del procesamiento hacen referencia a los números de línea del archivo de origen original en lugar de líneas en el archivo preprocesado.  
   
- La opción **\/E** suprime la compilación.  Debe volver a enviar el archivo preprocesado para compilación.  **\/E** también suprime los archivos de salida de las opciones **\/FA**, **\/Fa** y **\/Fm**.  Para obtener más información, vea [\/FA, \/Fa \(Archivo de lista\)](../../build/reference/fa-fa-listing-file.md) y [\/Fm \(Asignar nombre al archivo de asignaciones\)](../../build/reference/fm-name-mapfile.md).  
+ El **/E** opción suprime la compilación. Debe volver a enviar el archivo preprocesado para la compilación. **/E** se suprimen los archivos de salida de la **/FA**, **/Fa**, y **/Fm** opciones. Para obtener más información, consulte [/FA, /Fa (Listing File)](../../build/reference/fa-fa-listing-file.md) y [/Fm (Name Mapfile)](../../build/reference/fm-name-mapfile.md).  
   
- Para suprimir directivas `#line`, utilice en su lugar la opción [\/EP \(Preprocesar para stdout sin directivas \#line\)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md).  
+ Suprimir `#line` directivas, utilice la [/EP (Preprocesar para stdout sin directivas #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opción en su lugar.  
   
- Para enviar el resultado preprocesado a un archivo, en vez de hacerlo a `stdout`, utilice en su lugar la opción [\/P \(Preprocesar y escribir en un archivo\)](../../build/reference/p-preprocess-to-a-file.md).  
+ Para enviar el resultado preprocesado a un archivo en lugar de a `stdout`, use la [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción en su lugar.  
   
- Para suprimir directivas `#line` y enviar el resultado preprocesado a un archivo, utilice **\/P** y **\/EP** a la vez.  
+ Suprimir `#line` directivas y enviar el resultado preprocesado a un archivo, use **/P** y **/EP** juntos.  
   
- No puede usar encabezados precompilados con la opción **\/E**.  
+ No puede usar encabezados precompilados con la **/E** opción.  
   
- Tenga en cuenta que, cuando se preprocesa en un archivo independiente, no se emiten espacios después de los símbolos \(tokens\).  Esto puede generar un programa no válido o causar efectos secundarios inesperados.  El programa siguiente compila correctamente:  
+ Tenga en cuenta que, cuando se preprocesa en un archivo independiente, no se emiten espacios después de símbolos (tokens). Esto puede dar lugar a un programa no válido o tiene efectos secundarios imprevistos. El programa siguiente compila correctamente:  
   
 ```  
 #define m(x) x  
@@ -60,35 +59,35 @@ m(int)main( )
 }  
 ```  
   
- No obstante, si se compila con:  
+ Sin embargo, si se compila con:  
   
 ```  
 cl -E test.cpp > test2.cpp  
 ```  
   
- `int main` en test2.cpp será incorrectamente `intmain`.  
+ `int main`en test2.cpp será incorrectamente `intmain`.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción del compilador en el **opciones adicionales**cuadro.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
   
-## Ejemplo  
- La línea de comandos siguiente preprocesa `ADD.C`, conserva los comentarios, agrega directivas `#line` y muestra el resultado en el dispositivo de salida estándar:  
+## <a name="example"></a>Ejemplo  
+ La línea de comandos siguiente preprocesa `ADD.C`, conserva los comentarios, agrega `#line` directivas y se muestra el resultado en el dispositivo de salida estándar:  
   
 ```  
 CL /E /C ADD.C  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

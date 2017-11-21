@@ -1,33 +1,30 @@
 ---
-title: ".XCREF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".XCREF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".XCREF directive"
+title: . XCREF | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .XCREF
+dev_langs: C++
+helpviewer_keywords: .XCREF directive
 ms.assetid: f8443482-2a7e-4764-bef8-8bfdaf06d2fe
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b46991623c6a3e6e29a80caed2f086d1cc9eeee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .XCREF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Vea [.NOCREF](../../assembler/masm/dot-nocref.md).  
+# <a name="xcref"></a>.XCREF
+Vea [. NOCREF](../../assembler/masm/dot-nocref.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,5 +32,5 @@ Vea [.NOCREF](../../assembler/masm/dot-nocref.md).
   
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

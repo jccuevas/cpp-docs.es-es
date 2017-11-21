@@ -1,35 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4710"
+title: Compilador advertencia (nivel 4) C4710 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4710
+dev_langs: C++
+helpviewer_keywords: C4710
 ms.assetid: 76381ec7-3fc1-4bee-9a0a-c2c8307b92e2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f1008d8ab97119ff7fbe828d58ca5b2d4e4f8101
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : la función no está entre líneas  
+# <a name="compiler-warning-level-4-c4710"></a>Advertencia del compilador (nivel 4) C4710
+'función': función no está entre línea  
   
- La función dada fue seleccionada para la expansión en línea, pero el compilador no realizó la expansión.  
+ La función especificada se seleccionaron para la expansión en línea, pero el compilador no realizó la inserción.  
   
- La inclusión de funciones en línea tiene lugar a discreción del compilador.  La palabra clave **inline**, al igual que la palabra clave **register**, se utiliza como sugerencia para el compilador.  El compilador utiliza la heurística para determinar si debe incluir en línea una función particular con objeto de acelerar el código, al compilar para optimizar la velocidad, o para reducir el tamaño del código al compilar para optimizar el espacio.  El compilador sólo realiza la inclusión en línea de funciones muy pequeñas al compilar para optimizar el espacio.  
+ Inserción se realiza a discreción del compilador. El **en línea** palabra clave, como el **registrar** palabra clave, se utiliza como una sugerencia para el compilador. El compilador utiliza la heurística para determinar si debe incluir en línea una determinada función para acelerar el código cuando se compila para acelerar el proceso, o si debe incluir en línea una determinada función para hacer que el código de menor cuando se compila con espacio. El compilador incluirá solo muy pequeñas funciones cuando se compila con espacio.  
   
- En algunos casos, el compilador no incluye en línea una determinada función por motivos mecánicos.  Vea [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obtener una lista de motivos por los que el compilador no incluye en línea una función.  
+ En algunos casos, el compilador no insertará una determinada función por motivos mecánicos. Vea [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obtener una lista de motivos por los que el compilador no alinear una función.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.

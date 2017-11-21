@@ -1,31 +1,31 @@
 ---
-title: "Ventajas del ensamblado alineado | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ensamblador [C++], ventajas"
-  - "ensamblado alineado [C++], acerca del ensamblado alineado"
-  - "ensamblado alineado [C++], utilizar"
+title: "Ventajas de ensamblado en línea | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembler [C++], advantages
+- inline assembly [C++], about inline assembly
+- inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5a70ab92e76101c193db62fbe9119bb851d46738
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Ventajas del ensamblado alineado
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específicos de Microsoft  
- Dado que el ensamblador alineado no requiere pasos de ensamblado y vínculo independientes y de vínculo, es más aconsejable que un ensamblador independiente.  El código de ensamblado alineado puede utilizar cualquier nombre de variable o de función de C que esté en el ámbito, por lo que resulta fácil integrarlo con el código C del programa.  Dado que el código de ensamblado se puede combinar alineado con instrucciones de C o C\+\+, puede realizar tareas complicadas o imposibles en C o C\+\+.  
+# <a name="advantages-of-inline-assembly"></a>Ventajas de ensamblado alineado
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ Dado que el ensamblador alineado no requiere pasos de ensamblado y vínculo independientes y de vínculo, es más aconsejable que un ensamblador independiente. El código de ensamblado alineado puede utilizar cualquier nombre de variable o de función de C que esté en el ámbito, por lo que resulta fácil integrarlo con el código C del programa. Dado que el código de ensamblado se puede combinar alineado con instrucciones de C o C++, puede realizar tareas complicadas o imposibles en C o C++.  
   
  Entre los usos de ensamblado alineado se incluyen:  
   
@@ -37,9 +37,9 @@ caps.handback.revision: 7
   
 -   Escritura de código de prólogo y epílogo para llamadas "naked".  
   
- El ensamblado alineado es una herramienta para fines especiales.  Si piensa migrar una aplicación a equipos diferentes, es probable que desee colocar código específico del equipo en un módulo independiente.  Dado que el ensamblador alineado no admite todas las directivas de macro y datos de Microsoft Macro Assembler \(MASM\), puede que le resulte más conveniente utilizar MASM para dichos módulos.  
+ El ensamblado alineado es una herramienta para fines especiales. Si piensa migrar una aplicación a equipos diferentes, es probable que desee colocar código específico del equipo en un módulo independiente. Dado que el ensamblador alineado no admite todas las directivas de macro y datos de Microsoft Macro Assembler (MASM), puede que le resulte más conveniente utilizar MASM para dichos módulos.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Ensamblador alineado](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblador insertado](../../assembler/inline/inline-assembler.md)

@@ -1,40 +1,39 @@
 ---
-title: "2.9 Directive Nesting | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.9 anidamiento de directivas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6565a43c-fd2d-4366-8322-8d75e1b06600
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1af9f515861863af5906c99d78aa66d08aa09b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.9 Directive Nesting
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El anidamiento dinámico de directivas debe observar las reglas siguientes:  
+# <a name="29-directive-nesting"></a>2.9 Anidamiento de directivas
+El anidamiento dinámico de directivas debe cumplir las reglas siguientes:  
   
--   Una directiva de **Paralelo** dentro de otro **Paralelo** establece dinámicamente lógicamente un nuevo equipo, que consta sólo del subproceso actual, a menos que se habilite el paralelismo anidados.  
+-   A **paralelo** directiva dinámicamente dentro de otro **paralelo** lógicamente establece un nuevo equipo, que se compone del subproceso actual, a menos que anidada paralelismo está habilitado.  
   
--   **Para**, **secciones**, y las directivas de **solo** que enlazan al mismo **Paralelo** no pueden estar anidados dentro de otros.  
+-   **para**, **secciones**, y **único** directivas que se enlazan a la misma **paralelo** no pueden anidarse dentro de otros.  
   
--   Las directivas de**Crtico** con el mismo nombre no pueden anidarse dentro de otros.  Observe que esta restricción no es suficiente para evitar el interbloqueo.  
+-   **crítico** directivas con el mismo nombre no pueden anidarse dentro de otros. Tenga en cuenta que esta restricción no es suficiente para evitar el interbloqueo.  
   
--   **Para**, **secciones**, y las directivas de **solo** no se permiten en la extensión dinámica de **Crtico**, de **consultar**, y de las regiones de **principal** si las directivas se enlazan a mismo **Paralelo** que regiones.  
+-   **para**, **secciones**, y **único** directivas no están permitidas en la extensión dinámica de **crítico**, **ordenados**, y **maestro** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
   
--   las directivas de**barrera** no se permiten en la extensión dinámica de **Para**, de **consultar**, de **secciones**, de **solo**, de **principal**, y de las regiones de **Crtico** si las directivas se enlazan a mismo **Paralelo** que regiones.  
+-   **barrera** directivas no están permitidas en la extensión dinámica de **para**, **ordenados**, **secciones**, **único**, **maestro**, y **crítico** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
   
--   las directivas de**principal** no se permiten en la extensión dinámica de **Para**, de **secciones**, y las directivas de **solo** si las directivas de **principal** enlazan al mismo **Paralelo** que las directivas de división del trabajo.  
+-   **maestro** directivas no están permitidas en la extensión dinámica de **para**, **secciones**, y **único** directivas si la **master** directivas enlazar al mismo **paralelo** como las directivas de uso compartido.  
   
--   las directivas de**consultar** no se permiten en la extensión dinámica de las regiones de **Crtico** si las directivas se enlazan a mismo **Paralelo** que regiones.  
+-   **ordenados** directivas no están permitidas en la extensión dinámica de **crítico** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
   
--   Cualquier directiva permitido cuando ejecuta dinámicamente dentro de una región paralela también se permite cuando se ejecuta fuera de una región paralela.  Cuando se ejecuta dinámicamente fuera de una región paralela definida por el usuario, la directiva es ejecutada por un equipo compuesto por sólo el subproceso principal.
+-   También se permite que ninguna directiva que se permite cuando se ejecuta de forma dinámica dentro de una región paralela cuando se ejecuta fuera de una región paralela. Cuando se ejecuta de forma dinámica fuera de una región paralela especificada por el usuario, se ejecuta la directiva de un equipo que se compone del subproceso principal.

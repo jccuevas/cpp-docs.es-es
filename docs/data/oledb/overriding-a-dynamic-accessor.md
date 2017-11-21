@@ -1,32 +1,32 @@
 ---
-title: "Invalidar un descriptor de acceso din&#225;mico | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "descriptores de acceso [C++], dinámicos"
-  - "descriptores de acceso dinámicos"
-  - "reemplazar, descriptores de acceso dinámicos"
+title: "Invalidar un descriptor de acceso dinámico | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Invalidar un descriptor de acceso din&#225;mico
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Al usar un descriptor de acceso dinámico como `CDynamicAccessor`, el comando **Open** crea automáticamente un descriptor de acceso, basado en la información de columnas del conjunto de filas abierto.  Se puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  
+# <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
+Cuando se usa un descriptor de acceso dinámico como `CDynamicAccessor`, el comando **abiertos** método crea un descriptor de acceso de forma automática, en función de la información de columna del conjunto de filas abierto. Puede reemplazar el descriptor de acceso dinámico para controlar exactamente cómo se enlazan las columnas.  
   
- Para reemplazar el descriptor de acceso dinámico, pase **false** como último parámetro al método `CCommand::Open`.  Ello impide que **Open** pueda crear un descriptor de acceso automáticamente.  A continuación se puede llamar a `GetColumnInfo` y `AddBindEntry` por cada columna que se desee enlazar.  El código siguiente muestra cómo hacerlo:  
+ Para reemplazar el descriptor de acceso dinámico, pase **false** como el último parámetro para el `CCommand::Open` método. Esto evita que **abiertos** pueda crear un descriptor de acceso automáticamente. A continuación, puede llamar a `GetColumnInfo` y llame a `AddBindEntry` para cada columna que desea enlazar. El código siguiente muestra cómo hacerlo:  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +76,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## Vea también  
- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vea también  
+ [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

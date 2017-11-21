@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_info
-dev_langs:
-- C++
+f1_keywords: type_info
+dev_langs: C++
 helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b87dec1f3d3a04d984c3bbd96344ebcb0a163f19
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="typeinfo-class"></a>type_info (Clase)
 El **type_info** clase describe información de tipo generada en el programa por el compilador. Los objetos de esta clase almacenan de forma eficaz un puntero a un nombre para el tipo. El **type_info** clase también almacena un valor codificado adecuado para comparar dos tipos de igualdad u orden de intercalación. Las reglas de codificación y la secuencia de intercalación para tipos no se especifican y pueden diferir entre programas.  
@@ -53,12 +49,11 @@ public:
   
  No hay ningún vínculo entre el orden de intercalación de tipos y las relaciones de herencia. Use la **type_info:: before** para determinar la secuencia de intercalación de tipos de función miembro. No hay ninguna garantía de que **type_info:: before** producirá el mismo resultado en programas diferentes o incluso ejecuciones diferentes del mismo programa. De esta manera, **type_info:: before** es similar a la dirección del **(&)** operador.  
   
- El **type_info:: Name** función miembro devuelve un **const char\* ** a una cadena terminada en null que representa el nombre legible del tipo. La memoria a la que se señala se almacena en caché y nunca debe desasignarse directamente.  
+ El **type_info:: Name** función miembro devuelve un **const char\***  a una cadena terminada en null que representa el nombre legible del tipo. La memoria a la que se señala se almacena en caché y nunca debe desasignarse directamente.  
   
- El **type_info:: raw_name** función miembro devuelve un **const char\* ** a una cadena terminada en null que representa el nombre representativo del tipo de objeto. El nombre se almacena realmente en forma representativa para ahorrar espacio. Por lo tanto, esta función es más rápida que **type_info:: Name** porque no es necesario quitar la decoración de nombre. La cadena devuelta por la **type_info:: raw_name** función es útil en operaciones de comparación, pero no es legible. Si necesita una cadena legible para el usuario, use la **type_info:: Name** funcione en su lugar.  
+ El **type_info:: raw_name** función miembro devuelve un **const char\***  a una cadena terminada en null que representa el nombre representativo del tipo de objeto. El nombre se almacena realmente en forma representativa para ahorrar espacio. Por lo tanto, esta función es más rápida que **type_info:: Name** porque no es necesario quitar la decoración de nombre. La cadena devuelta por la **type_info:: raw_name** función es útil en operaciones de comparación, pero no es legible. Si necesita una cadena legible para el usuario, use la **type_info:: Name** funcione en su lugar.  
   
  Información de tipo se genera para solo si de las clases polimórficas el [/GR (habilitar información de tipo en tiempo de ejecución)](../build/reference/gr-enable-run-time-type-information.md) se especifica la opción del compilador.  
   
 ## <a name="see-also"></a>Vea también  
  [Información de tipos en tiempo de ejecución](../cpp/run-time-type-information.md)
-

@@ -4,46 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4565
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4565
+f1_keywords: C4565
+dev_langs: C++
+helpviewer_keywords: C4565
 ms.assetid: a71f1341-a4a1-4060-ad1e-9322531883ed
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 70b0311ff02fc9c5fb2b06005a639d0a3dca21e4
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 2cbe5e8aecd8863f0b3ba092b8d199c1032ce157
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4565"></a>Advertencia del compilador (nivel 4) C4565
-'función': redefinición; el símbolo se declaró previamente con __declspec (modificador)  
+'función': nueva definición; el símbolo se declaró previamente con __declspec (modificador)  
   
- Se ha redefinido o volver a declarar un símbolo y la segunda definición o declaración, a diferencia de la primera definición o declaración, no tenía un `__declspec` modificador (***modificador***). Esta advertencia es informativa. Para corregir esta advertencia, elimine una de las definiciones.  
+ Se vuelve a definir o se volvió a declarar un símbolo de y la segunda definición o declaración, a diferencia de la primera definición o declaración, no tenía un `__declspec` modificador (***modificador***). La advertencia es informativa. Para corregir esta advertencia, elimine una de las definiciones.  
   
  El ejemplo siguiente genera C4565:  
   

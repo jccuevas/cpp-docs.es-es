@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::put_Id (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::put_Id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "put_Id (método)"
+title: "Asyncbase:: Put_id (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::put_Id
+dev_langs: C++
+helpviewer_keywords: put_Id method
 ms.assetid: aebad85f-4774-42de-b625-a9cf5f65cb4e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b1046b730d2e79971e5478346d011d30e5f6561
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::put_Id (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asyncbaseputid-method"></a>AsyncBase::put_Id (Método)
 Establece el identificador de la operación asincrónica.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(const unsigned int id);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `id`  
  Un identificador distinto de cero.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, E\_INVALIDARG o E\_ILLEGAL\_METHOD\_CALL.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, E_INVALIDARG o E_ILLEGAL_METHOD_CALL.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [AsyncBase \(Clase\)](../windows/asyncbase-class.md)
+## <a name="see-also"></a>Vea también  
+ [AsyncBase (clase)](../windows/asyncbase-class.md)

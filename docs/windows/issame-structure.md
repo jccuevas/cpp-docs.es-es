@@ -1,32 +1,30 @@
 ---
-title: "IsSame (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsSame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSame (estructura)"
+title: IsSame (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsSame
+dev_langs: C++
+helpviewer_keywords: IsSame structure
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1bdc19519367780444da5df3e1287b32634430c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IsSame (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="issame-structure"></a>IsSame (estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -40,31 +38,31 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T1`  
  Un tipo.  
   
  `T2`  
- Otro.  
+ Otro tipo.  
   
-## Comentarios  
- Prueba si un tipo especificado es igual que otro tipo especificado.  
+## <a name="remarks"></a>Comentarios  
+ Comprueba si un tipo especificado es igual que otro tipo especificado.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constantes públicas  
+### <a name="public-constants"></a>Constantes públicas  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[IsSame::value \(Constante\)](../windows/issame-value-constant.md)|Indica si un tipo es igual que otro.|  
+|[IsSame::value (constante)](../windows/issame-value-constant.md)|Indica si un tipo es igual a otro.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `IsSame`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** internal.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

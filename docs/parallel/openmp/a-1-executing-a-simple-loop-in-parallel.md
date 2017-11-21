@@ -1,27 +1,26 @@
 ---
-title: "A.1   Executing a Simple Loop in Parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.1 ejecuta un bucle Simple en paralelo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b8aaacae-b20d-4b16-a540-54ccbf09582b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2c6cfe794b9d7f50d7e12b8d2f444628ec6d79f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# A.1   Executing a Simple Loop in Parallel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente se muestra cómo ejecutar un bucle sencillo con la directiva de `parallel for` \([sección 2.5.1](../Topic/2.5.1%20parallel%20for%20Construct.md) en la página 16\).  La variable de iteración del bucle es privada de forma predeterminada, por lo que no es necesario especificarla explícitamente en una cláusula privada.  
+# <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1 Ejecutar un bucle sencillo en paralelo
+En el ejemplo siguiente se muestra cómo paralelizar un bucle simple utilizando el `parallel for` directiva ([sección 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) en la página 16). La variable de iteración del bucle es privada de forma predeterminada, por lo que no es necesario especificarla explícitamente en una cláusula privada.  
   
 ```  
 #pragma omp parallel for  

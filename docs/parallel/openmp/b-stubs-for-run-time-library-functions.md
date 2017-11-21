@@ -1,32 +1,31 @@
 ---
-title: "B. Stubs for Run-time Library Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e360e075cf8c721b9357746b2afa3a08df3c851a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Esta sección proporciona códigos auxiliares para las funciones de la biblioteca en tiempo de ejecución definido en el OpenMP C y C\+\+ API.  Los códigos auxiliares se proporcionan a la portabilidad habilitada para las plataformas que no admiten el OpenMP C y C\+\+ API.  En estas plataformas, los programas de OpenMP deben vincularse a una biblioteca que contiene estas funciones de código auxiliar.  Las funciones de código auxiliar se supone que las directivas en el programa de OpenMP se omitirán.  Como tal, emulan semántica en serie.  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución
+Esta sección proporciona código auxiliar para las funciones de biblioteca en tiempo de ejecución definidas en OpenMP C y C++ API. El código auxiliar se proporciona para habilitar la portabilidad para plataformas que no son compatibles con OpenMP C y C++ API. En estas plataformas, programas de OpenMP deben vincularse a una biblioteca que contiene estas funciones de código auxiliar. Las funciones de código auxiliar se supone que se omiten las directivas en el programa de OpenMP. Por lo tanto, imitan la semántica de la serie.  
   
 > [!NOTE]
->  La variable de bloqueo que aparece en las funciones de bloqueo debe realizarse exclusivamente con estas funciones.  No se debe inicializar o modificarse de otra manera en el programa del usuario.  Los usuarios no deben realizar suposiciones sobre los mecanismos utilizados por OpenMP C y las implementaciones de C\+\+ al implementar bloqueos basándose en el esquema utilizado por las funciones de código auxiliar.  
+>  Debe tener acceso a la variable de bloqueo que aparece en las funciones de bloqueo exclusivamente a través de estas funciones. Se debe no ser inicializado o modificado de algún modo en el programa de usuario. Los usuarios no deben realizar suposiciones acerca de los mecanismos que se puedan usar las implementaciones de OpenMP C y C++ para implementar bloqueos basándose en el esquema utilizado por las funciones de código auxiliar.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 #include <stdio.h>  

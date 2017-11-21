@@ -1,73 +1,73 @@
 ---
-title: "How to: Import and Export Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.resvw.resource.importing"
-  - "vc.resvw.resource.importing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], exporting"
-  - "graphics [C++], exporting"
-  - "graphics [C++], importing"
-  - "resources [Visual Studio], importing"
-  - "bitmaps [C++], importing and exporting"
-  - "toolbars [C++], importing"
-  - "images [C++], importing"
-  - "toolbars [C++], exporting"
-  - "cursors [C++], importing and exporting"
-  - "images [C++], exporting"
+title: "Cómo: importar y exportar recursos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.resvw.resource.importing
+- vc.resvw.resource.importing
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], exporting
+- graphics [C++], exporting
+- graphics [C++], importing
+- resources [Visual Studio], importing
+- bitmaps [C++], importing and exporting
+- toolbars [C++], importing
+- images [C++], importing
+- toolbars [C++], exporting
+- cursors [C++], importing and exporting
+- images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21f596996d090d9d41146c6f8ea9cb24884dd4c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Import and Export Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Puede importar recursos gráficos \(mapas de bits, iconos, cursores y barras de herramientas\), archivos HTML y recursos personalizados para usarlos en Visual C\+\+.  Puede exportar los mismos tipos de archivos desde un proyecto de Visual C\+\+ para separar archivos que se pueden usar fuera del entorno de desarrollo.  
+# <a name="how-to-import-and-export-resources"></a>Cómo: Importar y exportar recursos
+Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde un proyecto de Visual C++ para separar archivos que se pueden usar fuera del entorno de desarrollo.  
   
 > [!NOTE]
 >  Los tipos de recursos como los aceleradores, los cuadros de diálogo y las tablas de cadenas no se pueden importar o exportar, porque no son tipos de archivos independientes.  
   
-### Para importar un recurso individual al archivo de recursos actual  
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Para importar un recurso individual al archivo de recursos actual  
   
-1.  En la [Vista de recursos](../windows/resource-view-window.md), haga clic con el botón derecho en el nodo del archivo de script de recursos \(\*.rc\) al que quiera agregar un recurso.  
+1.  En [vista de recursos](../windows/resource-view-window.md), haga clic en el nodo para el script de recursos (* .rc) a la que desea agregar un recurso de archivo.  
   
-2.  Haga clic en **Importar** en el menú contextual.  
+2.  Haga clic en **importación** en el menú contextual.  
   
-3.  Busque y seleccione el nombre de archivo del mapa de bits \(.bmp\), icono \(.ico\), cursor \(.cur\), archivo Html \(.htm\) o cualquier otro archivo que quiera importar.  
+3.  Busque y seleccione el nombre de archivo del mapa de bits (.bmp), icono (.ico), cursor (.cur), archivo Html (.htm) o cualquier otro archivo que quiera importar.  
   
-4.  Haga clic en **Aceptar** para agregar el recurso al archivo seleccionado en la **Vista de recursos**.  
+4.  Haga clic en **Aceptar** para agregar el recurso al archivo seleccionado en **recursos** vista.  
   
     > [!NOTE]
-    >  El proceso de importación es el mismo, independientemente del tipo de recurso seleccionado.  El recurso importado se agrega automáticamente al nodo correspondiente a ese tipo de recurso.  
+    >  El proceso de importación es el mismo, independientemente del tipo de recurso seleccionado. El recurso importado se agrega automáticamente al nodo correspondiente a ese tipo de recurso.  
   
-### Para exportar un mapa de bits, un icono o un cursor como un archivo independiente \(para usarlo fuera de Visual C\+\+\)  
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Para exportar un mapa de bits, un icono o un cursor como un archivo independiente (para usarlo fuera de Visual C++)  
   
-1.  En la **Vista de recursos**, haga clic con el botón derecho en el recurso que quiera exportar.  
+1.  En **recursos** ver, haga clic en el recurso que se va a exportar.  
   
-2.  Haga clic en **Exportar** en el menú contextual.  
+2.  Haga clic en **exportar** en el menú contextual.  
   
-3.  En el cuadro de diálogo **Exportar recurso**, acepte el nombre de archivo actual o escriba uno nuevo.  
+3.  En el **Exportar recurso** diálogo cuadro, acepte el nombre de archivo actual o escriba uno nuevo.  
   
-4.  Vaya a la carpeta donde quiera guardar el archivo y haga clic en **Exportar**.  
+4.  Navegue hasta la carpeta donde desea guardar el archivo y haga clic en **exportar**.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Vea el [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md) para obtener más información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo tener acceso a los recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades.  
+
   
  Requisitos  
   
  Win32  
   
-## Vea también  
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Vea también  
+ [Archivos de recursos](../windows/resource-files-visual-studio.md)   
+ [Editores de recursos](../windows/resource-editors.md)

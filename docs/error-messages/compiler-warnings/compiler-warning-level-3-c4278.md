@@ -1,31 +1,29 @@
 ---
-title: "Advertencia del compilador (nivel 3) C4278 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4278"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4278"
+title: Compilador advertencia (nivel 3) C4278 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4278
+dev_langs: C++
+helpviewer_keywords: C4278
 ms.assetid: 4b6053fb-df62-4c04-b6c8-c011759557b8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: eb1666d873d8b284c4739431e258bedc6586ff66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 3) C4278
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificador': el identificador de la biblioteca de tipos 'tlb' ya es una macro; utilice el calificador 'rename'  
+# <a name="compiler-warning-level-3-c4278"></a>Advertencia del compilador (nivel 3) C4278
+'identificador': identificador de la biblioteca de tipos 'tlb' ya es una macro; Utilice el calificador 'rename'  
   
- Al utilizar [\#import](../../preprocessor/hash-import-directive-cpp.md), un identificador de la biblioteca de tipos que se está importando intenta declarar un identificador ***identifier***.  Sin embargo, éste ya constituye un símbolo válido.  
+ Cuando se usa [#import](../../preprocessor/hash-import-directive-cpp.md), un identificador de la biblioteca de tipos que está importando intenta declarar un identificador ***identificador***. Sin embargo, esto ya es un símbolo válido.  
   
- Utilice el atributo `#import` **rename** para asignar un alias al símbolo de la biblioteca de tipos.
+ Use la `#import` **cambiar el nombre de** atributo para asignar un alias al símbolo de la biblioteca de tipos.

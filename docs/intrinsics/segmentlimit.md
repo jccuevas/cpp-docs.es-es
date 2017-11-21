@@ -1,63 +1,62 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit (función intrínseca)"
-  - "lsl (instrucción)"
+title: __segmentlimit | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4b23b988069064e938db9f9f87921df901effd1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="segmentlimit"></a>__segmentlimit
 **Específicos de Microsoft**  
   
- Genera la instrucción de `lsl` \(límite de segmento de carga\).  
+ Genera el `lsl` instrucción (límite de segmento de carga).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `a`  
- Una constante que especifica el selector del segmento.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `a`  
+ Una constante que especifica el selector de segmento.  
   
-## Valor devuelto  
- El límite del segmento del selector de segmento especificado por `a,`siempre que el selector es válido y visibles en el nivel de permiso actual.  
+## <a name="return-value"></a>Valor devuelto  
+ El límite del segmento del selector de segmento especificado por `a`, siempre que el selector es válido y se ve en el nivel de permiso actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Si el límite de segmento no puede recuperar, los errores de esta instrucción.  En el error, esta instrucción borra el indicador de ZF y el valor devuelto es indefinido.  
+## <a name="remarks"></a>Comentarios  
+ Si no se puede recuperar el límite del segmento, se produce un error en esta instrucción. En caso de error, esta instrucción borra la marca ZF y el valor devuelto es indefinido.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 #include <stdio.h>  
@@ -104,9 +103,14 @@ int main(void)
 }  
 ```  
   
-  **Antes: eflags \=0x0 Después de límite \=0xbaadbabe de segmento: el eflags \=0x256 de límite \=0xffffffff del segmento eflags.zf \= correctamente establecido\!**  
- **el sl ha cambiado**   
-## Específico de Microsoft de FINAL  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## Vea también  
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

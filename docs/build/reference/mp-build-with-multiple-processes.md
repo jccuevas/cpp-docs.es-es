@@ -1,92 +1,91 @@
 ---
-title: "-MP (Compilar con varios procesos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.MultiProcessorCompilation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "-MP (opción del compilador) (C++)"
-  - "/MP (opción del compilador) (C++)"
-  - "MP (opción del compilador) (C++)"
-  - "compilador cl.exe, compilación con varios procesos"
+title: -MP (compilar con varios procesos) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCCLCompilerTool.MultiProcessorCompilation
+dev_langs: C++
+helpviewer_keywords:
+- -MP compiler option (C++)
+- /MP compiler option (C++)
+- MP compiler option (C++)
+- cl.exe compiler, multi-process build
 ms.assetid: a932b14a-74fe-4b45-84e4-6bf53f0f5e07
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /MP (Compilar con varios procesos)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La opción **\/MP** puede reducir el tiempo total de compilación de los archivos de origen en la línea de comandos. La opción **\/MP** hace que el compilador cree una o varias copias de sí mismo, cada una en un proceso independiente. Después, estas copias compilan simultáneamente los archivos de origen. Por consiguiente, se puede reducir considerablemente el tiempo total necesario para compilar los archivos de origen.  
+# <a name="mp-build-with-multiple-processes"></a>/MP (Compilar con varios procesos)
+La opción **/MP** puede reducir el tiempo total de compilación de los archivos de origen en la línea de comandos. La opción **/MP** hace que el compilador cree una o varias copias de sí mismo, cada una en un proceso independiente. Después, estas copias compilan simultáneamente los archivos de origen. Por consiguiente, se puede reducir considerablemente el tiempo total necesario para compilar los archivos de origen.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /MP[processMax]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `processMax`  
- \(Opcional\) Número máximo de procesos que puede crear el compilador.  
+ (Opcional) Número máximo de procesos que puede crear el compilador.  
   
  El argumento `processMax` debe estar comprendido entre 1 y 65536. De lo contrario, el compilador emite el mensaje de advertencia `D9014`, ignora el argumento `processMax` y presupone que el número máximo de procesos es 1.  
   
- Si omite el argumento `processMax`, el compilador recupera el número de [procesadores efectivos](#effective_processors) en el equipo desde el sistema operativo y crea un proceso para cada procesador.  
+ Si omite el argumento `processMax` , el compilador recupera el número de [procesadores efectivos](#effective_processors) en el equipo desde el sistema operativo y crea un proceso para cada procesador.  
   
-## Comentarios  
- La opción del compilador **\/MP** puede reducir considerablemente el tiempo de compilación al compilar varios archivos. Para mejorar el tiempo de compilación, el compilador crea hasta `processMax` copias de sí mismo y las usa para compilar los archivos de origen al mismo tiempo. La opción **\/MP** se aplica a las compilaciones, no a la generación de código de vinculación ni a la generación de código en tiempo de vínculo. De forma predeterminada, la opción **\/MP** está desactivada.  
+## <a name="remarks"></a>Comentarios  
+ La opción del compilador **/MP** puede reducir considerablemente el tiempo de compilación al compilar varios archivos. Para mejorar el tiempo de compilación, el compilador crea hasta `processMax` copias de sí mismo y las usa para compilar los archivos de origen al mismo tiempo. La opción **/MP** se aplica a las compilaciones, no a la generación de código de vinculación ni a la generación de código en tiempo de vínculo. De forma predeterminada, la opción **/MP** está desactivada.  
   
- La mejora en el tiempo de compilación depende del número de procesadores que hay en un equipo, del número de archivos que se van a compilar y de la disponibilidad de los recursos del sistema, como la capacidad de E\/S. Experimente con la opción **\/MP** para determinar la mejor configuración para compilar un proyecto en concreto. Para obtener consejos que le ayuden a tomar esa decisión, consulte [Instrucciones](#guidelines).  
+ La mejora en el tiempo de compilación depende del número de procesadores que hay en un equipo, del número de archivos que se van a compilar y de la disponibilidad de los recursos del sistema, como la capacidad de E/S. Experimente con la opción **/MP** para determinar la mejor configuración para compilar un proyecto en concreto. Para obtener consejos que le ayuden a tomar esa decisión, consulte [Instrucciones](#guidelines).  
   
-## Opciones y características de lenguaje incompatibles  
- La opción **\/MP** es incompatible con algunas opciones del compilador y algunas características de lenguaje. Si usa una opción del compilador incompatible con la opción **\/MP**, el compilador emite la advertencia `D9030` e ignora la opción **\/MP**. Si usa una característica de lenguaje incompatible, el compilador emite el error `C2813` y termina o continúa, según la opción de nivel de advertencia del compilador actual.  
+## <a name="incompatible-options-and-language-features"></a>Opciones y características de lenguaje incompatibles  
+ La opción **/MP** es incompatible con algunas opciones del compilador y algunas características de lenguaje. Si usa una opción del compilador incompatible con la opción **/MP** , el compilador emite la advertencia `D9030` e ignora la opción **/MP** . Si usa una característica de lenguaje incompatible, el compilador emite el error `C2813` y termina o continúa, según la opción de nivel de advertencia del compilador actual.  
   
 > [!NOTE]
 >  La mayoría de las opciones son incompatibles porque, de lo contrario, los compiladores que se ejecutan a la vez escribirían sus resultados al mismo tiempo en la consola o en un archivo determinado. Por consiguiente, el resultado podría combinarse y resultar confuso. En algunos casos, la combinación de opciones podría empeorar el rendimiento.  
   
- En la siguiente tabla aparecen las opciones del compilador y las características de lenguaje que no son compatibles con la opción **\/MP**:  
+ En la siguiente tabla aparecen las opciones del compilador y las características de lenguaje que no son compatibles con la opción **/MP** :  
   
 |Opción o característica de lenguaje|Descripción|  
-|-----------------------------------------|-----------------|  
-|Directiva de preprocesador [\#import](../../preprocessor/hash-import-directive-cpp.md)|Convierte los tipos en una biblioteca de tipos en clases de C\+\+ y las escribe en un archivo de encabezado.|  
-|[\/E](../../build/reference/e-preprocess-to-stdout.md), [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia los resultados del preprocesador en los resultados estándar \(**stdout**\).|  
-|[\/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Permite una reconstrucción incremental.|  
-|[\/showIncludes](../../build/reference/showincludes-list-include-files.md)|Escribe una lista de archivos de inclusión en el error estándar \(**stderr**\).|  
-|[\/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Escribe un archivo de encabezado precompilado.|  
+|--------------------------------|-----------------|  
+|Directiva de preprocesador[#import](../../preprocessor/hash-import-directive-cpp.md) |Convierte los tipos en una biblioteca de tipos en clases de C++ y las escribe en un archivo de encabezado.|  
+|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia los resultados del preprocesador en los resultados estándar (**stdout**).|  
+|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Permite una reconstrucción incremental.|  
+|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Escribe una lista de archivos de inclusión en el error estándar (**stderr**).|  
+|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Escribe un archivo de encabezado precompilado.|  
   
-## Mensajes de diagnóstico  
- Si especifica una opción o una característica de lenguaje que no es compatible con la opción **\/MP**, recibirá un mensaje de diagnóstico. En la siguiente tabla aparecen los mensajes y el comportamiento del compilador:  
+## <a name="diagnostic-messages"></a>Mensajes de diagnóstico  
+ Si especifica una opción o una característica de lenguaje que no es compatible con la opción **/MP** , recibirá un mensaje de diagnóstico. En la siguiente tabla aparecen los mensajes y el comportamiento del compilador:  
   
 |Mensaje de diagnóstico|Descripción|Comportamiento del compilador|  
-|----------------------------|-----------------|-----------------------------------|  
-|`C2813`|La directiva **\#import** no es compatible con la opción **\/MP**.|La compilación finaliza a menos que una opción de [nivel de advertencia del compilador](../../build/reference/compiler-option-warning-level.md) especifique lo contrario.|  
-|`D9014`|Se especificó un valor no válido para el argumento `processMax`.|El compilador omite el valor no válido y presupone el valor 1.|  
-|`D9030`|La opción especificada no es compatible con **\/MP**.|El compilador omite la opción **\/MP**.|  
+|------------------------|-----------------|-----------------------|  
+|`C2813`|La directiva **#import** no es compatible con la opción **/MP** .|La compilación finaliza a menos que una opción de [nivel de advertencia del compilador](../../build/reference/compiler-option-warning-level.md) especifique lo contrario.|  
+|`D9014`|Se especificó un valor no válido para el argumento `processMax` .|El compilador omite el valor no válido y presupone el valor 1.|  
+|`D9030`|La opción especificada no es compatible con **/MP**.|El compilador omite la opción **/MP** .|  
   
 ##  <a name="guidelines"></a> Instrucciones  
   
-### Medir el rendimiento  
+### <a name="measure-performance"></a>Medir el rendimiento  
  Use el tiempo de compilación total para medir el rendimiento. Puede medir el tiempo de compilación con un reloj físico o con un software que calcule la diferencia entre el inicio y el final de la compilación. Si su equipo tiene varios procesadores, un reloj físico podría aportar unos resultados más precisos que una medición de tiempo de un software.  
   
-###  <a name="effective_processors"></a> Procesadores efectivos  
- Un equipo puede tener uno o varios procesadores virtuales \(también denominados "procesadores efectivos"\), para cada uno de los procesadores físicos. Cada procesador físico puede tener uno o varios núcleos y, si el sistema operativo permite la tecnología hyperthreading para un núcleo, cada uno de ellos actúa como dos procesadores virtuales.  
+###  <a name="effective_processors"></a> Effective Processors  
+ Un equipo puede tener uno o varios procesadores virtuales (también denominados "procesadores efectivos"), para cada uno de los procesadores físicos. Cada procesador físico puede tener uno o varios núcleos y, si el sistema operativo permite la tecnología hyperthreading para un núcleo, cada uno de ellos actúa como dos procesadores virtuales.  
   
- Por ejemplo, un equipo tiene un procesador efectivo si tiene un procesador físico que tiene un núcleo y la tecnología hyperthreading está deshabilitada. En cambio, un equipo tiene ocho procesadores efectivos si tiene dos procesadores físicos, cada uno de los cuales tiene dos núcleos y todos los núcleos tienen habilitada la tecnología hyperthreading. Es decir: \(8 procesadores efectivos\) \= \(2 procesadores físicos\) x \(2 núcleos por procesador físico\) x \(2 procesadores efectivos por núcleo debido al hyperthreading\).  
+ Por ejemplo, un equipo tiene un procesador efectivo si tiene un procesador físico que tiene un núcleo y la tecnología hyperthreading está deshabilitada. En cambio, un equipo tiene ocho procesadores efectivos si tiene dos procesadores físicos, cada uno de los cuales tiene dos núcleos y todos los núcleos tienen habilitada la tecnología hyperthreading. Es decir, (8 procesadores efectivos) = (2 procesadores físicos) x (2 núcleos por procesador físico) x (2 procesadores efectivos por núcleo debido al hyperthreading).  
   
- Si se omite el argumento `processMax` en la opción **\/MP**, el compilador obtiene el número de procesadores efectivos a partir del sistema operativo, con lo que crea un proceso por cada procesador efectivo. Hay que tener en cuenta que el compilador no puede garantizar qué proceso se ejecuta en un procesador en concreto: el encargado de tomar esa decisión es el sistema operativo.  
+ Si se omite el argumento `processMax` en la opción **/MP** , el compilador obtiene el número de procesadores efectivos a partir del sistema operativo, con lo que crea un proceso por cada procesador efectivo. Hay que tener en cuenta que el compilador no puede garantizar qué proceso se ejecuta en un procesador en concreto: el encargado de tomar esa decisión es el sistema operativo.  
   
-### Número de procesos  
- El compilador calcula el número de procesos que va a usar para compilar los archivos de origen. Ese valor es el número más bajo del número de archivos de origen que especifica en la línea de comandos y el número de procesos que especifica explícita o implícitamente con la opción **\/MP**. Puede establecer explícitamente el número máximo de procesos proporcionando el argumento `processMax` de la opción **\/MP**. También puede usar el valor predeterminado, que es igual al número de procesadores efectivos que hay en un equipo si se omite el argumento `processMax`.  
+### <a name="number-of-processes"></a>Número de procesos  
+ El compilador calcula el número de procesos que va a usar para compilar los archivos de origen. Ese valor es el número más bajo del número de archivos de origen que especifica en la línea de comandos y el número de procesos que especifica explícita o implícitamente con la opción **/MP** . Puede establecer explícitamente el número máximo de procesos proporcionando el argumento `processMax` de la opción **/MP** . También puede usar el valor predeterminado, que es igual al número de procesadores efectivos que hay en un equipo si se omite el argumento `processMax` .  
   
  Por ejemplo, imagínese que especifica la siguiente línea de comandos:  
   
@@ -98,38 +97,38 @@ La opción **\/MP** puede reducir el tiempo total de compilación de los archivo
   
  En este caso, el sistema operativo detecta dos procesadores; por lo tanto, el compilador usará dos procesos en sus cálculos. Como resultado, el compilador ejecutará la compilación con dos procesos, ya que ese es el número más bajo de dos procesos y tres archivos de origen.  
   
-### Archivos de origen y orden de compilación  
+### <a name="source-files-and-build-order"></a>Archivos de origen y orden de compilación  
  Es posible que los archivos de origen no se compilen en el mismo orden en el que aparecen en la línea de comandos. Aunque el compilador crea un conjunto de procesos que contienen copias del compilador, el sistema operativo programa el momento en el que se ejecuta cada proceso. Por consiguiente, no se puede garantizar que los archivos de origen se compilen en un orden determinado.  
   
  Un archivo de origen se compila cuando un proceso está disponible para la compilación. Si hay más archivos que procesos, los procesos disponibles compilan el primer conjunto de archivos. Los archivos restantes se procesan cuando un proceso acaba de tratar un archivo anterior y está disponible para trabajar en uno de los archivos restantes.  
   
- No especifique el mismo archivo de origen varias veces en una línea de comandos. Esto puede ocurrir, por ejemplo, si una herramienta crea automáticamente un [archivo Make](../../build/contents-of-a-makefile.md) que se basa en la información de dependencia de un proyecto. Si no especifica la opción **\/MP**, el compilador procesa secuencialmente la lista de archivos y vuelve a compilar todas las apariciones del archivo. Pero si la especifica **\/MP**, es posible que diferentes compiladores compilen el mismo archivo a la vez. Por consiguiente, los distintos compiladores intentarán escribir en el mismo archivo de salida a la vez. Un compilador obtendrá correctamente acceso exclusivo de escritura en el archivo de salida, mientras que en el resto de los compiladores se producirá un error de acceso al archivo.  
+ No especifique el mismo archivo de origen varias veces en una línea de comandos. Esto puede ocurrir, por ejemplo, si una herramienta crea automáticamente un [archivo Make](../../build/contents-of-a-makefile.md) que se basa en la información de dependencia de un proyecto. Si no especifica la opción **/MP** , el compilador procesa secuencialmente la lista de archivos y vuelve a compilar todas las apariciones del archivo. Pero si la especifica **/MP** , es posible que diferentes compiladores compilen el mismo archivo a la vez. Por consiguiente, los distintos compiladores intentarán escribir en el mismo archivo de salida a la vez. Un compilador obtendrá correctamente acceso exclusivo de escritura en el archivo de salida, mientras que en el resto de los compiladores se producirá un error de acceso al archivo.  
   
-### Usar bibliotecas de tipos \(\#import\)  
- El compilador no admite el uso de la directiva [\#import](../../preprocessor/hash-import-directive-cpp.md) con el modificador **\/MP**. Si es posible, siga estos pasos para solucionar este problema:  
+### <a name="using-type-libraries-import"></a>Usar bibliotecas de tipos (#import)  
+ El compilador no admite el uso de la directiva [#import](../../preprocessor/hash-import-directive-cpp.md) con el modificador **/MP** . Si es posible, siga estos pasos para solucionar este problema:  
   
--   Mueva todas las directivas `#import` de los distintos archivos de origen a uno o varios archivos y compílelos sin la opción **\/MP**. El resultado será un conjunto de archivos de encabezado generados.  
+-   Mueva todas las directivas `#import` de los distintos archivos de origen a uno o varios archivos y compílelos sin la opción **/MP** . El resultado será un conjunto de archivos de encabezado generados.  
   
--   En los otros archivos de origen, inserte directivas [\#include](../../preprocessor/hash-include-directive-c-cpp.md) que especifiquen los encabezados generados y compile los archivos de origen restantes con la opción **\/MP**.  
+-   En los otros archivos de origen, inserte directivas [#include](../../preprocessor/hash-include-directive-c-cpp.md) que especifiquen los encabezados generados y compile los archivos de origen restantes con la opción **/MP** .  
   
-### Configuración de un proyecto de Visual Studio  
+### <a name="visual-studio-project-settings"></a>Configuración de un proyecto de Visual Studio  
   
-#### Herramienta MSBUILD.exe  
- [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] usa la herramienta [MSBuild.exe](../Topic/MSBuild%20Reference.md) para crear soluciones y proyectos. La opción de línea de comandos **\/maxcpucount:**`number` \(o **\/m:**`number`\) de la herramienta MSBuild.exe puede crear varios proyectos a la vez, mientras que la opción del compilador **\/MP** puede crear varias unidades de compilación al mismo tiempo. Si es adecuado para su aplicación, mejore el tiempo de compilación de la solución usando **\/MP**, **\/maxcpucount** o ambas opciones.  
+#### <a name="the-msbuildexe-tool"></a>Herramienta MSBUILD.exe  
+ [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] usa la herramienta [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) para crear soluciones y proyectos. La opción de línea de comandos **/maxcpucount:**`number` (o **/m:**`number`) de la herramienta MSBuild.exe puede crear varios proyectos a la vez, mientras que la opción del compilador **/MP** puede crear varias unidades de compilación al mismo tiempo. Si es adecuado para su aplicación, mejore el tiempo de compilación de la solución usando **/MP** , **/maxcpucount**o ambas opciones.  
   
- El tiempo de compilación de la solución depende en parte del número de procesos que llevan a cabo la compilación. El argumento `number` de la opción [maxcpucount](../Topic/MSBuild%20Command-Line%20Reference.md) de MSBuild especifica el número máximo de proyectos que se van a compilar al mismo tiempo. De forma similar, el argumento `processMax` de la opción del compilador **\/MP** especifica el número máximo de unidades de compilación que se van a crear al mismo tiempo. Si la opción **\/maxcpucount** especifica *P* proyectos y la opción **\/MP** especifica *C* procesos, se ejecutará a la vez un máximo de *P*x*C* procesos.  
+ El tiempo de compilación de la solución depende en parte del número de procesos que llevan a cabo la compilación. El argumento `number` de la opción [maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) de MSBuild especifica el número máximo de proyectos que se van a compilar al mismo tiempo. De forma similar, el argumento `processMax` de la opción del compilador **/MP** especifica el número máximo de unidades de compilación que se van a crear al mismo tiempo. Si la opción **/maxcpucount** especifica *P* proyectos y la opción **/MP** especifica *C* procesos, se ejecutará a la vez un máximo de *P*x*C* procesos.  
   
- El criterio para decidir si se debe usar la tecnología de `MSBuild` o **\/MP** es el siguiente:  
+ El criterio para decidir si se debe usar la tecnología de `MSBuild` o **/MP** es el siguiente:  
   
--   Si hay muchos proyectos con pocos archivos en cada proyecto, use la herramienta `MSBuild`.  
+-   Si hay muchos proyectos con pocos archivos en cada proyecto, use la herramienta `MSBuild` .  
   
--   Si hay pocos proyectos con muchos archivos en cada proyecto, use la opción **\/MP**.  
+-   Si hay pocos proyectos con muchos archivos en cada proyecto, use la opción **/MP** .  
   
--   Si el número de proyectos y archivos por proyecto está equilibrado, use `MSBuild` y **\/MP**. Para comenzar, establezca la opción **maxcpucount** en el número de proyectos que se van a crear y la opción **\/MP** en el número de procesadores que hay en su equipo. Mida el rendimiento y, luego, ajuste la configuración para conseguir los mejores resultados. Repita este ciclo hasta que esté satisfecho con el tiempo de compilación total.  
+-   Si el número de proyectos y archivos por proyecto está equilibrado, use `MSBuild` y **/MP**. Para comenzar, establezca la opción **maxcpucount** en el número de proyectos que se van a crear y la opción **/MP** en el número de procesadores que hay en su equipo. Mida el rendimiento y, luego, ajuste la configuración para conseguir los mejores resultados. Repita este ciclo hasta que esté satisfecho con el tiempo de compilación total.  
   
-#### Opción del compilador \/Gm  
- De forma predeterminada, la compilación de un proyecto permite la opción del compilador **\/Gm** \(compilaciones incrementales\) para las compilaciones de depuración y la deshabilita para las compilaciones de versión. Por lo tanto, la opción del compilador **\/MP** se deshabilita automáticamente en las compilaciones de depuración, puesto que entra en conflicto con la opción del compilador **\/Gm** predeterminada.  
+#### <a name="the-gm-compiler-option"></a>Opción del compilador /Gm  
+ De forma predeterminada, la compilación de un proyecto permite la opción del compilador **/Gm** (compilaciones incrementales) para las compilaciones de depuración y la deshabilita para las compilaciones de versión. Por lo tanto, la opción del compilador **/MP** se deshabilita automáticamente en las compilaciones de depuración, puesto que entra en conflicto con la opción del compilador **/Gm** predeterminada.  
   
-## Vea también  
- [\#import \(Directiva\)](../../preprocessor/hash-import-directive-cpp.md)   
- [Referencia de la línea de comandos](../Topic/MSBuild%20Command-Line%20Reference.md)
+## <a name="see-also"></a>Vea también  
+ [#import (directiva)](../../preprocessor/hash-import-directive-cpp.md)   
+ [Referencia de la línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference)

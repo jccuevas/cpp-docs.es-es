@@ -1,28 +1,28 @@
 ---
-title: "HString::CopyTo (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Hstring:: CopyTo (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: a1fd2ef0-e175-4c18-927b-550e02a89e43
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b49031359c2a51f6bdc28c52fb38ca4e29cb3e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# HString::CopyTo (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia el objeto HString actual a un objeto HSTRING.  
+# <a name="hstringcopyto-method"></a>HString::CopyTo (Método)
+Copia el HString actual objeto a un objeto HSTRING.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -31,17 +31,17 @@ HRESULT CopyTo(
    ) const throw();  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `str`  
- La HSTRING que recibe la copia.  
+ El HSTRING que recibe la copia.  
   
-## Comentarios  
- Este método llama a la función [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx).  
+## <a name="remarks"></a>Comentarios  
+ Este método llama a la [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) (función).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [HString \(Clase\)](../windows/hstring-class.md)
+## <a name="see-also"></a>Vea también  
+ [HString (clase)](../windows/hstring-class.md)

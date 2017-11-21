@@ -1,37 +1,36 @@
 ---
-title: "C&#243;mo: Dibujar formas con .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dibujar, formas"
-  - "GDI+, dibujar formas"
-  - "formas"
-  - "formas, dibujar"
+title: "Cómo: dibujar formas con .NET Framework | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+, drawing shapes
+- drawing, shapes
+- shapes
+- shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9c9c2fedb4bb07fa2301368e4bd7b62fb636d3fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Dibujar formas con .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente utiliza la clase <xref:System.Drawing.Graphics> para modificar el controlador de eventos <xref:System.Windows.Forms.Form.OnPaint%2A> para recuperar un puntero al objeto <xref:System.Drawing.Graphics> para el formulario principal.  Este puntero se utiliza posteriormente para establecer el color de fondo del formulario y dibujar una línea y un arco utilizando los métodos <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> y <xref:System.Drawing.Graphics.DrawArc%2A>.  
+# <a name="how-to-draw-shapes-with-the-net-framework"></a>Cómo: Dibujar formas con .NET Framework
+El siguiente ejemplo de código utiliza el <xref:System.Drawing.Graphics> clase para modificar el <xref:System.Windows.Forms.Form.OnPaint%2A> controlador de eventos para recuperar un puntero a la <xref:System.Drawing.Graphics> objeto para el formulario principal. This (puntero), a continuación, se usa para establecer el color de fondo del formulario y dibujar una línea y un arco utilizando la <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> y <xref:System.Drawing.Graphics.DrawArc%2A> métodos.  
   
 > [!NOTE]
->  GDI\+ se incluye con Windows XP y está disponible como componente redistribuible con Windows NT 4.0 SP 6, Windows 2000, Windows 98 y Windows Me.  Para descargar el último redistribuible, vea [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  Para obtener más información, vea [GDI\+](_gdiplus_GDI_start_cpp).  
+>  GDI + se incluye con Windows XP y está disponible como componente redistribuible para Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 y Windows Millennium Edition. Para descargar el último redistribuible, vea [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232). 
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 #using <system.drawing.dll>  
@@ -61,6 +60,6 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }  
 ```  
   
-## Vea también  
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
- [System::Drawing \(Espacio de nombres\)](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)
+## <a name="see-also"></a>Vea también  
+ [Programación de .NET con C++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+ [Espacio de nombres Drawing](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)

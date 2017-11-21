@@ -1,32 +1,30 @@
 ---
-title: "SRWLockExclusiveTraits::Unlock (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock (método)"
+title: "Srwlockexclusivetraits:: Unlock (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 7fd6b0fb-8b88-4a43-aa74-0d7fe47a0da6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ac40ea65dad74d42a3ee729bfb1cd1711879a06
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLockExclusiveTraits::Unlock (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Control exclusivo de versiones del objeto especificado de SRWLock.  
+# <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock (Método)
+Devuelve el control exclusivo del objeto SRWLock especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 inline static void Unlock(  
@@ -34,14 +32,14 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `srwlock`  
- Identificador de un objeto de SRWLock.  
+ Identificador de un objeto SRWLock.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** handletraits  
   
-## Vea también  
- [SRWLockExclusiveTraits \(Estructura\)](../windows/srwlockexclusivetraits-structure.md)
+## <a name="see-also"></a>Vea también  
+ [SRWLockExclusiveTraits (estructura)](../windows/srwlockexclusivetraits-structure.md)

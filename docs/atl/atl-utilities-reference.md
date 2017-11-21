@@ -1,112 +1,105 @@
 ---
-title: "Referencia de utilidades de ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Referencia de utilidades ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Referencia de utilidades de ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="atl-utilities-reference"></a>Referencia de utilidades de ATL
+ATL proporciona código para manipular las rutas de acceso y las direcciones URL en forma de [CPathT](../atl/reference/cpatht-class.md) y [CUrl](../atl/reference/curl-class.md). Un grupo de subprocesos, [CThreadPool](../atl/reference/cthreadpool-class.md), puede utilizar en las aplicaciones. Este código se puede encontrar en atlpath.h y atlutil.h.  
+  
+### <a name="classes"></a>Clases  
+  
+|||  
+|-|-|  
+|[CPathT (clase)](../atl/reference/cpatht-class.md)|Esta clase representa una ruta de acceso.|  
+|[CDebugReportHook (clase)](../atl/reference/cdebugreporthook-class.md)|Utilice esta clase para enviar informes de depuración a una canalización con nombre.|  
+|[CNonStatelessWorker (clase)](../atl/reference/cnonstatelessworker-class.md)|Recibe solicitudes de un grupo de subprocesos y los pasa a un objeto de trabajo que se crea y se destruye en cada solicitud.|  
+|[CNoWorkerThread (clase)](../atl/reference/cnoworkerthread-class.md)|Utilice esta clase como argumento para el `MonitorClass` parámetro de plantilla a las clases de caché si desea deshabilitar el mantenimiento de la memoria caché dinámica.|  
+|[CThreadPool (clase)](../atl/reference/cthreadpool-class.md)|Esta clase proporciona un grupo de subprocesos de trabajo que procesan una cola de elementos de trabajo.|  
+|[CUrl (clase)](../atl/reference/curl-class.md)|Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de las otras si analizar una dirección URL existente cadena o generar una cadena desde el principio.|  
+|[CWorkerThread (clase)](../atl/reference/cworkerthread-class.md)|Esta clase crea un subproceso de trabajo o usa uno existente, espera a que en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificado cuando se señala a uno de los controladores.|  
+  
+### <a name="typedefs"></a>Definiciones de tipo  
+  
+|||  
+|-|-|  
+|[CPath](../atl/reference/atl-typedefs.md#cpath)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) con `CString`.|  
+|[CPathA](../atl/reference/atl-typedefs.md#cpatha)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) con `CStringA`.|  
+|[CPathW](../atl/reference/atl-typedefs.md#cpathw)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) con `CStringW`.|  
+|[ATL_URL_PORT](../atl/reference/atl-typedefs.md#atl_url_port)|El tipo utilizado por [CUrl](../atl/reference/curl-class.md) para especificar un número de puerto.|  
+  
+### <a name="enums"></a>Enumeraciones  
+  
+|||  
+|-|-|  
+|[ATL_URL_SCHEME](../atl/reference/atl-url-scheme-enum.md)|Los miembros de esta enumeración proporcionan constantes para los esquemas entendidos [CUrl](../atl/reference/curl-class.md).|  
+  
+### <a name="functions"></a>Funciones  
+  
+|||  
+|-|-|  
+|[AtlCanonicalizeUrl](../atl/reference/atl-http-utility-functions.md#atlcanonicalizeurl)|Llame a esta función para canonizar una dirección URL, que incluye la conversión de espacios y caracteres no seguros en secuencias de escape.|  
+|[AtlCombineUrl](../atl/reference/atl-http-utility-functions.md#atlcombineurl)|Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una única dirección URL canónica.|  
+|[AtlEscapeUrl](../atl/reference/atl-http-utility-functions.md#atlescapeurl)|Llame a esta función para convertir todos los caracteres no seguros en secuencias de escape.|  
+|[AtlGetDefaultUrlPort](../atl/reference/atl-http-utility-functions.md#atlgetdefaulturlport)|Llame a esta función para obtener el número de puerto predeterminado asociado a un determinado protocolo de internet o un esquema.|  
+|[AtlHexValue](../atl/reference/atl-text-encoding-functions.md#atlhexvalue)|Llame a esta función para obtener el valor numérico de un dígito hexadecimal.|  
+|[AtlIsUnsafeUrlChar](../atl/reference/atl-http-utility-functions.md#atlisunsafeurlchar)|Llame a esta función para comprobar si un carácter es seguro para usarlo en una dirección URL.|  
+|[AtlUnescapeUrl](../atl/reference/atl-http-utility-functions.md#atlunescapeurl)|Llame a esta función para convertir de nuevo los caracteres de escape en sus valores originales.|  
+|[SystemTimeToHttpDate](../atl/reference/atl-http-utility-functions.md#systemtimetohttpdate)|Llame a esta función para convertir una hora del sistema en una cadena con un formato adecuado para usarla en encabezados HTTP.|  
 
-ATL proporciona el código para las rutas y las direcciones URL de manipulación en forma de [CPathT](../atl/reference/cpatht-class.md) y [rizo](../atl/reference/curl-class.md).  Un grupo de subprocesos, [CThreadPool](../atl/reference/cthreadpool-class.md), se puede utilizar en las aplicaciones.  Este código se encuentra en atlpath.h y atlutil.h.  
+|[ATLPath::AddBackslash](../atl/reference/atl-path-functions.md#addbackslash)| Esta función es un contenedor sobrecargado de [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561). |  
+|[ATLPath::AddExtension](../atl/reference/atl-path-functions.md#addextension)| Esta función es un contenedor sobrecargado de [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563). |  
+|[ATLPath::Append](../atl/reference/atl-path-functions.md#append)| Esta función es un contenedor sobrecargado de [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565). |  
+|[ATLPath::BuildRoot](../atl/reference/atl-path-functions.md#buildroot)| Esta función es un contenedor sobrecargado de [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567). |  
+|[ATLPath::Canonicalize](../atl/reference/atl-path-functions.md#canonicalize)| Esta función es un contenedor sobrecargado de [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569). |  
+|[ATLPath::Combine](../atl/reference/atl-path-functions.md#combine)| Esta función es un contenedor sobrecargado de [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571). |  
+|[ATLPath::CommonPrefix](../atl/reference/atl-path-functions.md#commonprefix)| Esta función es un contenedor sobrecargado de [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574). |  
+|[ATLPath::CompactPath](../atl/reference/atl-path-functions.md#compactpath)| Esta función es un contenedor sobrecargado de [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575). |  
+|[ATLPath::CompactPathEx](../atl/reference/atl-path-functions.md#compactpathex)| Esta función es un contenedor sobrecargado de [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578). |  
+|[ATLPath::FileExists](../atl/reference/atl-path-functions.md#fileexists)| Esta función es un contenedor sobrecargado de [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584). |  
+|[ATLPath::FindExtension](../atl/reference/atl-path-functions.md#findextension)| Esta función es un contenedor sobrecargado de [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587). |  
+|[ATLPath::FindFileName](../atl/reference/atl-path-functions.md#findfilename)| Esta función es un contenedor sobrecargado de [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589). |  
+|[ATLPath::GetDriveNumber](../atl/reference/atl-path-functions.md#getdrivenumber)| Esta función es un contenedor sobrecargado de [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612). |  
+|[ATLPath::IsDirectory](../atl/reference/atl-path-functions.md#isdirectory)| Esta función es un contenedor sobrecargado de [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621). |  
+|[ATLPath::IsFileSpec](../atl/reference/atl-path-functions.md#isfilespec)| Esta función es un contenedor sobrecargado de [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627). |  
+|[ATLPath::IsPrefix](../atl/reference/atl-path-functions.md#isprefix)| Esta función es un contenedor sobrecargado de [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650). |  
+|[ATLPath::IsRelative](../atl/reference/atl-path-functions.md#isrelative)| Esta función es un contenedor sobrecargado de [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660). |  
+|[ATLPath::IsRoot](../atl/reference/atl-path-functions.md#isroot)| Esta función es un contenedor sobrecargado de [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674). |  
+|[ATLPath::IsSameRoot](../atl/reference/atl-path-functions.md#issameroot)| Esta función es un contenedor sobrecargado de [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687). |  
+|[ATLPath::IsUNC](../atl/reference/atl-path-functions.md#isunc)| Esta función es un contenedor sobrecargado de [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712). |  
+|[ATLPath::IsUNCServer](../atl/reference/atl-path-functions.md#isuncserver)| Esta función es un contenedor sobrecargado de [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722). |  
+|[ATLPath::IsUNCServerShare](../atl/reference/atl-path-functions.md#isuncservershare)| Esta función es un contenedor sobrecargado de [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723). |  
+|[ATLPath::MakePretty](../atl/reference/atl-path-functions.md#makepretty)| Esta función es un contenedor sobrecargado de [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725). |  
+|[ATLPath::MatchSpec](../atl/reference/atl-path-functions.md#matchspec)| Esta función es un contenedor sobrecargado de [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727). |  
+|[ATLPath::QuoteSpaces](../atl/reference/atl-path-functions.md#quotespaces)| Esta función es un contenedor sobrecargado de [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739). |  
+|[ATLPath::RelativePathTo](../atl/reference/atl-path-functions.md#relativepathto)| Esta función es un contenedor sobrecargado de [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740). |  
+|[ATLPath::RemoveArgs](../atl/reference/atl-path-functions.md#removeargs)| Esta función es un contenedor sobrecargado de [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742). |  
+|[ATLPath::RemoveBackslash](../atl/reference/atl-path-functions.md#removebackslash)| Esta función es un contenedor sobrecargado de [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743). |  
+|[ATLPath::RemoveBlanks](../atl/reference/atl-path-functions.md#removeblanks)| Esta función es un contenedor sobrecargado de [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745). |  
+|[ATLPath::RemoveExtension](../atl/reference/atl-path-functions.md#removeextension)| Esta función es un contenedor sobrecargado de [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746). |  
+|[ATLPath::RemoveFileSpec](../atl/reference/atl-path-functions.md#removefilespec)| Esta función es un contenedor sobrecargado de [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748). |  
+|[ATLPath::RenameExtension](../atl/reference/atl-path-functions.md#renameextension)| Esta función es un contenedor sobrecargado de [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749). |  
+|[ATLPath::SkipRoot](../atl/reference/atl-path-functions.md#skiproot)| Esta función es un contenedor sobrecargado de [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754). |  
+|[ATLPath::StripPath](../atl/reference/atl-path-functions.md#strippath)| Esta función es un contenedor sobrecargado de [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756). |  
+|[ATLPath::StripToRoot](../atl/reference/atl-path-functions.md#striptoroot)| Esta función es un contenedor sobrecargado de [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757). |  
+|[ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces)| Esta función es un contenedor sobrecargado de [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763). |  
   
-### Clases  
-  
-|||  
-|-|-|  
-|[clase de CPathT](../atl/reference/cpatht-class.md)|esta clase representa una ruta.|  
-|[clase de CDebugReportHook](../atl/reference/cdebugreporthook-class.md)|Utilice esta clase para enviar informes de depuración a una canalización con nombre.|  
-|[clase de CNonStatelessWorker](../atl/reference/cnonstatelessworker-class.md)|Recibe solicitudes de un grupo de subprocesos y las pasa en un objeto worker que se cree y se destruya en cada solicitud.|  
-|[clase de CNoWorkerThread](../atl/reference/cnoworkerthread-class.md)|Utilice esta clase como el argumento para que el parámetro de plantilla de `MonitorClass` almacene en caché clases si desea deshabilitar mantenimiento dinámico de caché.|  
-|[Clase CThreadPool](../atl/reference/cthreadpool-class.md)|Esta clase proporciona un grupo de subprocesos de trabajo que procesen una cola de elementos de trabajo.|  
-|[Clase de rizo](../atl/reference/curl-class.md)|Esta clase representa una dirección URL.  Permite manipular cada elemento de la dirección URL independientemente de los demás si analiza una cadena existente de la dirección URL o compila una cadena desde el principio.|  
-|[clase de CWorkerThread](../atl/reference/cworkerthread-class.md)|Esta clase crea un subproceso de trabajo o utiliza existente, espera en uno o más controladores de objeto de kernel, y ejecuta una función especificada del cliente a uno de los identificadores se señala.|  
-  
-### Typedefs  
-  
-|||  
-|-|-|  
-|[CPath](../Topic/CPath.md)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) mediante `CString`.|  
-|[CPathA](../Topic/CPathA.md)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) mediante `CStringA`.|  
-|[CPathW](../Topic/CPathW.md)|Una especialización de [CPathT](../atl/reference/cpatht-class.md) mediante `CStringW`.|  
-|[ATL\_URL\_PORT](../Topic/ATL_URL_PORT.md)|el tipo utilizado por [rizo](../atl/reference/curl-class.md) para especificar un número de puerto.|  
-  
-### Enumeraciones  
-  
-|||  
-|-|-|  
-|[ATL\_URL\_SCHEME](../Topic/ATL_URL_SCHEME.md)|Los miembros de esta enumeración proporcionan las constantes para esquemas entendidos por [rizo](../atl/reference/curl-class.md).|  
-  
-### Funciones  
-  
-|||  
-|-|-|  
-|[AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md)|Llame a esta función para canonicalize una dirección URL, que incluye convertir caracteres y espacios no seguros en secuencias de escape.|  
-|[AtlCombineUrl](../Topic/AtlCombineUrl.md)|Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una dirección URL única, canónica.|  
-|[AtlEscapeUrl](../Topic/AtlEscapeUrl.md)|Llame a esta función para convertir todos los caracteres inseguros en secuencias de escape.|  
-|[AtlGetDefaultUrlPort](../Topic/AtlGetDefaultUrlPort.md)|Llame a esta función para obtener el número de puerto predeterminado asociado con un Internet Protocol o un esquema determinado.|  
-|[AtlHexValue](../Topic/AtlHexValue.md)|Llame a esta función para obtener el valor numérico de un dígito hexadecimal.|  
-|[AtlIsUnsafeUrlChar](../Topic/AtlIsUnsafeUrlChar.md)|Llame a esta función para comprobar si un carácter es seguro para el uso en una dirección URL.|  
-|[AtlUnescapeUrl](../Topic/AtlUnescapeUrl.md)|Llame a esta función para convertir los caracteres ASCII de nuevo a sus valores originales.|  
-|[SystemTimeToHttpDate](../Topic/SystemTimeToHttpDate.md)|Llame a esta función para convertir una hora del sistema en una cadena en un formato adecuado para utilizar en encabezados HTTP.|  
-|[ATLPath:: AddBackslash](../Topic/ATLPath::AddBackslash.md)|esta función es un contenedor sobrecargado para [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).|  
-|[ATLPath:: AddExtension](../Topic/ATLPath::AddExtension.md)|esta función es un contenedor sobrecargado para [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).|  
-|[ATLPath:: Anexar](../Topic/ATLPath::Append.md)|esta función es un contenedor sobrecargado para [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).|  
-|[ATLPath:: BuildRoot](../Topic/ATLPath::BuildRoot.md)|esta función es un contenedor sobrecargado para [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).|  
-|[ATLPath:: Canonicalize](../Topic/ATLPath::Canonicalize.md)|esta función es un contenedor sobrecargado para [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).|  
-|[ATLPath:: Combine](../Topic/ATLPath::Combine.md)|esta función es un contenedor sobrecargado para [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).|  
-|[ATLPath:: CommonPrefix](../Topic/ATLPath::CommonPrefix.md)|esta función es un contenedor sobrecargado para [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).|  
-|[ATLPath:: CompactPath](../Topic/ATLPath::CompactPath.md)|esta función es un contenedor sobrecargado para [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).|  
-|[ATLPath:: CompactPathEx](../Topic/ATLPath::CompactPathEx.md)|esta función es un contenedor sobrecargado para [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).|  
-|[ATLPath:: FileExists](../Topic/ATLPath::FileExists.md)|esta función es un contenedor sobrecargado para [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).|  
-|[ATLPath:: FindExtension](../Topic/ATLPath::FindExtension.md)|esta función es un contenedor sobrecargado para [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).|  
-|[ATLPath:: FindFileName](../Topic/ATLPath::FindFileName.md)|esta función es un contenedor sobrecargado para [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).|  
-|[ATLPath:: GetDriveNumber](../Topic/ATLPath::GetDriveNumber.md)|esta función es un contenedor sobrecargado para [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).|  
-|[ATLPath:: IsDirectory](../Topic/ATLPath::IsDirectory.md)|esta función es un contenedor sobrecargado para [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).|  
-|[ATLPath:: IsFileSpec](../Topic/ATLPath::IsFileSpec.md)|esta función es un contenedor sobrecargado para [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).|  
-|[ATLPath:: IsPrefix](../Topic/ATLPath::IsPrefix.md)|esta función es un contenedor sobrecargado para [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).|  
-|[ATLPath:: IsRelative](../Topic/ATLPath::IsRelative.md)|esta función es un contenedor sobrecargado para [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).|  
-|[ATLPath:: IsRoot](../Topic/ATLPath::IsRoot.md)|esta función es un contenedor sobrecargado para [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).|  
-|[ATLPath:: IsSameRoot](../Topic/ATLPath::IsSameRoot.md)|esta función es un contenedor sobrecargado para [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).|  
-|[ATLPath:: IsUNC](../Topic/ATLPath::IsUNC.md)|esta función es un contenedor sobrecargado para [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).|  
-|[ATLPath:: IsUNCServer](../Topic/ATLPath::IsUNCServer.md)|esta función es un contenedor sobrecargado para [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).|  
-|[ATLPath:: IsUNCServerShare](../Topic/ATLPath::IsUNCServerShare.md)|esta función es un contenedor sobrecargado para [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).|  
-|[ATLPath:: MakePretty](../Topic/ATLPath::MakePretty.md)|esta función es un contenedor sobrecargado para [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).|  
-|[ATLPath:: MatchSpec](../Topic/ATLPath::MatchSpec.md)|esta función es un contenedor sobrecargado para [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).|  
-|[ATLPath:: QuoteSpaces](../Topic/ATLPath::QuoteSpaces.md)|esta función es un contenedor sobrecargado para [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).|  
-|[ATLPath:: RelativePathTo](../Topic/ATLPath::RelativePathTo.md)|esta función es un contenedor sobrecargado para [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).|  
-|[ATLPath:: RemoveArgs](../Topic/ATLPath::RemoveArgs.md)|esta función es un contenedor sobrecargado para [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).|  
-|[ATLPath:: RemoveBackslash](../Topic/ATLPath::RemoveBackslash.md)|esta función es un contenedor sobrecargado para [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).|  
-|[ATLPath:: RemoveBlanks](../Topic/ATLPath::RemoveBlanks.md)|esta función es un contenedor sobrecargado para [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).|  
-|[ATLPath:: RemoveExtension](../Topic/ATLPath::RemoveExtension.md)|esta función es un contenedor sobrecargado para [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).|  
-|[ATLPath:: RemoveFileSpec](../Topic/ATLPath::RemoveFileSpec.md)|esta función es un contenedor sobrecargado para [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).|  
-|[ATLPath:: RenameExtension](../Topic/ATLPath::RenameExtension.md)|esta función es un contenedor sobrecargado para [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).|  
-|[ATLPath:: SkipRoot](../Topic/ATLPath::SkipRoot.md)|esta función es un contenedor sobrecargado para [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).|  
-|[ATLPath:: StripPath](../Topic/ATLPath::StripPath.md)|esta función es un contenedor sobrecargado para [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).|  
-|[ATLPath:: StripToRoot](../Topic/ATLPath::StripToRoot.md)|esta función es un contenedor sobrecargado para [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).|  
-|[ATLPath:: UnquoteSpaces](../Topic/ATLPath::UnquoteSpaces.md)|esta función es un contenedor sobrecargado para [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).|  
-  
-### Macros  
-  
-|||  
-|-|-|  
-|[Marcadores de ATL\_URL](../Topic/ATL_URL%20Flags.md)|Estas marcas modifican el comportamiento de [AtlEscapeUrl](../Topic/AtlEscapeUrl.md) y de [AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md) .|  
-|[ATL\_WORKER\_THREAD\_WAIT](../Topic/ATL_WORKER_THREAD_WAIT.md)|Esta macro define el valor predeterminado en milisegundos que [CWorkerThread:: Apagado](../Topic/CWorkerThread::Shutdown.md) esperará el subproceso de trabajo para cerrar.|  
-|[ATLS\_DEFAULT\_THREADPOOLSHUTDOWNTIMEOUT](../Topic/ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT.md)|esta macro define la hora predeterminada en milisegundos que [CThreadPool](../atl/reference/cthreadpool-class.md) esperará un subproceso para cerrar.|  
-|[ATLS\_DEFAULT\_THREADSPERPROC](../Topic/ATLS_DEFAULT_THREADSPERPROC.md)|esta macro define el número predeterminado de subprocesos por el procesador utilizado por [CThreadPool](../atl/reference/cthreadpool-class.md).|  
-  
-## Vea también  
+
+## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)
+ [Componentes de escritorio COM de ATL](../atl/atl-com-desktop-components.md)

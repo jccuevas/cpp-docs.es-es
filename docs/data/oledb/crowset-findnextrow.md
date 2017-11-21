@@ -1,91 +1,90 @@
 ---
-title: "CRowset::FindNextRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset.FindNextRow"
-  - "CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset::FindNextRow"
-  - "CRowset::FindNextRow"
-  - "CRowset<TAccessor>::FindNextRow"
-  - "CRowset.FindNextRow"
-  - "ATL.CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset<TAccessor>::FindNextRow"
-  - "FindNextRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FindNextRow (método)"
+title: 'CRowset:: FindNextRow | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset.FindNextRow
+- CRowset<TAccessor>.FindNextRow
+- ATL::CRowset::FindNextRow
+- CRowset::FindNextRow
+- CRowset<TAccessor>::FindNextRow
+- CRowset.FindNextRow
+- ATL.CRowset<TAccessor>.FindNextRow
+- ATL::CRowset<TAccessor>::FindNextRow
+- FindNextRow
+dev_langs: C++
+helpviewer_keywords: FindNextRow method
 ms.assetid: 36484df9-3625-4f15-bf69-db73a8d91c55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a7b3e68ef75344b6ee0e612fb104c9a21ea1bde
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::FindNextRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Encuentra la fila coincidente siguiente después del marcador especificado.  
+# <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
+Busca la siguiente fila coincidente después del marcador especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT FindNextRow(   
-   DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL    
+      HRESULT FindNextRow(   
+   DBCOMPAREOP op,   
+   BYTE* pData,   
+   DBTYPE wType,   
+   DBLENGTH nLength,   
+   BYTE bPrecision,   
+   BYTE bScale,   
+   BOOL bSkipCurrent = TRUE,   
+   CBookmarkBase* pBookmark = NULL    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `op`  
- \[in\] La operación que se va comparar valores de fila.  Para los valores, vea [IRowsetFind::FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx).  
+ [in] La operación que se utilizará en la comparación de valores de fila. Para los valores, vea [irowsetfind:: FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx).  
   
  `pData`  
- \[in\] Un puntero al valor que se va a comparar.  
+ [in] Un puntero al valor que se debe coincidir.  
   
  `wType`  
- \[in\] Indica el tipo de datos de la parte del valor del búfer.  Para obtener información sobre las marcas de tipo, vea [Tipos de datos](https://msdn.microsoft.com/en-us/library/ms723969.aspx) en *la referencia del* programador de OLE [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Indica el tipo de datos de la parte del valor del búfer. Para obtener información acerca de los indicadores de tipo, consulte [tipos de datos](https://msdn.microsoft.com/en-us/library/ms723969.aspx) en el *referencia del programador de OLE DB* del SDK de Windows.  
   
  `nLength`  
- \[in\] Longitud, en bytes, de la estructura de datos de consumidor asignada por el valor de datos.  Para obtener detalles, vea la descripción de **cbMaxLen** en [Estructuras de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en *la referencia del programador.*  
+ [in] La longitud, en bytes, de la estructura de datos del consumidor asignada para el valor de datos. Para obtener más información, vea la descripción de **cbMaxLen** en [estructuras DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en el *referencia del programador de OLE DB.*  
   
  `bPrecision`  
- \[in\] La precisión máxima utilizada para recopilar datos.  Sólo se utiliza si `wType` es `DBTYPE_NUMERIC`.  Para obtener más información, vea [Conversiones que implican DBTYPE\_NUMERIC o DBTYPE\_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) en *la referencia del*programador.  
+ [in] La precisión máxima que se utiliza al obtener datos. Sólo se usa si `wType` es `DBTYPE_NUMERIC`. Para obtener más información, consulte [las conversiones que involucran DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) en el *referencia del programador de OLE DB*.  
   
  `bScale`  
- \[in\] La escala utilizada para recopilar datos.  Sólo se utiliza si `wType` es `DBTYPE_NUMERIC` o **DBTYPE\_DECIMAL**.  Para obtener más información, vea [Conversiones que implican DBTYPE\_NUMERIC o DBTYPE\_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) en *la referencia del*programador.  
+ [in] La escala que se utiliza al obtener datos. Sólo se usa si `wType` es `DBTYPE_NUMERIC` o **DBTYPE_DECIMAL**. Para obtener más información, consulte [las conversiones que involucran DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) en el *referencia del programador de OLE DB*.  
   
  *bSkipCurrent*  
- \[in\] El número de filas de marcador en el que se va a iniciar una búsqueda.  
+ [in] El número de filas del marcador en el que se va a iniciar una búsqueda.  
   
  `pBookmark`  
- \[in\] El marcador de posición en la que se va a iniciar una búsqueda.  
+ [in] El marcador de posición en la que se va a iniciar una búsqueda.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método requiere la interfaz opcional **IRowsetFind**, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetFind** a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Este método requiere que la interfaz opcional **IRowsetFind**, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetFind** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
- Para obtener información sobre cómo utilizar marca una dirección de la Internet en consumidores, vea [Mediante los marcadores](../../data/oledb/using-bookmarks.md).  
+ Para obtener información sobre el uso de marcadores en los consumidores, consulte [Using Bookmarks](../../data/oledb/using-bookmarks.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
- [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx)
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
+ [Estructuras DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)

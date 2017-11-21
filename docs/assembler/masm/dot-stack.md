@@ -1,38 +1,35 @@
 ---
-title: ".STACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".STACK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".STACK directive"
+title: . PILA | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .STACK
+dev_langs: C++
+helpviewer_keywords: .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20557bf243db1c004d6ec62dcb589cfb8605a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# .STACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se utiliza con [.MODEL](../../assembler/masm/dot-model.md), define un segmento de pila \(con la PILA de nombre de segmento\).  `size` opcional especifica el número de bytes de la pila \(valor predeterminado 1.024\).  La directiva de `.STACK` automáticamente cierre la instrucción de la pila.  
+# <a name="stack"></a>.STACK
+Cuando se utiliza con [. MODELO](../../assembler/masm/dot-model.md), define un segmento de pila (con el nombre del segmento de pila). Opcional `size` especifica el número de bytes de la pila (el valor predeterminado es 1.024). El `.STACK` directiva cierra automáticamente la instrucción de la pila.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 .STACK [[size]]  
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

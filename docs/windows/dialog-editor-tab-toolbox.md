@@ -1,105 +1,106 @@
 ---
-title: "Editor de cuadros de di&#225;logo (Ficha, Cuadro de herramientas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Cuadro de herramientas [C++], pestaña Editor de cuadros de diálogo"
-  - "controles [C++], tipos"
-  - "controles syslink en cuadros de diálogo"
-  - "controles personalizados [Visual Studio], cuadros de diálogo"
-  - "controles [C++], estándar"
-  - "Editor de cuadros de diálogo, crear controles"
-  - "controles [C++], agregar a cuadros de diálogo"
+title: "Pestaña de Editor de cuadro de diálogo, cuadro de herramientas | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Toolbox [C++], Dialog Editor tab
+- controls [C++], types
+- syslink controls ino dialog boxes
+- custom controls [Visual Studio], dialog boxes
+- controls [C++], standard
+- Dialog editor, creating controls
+- controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c897cd0a9e4685cdd3dd202b4831504b9f4c88c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Editor de cuadros de di&#225;logo (Ficha, Cuadro de herramientas)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La pestaña Editor de cuadros de diálogo aparece en la [ventana del cuadro de herramientas](../Topic/Toolbox.md) cuando trabaja en el editor de cuadros de diálogo. Para agregar controles a su nuevo cuadro de diálogo, arrastre controles desde el cuadro de herramientas al cuadro de diálogo que está creando \(para más información, vea [Agregar un control a un cuadro de diálogo](../mfc/adding-a-control-to-a-dialog-box.md)\). Después, puede mover los controles o cambiar su tamaño y su forma.  
+# <a name="dialog-editor-tab-toolbox"></a>Editor de cuadros de diálogo (Ficha, Cuadro de herramientas)
+La pestaña del Editor de cuadro de diálogo aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando esté trabajando en el editor de cuadro de diálogo. Para agregar controles a un cuadro de diálogo nuevo, arrastre controles desde el cuadro de herramientas al cuadro de diálogo que está creando (para obtener más información, consulte [agregar un Control a un cuadro de diálogo](adding-a-control-to-a-dialog-box.md)). Después, puede mover los controles o cambiar su tamaño y su forma.  
   
  Los controles estándares disponibles en el cuadro de herramientas son:  
   
--   [Button \(control\)](../mfc/reference/cbutton-class.md)  
+-   [Control de botón](../mfc/reference/cbutton-class.md)  
   
--   [Check Box \(control\)](../mfc/reference/button-styles.md)  
+-   [Control de casilla de verificación](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Combo Box \(control\)](../mfc/reference/ccombobox-class.md)  
+-   [Control de cuadro combinado](../mfc/reference/ccombobox-class.md)  
   
--   [Edit \(control\)](../mfc/reference/cedit-class.md)  
+-   [Control de edición](../mfc/reference/cedit-class.md)  
   
 -   Cuadro de grupo  
   
--   [List Box \(control\)](../mfc/reference/clistbox-class.md)  
+-   [Control de cuadro de lista](../mfc/reference/clistbox-class.md)  
   
--   [Radio Button \(control\)](../mfc/reference/button-styles.md)  
+-   [Control de botón de radio](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
--   [Static Text \(control\)](../mfc/reference/cstatic-class.md)  
+-   [Control de texto estático](../mfc/reference/cstatic-class.md)  
   
--   [Picture \(control\)](../mfc/reference/cpictureholder-class.md)  
+-   [Control de imagen](../mfc/reference/cpictureholder-class.md)  
   
--   [Rich Edit 2.0 \(control\)](../mfc/using-cricheditctrl.md)  
+-   [Control Rich Edit 2.0](../mfc/using-cricheditctrl.md)  
   
--   [Scroll Bar \(control\)](../mfc/reference/cscrollbar-class.md)  
+-   [Control de barra de desplazamiento](../mfc/reference/cscrollbar-class.md)  
   
- Los [controles comunes de Windows](../mfc/controls-mfc.md) disponibles en el cuadro de herramientas ofrecen una mayor funcionalidad en su aplicación. Son los siguientes:  
+ El [controles comunes de Windows](../mfc/controls-mfc.md) disponible en el cuadro de herramientas ofrecen una mayor funcionalidad en la aplicación. Son los siguientes:  
   
 -   [Control deslizante](../mfc/slider-control-styles.md)  
   
--   [Control de botón de número](../mfc/using-cspinbuttonctrl.md)  
+-   [Control de número](../mfc/using-cspinbuttonctrl.md)  
   
 -   [Control de progreso](../mfc/styles-for-the-progress-control.md)  
   
--   [Hot Key \(control\)](../mfc/using-a-hot-key-control.md)  
+-   [Hot Key (control)](../mfc/using-a-hot-key-control.md)  
   
--   [List \(control\)](../mfc/list-control-and-list-view.md)  
+-   [Control de lista](../mfc/list-control-and-list-view.md)  
   
--   [Tree \(control\)](../mfc/tree-control-styles.md)  
+-   [Control de árbol](../mfc/tree-control-styles.md)  
   
--   [Control Tab](../mfc/tab-controls-and-property-sheets.md)  
+-   [Control de pestaña](../mfc/tab-controls-and-property-sheets.md)  
   
--   [Animation \(control\)](../mfc/using-an-animation-control.md)  
+-   [Control de animación](../mfc/using-an-animation-control.md)  
   
--   [Date Time Picker \(control\)](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Control de selector de hora de fecha](../mfc/creating-the-date-and-time-picker-control.md)  
   
--   [Month Calendar \(control\)](../mfc/month-calendar-control-examples.md)  
+-   [Control de calendario mensual](../mfc/month-calendar-control-examples.md)  
   
--   [IP Address \(control\)](../mfc/reference/cipaddressctrl-class.md)  
+-   [Control de dirección IP](../mfc/reference/cipaddressctrl-class.md)  
   
--   [Extended Combo Box \(control\)](../mfc/creating-an-extended-combo-box-control.md)  
+-   [Control de cuadro combinado extendido](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [Custom \(control\)](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [Control personalizado](custom-controls-in-the-dialog-editor.md)  
   
- Para agregar controles personalizados al cuadro de diálogo, seleccione el **Control personalizado** en el cuadro de herramientas y arrástrelo al cuadro de diálogo. Para agregar un control Syslink, agregue un control personalizado y luego cambie la propiedad **Clase** del control a **Syslink**. Esto hará que se actualicen las propiedades y que muestren las propiedades del control Syslink. Para información sobre la clase contenedora de MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Puede agregar controles personalizados al cuadro de diálogo seleccionando el **Control personalizado** icono en el cuadro de herramientas y arrástrelo al cuadro de diálogo. Para agregar un control Syslink, agregue un control personalizado y, a continuación, cambie el control **clase** propiedad **Syslink**. Esto hará que se actualicen las propiedades y que muestren las propiedades del control Syslink. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- También puede [agregar controles ActiveX a su cuadro de diálogo](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ También puede [agregar controles ActiveX a su cuadro de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- También puede personalizar la ventana del cuadro de herramientas para facilitar su uso. Para más información, vea [Administración de elementos y pestañas en el cuadro de herramientas](http://msdn.microsoft.com/es-es/21285050-cadd-455a-b1f5-a2289a89c4db). Por ejemplo, puede colocar controles en la ventana del cuadro de herramientas para facilitar el acceso. Para más información, vea [Personalizar el cuadro de diálogo Cuadro de herramientas](http://msdn.microsoft.com/es-es/bd07835f-18a8-433e-bccc-7141f65263bb).  
+ También puede personalizar la ventana del cuadro de herramientas para facilitar su uso. Para obtener más información, vea [Usar el cuadro de herramientas](/visualstudio/ide/using-the-toolbox).  
+
+ Para obtener más información sobre cómo utilizar el control RichEdit 1.0 con MFC, vea [utilizar el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Para más información sobre el uso del control RichEdit 1.0 con MFC, vea [Utilizar el control RichEdit 1.0 con MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, obtener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Controles](../mfc/controls-mfc.md)   
- [Clases de control](../mfc/control-classes.md)   
+ [Clases de controles](../mfc/control-classes.md)   
  [Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)   
- [Estilos de barra de desplazamiento](../mfc/reference/scroll-bar-styles.md)   
- [Ejemplos de control Rich Edit](../mfc/rich-edit-control-examples.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
+ [Estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
+ [Ejemplos de Control Rich Edit](../mfc/rich-edit-control-examples.md)   
+ [Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Tipos de controles de cuadro de diálogo y tipos de variable](../ide/dialog-box-controls-and-variable-types.md)
+

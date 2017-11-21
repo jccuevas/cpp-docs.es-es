@@ -1,42 +1,42 @@
 ---
-title: "C&#243;mo: Calcular las referencias a matrices mediante PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cálculo de referencias de datos [C++], matrices"
-  - "interoperabilidad [C++], matrices"
-  - "calcular las referencias [C++], matrices"
-  - "invocación de plataforma [C++], matrices"
+title: "Cómo: serializar matrices mediante PInvoke | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf034bb191174d78ca8a614559e9f1e4976d88bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Calcular las referencias a matrices mediante PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema, se explica cómo se puede llamar a funciones nativas que aceptan cadenas de lenguaje C mediante el tipo de cadena de CLR <xref:System.String> utilizando la compatibilidad de invocación de plataforma \(P\/Invoke\) de .NET Framework.  Se aconseja a los programadores de Visual C\+\+ que utilicen las características de interoperabilidad de C\+\+ en lugar de lo indicado \(cuando sea posible\), ya que P\/Invoke proporciona pocos informes de errores en tiempo de compilación, no tiene seguridad de tipos y su implementación puede resultar tediosa.  Si la API no administrada se empaqueta como archivo DLL y el código fuente no está disponible, P\/Invoke es la única opción \(en caso contrario, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\).  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Cómo: serializar matrices mediante PInvoke
+Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante el tipo de cadena CLR <xref:System.String> utilizando el soporte de invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) debido a que P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción (en caso contrario, vea [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
   
-## Ejemplo  
- Dado que las matrices nativas y administradas se distribuyen de manera diferente en memoria, para pasarlas correctamente por el límite entre administrado y no administrado se requiere conversión o cálculo de referencias.  En este tema, se muestra cómo se puede pasar una matriz de elementos simples \(representables como bits o bytes\) a funciones nativas desde código administrado.  
+## <a name="example"></a>Ejemplo  
+ Dado que las matrices nativas y administradas se distribuyen de manera diferente en la memoria, pasarlas correctamente a través del límite administrado y no requiere conversión o el cálculo de referencias. Este tema muestra cómo se puede pasar una matriz de elementos simple (blitable) a funciones nativas desde código administrado.  
   
- Como sucede con el cálculo de referencias de datos administrados\/no administrados en general, el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> se utiliza para crear un punto de entrada administrado para cada función nativa que se va a usar.  En el caso de funciones que toman matrices como argumentos, también se debe utilizar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para especificar al compilador cómo se efectuará el cálculo de referencias de los datos.  En el ejemplo siguiente, la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> se utiliza para indicar que el cálculo de referencias de la matriz administrada se efectuará como para una matriz de estilo C.  
+ Como ocurre en general, la serialización de datos administrado y el <xref:System.Runtime.InteropServices.DllImportAttribute> atributo se usa para crear un punto de entrada administrado para cada función nativa que se usará. En el caso de las funciones que toman matrices como argumentos, la <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo debe usarse también para especificar al compilador cómo se pueden calcular las referencias los datos. En el ejemplo siguiente, la <xref:System.Runtime.InteropServices.UnmanagedType> enumeración se utiliza para indicar que se pueden calcular las referencias de la matriz administrada como una matriz de estilo C.  
   
- El código siguiente está compuesto por módulo administrado y en uno no administrado.  El módulo no administrado es un archivo DLL que define una función que acepta una matriz de enteros.  El segundo módulo es una aplicación de línea de comandos administrada que importa esta función, pero la define en cuanto a una matriz administrada, y utiliza el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para especificar que la matriz se debe convertir en una matriz nativa cuando se le llame.  
+ El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una función que acepta una matriz de enteros. El segundo módulo es una aplicación de línea de comandos administrada que importa esta función, pero lo define en términos de una matriz administrada y usa el <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para especificar que la matriz debe convertirse en una matriz nativa cuando se le llama.  
   
- El módulo administrado se compila con \/clr, pero \/clr:pure también funciona.  
+ El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +59,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +84,7 @@ int main() {
 }  
 ```  
   
- Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional directiva \#include.  De hecho, dado que sólo se puede obtener acceso al archivo DLL en tiempo de ejecución, no se detectarán problemas con funciones importadas con <xref:System.Runtime.InteropServices.DllImportAttribute> en tiempo de compilación.  
+ Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional #include (directiva). De hecho, dado que se tiene acceso a la DLL en tiempo de ejecución solo, problemas con las funciones se importan con <xref:System.Runtime.InteropServices.DllImportAttribute> no se detectarán durante la compilación.  
   
-## Vea también  
- [Utilizar un elemento PInvoke explícito en C\+\+ \(Atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vea también  
+ [Usar un elemento PInvoke explícito en C++ (Atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

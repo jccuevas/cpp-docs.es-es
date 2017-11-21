@@ -1,55 +1,54 @@
 ---
-title: "__svm_stgi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_stgi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_stgi (función instrínseca)"
-  - "STGI (instrucción)"
+title: __svm_stgi | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_stgi
+dev_langs: C++
+helpviewer_keywords:
+- __svm_stgi intrinsic
+- STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e76d0cda4dfe1644c590c555d9589c17b67686a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_stgi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="svmstgi"></a>__svm_stgi
 **Específicos de Microsoft**  
   
- Establece la marca global de la interrupción.  
+ Establece la marca global de interrupción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __svm_stgi(void);  
 ```  
   
-## Comentarios  
- La función de `__svm_stgi` es equivalente a la instrucción máquina de `STGI` .  La marca global de la interrupción determina si el microprocesador omite, posponer, o controla las interrupciones debido a los eventos como una finalización de E\/S, una alerta de temperatura de hardware, o una excepción de depuración.  
+## <a name="remarks"></a>Comentarios  
+ El `__svm_stgi` función es equivalente a la `STGI` instrucción máquina. El indicador de interrupción global determina si el microprocesador omite, pospone o controla las interrupciones a causa de eventos como una finalización de E/S, una alerta de temperatura de hardware o una excepción de depuración.  
   
- Esta función admite la interacción de la máquina virtual monitor de un host con un sistema operativo invitado y las aplicaciones.  Para obtener más información, busque el documento, “volumen 2 de Manual del programador de arquitectura AMD64: Programa del sistema,” número de documento 24593, revisión 3,11, en [compañía de AMD](http://go.microsoft.com/fwlink/?LinkId=23746) el sitio.  
+ Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "volumen de Manual del programador de arquitectura AMD64 2: programación de sistema," número 24593, 3.11, de revisión del documento en el [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) sitio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__svm_stgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_clgi](../intrinsics/svm-clgi.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [__svm_clgi](../intrinsics/svm-clgi.md)

@@ -1,32 +1,32 @@
 ---
-title: "M&#250;ltiples archivos en l&#237;nea | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "archivos en línea, varios NMAKE"
-  - "varios archivos en línea"
-  - "NMAKE (programa), archivos en línea"
+title: "Múltiples archivos en línea | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, multiple NMAKE
+- multiple inline files
+- NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8bdba2afcc7bc17cb0609e95764b06d83d4cc91e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# M&#250;ltiples archivos en l&#237;nea
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multiple-inline-files"></a>Múltiples archivos en línea
 Un comando puede crear más de un archivo en línea.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -37,8 +37,8 @@ inlinetext
 <<[KEEP | NOKEEP]  
 ```  
   
-## Comentarios  
- Para cada archivo, se han de especificar una o más líneas de texto en línea seguidas de una línea de cierre que contenga el delimitador.  El texto del segundo archivo se ha de empezar en la línea que sigue a la línea delimitadora del primer archivo.  
+## <a name="remarks"></a>Comentarios  
+ Para cada archivo, especifique una o más líneas de texto insertado seguido por una línea de cierre que contiene el delimitador. Comience el texto del segundo archivo en la línea siguiente a la línea delimitadora para el primer archivo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Archivos insertados en un archivo MAKE](../build/inline-files-in-a-makefile.md)

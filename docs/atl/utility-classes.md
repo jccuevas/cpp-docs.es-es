@@ -1,44 +1,43 @@
 ---
-title: "Utility Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes.utility"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utility classes"
+title: Clases de utilidad (ATL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.utility
+dev_langs: C++
+helpviewer_keywords: utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a6fdf94140b321e86df4ee25a92a2f8fc4693880
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Utility Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se proporcionan las clases de utilidad de la MFC\- independiente siguiente:  
+# <a name="utility-classes"></a>Clases de utilidad
+Se proporcionan las siguientes clases de utilidad independientes de MFC:  
   
--   Compatibilidad mejorada Proporciona de mapa de bits de[CImage](../atl-mfc-shared/reference/cimage-class.md) , incluida la capacidad de cargar y guardar imágenes en JPEG, GIF, BMP, y los formatos de \(PNG\) de gráficos de red de Portable.  
+-   [CImage](../atl-mfc-shared/reference/cimage-class.md) proporciona mayor compatibilidad de mapa de bits, incluida la capacidad para cargar y guardar imágenes en JPEG, GIF, BMP y da formato a gráficos de red portátiles (PNG).  
   
--   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) proporciona una implementación para almacenar las coordenadas \(x, y\) los pares.  
+-   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) proporciona una implementación para almacenar pares de coordenadas (x, y).  
   
 -   [CRect](../atl-mfc-shared/reference/crect-class.md) proporciona una implementación para almacenar coordenadas de áreas rectangulares.  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md) proporciona una implementación para almacenar distancia, posiciones relativas, o valores emparejados.  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) proporciona una implementación para almacenar valores emparejados, posiciones relativas o distancia.  
   
 -   [CString](../atl-mfc-shared/reference/cstringt-class.md) proporciona una implementación para almacenar cadenas de caracteres.  
   
--   Plantilla sencilla de[CAdapt](../atl/reference/cadapt-class.md) A utilizada para ajustar las clases que vuelven a definir el dirección\- de operator.  
+-   [CAdapt](../atl/reference/cadapt-class.md) una plantilla sencilla que se utiliza para ajustar las clases que vuelven a definir el operador address-of.  
   
--   [\_U\_RECT](../atl/reference/u-rect-class.md) Una clase de adaptadores de argumento que permite los punteros de `RECT` o los hace referencia para pasar a una función que se implemente en términos de punteros.  
+-   [_U_RECT](../atl/reference/u-rect-class.md) una clase de adaptador de argumento que permite `RECT` punteros o referencias a pasarse a una función que se implementa en cuanto a punteros.  
   
-## Vea también  
- [Class Overview](../atl/atl-class-overview.md)
+## <a name="see-also"></a>Vea también  
+ [Información general de clases](../atl/atl-class-overview.md)
+

@@ -1,28 +1,27 @@
 ---
-title: "Comentarios en un archivo MAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make (archivos), comentarios"
+title: Comentarios en un archivo MAKE | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7edfd0759c91adc75b77b0b320e2469722f5efc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Comentarios en un archivo MAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Delante de un comentario se pone un signo de número \(\#\).  NMAKE omite el texto situado a partir del signo de número hasta el siguiente carácter de nueva línea.  Ejemplos:  
+# <a name="comments-in-a-makefile"></a>Comentarios en un archivo MAKE
+Preceden a un comentario con un signo de número (#). NMAKE omite el texto desde el signo de número hasta el siguiente carácter de nueva línea. Ejemplos:  
   
 ```  
 # Comment on line by itself  
@@ -42,11 +41,11 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this  
 ```  
   
- Para especificar un signo de número literal, se ha de poner delante un símbolo de intercalación \(**^**\) del siguiente modo:  
+ Para especificar un signo de número literal, escríbalo con un símbolo de intercalación (**^**), como sigue:  
   
 ```  
 DEF = ^#define  #Macro for a C preprocessing directive  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Contenido de un archivo MAKE](../build/contents-of-a-makefile.md)

@@ -1,33 +1,32 @@
 ---
-title: "sections (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section"
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sections OpenMP directive"
+title: secciones (OpenMP) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section
+- SECTIONS
+dev_langs: C++
+helpviewer_keywords: sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3dbe6474b8fa957c07c334641e0e95cdc5b07878
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# sections (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-identifica las secciones de código que se dividirán entre todos los subprocesos.  
+# <a name="sections-openmp"></a>sections (OpenMP)
+Identifica las secciones de código para ser dividido entre todos los subprocesos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp [parallel] sections [clauses]  
@@ -35,20 +34,20 @@ identifica las secciones de código que se dividirán entre todos los subproceso
    #pragma omp section  
    {  
       code_block   
-   }   
+   }   
 }  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
- `clause` \(opcional\)  
- cero o más cláusula.  Vea la sección comentarios para obtener una lista de las cláusulas admitidas por **secciones**.  
+ `clause` (opcional)  
+ Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **secciones**.  
   
-## Comentarios  
- la directiva de **secciones** puede contener cero o más directiva de **sección** .  
+## <a name="remarks"></a>Comentarios  
+ El **secciones** directiva puede contener cero o más **sección** directivas.  
   
- La directiva de **secciones** admite las siguientes cláusulas de OpenMP:  
+ El **secciones** directiva es compatible con las cláusulas de OpenMP siguientes:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,11 +59,11 @@ identifica las secciones de código que se dividirán entre todos los subproceso
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- si **Paralelo** también se especifica, `clause` puede ser cualquier cláusula aceptada por las directivas de **Paralelo** o de **secciones** , excepto `nowait`.  
+ Si **paralelo** también se especifica, `clause` cualquier cláusula puede ser aceptado por la **paralelo** o **secciones** directivas, excepto `nowait`.  
   
- Para obtener más información, vea [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md).  
+ Para obtener más información, consulte [2.4.2 sections (construcción)](../../../parallel/openmp/2-4-2-sections-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_sections.cpp  
@@ -82,7 +81,10 @@ int main() {
 }  
 ```  
   
-  **Hello de subproceso 0**  
-**Hello de subproceso 0**   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Hello from thread 0  
+Hello from thread 0  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

@@ -1,63 +1,62 @@
 ---
-title: "Atributos IDL, Asistente para agregar m&#233;todos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.method.idlattrib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para agregar métodos [C++]"
-  - "Atributos IDL, Asistente para agregar métodos"
+title: "Atributos IDL, Asistente para agregar métodos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.method.idlattrib
+dev_langs: C++
+helpviewer_keywords:
+- Add Method Wizard [C++]
+- IDL attributes, Add Method Wizard
 ms.assetid: f80c3bc1-b515-4d6c-83ee-98c2c21ba902
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 583b2c0ec67c4799753fe52d74131e7238b11d46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Atributos IDL, Asistente para agregar m&#233;todos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esta página del Asistente para agregar métodos se utiliza para especificar la configuración del lenguaje de definición de interfaz \(IDL\) del método.  
+# <a name="idl-attributes-add-method-wizard"></a>Atributos IDL, Asistente para agregar métodos
+Utilice esta página del Asistente para agregar método para especificar la configuración de idioma (IDL) de definición de interfaz para el método.  
   
  **id**  
- Permite especificar el identificador numérico del método.  Vea [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) en *MIDL Reference \(*Referencia del lenguaje MIDL*\)*.  
+ Establece el identificador numérico que identifica el método. Vea [identificador](http://msdn.microsoft.com/library/windows/desktop/aa367040) en el *MIDL referencia*.  
   
- Este cuadro no está disponible con las interfaces personalizadas o las dispinterfaces de MFC.  
+ Este cuadro no está disponible para las interfaces personalizadas y no está disponible para interfaces dispinterface MFC.  
   
- **call\_as**  
- Especifica el nombre de un método remoto con el que se puede asociar el método local.  Vea [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) en *MIDL Reference \(*Referencia del lenguaje MIDL*\)*.  
+ **call_as**  
+ Especifica el nombre de un método remoto al que se puede asignar este método local. Vea [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) en el *MIDL referencia*.  
   
- No están disponibles para dispinterfaces de MFC.  
+ No está disponible para interfaces dispinterface MFC.  
   
  **helpcontext**  
- Especifica un identificador de contexto que le permite al usuario ver información sobre el método en el archivo de Ayuda.  Vea [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) en *MIDL Reference \(*Referencia del lenguaje MIDL*\)*.  
+ Especifica un identificador de contexto que permite al usuario ver información acerca de este método en el archivo de ayuda. Vea [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) en el *MIDL referencia*.  
   
- No están disponibles para dispinterfaces de MFC.  
+ No está disponible para interfaces dispinterface MFC.  
   
  **helpstring**  
- Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.  De forma predeterminada, toma el valor "method *Nombre de método*". Vea [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) en *MIDL Reference \(*Referencia del lenguaje MIDL*\)*.  
+ Especifica una cadena de caracteres que se utiliza para describir el elemento al que se aplica. De forma predeterminada, se establece en "método *nombre del método*." Vea [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) en el *MIDL referencia*.  
   
- No están disponibles para dispinterfaces de MFC.  
+ No está disponible para interfaces dispinterface MFC.  
   
  **Atributos adicionales**  
- No están disponibles para dispinterfaces de MFC.  
+ No está disponible para interfaces dispinterface MFC.  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|**hidden**|Indica que, aunque el método existe, no deberá mostrarse en exploradores orientados al usuario.  Vea [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) en *MIDL Reference* \(Referencia del lenguaje MIDL\).|  
-|**source**|Indica que un miembro del método es un origen de eventos.  Vea [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) en *MIDL Reference* \(Referencia del lenguaje MIDL\).|  
-|`local`|Le especifica al compilador MIDL que el método no es remoto.  Vea [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) en *MIDL Reference* \(Referencia del lenguaje MIDL\).|  
-|**restricted**|Especifica que no se puede llamar al método arbitrariamente.  Vea [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) en *MIDL Reference* \(Referencia del lenguaje MIDL\).|  
-|**vararg**|Especifica que el método toma un número variable de argumentos.  Para ello, el último argumento deberá ser una matriz segura de tipo **VARIANT** que contenga todos los argumentos restantes.  Vea [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) en *MIDL Reference \(*Referencia del lenguaje MIDL*\)*.|  
+|---------------|-----------------|  
+|**hidden**|Indica que el método existe pero no se debe mostrar en un explorador orientado al usuario. Vea [oculto](http://msdn.microsoft.com/library/windows/desktop/aa366861) en el *MIDL referencia*.|  
+|**origen**|Indica que un miembro del método es un origen de eventos. Vea [origen](http://msdn.microsoft.com/library/windows/desktop/aa367166) en el *MIDL referencia*.|  
+|`local`|Especifica que el compilador MIDL que el método no es remoto. Vea [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) en el *MIDL referencia*.|  
+|**restricted**|Especifica que el método no se puede llamar arbitrariamente. Vea [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) en el *MIDL referencia*.|  
+|**vararg**|Especifica que el método toma un número variable de argumentos. Para lograr esto, el último argumento debe ser una matriz segura de **VARIANT** tipo que contiene todos los argumentos restantes. Vea [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) en el *MIDL referencia*.|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar un método](../ide/adding-a-method-visual-cpp.md)   
  [Asistente para agregar métodos](../ide/add-method-wizard.md)

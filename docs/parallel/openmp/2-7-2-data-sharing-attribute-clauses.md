@@ -1,48 +1,47 @@
 ---
-title: "2.7.2 Data-Sharing Attribute Clauses | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2 cláusulas de atributos de datos compartidos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2 Data-Sharing Attribute Clauses
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Varias directivas aceptan las cláusulas que permiten a un usuario controlar los atributos de las variables durante la región.  Las cláusulas de atributo de uso compartido sólo se aplican a las variables en la extensión léxica de la directiva en la que la cláusula aparece.  No todas las cláusulas siguientes se admiten en todas las directivas.  La lista de cláusulas que son válidas en una directiva determinada se describe con la directiva.  
+# <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Cláusulas de atributos de uso compartido de datos
+Varias directivas aceptan las cláusulas que permiten a un usuario controlar los atributos de uso compartido de variables para la duración de la región. Cláusulas de atributos de uso compartido sólo se aplican a las variables de la extensión de la directiva en el que aparece la cláusula léxica. Todas las cláusulas siguientes no se permiten en todas las directivas. La lista de cláusulas que son válidos en una directiva determinada se describen con la directiva.  
   
- Si una variable es visible cuando se encuentra un paralelo o construcción de división del trabajo, y la variable no se especifica en una cláusula de atributo de uso compartido o directiva de **threadprivate** , se comparte la variable.  Las variables estáticas declaradas dentro de la extensión dinámica de una región paralela comparten.  Se comparte la memoria asignada pila \(por ejemplo, mediante **malloc \(\)** en C o C\+\+ o el operador de **nuevo** en C\+\+\).  \(El puntero se en esta memoria, sin embargo, puede ser privado o compartido\). Las variables con la duración automática de almacenamiento declarada dentro de la extensión dinámica de una región paralela son privados.  
+ Si una variable es visible cuando un paralelo o se encontró la construcción de uso compartido y no se especifica la variable en una cláusula de atributo de uso compartido o **threadprivate** directivas, a continuación, la variable se comparte. Las variables estáticas declaradas dentro de la extensión dinámica de una región paralela se comparten. Asignada memoria del montón (por ejemplo, si se usa **malloc()** en C o C++ o **nueva** operador en C++) se comparte. (El puntero a esta memoria, sin embargo, puede ser privados o compartidos.) Las variables con una duración de almacenamiento automática declarados dentro de la extensión dinámica de una región paralela son privadas.  
   
- La mayoría de las cláusulas aceptan un argumento *de la variable\-lista* , que es una lista separada por comas de variables que estén visibles.  Si una variable a la que se hace referencia en una cláusula de atributo de uso compartido de datos tiene un tipo derivado de una plantilla, y no hay otras referencias que variable del programa, el comportamiento es indefinido.  
+ La mayoría de las cláusulas acepte un *lista de variables* argumento, que es una lista separada por comas de variables que están visibles. Si hace referencia una variable en una cláusula de atributo de uso compartido de datos tiene un tipo derivado de una plantilla y no hay ninguna otra referencia a esa variable en el programa, el comportamiento es indefinido.  
   
- Todas las variables que aparecen en cláusulas directivas deben ser visibles.  Las cláusulas se pueden repetir según sea necesario, pero ninguna variable se puede especificar en más de una cláusula, excepto que una variable se puede especificar en **firstprivate** y una cláusula de **lastprivate** .  
+ Todas las variables que aparecen en cláusulas de la Directiva deben ser visibles. Las cláusulas se pueden repetir según sea necesario, pero no hay ninguna variable puede especificarse en más de una cláusula, salvo que una variable puede especificarse tanto en un **firstprivate** y un **lastprivate** cláusula.  
   
- Las secciones siguientes describen las cláusulas de atributo de uso compartido de datos:  
+ Las siguientes secciones describen las cláusulas de atributos de uso compartido de datos:  
   
--   **private**, [sección 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) en la página 25.  
+-   **privada**, [sección 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) en página 25.  
   
--   **firstprivate**, [sección 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) en la página 26.  
+-   **firstprivate**, [sección 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) en página 26.  
   
--   **lastprivate**, [sección 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) en la página 27.  
+-   **lastprivate**, [sección 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) en página 27.  
   
--   **compartido**, [sección 2.7.2.4](../../parallel/openmp/2-7-2-4-shared.md) en la página 27.  
+-   **compartido**, [sección 2.7.2.4](../../parallel/openmp/2-7-2-4-shared.md) en página 27.  
   
--   **predeterminado**, [sección 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) en la página 28.  
+-   **valor predeterminado**, [sección 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) en página 28.  
   
--   **informe detallado**, [sección 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) en la página 28.  
+-   **reducción**, [sección 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) en página 28.  
   
--   **copyin**, [sección 2.7.2.7](../../parallel/openmp/2-7-2-7-copyin.md) en la página 31.  
+-   **copyin**, [sección 2.7.2.7](../../parallel/openmp/2-7-2-7-copyin.md) en página 31.  
   
--   **copyprivate**, [sección 2.7.2.8](../Topic/2.7.2.8%20copyprivate.md) en la página 32.
+-   **copyprivate**, [sección 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) en la página 32.

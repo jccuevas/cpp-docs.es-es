@@ -1,34 +1,32 @@
 ---
-title: "Error de las herramientas del vinculador LNK2004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2004"
+title: Las herramientas del vinculador LNK2004 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2004
+dev_langs: C++
+helpviewer_keywords: LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0bd4ddd4e7caf042ac16c5947a6b48aa21ab5739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK2004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-desbordamiento de corrección relativo de gp en 'destino'; la sección corta 'sección' es demasiado grande o está fuera de intervalo  
+# <a name="linker-tools-error-lnk2004"></a>Error de las herramientas del vinculador LNK2004
+desbordamiento de corrección relativo de GP en 'destino'; breve sección 'sección' es demasiado grande o fuera del intervalo.  
   
- La sección es demasiado grande.  
+ La sección era demasiado grande.  
   
- Para resolver este error, reduzca el tamaño de la sección corta colocando datos explícitamente en las secciones largas mediante la directiva pragma \#pragma section\(".sectionname", read, write, long\) y utilizando `__declspec(allocate(".sectionname"))` en las definiciones y en las declaraciones de datos.  Por ejemplo,  
+ Para resolver este error, reduzca el tamaño de la sección corto, ya sea explícitamente colocar datos en las secciones largas mediante #pragma section (".sectionname", lectura, escritura, long) y utilizando `__declspec(allocate(".sectionname"))` en declaraciones y definiciones de datos.  Por ejemplo,  
   
 ```  
 #pragma section(".data$mylong", read, write, long)  
@@ -41,7 +39,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };  
 ```  
   
- También puede mover datos agrupados mediante criterios lógicos a una estructura propia, que será una recolección de datos de un tamaño mayor de 8 bytes que el compilador asignará a una sección de datos de tipo long.  Por ejemplo,  
+ También puede mover datos agrupados lógicamente en su propia estructura, que es una colección de datos mayores de 8 bytes, que el compilador asignará en una sección de datos de tipo long.  Por ejemplo,  
   
 ```  
 // from this...  
@@ -60,4 +58,4 @@ struct X {
   
 ```  
   
- Este error va seguido del error irrecuperable `LNK1165`.
+ Este error se sigue por error irrecuperable `LNK1165`.

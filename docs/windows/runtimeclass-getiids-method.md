@@ -1,32 +1,30 @@
 ---
-title: "RuntimeClass::GetIids (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids (método)"
+title: "Runtimeclass:: Getiids (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 826a67d1-ebc4-4940-b5d5-7cd66885e4a1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d80e5ea7b068b1d362b46430a1c55f7ff6e620a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClass::GetIids (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtiene una matriz que contenga los id. de la interfaz implementados por el objeto actual de RuntimeClass.  
+# <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids (Método)
+Obtiene una matriz que puede contener la interfaz identificadores implementados por el objeto de RuntimeClass actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -36,20 +34,20 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `iidCount`  
- Cuando esta operación finaliza, el número total de elementos de la matriz `iids`.  
+ Cuando se completa esta operación, el número total de elementos de matriz `iids`.  
   
  `iids`  
- Cuando esta operación finaliza, un puntero a una matriz de id. de la interfaz.  
+ Cuando se completa esta operación, un puntero a una matriz de identificadores de interfaz.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, E\_OUTOFMEMORY.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, E_OUTOFMEMORY.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [RuntimeClass \(Clase\)](../windows/runtimeclass-class.md)
+## <a name="see-also"></a>Vea también  
+ [RuntimeClass (clase)](../windows/runtimeclass-class.md)

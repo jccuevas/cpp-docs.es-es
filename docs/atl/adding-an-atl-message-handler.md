@@ -1,40 +1,41 @@
 ---
-title: "Agregar un controlador de mensajes ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, controladores de mensajes"
-  - "ATL, ventanas"
-  - "message handlers [C++]"
-  - "message handling [C++], ATL message handler"
-  - "windows [C++], ATL"
+title: Agregar un controlador de mensajes ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- message handlers [C++]
+- ATL, windows
+- message handling [C++], ATL message handler
+- windows [C++], ATL
+- ATL, message handlers
 ms.assetid: cdea38a1-0d9b-4f8d-bbd5-b4f063fb3eeb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Agregar un controlador de mensajes ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="adding-an-atl-message-handler"></a>Agregar un controlador de mensajes ATL
+Para agregar un controlador de mensajes (una función miembro que controla los mensajes de Windows) a un control, seleccione primero el control en la vista de clases. A continuación, abra el **propiedades** ventana, seleccione la **mensajes** icono y haga clic en la lista desplegable de control en el cuadro opuesto al mensaje requerido. Esto agregará una declaración para el controlador de mensajes en el archivo de encabezado del control y una implementación esqueleto del controlador en el archivo .cpp del control. También agregará el mapa de mensajes y agregue una entrada para el controlador.  
+  
+ Agregar un controlador de mensajes en ATL es similar a agregar un controlador de mensajes a una clase MFC. Vea [agregar un controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md) para obtener más información.  
+  
+ Las condiciones siguientes se aplican solo a agregar un controlador de mensajes ATL:  
+  
+-   Los controladores de mensajes siguen la misma convención de nomenclatura que MFC.  
+  
+-   Las entradas del mapa de mensajes nuevos se agregan en el mapa de mensajes principal. El asistente no reconoce los mapas de mensajes alternativos y encadenamiento de.  
+  
+## <a name="see-also"></a>Vea también  
+ [Implementar una ventana](../atl/implementing-a-window.md)
 
-Para agregar un controlador de mensajes \(miembro funciona que los mensajes de Windows de identificadores\) a un control, seleccione primero el control en la vista de clases.  A continuación se abre la ventana de **Propiedades** , seleccione el icono de **Mensajes** , y haga clic en el control desplegable del cuadro opuesta de mensaje requerido.  Esto agregará una declaración para el controlador de mensajes en una implementación básica de control el archivo de encabezado y de controlador en el archivo de .cpp del control.  También agregará el mapa de mensajes y agregará una entrada para el controlador.  
-  
- Agregar un controlador de mensajes en ATL es similar a agregar un controlador de mensajes a una clase MFC.  Vea [Agregar un controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md) para obtener más información.  
-  
- Las condiciones siguientes se aplican sólo a agregar un controlador de mensajes ATL:  
-  
--   los controladores de mensajes siguen a la misma convención de nomenclatura que MFC.  
-  
--   Las nuevas entradas del mapa de mensajes se agregan en el mapa principal de mensajes.  El asistente no reconoce mapas alternativos y encadenamiento de mensaje.  
-  
-## Vea también  
- [Implementing a Window](../atl/implementing-a-window.md)

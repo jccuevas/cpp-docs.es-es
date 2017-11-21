@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- CMemoryState
-dev_langs:
-- C++
+f1_keywords: CMemoryState
+dev_langs: C++
 helpviewer_keywords:
-- CMemoryState structure
-- memory leaks, detecting
-- detecting memory leaks
+- CMemoryState structure [MFC]
+- memory leaks [MFC], detecting
+- detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 5485a3cf8107dd9b245cb2d3fff6982f31279abe
-ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: ebb8a9db0e22f3b9d794859c03729b019fd65703
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cmemorystate-structure"></a>Estructura de CMemoryState
 Proporciona una manera cómoda para detectar pérdidas de memoria en el programa.  
@@ -75,7 +57,7 @@ struct CMemoryState
   
 -   Mediante el `malloc` /  **libre** familia de funciones de la biblioteca de tiempo de ejecución.  
   
--   Mediante las funciones de administración de memoria de API de Windows, **LocalAlloc**/ **LocalFree** y **GlobalAlloc**/ **GlobalFree**.  
+-   Mediante las funciones de administración de memoria de API de Windows, **LocalAlloc**/ **LocalFree** y **GlobalAlloc**/ **GlobalFree** .  
   
 -   En C++ **nueva** y **eliminar** operadores.  
   
@@ -83,7 +65,7 @@ struct CMemoryState
   
  Al igual que con otros diagnósticos, el `CMemoryState` diagnósticos solo están disponibles en versiones de depuración del programa. Debe tener una versión de depuración del **_DEBUG** constante definida.  
   
- Si sospecha que el programa tiene una fuga de memoria, puede usar el `Checkpoint`, **diferencia**, y `DumpStatistics` funciones para detectar la diferencia entre el estado de memoria (objetos asignados) en dos distintos puntos de ejecución del programa. Esta información puede ser útil para determinar si una función es limpiar todos los objetos que asigna.  
+ Si sospecha que el programa tiene una fuga de memoria, puede usar el `Checkpoint`, **diferencia**, y `DumpStatistics` funciones para detectar la diferencia entre el estado de memoria (objetos asignados) en dos puntos distintos del programa ejecución. Esta información puede ser útil para determinar si una función es limpiar todos los objetos que asigna.  
   
  Si simplemente saber dónde se produce el desequilibrio en la asignación y desasignación no proporciona suficiente información, puede usar el `DumpAllObjectsSince` función para volcar todos los objetos asignados desde la llamada anterior a `Checkpoint`. Este volcado muestra el orden de asignación, el archivo de código fuente y la línea donde se ha asignado el objeto (si está utilizando `DEBUG_NEW` para la asignación) y la derivación del objeto, su dirección y su tamaño. `DumpAllObjectsSince`También llama a cada objeto `Dump` función para proporcionar información sobre su estado actual.  
   
@@ -112,14 +94,14 @@ void Checkpoint();
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.  
   
 ##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
- Construye un vacío `CMemoryState` objeto que se debe rellenar por la [Checkpoint](#checkpoint) o [diferencia](#difference) función miembro.  
+ Construye un vacío `CMemoryState` objeto que se debe rellenar por la [punto de comprobación](#checkpoint) o [diferencia](#difference) función miembro.  
   
 ```  
 CMemoryState();
 ```  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFC_Utilities #18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
 ##  <a name="difference"></a>CMemoryState:: Difference  
  Compara dos `CMemoryState` objetos, a continuación, almacena la diferencia en esta `CMemoryState` objeto.  
@@ -147,7 +129,7 @@ BOOL Difference(
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.  
   
 ##  <a name="dumpallobjectssince"></a>CMemoryState:: DumpAllObjectsSince  
- Llamadas a la `Dump` función para todos los objetos de un tipo derivado de la clase `CObject` que se asignaron (y todavía se asignan) desde la última [Checkpoint](#checkpoint) llamar para este `CMemoryState` objeto.  
+ Llamadas el `Dump` función para todos los objetos de un tipo derivado de la clase `CObject` que se asignaron (y todavía se asignan) desde la última [punto de comprobación](#checkpoint) llamar para este `CMemoryState` objeto.  
   
 ```  
 void DumpAllObjectsSince() const;
@@ -194,21 +176,20 @@ void DumpStatistics() const;
 ### <a name="example"></a>Ejemplo  
   El siguiente código se debe colocar en *Nombre_proyecto*App.cpp. Defina las variables globales siguientes:  
   
- [!code-cpp[NVC_MFC_Utilities Nº 40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  
   
  En el `InitInstance` funcionar, agregue la línea:  
   
- [!code-cpp[NVC_MFC_Utilities #41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]  
   
  Agregue un controlador para el `ExitInstance` función y utilice el código siguiente:  
   
- [!code-cpp[NVC_MFC_Utilities #42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]  
   
  Ahora puede ejecutar el programa en modo de depuración para ver el resultado de la `DumpStatistics` (función).  
   
 ## <a name="see-also"></a>Vea también  
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
 
 
 

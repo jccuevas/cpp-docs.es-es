@@ -1,30 +1,28 @@
 ---
-title: "Module::UnregisterWinRTObject (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::UnregisterWinRTObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UnregisterWinRTObject (método)"
+title: "Module:: unregisterwinrtobject (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::UnregisterWinRTObject
+dev_langs: C++
+helpviewer_keywords: UnregisterWinRTObject method
 ms.assetid: 32334aa7-2293-40d2-9a89-4b02e2e31f3c
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1c5f1fe4da0d9c0699ab7205ad7823ca8d506dd2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Module::UnregisterWinRTObject (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anula el registro de uno o varios [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] objetos para que otras aplicaciones no pueden conectarse a ellos.  
+# <a name="moduleunregisterwinrtobject-method"></a>Module::UnregisterWinRTObject (Método)
+Anula el registro de uno o varios objetos en tiempo de ejecución de Windows para que otras aplicaciones no se pueden conectar a ellos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +36,7 @@ virtual HRESULT UnregisterWinRTObject(
   
 #### <a name="parameters"></a>Parámetros  
  `cookie`  
- Puntero a un valor que identifica el objeto de clase cuyo registro se va a revocar.  
+ Un puntero a un valor que identifica el objeto de clase cuyo registro se va a revocar.  
   
 ## <a name="return-value"></a>Valor devuelto  
   

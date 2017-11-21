@@ -1,34 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4558 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4558"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4558"
+title: Compilador advertencia (nivel 1) C4558 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4558
+dev_langs: C++
+helpviewer_keywords: C4558
 ms.assetid: 52bb0324-7bec-468c-b35b-13a08d38e578
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 77936e230af6a34b5bc48a5d79ee077882845294
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4558
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-el valor del operando 'valor' está fuera del intervalo 'límite inferior \- límite superior'  
+# <a name="compiler-warning-level-1-c4558"></a>Advertencia del compilador (nivel 1) C4558
+valor del operando 'valor' está fuera del intervalo 'límite_inferior - límite_superior'  
   
- El valor pasado a una instrucción en lenguaje de ensamblado está fuera del intervalo especificado para el parámetro.  El valor quedará truncado.  
+ El valor pasado a una instrucción del lenguaje de ensamblado está fuera del intervalo especificado para el parámetro. El valor se truncará.  
   
- El código siguiente genera el error C4558:  
+ El ejemplo siguiente genera C4558:  
   
 ```  
 // C4558.cpp  

@@ -1,32 +1,32 @@
 ---
-title: "Recorrer un conjunto de filas simple | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "descriptores de acceso [C++], conjuntos de filas"
-  - "acceso a datos [C++], conjuntos de filas"
-  - "consumidores OLE DB [C++], atributos de bases de datos"
-  - "conjuntos de filas [C++], obtener acceso"
-  - "conjuntos de filas simples"
+title: Recorrer un conjunto de filas Simple | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Recorrer un conjunto de filas simple
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente muestra un tipo de acceso a bases de datos fácil y rápido que no incluye el uso de comandos.  El código de consumidor siguiente, perteneciente a un proyecto ATL, recupera los registros de una tabla denominada *Artists* de una tabla de Microsoft Access, usando el proveedor OLE DB de Microsoft para ODBC.  En el código se crea un objeto de tabla [CTable](../../data/oledb/ctable-class.md) con un descriptor de acceso basado en la clase de registro de usuario `CArtists`.  Abre una conexión, abre una sesión en la conexión y abre la tabla en la sesión.  
+# <a name="traversing-a-simple-rowset"></a>Recorrer un conjunto de filas simple
+En el ejemplo siguiente se muestra un acceso rápido y sencillo de base de datos que implican comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *intérpretes* un Microsoft Access la base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +51,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- El registro de usuario, `CArtists` , ofrece el siguiente aspecto:  
+ El registro de usuario, `CArtists`, tiene este aspecto:  
   
 ```  
 class CArtists  
@@ -70,5 +70,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

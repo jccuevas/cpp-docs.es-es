@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs:
-- C++
-helpviewer_keywords:
-- ScheduleGroup class
+dev_langs: C++
+helpviewer_keywords: ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: dc7a78fd135d56e1243c43672172e433652e34e2
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ac169e7cc01682b8ecd0dc4fb5dd387f3be38504
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup (Clase)
 Representa una abstracción para un grupo de programación. Los grupos de programación organizan un conjunto de trabajos relacionados que se benefician de programarse juntos ya sea temporalmente, mediante la ejecución de otra tarea en el mismo grupo antes de trasladarse a otro grupo, o espacialmente, mediante la ejecución de varios elementos del mismo grupo en el mismo nodo NUMA o socket físico.  
@@ -90,9 +72,9 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.  
   
-##  <a name="operator_delete"></a>delete (operador) 
+##  <a name="operator_delete"></a>operador delete 
 
- Un `ScheduleGroup` objeto se destruye internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
+ Un `ScheduleGroup` objeto sea destruido internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
   
 ```
 void operator delete(
@@ -121,7 +103,7 @@ virtual unsigned int Reference() = 0;
  El recuento de referencias incrementado recientemente.  
   
 ### <a name="remarks"></a>Comentarios  
- Normalmente, esto se utiliza para administrar la duración del grupo de programación para la composición. Cuando el recuento de referencias de un grupo de programación llega a cero, se elimina el grupo de programación en tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) (método), o la [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) método empieza con un recuento de referencias de uno.  
+ Esto se utiliza normalmente para administrar la duración del grupo de programación para la creación. Cuando el recuento de referencias de un grupo de programación cae a cero, se elimina el grupo de programación en tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) método, o la [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) método empieza con un recuento de referencias de uno.  
   
 ##  <a name="release"></a>Versión 
 
@@ -135,9 +117,9 @@ virtual unsigned int Release() = 0;
  El recuento de referencias disminuido recientemente.  
   
 ### <a name="remarks"></a>Comentarios  
- Normalmente, esto se utiliza para administrar la duración del grupo de programación para la composición. Cuando el recuento de referencias de un grupo de programación llega a cero, se elimina el grupo de programación en tiempo de ejecución. Después de llamar a la `Release` método hacen referencia el número específico de veces que se quite la creación del recuento y cualquier referencia adicional colocada mediante el `Reference` método, no puede utilizar el grupo de programación más. Esto dará lugar a un comportamiento indefinido.  
+ Esto se utiliza normalmente para administrar la duración del grupo de programación para la creación. Cuando el recuento de referencias de un grupo de programación cae a cero, se elimina el grupo de programación en tiempo de ejecución. Después de haber llamado el `Release` método hacen referencia el número especificado de veces que se quite la creación del recuento y cualquier referencia adicional colocada mediante el `Reference` método, no puede utilizar el grupo de programación adicional. Si lo hace, se producirá un comportamiento indefinido.  
   
- Un grupo de programación está asociado con una instancia del programador determinada. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, porque pueden provocar en el programador que se va a destruir. Hacer lo contrario da como resultado un comportamiento indefinido.  
+ Un grupo de programación está asociado a una instancia del programador determinada. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, porque pueden provocar en el que se destruya el programador. Hace lo contrario da como resultado un comportamiento indefinido.  
   
 ##  <a name="dtor"></a>~ ScheduleGroup 
 
@@ -157,20 +139,19 @@ virtual void ScheduleTask(
   
 ### <a name="parameters"></a>Parámetros  
  `_Proc`  
- Un puntero a función que se ejecuta para realizar el cuerpo de la tarea ligera.  
+ Un puntero a función que se ejecuta para llevar a cabo el cuerpo de la tarea ligera.  
   
  `_Data`  
- Un puntero void a los datos que se pasará como un parámetro en el cuerpo de la tarea.  
+ Un puntero void para los datos que se pasarán como un parámetro en el cuerpo de la tarea.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamar a la `ScheduleTask` método coloca implícitamente un recuento de referencias en el grupo de programación que se elimina el tiempo de ejecución en el momento adecuado cuando se ejecuta la tarea.  
+ Llamar a la `ScheduleTask` método coloca implícitamente un recuento de referencias en el grupo de programación que se quita el tiempo de ejecución en el momento adecuado cuando se ejecuta la tarea.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [CurrentScheduler (clase)](currentscheduler-class.md)   
  [Scheduler (clase)](scheduler-class.md)   
  [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
 
 
 

@@ -1,33 +1,33 @@
 ---
-title: "C&#243;mo: Cargar recursos no administrados en una matriz de bytes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recursos nativos"
-  - "recursos nativos, cargar en una matriz de bytes"
-  - "recursos no administrados, cargar en una matriz de bytes"
+title: "Cómo: cargar recursos no administrados en una matriz de bytes | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95c6e0655bcb5868a3c8eefa7a990ceea5dc6371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Cargar recursos no administrados en una matriz de bytes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se describen varias maneras de cargar recursos no administrados en una matriz <xref:System.Byte>.  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Cómo: Cargar recursos no administrados en una matriz de bytes
+En este tema se describe varias formas de cargar recursos no administrados en un <xref:System.Byte> matriz.  
   
-## Ejemplo  
- Si sabe el tamaño del recurso no administrado, puede preasignar una matriz CLR y después cargar el recurso en la matriz usando un puntero al bloque de la matriz CLR.  
+## <a name="example"></a>Ejemplo  
+ Si conoce el tamaño del recurso no administrado, puede preasignar una matriz de CLR y, a continuación, cargar el recurso en la matriz mediante un puntero al bloque de la matriz CLR.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +57,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## Ejemplo  
- En este ejemplo se muestra cómo copiar datos de un bloque de memoria no administrado en una matriz administrada.  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo muestra cómo copiar datos desde un bloque de memoria no administrada a una matriz administrada.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +81,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

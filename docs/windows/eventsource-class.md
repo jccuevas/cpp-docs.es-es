@@ -1,32 +1,30 @@
 ---
-title: "EventSource (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventSource (clase)"
+title: EventSource (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource
+dev_langs: C++
+helpviewer_keywords: EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Representa un evento.  Las funciones miembro de EventSource agregan, quitan, y los controladores de eventos.  
+# <a name="eventsource-class"></a>EventSource (clase)
+Representa un evento. Funciones de miembro EventSource agregarán, quitarán e invocan controladores de eventos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -35,42 +33,42 @@ template<
 class EventSource;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TDelegateInterface`  
- La interfaz un delegado que representa un controlador de eventos.  
+ La interfaz a un delegado que representa un controlador de eventos.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[EventSource::EventSource \(Constructor\)](../windows/eventsource-eventsource-constructor.md)|Inicializa una nueva instancia de la clase de EventSource.|  
+|[EventSource::EventSource (constructor)](../windows/eventsource-eventsource-constructor.md)|Inicializa una nueva instancia de la clase EventSource.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[EventSource::Add \(Método\)](../windows/eventsource-add-method.md)|Anexa el controlador de eventos representado por la interfaz especificada del delegado al conjunto de controladores de eventos para el objeto actual de EventSource.|  
-|[EventSource::GetSize \(Método\)](../windows/eventsource-getsize-method.md)|Recupera el número de controladores de eventos asociados al objeto actual de EventSource|  
-|[EventSource::InvokeAll \(Método\)](../windows/eventsource-invokeall-method.md)|Llama a cada controlador de eventos asociado al objeto actual de EventSource utilizando los tipos y los argumentos especificados del argumento.|  
-|[EventSource::Remove \(Método\)](../Topic/EventSource::Remove%20Method.md)|Elimina el controlador de eventos representado por el símbolo especificado de registro de eventos del conjunto de controladores de eventos asociados al objeto actual de EventSource.|  
+|[EventSource::Add (método)](../windows/eventsource-add-method.md)|Anexa el controlador del evento representado por la interfaz de delegado especificado para el conjunto de controladores de eventos para el objeto de origen de eventos actual.|  
+|[EventSource::GetSize (método)](../windows/eventsource-getsize-method.md)|Recupera el número de controladores de eventos asociados con el objeto EventSource actual|  
+|[EventSource::InvokeAll (método)](../windows/eventsource-invokeall-method.md)|Llama a cada controlador de eventos asociado con el objeto de EventSource actual utilizando los argumentos y tipos de argumentos especificados.|  
+|[EventSource::Remove (método)](../windows/eventsource-remove-method.md)|Elimina el controlador de eventos representado por el token de registro de eventos especificado del conjunto de controladores de eventos asociados con el objeto de origen de eventos actual.|  
   
-### Miembros de datos protegidos  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock\_ \(Miembro de datos\)](../windows/eventsource-addremovelock-data-member.md)|Sincronizar el acceso a la matriz de [targets\_](../Topic/EventSource::targets_%20Data%20Member.md) al agregar, quitar, o invocando a los controladores de eventos.|  
-|[EventSource::targets\_ \(Miembro de datos\)](../Topic/EventSource::targets_%20Data%20Member.md)|Una matriz de uno o más controladores de eventos.|  
-|[EventSource::targetsPointerLock\_ \(Miembro de datos\)](../windows/eventsource-targetspointerlock-data-member.md)|Sincroniza el acceso a los miembros de datos internos mientras están agregando, se están quitando, o se invocan los controladores de eventos para este EventSource.|  
+|[EventSource::addRemoveLock_ (miembro de datos)](../windows/eventsource-addremovelock-data-member.md)|Sincroniza el acceso a la [targets_](../windows/eventsource-targets-data-member.md) matriz al agregar, quitar o invocar controladores de eventos.|  
+|[EventSource::targets_ (miembro de datos)](../windows/eventsource-targets-data-member.md)|Una matriz de uno o más controladores de eventos.|  
+|[EventSource::targetsPointerLock_ (miembro de datos)](../windows/eventsource-targetspointerlock-data-member.md)|Sincroniza el acceso a miembros de datos internos incluso mientras se agregan controladores de eventos para este origen de eventos, quitar o invocar.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `EventSource`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

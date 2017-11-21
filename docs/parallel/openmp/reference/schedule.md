@@ -1,40 +1,38 @@
 ---
-title: "schedule | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "schedule"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "schedule OpenMP clause"
+title: "programación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: schedule
+dev_langs: C++
+helpviewer_keywords: schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30023c9e994300b9dcdb09509e7d0c2218aa26f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# schedule
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Se aplica a la directiva de [for](../../../parallel/openmp/reference/for-openmp.md) .  
+# <a name="schedule"></a>schedule
+Se aplica a la [para](../../../parallel/openmp/reference/for-openmp.md) directiva.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 schedule(type[,size])  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `type`  
- la clase de programación:  
+ El tipo de programación:  
   
 -   `dynamic`  
   
@@ -44,13 +42,13 @@ schedule(type[,size])
   
 -   `static`  
   
- `size` \(opcional\)  
- Especifica el tamaño de iteraciones.  `size` debe ser un entero.  no válido cuando `type` es `runtime`.  
+ `size` (opcional)  
+ Especifica el tamaño de las iteraciones. `size`debe ser un entero. No es válido cuando `type` es `runtime`.  
   
-## Comentarios  
- Para obtener más información, vea [2.4.1 for Construct](../../../parallel/openmp/2-4-1-for-construct.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [2.4.1 for (construcción)](../../../parallel/openmp/2-4-1-for-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_schedule.cpp  
@@ -136,30 +134,34 @@ int main( )
 }  
 ```  
   
-  **\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124; Estática &#124; Estática &#124; dinámico &#124; dinámico &#124; dirigido &#124;**  
-**&#124;    1   &#124;    5   &#124;    1    &#124;    5    &#124;        &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**  
-**&#124;    0   &#124;    0   &#124;    0    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    2   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    3   &#124;    0   &#124;    3    &#124;    2    &#124;    1   &#124;**  
-**&#124;    0   &#124;    0   &#124;    2    &#124;    2    &#124;    1   &#124;**  
-**&#124;    1   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    2   &#124;    1   &#124;    2    &#124;    3    &#124;    3   &#124;**  
-**&#124;    3   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    0   &#124;    1   &#124;    0    &#124;    3    &#124;    3   &#124;**  
-**&#124;    1   &#124;    1   &#124;    0    &#124;    3    &#124;    2   &#124;**  
-**&#124;    2   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    3   &#124;    2   &#124;    1    &#124;    0    &#124;    2   &#124;**  
-**&#124;    0   &#124;    2   &#124;    1    &#124;    0    &#124;    3   &#124;**  
-**&#124;    1   &#124;    2   &#124;    2    &#124;    0    &#124;    3   &#124;**  
-**&#124;    2   &#124;    2   &#124;    2    &#124;    0    &#124;    0   &#124;**  
-**&#124;    3   &#124;    3   &#124;    2    &#124;    1    &#124;    0   &#124;**  
-**&#124;    0   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    1   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    2   &#124;    3   &#124;    3    &#124;    1    &#124;    1   &#124;**  
-**&#124;    3   &#124;    3   &#124;    0    &#124;    1    &#124;    3   &#124;**  
-**\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-**   
-## Vea también  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+------------------------------------------------  
+| static | static | dynamic | dynamic | guided |  
+|    1   |    5   |    1    |    5    |        |  
+------------------------------------------------  
+|    0   |    0   |    0    |    2    |    1   |  
+|    1   |    0   |    3    |    2    |    1   |  
+|    2   |    0   |    3    |    2    |    1   |  
+|    3   |    0   |    3    |    2    |    1   |  
+|    0   |    0   |    2    |    2    |    1   |  
+|    1   |    1   |    2    |    3    |    3   |  
+|    2   |    1   |    2    |    3    |    3   |  
+|    3   |    1   |    0    |    3    |    3   |  
+|    0   |    1   |    0    |    3    |    3   |  
+|    1   |    1   |    0    |    3    |    2   |  
+|    2   |    2   |    1    |    0    |    2   |  
+|    3   |    2   |    1    |    0    |    2   |  
+|    0   |    2   |    1    |    0    |    3   |  
+|    1   |    2   |    2    |    0    |    3   |  
+|    2   |    2   |    2    |    0    |    0   |  
+|    3   |    3   |    2    |    1    |    0   |  
+|    0   |    3   |    3    |    1    |    1   |  
+|    1   |    3   |    3    |    1    |    1   |  
+|    2   |    3   |    3    |    1    |    1   |  
+|    3   |    3   |    0    |    1    |    3   |  
+------------------------------------------------  
+  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

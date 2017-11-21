@@ -1,98 +1,97 @@
 ---
-title: "interface class (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "interface_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interface y class (palabras clave)"
-  - "interface y struct (palabras clave)"
+title: la interfaz de clase (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: interface_CPP
+dev_langs: C++
+helpviewer_keywords:
+- interface class keyword
+- interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 30
-caps.handback.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b3c6416ebe8b87295499e2a2ba50519d830b59ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# interface class (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Declara una interfaz.  Para obtener información sobre interfaces nativas, vea [\_\_interfaz](../cpp/interface.md).  
+# <a name="interface-class--c-component-extensions"></a>interface class (Extensiones de componentes de C++)
+Declara una interfaz.  Para obtener información sobre las interfaces nativas, vea [__interface](../cpp/interface.md).  
   
-## Todos los runtimes  
+## <a name="all-runtimes"></a>Todos los runtimes  
  **Sintaxis**  
   
 ```  
   
-        interface_access interface class  name :  inherit_access base_interface {};  
-interface_access interface struct name :  inherit_access base_interface {};  
+interface_access  
+interface class  
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
  **Parámetros**  
   
- *interface\_access*  
- La accesibilidad de una interfaz fuera del ensamblado.  Los valores posibles son **public** y `private`.  `private` es el valor predeterminado.  Las interfaces anidados no pueden tener un especificador de *interface\_access* .  
+ *interface_access*  
+ La accesibilidad de una interfaz desde fuera del ensamblado.  Los valores posibles son **público** y `private`.  `private` es el valor predeterminado.  Las interfaces anidadas no pueden tener un *interface_access* especificador.  
   
  *name*  
  Nombre de la interfaz.  
   
- *inherit\_access*  
- Accesibilidad de *base\_interface*.  La única accesibilidad permitida para una interfaz base es `public` \(valor predeterminado\).  
+ *inherit_access*  
+ La accesibilidad de *base_interface*.  Los únicos permiten accesibilidad para una interfaz base es `public` (el valor predeterminado).  
   
- *base\_interface* \(opcional\)  
- Una interfaz base para la interfaz *name*.  
+ *base_interface* (opcional)  
+ Una interfaz base para la interfaz de *nombre*.  
   
  **Comentarios**  
   
- **interface struct** es equivalente a **interface class**.  
+ **interfaz struct** es equivalente a **clase de interfaz**.  
   
- Una interfaz puede contener las declaraciones de las funciones, los eventos, y las propiedades.  Todos los miembros de la interfaz tienen accesibilidad pública.  Una interfaz también puede contener miembros de datos, las funciones, los eventos, las propiedades y estáticos, y estos miembros estáticos se deben definir en la interfaz.  
+ Una interfaz puede contener declaraciones de funciones, eventos y propiedades.  Todos los miembros de interfaz tienen accesibilidad pública. Una interfaz también puede contener miembros de datos estáticos, funciones, eventos y propiedades, y estos miembros estáticos se deben definir en la interfaz.  
   
- Una interfaz define cómo una clase puede implementar.  Una interfaz no es una clase y las clases pueden implementar solamente interfaces.  Cuando una clase define una función declarada en una interfaz, se implementa, no se reemplaza la función.  Por consiguiente, la búsqueda de nombre no incluye miembros de interfaz.  
+ Una interfaz que define cómo se puede implementar una clase. Una interfaz no es una clase y las clases solo pueden implementar interfaces. Cuando una clase define una función declarada en una interfaz, se implementa la función, no se reemplaza. Por lo tanto, la búsqueda de nombre no incluye a miembros de interfaz.  
   
- Una clase o struct que derive de una interfaz debe implementar todos los miembros de la interfaz.  Al implementar *nombre* de la interfaz también debe implementar las interfaces en la lista de `base_interface` .  
+ Una clase o struct que deriva de una interfaz debe implementar a todos los miembros de la interfaz. Al implementar la interfaz *nombre* también debe implementar las interfaces en el `base_interface` lista.  
   
- Para obtener más información, vea:  
+ Para obtener más información, consulte:  
   
--   [Constructor estático de la interfaz](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
+-   [Constructor estático de interfaz](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
--   [Interfaces genéricas \(Visual C\+\+\)](../Topic/Generic%20Interfaces%20\(Visual%20C++\).md)  
+-   [Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- Para obtener información sobre otros tipos CLR, vea [Clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Para obtener información sobre otros tipos CLR, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Puede detectar en tiempo de compilación si un tipo es una interfaz con `__is_interface_class(``type``)`.  Para obtener más información, vea [Compatibilidad de compilador para type traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Puede detectar en tiempo de compilación si un tipo es una interfaz con `__is_interface_class(type)`. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- En el entorno de desarrollo, puede obtener Ayuda de F1 para estas palabras clave resaltando la palabra clave, \(`interface class`, por ejemplo\) y presionando F1.  
+ En el entorno de desarrollo, puede obtener ayuda de F1 sobre estas palabras clave resaltando la palabra clave, (`interface class`, por ejemplo) y presione la tecla F1.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  **Comentarios**  
   
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución\).  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime\).  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo de código siguiente muestra cómo una interfaz puede definir el comportamiento de una función de reloj.  
+ En el ejemplo de código siguiente se muestra cómo una interfaz puede definir el comportamiento de una función de reloj.  
   
 ```  
 // mcppv2_interface_class.cpp  
@@ -184,16 +183,25 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **en Function\_3**  
- **en Función\_2**  
- **en Función\_1**  
- **8**  
- **OnClick: 7, 3,14159**  
- **en Función\_1** **Ejemplo**  
+```Output  
+in Function_3  
   
- El ejemplo de código siguiente muestra dos maneras de implementar funciones con la misma firma declarada en varias interfaces y donde esas interfaces son utilizadas por una clase.  
+in Function_2  
+  
+in Function_1  
+  
+8  
+  
+OnClick: 7, 3.14159  
+  
+in Function_1  
+```  
+  
+ **Ejemplo**  
+  
+ El ejemplo de código siguiente muestra dos maneras de implementar las funciones con la misma firma que se ha declarado en varias interfaces y donde se usan las interfaces mediante una clase.  
   
 ```  
 // mcppv2_interface_class_2.cpp  
@@ -218,5 +226,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

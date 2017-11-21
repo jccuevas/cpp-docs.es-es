@@ -1,47 +1,45 @@
 ---
-title: "CriticalSectionTraits::GetInvalidValue (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInvalidValue (método)"
+title: "Criticalsectiontraits:: Getinvalidvalue (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: 665f30a6-ca9c-4968-8c03-8f84e6b2329b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 67d377ea23c31b9ba7111f139f4c9d2db3ae7004
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CriticalSectionTraits::GetInvalidValue (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especial una plantilla de CriticalSection de modo que la plantilla es siempre no válida.  
+# <a name="criticalsectiontraitsgetinvalidvalue-method"></a>CriticalSectionTraits::GetInvalidValue (Método)
+Una plantilla CriticalSection se especializa para que la plantilla no siempre es válida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 inline static Type GetInvalidValue();  
 ```  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Siempre devuelve un puntero a una sección crítica no válida.  
   
-## Comentarios  
- Definen el modificador de *Type* como `typedef CRITICAL_SECTION* Type;`.  
+## <a name="remarks"></a>Comentarios  
+ El *tipo* modificador se define como `typedef CRITICAL_SECTION* Type;`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** handletraits  
   
-## Vea también  
- [CriticalSectionTraits \(Estructura\)](../windows/criticalsectiontraits-structure.md)
+## <a name="see-also"></a>Vea también  
+ [CriticalSectionTraits (estructura)](../windows/criticalsectiontraits-structure.md)

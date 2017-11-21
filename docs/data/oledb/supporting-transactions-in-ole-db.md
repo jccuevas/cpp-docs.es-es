@@ -1,63 +1,63 @@
 ---
-title: "Admitir transacciones en OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bases de datos [C++], transacciones"
-  - "transacciones distribuidas [C++]"
-  - "transacciones anidadas [C++]"
-  - "OLE DB [C++], compatibilidad con transacciones"
-  - "plantillas de consumidor OLE DB [C++], compatibilidad con transacciones"
-  - "transacciones [C++], compatibilidad de OLE DB"
+title: Admitir transacciones en OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates [C++], transaction support
+- transactions [C++], OLE DB support for
+- nested transactions [C++]
+- OLE DB [C++], transaction support
+- databases [C++], transactions
+- distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a7b1e937a7fa1ab33ff74d3c4e42856928320fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Admitir transacciones en OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Una [transacción](../../data/transactions-mfc-data-access.md) es una forma de agrupar, o de procesar por lotes, una serie de actualizaciones que se van a realizar en un origen de datos, de forma que todas tengan éxito y se confirmen de una vez, o \(si se produce un error en una de ellas\) no se confirme ninguna y se revierta toda la transacción.  Este proceso garantiza la integridad del resultado en el origen de datos.  
+# <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
+A [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agrupar, o por lotes, una serie de actualizaciones a un origen de datos para que todas correctamente y se confirman al mismo tiempo o (si alguna de ellos se produce un error) no se confirmará ninguno y se revierte la transacción entera. Este proceso garantiza la integridad del resultado en el origen de datos.  
   
  OLE DB admite transacciones con los tres métodos siguientes:  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="0699a86bb6d6316bff035b804a56f0aa" class\="tgtSentence"\>ITransactionLocal::StartTransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="39299b0fea086b86052550bd165334f7" class\="tgtSentence"\>ITransaction::Commit\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction:: Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="8e992150c28ae247d532408ca7828bfe" class\="tgtSentence"\>ITransaction::Abort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction:: Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   
-## Relación de sesiones y transacciones  
- Un único objeto de origen de datos puede crear uno o varios objetos de sesión, cada uno de los cuales puede hallarse dentro o fuera del ámbito de una transacción en un momento dado.  
+## <a name="relationship-of-sessions-and-transactions"></a>Relación de sesiones y transacciones  
+ Un objeto de origen de datos solo puede crear uno o varios objetos de sesión, cada uno de los cuales puede encontrarse dentro o fuera del ámbito de una transacción en un momento dado.  
   
- Cuando una sesión no entra en una transacción, todo el trabajo hecho en esa sesión en el almacén de datos queda confirmado inmediatamente en cada llamada de método. A veces se denomina modo de confirmación automática o modo implícito.  
+ Cuando una sesión no entra en una transacción, todo el trabajo realizado dentro de esa sesión en el almacén de datos se confirma inmediatamente en cada llamada al método. (Esto se conoce a veces como modo de confirmación automática o implícitas.)  
   
- Cuando una sesión entra en una transacción, todo el trabajo realizado en esa sesión en el almacén de datos forma parte de la transacción y se confirma o anula como una unidad. A veces se denomina modo de confirmación manual.  
+ Cuando una sesión entra en una transacción, todo el trabajo realizado dentro de esa sesión en el almacén de datos forma parte de esa transacción y se confirma o anula como una sola unidad. (Esto se conoce a veces como modo de confirmación manual.)  
   
- La compatibilidad con transacciones es específica de cada proveedor.  Si el proveedor que utiliza admite el uso de transacciones, un objeto de sesión que admita **ITransaction** e **ITransactionLocal** puede participar en una transacción simple \(no anidada\).  La clase [CSession](../../data/oledb/csession-class.md) de las plantillas OLE DB admite estas interfaces y es la forma recomendada para implementar la compatibilidad con transacciones en Visual C\+\+.  
+ Compatibilidad con transacciones es específica del proveedor. Si el proveedor usa admite transacciones, un objeto de sesión que admita **ITransaction** y **ITransactionLocal** puede escribir una sencilla (es decir, no anidada) transacciones. La clase de plantillas OLE DB [CSession](../../data/oledb/csession-class.md) es compatible con estas interfaces y es la manera recomendada para implementar la compatibilidad con transacciones en Visual C++.  
   
-## Iniciar y finalizar la transacción  
- Se llama a los métodos `StartTransaction`, **Commit** y **Abort** en el objeto de conjunto de filas del consumidor.  
+## <a name="starting-and-ending-the-transaction"></a>Iniciar y finalizar la transacción  
+ Se llama a la `StartTransaction`, **confirmar**, y **anular** métodos en el objeto de conjunto de filas en el consumidor.  
   
- Al llamar a **ITransactionLocal::StartTransaction** se inicia una nueva transacción local.  Una vez iniciada, los cambios forzados por sucesivas operaciones no se aplican realmente al almacén de datos hasta que se confirme la transacción.  
+ Al llamar a **ITransactionLocal:: StartTransaction** inicia una nueva transacción local. Cuando se inicia la transacción, los cambios forzados por sucesivas operaciones no se aplican realmente al almacén de datos hasta que se confirma la transacción.  
   
- Al llamar a **ITransaction::Commit** o **ITransaction::Abort** se finaliza la transacción.  **Commit** hace que todos los cambios incluidos en el ámbito de la transacción se apliquen al almacén de datos.  **Abort** hace que se cancelen todos los cambios dentro del ámbito de la transacción y el almacén de datos quede en el estado que tenía antes de comenzar la transacción.  
+ Al llamar a **ITransaction:: Commit** o **ITransaction:: Abort** finaliza la transacción. **Confirmar** hace que todos los cambios en el ámbito de la transacción que se va a aplicarse al almacén de datos. **Anular** hace todos los cambios dentro del ámbito de la transacción se puede cancelar y el almacén de datos quede en el estado tenía antes de comenzar la transacción.  
   
-## Transacciones anidadas  
- Una [transacción anidada](https://msdn.microsoft.com/en-us/library/ms716985.aspx) se produce al iniciar una nueva transacción local cuando ya existe una transacción activa en la sesión.  La nueva transacción se inicia como una transacción anidada bajo la transacción actual.  Si el proveedor no admite transacciones anidadas, al llamar a `StartTransaction` cuando ya hay una transacción activa en la sesión, se devuelve **XACT\_E\_XTIONEXISTS**.  
+## <a name="nested-transactions"></a>Transacciones anidadas  
+ A [anidar transacciones](https://msdn.microsoft.com/en-us/library/ms716985.aspx) se produce cuando se inicia una nueva transacción local cuando una transacción activa ya existe en la sesión. La nueva transacción se inicia como una transacción anidada bajo la transacción actual. Si el proveedor no admite transacciones anidadas, al llamar a `StartTransaction` cuando ya hay una transacción activa en la sesión devuelve **XACT_E_XTIONEXISTS**.  
   
-## Transacciones distribuidas  
- Una transacción distribuida es una transacción que actualiza datos distribuidos; es decir, datos repartidos en más de un equipo de una red.  Si se desea admitir transacciones en un sistema distribuido, se debe utilizar .NET Framework en lugar de la compatibilidad con transacciones de OLE DB.  
+## <a name="distributed-transactions"></a>Transacciones distribuidas  
+ Una transacción distribuida es una transacción que actualiza datos distribuidos; es decir, datos en más de un sistema de equipo de la red. Si desea admitir transacciones en un sistema distribuido, debe utilizar .NET Framework en lugar de la compatibilidad con transacciones de OLE DB.  
   
-## Vea también  
- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vea también  
+ [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

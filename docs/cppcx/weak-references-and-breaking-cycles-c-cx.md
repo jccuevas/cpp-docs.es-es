@@ -1,24 +1,27 @@
 ---
-title: "Referencias parciales y ruptura de ciclos (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Referencias parciales y ruptura de ciclos (C++ / CX) | Documentos de Microsoft
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: 12
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: f769169f7a101e2f330ea7787401895d05778260
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Referencias parciales y ruptura de ciclos (C++/CX)
-En cualquier sistema de tipos basado en el recuento de referencias, las referencias a tipos pueden formar *ciclos* \(es decir, un objeto hace referencia a un segundo objeto, el segundo objeto hace referencia a un tercer objeto, etc.\), hasta que un objeto final vuelve a hacer referencia al primer objeto. En un ciclo, los objetos no se pueden eliminar correctamente cuando el recuento de referencias de un objeto se convierte en cero. Para ayudarte a solucionar este problema, [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] proporciona la clase [Platform::WeakReference \(Clase\)](../cppcx/platform-weakreference-class.md). Un objeto `WeakReference` admite el método [Resolve](../cppcx/weakreference-resolve-method-platform-namespace.md), que devuelve null si el objeto ya no existe o produce una excepción [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) si el objeto está activo pero no es de tipo  `T`.  
+# <a name="weak-references-and-breaking-cycles-ccx"></a>Referencias parciales y ruptura de ciclos (C++/CX)
+En cualquier sistema de tipos basado en el recuento de referencias, las referencias a tipos pueden formar *ciclos*(es decir, un objeto hace referencia a un segundo objeto, el segundo objeto hace referencia a un tercer objeto, etc.), hasta que un objeto final vuelve a hacer referencia al primer objeto. En un ciclo, los objetos no se pueden eliminar correctamente cuando el recuento de referencias de un objeto se convierte en cero. Para resolver este problema, C++ / CX proporciona el [WeakReference (clase)](../cppcx/platform-weakreference-class.md) clase. Un objeto `WeakReference` admite el método [Resolve](../cppcx/platform-weakreference-class.md#resolve) , que devuelve null si el objeto ya no existe o produce una excepción [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) si el objeto está activo pero no es de tipo `T`.  
   
- Un escenario en el que `WeakReference` debe utilizarse es cuando el puntero `this` se captura en una expresión lambda que se utiliza para definir un controlador de eventos. Te recomendamos que utilices métodos con nombre cuando definas controladores de eventos, pero si deseas utilizar una expresión lambda para tu controlador de eventos \(o si tienes que interrumpir un ciclo de recuento de referencias en alguna otra situación\), utiliza `WeakReference`. Por ejemplo:  
+ Un escenario en el que `WeakReference` debe utilizarse es cuando el puntero `this` se captura en una expresión lambda que se utiliza para definir un controlador de eventos. Te recomendamos que utilices métodos con nombre cuando definas controladores de eventos, pero si deseas utilizar una expresión lambda para tu controlador de eventos (o si tienes que interrumpir un ciclo de recuento de referencias en alguna otra situación), utiliza `WeakReference`. Por ejemplo:  
   
 ```  
   
@@ -58,5 +61,6 @@ Class1::Class1()
   
  Cuando un controlador de eventos produce una excepción `DisconnectedException`, hace que el evento quite el controlador de la lista de suscriptores.  
   
-## Vea también  
- [\(NOTINBUILD\) Temas avanzados](http://msdn.microsoft.com/es-es/1ccff0cf-a6cc-47ef-a05f-eba6307b3ced)
+## <a name="see-also"></a>Vea también  
+
+

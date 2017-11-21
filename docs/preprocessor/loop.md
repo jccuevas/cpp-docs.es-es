@@ -1,31 +1,31 @@
 ---
-title: "loop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "loop_CPP"
-  - "vc-pragma.loop"
-dev_langs: 
-  - "C++"
+title: bucle | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- loop_CPP
+- vc-pragma.loop
+dev_langs: C++
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c1bb28abd8ba1bf02e6dff8b508e43d4c761bb98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# loop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Controla cómo el paralelizador automático debe considerar el código del bucle y\/o excluye un bucle de la consideración del vectorizador automático.  
+# <a name="loop"></a>bucle
+Controla cómo el paralelizador automático debe considerar el código del bucle y/o excluye un bucle de la consideración del vectorizador automático.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -42,21 +42,21 @@ Controla cómo el paralelizador automático debe considerar el código del bucle
 #pragma loop( ivdep )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `hint_parallel(` `n` `)`  
- Sugiere al compilador que este bucle se ejecute en paralelo en `n` subprocesos, donde `n` es un literal entero positivo o cero.  Si `n` es cero, se usa el número máximo de subprocesos en tiempo de ejecución.  Esta es una sugerencia que se hace al compilador, no una orden y, por tanto, no existen garantías de que el bucle se ejecute en paralelo.  Si el bucle tiene dependencias de datos o problemas estructurales \(por ejemplo, el bucle se almacena en un valor escalar que se usa más allá del cuerpo del bucle\), el bucle no se ejecuta en paralelo.  
+ Sugiere al compilador que este bucle se ejecute en paralelo en `n` subprocesos, donde `n` es un literal entero positivo o cero. Si `n` es cero, se usa el número máximo de subprocesos en tiempo de ejecución. Esta es una sugerencia que se hace al compilador, no una orden y, por tanto, no existen garantías de que el bucle se ejecute en paralelo. Si el bucle tiene dependencias de datos o problemas estructurales (por ejemplo, el bucle se almacena en un valor escalar que se usa más allá del cuerpo del bucle), el bucle no se ejecuta en paralelo.  
   
- El compilador omite esta opción a menos que se especifique el modificador del compilador [\/Qpar](../build/reference/qpar-auto-parallelizer.md).  
+ El compilador omite esta opción a menos que la [/Qpar](../build/reference/qpar-auto-parallelizer.md) ha especificado el modificador de compilador.  
   
  `no_vector`  
- De forma predeterminada, el vectorizador automático está activado e intentará vectorizar todos los bucles que evalúe de modo que se beneficien de él.  Especifique esta directiva pragma para deshabilitar el vectorizador automático para el bucle que aparece detrás.  
+ De forma predeterminada, el vectorizador automático está activado e intentará vectorizar todos los bucles que evalúe de modo que se beneficien de él. Especifique esta directiva pragma para deshabilitar el vectorizador automático para el bucle que aparece detrás.  
   
  `ivdep`  
- Sugiere al compilador que omita las dependencias de vector de este bucle.  Se utiliza junto con `hint_parallel`.  
+ Sugiere al compilador que omita las dependencias de vector de este bucle. Se utiliza junto con `hint_parallel`.  
   
-## Comentarios  
- Para utilizar la directiva pragma `loop`, colóquela inmediatamente antes de una definición de bucle, no dentro de ella.  La directiva pragma surte efecto para el ámbito del bucle que aparece detrás.  Puede aplicar varias directivas pragma a un bucle, en cualquier orden, pero debe establecer cada una de ellas en una instrucción pragma diferente.  
+## <a name="remarks"></a>Comentarios  
+ Para utilizar la directiva pragma `loop`, colóquela inmediatamente antes de una definición de bucle, no dentro de ella. La directiva pragma surte efecto para el ámbito del bucle que aparece detrás. Puede aplicar varias directivas pragma a un bucle, en cualquier orden, pero debe establecer cada una de ellas en una instrucción pragma diferente.  
   
-## Vea también  
- [Paralelización y vectorización automáticas](../parallel/auto-parallelization-and-auto-vectorization.md)   
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también  
+ [Paralelización y vectorización automática](../parallel/auto-parallelization-and-auto-vectorization.md)   
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

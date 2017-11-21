@@ -1,32 +1,31 @@
 ---
-title: "C&#243;mo: Recuperar texto del Portapapeles (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Portapapeles, recuperar texto"
-  - "texto, recuperar del Portapapeles"
+title: "Cómo: recuperar texto del Portapapeles (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Recuperar texto del Portapapeles (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el ejemplo de código siguiente se utiliza la función miembro <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> para devolver un puntero a la interfaz <xref:System.Windows.Forms.IDataObject>.  Esta interfaz se puede consultar a continuación para conocer el formato de los datos y utilizarse para recuperar los datos reales.  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Cómo: Recuperar texto del Portapapeles (C++/CLI)
+El siguiente ejemplo de código utiliza el <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> función de miembro para devolver un puntero a la <xref:System.Windows.Forms.IDataObject> interfaz. Esta interfaz, a continuación, puede consultar para el formato de los datos y que utiliza para recuperar los datos reales.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // read_clipboard.cpp  
@@ -62,6 +61,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Vea también  
- [Operaciones de Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Operaciones de Windows (C++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

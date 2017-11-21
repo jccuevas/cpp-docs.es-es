@@ -1,39 +1,38 @@
 ---
-title: "Especificadores de invalidaci&#243;n (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "especificadores de invalidación, Visual C++"
-  - "especificadores de invalidación"
+title: "Especificadores de invalidación (extensiones de componente de C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- override specifiers, Visual C++
+- override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Especificadores de invalidaci&#243;n (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los *especificadores de invalidación* modifican la forma en que se comportan los tipos heredados y los miembros de tipos heredados en los tipos derivados.  
+# <a name="override-specifiers--c-component-extensions"></a>Especificadores de invalidación (Extensiones de componentes de C++)
+*Especificadores de invalidación* modificar cómo heredados tipos y miembros de tipos heredados se comportan en los tipos derivados.  
   
-## Todos los runtimes  
+## <a name="all-runtimes"></a>Todos los runtimes  
  **Comentarios**  
   
  Para obtener más información acerca de los especificadores de invalidación, vea:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [new \(nueva ranura en vtable\)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [New (nueva ranura en vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -43,19 +42,19 @@ Los *especificadores de invalidación* modifican la forma en que se comportan lo
   
  `abstract` y `sealed` también son válidos en declaraciones de tipos, donde no actúan como especificadores de invalidación.  
   
- Para obtener información acerca de cómo reemplazar explícitamente funciones de clase base, vea [Invalidaciones explícitas](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Para obtener información sobre cómo reemplazar explícitamente funciones de clase base, vea [reemplazos explícitos](../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## Windows en tiempo de ejecución  
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución\).  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime\).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

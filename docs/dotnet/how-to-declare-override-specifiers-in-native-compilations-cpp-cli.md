@@ -1,41 +1,39 @@
 ---
-title: "C&#243;mo: Declarar especificadores de invalidaci&#243;n en las compilaciones nativas (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "especificadores de invalidación en compilaciones nativas, invalidar"
+title: "Cómo: declarar especificadores de invalidación (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 07d612e97a6aaf3ff53116415b8eedc7324f78ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Declarar especificadores de invalidaci&#243;n en las compilaciones nativas (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[sealed](../windows/sealed-cpp-component-extensions.md), [resumen](../windows/abstract-cpp-component-extensions.md), y [override](../windows/override-cpp-component-extensions.md) están disponibles en las compilaciones que no utilizan **\/ZW** o [\/clr](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Cómo: Declarar especificadores de invalidación en las compilaciones nativas (C++/CLI)
+[sellado](../windows/sealed-cpp-component-extensions.md), [abstracta](../windows/abstract-cpp-component-extensions.md), y [invalidar](../windows/override-cpp-component-extensions.md) están disponibles en las compilaciones que no utilizan **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
 > [!NOTE]
->  El lenguaje estándar ISO C\+\+11 tiene el identificador de [override](../cpp/override-specifier.md) y el identificador de [final](../cpp/final-specifier.md) , y ambos son compatibles con el uso `final` de Visual Studio en lugar de `sealed` en el código que se tienen que compilarse como nativos \- únicamente.  
+>  El ISO C ++ 11 estándar lenguaje tiene la [invalidar](../cpp/override-specifier.md) identificador y el [final](../cpp/final-specifier.md) identificador y ambos se admiten en el uso de Visual Studio `final` en lugar de `sealed` en el código que está diseñado para se compila como solo nativo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente se muestra que `sealed` es válido en compila nativas.  
+### <a name="description"></a>Descripción  
+ En el ejemplo siguiente se muestra que `sealed` es válida en compilaciones nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // sealed_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -56,14 +54,14 @@ public:
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente se muestra que `override` es válido en compila nativas.  
+### <a name="description"></a>Descripción  
+ En el ejemplo siguiente se muestra que `override` es válida en compilaciones nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // override_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -77,14 +75,14 @@ public:
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- Este ejemplo muestra que `abstract` es válido en compila nativas.  
+### <a name="description"></a>Descripción  
+ Este ejemplo muestra que `abstract` es válida en compilaciones nativas.  
   
-### Código  
+### <a name="code"></a>Código  
   
-```  
+```cpp  
 // abstract_native_keyword.cpp  
 class X abstract {};  
   
@@ -93,5 +91,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Especificadores de invalidación](../windows/override-specifiers-cpp-component-extensions.md)

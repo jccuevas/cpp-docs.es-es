@@ -1,29 +1,27 @@
 ---
-title: "Module::GetClassObject (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetClassObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetClassObject (método)"
+title: "Module:: GetClassObject (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetClassObject
+dev_langs: C++
+helpviewer_keywords: GetClassObject method
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ad48700b1a7d2a4ca516e5df98a6ac2e0dd0b78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Module::GetClassObject (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetclassobject-method"></a>Module::GetClassObject (Método)
 Recupera una memoria caché de generadores de clases.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,12 +46,12 @@ Recupera una memoria caché de generadores de clases.
  Puntero al objeto devuelto.  
   
  `serverName`  
- El nombre del servidor que está especificado en el `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o `nullptr` para obtener el nombre del servidor predeterminado.  
+ El nombre del servidor que se especifica en la vista la `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, o `ActivatableClass` macro; o `nullptr` para obtener el nombre del servidor predeterminado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice este método sólo para COM, no el [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]. Este método expone sólo IClassFactory métodos.  
+ Use este método solo para COM, no el tiempo de ejecución de Windows. Este método expone solo IClassFactory métodos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

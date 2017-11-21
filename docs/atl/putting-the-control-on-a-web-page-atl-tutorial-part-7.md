@@ -1,81 +1,82 @@
 ---
-title: "Colocar el control en una p&#225;gina web (Tutorial de ATL, Parte 7) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Colocar el Control en una página Web (ATL Tutorial, parte 7) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Colocar el control en una p&#225;gina web (Tutorial de ATL, Parte 7)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El control finaliza ahora.  Para ver el control en funcionamiento en una situación real, colóquelo en una página web.  Cuando se definió el control se creó un archivo HTML que contiene el control.  Abra el archivo PolyCtl.htm desde **Explorador de soluciones** y podrá ver el control en una página web.  
+# <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocar el control en una página web (Tutorial de ATL, Parte 7)
+El control ya está terminado. Para ver el control de trabajo en una situación real, colóquelo en una página Web. Se creó un archivo HTML que contiene el control cuando se define el control. Abra el archivo PolyCtl.htm desde **el Explorador de soluciones**, y puede ver el control en una página Web.  
   
- En este paso, generará script en la página web para responder a eventos.  También modificará el control para que Internet Explorer sepa que el control es seguro para la creación de script.  
+ En este paso, se script la página Web para responder a eventos. Además, modificará el control para que Internet Explorer sepa que el control es seguro para scripting.  
   
-## Scripting de la página web  
- El control no realiza ninguna función aún, así que cambie la página web para responder a los eventos que envía.  
+## <a name="scripting-the-web-page"></a>Secuencias de comandos de la página Web  
+ El control no hace nada aún, por lo que cambiar la página Web para responder a los eventos que se envían.  
   
-#### Para crear un script de la página web  
+#### <a name="to-script-the-web-page"></a>En la página Web de la secuencia de comandos  
   
-1.  Abra PolyCtl.htm y seleccione la vista HTML.  Agregue las líneas siguientes al código HTML.  Deben agregarse después de `</OBJECT>`, pero antes de `</BODY>`.  
+1.  Abra PolyCtl.htm y seleccione la vista HTML. Agregue las siguientes líneas en el código HTML. Se debe agregar después `</OBJECT>` pero antes `</BODY>`.  
   
-    ```  
-  
-    <SCRIPT LANGUAGE="VBScript">  
-    <!--  
+ ```  
+ 
+ <SCRIPT LANGUAGE="VBScript">  
+ <!--  
     Sub PolyCtl_ClickIn(x, y)  
-       PolyCtl.Sides = PolyCtl.Sides + 1  
+    PolyCtl.Sides = PolyCtl.Sides + 1  
     End Sub  
     Sub PolyCtl_ClickOut(x, y)  
-       PolyCtl.Sides = PolyCtl.Sides - 1  
+    PolyCtl.Sides = PolyCtl.Sides - 1  
     End Sub  
-    -->  
-    </SCRIPT>  
-    ```  
+ -->  
+ </SCRIPT>  
+ ```  
   
 2.  Guarde el archivo HTM.  
   
- Ha agregado algún código de VBScript que obtiene la propiedad Sides del control e incrementa el número de lados en uno si hace clic dentro del control.  Si hace clic fuera del control, reducirá el número de lados por uno.  
+ Ha agregado código VBScript que obtiene la propiedad de los lados del control y aumenta el número de caras en uno si hace clic dentro del control. Si hace clic fuera del control, reduzca el número de lados en uno.  
   
-## Lo que indica que el control es seguro para la creación de scripts  
- Puede ver la página web con el control en Internet Explorer o, de un modo más conveniente, usar la vista de explorador web incluida en Visual C\+\+.  Para ver el control en la vista de explorador web, haga clic con el botón secundario en PolyCtl.htm y haga clic en **Ver en el explorador**.  
+## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Que indica que el Control es seguro para Scripting  
+ Puede ver la página Web con el control en el Explorador de Internet, o bien, utilizar más para su comodidad, la vista de explorador Web integrada en Visual C++. Para ver el control en la vista de explorador Web, haga clic en PolyCtl.htm y haga clic en **ver en el explorador**.  
   
- Sobre la base de la configuración de seguridad actual de Internet Explorer, puede que reciba un cuadro de diálogo de alerta de seguridad que indica que el control quizá no sea seguro para el script y pueda causar daños.  Por ejemplo, si tiene un control que muestra un archivo pero también tiene un método `Delete` que eliminó un archivo, sería seguro si lo acaba de ver en una página.  Sería no seguro generar script, sin embargo, porque alguien podría llamar al método `Delete`.  
+ En función de la configuración de seguridad actual de Internet Explorer, es posible que reciba una alerta de seguridad de diálogo cuadro que indica que el control no puede ser seguro para la ejecución del script y podría provocar daños. Por ejemplo, si tiene un control que muestra un archivo, pero también tenía un `Delete` método que elimina un archivo, sería seguro si sólo lo ve en una página. No sería seguro generar un script, sin embargo, dado que un usuario podría llamar a la `Delete` método.  
   
 > [!IMPORTANT]
->  En este tutorial, puede cambiar la configuración de seguridad de Internet Explorer para ejecutar los controles ActiveX que no estén marcadas como seguros.  En el Panel de control, haga clic en **Propiedades de Internet** y en **Seguridad** para cambiar los valores adecuados.  Tras completar el tutorial, cambie la configuración de seguridad a su estado original.  
+>  Para este tutorial, puede cambiar la configuración de seguridad de Internet Explorer para ejecutar los controles ActiveX no marcados como seguros. En el Panel de Control, haga clic en **propiedades de Internet** y haga clic en **seguridad** para cambiar la configuración apropiada. Cuando se haya completado el tutorial, cambie la configuración de seguridad a su estado original.  
   
- Mediante programación puede alertar a Internet Explorer, que no necesita mostrar el cuadro de diálogo Alerta de seguridad para este control determinado.  Puede hacerlo mediante la interfaz `IObjectSafety` y ATL proporciona una implementación de esta interfaz en la clase [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md).  Para agregar la interfaz al control, agregue `IObjectSafetyImpl` a la lista de clases heredadas y agregue una entrada para ella en el mapa COM.  
+ Mediante programación puede avisar Internet Explorer que no es necesario mostrar el cuadro de diálogo de alerta de seguridad para este control particular. Para hacer esto con el `IObjectSafety` interfaz y ATL proporciona una implementación de esta interfaz en la clase [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md). Para agregar la interfaz al control, agregue `IObjectSafetyImpl` a la lista de las clases heredadas y agregar una entrada para él en el mapa COM.  
   
-#### Para agregar IObjectSafetyImpl al control  
+#### <a name="to-add-iobjectsafetyimpl-to-the-control"></a>Para agregar IObjectSafetyImpl al control  
   
 1.  Agregue la siguiente línea al final de la lista de clases heredadas en PolyCtl.h y agregue una coma a la línea anterior:  
   
-     [!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/CPP/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#62](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_1.h)]  
   
-2.  Agregue la siguiente línea al mapa COM de PolyCtl.h:  
+2.  Agregue la siguiente línea al mapa COM en PolyCtl.h:  
   
-     [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/CPP/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#63](../atl/codesnippet/cpp/putting-the-control-on-a-web-page-atl-tutorial-part-7_2.h)]  
   
-## Compilar y probar el control  
- Crear el control.  Una vez finalizada la compilación, abra de nuevo PolyCtl.htm en vista de explorador.  Esta vez, la página web se debe mostrar directamente sin el cuadro de diálogo de alerta de seguridad.  Haga clic dentro del polígono; el número de lados se incrementa por uno.  Haga clic fuera del polígono para reducir el número de lados.  Si intenta reducir el número de lados por debajo de tres, verá el mensaje de error que estableció.  
+## <a name="building-and-testing-the-control"></a>Compilar y probar el control  
+ Compilar el control. Una vez que haya finalizado la compilación, abra de nuevo PolyCtl.htm en la vista de explorador. Esta vez, debe mostrarse la página Web directamente, sin el cuadro de diálogo Alerta de seguridad. Haga clic dentro del polígono; el número de lados aumenta en uno. Haga clic fuera del polígono para reducir el número de lados. Si intenta reducir el número de lados por debajo de tres, verá el mensaje de error que se establece.  
   
- [Volvamos al paso 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Vuelva al paso 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## Pasos siguientes  
- Esto concluye el tutorial de ATL.  Para obtener vínculos a más información sobre ATL, vea [página de inicio de ATL](../atl/active-template-library-atl-concepts.md).  
+## <a name="next-steps"></a>Pasos siguientes  
+ Esto concluye el tutorial ATL. Para obtener vínculos a más información acerca de ATL, vea el [página de inicio de ATL](../atl/active-template-library-atl-concepts.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)
+

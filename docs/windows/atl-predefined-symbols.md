@@ -1,46 +1,46 @@
 ---
-title: "ATL Predefined Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "symbols, ATL predefined"
-  - "ATL symbols"
+title: "Símbolos predefinidos de ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- symbols, ATL predefined
+- ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: daa70cb5bc1bcb1fef77930a9955f7afbd618f67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Predefined Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Estos símbolos están definidos en los archivos de encabezado ATL, pero admiten funciones y acciones de aplicaciones estándar de Windows.  Estos símbolos se utilizan principalmente con cuadros de diálogo.  Cuando se trabaja con cuadros de diálogo y controles en la [Editor de cuadros de diálogo](../mfc/dialog-editor.md), estos símbolos aparecen en la ventana Propiedades asociada a los controles comunes.  Por ejemplo, si un cuadro de diálogo tiene un botón Cancelar, este comando se asocia al símbolo IDCANCEL en la [ventana Propiedades](../Topic/Properties%20Window.md).  
+# <a name="atl-predefined-symbols"></a>Símbolos predefinidos de ATL
+Estos símbolos están definidos en los archivos de encabezado ATL, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan principalmente con cuadros de diálogo. Cuando se trabaja con los cuadros de diálogo y controles en el [editor de cuadro de diálogo](../windows/dialog-editor.md), estos símbolos aparecen en la ventana Propiedades asociada a los controles comunes. Por ejemplo, si el cuadro de diálogo tiene un botón Cancelar, ese comando se asocia al símbolo IDCANCEL en la [ventana propiedades](/visualstudio/ide/reference/properties-window).  
   
 |||  
 |-|-|  
-|IDABORT|Control: botón Anular del cuadro de diálogo|  
-|IDC\_STATIC|Control: control estático|  
-|IDCANCEL|Control: botón Cancelar del cuadro de diálogo|  
-|IDIGNORE|Control: botón Omitir del cuadro de diálogo|  
-|IDNO|Control: botón No del cuadro de diálogo|  
-|IDOK|Control: botón Aceptar del cuadro de diálogo|  
-|IDR\_ACCELERATOR1|Recurso: tabla de aceleradores|  
-|IDRETRY|Control: botón Reintentar del cuadro de diálogo|  
-|IDS\_PROJNAME|Cadena: nombre de la aplicación actual|  
-|IDYES|Control: botón Sí del cuadro de diálogo|  
+|IDABORT|Control: Botón de anulación de cuadro de diálogo|  
+|IDC_STATIC|Control: Control estático|  
+|IDCANCEL|Control: Botón de cancelación del cuadro de diálogo|  
+|IDIGNORE|Control: Botón de omitir del cuadro de diálogo|  
+|IDNO|Control: no cuadro de diálogo ningún botón|  
+|IDOK|Control: Botón Aceptar del cuadro de diálogo|  
+|IDR_ACCELERATOR1|Recursos: Tabla de aceleradores|  
+|IDRETRY|Control: Botón de reintento de cuadro de diálogo|  
+|IDS_PROJNAME|Cadena: Nombre actual de la aplicación|  
+|IDYES|Control: Botón Sí cuadro de diálogo|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  ATL  
   
-## Vea también  
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>Vea también  
+ [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)   
+ [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

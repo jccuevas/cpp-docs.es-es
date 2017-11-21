@@ -1,32 +1,30 @@
 ---
-title: "SRWLock::TryLockExclusive (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLockExclusive (método)"
+title: "SRWLOCK:: Trylockexclusive (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive
+dev_langs: C++
+helpviewer_keywords: TryLockExclusive method
 ms.assetid: 661e8b19-3058-4511-8742-c9fbb90412c7
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a23629ae5bc7d1645367019ea38d747779b84b16
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLock::TryLockExclusive (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Intenta adquirir un objeto de SRWLock en modo exclusivo para la actual o el objeto especificado de SRWLock.  Si la llamada se realiza correctamente, el subproceso de llamada toma la propiedad del bloqueo.  
+# <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive (Método)
+Intenta adquirir un objeto SRWLock en modo exclusivo para el objeto de SRWLock actual o especificado. Si la llamada se realiza correctamente, el subproceso de llamada toma posesión del bloqueo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 SyncLockExclusive TryLockExclusive();  
@@ -36,17 +34,17 @@ static SyncLockExclusive TryLockExclusive(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `lock`  
- Puntero a un objeto de SRWLock.  
+ Puntero a un objeto SRWLock.  
   
-## Valor devuelto  
- Si es correcto, un objeto de SRWLock en modo exclusivo y el subproceso de llamada toma la propiedad del bloqueo.  Si no, un objeto de SRWLock cuyo estado no es válida.  
+## <a name="return-value"></a>Valor devuelto  
+ Si se realiza correctamente, un objeto SRWLock en modo exclusivo y el subproceso que realiza la llamada toma posesión del bloqueo. En caso contrario, un SRWLock objeto cuyo estado no es válido.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [SRWLock \(Clase\)](../windows/srwlock-class.md)
+## <a name="see-also"></a>Vea también  
+ [SRWLock (clase)](../windows/srwlock-class.md)

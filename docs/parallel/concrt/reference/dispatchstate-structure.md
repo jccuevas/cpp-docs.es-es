@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
 - CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
-dev_langs:
-- C++
-helpviewer_keywords:
-- DispatchState structure
+dev_langs: C++
+helpviewer_keywords: DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a617d1f1d7f68c00c7011daffc6ba59f08c43a1e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a6997596876f080ea00611af90d05eb4fddd2857
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="dispatchstate-structure"></a>DispatchState (Estructura)
 La estructura `DispatchState` se usa para transferir el estado al método `IExecutionContext::Dispatch`. Describe las circunstancias bajo las que el método `Dispatch` se invoca en una interfaz `IExecutionContext`.  
@@ -66,7 +48,7 @@ struct DispatchState;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[M_dispatchstatesize](#m_dispatchstatesize)|Tamaño de esta estructura, que se usa para el control de versiones.|  
+|[M_dispatchstatesize](#m_dispatchstatesize)|Tamaño de esta estructura, que se utiliza para controlar las versiones.|  
 |[DispatchState:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|Indica si este contexto ha escrito el `Dispatch` método porque el contexto anterior se bloqueó de forma asincrónica. Esto sólo se utiliza en el contexto de programación UMS y está establecido en el valor `0` para todos los demás contextos de ejecución.|  
 |[DispatchState:: M_reserved](#m_reserved)|Bits reservados para pasar información del futuro.|  
   
@@ -86,7 +68,7 @@ DispatchState();
 ```  
   
 ##  <a name="m_dispatchstatesize"></a>Miembro de datos M_dispatchstatesize  
- Tamaño de esta estructura, que se usa para el control de versiones.  
+ Tamaño de esta estructura, que se utiliza para controlar las versiones.  
   
 ```
 unsigned long m_dispatchStateSize;
@@ -108,4 +90,3 @@ unsigned int m_reserved : 31;
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,35 +36,18 @@ f1_keywords:
 - AGENTS/concurrency::source_block::sync_send
 - AGENTS/concurrency::source_block::unlink_target_notification
 - AGENTS/concurrency::source_block::wait_for_outstanding_async_sends
-dev_langs:
-- C++
-helpviewer_keywords:
-- source_block class
+dev_langs: C++
+helpviewer_keywords: source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b31f02559da7e4396926ce7611a6907c32693121
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 01961cf610a50ff9f0c858eeb0269288120edbe1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sourceblock-class"></a>source_block (Clase)
 La clase `source_block` es una clase base abstracta solo para bloques de origen. La clase proporciona funcionalidad de administración de vínculo básico, así como comprobaciones de errores frecuentes.  
@@ -79,7 +61,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 #### <a name="parameters"></a>Parámetros  
  `_TargetLinkRegistry`  
- Registro del vínculo que se utilizará para retener los vínculos de destino.  
+ Registro del vínculo que se usará para retener los vínculos de destino.  
   
  `_MessageProcessorType`  
  Tipo de procesador para procesar el mensaje.  
@@ -96,19 +78,19 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[source_block](#ctor)|Construye un objeto `source_block`.|  
+|[source_block)](#ctor)|Construye un objeto `source_block`.|  
 |[~ source_block (destructor)](#dtor)|Destruye el objeto `source_block`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Aceptar](#accept)|Acepta un mensaje que fue proporcionado por este `source_block` objeto, transfiriendo la propiedad al llamador.|  
-|[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en este `source_block` objeto para evitar la eliminación.|  
+|[Aceptar](#accept)|Acepta un mensaje que fue proporcionado por este `source_block` objeto, transferir la propiedad al llamador.|  
+|[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en el objeto `source_block` objeto, para evitar la eliminación.|  
 |[consumir](#consume)|Consume un mensaje ofrecido previamente por este `source_block` objeto y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
 |[link_target](#link_target)|Vincula un bloque de destino a esta `source_block` objeto.|  
 |[release](#release)|Libera una reserva de mensaje correcto anterior.|  
-|[release_ref](#release_ref)|Libera un recuento de referencias en este `source_block` objeto.|  
+|[release_ref](#release_ref)|Libera un recuento de referencias en el objeto `source_block` objeto.|  
 |[reserve](#reserve)|Reserva un mensaje ofrecido previamente por este `source_block` objeto.|  
 |[unlink_target](#unlink_target)|Desvincula un bloque de destino de este `source_block` objeto.|  
 |[unlink_targets](#unlink_targets)|Desvincula todos los bloques de destino desde este `source_block` objeto. (Invalida [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|  
@@ -118,24 +100,24 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Cuando se invalida en una clase derivada, acepta un mensaje proporcionado por el origen. Los bloques de mensaje deberían invalidar este método para validar la `_MsgId` y devolver un mensaje.|  
-|[async_send](#async_send)|Pone en cola los mensajes e inicia una tarea de propagación, si aún no ha hecho de forma asincrónica|  
-|[consume_message](#consume_message)|Cuando se invalida en una clase derivada, consume un mensaje reservado previamente.|  
+|[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de propagación, si esto no se ha hecho ya|  
+|[consume_message](#consume_message)|Cuando se invalida en una clase derivada, consume un mensaje que se ha reservado previamente.|  
 |[enable_batched_processing](#enable_batched_processing)|Permite procesar por lotes de procesamiento para este bloque.|  
 |[initialize_source](#initialize_source)|Inicializa el `message_propagator` dentro de este `source_block`.|  
 |[link_target_notification](#link_target_notification)|Una devolución de llamada que notifica que se ha vinculado un nuevo destino a este `source_block` objeto.|  
-|[process_input_messages](#process_input_messages)|Procesar mensajes de entrada. Esto sólo es útil para los bloques propagadores, que se derivan de source_block|  
-|[propagate_output_messages](#propagate_output_messages)|Propagar mensajes a los destinos.|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|Cuando se invalida en una clase derivada, propaga el mensaje dado a cualquiera o todos los destinos vinculados. Ésta es la rutina de propagación principal para los bloques de mensajes.|  
+|[process_input_messages](#process_input_messages)|Procesar mensajes de entrada. Esto solo es útil para los bloques propagadores, que derivan de source_block|  
+|[propagate_output_messages](#propagate_output_messages)|Propagar los mensajes a los destinos.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Cuando se invalida en una clase derivada, propaga el mensaje especificado a cualquiera de los destinos vinculados. Se trata de la rutina de propagación principal para los bloques de mensajes.|  
 |[release_message](#release_message)|Cuando se invalida en una clase derivada, libera una reserva de mensaje anterior.|  
-|[remove_targets](#remove_targets)|Quita todos los vínculos de destino de este bloque de origen. Esto se debe llamar desde el destructor.|  
+|[remove_targets](#remove_targets)|Quita todos los vínculos de destino para este bloque de origen. Esto se debe llamar desde el destructor.|  
 |[reserve_message](#reserve_message)|Cuando se invalida en una clase derivada, reserva un mensaje ofrecido previamente por este `source_block` objeto.|  
-|[resume_propagation](#resume_propagation)|Cuando se invalida en una clase derivada, reanuda la propagación una vez liberada una reserva.|  
-|[sync_send](#sync_send)|Forma sincrónica pone en cola los mensajes e inicia una tarea de propagación, si esto no se ha hecho ya.|  
-|[unlink_target_notification](#unlink_target_notification)|Una devolución de llamada que notifica que el destino se ha desvinculado esto `source_block` objeto.|  
-|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Espera a que todas las propagaciones asincrónicas completar. Esta espera de vuelta específica del propagador se usa en destructores de bloques de mensajes para asegurarse de que todas las propagaciones asincrónicas tienen tiempo para finalizar antes de destruir el bloque.|  
+|[resume_propagation](#resume_propagation)|Cuando se invalida en una clase derivada, reanuda la propagación después de que se ha liberado una reserva.|  
+|[sync_send](#sync_send)|Sincrónicamente pone en cola los mensajes e inicia una tarea de propagación, si esto no se ha hecho ya.|  
+|[unlink_target_notification](#unlink_target_notification)|Una devolución de llamada que notifica que un destino se ha desvinculado desde este `source_block` objeto.|  
+|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Espera a que todas las propagaciones asincrónicas que se complete. Esta espera de vuelta específica del propagador se usa en destructores de bloques de mensajes para asegurarse de que todas las propagaciones asincrónicas tienen tiempo para finalizar antes de destruir el bloque.|  
   
 ## <a name="remarks"></a>Comentarios  
- Bloques de mensajes deben derivar de este bloque para aprovechar las ventajas de administración de vínculos y la sincronización proporcionados por esta clase.  
+ Bloques de mensajes deben derivar de este bloque para aprovechar las ventajas de administración de vínculos y sincronización proporcionados por esta clase.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [ISource](isource-class.md)  
@@ -149,7 +131,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 ##  <a name="accept"></a>Aceptar 
 
- Acepta un mensaje que fue proporcionado por este `source_block` objeto, transfiriendo la propiedad al llamador.  
+ Acepta un mensaje que fue proporcionado por este `source_block` objeto, transferir la propiedad al llamador.  
   
 ```
 virtual message<_Target_type>* accept(
@@ -159,18 +141,18 @@ virtual message<_Target_type>* accept(
   
 ### <a name="parameters"></a>Parámetros  
  `_MsgId`  
- El `runtime_object_identity` de la ofrecida `message` objeto.  
+ El `runtime_object_identity` de la que se ofrecen `message` objeto.  
   
  `_PTarget`  
- Un puntero al bloque de destino que llama a la `accept` (método).  
+ Un puntero al bloque de destino que llama a la `accept` método.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.  
+ Un puntero a la `message` que el llamador tiene ahora la propiedad del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
   
- El `accept` un destino llama a método mientras se ofrece un mensaje por este `ISource` bloque. El puntero de mensaje devuelto puede ser diferente de la que se pasa a la `propagate` método de la `ITarget` bloquear, si este origen decide realizar una copia del mensaje.  
+ El `accept` método se llama mediante un destino mientras se ofrece un mensaje por este `ISource` bloque. El puntero de mensaje devuelto puede ser diferente de la que se pasa a la `propagate` método de la `ITarget` bloquear, si este origen decide realizar una copia del mensaje.  
   
 ##  <a name="accept_message"></a>accept_message 
 
@@ -188,22 +170,22 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
  Un puntero al mensaje que el llamador tiene ahora la propiedad.  
   
 ### <a name="remarks"></a>Comentarios  
- Para transferir la propiedad, se debería devolver el puntero de mensaje original. Para mantener la propiedad, debe realizados y devuelve una copia de la carga del mensaje.  
+ Para transferir la propiedad, se debería devolver el puntero de mensaje original. Para mantener la propiedad, debe se realiza y se devuelve una copia de la carga del mensaje.  
   
 ##  <a name="acquire_ref"></a>acquire_ref 
 
- Adquiere un recuento de referencias en este `source_block` objeto para evitar la eliminación.  
+ Adquiere un recuento de referencias en el objeto `source_block` objeto, para evitar la eliminación.  
   
 ```
 virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es invocado por un `ITarget` objeto vinculado a este origen durante el `link_target` método.  
+ Este método es invocado por un `ITarget` objeto que se está vinculando a este origen durante el `link_target` método.  
   
 ##  <a name="async_send"></a>async_send 
 
- Pone en cola los mensajes e inicia una tarea de propagación, si aún no ha hecho de forma asincrónica  
+ Pone en cola los mensajes de forma asincrónica y se inicia una tarea de propagación, si esto no se ha hecho ya  
   
 ```
 virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
@@ -211,7 +193,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
   
 ### <a name="parameters"></a>Parámetros  
  `_Msg`  
- Un puntero a un `message` objeto que se va a enviar de forma asincrónica.  
+ Un puntero a un `message` objeto que se va a devolver de forma asincrónica.  
   
 ##  <a name="consume"></a>consumir 
 
@@ -228,21 +210,21 @@ virtual message<_Target_type>* consume(
  El `runtime_object_identity` de reservado `message` objeto.  
   
  `_PTarget`  
- Un puntero al bloque de destino que llama a la `consume` (método).  
+ Un puntero al bloque de destino que llama a la `consume` método.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.  
+ Un puntero a la `message` que el llamador tiene ahora la propiedad del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
   
- El método produce una [bad_target](bad-target-class.md) excepción si el parámetro `_PTarget` no representa el destino al que se llama `reserve`.  
+ El método produce una [bad_target](bad-target-class.md) excepción si el parámetro `_PTarget` no representa el destino que llama `reserve`.  
   
  El `consume` método es similar a `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.  
   
 ##  <a name="consume_message"></a>consume_message 
 
- Cuando se invalida en una clase derivada, consume un mensaje reservado previamente.  
+ Cuando se invalida en una clase derivada, consume un mensaje que se ha reservado previamente.  
   
 ```
 virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) = 0;
@@ -293,7 +275,7 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
   
 ### <a name="parameters"></a>Parámetros  
  `_PTarget`  
- Un puntero a un `ITarget` bloque para vincular a esta `source_block` objeto.  
+ Un puntero a un `ITarget` bloque para vincularlo a este `source_block` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
@@ -308,7 +290,7 @@ virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
   
 ##  <a name="process_input_messages"></a>process_input_messages 
 
- Procesar mensajes de entrada. Esto sólo es útil para los bloques propagadores, que se derivan de source_block  
+ Procesar mensajes de entrada. Esto solo es útil para los bloques propagadores, que derivan de source_block  
   
 ```
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
@@ -319,7 +301,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
   
 ##  <a name="propagate_output_messages"></a>propagate_output_messages 
 
- Propagar mensajes a los destinos.  
+ Propagar los mensajes a los destinos.  
   
 ```
 virtual void propagate_output_messages();
@@ -327,7 +309,7 @@ virtual void propagate_output_messages();
   
 ##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
- Cuando se invalida en una clase derivada, propaga el mensaje dado a cualquiera o todos los destinos vinculados. Ésta es la rutina de propagación principal para los bloques de mensajes.  
+ Cuando se invalida en una clase derivada, propaga el mensaje especificado a cualquiera de los destinos vinculados. Se trata de la rutina de propagación principal para los bloques de mensajes.  
   
 ```
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessage);
@@ -335,7 +317,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
   
 ### <a name="parameters"></a>Parámetros  
  `_PMessage`  
- Un puntero al mensaje que va a propagar.  
+ Un puntero al mensaje que se propaguen.  
   
 ##  <a name="release"></a>la versión 
 
@@ -352,12 +334,12 @@ virtual void release(
  El `runtime_object_identity` de reservado `message` objeto.  
   
  `_PTarget`  
- Un puntero al bloque de destino que llama a la `release` (método).  
+ Un puntero al bloque de destino que llama a la `release` método.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
   
- El método produce una [bad_target](bad-target-class.md) excepción si el parámetro `_PTarget` no representa el destino al que se llama `reserve`.  
+ El método produce una [bad_target](bad-target-class.md) excepción si el parámetro `_PTarget` no representa el destino que llama `reserve`.  
   
 ##  <a name="release_message"></a>release_message 
 
@@ -373,7 +355,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
   
 ##  <a name="release_ref"></a>release_ref 
 
- Libera un recuento de referencias en este `source_block` objeto.  
+ Libera un recuento de referencias en el objeto `source_block` objeto.  
   
 ```
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
@@ -388,7 +370,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
   
 ##  <a name="remove_targets"></a>remove_targets 
 
- Quita todos los vínculos de destino de este bloque de origen. Esto se debe llamar desde el destructor.  
+ Quita todos los vínculos de destino para este bloque de origen. Esto se debe llamar desde el destructor.  
   
 ```
 void remove_targets();
@@ -406,18 +388,18 @@ virtual bool reserve(
   
 ### <a name="parameters"></a>Parámetros  
  `_MsgId`  
- El `runtime_object_identity` de la ofrecida `message` objeto.  
+ El `runtime_object_identity` de la que se ofrecen `message` objeto.  
   
  `_PTarget`  
- Un puntero al bloque de destino que llama a la `reserve` (método).  
+ Un puntero al bloque de destino que llama a la `reserve` método.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se ha reservado correctamente, `false` en caso contrario. Las reservas pueden fallar por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas etc..  
+ `true`Si el mensaje se reservó correctamente, `false` en caso contrario. Las reservas pueden tener errores por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas y así sucesivamente.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
   
- Después de llamar a `reserve`, si se realiza correctamente, debe llamar `consume` o `release` para aceptar o ceder la posesión del mensaje, respectivamente.  
+ Después de llamar a `reserve`, si se realiza correctamente, debe llamar a `consume` o `release` para aceptar o ceder la posesión del mensaje, respectivamente.  
   
 ##  <a name="reserve_message"></a>reserve_message 
 
@@ -432,20 +414,20 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
  El `runtime_object_identity` de la `message` objeto va a reservar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se ha reservado correctamente, `false` en caso contrario.  
+ `true`Si el mensaje se reservó correctamente, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de `reserve` se llama, si devuelve `true`, `consume` o `release` se debe llamar para aceptar o liberar la propiedad del mensaje.  
+ Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.  
   
 ##  <a name="resume_propagation"></a>resume_propagation 
 
- Cuando se invalida en una clase derivada, reanuda la propagación una vez liberada una reserva.  
+ Cuando se invalida en una clase derivada, reanuda la propagación después de que se ha liberado una reserva.  
   
 ```
 virtual void resume_propagation() = 0;
 ```  
   
-##  <a name="ctor"></a>source_block 
+##  <a name="ctor"></a>source_block) 
 
  Construye un objeto `source_block`.  
   
@@ -453,7 +435,7 @@ virtual void resume_propagation() = 0;
 source_block();
 ```  
   
-##  <a name="dtor"></a>~ source_block 
+##  <a name="dtor"></a>~ source_block) 
 
  Destruye el objeto `source_block`.  
   
@@ -463,7 +445,7 @@ virtual ~source_block();
   
 ##  <a name="sync_send"></a>sync_send 
 
- Forma sincrónica pone en cola los mensajes e inicia una tarea de propagación, si esto no se ha hecho ya.  
+ Sincrónicamente pone en cola los mensajes e inicia una tarea de propagación, si esto no se ha hecho ya.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
@@ -483,14 +465,14 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
   
 ### <a name="parameters"></a>Parámetros  
  `_PTarget`  
- Un puntero a un `ITarget` bloque desvincular desde este `source_block` objeto.  
+ Un puntero a un `ITarget` bloque desvinculación de esto `source_block` objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_PTarget` es `NULL`.  
   
 ##  <a name="unlink_target_notification"></a>unlink_target_notification 
 
- Una devolución de llamada que notifica que el destino se ha desvinculado esto `source_block` objeto.  
+ Una devolución de llamada que notifica que un destino se ha desvinculado desde este `source_block` objeto.  
   
 ```
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
@@ -510,7 +492,7 @@ virtual void unlink_targets();
   
 ##  <a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends 
 
- Espera a que todas las propagaciones asincrónicas completar. Esta espera de vuelta específica del propagador se usa en destructores de bloques de mensajes para asegurarse de que todas las propagaciones asincrónicas tienen tiempo para finalizar antes de destruir el bloque.  
+ Espera a que todas las propagaciones asincrónicas que se complete. Esta espera de vuelta específica del propagador se usa en destructores de bloques de mensajes para asegurarse de que todas las propagaciones asincrónicas tienen tiempo para finalizar antes de destruir el bloque.  
   
 ```
 void wait_for_outstanding_async_sends();
@@ -519,4 +501,3 @@ void wait_for_outstanding_async_sends();
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [ISource (clase)](isource-class.md)
-

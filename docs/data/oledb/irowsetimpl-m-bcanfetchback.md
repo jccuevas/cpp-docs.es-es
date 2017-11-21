@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::m_bCanFetchBack | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetImpl.m_bCanFetchBack"
-  - "ATL::IRowsetImpl::m_bCanFetchBack"
-  - "IRowsetImpl.m_bCanFetchBack"
-  - "IRowsetImpl::m_bCanFetchBack"
-  - "m_bCanFetchBack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCanFetchBack"
+title: 'IRowsetImpl:: M_bcanfetchback | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetImpl.m_bCanFetchBack
+- ATL::IRowsetImpl::m_bCanFetchBack
+- IRowsetImpl.m_bCanFetchBack
+- IRowsetImpl::m_bCanFetchBack
+- m_bCanFetchBack
+dev_langs: C++
+helpviewer_keywords: m_bCanFetchBack
 ms.assetid: cfa007b0-7ba5-48a3-9d05-9f1916305fb7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 09440f8453fe0ee13297c600b148927bacafc5da
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::m_bCanFetchBack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indica si un proveedor admite obtención hacia atrás.  
+# <a name="irowsetimplmbcanfetchback"></a>IRowsetImpl::m_bCanFetchBack
+Indica si un proveedor admite la captura con versiones anteriores.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,12 +37,12 @@ unsigned m_bCanFetchBack:1;
   
 ```  
   
-## Comentarios  
- Vinculado a **DBPROP\_CANFETCHBACKWARDS** la propiedad del grupo de **DBPROPSET\_ROWSET** .  El proveedor debe admitir **DBPROP\_CANFETCHBACKWARDS** para que **m\_bCanFetchBackwards** que sea true.  
+## <a name="remarks"></a>Comentarios  
+ Vinculado a la **DBPROP_CANFETCHBACKWARDS** propiedad en el **DBPROPSET_ROWSET** grupo. El proveedor debe admitir **DBPROP_CANFETCHBACKWARDS** para **m_bCanFetchBackwards** se establezca en true.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IRowsetImpl \(Clase\)](../../data/oledb/irowsetimpl-class.md)   
- [IRowsetImpl::m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)
+## <a name="see-also"></a>Vea también  
+ [IRowsetImpl (clase)](../../data/oledb/irowsetimpl-class.md)   
+ [IRowsetImpl::m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)

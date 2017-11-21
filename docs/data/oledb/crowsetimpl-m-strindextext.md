@@ -1,33 +1,32 @@
 ---
-title: "CRowsetImpl::m_strIndexText | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl::m_strIndexText"
-  - "CRowsetImpl.m_strIndexText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_strIndexText"
+title: 'CRowsetImpl:: M_strindextext | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl::m_strIndexText
+- CRowsetImpl.m_strIndexText
+dev_langs: C++
+helpviewer_keywords: m_strIndexText
 ms.assetid: fa5465b8-67c6-4efa-b786-d5bca67b9f96
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a38ad6e8fcb36b5e7c601b416b214d9e2f98ff60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl::m_strIndexText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Contiene el índice inicial de conjunto de filas.  
+# <a name="crowsetimplmstrindextext"></a>CRowsetImpl::m_strIndexText
+Contiene el índice inicial del conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,13 +34,13 @@ CComBSTR CRowsetBaseImpl::m_strIndexText;
   
 ```  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [CRowsetImpl \(Clase\)](../../data/oledb/crowsetimpl-class.md)   
- [CRowsetImpl::m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
- [CRowsetImpl::m\_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
- [CRowsetImpl::GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)   
- [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowsetImpl (clase)](../../data/oledb/crowsetimpl-class.md)   
+ [CRowsetImpl:: M_strcommandtext](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
+ [CRowsetImpl:: M_rgrowdata](../../data/oledb/crowsetimpl-m-rgrowdata.md)   
+ [CRowsetImpl:: Getcommandfromid](../../data/oledb/crowsetimpl-getcommandfromid.md)   
+ [CRowsetImpl:: SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)   
  [CRowsetImpl::ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)

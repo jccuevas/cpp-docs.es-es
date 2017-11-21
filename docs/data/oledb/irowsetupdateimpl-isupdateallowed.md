@@ -1,34 +1,33 @@
 ---
-title: "IRowsetUpdateImpl::IsUpdateAllowed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl::IsUpdateAllowed"
-  - "IRowsetUpdateImpl.IsUpdateAllowed"
-  - "IsUpdateAllowed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsUpdateAllowed (método)"
+title: 'IRowsetUpdateImpl:: IsUpdateAllowed | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl::IsUpdateAllowed
+- IRowsetUpdateImpl.IsUpdateAllowed
+- IsUpdateAllowed
+dev_langs: C++
+helpviewer_keywords: IsUpdateAllowed method
 ms.assetid: d6daf3b3-a8e0-4275-a67d-897dea01e297
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: feaa5b397989667da62bbf979603391c08eada2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::IsUpdateAllowed
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Invalide este método para comprobar la seguridad, integridad, etc. antes de actualizaciones.  
+# <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
+Invalide este método para comprobar si la seguridad, la integridad, y así sucesivamente antes de las actualizaciones.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,21 +38,21 @@ Invalide este método para comprobar la seguridad, integridad, etc. antes de act
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *status*  
- \[in\] El estado de operaciones pendientes en las filas.  
+ [in] El estado de las operaciones pendientes de las filas.  
   
  *hRowUpdate*  
- \[in\] Administrar para las filas que desea actualizar.  
+ [in] Identificador para las filas que el usuario desea actualizar.  
   
  *pRowStatus*  
- \[out\] El estado devuelto al usuario.  
+ [out] El estado devuelto al usuario.  
   
-## Comentarios  
- Si determina que una actualización debe ser permitida, devuelve `S_OK`; si no devuelve **E\_FAIL**.  Si permite una actualización, también debe establecer **DBROWSTATUS** en [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) a [estado de fila](https://msdn.microsoft.com/en-us/library/ms722752.aspx)adecuado.  
+## <a name="remarks"></a>Comentarios  
+ Si determina que una actualización debe permitirse, devuelve `S_OK`; de lo contrario devuelve **E_FAIL**. Si permite que una actualización, también debe establecer el **DBROWSTATUS** en [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) a un correspondiente [estado de la fila](https://msdn.microsoft.com/en-us/library/ms722752.aspx).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IRowsetUpdateImpl \(Clase\)](../../data/oledb/irowsetupdateimpl-class.md)
+## <a name="see-also"></a>Vea también  
+ [IRowsetUpdateImpl (Clase)](../../data/oledb/irowsetupdateimpl-class.md)

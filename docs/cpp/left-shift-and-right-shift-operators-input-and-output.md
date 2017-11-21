@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <<
 - '>>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - << operator [C++], with specific objects
 - left shift operators [C++]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ad2da0f4f8807bef5899a32eabda931092641260
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de desplazamiento de desplazamiento a la izquierda y derecha (&gt; &gt; y &lt; &lt;)
 Los operadores de desplazamiento bit a bit son el operador de desplazamiento a la derecha (>>), que mueve los bits de *MAYÚS-expression* hacia la derecha y el operador de desplazamiento a la izquierda (<<), que mueve los bits de *MAYÚS-expression* a la izquierda. <sup>1</sup>  
@@ -201,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Detalles adicionales  
- El resultado de una operación de desplazamiento es indefinido si *additive-expression* es negativo o si *additive-expression* es mayor o igual que el número de bits en el (se ha promovido) * MAYÚS-expression*. Se realiza ninguna operación de desplazamiento si *additive-expression* es 0.  
+ El resultado de una operación de desplazamiento es indefinido si *additive-expression* es negativo o si *additive-expression* es mayor o igual que el número de bits en el (se ha promovido)  *MAYÚS-expression*. Se realiza ninguna operación de desplazamiento si *additive-expression* es 0.  
   
 ```cpp  
 #include <iostream>  

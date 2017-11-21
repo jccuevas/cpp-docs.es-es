@@ -1,77 +1,78 @@
 ---
-title: "/FC (Ruta de acceso completa de archivo de c&#243;digo fuente en diagn&#243;sticos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.UseFullPaths"
-  - "/FC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FC (opción del compilador) [C++]"
-  - "-FC (opción del compilador) [C++]"
+title: "-FC (ruta de acceso completa del archivo de código fuente en diagnósticos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.UseFullPaths
+- /FC
+dev_langs: C++
+helpviewer_keywords:
+- /FC compiler option [C++]
+- -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c9c612dfa300ff42d90988edb77601619fdd4b3c
+ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
-# /FC (Ruta de acceso completa de archivo de c&#243;digo fuente en diagn&#243;sticos)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (Ruta de acceso completa de archivo de código fuente en diagnósticos)
 
-Hace que el compilador muestre la ruta de acceso completa de archivos de código fuente que se ha pasado al compilador en diagnósticos.  
-  
-## Sintaxis  
-  
-```  
-/FC  
-```  
-  
-## Comentarios  
- Observe el siguiente código de ejemplo:  
-  
-```  
-// compiler_option_FC.cpp  
-int main( ) {  
-   int i   // C2143  
-}  
-```  
-  
- Sin **\/FC**, el texto de diagnóstico tendría un aspecto similar al del siguiente texto de diagnóstico:  
-  
--   compiler\_option\_FC.cpp\(5\) : error C2143: error de sintaxis : falta ';' antes de '}'  
-  
- Con **\/FC**, el texto de diagnóstico tendría un aspecto similar al siguiente texto de diagnóstico:  
-  
--   c:\\test\\compiler\_option\_FC.cpp\(5\) : error C2143: error de sintaxis : falta ';' antes de '}'  
-  
- También es necesaria la opción **\/FC** si se desea ver la ruta de acceso completa de un nombre de archivo cuando se utiliza la macro \_\_FILE\_\_.  Vea [Macros predefinidas](../../preprocessor/predefined-macros.md) para obtener más información sobre \_\_FILE\_\_.  
-  
- La opción **\/FC** es implícita en **\/ZI**.  Para obtener más información sobre **\/ZI**, vea [\/Z7, \/Zi, \/ZI \(Formato de la información de depuración\)](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
-  
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Expanda el nodo **Propiedades de configuración**.  
-  
-3.  Expanda el nodo **C\/C\+\+**.  
-  
-4.  Seleccione la página de propiedades **Avanzadas**.  
-  
-5.  Modifique la propiedad **Utilizar rutas de acceso completas**.  
-  
-### Para establecer esta opción del vinculador mediante programación  
-  
-1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UseFullPaths%2A>.  
-  
-## Vea también  
- [Opciones del compilador](../../build/reference/compiler-options.md)   
- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+Hace que el compilador mostrar la ruta de acceso completa de archivos de código fuente que se pasó al compilador en diagnósticos.
+
+## <a name="syntax"></a>Sintaxis
+
+> /FC
+
+## <a name="remarks"></a>Comentarios
+
+Tenga en cuenta el ejemplo de código siguiente:
+
+```cpp
+// compiler_option_FC.cpp
+int main( ) {
+   int i   // C2143
+}
+```
+
+Sin **/FC**, el texto de diagnóstico tendría un aspecto similar al siguiente texto de diagnóstico:
+
+- compiler_option_FC.cpp (5): error C2143: error de sintaxis: falta ';' antes de '}'
+
+Con **/FC**, el texto de diagnóstico tendría un aspecto similar al siguiente texto de diagnóstico:
+
+- c:\test\compiler_option_FC.cpp(5): error C2143: error de sintaxis: falta ';' antes de '}'
+
+**/FC** también es necesario si desea ver la ruta de acceso completa de un nombre de archivo cuando se usa el &#95; &#95; ARCHIVO de &#95; &#95; macro.  Vea [Macros predefinidas](../../preprocessor/predefined-macros.md) para obtener más información sobre &#95; &#95; ARCHIVO de &#95; &#95;.
+
+El **/FC** opción está implícito en **/Zi**. Para obtener más información acerca de **/Zi**, consulte [/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
+
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+
+1. Expanda el **propiedades de configuración** nodo.
+
+1. Expanda el **C/C++** nodo.
+
+1. Seleccione el **avanzadas** página de propiedades.
+
+1. Modificar el **Use rutas de acceso completas** propiedad.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
+
+- Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UseFullPaths%2A>.
+
+## <a name="see-also"></a>Vea también
+
+[Opciones del compilador](../../build/reference/compiler-options.md)   
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

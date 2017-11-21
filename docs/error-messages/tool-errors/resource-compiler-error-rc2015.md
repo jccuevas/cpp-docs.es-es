@@ -1,33 +1,31 @@
 ---
-title: "Error del compilador de recursos RC2015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2015"
+title: Error del compilador de recursos RC2015 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2015
+dev_langs: C++
+helpviewer_keywords: RC2015
 ms.assetid: 99691683-fb9e-4e61-beb1-12e484858570
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1b2de249247cdfff7720f640e9c0ee60af9c1d79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error del compilador de recursos RC2015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-hay demasiados caracteres en la constante  
+# <a name="resource-compiler-error-rc2015"></a>Error del compilador de recursos RC2015
+Hay demasiados caracteres en la constante  
   
  Una constante de caracteres contiene más de dos caracteres.  
   
- Las constantes de caracteres están limitadas a uno \(constantes de caracteres estándar\) o dos caracteres \(constantes de caracteres largas\).  
+ Constantes de caracteres están limitadas a un carácter (constantes de caracteres estándar) o dos caracteres (constantes de caracteres largas).  
   
- Observe que una secuencia de escape \(por ejemplo, \\t para tab\) se ha convertido en un solo carácter.
+ Tenga en cuenta que una secuencia de escape (por ejemplo, \t para tabulación) se convierte en un único carácter.

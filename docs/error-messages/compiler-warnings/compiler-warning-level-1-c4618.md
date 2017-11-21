@@ -1,36 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4618 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4618"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4618"
+title: Compilador advertencia (nivel 1) C4618 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4618
+dev_langs: C++
+helpviewer_keywords: C4618
 ms.assetid: 6ff10d0a-6d5b-4373-8196-1d57bb6b1611
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f1a9319e40dfb2aea29c6163628320aa08896066
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4618
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-los parámetros de tipo pragma incluían una cadena vacía; se ha omitido pragma  
+# <a name="compiler-warning-level-1-c4618"></a>Advertencia del compilador (nivel 1) C4618
+parámetros de tipo pragma incluían una cadena vacía; se ha omitido pragma  
   
- Se proporcionó una cadena nula como argumento para **\#pragma**.  
+ Se proporcionó una cadena nula como argumento para una **#pragma**.  
   
- Se procesó pragma sin el argumento.  
+ Se procesó la directiva pragma sin el argumento.  
   
- El código siguiente genera el error C4618:  
+ El ejemplo siguiente genera C4618:  
   
 ```  
 // C4618.cpp  

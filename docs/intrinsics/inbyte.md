@@ -1,36 +1,36 @@
 ---
-title: "__inbyte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inbyte"
-  - "__inbyte_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "in (instrucción)"
-  - "__inbyte (función intrínseca)"
+title: __inbyte | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inbyte
+- __inbyte_cpp
+dev_langs: C++
+helpviewer_keywords:
+- in instruction
+- __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: adf3e2ccd864eee1a92c24551cfc73bb080e572e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __inbyte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inbyte"></a>__inbyte
 **Específicos de Microsoft**  
   
- Genera la instrucción de `in` , devolviendo una lectura de byte puerto especificado por `Port`.  
+ Genera el `in` instrucción, devolver un byte lee desde el puerto especificado por `Port`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unsigned char __inbyte(  
@@ -38,25 +38,25 @@ unsigned char __inbyte(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Port`  
- El puerto de lectura.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Port`  
+ El puerto que leer.  
   
-## Valor devuelto  
- La lectura de byte puerto especificado.  
+## <a name="return-value"></a>Valor devuelto  
+ Byte leído desde el puerto especificado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Comentarios  
- Esta rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

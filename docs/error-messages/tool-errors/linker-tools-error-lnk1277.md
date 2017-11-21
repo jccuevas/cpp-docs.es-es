@@ -1,39 +1,37 @@
 ---
-title: "Error de las herramientas del vinculador LNK1277 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1277"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1277"
+title: Las herramientas del vinculador LNK1277 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1277
+dev_langs: C++
+helpviewer_keywords: LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 868fb4ef472aaf80242c276a9052562779da745c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1277
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se encontró el registro de objeto en pgd \(nombre de archivo\)  
+# <a name="linker-tools-error-lnk1277"></a>Error de las herramientas del vinculador LNK1277
+registro de objeto no encontrado en pgd (nombre de archivo)  
   
- Al utilizar [\/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), la ruta de acceso de uno de los archivos de entrada .lib, def u .obj files era distinta de aquella en la que se encontraban durante \/LTCG:PGINSTRUMENT.  Esto podría deberse a un cambio en la variable de entorno LIB después de \/LTCG:PGINSTRUMENT.  La ruta de acceso completa a los archivos de entrada se almacena en el archivo .pgd.  
+ Cuando se usa [PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), la ruta de acceso de uno de los archivos .lib, def o .obj entrados era diferente de la ruta de acceso en el que se encontraron durante/LTCG: PGINSTRUMENT. Esto podría deberse a un cambio en la variable de entorno LIB después de/LTCG: PGINSTRUMENT. La ruta de acceso completa a los archivos de entrada se almacena en el archivo. pgd.  
   
- \/LTCG:PGOPTIMIZE requiere que las entradas sean idénticas a la fase \/LTCG:PGINSTRUMENT.  
+ / LTCG: PGOPTIMIZE requiere que las entradas sean idénticas a la fase/LTCG: PGINSTRUMENT.  
   
- Para solucionar esta advertencia, realice una de las acciones siguientes:  
+ Para resolver esta advertencia, realice una de las siguientes acciones:  
   
--   Ejecute \/LTCG:PGINSTRUMENT, rehaga todas las ejecuciones de prueba y ejecute \/LTCG:PGOPTIMIZE.  
+-   Ejecute/LTCG: PGINSTRUMENT, vuelva a realizar todas las ejecuciones de prueba y/LTCG: PGOPTIMIZE.  
   
--   Cambie la variable de entorno LIB por lo que era cuando se ejecutó \/LTCG:PGINSTRUMENT.  
+-   Cambie la variable de entorno LIB al que tenía cuando se ejecutó/LTCG: PGINSTRUMENT.  
   
- No se recomienda tratar de resolver el error LNK1277 utilizando \/LTCG:PGUPDATE.
+ No se recomienda evitar LNK1277 utilizando/LTCG: PGUPDATE.

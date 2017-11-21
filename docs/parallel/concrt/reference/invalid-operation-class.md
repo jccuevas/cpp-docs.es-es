@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_operation
 - CONCRT/concurrency::invalid_operation
 - CONCRT/concurrency::invalid_operation::invalid_operation
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_operation class
+dev_langs: C++
+helpviewer_keywords: invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 85821bbbe62fe5da93165065cb6f17ae4e938f4e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 32053eaadc80a69b2ecdcf8887092ac8fadbdf8b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidoperation-class"></a>invalid_operation (Clase)
 Esta clase describe una excepción producida cuando se realiza una operación no válida que no está descrita con más precisión por otro tipo de excepción producida por el runtime de simultaneidad.  
@@ -57,7 +39,7 @@ class invalid_operation : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[invalid_operation](#ctor)|Sobrecargado. Construye un objeto `invalid_operation`.|  
+|[invalid_operation)](#ctor)|Sobrecargado. Construye un objeto `invalid_operation`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los diversos métodos que producen esta excepción normalmente indicarán bajo qué circunstancias la producen.  
@@ -72,7 +54,7 @@ class invalid_operation : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>invalid_operation 
+##  <a name="ctor"></a>invalid_operation) 
 
  Construye un objeto `invalid_operation`.  
   
@@ -88,4 +70,3 @@ invalid_operation() throw();
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

@@ -1,57 +1,55 @@
 ---
-title: "__writecr4 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_writecr4"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_writecr4 (función intrínseca)"
+title: __writecr4 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _writecr4
+dev_langs: C++
+helpviewer_keywords: _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9d12529be223420992413bcdcd4812dd0d78a5ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __writecr4
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="writecr4"></a>__writecr4
 **Específicos de Microsoft**  
   
- Escriba el valor `Data` en el registro CR4.  
+ Escribe el valor `Data` para el registro de CR4.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void writecr4(   
-   unsigned __int64 Data   
+void writecr4(   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Data`  
- El valor a escribir en el registro CR4.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Data`  
+ El valor para escribir en el registro de CR4.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Este intrínseco sólo está disponible en modo kernel, y la rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Este intrínseco solo está disponible en modo kernel, y la rutina solo está disponible como intrínseco.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

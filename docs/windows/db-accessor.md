@@ -1,32 +1,30 @@
 ---
-title: "db_accessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_accessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_accessor attribute"
+title: db_accessor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_accessor
+dev_langs: C++
+helpviewer_keywords: db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d5293712990685ff63bcafa8e5c9d5a0e8592a25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# db_accessor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Atributos de **db\_column** de grupos que participan en `IAccessor`\- enlace basado.  
+# <a name="dbaccessor"></a>db_accessor
+Grupos de **db_column** atributos que participan en `IAccessor`-basados en el enlace.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,24 +34,24 @@ Atributos de **db\_column** de grupos que participan en `IAccessor`\- enlace bas
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *num*  
- Especifica el número de descriptor de acceso \(un índice entero único\).  Debe especificar números de descriptor de acceso en sentido petición, mediante enteros o valores definidos.  
+ Especifica el número de descriptor de acceso (un índice entero basado en cero). Debe especificar números de descriptor de acceso de forma ascendente, orden, utilizando enteros o valores definidos.  
   
- *Auto*  
- Un valor booleano que especifica si se recuperan \(**TRUE**\) o no se recupera el descriptor automáticamente \(**FALSO**\).  
+ *auto*  
+ Un valor booleano que especifica si el descriptor de acceso se recupera automáticamente (**TRUE**) o no recuperado (**FALSE**).  
   
-## Comentarios  
- **db\_accessor** define el descriptor subyacente de OLE DB para **db\_column** subsiguiente y los atributos de **db\_param** dentro de la misma clase o de la función.  **db\_accessor** es utilizable en el nivel de miembro y se utiliza para agrupar los atributos de **db\_column** que participan en OLE DB `IAccessor`\- enlace basado.  Se utiliza junto con los atributos de **db\_table** o de **db\_command** .  Llamar a este atributo es similar a llamar a macros de [BEGIN\_ACCESSOR](../data/oledb/begin-accessor.md) y de [END\_ACCESSOR](../data/oledb/end-accessor.md) .  
+## <a name="remarks"></a>Comentarios  
+ **db_accessor** define el descriptor de acceso de OLE DB subyacente para posteriores **db_column** y **db_param** atributos dentro de la misma clase o función. **db_accessor** es utilizable en el nivel de miembro y se utiliza al grupo **db_column** atributos que participan en OLE DB `IAccessor`-basados en el enlace. Se utiliza junto con cualquiera el **db_table** o **db_command** atributos. Llamar a este atributo es similar a llamar a la [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) y [END_ACCESSOR](../data/oledb/end-accessor.md) macros.  
   
- **db\_accessor** genera un conjunto de filas y enlazarlo a los mapas correspondientes de descriptor de acceso.  Si no llama **db\_accessor**, el descriptor de acceso 0 se generará automáticamente, y todos los enlaces de columna se asignan a este bloque de descriptor de acceso.  
+ **db_accessor** genera un conjunto de filas y la enlaza con las asignaciones de descriptor de acceso correspondiente. Si no se llama **db_accessor**, automáticamente se generará el descriptor de acceso 0, y todos los enlaces de columna se asignarán a este bloque de descriptor de acceso.  
   
- enlaces de columna de base de datos de los grupos de**db\_accessor** en uno o varios descriptores de acceso.  Para obtener una descripción de las situaciones en las que es necesario utilizar múltiples descriptores de acceso, vea [Utilizar varios descriptores de acceso en un conjunto de filas](../data/oledb/using-multiple-accessors-on-a-rowset.md).  Vea también “compatibilidad de registro para Múltiples Descriptores” en [registros de usuario](../data/oledb/user-records.md).  
+ **db_accessor** enlaces de columna en los descriptores de acceso de uno o varios grupos de la base de datos. Para obtener una explicación de los escenarios en los que es necesario utilizar varios descriptores de acceso, consulte [utilizar varios descriptores de acceso en un conjunto de filas](../data/oledb/using-multiple-accessors-on-a-rowset.md). Vea también "Usuario registro compatibilidad para varios descriptores de acceso" en [registros de usuario](../data/oledb/user-records.md).  
   
- Cuando el proveedor de atributos de consumidor aplicar este atributo a una clase, el compilador cambiará la clase al \_TheClassNameAccessor, donde es el nombre *TheClassName que* asignó la clase, y el compilador también creará una clase denominada *TheClassName,* que deriva de \_TheClassNameAccessor.  En la vista de clases, verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
-## Ejemplo  
- El ejemplo siguiente utiliza **db\_accessor** para agrupar columnas de la tabla Orders de la base de datos Northwind en dos descriptores de acceso.  El descriptor de acceso 0 es un descriptor de acceso automático, y el descriptor de acceso 1 no.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se utiliza **db_accessor** para agrupar columnas de la tabla Orders de la base de datos Northwind en dos descriptores de acceso. Descriptor de acceso 0 es automática y descriptor de acceso 1 no lo es.  
   
 ```  
 // cpp_attr_ref_db_accessor.cpp  
@@ -75,19 +73,18 @@ public:
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Bloques de atributo|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|Bloques de atributos|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)   

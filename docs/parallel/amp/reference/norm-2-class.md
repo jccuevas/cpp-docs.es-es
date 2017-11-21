@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,33 +33,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ee6c906748be7d784b65144ceee63cf7c4bb53aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="norm2-class"></a>norm_2 (Clase)
 Representa un vector corto de dos números normales.  
@@ -119,7 +102,7 @@ class norm_2;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[tamaño (constante)](#norm_2__size)||  
+|[cambio de tamaño constante](#norm_2__size)||  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -140,7 +123,7 @@ class norm_2;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_short_vectors.h  
   
- **Namespace:** Graphics  
+ **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a>norm_2 
 
@@ -220,7 +203,7 @@ explicit inline norm_2(
  El valor de inicialización.  
   
  `_Other`  
- Objeto utilizado para inicializar.  
+ El objeto utilizado para inicializar.  
   
 ##  <a name="norm_2__size"></a>tamaño 
 
@@ -230,4 +213,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

@@ -1,65 +1,64 @@
 ---
-title: "C.2 Reglas | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C.2 reglas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f0b9c7a74c74f014c9ce8e3873635786fe1e560
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C.2 Reglas
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones de la gramática del lenguaje base para las directivas de OpenMP C y C++.  
+# <a name="c2-rules"></a>C.2 Reglas
+La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones de la gramática del lenguaje de base para las directivas de OpenMP C y C++.  
   
- **/\* en C++ (ISO/IEC 14882: 1998) \*/**  
+ **/\*en C++ (ISO/IEC 14882: 1998)\*/**  
   
  *instrucción-seq*:  
   
- *instrucción*  
+ *statement*  
   
  *Directiva de OpenMP*  
   
- *instrucción de declaración seq*  
+ *instrucción de declaración-seq*  
   
- *seq de instrucción de directiva de openmp*  
+ *instrucción-seq directiva de openmp*  
   
- **/\* en C90 ISO/IEC 9899 (puede: en 1990) \*/**  
+ **/\*en C90 ISO/IEC 9899 (puede: en 1990)\*/**  
   
- *lista de instrucciones*:  
+ *statement-list*:  
   
- *instrucción*  
+ *statement*  
   
  *Directiva de OpenMP*  
   
- *instrucción de la lista de instrucciones*  
+ *statement-list statement*  
   
  *lista de instrucciones de directiva de openmp*  
   
- **/\* en C99 (ISO/IEC 9899:1999) \*/**  
+ **/\*en C99 (ISO/IEC 9899: 1999)\*/**  
   
  *elemento de bloque*:  
   
- *declaración*  
+ *declaration*  
   
- *instrucción*  
+ *statement*  
   
  *Directiva de OpenMP*  
   
- *instrucción*:  
+ *statement*:  
   
- **/\* instrucciones estándar \*/**  
+ **/\*instrucciones estándar\*/**  
   
  *construcción de OpenMP*  
   
@@ -67,7 +66,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *construcción paralela*  
   
- *para la construcción*  
+ *para construir*  
   
  *construcción de secciones*  
   
@@ -93,7 +92,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *bloque estructurado*:  
   
- *instrucción*  
+ *statement*  
   
  *construcción paralelo*:  
   
@@ -101,7 +100,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva paralelo*:  
   
- **# pragma omp parallel**  *cláusula paralelo*optseq *nueva línea*  
+ **# pragma omp parallel***cláusula paralelo*optseq *nueva línea*   
   
  *cláusula paralelo*:  
   
@@ -119,7 +118,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *instrucción de iteración de directiva*  
   
- *para la directiva*:  
+ *para la directiva de*:  
   
  **# pragma omp para** *cláusula for*optseq *nueva línea*  
   
@@ -129,7 +128,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *cláusula de datos*  
   
- **NOWAIT**  
+ **nowait**  
   
  *único para la cláusula*:  
   
@@ -141,33 +140,33 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *tipo de programación*:  
   
- **estático**  
+ **static**  
   
- **dinámico**  
+ **dynamic**  
   
- **guiada**  
+ **guiadas por perfiles**  
   
  **en tiempo de ejecución**  
   
  *construcción de secciones*:  
   
- *ámbito de la sección Directiva secciones*  
+ *ámbito de sección Directiva de secciones*  
   
  *Directiva de secciones*:  
   
- **secciones de omp pragma #** *cláusula secciones*optseq *nueva línea*  
+ **secciones de # pragma omp** *cláusula secciones*optseq *nueva línea*  
   
  *cláusula de secciones*:  
   
  *cláusula de datos*  
   
- **NOWAIT**  
+ **nowait**  
   
  *ámbito de la sección*:  
   
  *{sección secuencia}*  
   
- *secuencia en la sección*:  
+ *secuencia de la sección*:  
   
  *Directiva de sección*opt *bloque estructurado*  
   
@@ -181,7 +180,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *bloque estructurado de directiva único*  
   
- *directiva solo*:  
+ *Single-directive*:  
   
  **# pragma omp único** *única cláusula*optseq *nueva línea*  
   
@@ -189,13 +188,13 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *cláusula de datos*  
   
- **NOWAIT**  
+ **nowait**  
   
- *paralelo de construcción*:  
+ *paralelo para construir*:  
   
- *instrucción de iteración paralelo de directiva*  
+ *instrucción de iteración de paralelo de directiva*  
   
- *paralelo de directiva*:  
+ *paralelo para directiva*:  
   
  **# pragma omp parallel para** *cláusula for paralelo*optseq *nueva línea*  
   
@@ -213,7 +212,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva de sections paralelo*:  
   
- **secciones paralelas de # pragma omp** *cláusula de secciones paralelo*optseq *nueva línea*  
+ **secciones de # pragma omp parallel** *paralelo-secciones-clause*optseq *nueva línea*  
   
  *cláusula de secciones paralelo*:  
   
@@ -221,13 +220,13 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *cláusula de datos*  
   
- *construcción del patrón*:  
+ *construcción de master*:  
   
- *Directiva maestra bloque estructurado*  
+ *bloque estructurado de directiva de master*  
   
  *Directiva de master*:  
   
- **patrón de omp pragma #** *nueva línea*  
+ **patrón de # pragma omp** *nueva línea*  
   
  *Critical (construcción)-*:  
   
@@ -235,7 +234,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva Critical*:  
   
- **# pragma omp crítica** *región frase*opt *nueva línea*  
+ **# pragma omp crítico** *región frase*opt *nueva línea*  
   
  *frase de región*:  
   
@@ -243,11 +242,11 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva de barrera*:  
   
- **barrera de omp pragma #** *nueva línea*  
+ **barrera de # pragma omp** *nueva línea*  
   
  *Atomic (construcción)-*:  
   
- *instrucción de expresión de directiva atomic*  
+ *instrucción de expresión de directiva atómica*  
   
  *directiva atomic*:  
   
@@ -255,9 +254,9 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva de vaciado*:  
   
- **# pragma omp vaciado** *vars vaciado*opt *nueva línea*  
+ **# pragma omp vaciado** *vaciado var*opt *nueva línea*  
   
- *vaciado vars*:  
+ *variables de los de vaciado*:  
   
  *(lista de variables)*  
   
@@ -267,54 +266,54 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
   
  *Directiva ordenados*:  
   
- **pedido # pragma omp** *nueva línea*  
+ **# pragma omp ordenados** *nueva línea*  
   
  *declaración*:  
   
- **/\* declaraciones estándares \*/**  
+ **/\*declaraciones estándares\*/**  
   
  *Directiva threadprivate*  
   
  *Directiva threadprivate*:  
   
- **# pragma omp threadprivate (** *lista variable*  **)** *nueva línea*  
+ **# pragma omp threadprivate (** *lista de variables***)** *nueva línea*   
   
  *cláusula de datos*:  
   
- **privada (** *lista variable* **)**  
+ **privada (** *lista de variables* **)**  
   
- **copyprivate (**  *lista variable*  **)**  
+ **copyprivate (***lista de variables***)**   
   
- **firstprivate (**  *lista variable*  **)**  
+ **firstprivate (***lista de variables***)**   
   
- **lastprivate (** *lista variable*  **)**  
+ **lastprivate (** *lista de variables***)**   
   
- **compartido (** *lista variable* **)**  
+ **compartido (** *lista de variables* **)**  
   
- **valor predeterminado (compartido)**  
+ **predeterminado (compartido)**  
   
- **valor predeterminado (ninguna)**  
+ **predeterminado (ninguno)**  
   
- **reducción (**  *operador de reducción*  **:**  *lista variable*  **)**  
+ **reducción (***operador de reducción***:***lista de variables***)**   
   
- **copyin (**  *lista variable*  **)**  
+ **copyin (***lista de variables***)**   
   
  *operador de reducción*:  
   
- *Uno de*: **+ \* -& ^ & #124; & & & #124; & #124;**  
+ *Uno de*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
   
- **/\* en C \*/**  
+ **/\*en C\*/**  
   
  *lista de variables*:  
   
- *identificador*  
+ *identifier*  
   
  *lista de variables* **,** *identificador*  
   
- **/\* en C++ \*/**  
+ **/\*en C++\*/**  
   
  *lista de variables*:  
   
- *expresión de Id.*  
+ *Id. de expresión*  
   
  *lista de variables* **,** *expresión de Id.*

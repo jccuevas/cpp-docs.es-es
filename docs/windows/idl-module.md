@@ -1,32 +1,30 @@
 ---
-title: "idl_module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_module attribute"
+title: idl_module | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_module
+dev_langs: C++
+helpviewer_keywords: idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5d51e9344f9cebace9266c93def83fd37604ce39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# idl_module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica un punto de entrada en un archivo .dll.  
+# <a name="idlmodule"></a>idl_module
+Especifica un punto de entrada en un archivo DLL.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -43,45 +41,45 @@ Especifica un punto de entrada en un archivo .dll.
 function declaration  
 ```  
   
-#### Parámetros  
- **nombre**  
- Un nombre definido por el usuario para el bloque de código que aparecerá en el archivo .idl.  
+#### <a name="parameters"></a>Parámetros  
+ **name**  
+ Un nombre definido por el usuario para el bloque de código que va a aparecer en el archivo IDL.  
   
- **dllname** \(opcional\)  
+ **nombre dll** (opcional)  
  El archivo .dll que contiene la exportación.  
   
- `uuid` \(opcional\)  
+ `uuid` (opcional)  
  Identificador único.  
   
- **helpstring** \(opcional\)  
+ **helpstring** (opcional)  
  Una cadena de caracteres que se usa para describir la biblioteca de tipos.  
   
- **helpstringcontext** \(opcional\)  
- El identificador de un tema de Ayuda en un archivo de .hlp o .chm.  
+ **helpstringcontext** (opcional)  
+ El identificador de un tema de ayuda en un archivo .hlp o .chm.  
   
- **helpcontext** \(opcional\)  
- El identificador de Ayuda para esta biblioteca de tipos.  
+ **helpcontext** (opcional)  
+ Identificador de ayuda para esta biblioteca de tipos.  
   
- **Oculto** \(opcional\)  
- Un parámetro que evita que la biblioteca se mostrará.  Vea el atributo de [Oculto](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL para obtener más información.  
+ **hidden** (opcional)  
+ Un parámetro que impide que la biblioteca que se va a mostrar. Consulte el atributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) para obtener más información.  
   
- ***Restringido***  \(opcional\)  
- Los miembros de la biblioteca no pueden ser llamados arbitrariamente.  Vea el atributo de [Restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL para obtener más información.  
+ ***restringido*** (opcional)  
+ Los miembros de la biblioteca no se puede llamar de forma arbitraria. Consulte el atributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) para obtener más información.  
   
  *declaración de función*  
- La función que definirá.  
+ La función que va a definir.  
   
-## Comentarios  
- El atributo de `idl_module` C\+\+ permite especificar el punto de entrada en un archivo .dll, que permite importar de un archivo .dll.  
+## <a name="remarks"></a>Comentarios  
+ El `idl_module` atributo C++ le permite especificar el punto de entrada en un archivo .dll, que le permite importar desde un archivo DLL.  
   
- El atributo de **idl\_module** tiene funcionalidad similar al atributo de [módulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL.  
+ El **idl_module** atributo tiene una funcionalidad similar a la [módulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) atributo MIDL.  
   
- Puede exportar desde un objeto COM que puede exportar desde un archivo .dll colocando un punto de entrada de DLL en el bloque de la biblioteca de un archivo .idl.  
+ Puede exportar nada de un objeto COM que se puede exportar desde un archivo .dll colocando un punto de entrada DLL en el bloque de biblioteca de un archivo IDL.  
   
- el uso `idl_module` de la necesidad en dos pasos.  Primero, debe definir un par de nombre\/DLL.  A continuación, cuando usa `idl_module` para especificar un punto de entrada, especifique el nombre y cualquier atributo adicional.  
+ La debe usar `idl_module` en dos pasos. En primer lugar, debe definir un par nombre/DLL. A continuación, cuando usa `idl_module` para especificar un punto de entrada, especifique el nombre y los atributos adicionales.  
   
-## Ejemplo  
- el código siguiente muestra cómo utilizar el atributo de `idl_module` :  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo utilizar el `idl_module` atributo:  
   
 ```  
 // cpp_attr_ref_idl_module.cpp  
@@ -92,21 +90,20 @@ function declaration
 void FuncName(int i);  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Cualquier parte|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|En cualquier lugar|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos independientes](../windows/stand-alone-attributes.md)   
  [entry](../windows/entry.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

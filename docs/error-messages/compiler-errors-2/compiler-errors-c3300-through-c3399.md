@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -106,19 +105,17 @@ helpviewer_keywords:
 - C3376
 - C3377
 - C3378
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 de errores del compilador a través de la advertencia C3399
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -230,4 +227,3 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C3397](compiler-error-c3397.md)|No se permite la inicialización de agregado en argumentos predeterminados|  
 |[Error del compilador C3398](compiler-error-c3398.md)|'*operador*': no se puede convertir de '*tipo*'to'*tipo*'. La expresión de origen debe ser un símbolo de función|  
 |[Error del compilador C3399](compiler-error-c3399.md)|'*tipo*': no se puede proporcionar argumentos cuando se crea una instancia de un parámetro genérico|  
-

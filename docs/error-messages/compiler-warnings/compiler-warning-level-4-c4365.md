@@ -1,37 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4365 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4365"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4365"
+title: Compilador advertencia (nivel 4) C4365 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4365
+dev_langs: C++
+helpviewer_keywords: C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7d2c54e6761edf95ece06b5cad79374566e296b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 4) C4365
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'acción' : conversión de 'type\_1' a 'type\_2', no coinciden signed\/unsigned  
+# <a name="compiler-warning-level-4-c4365"></a>Advertencia del compilador (nivel 4) C4365
+'acción': conversión de 'type_1' a 'type_2', no coinciden signed/unsigned  
   
- Por ejemplo, intentó convertir un valor sin signo en un valor con signo.  
+ Por ejemplo, se intentó convertir un valor sin signo en un valor con signo.  
   
- C4365 está desactivada de manera predeterminada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ C4365 está desactivada de forma predeterminada.  Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4365.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4365.  
   
 ```  
 // C4365.cpp  

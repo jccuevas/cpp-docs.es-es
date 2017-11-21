@@ -1,46 +1,47 @@
 ---
-title: "String and Text Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string classes [ATL]"
-  - "conversión de cadenas, ATL"
+title: Cadena ATL y las clases de texto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- string conversion, ATL
+- string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c494da428dedcf5a326acacbec006e9d9efd8d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# String and Text Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="string-and-text-classes"></a>Clases de texto y de cadena
+Estas clases proporcionan compatibilidad para las cadenas y las conversiones de cadenas de texto.  
+  
+-   [CA2AEX](../atl/reference/ca2aex-class.md) esta clase se utiliza por las macros de conversión de cadena `CA2TEX` y `CT2AEX`y la definición de tipo **CA2A**.  
+  
+-   [CA2CAEX](../atl/reference/ca2caex-class.md) esta clase se utiliza con macros de conversión de cadena `CA2CTEX` y `CT2CAEX`y la definición de tipo **CA2CA**.  
+  
+-   [CA2WEX](../atl/reference/ca2wex-class.md) esta clase se utiliza por las macros de conversión de cadena `CA2TEX`, `CA2CTEX`, `CT2WEX`, y `CT2CWEX`y la definición de tipo **CA2W**.  
+  
+-   [CW2AEX](../atl/reference/cw2aex-class.md) esta clase se utiliza por las macros de conversión de cadena `CT2AEX`, `CW2TEX`, `CW2CTEX`, y `CT2CAEX`y la definición de tipo **CW2A**.  
+  
+-   [CW2CWEX](../atl/reference/cw2cwex-class.md) esta clase se utiliza por las macros de conversión de cadena `CW2CTEX` y `CT2CWEX`y la definición de tipo **CW2CW**.  
+  
+-   [CW2WEX](../atl/reference/cw2wex-class.md) esta clase se utiliza por las macros de conversión de cadena `CW2TEX` y `CT2WEX`y la definición de tipo `CW2W`.  
+  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) esta clase es un contenedor de `BSTR`s.  
+  
+-   [_U_STRINGorID](../atl/reference/u-stringorid-class.md) ambos nombres de recursos permite que esta clase de adaptador de argumento (`LPCTSTR`s) o identificadores de recursos (**UINT**s) que se pasan a una función sin necesidad de autor de la llamada convertir el identificador en una cadena con el  **MAKEINTRESOURCE** macro.  
+  
+## <a name="see-also"></a>Vea también  
+ [Información general de clases](../atl/atl-class-overview.md)   
+ [Macros de conversión de cadena MFC y ATL](reference/string-conversion-macros.md)
 
-Estas clases proporcionan compatibilidad para cadenas y las conversiones de cadena de texto.  
-  
--   La clase de[CA2AEX](../atl/reference/ca2aex-class.md) This usan las macros `CA2TEX` y `CT2AEX`de la conversión de cadenas, y typedef **CA2A**.  
-  
--   La clase de[CA2CAEX](../atl/reference/ca2caex-class.md) This usan las macros `CA2CTEX` y `CT2CAEX`de la conversión de cadenas, y typedef **CA2CA**.  
-  
--   La clase de[CA2WEX](../atl/reference/ca2wex-class.md) This usan las macros `CA2TEX`, `CA2CTEX`, `CT2WEX`, y `CT2CWEX`, y typedef **CA2W**de la conversión de cadenas.  
-  
--   La clase de[CW2AEX](../atl/reference/cw2aex-class.md) This usan las macros `CT2AEX`, `CW2TEX`, `CW2CTEX`, y `CT2CAEX`, y typedef **CW2A**de la conversión de cadenas.  
-  
--   La clase de[CW2CWEX](../atl/reference/cw2cwex-class.md) This usan las macros `CW2CTEX` y `CT2CWEX`de la conversión de cadenas, y typedef **CW2CW**.  
-  
--   La clase de[CW2WEX](../atl/reference/cw2wex-class.md) This usan las macros `CW2TEX` y `CT2WEX`de la conversión de cadenas, y typedef `CW2W`.  
-  
--   La clase de[CComBSTR](../atl/reference/ccombstr-class.md) Esta es un contenedor para s para `BSTR`.  
-  
--   La clase de adaptador de argumento de[\_U\_STRINGorID](../atl/reference/u-stringorid-class.md) This permite nombres de recursos \(s de`LPCTSTR`\) o los id. de recurso \(s de**UINT**\) que se pasarán a una función sin requerir que el llamador convertir el id. en una cadena mediante la macro de **MAKEINTRESOURCE** .  
-  
-## Vea también  
- [Class Overview](../atl/atl-class-overview.md)   
- [ATL and MFC String Conversion Macros](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)

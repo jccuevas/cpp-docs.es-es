@@ -1,31 +1,30 @@
 ---
-title: "C&#243;mo: Iterar por matrices con for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], recorrer en iteración con para cada"
+title: "Cómo: iterar por matrices con for each | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 559f2257a12d87eb03e9dbc7aa1493d0ec016b48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Iterar por matrices con for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema muestra cómo utilizar la palabra clave de [for each, in](../dotnet/for-each-in.md) en diferentes tipos de matrices.  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>Cómo: Iterar por matrices con for each
+Este tema muestra cómo utilizar el [para cada uno, en](../dotnet/for-each-in.md) palabra clave en diferentes tipos de matrices.  
   
-## Ejemplo  
- Este ejemplo muestra cómo utilizar `for each` en la matriz de tipos de referencia.  Tenga en cuenta que si cualquier dimensión de una matriz dimensional múltiples es cero, el bucle de `for each` no iterará sobre la matriz.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo muestra cómo utilizar `for each` en la matriz de tipos de referencia.  Tenga en cuenta que si cualquier dimensión de una matriz unidimensional de múltiples es cero, el `for each` bucle no creará una iteración a través de la matriz.  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +65,18 @@ int main() {
 }  
 ```  
   
-  **0 \= en MyClass**  
-**1 \= en MyClass**  
-**0 \= de MyClass2**  
-**1 \= de MyClass2**  
-**2 \= de MyClass2**  
-**3 \= de MyClass2**   
-## Ejemplo  
- En este ejemplo se muestra para cada que recorre en iteración <xref:System.Collections.ArrayList>, que implementa <xref:System.Collections.IEnumerable>.  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se muestra para cada iteración sobre un <xref:System.Collections.ArrayList>, que implementa <xref:System.Collections.IEnumerable>.  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +98,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## Ejemplo  
- En este ejemplo se muestra cómo recorrer en iteración una matriz de matrices.  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo muestra cómo recorrer en iteración una matriz de matrices.  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +135,17 @@ int main() {
 }  
 ```  
   
-  **IntArray \[0\] \= 10**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**IntArray \[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## Vea también  
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [for each, in](../dotnet/for-each-in.md)

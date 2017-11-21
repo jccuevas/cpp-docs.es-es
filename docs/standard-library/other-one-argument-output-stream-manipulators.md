@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams, one-argument manipulators
+dev_langs: C++
+helpviewer_keywords: output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Otros manipuladores de flujos de salida con un argumento
 El siguiente ejemplo usa una clase `money`, que es un tipo `long`. El manipulador `setpic` adjunta una cadena formato de "imagen" a la clase que puede usarse mediante el operador de inserción de secuencia sobrecargado de la clase `money`. La cadena de imagen se almacena como una variable estática en la clase `money` en lugar de como un miembro de datos de una clase de secuencia, por lo que no tiene que derivar una nueva clase de flujo de salida.  
@@ -103,5 +85,4 @@ int main( )
   
 ## <a name="see-also"></a>Vea también  
  [Manipuladores personalizados con argumentos](../standard-library/custom-manipulators-with-arguments.md)
-
 

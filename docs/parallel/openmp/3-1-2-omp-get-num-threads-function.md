@@ -1,41 +1,40 @@
 ---
-title: "3.1.2 omp_get_num_threads Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.2 omp_get_num_threads (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: bcdd76e2-d96b-4884-ac8f-e55fc0c42801
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b832cd4e4e44706bbd4ffc63b5912f941bb0ca6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.2 omp_get_num_threads Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de **omp\_get\_num\_threads** devuelve el número de subprocesos actualmente en el equipo que ejecuta la región paralela de la que lo llama.  El formato es como se detalla a continuación:  
+# <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads (Función)
+El **omp_get_num_threads ()** función devuelve el número de subprocesos actualmente en el equipo que ejecuta la región paralela desde el que se llama. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
 int omp_get_num_threads(void);  
 ```  
   
- La cláusula de **num\_threads** , la función de **omp\_set\_num\_threads** , y el control de la variable de entorno **OMP\_NUM\_THREADS** el número de subprocesos en un equipo.  
+ El **num_threads** cláusula, el **omp_set_num_threads ()** función y el **OMP_NUM_THREADS** variable de entorno controlan el número de subprocesos en un equipo.  
   
- Si el número de subprocesos no se ha establecido por el usuario, el valor predeterminado es implementación\-definido.  Esta función enlaza a **Paralelo** la directiva que agrega más próxima.  Si se llama de una parte de serie de un programa, o de una región paralela anidado que esté serializado, esta función devuelve 1.  
+ Si el número de subprocesos no se ha establecido explícitamente por el usuario, el valor predeterminado es definido por la implementación. Esta función se enlaza a los más próximo incluye **paralelo** directiva. Si se llama desde una serie parte de un programa, o de una región paralela anidada que se serializa, esta función devuelve 1.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   La variable de entorno**OMP\_NUM\_THREADS** , vea [sección 4,2](../../parallel/openmp/4-2-omp-num-threads.md) en la página 48.  
+-   **OMP_NUM_THREADS** vea variable de entorno [sección 4.2](../../parallel/openmp/4-2-omp-num-threads.md) en página 48.  
   
--   la cláusula de**num\_threads** , vea [sección 2,3](../../parallel/openmp/2-3-parallel-construct.md) en la página 8.  
+-   **num_threads** cláusula, vea [sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8.  
   
--   La construcción de**Paralelo** , vea [sección 2,3](../../parallel/openmp/2-3-parallel-construct.md) en la página 8.
+-   **paralelo** construir, consulte [sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8.

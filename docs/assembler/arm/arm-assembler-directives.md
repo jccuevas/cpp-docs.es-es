@@ -1,49 +1,49 @@
 ---
-title: "ARM Assembler Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Directiva del ensamblador de ARM | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ARM Assembler Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En su mayor parte, el ensamblador de ARM de Microsoft utiliza el lenguaje de ensamblado de ARM, que se documenta en el capítulo 7 de la [manual de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  Sin embargo, las implementaciones de Microsoft de algunas directivas de ensamblado difieren de las directivas de ensamblado del ARM.  En este artículo se explica las diferencias.  
+# <a name="arm-assembler-directives"></a>Directiva del ensamblador de ARM
+En su mayor parte, el ensamblador de ARM de Microsoft usa el lenguaje de ensamblador ARM, que se describe en el capítulo 7 de la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102). Sin embargo, las implementaciones de Microsoft de algunas directivas de ensamblado diferencian de las directivas de ensamblado ARM. En este artículo se explica las diferencias.  
   
-## Implementaciones de Microsoft de las directivas de ensamblado de ARM  
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementaciones de directivas de ensamblado ARM Microsoft  
  ÁREA  
- El ensamblador de ARM de Microsoft es compatible con estos atributos de zona: alinear, código, CODEALIGN, datos, NOINIT, READONLY, READWRITE, PULGAR, ARM.  
+ El ensamblador de ARM de Microsoft es compatible con estos atributos de área: alinear código, CODEALIGN, datos, NOINIT, solo lectura, lectura y escritura, THUMB, ARM.  
   
- Todas excepto THUMB y ARM funcionan tal como se documenta en el [manual de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Todas excepto THUMB y ARM funcionan como se documenta en la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
   
- En el ensamblador Microsoft ARM THUMB indica que una sección de código contiene código de control de posición y es el valor predeterminado para las secciones de código.  ARM indica que la sección contiene código ARM.  
+ En el ensamblador de ARM de Microsoft, THUMB indica que una sección de código contiene código Thumb y es el valor predeterminado para las secciones de código.  ARM indica que la sección contiene código ARM.  
   
  ATTR  
  No se admite.  
   
  CODE16  
- No se admite porque implica la sintaxis de pulgar pre\-UAL, que no se admite el ensamblador de ARM de Microsoft.  Utilice la directiva de control de posición en su lugar, junto con la sintaxis de United Airlines.  
+ No se admite porque implica la sintaxis de Thumb pre-UAL, que no permite que el ensamblador de ARM de Microsoft.  Utilice la directiva de control de posición en su lugar, junto con la sintaxis UAL.  
   
- COMÚN  
- No se admite la especificación de una alineación para la región común.  
+ COMUNES  
+ No se admite la especificación de una alineación de la región comunes.  
   
  DCDO  
  No se admite.  
   
  DN, QN, SN  
- No se admite la especificación de un tipo o un carril en el alias de registro.  
+ No se admite la especificación de un tipo o una calle en el registro de alias.  
   
  ENTRADA  
  No se admite.  
@@ -53,12 +53,10 @@ En su mayor parte, el ensamblador de ARM de Microsoft utiliza el lenguaje de ens
   
  EXPORTACIÓN y GLOBAL  
  ```  
-  
 EXPORTsym {[type]}  
-  
 ```  
   
- `sym`es el símbolo que se va a exportar.  `[type]`, si se especifica, puede ser una `[DATA]` para indicar que el símbolo de puntos de datos o `[FUNC]` para indicar que el símbolo hace referencia al código.  
+ `sym`es el símbolo que se exportarán.  `[type]`, si se especifica, puede ser `[DATA]` para indicar que el símbolo apunta a los datos o `[FUNC]` para indicar que el símbolo hace referencia al código.  
   
  GLOBAL es un sinónimo para la exportación.  
   
@@ -69,50 +67,48 @@ EXPORTsym {[type]}
  No se admite.  
   
  FUNCIÓN y PROC  
- Aunque la sintaxis de ensamblado es compatible con la especificación de una costumbre convención de llamada a procedimientos con una lista de los registros que son Guardar llamador y aquellos que son el ahorro de destinatario de la llamada, el ensamblador de ARM de Microsoft acepta la sintaxis pero pasa por alto las listas de registro.  La información de depuración que se produce por el ensamblador admite únicamente la convención de llamada de la predeterminada.  
+ Aunque la sintaxis de ensamblado es compatible con la especificación de un personalizado convención de llamada en los procedimientos con una lista de los registros que están llamador guardado y los que están destinatario guardado, el ensamblador de ARM de Microsoft acepta la sintaxis pero omite las listas de registro.  La información de depuración generada por el ensamblador admite solo la convención de llamada predeterminada.  
   
  IMPORTACIÓN y EXTERN  
  ```  
-  
 IMPORT sym{, WEAK alias{, TYPE t}}  
-  
 ```  
   
  `sym`es el nombre del símbolo que desea importar.  
   
- Si DÉBIL `alias` se especifica, indica que `sym` es un externo débil.  Si no hay definición para el se encuentra en tiempo de vinculación, a continuación, todas las referencias a ella en su lugar enlazar a `alias`.  
+ Si DÉBIL `alias` se especifica, indica que `sym` es un external débil. Si se encuentra ninguna definición para ella en tiempo de vinculación, todas las referencias a ella en su lugar, enlazar a `alias`.  
   
- Si tipo de  `t` se especifica, a continuación, `t` indica cómo el vinculador debe intentar resolver `sym`.  Estos valores para `t` son posibles:   
-1: Realizar una búsqueda de la biblioteca de`sym`   
-2: Realizar una búsqueda de la biblioteca de`sym`   
-3 —`sym` es un alias de `alias` \(predeterminado\)  
+ Si tipo `t` no se especifica, `t` indica cómo el vinculador debería intentar resolver `sym`.  Estos valores para `t` son posibles:   
+1: no se realice una búsqueda de la biblioteca de`sym`  
+2: realizar una búsqueda de la biblioteca de`sym`  
+3:`sym` es un alias para `alias` (valor predeterminado)  
   
- EXTERN es un sinónimo para la importación, salvo que `sym` se importa sólo si hay referencias a él en el ensamblado actual.  
+ EXTERN es un sinónimo para la importación, salvo que `sym` se importan solo si hay referencias a él en el ensamblado actual.  
   
  MACRO  
- No se admite el uso de una variable para contener el código de condición de una macro.  Los valores para la macro no se admiten parámetros predeterminados.  
+ No se admite el uso de una variable que contenga el código de la condición de una macro. Valores predeterminados de la macro no se admiten parámetros.  
   
  NOFP  
  No se admite.  
   
- OPT, TTL, SUBT  
- No se admite porque el ensamblador de ARM de Microsoft no produce anuncios.  
+ PARTICIPACIÓN, TTL, SUBT  
+ No se admite porque el ensamblador de ARM de Microsoft no genera la lista de programas.  
   
  PRESERVE8  
  No se admite.  
   
- RELOC  
- `RELOC n`sólo se puede seguir una instrucción o una directiva de definición de datos.  No hay ningún "símbolo anónimo" que puede ser reubicado.  
+ REUBIQUE  
+ `RELOC n`solo se puede seguir una instrucción o una directiva de definición de datos. No hay ninguna "anónimo"symbol"que se puede reasignar.  
   
- REQUIEREN  
+ REQUERIR  
  No se admite.  
   
  REQUIRE8  
  No se admite.  
   
  THUMBX  
- No se admite porque el ensamblador de ARM de Microsoft no admite el conjunto de instrucciones de control de posición 2EE.  
+ No se admite porque el ensamblador de ARM de Microsoft no admite el conjunto de instrucciones de Thumb-2EE.  
   
-## Vea también  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de línea de comandos de ensamblador ARM](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [Mensajes de diagnóstico del ensamblador de ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)

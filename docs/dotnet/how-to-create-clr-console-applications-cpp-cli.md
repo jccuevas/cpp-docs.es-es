@@ -1,29 +1,28 @@
 ---
-title: "C&#243;mo: Crear aplicaciones de consola CLR (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones de consola, plantillas"
-  - "Aplicaciones de consola CLR, plantilla de proyecto"
+title: "Cómo: crear aplicaciones de consola CLR (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- console applications, templates
+- CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e5aa59f26a3feb485cf2e7aae0564aca8848acd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Crear aplicaciones de consola CLR (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="how-to-create-clr-console-applications-ccli"></a>Cómo: Crear aplicaciones de consola CLR (C++/CLI)
 Puede utilizar la plantilla Aplicación de consola para crear un proyecto de aplicación de consola que ya tiene referencias y archivos esenciales del proyecto.  
   
  Normalmente, una aplicación de consola se compila en un archivo ejecutable independiente, pero no tiene una interfaz gráfica de usuario. Un usuario ejecuta la aplicación de consola en un símbolo del sistema y utiliza el símbolo del sistema para emitir instrucciones a la aplicación en ejecución. También en el símbolo del sistema, la aplicación proporciona información de salida. La inmediatez de una aplicación de consola simplifica en gran medida el aprendizaje de las técnicas de programación sin preocuparse por implementar una interfaz de usuario.  
@@ -38,9 +37,9 @@ Puede utilizar la plantilla Aplicación de consola para crear un proyecto de apl
   
 -   Archivos de código fuente:  
   
-    -   Consola \(archivo .cpp\): archivo de código fuente principal y punto de entrada a la aplicación que acaba de crear. Identifica el archivo .dll y el espacio de nombres del proyecto. Incluya su propio código en este archivo.  
+    -   Consola (archivo .cpp): archivo de código fuente principal y punto de entrada a la aplicación que acaba de crear. Identifica el archivo .dll y el espacio de nombres del proyecto. Incluya su propio código en este archivo.  
   
-    -   AssemblyInfo.cpp: contiene atributos, archivos, recursos, tipos, información de versiones, información de firma, etc. que se pueden usar para modificar los metadatos de ensamblado del proyecto. Para obtener más información, vea [Contenido de los ensamblados](../Topic/Assembly%20Contents.md).  
+    -   AssemblyInfo.cpp: contiene atributos, archivos, recursos, tipos, información de versiones, información de firma, etc. que se pueden usar para modificar los metadatos de ensamblado del proyecto. Para obtener más información, consulte [contenido de un ensamblado](/dotnet/framework/app-domains/assembly-contents).  
   
     -   Stdafx.cpp: se utiliza para compilar un archivo de encabezado precompilado denominado Win32.pch y un archivo de tipos precompilado denominado StdAfx.obj.  
   
@@ -58,19 +57,19 @@ Puede utilizar la plantilla Aplicación de consola para crear un proyecto de apl
   
 -   ReadMe.txt: describe los archivos del proyecto.  
   
-## Para crear un proyecto de aplicación de consola de Common Language Runtime \(CLR\)  
+## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Para crear un proyecto de aplicación de consola de Common Language Runtime (CLR)  
   
 1.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
-2.  En el cuadro de diálogo **Nuevo proyecto**, bajo **Plantillas instaladas**, seleccione el nodo **Visual C\+\+**, seleccione el nodo **CLR** y, a continuación, seleccione la plantilla Aplicación de consola.  
+2.  En el cuadro de diálogo **Nuevo proyecto** , bajo **Plantillas instaladas**, seleccione el nodo **Visual C++** , seleccione el nodo **CLR** y, a continuación, seleccione la plantilla Aplicación de consola.  
   
-3.  En el cuadro **Nombre**, escriba un nombre único para la aplicación.  
+3.  En el cuadro **Nombre** , escriba un nombre único para la aplicación.  
   
      Puede especificar otros valores del proyecto y de la solución, pero no son necesarios.  
   
-4.  Elija el botón **Aceptar**.  
+4.  Elija el botón **Aceptar** .  
   
-## Vea también  
- [NOTINBUILD Cómo: crear aplicaciones de consola CLR](http://msdn.microsoft.com/es-es/b8af4197-e65f-4b17-b18e-b9e92965d026)   
+## <a name="see-also"></a>Vea también  
  [Proyectos de CLR](../ide/files-created-for-clr-projects.md)   
- [NIB: administración elementos en proyectos](http://msdn.microsoft.com/es-es/762e606b-7f44-4b66-97a1-e30a703654a0)
+
+

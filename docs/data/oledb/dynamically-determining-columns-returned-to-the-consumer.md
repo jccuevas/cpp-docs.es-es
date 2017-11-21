@@ -1,31 +1,31 @@
 ---
-title: "Determinar din&#225;micamente las columnas que se devuelven al consumidor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marcadores [C++], determinación dinámica de columnas"
-  - "determinar columnas dinámicamente [C++]"
+title: "Determinar dinámicamente las columnas se devuelve al consumidor | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Determinar din&#225;micamente las columnas que se devuelven al consumidor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Normalmente, las macros PROVIDER\_COLUMN\_ENTRY controlan la llamada a **IColumnsInfo::GetColumnsInfo**.  Sin embargo, dado que un consumidor puede decidir utilizar marcadores, el proveedor debe poder cambiar las columnas que se devuelven, en función de si el consumidor solicita un marcador.  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinar dinámicamente las columnas que se devuelven al consumidor
+Normalmente, las macros PROVIDER_COLUMN_ENTRY controlan la **IColumnsInfo:: GetColumnsInfo** llamar. Sin embargo, dado que un consumidor puede decidir utilizar marcadores, el proveedor debe poder cambiar las columnas devueltas dependiendo de si el consumidor solicita un marcador.  
   
- Para controlar la llamada a **IColumnsInfo::GetColumnsInfo**, elimine PROVIDER\_COLUMN\_MAP, que define una función `GetColumnInfo`, del registro de usuario `CAgentMan` de MyProviderRS.h y reemplácela con la definición de su propia función `GetColumnInfo`:  
+ Para controlar la **IColumnsInfo:: GetColumnsInfo** llamada, elimine PROVIDER_COLUMN_MAP, que define una función `GetColumnInfo`, desde la `CAgentMan` usuario registro en MyProviderRS.h y reemplácela con la definición para su propio `GetColumnInfo` (función):  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +48,11 @@ public:
 };  
 ```  
   
- A continuación, implemente la función `GetColumnInfo` en MyProviderRS.cpp, como se muestra en el siguiente fragmento de código.  
+ A continuación, implementará la `GetColumnInfo` funcionando en MyProviderRS.cpp, como se muestra en el código siguiente.  
   
- `GetColumnInfo` comprueba en primer lugar si el valor de la propiedad **DBPROP\_BOOKMARKS** de OLE DB está establecido.  Para obtener la propiedad, `GetColumnInfo` utiliza un puntero \(`pRowset`\) al objeto de conjunto de filas.  El puntero `pThis` representa la clase que creó el conjunto de filas, que es la clase en la que está almacenado el mapa de propiedades.  `GetColumnInfo` convierte el tipo del puntero `pThis` al de un puntero `RMyProviderRowset`.  
+ `GetColumnInfo`comprueba primero si la propiedad de OLE DB **DBPROP_BOOKMARKS** se establece. Para obtener la propiedad `GetColumnInfo` utiliza un puntero (`pRowset`) para el objeto de conjunto de filas. El `pThis` puntero representa la clase que creó el conjunto de filas, que es la clase donde se almacena la asignación de propiedad. `GetColumnInfo`conversiones de tipo el `pThis` puntero a un `RMyProviderRowset` puntero.  
   
- Para comprobar el valor de la propiedad **DBPROP\_BOOKMARKS**, `GetColumnInfo` utiliza la interfaz `IRowsetInfo`, que se puede obtener llamando a `QueryInterface` en la interfaz `pRowset`.  Como alternativa, puede utilizar un método [CComQIPtr](../../atl/reference/ccomqiptr-class.md) de ATL.  
+ Para comprobar si la **DBPROP_BOOKMARKS** propiedad, `GetColumnInfo` utiliza la `IRowsetInfo` interfaz, que puede obtener mediante una llamada a `QueryInterface` en el `pRowset` interfaz. Como alternativa, puede usar un ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) método en su lugar.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +113,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- En este ejemplo se utiliza una matriz estática para que contenga la información de columna.  Si el consumidor no desea la columna de marcador, habrá una entrada de matriz no utilizada.  Para controlar la información, debe crear dos macros de matriz: ADD\_COLUMN\_ENTRY y ADD\_COLUMN\_ENTRY\_EX.  ADD\_COLUMN\_ENTRY\_EX utiliza un parámetro adicional, `flags`, que es necesario para designar una columna de marcador.  
+ Este ejemplo utiliza una matriz estática para contener la información de columna. Si el consumidor no desea que la columna de marcador, se utiliza con una entrada de la matriz. Para controlar la información, cree dos macros de matriz: ADD_COLUMN_ENTRY y ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX utiliza un parámetro adicional, `flags`, que es necesario para designar una columna de marcador.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +146,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- En la función `GetColumnInfo`, se utiliza la macro de marcador de la manera siguiente:  
+ En el `GetColumnInfo` función, la macro de marcador se usa como el siguiente:  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +154,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Ahora puede compilar y ejecutar el proveedor mejorado.  Para probar el proveedor, modifique el consumidor de prueba como se describe en [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md).  Ejecute el consumidor de prueba con el proveedor.  Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor cuando haga clic en el botón **Ejecutar** en el cuadro de diálogo **Consumidor de prueba**.  
+ Ahora puede compilar y ejecutar el proveedor mejorado. Para probar el proveedor, modifique el consumidor de prueba como se describe en [implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md). Ejecute el consumidor de prueba con el proveedor. Compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor al hacer clic en el **ejecutar** botón en el **consumidor de prueba** cuadro de diálogo.  
   
-## Vea también  
- [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+## <a name="see-also"></a>Vea también  
+ [Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

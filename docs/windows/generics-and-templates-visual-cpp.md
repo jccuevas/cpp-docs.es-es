@@ -1,66 +1,65 @@
 ---
-title: "Gen&#233;ricos y plantillas (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "genéricos [C++], frente a plantillas"
-  - "plantillas, C++"
+title: "Genéricos y plantillas (Visual C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ea175a0f71c412583065eb2df4e04928ffe57ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Gen&#233;ricos y plantillas (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genéricos y plantillas son ambas características de lenguaje que proporcionan compatibilidad para los tipos parametrizados.  Sin embargo, son diferentes y tienen diferente utilizan.  Este tema proporciona información general sobre las muchas diferencias.  
+# <a name="generics-and-templates-visual-c"></a>Genéricos y plantillas (Visual C++)
+Genéricos y plantillas son las características del lenguaje que proporcionan compatibilidad para tipos parametrizados. Sin embargo, son diferentes y tienen diferentes usos. Este tema proporciona información general sobre las numerosas diferencias existentes.  
   
- Para obtener más información, vea [Windows en tiempo de ejecución y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) y [Información general de plantillas](../Topic/Templates%20Overview.md).  
+ Para obtener más información, consulte [Windows Runtime y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-## Comparar las plantillas y Genéricos  
- Diferencias clave entre genéricos y plantillas de C\+\+:  
+## <a name="comparing-templates-and-generics"></a>Comparación de plantillas y tipos genéricos  
+ Diferencias principales entre genéricos y plantillas de C++:  
   
--   Los genéricos son genéricos hasta que sustituyan a tipos para ellos en tiempo de ejecución.  Las plantillas se especializan en tiempo de compilación y que no son tipos todavía con parámetros en tiempo de ejecución  
+-   Los genéricos son genéricos hasta que los tipos se sustituyen por ellos en tiempo de ejecución. Plantillas están especializadas en tiempo de compilación, por lo que no son tipos parametrizados todavía en tiempo de ejecución  
   
--   Common Language Runtime admite específicamente genéricos en MSIL.  Como el runtime conoce genéricos, tipos específicos pueden ser reemplazados por los tipos genéricos para hacer referencia a un ensamblado que contenga un tipo genérico.  Las plantillas, en cambio, resuelven en tipos normales en tiempo de compilación y tipos resultantes pueden no ser especializados en otros ensamblados.  
+-   Common language runtime admite específicamente genéricos en MSIL. Dado que el tiempo de ejecución sabe acerca de los genéricos, tipos específicos se pueden sustituir por tipos genéricos al hacer referencia a un ensamblado que contiene un tipo genérico. Plantillas, en cambio, resolver en los tipos normales en tiempo de compilación y los tipos resultantes no se pueden especializar de otros ensamblados.  
   
--   Los genéricos especializados en dos ensamblados diferentes con los mismos argumentos de tipo son el mismo tipo.  Plantillas especializadas en dos ensamblados diferentes con los mismos argumentos de tipo se consideran por el runtime ser tipos diferentes.  
+-   Los tipos genéricos especializados en ensamblados diferentes con el mismo tipo de argumentos son del mismo tipo. Plantillas especializados en ensamblados diferentes con el mismo tipo de argumentos se consideran en tiempo de ejecución son de tipos diferentes.  
   
--   Los genéricos se representan como parte única de código ejecutable que se utiliza para todos los argumentos de tipo de referencia \(esto no es aplicable para los tipos de valor, que tienen una implementación única por tipo de valor\).  El compilador JIT conoce genéricos y optimizar el código de referencia o tipos de valor que se utilizan como argumentos de tipo.  Las plantillas generan código independiente en tiempo de ejecución para cada especialización.  
+-   Los tipos genéricos se generan como un único fragmento de código ejecutable que se utiliza para todos los argumentos de tipo de referencia (Esto no es true para los tipos de valor, que tienen una implementación por tipo de valor única). El compilador JIT sabe acerca de los genéricos y se puede optimizar el código para los tipos de valor o referencia que se utilizan como argumentos de tipo. Las plantillas de generar código en tiempo de ejecución independiente para cada especialización.  
   
--   Los genéricos no permiten el uso de parámetros de plantilla que no son de tipo, como `template <int i> C {}`.  Las plantillas los permiten.  
+-   Genéricos no permitir los parámetros de plantilla sin tipo, como `template <int i> C {}`. Las plantillas permiten a ellos.  
   
--   Los genéricos no permiten la especialización explícita \(es decir, una implementación personalizada de una plantilla para un tipo específico\).  Las plantillas hacen.  
+-   Los genéricos no permiten la especialización explícita (es decir, una implementación personalizada de una plantilla para un tipo específico). Plantillas de hacerlo.  
   
--   Los genéricos no permiten la especialización parcial \(una implementación personalizada de un subconjunto de los argumentos de tipo\).  Las plantillas hacen.  
+-   Los genéricos no permiten la especialización parcial (una implementación personalizada que va a un subconjunto de los argumentos de tipo). Plantillas de hacerlo.  
   
--   Los genéricos no permiten que el parámetro de tipo es utilizado como clase base para el tipo genérico.  Las plantillas hacen.  
+-   Los genéricos no permiten el parámetro de tipo que se usará como la clase base para el tipo genérico. Plantillas de hacerlo.  
   
--   Las plantillas admiten parámetros de la plantilla\- plantilla \(por ejemplo.  `template<template<class T> class X> class MyClass`\), pero los genéricos no.  
+-   Plantillas admiten parámetros de plantilla de plantilla (p. ej. `template<template<class T> class X> class MyClass`), pero no genéricos.  
   
-## Combinar las plantillas y Genéricos  
+## <a name="combining-templates-and-generics"></a>Genéricos y plantillas de combinación  
   
--   La diferencia básica sobre genéricos tiene implicaciones para compilar aplicaciones que combinan las plantillas y los genéricos.  Por ejemplo, suponga que tiene una clase de plantilla para la que desea crear un contenedor genérico para exponer esa plantilla a otros lenguajes como genérico.  No puede hacer que el genérico toma un parámetro de tipo que se pasa sin embargo a la plantilla, como plantilla debe tener ese parámetro de tipo en tiempo de compilación, pero el genérico no se resuelve el parámetro de tipo en tiempo de ejecución.  Anidar una plantilla dentro de un genérico no funcionará ya sea porque no hay manera de expandir las plantillas en tiempo de compilación para los tipos genéricos arbitrarios que pueden crearse instancias en tiempo de ejecución.  
+-   La diferencia básica en genéricos tiene implicaciones para crear aplicaciones que combinan plantillas y tipos genéricos. Por ejemplo, suponga que tiene una clase de plantilla que desea crear un contenedor genérico para exponer esa plantilla a otros lenguajes como un tipo genérico. No puede tener el genérico toman un parámetro de tipo que, a continuación, pasa directo a la plantilla, puesto que la plantilla debe tener ese parámetro de tipo en tiempo de compilación, pero la clase genérica no resolver el parámetro de tipo hasta el tiempo de ejecución. Anidar una plantilla dentro de un tipo genérico no funcionará bien porque no hay ninguna manera para expandir las plantillas en tiempo de compilación para los tipos genéricos arbitrarios que se pueden crear instancias en tiempo de ejecución.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente se muestra un ejemplo sencillo de plantillas mediante y de genéricos junto.  En este ejemplo, la clase de plantilla pasa el parámetro a través del tipo genérico.  El inverso no es posible.  
+### <a name="description"></a>Descripción  
+ En el ejemplo siguiente se muestra un ejemplo sencillo de usar plantillas y tipos genéricos juntos. En este ejemplo, la clase de plantilla pasa su parámetro a través del tipo genérico. Lo contrario no es posible.  
   
- Este lenguaje podría usar cuando desea compilar en la API genérico existente con el código de plantilla que es local a un ensamblado de Visual C\+\+, o cuando necesita agregar un nivel adicional de parametrización a un tipo genérico, aprovechar algunas características de las plantillas no admitidas por los genéricos.  
+ Esta expresión podría utilizarse cuando desea compilar en una API existente genérica con un código de plantilla que es local a un ensamblado de Visual C++, o cuando necesite agregar una capa adicional de la parametrización a un tipo genérico, para aprovechar las ventajas de determinadas características de plantillas no admitidas d. por genéricos  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +94,11 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Resultado  
   
 ```  
 F  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Genéricos](../windows/generics-cpp-component-extensions.md)

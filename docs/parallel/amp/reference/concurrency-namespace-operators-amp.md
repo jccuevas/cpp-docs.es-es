@@ -6,19 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operadores de espacio de nombres de simultaneidad (AMP)
 ||||  
@@ -51,7 +49,7 @@ bool operator== (
  Una de las tuplas para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si las tuplas son iguales; de lo contrario, `false`.  
+ `true`Si las tuplas son iguales; en caso contrario, `false`.  
   
 ##  <a name="operator_neq"></a>  operator!=   
  Determina si los argumentos especificados no son iguales.  
@@ -77,7 +75,7 @@ bool operator!= (
  Una de las tuplas para comparar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si las tuplas no son iguales; de lo contrario, `false`.  
+ `true`Si las tuplas no son iguales; en caso contrario, `false`.  
   
 ##  <a name="operator_add"></a>  operator+   
 
@@ -122,7 +120,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
  Uno de los argumentos que se van a agregar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La suma de todos los argumentos especificados.  
+ La suma de todos los de los argumentos especificados.  
   
 ##  <a name="operator-"></a>  operator-   
 
@@ -167,7 +165,7 @@ _Tuple_type<_Rank>   operator-(
  El argumento que se resta.  
   
 ### <a name="return-value"></a>Valor devuelto  
- La diferencia entre los argumentos especificados de todos.  
+ La diferencia de todos los entre los argumentos especificados.  
   
 ##  <a name="operator_star"></a>  operator*   
 
@@ -197,13 +195,13 @@ _Tuple_type<_Rank>   operator*(
  El rango de los argumentos de la tupla.  
   
  `_Lhs`  
- Una de las tuplas que se va a multiplicar.  
+ Una de las tuplas para multiplicar.  
   
  `_Rhs`  
- Una de las tuplas que se va a multiplicar.  
+ Una de las tuplas para multiplicar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El producto de todos los argumentos especificados.  
+ El producto de todos los de los argumentos especificados.  
   
 
 ##  <a name="operator_div"></a>  operator/   
@@ -239,7 +237,7 @@ _Tuple_type<_Rank>   operator/(
  La tupla dividir por.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El cociente de todos de los argumentos especificados.  
+ El cociente de todos los de los argumentos especificados.  
   
 ##  <a name="operator_mod"></a>  operator%   
 
@@ -272,11 +270,10 @@ _Tuple_type<_Rank>   operator%(
  La tupla desde el que el módulo se calcula.  
   
  `_Rhs`  
- La tupla de módulo por.  
+ La tupla al módulo por.  
   
 ### <a name="return-value"></a>Valor devuelto  
  El resultado del primer módulo de argumento especificado el segundo argumento especificado.  
   
 ## <a name="see-also"></a>Vea también  
  [Namespace de simultaneidad](concurrency-namespace-cpp-amp.md)
-

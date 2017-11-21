@@ -1,34 +1,35 @@
 ---
-title: "Marshaling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interfaces COM, calcular las referencias"
-  - "calcular las referencias"
-  - "calcular las referencias, interoperabilidad COM"
+title: "El cálculo de referencias | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling, COM interop
+- marshaling
+- COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec8c85606f0f0ef3de67a61181ead6537fde179e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Marshaling
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La técnica COM de cálculo de referencias permite las interfaces expuestas por un objeto en un proceso que se utilizará en otro proceso.  En cálculo de referencias, COM proporciona el código \(o el código de las aplicaciones proporcionado por el implementador de la interfaz\) tanto para empaquetar los parámetros de un método en un formato que puede desplazarse entre procesos \(así como, a través de la conexión a los procesos que se ejecutan en otros equipos\) y desempaquetar los parámetros en el otro extremo.  Igualmente, COM debe realizar estos mismos pasos en la devolución de llamada.  
+# <a name="marshaling"></a>el cálculo de referencias
+La técnica de COM de la serialización permite interfaces expuestas por un objeto en un proceso para su uso en otro proceso. En el cálculo de referencias, COM proporciona el código (o utiliza el código proporcionado por el implementador de la interfaz) para empaquetar los parámetros del método en un formato que se puede mover entre procesos (y, a través de la conexión a procesos que se ejecutan en otras máquinas) y para desempaquetar dichos parámetros en el otro extremo. Del mismo modo, COM debe realizar estos mismos pasos en la devolución de la llamada.  
   
 > [!NOTE]
->  El cálculo de referencias no suele ser necesario cuando una interfaz proporcionada por un objeto se utiliza en el mismo proceso que el objeto.  Sin embargo, el cálculo de referencias puede ser necesario entre subprocesos.  
+>  El cálculo de referencias normalmente no es necesario cuando se usa una interfaz proporcionada por un objeto en el mismo proceso que el objeto. Sin embargo, la serialización puede resultar necesario entre subprocesos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Introducción a COM](../atl/introduction-to-com.md)   
- [Marshaling Details](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+ [Detalles del cálculo de referencias](http://msdn.microsoft.com/library/windows/desktop/ms692621)
+

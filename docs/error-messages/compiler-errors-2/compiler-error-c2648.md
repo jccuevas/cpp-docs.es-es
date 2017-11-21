@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2648
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2648
+f1_keywords: C2648
+dev_langs: C++
+helpviewer_keywords: C2648
 ms.assetid: ce338337-9154-4f85-bb61-b05fdbfad75d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 99d52f3c07c0c20e49fa46baeba4cde618e286c7
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2648"></a>C2648 de Error del compilador
 'identificador': uso de miembro como parámetro predeterminado requiere un miembro static  

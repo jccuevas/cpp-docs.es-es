@@ -1,35 +1,33 @@
 ---
-title: "Error PRJ0004 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0004"
+title: Error PRJ0004 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0004
+dev_langs: C++
+helpviewer_keywords: PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bea7d383375794f158c8914efa571b9cb2f1c354
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error PRJ0004 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-No se puede generar la línea de comandos para la herramienta 'nombre\_herramienta'.  
+# <a name="project-build-error-prj0004"></a>Error PRJ0004 al compilar el proyecto
+No se pudo generar la línea de comandos para el archivo ' herramienta '.  
   
- Se especificaron una o más propiedades de tal forma que la sintaxis de la llamada a la herramienta ***nombre\_herramienta*** no es válida:  
+ Se especificaron una o más propiedades de tal manera que la sintaxis de la llamada a ***herramienta*** no válido:  
   
--   Es posible que haya especificado macros desconocidas o de sintaxis incorrecta.  
+-   Puede que haya especificado macros desconocidas o mal formadas.  
   
--   Puede que el equipo no tenga suficiente espacio disponible en disco.  
+-   Su equipo tenga suficiente espacio libre en disco.  
   
- Puede revisar la configuración de la herramienta en la [página de propiedades Línea de comandos](../../ide/command-line-property-pages.md).
+ Puede que desee revisar la configuración de la herramienta examinando el [página de propiedades de línea de comandos](../../ide/command-line-property-pages.md).

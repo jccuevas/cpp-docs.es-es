@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - AGENTS/concurrency::ITarget::link_source
 - AGENTS/concurrency::ITarget::unlink_source
 - AGENTS/concurrency::ITarget::unlink_sources
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITarget class
+dev_langs: C++
+helpviewer_keywords: ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4bd6b21e274431449c8fac452995dd66fc1aef1b
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 8a40b73d752a40c94a8ea47acef40ea12f2e4504
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="itarget-class"></a>ITarget (Clase)
 La clase `ITarget` es la interfaz para todos los bloques de destino. Los bloques de destinos consumen mensajes ofrecidos por los bloques `ISource`.  
@@ -81,19 +63,19 @@ class ITarget;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[propagar](#propagate)|Cuando se invalida en una clase derivada, forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
-|[Enviar](#send)|Cuando se invalida en una clase derivada, pasa sincrónicamente un mensaje al bloque de destino.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, tal como requiere el consumo de un mensaje pospuesto en un momento posterior para identificarse en su registro de vínculo de sourse.|  
+|[send](#send)|Cuando se invalida en una clase derivada, forma sincrónica, pasa un mensaje al bloque de destino.|  
+|[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, como el origen para identificarse en su registro de vínculo de sourse requiere que el consumo de un mensaje pospuesto en un momento posterior.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[link_source](#link_source)|Cuando se invalida en una clase derivada, vincula un bloque de origen especificado a este `ITarget` bloque.|  
-|[unlink_source](#unlink_source)|Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado de este `ITarget` bloquear.|  
-|[unlink_sources](#unlink_sources)|Cuando se invalida en una clase derivada, desvincula todos los bloques de origen de este `ITarget` bloquear.|  
+|[unlink_source](#unlink_source)|Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado desde este `ITarget` bloque.|  
+|[unlink_sources](#unlink_sources)|Cuando se invalida en una clase derivada, desvincula todos los bloques de origen desde este `ITarget` bloque.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
+ Para obtener más información, consulte [los bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ITarget`  
@@ -121,10 +103,10 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
   
 ### <a name="parameters"></a>Parámetros  
  `_PSource`  
- El `ISource` bloquear esto vinculado `ITarget` bloque.  
+ El `ISource` bloquear que se vinculan a esta `ITarget` bloque.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función no debe llamarse directamente en un `ITarget` bloque. Bloques deberían estar conectados entre sí mediante el `link_target` método `ISource` bloques, que invocarán el `link_source` método en el destino correspondiente.  
+ Esta función no debe llamarse directamente en un `ITarget` bloque. Bloques deberían estar conectados entre sí mediante el `link_target` método en `ISource` bloques, que invocarán el `link_source` método en el destino correspondiente.  
   
 ##  <a name="propagate"></a>propagar 
 
@@ -144,14 +126,14 @@ virtual message_status propagate(
  Un puntero al bloque de origen que proporciona el mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
+ A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el `_PMessage` o `_PSource` parámetro es `NULL`.  
   
 ##  <a name="send"></a>Enviar 
 
- Cuando se invalida en una clase derivada, pasa sincrónicamente un mensaje al bloque de destino.  
+ Cuando se invalida en una clase derivada, forma sincrónica, pasa un mensaje al bloque de destino.  
   
 ```
 virtual message_status send(
@@ -167,7 +149,7 @@ virtual message_status send(
  Un puntero al bloque de origen que proporciona el mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
+ A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el `_PMessage` o `_PSource` parámetro es `NULL`.  
@@ -178,7 +160,7 @@ virtual message_status send(
   
 ##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
- Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, tal como requiere el consumo de un mensaje pospuesto en un momento posterior para identificarse en su registro de vínculo de sourse.  
+ Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, como el origen para identificarse en su registro de vínculo de sourse requiere que el consumo de un mensaje pospuesto en un momento posterior.  
   
 ```
 virtual bool supports_anonymous_source();
@@ -189,7 +171,7 @@ virtual bool supports_anonymous_source();
   
 ##  <a name="unlink_source"></a>unlink_source 
 
- Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado de este `ITarget` bloquear.  
+ Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado desde este `ITarget` bloque.  
   
 ```
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
@@ -197,14 +179,14 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
   
 ### <a name="parameters"></a>Parámetros  
  `_PSource`  
- El `ISource` bloquear desvincula de este `ITarget` bloquear.  
+ El `ISource` bloquear se desvincula de este `ITarget` bloque.  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función no debe llamarse directamente en un `ITarget` bloque. Los bloques deberían estar desconectados usando la `unlink_target` o `unlink_targets` métodos en `ISource` bloques, que se invocarán la `unlink_source` método en el destino correspondiente.  
+ Esta función no debe llamarse directamente en un `ITarget` bloque. Los bloques deberían estar desconectados usando la `unlink_target` o `unlink_targets` métodos en `ISource` bloques, que se va a invocar la `unlink_source` método en el destino correspondiente.  
   
 ##  <a name="unlink_sources"></a>unlink_sources 
 
- Cuando se invalida en una clase derivada, desvincula todos los bloques de origen de este `ITarget` bloquear.  
+ Cuando se invalida en una clase derivada, desvincula todos los bloques de origen desde este `ITarget` bloque.  
   
 ```
 virtual void unlink_sources() = 0;
@@ -213,4 +195,3 @@ virtual void unlink_sources() = 0;
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   
  [ISource (clase)](isource-class.md)
-

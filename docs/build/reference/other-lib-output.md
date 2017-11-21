@@ -1,36 +1,34 @@
 ---
-title: "Otros resultados de LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "archivos de salida, LIB"
+title: Otros resultados de LIB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 039117b08a3985e1d29f8be50a8869156699b415
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Otros resultados de LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En el modo predeterminado puede utilizar la opción \/LIST para mostrar información acerca de la biblioteca resultante.  Puede redirigir estos resultados a un archivo.  
+# <a name="other-lib-output"></a>Otros resultados de LIB
+En el modo predeterminado, puede utilizar la opción /LIST para mostrar información acerca de la biblioteca resultante. Puede redirigir esta salida a un archivo.  
   
- LIB muestra un mensaje con información de copyright y de versión, y repite la ejecución de los archivos de comandos, a menos que se utilice la opción \/NOLOGO.  
+ LIB muestra un mensaje de copyright y la versión y vuelve a archivos de comandos, a menos que se utiliza la opción/nologo.  
   
- Cuando escriba `lib` sin más entradas, LIB mostrará una instrucción de uso en la que se resumen las distintas opciones.  
+ Cuando escriba `lib` con ninguna otra entrada, LIB mostrará una instrucción de uso que se resume sus opciones.  
   
- Los mensajes de error y de advertencia emitidos por LIB tienen la forma LNK*nnnn*.  Las herramientas LINK, DUMPBIN y EDITBIN también utilizan este intervalo de errores.  Para obtener ayuda, seleccione el error en la Ventana de salida y presione F1.  
+ Error y advertencia mensajes emitidos por LIB tienen la forma LNK*nnnn*. Las herramientas LINK, DUMPBIN y EDITBIN también utilizan este intervalo de errores. Hay disponible Ayuda seleccionando el error en la ventana de salida y presione F1.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Información general sobre LIB](../../build/reference/overview-of-lib.md)

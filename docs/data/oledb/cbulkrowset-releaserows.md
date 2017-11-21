@@ -1,39 +1,38 @@
 ---
-title: "CBulkRowset::ReleaseRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReleaseRows"
-  - "ATL.CBulkRowset<TAccessor>.ReleaseRows"
-  - "ATL::CBulkRowset<TAccessor>::ReleaseRows"
-  - "ATL.CBulkRowset.ReleaseRows"
-  - "CBulkRowset<TAccessor>::ReleaseRows"
-  - "ATL::CBulkRowset::ReleaseRows"
-  - "CBulkRowset::ReleaseRows"
-  - "CBulkRowset.ReleaseRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseRows (método)"
+title: 'CBulkRowset:: ReleaseRows | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReleaseRows
+- ATL.CBulkRowset<TAccessor>.ReleaseRows
+- ATL::CBulkRowset<TAccessor>::ReleaseRows
+- ATL.CBulkRowset.ReleaseRows
+- CBulkRowset<TAccessor>::ReleaseRows
+- ATL::CBulkRowset::ReleaseRows
+- CBulkRowset::ReleaseRows
+- CBulkRowset.ReleaseRows
+dev_langs: C++
+helpviewer_keywords: ReleaseRows method
 ms.assetid: ba48aff3-0887-47ba-aed7-7ff28fa1c4a8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c26d8ccea242b5afceaca5a1216f4194c9590d41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CBulkRowset::ReleaseRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Llamadas [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) para disminuir el recuento de referencias para todas las filas recuperadas actualmente de conjuntos de filas masivos.  
+# <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
+Llamadas [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,12 +40,12 @@ HRESULT ReleaseRows( ) throw( );
   
 ```  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CBulkRowset \(Clase\)](../../data/oledb/cbulkrowset-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CBulkRowset (clase)](../../data/oledb/cbulkrowset-class.md)   
  [CBulkRowset::AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)

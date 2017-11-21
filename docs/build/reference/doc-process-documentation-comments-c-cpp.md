@@ -1,72 +1,69 @@
 ---
-title: "/doc (Procesar comentarios de documentaci&#243;n) (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles"
-  - "/doc"
-  - "VC.Project.VCCLCompilerTool.XMLDocumentationFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/doc (opción del compilador) [C++]"
-  - "comentarios, código C++"
-  - "-doc (opción del compilador) [C++]"
-  - "documentación XML, comentarios de archivos de código fuente"
+title: "-/doc (procesar comentarios de documentación) (C/C ++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
+- /doc
+- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
+dev_langs: C++
+helpviewer_keywords:
+- /doc compiler option [C++]
+- comments, C++ code
+- XML documentation, comments in source files
+- -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 083eb8742308f986e3261711039bbd29a914d97e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /doc (Procesar comentarios de documentaci&#243;n) (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Provoca que el compilador procese comentarios de documentación en archivos de código fuente, y la creación de un archivo .xdc por cada archivo de código fuente que tenga comentarios de documentación.  
+# <a name="doc-process-documentation-comments-cc"></a>/doc (Procesar comentarios de documentación) (C/C++)
+Hace que el compilador para procesar los comentarios de documentación en archivos de código fuente y para crear un archivo .xdc por cada archivo de código fuente que tenga comentarios de documentación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /doc[name]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `name`  
- El nombre del archivo .xdc que creará el compilador.  Sólo es válido cuando se pasa un archivo .cpp en la compilación.  
+ El nombre del archivo .xdc que creará el compilador. Solo es válido cuando se pasa un archivo .cpp en la compilación.  
   
-## Comentarios  
- Los archivos .xdc se procesan en un archivo .xml con xdcmake.exe.  Para obtener más información, vea [XDCMake \(Referencia\)](../../ide/xdcmake-reference.md).  
+## <a name="remarks"></a>Comentarios  
+ Los archivos .xdc se procesan en un archivo .xml con xdcmake.exe. Para obtener más información, consulte [XDCMake Reference](../../ide/xdcmake-reference.md).  
   
- Puede agregar los comentarios de documentación a sus archivos de código fuente.  Para obtener más información, vea [Etiquetas recomendadas para comentarios de documentación](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
+ Puede agregar comentarios de documentación a los archivos de código fuente. Para obtener más información, consulte [etiquetas recomendadas para comentarios de documentación](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
   
- **\/doc** no es compatible con **\/clr:oldSyntax**.  Vea [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) para obtener más información.  
+ Para utilizar el archivo .xml generado con IntelliSense, realizar el nombre de archivo del archivo .xml igual que el ensamblado que desea admitir y ponga el archivo .xml se encuentra en el mismo directorio que el ensamblado. Cuando se hace referencia al ensamblado en el proyecto de Visual Studio, también se encuentra el archivo XML. Para obtener más información, consulte [utilizar IntelliSense](/visualstudio/ide/using-intellisense) y [proporcionar comentarios del código XML](/visualstudio/ide/supplying-xml-code-comments).  
   
- Para utilizar el archivo .xml generado con IntelliSense, haga coincidir el nombre del archivo .xml con el del ensamblado que desea admitir y ponga el archivo .xml en el mismo directorio que el ensamblado.  Cuando se haga referencia al ensamblado en el proyecto de Visual Studio, también se encontrará el archivo .xml.  Para obtener más información, vea [Utilizar IntelliSense](../Topic/Using%20IntelliSense.md) y [Proporcionar comentarios del código XML](../Topic/Supplying%20XML%20Code%20Comments.md).  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+2.  Expanda el **propiedades de configuración** nodo.  
   
-2.  Expanda el nodo **Propiedades de configuración**.  
+3.  Expanda el **C/C++** nodo.  
   
-3.  Expanda el nodo **C\/C\+\+**.  
+4.  Seleccione el **archivos de salida** página de propiedades.  
   
-4.  Seleccione la página de propiedades **Archivos de resultados**.  
+5.  Modificar el **generar archivos de documentación XML** propiedad.  
   
-5.  Modifique la propiedad **Generar archivos de documentación XML**.  
-  
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

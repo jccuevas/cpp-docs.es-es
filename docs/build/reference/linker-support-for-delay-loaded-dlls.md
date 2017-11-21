@@ -1,44 +1,43 @@
 ---
-title: "Compatibilidad del vinculador con las DLL de carga retrasada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "carga retrasada de archivos DLL, compatibilidad con el vinculador"
+title: Compatibilidad del vinculador con las DLL de carga de retraso | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Compatibilidad del vinculador con las DLL de carga retrasada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El vinculador de Visual C\+\+ admite actualmente la carga retrasada de las DLL.  Esto evita la necesidad de utilizar las funciones **LoadLibrary** y **GetProcAddress** de [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] para implementar la carga retrasada de las DLL.  
+# <a name="linker-support-for-delay-loaded-dlls"></a>Compatibilidad del vinculador con las DLL de carga retrasada
+El vinculador de Visual C++ ahora es compatible con la carga retrasada de archivos DLL. Esto evita la necesidad de utilizar las funciones de Windows SDK **LoadLibrary** y **GetProcAddress** para implementar la carga retrasada de DLL.  
   
- Antes de Visual C\+\+ 6.0, la única forma de cargar una DLL en tiempo de ejecución era usando **LoadLibrary**y**GetProcAddress**; el sistema operativo cargaba la DLL una vez cargado el ejecutable o la DLL que lo utilizaba.  
+ Antes de Visual C++ 6.0, la única manera de cargar un archivo DLL en tiempo de ejecución era mediante **LoadLibrary** y **GetProcAddress**; el sistema operativo carga el archivo DLL cuando el archivo ejecutable o DLL mediante archivos que se cargó.  
   
- A partir de Visual C\+\+ 6.0, al vincular estáticamente con una DLL, el vinculador proporciona opciones para retrasar la carga de la DLL hasta que el programa llame a una función dentro de esa DLL.  
+ A partir de Visual C++ 6.0, al vincular estáticamente con un archivo DLL, el vinculador proporciona opciones para retrasar cargar el archivo DLL hasta que el programa llama a una función en ese archivo DLL.  
   
- Una aplicación puede retrasar la carga de una DLL usando la opción [\/DELAYLOAD \(Importación de carga retrasada\)](../../build/reference/delayload-delay-load-import.md) del vinculador con una función auxiliar \(implementación predeterminada proporcionada por Visual C\+\+\).  La función auxiliar cargará la DLL en tiempo de ejecución llamando a **LoadLibrary** y **GetProcAddress**.  
+ Una aplicación puede retrasar la carga de un archivo DLL mediante la [/DELAYLOAD (importación de carga retrasada)](../../build/reference/delayload-delay-load-import.md) opción del vinculador con una función auxiliar (implementación predeterminada proporcionada por Visual C++). La función auxiliar cargará la DLL en tiempo de ejecución mediante una llamada a **LoadLibrary** y **GetProcAddress** para usted.  
   
- Se debe considerar la carga retrasada de una DLL si:  
+ Debe considerar la carga retrasada de una DLL si:  
   
--   El programa no puede llamar a una función dentro de la DLL.  
+-   El programa no puede llamar a una función en el archivo DLL.  
   
--   Es posible que no se llame a una función de la DLL hasta bien avanzada la ejecución del programa.  
+-   No se puede llamar una función en el archivo DLL hasta más adelante en la ejecución del programa.  
   
- La carga retrasada de una DLL se puede especificar durante la compilación de un proyecto .EXE o .DLL.  Un proyecto DLL que retrasa la carga de una o varias DLL no debe llamar a un punto de entrada de carga retrasada en Dllmain.  
+ La carga retrasada de una DLL se puede especificar durante la generación de una. EXE o. Proyecto DLL. UN ARCHIVO. Proyecto DLL que retrasa la carga de uno o más archivos DLL no debería propio llamar a un punto de entrada de carga retrasada en Dllmain.  
   
- Los temas siguientes describen la carga retrasada de las DLL:  
+ Los temas siguientes describen los archivos DLL de carga retrasada:  
   
 -   [Especificar archivos DLL para carga retrasada](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -54,10 +53,10 @@ El vinculador de Visual C\+\+ admite actualmente la carga retrasada de las DLL. 
   
 -   [Restricciones de las DLL de carga retrasada](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [Descripción de la función auxiliar](http://msdn.microsoft.com/es-es/6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [Descripción de la función auxiliar](understanding-the-helper-function.md)  
   
 -   [Crear una función auxiliar personalizada](../../build/reference/developing-your-own-helper-function.md)  
   
-## Vea también  
- [Archivos DLL en Visual C\+\+](../../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Archivos DLL en Visual C++](../../build/dlls-in-visual-cpp.md)   
  [Vinculación](../../build/reference/linking.md)

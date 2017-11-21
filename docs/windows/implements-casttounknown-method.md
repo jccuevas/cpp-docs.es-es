@@ -1,47 +1,45 @@
 ---
-title: "Implements::CastToUnknown (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown (método)"
+title: "Implements:: casttounknown (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: ca3324f7-4136-406b-8698-7389f4f3d3c7
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 942b816af70a8c47c9168f55185d6817f69ccd46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Implements::CastToUnknown (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtiene un puntero a la interfaz subyacente de IUnknown.  
+# <a name="implementscasttounknown-method"></a>Implements::CastToUnknown (Método)
+Obtiene un puntero a la interfaz IUnknown subyacente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
-## Valor devuelto  
- Esta operación se realiza correctamente y siempre devuelve el puntero de IUnknown.  
+## <a name="return-value"></a>Valor devuelto  
+ Esta operación siempre se realiza correctamente y devuelve el puntero IUnknown.  
   
-## Comentarios  
- Función interna de la aplicación auxiliar.  
+## <a name="remarks"></a>Comentarios  
+ Función auxiliar interno.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Implements \(Estructura\)](../Topic/Implements%20Structure.md)
+## <a name="see-also"></a>Vea también  
+ [Implements (estructura)](../windows/implements-structure.md)

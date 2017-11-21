@@ -1,29 +1,27 @@
 ---
-title: "Error irrecuperable del compilador de recursos RC1208 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1208"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1208"
+title: Error irrecuperable del compilador de recursos RC1208 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1208
+dev_langs: C++
+helpviewer_keywords: RC1208
 ms.assetid: 7dacc4ec-3ebd-49b3-ba4c-1a2982bac720
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 48aeb7b200b4c3cc58794c546932102d6409e1ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error irrecuperable del compilador de recursos RC1208
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-el archivo de entrada tiene la extensión .RES  
+# <a name="resource-compiler-fatal-error-rc1208"></a>Error irrecuperable del compilador de recursos RC1208
+tiene el archivo de entrada. Extensión de RES  
   
- La extensión .RES se utiliza para los resultados del compilador de recursos.  La extensión .RC debería utilizarse para scripts del compilador de recursos.
+ El archivo. Res se utilizan para la salida del compilador de recursos. El archivo. Extensión RC debe utilizarse para las secuencias de comandos del compilador de recursos.

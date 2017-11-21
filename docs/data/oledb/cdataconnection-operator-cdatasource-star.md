@@ -1,37 +1,36 @@
 ---
-title: "CDataConnection::operator CDataSource* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource*"
-  - "CDataConnection::operatorCDataSource*"
-  - "CDataConnection.operatorCDataSource*"
-  - "operatorCDataSource*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataSource* (operador)"
-  - "operator * (CDataSource)"
+title: 'CDataConnection:: operator CDataSource * | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource*
+- CDataConnection::operatorCDataSource*
+- CDataConnection.operatorCDataSource*
+- operatorCDataSource*
+dev_langs: C++
+helpviewer_keywords:
+- CDataSource* operator
+- operator * (CDataSource)
 ms.assetid: 9118e324-e68d-45c5-a791-03f041d420ed
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3010f0774224cd02a35aeaa185bca32f370d5ba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::operator CDataSource*
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve un puntero al objeto contenido de `CDataSource` .  
+# <a name="cdataconnectionoperator-cdatasource"></a>CDataConnection::operator CDataSource*
+Devuelve un puntero para el objeto contenido `CDataSource` objeto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,14 +38,14 @@ operator const CDataSource*() throw( );
   
 ```  
   
-## Comentarios  
- Este operador devuelve un puntero al objeto contenido de `CDataSource` , permitiendo pasar un objeto de `CDataConnection` donde se espera un puntero de `CDataSource` .  
+## <a name="remarks"></a>Comentarios  
+ Este operador devuelve un puntero para el objeto contenido `CDataSource` objeto, lo que le permite pasar un `CDataConnection` objeto donde un `CDataSource` puntero se espera.  
   
- Vea [operador CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) para obtener un ejemplo de uso.  
+ Vea [operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) para obtener un ejemplo de uso.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDataConnection \(Clase\)](../../data/oledb/cdataconnection-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CDataConnection (clase)](../../data/oledb/cdataconnection-class.md)   
  [CDataConnection::operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)

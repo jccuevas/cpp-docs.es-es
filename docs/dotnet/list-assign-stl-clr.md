@@ -1,32 +1,30 @@
 ---
-title: "list::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign (miembro) [STL/CLR]"
+title: 'List:: assign (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed13bb97aeceb0918d7b92405c9742a6f9710dc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# list::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listassign-stlclr"></a>list::assign (STL/CLR)
 Reemplaza todos los elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +33,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  count  
- Número de elementos que se va a insertar.  
+ Número de elementos que se van a insertar.  
   
  first  
- Inicio del intervalo que se va a insertar.  
+ Comienzo del intervalo que se va a insertar.  
   
  last  
  Final del intervalo que se va a insertar.  
   
- right  
- Enumeración que se va a insertar.  
+ derecha  
+ Enumeración para insertar.  
   
- val  
+ Val  
  Valor del elemento que se va a insertar.  
   
-## Comentarios  
- La primera función miembro reemplaza la secuencia controlada con una repetición de los elementos de `count` de valor `val`.  Se utiliza para rellenar el contenedor con todos los elementos que tiene el mismo valor.  
+## <a name="remarks"></a>Comentarios  
+ La primera función miembro reemplaza la secuencia controlada por una repetición de `count` elementos del valor `val`. Usarlo para rellenar el contenedor con elementos de todos los que tengan el mismo valor.  
   
- Si `InIt` es un tipo entero, la segunda función miembro se comporta igual que `assign((size_type)``first``, (value_type)``last``)`.  Si no, reemplace la secuencia controlada con la secuencia `[``first``,` `last``)`.  Se utiliza para hacer la secuencia controlada una copia otra secuencia.  
+ Si `InIt` es de tipo entero, la segunda función miembro comporta igual que `assign((size_type)first, (value_type)last)`. En caso contrario, reemplaza la secuencia controlada por la secuencia [`first`, `last`). Usarlo para realizar el controlado de secuencia de una copia otra secuencia.  
   
- La tercera función miembro reemplaza la secuencia controlada con la secuencia indicada por el enumerador `right`.  Se utiliza para hacer la secuencia controlada una copia de una secuencia descrita por un enumerador.  
+ La tercera función miembro reemplaza la secuencia controlada por la secuencia designada por el enumerador `right`. Usa para realizar una copia de una secuencia descrita por un enumerador de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_assign.cpp   
@@ -97,14 +95,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **una b**  
- **a b c**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

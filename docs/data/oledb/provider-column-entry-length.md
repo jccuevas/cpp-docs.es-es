@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH (macro)"
+title: PROVIDER_COLUMN_ENTRY_LENGTH | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_LENGTH macro
 ms.assetid: b4a67246-c049-4622-bb65-242cc8cae4be
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a2d976dd079eb0100d4eb7cf56ef7c9dcfd0175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Representa una columna concreta admitida por el proveedor.  
+# <a name="providercolumnentrylength"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+Representa una columna específica admitida por el proveedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,30 +33,30 @@ name
 , ordinal, size, member )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *name*  
- \[in\] El nombre de columna.  
+ [in] El nombre de columna.  
   
  `ordinal`  
- \[in\] El número de columnas.  A menos que la columna es una columna de marcador, el número de columnas no debe ser 0.  
+ [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.  
   
  `size`  
- \[in\] El tamaño de la columna en bytes.  
+ [in] El tamaño de columna en bytes.  
   
  `member`  
- \[in\] La variable miembro en `dataClass` que almacena los datos de columna.  
+ [in] La variable de miembro en `dataClass` que almacena los datos de columna.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Permite especificar el tamaño de columna.  
   
-## Ejemplo  
- Vea [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

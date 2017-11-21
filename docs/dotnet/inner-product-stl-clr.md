@@ -1,32 +1,30 @@
 ---
-title: "inner_product (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inner_product"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inner_product (función) [STL/CLR]"
+title: inner_product (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inner_product
+dev_langs: C++
+helpviewer_keywords: inner_product function [STL/CLR]
 ms.assetid: 97d7a507-7494-4216-aedf-0546ed0edb3f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d10b4b3b62c135e110f63acb555691c256450491
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# inner_product (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Calcula la suma del producto mejor elemento de dos intervalos y la agrega a un valor inicial especificado o calcula el resultado de un procedimiento general donde la suma y operaciones binarias del producto se reemplazan con otras operaciones binarias especificadas.  
+# <a name="innerproduct-stlclr"></a>inner_product (STL/CLR)
+Calcula la suma del producto de elementos de dos intervalos y la agrega a un valor inicial especificado, o calcula el resultado de un procedimiento general donde las operaciones binarias de suma y de producto se reemplazan por otras operaciones binarias especificadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt1, class _InIt2, class _Ty> inline  
@@ -38,13 +36,13 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
         _Ty _Val, _Fn21 _Func1, _Fn22 _Func2);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función numérica `inner_product`STL.  Para obtener más información, vea [inner\_product](../Topic/inner_product.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función numérica de la biblioteca estándar de C++ `inner_product`. Para obtener más información, consulte [inner_product](../standard-library/numeric-functions.md#inner_product).  
   
-## Requisitos  
- cliext \<de**Encabezado:** \/numérico\>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/numeric >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

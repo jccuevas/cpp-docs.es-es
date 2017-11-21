@@ -1,69 +1,68 @@
 ---
-title: "__movsw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsw (instrucción)"
-  - "rep movsw (instrucción)"
-  - "__movsw (función intrínseca)"
+title: __movsw | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsw
+dev_langs: C++
+helpviewer_keywords:
+- movsw instruction
+- rep movsw instruction
+- __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23c2a1674795701b13b4cd28daf6c21160e90c2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __movsw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="movsw"></a>__movsw
 **Específicos de Microsoft**  
   
- Genera una instrucción de la cadena de movimiento \(`rep movsw`\).  
+ Genera una cadena mover (`rep movsw`) instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __movsw(   
-   unsigned short* Dest,   
-   unsigned short* Source,   
-   size_t Count   
+void __movsw(   
+   unsigned short* Dest,   
+   unsigned short* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parámetros  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parámetros  
+ [out] `Dest`  
  El destino de la operación.  
   
- \[in\] `Source`  
+ [in] `Source`  
  El origen de la operación.  
   
- \[in\] `Count`  
- El número de palabras a copiar.  
+ [in] `Count`  
+ El número de palabras que se va a copiar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- El resultado es que las primeras palabras de `Count` designadas por a `Source` se copian a la cadena de `Dest` .  
+## <a name="remarks"></a>Comentarios  
+ El resultado es que la primera `Count` palabras que señala `Source` se copian en el `Dest` cadena.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // movsw.cpp  
@@ -85,8 +84,11 @@ int main()
 }  
 ```  
   
-  **0 1 2 3 4 5 6 7 8 9**    
-## Específico de Microsoft de FINAL  
+```Output  
+0 1 2 3 4 5 6 7 8 9   
+```  
   
-## Vea también  
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

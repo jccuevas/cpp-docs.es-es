@@ -1,35 +1,34 @@
 ---
-title: "C&#243;mo: Girar im&#225;genes con .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI+ [C++], girar imágenes"
-  - "gráficos [C++], girar imágenes"
+title: "Cómo: girar imágenes con .NET Framework | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++], rotating images
+- graphics [C++], rotating images
 ms.assetid: e32104d5-87d0-47a9-a22f-9bc835b7e8d7
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5b337186f67758d56dbc0bae06b6886f43f7435
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# C&#243;mo: Girar im&#225;genes con .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el ejemplo de código siguiente se muestra el uso de la clase <xref:System.Drawing.Image?displayProperty=fullName> para cargar una imagen del disco, girarla 90 grados y guardarla como un archivo .jpg nuevo.  
+# <a name="how-to-rotate-images-with-the-net-framework"></a>Cómo: Girar imágenes con .NET Framework
+En el ejemplo de código siguiente se muestra el uso de la <xref:System.Drawing.Image?displayProperty=fullName> clase para cargar una imagen desde el disco, girar 90 grados y guardarla como un archivo .jpg nuevo.  
   
 > [!NOTE]
->  GDI\+ se incluye con Windows XP y está disponible como un componente redistribuible con Windows NT 4.0 SP 6, Windows 2000, Windows 98 y Windows Millennium.  Para descargar el último redistribuible, vea [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  Para obtener más información, vea [GDI\+](_gdiplus_GDI_start_cpp).  
+>  GDI + se incluye con Windows XP y está disponible como componente redistribuible para Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 y Windows Millennium Edition. Para descargar el último redistribuible, vea [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232). 
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 #using <system.drawing.dll>  
@@ -46,5 +45,5 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

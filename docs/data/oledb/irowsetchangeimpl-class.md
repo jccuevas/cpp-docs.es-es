@@ -1,36 +1,36 @@
 ---
-title: "IRowsetChangeImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetChangeImpl"
-  - "IRowsetChangeImpl"
-  - "ATL.IRowsetChangeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetChangeImpl (clase)"
-  - "proveedores, actualizables"
-  - "proveedores actualizables, actualización inmediata"
+title: IRowsetChangeImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetChangeImpl
+- IRowsetChangeImpl
+- ATL.IRowsetChangeImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- updatable providers, immediate update
+- IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dc31fc66f28f6fd9a8d9e9bc7122bf2aa7b2b73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetChangeImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La implementación de las plantillas OLE DB de la interfaz de [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) en la especificación OLE DB.  
+# <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl (Clase)
+La implementación de plantillas OLE DB de la [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfaz en la especificación de OLE DB.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -43,7 +43,7 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Una clase derivada de `IRowsetChangeImpl`.  
   
@@ -57,43 +57,43 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
  La unidad de almacenamiento para el identificador de fila.  
   
  `MapClass`  
- La unidad de almacenamiento para los identificadores de fila retenidos por el proveedor.  
+ La unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos de interfaz \(utilizados con IRowsetChange\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>Métodos de interfaz (usados con IRowsetChange)  
   
 |||  
 |-|-|  
-|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Elimina filas del conjunto de filas.|  
+|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Elimina las filas del conjunto de filas.|  
 |[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Inserta una fila en el conjunto de filas.|  
-|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Establece valores de datos en una o más columnas.|  
+|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Establece los valores de datos en una o varias columnas.|  
   
-### Método de implementación \(devolución\)  
+### <a name="implementation-method-callback"></a>Método de implementación (devolución de llamada)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Overidden por el proveedor para confirmar datos al almacén.|  
+|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Se reemplaza por proveedor para confirmar datos en su almacén.|  
   
-## Comentarios  
- Esta interfaz es responsable de operaciones de escritura inmediatas a un almacén de datos. “Inmediato” significa que cuando el usuario final \(la persona que utiliza al consumidor\) realiza los cambios, esos cambios inmediatamente se transmitidos al almacén de datos \(y no se puede deshacer\).  
+## <a name="remarks"></a>Comentarios  
+ Esta interfaz es responsable de operaciones de escritura inmediato en un almacén de datos. Almacena "Inmediata" significa que, cuando el usuario final (es decir, la persona con el consumidor) realiza los cambios, esos cambios se transfieren inmediatamente a los datos (y no se puede deshacer).  
   
- `IRowsetChangeImpl` implementa la interfaz OLE DB `IRowsetChange` , que permite actualizar de valores de columnas en las filas existentes, eliminar filas, e insertar nuevas filas.  
+ `IRowsetChangeImpl`implementa OLE DB `IRowsetChange` interfaz, lo que permite la actualización de los valores de columnas en las filas existentes, eliminar filas e insertar nuevas filas.  
   
- La implementación de las plantillas OLE DB admite todos los métodos base \(`SetData`, `InsertRow`, y `DeleteRows`\).  
+ La implementación de plantillas OLE DB admite todos los métodos base (`SetData`, `InsertRow`, y `DeleteRows`).  
   
 > [!IMPORTANT]
->  Se recomienda leer la documentación siguiente BEFORE que intentar implementar el proveedor:  
+>  Se recomienda encarecidamente que lea la siguiente documentación antes de intentar implementar el proveedor:  
   
 -   [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Chapter 6 de *OLE DB Programmer's Reference*  
+-   Capítulo 6 de la *referencia del programador OLE DB*  
   
--   También vea cómo la clase de `RUpdateRowset` se utiliza en el ejemplo UpdatePV  
+-   Consulte también cómo `RUpdateRowset` clase se utiliza en el ejemplo UpdatePV  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

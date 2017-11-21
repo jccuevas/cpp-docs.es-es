@@ -1,29 +1,27 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4200 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4200"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4200"
+title: Las herramientas del vinculador LNK4200 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4200
+dev_langs: C++
+helpviewer_keywords: LNK4200
 ms.assetid: 0d335e69-8766-455b-beb5-a3ba6247274e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f3adc5cb26b505a3d6eff0bee7ac4569d97695d7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4200
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-información de número de línea dañada en archivo objeto; se ha omitido  
+# <a name="linker-tools-warning-lnk4200"></a>Advertencia de las herramientas del vinculador LNK4200
+información del número de línea dañada en el archivo de objeto; pasa por alto  
   
- La información de número de línea del archivo objeto está dañada.  Recompile.
+ La información del número de línea en el archivo objeto está dañada. Recompile.

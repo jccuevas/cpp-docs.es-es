@@ -1,34 +1,34 @@
 ---
-title: "Debugging and Exceptions Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "debugging and exceptions classes"
+title: "Clases de excepciones (ATL) y depuración | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: debugging and exceptions classes
 ms.assetid: d42d7649-9721-4a1a-8b38-d983a649fdb9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92ffe32890df1b9ca68f638833c88fb2afe4bf98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Debugging and Exceptions Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="debugging-and-exceptions-classes"></a>Clases de excepciones y depuración
+Estas clases proporcionan compatibilidad para control de excepciones y depuración.  
+  
+-   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) esta clase proporciona compatibilidad para interfaces de depuración.  
+  
+-   [CAtlException](../atl/reference/catlexception-class.md) esta clase define una excepción de ATL.  
+  
+## <a name="see-also"></a>Vea también  
+ [Información general de clases](../atl/atl-class-overview.md)   
+ [Funciones globales de notificación de errores y depuración](../atl/reference/debugging-and-error-reporting-global-functions.md)   
+ [Macros de depuración e informe de errores](../atl/reference/debugging-and-error-reporting-macros.md)
 
-Estas clases proporcionan compatibilidad con el control de excepciones y depuración.  
-  
--   La clase de[CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) This proporciona compatibilidad para la depuración interfaces.  
-  
--   La clase de[CAtlException](../atl/reference/catlexception-class.md) This define una excepción ATL.  
-  
-## Vea también  
- [Class Overview](../atl/atl-class-overview.md)   
- [Debugging and Error Reporting Global Functions](../atl/reference/debugging-and-error-reporting-global-functions.md)   
- [Debugging and Error Reporting Macros](../atl/reference/debugging-and-error-reporting-macros.md)

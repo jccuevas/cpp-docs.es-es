@@ -1,30 +1,29 @@
 ---
-title: "RuntimeClassBaseT (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT"
-dev_langs: 
-  - "C++"
+title: RuntimeClassBaseT (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT
+dev_langs: C++
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd2f654a27792336488d950a72cedfa4b3ed6527
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClassBaseT (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT (Estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -33,23 +32,23 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `RuntimeClassTypeT`  
- Un campo de marcas que especificar uno o varios enumeradores de [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) .  
+ Un campo de indicadores que especifica uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) los enumeradores.  
   
-## Comentarios  
- Proporciona métodos auxiliares para operaciones y obtener de `QueryInterface` id. de la interfaz.  
+## <a name="remarks"></a>Comentarios  
+ Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener identificadores de interfaz.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `RuntimeClassBaseT`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Reference \(Windows Runtime Library\)](http://msdn.microsoft.com/es-es/00000000-0000-0000-0000-000000000000)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

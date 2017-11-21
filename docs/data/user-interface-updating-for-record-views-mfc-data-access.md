@@ -1,39 +1,39 @@
 ---
-title: "Actualizaci&#243;n de la interfaz de usuario para vistas de registros (acceso a datos MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "menús, actualizar cuando el contexto cambia"
-  - "vistas de registros, interfaz de usuario"
-  - "interfaces de usuario, actualizar"
+title: "Actualización de la interfaz de usuario para vistas de registros (acceso a datos MFC) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- user interfaces, updating
+- menus, updating as context changes
+- record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aab6ea73fc5726771877640268c89edea4d0745a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Actualizaci&#243;n de la interfaz de usuario para vistas de registros (acceso a datos MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`CRecordView` y `CDaoRecordView` también proporcionan controladores de actualización de la interfaz de usuario predeterminados para los comandos de navegación.  Estos controladores automatizan la habilitación y la deshabilitación de los objetos de la interfaz de usuario, como los elementos de menú y los botones de la barra de herramientas.  El asistente para aplicaciones proporciona menús estándar y, si elige la opción **Barra de herramientas acoplable** un conjunto de botones de la barra de herramientas para los comandos.  Si crea una clase de vista de registros con `CRecordView`, es posible que le interese agregar a la aplicación objetos de interfaz de usuario similares.  
+# <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Actualización de la interfaz de usuario para vistas de registros (acceso a datos MFC)
+`CRecordView`proporciona controladores de actualización de la interfaz de usuario de valor predeterminado para los comandos de navegación. Estos controladores automatizan la habilitación y la deshabilitación de los objetos de la interfaz de usuario, como los elementos de menú y los botones de la barra de herramientas. El Asistente para aplicaciones proporciona menús estándar y, si elige la **barra de herramientas acoplable** opción, un conjunto de botones de barra de herramientas para los comandos. Si crea una clase de vista de registros con `CRecordView`, es posible que le interese agregar a la aplicación objetos de interfaz de usuario similares.  
   
-### Cómo crear recursos de menú con el editor de menús  
+### <a name="to-create-menu-resources-with-the-menu-editor"></a>Cómo crear recursos de menú con el editor de menús  
   
-1.  Consulte la información sobre el uso del [editor de menús](../mfc/menu-editor.md) para crear su propio menú con los mismos cuatro comandos.  
+1.  Que hace referencia a la información sobre el uso de la [editor de menús](../windows/menu-editor.md), crear su propio menú con los mismos cuatro comandos.  
   
-#### Cómo crear botones de barra de herramientas con el editor de gráficos  
+#### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Cómo crear botones de barra de herramientas con el editor de gráficos  
   
-1.  Consulte la información sobre el uso del [editor de la barra de herramientas](../mfc/toolbar-editor.md) para editar el recurso de la barra de herramientas y agregar botones de barra de herramientas a los comandos de exploración de registros.  
+1.  Que hace referencia a la información sobre el uso de la [editor de la barra de herramientas](../windows/toolbar-editor.md), edite el recurso de barra de herramientas para agregar botones de barra de herramientas para los comandos de exploración de registros.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)   
  [Utilizar una vista de registros](../data/using-a-record-view-mfc-data-access.md)

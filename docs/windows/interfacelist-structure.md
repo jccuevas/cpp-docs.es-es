@@ -1,32 +1,30 @@
 ---
-title: "InterfaceList (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceList (estructura)"
+title: InterfaceList (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceList
+dev_langs: C++
+helpviewer_keywords: InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a9c7c14dc24bf76444b62adb0870b85fac449e67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceList (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="interfacelist-structure"></a>InterfaceList (estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -36,32 +34,32 @@ template <
 struct InterfaceList;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- Un nombre de interfaz; la primera interfaz en la lista recursiva.  
+ Un nombre de la interfaz; la primera interfaz en la lista recursiva.  
   
  `U`  
- Un nombre de interfaz; las interfaces restantes en la lista recursiva.  
+ Un nombre de la interfaz; las interfaces restantes en la lista recursiva.  
   
-## Comentarios  
- Se utiliza para crear una lista recursivo de interfaces.  
+## <a name="remarks"></a>Comentarios  
+ Se utiliza para crear una lista recursiva de interfaces.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Typedefs públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`FirstT`|Sinónimo del parámetro `T`de la plantilla.|  
-|`RestT`|Sinónimo del parámetro `U`de la plantilla.|  
+|`FirstT`|Sinónimo de parámetro de plantilla `T`.|  
+|`RestT`|Sinónimo de parámetro de plantilla `U`.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `InterfaceList`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,17 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5f81e7c2e3f07074f451446d9ccc1796e1c393bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view (Clase)
 Proporciona acceso de writeonly a una textura.  
@@ -81,7 +64,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[writeonly_texture_view (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
+|[writeonly_texture_view está Constructor](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
 |[~ writeonly_texture_view (destructor)](#ctor)|Destruye el objeto `writeonly_texture_view`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -94,7 +77,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto a ésta.|  
+|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto a este.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -110,9 +93,9 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_graphics.h  
   
- **Namespace:** Graphics  
+ **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ writeonly_texture_view 
+##  <a name="dtor"></a>~ writeonly_texture_view está 
 
  Destruye el objeto `writeonly_texture_view`.  
   
@@ -122,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a>operador = 
 
- Copia especificado `writeonly_texture_view` objeto a ésta.  
+ Copia especificado `writeonly_texture_view` objeto a este.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -161,7 +144,7 @@ void set(
  `value`  
  Nuevo valor del elemento.  
   
-##  <a name="ctor"></a>writeonly_texture_view 
+##  <a name="ctor"></a>writeonly_texture_view está 
 
  Inicializa una nueva instancia de la clase `writeonly_texture_view`.  
   
@@ -188,4 +171,3 @@ writeonly_texture_view(
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

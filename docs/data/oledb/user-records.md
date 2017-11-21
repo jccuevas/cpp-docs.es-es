@@ -1,43 +1,42 @@
 ---
-title: "Registros de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "descriptores de acceso [C++], conjuntos de filas"
-  - "descriptores de acceso [C++], static"
-  - "BEGIN_ACCESSOR (macro), ejemplo"
-  - "BEGIN_ACCESSOR_MAP (macro)"
-  - "CAccessor (clase), ejemplo"
-  - "COLUMN_ENTRY (macro)"
-  - "COLUMN_ENTRY_MAP (macro)"
-  - "plantillas de consumidor OLE DB, registros de usuario"
-  - "conjuntos de filas [C++], descriptores de acceso"
-  - "registros de usuario, plantillas de consumidor OLE DB"
+title: Registros de usuario | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_MAP
+dev_langs: C++
+helpviewer_keywords:
+- rowsets [C++], accessors
+- COLUMN_ENTRY macro
+- COLUMN_ENTRY_MAP macro
+- user records, OLE DB consumer templates
+- OLE DB consumer templates, user records
+- CAccessor class, example
+- BEGIN_ACCESSOR_MAP macro
+- accessors [C++], rowsets
+- accessors [C++], static
+- BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9acb0a85ce469351ce1dcd34707f2125815f6c92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Registros de usuario
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para usar un descriptor de acceso estático, es decir, derivado de **CAccessor\)**, el consumidor debe poseer un registro de usuario.  El registro de usuario es una clase de C\+\+ que contiene elementos de datos que controlan la entrada o salida.  El Asistente para consumidores OLE DB ATL genera un registro de usuario para nuestro consumidor.  Se pueden agregar métodos al registro para realizar tareas opcionales como el control de comandos.  
+# <a name="user-records"></a>Registros de usuario
+Para usar un descriptor de acceso estática (es decir, un descriptor de acceso se deriva de **CAccessor)**, el consumidor debe poseer un registro de usuario. El registro de usuario es una clase de C++ que contiene elementos de datos que controlan la entrada o salida. El Asistente para consumidores OLE DB ATL genera un registro de usuario para el consumidor. Puede agregar métodos para el registro de usuario para realizar tareas opcionales como control de comandos.  
   
- El código siguiente muestra un registro de ejemplo que controla la ejecución de comandos.  En el registro de usuario, `BEGIN_COLUMN_MAP` representa un conjunto de filas de datos pasado al consumidor desde un proveedor.  `BEGIN_PARAM_MAP` representa un conjunto de parámetros de comando.  En este ejemplo se usa una clase [CCommand](../../data/oledb/ccommand-class.md) para controlar los parámetros de comando.  Los miembros de datos de las entradas de mapa representan posiciones de desplazamiento en un bloque contiguo de memoria por cada instancia de la clase.  Las macros `COLUMN_ENTRY` corresponden a las macros `PROVIDER_COLUMN_ENTRY` del lado del proveedor.  
+ El código siguiente muestra un registro de ejemplo que controla los comandos. En el registro de usuario, `BEGIN_COLUMN_MAP` representa un conjunto de filas de datos pasado al consumidor desde un proveedor. `BEGIN_PARAM_MAP`Representa un conjunto de parámetros del comando. Este ejemplo se utiliza un [CCommand](../../data/oledb/ccommand-class.md) clase para administrar los parámetros del comando. Los miembros de datos en las entradas del mapa representan desplazamientos en un bloque contiguo de memoria para cada instancia de la clase. El `COLUMN_ENTRY` macros corresponden a la `PROVIDER_COLUMN_ENTRY` macros en el lado del proveedor.  
   
- Para obtener más información acerca de las macros **COLUMN\_MAP** y **PARAM\_MAP**, vea [Macros para plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Para obtener más información sobre la **COLUMN_MAP** y **PARAM_MAP** macros, consulte [Macros para plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ```  
 class CArtists  
@@ -62,13 +61,13 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Registros de usuario generados por el asistente  
- Si se utiliza el Asistente para consumidores OLE DB ATL para generar un consumidor, se puede elegir entre el uso de plantillas OLE DB o atributos OLE DB.  En función de la elección, el código generado es diferente.  Para obtener más información acerca del código, vea [Clases generadas por el Asistente para consumidores](../../data/oledb/consumer-wizard-generated-classes.md).  
+## <a name="wizard-generated-user-records"></a>Registros de usuario generados por el Asistente  
+ Si utiliza al Asistente para consumidores OLE DB ATL para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. El código generado es diferente en cada caso. Para obtener más información acerca de este código, consulte [clases generadas](../../data/oledb/consumer-wizard-generated-classes.md).  
   
-## Compatibilidad del registro de usuario con múltiples descriptores de acceso  
- Para obtener información detallada de los escenarios en que es necesario utilizar múltiples descriptores de acceso, vea [Utilizar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+## <a name="user-record-support-for-multiple-accessors"></a>Compatibilidad con registros de usuario de varios descriptores de acceso  
+ Para obtener una explicación detallada de los escenarios en los que es necesario utilizar varios descriptores de acceso, consulte [utilizar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- El ejemplo siguiente muestra el registro de usuario modificado para que admita múltiples descriptores de acceso en el conjunto de filas.  En lugar de `BEGIN_COLUMN_MAP` y `END_COLUMN_MAP`, se utiliza [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md) y [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) para cada descriptor de acceso.  La macro `BEGIN_ACCESSOR` especifica el número de descriptor de acceso \(desplazamiento respecto a cero\) y si el descriptor de acceso es del tipo automático \(autoaccessor\).  Los descriptores de acceso automáticos llaman a `GetData` para recuperar datos automáticamente en una llamada a [MoveNext](../../data/oledb/crowset-movenext.md).  Los descriptores de acceso no automáticos requieren recuperar explícitamente los datos.  Utilice un descriptor de acceso no automático si crea un enlace con un gran campo de datos \(como un mapa de bits\) que no desea recuperar en cada registro.  
+ En el ejemplo siguiente se muestra el registro de usuario modificado para admitir varios descriptores de acceso en el conjunto de filas. En lugar de `BEGIN_COLUMN_MAP` y `END_COLUMN_MAP`, usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) y [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) para cada descriptor de acceso. El `BEGIN_ACCESSOR` macro especifica el número de descriptor de acceso (desplazamiento respecto a cero) y si el descriptor de acceso es autoaccessor. Llamada de Autoaccessors `GetData` para recuperar datos automáticamente en una llamada a [MoveNext](../../data/oledb/crowset-movenext.md). Descriptores de acceso debe recuperar los datos de forma explícita. Utilice un descriptor de acceso si va a enlazar a un campo de datos de gran tamaño (por ejemplo, una imagen de mapa de bits) que no puede recuperar para todos los registros.  
   
 ```  
 class CMultiArtists  
@@ -92,5 +91,5 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

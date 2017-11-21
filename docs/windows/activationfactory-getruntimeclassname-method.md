@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::GetRuntimeClassName (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRuntimeClassName (método)"
+title: "Activationfactory:: Getruntimeclassname (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName
+dev_langs: C++
+helpviewer_keywords: GetRuntimeClassName method
 ms.assetid: 74e34f0a-9c51-4b40-89f5-45c6c5886ece
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7f3e013212bea46a37654a078f9315533a1ee16
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::GetRuntimeClassName (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtiene el nombre de clase del objeto en tiempo de ejecución que el ActivationFactory actual crea instancias.  
+# <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName (Método)
+Obtiene el nombre de clase en tiempo de ejecución del objeto que se crea una instancia de la ActivationFactory actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(_Out_ HSTRING* runtimeName);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `runtimeName`  
- Cuando esta operación finaliza, un identificador de cadena que contiene el nombre de clase del objeto en tiempo de ejecución que el ActivationFactory actual crea instancias.  
+ Cuando se completa esta operación, un identificador de una cadena que contiene el nombre de clase en tiempo de ejecución del objeto que se crea una instancia de la ActivationFactory actual.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que describe el error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que describe el error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ActivationFactory \(Clase\)](../windows/activationfactory-class.md)
+## <a name="see-also"></a>Vea también  
+ [ActivationFactory (clase)](../windows/activationfactory-class.md)

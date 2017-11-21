@@ -1,32 +1,30 @@
 ---
-title: "list::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert (miembro) [STL/CLR]"
+title: 'List:: Insert (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 399ed30f-6b76-41a8-b180-6070e3ca1c68
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2a0fd1aad6b32de4f9232cbb7f7874255d1ecba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# list::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Agrega elementos en una posición especificada.  
+# <a name="listinsert-stlclr"></a>list::insert (STL/CLR)
+Agrega un elemento en una posición especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -37,39 +35,39 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  count  
- Número de elementos que se va a insertar.  
+ Número de elementos que se van a insertar.  
   
  first  
- Inicio del intervalo que se va a insertar.  
+ Comienzo del intervalo que se va a insertar.  
   
  last  
  Final del intervalo que se va a insertar.  
   
- right  
- Enumeración que se va a insertar.  
+ derecha  
+ Enumeración para insertar.  
   
- val  
+ Val  
  Valor del elemento que se va a insertar.  
   
  donde  
- Donde en el contenedor insertar antes.  
+ WHERE en el contenedor para insertar antes.  
   
-## Comentarios  
- Cada una de las funciones miembro inserta, antes del elemento indicada por `where` en la secuencia controlada, una secuencia especificada por los operandos restantes.  
+## <a name="remarks"></a>Comentarios  
+ Cada uno de los miembros funciones inserta, antes del elemento señalado por `where` en la secuencia controlada, una secuencia especificada por los operandos restantes.  
   
- La primera función miembro inserta un elemento con el valor `val` y devuelve un iterador que señala el elemento insertado recientemente.  Se utiliza para insertar un único elemento antes de un lugar designado por un iterador.  
+ La primera función miembro inserta un elemento con el valor `val` y devuelve un iterador que designa el elemento recién insertado. Se usar para insertar un elemento único antes de un lugar designado por un iterador.  
   
- La segunda función miembro inserta una repetición de `count` elementos de valor `val`.  Se utiliza para insertar elementos cero o más contiguo que son todas las copias del mismo valor.  
+ La segunda función miembro inserta una repetición de `count` elementos de valor `val`. Usa para insertar cero o más elementos contiguos que son todas las copias del mismo valor.  
   
- Si `InIt` es un tipo entero, la tercera función miembro se comporta igual que `insert(``where``, (size_type)``first``, (value_type)``last``)`.  Si no, inserte la secuencia `[``first``,` `last``)`.  Se utiliza para insertar elementos cero o más contiguo copiados de otra secuencia.  
+ Si `InIt` es un tipo entero, la tercera función miembro se comporta igual que `insert(where, (size_type)first, (value_type)last)`. En caso contrario, inserta la secuencia [`first`, `last`). Usa para insertar cero o más elementos contiguos copiados desde otra secuencia.  
   
- La cuarta función miembro inserta la secuencia indicada por `right`.  Se utiliza para insertar una secuencia descrita por un enumerador.  
+ La cuarta función miembro inserta la secuencia designada por el `right`. Usa para insertar una secuencia descrita por un enumerador.  
   
- Al insertar un elemento único, el número de copias del elemento es lineal del número de elementos entre el punto de inserción y el final más próximo de la secuencia. \(Al incrustar uno o más elementos en el final de la secuencia, ninguna copia del elemento aparece.\) Si `InIt` es un iterador de entrada, la tercera función miembro realiza eficazmente una sola inserción para cada elemento de la secuencia.  Si no, al insertar los elementos de `N` , el número de copias del elemento es lineal en `N` más el número de elementos entre el punto de inserción y el final más próximo de la secuencia.  
+ Cuando se inserta un elemento único, el número de copias del elemento es lineal en el número de elementos entre el punto de inserción y el final cuanto más cerca de la secuencia. (Cuando se inserta uno o más elementos en cualquier extremo de la secuencia, se produce ninguna copia del elemento.) Si `InIt` es un iterador de entrada, la tercera función miembro realiza una inserción única para cada elemento de la secuencia. En caso contrario, al insertar `N` elementos, el número de copias del elemento es lineal en `N` más el número de elementos entre el punto de inserción y el final cuanto más cerca de la secuencia.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_insert.cpp   
@@ -130,17 +128,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**insert\(begin\(\)\+1, L'x\) \= x**  
- **una b c de x**  
- **e y**  
- **e y a b de x**  
- **una y la y la a b c de x a b de x**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)

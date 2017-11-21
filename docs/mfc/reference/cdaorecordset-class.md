@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -91,36 +90,98 @@ f1_keywords:
 - AFXDAO/CDaoRecordset::m_pDatabase
 - AFXDAO/CDaoRecordset::m_strFilter
 - AFXDAO/CDaoRecordset::m_strSort
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- recordsets, types
-- CDaoRecordset class
-- records, CDaoRecordSet
+- CDaoRecordset [MFC], CDaoRecordset
+- CDaoRecordset [MFC], AddNew
+- CDaoRecordset [MFC], CanAppend
+- CDaoRecordset [MFC], CanBookmark
+- CDaoRecordset [MFC], CancelUpdate
+- CDaoRecordset [MFC], CanRestart
+- CDaoRecordset [MFC], CanScroll
+- CDaoRecordset [MFC], CanTransact
+- CDaoRecordset [MFC], CanUpdate
+- CDaoRecordset [MFC], Close
+- CDaoRecordset [MFC], Delete
+- CDaoRecordset [MFC], DoFieldExchange
+- CDaoRecordset [MFC], Edit
+- CDaoRecordset [MFC], FillCache
+- CDaoRecordset [MFC], Find
+- CDaoRecordset [MFC], FindFirst
+- CDaoRecordset [MFC], FindLast
+- CDaoRecordset [MFC], FindNext
+- CDaoRecordset [MFC], FindPrev
+- CDaoRecordset [MFC], GetAbsolutePosition
+- CDaoRecordset [MFC], GetBookmark
+- CDaoRecordset [MFC], GetCacheSize
+- CDaoRecordset [MFC], GetCacheStart
+- CDaoRecordset [MFC], GetCurrentIndex
+- CDaoRecordset [MFC], GetDateCreated
+- CDaoRecordset [MFC], GetDateLastUpdated
+- CDaoRecordset [MFC], GetDefaultDBName
+- CDaoRecordset [MFC], GetDefaultSQL
+- CDaoRecordset [MFC], GetEditMode
+- CDaoRecordset [MFC], GetFieldCount
+- CDaoRecordset [MFC], GetFieldInfo
+- CDaoRecordset [MFC], GetFieldValue
+- CDaoRecordset [MFC], GetIndexCount
+- CDaoRecordset [MFC], GetIndexInfo
+- CDaoRecordset [MFC], GetLastModifiedBookmark
+- CDaoRecordset [MFC], GetLockingMode
+- CDaoRecordset [MFC], GetName
+- CDaoRecordset [MFC], GetParamValue
+- CDaoRecordset [MFC], GetPercentPosition
+- CDaoRecordset [MFC], GetRecordCount
+- CDaoRecordset [MFC], GetSQL
+- CDaoRecordset [MFC], GetType
+- CDaoRecordset [MFC], GetValidationRule
+- CDaoRecordset [MFC], GetValidationText
+- CDaoRecordset [MFC], IsBOF
+- CDaoRecordset [MFC], IsDeleted
+- CDaoRecordset [MFC], IsEOF
+- CDaoRecordset [MFC], IsFieldDirty
+- CDaoRecordset [MFC], IsFieldNull
+- CDaoRecordset [MFC], IsFieldNullable
+- CDaoRecordset [MFC], IsOpen
+- CDaoRecordset [MFC], Move
+- CDaoRecordset [MFC], MoveFirst
+- CDaoRecordset [MFC], MoveLast
+- CDaoRecordset [MFC], MoveNext
+- CDaoRecordset [MFC], MovePrev
+- CDaoRecordset [MFC], Open
+- CDaoRecordset [MFC], Requery
+- CDaoRecordset [MFC], Seek
+- CDaoRecordset [MFC], SetAbsolutePosition
+- CDaoRecordset [MFC], SetBookmark
+- CDaoRecordset [MFC], SetCacheSize
+- CDaoRecordset [MFC], SetCacheStart
+- CDaoRecordset [MFC], SetCurrentIndex
+- CDaoRecordset [MFC], SetFieldDirty
+- CDaoRecordset [MFC], SetFieldNull
+- CDaoRecordset [MFC], SetFieldValue
+- CDaoRecordset [MFC], SetFieldValueNull
+- CDaoRecordset [MFC], SetLockingMode
+- CDaoRecordset [MFC], SetParamValue
+- CDaoRecordset [MFC], SetParamValueNull
+- CDaoRecordset [MFC], SetPercentPosition
+- CDaoRecordset [MFC], Update
+- CDaoRecordset [MFC], m_bCheckCacheForDirtyFields
+- CDaoRecordset [MFC], m_nFields
+- CDaoRecordset [MFC], m_nParams
+- CDaoRecordset [MFC], m_pDAORecordset
+- CDaoRecordset [MFC], m_pDatabase
+- CDaoRecordset [MFC], m_strFilter
+- CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bd211f55e2a07ef2d0c61e039df526fc2cd654f4
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d9742093585283350ce2c40ae533cc9e530d94bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (clase)
 Representa un conjunto de registros seleccionados de un origen de datos.  
@@ -243,7 +304,7 @@ class CDaoRecordset : public CObject
   
 -   Establecer un índice y buscar rápidamente los registros mediante [búsqueda](#seek) (sólo para conjuntos de registros de tipo de tabla).  
   
--   Buscar registros basándose en una comparación de cadenas: "<",></",>\<=", "=", "> =", o ">" (tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea).  
+-   Buscar registros basándose en una comparación de cadenas: "<","\<=", "=", "> =", o ">" (tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea).  
   
 -   Actualizar los registros y especificar un modo de bloqueo (excepto los conjuntos de registros de tipo de instantánea).  
   
@@ -260,7 +321,7 @@ class CDaoRecordset : public CObject
   
  Puede usar `CDaoRecordset` directamente o derivar una clase de `CDaoRecordset`. Para utilizar una clase de conjunto de registros en cualquier caso, abrir una base de datos y crear un objeto de conjunto de registros, el constructor se pasa un puntero a su `CDaoDatabase` objeto. También se puede construir un `CDaoRecordset` objeto y deje que MFC crear un archivo temporal `CDaoDatabase` objeto automáticamente. A continuación, llame el conjunto de registros [abiertos](#open) función de miembro, que especifica si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea. Al llamar a **abiertos** selecciona datos de la base de datos y recupera el primer registro.  
   
- Usar a miembros de datos y funciones de miembro del objeto para desplazarse por los registros y operar con ellas. Las operaciones disponibles dependen de si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea y, si es actualizable o de solo lectura, esto depende de la capacidad de la base de datos o el origen de datos Open Database Connectivity (ODBC). Para actualizar los registros que se han cambiado o agregado desde el **abiertos** llamada, llamar al objeto [Requery](#requery) función miembro. Llamar al objeto **cerrar** miembro de función y destruir el objeto cuando haya terminado con él.  
+ Usar a miembros de datos y funciones de miembro del objeto para desplazarse por los registros y operar con ellas. Las operaciones disponibles dependen de si el objeto es un conjunto de registros de tipo de tabla, un conjunto de registros de tipo dinámico o un conjunto de registros de tipo de instantánea y, si es actualizable o de solo lectura, esto depende de la capacidad de la base de datos o Open Database Connectivity (ODBC) origen de datos. Para actualizar los registros que se han cambiado o agregado desde el **abiertos** llamada, llamar al objeto [Requery](#requery) función miembro. Llamar al objeto **cerrar** miembro de función y destruir el objeto cuando haya terminado con él.  
   
  `CDaoRecordset`intercambio de campos de registros DAO (DFX) se utiliza para permitir la lectura y actualización de los campos de registro a través de los miembros de C++ con seguridad de tipos de su `CDaoRecordset` o `CDaoRecordset`-clase derivada. También puede implementar el enlace dinámico de columnas en una base de datos sin usar el mecanismo DFX utilizando [GetFieldValue](#getfieldvalue) y [SetFieldValue](#setfieldvalue).  
   
@@ -293,7 +354,7 @@ virtual void AddNew();
   
 -   En un tipo de conjunto de registros dinámicos no se garantiza el conjunto de registros, donde se insertó el nuevo registro. Este comportamiento en el que se ha cambiado con Microsoft Jet 3.0 por motivos de rendimiento y la simultaneidad. Si su objetivo es hacer el registro recién agregado en el registro actual, obtener el marcador del último registro modificado y mover a ese marcador:  
   
- [!code-cpp[NVC_MFCDatabase n.º 1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
   
 -   En un conjunto de registros de tipo de tabla para la que se ha especificado un índice, los registros se devuelven en su posición correcta en el criterio de ordenación. Si no se ha especificado ningún índice, los nuevos registros se devuelven al final del conjunto de registros.  
   
@@ -303,7 +364,7 @@ virtual void AddNew();
   
  No es válido para llamar a `AddNew` para un conjunto de registros cuyo [abiertos](#open) función miembro no se ha llamado. A `CDaoException` se produce si se llama a `AddNew` para un conjunto de registros que no se puede anexar. Puede determinar si el conjunto de registros es actualizable mediante una llamada a [CanAppend](#canappend).  
   
- Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a [SetFieldDirty](#setfielddirty) usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor se encuentra en el miembro de datos de campo. El mecanismo DFX también emplea el uso de **PSEUDO NULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a [SetFieldDirty](#setfielddirty) usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor está en el miembro de datos de campo. El mecanismo DFX también emplea el uso de **PSEUDO NULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como modificados. En este caso, será necesario establecer explícitamente el campo de datos sucios. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
@@ -348,7 +409,7 @@ virtual void CancelUpdate();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Por ejemplo, si una aplicación llama a la **editar** o `AddNew` función miembro y no se ha llamado [actualización](#update), `CancelUpdate` cancela los cambios efectuados después **editar** o `AddNew` se llamó.  
+ Por ejemplo, si una aplicación llama a la **editar** o `AddNew` función miembro y no se ha llamado [actualización](#update), `CancelUpdate` cancela los cambios efectuados después **editar**o `AddNew` se llamó.  
   
 > [!NOTE]
 >  Si los registros son doble búfer (es decir, la comprobación automática de campos está habilitada), una llamada a `CancelUpdate` restaurará las variables de miembro para los valores que tenían antes de `AddNew` o **editar** se llamó.  
@@ -426,7 +487,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  `pDatabase`  
- Contiene un puntero a un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto o el valor **NULL**. Si no **NULL** y `CDaoDatabase` del objeto **abrir** función miembro no se ha llamado para conectarse al origen de datos, el conjunto de registros intenta abrir automáticamente durante su propio [abrir](#open) llamar. Si se pasa **NULL**, `CDaoDatabase` objeto se construye y se conecta automáticamente con la información de origen de datos que especificó si deriva de la clase de conjunto de registros de `CDaoRecordset`.  
+ Contiene un puntero a un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto o el valor **NULL**. Si no **NULL** y `CDaoDatabase` del objeto **abrir** función miembro no se ha llamado para conectarse al origen de datos, el conjunto de registros intenta abrir automáticamente durante su propio [abrir ](#open) llamar. Si se pasa **NULL**, `CDaoDatabase` objeto se construye y se conecta automáticamente con la información de origen de datos que especificó si deriva de la clase de conjunto de registros de `CDaoRecordset`.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede usar `CDaoRecordset` directamente o derivar una clase específica de la aplicación de `CDaoRecordset`. Puede utilizar ClassWizard para derivar las clases de conjunto de registros.  
@@ -460,7 +521,7 @@ virtual void Delete();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Después de una eliminación se realiza correctamente, se establecen los miembros de datos de campo del conjunto de registros en un valor Null, y debe llamar explícitamente a una de las funciones de miembro de navegación de conjunto de registros ( [mover](#move), [Seek](#seek), [SetBookmark](#setbookmark), y así sucesivamente) con el fin de abandonar el registro eliminado. Cuando se eliminan registros de un conjunto de registros, debe haber un registro actual en el conjunto de registros antes de llamar a **eliminar**; en caso contrario, MFC inicia una excepción.  
+ Después de una eliminación se realiza correctamente, se establecen los miembros de datos de campo del conjunto de registros en un valor Null, y debe llamar explícitamente a una de las funciones de miembro de navegación de conjunto de registros ( [mover](#move), [Seek](#seek), [ SetBookmark](#setbookmark), y así sucesivamente) con el fin de abandonar el registro eliminado. Cuando se eliminan registros de un conjunto de registros, debe haber un registro actual en el conjunto de registros antes de llamar a **eliminar**; en caso contrario, MFC inicia una excepción.  
   
  **Eliminar** quita el registro actual y lo convierte en inaccesible. Aunque no se puede editar o utilizar el registro eliminado, sigue estando activo. Cuando se mueva a otro registro, sin embargo, no puede realizar el registro eliminado actual nuevo.  
   
@@ -491,7 +552,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  Cuando se declara la clase derivada de conjunto de registros con ClassWizard, el asistente escribe una invalidación de `DoFieldExchange` para usted, que es similar al siguiente:  
   
- [!code-cpp[NVC_MFCDatabase n.º 2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
 ##  <a name="edit"></a>CDaoRecordset:: Edit  
  Llame a esta función miembro para permitir cambios en el registro actual.  
@@ -508,7 +569,7 @@ virtual void Edit();
   
  En algunos casos, puede que desee actualizar una columna por lo que es Null (que contiene ningún dato). Para ello, llame a `SetFieldNull` con un parámetro de **TRUE** para marcar el campo es Null; Esto también hace que la columna que se va a actualizar. Si desea que un campo se escriben en el origen de datos incluso si no ha cambiado su valor, llame a `SetFieldDirty` con un parámetro de **TRUE**. Esto funciona incluso si el campo tiene el valor Null.  
   
- Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a [SetFieldDirty](#setfielddirty) usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor se encuentra en el miembro de datos de campo. El mecanismo DFX también emplea el uso de **PSEUDO NULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a [SetFieldDirty](#setfielddirty) usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor está en el miembro de datos de campo. El mecanismo DFX también emplea el uso de **PSEUDO NULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como modificados. En este caso, será necesario establecer explícitamente el campo de datos sucios. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
@@ -558,7 +619,7 @@ void FillCache(
   
  Registros obtenidos de la memoria caché no reflejan los cambios realizados al mismo tiempo al origen de datos por otros usuarios.  
   
- `FillCache`captura solo los registros ya no almacenado en caché. Para forzar una actualización de todos los datos almacenados en caché, llame a la `SetCacheSize` función miembro con un `lSize` parámetro igual a 0, llamada `SetCacheSize` nuevo con el `lSize` parámetro igual que el tamaño de la memoria caché que solicitó originalmente y, a continuación, llame `FillCache`.  
+ `FillCache`captura solo los registros ya no almacenado en caché. Para forzar una actualización de todos los datos almacenados en caché, llame a la `SetCacheSize` función miembro con un `lSize` parámetro igual a 0, llamada `SetCacheSize` nuevo con el `lSize` parámetro igual que el tamaño de la memoria caché solicitada originalmente y, a continuación, llamar a `FillCache`.  
   
  Para obtener información relacionada, vea el tema "Método FillCache" en la Ayuda de DAO.  
   
@@ -586,13 +647,13 @@ virtual BOOL Find(
  `lpszFilter`  
  Una expresión de cadena (como el **donde** cláusula en una instrucción SQL sin la palabra **donde**) utilizado para buscar el registro. Por ejemplo:  
   
- [!code-cpp[NVC_MFCDatabase 3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si no se encuentra registros coincidentes, 0 en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede encontrar el primer, siguiente, anterior, o última instancia de la cadena. **Buscar** es una función virtual, por lo que puede invalidarlo y agregar su propia implementación. El `FindFirst`, `FindLast`, `FindNext`, y `FindPrev` funciones miembro llaman a la **buscar** función de miembro, por lo que puede usar **buscar** para controlar el comportamiento de todas las operaciones de búsqueda.  
+ Puede encontrar el primer, siguiente, anterior, o última instancia de la cadena. **Buscar** es una función virtual, por lo que puede invalidarlo y agregar su propia implementación. El `FindFirst`, `FindLast`, `FindNext`, y `FindPrev` funciones miembro llaman a la **buscar** función de miembro, por lo que puede usar **buscar** para controlar el comportamiento de todas las operaciones de búsqueda .  
   
  Para buscar un registro en un conjunto de registros de tipo de tabla, llame a la [Seek](#seek) función miembro.  
   
@@ -647,7 +708,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan registros indizados específicos.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -685,7 +746,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan registros indizados específicos.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -723,7 +784,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan registros indizados específicos.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -761,7 +822,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
 -   Debe tener el formato de fecha de Estados Unidos (mes-año) cuando busca campos que contienen fechas, incluso si no usa la versión de Estados Unidos del motor de base de datos de Microsoft Jet; en caso contrario, registros coincidentes no se pueden encontrar.  
   
--   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan registros indizados específicos.  
+-   Cuando se trabaja con grandes conjuntos de registros dinámicos y de bases de datos ODBC, puede detectar que utiliza las operaciones de búsqueda es muy lento, especialmente cuando se trabaja con grandes conjuntos de registros. Puede mejorar el rendimiento mediante consultas SQL con personalizarse **ORDERBY** o **donde** cláusulas, consultas de parámetros, o **CDaoQuerydef** objetos que recuperan específico registros indizados.  
   
  Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.  
   
@@ -781,7 +842,7 @@ long GetAbsolutePosition();
  Si no hay ningún registro actual, como cuando no hay ningún registro en el conjunto de registros, se devuelve 1. Si se elimina el registro actual, el valor de la propiedad AbsolutePosition no está definido y MFC inicia una excepción si se hace referencia. Para conjuntos de registros de tipo de conjunto de registros dinámicos, se agregan nuevos registros al final de la secuencia.  
   
 > [!NOTE]
->  Esta propiedad no está diseñada para usarse como un número de registro suplente. Los marcadores siguen siendo la forma recomendada de conservar y volver a una posición determinada y son la única forma de colocar el registro actual en todos los tipos de objetos de conjunto de registros. En concreto, la posición de un registro determinado cambia cuando se eliminan registros anteriores a ésta. También no hay ninguna garantía de que un determinado registro tendrá la misma posición absoluta si se vuelve a crear el conjunto de registros, porque no se garantiza el orden de los registros individuales dentro de un conjunto de registros, a menos que se crea con una instrucción SQL que usa un **ORDERBY** cláusula.  
+>  Esta propiedad no está diseñada para usarse como un número de registro suplente. Los marcadores siguen siendo la forma recomendada de conservar y volver a una posición determinada y son la única forma de colocar el registro actual en todos los tipos de objetos de conjunto de registros. En concreto, la posición de un registro determinado cambia cuando se eliminan registros anteriores a ésta. También no hay ninguna garantía de que un determinado registro tendrá la misma posición absoluta si se vuelve a crear el conjunto de registros, porque no se garantiza el orden de los registros individuales dentro de un conjunto de registros, a menos que se crea con una instrucción SQL que usa un  **ORDERBY** cláusula.  
   
 > [!NOTE]
 >  Esta función miembro es válida únicamente para el tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea.  
@@ -905,7 +966,7 @@ virtual CString GetDefaultDBName();
   
  En el ejemplo siguiente se muestra el uso de la barra diagonal inversa doble (\\\\) en la cadena, según sea necesario para la cadena para que se interpreten correctamente.  
   
- [!code-cpp[NVC_MFCDatabase #4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
 ##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
  El marco de trabajo llama a esta función miembro para obtener la instrucción SQL de forma predeterminada en la que se basa el conjunto de registros.  
@@ -1310,7 +1371,7 @@ BOOL IsBOF() const;
   
  Esta tabla muestra las operaciones de movimiento permitidas con diferentes combinaciones de `IsBOF` /  `IsEOF`.  
   
-||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover< 0></ 0>|Mover 0|MoveNext,<br /><br /> Mover > 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
 |`IsBOF`= distinto de cero,<br /><br /> `IsEOF`=0|Permitido|Excepción|Excepción|Permitido|  
 |`IsBOF`=0,<br /><br /> `IsEOF`= es distinto de cero|Permitido|Permitido|Excepción|Excepción|  
@@ -1325,8 +1386,8 @@ BOOL IsBOF() const;
 |------|-----------|-----------|  
 |**MoveFirst**,`MoveLast`|Es distinto de cero|Es distinto de cero|  
 |**Mover** 0|No hay ningún cambio|No hay ningún cambio|  
-|`MovePrev`, **Move**< 0></ 0>|Es distinto de cero|No hay ningún cambio|  
-|`MoveNext`, **Move** > 0|No hay ningún cambio|Es distinto de cero|  
+|`MovePrev`, **Mover** < 0|Es distinto de cero|No hay ningún cambio|  
+|`MoveNext`, **Mover** > 0|No hay ningún cambio|Es distinto de cero|  
   
  Para obtener información relacionada, vea el tema "BOF, EOF (propiedades)" en la Ayuda de DAO.  
   
@@ -1377,7 +1438,7 @@ BOOL IsEOF() const;
   
  Esta tabla muestra las operaciones de movimiento permitidas con diferentes combinaciones de `IsBOF` /  `IsEOF`.  
   
-||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover< 0></ 0>|Mover 0|MoveNext,<br /><br /> Mover > 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
 |`IsBOF`= distinto de cero,<br /><br /> `IsEOF`=0|Permitido|Excepción|Excepción|Permitido|  
 |`IsBOF`=0,<br /><br /> `IsEOF`= es distinto de cero|Permitido|Permitido|Excepción|Excepción|  
@@ -1392,8 +1453,8 @@ BOOL IsEOF() const;
 |------|-----------|-----------|  
 |**MoveFirst**,`MoveLast`|Es distinto de cero|Es distinto de cero|  
 |**Mover** 0|No hay ningún cambio|No hay ningún cambio|  
-|`MovePrev`, **Move**< 0></ 0>|Es distinto de cero|No hay ningún cambio|  
-|`MoveNext`, **Move** > 0|No hay ningún cambio|Es distinto de cero|  
+|`MovePrev`, **Mover** < 0|Es distinto de cero|No hay ningún cambio|  
+|`MoveNext`, **Mover** > 0|No hay ningún cambio|Es distinto de cero|  
   
  Para obtener información relacionada, vea el tema "BOF, EOF (propiedades)" en la Ayuda de DAO.  
   
@@ -1412,7 +1473,7 @@ BOOL IsFieldDirty(void* pv);
  Es distinto de cero si el miembro de datos del campo especificado se marca como modificado; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Los datos de todos los miembros de datos de campo modificados se transferirán al registro en el origen de datos cuando se actualiza el registro actual mediante una llamada a la **actualización** función miembro de `CDaoRecordset` (después de una llamada a **editar** o `AddNew`). Con este conocimiento, puede realizar más pasos, como quitar marcadores el miembro de datos de campo para marcar la columna, por lo que no se escribirán en el origen de datos.  
+ Los datos de todos los miembros de datos de campo modificados se transferirán al registro en el origen de datos cuando se actualiza el registro actual mediante una llamada a la **actualización** función miembro de `CDaoRecordset` (después de una llamada a **editar**o `AddNew`). Con este conocimiento, puede realizar más pasos, como quitar marcadores el miembro de datos de campo para marcar la columna, por lo que no se escribirán en el origen de datos.  
   
  `IsFieldDirty`se implementa a través de `DoFieldExchange`.  
   
@@ -1436,7 +1497,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  En determinadas situaciones, mediante `IsFieldNull` puede ser ineficaz, como se muestra en el ejemplo de código siguiente:  
   
- [!code-cpp[NVC_MFCDatabase Nº 5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
   
 > [!NOTE]
 >  Si se utiliza un enlace de registro dinámico, sin tener que derivar de `CDaoRecordset`, asegúrese de usar **VT_NULL** tal como se muestra en el ejemplo.  
@@ -1495,7 +1556,7 @@ BOOL IsOpen() const;
  Contiene el número de miembros de datos de parámetro en la clase de conjunto de registros: el número de parámetros pasados con la consulta del conjunto de registros.  
   
 ### <a name="remarks"></a>Comentarios  
- Si la clase de conjunto de registros tiene los miembros de datos de parámetro, debe inicializar el constructor de la clase `m_nParams` con el número correcto. El valor de `m_nParams` el valor predeterminado es 0. Si agrega miembros de datos de parámetro, lo que debe hacer manualmente, también debe agregar manualmente una inicialización en el constructor de clase para reflejar el número de parámetros (que debe ser al menos tan grande como el número de '' marcadores de posición en la **m_strFilter** o `m_strSort` cadena).  
+ Si la clase de conjunto de registros tiene los miembros de datos de parámetro, debe inicializar el constructor de la clase `m_nParams` con el número correcto. El valor de `m_nParams` el valor predeterminado es 0. Si agrega miembros de datos de parámetro, lo que debe realizar manualmente, también debe agregar manualmente una inicialización en el constructor de clase para reflejar el número de parámetros (que debe ser al menos tan grande como el número de '' marcadores de posición en su **m_strFilter**  o `m_strSort` cadena).  
   
  El marco de trabajo utiliza este número cuando parametriza la consulta del conjunto de registros.  
   
@@ -1766,7 +1827,7 @@ virtual void Open(
 > [!NOTE]
 >  Solo se puede llamar a **abiertos** mediante un `CDaoTableDef` objeto para conjuntos de registros de tipo de tabla.  
   
- Cuando se usa la tercera versión de **abiertos** donde se pasa un `CDaoQueryDef` de objeto, que se ejecutará la consulta y las columnas resultantes estará disponibles para enlazar a través de `DoFieldExchange` y el mecanismo DFX, o enlace dinámicamente mediante `GetFieldValue`.  
+ Cuando se usa la tercera versión de **abiertos** donde se pasa un `CDaoQueryDef` de objeto, que se ejecutará la consulta y las columnas resultantes estará disponibles para enlazar a través de `DoFieldExchange` y el mecanismo DFX, o enlazar dinámicamente a través de `GetFieldValue`.  
   
 > [!NOTE]
 >  Solo se puede llamar a **abiertos** mediante un `CDaoQueryDef` objeto para el tipo de conjunto de registros dinámicos y conjuntos de registros de tipo de instantánea.  
@@ -1775,19 +1836,19 @@ virtual void Open(
   
 |Valor del parámetro `lpszSQL`|Los registros seleccionados están determinados por|Ejemplo|  
 |--------------------------------------|----------------------------------------|-------------|  
-|**ES NULL**|La cadena devuelta por `GetDefaultSQL`.||  
+|**NULL**|La cadena devuelta por `GetDefaultSQL`.||  
 |Una lista separada por comas de uno o más definiciones de tabla o nombres de definición de consulta.|Todas las columnas se representan en el `DoFieldExchange`.|`"Customer"`|  
 |**Seleccione** lista de columnas **FROM** lista de tablas|Las columnas especificadas del querydef(s) y/o tabledef(s) especificado.|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
  El procedimiento habitual consiste en pasar **NULL** a **abiertos**; en ese caso, **abiertos** llamadas `GetDefaultSQL`, una función de miembro reemplazables que genera el asistente al crear un `CDaoRecordset`-clase derivada. Este valor proporciona los nombres de tabledef(s) o definición de consulta que especificó en el Asistente para. Se puede especificar otra información en el parámetro `lpszSQL`.  
   
- Cualquier valor que pase, **abiertos** construye una cadena SQL final para la consulta (la cadena puede tener SQL **donde** y **ORDERBY** anexadas cláusulas para el `lpszSQL` cadena pasó) y, a continuación, ejecuta la consulta. Puede examinar la cadena construida mediante una llamada a `GetSQL` después de llamar a **abiertos**.  
+ Cualquier valor que pase, **abrir** construye una cadena SQL final para la consulta (la cadena puede tener SQL **donde** y **ORDERBY** anexadas cláusulas a la `lpszSQL` cadena que se pasa) y, a continuación, ejecuta la consulta. Puede examinar la cadena construida mediante una llamada a `GetSQL` después de llamar a **abiertos**.  
   
  Los miembros de datos de campo de la clase de conjunto de registros están enlazados a las columnas de los datos seleccionados. Si se devuelve algún registro, el primer registro se convierte en el registro actual.  
   
  Si desea establecer opciones para el conjunto de registros, por ejemplo, un filtro o una ordenación, establezca `m_strSort` o **m_strFilter** después de crear el objeto de conjunto de registros, pero antes de llamar a **abiertos**. Si desea que los registros del conjunto de registros después de actualizar el conjunto de registros está abierto, llame a **Requery**.  
   
- Si se llama a **abiertos** en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo de instantánea, o si el origen de datos hace referencia a una instrucción SQL o una definición de tabla que representa una tabla asociada, no se puede usar **dbOpenTable** para el argumento de tipo; si lo hace, MFC inicia una excepción. Para determinar si un objeto de definición de tabla representa una tabla asociada, cree una [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objeto y llame a su [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) función miembro.  
+ Si se llama a **abiertos** en un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo de instantánea, o si el origen de datos hace referencia a una instrucción SQL o una definición de tabla que representa una tabla asociada, no se puede usar **dbOpenTable** para el tipo argumento; Si lo hace, MFC inicia una excepción. Para determinar si un objeto de definición de tabla representa una tabla asociada, cree una [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) objeto y llame a su [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) función miembro.  
   
  Use la **dbSeeChanges** marcar si desea volver a capturar los cambios realizados por otro usuario u otro programa en su equipo cuando está modificando o eliminando el registro de la mismo. Por ejemplo, si dos usuarios comenzar a editar el mismo registro, el primer usuario que llame a la **actualización** función miembro se realiza correctamente. Cuando **actualización** llama el segundo usuario, un `CDaoException` se produce. De forma similar, si el segundo usuario intenta llamar a **eliminar** eliminar el registro y ya ha cambiado el primer usuario, un `CDaoException` se produce.  
   
@@ -1845,7 +1906,7 @@ BOOL Seek(
   
 ### <a name="parameters"></a>Parámetros  
  `lpszComparison`  
- Una de las siguientes expresiones de cadena: "<",></",>\<=", "=", "> =", o ">".  
+ Una de las siguientes expresiones de cadena: "<","\<=", "=", "> =", o ">".  
   
  `pKey1`  
  Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Obligatorio.  
@@ -1875,9 +1936,9 @@ BOOL Seek(
   
  Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, el `COleVariant` objetos se deben declarar explícitamente ANSI. Esto puede hacerse mediante el uso de la [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** forma de constructor con `vtSrc` establecido en `VT_BSTRT` (ANSI) o mediante el **COleVariant** función [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** con `vtSrc` establecido en `VT_BSTRT`.  
   
- Cuando se llama a `Seek`, pasar uno o más valores de clave y un operador de comparación ("<",></",>\<=", "=", "> =", o ">"). `Seek`busca en los campos de clave especificados y localiza el primer registro que satisface los criterios especificados por `lpszComparison` y `pKey1`. Una vez encontrado, `Seek` devuelve es distinto de cero y hace que dicho registro actual. Si `Seek` se produce un error al intentar buscar una coincidencia, `Seek` devuelve cero y el registro actual es indefinido. Al utilizar DAO directamente, debe comprobar explícitamente la propiedad NoMatch.  
+ Cuando se llama a `Seek`, pasar uno o más valores de clave y un operador de comparación ("<","\<=", "=", "> =", o ">"). `Seek`busca en los campos de clave especificados y localiza el primer registro que satisface los criterios especificados por `lpszComparison` y `pKey1`. Una vez encontrado, `Seek` devuelve es distinto de cero y hace que dicho registro actual. Si `Seek` se produce un error al intentar buscar una coincidencia, `Seek` devuelve cero y el registro actual es indefinido. Al utilizar DAO directamente, debe comprobar explícitamente la propiedad NoMatch.  
   
- Si `lpszComparison` es "=", "> =", o ">", `Seek` comienza al principio del índice. Si `lpszComparison` es "<" or=""> </"> <=",> </=",> `Seek` se inicia al final del índice y busca hacia atrás a menos que haya entradas de índice duplicadas al final. En este caso, `Seek` comienza en una entrada arbitraria entre las entradas de índice duplicadas al final del índice.  
+ Si `lpszComparison` es "=", "> =", o ">", `Seek` comienza al principio del índice. Si `lpszComparison` es "<" o "< =", `Seek` se inicia al final del índice y busca hacia atrás a menos que haya entradas de índice duplicadas al final. En este caso, `Seek` comienza en una entrada arbitraria entre las entradas de índice duplicadas al final del índice.  
   
  No existe no tiene que ser un registro actual cuando se utiliza `Seek`.  
   
@@ -1909,7 +1970,7 @@ void SetAbsolutePosition(long lPosition);
  Si se elimina el registro actual, el valor de la propiedad AbsolutePosition no está definido y MFC inicia una excepción si se hace referencia. Nuevos registros se agregan al final de la secuencia.  
   
 > [!NOTE]
->  Esta propiedad no está diseñada para usarse como un número de registro suplente. Los marcadores siguen siendo la forma recomendada de conservar y volver a una posición determinada y son la única forma de colocar el registro actual en todos los tipos de objetos de conjunto de registros que admiten marcadores. En concreto, la posición de un registro determinado cambia cuando se eliminan registros anteriores a ésta. También no hay ninguna garantía de que un determinado registro tendrá la misma posición absoluta si se vuelve a crear el conjunto de registros, porque no se garantiza el orden de los registros individuales dentro de un conjunto de registros, a menos que se crea con una instrucción SQL que usa un **ORDERBY** cláusula.  
+>  Esta propiedad no está diseñada para usarse como un número de registro suplente. Los marcadores siguen siendo la forma recomendada de conservar y volver a una posición determinada y son la única forma de colocar el registro actual en todos los tipos de objetos de conjunto de registros que admiten marcadores. En concreto, la posición de un registro determinado cambia cuando se eliminan registros anteriores a ésta. También no hay ninguna garantía de que un determinado registro tendrá la misma posición absoluta si se vuelve a crear el conjunto de registros, porque no se garantiza el orden de los registros individuales dentro de un conjunto de registros, a menos que se crea con una instrucción SQL que usa un  **ORDERBY** cláusula.  
   
  Para obtener información relacionada, vea el tema "AbsolutePosition (propiedad)" en la Ayuda de DAO.  
   
@@ -1948,7 +2009,7 @@ void SetCacheSize(long lSize);
 ### <a name="remarks"></a>Comentarios  
  Una caché es un espacio en la memoria local que contiene los datos recuperados más recientemente desde el servidor en caso de que los datos volverá a solicitarse mientras se ejecuta la aplicación. Almacenamiento en caché de datos mejora el rendimiento de una aplicación que recupera datos de un servidor remoto a través de objetos de conjunto de registros de tipo de conjunto de registros dinámicos. Cuando se solicitan datos, el motor de base de datos de Microsoft Jet comprueba la memoria caché para los datos solicitados en primer lugar, en lugar de recuperar desde el servidor, que requiere más tiempo. Datos que no proceden de un origen de datos ODBC no se guardan en la memoria caché.  
   
- Cualquier origen de datos ODBC, como una tabla asociada, puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto, llamada la `SetCacheSize` y `SetCacheStart` funciones miembro y, después, llame el `FillCache` función miembro o paso a paso por los registros mediante el uso de una de las operaciones de movimiento. El `lSize` parámetro de la `SetCacheSize` función miembro puede basarse en el número de registros de la aplicación puede funcionar al mismo tiempo. Por ejemplo, si usas un conjunto de registros como el origen de los datos que se muestre en pantalla, podría pasar la `SetCacheSize``lSize` parámetro como 20 para mostrar 20 registros a la vez.  
+ Cualquier origen de datos ODBC, como una tabla asociada, puede tener una caché local. Para crear la memoria caché, abra un objeto de conjunto de registros desde el origen de datos remoto, llamada la `SetCacheSize` y `SetCacheStart` funciones miembro y, después, llame el `FillCache` función miembro o paso a paso por los registros mediante el uso de una de las operaciones de movimiento. El `lSize` parámetro de la `SetCacheSize` función miembro puede basarse en el número de registros de la aplicación puede funcionar al mismo tiempo. Por ejemplo, si usas un conjunto de registros como el origen de los datos que se muestre en pantalla, podría pasar la `SetCacheSize` `lSize` parámetro como 20 para mostrar 20 registros a la vez.  
   
  Para obtener información relacionada, vea el tema "CacheSize, CacheStart (propiedades)" en la Ayuda de DAO.  
   
@@ -1990,7 +2051,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 ### <a name="remarks"></a>Comentarios  
  Registros de las tablas base no se almacenan en ningún orden concreto. Un índice de configuración cambia el orden de los registros devueltos desde la base de datos, pero no afecta el orden en que se almacenan los registros. Ya debe estar definido el índice especificado. Si intenta usar un objeto de índice que no existe, o si el índice no se establece cuando se llama a [Seek](#seek), MFC inicia una excepción.  
   
- Puede crear un nuevo índice de la tabla mediante una llamada a [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) y agregar el nuevo índice de la colección de índices de la definición de tabla subyacente mediante una llamada a [CDaoTableDef:: Append](../../mfc/reference/cdaotabledef-class.md#append)y, a continuación, volver a abrir el conjunto de registros.  
+ Puede crear un nuevo índice de la tabla mediante una llamada a [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) y agregar el nuevo índice de la colección de índices de la definición de tabla subyacente mediante una llamada a [CDaoTableDef:: Append](../../mfc/reference/cdaotabledef-class.md#append), y a continuación, volver a abrir el conjunto de registros.  
   
  Los registros devueltos desde un conjunto de registros de tipo de tabla pueden ordenarse sólo por los índices definidos para la definición de tabla subyacente. Para ordenar los registros en otro orden, puede abrir un tipo de conjunto de registros dinámicos o un conjunto de registros de tipo de instantánea con una instancia de SQL **ORDERBY** cláusula almacenados en [CDaoRecordset::m_strSort](#m_strsort).  
   
@@ -2010,12 +2071,12 @@ void SetFieldDirty(
  Contiene la dirección de un miembro de datos de campo del conjunto de registros o **NULL**. Si **NULL**, se marcan todos los miembros de datos de campo del conjunto de registros. (C++ **NULL** no es igual a Null en la terminología de base de datos, lo que significa "no tener ningún valor.")  
   
  `bDirty`  
- **TRUE** si es miembro de datos del campo se marca como "sucio" (modificado). En caso contrario, **FALSE** si es miembro de datos del campo se marca como "limpiar" (sin cambios).  
+ **TRUE** si es miembro de datos del campo se marca como "dirty" (modificado). En caso contrario, **FALSE** si es miembro de datos del campo se marca como "limpiar" (sin cambios).  
   
 ### <a name="remarks"></a>Comentarios  
  Marcar campos como sin cambios garantiza que no se actualiza el campo.  
   
- Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a `SetFieldDirty` usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor se encuentra en el miembro de datos de campo. El mecanismo DFX también emplea el uso de **PSEUDONULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
+ Las marcas de framework cambiar los miembros de datos de campo para asegurarse de que se escribirán en el registro en el origen de datos mediante el mecanismo de intercambio (DFX) de campos de registros DAO. Cambiar el valor de un campo normalmente establece el campo desfasadas automáticamente, por lo que rara vez deberá llamar a `SetFieldDirty` usted mismo, pero a veces, conviene asegurarse de que las columnas se explícitamente actualiza o inserta independientemente de qué valor está en los datos del campo miembro. El mecanismo DFX también emplea el uso de **PSEUDONULL**. Para obtener más información, consulte [CDaoFieldExchange:: M_noperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
  Si no se utiliza el mecanismo de almacenamiento en búfer doble, a continuación, cambiar el valor del campo no establece automáticamente el campo como modificados. En este caso, será necesario establecer explícitamente el campo como modificados. La marca contenida en [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controla la comprobación automática de campos.  
   
@@ -2024,13 +2085,13 @@ void SetFieldDirty(
   
  Usar **NULL** para el primer argumento de la función aplicará la función a todos los **outputColumn** campos, no **param** campos en `CDaoFieldExchange`. Por ejemplo, la llamada  
   
- [!code-cpp[NVC_MFCDatabase #6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
   
  establecerá solo **outputColumn** campos a **NULL**; **param** campos no se verá afectados.  
   
  Para que funcione en un **param**, debe proporcionar la dirección real de la persona **param** que desea trabajar en ella, como:  
   
- [!code-cpp[NVC_MFCDatabase #7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
   
  Esto significa que no se puede establecer todos los **param** campos a **NULL**, tal y como se haría con **outputColumn** campos.  
   
@@ -2068,7 +2129,7 @@ void SetFieldNull(
   
  Usar **NULL** para el primer argumento de la función aplicará únicamente a la función **outputColumn** campos, no **param** campos en `CDaoFieldExchange`. Por ejemplo, la llamada  
   
- [!code-cpp[NVC_MFCDatabase #8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
   
  establecerá solo **outputColumn** campos a **NULL**; **param** campos no se verá afectados.  
   
@@ -2257,4 +2318,3 @@ virtual void Update();
  [CDaoWorkspace (clase)](../../mfc/reference/cdaoworkspace-class.md)   
  [CDaoDatabase (clase)](../../mfc/reference/cdaodatabase-class.md)   
  [CDaoQueryDef (clase)](../../mfc/reference/cdaoquerydef-class.md)
-

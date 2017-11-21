@@ -1,102 +1,102 @@
 ---
-title: "_putch_nolock, _putwch_nolock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putwch_nolock"
-  - "_putch_nolock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putch_nolock"
-  - "_puttch_nolock"
-  - "putch_nolock"
-  - "putwch_nolock"
-  - "_putwch_nolock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putch_nolock (función)"
-  - "_puttch_nolock (función)"
-  - "_putwch_nolock (función)"
-  - "caracteres, escribir"
-  - "consola, escribir caracteres en"
-  - "putch_nolock (función)"
-  - "puttch_nolock (función)"
-  - "putwch_nolock (función)"
+title: _putch_nolock, _putwch_nolock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putwch_nolock
+- _putch_nolock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putch_nolock
+- _puttch_nolock
+- putch_nolock
+- putwch_nolock
+- _putwch_nolock
+dev_langs: C++
+helpviewer_keywords:
+- putwch_nolock function
+- puttch_nolock function
+- characters, writing
+- putch_nolock function
+- _putch_nolock function
+- _puttch_nolock function
+- console, writing characters to
+- _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 75da1fcf2596bc8ab65c6fe2403c8397170a22b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# _putch_nolock, _putwch_nolock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
 Escribe un carácter en la consola sin bloquear el subproceso.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución.  Para obtener más información, vea [Funciones de CRT no admitidas con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
       int _putch_nolock(  
-int c   
+int c  
 );  
 wint_t _putwch_nolock(  
 wchar_t c  
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *c*  
  Carácter que se va a generar.  
   
-## Valor devuelto  
- Si la operación se realiza correctamente, devuelve *c*.  Si **\_putch\_nolock** produce un error, devuelve **EOF**; si **\_putwch\_nolock** produce un error, devuelve **WEOF**.  
+## <a name="return-value"></a>Valor devuelto  
+ Si la operación se realiza correctamente, devuelve *c*. Si **_putch_nolock** produce un error, devuelve **EOF**; si **_putwch_nolock** produce un error, devuelve **WEOF**.  
   
-## Comentarios  
- **\_putch\_nolock** y **\_putwch\_nolock** son exactamente igual que **\_putch** y **\_putwch**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos.  Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos.  Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
+## <a name="remarks"></a>Comentarios  
+ **_putch_nolock** y **_putwch_nolock** son exactamente iguales que **_putch** y **_putwch**, respectivamente, salvo que no están protegidos de las interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
   
-### Asignaciones de rutina de texto genérico  
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
-|Rutina Tchar.h|\_UNICODE y \_MBCS no definidos|\_MBCS definido|\_UNICODE definido|  
-|--------------------|-------------------------------------|---------------------|------------------------|  
-|**\_puttch\_nolock**|**\_putch\_nolock**|**\_putch\_nolock**|**\_putwch\_nolock**|  
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|**\_putch\_nolock**|\<conio.h\>|  
-|**\_putwch\_nolock**|\<conio.h\>|  
+|-------------|---------------------|  
+|**_putch_nolock**|\<conio.h>|  
+|**_putwch_nolock**|\<conio.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Bibliotecas  
+## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
-## Vea también  
- [E\/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [\_getch, \_getwch](../../c-runtime-library/reference/getch-getwch.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

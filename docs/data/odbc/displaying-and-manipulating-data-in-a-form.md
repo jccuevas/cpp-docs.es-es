@@ -1,37 +1,37 @@
 ---
-title: "Mostrar y manipular datos en un formulario | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "datos [MFC]"
-  - "datos [MFC], mostrar en un formulario"
-  - "mostrar datos [C++], formularios"
-  - "formularios [C++], mostrar datos"
-  - "ODBC [C++], formularios"
-  - "vistas de registros [C++], mostrar datos"
+title: Mostrar y manipular datos en un formulario | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- forms [C++], displaying data
+- displaying data [C++], forms
+- ODBC [C++], forms
+- record views [C++], displaying data
+- data [MFC]
+- data [MFC], displaying in a form
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb286e837d06ca12ebffa22d15ff9c534d815e83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Mostrar y manipular datos en un formulario
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Muchas aplicaciones de acceso a datos seleccionan los datos y los muestran en los campos de un formulario.  La clase de base de datos [CRecordView](../../mfc/reference/crecordview-class.md) proporciona un objeto [CFormView](../../mfc/reference/cformview-class.md) directamente conectado al objeto de conjunto de registros.  La vista de registros utiliza el [intercambio de datos de cuadros de diálogo \(DDX\)](../../mfc/dialog-data-exchange-and-validation.md) para mover los valores de los campos del registro actual desde el conjunto de registros hasta los controles del formulario y para mover información actualizada de vuelta al conjunto de registros.  El conjunto de registros, a su vez, utiliza el intercambio de campos de registros \(RFX\) para mover datos entre los miembros de datos de campo y las columnas correspondientes de una tabla del origen de datos.  
+# <a name="displaying-and-manipulating-data-in-a-form"></a>Mostrar y manipular datos en un formulario
+Muchas aplicaciones de acceso a datos seleccione datos y mostrarlos en campos de un formulario. La clase de base de datos [CRecordView](../../mfc/reference/crecordview-class.md) le ofrece un [CFormView](../../mfc/reference/cformview-class.md) objeto conectado directamente a un objeto de conjunto de registros. La vista de registros utiliza [intercambio de datos de cuadros de diálogo (DDX)](../../mfc/dialog-data-exchange-and-validation.md) para mover los valores de los campos del registro actual del conjunto de registros a los controles en el formulario y para mover información actualizada de vuelta al conjunto de registros. El conjunto de registros, a su vez, utiliza el intercambio de campos de registros (RFX) para mover datos entre sus miembros de datos de campo y las columnas correspondientes de una tabla en el origen de datos.  
   
- Se puede utilizar el Asistente para aplicaciones MFC o **Agregar clase** \(como se describe en [Agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)\) para crear la clase de vista y su clase de conjunto de registros asociada conjuntamente.  
+ Puede usar el Asistente para aplicaciones MFC o **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) para crear la clase de vista y su clase de conjunto de registros asociada conjuntamente.  
   
- La vista de registros y el conjunto de registros se destruyen al cerrar el documento.  Para obtener más información sobre vistas de registros, vea [Vistas de registros](../../data/record-views-mfc-data-access.md).  Para obtener más información sobre RFX, vea [Intercambio de campos de registros \(RFX\)](../../data/odbc/record-field-exchange-rfx.md).  
+ La vista de registros y su conjunto de registros se destruyen cuando se cierra el documento. Para obtener más información sobre vistas de registros, vea [vistas de registros](../../data/record-views-mfc-data-access.md). Para obtener más información sobre RFX, consulte [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ODBC y MFC](../../data/odbc/odbc-and-mfc.md)
