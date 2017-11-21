@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- hash_set/stdext::hash_compare
-- hash_compare
-dev_langs:
-- C++
-helpviewer_keywords:
-- hash_compare class
+f1_keywords: hash_set/stdext::hash_compare
+dev_langs: C++
+helpviewer_keywords: hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 56b02a7bcafebebfb9fbb5569ad28eb2d52cf879
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: a04dd9a2c18357260a4543f7117955cc611fa001
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="hashcompare-class"></a>hash_compare (Clase)
 La clase de plantilla describe un objeto que se puede usar con cualquiera de los contenedores asociativos hash (hash_map, hash_multimap, hash_set o hash_multiset) como un objeto de parámetro **Traits** predeterminado para ordenar y aplicar algoritmos hash a los elementos que contienen.  
@@ -59,8 +39,6 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
   
 -   La constante entera **min_buckets** especifica el número mínimo de depósitos que se deben mantener en la tabla hash. Debe ser una potencia de dos y mayor que cero. El valor proporcionado por hash_compare es 8.  
   
- En Visual C++ .NET 2003, los miembros de los archivos de encabezado [<hash_map>](../standard-library/hash-map.md) y [<hash_set>](../standard-library/hash-set.md) ya no están en el espacio de nombres std, sino que se han movido al espacio de nombres stdext. Vea [stdext (Espacio de nombres)](../standard-library/stdext-namespace.md) para obtener más información.  
-  
 ## <a name="example"></a>Ejemplo  
  Vea los ejemplos de [hash_map::hash_map](../standard-library/hash-map-class.md#hash_map), [hash_multimap::hash_multimap](../standard-library/hash-multimap-class.md#hash_multimap), [hash_set::hash_set](../standard-library/hash-set-class.md#hash_set) y [hash_multiset::hash_multiset](../standard-library/hash-multiset-class.md#hash_multiset) para ver ejemplos sobre cómo declarar y usar hash_compare.  
   
@@ -72,7 +50,6 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

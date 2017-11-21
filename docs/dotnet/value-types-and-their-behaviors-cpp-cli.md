@@ -1,43 +1,41 @@
 ---
-title: "Tipos de valor y su comportamiento (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de valor"
+title: Tipos de valor y sus comportamientos (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: value types
 ms.assetid: 5cb872a6-1e0a-429d-853d-df4ab47e8f2a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 683471e6449e1c1f190ecc7ef680d6108fdd644a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Tipos de valor y su comportamiento (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los tipos de valor han cambiado de distintas maneras de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  Esta sección trata del tipo de enumeración CLR y del tipo de clase de valor, de la conversión boxing y del acceso a la instancia convertida mediante boxing en el montón CLR, así como de los punteros anclados e interiores.  Ha habido muchos cambios de lenguaje en esta área.  
+# <a name="value-types-and-their-behaviors-ccli"></a>Tipos de valor y su comportamiento (C++/CLI)
+Tipos de valor han cambiado de distintas maneras de extensiones administradas para C++ a Visual C++. En esta sección, veremos el tipo de enumeración CLR y el tipo de clase de valor, junto con la conversión boxing y obtener acceso a la instancia de conversión boxing en el montón CLR, así como de los punteros interiores y anclados. Ha habido muchos cambios de lenguaje en esta área.  
   
-## En esta sección  
- [CLR Enum Type](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Tipo de enumeración de CLR](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
  Trata sobre los cambios en la declaración y el comportamiento de las enumeraciones.  
   
  [Conversión boxing implícita de los tipos de valor](../dotnet/implicit-boxing-of-value-types.md)  
- Trata sobre los motivos para realizar la conversión boxing implícita de los tipos de valor y los cambios en el comportamiento consecuentes.  
+ Describe la motivación de conversión boxing implícita de tipos de valor y los cambios de comportamiento consecutivas.  
   
  [Controlador de seguimiento de un valor al que se le ha aplicado la conversión boxing](../dotnet/a-tracking-handle-to-a-boxed-value.md)  
- Explica cómo la conversión boxing implícita de tipos de valor convierte un controlador de seguimiento en un objeto de valor al que se ha aplicado la conversión boxing.  
+ Describe la conversión boxing implícita cómo del valor de tipos se traduce en un controlador de seguimiento para el objeto de valor con conversión boxing.  
   
  [Semántica de los tipos de valor](../dotnet/value-type-semantics.md)  
- Trata sobre los cambios semánticos de los tipos de valor, incluidos los métodos virtuales heredados, los constructores predeterminados de clases y los punteros interiores y anclados.  
+ Explica los cambios en la semántica de tipos de valor, incluidos los métodos virtuales heredados, los constructores predeterminados de clases, punteros interiores y fijar punteros.  
   
-## Vea también  
- [Manual de migraciones C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
+## <a name="see-also"></a>Vea también  
+ [C++ / CLI manual de migraciones](../dotnet/cpp-cli-migration-primer.md)   
  [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)

@@ -1,63 +1,62 @@
 ---
-title: "Selector de colores personalizados (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.customcolorselector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Selector de colores personalizados (cuadro de diálogo)"
-  - "colores, imagen"
+title: "Cuadro de diálogo Selector de colores personalizados (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.customcolorselector
+dev_langs: C++
+helpviewer_keywords:
+- Custom Color Selector dialog box
+- colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 417e1b99066a0e2af6b58fb684bf0912f7c420ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Selector de colores personalizados (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este cuadro de diálogo permite personalizar los colores utilizados en la imagen.  Para obtener más información, vea [Personalizar o cambiar colores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+# <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Selector de colores personalizados (Cuadro de diálogo) (Editor de imágenes para iconos)
+Este cuadro de diálogo permite personalizar los colores utilizados en la imagen. Para obtener más información, consulte [personalizar o cambiar colores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Presentación de color degradado**  
- Cambia los valores de un color seleccionado.  Sitúe el cursor de líneas en cruz sobre el color que desee cambiar.  A continuación, suba o baje el control deslizante para cambiar la luminosidad o los valores RGB del color.  
+ **Presentación de Color degradado**  
+ Cambia los valores de un color seleccionado. Coloque la cruz en el color que desee cambiar. A continuación, mueva el control deslizante hacia arriba o hacia abajo para cambiar la luminosidad o los valores RGB del color.  
   
- **Barra de luminosidad**  
- Establece la luminosidad del color seleccionado en el cuadro Presentación de color degradado.  Para aumentar la luminosidad, haga clic en la flecha blanca y arrástrela hacia arriba en la barra. Para disminuirlo, arrastre la flecha hacia abajo.  Tenga en cuenta que el cuadro Color presenta el color seleccionado y el efecto de la luminosidad establecida.  
+ **Barra Luminosidad**  
+ Establece la luminosidad del color que seleccione en el cuadro de presentación de Color degradado. Haga clic y arrastre la flecha blanca hacia arriba la barra para aumentar el brillo o hacia abajo por menos dinero. Tenga en cuenta que el cuadro de Color muestra el color que ha seleccionado y el efecto de la luminosidad establece.  
   
  **Color**  
- Muestra el matiz \(valor de la rueda de colores\) del color que se está definiendo.  Los valores oscilan entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 corresponde al verde, 180 es cián, 200 es magenta y 240 es azul.  
+ Muestra el matiz (valor de la rueda de color) del color que se va a definir. Los valores comprendidos entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 es verde, 180 es aguamarina, 200 es fucsia y 240 es azul.  
   
  **Matiz**  
- Muestra el matiz \(valor de la rueda de colores\) del color que se está definiendo.  Los valores oscilan entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 corresponde al verde, 180 es cián, 200 es magenta y 240 es azul.  
+ Muestra el matiz (valor de la rueda de color) del color que se va a definir. Los valores comprendidos entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 es verde, 180 es aguamarina, 200 es fucsia y 240 es azul.  
   
- **Sat**  
- Especifica el valor de saturación del color que se está definiendo,  es decir, la cantidad de color de un matiz especificado.  El intervalo de valores oscila entre 0 y 240.  
+ **SAT.**  
+ Especifica el valor de saturación del color que se va a definir. La saturación es la cantidad de color en un matiz especificado. Los valores comprendidos entre 0 y 240.  
   
  **Lum**  
- Especifica la luminosidad \(brillo\) del color que se está definiendo.  El intervalo de valores oscila entre 0 y 240.  
+ Enumera la luminosidad (brillo) del color que se va a definir. Los valores comprendidos entre 0 y 240.  
   
- **Red**  
- Especifica el valor de rojo del color que se está definiendo.  El intervalo de valores oscila entre 0 y 255.  
+ **Rojo**  
+ Especifica el valor de rojo del color que se va a definir. Los valores comprendidos entre 0 y 255.  
   
  **Verde**  
- Especifica el valor de verde del color que se está definiendo.  El intervalo de valores oscila entre 0 y 255.  
+ Especifica el valor de verde del color que se va a definir. Los valores comprendidos entre 0 y 255.  
   
  **Azul**  
- Especifica el valor de azul del color que se está definiendo.  El intervalo de valores oscila entre 0 y 255.  
+ Especifica el valor azul del color que se va a definir. Los valores comprendidos entre 0 y 255.  
   
-## Requisitos  
- None  
+## <a name="requirements"></a>Requisitos  
+ Ninguna  
   
-## Vea también  
- [Imagen \(Menú\)](../mfc/image-menu-image-editor-for-icons.md)   
- [Customizing or Changing Colors](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Ventana Colores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md)
+## <a name="see-also"></a>Vea también  
+ [Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)   
+ [Personalizar o cambiar colores](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
+ [Ventana colores](../windows/colors-window-image-editor-for-icons.md)

@@ -1,27 +1,26 @@
 ---
-title: "3.1.4 omp_get_thread_num Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.4 omp_get_thread_num (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5220402b-c109-4b1f-ba79-002e93d08617
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9beb9e81d767a11b4ca701725ac44cc19cd3c3e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.4 omp_get_thread_num Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de `omp_get_thread_num` devuelve el número de subprocesos, dentro de su equipo, el subproceso ejecutando la función.  El número de subproceso se encuentra entre 0 y **omp\_get\_num\_threads \(\)**– 1, incluidos.  El subproceso principal del equipo es el subproceso 0.  
+# <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num (Función)
+El `omp_get_thread_num` función devuelve el número de subprocesos, dentro de su equipo, de que el subproceso que ejecuta la función. Los archivos de número subproceso entre 0 y **omp_get_num_threads()**-1, ambos inclusive. El subproceso principal del equipo es 0.  
   
  El formato es como se detalla a continuación:  
   
@@ -30,8 +29,8 @@ La función de `omp_get_thread_num` devuelve el número de subprocesos, dentro d
 int omp_get_thread_num(void);  
 ```  
   
- Si se llama de una región en serie, `omp_get_thread_num` devuelve 0.  Si se llama dentro de una región paralela anidado que esté serializado, esta función devuelve 0.  
+ Si se llama desde una región de la serie, `omp_get_thread_num` devuelve 0. Si se llama desde dentro de una región paralela anidada que se serializa, esta función devuelve 0.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   la función de`omp_get_num_threads` , vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en la página 37.
+-   `omp_get_num_threads`función, vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en página 37.

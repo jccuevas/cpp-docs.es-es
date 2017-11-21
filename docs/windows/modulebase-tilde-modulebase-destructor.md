@@ -1,46 +1,43 @@
 ---
-title: "ModuleBase::~ModuleBase (Destructor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ModuleBase::~ModuleBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~ModuleBase, destructor"
+title: 'ModuleBase:: ~ ModuleBase (destructor) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ModuleBase::~ModuleBase
+dev_langs: C++
+helpviewer_keywords: ~ModuleBase, destructor
 ms.assetid: e1cbaf32-34b9-4479-931b-b7ef151cae06
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30a9e03ab437b9320c3c0c62af24977fc6016675
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ModuleBase::~ModuleBase (Destructor)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="modulebasemodulebase-destructor"></a>ModuleBase::~ModuleBase (Destructor)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 virtual ~ModuleBase();  
 ```  
   
-## Comentarios  
- Desinicializa la instancia actual de la clase de ModuleBase.  
+## <a name="remarks"></a>Comentarios  
+ Desinicializa la instancia actual de la clase ModuleBase.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [ModuleBase \(Clase\)](../windows/modulebase-class.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [ModuleBase (clase)](../windows/modulebase-class.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

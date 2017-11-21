@@ -1,11 +1,10 @@
 ---
-title: CUrl clase | Documentos de Microsoft
+title: Clase de cUrl | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -39,41 +38,24 @@ f1_keywords:
 - ATLUTIL/ATL::CUrl::SetSchemeName
 - ATLUTIL/ATL::CUrl::SetUrlPath
 - ATLUTIL/ATL::CUrl::SetUserName
-dev_langs:
-- C++
-helpviewer_keywords:
-- CUrl class
+dev_langs: C++
+helpviewer_keywords: CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: eda63a8dc704dd471d8078b848d95fc9fb44f58f
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7e05cb6ca1aa9ffd9a827fd9f907fdc39d5bde13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="curl-class"></a>Clase de cUrl
-Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de las otras si una dirección URL existente de análisis de cadena o crear una cadena desde el principio.  
+Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de las otras si analizar una dirección URL existente cadena o generar una cadena desde el principio.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no pueden utilizarse en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -95,28 +77,28 @@ class CUrl
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[CUrl::Canonicalize](#canonicalize)|Llame a este método para convertir la cadena de dirección URL en forma canónica.|  
-|[CUrl::Clear](#clear)|Llame a este método para borrar todos los campos de dirección URL.|  
+|[CUrl::Clear](#clear)|Llamar a este método para borrar todos los campos de dirección URL.|  
 |[CUrl::CrackUrl](#crackurl)|Llame a este método para descodificar y analizar la dirección URL.|  
 |[CUrl::CreateUrl](#createurl)|Llame a este método para crear la dirección URL.|  
-|[CUrl::GetExtraInfo](#getextrainfo)|Llamar a este método para obtener información adicional (como *texto* # *texto*) de la dirección URL.|  
-|[CUrl::GetExtraInfoLength](#getextrainfolength)|Llamar a este método para obtener la longitud de la información adicional (como *texto* # *texto*) para recuperar desde la dirección URL.|  
+|[CUrl::GetExtraInfo](#getextrainfo)|Llamar a este método para obtener información adicional (como *texto* o # *texto*) de la dirección URL.|  
+|[CUrl::GetExtraInfoLength](#getextrainfolength)|Llamar a este método para obtener la longitud de la información adicional (como *texto* o # *texto*) para recuperar de la dirección URL.|  
 |[CUrl::GetHostName](#gethostname)|Llamar a este método para obtener el nombre de host de la dirección URL.|  
-|[CUrl::GetHostNameLength](#gethostnamelength)|Llamar a este método para obtener la longitud del nombre de host.|  
+|[CUrl::GetHostNameLength](#gethostnamelength)|Llame a este método para obtener la longitud del nombre de host.|  
 |[CUrl::GetPassword](#getpassword)|Llamar a este método para obtener la contraseña de la dirección URL.|  
 |[CUrl::GetPasswordLength](#getpasswordlength)|Llame a este método para obtener la longitud de la contraseña.|  
-|[CUrl::GetPortNumber](#getportnumber)|Llame a este método para obtener el número de puerto en términos de ATL_URL_PORT.|  
+|[CUrl::GetPortNumber](#getportnumber)|Llamar a este método para obtener el número de puerto en cuanto a ATL_URL_PORT.|  
 |[CUrl::GetScheme](#getscheme)|Llame a este método para obtener el esquema de dirección URL.|  
-|[CUrl::GetSchemeName](#getschemename)|Llame a este método para obtener el nombre de esquema de dirección URL.|  
-|[CUrl::GetSchemeNameLength](#getschemenamelength)|Llamar a este método para obtener la longitud del nombre del esquema de dirección URL.|  
-|[CUrl::GetUrlLength](#geturllength)|Llamar a este método para obtener la longitud de la dirección URL.|  
-|[CUrl::GetUrlPath](#geturlpath)|Llame a este método para obtener la ruta de acceso de dirección URL.|  
-|[CUrl::GetUrlPathLength](#geturlpathlength)|Llame a este método para obtener la longitud de la ruta de acceso de dirección URL.|  
+|[CUrl::GetSchemeName](#getschemename)|Llamar a este método para obtener el nombre de esquema de dirección URL.|  
+|[CUrl::GetSchemeNameLength](#getschemenamelength)|Llame a este método para obtener la longitud del nombre de esquema de dirección URL.|  
+|[CUrl::GetUrlLength](#geturllength)|Llame a este método para obtener la longitud de dirección URL.|  
+|[CUrl::GetUrlPath](#geturlpath)|Llamar a este método para obtener la ruta de acceso de dirección URL.|  
+|[CUrl::GetUrlPathLength](#geturlpathlength)|Llame a este método para obtener la longitud de ruta de acceso de dirección URL.|  
 |[CUrl::GetUserName](#getusername)|Llamar a este método para obtener el nombre de usuario de la dirección URL.|  
-|[CUrl::GetUserNameLength](#getusernamelength)|Llamar a este método para obtener la longitud del nombre de usuario.|  
-|[CUrl::SetExtraInfo](#setextrainfo)|Llamar a este método para establecer la información adicional (como *texto* # *texto*) de la dirección URL.|  
+|[CUrl::GetUserNameLength](#getusernamelength)|Llame a este método para obtener la longitud del nombre de usuario.|  
+|[CUrl::SetExtraInfo](#setextrainfo)|Llamar a este método para establecer la información adicional (como *texto* o # *texto*) de la dirección URL.|  
 |[CUrl::SetHostName](#sethostname)|Llame a este método para establecer el nombre de host.|  
-|[CUrl::SetPassword](#setpassword)|Llamar a este método para establecer la contraseña.|  
-|[CUrl::SetPortNumber](#setportnumber)|Llame a este método para establecer el número de puerto en términos de ATL_URL_PORT.|  
+|[CUrl::SetPassword](#setpassword)|Llame a este método para establecer la contraseña.|  
+|[CUrl::SetPortNumber](#setportnumber)|Llamar a este método para establecer el número de puerto en cuanto a ATL_URL_PORT.|  
 |[CUrl::SetScheme](#setscheme)|Llame a este método para establecer el esquema de dirección URL.|  
 |[CUrl::SetSchemeName](#setschemename)|Llame a este método para establecer el nombre de esquema de dirección URL.|  
 |[CUrl::SetUrlPath](#seturlpath)|Llame a este método para establecer la ruta de acceso de dirección URL.|  
@@ -126,28 +108,28 @@ class CUrl
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CUrl::operator =](#operator_eq)|Asigna especificado `CUrl` objeto actual `CUrl` objeto.|  
+|[CUrl::operator =](#operator_eq)|Asigna especificado `CUrl` objeto al actual `CUrl` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CUrl`permite manipular los campos de una dirección URL, como el número de puerto o la ruta de acceso. `CUrl`comprende las direcciones URL de la forma siguiente:  
+ `CUrl`permite manipular los campos de una dirección URL, como el número de puerto o la ruta de acceso. `CUrl`entienda las direcciones URL de la forma siguiente:  
   
- \<Esquema >: / /\<UserName >:\<contraseña > @\<HostName >:\<PortNumber > /\<UrlPath >\<ExtraInfo >  
+ \<Esquema > ://\<nombre de usuario >:\<contraseña > @\<nombre de host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >  
   
- (Algunos campos son opcionales). Por ejemplo, considere esta dirección URL:  
+ (Algunos campos son opcionales). Por ejemplo, considere la posibilidad de esta dirección URL:  
   
  http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents  
   
- [CUrl::CrackUrl](#crackurl) analiza como sigue:  
+ [CUrl::CrackUrl](#crackurl) se analiza como se indica a continuación:  
   
 -   Esquema: "http" o [ATL_URL_SCHEME_HTTP](atl-url-scheme-enum.md)  
   
--   Nombre de usuario: "alguien"  
+-   Nombre de usuario: "someone"  
   
 -   Contraseña: "secreto"  
   
 -   Nombre de host: "www.microsoft.com"  
   
--   Número de puerto: 80  
+-   PortNumber: 80  
   
 -   UrlPath: "visualc/stuff.htm"  
   
@@ -167,15 +149,15 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `dwFlags`  
- Las marcas que controlan la canonización. Si no se especifican indicadores ( `dwFlags` = 0), el método convierte todos los caracteres no seguros y las secuencias de metadatos (como \\., \.., y \\...) secuencias de escape. `dwFlags`puede ser uno de los siguientes valores:  
+ Las marcas que controlan la canonización. Si no se especifica ningún indicador ( `dwFlags` = 0), el método convierte todos los caracteres no seguros y las secuencias de metadatos (como \\., \.., y \\...) como escape secuencias. `dwFlags`puede ser uno de los siguientes valores:  
   
 -   ATL_URL_BROWSER_MODE: No codificar o descodificar caracteres después de "#" o "" y no quita los espacios en blanco finales después de "". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.  
   
--   ATL_URL _DECODE: convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape antes de que se analiza la dirección URL.  
+-   ATL_URL _DECODE: convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de que se analiza la dirección URL.  
   
--   ATL_URL _ENCODE_PERCENT: codifica los signos de porcentaje detectados. De forma predeterminada, no se codifican los signos de porcentaje.  
+-   ATL_URL _ENCODE_PERCENT: codifica los signos de porcentaje encontrados. De forma predeterminada, no se codifican los signos de porcentaje.  
   
--   ATL_URL _ENCODE_SPACES_ONLY: codifica sólo espacios.  
+-   ATL_URL _ENCODE_SPACES_ONLY: codifica solo espacios.  
   
 -   ATL_URL _NO_ENCODE: no convierte los caracteres no seguros en secuencias de escape.  
   
@@ -188,7 +170,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
  Convertir en forma canónica implica la conversión de espacios para secuencias de escape y caracteres no seguros.  
   
 ##  <a name="clear"></a>CUrl::Clear  
- Llame a este método para borrar todos los campos de dirección URL.  
+ Llamar a este método para borrar todos los campos de dirección URL.  
   
 ```
 inline void Clear() throw();
@@ -206,7 +188,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
  La dirección URL.  
   
  `dwFlags`  
- Especifique ATL_URL_DECODE o ATL_URL_ESCAPE para convertir todos los caracteres de escape en `lpszUrl` a sus valores reales después del análisis. (Antes de Visual C++ 2005, ATL_URL_DECODE convertir todos los caracteres de escape antes del análisis.)  
+ Especifique ATL_URL_DECODE o ATL_URL_ESCAPE para convertir todos los caracteres de escape en `lpszUrl` con sus valores reales después del análisis. (Antes de Visual C++ 2005, ATL_URL_DECODE convertir todos los caracteres de escape antes del análisis.)  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -226,25 +208,25 @@ inline BOOL CreateUrl(
  Un búfer de cadena para contener la cadena de dirección URL completa.  
   
  `pdwMaxLength`  
- La longitud máxima de la *lpszUrl* el búfer de cadena.  
+ La longitud máxima de la *lpszUrl* búfer de cadena.  
   
  `dwFlags`  
- Especificar ATL_URL_ESCAPE para convertir todos los caracteres de escape en *lpszUrl* a sus valores reales.  
+ Especificar ATL_URL_ESCAPE para convertir todos los caracteres de escape en *lpszUrl* con sus valores reales.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método anexa los campos individuales para construir la cadena de dirección URL completa con el formato siguiente:  
+ Este método anexa sus campos individuales para construir la cadena de dirección URL completa con el formato siguiente:  
   
- **\<esquema >: / /\<usuario >:\<pasar > @\<dominio >:\<puerto >\<ruta >\<adicional >**  
+ **\<esquema > ://\<usuario >:\<pasar > @\<dominio >:\<puerto >\<ruta de acceso >\<adicional >**  
   
  Cuando se llama a este método, el `pdwMaxLength` parámetro inicialmente debe contener la longitud máxima del búfer de cadena al que hace referencia el *lpszUrl* parámetro. El valor de la `pdwMaxLength` parámetro se actualizará con la longitud real de la cadena de dirección URL.  
   
 ### <a name="example"></a>Ejemplo  
- Este ejemplo muestra la creación de un objeto de CUrl y recuperar la cadena de dirección URL  
+ Este ejemplo muestra la creación de un objeto CUrl y recuperar su cadena de dirección URL  
   
- [!code-cpp[NVC_ATL_Utilities&#133;](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
 ##  <a name="curl"></a>CUrl::CUrl  
  El constructor.  
@@ -266,7 +248,7 @@ CUrl(const CUrl& urlThat) throw();
 ```  
   
 ##  <a name="getextrainfo"></a>CUrl::GetExtraInfo  
- Llamar a este método para obtener información adicional (como *texto* # *texto*) de la dirección URL.  
+ Llamar a este método para obtener información adicional (como *texto* o # *texto*) de la dirección URL.  
   
 ```
 inline LPCTSTR GetExtraInfo() const throw();
@@ -276,7 +258,7 @@ inline LPCTSTR GetExtraInfo() const throw();
  Devuelve una cadena que contiene la información adicional.  
   
 ##  <a name="getextrainfolength"></a>CUrl::GetExtraInfoLength  
- Llamar a este método para obtener la longitud de la información adicional (como *texto* # *texto*) para recuperar desde la dirección URL.  
+ Llamar a este método para obtener la longitud de la información adicional (como *texto* o # *texto*) para recuperar de la dirección URL.  
   
 ```
 inline DWORD GetExtraInfoLength() const throw();
@@ -296,7 +278,7 @@ inline LPCTSTR GetHostName() const throw();
  Devuelve el nombre de host.  
   
 ##  <a name="gethostnamelength"></a>CUrl::GetHostNameLength  
- Llamar a este método para obtener la longitud del nombre de host.  
+ Llame a este método para obtener la longitud del nombre de host.  
   
 ```
 inline DWORD GetHostNameLength() const throw();
@@ -326,7 +308,7 @@ inline DWORD GetPasswordLength() const throw();
  Devuelve la longitud de contraseña.  
   
 ##  <a name="getportnumber"></a>CUrl::GetPortNumber  
- Llame a este método para obtener el número de puerto.  
+ Llamar a este método para obtener el número de puerto.  
   
 ```
 inline ATL_URL_PORT GetPortNumber() const throw();
@@ -346,7 +328,7 @@ inline ATL_URL_SCHEME GetScheme() const throw();
  Devuelve el [ATL_URL_SCHEME](atl-url-scheme-enum.md) valor que describe el esquema de la dirección URL.  
   
 ##  <a name="getschemename"></a>CUrl::GetSchemeName  
- Llame a este método para obtener el nombre de esquema de dirección URL.  
+ Llamar a este método para obtener el nombre de esquema de dirección URL.  
   
 ```
 inline LPCTSTR GetSchemeName() const throw();
@@ -356,7 +338,7 @@ inline LPCTSTR GetSchemeName() const throw();
  Devuelve el nombre de esquema de dirección URL (por ejemplo, "http" o "ftp").  
   
 ##  <a name="getschemenamelength"></a>CUrl::GetSchemeNameLength  
- Llamar a este método para obtener la longitud del nombre del esquema de dirección URL.  
+ Llame a este método para obtener la longitud del nombre de esquema de dirección URL.  
   
 ```
 inline DWORD GetSchemeNameLength() const throw();
@@ -366,17 +348,17 @@ inline DWORD GetSchemeNameLength() const throw();
  Devuelve la longitud del nombre de esquema de dirección URL.  
   
 ##  <a name="geturllength"></a>CUrl::GetUrlLength  
- Llamar a este método para obtener la longitud de la dirección URL.  
+ Llame a este método para obtener la longitud de dirección URL.  
   
 ```
 inline DWORD GetUrlLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve la longitud de la dirección URL.  
+ Devuelve la longitud de dirección URL.  
   
 ##  <a name="geturlpath"></a>CUrl::GetUrlPath  
- Llame a este método para obtener la ruta de acceso de dirección URL.  
+ Llamar a este método para obtener la ruta de acceso de dirección URL.  
   
 ```
 inline LPCTSTR GetUrlPath() const throw();
@@ -386,14 +368,14 @@ inline LPCTSTR GetUrlPath() const throw();
  Devuelve la ruta de acceso de dirección URL.  
   
 ##  <a name="geturlpathlength"></a>CUrl::GetUrlPathLength  
- Llame a este método para obtener la longitud de la ruta de acceso de dirección URL.  
+ Llame a este método para obtener la longitud de ruta de acceso de dirección URL.  
   
 ```
 inline DWORD GetUrlPathLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve la longitud de la ruta de acceso de dirección URL.  
+ Devuelve la longitud de ruta de acceso de dirección URL.  
   
 ##  <a name="getusername"></a>CUrl::GetUserName  
  Llamar a este método para obtener el nombre de usuario de la dirección URL.  
@@ -406,7 +388,7 @@ inline LPCTSTR GetUserName() const throw();
  Devuelve el nombre de usuario.  
   
 ##  <a name="getusernamelength"></a>CUrl::GetUserNameLength  
- Llamar a este método para obtener la longitud del nombre de usuario.  
+ Llame a este método para obtener la longitud del nombre de usuario.  
   
 ```
 inline DWORD GetUserNameLength() const throw();
@@ -416,7 +398,7 @@ inline DWORD GetUserNameLength() const throw();
  Devuelve la longitud del nombre de usuario.  
   
 ##  <a name="operator_eq"></a>CUrl::operator =  
- Asigna especificado `CUrl` objeto actual `CUrl` objeto.  
+ Asigna especificado `CUrl` objeto al actual `CUrl` objeto.  
   
 ```
 CUrl& operator= (const CUrl& urlThat) throw();
@@ -430,7 +412,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
  Devuelve una referencia al objeto actual.  
   
 ##  <a name="setextrainfo"></a>CUrl::SetExtraInfo  
- Llamar a este método para establecer la información adicional (como *texto* # *texto*) de la dirección URL.  
+ Llamar a este método para establecer la información adicional (como *texto* o # *texto*) de la dirección URL.  
   
 ```
 inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
@@ -438,7 +420,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
   
 ### <a name="parameters"></a>Parámetros  
  *lpszInfo*  
- Cadena que contiene la información adicional para incluir en la dirección URL.  
+ Cadena que contiene la información adicional que se incluirán en la dirección URL.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
@@ -458,7 +440,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ##  <a name="setpassword"></a>CUrl::SetPassword  
- Llamar a este método para establecer la contraseña.  
+ Llame a este método para establecer la contraseña.  
   
 ```
 inline BOOL SetPassword(LPCTSTR lpszPass) throw();
@@ -500,7 +482,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- También puede establecer el esquema por su nombre (consulte [CUrl::SetSchemeName](#setschemename)).  
+ También puede establecer el esquema por su nombre (vea [CUrl::SetSchemeName](#setschemename)).  
   
 ##  <a name="setschemename"></a>CUrl::SetSchemeName  
  Llame a este método para establecer el nombre de esquema de dirección URL.  
@@ -549,4 +531,3 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../atl/reference/atl-classes.md)
-

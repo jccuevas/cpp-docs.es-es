@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,39 +32,40 @@ f1_keywords:
 - AFXDB/CDatabase::SetLoginTimeout
 - AFXDB/CDatabase::SetQueryTimeout
 - AFXDB/CDatabase::m_hdbc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- database classes [C++], ODBC
-- MFC [C++], ODBC
-- ODBC [C++], CDatabase class
-- ODBC database class
-- database connections [C++], CDatabase class
-- CDatabase class
+- CDatabase [MFC], CDatabase
+- CDatabase [MFC], BeginTrans
+- CDatabase [MFC], BindParameters
+- CDatabase [MFC], Cancel
+- CDatabase [MFC], CanTransact
+- CDatabase [MFC], CanUpdate
+- CDatabase [MFC], Close
+- CDatabase [MFC], CommitTrans
+- CDatabase [MFC], ExecuteSQL
+- CDatabase [MFC], GetBookmarkPersistence
+- CDatabase [MFC], GetConnect
+- CDatabase [MFC], GetCursorCommitBehavior
+- CDatabase [MFC], GetCursorRollbackBehavior
+- CDatabase [MFC], GetDatabaseName
+- CDatabase [MFC], IsOpen
+- CDatabase [MFC], OnSetOptions
+- CDatabase [MFC], Open
+- CDatabase [MFC], OpenEx
+- CDatabase [MFC], Rollback
+- CDatabase [MFC], SetLoginTimeout
+- CDatabase [MFC], SetQueryTimeout
+- CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase (clase)
 Representa una conexión a un origen de datos, a través de la que puede trabajar con el origen de datos.  
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|Inicia una transacción de"", una serie de llamadas reversibles para la `AddNew`, **editar**, **eliminar**, y **actualización** funciones miembro de clase `CRecordset` : en el origen de datos conectado. El origen de datos debe admitir transacciones para **BeginTrans** surta efecto.|  
+|[CDatabase::BeginTrans](#begintrans)|Inicia una transacción de"", una serie de llamadas reversibles para la `AddNew`, **editar**, **eliminar**, y **actualización** funciones miembro de clase `CRecordset` , en el origen de datos conectado. El origen de datos debe admitir transacciones para **BeginTrans** surta efecto.|  
 |[CDatabase::BindParameters](#bindparameters)|Le permite enlazar parámetros antes de llamar a `CDatabase::ExecuteSQL`.|  
 |[CDatabase::Cancel](#cancel)|Cancela una operación asincrónica o en un proceso de un segundo subproceso.|  
 |[CDatabase::CanTransact](#cantransact)|Devuelve un valor distinto de cero si el origen de datos admite transacciones.|  
@@ -189,7 +189,7 @@ void Cancel();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Tenga en cuenta que las clases ODBC de MFC ya no usan el procesamiento asincrónico; para llevar a cabo una operación asincrónica, se debe llamar directamente a la función API de ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Para obtener más información, consulte [ejecución asincrónica](https://msdn.microsoft.com/library/ms713563.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Tenga en cuenta que las clases ODBC de MFC ya no usan el procesamiento asincrónico; para llevar a cabo una operación asincrónica, se debe llamar directamente a la función API de ODBC [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). Para obtener más información, consulte [ejecución asincrónica](https://msdn.microsoft.com/library/ms713563.aspx) del SDK de Windows.  
   
 ##  <a name="cantransact"></a>CDatabase::CanTransact  
  Llame a esta función miembro para determinar si la base de datos permite que las transacciones.  
@@ -232,9 +232,9 @@ CDatabase();
 ### <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo utilizar `CDatabase` en un `CDocument`-clase derivada.  
   
- [!code-cpp[NVC_MFCDatabase n.º 9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
+ [!code-cpp[NVC_MFCDatabase#9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
   
- [!code-cpp[NVC_MFCDatabase #10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
 ##  <a name="close"></a>CDatabase::Close  
  Llame a esta función miembro si desea desconectarse de un origen de datos.  
@@ -249,7 +249,7 @@ virtual void Close();
  Todas las pendientes `AddNew` o **editar** instrucciones de conjuntos de registros con la base de datos se cancelan y se revierten todas las transacciones pendientes. Los conjuntos de registros depende de la `CDatabase` objeto quedan en un estado indefinido.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDatabase #12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
 ##  <a name="committrans"></a>CDatabase::CommitTrans  
  Llame a esta función miembro al completarse las transacciones.  
@@ -262,7 +262,7 @@ BOOL CommitTrans();
  Es distinto de cero si las actualizaciones se hayan confirmado correctamente; en caso contrario es 0. Si **CommitTrans** se produce un error, el estado del origen de datos no está definido. Debe comprobar los datos para determinar su estado.  
   
 ### <a name="remarks"></a>Comentarios  
- Una transacción está formada por una serie de llamadas a la `AddNew`, **editar**, **eliminar**, y **actualización** las funciones miembro de un `CRecordset` objeto que se inició con una llamada a la [BeginTrans](#begintrans) función miembro. **CommitTrans** confirma la transacción. De forma predeterminada, las actualizaciones se confirman inmediatamente; al llamar a **BeginTrans** hace compromiso de actualizaciones se retrasa hasta que **CommitTrans** se llama.  
+ Una transacción está formada por una serie de llamadas a la `AddNew`, **editar**, **eliminar**, y **actualización** las funciones miembro de un `CRecordset` objeto que comienza con un la llamada a la [BeginTrans](#begintrans) función miembro. **CommitTrans** confirma la transacción. De forma predeterminada, las actualizaciones se confirman inmediatamente; al llamar a **BeginTrans** hace compromiso de actualizaciones se retrasa hasta que **CommitTrans** se llama.  
   
  Hasta que se llama **CommitTrans** para finalizar una transacción, puede llamar a la [reversión](#rollback) función de miembro para anular la transacción y dejar el origen de datos en su estado original. Para comenzar una nueva transacción, llame a **BeginTrans** nuevo.  
   
@@ -288,7 +288,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
  La mayoría de los comandos para un origen de datos se emite a través de objetos de conjunto de registros, que son compatibles con los comandos para seleccionar los datos, insertar nuevos registros, eliminar registros y editar registros. Sin embargo, no todas las funciones ODBC es compatible directamente con las clases de base de datos, por lo que en ocasiones puede que necesite realizar una llamada directa de SQL con `ExecuteSQL`.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDatabase #13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
 ##  <a name="getbookmarkpersistence"></a>CDatabase:: GetBookmarkPersistence  
  Llame a esta función miembro para averiguar la persistencia de los marcadores en un objeto de conjunto de registros tras determinadas operaciones.  
@@ -315,7 +315,7 @@ DWORD GetBookmarkPersistence() const;
 |`SQL_BP_UPDATE`|El marcador de una fila es válido tras una **actualización** operación en esa fila.|  
 |`SQL_BP_OTHER_HSTMT`|Los marcadores asociados con un objeto de conjunto de registros son válidos en un segundo conjunto de registros.|  
   
- Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener más información acerca de los marcadores, vea el artículo [conjunto de registros: marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+ Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** del SDK de Windows. Para obtener más información acerca de los marcadores, vea el artículo [conjunto de registros: marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
 ##  <a name="getconnect"></a>CDatabase::GetConnect  
  Llame a esta función miembro para recuperar la cadena de conexión utilizada durante la llamada a `OpenEx` o a `Open` que conectó el objeto `CDatabase` a un origen de datos.  
@@ -349,7 +349,7 @@ int GetCursorCommitBehavior() const;
 |`SQL_CB_DELETE`|Llame a `CRecordset::Close` inmediatamente después de la confirmación de transacción.|  
 |`SQL_CB_PRESERVE`|Continuar normalmente con `CRecordset` operaciones.|  
   
- Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener más información acerca de las transacciones, vea el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** del SDK de Windows. Para obtener más información acerca de las transacciones, vea el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 ##  <a name="getcursorrollbackbehavior"></a>CDatabase:: GetCursorRollbackBehavior  
  Llame a esta función miembro para determinar cómo un [reversión](#rollback) operación afecta a los cursores en los objetos de conjunto de registros abierto.  
@@ -370,7 +370,7 @@ int GetCursorRollbackBehavior() const;
 |`SQL_CB_DELETE`|Llame a `CRecordset::Close` inmediatamente después de la reversión de transacciones.|  
 |`SQL_CB_PRESERVE`|Continuar normalmente con `CRecordset` operaciones.|  
   
- Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Para obtener más información acerca de las transacciones, vea el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
+ Para obtener más información acerca de este valor devuelto, vea la función API de ODBC **SQLGetInfo** del SDK de Windows. Para obtener más información acerca de las transacciones, vea el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
   
 ##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
  Llame a esta función miembro para recuperar el nombre de la base de datos conectada (siempre que el origen de datos define un objeto con nombre denominado "base de datos").  
@@ -406,7 +406,7 @@ BOOL IsOpen() const;
  Sin embargo, en algunas circunstancias, que necesite usar el identificador directamente. Por ejemplo, si necesita llamar a funciones de la API de ODBC directamente en lugar de a través de la clase `CDatabase`, es posible que tenga un identificador de conexión para pasar como parámetro. Vea el ejemplo de código siguiente.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDatabase #15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
 ##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
  El marco de trabajo llama a esta función miembro cuando se ejecuta directamente una instrucción SQL con el `ExecuteSQL` función miembro.  
@@ -472,12 +472,12 @@ virtual BOOL Open(
   
  Si lo desea, puede abrir su propio cuadro de diálogo antes de llamar a **abrir** para obtener información del usuario, como una contraseña, a continuación, agregue dicha información a la cadena de conexión se pasa a **abrir**. Es posible que quiera guardar la cadena de conexión que pase por lo que puede volver a usarla la próxima vez su aplicación llama **abiertos** en un `CDatabase` objeto.  
   
- También puede utilizar la cadena de conexión para varios niveles de autorización de inicio de sesión (cada uno de ellos para otro `CDatabase` objeto) o para transmitir información específica del origen de datos. Para obtener más información acerca de las cadenas de conexión, consulte el capítulo 5 en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ También puede utilizar la cadena de conexión para varios niveles de autorización de inicio de sesión (cada uno de ellos para otro `CDatabase` objeto) o para transmitir información específica del origen de datos. Para obtener más información acerca de las cadenas de conexión, consulte el capítulo 5 en el SDK de Windows.  
   
  Es posible que un intento de conexión en tiempo de espera si, por ejemplo, el host DBMS no está disponible. Si se produce un error en el intento de conexión, **abiertos** produce una `CDBException`.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDatabase #14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
 ##  <a name="openex"></a>CDatabase:: OpenEx  
  Llame a esta función miembro para inicializar un recién construido `CDatabase` objeto.  
@@ -511,7 +511,7 @@ virtual BOOL OpenEx(
 ### <a name="remarks"></a>Comentarios  
  El objeto de base de datos debe inicializarse antes de que se puede utilizar para construir un objeto de conjunto de registros.  
   
- Si el `lpszConnectString` parámetro en su `OpenEx` llamada no contiene suficiente información para realizar la conexión, el controlador ODBC abre un cuadro de diálogo para obtener la información necesaria del usuario, siempre que no se han establecido **CDatabase::noOdbcDialog** o **CDatabase::forceOdbcDialog** en el `dwOptions` parámetro. Cuando se llama a `OpenEx`, la cadena de conexión, `lpszConnectString`, se almacena de forma privada en el `CDatabase` objeto y está disponible mediante una llamada a la [GetConnect](#getconnect) función miembro.  
+ Si el `lpszConnectString` parámetro en su `OpenEx` llamada no contiene suficiente información para realizar la conexión, el controlador ODBC abre un cuadro de diálogo para obtener la información necesaria del usuario, siempre que no se han establecido **CDatabase:: noOdbcDialog** o **CDatabase::forceOdbcDialog** en el `dwOptions` parámetro. Cuando se llama a `OpenEx`, la cadena de conexión, `lpszConnectString`, se almacena de forma privada en el `CDatabase` objeto y está disponible mediante una llamada a la [GetConnect](#getconnect) función miembro.  
   
  Si lo desea, puede abrir su propio cuadro de diálogo antes de llamar a `OpenEx` para obtener información del usuario, como una contraseña y, a continuación, agregar dicha información a la cadena de conexión se pasa a `OpenEx`. Es posible que quiera guardar la cadena de conexión que pase por lo que puede volver a usarla la próxima vez su aplicación llama `OpenEx` en un `CDatabase` objeto.  
   
@@ -520,7 +520,7 @@ virtual BOOL OpenEx(
  Es posible que un intento de conexión en tiempo de espera si, por ejemplo, el host DBMS no está disponible. Si se produce un error en el intento de conexión, `OpenEx` produce una `CDBException`.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDatabase Nº 11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
 ##  <a name="rollback"></a>CDatabase::Rollback  
  Llame a esta función miembro para invertir los cambios realizados durante una transacción.  
@@ -533,7 +533,7 @@ BOOL Rollback();
  Es distinto de cero si se ha revertido la transacción; en caso contrario es 0. Si un **reversión** llamada produce un error, el origen de datos y transacciones Estados no están definidos. Si **reversión** devuelve 0, debe comprobar el origen de datos para determinar su estado.  
   
 ### <a name="remarks"></a>Comentarios  
- Todos los `CRecordset``AddNew`, **editar**, **eliminar**, y **actualización** llamadas ejecutadas desde la última [BeginTrans](#begintrans) se revierten al estado que existía en el momento de esa llamada.  
+ Todos los `CRecordset` `AddNew`, **editar**, **eliminar**, y **actualización** llamadas ejecutadas desde la última [BeginTrans](#begintrans) se revierten volver al estado que existía en el momento de esa llamada.  
   
  Después de llamar a **reversión**, la transacción está por encima y se debe llamar a **BeginTrans** nuevo por otra transacción. El registro que era el actual antes de que llame **BeginTrans** se convierte en el registro actual de nuevo después de **reversión**.  
   
@@ -578,4 +578,3 @@ void SetQueryTimeout(DWORD dwSeconds);
  [CObject (clase)](../../mfc/reference/cobject-class.md)   
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [CRecordset (clase)](../../mfc/reference/crecordset-class.md)
-

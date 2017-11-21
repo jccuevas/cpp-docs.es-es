@@ -1,32 +1,30 @@
 ---
-title: "SafeSubtract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeSubtract"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeSubtract (función)"
+title: SafeSubtract | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeSubtract
+dev_langs: C++
+helpviewer_keywords: SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 98114ebc7baee41970177e9c390f65fa5521544a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# SafeSubtract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Resta dos números de manera que protege contra el desbordamiento.  
+# <a name="safesubtract"></a>SafeSubtract
+Resta dos números de forma que protege contra los desbordamientos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +35,34 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### Parámetros  
- \[in\] `t`  
- El primer número de resta.  Esto debe ser de tipo t.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `t`  
+ El primer número de la resta. Debe ser de tipo T.  
   
- \[in\] `u`  
- El número que se va a restar de `t`.  Esto debe ser de tipo U.  
+ [in] `u`  
+ El número que se resta `t`. Debe ser de tipo U.  
   
- \[out\] `result`  
+ [out] `result`  
  El parámetro donde `SafeSubtract` almacena el resultado.  
   
-## Valor devuelto  
- `true` si no se produce ningún error; `false` si se produce un error.  
+## <a name="return-value"></a>Valor devuelto  
+ `true`Si se produce ningún error; `false` si se produce un error.  
   
-## Comentarios  
- Este método forma parte de [SafeInt \(Biblioteca\)](../windows/safeint-library.md) y está diseñado para una única operación de resta sin crear una instancia de [SafeInt \(Clase\)](../windows/safeint-class.md).  
+## <a name="remarks"></a>Comentarios  
+ Este método forma parte de [Biblioteca SafeInt](../windows/safeint-library.md) y está diseñado para una operación de resta único sin necesidad de crear una instancia de la [SafeInt (clase)](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Este método debe utilizarse únicamente cuando una sola operación matemática debe proteger.  Si hay varias operaciones, debe usar la clase de `SafeInt` en lugar de llamar a funciones independientes individuales.  
+>  Este método solo debe usarse cuando se debe proteger una sola operación matemática. Si hay varias operaciones, debe usar la `SafeInt` clase en lugar de llamar a las funciones individuales independientes.  
   
- Para obtener más información sobre los tipos t de plantilla y el U, vea [SafeInt \(Funciones\)](../windows/safeint-functions.md).  
+ Para obtener más información acerca de los tipos de plantilla T y U, consulte [SafeInt (funciones)](../windows/safeint-functions.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** safeint.h  
   
- **Espacio de nombres:** Microsoft::Utilities  
+ **Namespace:** Microsoft::Utilities  
   
-## Vea también  
- [SafeInt \(Funciones\)](../windows/safeint-functions.md)   
- [SafeInt \(Biblioteca\)](../windows/safeint-library.md)   
- [SafeInt \(Clase\)](../windows/safeint-class.md)   
+## <a name="see-also"></a>Vea también  
+ [SafeInt (funciones)](../windows/safeint-functions.md)   
+ [Biblioteca SafeInt](../windows/safeint-library.md)   
+ [SafeInt (clase)](../windows/safeint-class.md)   
  [SafeAdd](../windows/safeadd.md)

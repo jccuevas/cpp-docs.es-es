@@ -1,32 +1,30 @@
 ---
-title: "bind1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind1st (función) [STL/CLR]"
+title: bind1st (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind1st
+dev_langs: C++
+helpviewer_keywords: bind1st function [STL/CLR]
 ms.assetid: 03a04cef-60fb-4667-b22a-22a387adb028
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# bind1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera `binder1st` para un argumento y un functor.  
+# <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
+Genera un `binder1st` por un functor y un argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun,  
@@ -35,24 +33,24 @@ template<typename Fun,
         Arg left);  
 ```  
   
-## Parámetros de plantilla  
- Argumento  
+## <a name="template-parameters"></a>Parámetros de plantilla  
+ Arg  
  Tipo del argumento.  
   
- Debería  
- El tipo de functor.  
+ Fun  
+ El tipo del functor.  
   
-## Parámetros de función  
+## <a name="function-parameters"></a>Parámetros de función  
  functor  
- El functor a ajustar.  
+ El functor que va a contener.  
   
  left  
- El primer argumento a ajustar.  
+ El primer argumento que va a contener.  
   
-## Comentarios  
- La función de la plantilla devuelve [binder1st](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`.  Se utiliza como una manera cómoda de ajustar un functor de dos\- argumento y su primer argumento en un functor de uno\- argumento que lo llame con un segundo argumento.  
+## <a name="remarks"></a>Comentarios  
+ Devuelve la función de plantilla [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos y su primer argumento en un functor de un argumento que se llama con un segundo argumento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_bind1st.cpp   
@@ -95,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [binder1st](../dotnet/binder1st-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

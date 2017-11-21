@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>location (Clase)
 Una abstracción de una ubicación física en el hardware.  
@@ -73,8 +55,8 @@ class location;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Determina si dos `location` objetos representan una ubicación diferente.|  
-|[operator=](#operator_eq)|Asigna el contenido de otro `location` objeto a ésta.|  
+|[operator!=](#operator_neq)|Determina si dos `location` objetos representan otra ubicación.|  
+|[operator=](#operator_eq)|Asigna el contenido de otra matriz `location` objeto a este.|  
 |[operator==](#operator_eq_eq)|Determina si dos `location` objetos representan la misma ubicación.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
@@ -102,7 +84,7 @@ static location __cdecl current();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una ubicación que representa el lugar más específica a la que está ejecutando el subproceso que realiza la llamada.  
+ Una ubicación que representa la ubicación más específica en la que está ejecutando el subproceso que realiza la llamada.  
   
 ##  <a name="from_numa_node"></a>from_numa_node 
 
@@ -114,7 +96,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
   
 ### <a name="parameters"></a>Parámetros  
  `_NumaNodeNumber`  
- El número de nodos NUMA para construir una ubicación para.  
+ El número de nodo NUMA para construir una ubicación para.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una ubicación que representa el nodo NUMA especificado por el `_NumaNodeNumber` parámetro.  
@@ -144,11 +126,11 @@ location(
  `_PBinding`  
   
 ### <a name="remarks"></a>Comentarios  
- Una ubicación predeterminada construido representa el sistema como un todo.  
+ Una ubicación construido de forma predeterminada representa el sistema como un todo.  
   
 ##  <a name="operator_neq"></a>operador! = 
 
- Determina si dos `location` objetos representan una ubicación diferente.  
+ Determina si dos `location` objetos representan otra ubicación.  
   
 ```
 bool operator!= (const location& _Rhs) const;
@@ -162,7 +144,7 @@ bool operator!= (const location& _Rhs) const;
   
 ##  <a name="operator_eq"></a>operador = 
 
- Asigna el contenido de otro `location` objeto a ésta.  
+ Asigna el contenido de otra matriz `location` objeto a este.  
   
 ```
 location& operator= (const location& _Rhs);
@@ -190,4 +172,3 @@ bool operator== (const location& _Rhs) const;
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

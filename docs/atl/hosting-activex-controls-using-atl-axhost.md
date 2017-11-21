@@ -1,60 +1,61 @@
 ---
-title: "Hosting ActiveX Controls Using ATL AXHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles ActiveX [C++], hosting"
-  - "AXHost method"
-  - "Calendar control (ActiveX)"
-  - "Calendar control (ActiveX), hosting with ATL AXHost"
-  - "CAxWindow2T class"
-  - "hospedar controles ActiveX"
+title: Hospedar controles ActiveX mediante AXHost de ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CAxWindow2T class
+- Calendar control (ActiveX), hosting with ATL AXHost
+- Calendar control (ActiveX)
+- ActiveX controls [C++], hosting
+- hosting ActiveX controls
+- AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Hosting ActiveX Controls Using ATL AXHost
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de este tema se muestra cómo crear AXHost y cómo hospedar un control ActiveX mediante diferente ATL funciona.  También muestra cómo tener acceso a los eventos del control y el receptor \(mediante [IDispEventImpl](../atl/reference/idispeventimpl-class.md)\) del control se hospeda que.  El ejemplo hospeda el control Calendar en una ventana principal o en una ventana secundaria.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Hospedar controles ActiveX mediante AXHost de ATL
+En este tema se muestra cómo crear AXHost y cómo hospedar un control ActiveX mediante varias funciones ATL. También muestra cómo obtener acceso a los eventos de control y el receptor (mediante [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) desde el control hospedado. El ejemplo hospeda el control de calendario en una ventana principal o en una ventana secundaria.  
   
- Observe la definición del símbolo de `USE_METHOD` .  Puede cambiar el valor de este símbolo para variar entre 1 y 8.  El valor del símbolo determina cómo el control se creará:  
+ Tenga en cuenta la definición de la `USE_METHOD` símbolos. Puede cambiar el valor de este símbolo que oscile entre 1 y 8. El valor del símbolo determina cómo se creará el control:  
   
--   Por valores pares de `USE_METHOD`, la llamada para crear el host crea una subclase de una ventana y la convierte en un host del control.  Por valores con números impares, el código crea una ventana secundaria que actúa como host.  
+-   Para los valores impares de `USE_METHOD`, la llamada para crear una ventana de las subclases de host y lo convierte en un host de control. Para los valores impares, el código crea una ventana secundaria que actúa como un host.  
   
--   Para los valores de `USE_METHOD` entre 1 y 4, el acceso al control y la recepción de eventos se realizan en la llamada que también crea el host.  Los valores entre 5 y 8 vea el host para las interfaces y enlace el receptor.  
+-   Para los valores de `USE_METHOD` entre 1 y 4, el acceso al control y la recepción de eventos se llevan a cabo en la llamada que sirve para crear el host. Los valores entre 5 y 8 consultan al host para las interfaces y enlazan el receptor.  
   
- A continuación se ofrece un resumen:  
+ A continuación, se muestra un resumen:  
   
-|USE\_METHOD|Host|Acceso de Control y contraer de eventos|Función demostrada|  
-|-----------------|----------|---------------------------------------------|------------------------|  
-|1|Ventana secundaria|Un paso|CreateControlLicEx|  
-|2|Ventana principal|Un paso|AtlAxCreateControlLicEx|  
-|3|Ventana secundaria|Un paso|CreateControlEx|  
-|4|Ventana principal|Un paso|AtlAxCreateControlEx|  
+|USE_METHOD|Host|Controlar el acceso y la recepción de eventos|Función explicada|  
+|-----------------|----------|--------------------------------------|---------------------------|  
+|1|Ventana secundaria|Un solo paso|CreateControlLicEx|  
+|2|Ventana principal|Un solo paso|AtlAxCreateControlLicEx|  
+|3|Ventana secundaria|Un solo paso|CreateControlEx|  
+|4|Ventana principal|Un solo paso|AtlAxCreateControlEx|  
 |5|Ventana secundaria|Varios pasos|CreateControlLic|  
 |6|Ventana principal|Varios pasos|AtlAxCreateControlLic|  
 |7|Ventana secundaria|Varios pasos|CreateControl|  
 |8|Ventana principal|Varios pasos|AtlAxCreateControl|  
   
- [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/CPP/hosting-activex-controls-using-atl-axhost_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## Vea también  
- [Preguntas más frecuentes sobre contención de controles](../atl/atl-control-containment-faq.md)   
- [AtlAxCreateControl](../Topic/AtlAxCreateControl.md)   
- [AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)   
- [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)   
- [AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)   
- [CAxWindow2T Class](../atl/reference/caxwindow2t-class.md)   
- [IAxWinHostWindowLic Interface](../atl/reference/iaxwinhostwindowlic-interface.md)
+## <a name="see-also"></a>Vea también  
+ [Preguntas más frecuentes sobre la contención de controles](../atl/atl-control-containment-faq.md)   
+ [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
+ [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
+ [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [Clase CAxWindow2T](../atl/reference/caxwindow2t-class.md)   
+ [IAxWinHostWindowLic (interfaz)](../atl/reference/iaxwinhostwindowlic-interface.md)
+

@@ -1,50 +1,50 @@
 ---
-title: "Control de eventos en ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de eventos, acerca del control de eventos"
+title: Control de eventos y ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a4095ae7cccf33110e4f530c533256aba009aa6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Control de eventos en ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esta sección muestra cómo recibir eventos mediante ATL.  Cubre los principios de control de eventos COM y los específicos de eventos de contraer utilizando la compatibilidad proporcionado para ATL.  
+# <a name="event-handling-and-atl"></a>Control de eventos en ATL
+Esta sección muestra cómo recibir eventos a través de ATL. Abarca los principios de control de eventos COM y los detalles de la recepción de eventos mediante la compatibilidad proporcionada por ATL.  
   
- Para obtener información sobre cómo activar eventos y los puntos de conexión de implementan, lectura [Puntos de conexión ATL](../atl/atl-connection-points.md).  
+ Para obtener información sobre cómo activar eventos e implementar puntos de conexión, lea [puntos de conexión ATL](../atl/atl-connection-points.md).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Principios de control de eventos](../atl/event-handling-principles.md)  
- Describe los pasos comunes a todo el dar de eventos.  
+ Describe los pasos comunes para cualquier control de eventos.  
   
- [Implementar la interfaz de control de eventos](../atl/implementing-the-event-handling-interface.md)  
- Describe clases para implementar la interfaz de eventos.  
+ [Implementación de la interfaz de control de eventos](../atl/implementing-the-event-handling-interface.md)  
+ Describe las clases que se utilizará para implementar la interfaz de eventos.  
   
- [Con IDispEventImpl](../atl/using-idispeventimpl.md)  
- Muestra los pasos para utilizar `IDispEventImpl` y se muestra un ejemplo de código.  
+ [Usar IDispEventImpl](../atl/using-idispeventimpl.md)  
+ Enumera los pasos necesarios para usar `IDispEventImpl` y se muestra un ejemplo de código.  
   
- [Mediante IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
- Muestra los pasos para utilizar `IDispEventSimpleImpl` y se muestra un ejemplo de código.  
+ [Usar IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+ Enumera los pasos necesarios para usar `IDispEventSimpleImpl` y se muestra un ejemplo de código.  
   
  [Resumen de control de eventos ATL](../atl/atl-event-handling-summary.md)  
- Resumen, utilizando las tablas, las formas posibles para implementar una interfaz de eventos y notificárselo y unadvising el origen de eventos mediante ATL.  
+ Resume, mediante tablas, los métodos principales para implementar una interfaz de eventos y para aconsejar y desaconsejar el origen del evento mediante ATL.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Proporciona vínculos a temas conceptuales sobre cómo programar utilizando Active Template Library.  
+ Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Conceptos](../atl/active-template-library-atl-concepts.md)
+

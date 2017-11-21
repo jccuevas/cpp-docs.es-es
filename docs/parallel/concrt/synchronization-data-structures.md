@@ -1,116 +1,122 @@
 ---
-title: "Estructuras de datos de sincronizaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "estructuras de datos de sincronización"
+title: "Estructuras de datos de sincronización | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Estructuras de datos de sincronizaci&#243;n
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El Runtime de simultaneidad proporciona varias estructuras de datos que permiten sincronizar el acceso a los datos compartidos de varios subprocesos.  Estas estructuras de datos son útiles en el caso de disponer de datos compartidos que apenas se modifican.  Un objeto de sincronización, como una sección crítica, hace que otros subprocesos esperen hasta que esté disponible el recurso compartido.  Por consiguiente, si se utiliza este tipo de objeto para sincronizar el acceso a datos de uso frecuente, es posible que la aplicación pierda escalabilidad.  [Parallel Patterns Library \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) proporciona la clase de [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) , que permite compartir un recurso entre varios subprocesos o tareas sin necesidad de sincronización.  Para obtener más información sobre la clase `combinable`, vea [Contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).  
+# <a name="synchronization-data-structures"></a>Estructuras de datos de sincronización
+El Runtime de simultaneidad proporciona varias estructuras de datos que permiten sincronizar el acceso a los datos compartidos desde varios subprocesos. Estas estructuras de datos son útiles cuando se comparten los datos que modifican con poca frecuencia. Un objeto de sincronización, por ejemplo, una sección crítica, hace que otros subprocesos esperar hasta que el recurso compartido está disponible. Por lo tanto, si usa este tipo de objeto para sincronizar el acceso a datos que se utilizan con frecuencia, puede perder la escalabilidad de la aplicación. El [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) proporciona el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite compartir un recurso entre varios subprocesos o tareas sin la necesidad de sincronización. Para obtener más información sobre la `combinable` de clases, consulte [contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ##  <a name="top"></a> Secciones  
- En este tema, se describen detalladamente los siguientes tipos de bloques de mensajes asincrónicos:  
+ En este tema se describe los siguientes tipos de bloques de mensajes asincrónicos en detalle:  
   
--   [critical\_section](#critical_section)  
+-   [critical_section)](#critical_section)  
   
--   [reader\_writer\_lock](#reader_writer_lock)  
+-   [reader_writer_lock)](#reader_writer_lock)  
   
--   [scoped\_lock y scoped\_lock\_read](#scoped_lock)  
+-   [scoped_lock y scoped_lock_read](#scoped_lock)  
   
--   [evento](#event)  
+-   [event](#event)  
   
-##  <a name="critical_section"></a> critical\_section  
- La clase de [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) representa un objeto cooperativo de exclusión mutua que cede ante otras tareas en lugar de adelantarse a ellas.  Las secciones críticas son útiles cuando varios subprocesos requieren acceso exclusivo de lectura y escritura a los datos compartidos.  
+##  <a name="critical_section"></a>critical_section)  
+ El [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) clase representa un objeto cooperativo de exclusión mutua que cede a otras tareas en lugar de adelantarse a ellas. Las secciones críticas son útiles cuando varios subprocesos requieren exclusivo acceso de lectura y escritura a los datos compartidos.  
+
+ La `critical_section` clase no es reentrante. El [concurrency::critical_section::lock](reference/critical-section-class.md#lock) método produce una excepción de tipo [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md) si es llamado por el subproceso que ya posee el bloqueo.  
+
+
   
- La clase `critical_section` es no reentrante.  El método de [concurrency::critical\_section::lock](../Topic/critical_section::lock%20Method.md) produce una excepción de [concurrency::improper\_lock](../../parallel/concrt/reference/improper-lock-class.md) tipo si llama el subproceso que ya posee el bloqueo.  
-  
-### Métodos y características  
- En la tabla siguiente se muestran los métodos importantes definidos por la clase `critical_section`.  
+### <a name="methods-and-features"></a>Métodos y características  
+ La tabla siguiente muestran los métodos importantes que se definen mediante la `critical_section` clase.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[bloquear](../Topic/critical_section::lock%20Method.md)|Adquiere la sección crítica.  El contexto de la llamada se bloquea hasta que adquiere el bloqueo.|  
-|[try\_lock](../Topic/critical_section::try_lock%20Method.md)|Intenta adquirir la sección crítica, pero no se bloquea.|  
-|[unlock](../Topic/critical_section::unlock%20Method.md)|Libera la sección crítica.|  
+|[lock](reference/critical-section-class.md#lock)|Adquiere la sección crítica. Los bloques de contexto que realiza la llamada hasta que adquiere el bloqueo.|  
+|[try_lock](reference/critical-section-class.md#try_lock)|Intenta adquirir la sección crítica, pero no se bloquea.|  
+|[unlock](reference/critical-section-class.md#unlock)|Libera la sección crítica.|  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-##  <a name="reader_writer_lock"></a> reader\_writer\_lock  
- La clase de [concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) proporciona operaciones de lectura y escritura seguro para subprocesos a los datos compartidos.  Utilice bloqueos de lectura o escritura cuando varios subprocesos requieren acceso de lectura simultáneo a un recurso compartido pero apenas escriben en dicho recurso.  Esta clase solo proporciona acceso de escritura a un objeto a la vez.  
+##  <a name="reader_writer_lock"></a>reader_writer_lock)  
+ El [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) clase proporciona las operaciones de lectura/escritura de subprocesos a los datos compartidos. Usar bloqueos de lector/escritor cuando varios subprocesos requieren acceso de lectura simultánea a un recurso compartido pero apenas escriben en dicho recurso compartido. Esta clase proporciona solo un subproceso tenga acceso de escritura a un objeto en cualquier momento.  
   
- La clase `reader_writer_lock` tiene mejor rendimiento que la clase `critical_section` porque un objeto `critical_section` adquiere acceso exclusivo a un recurso compartido, lo que evita el acceso de lectura simultáneo.  
+ El `reader_writer_lock` clase puede realizar mejor que la `critical_section` clase porque un `critical_section` objeto adquiere acceso exclusivo a un recurso compartido, lo que impide el acceso de lectura simultáneo.  
   
- Al igual que la clase `critical_section`, la clase `reader_writer_lock` representa un objeto cooperativo de exclusión mutua que cede ante otras tareas en lugar de adelantarse a ellas.  
+ Al igual que el `critical_section` (clase), el `reader_writer_lock` clase representa un objeto cooperativo de exclusión mutua que cede a otras tareas en lugar de adelantarse a ellas.  
   
- Cuando un subproceso que tiene que escribir en un recurso compartido adquiere un bloqueo de lectura o escritura, se bloquean otros subprocesos que también tienen que obtener acceso al recurso hasta que el sistema de escritura libera el bloqueo.  La clase `reader_writer_lock` es un ejemplo de un bloqueo de *preferencia de escritura*, que desbloquea los sistemas de escritura en espera antes de desbloquear los lectores en espera.  
+ Cuando un subproceso que debe escribir en un recurso compartido adquiere un bloqueo de lectura/escritura, otros subprocesos que también deben tener acceso a los recursos se bloquean hasta que el sistema de escritura libera el bloqueo. El `reader_writer_lock` clase es un ejemplo de un *preferencia de escritura* bloqueo, que es un bloqueo que desbloquea de escritura en espera antes de desbloquear los lectores en espera.  
   
- Al igual que la clase `critical_section`, la clase `reader_writer_lock` no es reentrante.  Los métodos de [concurrency::reader\_writer\_lock::lock](../Topic/reader_writer_lock::lock%20Method.md) y de [concurrency::reader\_writer\_lock::lock\_read](../Topic/reader_writer_lock::lock_read%20Method.md) producen una excepción de `improper_lock` tipo si llama un subproceso que ya posee el bloqueo.  
+ Al igual que el `critical_section` (clase), el `reader_writer_lock` clase no es reentrante. El [concurrency::reader_writer_lock::lock](reference/reader-writer-lock-class.md#lock) y [concurrency::reader_writer_lock::lock_read](reference/reader-writer-lock-class.md#lock_read) métodos lanzan una excepción de tipo `improper_lock` si se llama a un subproceso que ya posee el bloqueo.  
+
+
   
 > [!NOTE]
->  Dado que la clase `reader_writer_lock` no es una clase reentrante, un bloqueo de solo lectura no se puede actualizar a un bloqueo de lectura o escritura ni un bloqueo de lectura o escritura se puede degradar a un bloqueo de solo lectura.  Si se realiza alguna de estas operaciones, se produce un comportamiento inesperado.  
+>  Dado que la `reader_writer_lock` clase es no reentrante, no se puede actualizar un bloqueo de solo lectura a un bloqueo de lector/escritor o degradar un bloqueo de lector/escritor a un bloqueo de solo lectura. Realizar alguna de estas operaciones, produce un comportamiento no especificado.  
   
-### Métodos y características  
- En la tabla siguiente se muestran los métodos importantes definidos por la clase `reader_writer_lock`.  
+### <a name="methods-and-features"></a>Métodos y características  
+ La tabla siguiente muestran los métodos importantes que se definen mediante la `reader_writer_lock` clase.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[bloquear](../Topic/reader_writer_lock::lock%20Method.md)|Adquiere acceso de lectura y escritura al bloqueo.|  
-|[try\_lock](../Topic/reader_writer_lock::try_lock%20Method.md)|Intenta adquirir acceso de lectura y escritura al bloqueo, pero no se bloquea.|  
-|[lock\_read](../Topic/reader_writer_lock::lock_read%20Method.md)|Adquiere acceso de solo lectura al bloqueo.|  
-|[try\_lock\_read](../Topic/reader_writer_lock::try_lock_read%20Method.md)|Intenta adquirir acceso de solo lectura al bloqueo, pero no se bloquea.|  
-|[unlock](../Topic/reader_writer_lock::unlock%20Method.md)|Libera el bloqueo.|  
+|[lock](reference/reader-writer-lock-class.md#lock)|Adquiere el acceso de lectura/escritura al bloqueo.|  
+|[try_lock](reference/reader-writer-lock-class.md#try_lock)|Intenta adquirir acceso de lectura/escritura al bloqueo, pero no se bloquea.|  
+|[lock_read](reference/reader-writer-lock-class.md#lock_read)|Adquiere el acceso de solo lectura al bloqueo.|  
+|[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Intenta adquirir acceso de solo lectura al bloqueo, pero no se bloquea.|  
+|[unlock](reference/reader-writer-lock-class.md#unlock)|Libera el bloqueo.|  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-##  <a name="scoped_lock"></a> scoped\_lock y scoped\_lock\_read  
- Las clases `reader_writer_lock` y `critical_section` proporcionan clases auxiliares anidadas que simplifican la forma en que se usan los objetos de exclusión mutua.  Estas clases auxiliares se denominan *bloqueos con ámbito*.  
+##  <a name="scoped_lock"></a>scoped_lock y scoped_lock_read  
+ El `critical_section` y `reader_writer_lock` clases proporcionan clases anidadas auxiliares que simplifican la forma de trabajar con objetos de exclusión mutua. Estas clases auxiliares se denominan *bloqueos con ámbito*.  
   
- La clase de `critical_section` contiene la clase de [concurrency::critical\_section::scoped\_lock](../Topic/critical_section::scoped_lock%20Class.md) .  El constructor adquiere acceso al objeto `critical_section` proporcionado; el destructor libera el acceso a dicho objeto.  La clase de `reader_writer_lock` contiene la clase de [concurrency::reader\_writer\_lock::scoped\_lock](../Topic/reader_writer_lock::scoped_lock%20Class.md) , similar a `critical_section::scoped_lock`, salvo que administra el acceso de escritura al objeto proporcionado de `reader_writer_lock` .  La clase de `reader_writer_lock` también contiene la clase de [concurrency::reader\_writer\_lock::scoped\_lock\_read](../Topic/reader_writer_lock::scoped_lock_read%20Class.md) .  Esta clase administra el acceso de lectura al objeto `reader_writer_lock` proporcionado.  
+ El `critical_section` clase contiene la [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) clase. El constructor adquiere el acceso al proporcionado `critical_section` objeto; el destructor libera el acceso a dicho objeto. El `reader_writer_lock` clase contiene la [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) (clase), que es similar a `critical_section::scoped_lock`, excepto en que administra el acceso de escritura al proporcionado `reader_writer_lock` objeto. El `reader_writer_lock` clase también contiene el [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class) clase. Esta clase administra el acceso de lectura al proporcionado `reader_writer_lock` objeto.  
+
   
- Los bloqueos con ámbito ofrecen varias ventajas cuando se usan los objetos `reader_writer_lock` y `critical_section` manualmente.  Normalmente, se asigna un bloqueo con ámbito en la pila.  Un bloqueo con ámbito libera automáticamente el acceso a su objeto de exclusión mutua cuando se destruye; por consiguiente, no se desbloquea manualmente el objeto subyacente.  Esto resulta útil cuando una función contiene varias instrucciones `return`.  Los bloqueos con ámbito también pueden ayudar a escribir código seguro ante excepciones.  Cuando una instrucción `throw` hace que se desenrede la pila, se invoca el destructor de cualquier bloqueo con ámbito activo, por lo que se libera siempre correctamente el objeto de exclusión mutua.  
+ Los bloqueos con ámbito ofrecen varias ventajas cuando se trabaja con `critical_section` y `reader_writer_lock` objetos manualmente. Normalmente, se asigna un bloqueo con ámbito en la pila. Un bloqueo con ámbito libera automáticamente el acceso a su objeto de exclusión mutua cuando se destruye; por lo tanto, no se desbloquea manualmente el objeto subyacente. Esto es útil cuando una función contiene varias `return` instrucciones. Los bloqueos con ámbito también pueden ayudarle a escribir código seguro ante excepciones. Cuando un `throw` instrucción hace que la pila se desenrede, se llama al destructor de cualquier bloqueo con ámbito activo y, por tanto, se libera siempre correctamente el objeto de exclusión mutua.  
   
 > [!NOTE]
->  Cuando use las clases `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock_read` y `reader_writer_lock::scoped_lock`, no libere manualmente el acceso al objeto de exclusión mutua subyacente.  De ese modo, es posible que el runtime pase a un estado no válido.  
+>  Cuando se usa el `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock`, y `reader_writer_lock::scoped_lock_read` las clases, no libere manualmente el acceso al objeto subyacente para la exclusión mutua. Esto puede colocar el tiempo de ejecución en un estado no válido.  
   
-##  <a name="event"></a> evento  
- La clase de [concurrency::event](../../parallel/concrt/reference/event-class.md) representa un objeto de sincronización cuyo estado puede ser señalado o no ser señalado.  A diferencia de los objetos de sincronización, cuyo propósito es proteger el acceso a los datos compartidos \(por ejemplo, las secciones críticas\), los eventos sincronizan el flujo de ejecución.  
+##  <a name="event"></a>evento  
+ El [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) clase representa un objeto de sincronización cuyo estado puede ser señalado o no señalado. A diferencia de los objetos de sincronización, por ejemplo, secciones críticas, cuya finalidad es proteger el acceso a los datos compartidos, los eventos sincronizan el flujo de ejecución.  
   
- La clase `event` resulta útil cuando una tarea ha completado el trabajo de otra tarea.  Por ejemplo, una tarea podría señalar a otra tarea que ha leído datos de una conexión de red o de un archivo.  
+ La `event` clase es útil cuando una tarea ha completado el trabajo de otra tarea. Por ejemplo, una tarea podría señalar a otra tarea que ha leído datos desde una conexión de red o desde un archivo.  
   
-### Métodos y características  
- En la tabla siguiente, se muestran varios de los métodos importantes definidos por la clase `event`.  
+### <a name="methods-and-features"></a>Métodos y características  
+ La tabla siguiente muestran algunos de los métodos importantes que se definen mediante la `event` clase.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[wait](../Topic/event::wait%20Method.md)|Espera a que se señale el evento.|  
-|[set](../Topic/event::set%20Method.md)|Establece el evento en el estado señalado.|  
-|[reset](../Topic/event::reset%20Method.md)|Establece el evento en el estado no señalado.|  
-|[wait\_for\_multiple](../Topic/event::wait_for_multiple%20Method.md)|Espera a que se señalen varios eventos.|  
+|[espera](reference/event-class.md#wait)|Espera a que se señale el evento.|  
+|[set](reference/event-class.md#set)|Establece el evento en el estado señalado.|  
+|[reset](reference/event-class.md#reset)|Establece el evento en el estado no señalado.|  
+|[wait_for_multiple](reference/event-class.md#wait_for_multiple)|Espera a que se señalen varios eventos.|  
+
   
-### Ejemplo  
- Para obtener un ejemplo en el que se muestra cómo usar la clase `event`, vea [Comparar estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).  
+### <a name="example"></a>Ejemplo  
+ Para obtener un ejemplo que muestra cómo utilizar el `event` de clases, consulte [comparar estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).  
   
- \[[Arriba](#top)\]  
+ [[Arriba](#top)]  
   
-## Secciones relacionadas  
- [Comparar estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
- Se compara el comportamiento de las estructuras de datos de sincronización con el de la API de Windows.  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Comparación de estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)  
+ Se compara el comportamiento de las estructuras de datos de sincronización a las proporcionadas por la API de Windows.  
   
  [Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime.md)  
- Se describe el Runtime de simultaneidad, que simplifica la programación en paralelo, y contiene vínculos a temas relacionados.
+ Se describe el Runtime de simultaneidad, que simplifica la programación en paralelo, y contiene vínculos a los temas relacionados.
+

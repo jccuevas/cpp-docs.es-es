@@ -4,50 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
-- directory_iterator
 - filesystem/std::experimental::filesystem::_Directory_iterator::_Directory_iterator
-- filesystem/std::experimental::filesystem::directory_iterator
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::directory_iterator
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::increment
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator=
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator==
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator!=
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator*
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator->
-- FILESYSTEM/std::experimental::filesystem::directory_iterator::operator++
-dev_langs:
-- C++
+- filesystem/std::experimental::filesystem::directory_iterator::directory_iterator
+- filesystem/std::experimental::filesystem::directory_iterator::increment
+- filesystem/std::experimental::filesystem::directory_iterator::operator=
+- filesystem/std::experimental::filesystem::directory_iterator::operator==
+- filesystem/std::experimental::filesystem::directory_iterator::operator!=
+- filesystem/std::experimental::filesystem::directory_iterator::operator*
+- filesystem/std::experimental::filesystem::directory_iterator::operator-&gt;
+- filesystem/std::experimental::filesystem::directory_iterator::operator++
+dev_langs: C++
 ms.assetid: dca2ecf8-3e69-4644-a83d-705061e10cc8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4eb80d5309a7749c1374d72be16798dbeea33bdc
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::directory_iterator
+- std::experimental::filesystem::_Directory_iterator::_Directory_iterator
+- std::experimental::filesystem::directory_iterator
+- std::experimental::filesystem::directory_iterator::directory_iterator
+- std::experimental::filesystem::directory_iterator::increment
+- std::experimental::filesystem::directory_iterator::operator=
+- std::experimental::filesystem::directory_iterator::operator==
+- std::experimental::filesystem::directory_iterator::operator!=
+- std::experimental::filesystem::directory_iterator::operator*
+- std::experimental::filesystem::directory_iterator::operator-&gt;
+- std::experimental::filesystem::directory_iterator::operator++
+ms.openlocfilehash: 9782cd4853b7b0c1f429f65ec0741148cc1bc241
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="directoryiterator-class"></a>directory_iterator (Clase)
 Describe un iterador de entrada que establece secuencias en los nombres de archivo en un directorio. En el caso de un iterador X, la expresión *X se evalúa como un objeto de la clase directory_entry que contiene el nombre de archivo y cualquier elemento conocido sobre su estado.  
@@ -150,5 +143,4 @@ directory_iterator& operator++(int);
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
  [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md)
-
 

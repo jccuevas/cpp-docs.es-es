@@ -7,14 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de utilidad de HTTP de ATL
 
@@ -53,7 +53,7 @@ inline BOOL AtlCanonicalizeUrl(
  Búfer asignado por el autor de llamada para recibir la dirección URL con formato canónico.  
   
  `pdwMaxLength`  
- Puntero a una variable que contiene la longitud en caracteres de `szCanonicalized`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
+ Puntero a una variable que contiene la longitud en caracteres de `szCanonicalized`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer incluido el carácter nulo final. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwFlags`  
  Indicadores ATL_URL que controlan el comportamiento de esta función. 
@@ -98,7 +98,7 @@ inline BOOL AtlCombineUrl(
  Búfer asignado por el autor de llamada para recibir la dirección URL con formato canónico.  
   
  `pdwMaxLength`  
- Puntero a una variable que contiene la longitud en caracteres de `szBuffer`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
+ Puntero a una variable que contiene la longitud en caracteres de `szBuffer`. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer incluido el carácter nulo final. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwFlags`  
  Indicadores que controlan el comportamiento de esta función. Vea [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  Búfer asignado por el autor de la llamada a la que se escribirá la URL convertida.  
   
  `pdwStrLen`  
- Puntero a una variable DWORD. Si la función se realiza correctamente, `pdwStrLen` recibe el número de caracteres escritos en el búfer, sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación. Cuando se usa la versión de caracteres anchos de este método, `pdwStrLen` recibe el número de caracteres necesarios, no el número de bytes.  
+ Puntero a una variable DWORD. Si la función se realiza correctamente, `pdwStrLen` recibe el número de caracteres escritos en el búfer incluido el carácter nulo final. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación. Cuando se usa la versión de caracteres anchos de este método, `pdwStrLen` recibe el número de caracteres necesarios, no el número de bytes.  
   
  `dwMaxLength`  
  El tamaño del búfer `lpszStringOut`.  
@@ -203,7 +203,7 @@ inline BOOL AtlUnescapeUrl(
  Búfer asignado por el autor de la llamada a la que se escribirá la URL convertida.  
   
  `pdwStrLen`  
- Puntero a una variable DWORD. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer sin incluir el carácter nulo de terminación. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
+ Puntero a una variable DWORD. Si la función se realiza correctamente, la variable recibe el número de caracteres escritos en el búfer incluido el carácter nulo final. Si se produce un error en la función, la variable recibe la longitud requerida en bytes del búfer, incluido el espacio para el carácter nulo de terminación.  
   
  `dwMaxLength`  
  El tamaño del búfer `lpszStringOut`.  
@@ -259,5 +259,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>Vea también  
  [Conceptos](../../atl/active-template-library-atl-concepts.md)   
  [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)   
-
 

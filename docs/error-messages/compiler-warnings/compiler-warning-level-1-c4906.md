@@ -1,37 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4906 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4906"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4906"
+title: Compilador advertencia (nivel 1) C4906 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4906
+dev_langs: C++
+helpviewer_keywords: C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 784bce01aa18991a28e4410f9fbaf3eb502ddd60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4906
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4906"></a>Advertencia del compilador (nivel 1) C4906
 conversión de literal de cadena a 'LPWSTR'  
   
- El compilador detectó una conversión no segura.  La conversión tuvo lugar, pero es necesario utilizar una rutina de conversión.  
+ El compilador detectó una conversión no segura. La conversión se realizó correctamente, pero debe usar una rutina de conversión.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
-## Ejemplo  
- El código siguiente genera el error C4906:  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4906:  
   
 ```  
 // C4906.cpp  

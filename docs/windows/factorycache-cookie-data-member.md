@@ -1,32 +1,30 @@
 ---
-title: "FactoryCache::cookie (Miembro de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache::cookie"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cookie (miembro de datos)"
+title: Miembro de datos Factorycache | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache::cookie
+dev_langs: C++
+helpviewer_keywords: cookie data member
 ms.assetid: b1bc79af-a896-4e3b-8afa-64733022eddf
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3cca7b708f7fc2a0fdaa5b975396958b967210a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# FactoryCache::cookie (Miembro de datos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es compatible con la infraestructura de [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] y no está diseñado para que se utilice directamente desde el código.  
+# <a name="factorycachecookie-data-member"></a>FactoryCache::cookie (Miembro de datos)
+Admite la infraestructura de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 union {   
@@ -35,14 +33,14 @@ union {
 } cookie;  
 ```  
   
-## Comentarios  
- Contiene un valor que identifica [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] o un objeto registrado de la clase COM, y se utiliza después para anular el registro del objeto.  
+## <a name="remarks"></a>Comentarios  
+ Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [FactoryCache \(Estructura\)](../Topic/FactoryCache%20Structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [FactoryCache (estructura)](../windows/factorycache-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::runtime_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- runtime_error class
+f1_keywords: stdexcept/std::runtime_error
+dev_langs: C++
+helpviewer_keywords: runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 25153052fff20635069340e3d0c9f46f3d56280c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fffdedc184df2de8956341015345bf2f6fb16e80
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="runtimeerror-class"></a>runtime_error (Clase)
 Clase que actúa como la clase base para todas las excepciones iniciadas para informar de errores supuestamente detectables únicamente cuando se ejecute el programa.  
@@ -82,5 +77,4 @@ Type class std::runtime_error
 
     
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

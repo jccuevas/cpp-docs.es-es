@@ -1,32 +1,30 @@
 ---
-title: "importidl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importidl attribute"
+title: importidl | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importidl
+dev_langs: C++
+helpviewer_keywords: importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8842141b1c6e8159023da9a7cc486e81460ef36b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# importidl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inserta el archivo especificado .idl en el archivo generado .idl.  
+# <a name="importidl"></a>importidl
+Inserta el archivo .idl especificado en el archivo .idl generado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,16 +33,16 @@ Inserta el archivo especificado .idl en el archivo generado .idl.
 ) ];  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `idl_file`  
- Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se generará para la aplicación.  
+ Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que se genera para la aplicación.  
   
-## Comentarios  
- El atributo de **importidl** C\+\+ coloca la sección fuera del bloque de biblioteca \(en `idl_file`\) en el archivo generado .idl del programa y la sección biblioteca \(en `idl_file`\) en la sección de la biblioteca del archivo generado .idl del programa.  
+## <a name="remarks"></a>Comentarios  
+ El **importidl** atributo C++ coloca la sección fuera del bloque de biblioteca (en `idl_file`) en el archivo .idl generado de su programa y la sección de la biblioteca (en `idl_file`) en la sección de la biblioteca de su programa archivo .idl generado.  
   
- Se puede utilizar **importidl**, por ejemplo, si desea utilizar un archivo mano\-codificado .idl con el archivo generado .idl.  
+ Puede que desee usar **importidl**, por ejemplo, si desea usar un archivo .idl codificados a mano con el archivo .idl generado.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cpp_attr_ref_importidl.cpp  
@@ -53,24 +51,23 @@ Inserta el archivo especificado .idl en el archivo generado .idl.
 [importidl("import.idl")];  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Cualquier parte|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|En cualquier lugar|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos de compilador](../windows/compiler-attributes.md)   
+ [Atributos independientes](../windows/stand-alone-attributes.md)   
+ [importar](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [incluir](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

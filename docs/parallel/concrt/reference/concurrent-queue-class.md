@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,34 +19,18 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrentqueue-class"></a>Clase concurrent_queue
 La clase `concurrent_queue` es una clase de contenedor de secuencias que permite el acceso primero en entrar, primero en salir a sus elementos. Habilita un conjunto limitado de operaciones seguras para simultaneidad, como `push` y `try_pop`.  
@@ -64,7 +47,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
  El tipo de datos de los elementos que se almacenará en la cola.  
   
  `_Ax`  
- El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para esta cola simultánea. Este argumento es opcional y el valor predeterminado es `allocator<``T``>`.  
+ El tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria para esta cola simultánea. Este argumento es opcional y el valor predeterminado es `allocator<T>`.  
   
 ## <a name="members"></a>Miembros  
   
@@ -73,12 +56,12 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`allocator_type`|Tipo que representa la clase de asignador de la cola simultánea.|  
-|`const_iterator`|Un tipo que representa un no-subprocesos `const` iterador sobre los elementos en una cola simultánea.|  
+|`const_iterator`|Un tipo que representa un no subprocesos `const` iterador sobre los elementos en una cola simultánea.|  
 |`const_reference`|Un tipo que proporciona una referencia a un `const` elemento almacenado en una cola simultánea para leer y realizar `const` operaciones.|  
 |`difference_type`|Un tipo que proporciona la distancia firmada entre dos elementos en una cola simultánea.|  
-|`iterator`|Tipo que representa un iterador no seguro para subprocesos sobre los elementos en una cola simultánea.|  
+|`iterator`|Tipo que representa un iterador no es segura para subprocesos sobre los elementos en una cola simultánea.|  
 |`reference`|Un tipo que proporciona una referencia a un elemento almacenado en una cola simultánea.|  
-|`size_type`|Un tipo que cuenta el número de elementos en una cola simultánea.|  
+|`size_type`|Tipo que cuenta el número de elementos en una cola simultánea.|  
 |`value_type`|Tipo que representa el tipo de datos almacenados en una cola simultánea.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
@@ -93,7 +76,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[clear](#clear)|Borra la cola simultánea, los destruyendo actualmente los elementos en cola. Este método no es seguro para la simultaneidad.|  
-|[empty](#empty)|Se llama a este método comprueba si la cola simultánea está vacía en este momento. Este método es seguro para simultaneidad.|  
+|[empty](#empty)|Comprueba si la cola simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  
 |[get_allocator](#get_allocator)|Devuelve una copia del asignador usada para construir la cola simultánea. Este método es seguro para simultaneidad.|  
 |[push](#push)|Sobrecargado. Pone en cola un elemento al final de la cola simultánea. Este método es seguro para simultaneidad.|  
 |[try_pop](#try_pop)|Quita un elemento de la cola si está disponible. Este método es seguro para simultaneidad.|  
@@ -102,7 +85,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |[unsafe_size](#unsafe_size)|Devuelve el número de elementos en la cola. Este método no es seguro para la simultaneidad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [objetos y contenedores paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
+ Para obtener más información, consulte [contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `concurrent_queue`  
@@ -164,7 +147,7 @@ concurrent_queue(_InputIterator _Begin,
   
  El segundo constructor especifica una copia de la cola simultánea `_OtherQ`.  
   
- El tercer constructor especifica un movimiento de la cola simultánea `_OtherQ`.  
+ El tercer constructor especifica una operación de traslado de la cola simultánea `_OtherQ`.  
   
  El cuarto constructor especifica los valores proporcionados por el intervalo de iterador [ `_Begin`, `_End`).  
   
@@ -178,17 +161,17 @@ concurrent_queue(_InputIterator _Begin,
   
 ##  <a name="empty"></a>vacía 
 
- Se llama a este método comprueba si la cola simultánea está vacía en este momento. Este método es seguro para simultaneidad.  
+ Comprueba si la cola simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si la cola simultánea está vacía en el momento en que tratamos, `false` en caso contrario.  
+ `true`Si la cola simultánea estaba vacía en el momento en que hemos explicado, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Este método es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`, y `empty`, el valor devuelto podría ser incorrecto durante el tiempo que es inspeccionado por el subproceso que realiza la llamada.  
+ Aunque este método es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`, y `empty`, el valor devuelto podría ser incorrecto durante el tiempo que es inspeccionado por el subproceso que realiza la llamada.  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
@@ -213,7 +196,7 @@ void push(T&& _Src);
   
 ### <a name="parameters"></a>Parámetros  
  `_Src`  
- El elemento debe agregarse a la cola.  
+ El elemento que se va a agregarse a la cola.  
   
 ### <a name="remarks"></a>Comentarios  
  `push`es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`, y `empty`.  
@@ -234,7 +217,7 @@ bool try_pop(T& _Dest);
  `true`Si un elemento se quitó correctamente la cola, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Si un elemento se quitó correctamente la cola, el parámetro `_Dest` recibe el valor de la eliminación, se destruye el valor original contenido en la cola y esta función devuelve `true`. Si no había ningún elemento de la cola, esta función devuelve `false` sin bloqueo y el contenido de la `_Dest` parámetro son indefinidos.  
+ Si un elemento se quitó correctamente la cola, el parámetro `_Dest` recibe el valor quitado de la cola, se destruye el valor original que se retienen en la cola y esta función devuelve `true`. Si no había ningún elemento para quitar de la cola, esta función devuelve `false` sin bloqueo y el contenido de la `_Dest` parámetro son indefinidos.  
   
  `try_pop`es seguro para simultaneidad con respecto a las llamadas a los métodos `push`, `try_pop`, y `empty`.  
   
@@ -249,10 +232,10 @@ const_iterator unsafe_begin() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un iterador de tipo `iterator` o `const_iterator` al principio del objeto de cola simultánea.  
+ Un iterador de tipo `iterator` o `const_iterator` al principio del objeto de cola simultáneos.  
   
 ### <a name="remarks"></a>Comentarios  
- Los iteradores para la `concurrent_queue` clase están pensados principalmente para la depuración, como son lentos y la iteración no es seguro para simultaneidad con respecto a otras operaciones de cola.  
+ Los iteradores para la `concurrent_queue` clase están pensados principalmente para la depuración, como son lentas e iteración no es seguro para simultaneidad con respecto a otras operaciones de cola.  
   
 ##  <a name="unsafe_end"></a>unsafe_end 
 
@@ -268,7 +251,7 @@ const_iterator unsafe_end() const;
  Un iterador de tipo `iterator` o `const_iterator` al final de la cola simultánea.  
   
 ### <a name="remarks"></a>Comentarios  
- Los iteradores para la `concurrent_queue` clase están pensados principalmente para la depuración, como son lentos y la iteración no es seguro para simultaneidad con respecto a otras operaciones de cola.  
+ Los iteradores para la `concurrent_queue` clase están pensados principalmente para la depuración, como son lentas e iteración no es seguro para simultaneidad con respecto a otras operaciones de cola.  
   
 ##  <a name="unsafe_size"></a>unsafe_size 
 
@@ -282,8 +265,7 @@ size_type unsafe_size() const;
  El tamaño de la cola simultánea.  
   
 ### <a name="remarks"></a>Comentarios  
- `unsafe_size`no es seguro para simultaneidad y puede generar resultados incorrectos si se llama simultáneamente con llamadas a los métodos `push`, `try_pop`, y `empty`.  
+ `unsafe_size`no es seguro para simultaneidad y puede generar resultados incorrectos si se llama al mismo tiempo que las llamadas a los métodos `push`, `try_pop`, y `empty`.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

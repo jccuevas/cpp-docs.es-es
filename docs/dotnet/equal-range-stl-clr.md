@@ -1,32 +1,30 @@
 ---
-title: "equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range (función) [STL/CLR]"
+title: equal_range (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range function [STL/CLR]
 ms.assetid: 1b2e76c3-6b52-486d-9785-2639b54277fd
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b94388f233c8ffb6577d88e137245475c3656de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Encuentra un par de posiciones en un intervalo petición, el primer o menor que el equivalente a la posición de un elemento especificado y el segundo mayor que la posición del elemento, donde el sentido de equivalencia o de ordenación utilizado para establecer las posiciones de la secuencia se puede especificar por un predicado binario.  
+# <a name="equalrange-stlclr"></a>equal_range (STL/CLR)
+Busca un par de posiciones en un intervalo ordenado; la primera es menor o equivalente a la posición de un elemento especificado y la segunda es mayor que la posición del elemento, donde el sentido de equivalencia o de ordenación empleado para establecer las posiciones en la secuencia se puede especificar con un predicado binario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `equal_range`STL.  Para obtener más información, vea [equal\_range](../Topic/equal_range.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `equal_range`. Para obtener más información, consulte [equal_range](../standard-library/algorithm-functions.md#equal_range).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "binary_delegate_noreturn (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate_noreturn (función) [STL/CLR]"
+title: binary_delegate_noreturn (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: binary_delegate_noreturn function [STL/CLR]
 ms.assetid: 055c7e9d-e5c3-48fe-9327-3f6316e8a51e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee1ac1ddbd78bba8a6d01f29d45f94e63644dc5a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# binary_delegate_noreturn (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase genereic describe un delegado de dos\- argumento que devuelve `void`.  Se utiliza especifica un delegado en términos de su argumento.  
+# <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
+La clase genereic describe un delegado de dos argumentos que devuelve `void`. Se usa especificar un delegado en cuanto a su argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 generic<typename Arg1,  
@@ -34,31 +32,31 @@ generic<typename Arg1,
     delegate void binary_delegate(Arg1, Arg2);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  Arg1  
  El tipo del primer argumento.  
   
  Arg2  
  El tipo del segundo argumento.  
   
-## Comentarios  
- El delegado genereic describe una función de dos\- argumento que devuelve `void`.  
+## <a name="remarks"></a>Comentarios  
+ El delegado genereic describe una función de dos argumentos que devuelve `void`.  
   
- Observe que para:  
+ Tenga en cuenta que para:  
   
  `binary_delegate_noreturn<int, int> Fun1;`  
   
  `binary_delegate_noreturn<int, int> Fun2;`  
   
- los tipos `Fun1` y `Fun2` son sinónimos, mientras que para:  
+ los tipos de `Fun1` y `Fun2` son sinónimos, mientras que para:  
   
  `delegate void Fun1(int, int);`  
   
  `delegate void Fun2(int, int);`  
   
- no son el mismo tipo.  
+ no son del mismo tipo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_binary_delegate_noreturn.cpp   
@@ -85,15 +83,18 @@ int main()
   
 ```  
   
-  **comparar \(a,\) \= False**  
-**comparar \(a, b\) \= True**  
-**comparar \(b, a\) \= False**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+compare(a, a) = False  
+compare(a, b) = True  
+compare(b, a) = False  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

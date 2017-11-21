@@ -1,65 +1,65 @@
 ---
-title: "Determinar el m&#233;todo de exportaci&#243;n que se debe utilizar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def (archivos) [C++], exportar desde DLL"
-  - "__declspec(dllexport) (palabra clave) [C++]"
-  - "def (archivos) [C++], exportar desde DLL"
-  - "exportar DLL [C++], comparación de métodos"
+title: "Determinar qué método de exportación que se utilizan | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __declspec(dllexport) keyword [C++]
+- exporting DLLs [C++], method comparison
+- def files [C++], exporting from DLLs
+- .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 013620a6353c281b2d60a8c4f847f57c60e5f10c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Determinar el m&#233;todo de exportaci&#243;n que se debe utilizar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Puede exportar funciones en dos del archivo de las maneras \- uno .def o palabra clave de `__declspec(dllexport)` .  Para ayudarle a decidir qué es mejor para el archivo DLL, considere estas preguntas:  
+# <a name="determining-which-exporting-method-to-use"></a>Determinar el método de exportación que se debe utilizar
+Puede exportar funciones de dos maneras: un archivo .def o `__declspec(dllexport)` palabra clave. Para ayudarle a decidir qué forma es mejor para el archivo DLL, tenga en cuenta estas preguntas:  
   
--   ¿Pretende exportar más funciones más adelante?  
+-   ¿Tiene pensado exportar funciones más más tarde?  
   
--   ¿DLL sólo se utiliza en las aplicaciones que puede recompilar, o bien usan las aplicaciones que no puede recompilar\- para el ejemplo, las aplicaciones creadas por terceros?  
+-   ¿Es el archivo DLL utilizado sólo por aplicaciones que puede volver a generar o se usan las aplicaciones que no se puede volver a generar, por ejemplo, las aplicaciones que se crean por parte de terceros?  
   
-## Ventajas y desventajas de utilizar archivos .def  
- Exportar funciones de un archivo .def permite controlar sobre los ordinales de exportación.  Al agregar una función exportada a la DLL, puede asignar un valor ordinal más alto que cualquier otra función exportada.  Cuando lo haga, las aplicaciones que utilizan la vinculación implícita no tienen que volver a vincularse a la biblioteca de importación que contiene la nueva función.  Esto es muy útil si está diseñando un archivo DLL para uso de muchas aplicaciones porque puede agregar nueva funcionalidad y asegurarse también de que continúa funcionando correctamente con aplicaciones que confían ya en ella.  Por ejemplo, los archivos DLL de MFC se compilan utilizando archivos .def.  
+## <a name="pros-and-cons-of-using-def-files"></a>Ventajas y desventajas del uso de archivos .def  
+ Exportar funciones en un archivo .def permite controlar los ordinales de exportación. Cuando se agrega una función exportada en el archivo DLL, se puede asignar un valor ordinal mayor que cualquier otra función exportada. Al hacer esto, las aplicaciones que utilizan la vinculación implícita no tiene que volver a vincular con la biblioteca de importación que contiene la nueva función. Esto resulta muy útil si está diseñando un archivo DLL para usarlo muchas aplicaciones, ya que puede agregar nuevas funcionalidades y asegurarse también de que sigue funcionar correctamente con las aplicaciones que ya se basan en ella. Por ejemplo, los archivos DLL de MFC se generan utilizando .def (archivos).  
   
- Otra ventaja de utilizar un archivo .def es que puede utilizar el atributo de `NONAME` exportar una función.  Esto sólo coloca el ordinal en la tabla de exportaciones de DLL.  Para los archivos DLL con un gran número de funciones exportadas, mediante el atributo de `NONAME` puede reducir el tamaño del archivo DLL.  Para obtener información sobre cómo escribir una instrucción de definición de módulo, vea [Reglas para instrucciones de definición de módulos](../build/reference/rules-for-module-definition-statements.md).  Para obtener información acerca de la exportación ordinal, vea [Exportar funciones desde un archivo DLL por ordinal en lugar de por nombre](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
+ Otra ventaja de utilizar un archivo .def es que puede usar el `NONAME` atributo para exportar una función. Esto coloca únicamente el ordinal de la tabla de exportaciones del archivo DLL. Archivos DLL que tiene un gran número de funciones exportadas, usando la `NONAME` atributo puede reducir el tamaño del archivo DLL. Para obtener información sobre cómo escribir una instrucción de definición de módulo, consulte [reglas para instrucciones de definición de módulo de](../build/reference/rules-for-module-definition-statements.md). Para obtener información acerca de la exportación de ordinales, vea [exportar funciones desde un archivo DLL por Ordinal en lugar de por nombre](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
   
- Una desventaja de utilizar un archivo .def es que si exporta funciones de un archivo de c\+\+., tiene que colocar los nombres representativos en el archivo .def o definir las funciones exportadas mediante extern “C” para evitar la decoración de nombres que es realizada por el compilador de Visual C\+\+.  
+ Una desventaja de utilizar un archivo .def es que si va a exportar funciones en un archivo de C++, tiene que colocar los nombres representativos en el .def archivo o definir las funciones exportadas mediante el uso de extern "C" para evitar la decoración de nombres que se lleva a cabo por el compilador de Visual C++.  
   
- Si coloca los nombres representativos en el archivo .def, puede obtenerlos mediante la herramienta de [DUMPBIN](../build/reference/dumpbin-reference.md) o con la opción de [\/MAP](../build/reference/map-generate-mapfile.md) del vinculador.  Los nombres representativos generados por el compilador son compilador\- específicos; por consiguiente, si coloca los nombres representativos generados por el compilador en un archivo .def, también deberán generarse las aplicaciones que se vinculan al archivo DLL mediante la misma versión del compilador para los nombres representativos en la coincidencia de la aplicación que realiza la llamada los nombres exportados en el archivo .def del archivo DLL.  
+ Si coloca los nombres representativos en el archivo .def, se puede obtener mediante la [DUMPBIN](../build/reference/dumpbin-reference.md) de herramientas o mediante el vinculador [/MAP](../build/reference/map-generate-mapfile.md) opción. Los nombres representativos producidos por el compilador son específicos del compilador; por lo tanto, si coloca los nombres representativos producidos por el compilador en un archivo .def, las aplicaciones que se vinculan al archivo DLL también deberán generarse utilizando la misma versión del compilador para que los nombres representativos de la aplicación que realiza la llamada coincide con el nombre i n el archivo .def del archivo DLL.  
   
-## Ventajas y desventajas de utilizar \_\_declspec\(dllexport\)  
- Mediante `__declspec(dllexport)` es conveniente porque no tiene que preocuparse de mantener un archivo .def y obtener los nombres representativos de las funciones exportadas.  Sin embargo, la utilidad de esta manera de exportar está limitada por número de aplicaciones vinculadas que está dispuesto recompilar.  Si recompila el archivo DLL con nuevas exportaciones, también tiene que recompilar las aplicaciones porque los nombres representativos de las funciones de C\+\+ exportadas podrían cambiar si utiliza una versión diferente del compilador para recompilarlo.  
+## <a name="pros-and-cons-of-using-declspecdllexport"></a>Ventajas y desventajas del uso de __declspec (dllexport)  
+ Usar `__declspec(dllexport)` resulta práctico porque no tiene que preocuparse sobre cómo mantener un archivo .def y obtener los nombres representativos de las funciones exportadas. Sin embargo, la utilidad de esta forma de exportar está limitada por el número de aplicaciones vinculados que desea volver a generar. Si se vuelve a generar el archivo DLL con nuevas exportaciones, también deben generar las aplicaciones, ya que los nombres representativos para las funciones de C++ exportadas podrían cambiar si usa una versión diferente del compilador para volver a compilarlo.  
   
-### ¿Qué desea hacer?  
+### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
   
--   [Exportar desde un archivo DLL mediante archivos .DEF](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Exportar desde un archivo DLL mediante \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Exportar e importar utilizando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Exportar funciones de C\+\+ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Exportar funciones de C para utilizarlas en ejecutables en lenguaje C o C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Exportar funciones de C para utilizarlas en ejecutables de C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Importar a una aplicación mediante \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Inicializar un archivo DLL](../build/initializing-a-dll.md)  
+-   [Inicializar un archivo DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-### ¿Sobre qué desea obtener más información?  
+### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
 -   [Importar y exportar funciones inline](../build/importing-and-exporting-inline-functions.md)  
   
@@ -67,5 +67,5 @@ Puede exportar funciones en dos del archivo de las maneras \- uno .def o palabra
   
 -   [Nombres representativos](../build/reference/decorated-names.md)  
   
-## Vea también  
- [Exportar desde un archivo DLL](../build/exporting-from-a-dll.md)
+## <a name="see-also"></a>Vea también  
+ [Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)

@@ -1,49 +1,47 @@
 ---
-title: "flush (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Flush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flush OpenMP directive"
+title: Flush (OpenMP) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2892a260ae7982741fcda2944683b0d6957824ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# flush (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.  
+# <a name="flush-openmp"></a>flush (OpenMP)
+Especifica que todos los subprocesos tienen la misma vista de memoria para todos los objetos compartidos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp flush [(var)]  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
- `var` \(opcional\)  
- Una lista separada por comas de variables que representan objetos desea sincronizar.  Si `var` no se especifica, se vacía toda la memoria.  
+ `var` (opcional)  
+ Una lista separada por comas de variables que representan los objetos que desea sincronizar. Si `var` no se especifica, toda la memoria se vacía.  
   
-## Comentarios  
- la directiva de **vaciado** no admite ninguna cláusula de OpenMP.  
+## <a name="remarks"></a>Comentarios  
+ El **vaciar** directiva es compatible con ningún cláusulas de OpenMP.  
   
- Para obtener más información, vea [2.6.5 flush Directive](../Topic/2.6.5%20flush%20Directive.md).  
+ Para obtener más información, consulte [2.6.5 flush (directiva)](../../../parallel/openmp/2-6-5-flush-directive.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_flush.cpp  
@@ -94,8 +92,11 @@ int main() {
 }  
 ```  
   
-  **subproceso 0: leer datos**  
-**subproceso 1: datos de proceso**  
-**datos \= 2**   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Thread 0: read data  
+Thread 1: process data  
+data = 2  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

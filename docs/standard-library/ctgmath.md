@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: dfe527ab1c0783fecca9d0b9bfdc9fcf439e7c5b
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3d0b0234ea6a3f63f0730b3e0dc965f1e8c8e902
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 Incluye los encabezados \<ccomplex> y \<cmath> de la biblioteca estándar de C++, que proporcionan las macros math de tipo genérico equivalentes a \<tgmath.h>.  
@@ -57,7 +40,6 @@ Incluye los encabezados \<ccomplex> y \<cmath> de la biblioteca estándar de C++
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

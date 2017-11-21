@@ -1,154 +1,155 @@
 ---
-title: "Agregar una p&#225;gina de propiedades (Tutorial de ATL, Parte 6) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "Agregar una página de propiedades (ATL Tutorial, parte 6) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Agregar una p&#225;gina de propiedades (Tutorial de ATL, Parte 6)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las páginas de propiedades se implementan como objetos COM independientes, que permiten que sean compartidos si es necesario.  En este paso, realizará las tareas siguientes para agregar una página de propiedades al control:  
+# <a name="adding-a-property-page-atl-tutorial-part-6"></a>Agregar una página de propiedades (Tutorial de ATL, Parte 6)
+Páginas de propiedades se implementan como objetos COM independientes, lo que permite compartirlas si es necesario. En este paso, realizará las tareas siguientes para agregar una página de propiedades al control:  
   
--   Crear el recurso de la página de propiedades  
+-   Crear el recurso de página de propiedades  
   
 -   Agregar código para crear y administrar la página de propiedades  
   
 -   Agregar la página de propiedades al Control  
   
-## Crear el recurso de la página de propiedades  
- Para agregar una página de propiedades al control, utilice el ATL agregan el asistente de clases.  
+## <a name="creating-the-property-page-resource"></a>Crear el recurso de página de propiedades  
+ Para agregar una página de propiedades al control, use el Asistente para agregar clases de ATL.  
   
-#### para agregar una página de propiedades  
+#### <a name="to-add-a-property-page"></a>Para agregar una página de propiedades  
   
-1.  En el explorador de soluciones, haga clic con el botón secundario Polygon.  
+1.  En el Explorador de soluciones, haga clic en polígono.  
   
-2.  En el menú contextual, haga clic en **Agregar** y, a continuación, en **Agregar clase**.  
+2.  En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.  
   
-3.  En la lista de plantillas, seleccione **Página de propiedades ATL** y haga clic **Agregar**.  
+3.  En la lista de plantillas, seleccione **página de propiedades ATL** y haga clic en **agregar**.  
   
-4.  Cuando aparezca el Asistente para páginas de propiedades ATL, entre en `PolyProp` como nombre de **Corto** .  
+4.  Cuando aparezca el Asistente para páginas de propiedades ATL, escriba `PolyProp` como el **corto** nombre.  
   
-5.  Haga **clic en cadenas** para **abrir la** página de cadenas y **escriba el** &Polygon como **título.**  
+5.  Haga clic en **cadenas** para abrir el **cadenas** página e introduzca **& polígono** como el **título**.  
   
-     **Título** de la página de propiedades es la cadena que aparece en la pestaña para esa página.  **Cadena de Documento** es una descripción que un marco de propiedades utiliza para colocar en una línea de estado o una información sobre herramientas.  Observe que el cuadro estándar de propiedad no utiliza actualmente esta cadena, por lo que puede dejarlo con contenido predeterminado.  No generará **Archivo de ayuda** en el momento, de modo que elimine la entrada en dicho cuadro de texto.  
+     El **título** de la propiedad página es la cadena que aparece en la ficha de esa página. El **cadena** es una descripción que un marco de propiedad se utiliza para colocar en una sugerencia de línea o la herramienta de estado. Tenga en cuenta que el marco de propiedad estándar actualmente no usa esta cadena, por lo que puede dejar con el contenido predeterminado. No generará una **archivo de Ayuda** en este momento, por lo que elimina la entrada en dicho cuadro de texto.  
   
-6.  Haga clic en **Finalizar**, y el objeto de la página de propiedades se creará.  
+6.  Haga clic en **finalizar**, y se creará el objeto de página de propiedades.  
   
- se crean los tres archivos siguientes:  
+ Se crean los tres archivos siguientes:  
   
 |Archivo|Descripción|  
-|-------------|-----------------|  
-|PolyProp.h|contiene la clase `CPolyProp`de C\+\+, que implementa la página de propiedades.|  
-|PolyProp.cpp|incluye el archivo de PolyProp.h.|  
-|PolyProp.rgs|El script de registro que registra el objeto de la página de propiedades.|  
+|----------|-----------------|  
+|PolyProp.h|Contiene la clase de C++ `CPolyProp`, que implementa la página de propiedades.|  
+|PolyProp.cpp|Incluye el archivo PolyProp.h.|  
+|PolyProp.rgs|El script de registro que registra el objeto de página de propiedades.|  
   
- Los siguientes cambios de código también se realizan:  
+ También se realizan los cambios en el código siguiente:  
   
--   La nueva página de propiedades se agrega a la entrada de objeto asignada en Polygon.cpp.  
+-   La nueva página de propiedades se agrega a la asignación de entrada de objeto en Polygon.cpp.  
   
--   La clase de `PolyProp` se agrega al archivo de Polygon.idl.  
+-   La `PolyProp` clase se agrega al archivo Polygon.idl.  
   
--   El nuevo archivo de script PolyProp.rgs de registro se agrega al recurso del proyecto.  
+-   El nuevo archivo de script de registro PolyProp.rgs se agrega a los recursos del proyecto.  
   
--   Una plantilla de cuadro de diálogo se agrega al recurso del proyecto para la página de propiedades.  
+-   Una plantilla de cuadro de diálogo se agrega a los recursos del proyecto para la página de propiedades.  
   
--   Las cadenas de propiedad especificada se agregan a la tabla de cadenas de recursos.  
+-   Las cadenas de propiedad que ha especificado se agregan a la tabla de cadenas de recursos.  
   
- Ahora agregue los campos que desea que aparezcan en la página de propiedades.  
+ Ahora, agregue los campos que desea que aparezca en la página de propiedades.  
   
-#### para agregar campos a la página de propiedades  
+#### <a name="to-add-fields-to-the-property-page"></a>Para agregar campos a la página de propiedades  
   
-1.  En el explorador de soluciones, haga doble clic en el archivo de recursos de Polygon.rc.  Se abrirá la vista de recursos.  
+1.  En el Explorador de soluciones, haga doble clic en el archivo de recurso Polygon.rc. Se abrirá la vista de recursos.  
   
-2.  En la, expanda el nodo dialog y haga doble clic en IDD\_POLYPROP.  Observe que el cuadro de diálogo que aparece está vacía salvo una etiqueta que indica a que inserte los controles aquí.  
+2.  En la vista de recursos, expanda el nodo de cuadro de diálogo y haga doble clic en IDD_POLYPROP. Tenga en cuenta que el cuadro de diálogo que aparece está vacío, excepto por una etiqueta que indica si debe insertar aquí los controles.  
   
-3.  Seleccione la etiqueta y cámbiela para leer `lados:` modificando el texto de **Título** en la ventana de **Propiedades** .  
+3.  Seleccione esa etiqueta y cámbiela por leer `Sides:` modificando la **título** texto en la **propiedades** ventana.  
   
-4.  Cambie el tamaño del cuadro de la etiqueta de modo que ajusta el tamaño del texto.  
+4.  Redimensionar el cuadro de etiqueta para que se ajuste el tamaño del texto.  
   
 5.  Arrastre un control de edición del cuadro de herramientas a la derecha de la etiqueta.  
   
-6.  Finalmente, cambie **ID** del control de edición a `IDC_SIDES` mediante la ventana Propiedades.  
+6.  Por último, cambie el **identificador** de control de edición para `IDC_SIDES` mediante la ventana Propiedades.  
   
- Esto completa el proceso de crear el recurso de la página de propiedades.  
+ Esto completa el proceso de crear el recurso de página de propiedades.  
   
-## Agregar código para crear y administrar la página de propiedades  
- Ahora que ha creado el recurso de la página de propiedades, debe escribir el código de implementación.  
+## <a name="adding-code-to-create-and-manage-the-property-page"></a>Agregar código para crear y administrar la página de propiedades  
+ Ahora que ha creado el recurso de página de propiedades, debe escribir el código de implementación.  
   
- Primero, permite a la clase de `CPolyProp` para establecer el número de lados en el objeto cuando se presiona el botón de **Aplicar** .  
+ En primer lugar, habilite el `CPolyProp` clase para establecer el número de lados en el objeto cuando el **aplicar** se presiona el botón.  
   
-#### Para modificar el aplicar funcione para establecer el número de lados  
+#### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>Para modificar la función Apply para establecer el número de lados  
   
-1.  reemplace la función de `Apply` en PolyProp.h con el código siguiente:  
+1.  Reemplace el `Apply` función en PolyProp.h con el código siguiente:  
   
-     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_1.h)]  
+     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]  
   
- Una página de propiedad puede tener más de un cliente conectado a ella a la vez, de modo que los bucles de la función de `Apply` alrededor y llama a `put_Sides` en cada cliente con el valor recuperado del cuadro de edición.  Utiliza la clase de [CComQIPtr](../atl/reference/ccomqiptr-class.md) , que realiza `QueryInterface` en cada objeto para obtener la interfaz de `IPolyCtl` de la interfaz de **IUnknown** \(almacenados en la matriz de `m_ppUnk` \).  
+ Una página de propiedades puede tener más de un cliente asociado a él en cualquier momento, por lo que la `Apply` función recorre y llama a `put_Sides` en cada cliente con el valor recuperado del cuadro de edición. Usa el [CComQIPtr](../atl/reference/ccomqiptr-class.md) (clase), que lleva a cabo la `QueryInterface` cada objeto que se va a obtener el `IPolyCtl` de la interfaz de la **IUnknown** interfaz (almacenados en la `m_ppUnk` matriz).  
   
- El código comprueba ahora que funcionó establecer la propiedad de `Sides` realmente.  Si se produce un error, el código muestra un cuadro de mensaje que muestra los detalles de error de la interfaz de **IErrorInfo** .  Normalmente, un contenedor solicita un objeto la interfaz de **ISupportErrorInfo** y llama a `InterfaceSupportsErrorInfo` primero, determinar si el objeto admite la información de error de valor.  Puede omitir esta tarea.  
+ Ahora, el código comprueba esa configuración el `Sides` propiedad trabajada realmente. Si se produce un error, el código muestra un cuadro de mensaje muestra los detalles de error de la **IErrorInfo** interfaz. Normalmente, un contenedor solicita a un objeto para el **ISupportErrorInfo** interfaz y llamadas `InterfaceSupportsErrorInfo` primero, para determinar si el objeto es compatible con la información de error de configuración. Puede omitir esta tarea.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) ayuda automáticamente controlando el recuento de referencias, por lo que no necesita llamar a `Release` en la interfaz.  `CComBSTR` ayuda con `BSTR` que procesa, por lo que no tendrá que realizar la llamada final de `SysFreeString` .  También puede utilizar una de las distintas clases de la conversión de cadenas, lo que puede convertir `BSTR` en caso necesario \(esta es la razón por la que la macro de `USES_CONVERSION` está al principio de la función\).  
+ [CComPtr](../atl/reference/ccomptr-class.md) le ayuda a controlando automáticamente el recuento de referencias, por lo que no es necesario llamar a `Release` en la interfaz. `CComBSTR`le ayuda a con `BSTR` de procesamiento, por lo que no es necesario que realizar la última `SysFreeString` llamar. También utilizamos una de las diferentes clases de conversión de cadenas, por lo que puede convertir el `BSTR` si es necesario (se trata de por qué la `USES_CONVERSION` macro está al principio de la función).  
   
- También debe establecer el mensaje modificado de la página de propiedades para indicar que el botón de **Aplicar** esté habilitado.  Esto sucede cuando el usuario cambia el valor en el cuadro de edición de **lados** .  
+ También debe establecer el marcador de modificado de la página de propiedades para indicar que la **aplicar** botón debe estar habilitado. Esto se produce cuando el usuario cambia el valor de la **lados** cuadro de edición.  
   
-#### Para controlar el botón apply  
+#### <a name="to-handle-the-apply-button"></a>Para controlar el botón Aplicar  
   
-1.  En la vista de clases, haga clic con el botón secundario CPolyProp y haga clic **Propiedades** en el menú contextual.  
+1.  En la vista de clases, haga clic en CPolyProp y haga clic en **propiedades** en el menú contextual.  
   
-2.  En la ventana Propiedades, haga clic en el icono de **events** .  
+2.  En la ventana Propiedades, haga clic en el **eventos** icono.  
   
-3.  Expanda el nodo de `IDC_SIDES` en la lista.  
+3.  Expanda el `IDC_SIDES` nodo en la lista de eventos.  
   
-4.  `EN_CHANGE`seleccione y, en el menú desplegable situado a la derecha, haga clic en **Agregar OnEnChangeSides**.  La declaración del controlador de `OnEnChangeSides` se agregará a Polyprop.h, y la implementación de controlador a Polyprop.cpp.  
+4.  Seleccione `EN_CHANGE`y en el menú desplegable a la derecha, haga clic en  **\<Agregar > OnEnChangeSides**. El `OnEnChangeSides` declaración del controlador se agregará a Polyprop.h y la implementación a Polyprop.cpp.  
   
  A continuación, modificará el controlador.  
   
-#### para modificar el método de OnEnChangeSides  
+#### <a name="to-modify-the-onenchangesides-method"></a>Para modificar el método OnEnChangeSides  
   
-1.  Agregue el código siguiente en Polyprop.cpp al método de `OnEnChangeSides` \(que elimina cualquier código que el asistente desde allí\):  
+1.  Agregue el código siguiente en Polyprop.cpp a la `OnEnChangeSides` método (eliminar cualquier código que haya puesto allí el asistente):  
   
-     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides` se invoca cuando un mensaje de **WM\_COMMAND** se envía con la notificación de **EN\_CHANGE** para el control de `IDC_SIDES` .  `OnEnChangeSides` llamar `SetDirty` y pasa `TRUE` para indicar que la página de propiedades es modificada ahora y el botón de **Aplicar** debe estar habilitado.  
+ `OnEnChangeSides`se invocará cuando un **WM_COMMAND** mensaje se envía con el **EN_CHANGE** notificación para el `IDC_SIDES` control. `OnEnChangeSides`a continuación, llama `SetDirty` y pasa `TRUE` para indicar la propiedad de la página ahora está desfasada y **aplicar** botón debe estar habilitado.  
   
-## Agregar la página de propiedades al Control  
- Los ATL agregan el asistente de clases y el Asistente para páginas de propiedades ATL no agrega la página de propiedades al control automáticamente, porque podría haber varios controles en el proyecto.  Necesitará agregar una entrada al mapa de propiedades del control.  
+## <a name="adding-the-property-page-to-the-control"></a>Agregar la página de propiedades al Control  
+ El Asistente para agregar clases de ATL y el Asistente para páginas de propiedades ATL no agregan la página de propiedades al control automáticamente automáticamente, ya que podría haber varios controles en el proyecto. Debe agregar una entrada a la asignación de propiedad del control.  
   
-#### para agregar la página de propiedades  
+#### <a name="to-add-the-property-page"></a>Para agregar la página de propiedades  
   
-1.  PolyCtl.h abierto y agregue esta línea a la propiedad asignada:  
+1.  Abra PolyCtl.h y agregue esta línea al mapa de propiedades:  
   
-     [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_3.h)]  
+     [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_3.h)]  
   
- La propiedad del control ahora asignada tiene el siguiente aspecto:  
+ Asignación de propiedad del control ahora se ve así:  
   
- [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_4.h)]  
+ [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_4.h)]  
   
- Se podría haber agregar una macro de `PROP_PAGE` con el CLSID de la página de propiedades, pero si utiliza la macro de `PROP_ENTRY` como se muestra, el valor de propiedad de `Sides` también se guarda cuando se guarda el control.  
+ Podría haber agregado un `PROP_PAGE` macro con el CLSID de la página de propiedades, aunque si se usa el `PROP_ENTRY` macro tal y como se muestra, la `Sides` también se guarda el valor de propiedad cuando se guarda el control.  
   
- Los tres parámetros a la macro son la descripción de la propiedad, los DISPID para la propiedad, y el CLSID de la página de propiedades que tiene la propiedad.  Esto es útil si, por ejemplo, carga el control en Visual Basic y establezca el número de lados en tiempo de diseño.  Dado que guardan el número de lados, al cargar el proyecto de Visual Basic, restablecerán el número de lados.  
+ Los tres parámetros de la macro son la descripción de la propiedad, el identificador DISPID de la propiedad y el CLSID de la página de propiedades que tiene la propiedad en él. Esto es útil si, por ejemplo, cargue el control en Visual Basic y establecer el número de lados en tiempo de diseño. Dado que el número de lados se guarda, al volver a cargar el proyecto de Visual Basic, se restaurará el número de lados.  
   
-## Compilar y probar el Control  
- Compile ahora ese control y incrustarlo en el contenedor de prueba del control ActiveX.  En contenedor de prueba, en el menú de **Editar** , haga clic **objeto de la clase de PolyCtl**.  La página de propiedades aparecerá; haga clic en la pestaña de **polígono** .  
+## <a name="building-and-testing-the-control"></a>Compilar y probar el control  
+ Ahora, genere el control e insértelo en ActiveX Control Test Container. En el contenedor de prueba, en la **editar** menú, haga clic en **PolyCtl Class Object**. Aparece la página de propiedades; Haga clic en el **polígono** ficha.  
   
- el botón de **Aplicar** se deshabilita inicialmente.  Empieza a escribir un valor en el cuadro de **lados** y el botón de **Aplicar** será habilitado.  Cuando haya terminado de escribir el valor, haga clic en el botón de **Aplicar** .  Los cambios de presentación del control, y el botón de **Aplicar** se deshabilita de nuevo.  Pruebe a escribir un valor no válido.  Verá un cuadro de mensaje el contener de la descripción del error que establece de la función de `put_Sides` .  
+ El **aplicar** botón está inicialmente deshabilitado. Comience a escribir un valor en el **lados** cuadro y **aplicar** se habilitará el botón. Cuando haya terminado de escribir el valor, haga clic en el **aplicar** botón. Los cambios de presentación del control y el **aplicar** botón nuevo está deshabilitado. Pruebe a escribir un valor no válido. Verá un cuadro de mensaje que contiene la descripción del error que puede establecer desde el `put_Sides` función.  
   
- Siguiente, coloque el control en una página Web.  
+ A continuación, se coloca el control en una página Web.  
   
- [De nuevo al paso 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [En el paso 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Vuelva al paso 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [Al paso 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)
+

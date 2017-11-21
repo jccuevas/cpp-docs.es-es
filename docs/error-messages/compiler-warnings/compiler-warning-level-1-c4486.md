@@ -1,35 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4486"
+title: Compilador advertencia (nivel 1) C4486 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4486
+dev_langs: C++
+helpviewer_keywords: C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d8819029a9fc5a40281f875ab12595c7a73f0e09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : un método virtual privado de una clase ref o clase value se debe marcar como 'sealed'  
+# <a name="compiler-warning-level-1-c4486"></a>Advertencia del compilador (nivel 1) C4486
+'función': un método virtual privado de una clase ref o clase value se debe marcar como 'sealed'  
   
- Como no se puede obtener acceso a una función miembro virtual privada de una clase administrada o struct ni tampoco se puede reemplazar, debe marcarse como [sellado](../../windows/sealed-cpp-component-extensions.md).  
+ Puesto que no está accesible o se reemplaza una función miembro virtual privada de una clase o estructura administrada, se debe marcar [sellado](../../windows/sealed-cpp-component-extensions.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4486.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4486.  
   
 ```  
 // C4486.cpp  
@@ -41,8 +39,8 @@ private:
 };  
 ```  
   
-## Ejemplo  
- El siguiente ejemplo muestra un posible uso de una función sealed virtual privada.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra un uso posible de una función sealed, virtual privada.  
   
 ```  
 // C4486_b.cpp  

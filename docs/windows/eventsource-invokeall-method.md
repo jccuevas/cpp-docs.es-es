@@ -1,30 +1,28 @@
 ---
-title: "EventSource::InvokeAll (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll (método)"
+title: "EventSource:: InvokeAll (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource::InvokeAll (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Llama a cada controlador de eventos asociado con el actual [EventSource](../windows/eventsource-class.md) objeto mediante los argumentos y tipos de argumento especificados.  
+# <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll (Método)
+Llama a cada controlador de eventos asociado con el actual [EventSource](../windows/eventsource-class.md) objeto mediante los argumentos y tipos de argumentos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -190,7 +188,7 @@ void InvokeAll(
  El tipo del primer argumento de controlador de eventos.  
   
  `T2`  
- El tipo del segundo argumento del controlador de eventos.  
+ El tipo del segundo argumento de controlador de eventos.  
   
  `T3`  
  El tipo del tercer argumento de controlador de eventos.  
@@ -214,7 +212,7 @@ void InvokeAll(
  El tipo del noveno argumento del controlador de eventos.  
   
  `arg0`  
- El argumento de controlador de evento de cero.  
+ El argumento de controlador de eventos de cero.  
   
  `arg1`  
  El primer argumento de controlador de eventos.  
@@ -232,10 +230,10 @@ void InvokeAll(
  El quinto argumento de controlador de eventos.  
   
  `arg6`  
- Sexto argumento del controlador de eventos.  
+ El sexto argumento de controlador de eventos.  
   
  `arg7`  
- Séptimo argumento del controlador de eventos.  
+ El séptimo argumento de controlador de eventos.  
   
  `arg8`  
  El octavo argumento de controlador de eventos.  

@@ -1,36 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+title: Compilador advertencia (nivel 1) C4346 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 17e4644901d127bf11637bc24ea155072f83e03c
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
-# Advertencia del compilador (nivel 1) C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'nombre' : un nombre dependiente no es un tipo  
+# <a name="compiler-warning-level-1-c4346"></a>Advertencia del compilador (nivel 1) C4346
+'nombre': nombre dependiente no es un tipo  
   
- La palabra clave [typename](../../cpp/typename.md) es necesaria si se va a tratar un nombre dependiente como un tipo.  Éste es un cambio importante en el compilador de Visual C\+\+ .NET 2003 implementado para cumplir el estándar ISO C\+\+.  
+ El [typename](../../cpp/typename.md) palabra clave es obligatoria si un nombre dependiente se tratará como un tipo. Para el código que funciona igual en todas las versiones de Visual C++, agregue `typename` a la declaración.  
   
- Para que el código funcione de igual forma en todas las versiones de Visual C\+\+, agregue `typename` a la declaración.  
-  
- El código siguiente genera el error C4346:  
+ El ejemplo siguiente genera C4346:  
   
 ```  
 // C4346.cpp  
@@ -43,7 +39,7 @@ struct C {
 };  
 ```  
   
- En los ejemplos siguientes se muestran otros contextos en los que la palabra clave **typename** es necesaria:  
+ Los ejemplos siguientes se muestran otros ejemplos donde el **typename** palabra clave es necesaria:  
   
 ```  
 // C4346b.cpp  
@@ -64,7 +60,7 @@ struct M : public L<typename T::Type, T::Value>
 };  
 ```  
   
- y en este otro,  
+ Y esto  
   
 ```  
 // C4346c.cpp  

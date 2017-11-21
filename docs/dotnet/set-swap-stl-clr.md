@@ -1,45 +1,43 @@
 ---
-title: "set::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap (miembro) [STL/CLR]"
+title: 'Set:: swap (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: c1733a77-d23f-44cb-b038-f1893a6fe6b1
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4161f3d2d5d1424a3645a8025576865f7d05603f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# set::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setswap-stlclr"></a>set::swap (STL/CLR)
 Intercambia el contenido de dos contenedores.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void swap(set<Key>% right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
  Contenedor con el que se va a intercambiar el contenido.  
   
-## Comentarios  
- La función miembro cambia las secuencias controladas entre `this` y `right`.  Hacerlo en tiempo constante y no produce ninguna excepción.  Se utiliza como una manera rápida de cambiar el contenido de dos contenedores.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro intercambia las secuencias controladas entre `this` y `right`. Lo hace en tiempo constante y no inicia ninguna excepción. Utiliza como una forma rápida para intercambiar el contenido de dos contenedores.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_set_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **f de d e**  
- **f de d e**  
- **a b c**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [set](../dotnet/set-stl-clr.md)   
- [set::operator\=](../dotnet/set-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

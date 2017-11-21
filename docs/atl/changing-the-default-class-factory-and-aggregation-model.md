@@ -1,49 +1,50 @@
 ---
-title: "Changing the Default Class Factory and Aggregation Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregation [C++], aggregation models"
-  - "aggregation [C++], utilizar ATL"
-  - "CComClassFactory class, making the default"
-  - "CComCoClass class, default class factory and aggregation model"
-  - "class factories, cambiar elementos predeterminados"
-  - "default class factory"
-  - "default class factory, ATL"
-  - "valores predeterminados [C++], aggregation model in ATL"
-  - "valores predeterminados [C++], class factory"
+title: "Cambiar el generador de clases predeterminado y el modelo de agregación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComClassFactory class, making the default
+- aggregation [C++], using ATL
+- aggregation [C++], aggregation models
+- defaults [C++], aggregation model in ATL
+- default class factory
+- class factories, changing default
+- CComCoClass class, default class factory and aggregation model
+- default class factory, ATL
+- defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a963c1fba2d3eda9c86fa1e6db74de739bf45182
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Changing the Default Class Factory and Aggregation Model
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Cambiar el generador de clases predeterminado y el modelo de agregación
+ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir el modelo de generador y agregación de clase predeterminado para el objeto. `CComCoClass`Especifica las dos macros siguientes:  
+  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) declara el generador de clases como [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
+  
+-   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) declara que se puede agregar el objeto.  
+  
+ Puede invalidar cualquiera de estos valores predeterminados especificando otra macro en la definición de clase. Por ejemplo, para usar [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) en lugar de `CComClassFactory`, especifique el [macro DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) macro:  
+  
+ [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
+  
+ Otras dos macros que definen un generador de clases son [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) y [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
+  
+ ATL también usa el `typedef` mecanismo para implementar el comportamiento predeterminado. Por ejemplo, el `DECLARE_AGGREGATABLE` macro utiliza `typedef` para definir un tipo denominado **_CreatorClass**, que, a continuación, se hace referencia a lo largo de ATL. Tenga en cuenta que en una clase derivada, un `typedef` con el mismo nombre que la clase base `typedef` da como resultado ATL mediante la definición e invalidar el comportamiento predeterminado.  
+  
+## <a name="see-also"></a>Vea también  
+ [Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)   
+ [Macros de agregación y generador de clases](../atl/reference/aggregation-and-class-factory-macros.md)
 
-ATL utiliza [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir el modelo predeterminado de generador y la agregación de clase del objeto.  `CComCoClass` especifica las dos macros siguientes:  
-  
--   [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md) declara el generador de la clase se [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
-  
--   [DECLARE\_AGGREGATABLE](../Topic/DECLARE_AGGREGATABLE.md) declara que el objeto puede agregarse.  
-  
- Puede reemplazar cualquiera de estos valores predeterminados especificando otra macro en la definición de clase.  Por ejemplo, para utilizar [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) en lugar de `CComClassFactory`, especifique la macro de [DECLARE\_ CLASSFACTORY2](../Topic/DECLARE_CLASSFACTORY2.md) :  
-  
- [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/CPP/changing-the-default-class-factory-and-aggregation-model_1.h)]  
-  
- Otras dos macros que definen un generador de clases son [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) y [DECLARE\_CLASSFACTORY\_SINGLETON](../Topic/DECLARE_CLASSFACTORY_SINGLETON.md).  
-  
- ATL también utiliza el mecanismo de `typedef` para implementar el comportamiento predeterminado.  Por ejemplo, la macro de `DECLARE_AGGREGATABLE` utiliza `typedef` para definir un tipo denominado **\_CreatorClass**, que se hace referencia en ATL.  Observe que en una clase derivada, `typedef` utilizando el mismo nombre que los resultados de `typedef` de clase base en ATL mediante la definición y reemplazar el comportamiento predeterminado.  
-  
-## Vea también  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)   
- [Aggregation and Class Factory Macros](../atl/reference/aggregation-and-class-factory-macros.md)

@@ -1,53 +1,53 @@
 ---
-title: "OpenMP Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Funciones de OpenMP | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: caa41947f43189f52333106f80cce6f58b921f8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP Functions
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-proporciona vínculos a las funciones utilizadas en el OpenMP API.  
+# <a name="openmp-functions"></a>Funciones de OpenMP
+Proporciona vínculos a las funciones que se utilizan en la API de OpenMP.  
   
- Implementación de Visual C\+\+ del estándar de OpenMP incluye las siguientes funciones.  
+ La implementación de Visual C++ de la OpenMP estándar incluye las siguientes funciones.  
   
 |Función|Descripción|  
-|-------------|-----------------|  
-|[omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|desinicializa un bloqueo.|  
-|[omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|desinicializa un bloqueo encajable.|  
-|[omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Devuelve un valor que indica si el número de subprocesos disponibles en la región paralela subsiguiente se puede ajustar el motor en tiempo de ejecución.|  
-|[omp\_get\_max\_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Devuelve un entero al que sea igual o mayor que el número de subprocesos que estará disponible si una región paralela sin [num\_threads](../../../parallel/openmp/reference/num-threads.md) estaba definido en ese momento en el código.|  
-|[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Devuelve un valor que indica si se habilita el paralelismo anidados.|  
-|[omp\_get\_num\_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Devuelve el número de procesadores disponibles cuando se llama a la función.|  
-|[omp\_get\_num\_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Devuelve el número de subprocesos de la región paralela.|  
-|[omp\_get\_thread\_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Devuelve el número de subprocesos del subproceso que se ejecuta dentro del equipo de subproceso.|  
-|[omp\_get\_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Devuelve el número de segundos entre los tic\-tac de reloj de procesador.|  
-|[omp\_get\_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Devuelve un valor en segundos de tiempo transcurrido de algún punto.|  
-|[omp\_in\_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Devuelve cero si se llama dentro de una región paralela.|  
-|[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Inicializa un bloqueo simple.|  
-|[omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Inicializa un bloqueo.|  
-|[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indica que el número de subprocesos disponibles en la región paralela subsiguiente se puede ajustar el motor en tiempo de ejecución.|  
-|[omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Los bloques muestra la ejecución hasta que un bloqueo esté disponible.|  
-|[omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Los bloques muestra la ejecución hasta que un bloqueo esté disponible.|  
-|[omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Paralelismo anidado de permisos.|  
-|[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Establece el número de subprocesos en regiones paralelas posteriores, a menos que se reemplace con una cláusula de [num\_threads](../../../parallel/openmp/reference/num-threads.md) .|  
-|[omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Los intentos de establecer un bloqueo pero no bloquean la ejecución de subprocesos.|  
-|[omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Los intentos de establecer un bloqueo encajable pero no bloquean la ejecución de subprocesos.|  
-|[omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Libere un bloqueo.|  
-|[omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Libere un bloqueo encajable.|  
+|--------------|-----------------|  
+|[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Anula la inicialización de un bloqueo.|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Anula la inicialización de un bloqueo anidable.|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Devuelve un valor que indica si el número de subprocesos disponibles en la región paralela posterior puede ser ajustado por el tiempo de ejecución.|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Devuelve un entero que es igual o mayor que el número de subprocesos que estaría disponible si una región paralela sin [num_threads](../../../parallel/openmp/reference/num-threads.md) se define en ese momento en el código.|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Devuelve un valor que indica si está habilitado el paralelismo anidado.|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Devuelve el número de procesadores que están disponibles cuando se llama a la función.|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Devuelve el número de subprocesos en la región paralela.|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Devuelve el número de subprocesos de la ejecución de subprocesos dentro de su equipo de subproceso.|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Devuelve el número de segundos entre ciclos de reloj de procesador.|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Devuelve que un valor en segundos del tiempo transcurrido en algún momento.|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Devuelve un valor distinto de cero si se llama desde dentro de una región paralela.|  
+|[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Inicializa un bloqueo simple.|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Inicializa un bloqueo.|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indica que el número de subprocesos disponibles en la región paralela posterior puede ser ajustado por el tiempo de ejecución.|  
+|[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Bloques de ejecución del subproceso hasta que haya un bloqueo disponible.|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Bloques de ejecución del subproceso hasta que haya un bloqueo disponible.|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Habilita el paralelismo anidado.|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Establece el número de subprocesos en regiones posteriores en paralelo, a menos que se reemplaza por un [num_threads](../../../parallel/openmp/reference/num-threads.md) cláusula.|  
+|[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Intenta establecer un bloqueo, pero no impide la ejecución de subprocesos.|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Intenta establecer un bloqueo anidable pero no impide la ejecución de subprocesos.|  
+|[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Libera un bloqueo.|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Libera un bloqueo anidable.|  
   
-## Vea también  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de la biblioteca](../../../parallel/openmp/reference/openmp-library-reference.md)

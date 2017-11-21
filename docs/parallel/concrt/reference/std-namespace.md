@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- ppltasks/std
-dev_langs:
-- C++
+f1_keywords: ppltasks/std
+dev_langs: C++
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25c6d8be54ff6d8475492ba4e54f77ec721a0ae0
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5e649f5228fdc9ad0faba11403645e426090dc4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="std-namespace"></a>std (Espacio de nombres)
 ## <a name="syntax"></a>Sintaxis  
@@ -51,14 +33,13 @@ namespace std;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Función make_exception_ptr](make-exception-ptr-function.md)||  
+|[make_exception_ptr (función)](make-exception-ptr-function.md)||  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** ppltasks.h  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia](reference-concurrency-runtime.md)
-
 
 
 

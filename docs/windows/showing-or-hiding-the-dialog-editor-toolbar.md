@@ -1,63 +1,64 @@
 ---
-title: "Mostrar u ocultar la barra de herramientas del Editor de cuadros de di&#225;logo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controles [C++], mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo"
-  - "barras de herramientas [C++], mostrar"
-  - "barras de herramientas [C++], ocultar"
-  - "Editor de cuadros de diálogo, mostrar u ocultar la barra de herramientas"
+title: "Mostrar u ocultar la barra de herramientas del Editor de diálogos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], showing or hiding Dialog editor toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
+- Dialog editor, showing or hiding toolbar
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e794cb6e24e86aa83fe7ea5b36f700c9dc9893f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Mostrar u ocultar la barra de herramientas del Editor de cuadros de di&#225;logo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se abre el Editor de cuadros de diálogo, su barra de herramientas aparecerá automáticamente encima de la solución.  
+# <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo
+Cuando se abre el editor de cuadro de diálogo, la barra de herramientas del Editor de cuadro de diálogo aparece automáticamente en la parte superior de la solución.  
   
-### Barra de herramientas del Editor de cuadros de diálogo  
+### <a name="dialog-editor-toolbar"></a>Barra de herramientas del Editor de cuadros de diálogo  
   
-|Icono|Significado|Icono|Significado|  
-|-----------|-----------------|-----------|-----------------|  
-|![Botón Probar cuadro de diálogo](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Probar cuadro de diálogo|![Botón Espaciar horizontalmente](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Horizontalmente|  
+|Iconos|Significado|Iconos|Significado|  
+|----------|-------------|----------|-------------|  
+|![Botón de cuadro de diálogo de prueba](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Probar cuadro de diálogo|![Botón espaciar horizontalmente](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Horizontalmente|  
 |![Botón Alinear lados izquierdos](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinear lados izquierdos|![Botón Espaciar verticalmente](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Verticalmente|  
-|![Botón Alinear lados derechos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinear lados derechos|![Botón Igualar ancho](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Igualar ancho|  
-|![Botón Alinear lados superiores](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinear lados superiores|![Botón Igualar alto](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Igualar alto|  
-|![Botón Alinear lados inferiores](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinear lados inferiores|![Botón Igualar tamaño](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamaño|  
+|![Botón Alinear lados derechos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinear lados derechos|![Botón de marca mismo ancho](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Igualar ancho|  
+|![Botón Alinear lados superiores](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinear lados superiores|![Asegúrese de alto botón](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Igualar alto|  
+|![Botón Alinear lados inferiores](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinear lados inferiores|![Asegúrese de tamaño mismo botón](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamaño|  
 |![Botón Centrar verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Botón Alternar cuadrícula](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Alternar cuadrícula|  
 |![Botón Centrar horizontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Botón Alternar guías](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Alternar guías|  
   
- La barra de herramientas del Editor de cuadros de diálogo contiene botones para organizar la disposición de los distintos controles en el cuadro de diálogo \(por ejemplo, tamaño y alineación\).  Los botones de la barra de herramientas del Editor de cuadros de diálogo se corresponden con los comandos del menú Formato.  Para obtener información detallada, vea [Teclas de aceleración del Editor de cuadros de diálogo](../mfc/accelerator-keys-for-the-dialog-editor.md)  
+ La barra de herramientas del Editor de cuadro de diálogo contiene botones para organizar el diseño de los controles en el cuadro de diálogo, por ejemplo, tamaño y alineación. Botones de barra de herramientas del Editor de cuadro de diálogo se corresponden con los comandos del menú de formato. Para obtener más información, consulte [teclas de aceleración del Editor de cuadros de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- En el Editor de cuadros de diálogo, se puede activar la presentación de la barra de herramientas seleccionándola en la lista de barras de herramientas y ventanas disponibles.  
+ Cuando esté en el editor de cuadro de diálogo, puede alternar la visualización de la barra de herramientas del Editor de cuadro de diálogo, selecciónelo en la lista de ventanas y barras de herramientas disponibles.  
   
-### Para mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo  
+### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Para mostrar u ocultar la barra de herramientas del editor de cuadro de diálogo  
   
-1.  En el menú **Ver**, haga clic en **Barras de herramientas** y, a continuación, elija **Editor de cuadros de diálogo** en el submenú.  
+1.  En el **vista** menú haga clic en **las barras de herramientas** , a continuación, elija **Editor de cuadro de diálogo** del submenú.  
   
     > [!NOTE]
-    >  La barra de herramientas del Editor de cuadros de diálogo se muestra de forma predeterminada cuando se abre un recurso de cuadro de diálogo en el Editor de cuadros de diálogo; no obstante, si la barra de herramientas se cierra de forma explícita, deberá invocarse la próxima vez que se abra un recurso de cuadro de diálogo.  
+    >  La barra de herramientas del Editor de cuadro de diálogo se muestra de forma predeterminada al abrir un recurso de cuadro de diálogo en el editor de cuadro de diálogo; Sin embargo, si cierra explícitamente la barra de herramientas, debe invocar la próxima vez que abra un recurso de cuadro de diálogo.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
  Win32  
   
-## Vea también  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [How to: Create a Resource](../windows/how-to-create-a-resource.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Organización de los controles de cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Cómo: crear un recurso](../windows/how-to-create-a-resource.md)   
+ [Archivos de recursos](../windows/resource-files-visual-studio.md)   
+ [Editor de cuadros de diálogo](../windows/dialog-editor.md)
+

@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - operation_timed_out
 - CONCRT/concurrency::operation_timed_out
 - CONCRT/concurrency::operation_timed_out::operation_timed_out
-dev_langs:
-- C++
-helpviewer_keywords:
-- operation_timed_out class
+dev_langs: C++
+helpviewer_keywords: operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ec17c3ae4fa10fd7b24170934c672fb569112f60
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 501a0d6d99c75792a97918cd933326c0916373be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out (Clase)
 Esta clase describe una excepción que se produce cuando una operación ha agotado su tiempo de espera.  
@@ -57,7 +39,7 @@ class operation_timed_out : public std::exception;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[operation_timed_out](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
+|[operation_timed_out)](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -69,7 +51,7 @@ class operation_timed_out : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>operation_timed_out 
+##  <a name="ctor"></a>operation_timed_out) 
 
  Construye un objeto `operation_timed_out`.  
   
@@ -85,4 +67,3 @@ operation_timed_out() throw();
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

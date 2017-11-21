@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -34,19 +33,17 @@ helpviewer_keywords:
 - C2478
 - C2481
 - C2497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6586dfb0e0c3d63d87d6790f0cbe1bb8a832133e
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>: De errores del compilador C2400 a C2499
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -148,7 +145,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2491](compiler-error-c2491.md)|'*identificador*': definición de dllimport *función* no permitido|  
 |[Error del compilador C2492](compiler-error-c2492.md)|'*variable*': datos con duración de almacenamiento de subprocesos no pueden tener una interfaz dll|  
 |[Error del compilador C2493](compiler-error-c2493.md)|formato no válido de __based|  
-|[Error del compilador C2494](compiler-error-c2494.md)|'*palabra clave*' no se puede llamar desde dentro de una expresión de filtro o \_ \_bloque finally/finally|  
+|[Error del compilador C2494](compiler-error-c2494.md)|'*palabra clave*' no se puede llamar desde dentro de una expresión de filtro o &#95; &#95; bloque finally/finally|  
 |[Error del compilador C2495](compiler-error-c2495.md)|'*identificador*': '__declspec(noexcept)' solo puede aplicarse a definiciones o declaraciones de función|  
 |[Error del compilador C2496](compiler-error-c2496.md)|'*identificador*': 'selectany' solo puede aplicarse a los elementos de datos con vinculación externa|  
 |C2497 de Error del compilador|'*identificador*': 'implementation_key' solo puede aplicarse a las declaraciones de función|  

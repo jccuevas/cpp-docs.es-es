@@ -1,32 +1,30 @@
 ---
-title: "InterfaceTraits::FillArrayWithIid (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid (método)"
+title: "Interfacetraits:: Fillarraywithiid (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: 73583177-adc9-4fcb-917d-fa7e6d07c990
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 014d47e650cf27f7e5a70ad63b0f6de21e5e5ccd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::FillArrayWithIid (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="interfacetraitsfillarraywithiid-method"></a>InterfaceTraits::FillArrayWithIid (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -36,25 +34,25 @@ __forceinline static void FillArrayWithIid(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `index`  
  Puntero a un campo que contiene un valor de índice de base cero.  
   
  `iids`  
- Una matriz de id. de la interfaz.  
+ Una matriz de identificadores de interfaz.  
   
-## Comentarios  
- Asigna el identificador de interfaz de `Base` al elemento de matriz especificado por el argumento index.  
+## <a name="remarks"></a>Comentarios  
+ Asigna el identificador de interfaz de `Base` al elemento de matriz especificado por el argumento de índice.  
   
- El cambio en el nombre de esta API, sólo un elemento de matriz se modifica; no la matriz completa.  
+ Al contrario que en el nombre de esta API, se modifica el elemento de solo una matriz; no toda la matriz.  
   
- Para obtener más información sobre `Base`, vea la sección Public Typedefs en [InterfaceTraits \(Estructura\)](../windows/interfacetraits-structure.md).  
+ Para obtener más información acerca de `Base`, vea la sección de definiciones de tipo público en [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [InterfaceTraits \(Estructura\)](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [InterfaceTraits (estructura)](../windows/interfacetraits-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

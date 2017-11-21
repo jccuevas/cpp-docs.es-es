@@ -1,36 +1,35 @@
 ---
-title: "vector (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/vector> (encabezado) [STL/CLR]"
-  - "<vector> (encabezado) [STL/CLR]"
-  - "vector (clase) [STL/CLR]"
+title: vector (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector
+dev_langs: C++
+helpviewer_keywords:
+- vector class [STL/CLR]
+- <cliext/vector> header [STL/CLR]
+- <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ee3debcaf651a2a11ef51cac405edf816c5b8ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# vector (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un objeto que controla una secuencia de la variar\- longitud de elementos que tiene acceso aleatorio.  Utiliza el contenedor `vector` para administrar una secuencia de elementos como bloque contiguo de almacenamiento.  El bloque se implementa como una matriz que aumenta a petición.  
+# <a name="vector-stlclr"></a>vector (STL/CLR)
+La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso aleatorio. Utilice el contenedor de `vector` para administrar una secuencia de elementos como un bloque contiguo de almacenamiento. El bloque se implementa como una matriz que aumenta de tamaño a petición.  
   
- En la descripción siguiente, `GValue` es igual que `Value` a menos que este último es un tipo de referencia, en este caso es `Value^`.  
+ En la descripción siguiente, `GValue` es el mismo que `Value` a menos que el segundo es un tipo de referencia, en cuyo caso es `Value^`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Value>  
@@ -46,100 +45,101 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|[vector::const\_iterator](../dotnet/vector-const-iterator-stl-clr.md)|El tipo de un iterador constante para la secuencia controlada.|  
-|[vector::const\_reference](../dotnet/vector-const-reference-stl-clr.md)|El tipo de una referencia constante a un elemento.|  
-|[vector::const\_reverse\_iterator](../dotnet/vector-const-reverse-iterator-stl-clr.md)|El tipo de un iterador inverso constante para la secuencia controlada.|  
-|[vector::difference\_type](../dotnet/vector-difference-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
-|[vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)|El tipo de interfaz genérica para el contenedor.|  
-|[vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)|El tipo de un iterador para la interfaz genérica para el contenedor.|  
-|[vector::generic\_reverse\_iterator](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|El tipo de un iterador inverso para la interfaz genérica para el contenedor.|  
-|[vector::generic\_value](../dotnet/vector-generic-value-stl-clr.md)|El tipo de un elemento de la interfaz genérica para el contenedor.|  
-|[vector::iterator](../dotnet/vector-iterator-stl-clr.md)|El tipo de un iterador para la secuencia controlada.|  
-|[vector::reference](../dotnet/vector-reference-stl-clr.md)|El tipo de una referencia a un elemento.|  
-|[vector::reverse\_iterator](../dotnet/vector-reverse-iterator-stl-clr.md)|El tipo de un iterador inverso para la secuencia controlada.|  
-|[vector::size\_type](../dotnet/vector-size-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
-|[vector::value\_type](../dotnet/vector-value-type-stl-clr.md)|El tipo de un elemento.|  
+|---------------------|-----------------|  
+|[vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|El tipo de un iterador constante para la secuencia controlada.|  
+|[vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|El tipo de una referencia constante a un elemento.|  
+|[vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|El tipo de un iterador invertido constante para la secuencia controlada.|  
+|[vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
+|[vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|El tipo de la interfaz genérica para el contenedor.|  
+|[vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|El tipo de un iterador para la interfaz genérica para el contenedor.|  
+|[vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|El tipo de un iterador inverso para la interfaz genérica para el contenedor.|  
+|[vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|El tipo de un elemento de la interfaz genérica para el contenedor.|  
+|[vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|El tipo de un iterador para la secuencia controlada.|  
+|[vector::reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|El tipo de una referencia a un elemento.|  
+|[vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|El tipo de un iterador invertido para la secuencia controlada.|  
+|[vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
+|[vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|El tipo de un elemento.|  
   
-|Función de miembro|Descripción|  
-|------------------------|-----------------|  
-|[vector::assign](../dotnet/vector-assign-stl-clr.md)|Reemplaza todos los elementos.|  
-|[vector::at](../dotnet/vector-at-stl-clr.md)|Tiene acceso a un elemento en una posición especificada.|  
-|[vector::back](../dotnet/vector-back-stl-clr.md)|Tiene acceso al último elemento.|  
-|[vector::begin](../dotnet/vector-begin-stl-clr.md)|Designa el principio de la secuencia controlada.|  
-|[vector::capacity](../dotnet/vector-capacity-stl-clr.md)|Notifica el tamaño de almacenamiento asignado del contenedor.|  
-|[vector::clear](../dotnet/vector-clear-stl-clr.md)|Quita todos los elementos.|  
-|[vector::empty](../dotnet/vector-empty-stl-clr.md)|Comprueba si no hay elementos presentes.|  
-|[vector::end](../dotnet/vector-end-stl-clr.md)|Designa el final de la secuencia controlada.|  
-|[vector::erase](../dotnet/vector-erase-stl-clr.md)|Quita los elementos en las posiciones especificadas.|  
-|[vector::front](../dotnet/vector-front-stl-clr.md)|Tiene acceso al primer elemento.|  
-|[vector::insert](../dotnet/vector-insert-stl-clr.md)|Agrega elementos en una posición especificada.|  
-|[vector::pop\_back](../dotnet/vector-pop-back-stl-clr.md)|Quita el último elemento.|  
-|[vector::push\_back](../dotnet/vector-push-back-stl-clr.md)|Agrega un nuevo elemento pasado.|  
-|[vector::rbegin](../dotnet/vector-rbegin-stl-clr.md)|Designa el principio de la secuencia controlada inversa.|  
-|[vector::rend](../dotnet/vector-rend-stl-clr.md)|Designa el final de la secuencia controlada inversa.|  
-|[vector::reserve](../dotnet/vector-reserve-stl-clr.md)|Proteger una capacidad mínima de crecimiento para el contenedor.|  
-|[vector::resize](../dotnet/vector-resize-stl-clr.md)|Cambia el número de elementos.|  
-|[vector::size](../dotnet/vector-size-stl-clr.md)|Cuenta el número de elementos.|  
-|[vector::swap](../dotnet/vector-swap-stl-clr.md)|Intercambia el contenido de dos contenedores.|  
-|[vector::to\_array](../dotnet/vector-to-array-stl-clr.md)|Copia la secuencia controlada a una nueva matriz.|  
-|[vector::vector](../dotnet/vector-vector-stl-clr.md)|Construye un objeto contenedor.|  
+|Función miembro|Descripción|  
+|---------------------|-----------------|  
+|[vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Reemplaza todos los elementos.|  
+|[vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Obtiene acceso a un elemento en una posición especificada.|  
+|[vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Obtiene acceso al último elemento.|  
+|[vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Designa el principio de la secuencia controlada.|  
+|[vector::capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Informa del tamaño de almacenamiento asignado para el contenedor.|  
+|[vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Quita todos los elementos.|  
+|[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Comprueba si no hay ningún elemento presente.|  
+|[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Designa el final de la secuencia controlada.|  
+|[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Quita los elementos de las posiciones especificadas.|  
+|[vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Obtiene acceso al primer elemento.|  
+|[vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Agrega un elemento en una posición especificada.|  
+|[vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Quita el último elemento.|  
+|[vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Agrega un nuevo elemento de la última.|  
+|[vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Designa el principio de la secuencia controlada inversa.|  
+|[vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Designa el final de la secuencia controlada inversa.|  
+|[vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Garantiza una capacidad de crecimiento mínimo para el contenedor.|  
+|[vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Cambia el número de elementos.|  
+|[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Cuenta el número de elementos.|  
+|[vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Intercambia el contenido de dos contenedores.|  
+|[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Copia la secuencia controlada en una nueva matriz.|  
+|[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Construye un objeto contenedor.|  
   
 |Propiedad|Descripción|  
-|---------------|-----------------|  
-|[vector::back\_item](../dotnet/vector-back-item-stl-clr.md)|Tiene acceso al último elemento.|  
-|[vector::front\_item](../dotnet/vector-front-item-stl-clr.md)|Tiene acceso al primer elemento.|  
+|--------------|-----------------|  
+|[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Obtiene acceso al último elemento.|  
+|[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Obtiene acceso al primer elemento.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|[vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)|Reemplaza la secuencia controlada.|  
-|[vector::operator](../dotnet/vector-operator-stl-clr.md)|Tiene acceso a un elemento en una posición especificada.|  
-|[operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)|Determina si un objeto de `vector` no es igual a otro objeto de `vector` .|  
-|[operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)|Determina si un objeto de `vector` es menor que otro objeto de `vector` .|  
-|[operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Determina si un objeto de `vector` menor o igual que otro objeto de `vector` .|  
-|[operator\=\= \(vector\)](../dotnet/operator-equality-vector-stl-clr.md)|Determina si un objeto de `vector` es igual a otro objeto de `vector` .|  
-|[operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)|Determina si un objeto de `vector` es mayor que otro objeto de `vector` .|  
-|[operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Determina si un objeto de `vector` mayor o igual que otro objeto de `vector` .|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|[vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Reemplaza la secuencia controlada.|  
+|[vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Obtiene acceso a un elemento en una posición especificada.|  
+|[operator!= (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Determina si un `vector` no es igual a otro objeto `vector` objeto.|  
+|[operator< (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Determina si un `vector` objeto es menor que otro `vector` objeto.|  
+|[operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Determina si un `vector` objeto es menor o igual que otro `vector` objeto.|  
+|[operator== (vector) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Determina si un `vector` es igual a otro objeto `vector` objeto.|  
+|[operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Determina si un `vector` es mayor que otro objeto `vector` objeto.|  
+|[operator>= (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Determina si un `vector` objeto es mayor o igual que otro `vector` objeto.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interfaz|Descripción|  
-|--------------|-----------------|  
-|<xref:System.ICloneable>|Dupliquen un objeto.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplicar un objeto.|  
 |<xref:System.Collections.IEnumerable>|Secuencia a través de los elementos.|  
-|<xref:System.Collections.ICollection>|Mantenga el grupo de elementos.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia mediante elementos escritos.|  
-|<xref:System.Collections.Generic.ICollection%601>|Mantenga el grupo de elementos escritos.|  
-|<xref:System.Collections.Generic.IList%601>|Maintain pidió al grupo de elementos escritos.|  
-|IVectorValue\<\>|Mantenga el contenedor genérico.|  
+|<xref:System.Collections.ICollection>|Mantener el grupo de elementos.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Secuencia a través de los elementos con tipo.|  
+|<xref:System.Collections.Generic.ICollection%601>|Mantener el grupo de elementos con tipo.|  
+|<xref:System.Collections.Generic.IList%601>|Mantener un grupo ordenado de elementos con tipo.|  
+|IVector < valor\>|Mantener contenedor genérico.|  
   
-## Comentarios  
- El objeto asigna y libera el almacenamiento de la secuencia que controla con una matriz almacenado de los elementos de `Value` , que crece a petición.  El crecimiento aparece de manera que el costo de anexar un nuevo elemento se amortice tiempo constante.  Es decir el costo de agregar elementos al final no aumenta, por término medio, como la longitud de la secuencia controlada obtiene mayor.  Así, un vector es un buen candidato al contenedor subyacente para la clase de plantilla [pila](../dotnet/stack-stl-clr.md).  
+## <a name="remarks"></a>Comentarios  
+ El objeto asigna y libera almacenamiento para la secuencia que controla a través de una matriz almacenada de `Value` elementos, lo que aumenta de tamaño a petición. El crecimiento tiene lugar de tal modo que el costo de anexar un nuevo elemento de tiempo constante amortizado. En otras palabras, el costo de agregar elementos al final no aumenta, en promedio, como la longitud de la mayor obtiene de la secuencia controlada. Por lo tanto, un vector es un buen candidato para el contenedor subyacente para la clase de plantilla [(STL/CLR) de la pila](../dotnet/stack-stl-clr.md).  
   
- `vector` admite iteradores de acceso aleatorio, lo que significa que puede hacer referencia a un elemento determinado directamente su posición numérica, contando a desde cero para el primer elemento \(frontal\), a [vector::size](../dotnet/vector-size-stl-clr.md)`() - 1` para el elemento \(posterior\) pasado.  También significa que un vector es un buen candidato al contenedor subyacente para la clase de plantilla [priority\_queue](../dotnet/priority-queue-stl-clr.md).  
+ A `vector` iteradores de acceso aleatorio admite, lo que significa que puede hacer referencia a un elemento directamente según su posición numérica, contando desde cero para el primer elemento (la parte delantera), a `size() - 1` para el último elemento (atrás). También significa que un vector es un buen candidato para el contenedor subyacente para la clase de plantilla [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Un iterador de vector almacena un identificador al objeto asociado vectoriales, junto con la tendencia del elemento que señala.  Puede usar iteradores únicamente con los objetos contenedores asociados.  La tendencia de un elemento de vector coincide con su posición.  
+ Un iterador de vector almacena un identificador a su objeto de vector asociado, junto con la diferencia del elemento que este designa. Sólo puede usar iteradores con sus objetos de contenedor asociado. La diferencia de un elemento de vector es igual a su posición.  
   
- Insertar o eliminar elementos puede cambiar el valor del elemento almacenado en una posición determinada, por lo que el valor indicado por un iterador también puede cambiar. \(El contenedor se puede tener que copiar elementos arriba o abajo para crear un hueco antes de una inserción o para rellenar una vulnerabilidad después de un barrido.\) Sin embargo, un iterador de vector sigue siendo válido siempre y cuando la tendencia está en el intervalo `[0,` [vector::size](../dotnet/vector-size-stl-clr.md)`()]`.  Por otra parte, un iterador válido permanece dereferencable \-\- puede utilizarlo para obtener acceso o modificar el valor del elemento que señala \-\- siempre y cuando la tendencia no es igual a `size()`.  
+ Insertar o borrar elementos puede cambiar el valor del elemento almacenado en una posición determinada, por lo que también puede cambiar el valor designado por un iterador. (El contenedor puede tener que copiar los elementos de seguridad o hacia abajo para crear un "agujero" antes de una instrucción insert o para rellenar un "agujero" después de un borrado). Sin embargo, un iterador de vector sigue siendo válido siempre y cuando la diferencia está en el intervalo `[0, size()]`. Además, un iterador válido permanece dereferencable: se puede utilizar para tener acceso o modificar el valor del elemento designa--siempre y cuando su diferencia no es igual a `size()`.  
   
- Borrar o quitar un elemento denomina destructor por el valor almacenado.  Destruyendo el contenedor borra todos los elementos.  Así, un contenedor cuyo tipo de elemento es una clase de referencia se asegura que ningún elemento sobrevivan al contenedor.  La nota, sin embargo, que un contenedor de identificadores hace `not` destruye sus elementos.  
+ Borrar o quitar un elemento llama al destructor para definir el valor almacenado. Destruir el contenedor, borrará todos los elementos. Por lo tanto, un contenedor cuyo tipo de elemento es una clase ref garantiza que ningún elemento su duración mayor que el contenedor. Sin embargo, tenga en cuenta que un contenedor de identificadores de destruir sus elementos.  
   
-## Requisitos  
- cliext \<\/vector de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/vector >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [pila](../dotnet/stack-stl-clr.md)   
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [pila (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
+ [Referencia de la biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

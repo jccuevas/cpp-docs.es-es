@@ -1,76 +1,75 @@
 ---
-title: "Semaphore (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Semaphore"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Semaphore (clase)"
+title: "Clase de semáforo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Semaphore
+dev_langs: C++
+helpviewer_keywords: Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 10de04ebed31835d93daca9cf4caa5d96ed605b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Semaphore (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="semaphore-class"></a>Semaphore (clase)
 Representa un objeto de sincronización que controla un recurso compartido que puede admitir un número limitado de usuarios.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
+  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Typedefs públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`SyncLock`|Un sinónimo de una clase que admita sincrónico bloqueos.|  
+|`SyncLock`|Sinónimo de una clase que admita bloqueos sincrónicos.|  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[Semaphore::Semaphore \(Constructor\)](../windows/semaphore-semaphore-constructor.md)|Inicializa una nueva instancia de la clase semaphore.|  
+|[Semaphore::Semaphore (constructor)](../windows/semaphore-semaphore-constructor.md)|Inicializa una nueva instancia de la clase de semáforo.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke \(Método\)](../windows/invokehelper-invoke-method.md)|Llama al controlador de eventos cuya firma contiene el número especificado de argumentos.|  
+|[InvokeHelper::Invoke (método)](../windows/invokehelper-invoke-method.md)|Llama al controlador de eventos cuya firma contiene el número de argumentos especificado.|  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[Semaphore::Lock \(Método\)](../windows/semaphore-lock-method.md)|Espera hasta que el objeto actual, o el objeto asociado al identificador especificado, está en el estado señalado o ha transcurrido el intervalo de tiempo de espera especificado.|  
+|[Semaphore::Lock (método)](../windows/semaphore-lock-method.md)|Espera a que el objeto actual o el objeto asociado con el identificador especificado, está en el estado señalado o ha transcurrido el intervalo de tiempo de espera especificado.|  
   
-### Operadores públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[Semaphore::operator\= \(Operador\)](../windows/semaphore-operator-assign-operator.md)|Mueve el identificador especificado de un objeto semaphore al objeto actual del semáforo.|  
+|[Semaphore::operator= (operador)](../windows/semaphore-operator-assign-operator.md)|Mueve el identificador especificado de un objeto semáforo de que el objeto de semáforo actual.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Semaphore`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [Microsoft::WRL::Wrappers \(Espacio de nombres\)](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

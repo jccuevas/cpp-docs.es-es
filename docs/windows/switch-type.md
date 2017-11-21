@@ -1,32 +1,30 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: switch_type | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99ec139c1ff10456639249c94451877a18cbbf51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifica el tipo de la variable utilizada como unión discriminante.  
+# <a name="switchtype"></a>switch_type
+Identifica el tipo de la variable utilizada como la unión discriminante.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,14 +34,14 @@ type
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `type`  
- El tipo de modificador, puede ser un entero, un carácter, un booleano, o tipo de enumeración.  
+ El tipo de conmutador, puede ser un tipo entero, carácter, Boolean o enumeración.  
   
-## Comentarios  
- el atributo de **switch\_type** C\+\+ tiene la misma funcionalidad que el atributo de [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **switch_type** atributo C++ tiene la misma funcionalidad que la [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) atributo MIDL.  
   
- los atributos de C\+\+ no admiten [uniones encapsuladas](http://msdn.microsoft.com/library/windows/desktop/aa366811).  [uniones de Nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) solo se admite en el formato siguiente:  
+ Los atributos de C++ no admiten [encapsulado uniones](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Uniones nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) solo se admiten en el formato siguiente:  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +60,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## Ejemplo  
- Vea el ejemplo de [mayúsculas\/minúsculas](../windows/case-cpp.md) para un ejemplo de uso de **switch\_type**.  
+## <a name="example"></a>Ejemplo  
+ Consulte la [caso](../windows/case-cpp.md) ejemplo para un ejemplo de uso de **switch_type**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|`typedef`|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

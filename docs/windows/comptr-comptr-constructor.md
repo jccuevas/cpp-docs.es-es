@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::ComPtr (Constructor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtr, constructor"
+title: Constructor de Comptr | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ComPtr
+dev_langs: C++
+helpviewer_keywords: ComPtr, constructor
 ms.assetid: eaf70907-beac-458f-a503-2e5e27b0c196
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b31fdcbad35bc65b2d8ca26ccab69e875c1d3aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::ComPtr (Constructor)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Intializes una nueva instancia de la clase de ComPtr.  Las sobrecargas proporcionan predeterminado, cópielo, se mueven, y constructores de conversión.  
+# <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr (Constructor)
+Inicializa una nueva instancia de la clase ComPtr. Las sobrecargas proporcionan constructores predeterminados, así como de copia, movimiento y conversión.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW ComPtr();  
@@ -63,28 +61,28 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `U`  
  Tipo del parámetro `other`.  
   
  `other`  
  Objeto de tipo `U`.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
-## Comentarios  
- El primer constructor es el constructor predeterminado, que implictly crea un objeto vacío.  El segundo constructor especifica [\_\_nullptr](../windows/nullptr-cpp-component-extensions.md), que crea explícitamente un objeto vacío.  
+## <a name="remarks"></a>Comentarios  
+ El primer constructor es el constructor predeterminado, que implícitamente crea un objeto vacío. El segundo constructor especifica [__nullptr](../windows/nullptr-cpp-component-extensions.md), que crea explícitamente un objeto vacío.  
   
- El tercer constructor crea un objeto del objeto especificado por un puntero.  
+ El tercer constructor crea un objeto desde el objeto especificado por un puntero.  
   
- Los cuartos y quintos constructores son constructores de copias.  El quinto constructor copia un objeto si se puede convertir al tipo actual.  
+ Los constructores cuarto y quinto son constructores de copias. El quinto constructor copia un objeto si es convertible al tipo actual.  
   
- Sexto y séptimos constructores son constructores de movimiento.  El séptimo constructor mueve un objeto si se puede convertir al tipo actual.  
+ Los constructores sexto y séptimo son constructores de movimiento. El séptimo constructor mueve un objeto si es convertible al tipo actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ComPtr \(Clase\)](../windows/comptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtr (clase)](../windows/comptr-class.md)

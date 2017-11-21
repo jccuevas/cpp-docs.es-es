@@ -1,32 +1,30 @@
 ---
-title: "db_source | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_source attribute"
+title: db_source | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords: db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89f07745d2a9f0f832f42c512e0671b4114a80c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# db_source
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-crea una conexión a un origen de datos.  
+# <a name="dbsource"></a>db_source
+Crea una conexión a un origen de datos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -37,31 +35,31 @@ crea una conexión a un origen de datos.
 ) ]  
 ```  
   
-#### Parámetros  
- *db\_source*  
- La cadena de conexión utilizada para conectarse al origen de datos.  Para el formato de la cadena de conexión, vea [cadenas de conexión y vínculos de datos](https://msdn.microsoft.com/en-us/library/ms718376.aspx) de Microsoft Data Access Components \(MDAC\) SDK.  
+#### <a name="parameters"></a>Parámetros  
+ *db_source*  
+ La cadena de conexión utilizada para conectarse al origen de datos. Para el formato de la cadena de conexión, vea [cadenas de conexión y vínculos de datos](https://msdn.microsoft.com/en-us/library/ms718376.aspx) en Microsoft Data Access Components (MDAC) SDK.  
   
- \(opcional\)*nombre*  
- Cuando se utiliza `db_source` en una clase, *el nombre* es una instancia de un objeto de origen de datos que tiene el atributo de `db_source` aplicadas \(vea el ejemplo 1\).  Cuando se utiliza `db_source` especificado en una implementación del método, *el nombre* es una variable \(local al método\) que se puede utilizar para tener acceso al origen de datos \(vea el ejemplo 2\).  Pasa este *nombre* al parámetro de `source_name` de **db\_command** para asociar el origen de datos a un comando.  
+ *name* (opcional)  
+ Cuando usas `db_source` en una clase, *nombre* es una instancia de un objeto de origen de datos que tiene el `db_source` atributo aplicado a él (vea el ejemplo 1). Cuando se usa `db_source` en línea en una implementación de método *nombre* es una variable (local para el método) que puede utilizarse para tener acceso a los datos de origen (vea el ejemplo 2). Pase este *nombre* a la `source_name` parámetro de **db_command** para asociar un comando en el origen de datos.  
   
- `hresult` \(opcional\)  
- identifica la variable que recibirá `HRESULT` de este comando de base de datos.  Si no existe la variable, automáticamente se insertada por el atributo.  
+ `hresult` (opcional)  
+ Identifica la variable que recibirá el `HRESULT` de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.  
   
-## Comentarios  
- `db_source` crea [CDataSource](../data/oledb/cdatasource-class.md) y un objeto de [CSession](../data/oledb/csession-class.md) , que conjuntamente representan una conexión con un origen de datos de consumidor OLE DB.  
+## <a name="remarks"></a>Comentarios  
+ `db_source`crea un [CDataSource](../data/oledb/cdatasource-class.md) y un [CSession](../data/oledb/csession-class.md) objeto, que juntas representan una conexión con un origen de datos del consumidor de OLE DB.  
   
- Cuando se utiliza `db_source` en una clase, el objeto de `CSession` se convierte en un miembro de clase.  
+ Cuando usas `db_source` en una clase, el `CSession` objeto pasa a ser un miembro de la clase.  
   
- Cuando se utiliza `db_source` en un método, el código insertado se ejecutará en el ámbito del método, y el objeto de `CSession` se crea como una variable local.  
+ Cuando usas `db_source` en un método, se ejecutará el código insertado en el ámbito del método y el `CSession` objeto se crea como una variable local.  
   
- `db_source` agrega propiedades de origen de datos a una clase o dentro de un método.  Se utiliza junto con **db\_command** \(que toma el parámetro de*nombre de*`db_source`como parámetro de `source_name` \).  
+ `db_source`Agrega propiedades del origen de datos a una clase o dentro de un método. Se utiliza junto con **db_command** (que adopta el `db_source` *nombre* parámetro como su `source_name` parámetro).  
   
- Cuando el proveedor de atributos de consumidor aplicar este atributo a una clase, el compilador cambiará la clase al \_TheClassNameAccessor, donde es el nombre *TheClassName que* asignó la clase, y el compilador también creará una clase denominada *TheClassName,* que deriva de \_TheClassNameAccessor.  En la vista de clases, verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
- Para obtener un ejemplo de este atributo se utiliza en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/es-es/52bef5da-c1a0-4223-b4e6-9e464b6db409) y [MultiRead](http://msdn.microsoft.com/es-es/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Para obtener un ejemplo de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) y [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
-## Ejemplo  
- Este ejemplo llama a `db_source` en una clase para crear una conexión al origen de datos `ds` mediante la base de datos Northwind.  `ds` es un identificador para el origen de datos, que se puede utilizar internamente en la clase de `CMyCommand` .  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se llama `db_source` en una clase para crear una conexión al origen de datos `ds` con la base de datos Northwind. `ds`es un identificador para el origen de datos, que puede utilizarse internamente en la `CMyCommand` clase.  
   
 ```  
 // db_source_1.cpp  
@@ -77,19 +75,18 @@ crea una conexión a un origen de datos.
 class CMyCommand {};  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|**clase**, `struct`, miembro, método, local|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)   

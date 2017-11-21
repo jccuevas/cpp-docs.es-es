@@ -1,57 +1,56 @@
 ---
-title: "__ud2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ud2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UD2 (instrucción)"
-  - "__ud2 (función intrínseca)"
+title: __ud2 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ud2
+dev_langs: C++
+helpviewer_keywords:
+- UD2 instruction
+- __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699e575d283f830d94c123f7748f7fdaa6272ff5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __ud2
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ud2"></a>__ud2
 **Específicos de Microsoft**  
   
- Genera una instrucción definida.  
+ Genera una instrucción no definida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __ud2();  
 ```  
   
-## Comentarios  
- El procesador produce una excepción no válida del código de operación si ejecuta una instrucción definida.  
+## <a name="remarks"></a>Comentarios  
+ El procesador produce una excepción de código de operación no válido si se ejecuta una instrucción no definida.  
   
- La función de `__ud2` es equivalente a la instrucción máquina de `UD2` , y está disponible únicamente en modo kernel.  Para obtener más información, busque el documento, “Manual del desarrollador de software de arquitectura Intel, volumen 2: Referencia del conjunto de instrucciones,” en [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) el sitio.  
+ El `__ud2` función es equivalente a la `UD2` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sitio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Ejemplo  
- El ejemplo siguiente se ejecuta una instrucción sin definir, produce una excepción.  El controlador de excepciones modifique el código de retorno a desde cero a uno.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se ejecuta una instrucción no definida, lo que produce una excepción. El controlador de excepciones, a continuación, cambia el código de retorno de cero a uno.  
   
 ```  
 // __ud2_intrinsic.cpp  
@@ -83,10 +82,11 @@ int main() {
 }  
 ```  
   
-  **Antes de \_\_ud2 \(\).**  
- **Código de retorno \= 0.**  
- **En el controlador de excepciones.**  
- **Después de \_\_ud2 \(\).**  
- **Código de retorno \= 1.**   
-## Vea también  
+```Output  
+Before __ud2(). Return code = 0.  
+  In the exception handler.  
+After __ud2().  Return code = 1.  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

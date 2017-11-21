@@ -1,31 +1,29 @@
 ---
-title: "Error irrecuperable de CVTRES CVT1103 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CVT1103"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CVT1103"
+title: Error irrecuperable de CVTRES CVT1103 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CVT1103
+dev_langs: C++
+helpviewer_keywords: CVT1103
 ms.assetid: 5ba5f44c-c3c3-4861-92c5-13c51ee667ef
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4a962f6e69c43d7296417c01d752f82c66e4cdcb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error irrecuperable de CVTRES CVT1103
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se puede leer 'nombredearchivo'  
+# <a name="cvtres-fatal-error-cvt1103"></a>Error irrecuperable de CVTRES CVT1103
+no se puede leer el nombre de archivo  
   
- Se ha producido un error irrecuperable cuando CVTRES intentó leer el archivo dado.  
+ Se produjo un error irrecuperable cuando CVTRES intentó leer el archivo especificado.  
   
- Este error puede estar motivado por los daños del archivo.
+ Este error puede deberse a daños en el archivo.

@@ -1,44 +1,44 @@
 ---
-title: "Aplicaciones Windows universales (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Aplicaciones Windows universales (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 656c8ac642ae9c8a6a76e1ed52ca014b5515e65f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Aplicaciones Windows universales (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="universal-windows-apps-c"></a>Aplicaciones Windows universales (C++)
+Aplicaciones universales de plataforma de Windows (UWP) representan un conjunto de principios de diseño que crear interfaces de usuario simple que están centradas en el contenido que se ajusta automáticamente a los diferentes tamaños de pantalla en diversos dispositivos. La interfaz de usuario se crea en el marcado XAML y el código subyacente en C++ nativo. También puede crear componentes (archivos DLL) que las aplicaciones para UWP escritas en otros lenguajes pueden consumir. La superficie de API para aplicaciones UWP es el tiempo de ejecución de Windows, que es una biblioteca factorizada correctamente que proporciona una amplia variedad de servicios del sistema operativo.  
 
-Las aplicaciones de la Plataforma universal de Windows \(UWP\) representan un conjunto de principios de diseño que se centra en crear interfaces de usuario sencillas en torno a un contenido que se ajusta automáticamente a los diferentes tamaños de pantalla de los diversos dispositivos. La interfaz de usuario se crea en el marcado XAML y el código subyacente en C\+\+ nativo. También puede crear componentes \(archivos DLL\) que las aplicaciones para UWP escritas en otros lenguajes pueden consumir. La superficie de la API de las aplicaciones para UWP es [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], que es una biblioteca factorizada correctamente que proporciona una gran variedad de servicios del sistema operativo.  
+> [!TIP]  
+> Para Windows 10, puede utilizar el convertidor de la aplicación de escritorio para empaquetar la aplicación de escritorio existente para la implementación a través de la tienda de Windows. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
   
-> [!NOTE]
->  Gran parte de la documentación para el desarrollo de aplicaciones para UWP en C\+\+ se encuentra en el sitio web del [Centro de desarrollo de Windows](http://go.microsoft.com/fwlink/p/?LinkId=255563). Algunos de los vínculos de este artículo van a ese sitio web.  
   
-## Aplicaciones para UWP que usan C\+\+\/CX  
+## <a name="uwp-apps-that-use-ccx"></a>Aplicaciones para UWP que usan C++/CX  
   
 |||  
 |-|-|  
-|[Referencia del lenguaje Visual C\+\+ \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=255561)|Describe el conjunto de extensiones que simplifican el uso en C\+\+ de las API de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] y habilitan el control de errores basado en excepciones.|  
-|[Compilar aplicaciones y bibliotecas \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=264858)|Describe cómo crear bibliotecas DLL y estáticas a las que se puede tener acceso desde una aplicación o componente de C\+\+\/CX.|  
-|[Tutorial: crear la primera aplicación de Tienda Windows con C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255556)|Un tutorial que presenta los conceptos básicos de desarrollo de aplicaciones de la [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] en C\+\+. \(Aún no se ha actualizado para el desarrollo de UWP en Windows 10\).|  
-|[Guía básica para aplicaciones de la Tienda Windows con C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255553)|Proporciona vínculos a artículos sobre el desarrollo de aplicaciones y juegos de la [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] en C\+\+.|  
-|[Crear componentes de Windows en tiempo de ejecución en C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255559)|Describe cómo crear bibliotecas DLL que otras aplicaciones y componentes de la [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] pueden utilizar.|  
-|[Desarrollar juegos](http://go.microsoft.com/fwlink/p/?LinkId=255554)|Describe cómo utilizar DirectX y C\+\+ para crear juegos.|  
+|[Referencia del lenguaje Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|Describe el conjunto de extensiones que simplifican el uso de C++ de Windows Runtime APIs y habilitar el control de errores que se basa en excepciones.|  
+|[Compilar aplicaciones y bibliotecas (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Describe cómo crear bibliotecas DLL y estáticas a las que se puede tener acceso desde una aplicación o componente de C++/CX.|  
+|[Tutorial: crear la primera aplicación de Tienda Windows con C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Un tutorial que presenta los conceptos básicos de desarrollo de aplicaciones de plataforma Universal de Windows en C++. (Aún no se ha actualizado para el desarrollo de UWP en Windows 10).|  
+|[Crear componentes de Windows en tiempo de ejecución en C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Describe cómo crear bibliotecas DLL que otras aplicaciones de la plataforma Universal de Windows y componentes pueden consumir.|  
+|[Desarrollar juegos](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Describe cómo utilizar DirectX y C++ para crear juegos.|  
   
-## Aplicaciones de la [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] que utilizan [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\)  
- [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] proporciona interfaces COM de bajo nivel por las que el código ISO C\+\+ puede tener acceso a [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] en un entorno sin excepciones. En la mayoría de los casos, recomendamos utilizar C\+\+\/CX en lugar de [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] para el desarrollo de aplicaciones de la [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. Para obtener más información sobre [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)], vea [Biblioteca de plantillas de Windows Runtime C\+\+ \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md).  
+## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Aplicaciones de la plataforma universal de Windows que usan la biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL) 
+ La biblioteca de plantillas de C++ de Windows en tiempo de ejecución proporciona interfaces COM de bajo nivel que el código ISO C++ puede tener acceso a Windows Runtime en un entorno sin excepciones. En la mayoría de los casos, recomendamos utilizar C++ / CX en lugar de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para el desarrollo de aplicación de plataforma Universal de Windows. Para obtener información acerca de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución, consulte [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
-## Vea también  
- [Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)
+## <a name="see-also"></a>Vea también  
+ [Visual C++](../visual-cpp-in-visual-studio.md)
+

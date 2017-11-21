@@ -1,44 +1,43 @@
 ---
-title: "auto_handle::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::release"
-  - "auto_handle.release"
-  - "msclr.auto_handle.release"
-  - "auto_handle::release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::release"
+title: auto_handle::Release | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::release
+- auto_handle.release
+- msclr.auto_handle.release
+- auto_handle::release
+dev_langs: C++
+helpviewer_keywords: auto_handle::release
 ms.assetid: d4848150-859e-4c61-a946-09d24d3d6577
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f010429904df409b1514dc811d160182f2291227
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libera el objeto de administración `auto_handle` .  
+# <a name="autohandlerelease"></a>auto_handle::release
+Libera el objeto de `auto_handle` administración.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _element_type ^ release();  
 ```  
   
-## Valor devuelto  
- El objeto publicado.  
+## <a name="return-value"></a>Valor devuelto  
+ El objeto comercial.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_auto_handle_release.cpp  
@@ -81,17 +80,20 @@ int main()
 }  
 ```  
   
-  **Constructor de ClassA: primero**  
-**Constructor de ClassA: en segundo lugar**  
-**ClassA destructor: en segundo lugar**  
-**¡Hola primero de A\!**  
-**done**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\auto\_handle.h\>  
+```Output  
+ClassA constructor: first  
+ClassA constructor: second  
+ClassA destructor: second  
+Hello from first A!  
+done  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\auto_handle.h >  
   
-## Vea también  
- [auto\_handle \(Miembros\)](../dotnet/auto-handle-members.md)   
- [auto\_handle::~auto\_handle](../dotnet/auto-handle-tilde-auto-handle.md)   
- [auto\_handle::reset](../dotnet/auto-handle-reset.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [auto_handle (miembros)](../dotnet/auto-handle-members.md)   
+ [auto_handle:: ~ auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)   
+ [auto_handle::reset](../dotnet/auto-handle-reset.md)

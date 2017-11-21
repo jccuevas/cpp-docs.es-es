@@ -1,37 +1,38 @@
 ---
-title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, size"
-  - "dialog boxes, positioning"
+title: "Especificar la ubicación y el tamaño de un cuadro de diálogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, size
+- dialog boxes, positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0dcd2acc4067e62d5cc44ca4e180f591e9fe63b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Specifying the Location and Size of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La ubicación y el tamaño de un cuadro de diálogo, así como la ubicación y el tamaño de los controles que contiene, se miden en unidades de cuadro de diálogo.  Los valores de cada uno de los controles y del cuadro de diálogo aparecen en la parte inferior derecha de la barra de estado de Visual Studio cuando se seleccionan.  
+# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Especificar la ubicación y el tamaño de un cuadro de diálogo
+La ubicación y el tamaño de un cuadro de diálogo, así como la ubicación y tamaño de los controles en él, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando se selecciona de estado de Visual Studio.  
   
- En la [ventana Propiedades](../Topic/Properties%20Window.md) pueden definirse tres propiedades para especificar en qué parte de la pantalla ha de aparecer un cuadro de diálogo.  La propiedad Center es de tipo Boolean; si se establece su valor en True, el cuadro de diálogo siempre aparecerá centrado en la pantalla.  Si se establece en False, podrán definirse las propiedades XPos y YPos para indicar explícitamente el lugar de la pantalla donde deberá aparecer el cuadro de diálogo.  Las propiedades de posición son valores de distanciamiento con respecto a la esquina superior izquierda del área visible, que se define como {X\=0, Y\=0}.  La posición también depende de la propiedad **Absolute Align**: si es True, las coordenadas serán relativas a la pantalla; si es False, serán relativas a la ventana del propietario del cuadro de diálogo.  
+ Hay tres propiedades que se pueden establecer en el [ventana propiedades](/visualstudio/ide/reference/properties-window) para especificar dónde aparecerá un cuadro de diálogo en la pantalla. La propiedad Center es un valor booleano; Si establece el valor en True, el cuadro de diálogo siempre aparecerá en el centro de la pantalla. Si se establece en False, a continuación, puede establecer las propiedades XPos y YPos para indicar explícitamente que en la pantalla que aparecerá el cuadro de diálogo. Las propiedades de posición son valores de desplazamiento desde la esquina superior izquierda del área de visualización, que se define como {X = 0, Y = 0}. La posición también se basa en el **Absolute Align** propiedad: si es True, las coordenadas son relativas a la pantalla; si es False, las coordenadas son relativas a la ventana del propietario del cuadro de diálogo.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vea también  
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

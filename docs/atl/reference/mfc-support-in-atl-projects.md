@@ -1,63 +1,64 @@
 ---
-title: "Compatibilidad con MFC en proyectos ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.atl.addmfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL projects, compatibilidad con MFC"
+title: Compatibilidad con MFC en ATL (proyectos) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.atl.addmfc
+dev_langs: C++
+helpviewer_keywords: ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0217c62ff207ad706dbcb1cd172e878c2b96daee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Compatibilidad con MFC en proyectos ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si selecciona **Admitir MFC** en el Asistente para proyectos ATL, el proyecto declarará la aplicación como un objeto de aplicación MFC \(clase\).  El proyecto inicializa la biblioteca MFC y crea una instancia de una clase \(la clase *Nombre\_proyecto*\) derivada de [CWinApp](../../mfc/reference/cwinapp-class.md).  
+# <a name="mfc-support-in-atl-projects"></a>Compatibilidad con MFC en ATL (proyectos)
+Si selecciona **compatibilidad con MFC** en el Asistente para proyectos ATL, el proyecto declarará la aplicación como un objeto de aplicación MFC (clase). El proyecto inicializa la biblioteca MFC y crea una instancia de una clase (clase *Nombre_proyecto*) que se deriva de [CWinApp](../../mfc/reference/cwinapp-class.md).  
   
- Esta opción sólo está disponible para proyectos de archivo DLL sin atributos.  
+ Esta opción está disponible para proyectos ATL DLL sin atributos solo.  
   
 ```  
 class CProjNameApp : public CWinApp  
 {  
 public:  
-  
+ 
 // Overrides  
-   virtual BOOL InitInstance();  
-   virtual int ExitInstance();  
-   DECLARE_MESSAGE_MAP()  
+    virtual BOOL InitInstance();
+virtual int ExitInstance();
+DECLARE_MESSAGE_MAP() 
 };  
-  
+ 
 BEGIN_MESSAGE_MAP(CProjNameApp, CWinApp)  
 END_MESSAGE_MAP()  
-  
+ 
 CProjNameApp theApp;  
-  
+ 
 BOOL CProjNameApp::InitInstance()  
 {  
-   return CWinApp::InitInstance();  
+    return CWinApp::InitInstance();
+
 }  
-  
+ 
 int CProjNameApp::ExitInstance()  
 {  
-   return CWinApp::ExitInstance();  
+    return CWinApp::ExitInstance();
+
 }  
 ```  
   
- Puede ver la clase de objeto de aplicación y sus funciones `InitInstance` y `ExitInstance` en la Vista de clases.  
+ Puede ver la clase de objeto de aplicación y su `InitInstance` y `ExitInstance` funciones en la vista de clases.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar una clase](../../ide/adding-a-class-visual-cpp.md)   
  [Crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)   
- [Configuraciones predeterminadas de un proyecto ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)
+

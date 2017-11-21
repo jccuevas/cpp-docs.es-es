@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-system-navigation"></a>Exploración del sistema de archivos
 El encabezado \<filesystem> implementa la especificación técnica del sistema de archivos de C++ ISO/IEC TS 18822:2015 (borrador final: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) y tiene tipos y funciones que le permiten escribir código independiente de la plataforma para navegar por el sistema de archivos. Al ser multiplataforma, contiene algunas API que no son relevantes para los sistemas Windows. Por ejemplo, esto significa que `is_fifo(const path&)` siempre devuelve `false` en Windows.   
@@ -231,4 +213,3 @@ Press Enter to exit
 El encabezado \<filesystem> proporciona el tipo [directory_iterator](../standard-library/directory-iterator-class.md) para iterar en directorios individuales y la clase [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) para iterar de manera recursiva en un directorio y sus subdirectorios. Después de crear un iterador pasándole un objeto `path` , el iterador apunta al primer elemento directory_entry de la ruta de acceso. Cree el iterador de fin llamando al constructor predeterminado.  
   
 Cuando se itera en un directorio, se puede encontrar con varios tipos de elementos, incluyendo directorios, archivos, vínculos simbólicos y archivos de socket. El `directory_iterator` devuelve sus elementos como objetos [directory_entry](../standard-library/directory-entry-class.md).  
-

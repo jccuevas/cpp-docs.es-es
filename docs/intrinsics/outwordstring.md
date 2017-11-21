@@ -1,67 +1,66 @@
 ---
-title: "__outwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outwordstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep outsw (instrucción)"
-  - "__outwordstring (función intrínseca)"
-  - "outsw (instrucción)"
+title: __outwordstring | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outwordstring
+dev_langs: C++
+helpviewer_keywords:
+- rep outsw instruction
+- __outwordstring intrinsic
+- outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f51593b5a122fbc3720d22afe56ba3cddd2bd5ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# __outwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="outwordstring"></a>__outwordstring
 **Específicos de Microsoft**  
   
- Genera la instrucción de `rep outsw` , que envía las palabras de `Count` que comienzan en `Buffer` desproteger el puerto de E\/S especificado por `Port`.  
+ Genera el `rep outsw` instrucción, lo que envía `Count` palabras que empiezan en `Buffer` fuera del puerto de E/S especificado por `Port`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __outwordstring(   
-   unsigned short Port,   
-   unsigned short* Buffer,   
-   unsigned long Count   
+void __outwordstring(   
+   unsigned short Port,   
+   unsigned short* Buffer,   
+   unsigned long Count   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Port`  
- El puerto para enviar los datos a.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Port`  
+ El puerto para enviar los datos.  
   
- \[in\] `Buffer`  
- Un puntero a los datos que se envían el puerto especificado.  
+ [in] `Buffer`  
+ Un puntero a los datos que se envía el puerto especificado.  
   
- \[in\] `Count`  
- El número de palabras a enviar.  
+ [in] `Count`  
+ El número de palabras que se va a enviar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Esta rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

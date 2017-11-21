@@ -1,39 +1,38 @@
 ---
-title: "Error del evaluador de expresiones CXX0064 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0064"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0064"
-  - "CXX0064"
+title: Error del evaluador de expresiones CXX0064 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0064
+dev_langs: C++
+helpviewer_keywords:
+- CAN0064
+- CXX0064
 ms.assetid: aa509e71-0616-41ca-a94e-6c376b041e57
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ada57d8df67054fa6577b128a6be73921fbb7e81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error del evaluador de expresiones CXX0064
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se puede establecer el punto de interrupción en una función miembro virtual enlazada  
+# <a name="expression-evaluator-error-cxx0064"></a>Error del evaluador de expresiones CXX0064
+no se puede establecer un punto de interrupción en la función miembro virtual enlazada  
   
- Se ha definido un punto de interrupción en una función miembro virtual mediante un puntero a un objeto, así:  
+ Un punto de interrupción se estableció en una función miembro virtual a través de un puntero a un objeto, como:  
   
 ```  
 pClass->vfunc( int );  
 ```  
   
- Se puede definir un punto de interrupción en una función virtual escribiendo la clase, así:  
+ Un punto de interrupción se puede establecer en una función virtual escribiendo la clase, como:  
   
 ```  
 Class::vfunc( int );  

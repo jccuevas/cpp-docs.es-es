@@ -1,46 +1,46 @@
 ---
-title: "Conectarse a un origen de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conexiones [C++], origen de datos"
-  - "orígenes de datos [C++], conectar"
-  - "conexiones de bases de datos [C++], clases ODBC de MFC"
-  - "conexiones de bases de datos [C++], ODBC"
-  - "bases de datos [C++], conectar"
-  - "conexiones ODBC [C++], utilizar"
-  - "orígenes de datos ODBC [C++], conexiones"
+title: Conectarse a un origen de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- database connections [C++], ODBC
+- ODBC connections [C++], using
+- connections [C++], data source
+- databases [C++], connecting to
+- data sources [C++], connecting to
+- ODBC data sources [C++], connections
+- database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea788921b72d06deb44ed67ecdfa49c5efe43ed2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Conectarse a un origen de datos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un origen de datos ODBC comprende un conjunto de datos específico, la información requerida para tener acceso a esos datos y la ubicación del origen de datos, que se puede describir por medio de un nombre de origen de datos.  Desde el punto de vista del programa, el origen de datos incluye los datos, el DBMS, la red \(si la hubiera\) y ODBC.  
+# <a name="connecting-to-a-data-source"></a>Conectarse a un origen de datos
+Un origen de datos ODBC es un conjunto de datos, la información necesaria para tener acceso a esos datos y la ubicación del origen de datos, que se puede describir mediante un nombre de origen de datos específico. Desde el punto de vista de su programa, el origen de datos incluye los datos, el DBMS, la red (si existe) y ODBC.  
   
- Para tener acceso a los datos proporcionados por un origen de datos, el programa debe establecer antes de nada una conexión al origen de datos.  Dicha conexión administra el acceso a todos los datos.  
+ Para obtener acceso a datos proporcionados por un origen de datos, el programa en primer lugar debe establecer una conexión al origen de datos. Todo acceso a datos se administra a través de esa conexión.  
   
- Las conexiones de origen de datos están encapsuladas por la clase [CDatabase](../../mfc/reference/cdatabase-class.md).  Una vez conectado el objeto `CDatabase` a un origen de datos, se puede:  
+ Las conexiones de origen de datos están encapsuladas por clase [CDatabase](../../mfc/reference/cdatabase-class.md). Cuando un `CDatabase` objeto está conectado a un origen de datos, puede:  
   
--   Crear [conjuntos de registros](../../mfc/reference/crecordset-class.md) que seleccionen registros a partir de tablas o consultas.  
+-   Construir [conjuntos de registros](../../mfc/reference/crecordset-class.md), que seleccionar los registros de las tablas o las consultas.  
   
--   Administrar [transacciones](../../data/odbc/transaction-odbc.md) agrupando actualizaciones para que todas se confirmen en el origen de datos de una vez \(o se revierta la transacción completa para que el origen de datos permanezca inalterado\), si el origen de datos admite el nivel requerido de transacciones.  
+-   Administrar [transacciones](../../data/odbc/transaction-odbc.md), las actualizaciones por lotes por lo que todo se confirmen en el origen de datos a la vez (o se revierte la transacción completa para que el origen de datos permanezca sin cambios), si el origen de datos admite el nivel requerido de transacciones.  
   
--   Ejecutar directamente instrucciones de [SQL](../../data/odbc/sql.md) .  
+-   Ejecutar directamente [SQL](../../data/odbc/sql.md) instrucciones.  
   
- Una vez finalizado el trabajo con una conexión a un origen de datos, se ha de cerrar el objeto `CDatabase` y destruirlo o reutilizarlo para una nueva conexión.  Para obtener más información sobre conexiones a orígenes de datos, vea [Origen de datos \(ODBC\)](../../data/odbc/data-source-odbc.md).  
+ Cuando termine de trabajar con una conexión de origen de datos, cierre la `CDatabase` objeto y destruirlo o reutilizarlo para una nueva conexión. Para obtener más información acerca de las conexiones de origen de datos, vea [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [ODBC y MFC](../../data/odbc/odbc-and-mfc.md)

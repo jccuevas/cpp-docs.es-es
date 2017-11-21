@@ -1,27 +1,26 @@
 ---
-title: "A.30   Use of Reprivatization | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uso A.30 de Reprivatization | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26529090-6c39-40f2-b806-e12374d6b5f8
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ab359fdc63d90494b686684d26cc73e0135c886
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# A.30   Use of Reprivatization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente se muestra el reprivatization de variables.  Las variables privadas pueden ser `private` marcado de nuevo en una directiva anidadas.  No tienen que ser compartidos en la región paralela envolvente.  
+# <a name="a30---use-of-reprivatization"></a>A.30 Uso de la reprivatización
+En el ejemplo siguiente se muestra la reprivatization de variables. Se pueden marcar variables privadas `private` nuevo en una directiva anidada. No tiene que compartirse en la región paralela envolvente.  
   
 ```  
 int i, a;  

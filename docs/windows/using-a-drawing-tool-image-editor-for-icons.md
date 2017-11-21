@@ -1,79 +1,79 @@
 ---
-title: "Using a Drawing Tool (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], selecting drawing tools"
-  - "Image editor [C++], toolbar"
-  - "drawing tools"
+title: "Usar una herramienta de dibujo (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.drawing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], selecting drawing tools
+- Image editor [C++], toolbar
+- drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcbc089783e86be9c9fcb49fb3c4f0b10c29064f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Using a Drawing Tool (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las herramientas de dibujo a mano alzada y de borrado del Editor de imágenes funcionan de la misma manera: se selecciona una herramienta y, si es necesario, se [seleccionan los colores de primer plano y de fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y las opciones de tamaño y de forma.  Después se sitúa el puntero en la imagen y se hace clic o se arrastra para dibujar o borrar.  
+# <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usar una herramienta de dibujo (Editor de imágenes para iconos)
+El editor de imágenes a mano alzado del dibujo y el borrado de herramientas de todo el trabajo de la misma manera: seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y la forma. A continuación, mueva el puntero a la imagen y haga clic en o arrastre para dibujar y borrar.  
   
- Cuando está seleccionada la herramienta **Borrador**, **Pincel** o **Aerógrafo**, el selector de opciones muestra las opciones correspondientes a la herramienta pertinente.  
+ Cuando se selecciona el **borrador** herramienta, **pincel** herramienta, o **aerógrafo** herramienta, el selector de opciones muestra opciones de la herramienta.  
   
 > [!TIP]
->  En lugar de usar la herramienta **Borrador**, puede que sea más práctico dibujar en el color de fondo con una de las herramientas de dibujo.  
+>  En lugar de utilizar el **borrador** herramienta, le resultará más cómodo dibujar en el color de fondo con una de las herramientas de dibujo.  
   
- Puede seleccionar herramientas de dibujo en la barra de herramientas del **Editor de imágenes** o en el menú **Imagen**.  
+ Puede seleccionar herramientas de dibujo desde el **Editor de imágenes** barra de herramientas o el **imagen** menú.  
   
-### Para seleccionar y utilizar una herramienta de dibujo de la barra de herramientas del Editor de imágenes  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para seleccionar y utilizar una herramienta de dibujo de la barra de herramientas del Editor de imágenes  
   
-1.  Haga clic en un botón de la barra de herramientas del **Editor de imágenes**.  
+1.  Haga clic en un botón en el **Editor de imágenes** barra de herramientas.  
   
-    -   Al presionar el botón primario del mouse la herramienta **Borrador** pinta la imagen con el color de fondo actual.  
+    -   El **borrador** herramienta pinta la imagen con el color de fondo actual cuando se presiona el botón primario del mouse.  
   
-    -   La herramienta **Lápiz** dibuja a mano alzada con un ancho constante de un píxel.  
+    -   El **lápiz** herramienta dibuja a mano alzada con un ancho constante de un píxel.  
   
-    -   El **selector de opciones determina la forma y el tamaño de la herramienta Pincel**.  
+    -   El **selector de opciones determina la forma y el tamaño de la herramienta pincel**.  
   
-    -   La herramienta **Aerógrafo** distribuye de forma aleatoria píxeles de color en torno al centro del pincel.  
+    -   El **aerógrafo** herramienta distribuye al azar píxeles de color alrededor del centro del pincel.  
   
         > [!TIP]
-        >  Cuando se desplaza el cursor sobre los botones de la [barra de herramientas del Editor de imágenes](../mfc/toolbar-image-editor-for-icons.md), aparece la información sobre herramientas.  Estas sugerencias ayudan a identificar los botones que se mencionan en este documento.  
+        >  Información sobre herramientas aparece al situar el cursor sobre los botones en la [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md). Estas sugerencias le ayudarán a identificar los botones que se mencionan aquí.  
   
 2.  Si es necesario, seleccione los colores y un pincel:  
   
-    -   En la [paleta Colores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md), haga clic con el botón primario del mouse para seleccionar un color de primer plano o con el botón secundario para seleccionar un color de fondo.  
+    -   En el [paleta de colores](../windows/colors-window-image-editor-for-icons.md), haga clic en el botón primario del mouse para seleccionar un color de primer plano o el botón secundario del mouse para seleccionar un color de fondo.  
   
-    -   En el [selector de Opciones](../mfc/toolbar-image-editor-for-icons.md), haga clic en la forma que represente el pincel que desea usar.  
+    -   En el [Selector de opciones](../windows/toolbar-image-editor-for-icons.md), haga clic en una forma que representa el pincel que se va a utilizar.  
   
-3.  Señale al lugar de la imagen donde desee empezar a dibujar o pintar.  La forma del puntero cambia conforme a la herramienta seleccionada.  
+3.  Elija el lugar en la imagen donde desee empezar a dibujar o pintar. El puntero cambia de forma según la herramienta seleccionada.  
   
-4.  Presione el botón primario del mouse \(para el color de primer plano\) o el botón secundario \(para el color de fondo\) y manténgalo presionado mientras dibuja.  
+4.  Presione el botón primario del mouse (para el color de primer plano) o el botón secundario del mouse (para el color de fondo) y manténgalo presionado mientras dibuja.  
   
-### Para seleccionar y utilizar una herramienta de dibujo del menú Imagen  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Para seleccionar y utilizar una herramienta de dibujo de la imagen (menú)  
   
-1.  Haga clic en el menú **Imagen** y seleccione el comando **Herramientas**.  
+1.  Haga clic en el **imagen** menú y seleccione el **herramientas** comando.  
   
-2.  En el submenú en cascada, elija la herramienta que desee utilizar.  
+2.  En el submenú en cascada, elija la herramienta que se va a usar.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisitos  
   
- None  
+ Ninguna  
   
-## Vea también  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
+ [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)
+

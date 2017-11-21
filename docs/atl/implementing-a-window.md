@@ -1,38 +1,39 @@
 ---
-title: "Implementing a Window | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, ventanas"
-  - "CWindowImpl class, utilizar"
-  - "windows [C++], implementing in ATL"
+title: Implementar una ventana (ATL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- CWindowImpl class, using
+- windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a31316d63ad74ccfdf718e15d8e54d5c75b0535b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing a Window
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-a-window"></a>Implementar una ventana
+Clase [CWindowImpl](../atl/reference/cwindowimpl-class.md) le permite implementar una ventana y controlar sus mensajes. Mensaje detenida en ATL se basa en un mapa de mensajes. Esta sección se explica:  
+  
+-   Cómo [agregar un controlador de mensajes](../atl/adding-an-atl-message-handler.md) a un control.  
+  
+-   ¿Qué [mapas de mensajes](../atl/message-maps-atl.md) son y cómo utilizarlas.  
+  
+-   La sintaxis de [las funciones de controlador de mensaje](../atl/message-handler-functions.md).  
+  
+-   Cómo [implementar una ventana con CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
+  
+## <a name="see-also"></a>Vea también  
+ [Clases de ventana](../atl/atl-window-classes.md)
 
-La clase [CWindowImpl](../atl/reference/cwindowimpl-class.md) permite implementar una ventana y que controle sus mensajes.  El mensaje que proporciona en ATL se basa en un mapa de mensajes.  esta sección explica:  
-  
--   cómo a [agregue un controlador de mensajes](../atl/adding-an-atl-message-handler.md) a un control.  
-  
--   Son lo [mapas de mensajes](../atl/message-maps-atl.md) y cómo utilizarlos.  
-  
--   la sintaxis para [funciones de controlador de mensajes](../atl/message-handler-functions.md).  
-  
--   cómo a [implemente una ventana con CWindowImpl](../atl/implementing-a-window-with-cwindowimpl.md).  
-  
-## Vea también  
- [Clases de ventanas](../atl/atl-window-classes.md)

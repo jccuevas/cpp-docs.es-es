@@ -1,33 +1,30 @@
 ---
-title: "uuid (C++ Attributes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uuid attribute"
+title: UUID (atributos de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uuid
+dev_langs: C++
+helpviewer_keywords: uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b2a4c4ce8023901eb901555519c38c2fa07500dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# uuid (C++ Attributes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="uuid-c-attributes"></a>uuid (Atributos de C++)
 Especifica el identificador único para una clase o interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,39 +33,38 @@ Especifica el identificador único para una clase o interfaz.
 ) ]  
 ```  
   
-#### Parámetros  
- *uuid*  
- 128 Bits, identificador único.  
+#### <a name="parameters"></a>Parámetros  
+ *UUID*  
+ Un identificador de 128 bits único.  
   
-## Comentarios  
- Si la definición de una interfaz o clase no especifica el atributo de `uuid` C\+\+, el compilador de Visual C\+\+ proporcionará uno.  Cuando se especifica `uuid`, debe incluir las comillas.  
+## <a name="remarks"></a>Comentarios  
+ Si no especifica la definición de una interfaz o clase la `uuid` atributos de C++, el compilador de Visual C++ proporcionará uno. Cuando se especifica un `uuid`, debe incluir las comillas.  
   
- Si no especifica `uuid`, el compilador generará mismo GUID para interfaces o clases con el mismo nombre en distintos proyectos de atributo en un equipo.  
+ Si no se especifica `uuid`, el compilador generará el mismo GUID para las interfaces o clases con el mismo nombre en los proyectos de atributo diferente en un equipo.  
   
- Puede utilizar Uuidgen.exe o Guidgen.exe para ser id. únicos.  \(Para ejecutar cualquiera de estas herramientas, haga clic **Iniciar** y haga clic en **Ejecutar** en el menú.  Escriba el nombre de la herramienta necesaria.\)  
+ Puede usar Uuidgen.exe o Guidgen.exe para generar sus propios identificadores únicos. (Para ejecutar cualquiera de estas herramientas, haga clic en **iniciar** y haga clic en **ejecutar** en el menú. A continuación, escriba el nombre de la herramienta necesaria.)  
   
- Cuando se utiliza en un proyecto que tampoco utilice ATL, especificar el atributo de `uuid` es lo mismo que especificar el modificador \_\_declspec de [uuid](../cpp/uuid-cpp.md) .  Para recuperar `uuid` de una clase, puede utilizar [\_\_uuidof](../cpp/uuidof-operator.md)  
+ Cuando se utiliza en un proyecto que no utilizar ATL, especificando el `uuid` atributo es lo mismo que especificar el [uuid](../cpp/uuid-cpp.md) __declspec (modificador). Para recuperar el `uuid` de una clase, que se puede usar [__uuidof](../cpp/uuidof-operator.md)  
   
-## Ejemplo  
- Vea el ejemplo de [enlazable](../windows/bindable.md) para un ejemplo de uso de `uuid`.  
+## <a name="example"></a>Ejemplo  
+ Consulte la [enlazables](../windows/bindable.md) ejemplo para un ejemplo de uso de `uuid`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `struct`, `interface`, **union**, `enum`|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|**clase**, `struct`, `interface`, **union**,`enum`|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interfaz](../windows/interface-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [UUID](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

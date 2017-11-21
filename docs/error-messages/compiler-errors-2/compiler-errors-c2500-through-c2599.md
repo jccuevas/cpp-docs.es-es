@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -58,19 +57,17 @@ helpviewer_keywords:
 - C2591
 - C2595
 - C2596
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e66a789de4a1b5cfd64ff73f6dbecd4e85bfdffd
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 de errores del compilador a través de C2599
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -90,7 +87,7 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |[Error del compilador C2505](compiler-error-C2505.md)|'*símbolo*': ' __declspec (*especificador*)' solo se puede aplicar a declaraciones o definiciones de objetos globales o miembros de datos estáticos|  
 |[Error del compilador C2506](compiler-error-C2506.md)|'*miembro*': ' __declspec (*especificador*)' no se puede aplicar a este símbolo|  
 |[Error del compilador C2507](compiler-error-C2507.md)|'*identificador*': hay demasiados modificadores virtuales en la clase base|  
-|C2508 de Error del compilador|'*identificador*': '\_\_modificador declspec (*especificador1*)' no se puede combinar con '\_\_modificador declspec (*especificador2*)'|  
+|C2508 de Error del compilador|'*identificador*': ' __declspec (*especificador1*)' no se puede combinar con ' __declspec (*especificador2*)'|  
 |[Error del compilador C2509](compiler-error-C2509.md)|'*identificador*': función miembro no declarada en '*clase*'|  
 |[Error del compilador C2510](compiler-error-C2510.md)|'*identificador*': izquierdo de '::' debe ser class/struct/union|  
 |[Error del compilador C2511](compiler-error-C2511.md)|'*identificador*': sobrecargar la función de miembro no se encuentra en '*clase*'|  

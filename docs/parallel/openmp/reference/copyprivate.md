@@ -1,49 +1,47 @@
 ---
-title: "copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "copyprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copyprivate OpenMP clause"
+title: copyprivate | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# copyprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-especifica que una o más variables se deben compartir entre todos los subprocesos.  
+# <a name="copyprivate"></a>copyprivate
+Especifica que una o más variables deben compartirse entre todos los subprocesos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 copyprivate(var)  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
  `var`  
- una o más variables a compartir.  Si se especifica más de una variable, los nombres de variable separados por una coma.  
+ Una o más variables para compartir. Si se especifica más de una variable, separe los nombres de variable con una coma.  
   
-## Comentarios  
- `copyprivate` se aplica a la directiva de [single](../../../parallel/openmp/reference/single.md) .  
+## <a name="remarks"></a>Comentarios  
+ `copyprivate`se aplica a la [único](../../../parallel/openmp/reference/single.md) directiva.  
   
- Para obtener más información, vea [2.7.2.8 copyprivate](../Topic/2.7.2.8%20copyprivate.md).  
+ Para obtener más información, consulte [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_copyprivate.cpp  
@@ -92,19 +90,22 @@ int main() {
 }  
 ```  
   
-  **llamada CopyPrivate de un subproceso**  
-**valor \= 1,001000, subproceso \= 0**  
-**valor \= 1,002000, subproceso \= 0**  
-**valor \= 1,003000, subproceso \= 0**  
-**valor \= 1,004000, subproceso \= 0**  
-**llamada CopyPrivate de una región paralela**  
-**valor \= 1,005000, subproceso \= 0**  
-**valor \= 1,005000, subproceso \= 1**  
-**valor \= 1,006000, subproceso \= 0**  
-**valor \= 1,006000, subproceso \= 1**  
-**valor \= 1,007000, subproceso \= 0**  
-**valor \= 1,007000, subproceso \= 1**  
-**valor \= 1,008000, subproceso \= 0**  
-**valor \= 1,008000, subproceso \= 1**   
-## Vea también  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+call CopyPrivate from a single thread  
+Value = 1.001000, thread = 0  
+Value = 1.002000, thread = 0  
+Value = 1.003000, thread = 0  
+Value = 1.004000, thread = 0  
+call CopyPrivate from a parallel region  
+Value = 1.005000, thread = 0  
+Value = 1.005000, thread = 1  
+Value = 1.006000, thread = 0  
+Value = 1.006000, thread = 1  
+Value = 1.007000, thread = 0  
+Value = 1.007000, thread = 1  
+Value = 1.008000, thread = 0  
+Value = 1.008000, thread = 1  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

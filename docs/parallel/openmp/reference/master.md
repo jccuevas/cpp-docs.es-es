@@ -1,32 +1,30 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: principal | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 405c5f6cfba3ab60abac30fdb8a0ac730f1ab8b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que sólo el threadshould principal ejecuta una sección del programa.  
+# <a name="master"></a>master
+Especifica que sólo lo threadshould maestro ejecutará una sección del programa.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp master  
@@ -35,14 +33,14 @@ Especifica que sólo el threadshould principal ejecuta una sección del programa
 }  
 ```  
   
-## Comentarios  
- la directiva de **principal** no admite ninguna cláusula de OpenMP.  
+## <a name="remarks"></a>Comentarios  
+ El **maestro** directiva es compatible con ningún cláusulas de OpenMP.  
   
- La directiva de [single](../../../parallel/openmp/reference/single.md) permite especificar que una sección de código debe ejecutarse en un subproceso, no necesariamente el subproceso principal.  
+ El [único](../../../parallel/openmp/reference/single.md) directiva permite especificar que una sección de código debe ejecutarse en un solo subproceso, no necesariamente el subproceso principal.  
   
- Para obtener más información, vea [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md).  
+ Para obtener más información, consulte [2.6.1 master construcción](../../../parallel/openmp/2-6-1-master-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_master.cpp  
@@ -77,10 +75,13 @@ int main( )
 }  
 ```  
   
-  **a \[0\] \= 0**  
-**a \[1\] \= 1**  
-**a \[2\] \= 4**  
-**a \[3\] \= 9**  
-**a \[4\] \= 16**   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

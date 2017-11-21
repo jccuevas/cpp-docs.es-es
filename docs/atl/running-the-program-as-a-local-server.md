@@ -1,29 +1,30 @@
 ---
-title: "Running the Program as a Local Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "servicios ATL, running as local servers"
-  - "depurar [ATL], running services as local server"
+title: Ejecutar el programa como un servidor Local | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [ATL], running services as local server
+- ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 131bfefb35164b2d1e53f5671016235e5426c096
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Running the Program as a Local Server
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si se debe ejecutar el programa como un servicio es complejo, puede cambiar temporalmente el registro para ejecutar el programa como servidor local normal.  Cambie simplemente el valor de `LocalService` bajo el AppID a `_LocalService` y asegúrese de que la clave de `LocalServer32` bajo el CLSID se establece correctamente.  \(Observe que utilice DCOMCNFG especificar que la aplicación se debe ejecutar en un equipo diferente de la clave de `LocalServer32` a `_LocalServer32`.\) Ejecutando el programa como servidor local tarda unos más segundos en inicio porque la llamada a **StartServiceCtrlDispatcher** en `CAtlServiceModuleT::Start` tarda unos segundos antes de que se produzca un error.  
+# <a name="running-the-program-as-a-local-server"></a>Ejecutar el programa como un servidor Local
+Si ejecuta el programa como un servicio es un problema, puede cambiar temporalmente el registro para que el programa se ejecuta como un servidor local normal. Basta con cambiar el nombre de la `LocalService` valor bajo el AppID a `_LocalService` y asegúrese del `LocalServer32` clave bajo el CLSID está establecida correctamente. (Tenga en cuenta que mediante DCOMCNFG para especificar que la aplicación debe ejecutarse en un equipo diferente cambia el nombre la `LocalServer32` clave a `_LocalServer32`.) Al ejecutar el programa como un servidor local tarda unos segundos más en el inicio porque la llamada a **StartServiceCtrlDispatcher** en `CAtlServiceModuleT::Start` tarda unos segundos antes de que se produce un error.  
   
-## Vea también  
- [Debugging Tips](../atl/debugging-tips.md)
+## <a name="see-also"></a>Vea también  
+ [Sugerencias de depuración](../atl/debugging-tips.md)
+

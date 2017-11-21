@@ -1,57 +1,57 @@
 ---
-title: "Compilar archivos de informaci&#243;n de examen: informaci&#243;n general | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".bsc (archivos), acerca de los archivos .bsc"
-  - "archivos de información de examen (.bsc)"
-  - "archivos de información de examen (.bsc), crear"
-  - "bsc (archivos), acerca de los archivos bsc"
+title: "Generar archivos de información de examen: Información general sobre | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, about .bsc files
+- bsc files, about bsc files
+- browse information files (.bsc)
+- browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 51a922e75d0cc7232a7e45472e505440b7b1631c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Compilar archivos de informaci&#243;n de examen: informaci&#243;n general
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para crear información de examen con la finalidad de examinar símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente del proyecto y, después, BSCMAKE.EXE concatena los archivos .sbr en un archivo .bsc.  
+# <a name="building-browse-information-files-overview"></a>Compilar archivos de información de examen: información general
+Para crear información de exploración para la exploración de símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente en el proyecto, a continuación, BSCMAKE. EXE concatena los archivos .sbr en un archivo .bsc.  
   
- La generación de archivos .sbr y .bsc lleva tiempo y, por tanto, Visual C\+\+ desactiva estas funciones de forma predeterminada.  Para examinar la información de exploración actual se deben activar las opciones de exploración y compilar de nuevo el proyecto.  
+ Generar archivos .sbr y .bsc lleva tiempo, por lo que Visual C++ desactiva estas funciones de forma predeterminada. Si desea buscar la información actual, debe activar las opciones de exploración y compilar el proyecto de nuevo.  
   
- Utilice [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) para indicar al compilador que cree archivos .sbr.  Para crear archivos .bsc, puede llamar a [BSCMAKE](../../build/reference/bscmake-command-line.md) desde la línea de comandos.  El uso de BSCMAKE desde la línea de comandos permite controlar con mayor precisión la manipulación de los archivos de información de examen.  Vea [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md) para obtener más información.  
+ Use [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) para indicar al compilador que crean archivos. sbr. Para crear archivos .bsc, puede llamar a [BSCMAKE](../../build/reference/bscmake-command-line.md) desde la línea de comandos. Uso de BSCMAKE desde la línea de comandos proporciona un control más preciso sobre la manipulación de archivos de información de exploración. Vea [referencia de BSCMAKE](../../build/reference/bscmake-reference.md) para obtener más información.  
   
 > [!TIP]
->  Se puede activar la generación de archivos .sbr y dejar desactivada la generación de archivos .bsc.  De este modo, no sólo se proporcionan generaciones rápidas, sino que también se puede crear rápidamente un archivo .bsc nuevo activando la generación de archivos .bsc y generando el proyecto.  
+>  Puede activar la generación de archivos .sbr pero dejar la generación del archivo .bsc está desactivada. Esto proporciona generaciones rápidas, sino también le permite crear rápidamente un archivo .bsc nuevo por activar la generación de archivos .bsc y generando el proyecto.  
   
- Se puede reducir el tiempo, la memoria y el espacio de disco necesarios para compilar un archivo .bsc reduciendo el tamaño del archivo .bsc.  
+ Puede reducir el tiempo, memoria y espacio en disco necesario para generar un archivo .bsc reduciendo el tamaño del archivo .bsc.  
   
- Vea [Página de propiedades General \(Proyecto\)](../../ide/general-property-page-project.md) para obtener información sobre cómo compilar un archivo de explorador en el entorno de desarrollo.  
+ Vea [página de propiedades General (proyecto)](../../ide/general-property-page-project.md) para obtener información sobre cómo crear un archivo de explorador en el entorno de desarrollo.  
   
-### Para crear un archivo .bsc más pequeño  
+### <a name="to-create-a-smaller-bsc-file"></a>Para crear un archivo .bsc más pequeño  
   
-1.  Utilice [Opciones de la línea de comandos de BSCMAKE](../../build/reference/bscmake-options.md) para excluir información del archivo de información de examen.  
+1.  Use [opciones de línea de comandos de BSCMAKE](../../build/reference/bscmake-options.md) para excluir la información desde el archivo de información de examen.  
   
 2.  Omita los símbolos locales en uno o más archivos .sbr al compilar o ensamblar.  
   
-3.  Si un archivo objeto no tiene la información necesaria para la etapa actual de depuración, omita su archivo .sbr del comando BSCMAKE cuando recompile el archivo de información de examen.  
+3.  Si un archivo de objeto no contiene la información necesaria para la fase actual de la depuración, omita su archivo .sbr del comando BSCMAKE cuando se vuelve a generar el archivo de información de examen.  
   
-### Para combinar la información de examen de varios proyectos en un archivo del explorador \(.bsc\)  
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Para combinar la información de examen de varios proyectos en un archivo del explorador (.bsc)  
   
-1.  No compile el archivo .bsc en el nivel de proyecto ni utilice el modificador \/n para impedir el truncamiento de los archivos .sbr.  
+1.  No generar el archivo .bsc en el nivel de proyecto o usar el modificador /n para impedir que los archivos .sbr que se va a truncar.  
   
-2.  Después de compilar todos los proyectos, ejecute BSCMAKE con todos los archivos .sbr como entrada.  Se aceptan caracteres comodín.  Por ejemplo, si dispone de los directorios de proyecto C:\\X, C:\\Y y C:\\Z con archivos .sbr y desea combinar todos ellos en un archivo .bsc, utilice BSCMAKE C:\\X\\\*.sbr C:\\Y\\\* .sbr C:\\Z\\\* \/o c:\\cualquier\_directorio\\combined.bsc para compilar el archivo .bsc combinado.  
+2.  Después de que se generan todos los proyectos, ejecute BSCMAKE con todos los archivos .sbr como entrada. Se acepta caracteres comodín. Por ejemplo, si tenía directorios del proyecto C:\X, C:\Y y C:\Z con archivos .sbr en ellos y se desea combinar todos ellos en un archivo .bsc, utilice BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc para generar el archivo .bsc combinado.  
   
-## Vea también  
- [Herramientas de compilación de C\/C\+\+](../../build/reference/c-cpp-build-tools.md)   
+## <a name="see-also"></a>Vea también  
+ [Herramientas de compilación de C/c ++](../../build/reference/c-cpp-build-tools.md)   
  [Referencia de BSCMAKE](../../build/reference/bscmake-reference.md)

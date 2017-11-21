@@ -1,32 +1,30 @@
 ---
-title: "omp_destroy_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_destroy_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_destroy_nest_lock OpenMP function"
+title: omp_destroy_nest_lock | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_destroy_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_destroy_nest_lock OpenMP function
 ms.assetid: 0ab1352b-668f-43dd-b441-31ec4cc53e68
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43be9cff85d9e26bbe6399574a568fa565708858
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# omp_destroy_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-desinicializa un bloqueo encajable.  
+# <a name="ompdestroynestlock"></a>omp_destroy_nest_lock
+Anula la inicialización de un bloqueo anidable.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void omp_destroy_nest_lock(  
@@ -34,17 +32,17 @@ void omp_destroy_nest_lock(
 );  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
  `lock`  
- Una variable de [omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) cuyas se inicializó con [omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+ Una variable de tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que se inicializó con [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
-## Comentarios  
- Para obtener más información, vea [3.2.2 omp\_destroy\_lock and omp\_destroy\_nest\_lock Functions](../Topic/3.2.2%20omp_destroy_lock%20and%20omp_destroy_nest_lock%20Functions.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [3.2.2 omp_destroy_lock y omp_destroy_nest_lock funciones](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md).  
   
-## Ejemplo  
- Vea [omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obtener un ejemplo de `omp_destroy_nest_lock`mediante.  
+## <a name="example"></a>Ejemplo  
+ Vea [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obtener un ejemplo del uso de `omp_destroy_nest_lock`.  
   
-## Vea también  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones](../../../parallel/openmp/reference/openmp-functions.md)

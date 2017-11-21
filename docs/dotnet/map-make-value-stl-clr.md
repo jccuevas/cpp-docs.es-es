@@ -1,48 +1,46 @@
 ---
-title: "map::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value (miembro) [STL/CLR]"
+title: Map::make_value (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: a0bc4081-b8b7-450e-b041-a49ac42b279f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 639fb391b1feaa86bba1edd05f502d015c46779f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# map::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construye un objeto value.  
+# <a name="mapmakevalue-stlclr"></a>map::make_value (STL/CLR)
+Construye un objeto de valor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### Parámetros  
- clave  
+#### <a name="parameters"></a>Parámetros  
+ key  
  Valor de clave a utilizar.  
   
  asignado  
  Valor asignado a buscar.  
   
-## Comentarios  
- La función miembro devuelve un objeto de `value_type` cuya clave se `key` y cuyo asignaban valor son `mapped`.  Se utiliza para crear un objeto adecuado para el uso con otras funciones miembro.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un `value_type` objeto cuya clave es `key` y cuyo valor asignado es `mapped`. Usarlo para crear un objeto adecuado para su uso con muchas otras funciones de miembro.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)   
- [map::mapped\_type](../dotnet/map-mapped-type-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: KEY_TYPE (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   
+ [Map:: mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "search_n (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::search_n"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "search_n (función) [STL/CLR]"
+title: search_n (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::search_n
+dev_langs: C++
+helpviewer_keywords: search_n function [STL/CLR]
 ms.assetid: 34d9fd07-b160-4b1e-a632-303200740dfc
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdf58555a995b5be0c5726f3136afc8eafd64bfc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# search_n (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Buscar el primer subsequence de un intervalo que de un número especificado de elementos que tienen un valor determinado o una relación a ese valor según lo especificado por un predicado binario.  
+# <a name="searchn-stlclr"></a>search_n (STL/CLR)
+Busca la primera subsecuencia de un intervalo en la que un número especificado de elementos tienen un valor determinado o una relación con ese valor según lo especificado por un predicado binario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _FwdIt1, class _Diff2, class _Ty> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
         _Diff2 _Count, const _Ty& _Val, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `search_n`STL.  Para obtener más información, vea [search\_n](../Topic/search_n.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `search_n`. Para obtener más información, consulte [search_n](../standard-library/algorithm-functions.md#search_n).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

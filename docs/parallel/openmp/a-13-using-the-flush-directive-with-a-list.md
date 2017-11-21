@@ -1,27 +1,26 @@
 ---
-title: "A.13   Using the flush Directive with a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.13 mediante la directiva de vaciado con una lista | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6c9d0736-07c2-47b1-a216-5293f03b6397
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc10c427f92ed602975fdb56436911dafbd94532
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# A.13   Using the flush Directive with a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente se utiliza la directiva de `flush` para la sincronización punto a punto de objetos específicos entre pares de subprocesos:  
+# <a name="a13---using-the-flush-directive-with-a-list"></a>A.13 Usar la directiva flush con una lista
+En el ejemplo siguiente se usa el `flush` la directiva para la sincronización de punto a punto de determinados objetos entre los pares de subprocesos:  
   
 ```  
 int   sync[NUMBER_OF_THREADS];  

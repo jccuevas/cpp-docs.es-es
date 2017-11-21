@@ -1,110 +1,111 @@
 ---
-title: "Understanding Backus Nauer Form (BNF) Syntax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Backus Nauer Form (BNF) syntax"
-  - "BNF notation"
+title: Registrador de ATL y Backus Nauer forman la sintaxis (BNF) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BNF notation
+- Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Understanding Backus Nauer Form (BNF) Syntax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los scripts utilizados por el registro ATL se describen en este tema mediante la sintaxis de BNF, que utiliza la notación mostrada en la tabla siguiente.  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Comprender la sintaxis de Backus Nauer formulario (BNF)
+Las secuencias de comandos utilizadas por el registrador de ATL se describen en este tema mediante la sintaxis BNF, que emplea la notación descrita en la tabla siguiente.  
   
-|convención\/símbolo|Significado|  
-|-------------------------|-----------------|  
+|Convención/símbolos|Significado|  
+|------------------------|-------------|  
 |`::=`|Equivalente|  
-|`&#124;`|OR|  
-|`X+`|una o más s de `X`.|  
-|`[X]`|`X` es opcional.  Los delimitadores opcionales denotados por `[]`.|  
-|cualquier texto en negrita|un literal de cadena.|  
-|Cualquier texto *pone en cursiva*|cómo construir el literal de cadena.|  
+|`&#124;`|O|  
+|`X+`|Uno o más `X`s.|  
+|`[X]`|`X` es opcional. Los delimitadores opcionales se denotan mediante `[]`.|  
+|Cualquier **negrita** texto|Un literal de cadena.|  
+|Cualquier *en cursiva* texto|Cómo construir el literal de cadena.|  
   
- Como se indica en la tabla anterior, los scripts de registro utilizan literales de cadena.  estos valores son el texto real que debe aparecer en el script.  La tabla siguiente describe los literales de cadena utilizados en un script de registro ATL.  
+ Como se indica en la tabla anterior, los scripts del registrador utilizan literales de cadena. Estos valores son texto real que debe aparecer en la secuencia de comandos. La tabla siguiente describen los literales de cadena que se utiliza en una secuencia de comandos del registrador de ATL.  
   
-|literal de cadena|Acción|  
-|-----------------------|------------|  
-|**ForceRemove**|Quitar completamente la siguiente clave \(si existe\) y vuelva a crearlos.|  
-|**NoRemove**|No quita la siguiente clave durante Anular.|  
-|**val**|especifica que `<Key Name>` es realmente un valor denominado.|  
+|Literal de cadena|Acción|  
+|--------------------|------------|  
+|**ForceRemove**|Quita completamente la clave siguiente (si existe) y, a continuación, volver a crearla.|  
+|**NoRemove**|No se elimina la clave siguiente durante la eliminación del registro.|  
+|**Val**|Especifica que `<Key Name>` es en realidad un valor con nombre.|  
 |**Eliminar**|Elimina la clave siguiente durante el registro.|  
-|**s**|Especifica que el siguiente valor es una cadena \(**REG\_SZ**\).|  
-|**d**|especifica que el valor siguiente es **dword** \(**REG\_DWORD**\).|  
-|**m**|especifica que el valor siguiente es el multistring \(**REG\_MULTI\_SZ**\).|  
-|**b**|especifica que el valor siguiente es un valor binario \(**REG\_BINARY**\).|  
+|**s**|Especifica que el valor siguiente es una cadena (**REG_SZ**).|  
+|**d**|Especifica que el valor siguiente es un **DWORD** (**REG_DWORD**).|  
+|**m**|Especifica que el valor siguiente es un multistring (**REG_MULTI_SZ**).|  
+|**b**|Especifica que el valor siguiente es un valor binario (**REG_BINARY**).|  
   
-## Ejemplos de sintaxis de BNF  
- A continuación se muestran algunos ejemplos de la sintaxis para ayudarle a entender cómo la notación y literales de cadena funcionan en un script de registro ATL.  
+## <a name="bnf-syntax-examples"></a>Ejemplos de sintaxis BNF  
+ Estos son algunos ejemplos de sintaxis para ayudarle a entender cómo funcionan los literales de cadena y la notación en una secuencia de comandos del registrador de ATL.  
   
-### Ejemplo 1 de sintaxis  
+### <a name="syntax-example-1"></a>Ejemplo de sintaxis 1  
   
 ```  
 <registry expression> ::= <Add Key>  
 ```  
   
- especifica que `registry expression` es equivalente a `Add Key`.  
+ Especifica que `registry expression` es equivalente a `Add Key`.  
   
-### Ejemplo 2 de sintaxis  
+### <a name="syntax-example-2"></a>Ejemplo de sintaxis 2  
   
 ```  
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- especifica que `registry expression` es equivalente a `Add Key` o a `Delete Key`.  
+ Especifica que `registry expression` es equivalente al tipo `Add Key` o `Delete Key`.  
   
-### Ejemplo 3 de sintaxis  
+### <a name="syntax-example-3"></a>Ejemplo de sintaxis 3  
   
 ```  
 <Key Name> ::= '<AlphaNumeric>+'  
 ```  
   
- especifica que `Key Name` equivale a uno o más `AlphaNumerics`.  
+ Especifica que `Key Name` equivale a uno o varios `AlphaNumerics`.  
   
-### Ejemplo 4 de sintaxis  
+### <a name="syntax-example-4"></a>Ejemplo de sintaxis 4  
   
 ```  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
 ```  
   
- especifica que `Add Key` es equivalente a `Key Name`, y que los literales de cadena, `ForceRemove`, `NoRemove`, y `val`, son opcionales.  
+ Especifica que `Add Key` es equivalente a `Key Name`y que los literales de cadena, `ForceRemove`, `NoRemove`, y `val`, son opcionales.  
   
-### Ejemplo 5 de sintaxis  
+### <a name="syntax-example-5"></a>Ejemplo de sintaxis 5  
   
 ```  
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- especifica que `AlphaNumeric` equivale a cualquier carácter no null.  
+ Especifica que `AlphaNumeric` es equivalente a cualquier carácter que no sea NULL.  
   
-### Ejemplo 6 de sintaxis  
+### <a name="syntax-example-6"></a>Ejemplo de sintaxis 6  
   
 ```  
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- especifica que el nombre de clave `testmulti` es un valor multistring compuesto por `String 1` y `String 2`.  
+ Especifica que el nombre de clave `testmulti` está formado por un valor multistring `String 1` y `String 2`.  
   
-### Ejemplo 7 de sintaxis  
+### <a name="syntax-example-7"></a>Ejemplo de sintaxis 7  
   
 ```  
 val 'testhex' = d '&H55'  
 ```  
   
- especifica que el nombre de clave `testhex` es un valor de **dword** establecido hexadecimal 55 \(decimal 85\).  Observe este formato se adhieren **a la notación** de &H como se encuentra en la especificación de Visual Basic.  
+ Especifica que el nombre de clave `testhex` es un **DWORD** el valor hexadecimal 55 (85 decimal). Tenga en cuenta este formato se ajusta a la **& H** notación que se encuentra en las especificaciones de Visual Basic.  
   
-## Vea también  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>Vea también  
+ [Crear scripts del registrador](../atl/creating-registrar-scripts.md)
+

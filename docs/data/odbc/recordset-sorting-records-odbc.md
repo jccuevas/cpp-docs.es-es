@@ -1,42 +1,42 @@
 ---
-title: "Conjunto de registros: Ordenar registros (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conjuntos de registros ODBC, ordenar"
-  - "conjuntos de registros, ordenar"
-  - "ordenar datos, datos del conjunto de registros"
+title: 'Conjunto de registros: Ordenar registros (ODBC) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sorting data, recordset data
+- ODBC recordsets, sorting
+- recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ca9e8547149ae36722c40e146392085e6ccf08e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Conjunto de registros: Ordenar registros (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-sorting-records-odbc"></a>Conjunto de registros: Ordenar registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
   
- Este tema explica cómo ordenar un conjunto de registros.  Se pueden especificar una o varias columnas en las que basar la ordenación, así como el orden ascendente o descendente \(`ASC` o **DESC**; `ASC` es el predeterminado\) para cada columna especificada.  Por ejemplo, si se especifican dos columnas, los registros se ordenan en primer lugar por la primera columna indicada y después por la segunda.  La ordenación se define mediante una cláusula SQL **ORDER BY**.  Cuando el marco de trabajo anexa esta cláusula a la consulta SQL del conjunto de registros, ésta controla la ordenación de la selección.  
+ Este tema explica cómo ordenar el conjunto de registros. Puede especificar una o varias columnas en el que se va a basar la ordenación, y puede especificar el orden ascendente o descendente (`ASC` o **DESC**; `ASC` es el valor predeterminado) para cada columna especificada. Por ejemplo, si se especifican dos columnas, los registros se ordenan en primer lugar en la primera columna con el nombre y, a continuación, en la segunda columna denominada. Una instancia de SQL **ORDER BY** cláusula define un criterio de ordenación. Cuando el marco de trabajo anexa la **ORDER BY** cláusula para SQL del conjunto de registros de consulta, los controles de la cláusula de orden de la selección.  
   
- Se debe establecer un criterio de ordenación para el conjunto de registros después de crear el objeto, pero antes de llamar a su función miembro **Open** \(o antes de llamar a la función miembro **Requery** de un objeto de conjunto de registros existente a cuya función miembro **Open** se llamó anteriormente\).  
+ Debe establecer el criterio de ordenación del conjunto de registros después de crear el objeto, pero antes de llamar a su **abiertos** función miembro (o antes de llamar a la **Requery** función de miembro para un objeto de conjunto de registros existente cuyo **abiertos** función miembro se ha llamado anteriormente).  
   
-#### Para especificar una criterio de ordenación en un objeto de conjunto de registros  
+#### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Para especificar un criterio de ordenación para un objeto de conjunto de registros  
   
-1.  Cree un nuevo objeto de conjunto de registros \(o prepare la llamada a **Requery** para un objeto existente\).  
+1.  Construye un nuevo objeto de conjunto de registros (o prepare la llamada a **Requery** por otra ya existente).  
   
-2.  Establezca el valor del miembro de datos [m\_strSort](../Topic/CRecordset::m_strSort.md) del objeto.  
+2.  Establezca el valor del objeto [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) miembro de datos.  
   
-     El tipo de orden es una cadena terminada en null.  Contiene el texto de la cláusula SQL **ORDER BY**, pero no la palabra clave **ORDER BY**.  Por ejemplo, utilice:  
+     La ordenación es una cadena terminada en null. Contiene el contenido de la **ORDER BY** cláusula pero no la palabra clave **ORDER BY**. Por ejemplo, use:  
   
     ```  
     recordset.m_strSort = "LastName DESC, FirstName DESC";  
@@ -48,11 +48,11 @@ Este tema es aplicable a las clases ODBC de MFC.
     recordset.m_strSort = "ORDER BY LastName DESC, FirstName DESC";  
     ```  
   
-3.  Establezca otras opciones que necesite, como el filtro, el modo de bloqueo o los parámetros.  
+3.  Establezca las demás opciones que necesite, como un filtro, el modo de bloqueo o parámetros.  
   
-4.  Llame a **Open** para el nuevo objeto \(o a **Requery** para un objeto existente\).  
+4.  Llame a **abiertos** para el nuevo objeto (o **Requery** para un objeto existente).  
   
- Los registros seleccionados se ordenan según lo especificado.  Por ejemplo, para ordenar una serie de registros de estudiantes en orden descendente por el apellido y después por el nombre, haga lo siguiente:  
+ Los registros seleccionados se ordenan según se haya especificado. Por ejemplo, para ordenar un conjunto de registros de estudiantes en orden descendente por apellido y luego por nombres, haga lo siguiente:  
   
 ```  
 // Construct the recordset  
@@ -63,12 +63,12 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );  
 ```  
   
- El conjunto de registros contiene todos los registros de estudiantes, ordenados de forma descendente \(de la Z a la A\), primero por apellido y después por nombre.  
+ El conjunto de registros contiene todos los registros de estudiantes, ordenados de forma descendente (Z a) por apellido, a continuación, por nombre.  
   
 > [!NOTE]
->  Si elige reemplazar la cadena SQL predeterminada del conjunto de registros pasando su propia cadena SQL a **Open**, no debe establecer un orden si la cadena personalizada contiene una cláusula **ORDER BY**.  
+>  Si elige reemplazar la cadena SQL predeterminada del conjunto de registros pasando su propia cadena SQL a **abiertos**, no se debe establecer un orden si la cadena personalizada contiene una **ORDER BY** cláusula.  
   
-## Vea también  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Parametrizar un conjunto de registros \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
- [Conjunto de registros: Filtrar registros \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
+ [Conjunto de registros: Filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

@@ -1,48 +1,51 @@
 ---
-title: "Implementing the Event Handling Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, control de eventos"
-  - "control de eventos, ATL"
-  - "interfaces, event and event sink"
+title: Implementar la interfaz de control de eventos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, event handling
+- event handling, ATL
+- interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3ea192e863fe9813a762c0c948cc141b068c3f43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing the Event Handling Interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-the-event-handling-interface"></a>Implementar la interfaz de control de eventos
+ATL le ayuda con los tres elementos necesarios para el control de eventos: implementar la interfaz de eventos, aconsejar el origen del evento y desaconsejar el origen del evento. Los pasos precisos que deberá tomar dependen del tipo de la interfaz de eventos y los requisitos de rendimiento de la aplicación.  
+  
+ Las formas más habituales de implementar una interfaz utilizando ATL son:  
+  
+-   Derivar directamente desde una interfaz personalizada.  
+  
+-   Derivar de [IDispatchImpl](../atl/reference/idispatchimpl-class.md) para interfaces duales descritas en una biblioteca de tipos.  
+  
+-   Derivar de [IDispEventImpl](../atl/reference/idispeventimpl-class.md) para interfaces duales descritas en una biblioteca de tipos.  
+  
+-   Derivar de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) para interfaces dispinterface no descrita en una biblioteca de tipos, o cuando desea mejorar la eficacia si no se carga la información de tipo en tiempo de ejecución.  
+  
 
-ATL ayuda con los tres elementos necesarios para administrar eventos: implementar la interfaz de eventos, aconsejando el origen de eventos, y unadvising el origen de eventos.  Los pasos exactos que necesitará realizar dependen del tipo de la interfaz de eventos y los requisitos de rendimiento de la aplicación.  
+ Si está implementando una interfaz personalizada o dual, debe aconsejar el origen del evento mediante una llamada a [AtlAdvise](reference/connection-point-global-functions.md#atladvise) o [¡CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise). Debe realizar un seguimiento de la cookie devuelta por la llamada. Llame a [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) para interrumpir la conexión.  
+
   
- Las maneras más comunes de implementar una interfaz mediante ATL son:  
+ Si está implementando una interfaz dispinterface utilizando `IDispEventImpl` o `IDispEventSimpleImpl`, debe aconsejar el origen del evento mediante una llamada a [IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Llame a [IDispEventSimpleImpl:: DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) para interrumpir la conexión.  
   
--   Derivar de una interfaz personalizada directamente.  
+ Si utilizas `IDispEventImpl` como una clase base de un control compuesto, los orígenes de eventos incluidos en el mapa de receptores será aconsejable y desaconsejarán automáticamente mediante [CComCompositeControl:: AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
   
--   Derivar de [IDispatchImpl](../atl/reference/idispatchimpl-class.md) para las interfaces duales descritas en una biblioteca de tipos.  
+ El `IDispEventImpl` y `IDispEventSimpleImpl` clases administran la cookie para usted.  
   
--   Derivar de [IDispEventImpl](../atl/reference/idispeventimpl-class.md) para dispinterfaces descritos en una biblioteca de tipos.  
-  
--   Derivar de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) para dispinterfaces no descritos en una biblioteca de tipos o cuando se desea mejorar la eficacia no carga la información de tipo en tiempo de ejecución.  
-  
- Si está implementando una interfaz personalizada o dual, debe advertir el origen de eventos llamando a [AtlAdvise](../Topic/AtlAdvise.md) o [CComPtrBase:: Advise](../Topic/CComPtrBase::Advise.md).  Necesitará hacer un seguimiento de la cookie devuelta por la llamada personalmente.  llamada [AtlUnadvise](../Topic/AtlUnadvise.md) para interrumpir la conexión.  
-  
- Si está implementando una dispinterface mediante `IDispEventImpl` o `IDispEventSimpleImpl`, debe advertir el origen de eventos llamando a [IDispEventSimpleImpl:: DispEventAdvise](../Topic/IDispEventSimpleImpl::DispEventAdvise.md).  llamada [IDispEventSimpleImpl:: DispEventUnadvise](../Topic/IDispEventSimpleImpl::DispEventUnadvise.md) para interrumpir la conexión.  
-  
- Si usa `IDispEventImpl` como clase base de un control compuesto, los orígenes de eventos enumerados en el mapa del receptor se aconsejable y sin haber recibido consejo algunos automáticamente mediante [CComCompositeControl:: AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md).  
-  
- las clases de `IDispEventImpl` y de `IDispEventSimpleImpl` administran la cookie para usted.  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de eventos](../atl/event-handling-and-atl.md)
+

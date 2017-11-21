@@ -1,72 +1,71 @@
 ---
-title: "1.2 Definition of Terms | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.2 definición de términos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21c4bcafe89fda7e09333b014da20e1d483125e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 1.2 Definition of Terms
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-los términos siguientes se utilizan en este documento:  
+# <a name="12-definition-of-terms"></a>1.2 Definición de términos
+Los siguientes términos se usan en este documento:  
   
- barrera  
- Un punto de sincronización que debe realizarse por todos los subprocesos en un equipo.  Cada subproceso espera hasta que llegan todos los subprocesos en el equipo en este punto.  hay barreras explícitas identificadas por directivas y barreras implícitas creadas por la implementación.  
+ barrier  
+ Un punto de sincronización que debe tener acceso todos los subprocesos de un equipo.  Cada subproceso esperará hasta que todos los subprocesos en el equipo lleguen en este momento. Existen obstáculos explícitos identificados por directivas y barreras implícita creadas por la implementación.  
   
- construcción  
- una construcción es una instrucción.  Consta de una directiva y el bloque estructurado subsiguiente.  Observe que algunas directivas no forman parte de una construcción.  \(Vea *la openmp\-directiva* en [Apéndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)\).  
+ construct  
+ Una construcción es una instrucción. Se compone de una directiva y el bloque estructurado posterior. Tenga en cuenta que algunas directivas no forman parte de una construcción. (Consulte *directiva de openmp* en [Apéndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).  
   
  directiva  
- El C. o C\+\+ **\#pragma** seguido del identificador de **omp** , otro texto, y una nueva línea.  La directiva especifica un comportamiento del programa.  
+ C o C++ **#pragma** seguido por el **omp** identificador, otro texto y una nueva línea. La directiva especifica el comportamiento del programa.  
   
  extensión dinámica  
- Todas las instrucciones de *la extensión léxica*, más cualquier instrucción dentro de una función que se ejecuta como resultado de la ejecución de instrucciones dentro de la extensión léxica.  Una extensión dinámica también se conoce como *región*.  
+ Todas las instrucciones en el *extensión léxico*, además de cualquier instrucción dentro de una función que se ejecuta como resultado de la ejecución de instrucciones incluidas en la extensión léxica. Una extensión dinámica también se conoce como un *región*.  
   
- extensión léxica  
- Instrucciones incluidas léxico dentro *de un bloque estructurado*.  
+ extensión léxico  
+ Instrucciones léxicamente incluidas en un *bloque estructurado*.  
   
  subproceso principal  
- El subproceso que crea un equipo cuando se escribe *una región paralela* .  
+ El subproceso que se crea un equipo cuando un *región paralela* se escribe.  
   
  región paralela  
- Instrucciones que se enlazan a una construcción parallel de OpenMP y se pueden ejecutar por varios subprocesos.  
+ Instrucciones que enlazar a una construcción paralela OpenMP y se pueden ejecutar varios subprocesos.  
   
  private  
- Nombres de variable privados en el bloque de almacenamiento que es único al subproceso que realiza la referencia.  Observe que hay varias maneras de especificar que una variable es privada: una definición dentro de una región paralela, una directiva de **threadprivate** , **private**, **firstprivate**, **lastprivate**, o cláusula de **informe detallado** , o uso de la variable como variable de control de bucle de **Para**en un bucle de **Para** inmediatamente después de una directiva de **Para** o de **paralelo para** .  
+ Una variable privada designa un bloque de almacenamiento que sea único en el subproceso que hace la referencia. Tenga en cuenta que hay varias maneras de especificar que una variable es privada: una definición dentro de una región paralela, un **threadprivate** directiva, un **privada**, **firstprivate**, **lastprivate**, o **reducción** cláusula, o el uso de la variable como una **para**variable de control de bucle en una **para** bucles inmediatamente después de un **para** o **for paralelos** directiva.  
   
  región  
- una extensión dinámica.  
+ Una extensión dinámica.  
   
- región en serie  
- Instrucciones ejecutadas solo por *el subproceso principal* fuera de extensión dinámica de cualquier *región paralela*.  
+ región de serie  
+ Las instrucciones ejecutadas únicamente por la *maestro subproceso* fuera de la extensión dinámica de cualquier *región paralela*.  
   
- serialice  
- Para ejecutar una construcción paralela con un equipo de subprocesos que consistían en un único subproceso \(el subproceso principal para esa construcción paralela\), con el orden de ejecución de ejecución de las instrucciones dentro del bloque estructurado \(el mismo orden como si el bloque no fuera parte de una construcción paralela\), y sin efecto en el valor devuelto por **omp\_in\_parallel \(\)** \(aparte de los efectos de las construcciones paralelas anidadas\).  
+ Serializar  
+ Para ejecutar una construcción paralela con un grupo de subprocesos que consta de un único subproceso (que es el subproceso principal para esa construcción paralela), con serie orden de ejecución de las instrucciones dentro del bloque estructurado (el mismo pedido como si el bloque no eran parte de una construcción paralela) y con ningún efecto en el valor devuelto por **omp_in_parallel()** (además de los efectos de cualquier anidada construcciones paralelas).  
   
- compartido  
- Nombres de variable compartidos en solo bloque de almacenamiento.  Todos los subprocesos en un equipo que tienen acceso a esta variable tendrán acceso a este único bloque de almacenamiento.  
+ shared  
+ Una variable compartida nombres de un único bloque de almacenamiento. Todos los subprocesos en un equipo que tienen acceso a esta variable tendrá acceso a este único bloque de almacenamiento.  
   
  bloque estructurado  
- Un bloque estructurado es una instrucción \(único o compuesto\) que tiene una entrada única y una sola salida.  No hay ninguna instrucción un bloque estructurado si hay un salto fuera o dentro de esa instrucción \(llamada incluidos en **longjmp**\(3C\) o el uso de **captura**, sólo una llamada a **Salir** se permite\).  Una instrucción compuesta es un bloque estructurado si su ejecución siempre comienza en **{** y siempre los extremos que abra en **}**cerrado.  Una instrucción de expresiones, la instrucción SELECT, la instrucción de iteración, o de **intento** es un bloque estructurado si la instrucción compuesta correspondiente obtenida agregando lo en **{** y **}**sería un bloque estructurado.  Una instrucción de salto, denominada instrucción, o instrucción de declaración no es un bloque estructurado.  
+ Un bloque estructurado es una instrucción (simples o compuesta) que tiene una sola entrada y una salida única. Ninguna instrucción es un bloque estructurado si hay un salto dentro o fuera de esa instrucción (incluida una llamada a **longjmp**(3C) o el uso de **throw**, pero una llamada a **salir** se permite). Una instrucción compuesta es un bloque estructurado si su ejecución siempre empieza en la apertura **{** y siempre termina en el cierre **}**. Una instrucción de expresión, la instrucción de selección, la instrucción de iteración, o **intente** bloque es un bloque estructurado si obtiene la correspondiente instrucción compuesta incluyendo en **{** y **}** sería un bloque estructurado. Una instrucción de salto, una instrucción con etiqueta o una instrucción de declaración no es un bloque estructurado.  
   
- equipo  
- uno o más subprocesos que cooperan en la ejecución de una construcción.  
+ Equipo  
+ Uno o varios subprocesos cooperar en la ejecución de una construcción.  
   
- Subproceso  
- Una entidad de ejecución que tiene un flujo de serie de control, conjunto de variables privadas, y tener acceso a las variables shared.  
+ subproceso  
+ Una entidad de ejecución con un flujo de control serie, un conjunto de variables privadas y el acceso a las variables compartidas.  
   
  variable  
- Un identificador, calificado opcionalmente por espacios de nombres, esos nombres un objeto.
+ Un identificador, calificado opcionalmente con espacios de nombres, designa un objeto.

@@ -1,47 +1,45 @@
 ---
-title: "VerifyInheritanceHelper::Verify (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verify (método)"
+title: "Verifyinheritancehelper:: Verify (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
+dev_langs: C++
+helpviewer_keywords: Verify method
 ms.assetid: 3360082b-81ad-4191-9ec3-b4372f7207d7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b06fb7c95199f9c22155328d536d5c9e28bf377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# VerifyInheritanceHelper::Verify (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="verifyinheritancehelperverify-method"></a>VerifyInheritanceHelper::Verify (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 static void Verify();  
 ```  
   
-## Comentarios  
- Prueba las dos interfaces especificadas por los parámetros actuales de la plantilla y determina si una interfaz se deriva de la otra.  
+## <a name="remarks"></a>Comentarios  
+ Comprueba las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.  
   
- Se produce un error si una interfaz no se deriva de otro.  
+ Se genera un error si una interfaz no se deriva de la otra.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [VerifyInheritanceHelper \(Estructura\)](../windows/verifyinheritancehelper-structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [VerifyInheritanceHelper (estructura)](../windows/verifyinheritancehelper-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,24 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 1854f4c078bb6c8ce6a987961dc75444e104278c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Clase IPersistPropertyBagImpl
 Esta clase implementa **IUnknown** y permite que un objeto guardar sus propiedades en una bolsa de propiedades proporcionado por el cliente.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -96,7 +78,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) en el SDK de Windows.  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Inicializa un objeto recién creado.  
@@ -109,7 +91,7 @@ STDMETHOD(InitNew)();
  Devuelve `S_OK`.  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) en el SDK de Windows.  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Carga las propiedades del objeto de un contenedor de propiedades proporcionado por el cliente.  
@@ -121,7 +103,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>Comentarios  
  ATL usa asignación de propiedad del objeto para recuperar esta información.  
   
- Vea [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768206.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768206.aspx) en el SDK de Windows.  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Guarda las propiedades del objeto en una bolsa de propiedades proporcionado por el cliente.  
@@ -136,9 +118,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>Comentarios  
  ATL usa asignación de propiedad del objeto para almacenar esta información. De forma predeterminada, este método guarda todas las propiedades, independientemente del valor de *fSaveAllProperties*.  
   
- Vea [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

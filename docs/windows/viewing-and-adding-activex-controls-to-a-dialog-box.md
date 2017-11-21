@@ -1,34 +1,33 @@
 ---
-title: "Viewing and Adding ActiveX Controls to a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.activex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes [C++], adding ActiveX controls"
-  - "Insert ActiveX Control command"
-  - "ActiveX controls [C++], adding to dialog boxes"
+title: "Ver y agregar controles ActiveX a un cuadro de diálogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.controls.activex
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes [C++], adding ActiveX controls
+- Insert ActiveX Control command
+- ActiveX controls [C++], adding to dialog boxes
 ms.assetid: e1c2e3ae-e1b0-40d3-9766-623007073856
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 053e03717558e7eab1c92e1a50e6e3ce85a9fa9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Viewing and Adding ActiveX Controls to a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Ver y agregar controles ActiveX a un cuadro de diálogo
 Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo.  
   
-### Para ver los controles ActiveX que tiene a su disposición  
+### <a name="to-see-the-activex-controls-you-have-available"></a>Para ver los controles ActiveX que tiene a su disposición  
   
 1.  Abra un cuadro de diálogo en el editor del cuadro de diálogo.  
   
@@ -36,29 +35,30 @@ Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo.
   
 3.  En el menú contextual, haga clic en **Insertar control ActiveX**.  
   
-     Aparece el cuadro de diálogo [Insertar control ActiveX](../mfc/insert-activex-control-dialog-box.md) y en él se muestran todos los controles ActiveX de su sistema. En la parte inferior del cuadro de diálogo, aparece la ruta de acceso al archivo del control ActiveX.  
+     Aparece el cuadro de diálogo [Insertar control ActiveX](../windows/insert-activex-control-dialog-box.md) y en él se muestran todos los controles ActiveX de su sistema. En la parte inferior del cuadro de diálogo, aparece la ruta de acceso al archivo del control ActiveX.  
   
-### Para agregar un control ActiveX a un cuadro de diálogo  
+### <a name="to-add-an-activex-control-to-a-dialog-box"></a>Para agregar un control ActiveX a un cuadro de diálogo  
   
-1.  En el cuadro de diálogo [Insertar control ActiveX](../mfc/insert-activex-control-dialog-box.md), seleccione el control que quiera agregar al cuadro de diálogo y haga clic en **Aceptar**.  
+1.  En el cuadro de diálogo [Insertar control ActiveX](../windows/insert-activex-control-dialog-box.md), seleccione el control que quiera agregar al cuadro de diálogo y haga clic en **Aceptar**.  
   
      El control aparece en el cuadro de diálogo, en el que puede editar o crear controladores para él como lo haría con cualquier otro control.  
   
     > [!NOTE]
-    >  Puede agregar controles ActiveX a la [ventana del cuadro de herramientas](../Topic/Toolbox.md). Para más información, vea [Administración de elementos y pestañas en el cuadro de herramientas](http://msdn.microsoft.com/es-es/21285050-cadd-455a-b1f5-a2289a89c4db).  
+    >  Puede agregar controles ActiveX a la [ventana del cuadro de herramientas](/visualstudio/ide/reference/toolbox). Para más información, vea [Administración de elementos y pestañas en el cuadro de herramientas](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db).  
   
     > [!CAUTION]
     >  Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía del software.  
   
-     Puede colocar controles en la ventana del cuadro de herramientas para facilitar el acceso. Para más información, vea [Personalizar el cuadro de diálogo Cuadro de herramientas](http://msdn.microsoft.com/es-es/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     Puede colocar controles en la ventana del cuadro de herramientas para facilitar el acceso. Para más información, vea [Personalizar el cuadro de diálogo Cuadro de herramientas](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, obtener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
+## <a name="see-also"></a>Vea también  
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
+ [Controles ActiveX de MFC](../mfc/mfc-activex-controls.md)   
  [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
+

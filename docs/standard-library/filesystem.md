@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Incluya el encabezado \<filesystem> para tener acceso a las clases y funciones con las que se manipula y recupera información sobre las rutas de acceso, los archivos y los directorios.  
+Incluya el encabezado &lt;filesystem> para tener acceso a las clases y funciones con las que se manipula y recupera información sobre las rutas de acceso, los archivos y los directorios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Cuando se publicó Visual Studio 2017, el encabezado \<experimental/filesystem> aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  A partir de la versión de Visual Studio 2017 el \<filesystem > encabezado aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Este encabezado admite sistemas de archivos para uno de dos tipos amplios de sistemas operativos host: Microsoft Windows y Posix.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   Un objeto de ruta de acceso de clase almacena la ruta de acceso en forma nativa, pero admite la conversión sencilla entre esta forma almacenada y varias formas externas:  
   
-    -   Una secuencia terminada en null de char, codificada según la preferencia del sistema operativo.  
+-   Una secuencia terminada en null de char, codificada según la preferencia del sistema operativo.  
   
-    -   Una secuencia terminada en null de char, codificada como UTF-8.  
+-   Una secuencia terminada en null de char, codificada como UTF-8.  
   
-    -   Una secuencia terminada en null de wchar_t, codificada según la preferencia del sistema operativo.  
+-   Una secuencia terminada en null de wchar_t, codificada según la preferencia del sistema operativo.  
   
-    -   Una secuencia terminada en null de char16_t, codificada como UTF-16.  
+-   Una secuencia terminada en null de char16_t, codificada como UTF-16.  
   
-    -   Una secuencia terminada en null de char32_t, codificada como UTF-32.  
+-   Una secuencia terminada en null de char32_t, codificada como UTF-32.  
   
  Las interconversiones entre estas representaciones se realizan, según sea necesario, mediante el uso de una o varias facetas `codecvt`. Si no se designa un objeto de configuración regional específica, estas facetas se obtienen de la configuración regional global.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|  
 |[directory_options)](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|  
 |[en permisos](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

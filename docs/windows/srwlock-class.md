@@ -1,78 +1,76 @@
 ---
-title: "SRWLock (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLock (clase)"
+title: SRWLock (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock
+dev_langs: C++
+helpviewer_keywords: SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# SRWLock (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Representa un bloqueo delgado de lectura o escritura.  
+# <a name="srwlock-class"></a>SRWLock (clase)
+Representa un bloqueo finos de lector/escritor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class SRWLock;  
 ```  
   
-## Comentarios  
- Un bloqueo delgado de lectura o escritura se utiliza para sincronizar el acceso a subprocesos a un objeto o un recurso.  Para obtener más información, vea [Funciones de sincronización](http://msdn.microsoft.com/es-es/9b6359c2-0113-49b6-83d0-316ad95aba1b) en MSDN Library.  
+## <a name="remarks"></a>Comentarios  
+ Un bloqueo finos de lector/escritor se utiliza para sincronizar el acceso a través de subprocesos a un objeto o un recurso. Para obtener más información, consulte [funciones de sincronización](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Typedefs públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|Sinónimo para un objeto de SRWLock que se adquiere en modo exclusivo.|  
-|**SyncLockShared**|Sinónimo para un objeto de SRWLock que se adquiere en modo compartido.|  
+|**SyncLockExclusive**|Sinónimo de un objeto SRWLock que se adquiere en modo exclusivo.|  
+|**SyncLockShared**|Sinónimo de un objeto SRWLock que se adquiere en modo compartido.|  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[SRWLock::SRWLock \(Constructor\)](../windows/srwlock-srwlock-constructor.md)|Inicializa una nueva instancia de la clase de SRWLock.|  
-|[SRWLock::~SRWLock \(Destructor\)](../windows/srwlock-tilde-srwlock-destructor.md)|Desinicializa una instancia de la clase de SRWLock.|  
+|[SRWLock::SRWLock (constructor)](../windows/srwlock-srwlock-constructor.md)|Inicializa una nueva instancia de la clase SRWLock.|  
+|[SRWLock::~SRWLock (destructor)](../windows/srwlock-tilde-srwlock-destructor.md)|Desinicializa una instancia de la clase SRWLock.|  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[SRWLock::LockExclusive \(Método\)](../windows/srwlock-lockexclusive-method.md)|Adquiere un objeto de SRWLock en modo exclusivo.|  
-|[SRWLock::LockShared \(Método\)](../windows/srwlock-lockshared-method.md)|Adquiere un objeto de SRWLock en modo compartido.|  
-|[SRWLock::TryLockExclusive \(Método\)](../windows/srwlock-trylockexclusive-method.md)|Intenta adquirir un objeto de SRWLock en modo exclusivo para la actual o el objeto especificado de SRWLock.|  
-|[SRWLock::TryLockShared \(Método\)](../windows/srwlock-trylockshared-method.md)|Intenta adquirir un objeto de SRWLock en modo compartido para la actual o el objeto especificado de SRWLock.|  
+|[SRWLock::LockExclusive (método)](../windows/srwlock-lockexclusive-method.md)|Adquiere un objeto SRWLock en modo exclusivo.|  
+|[SRWLock::LockShared (método)](../windows/srwlock-lockshared-method.md)|Adquiere un objeto SRWLock en modo compartido.|  
+|[SRWLock::TryLockExclusive (método)](../windows/srwlock-trylockexclusive-method.md)|Intenta adquirir un objeto SRWLock en modo exclusivo para el objeto de SRWLock actual o especificado.|  
+|[SRWLock::TryLockShared (método)](../windows/srwlock-trylockshared-method.md)|Intenta adquirir un objeto SRWLock en modo compartido para el objeto de SRWLock actual o especificado.|  
   
-### Miembro de datos protegido  
+### <a name="protected-data-member"></a>Miembro de datos protegidos  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[SRWLock::SRWLock\_ \(Miembro de datos\)](../windows/srwlock-srwlock-data-member.md)|Contiene la variable subyacente de bloqueo del objeto actual de SRWLock.|  
+|[SRWLock::SRWLock_ (miembro de datos)](../windows/srwlock-srwlock-data-member.md)|Contiene la variable subyacente de bloqueo para el objeto de SRWLock actual.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `SRWLock`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [Microsoft::WRL::Wrappers \(Espacio de nombres\)](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

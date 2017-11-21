@@ -1,34 +1,33 @@
 ---
-title: "2.8 Directive Binding | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.8 enlace de directivas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7bdac45e-ab55-42f0-bd47-a2e3d5bbab3e
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a70dbc0306005473d427015e81d8b93e895da9fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.8 Directive Binding
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El enlace dinámico de directivas debe observar las reglas siguientes:  
+# <a name="28-directive-binding"></a>2.8 Enlace de directivas
+Enlace dinámico de directivas debe cumplir las reglas siguientes:  
   
--   **Para**, **secciones**, **solo**, **principal**, y las directivas de **barrera** enlazados a **Paralelo**dinámicamente que agrega, si existe, independientemente del valor de cualquier cláusula de **If \[SQL2008\]** que puede estar presente en esa directiva.  Si no se está ejecutando ninguna región paralela actualmente, las directivas se ejecutan en un equipo compuesto por sólo el subproceso principal.  
+-   El **para**, **secciones**, **único**, **maestro**, y **barrera** directivas enlazar a la dinámicamente envolvente **paralelo**, si existe alguno, independientemente del valor de cualquier **si** cláusula que puede estar presente en dicha directiva. Si actualmente no se está ejecutando ninguna región paralela, las directivas se ejecutan por un equipo que se compone del subproceso principal.  
   
--   La directiva de **consultar** enlaza el párrafo dinámicamente envolvente.  
+-   El **ordenados** directiva enlaza a dinámicamente envolvente **para**.  
   
--   La directiva de **atómico** aplica el acceso exclusivo con respecto a las directivas de **atómico** en todos los subprocesos, no solo el equipo actual.  
+-   El **atómica** Directiva exige acceso exclusivo con respecto a **atómica** directivas en todos los subprocesos, no solo el equipo actual.  
   
--   La directiva de **Crtico** aplica el acceso exclusivo con respecto a las directivas de **Crtico** en todos los subprocesos, no solo el equipo actual.  
+-   El **crítico** Directiva exige acceso exclusivo con respecto a **crítico** directivas en todos los subprocesos, no solo el equipo actual.  
   
--   Una directiva nunca puede enlazarse a cualquier directiva fuera de **Paralelo**dinámicamente que agrega más próximo.
+-   Una directiva nunca puede enlazar a cualquier directiva fuera lo más parecido posible dinámicamente envolvente **paralelo**.

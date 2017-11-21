@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,35 +19,18 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs:
-- C++
-helpviewer_keywords:
-- join class
+dev_langs: C++
+helpviewer_keywords: join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7847f1d8611c65e698ed5d47c3c20ef02ce048ff
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 25a65dae7b030cc1728194cce5d989c34fa06667
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="join-class"></a>join (Clase)
 Un bloque de mensajería `join` es un bloque `propagator_block` de destino único y de varios orígenes ordenado, que combina los mensajes de tipo `T` de cada uno de sus orígenes.  
@@ -75,33 +57,33 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[combinación](#ctor)|Sobrecargado. Construye un `join` bloque de mensajería.|  
+|[join](#ctor)|Sobrecargado. Construye un `join` bloque de mensajería.|  
 |[~ join (destructor)](#dtor)|Destruye el `join` bloque.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|Acepta un mensaje que fue proporcionado por este `join` bloque de mensajería, transfiriendo la propiedad al llamador.|  
+|[accept_message](#accept_message)|Acepta un mensaje que fue proporcionado por este `join` bloque de mensajería, transferir la propiedad al llamador.|  
 |[consume_message](#consume_message)|Consume un mensaje proporcionado anteriormente por el `join` bloque de mensajería y reservado por el destino, transfiriendo la propiedad al llamador.|  
 |[link_target_notification](#link_target_notification)|Una devolución de llamada que notifica que se ha vinculado un nuevo destino a este `join` bloque de mensajería.|  
-|[propagate_message](#propagate_message)|Un mensaje de forma asincrónica, pasa un `ISource` este bloque `join` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|Construye un mensaje de salida que contiene un mensaje de entrada de cada origen cuando todos han propagado un mensaje. Envía este mensaje de salida para cada uno de sus destinos.|  
+|[propagate_message](#propagate_message)|Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `join` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Construye un mensaje de salida que contiene un mensaje de entrada de cada origen al que todos ellos han propagado un mensaje. Envía este mensaje de salida para cada uno de sus destinos.|  
 |[release_message](#release_message)|Libera una reserva de mensaje anterior. (Invalida [source_block:: release_message](source-block-class.md#release_message).)|  
 |[reserve_message](#reserve_message)|Reserva un mensaje ofrecido previamente por este `join` bloque de mensajería. (Invalida [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
-|[resume_propagation](#resume_propagation)|Reanuda la propagación una vez liberada una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
+|[resume_propagation](#resume_propagation)|Reanuda la propagación después de que se ha liberado una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
+ Para obtener más información, consulte [los bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [ISource](isource-class.md)  
   
  [ITarget](itarget-class.md)  
   
- [source_block](source-block-class.md)  
+ [source_block)](source-block-class.md)  
   
- [propagator_block](propagator-block-class.md)  
+ [propagator_block)](propagator-block-class.md)  
   
  `join`  
   
@@ -112,7 +94,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 ##  <a name="accept_message"></a>accept_message 
 
- Acepta un mensaje que fue proporcionado por este `join` bloque de mensajería, transfiriendo la propiedad al llamador.  
+ Acepta un mensaje que fue proporcionado por este `join` bloque de mensajería, transferir la propiedad al llamador.  
   
 ```
 virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
@@ -120,10 +102,10 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
   
 ### <a name="parameters"></a>Parámetros  
  `_MsgId`  
- El `runtime_object_identity` de la ofrecida `message` objeto.  
+ El `runtime_object_identity` de la que se ofrecen `message` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.  
+ Un puntero a la `message` que el llamador tiene ahora la propiedad del objeto.  
   
 ##  <a name="consume_message"></a>consume_message 
 
@@ -138,7 +120,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
  El `runtime_object_identity` de la `message` objeto consumido.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.  
+ Un puntero a la `message` que el llamador tiene ahora la propiedad del objeto.  
   
 ### <a name="remarks"></a>Comentarios  
  Similar a `accept`, pero siempre va precedido por una llamada a `reserve`.  
@@ -190,7 +172,7 @@ join(
 ### <a name="remarks"></a>Comentarios  
  El runtime usa el programador predeterminado si no se especifican los parámetros `_PScheduler` o `_PScheduleGroup` .  
   
- El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `join` el bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
+ El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `join` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
 ##  <a name="dtor"></a>~ join 
 
@@ -210,7 +192,7 @@ virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- Un mensaje de forma asincrónica, pasa un `ISource` este bloque `join` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.  
+ Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `join` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.  
   
 ```
 message_status propagate_message(
@@ -226,11 +208,11 @@ message_status propagate_message(
  Un puntero al bloque de origen que proporciona el mensaje.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
+ A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
 ##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
- Construye un mensaje de salida que contiene un mensaje de entrada de cada origen cuando todos han propagado un mensaje. Envía este mensaje de salida para cada uno de sus destinos.  
+ Construye un mensaje de salida que contiene un mensaje de entrada de cada origen al que todos ellos han propagado un mensaje. Envía este mensaje de salida para cada uno de sus destinos.  
   
 ```
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
@@ -258,17 +240,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
   
 ### <a name="parameters"></a>Parámetros  
  `_MsgId`  
- El `runtime_object_identity` de la ofrecida `message` objeto.  
+ El `runtime_object_identity` de la que se ofrecen `message` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se ha reservado correctamente, `false` en caso contrario.  
+ `true`Si el mensaje se reservó correctamente, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- Después de `reserve` se llama, si devuelve `true`, `consume` o `release` se debe llamar para aceptar o liberar la propiedad del mensaje.  
+ Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.  
   
 ##  <a name="resume_propagation"></a>resume_propagation 
 
- Reanuda la propagación una vez liberada una reserva.  
+ Reanuda la propagación después de que se ha liberado una reserva.  
   
 ```
 virtual void resume_propagation();
@@ -278,4 +260,3 @@ virtual void resume_propagation();
  [simultaneidad Namespace](concurrency-namespace.md)   
  [Clase Choice](choice-class.md)   
  [multitype_join (clase)](multitype-join-class.md)
-

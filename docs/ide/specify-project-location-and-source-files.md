@@ -1,66 +1,64 @@
 ---
-title: "Especifique la ubicaci&#243;n del proyecto y los archivos de c&#243;digo fuente, Asistente para crear nuevo proyecto de archivos de c&#243;digo fuente existentes. | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.location"
-dev_langs: 
-  - "C++"
+title: "Nuevo proyecto del código existente - archivos de código fuente (Visual C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.location
+dev_langs: C++
 ms.assetid: 29ddffb9-5918-4d72-8c7a-a365f9de96dd
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36b20340da6cae933acb0650b3e073e3835a0204
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Especifique la ubicaci&#243;n del proyecto y los archivos de c&#243;digo fuente, Asistente para crear nuevo proyecto de archivos de c&#243;digo fuente existentes.
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilice esta página del Asistente para crear un nuevo proyecto de archivos de código fuente existentes con el fin de especificar lo siguiente:  
+# <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Especifique la ubicación del proyecto y los archivos de código fuente, Asistente para crear nuevo proyecto de archivos de código fuente existentes.
+Utilice esta página del Asistente para crear nuevo proyecto de archivos de código existentes para especificar:  
   
--   La ruta de acceso del directorio del nuevo proyecto  
+-   La ruta del directorio del nuevo proyecto  
   
--   Los directorios donde se buscarán los archivos de código fuente existentes  
+-   Los directorios donde buscar archivos de código fuente existentes  
   
 -   Los tipos de archivos que el asistente importará al nuevo proyecto  
   
-## Lista de tareas  
- [Cómo: Crear un proyecto de C\+\+ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>Lista de tareas  
+ [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Ubicación del archivo de proyecto**  
- Especifica la ruta de acceso del directorio del nuevo proyecto.  En esta ubicación el asistente depositará todos los archivos \(y subdirectorios\) del nuevo proyecto.  
+ Especifica la ruta del directorio del nuevo proyecto. Esta ubicación es donde deposite el Asistente para todos los archivos (y subdirectorios) del nuevo proyecto.  
   
- **Browse**  
- Abre el cuadro de diálogo **Ubicación del archivo del proyecto**, donde podrá especificar el directorio que contendrá el nuevo proyecto.  Este control permite navegar a la carpeta deseada.  
+ **Examinar**  
+ Muestra el **ubicación del archivo de proyecto** cuadro de diálogo, que le ayuda a especificar el directorio que contendrá el nuevo proyecto. Este control permite navegar hasta la carpeta deseada.  
   
  **Nombre del proyecto**  
- Especifica el nombre del nuevo proyecto.  Los archivos del proyecto, con extensiones de archivo como .vcxproj, adoptarán este nombre.  Los archivos de código fuente existentes conservarán su nombre original.  
+ Especifica el nombre del nuevo proyecto. Archivos de proyecto, que tienen extensiones de archivo como .vcxproj adoptarán este nombre. Archivos de código existentes mantendrá su nombre original.  
   
  **Agregar archivos al proyecto de estas carpetas**  
- Si esta opción está activada, establece el asistente para que copie al nuevo proyecto los archivos de código fuente existentes desde sus directorios originales \(que se indican en el cuadro de lista situado bajo este control\).  
+ Cuando se activa, Establece el Asistente para copiar archivos de código existentes desde sus directorios originales (que se especifican en el cuadro de lista situado bajo este control) en el nuevo proyecto.  
   
  **Agregar subcarpetas**  
- Especifica que se copien al nuevo proyecto los archivos de código fuente de todos los subdirectorios del directorio indicado en la columna **Carpeta**.  
+ Especifica copiar archivos de código de todos los subdirectorios del directorio de la lista **carpeta** columna al nuevo proyecto.  
   
  **Carpeta**  
- Indica la ruta de acceso al directorio que contiene los archivos de código fuente existentes que se copiarán al nuevo proyecto.  Esta columna indica todos los directorios donde el asistente buscará los archivos de código fuente existentes.  
+ Indica la ruta de acceso al directorio que contiene los archivos de código existentes que se copia en el nuevo proyecto. Esta columna muestra todos los directorios que el asistente buscará archivos de código existentes.  
   
- **Agregar**  
- Abre el cuadro de diálogo **Agregue archivos al proyecto desde esta carpeta**, que permite especificar en qué directorios buscará el asistente los archivos de código existentes.  
+ **Add**  
+ Muestra el **agregar archivos al proyecto desde esta carpeta** cuadro de diálogo que le ayuda a especificar directorios que el asistente buscará archivos de código existentes.  
   
  **Remove**  
- Elimina la ruta de acceso del directorio seleccionado en el cuadro de lista situado a la izquierda de este control.  
+ Elimina la ruta del directorio que está seleccionada en la izquierda del cuadro de lista de este control.  
   
  **Tipos de archivo para agregar al proyecto**  
- Especifica los tipos de archivos que el asistente agregará al nuevo proyecto de acuerdo con las extensiones de archivo indicadas.  Las extensiones de archivo están precedidas por el carácter comodín asterisco, y separadas por signos de punto y coma en la lista.  
+ Especifica los tipos de archivos que el asistente agregará al nuevo proyecto basado en las extensiones de archivo especificado. Extensiones de archivo están precedidas por el carácter comodín de asterisco y en la lista de extensiones de archivo se delimitan por un punto y coma.  
   
  **Mostrar todos los archivos en el Explorador de soluciones**  
- Especifica que todos los archivos del nuevo proyecto estarán visibles y aparecerán en la ventana de Explorador de soluciones.  Esta opción está habilitada de forma predeterminada.
+ Especifica que todos los archivos en el nuevo proyecto sea visible y se muestran en la ventana Explorador de soluciones. Esta opción está habilitada de forma predeterminada.

@@ -1,43 +1,43 @@
 ---
-title: "M&#233;todo DeferrableEventArgs::InvokeAllFinished | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Método deferrableeventargs:: Invokeallfinished | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 86b45205-3edb-4134-9cd0-ed7a7b4c3b1a
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: acae8467ceeaaafea6668d4fbf6b5e2f4884b373
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# M&#233;todo DeferrableEventArgs::InvokeAllFinished
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="deferrableeventargsinvokeallfinished-method"></a>Método DeferrableEventArgs::InvokeAllFinished
 Se llama para indicar que se ha completado todo el procesamiento para controlar un evento diferido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 void InvokeAllFinished()  
 ```  
   
-## Comentarios  
- Debe llamar a este método después de que el origen del evento llame a [InvokeAll](../windows/eventsource-invokeall-method.md).  Llamar a este método evita que se realicen futuros aplazamientos y obliga al controlador de finalización a ejecutarse si no se realizaron aplazamientos.  
+## <a name="remarks"></a>Comentarios  
+ Debe llamar a este método después de las llamadas del origen de evento [InvokeAll](../windows/eventsource-invokeall-method.md). Llamar a este método evita que se realicen futuros aplazamientos y obliga al controlador de finalización a ejecutarse si no se realizaron aplazamientos.  
   
- Para ver un ejemplo de código, vea [Clase DeferrableEventArgs](../windows/deferrableeventargs-class.md).  
+ Para obtener un ejemplo de código, vea [clase DeferrableEventArgs](../windows/deferrableeventargs-class.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clase DeferrableEventArgs](../windows/deferrableeventargs-class.md)   
- [EventSource::InvokeAll \(Método\)](../windows/eventsource-invokeall-method.md)
+ [EventSource::InvokeAll (método)](../windows/eventsource-invokeall-method.md)

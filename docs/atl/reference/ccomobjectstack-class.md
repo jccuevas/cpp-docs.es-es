@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectStack::QueryInterface
 - ATLCOM/ATL::CComObjectStack::Release
 - ATLCOM/ATL::CComObjectStack::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectStack class
+dev_langs: C++
+helpviewer_keywords: CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 0738eae13fdca5906596194016ce22812fbfcd36
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a4e00fc1f703df824daf7c0f1fc5fbaed05beb32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectstack-class"></a>Clase CComObjectStack
 Esta clase crea un objeto COM temporal y le proporciona una implementación básica de **IUnknown**.  
@@ -74,9 +56,9 @@ class CComObjectStack
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[CComObjectStack::AddRef](#addref)|Devuelve cero. En modo de depuración, se llama `_ASSERTE`.|  
-|[CComObjectStack::QueryInterface](#queryinterface)|Devuelve **E_NOINTERFACE**. En modo de depuración, se llama `_ASSERTE`.|  
-|[CComObjectStack::Release](#release)|Devuelve cero. En modo de depuración, se llama `_ASSERTE`. ~|  
+|[CComObjectStack::AddRef](#addref)|Devuelve el valor cero. En modo de depuración, llama a `_ASSERTE`.|  
+|[CComObjectStack::QueryInterface](#queryinterface)|Devuelve **E_NOINTERFACE**. En modo de depuración, llama a `_ASSERTE`.|  
+|[CComObjectStack::Release](#release)|Devuelve el valor cero. En modo de depuración, llama a `_ASSERTE`. ~|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
@@ -85,13 +67,13 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene el **HRESULT** devuelto durante la construcción de la `CComObjectStack` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObjectStack`se utiliza para crear un objeto COM temporal y proporcionar el objeto en una implementación básica de **IUnknown**. Normalmente, el objeto se utiliza como una variable local dentro de una función (que es, se inserta en la pila). Puesto que el objeto se destruye cuando finaliza la función, el recuento de referencias no se realiza para aumentar la eficacia.  
+ `CComObjectStack`se utiliza para crear un objeto COM temporal y proporcionar el objeto de una implementación básica de **IUnknown**. Normalmente, el objeto se usa como una variable local dentro de una función (que es, se inserta en la pila). Puesto que el objeto se destruye cuando se termina la función, el recuento de referencias no se realiza para aumentar la eficacia.  
   
- En el ejemplo siguiente se muestra cómo crear un objeto COM utilizado dentro de una función:  
+ En el ejemplo siguiente se muestra cómo crear un objeto COM que se usa dentro de una función:  
   
- [!code-cpp[NVC_ATL_COM&#42;](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
   
- El objeto temporal `Tempobj` se inserta en la pila y desaparecerán automáticamente cuando finaliza la función.  
+ El objeto temporal `Tempobj` se inserta en la pila y desaparece automáticamente cuando finaliza la función.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
@@ -102,17 +84,17 @@ class CComObjectStack
  **Encabezado:** atlcom.h  
   
 ##  <a name="addref"></a>CComObjectStack::AddRef  
- Devuelve cero.  
+ Devuelve el valor cero.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve cero.  
+ Devuelve el valor cero.  
   
 ### <a name="remarks"></a>Comentarios  
- En modo de depuración, se llama `_ASSERTE`.  
+ En modo de depuración, llama a `_ASSERTE`.  
   
 ##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
  El constructor.  
@@ -122,7 +104,7 @@ CComObjectStack(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Llamadas `FinalConstruct` y, a continuación, se establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`. Si no se ha derivado la clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar su propio `FinalConstruct` método. El destructor llama a `FinalRelease`.  
+ Llamadas `FinalConstruct` y, a continuación, establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`. Si no se ha derivado su clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar sus propios `FinalConstruct` método. El destructor llama a `FinalRelease`.  
   
 ##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
  Destructor.  
@@ -135,7 +117,7 @@ CComObjectStack();
  Libera todos los recursos asignados y llamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
- Contiene el `HRESULT` devuelve la llamada `FinalConstruct` durante la construcción de la `CComObjectStack` objeto.  
+ Contiene el `HRESULT` procedentes de la llamada `FinalConstruct` durante la construcción de la `CComObjectStack` objeto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
@@ -153,24 +135,23 @@ HRESULT    QueryInterface(REFIID, void**)
  Devuelve **E_NOINTERFACE**.  
   
 ### <a name="remarks"></a>Comentarios  
- En modo de depuración, se llama `_ASSERTE`.  
+ En modo de depuración, llama a `_ASSERTE`.  
   
 ##  <a name="release"></a>CComObjectStack::Release  
- Devuelve cero.  
+ Devuelve el valor cero.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve cero.  
+ Devuelve el valor cero.  
   
 ### <a name="remarks"></a>Comentarios  
- En modo de depuración, se llama `_ASSERTE`.  
+ En modo de depuración, llama a `_ASSERTE`.  
   
 ## <a name="see-also"></a>Vea también  
  [CComAggObject (clase)](../../atl/reference/ccomaggobject-class.md)   
  [CComObject (clase)](../../atl/reference/ccomobject-class.md)   
  [Clase CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

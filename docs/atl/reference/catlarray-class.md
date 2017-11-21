@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,7 +13,6 @@ f1_keywords:
 - ATLCOLL/ATL::Add
 - ATLCOLL/ATL::Append
 - ATLCOLL/ATL::AssertValid
-- ATLCOLL/ATL::CAtlArray
 - ATLCOLL/ATL::Copy
 - ATLCOLL/ATL::FreeExtra
 - ATLCOLL/ATL::GetAt
@@ -30,35 +28,18 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+dev_langs: C++
+helpviewer_keywords: CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: c81ee3121ffbb9d89374afd4e09a3a6044c4b70b
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlarray-class"></a>Clase CAtlArray
 Esta clase implementa un objeto de matriz.  
@@ -88,7 +69,7 @@ class CAtlArray
 |[AssertValid](#assertvalid)|Llamar a este método para confirmar que el objeto de matriz es válido.|  
 |[CAtlArray](#catlarray)|El constructor.|  
 |[~ CAtlArray](#dtor)|Destructor.|  
-|[Copia](#copy)|Llamar a este método para copiar los elementos de una matriz a otra.|  
+|[Copiar](#copy)|Llamar a este método para copiar los elementos de una matriz a otra.|  
 |[FreeExtra](#freeextra)|Llame a este método para quitar los elementos vacíos de la matriz.|  
 |[GetAt](#getat)|Llamar a este método para recuperar un único elemento del objeto de matriz.|  
 |[GetCount](#getcount)|Llamar a este método para devolver el número de elementos almacenados en la matriz.|  
@@ -106,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|  
+|[operador &#91; &#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|  
 
   
 ### <a name="typedefs"></a>Definiciones de tipo  
@@ -147,7 +128,7 @@ size_t Add();
  El nuevo elemento se agrega al final de la matriz. Si ningún elemento se proporciona, se agrega un elemento vacío; es decir, la matriz aumenta de tamaño como si se ha agregado un elemento real. Si se produce un error en la operación, [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) se llama con el argumento E_OUTOFMEMORY.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities n.º 1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>CAtlArray::Append  
  Llamar a este método para agregar el contenido de una matriz al final de la otra.  
@@ -171,7 +152,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
  En las compilaciones de depuración, se generará una ATLASSERT si la `CAtlArray` argumento no es una matriz válida o si `aSrc` hace referencia al mismo objeto. En versiones de lanzamiento, argumentos no válidos pueden provocar un comportamiento imprevisible.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities n.º 2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  Llamar a este método para confirmar que el objeto de matriz es válido.  
@@ -184,7 +165,7 @@ void AssertValid() const;
  Si el objeto de matriz no es válido, `ATLASSERT` producirá una aserción. Este método está disponible sólo si se define _DEBUG.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities 3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
 ##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  El constructor.  
@@ -197,7 +178,7 @@ CAtlArray() throw();
  Inicializa el objeto de matriz.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
 ##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  Destructor.  
@@ -231,7 +212,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 > `CAtlArray::Copy`no admite matrices que consta de los elementos creados con la [CAutoPtr](../../atl/reference/cautoptr-class.md) clase.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities Nº 5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  Llame a este método para quitar los elementos vacíos de la matriz.  
@@ -264,7 +245,7 @@ E& GetAt(size_t iElement) throw();
  En las compilaciones de depuración, se generará una ATLASSERT si `iElement` supera el número de elementos de la matriz. En versiones de lanzamiento, un argumento no válido puede provocar un comportamiento imprevisible.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>CAtlArray::GetCount  
  Llamar a este método para devolver el número de elementos almacenados en la matriz.  
@@ -294,7 +275,7 @@ const E* GetData() const throw();
  Devuelve un puntero a la ubicación de memoria que almacena el primer elemento de la matriz. Si no hay elementos disponibles, se devuelve NULL.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  El tipo de datos que se usará para agregar elementos a la matriz.  
@@ -326,7 +307,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 > `CAtlArray::InsertArrayAt`no admite matrices que consta de los elementos creados con la [CAutoPtr](../../atl/reference/cautoptr-class.md) clase.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>CAtlArray::InsertAt  
  Llamar a este método para insertar un nuevo elemento (o varias copias de un elemento) en el objeto de matriz.  
@@ -351,7 +332,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  En las compilaciones de depuración, se generará una ATLASSERT si la `CAtlArray` objeto no es válido, el número de elementos que se va a agregar es cero o es demasiado grande para la matriz para que contenga el número combinado de elementos. En las compilaciones comerciales, pasar parámetros no válidos puede provocar resultados imprevisibles.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities n.º 9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>CAtlArray::IsEmpty  
  Llamar a este método para comprobar si la matriz está vacía.  
@@ -367,7 +348,7 @@ bool IsEmpty() const throw();
  Se dice que la matriz vacía si no contiene ningún elemento. Por lo tanto, incluso si la matriz contiene elementos vacíos, no está vacío.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
 ##  <a name="operator_at"></a>[] CAtlArray::operator  
  Llame a este operador para devolver una referencia a un elemento de la matriz.  
@@ -431,7 +412,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  En las compilaciones de depuración, se generará una ATLASSERT si la `CAtlArray` objeto no es válido, o si el total combinado de `iElement` y `nCount` supera el número total de elementos de la matriz. En las compilaciones comerciales, los parámetros no válidos pueden provocar resultados imprevisibles.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities Nº 11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>CAtlArray::SetAt  
  Llamar a este método para establecer el valor de un elemento en el objeto de matriz.  
@@ -496,7 +477,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  Reemplaza el valor del elemento que señala el índice. Si `iElement` es mayor que el tamaño actual de la matriz, la matriz se incrementa automáticamente mediante una llamada a [CAtlArray::SetCount](#setcount). En las compilaciones de depuración, se generará una ATLASSERT si la `CAtlArray` objeto no es válido. En las compilaciones comerciales, los parámetros no válidos pueden provocar resultados imprevisibles.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo MMXSwarm](../../visual-cpp-samples.md)   
@@ -505,4 +486,3 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [Ejemplo de marquesina](../../visual-cpp-samples.md)   
  [CArray (clase)](../../mfc/reference/carray-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

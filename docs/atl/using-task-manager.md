@@ -1,30 +1,31 @@
 ---
-title: "Using Task Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "puntos de interrupción, Task Manager"
-  - "depurar [ATL], using Task Manager"
-  - "Task Manager"
+title: Mediante el Administrador de tareas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Task Manager
+- breakpoints, Task Manager
+- debugging [ATL], using Task Manager
 ms.assetid: 773fccd5-308d-42c2-a17f-60ae94989062
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Using Task Manager
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una de las maneras más fácil de depurar un servicio es utilizar el administrador de tareas de Windows NT 4.0 o Windows 2000.  Mientras se ejecuta el servicio, inicie el administrador de tareas y haga clic en la ficha de **Procesos** .  Haga clic con el botón secundario en el nombre del archivo EXE y haga clic en **Depurar**.  Esto inicia Visual C\+\+ asociado a ese proceso en ejecución.  Ahora, haga clic **Inter** en el menú de **Depurar** para permitir que se establezca puntos de interrupción en el código.  Haga clic en **Ejecutar** para ejecutarse a los puntos de interrupción seleccionados.  
+# <a name="using-task-manager"></a>Con el Administrador de tareas
+Una de las maneras más sencillas de depurar un servicio es mediante el uso del Administrador de tareas en Windows NT 4.0 o Windows 2000. Mientras se ejecuta el servicio, inicie el Administrador de tareas y haga clic en el **procesos** ficha. Haga clic en el nombre del archivo EXE y, a continuación, haga clic en **depurar**. Esto inicia Visual C++ conectados a ese proceso en ejecución. Ahora, haga clic en **interrumpir** en el **depurar** menú para que pueda establecer puntos de interrupción en el código. Haga clic en **ejecutar** para que se ejecute en los puntos de interrupción seleccionados.  
   
-## Vea también  
- [Debugging Tips](../atl/debugging-tips.md)
+## <a name="see-also"></a>Vea también  
+ [Sugerencias de depuración](../atl/debugging-tips.md)
+

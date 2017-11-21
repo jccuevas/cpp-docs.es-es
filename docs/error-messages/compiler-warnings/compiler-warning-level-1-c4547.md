@@ -1,36 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4547 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4547"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4547"
+title: Compilador advertencia (nivel 1) C4547 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4547
+dev_langs: C++
+helpviewer_keywords: C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f61c4075e8c41970cb72ca317373d7aeb4bddb02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Advertencia del compilador (nivel 1) C4547
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operador' : un operador antes de una coma no tiene ningún efecto; se esperaba un operador con efectos secundarios  
+# <a name="compiler-warning-level-1-c4547"></a>Advertencia del compilador (nivel 1) C4547
+'operador': operador antes de una coma no tiene ningún efecto; se esperaba un operador con efectos secundarios  
   
- El compilador ha detectado una expresión de coma mal formada.  
+ El compilador detectó una expresión de coma mal formada.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada. Para obtener más información, consulte [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- El código siguiente genera el error C4547:  
+ El ejemplo siguiente genera C4547:  
   
 ```  
 // C4547.cpp  

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_default_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_default_constructible
+f1_keywords: type_traits/std::is_default_constructible
+dev_langs: C++
+helpviewer_keywords: is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: fdb6b232afc97a804a75aee29f99c14abd7c0552
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 44af3c028f530613a9b2257409d44f217270dde6
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isdefaultconstructible-class"></a>Clase is_default_constructible
 Comprueba si un tipo tiene un constructor predeterminado.  
@@ -85,5 +80,4 @@ is_default_constructible<Simple2> == false
   
 ## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
-
 

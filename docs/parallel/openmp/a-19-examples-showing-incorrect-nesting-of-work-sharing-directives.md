@@ -1,29 +1,28 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Ejemplos A.19 que muestran el anidamiento incorrecto de directivas de uso compartido | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Los ejemplos de esta sección muestran las reglas directivas de anidamiento.  Para obtener más información sobre el anidamiento de directivas, vea [sección 2,9](../../parallel/openmp/2-9-directive-nesting.md) en la página 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 Ejemplos donde se muestra un anidamiento incorrecto de directivas de uso compartido
+Los ejemplos de esta sección muestra las reglas de anidamiento de directivas. Para obtener más información sobre el anidamiento de directivas, consulte [sección 2.9](../../parallel/openmp/2-9-directive-nesting.md) en la página 33.  
   
- El ejemplo siguiente no es compatible porque las directivas internas y externas de `for` se anidan y enlace misma a `parallel` la directiva:  
+ En el ejemplo siguiente no es conforme porque interno y externo `for` directivas están anidadas y enlazar a los mismos `parallel` directiva:  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +40,7 @@ void wrong1(int n)
 }  
 ```  
   
- La versión dinámicamente anidada siguiente del ejemplo anterior es también no compatible:  
+ La siguiente versión dinámicamente anidada del ejemplo anterior también será no compatible:  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +63,7 @@ void work1(int i, int n)
 }  
 ```  
   
- El ejemplo siguiente no es compatible porque están anidadas las directivas de `for` y de `single` , y enlazadas a la misma región paralela:  
+ En el ejemplo siguiente no es conforme porque la `for` y `single` directivas están anidadas, y que se enlacen a la misma región paralela:  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +80,7 @@ void wrong3(int n)
 }  
 ```  
   
- El ejemplo siguiente no es compatible porque una directiva de `barrier` dentro de `for` puede producir un interbloqueo:  
+ En el ejemplo siguiente no es conforme porque un `barrier` directiva dentro de un `for` puede dar lugar a un interbloqueo:  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +98,7 @@ void wrong4(int n)
 }  
 ```  
   
- El ejemplo siguiente no es compatible porque `barrier` produce el interbloqueo debido al hecho de que sólo un subproceso cada vez puede escribir la sección crítica:  
+ En el ejemplo siguiente no es conforme porque el `barrier` da como resultado un interbloqueo, debido al hecho de que solo un subproceso a la vez puede entrar en la sección crítica:  
   
 ```  
 void wrong5()  
@@ -116,7 +115,7 @@ void wrong5()
 }  
 ```  
   
- El ejemplo siguiente no es compatible porque `barrier` produce el interbloqueo debido al hecho de que sólo un subproceso ejecuta la sección de `single` :  
+ En el ejemplo siguiente no es conforme porque la `barrier` da como resultado un interbloqueo, debido al hecho de que sólo un subproceso ejecuta el `single` sección:  
   
 ```  
 void wrong6()  

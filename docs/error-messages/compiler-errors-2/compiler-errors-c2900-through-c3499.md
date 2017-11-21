@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -78,19 +77,17 @@ helpviewer_keywords:
 - C2987
 - C2997
 - C2999
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>C2900 de errores del compilador a través de C2999
 Los artículos de esta parte de la documentación contienen información sobre una subsección de los errores del compilador de Visual C++. Puede tener acceso a información aquí o bien, en la ventana de **salida** de Visual Studio, puede seleccionar un número de error y elegir después la tecla F1.  
@@ -202,4 +199,3 @@ Los artículos de esta parte de la documentación contienen información sobre u
 |C2997 de Error del compilador|'*función*': no se puede deducir el límite de la matriz de un inicializador de miembro predeterminado|  
 |[Error del compilador C2998](compiler-error-c2998.md)|'*declarador*': no puede ser una definición de plantilla|  
 |Error del compilador C2999|ERROR DESCONOCIDO Elija el comando soporte técnico en el menú Ayuda de Visual C++, o abra el archivo de Ayuda de soporte técnico para obtener más información|  
-

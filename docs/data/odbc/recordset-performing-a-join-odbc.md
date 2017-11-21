@@ -1,50 +1,50 @@
 ---
-title: "Conjunto de registros: Realizar una combinaci&#243;n (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enlace de datos [C++], columnas en conjuntos de registros"
-  - "enlace de datos [C++], columnas de conjuntos de registros"
-  - "filtros [C++], condiciones de combinación para conjuntos de registros"
-  - "combinaciones [C++], en conjuntos de registros"
-  - "conjuntos de registros ODBC [C++], combinaciones"
-  - "conjuntos de registros [C++], enlazar datos"
-  - "conjuntos de registros [C++], combinar tablas"
+title: "Conjunto de registros: Realizar una combinación (ODBC) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5366484ab4e2b08ababd887e0f09c9f97ce6c02f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Conjunto de registros: Realizar una combinaci&#243;n (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-performing-a-join-odbc"></a>Conjunto de registros: Realizar una combinación (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
   
-## Qué es una combinación  
- La operación de combinación \(JOIN\), una tarea común en bases de datos, permite trabajar con datos de más de una tabla usando un solo objeto de conjunto de registros.  Combinar dos o más tablas da como resultado un conjunto de registros capaz de contener columnas de cada tabla, pero aparece como una sola tabla para la aplicación.  A veces, la combinación usa todas las columnas de todas las tablas, pero en otras ocasiones la cláusula SQL **SELECT** utiliza sólo algunas de las columnas de cada tabla.  Las clases de base de datos admiten combinaciones de sólo lectura pero no combinaciones actualizables.  
+## <a name="what-a-join-is"></a>¿Qué es una combinación  
+ La operación de combinación, una tarea común de acceso a datos, le permite trabajar con datos de más de una tabla mediante un objeto único de conjunto de registros. Combinar dos o más tablas genera un conjunto de registros que puede contener columnas de cada tabla, pero aparece como una tabla única para la aplicación. A veces, la combinación usa todas las columnas de todas las tablas, pero a veces el código SQL **seleccione** cláusula en una combinación utiliza sólo algunas de las columnas de cada tabla. Las clases de base de datos admiten combinaciones de solo lectura pero no combinaciones actualizables.  
   
- Para seleccionar registros que contengan columnas de tablas combinadas, se necesitan los siguientes elementos:  
+ Para seleccionar los registros que contienen columnas de tablas combinadas, necesita los siguientes elementos:  
   
--   Una lista de tablas que contiene los nombres de todas las tablas combinadas.  
+-   Una lista de tablas que contienen los nombres de todas las tablas que se está combinando.  
   
--   Una lista de columnas que contenga los nombres de todas las columnas participantes.  Las columnas con el mismo nombre pero pertenecientes a diferentes tablas se diferencian por el nombre de tabla.  
+-   Una lista de columnas que contiene los nombres de todas las columnas que participan. Las columnas con el mismo nombre pero de tablas diferentes se califican con el nombre de tabla.  
   
--   Un filtro \(cláusula SQL **WHERE**\) que especifica las columnas en las que se combinan las tablas.  Este filtro toma la forma "Table1.KeyCol \= Table2.KeyCol" y realiza efectivamente la combinación.  
+-   Un filtro (SQL **donde** cláusula) que especifica las columnas en el que se combinan las tablas. Este filtro toma la forma "Table1.KeyCol = Table2.KeyCol" y realiza efectivamente la combinación.  
   
- Se pueden combinar más de dos tablas de la misma forma haciendo coincidir múltiples pares de columnas, combinando cada uno de ellos mediante la instrucción SQL **AND**.  
+ Se pueden combinar más de dos tablas de la misma forma haciendo coincidir múltiples pares de columnas, cada par combinadas mediante la palabra clave SQL **AND**.  
   
-## Vea también  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Declarar una clase para una consulta predefinida \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Conjunto de registros: Declarar una clase para una tabla \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Conjunto de registros: Volver a consultar un conjunto de registros \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Declarar una clase para una consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [Conjunto de registros: Declarar una clase para una tabla (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Conjunto de registros: Volver a consultar un conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

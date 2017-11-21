@@ -1,31 +1,29 @@
 ---
-title: "Swap (Funci&#243;n) (Biblioteca de plantillas C++ de Windows en tiempo de ejecuci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::Swap"
-dev_langs: 
-  - "C++"
+title: "Swap (función) (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::Swap
+dev_langs: C++
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0b48be8c5cd4702d0d4ee2dd7d541829e3bf94ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Swap (Funci&#243;n) (Biblioteca de plantillas C++ de Windows en tiempo de ejecuci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="swap-function-windows-runtime-c-template-library"></a>Swap (Función) (Biblioteca de plantillas C++ de Windows Runtime)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW inline void Swap(  
@@ -34,22 +32,22 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `left`  
  Primer argumento.  
   
  `right`  
  Segundo argumento.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
-## Comentarios  
- Cambie los valores de los dos argumentos especificados.  
+## <a name="remarks"></a>Comentarios  
+ Intercambia los valores de los dos argumentos especificados.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** internal.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -1,57 +1,55 @@
 ---
-title: "Finding a String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], searching"
-  - "strings [C++]"
+title: Buscar una cadena | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], searching
+- strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ff71ed7662e2a1713cbf6c3053fa044e78a3b1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Finding a String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El comando **Buscar en archivos** \(menú **Edición**\) permite buscar una o más cadenas en la tabla de cadenas, así como utilizar [expresiones regulares](../Topic/Using%20Regular%20Expressions%20in%20Visual%20Studio.md) para buscar todas las instancias de cadenas que coincidan con un modelo determinado.  
+# <a name="finding-a-string"></a>Buscar una cadena
+Puede buscar una o varias cadenas en la tabla de cadenas y usar [expresiones regulares](/visualstudio/ide/using-regular-expressions-in-visual-studio) con el **buscar en archivos** comando (**editar** menú) para buscar todas las instancias de cadenas que coinciden con un patrón.  
   
-### Para buscar una cadena en la tabla de cadenas  
+### <a name="to-find-a-string-in-the-string-table"></a>Para buscar una cadena en la tabla de cadenas  
   
-1.  Abra la tabla de cadenas haciendo doble clic en su icono en la [Vista de recursos](../windows/resource-view-window.md).  
+1.  Abra la tabla de cadenas haciendo doble clic en su icono en [vista de recursos](../windows/resource-view-window.md).  
   
     > [!NOTE]
     >  Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  En el menú **Edición**, haga clic en **Buscar y reemplazar** y, a continuación, elija **Buscar**.  
+2.  En el **editar** menú, haga clic en **buscar y reemplazar**, a continuación, elija **buscar**.  
   
-3.  En el cuadro **Buscar**, seleccione en la lista desplegable una cadena de búsqueda previamente utilizada o escriba el texto de la leyenda o el identificador de recurso de la cadena que desea encontrar.  
+3.  En el **buscar** cuadro, seleccione una cadena de búsqueda anterior en la lista desplegable o escriba el identificador de recurso o texto de título de la cadena que desea buscar.  
   
-4.  Seleccione cualquiera de las opciones de **Buscar**.  
+4.  Seleccione cualquiera de los **buscar** opciones.  
   
 5.  Haga clic en **Buscar siguiente**.  
   
     > [!TIP]
-    >  Para utilizar expresiones regulares en la búsqueda de archivos, utilice el comando **Buscar en archivos**.  Para que se muestre una lista de expresiones de búsqueda regulares, escriba una expresión regular que tenga que coincidir con un modelo determinado o haga clic en el botón situado a la derecha del cuadro **Buscar**.  Al seleccionar una expresión de esta lista, se usará como texto de búsqueda en el cuadro **Buscar**.  Para utilizar expresiones regulares, la casilla **Usar: Expresiones regulares** deberá estar activada.  
+    >  Para usar expresiones regulares para buscar archivos, use la **buscar en archivos** comando. Escriba una expresión regular para coincidir con un patrón o haga clic en el botón a la derecha de la **buscar** cuadro para mostrar una lista de expresiones regulares de búsqueda. Cuando se selecciona una expresión de esta lista, se usará como el texto de búsqueda en el **buscar** cuadro. Si utiliza expresiones regulares, asegúrese del **usar: expresiones regulares** casilla está activada.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados \(los orientados a Common Language Runtime\), vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* . Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, obtener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [String Editor](../mfc/string-editor.md)   
- [Cadenas](_win32_Strings)   
- [Acerca de cadenas](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Vea también  
+ [Editor de cadenas](../windows/string-editor.md)   
+

@@ -4,51 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- copy_options
-- filesystem::copy_options
 - filesystem/std::filesystem::copy_options
-- experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
-- directory_options
-- filesystem::directory_options
 - filesystem/std::filesystem::directory_options
-- experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
-- file_type
-- filesystem::file_type
 - filesystem/std::filesystem::file_type
-- experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
-- perms
-- filesystem::perms
 - filesystem/std::filesystem::perms
-- experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 1220ec0fa20eb285af755a67fae7ae09bd3d4fdf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; (Enumeraciones)
 En este tema, se documentan las enumeraciones del encabezado del sistema de archivos.
 
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<experimental/filesystem>  
-  
+ **Encabezado:** \<experimental/filesystem>    
  **Espacio de nombres:** std::experimental::filesystem  
 
 ##  <a name="copy_options"></a>  copy_options
@@ -105,7 +89,7 @@ enum class directory_options {
 |`follow_directory_symlink`|se tratan los vínculos simbólicos a directorios como directorios reales.|  
   
 ##  <a name="file_type"></a>  file_type
-Enumeración de tipos de archivo. Los valores admitidos son normales y el directorio, not_found y desconocido.  
+Enumeración de tipos de archivo. Los valores admitidos son normales, el directorio, not_found y desconocido.  
   
 ### <a name="syntax"></a>Sintaxis  
 ```cpp  
@@ -172,5 +156,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

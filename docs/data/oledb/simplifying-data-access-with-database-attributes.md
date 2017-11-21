@@ -1,71 +1,71 @@
 ---
-title: "Simplificar el acceso a datos con atributos de base de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-attr.db_param"
-  - "vc-attr.db_column"
-  - "vc-attr.db_accessor"
-  - "vc-attr.db_command"
-  - "vc-attr.db_table"
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributos [C++], acceso a datos"
-  - "atributos [C++], base de datos"
-  - "atributos [C++], consumidor OLE DB"
-  - "datos [C++], simplificar el acceso"
-  - "acceso a datos [C++], atributos de bases de datos"
-  - "atributos de bases de datos [C++]"
-  - "bases de datos [C++], atributos"
-  - "consumidores OLE DB [C++], atributos de bases de datos"
+title: Simplificar el acceso a datos con atributos de base de datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-attr.db_param
+- vc-attr.db_column
+- vc-attr.db_accessor
+- vc-attr.db_command
+- vc-attr.db_table
+- vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], database
+- attributes [C++], data access
+- databases [C++], attributes
+- data [C++], simplifying access
+- data access [C++], database attributes
+- database attributes [C++]
+- OLE DB consumers [C++], database attributes
+- attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca857a5d304d137009161618bddeed49886233b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Simplificar el acceso a datos con atributos de base de datos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra el uso de los atributos de base de datos para simplificar las operaciones con bases de datos.  
+# <a name="simplifying-data-access-with-database-attributes"></a>Simplificar el acceso a datos con atributos de base de datos
+Este tema muestra el uso de atributos de base de datos para simplificar las operaciones de base de datos.  
   
- La forma más fácil de tener acceso a la información de una base de datos es crear una clase de comando \(o tabla\) y una clase de registro de usuario para una tabla particular de la base de datos.  Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que anteriormente era obligado hacer.  
+ La manera sencilla de acceder a información desde una base de datos consiste en crear una clase de comando (o tabla) y una clase de registro de usuario para una tabla determinada en la base de datos. Los atributos de base de datos simplifican algunas de las declaraciones de plantilla que tenía anteriormente para realizar.  
   
- Para mostrar el uso de los atributos de base de datos, las siguientes secciones presentan dos declaraciones equivalentes de clases de tabla y registro de usuario: la primera utiliza atributos y la segunda plantillas de consumidor OLE DB.  Este código de declaración suele colocarse en un archivo de encabezado cuyo nombre sigue el del objeto de tabla o comando, como por ejemplo Authors.h.  
+ Para demostrar el uso de atributos de base de datos, las secciones siguientes muestran dos tabla equivalente y las declaraciones de clase de registro de usuario: la primera utiliza atributos y la segunda plantillas de consumidor OLE DB. Este código de declaración suele colocarse en un archivo de encabezado denominado para el objeto de tabla o un comando, por ejemplo, Authors.h.  
   
- Al comparar los dos archivos es posible ver lo fácil que es utilizar atributos.  Entre las diferencias se encuentran:  
+ Al comparar los dos archivos, puede ver lo sencillo que es usar atributos. Entre las diferencias son:  
   
--   Al utilizar atributos sólo hay que declarar una clase: `CAuthors`, mientras que con las plantillas hay que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.  
+-   Uso de atributos, solo tiene que declarar una clase: `CAuthors`, mientras que con las plantillas hay que declarar dos: `CAuthorsNoAttrAccessor` y `CAuthorsNoAttr`.  
   
--   La llamada a `db_source` de la versión con atributos equivale a la llamada a `OpenDataSource()` de la declaración de plantilla.  
+-   El `db_source` llamada en la versión con atributos equivale a la `OpenDataSource()` llamar a en la declaración de plantilla.  
   
--   La llamada a **db\_table** de la versión con atributos equivale a la siguiente declaración de plantilla:  
+-   El **db_table** llamada en la versión con atributos equivale a la siguiente declaración de plantilla:  
   
     ```  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
     ```  
   
--   Las llamadas a **db\_column** de la versión con atributos equivalen al mapa de columnas \(ver `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`\) de la declaración de plantilla.  
+-   El **db_column** llamadas en la versión con atributos equivalen al mapa de columnas (vea `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) en la declaración de plantilla.  
   
- Los atributos insertan una declaración de clase de registro de usuario.  La clase de registro de usuario equivale a `CAuthorsNoAttrAccessor` en la declaración de plantilla.  Si la clase de tabla es `CAuthors`, la clase de registro de usuario insertado recibe el nombre `CAuthorsAccessor` y sólo se puede ver su declaración en el código insertado.  Para obtener más información, vea "Clases de registro de usuario con atributos", en [Registros de usuario](../../data/oledb/user-records.md).  
+ Los atributos insertan una declaración de clase de registro de usuario para usted. La clase de registro de usuario es equivalente a `CAuthorsNoAttrAccessor` en la declaración de plantilla. Si la clase de tabla es `CAuthors`, con el nombre de la clase de registro de usuario insertado `CAuthorsAccessor`, y solo se puede ver su declaración en código insertado. Para obtener más información, vea "Clases de registro de usuario con atributos" en [registros de usuario](../../data/oledb/user-records.md).  
   
- Observe que tanto en el código con atributos como en el código de plantilla se deben establecer las propiedades del conjunto de filas utilizando `CDBPropSet::AddProperty`.  
+ Tenga en cuenta que en los atributos y el código de plantilla, debe establecer las propiedades del conjunto de filas mediante `CDBPropSet::AddProperty`.  
   
- Para obtener más información acerca de los atributos tratados en este tema, vea [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).  
+ Para obtener información acerca de los atributos descritos en este tema, consulte [atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
-## Declaración de tablas y descriptores de acceso mediante atributos  
- El siguiente código llama a `db_source` y **db\_table** en la clase de tabla.  `db_source` especifica el origen de datos y la conexión que se va a usar.  **db\_table** inserta el código de plantilla apropiado para declarar una clase de tabla.  **db\_column** especifica el mapa de columnas e inserta la declaración del descriptor de acceso.  Se pueden utilizar los atributos de consumidor OLE DB en cualquier proyecto que admita ATL.  
+## <a name="table-and-accessor-declaration-using-attributes"></a>Tabla y declaración de descriptor de acceso mediante atributos  
+ El código siguiente llama `db_source` y **db_table** en la clase de tabla. `db_source`Especifica el origen de datos y la conexión que se usará. **db_table** inserta el código de plantilla apropiado para declarar una clase de tabla. **db_column** especifica el mapa de columnas e inserta la declaración de descriptor de acceso. Puede utilizar atributos de consumidor OLE DB en cualquier proyecto que admita ATL.  
   
- A continuación se muestra la declaración de tabla y del descriptor de acceso con atributos.  
+ Aquí es la declaración de tabla y descriptor de acceso mediante atributos:  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -100,8 +100,8 @@ public:
 };  
 ```  
   
-## Declaración de tablas y descriptores de acceso mediante plantillas  
- Esta es la declaración de tabla y descriptor de acceso utilizando plantillas.  
+## <a name="table-and-accessor-declaration-using-templates"></a>Tabla y declaración de descriptor de acceso mediante plantillas  
+ Aquí es la declaración de tabla y descriptor de acceso mediante plantillas.  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -204,6 +204,6 @@ public:
 };  
 ```  
   
-## Vea también  
- [OLE DB Consumer Attributes](../../windows/ole-db-consumer-attributes.md)   
- [Attributes Walkthroughs](http://msdn.microsoft.com/es-es/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)
+## <a name="see-also"></a>Vea también  
+ [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)   
+ [Tutoriales sobre los atributos](http://msdn.microsoft.com/en-us/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

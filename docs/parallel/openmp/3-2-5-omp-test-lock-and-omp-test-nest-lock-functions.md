@@ -1,27 +1,26 @@
 ---
-title: "3.2.5 omp_test_lock and omp_test_nest_lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2.5 omp_test_lock y omp_test_nest_lock funciones | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 36818945-c22c-4c24-b754-4e73eba6f3f8
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fa340ce56d0e669a40b131a4cb3efbe18fc3c430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 3.2.5 omp_test_lock and omp_test_nest_lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Estas funciones intentan establecer un bloqueo pero no bloquean la ejecución de subprocesos.  El formato es como se detalla a continuación:  
+# <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock y omp_test_nest_lock (Funciones)
+Estas funciones se intentan establecer un bloqueo, pero no impiden la ejecución del subproceso. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
@@ -29,8 +28,8 @@ int omp_test_lock(omp_lock_t *lock);
 int omp_test_nest_lock(omp_nest_lock_t *lock);  
 ```  
   
- El argumento debe señalar a una variable inicializada de bloqueo.  Estas funciones intentan establecer un bloqueo de la misma manera que `omp_set_lock` y `omp_set_nest_lock`, salvo que no bloquean la ejecución de subprocesos.  
+ El argumento debe apuntar a una variable de bloqueo inicializado. Estas funciones se intentan establecer un bloqueo de la misma manera que `omp_set_lock` y `omp_set_nest_lock`, salvo que no bloqueen la ejecución del subproceso.  
   
- Para un bloqueo simple, la función de `omp_test_lock` devuelve un valor distinto de cero si el bloqueo se establece correctamente; de lo contrario, devuelve cero.  
+ Un bloqueo simple, la `omp_test_lock` función devuelve un valor distinto de cero si el bloqueo se estableció correctamente; en caso contrario, devuelve cero.  
   
- Para un bloqueo encajable, la función de `omp_test_nest_lock` devuelve el nuevo número de anidamiento si el bloqueo se establece correctamente; de lo contrario, devuelve cero.
+ Un bloqueo anidable, la `omp_test_nest_lock` función devuelve el recuento de anidamiento de nuevo si el bloqueo se estableció correctamente; en caso contrario, devuelve cero.

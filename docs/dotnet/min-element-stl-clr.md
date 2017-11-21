@@ -1,32 +1,30 @@
 ---
-title: "min_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::min_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "min_element (función) [STL/CLR]"
+title: min_element (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::min_element
+dev_langs: C++
+helpviewer_keywords: min_element function [STL/CLR]
 ms.assetid: 2a9c6828-9722-454f-9c10-d4a184d4d21b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7996e368abff6d82c346ff58eb19d2d53ff208d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# min_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Encuentra la primera aparición del elemento más pequeño en un intervalo especificado donde el criterio de ordenación se puede especificar por un predicado binario.  
+# <a name="minelement-stlclr"></a>min_element (STL/CLR)
+Busca la primera aparición del menor elemento en un intervalo especificado donde el criterio de ordenación se puede especificar mediante un predicado binario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _FwdIt> inline  
@@ -35,13 +33,13 @@ template<class _FwdIt, class _Pr> inline
     _FwdIt min_element(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `min_element`STL.  Para obtener más información, vea [min\_element](../Topic/min_element.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `min_element`. Para obtener más información, consulte [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

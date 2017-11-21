@@ -1,32 +1,32 @@
 ---
-title: "La vinculaci&#243;n de miembros integrales const est&#225;ticos ya no es literal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "constantes, declarar"
-  - "expresiones constantes de tipo entero"
-  - "atributo literal [C++]"
+title: "Vinculación de miembros integrales Const estáticos ya No es Literal | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- literal attribute [C++]
+- constants, declaring
+- integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2d4e955df4982ba2077098adc7bd47506b42239
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# La vinculaci&#243;n de miembros integrales const est&#225;ticos ya no es literal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La declaración de un miembro constante de una clase ha cambiado de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="static-const-int-linkage-is-no-longer-literal"></a>La vinculación de miembros integrales const estáticos ya no es literal
+Declaración de un miembro de constante de una clase ha cambiado de extensiones administradas para C++ a Visual C++.  
   
- Aunque todavía se admiten los miembros enteros `static const`, su atributo de vinculación ha cambiado.  Su atributo de vinculación anterior ahora lo lleva un miembro entero literal.  Por ejemplo, considere la siguiente clase de Extensiones administradas:  
+ Aunque `static const` todavía se admiten los miembros enteros, su atributo de vinculación ha cambiado. Su atributo de vinculación anterior ahora lo lleva un miembro entero literal. Por ejemplo, considere la siguiente clase de extensiones administradas:  
   
 ```  
 public __gc class Constants {  
@@ -35,37 +35,37 @@ public:
 };  
 ```  
   
- Esto genera los siguientes atributos CIL subyacentes para el campo \(tenga en cuenta el atributo literal\):  
+ Esto genera los siguientes atributos CIL subyacentes para el campo (tenga en cuenta el atributo literal):  
   
 ```  
 .field public static literal int32   
 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Mientras que esto aún se compila en la nueva sintaxis:  
+ Aunque esto aún se compila en la nueva sintaxis:  
   
 ```  
 public ref class Constants {  
 public:  
-   static const int LOG_DEBUG = 4;  
+   static const int LOG_DEBUG = 4;  
 };  
 ```  
   
- ya no emite el atributo literal y, por consiguiente, el tiempo de ejecución del CLR no lo ve como una constante:  
+ ya no se emite el atributo literal y, por tanto, no se visualiza como una constante en tiempo de ejecución de CLR:  
   
 ```  
 .field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Para tener el mismo atributo literal entre lenguajes, la declaración se debería cambiar al miembro de datos `literal` recientemente compatible, como sigue:  
+ Para tener el mismo atributo literal entre lenguaje, la declaración debe cambiarse a recién admitidas `literal` miembro de datos, como se indica a continuación,  
   
 ```  
 public ref class Constants {  
 public:  
-   literal int LOG_DEBUG = 4;  
+   literal int LOG_DEBUG = 4;  
 };  
 ```  
   
-## Vea también  
- [Declaraciones de miembros en una clase o interfaz \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+## <a name="see-also"></a>Vea también  
+ [Declaraciones de miembros en una clase o interfaz (C++ / CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [literal](../windows/literal-cpp-component-extensions.md)

@@ -1,62 +1,62 @@
 ---
-title: "Setting the Size of the Combo Box and Its Drop-Down List | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combo boxes, sizing"
-  - "controls [C++], sizing"
+title: "Establecer el tamaño de un cuadro combinado y de su lista desplegable | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes, sizing
+- controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9edef494f88bc5a5b4e8efdab94b70d233fcd59f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Setting the Size of the Combo Box and Its Drop-Down List
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es posible establecer el tamaño de un cuadro combinado cuando se agrega al cuadro de diálogo.  También es posible especificar el tamaño del cuadro de lista desplegable.  
+# <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Establecer el tamaño de un cuadro combinado y de su lista desplegable
+Puede cambiar el tamaño de un cuadro combinado cuando se agrega al cuadro de diálogo. También puede especificar el tamaño del cuadro de lista desplegable.  
   
-### Para establecer el tamaño de un cuadro combinado  
+### <a name="to-size-a-combo-box"></a>Para cambiar el tamaño de un cuadro combinado  
   
 1.  Seleccione el control de cuadro combinado en el cuadro de diálogo.  
   
-     En un principio, sólo estarán activos los cuadros de tamaño izquierdo y derecho.  
+     Inicialmente, solo los controladores de tamaño de la izquierda y derecha están activos.  
   
-2.  Establezca el ancho del cuadro combinado con los cuadros de tamaño.  
+2.  Use los controladores de tamaño para establecer el ancho del cuadro combinado.  
   
- También es posible establecer el tamaño vertical de la parte de lista desplegable del cuadro combinado.  
+ También puede establecer el tamaño vertical de la parte desplegable del cuadro combinado.  
   
-#### Para establecer el tamaño de la lista desplegable de un cuadro combinado  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Para establecer el tamaño combinado de la lista desplegable del cuadro  
   
-1.  Haga clic en el botón de flecha desplegable situado a la derecha del cuadro combinado.  
+1.  Haga clic en el botón de flecha de lista desplegable a la derecha del cuadro combinado.  
   
-     ![Flecha de un cuadro combinado en un proyecto MFC](../mfc/media/vccomboboxarrow.png "vcComboBoxArrow")  
+     ![Flecha en un cuadro combinado en un proyecto MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")  
   
-     El contorno del control cambia para mostrar el tamaño del cuadro combinado, con el área de lista desplegable extendida.  
+     El contorno del control cambia para mostrar el tamaño del cuadro combinado con el área de lista desplegable extendido.  
   
-2.  Cambie el tamaño inicial del área de lista desplegable mediante el cuadro de tamaño inferior.  
+2.  Utilice el controlador de tamaño inferior para cambiar el tamaño inicial del área de lista desplegable.  
   
-     ![Ajuste de tamaño de cuadro combinado en un proyecto MFC](../mfc/media/vccomboboxsizing.png "vcComboBoxSizing")  
+     ![Combinado &#45; tamaño de cuadro en un proyecto MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
-3.  Haga clic otra vez en la flecha desplegable para cerrar la parte de lista desplegable del cuadro combinado.  
+3.  Haga clic en la flecha de lista desplegable para cerrar la parte de lista desplegable del cuadro combinado.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](https://msdn.microsoft.com/library/f45fce5x.aspx) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](https://msdn.microsoft.com/library/xbx3z216.aspx). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Adding Values to a Combo Box Control](../mfc/adding-values-to-a-combo-box-control.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar valores a un Control de cuadro combinado](../windows/adding-values-to-a-combo-box-control.md)   
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

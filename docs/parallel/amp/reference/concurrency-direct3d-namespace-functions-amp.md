@@ -1,5 +1,5 @@
 ---
-title: Funciones del espacio de nombres de Concurrency::Direct3D (AMP) | Documentos de Microsoft
+title: Funciones de espacio de nombres Concurrency::Direct3D (AMP) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,31 +24,30 @@ f1_keywords:
 - amp/Concurrency::direct3d::smoothstep
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: b0e2d2de89bab2f4d0c6f23882f294c148886bcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones del espacio de nombres de Concurrency::Direct3D (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones de espacio de nombres Concurrency::Direct3D (AMP)
 ||||  
 |-|-|-|  
-|[abs](#abs)|[Clamp](#clamp)|[countbits](#countbits)|
+|[abs](#abs)|[Clamp](#clamp)|[countbits)](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
-|[iMax](#imax)|[imin)](#imin)|[is_timeout_disabled)](#is_timeout_disabled)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer)](#get_buffer)|  
+|[iMax](#imax)|[Imín](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[MAD](#mad)|[make_array](#make_array)|[ruido](#noise)|  
-|[radianes](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
-|[saturar](#saturate)|[inicio de sesión](#sign)|[smoothstep](#smoothstep)|  
-|[paso](#step)|[UMAX](#umax)|[umin)](#umin)|  
+|[radianes](#radians)|[rcp](#rcp)|[reversebits)](#reversebits)|  
+|[saturar](#saturate)|[inicio de sesión](#sign)|[smoothstep)](#smoothstep)|  
+|[paso](#step)|[UMAX](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Requisitos
 **Encabezado:** amp.h **Namespace:** simultaneidad
@@ -68,7 +67,7 @@ inline int abs(int _X) restrict(amp);
  Devuelve el valor absoluto del argumento.  
   
 ##  <a name="clamp"></a>Clamp  
- Calcula el valor del primer argumento especificado fijado en un intervalo definido por el segundo y tercer argumento especificado.  
+ Calcula el valor del primer argumento especificado que se fija en un intervalo definido por el segundo y tercer argumento especificado.  
   
 ```  
 inline float clamp(
@@ -96,7 +95,7 @@ inline int clamp(
 ### <a name="return-value"></a>Valor devuelto  
  El valor fijado de `_X`.  
   
-##  <a name="countbits"></a>countbits  
+##  <a name="countbits"></a>countbits)  
  Cuenta el número de bits de conjunto de _X  
   
 ```  
@@ -111,7 +110,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
  Devuelve el número de bits del conjunto de _X  
 
 ## <a name="create_accelerator_view"></a>create_accelerator_view  
-Crea un [accelerator_view](accelerator-view-class.md) objeto de un puntero a una interfaz de dispositivo Direct3D.  
+Crea un [accelerator_view](accelerator-view-class.md) objeto de un puntero a una interfaz de dispositivo de Direct3D.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -128,30 +127,30 @@ accelerator_view create_accelerator_view(
   
 #### <a name="parameters"></a>Parámetros  
  `_Accelerator`  
- El acelerador en el que es necesario crear el nuevo accelerator_view.  
+ El acelerador en el que el nuevo accelerator_view consiste en crear.  
   
  `_D3D_device`  
- Puntero a la interfaz de dispositivo Direct3D.  
+ Puntero a la interfaz de dispositivo de Direct3D.  
   
  `_Disable_timeout`  
- Parámetro booleano que especifica si se debe deshabilitar el tiempo de espera para la accelerator_view recién creado. Esto corresponde a la marca D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para crear un dispositivo Direct3D y se utiliza para indicar si el sistema operativo debe permitir cargas de trabajo que tardan más de 2 segundos en ejecutarse sin restablecer el dispositivo por el mecanismo de recuperación y detección de tiempo de espera de Windows. Se recomienda el uso de esta marca si necesita realizar tareas mucho tiempo en el accelerator_view.  
+ Un parámetro booleano que especifica si se debe deshabilitar el tiempo de espera para la accelerator_view recién creado. Esto corresponde a la marca de D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para la creación del dispositivo de Direct3D y se utiliza para indicar si el sistema operativo debe permitir las cargas de trabajo que tardan más de 2 segundos en ejecutarse sin restablecer el dispositivo por el tiempo de espera de Windows mecanismo de detección y recuperación. Se recomienda el uso de esta marca si necesita realizar tareas mucho tiempo en el accelerator_view.  
   
  `_Qmode`  
- El [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) que se utilizará para el accelerator_view recién creado. Este parámetro tiene un valor predeterminado de `queuing_mode_automatic`.  
+ El [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) que se usará para la accelerator_view recién creado. Este parámetro tiene un valor predeterminado de `queuing_mode_automatic`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- La `accelerator_view` objeto creado a partir de la interfaz de dispositivo Direct3D pasada.  
+ La `accelerator_view` objeto creado a partir de la interfaz de dispositivo de Direct3D pasada.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función crea un nuevo `accelerator_view` objeto de un puntero existente a una interfaz de dispositivo Direct3D. Si la llamada de función se realiza correctamente, se incrementa el recuento de referencias del parámetro por medio de un `AddRef` la llamada a la interfaz. Con seguridad, puede liberar el objeto cuando ya no sea necesario en el código de DirectX. Si se produce un error en la llamada al método, un [runtime_exception](runtime-exception-class.md) se produce.  
+ Esta función crea un nuevo `accelerator_view` objeto de un puntero existente a una interfaz de dispositivo de Direct3D. Si la llamada de función se realiza correctamente, se incrementa el recuento de referencias del parámetro por medio de un `AddRef` la llamada a la interfaz. Sin ningún riesgo puede liberar el objeto cuando ya no es necesaria en el código de DirectX. Si se produce un error en la llamada al método, un [runtime_exception](runtime-exception-class.md) se produce.  
   
- La `accelerator_view` objeto que se crea mediante esta función es segura para subprocesos. Debe sincronizar uso simultáneo de la `accelerator_view` objeto. Uso simultáneo de la sincronización del `accelerator_view` objeto y la interfaz ID3D11Device sin formato produce un comportamiento indefinido.  
+ La `accelerator_view` objeto que se crea mediante esta función es segura para subprocesos. Debe sincronizar el uso simultáneo de la `accelerator_view` objeto. Uso simultáneo de que no esté sincronizado el `accelerator_view` objeto y la interfaz sin formato de ID3D11Device provoca un comportamiento indefinido.  
   
- El tiempo de ejecución de C++ AMP proporciona información detallada del error en modo de depuración utilizando la capa de D3D depurar si utiliza el `D3D11_CREATE_DEVICE_DEBUG` marca.  
+ El tiempo de ejecución de C++ AMP proporciona información detallada del error en modo de depuración mediante la capa de D3D depurar si usas el `D3D11_CREATE_DEVICE_DEBUG` marca.  
   
   
 ##  <a name="d3d_access_lock"></a>d3d_access_lock  
- Adquirir un bloqueo en un accelerator_view con el fin de forma segura las operaciones de D3D en recursos compartidos con el accelerator_view. El accelerator_view y todos los recursos de C++ AMP asociados con este accelerator_view internamente toman este bloqueo al realizar operaciones y se bloqueará mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo no es recursiva: es llamar a esta función desde un subproceso que ya tiene el bloqueo de un comportamiento indefinido. Es un comportamiento no definido para realizar operaciones en el accelerator_view o cualquier contenedor de datos asociados con el accelerator_view desde el subproceso que mantiene el bloqueo del acceso de D3D. Consulte también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso basado en el ámbito D3D.  
+ Adquirir un bloqueo en un accelerator_view con el fin de forma segura las operaciones de D3D en recursos compartidos con el accelerator_view. El accelerator_view y todos los recursos de C++ AMP asociados con este accelerator_view internamente toman este bloqueo al realizar operaciones y se bloquean mientras el otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo no es recursiva: es un comportamiento indefinido para llamar a esta función desde un subproceso que ya tenía el bloqueo. Es un comportamiento indefinido para realizar operaciones en el accelerator_view o cualquier contenedor de datos asociado a la accelerator_view desde el subproceso que mantiene el bloqueo de acceso de D3D. Vea también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso basados en ámbitos D3D.  
   
 ```  
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -159,10 +158,10 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parámetros  
  `_Av`  
- Accelerator_view bloquear.  
+ Accelerator_view para bloquear.  
   
 ##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
- Intenta adquirir el bloqueo de acceso de D3D en un accelerator_view sin bloqueo.  
+ Ha intentado adquirir el bloqueo de acceso de D3D en un accelerator_view sin bloquear.  
   
 ```  
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -170,13 +169,13 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parámetros  
  `_Av`  
- Accelerator_view bloquear.  
+ Accelerator_view para bloquear.  
   
 ### <a name="return-value"></a>Valor devuelto  
- True si se adquirió el bloqueo, o falso si mantiene actualmente por otro subproceso.  
+ True si se ha adquirido el bloqueo, o false si se mantiene actualmente por otro subproceso.  
   
 ##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
- Liberar el bloqueo de acceso de D3D en los accelerator_view determinado. Si el subproceso de llamada no se mantiene el bloqueo en el accelerator_view los resultados son indefinidos.  
+ Liberar el bloqueo de acceso de D3D en el accelerator_view determinado. Si el subproceso que realiza la llamada no tiene el bloqueo en el accelerator_view los resultados son indefinidos.  
   
 ```  
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -184,10 +183,10 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
   
 ### <a name="parameters"></a>Parámetros  
  `_Av`  
- Accelerator_view para el que es liberar el bloqueo.  
+ Accelerator_view para los que es el bloqueo se libera.  
   
 ##  <a name="firstbithigh"></a>firstbithigh  
- Obtiene la ubicación del primer bit establecido en _X, comenzando con el bit de orden superior y moverse hacia el bit de orden más bajo.  
+ Obtiene la ubicación del primer bit establecido en _X, comenzando con el bit de orden superior y mover hacia el bit de orden más bajo.  
   
 ```  
 inline int firstbithigh(int _X) restrict(amp);
@@ -214,8 +213,8 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la ubicación del primer bit establecido  
   
-##  <a name="get_buffer"></a>get_buffer  
- Obtener la interfaz del búfer de Direct3D subyacente de la matriz especificada.  
+##  <a name="get_buffer"></a>get_buffer)  
+ Cómo obtener la interfaz de búfer de Direct3D subyacente de la matriz especificada.  
   
 ```  
 template<
@@ -234,10 +233,10 @@ IUnknown *get_buffer(
  El rango de la matriz.  
   
  `_Array`  
- Una matriz en una accelerator_view de Direct3D que se devuelve la interfaz de búfer de Direct3D subyacente.  
+ Una matriz en un accelerator_view de Direct3D para el que se devuelve la interfaz subyacente de búfer de Direct3D.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El puntero de interfaz IUnknown correspondiente al búfer de Direct3D subyacente de la matriz.  
+ El puntero de interfaz IUnknown correspondiente en el búfer de Direct3D subyacente de la matriz.  
   
 ##  <a name="imax"></a>iMax  
  Determinar el valor numérico máximo de los argumentos  
@@ -258,7 +257,7 @@ inline int imax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="imin"></a>imin)  
+##  <a name="imin"></a>Imín  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -277,8 +276,8 @@ inline int imin(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico mínimo de los argumentos  
   
-##  <a name="is_timeout_disabled"></a>is_timeout_disabled)  
- Devuelve una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado. Esto corresponde a la marca D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para crear un dispositivo Direct3D.  
+##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
+ Devuelve una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado. Esto corresponde a la marca de D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT para la creación de dispositivos de Direct3D.  
   
 ```  
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -286,7 +285,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
   
 ### <a name="parameters"></a>Parámetros  
  `_Accelerator_view`  
- Accelerator_view para que el tiempo de espera deshabilitada configuración consiste en consultar.  
+ El accelerator_view para que el tiempo de espera deshabilita esta opción es realizar consultas.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una marca booleana que indica si el tiempo de espera está deshabilitada para el accelerator_view especificado.  
@@ -330,10 +329,10 @@ inline unsigned int mad(
  El tercer argumento especificado.  
   
 ### <a name="return-value"></a>Valor devuelto  
- The result of `_X` * `_Y` + `_Z`.  
+ El resultado de `_X`  *  `_Y`  +  `_Z`.  
   
 ##  <a name="make_array"></a>make_array  
- Cree una matriz de un puntero de interfaz de búfer de Direct3D.  
+ Crear una matriz de un puntero de interfaz de búfer de Direct3D.  
   
 ```  
 template<
@@ -348,13 +347,13 @@ array<value_type, _Rank> make_array(
   
 ### <a name="parameters"></a>Parámetros  
  `value_type`  
- El tipo de elemento de la matriz que se va a crear.  
+ El tipo de elemento de la matriz que se creará.  
   
  `_Rank`  
- El rango de la matriz que se va a crear.  
+ El rango de la matriz que se creará.  
   
  `_Extent`  
- Una extensión que describe la forma de la agregación de la matriz.  
+ Una extensión que describe la forma de agregado de la matriz.  
   
  `_Rv`  
  Vista de aceleradores de D3D en los que es necesario crear la matriz.  
@@ -363,7 +362,7 @@ array<value_type, _Rank> make_array(
  Puntero de interfaz IUnknown del búfer para crear la matriz de D3D.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Una matriz en el que se crea utilizando el búfer proporcionado de Direct3D.  
+ Una matriz que se crea utilizando el búfer proporcionado de Direct3D.  
   
 ##  <a name="noise"></a>ruido  
  Genera un valor aleatorio mediante el algoritmo de ruido de Perlin  
@@ -374,13 +373,13 @@ inline float noise(float _X) restrict(amp);
   
 ### <a name="parameters"></a>Parámetros  
  `_X`  
- Valor de punto flotante de la que se va a generar ruido Perlin  
+ Valor de punto flotante en la que se va a generar el ruido de Perlin  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor de ruido de Perlin el dentro de un intervalo comprendido entre -1 y 1  
   
 ##  <a name="radians"></a>radianes  
- Convierte _X de grados a radianes  
+ Convierte _X de grados en radianes  
   
 ```  
 inline float radians(float _X) restrict(amp);
@@ -391,10 +390,10 @@ inline float radians(float _X) restrict(amp);
  Valor de punto flotante  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve _X convertido de grados a radianes  
+ Devuelve _X convertido de grados en radianes  
   
 ##  <a name="rcp"></a>rcp  
- Calcula el inverso del argumento especificado mediante una aproximación rápida.  
+ Calcula el inverso del argumento especificado usando una aproximación rápida.  
   
 ```  
 inline float rcp(float _X) restrict(amp);
@@ -408,9 +407,9 @@ inline double rcp(double _X) restrict(amp);
  El valor para el que se va a calcular el recíproco.  
   
 ### <a name="return-value"></a>Valor devuelto  
- El recíproco de los argumentos especificados.  
+ El inverso del argumento especificado.  
   
-##  <a name="reversebits"></a>reversebits  
+##  <a name="reversebits"></a>reversebits)  
  Invierte el orden de los bits de _X  
   
 ```  
@@ -436,7 +435,7 @@ inline float saturate(float _X) restrict(amp);
  Valor de punto flotante  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve _X fijados dentro del intervalo de 0 a 1  
+ Devuelve _X fijada dentro del intervalo de 0 a 1  
   
 ##  <a name="sign"></a>inicio de sesión  
  Determina el signo del argumento especificado.  
@@ -452,7 +451,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El signo del argumento.  
   
-##  <a name="smoothstep"></a>smoothstep  
+##  <a name="smoothstep"></a>smoothstep)  
  Devuelve una interpolación Hermite suave entre 0 y 1, si _X está en el intervalo [_Min, _Max].  
   
 ```  
@@ -473,7 +472,7 @@ inline float smoothstep(
  Valor de punto flotante  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve 0 si _X es menor que _Min; 1 si _X es mayor que _Max; de lo contrario, un valor entre 0 y 1 si _X está en el intervalo [_Min, _Max]  
+ Devuelve 0 si _X es menor que _Min; Devuelve 1 si _X es mayor que _Max; en caso contrario, un valor entre 0 y 1 si _X está en el intervalo [_Min, _Max]  
   
 ##  <a name="step"></a>paso  
  Compara dos valores y devuelve 0 o 1 según cuyo valor es mayor  
@@ -492,7 +491,7 @@ inline float step(
  Valor de punto flotante  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve 1 si el _X es mayor o igual que _Y; de lo contrario, 0  
+ Devuelve 1 si el _X es mayor o igual que _Y; en caso contrario, 0  
   
 ##  <a name="umax"></a>UMAX  
  Determinar el valor numérico máximo de los argumentos  
@@ -513,7 +512,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="umin"></a>umin)  
+##  <a name="umin"></a>umin  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -534,4 +533,3 @@ inline unsigned int umin(
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::direct3d (espacio de nombres)](concurrency-direct3d-namespace.md)
-

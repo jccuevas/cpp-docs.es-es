@@ -1,143 +1,141 @@
 ---
-title: "2.4.1 for Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.4.1 for (construcción) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92f3af3fa84043d9e8755136ab66e345e455ff1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.1 for Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directiva de **Para** identifica una construcción iterativa de división del trabajo que especifica que las iteraciones del bucle asociado se ejecutan en paralelo.  Las iteraciones del bucle de **Para** se enrutan a través de los subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que enlaza.  La sintaxis de construcción de **Para** es la siguiente:  
+# <a name="241-for-construct"></a>2.4.1 for (Construcción)
+El **para** directiva identifica una construcción de uso compartido de trabajo iterativa que especifica que las iteraciones del bucle asociado se ejecutarán en paralelo. Las iteraciones de la **para** bucle se distribuyen entre varios subprocesos que ya existen en el equipo que ejecuta la construcción paralela a la que se enlaza. La sintaxis de la **para** construcción es como sigue:  
   
 ```  
-#pragma omp for [clause[[,] clause] ... ] new-line  
-   for-loop  
+#pragma omp for [clause[[,] clause] ... ] new-linefor-loop  
 ```  
   
- La cláusula es:  
+ La cláusula es uno de los siguientes:  
   
- *variable\-lista* **\)**de**private \(**  
+ **privada (** *lista de variables* **)**  
   
- *variable\-lista* **\)**de**firstprivate \(**  
+ **firstprivate (** *lista de variables* **)**  
   
- *variable\-lista* **\)**de**lastprivate \(**  
+ **lastprivate (** *lista de variables* **)**  
   
- *variable\-lista* **\)**de**:**de*operador de***detallado \(**  
+ **reducción (** *operador* **:** *lista de variables***)**  
   
- **consultar**  
+ **ordenada**  
   
- *clase de* **programación \(**\[, *chunk\_size*\]**\)**  
+ **programación (** *tipo*[, *chunk_size*]**)**  
   
  **nowait**  
   
- La directiva de **Para** coloca las restricciones en la estructura de bucle correspondiente de **Para** .  específicamente, el bucle correspondiente de **Para** debe tener forma canónica:  
+ El **para** directiva impone restricciones en la estructura de los correspondientes **para** bucle. En concreto, la correspondiente **para** bucle debe tener la forma canónica:  
   
- *b lógico\-de Op. Sys. de* **para \(** init\-*expr***;***var*; *aumento\-expr***\)**  
+ **para (** *init-expr* **;** *var lógico op b*; *incr expr***)**  
   
- *init\-expr*  
+ *Init-expr*  
  Uno de los siguientes:  
   
- *var* \= *libra*  
+ *var* = *lb*  
   
- *entero\-tipo var* \= *libra*  
+ *tipo de entero var* = *lb*  
   
- *aumento\-expr*  
+ *incr expr*  
  Uno de los siguientes:  
   
- \+\+var  
+ ++*var*  
   
- *var* \+\+  
+ *var* ++  
   
- \-\- *var*  
+ -- *var*  
   
- *var* \-\-  
+ *var* --  
   
- *aumento* *var* \+\=  
+ *var* += *incr*  
   
- *var* \- \= *aumenta*  
+ *var* -= *incr*  
   
- *var* \= *var* \+ *aumentado*  
+ *var* = *var* + *incr*  
   
- *var* \= *aumentado* \+ *var*  
+ *var* = *incr* + *var*  
   
- *var* \= *var* \- *incr*  
+ *var* = *var* - *incr*  
   
  *var*  
- Una variable de entero con signo.  Si esta variable sería compartida de otra forma, implícita se crea privada para la duración del párrafo.  Esta variable no se debe modificar en el cuerpo de la instrucción de **Para** .  A menos que sea **lastprivate**especificado, su valor después del bucle es indeterminado.  
+ Una variable de entero con signo. Si esta variable se compartirá en caso contrario, se implícitamente hace privada para la duración de la **para**.   Esta variable no debe modificarse en el cuerpo de la **para** instrucción. A menos que se especifica la variable **lastprivate**, su valor después de que el bucle es indeterminado.  
   
- *lógico\-de Op. Sys.*  
+ *lógica-op*  
  Uno de los siguientes:  
   
- \<  
+ <  
   
- \<\=  
+ \<=  
   
- \>  
+ >  
   
- \>\=  
+ \>=  
   
- *signo de número*, *b*, y *ampliación*  
- Expresiones de entero invariables de bucle.  No hay ninguna sincronización durante la evaluación de estas expresiones.  Así, los efectos secundarios evaluado genera resultados indeterminados.  
+ *lb*, *b*, y *incr*  
+ Bucle expresiones entero invariable. No hay ninguna sincronización durante la evaluación de estas expresiones. Por lo tanto, efectos secundarios evaluados generan resultados indeterminados.  
   
- Observe que la forma canónica permite que el número de iteraciones del bucle se calcula en la entrada al bucle.  Este cálculo se realiza con valores en el tipo *de var*, después de promociones enteras.  En concreto, si valor *b* \- *la libra* \+ *aumentado* no se puede representar en ese tipo, el resultado es indeterminado.  Además, si *es lógico\-de Op. Sys.* es \< o \<\= a *aumento\-expr* debe producir *var* el aumento en cada iteración del bucle.  Si *es lógico\-de Op. Sys.* es \> o \>\= a *aumento\-expr* debe producir *var* disminuya en cada iteración del bucle.  
+ Tenga en cuenta que la forma canónica permite que el número de iteraciones del bucle debe calcularse en la entrada para el bucle. Este cálculo se realiza sin los valores en el tipo de *var*, después de promociones de enteros. En particular, si el valor de *b* - *lb* + *incr* no se puede representar en que el tipo, el resultado es indeterminado. Además, si *lógico op* es < o \<=, a continuación, *incr expr* deben provocar *var* para aumentar en cada iteración del bucle.   Si *lógico op* es > o > =, a continuación, *incr expr* deben provocar *var* reducir en cada iteración del bucle.  
   
- La cláusula de **programación** especifica cómo las iteraciones del bucle de **Para** se dividen entre los subprocesos del equipo.  La corrección de un programa no debe depender del subproceso ejecuta una iteración determinada.  El valor de *chunk\_size*, si se especifica, debe ser una expresión de tipo entero invariable de bucle con un valor positivo.  No hay ninguna sincronización durante la evaluación de esta expresión.  Así, los efectos secundarios evaluado genera resultados indeterminados.  *La clase* de programación puede ser una de las siguientes:  
+ El **programación** cláusula especifica cómo iteraciones de la **para** bucle se dividen entre los subprocesos del equipo. La corrección de un programa no debe depender de qué subproceso ejecuta una iteración concreta. El valor de *chunk_size*, si se especifica, debe ser una expresión de entero invariable de bucle con un valor positivo. No hay ninguna sincronización durante la evaluación de esta expresión. Por lo tanto, efectos secundarios evaluados generan resultados indeterminados. La programación *tipo* puede ser uno de los siguientes:  
   
- Los valores *de la clase* de cláusula de **programación** FRAME 2\-1  
+ TABLA 2-1 **programación** cláusula *tipo* valores  
   
 |||  
 |-|-|  
-|static|Cuando **programación \(static,** *chunk\_size*se especifica**\)** , las iteraciones se divide en partes de un tamaño especificado por *chunk\_size*.  Los elementos se asignan estáticamente a los subprocesos en el equipo de forma circular en el orden del número de subprocesos.  Cuando no *chunk\_size* se especifica, el espacio de la iteración se divide en partes que ocupan aproximadamente iguales de tamaño, con un fragmento asignado a cada subproceso.|  
-|dynamic|Cuando **programe \(dinámico,** *chunk\_size*se especifica**\)** , las iteraciones se divide en una serie de fragmentos, el cada contener *chunk\_size* iteraciones.  Cada fragmento se asigna a un subproceso que está esperando una asignación.  El subproceso ejecuta el fragmento de iteraciones y después espera la siguiente asignación, hasta que ningún partes queden asignar.  Observe que la pieza último asignarlos puede tener un número menor de iteraciones.  Cuando no *chunk\_size* se especifica, se toma como valor predeterminado la 1.|  
-|dirigido|Cuando **programación \(ejecuta,** *chunk\_size*se especifica**\)** , las iteraciones se asigna a los subprocesos en fragmentos a reducir los tamaños.  Cuando un subproceso finaliza su parte asignado de iteraciones, se asigna dinámicamente otro fragmento, hasta que queda ninguna.  Para *un chunk\_size* de 1, el tamaño de cada fragmento es aproximadamente el número de iteraciones no asignadas dividen por el número de subprocesos.  Estos tamaños disminuyen aproximadamente exponencial en 1.  Para *un chunk\_size* con *k* de valor mayor que 1, los tamaños disminuye aproximadamente exponencial *a k*, salvo que la pieza último puede tener menos que iteraciones *de k* .  Cuando no *chunk\_size* se especifica, se toma como valor predeterminado la 1.|  
-|motor en tiempo de ejecución|Cuando se especifica **programación \(en tiempo de ejecución\)** , la decisión referente a la programación se aplaza hasta el tiempo de ejecución.  *La clase* de programación y el tamaño de los sectores se pueden elegir en tiempo de ejecución estableciendo la variable de entorno **OMP\_SCHEDULE**.  Si esta variable de entorno no está establecida, la programación resultante es implementación\-definido.  Cuando se especifica **programación \(en tiempo de ejecución\)** , *chunk\_size* no debe especificar.|  
+|estático|Cuando **programación (estático,** *chunk_size***)** se especifica, iteraciones se dividen en fragmentos de un tamaño especificado por *chunk_size*. Los fragmentos se asignaron estáticamente a subprocesos en el equipo en un modo round-robin en el orden del número de subprocesos. Si no *chunk_size* se especifica, el espacio de la iteración se divide en fragmentos que son aproximadamente iguales en tamaño, con un fragmento que se asigna a cada subproceso.|  
+|dynamic|Cuando **programación (dinámicos,** *chunk_size***)** se especifica, las iteraciones se dividen en una serie de fragmentos, cada uno con *chunk_size* iteraciones. Cada fragmento se asigna a un subproceso que está esperando una asignación. El subproceso ejecuta el fragmento de iteraciones y, a continuación, espera su asignación siguiente, hasta que no queden ningún fragmento al que se asignará. Tenga en cuenta que el último fragmento que se asignará puede tener un menor número de iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
+|guiadas por perfiles|Cuando **programación (interactiva,** *chunk_size***)** se especifica, las iteraciones se asignan a los subprocesos en fragmentos con decrecientes tamaños. Cuando un subproceso finaliza su bloque asignado de iteraciones, se asigna dinámicamente otro fragmento, hasta que no queda ninguna. Para una *chunk_size* de 1, el tamaño de cada fragmento es aproximadamente igual al número de iteraciones sin asignar dividido por el número de subprocesos. Estos tamaños aproximadamente disminuyen exponencialmente en 1. Para una *chunk_size* con valor *k* mayor que 1, los tamaños de aproximadamente disminuir exponencialmente a *k*, excepto en que el último fragmento puede tener menos de  *k* iteraciones. Si no *chunk_size* se especifica, el valor predeterminado es 1.|  
+|motor en tiempo de ejecución|Cuando **schedule(runtime)** se especifica, la decisión sobre la programación se retrasa hasta el tiempo de ejecución. La programación *tipo* y tamaño de los fragmentos se puede seleccionar en tiempo de ejecución estableciendo la variable de entorno **OMP_SCHEDULE**. Si no se establece esta variable de entorno, la programación resultante está definido por la implementación. Cuando **schedule(runtime)** se especifica, *chunk_size* no se debe especificar.|  
   
- En ausencia de una cláusula definidas explícitamente de **programación** , **programación** predeterminado es implementación\-definido.  
+ En ausencia de definido explícitamente **programación** cláusula, el valor predeterminado **programación** define la implementación.  
   
- Un programa de OpenMP\-conforme a no debe confiar en una programación determinada para la ejecución correcta.  Un programa no debe depender de *una clase* de programación que cumple exacto a la descripción especificada anteriormente, porque es posible tener variaciones en las implementaciones de la misma *clase* de programación entre diferentes compiladores.  Las descripciones se pueden utilizar para seleccionar la programación adecuada para un escenario determinado.  
+ Un programa compatible con OpenMP no debe depender de una programación determinada para su ejecución correcta. Un programa no debe confiar en una programación *tipo* que se ajuste exactamente a la descripción dada anteriormente, porque es posible tener variaciones en las implementaciones de la misma programación *tipo* a través de compiladores diferentes. Las descripciones se pueden utilizar para seleccionar el plan que es adecuado para una situación determinada.  
   
- La cláusula de **consultar** debe estar presente en que las directivas de **consultar** enlazados a **Para** la construcción.  
+ El **ordenados** cláusula debe estar presente cuando **ordenados** directivas enlazar a la **para** construir.  
   
- Hay una barrera implícita al final de una construcción de **Para** a menos que se especifique una cláusula de **nowait** .  
+ Hay una barrera implícita al final de un **para** construir a menos que un **nowait** se especifica la cláusula.  
   
- Restricciones de la directiva de **Para** son los siguientes:  
+ Restricciones a la **para** directiva son los siguientes:  
   
--   El bucle de **Para** debe ser un bloque estructurado, y, además, la ejecución no se debe terminar con una instrucción de **Inter** .  
+-   El **para** bucle debe ser un bloque estructurado y, además, su ejecución no debe terminar con un **salto** instrucción.  
   
--   Los valores de las expresiones de control de bucle de bucle de **Para** asociado con una directiva de **Para** deben ser el mismo para todos los subprocesos en el equipo.  
+-   Los valores del bucle controlan las expresiones de la **para** bucle asociado con un **para** directiva debe ser el mismo para todos los subprocesos en el equipo.  
   
--   La variable de iteración del bucle de **Para** debe tener un tipo con signo entero.  
+-   El **para** variable de iteración del bucle debe tener un tipo de entero con signo.  
   
--   Una sola cláusula de **programación** puede aparecer en una directiva de **Para** .  
+-   Solo una **programación** cláusula puede aparecer en un **para** directiva.  
   
--   Una sola cláusula de **consultar** puede aparecer en una directiva de **Para** .  
+-   Solo una **ordenados** cláusula puede aparecer en un **para** directiva.  
   
--   Una sola cláusula de **nowait** puede aparecer en una directiva de **Para** .  
+-   Solo una **nowait** cláusula puede aparecer en un **para** directiva.  
   
--   No se especifica si o con qué frecuencia los efectos secundarios dentro *de chunk\_size*, *la libra*, el *b*, o de las expresiones *raise* aparece.  
+-   Es if no especificado o con qué frecuencia los efectos secundarios dentro de la *chunk_size*, *lb*, *b*, o *incr* aparecen expresiones.  
   
--   El valor de la expresión *de chunk\_size* debe ser el mismo para todos los subprocesos en el equipo.  
+-   El valor de la *chunk_size* expresión debe ser el mismo para todos los subprocesos en el equipo.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   **private**, **firstprivate**, **lastprivate**, y las cláusulas de **informe detallado** , vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.  
+-   **privada**, **firstprivate**, **lastprivate**, y **reducción** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en página 25.  
   
--   La variable de entorno**OMP\_SCHEDULE** , vea [sección 4,1](../../parallel/openmp/4-1-omp-schedule.md) en la página 48.  
+-   **OMP_SCHEDULE** vea variable de entorno [sección 4.1](../../parallel/openmp/4-1-omp-schedule.md) en página 48.  
   
--   la construcción de**consultar** , vea [sección 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) en la página 22.  
+-   **ordenados** construir, consulte [sección 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) en página 22.  
   
--   [apéndice d](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, le ofrece más información sobre cómo utilizar la cláusula de programación.
+-   [Apéndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, se proporciona más información sobre el uso de la cláusula schedule.

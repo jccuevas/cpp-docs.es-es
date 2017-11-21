@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITopologyNode structure
+dev_langs: C++
+helpviewer_keywords: ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c0a4e8365d7d0ef9912bb84e4a2a4cfe7e9ef0f1
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 1b2c53761a47162e3dae17a1447612d2e16fe16c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode (Estructura)
 Una interfaz a un nodo de topología definido por el Administrador de recursos. Un nodo contiene uno o varios recursos de ejecución.  
@@ -64,11 +46,11 @@ struct ITopologyNode;
 |[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|Devuelve el número de recursos de ejecución que se agrupan bajo este nodo.|  
 |[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.|  
 |[Itopologynode:: GetId](#getid)|Devuelve el Administrador de recursos del identificador único para este nodo.|  
-|[Itopologynode:: GetNext](#getnext)|Devuelve una interfaz hasta el siguiente nodo de topología en el orden de enumeración.|  
+|[Itopologynode:: GetNext](#getnext)|Devuelve una interfaz en el siguiente nodo de topología en orden de enumeración.|  
 |[Itopologynode:: Getnumanode](#getnumanode)|Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esta interfaz se utiliza normalmente para recorrer la topología del sistema observados por el Administrador de recursos.  
+ Esta interfaz se utiliza normalmente para recorrer la topología del sistema tal y como se observa el Administrador de recursos.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ITopologyNode`  
@@ -86,7 +68,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El número de recursos de ejecución se agrupan bajo este nodo.  
+ El número de recursos de ejecución que se agrupan bajo este nodo.  
   
 ##  <a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource (método)  
  Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.  
@@ -109,12 +91,12 @@ virtual unsigned int GetId() const = 0;
  El Administrador de recursos del identificador único para este nodo.  
   
 ### <a name="remarks"></a>Comentarios  
- El Runtime de simultaneidad representa subprocesos de hardware en el sistema en grupos de nodos de procesador. Nodos normalmente se derivan de la topología de hardware del sistema. Por ejemplo, todos los procesadores en un socket concreto o un nodo NUMA concreto pueden pertenecer al mismo nodo de procesador. El Administrador de recursos asigna identificadores únicos a estos nodos a partir de `0` hasta e incluyendo `nodeCount - 1`, donde `nodeCount` representa el número total de nodos de procesador en el sistema.  
+ El Runtime de simultaneidad representa subprocesos de hardware en el sistema en grupos de nodos de procesador. Nodos normalmente se derivan de la topología del hardware del sistema. Por ejemplo, todos los procesadores en un socket concreto o un nodo NUMA concreto pueden pertenecer al mismo nodo de procesador. El Administrador de recursos asigna identificadores únicos a estos nodos a partir de `0` hasta e incluyendo `nodeCount - 1`, donde `nodeCount` representa el número total de nodos de procesador en el sistema.  
   
  Se puede obtener el recuento de nodos de la función [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
 ##  <a name="getnext"></a>Itopologynode:: GetNext (método)  
- Devuelve una interfaz hasta el siguiente nodo de topología en el orden de enumeración.  
+ Devuelve una interfaz en el siguiente nodo de topología en orden de enumeración.  
   
 ```
 virtual ITopologyNode *GetNext() const = 0;
@@ -138,4 +120,3 @@ virtual unsigned long GetNumaNode() const = 0;
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

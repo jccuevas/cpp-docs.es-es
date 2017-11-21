@@ -1,29 +1,27 @@
 ---
-title: "Module::GetObjectCount (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetObjectCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetObjectCount (método)"
+title: "Module:: getobjectcount (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetObjectCount
+dev_langs: C++
+helpviewer_keywords: GetObjectCount method
 ms.assetid: 9fe29747-7e7f-40f2-9f6b-9a206b17fa8e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62e09aa2073c86c4bb4cc943e0bd90eee9b3c422
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Module::GetObjectCount (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetobjectcount-method"></a>Module::GetObjectCount (Método)
 Recupera el número de objetos administrados por este módulo.  
   
 ## <a name="syntax"></a>Sintaxis  

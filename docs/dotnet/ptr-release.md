@@ -1,45 +1,44 @@
 ---
-title: "ptr::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Release"
-  - "ptr::Release"
-  - "msclr.com.ptr.Release"
-  - "msclr::com::ptr::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release (método)"
+title: PTR::Release | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Release
+- ptr::Release
+- msclr.com.ptr.Release
+- msclr::com::ptr::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 7855781e-e4f6-4ad5-86a5-a81e2c3d90db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e1d7ab4d7cba32ae2d0d513decafb4111022f408
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libera todos poseyeron referencias en el objeto COM.  
+# <a name="ptrrelease"></a>ptr::Release
+Libera todas las referencias de propiedad en el objeto COM.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void Release();  
 ```  
   
-## Comentarios  
- Llamando a libera todos de esta función poseyó referencias en el objeto COM y establece el identificador interno al objeto COM a `nullptr`.  Si no existe ninguna otras referencias del objeto COM, se destruirá.  
+## <a name="remarks"></a>Comentarios  
+ Llamar a esta función libera propiedad todas las referencias en el objeto COM y establece el identificador interno para el objeto COM para `nullptr`.  Si no existen otras referencias en el objeto COM, se destruirá.  
   
-## Ejemplo  
- Este ejemplo implementa una clase CLR que utilice `com::ptr` para ajustar su objeto de `IXMLDOMDocument` miembro privado.  La función miembro de `ReplaceDocument` utiliza `Release` para liberar cualquier objeto anterior del documento antes de asociar el nuevo documento.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  El `ReplaceDocument` función miembro utiliza `Release` para liberar cualquier objeto de documento anterior antes de conectar el nuevo documento.  
   
 ```  
 // comptr_release.cpp  
@@ -113,11 +112,11 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\com\ptr.h >  
   
- msclr::com de**Namespace**  
+ **Namespace** msclr::com  
   
-## Vea también  
- [ptr \(Miembros\)](../dotnet/ptr-members.md)   
+## <a name="see-also"></a>Vea también  
+ [PTR (miembros)](../dotnet/ptr-members.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)

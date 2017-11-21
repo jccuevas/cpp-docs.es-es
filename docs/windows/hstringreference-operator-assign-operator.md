@@ -1,47 +1,45 @@
 ---
-title: "HStringReference::Operator= (Operador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator="
-dev_langs: 
-  - "C++"
+title: 'Hstringreference:: operator = (operador) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
+dev_langs: C++
 ms.assetid: ea100ed3-e566-4c9e-b6a8-f296088dea9c
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b6a9938308f0cbd8339c24d1876c09ae49df349
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# HStringReference::Operator= (Operador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mueve el valor de otro objeto HStringReference al objeto HStringReference actual.  
+# <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= (Operador)
+Mueve el valor de otro objeto de HStringReference al objeto HStringReference actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `other`  
- Un objeto existente de HStringReference.  
+ Un objeto HStringReference existente.  
   
-## Comentarios  
- El valor del objeto existente de `other` se copia en el objeto actual de HStringReference, y el objeto de `other` se destruye.  
+## <a name="remarks"></a>Comentarios  
+ El valor de la existente `other` objeto se copia en el objeto de HStringReference actual y, a continuación, el `other` se destruye el objeto.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [HStringReference \(Clase\)](../windows/hstringreference-class.md)
+## <a name="see-also"></a>Vea también  
+ [HStringReference (clase)](../windows/hstringreference-class.md)

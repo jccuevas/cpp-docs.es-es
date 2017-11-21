@@ -1,35 +1,33 @@
 ---
-title: "Error de las herramientas del vinculador LNK1309 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1309"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1309"
+title: Las herramientas del vinculador LNK1309 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1309
+dev_langs: C++
+helpviewer_keywords: LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: febaeeeabdf045ee7d223b7514d63202ded1e99c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error de las herramientas del vinculador LNK1309
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-módulo tipo1 detectado; no válido con el modificador \/CLRIMAGETYPE:tipo2  
+# <a name="linker-tools-error-lnk1309"></a>Error de las herramientas del vinculador LNK1309
+módulo tipo1 detectado; no válido con el modificador/CLRIMAGETYPE: tipo2  
   
- Se ha solicitado un tipo de imagen CLR con **\/CLRIMAGETYPE** pero el vinculador no ha podido generar ninguna imagen de ese tipo porque uno o varios módulos no eran compatibles con ese tipo.  
+ Se solicitó un tipo de imagen CLR con **/CLRIMAGETYPE** pero el vinculador no puede crear una imagen de ese tipo porque uno o varios módulos no eran compatibles con ese tipo.  
   
- Por ejemplo, se producirá el error LNK1309 si se especifica **\/CLRIMAGETYPE:safe** y se pasa un módulo creado con **\/clr:pure**.  
+ Por ejemplo, verá LNK1309 si especifica **/CLRIMAGETYPE:safe** y pasar un módulo compilado con **/CLR: pure**.  
   
- También se producirá el error LNK1309 si se intenta compilar una aplicación pura CLR que no sea de plena confianza utilizando ptrustu \[d\] .lib.  Para obtener información sobre cómo se crea una aplicación que no sea de plena confianza, vea [Cómo: Crear una aplicación de confianza parcial quitando la dependencia de la DLL de la biblioteca CRT](../../dotnet/create-a-partially-trusted-application.md).  
+ También verá LNK1309 si intentan volver a compilar una aplicación pura CLR confianza parcial mediante .lib ptrustu [d]. Para obtener información sobre cómo crear una aplicación de confianza parcial, vea [Cómo: crear una aplicación de confianza parcial mediante quitando la dependencia en la DLL de biblioteca de CRT](../../dotnet/create-a-partially-trusted-application.md).  
   
- Para obtener más información, vea [\/clr \(Compilación de Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md) y [\/CLRIMAGETYPE \(Especificar tipo de imagen CLR\)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+ Para obtener más información, consulte [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) y [/CLRIMAGETYPE (Especificar tipo de imagen de CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

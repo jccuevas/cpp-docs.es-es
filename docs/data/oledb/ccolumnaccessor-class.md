@@ -1,63 +1,62 @@
 ---
-title: "CColumnAccessor (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CColumnAccessor"
-  - "ATL::CColumnAccessor"
-  - "ATL.CColumnAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnAccessor (clase)"
+title: CColumnAccessor (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CColumnAccessor
+- ATL::CColumnAccessor
+- ATL.CColumnAccessor
+dev_langs: C++
+helpviewer_keywords: CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80193ff0304d55597e6690ac57ce06a482ef792d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# CColumnAccessor (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Genera insertó código de consumidor.  
+# <a name="ccolumnaccessor-class"></a>CColumnAccessor (Clase)
+Genera el código de consumidor insertado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CColumnAccessor : public CAccessorBase  
 ```  
   
-## Comentarios  
- En el código insertado, cada columna se enlaza como descriptor independiente.  Debe tener en cuenta que esta clase se utiliza en el código insertado \(por ejemplo, es posible que encuentre al depurar\), pero normalmente nunca tiene que usar la o sus métodos directamente.  
+## <a name="remarks"></a>Comentarios  
+ En el código insertado, todas las columnas se enlaza como un descriptor de acceso independiente. Debe tener en cuenta que esta clase se utiliza en el código insertado (por ejemplo, pueden surgir, al depurar), pero normalmente nunca es necesario utilizar directamente, ni a sus métodos.  
   
- `CColumnAccessor` implementa los siguientes métodos de código auxiliar, correspondientes en funcionalidad a otros métodos de clase de descriptor de acceso:  
+ `CColumnAccessor`implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponden en la funcionalidad de otros métodos de la clase de descriptor de acceso:  
   
--   constructor de`CColumnAccessor`The; crea instancias e inicializa el objeto de `CColumnAccessor` .  
+-   `CColumnAccessor`El constructor; crea e inicializa la `CColumnAccessor` objeto.  
   
--   memoria de`CreateAccessor`Allocates para estructuras de enlace de columna e inicializa los miembros de datos de columna.  
+-   `CreateAccessor`Asigna memoria a estructuras de enlace de la columna e inicializa a los miembros de datos de columna.  
   
 -   **BindColumns** enlaza las columnas a los descriptores de acceso.  
   
--   Búferes de**SetParameterBuffer**Allocates para los parámetros.  
+-   **SetParameterBuffer** asigna búferes de parámetros.  
   
--   `AddParameter` agrega una entrada de parámetro a las estructuras de entrada de parámetros.  
+-   `AddParameter`Agrega una entrada de parámetro a las estructuras de entrada de parámetro.  
   
--   **HasOutputColumns** determina si el descriptor de acceso ha generado columnas  
+-   **HasOutputColumns** determina si el descriptor de acceso tiene columnas de salida  
   
 -   **HasParameters** determina si el descriptor de acceso tiene parámetros.  
   
--   `BindParameters` enlaza los parámetros creados a las columnas.  
+-   `BindParameters`Enlaza los parámetros creados a las columnas.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

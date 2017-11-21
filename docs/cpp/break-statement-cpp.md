@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- break_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- break keyword [C++]
+f1_keywords: break_cpp
+dev_langs: C++
+helpviewer_keywords: break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e016ccc90ef53ca5f269a73d3f5b7ed3185f550
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 89be581f6e10ce5c3c7b0f92c37d165affb28844
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="break-statement-c"></a>break (Instrucción) (C++)
 La instrucción `break` finaliza la ejecución del bucle o la instrucción condicional envolvente más próximo en el que aparece. El control pasa a la instrucción que hay a continuación del final de la instrucción, si hay alguna.  

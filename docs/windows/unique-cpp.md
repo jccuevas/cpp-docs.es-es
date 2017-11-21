@@ -1,33 +1,30 @@
 ---
-title: "unique (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique attribute"
+title: "único (C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.unique
+dev_langs: C++
+helpviewer_keywords: unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 611879bf73fa7d61276d065a9009d356243f1954
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# unique (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-especifica un puntero único.  
+# <a name="unique-c"></a>unique (C++)
+Especifica un puntero único.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,27 +32,26 @@ especifica un puntero único.
   
 ```  
   
-## Comentarios  
- el atributo de **único** C\+\+ tiene la misma funcionalidad que el atributo de [único](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **único** atributo C++ tiene la misma funcionalidad que la [único](http://msdn.microsoft.com/library/windows/desktop/aa367294) atributo MIDL.  
   
-## Ejemplo  
- Vea el ejemplo de [referencia](../windows/ref-cpp.md) para un ejemplo de uso de **único**.  
+## <a name="example"></a>Ejemplo  
+ Consulte la [ref](../windows/ref-cpp.md) ejemplo para un ejemplo de uso de **único**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`, `struct`, **union**, parámetro de interfaz, método de interfaz|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|`typedef`, `struct`, **union**, la interfaz de parámetro, el método de interfaz|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de parámetro](../windows/parameter-attributes.md)   

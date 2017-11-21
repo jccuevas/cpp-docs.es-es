@@ -1,32 +1,30 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: library_block | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e0255002a8235f4e8a36d4b43df520d6e26865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="libraryblock"></a>library_block
 Coloca una construcción dentro del bloque de biblioteca IDL.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,11 +32,11 @@ Coloca una construcción dentro del bloque de biblioteca IDL.
   
 ```  
   
-## Comentarios  
- Cuando coloca una construcción dentro del bloque de la biblioteca, se garantiza que se pasa en la biblioteca de tipos, independientemente de si se hace referencia.  De forma predeterminada, solo las construcciones modificadas por [CoClass](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), y los atributos de [idl\_module](../windows/idl-module.md) se colocan en el bloque de la biblioteca.  
+## <a name="remarks"></a>Comentarios  
+ Cuando se coloca una construcción dentro del bloque de biblioteca, asegúrese de que se pasará en la biblioteca de tipos, independientemente de si se hace referencia. De forma predeterminada, solo las construcciones modificación la [coclase](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), y [idl_module](../windows/idl-module.md) atributos se colocan en el bloque de biblioteca.  
   
-## Ejemplo  
- En el código siguiente, una interfaz personalizada se coloca dentro del bloque de la biblioteca.  
+## <a name="example"></a>Ejemplo  
+ En el código siguiente, una interfaz personalizada se coloca dentro del bloque de biblioteca.  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +49,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Cualquier parte|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|En cualquier lugar|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de compilador](../windows/compiler-attributes.md)   
+ [Atributos independientes](../windows/stand-alone-attributes.md)   

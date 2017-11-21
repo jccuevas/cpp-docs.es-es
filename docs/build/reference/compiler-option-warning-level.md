@@ -1,134 +1,145 @@
 ---
-title: "/w, /Wn, /WX, /Wall, /wln, /wdn, /wen, /won (Nivel de advertencia) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.DisableSpecificWarnings"
-  - "VC.Project.VCCLCompilerTool.WarningLevel"
-  - "VC.Project.VCCLWCECompilerTool.DisableSpecificWarnings"
-  - "VC.Project.VCCLCompilerTool.WarnAsError"
-  - "VC.Project.VCCLWCECompilerTool.WarnAsError"
-  - "/wx"
-  - "VC.Project.VCCLWCECompilerTool.WarningLevel"
-  - "/wall"
-  - "VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors"
-  - "/Wv"
-  - "/w0"
-  - "/w1"
-  - "/w2"
-  - "/w3"
-  - "/w4"
-  - "/wd"
-  - "/we"
-  - "/wo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/w (opción del compilador)"
-  - "/W0 (opción del compilador) [C++]"
-  - "/W1 (opción del compilador) [C++]"
-  - "/W2 (opción del compilador) [C++]"
-  - "/W3 (opción del compilador) [C++]"
-  - "/W4 (opción del compilador) [C++]"
-  - "/Wall (opción del compilador) [C++]"
-  - "/wd (opción del compilador) [C++]"
-  - "/we (opción del compilador) [C++]"
-  - "/wo (opción del compilador) [C++]"
-  - "/WX (opción del compilador) [C++]"
-  - "w (opción del compilador) [C++]"
-  - "-w (opción del compilador) [C++]"
-  - "W0 (opción del compilador) [C++]"
-  - "-W0 (opción del compilador) [C++]"
-  - "W1 (opción del compilador) [C++]"
-  - "-W1 (opción del compilador) [C++]"
-  - "W2 (opción del compilador) [C++]"
-  - "-W2 (opción del compilador) [C++]"
-  - "W3 (opción del compilador) [C++]"
-  - "-W3 (opción del compilador) [C++]"
-  - "W4 (opción del compilador) [C++]"
-  - "-W4 (opción del compilador) [C++]"
-  - "Wall (opción del compilador) [C++]"
-  - "-Wall (opción del compilador) [C++]"
-  - "Nivel de advertencia (opción del compilador)"
-  - "advertencias, como errores (opción del compilador)"
-  - "wd (opción del compilador) [C++]"
-  - "-wd (opción del compilador) [C++]"
-  - "we (opción del compilador) [C++]"
-  - "-we (opción del compilador) [C++]"
-  - "wo (opción del compilador) [C++]"
-  - "-wo (opción del compilador) [C++]"
-  - "WX (opción del compilador) [C++]"
-  - "-WX (opción del compilador) [C++]"
+title: -w,-W0,-W1, - W2,-W3, - W4,-w1,-w2,-w3,-w4,-Wall, -wd,-se, -wo, -Wv, - WX (nivel de advertencia) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.DisableSpecificWarnings
+- VC.Project.VCCLCompilerTool.WarningLevel
+- VC.Project.VCCLWCECompilerTool.DisableSpecificWarnings
+- VC.Project.VCCLCompilerTool.WarnAsError
+- VC.Project.VCCLWCECompilerTool.WarnAsError
+- /wx
+- VC.Project.VCCLWCECompilerTool.WarningLevel
+- /wall
+- VC.Project.VCCLCompilerTool.TreatSpecificWarningsAsErrors
+- /Wv
+- /w0
+- /w1
+- /w2
+- /w3
+- /w4
+- /wd
+- /we
+- /wo
+dev_langs: C++
+helpviewer_keywords:
+- /W1 compiler option [C++]
+- w compiler option [C++]
+- -wo compiler option [C++]
+- Warning Level compiler option
+- W1 compiler option [C++]
+- -we compiler option [C++]
+- /WX compiler option [C++]
+- -wd compiler option [C++]
+- WX compiler option [C++]
+- wo compiler option [C++]
+- Wall compiler option [C++]
+- /w compiler option
+- W2 compiler option [C++]
+- -W2 compiler option [C++]
+- wd compiler option [C++]
+- /we compiler option [C++]
+- we compiler option [C++]
+- -W1 compiler option [C++]
+- -W4 compiler option [C++]
+- -Wall compiler option [C++]
+- /Wall compiler option [C++]
+- -W0 compiler option [C++]
+- W0 compiler option [C++]
+- -WX compiler option [C++]
+- /wo compiler option [C++]
+- W4 compiler option [C++]
+- W3 compiler option [C++]
+- /wd compiler option [C++]
+- warnings, as errors compiler option
+- /W3 compiler option [C++]
+- /W0 compiler option [C++]
+- /W4 compiler option [C++]
+- -W3 compiler option [C++]
+- -w compiler option [C++]
+- /W2 compiler option [C++]
+- /Wv compiler option [C++]
 ms.assetid: d6bc7bf5-c754-4879-909c-8e3a67e2629f
-caps.latest.revision: 21
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5504c3d726feda499fb4b63f68d7784291308694
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# /w, /Wn, /WX, /Wall, /wln, /wdn, /wen, /won (Nivel de advertencia)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica cómo el compilador genera las advertencias para una compilación determinada.  
+# <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/ w, / W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, / se, /wo, / wv, /WX (nivel de advertencia)
+Especifica cómo el compilador genera advertencias para una compilación dada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /w  
-/Wn  
-/WX  
+/W0  
+/W1  
+/W2  
+/W3  
+/W4  
 /Wall  
-/wln  
-/wdn  
-/wen  
-/won  
+/Wv[<version>]  
+/WX  
+/w1<warning>   
+/w2<warning>   
+/w3<warning>   
+/w4<warning>   
+/wd<warning>   
+/we<warning>   
+/wo<warning>  
 ```  
   
-## Comentarios  
- Las opciones y los argumentos relacionados se describen en la tabla siguiente.  
+## <a name="remarks"></a>Comentarios  
+ Las opciones de advertencia especifican qué advertencias del compilador para mostrar y el comportamiento de advertencia para la compilación completo.  
+  
+ En la tabla siguiente se describen las opciones de advertencia y los argumentos relacionados:  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**\/w**|Deshabilita todas las advertencias del compilador.|  
-|**\/W** `n`|Especifica el nivel de advertencia de ser generado por el compilador.  Los niveles válidos para `n` pueden tomar valores entre 0 y 4:<br /><br /> -   En el nivel 0 se deshabilitan todas las advertencias.<br />-   En el nivel 1 se muestran las advertencias severas.  El nivel 1 es la configuración predeterminada.<br />-   El nivel 2 muestra todas las advertencias de nivel 1 y las advertencias que tengan menos graves que el nivel 1.<br />-   El nivel 3 muestra todas las advertencias de nivel 2 y el resto de las advertencias que se recomienda para la producción.<br />-   El nivel 4 muestra todas las advertencias de nivel 3 y advertencias informativas.  Se recomienda usar esta opción para proporcionar sólo pelusa\- como advertencias.  Sin embargo, para un nuevo proyecto, puede ser preferible utilizar `/W4` en todas las compilaciones; esto asegurará el menor de los defectos de código posibles de la duro\-a\- búsqueda.|  
-|**\/Wall**|Muestra todas las advertencias de \/W4 y cualquier otra advertencia que no están incluidos en \/W4 \(por ejemplo, las advertencias que están desactivadas de forma predeterminada.  Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|**\/WX**|Trata todas las advertencias del compilador como errores.  Para un proyecto nuevo, puede ser más conveniente usar **\/WX** en todas las compilaciones; la resolución de todas las advertencias asegura el menor número posible de defectos de código de difícil localización.<br /><br /> El vinculador también tiene una opción de **\/WX** .  Para obtener más información, vea [\/WX \(Tratar advertencias del vinculador como errores\)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|  
-|**\/w** `ln`|Especifica el nivel de una advertencia concreta.  El primer parámetro establece el nivel de la advertencia \(lo mismo que **\/W**`n`\) y el segundo es el número de la advertencia.<br /><br /> Por ejemplo, `/w14326` hace que C4326 se genere como una advertencia de nivel 1.|  
-|**\/wd** `n`|Deshabilita la advertencia del compilador que se especifica en `n`.<br /><br /> Por ejemplo, `/wd4326` deshabilita la advertencia de compilador C4326.|  
-|**\/we** `n`|Trata como error la advertencia del compilador que se especifica en `n`.<br /><br /> Por ejemplo, `/we4326` marca el número de advertencia C4326 como un error.|  
-|**\/wo** `n`|Notifica el error solo una vez para la advertencia del compilador que se especifica en `n`.<br /><br /> Por ejemplo, `/wo4326` genera la advertencia C4326 que se señalice sólo una vez.|  
+|**/ w**|Suprime todas las advertencias del compilador.|  
+|**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Especifica el nivel de advertencias que se ha generado por el compilador. Los niveles de advertencia válidos oscilan entre 0 y 4:<br /><br /> -   **/ W0** suprime todas las advertencias.<br />-   **/ W1** muestra advertencias de nivel 1 (severas). **/ W1** es la configuración predeterminada.<br />-   **/ W2** muestra nivel 1 y nivel 2 advertencias (importantes).<br />-   **/ W3** muestra nivel 1, nivel 2 y avisos de nivel 3 (calidad de producción).<br />-   **/ W4** muestra nivel 1, nivel 2 y avisos de nivel 3, y todo el nivel 4 advertencias (informativas) que no están desactivadas de forma predeterminada. Se recomienda que use esta opción solo para proporcionar advertencias similares a quitar. Sin embargo, para un proyecto nuevo, puede ser mejor usar **/W4** en todas las compilaciones; Esto garantizará el menor número de defectos de código difícil de encontrar posibles.|  
+|**/ Wall**|Muestra todas las advertencias que se muestran por **/W4** y todas las demás advertencias que **/W4** no incluye, por ejemplo, las advertencias que están desactivadas de forma predeterminada. Para obtener más información, consulte [compilador advertencias que está desactivado de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|**/ Wv**`:version`|Suprimir las advertencias introducidas en las versiones del compilador más recientes que `version`. Puede usar esta opción para determinar si hay nuevas advertencias en el código compilado sin advertencias cuando se usa una versión anterior del compilador y para suprimir temporalmente las advertencias nuevo desde el proceso de compilación, mientras que corregirlos. El parámetro opcional `version` toma la forma `nn`[.`mm` [. `bbbbb`]] donde `nn` es el número de versión principal, `mm` es el número de versión secundaria opcional, y `bbbbb` es el número de versión opcional del compilador. Por ejemplo, utilice `/Wv:17.00.00000` para suprimir las advertencias introducidas en Visual C++ 2012 y versiones posteriores. De forma predeterminada, **/wv** utiliza el número de versión del compilador actual y sin advertencias se suprimen. Para obtener información sobre los cuales se suprimen las advertencias por versión del compilador, vea [advertencias del compilador por versión del compilador](../..//error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|  
+|**/WX**|Trata todas las advertencias del compilador como errores. Para un proyecto nuevo, puede ser más conveniente usar **/WX** en todas las compilaciones; resolver todas las advertencias asegura el menor número de defectos de código difícil de encontrar posibles.<br /><br /> El vinculador también tiene una **/WX** opción. Para obtener más información, consulte [/WX (Tratar advertencias del enlazador como errores)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|  
+|**/W1**`n`<br /><br /> **/W2**`n`<br /><br /> **/W3**`n`<br /><br /> **/ W4**`n`|Establece el nivel de advertencia para el número de advertencia especificado por `n`. Esto le permite cambiar el comportamiento del compilador para dicha advertencia cuando se establece un nivel de advertencia específico. Puede usar estas opciones en combinación con otras opciones de advertencia para aplicar los estándares de sus propio código para las advertencias, en lugar de los predeterminados suministrados por Visual Studio.<br /><br /> Por ejemplo, `/w34326` hace que C4326 se genere como una advertencia de nivel 3 en lugar de nivel 1. Si se compila con ambos el `/w34326` opción y `/W2` opción, advertencia C4326 no se genera.|  
+|**/wd**`n`|Suprime la advertencia del compilador especificado por `n`.<br /><br /> Por ejemplo, `/wd4326` suprime la advertencia de compilador C4326.|  
+|**/we**`n`|Trata la advertencia del compilador especificado por `n` como un error.<br /><br /> Por ejemplo, `/we4326` hace que el número de advertencia C4326 se trate como un error por el compilador.|  
+|**/wo**`n`|El compilador de advertencia que es especificada por los informes `n` una sola vez.<br /><br /> Por ejemplo, `/wo4326` causas advertencia C4326 se comunique una sola vez, la primera vez que se encuentra por el compilador.|  
   
- Si crea un encabezado precompilado \([\/Yc \(Crear archivo de encabezado precompilado\)](../../build/reference/yc-create-precompiled-header-file.md)\) utilizando una de las opciones de **\/w** , cualquier uso del encabezado precompilado \([\/Yu \(Utilizar el archivo de encabezado precompilado\)](../../build/reference/yu-use-precompiled-header-file.md)\) hace que los las opciones de **\/w** de ser en efecto de nuevo.  Puede reemplazar **\/w** que establece en el encabezado precompilado con otra opción de **\/w** en la línea de comandos.  
+ Si usa cualquiera de las opciones de advertencia cuando se crea un encabezado precompilado utilizando la [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opción, cualquier uso del encabezado precompilado utilizando la [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opción hace que las mismas opciones de advertencia a estar en vigor volver a ejecutarlo. Puede invalidar las opciones de advertencia establecidas en el encabezado precompilado con otra opción de advertencia en la línea de comandos.  
   
- Las directivas pragma en el código fuente no resultan afectadas por la opción **\/w**.  
+ Puede usar un [#pragma warning](../../preprocessor/warning.md) directiva para controlar el nivel de advertencia que se notifica en tiempo de compilación en archivos de origen específico.  
   
- También puede utilizar [warning](../../preprocessor/warning.md) para controlar el nivel de advertencia que se notifica en tiempo de compilación.  
+ Directivas de advertencia pragma en el código fuente no se ven afectadas por la **/w** opción.  
   
- [documentación de errores de compilación](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) describe las advertencias y niveles de advertencia, e indica por qué algunas instrucciones pueden no compilarse como el esperado.  
+ El [documentación sobre errores de compilación](../../error-messages/compiler-errors-1/c-cpp-build-errors.md) describe las advertencias y los niveles de advertencia e indica por qué ciertas instrucciones no pueden compilarse según lo esperado.  
   
-### Para establecer la opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-the-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer la opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  **C\/C\+\+**Seleccione.  
+2.  Seleccione **C/C++**.  
   
-3.  En la página de propiedades de **General** , modifique las propiedades de **Nivel de advertencia** o de **Tratar advertencias como errores** .  
+3.  En el **General** propiedad, modifique la **nivel de advertencia** o **tratar advertencias como errores** propiedades.  
   
-4.  En la página de propiedades de **opciones avanzadas** , modifique la propiedad de **Deshabilitar advertencias específicas** .  
+4.  En el **avanzadas** propiedad, modifique la **deshabilitar advertencias específicas** propiedad.  
   
-5.  Para las opciones restantes, en la página de propiedades de **Línea de comandos** , escriba la opción del compilador en el cuadro de **Opciones adicionales** .  
+5.  Para el resto de opciones, en el **línea de comandos** propiedad página, escriba la opción del compilador en el **opciones adicionales** cuadro.  
   
-### Para establecer la opción del compilador mediante programación  
+### <a name="to-set-the-compiler-option-programmatically"></a>Para establecer la opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>, <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A> y <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

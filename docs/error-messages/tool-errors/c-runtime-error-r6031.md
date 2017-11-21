@@ -1,29 +1,39 @@
 ---
-title: "Error de tiempo de ejecuci&#243;n de C R6031 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6031"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6031"
+title: "R6031 de Error en tiempo de ejecución de C | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6031
+dev_langs: C++
+helpviewer_keywords: R6031
 ms.assetid: 805d4cd1-cb2f-43fe-87e6-e7bd5b7329c5
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 587b370e94de573f262772de0f5a8bf34f25124b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Error en tiempo de ejecuci&#243;n de C R6031
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Intento de inicializar CRT más de una vez.Esto indica un error en la aplicación.  
+# <a name="c-runtime-error-r6031"></a>R6031 de Error en tiempo de ejecución de C
+Intento de inicializar CRT más de una vez. Esto indica un error en la aplicación.  
   
- Este diagnóstico indica que se ejecutaban instrucciones MSIL durante el bloqueo del cargador.  Para obtener más información, vea [Inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).
+> [!NOTE]
+>  Si aparece este mensaje de error mientras se ejecuta una aplicación, la aplicación se cerró porque tiene un problema interno. Esto puede deberse errores en la aplicación o a un error en un complemento o una extensión que usa la aplicación.  
+>   
+>  Puede intentar seguir estos pasos para corregir este error:  
+>   
+>  -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para reparar o reinstalar el programa.  
+> -   Use la **aplicaciones y características** o **programas y características** página en el **el Panel de Control** para quitar, reparar o reinstalar los programas de complemento o extensión utilizados por la aplicación.  
+> -   Comprobar **Windows Update** en el **el Panel de Control** las actualizaciones de software.  
+> -   Busque una versión actualizada de la aplicación. Si el problema continúa, póngase en contacto con el proveedor de la aplicación.  
+  
+ **Información para programadores**  
+  
+ Este diagnóstico indica que se estaban ejecutando instrucciones MSIL durante el bloqueo del cargador. Para obtener más información, consulte [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).

@@ -1,29 +1,29 @@
 ---
-title: "Convenciones de llamada, par&#225;metros y tipo de valor devuelto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "convenciones de llamada, funciones auxiliares"
-  - "funciones auxiliares, convenciones de llamada"
-  - "funciones auxiliares, tipos de valor devueltos"
+title: "Convenciones de llamada, parámetros y tipo de valor devuelto | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bdaf30655808d5a43f6866039cc93a3833896921
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Convenciones de llamada, par&#225;metros y tipo de valor devuelto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>Convenciones de llamada, parámetros y tipo de valor devuelto
 El prototipo de la rutina de la aplicación auxiliar es:  
   
 ```  
@@ -36,17 +36,17 @@ FARPROC WINAPI __delayLoadHelper2(
  donde:  
   
  `pidd`  
- Un puntero `const` a una `ImgDelayDescr` \(consulte delayimp.h\) que contiene los desplazamientos de diversos datos relacionados con la importación, una marca de tiempo para enlazar información y un conjunto de atributos que proporcionan más información sobre el contenido del descriptor.  Actualmente, solo hay un atributo, `dlattrRva`, que indica que las direcciones del descriptor son direcciones virtuales relativas \(y no direcciones virtuales\).  
+ Un puntero `const` a una `ImgDelayDescr` (consulte delayimp.h) que contiene los desplazamientos de diversos datos relacionados con la importación, una marca de tiempo para enlazar información y un conjunto de atributos que proporcionan más información sobre el contenido del descriptor. Actualmente, solo hay un atributo, `dlattrRva`, que indica que las direcciones del descriptor son direcciones virtuales relativas (y no direcciones virtuales).  
   
- Para ver la definición de la estructura de `PCImgDelayDescr`, consulte [Definiciones de estructura y de constante](../../build/reference/structure-and-constant-definitions.md).  
+ Para obtener la definición de la `PCImgDelayDescr` estructura, vea [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).  
   
  `ppfnIATEntry`  
- Un puntero a la ranura de la tabla de direcciones de importación \(IAT\) de carga retrasada que se actualizará con la dirección de la función importada.  La rutina de la aplicación auxiliar tiene que almacenar el mismo valor que devolverá en esta ubicación.  
+ Un puntero a la ranura de la tabla de direcciones de importación (IAT) de carga retrasada que se actualizará con la dirección de la función importada. La rutina de la aplicación auxiliar tiene que almacenar el mismo valor que devolverá en esta ubicación.  
   
-## Valores devueltos esperados  
+## <a name="expected-return-values"></a>Valores devueltos esperados  
  Si la función se ejecuta correctamente, devolverá la dirección de la función importada.  
   
- Si la función no se ejecuta correctamente, generará una excepción y devolverá 0.  Se pueden generar tres tipos de excepciones:  
+ Si la función no se ejecuta correctamente, generará una excepción y devolverá 0. Se pueden generar tres tipos de excepciones:  
   
 -   Parámetro no válido, que se produce si los atributos de `pidd` no se especifican correctamente.  
   
@@ -56,12 +56,12 @@ FARPROC WINAPI __delayLoadHelper2(
   
  Es su responsabilidad administrar estas excepciones.  
   
-## Comentarios  
- La convención de llamada de la función auxiliar es `__stdcall`.  El tipo del valor devuelto no es relevante, de modo que se usa FARPROC.  Esta función tiene vinculación de C.  
+## <a name="remarks"></a>Comentarios  
+ La convención de llamada de la función auxiliar es `__stdcall`. El tipo del valor devuelto no es relevante, de modo que se usa FARPROC. Esta función tiene vinculación de C.  
   
- El valor devuelto de la aplicación auxiliar de carga retrasada tiene que almacenarse en la ubicación del puntero de función transferida, salvo que quiera que la rutina de la aplicación auxiliar se use como enlace de notificación.  En ese caso, su código será el responsable de buscar el puntero de función adecuado que deba devolver.  Entonces, el código thunk generado por el enlazador tomará ese valor devuelto como el destino real de la importación y saltará a él directamente.  
+ El valor devuelto de la aplicación auxiliar de carga retrasada tiene que almacenarse en la ubicación del puntero de función transferida, salvo que quiera que la rutina de la aplicación auxiliar se use como enlace de notificación. En ese caso, su código será el responsable de buscar el puntero de función adecuado que deba devolver. Entonces, el código thunk generado por el enlazador tomará ese valor devuelto como el destino real de la importación y saltará a él directamente.  
   
-## Ejemplo  
+## <a name="sample"></a>Ejemplo  
  El siguiente código muestra cómo implementar una función de enlace simple.  
   
 ```  
@@ -141,5 +141,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Descripción de la función auxiliar](../../build/reference/understanding-the-helper-function.md)

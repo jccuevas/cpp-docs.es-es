@@ -1,33 +1,30 @@
 ---
-title: "threading (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: subprocesamiento (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c85287a590dfa9cf3c931ce358dca8b303f4737a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="threading-c"></a>threading (C++)
 Especifica el modelo de subprocesos de un objeto COM.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,49 +33,48 @@ Especifica el modelo de subprocesos de un objeto COM.
 ) ]  
 ```  
   
-#### Parámetros  
- ***modelo*** \(opcional\)  
- uno de los modelos de subprocesos siguientes:  
+#### <a name="parameters"></a>Parámetros  
+ ***modelo*** (opcional)  
+ Uno de los siguientes modelos de subprocesamiento:  
   
--   **apartamento** \(subproceso controlado\)  
+-   **apartamento** (apartamento de subproceso)  
   
--   **neutro** \(componentes de .NET Framework sin interfaz de usuario\)  
+-   **neutro** (componentes de .NET Framework sin interfaz de usuario)  
   
--   **solo** \(subprocesamiento simple\)  
+-   **solo** (ejecución de subprocesos simple)  
   
--   **libre** \(subprocesamiento libre\)  
+-   **libre** (libre de subprocesos)  
   
--   **ambos** \(apartamento y subprocesamiento libre\)  
+-   **ambos** (apartamento y subprocesamiento libre)  
   
- el valor predeterminado es **apartamento**.  
+ El valor predeterminado es **apartamento**.  
   
-## Comentarios  
- El atributo de **subprocesamiento** C\+\+ no aparece en el archivo generado .idl pero se utiliza en la implementación del objeto COM.  
+## <a name="remarks"></a>Comentarios  
+ El **subprocesamiento** atributo C++ no aparece en el archivo .idl generado, pero se utilizarán en la implementación del objeto COM.  
   
- En proyectos ATL, si el atributo de [CoClass](../windows/coclass.md) también está presente, el modelo de subprocesos especificado por *el modelo* se pasa como parámetro de plantilla a la clase de [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) , insertada por el atributo de **CoClass** .  
+ En los proyectos ATL, si la [coclase](../windows/coclass.md) también está presente, el atributo especificado por el modelo de subprocesamiento *modelo* se pasa como el parámetro de plantilla para la [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) (clase) , inserta la **coclase** atributo.  
   
- Las restricciones de **subprocesamiento** también tienen acceso a [event\_source](../windows/event-source.md).  
+ El **subprocesamiento** atributo también evita el acceso a un [event_source](../windows/event-source.md).  
   
-## Ejemplo  
- Vea el ejemplo de [licencia](../windows/licensed.md) para un ejemplo de uso de **subprocesamiento**.  
+## <a name="example"></a>Ejemplo  
+ Consulte la [con licencia](../windows/licensed.md) ejemplo para un ejemplo de uso de **subprocesamiento**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `struct`|  
-|**repetible**|No|  
-|**Atributos necesarios**|**CoClass**|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|**class**, `struct`|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|**coclass**|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Compatibilidad del código antiguo con multithreading \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos COM](../windows/com-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   
+ [Compatibilidad con multithreading código antiguo (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Neutros apartamentos](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

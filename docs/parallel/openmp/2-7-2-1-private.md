@@ -1,42 +1,41 @@
 ---
-title: "2.7.2.1 private | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.1 privada | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 079b4b84-f2b3-4050-a0ac-289493c36b3d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2aeb8f7c04798c23b23c27f7880802004b31b9d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.1 private
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La cláusula de `private` declara las variables en variable\-lista que es confidencial a cada subproceso en un equipo.  La sintaxis de la cláusula de `private` es la siguiente:  
+# <a name="2721-private"></a>2.7.2.1 private
+El `private` cláusula declara las variables de la lista de variables a ser privada para cada subproceso de un equipo. La sintaxis de la `private` cláusula es como sigue:  
   
 ```  
 private(variable-list)  
 ```  
   
- El comportamiento de la variable especificada en una cláusula de `private` es la siguiente.  Un nuevo objeto con la duración automática de almacenamiento se asigna para la construcción.  El tamaño y alineación de nuevo objeto vienen determinados por el tipo de la variable.  Esta asignación se produce una vez para cada subproceso del equipo, y se invoca un constructor predeterminado para un objeto de clase en caso necesario; si no el valor inicial es indeterminado.  El objeto original al que hace referencia la variable hace un valor indeterminado sobre la entrada a la construcción, no modificar dentro de la extensión dinámica de la construcción, y tiene un valor indeterminado sobre el resultado de la construcción.  
+ El comportamiento de una variable especificada en un `private` cláusula es como sigue. Se asigna un nuevo objeto con una duración de almacenamiento automática para la construcción. El tamaño y la alineación del nuevo objeto se determinan por el tipo de la variable. Esta asignación se produce una vez para cada subproceso en el equipo y se invoca un constructor predeterminado para un objeto de clase, si es necesario; en caso contrario, el valor inicial es indeterminado.  El objeto original al que hace referencia la variable tiene un valor indeterminado sobre las entradas a la construcción, no debe modificarse en la extensión dinámica de la construcción y tiene un valor indeterminado al salir de la construcción.  
   
- En la extensión léxica de construcción directiva, la variable hace referencia al nuevo objeto privado asignado por el subproceso.  
+ En la extensión léxica de la construcción de la directiva, el nuevo objeto privado asignado por el subproceso hace referencia a la variable.  
   
- Restricciones de la cláusula de `private` son los siguientes:  
+ Las restricciones a la `private` cláusula son los siguientes:  
   
--   Una variable con un tipo de clase que se especifica en una cláusula de `private` debe tener un constructor predeterminado accesible, inequívoca.  
+-   Una variable con un tipo de clase que se especifica en un `private` cláusula debe tener un constructor predeterminado accesible y no ambigua.  
   
--   La variable especificada en una cláusula de `private` no debe tener **const**\- tipo calificado a menos que tenga un tipo de clase con un miembro de `mutable` .  
+-   Una variable especificada en un `private` cláusula no debe tener un **const**-calificado tipo a menos que tenga una clase de tipo con un `mutable` miembro.  
   
--   La variable especificada en una cláusula de `private` no debe tener un tipo incompleto o un tipo de referencia.  
+-   Una variable especificada en un `private` cláusula no debe tener un tipo incompleto ni un tipo de referencia.  
   
--   Las variables que aparecen en la cláusula de `reduction` de una directiva de **Paralelo** no se pueden especificar en una cláusula de `private` en una directiva de división del trabajo que se enlaza a la construcción paralela.
+-   Las variables que aparecen en la `reduction` cláusula de una **paralelo** directiva no se puede especificar en un `private` cláusula en una directiva de uso compartido que se enlaza a la construcción paralela.

@@ -1,57 +1,55 @@
 ---
-title: "Reemplazar una funci&#243;n virtual (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.virtualfunc.override"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clases base, reemplazar funciones virtuales definidas en"
-  - "Propiedades (ventana), reemplazar funciones virtuales en"
-  - "funciones virtuales, reemplazar"
+title: "Reemplazar una función Virtual (Visual C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.virtualfunc.override
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, overriding
+- base classes, overriding virtual functions defined in
+- Properties window, overriding virtual functions in
 ms.assetid: 2d8c76f2-7a6b-4c9c-8de5-4282ce7755b6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85e79cc21d745ad7f57c4c47b784e58359da6ef4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Reemplazar una funci&#243;n virtual (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se pueden reemplazar las funciones virtuales definidas en una clase base desde la [ventana Propiedades](../Topic/Properties%20Window.md) de Visual Studio.  
+# <a name="overriding-a-virtual-function-visual-c"></a>Reemplazar una función virtual (Visual C++)
+Puede reemplazar las funciones virtuales definidas en una clase base desde Visual Studio [ventana propiedades](/visualstudio/ide/reference/properties-window).  
   
-### Para reemplazar una función virtual en la ventanas Propiedades  
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>Para reemplazar una función virtual en la ventana Propiedades  
   
-1.  En la Vista de clases, haga clic en la clase.  
+1.  En la vista de clases, haga clic en la clase.  
   
-2.  En la ventana Propiedades, haga clic en el botón **Invalidaciones**.  
+2.  En la ventana Propiedades, haga clic en el **invalida** botón.  
   
     > [!NOTE]
-    >  El botón **Invalidaciones** está disponible al seleccionar el nombre de la clase en la Vista de clases o al hacer clic dentro de la ventana de código fuente.  
+    >  El **invalida** botón está disponible cuando se selecciona el nombre de clase en la vista de clases o al hacer clic en la ventana de código fuente.  
   
-     La columna izquierda enumera las funciones virtuales.  Si el nombre de una función virtual también aparece en la columna derecha, ello quiere decir que ya se ha implementado una función de reemplazo.  
+     La columna izquierda enumera las funciones virtuales. Si el nombre de una función virtual también aparece en la columna derecha, ya se implementó una invalidación.  
   
-3.  Si la función no posee ningún reemplazo, haga clic en la celda de la columna derecha en la ventana Propiedades para mostrar el nombre sugerido para la función de reemplazo como \<add\>*FuncName.*  
+3.  Si la función no posee ningún reemplazo, a continuación, haga clic en la celda en la columna derecha en la ventana Propiedades para mostrar el nombre sugerido de la función de invalidación como \<Agregar >*FuncName*.  
   
-4.  Haga clic en el nombre sugerido para agregar código auxiliar a la función.  
+4.  Haga clic en el nombre sugerido para agregar código auxiliar para la función.  
   
-5.  Para modificar una función de reemplazo, haga doble clic en el nombre de la función en la Vista de clases y modifique el código en la ventana de código.  
+5.  Para modificar una función de reemplazo, haga doble clic en el nombre de la función en la vista de clases y modifique el código en la ventana de código fuente.  
   
- Para quitar un reemplazo, haga clic en el nombre de la función de reemplazo en la columna derecha y seleccione \<delete\>*FuncName.* El código de la función queda convertido en comentarios.  
+ Para quitar una invalidación, haga clic en el nombre de la función de reemplazo en la columna derecha y seleccione \<eliminar >*FuncName*. Se hace referencia a código de la función.  
   
-## Vea también  
- [Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Agregar una clase](../ide/adding-a-class-visual-cpp.md)   
  [Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Explorar la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)
+ [Agregar una Variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)

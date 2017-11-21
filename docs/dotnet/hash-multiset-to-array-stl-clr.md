@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (miembro) [STL/CLR]"
+title: hash_multiset::to_array (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: fc28b42a-a8fe-4953-887b-8a12957d4778
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36e52be2a66b019a5f6487daf0c01106e1b8a40b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la secuencia controlada a una nueva matriz.  
+# <a name="hashmultisettoarray-stlclr"></a>hash_multiset::to_array (STL/CLR)
+Copia la secuencia controlada en una nueva matriz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## Comentarios  
- La función miembro devuelve una matriz que contiene la secuencia controlada.  Se usa para obtener una copia de la secuencia controlada en forma de matriz.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve una matriz que contiene la secuencia controlada. Se usa para obtener una copia de la secuencia controlada en forma de matriz.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_hash_multiset_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **una c d b**  
- **a b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Encabezado:** \>  
+```Output  
+a b c d  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/hash_set >  
   
-## Vea también  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)

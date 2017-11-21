@@ -1,32 +1,30 @@
 ---
-title: "copy_backward (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::copy_backward"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copy_backward (función) [STL/CLR]"
+title: copy_backward (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::copy_backward
+dev_langs: C++
+helpviewer_keywords: copy_backward function [STL/CLR]
 ms.assetid: 649db3fd-5a79-44b6-bea9-ecbcbeba1f32
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d9138ef071acd984826add535bba57f86b00864
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# copy_backward (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="copybackward-stlclr"></a>copy_backward (STL/CLR)
 Asigna los valores de elementos de un intervalo de origen a un intervalo de destino, recorriendo en iteración la secuencia de origen de elementos y asignándoles nuevas posiciones en una dirección hacia atrás.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _BidIt1, class _BidIt2> inline  
@@ -34,13 +32,13 @@ template<class _BidIt1, class _BidIt2> inline
         _BidIt2 _Dest);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `copy_backward`STL.  Para obtener más información, vea [copy\_backward](../Topic/copy_backward.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `copy_backward`. Para obtener más información, consulte [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

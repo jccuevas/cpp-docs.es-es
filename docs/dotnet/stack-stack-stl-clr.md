@@ -1,32 +1,30 @@
 ---
-title: "stack::stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack (miembro) [STL/CLR]"
+title: 'Stack:: Stack (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e12c704561cd56ac251479861740c7df205f1e37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# stack::stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
 Construye un objeto de adaptador de contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 stack();  
@@ -35,39 +33,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
- Objeto a la copia.  
+ Objeto que se va a copiar.  
   
  ajustado  
- Contenedor ajustado a utilizar.  
+ Contenedor ajustada que se va a usar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `stack();`  
   
- crea un contenedor ajustado vacío.  Se utiliza para especificar una secuencia controlada inicial vacía.  
+ crea un contenedor vacío ajustado. Se usa para especificar una secuencia controlada inicial vacía.  
   
  El constructor:  
   
  `stack(stack<Value, Container>% right);`  
   
- crea un contenedor ajustado que es una copia de `right.get_container()`.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto `right`de la pila.  
+ crea un contenedor ajustado que es una copia de `right.get_container()`. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de pila `right`.  
   
  El constructor:  
   
  `stack(stack<Value, Container>^ right);`  
   
- crea un contenedor ajustado que es una copia de `right->get_container()`.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto `*right`de la pila.  
+ crea un contenedor ajustado que es una copia de `right->get_container()`. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de pila `*right`.  
   
  El constructor:  
   
  `explicit stack(container_type% wrapped);`  
   
- utilice el contenedor existente `wrapped` como contenedor ajustado.  Se utiliza para construir una pila de un contenedor existente.  
+ usa el contenedor existente `wrapped` como el contenedor ajustado. Se utiliza para crear una pila de un contenedor existente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -107,17 +105,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Requisitos  
- cliext \<\/pila de**Encabezado:** \>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/pila >  
   
-## Vea también  
- [pila](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [pila (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [Stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

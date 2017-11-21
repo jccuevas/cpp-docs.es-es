@@ -1,48 +1,49 @@
 ---
-title: "Lista de ejemplos de documentos y vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Lista de ejemplos de vista de documentos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a98e087a9155268997e913c2ecafc1bfd7020e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# Lista de ejemplos de documentos y vistas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="documentview-sample-list"></a>Lista de ejemplos de documentos y vistas
+Vea los siguientes programas de ejemplo que ilustran el uso de arquitectura documento/vista de MFC de formas interesantes:  
+  
+ *Variaciones documento/vista*  
+  
+-   [MDI](../visual-cpp-samples.md)  
+  
+-   [SCRIBBLE](../visual-cpp-samples.md)  
+  
+-   [VIEWEX](../visual-cpp-samples.md)  
+  
+ *Interfaz de cuadro de diálogo reemplaza el documento/vista*  
+  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
+  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
+  
+ *Uso de COleDocument y sus clases derivadas*  
+  
+-   [CONTENEDOR](../visual-cpp-samples.md)  
+  
+-   [HIERSVR](../visual-cpp-samples.md)  
+  
+-   [OCLIENT](../visual-cpp-samples.md)  
+  
+## <a name="see-also"></a>Vea también  
+ [Arquitectura documento/vista](../mfc/document-view-architecture.md)
 
-Vea los programas de ejemplo siguientes que muestran utilizando el documento de MFC y la arquitectura de maneras interesantes:  
-  
- *Variaciones de documentos y vistas*  
-  
--   [MDI](../top/visual-cpp-samples.md)  
-  
--   [SCRIBBLE](../top/visual-cpp-samples.md)  
-  
--   [VIEWEX](../top/visual-cpp-samples.md)  
-  
- *La interfaz del cuadro de diálogo reemplaza el documento o la vista*  
-  
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
-  
- *Mediante las clases derivadas de COleDocument y de Su*  
-  
--   [CONTENEDOR](../top/visual-cpp-samples.md)  
-  
--   [HIERSVR](../top/visual-cpp-samples.md)  
-  
--   [OCLIENT](../top/visual-cpp-samples.md)  
-  
-## Vea también  
- [Arquitectura documento\/vista](../mfc/document-view-architecture.md)
