@@ -1,46 +1,43 @@
 ---
-title: Configurar un proyecto de Linux | Microsoft Docs
+title: "Configuración de un proyecto de C++ de Linux en Visual Studio | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 9a3239120ccdbc533c5063c50a523ad84774f81c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
+En este tema se describe cómo configurar un proyecto de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake, consulte [Configure a Linux CMake Project](cmake-linux-project.md) (Configuración de un proyecto de CMake de Linux).
 
 ## <a name="general-settings"></a>Configuración general
-Con Visual Studio se pueden configurar una serie de opciones para un proyecto de Linux.  Para ver estas opciones, seleccione el menú **Proyecto > Propiedades** o haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Propiedades** en el menú contextual:
+Con Visual Studio se pueden configurar una serie de opciones para un proyecto de Linux.  Para ver estas opciones, seleccione el menú **Proyecto > Propiedades** o haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Propiedades** en el menú contextual. Aparecerá la configuración **General**.
 
 ![Configuración general](media/settings_general.png)
 
 De forma predeterminada, con la herramienta se crea un archivo ejecutable (.out).  Para compilar una biblioteca estática o dinámica o para usar un archivo Make existente, emplee la selección **Tipo de configuración**.
 
 ## <a name="remote-settings"></a>Configuración remota
-Para cambiar la configuración relacionada con el equipo remoto Linux, seleccione el elemento **Configuración remota**:
+Para cambiar la configuración correspondiente al equipo Linux remoto, configure las opciones remotas que aparecen en la configuración **General**:
 
-![Configuración remota](media/settings_remote.png)
+* Para cambiar el equipo Linux de destino, use la entrada **Máquina de compilación remota**.  Esto le permitirá seleccionar una de las conexiones creadas anteriormente.  Para crear una nueva entrada, vea la sección [Conexión al equipo Linux remoto](connect-to-your-remote-linux-computer.md).
 
-* Para cambiar el equipo Linux de destino, use la entrada **Equipo de destino**.  Esto le permitirá seleccionar una de las conexiones creadas anteriormente.  Para crear una nueva entrada, vea la sección [Conexión al equipo Linux remoto](connect-to-your-remote-linux-computer.md).
+* El **Directorio raíz de la compilación remota** determina la ubicación raíz donde se crea el proyecto en el equipo Linux remoto.  El valor predeterminado es **~/projects**, a menos que se cambie.
 
-* El **directorio raíz remoto** determina la ubicación raíz donde se crea el proyecto en el equipo remoto Linux.  El valor predeterminado es **~/projects**, a menos que se cambie.
+* El **Directorio del proyecto de compilación remota** es donde se creará este proyecto concreto en el equipo remoto Linux.  El valor predeterminado es **$(RemoteRootDir)/$(ProjectName)**, que se expandirá en un directorio con el nombre del proyecto actual, bajo el directorio raíz establecido arriba.
 
-* El **directorio de proyecto remoto** es donde se creará este proyecto concreto en el equipo remoto Linux.  El valor predeterminado es **$(RemoteRootDir)/$(ProjectName)**, que se expandirá en un directorio con el nombre del proyecto actual, bajo el directorio raíz establecido arriba.
-
-* Por último, para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **Valores predeterminados de herramientas**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo.
+> [!NOTE]
+> Para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **C/C++ > General** y en la sección **Enlazador > General**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo.
 
 ## <a name="vc-directories"></a>Directorios de VC++
 De forma predeterminada, Visual Studio no incluye ningún archivo de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.  Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
@@ -67,9 +64,13 @@ Al compilar, los archivos de origen del equipo de desarrollo se copian en el equ
   `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Eventos de compilación
-Dado que toda la compilación se produce en un equipo remoto, se han agregado varios eventos de compilación adicionales a la sección Eventos de compilación de las propiedades del proyecto.  Son **Evento remoto anterior a la compilación**, **Evento remoto anterior a la vinculación** y **Evento remoto posterior a la compilación** y se producirán en el equipo remoto antes o después de los pasos individuales del proceso.
+Dado que toda la compilación se produce en un equipo remoto, se han agregado varios eventos de compilación adicionales a la sección Eventos de compilación de las propiedades del proyecto.  Estos son **Evento remoto anterior a la compilación**, **Evento remoto anterior a la vinculación** y **Evento remoto posterior a la compilación**, y se producirán en el equipo remoto antes o después de los pasos individuales del proceso.
 
 ![Eventos de compilación](media/settings_buildevents.png)
 
 ## <a name="see-also"></a>Vea también
-[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)
+[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)  
+[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))  
+[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))  
+[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))  
+[Build Event Properties (Linux C++)](../linux/prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
