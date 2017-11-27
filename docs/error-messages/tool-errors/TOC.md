@@ -186,6 +186,7 @@
 ## [Advertencia de las herramientas del vinculador LNK4010](linker-tools-warning-lnk4010.md)
 ## [Advertencia de las herramientas del vinculador LNK4014](linker-tools-warning-lnk4014.md)
 ## [Advertencia de las herramientas del vinculador LNK4022](linker-tools-warning-lnk4022.md)
+## [Advertencia de las herramientas del vinculador LNK4037](linker-tools-warning-lnk4037.md)
 ## [Advertencia de las herramientas del vinculador LNK4039](linker-tools-warning-lnk4039.md)
 ## [Advertencia de las herramientas del vinculador LNK4044](linker-tools-warning-lnk4044.md)
 ## [Advertencia de las herramientas del vinculador LNK4049](linker-tools-warning-lnk4049.md)

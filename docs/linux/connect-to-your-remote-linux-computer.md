@@ -1,25 +1,22 @@
 ---
 title: Conectarse al equipo Linux remoto | Microsoft Docs
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6dce0c1c190854b7927c6e023edd76c9d1cb5645
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: dd817a7d9fad4946cd0aa9f641f9e8f495f1be9a
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="connect-to-your-remote-linux-computer"></a>Conectarse al equipo Linux remoto
 
 Al compilar, el código de Linux se copia en el equipo remoto Linux y, luego, se compila en ese sistema según la configuración elegida en Visual Studio.  Para configurar esta conexión remota:

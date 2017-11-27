@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: es-es
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2017 le ayudan a desarrollar aplicaciones universales de Windows nativas, aplicaciones de servidor y de escritorio nativas, bibliotecas multiplataforma que se ejecutan en iOS, Android y Windows, así como aplicaciones administradas que se ejecutan en .NET Framework.  
@@ -64,8 +56,7 @@ El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2
  [Novedades de Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
  Descubra las novedades de Visual C++.  
 
- [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md) 
- Obtenga información sobre las mejoras de conformidad de C++ en Visual Studio 2017. 
+ [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md) Obtenga información sobre las mejoras de conformidad de C++ en Visual Studio 2017. 
 
  [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)  
  Lista de estado de conformidad por característica en Visual C++.
@@ -97,7 +88,7 @@ El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2
  [Ejemplos de Visual C++](visual-cpp-samples.md)  
  Información acerca de los ejemplos.  
   
- [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=235296)  
+ [Comunidad de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=235296)  
  Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual Studio.  
   
 ## <a name="writing-applications-in-c"></a>Escribir aplicaciones en C++  
@@ -129,9 +120,9 @@ El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2
  Para obtener más información sobre cómo crear proyectos, trabajar con archivos de código fuente, vincular a bibliotecas, compilar, depurar, generar perfiles, implementar, etc., vea [IDE y herramientas para desarrollo](ide/ide-and-tools-for-visual-cpp-development.md).  
   
 ## <a name="c-language-reference"></a>Referencia del lenguaje C++  
- Para obtener información sobre el lenguaje C++, vea [Referencia de lenguaje C++](cpp/cpp-language-reference.md).  
+ Para obtener información sobre el lenguaje C++, vea [C++ Language Reference](cpp/cpp-language-reference.md).  
   
- Para obtener información sobre el preprocesador de C++, vea [Referencia del preprocesador de C/C++](preprocessor/c-cpp-preprocessor-reference.md).  
+ Para obtener información sobre el preprocesador de C++, vea [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).  
   
 ## <a name="c-libraries-in-visual-studio"></a>Bibliotecas de C++ en Visual Studio  
  En las secciones siguientes se proporciona información sobre las distintas bibliotecas de C++ que se incluyen en Visual C++.  
@@ -155,12 +146,12 @@ El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2
  Algoritmos con gran paralelismo que se ejecutan en la GPU.  
   
  [Biblioteca de plantillas de Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-Aplicaciones y componentes de  [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
+ Aplicaciones y componentes de [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
   
  [Programación de .NET con C++/CLI (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  Programación para Common Language Runtime (CLR).  
   
- Vea también la documentación de [STL/CLR](dotnet/stl-clr-library-reference.md) y la [Biblioteca de compatibilidad de C++](dotnet/cpp-support-library.md).  
+ Vea también la documentación de [STL/CLR](dotnet/stl-clr-library-reference.md) y la [C++ Support Library](dotnet/cpp-support-library.md).  
   
 ## <a name="other-c-libraries"></a>Otras bibliotecas de C++  
  Esta sección contiene vínculos a bibliotecas que no están incluidas en Visual Studio, pero que se pueden descargar y usar con Visual C++.  
@@ -185,4 +176,3 @@ Aplicaciones y componentes de  [!INCLUDE[win8_appname_long](build/includes/win8_
  [Referencia del lenguaje C](c-language/c-language-reference.md)   
  [Referencia de la biblioteca en tiempo de ejecución de C](c-runtime-library/c-run-time-library-reference.md)   
  [Intrínsecos del compilador y lenguaje ensamblador](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
