@@ -1,33 +1,30 @@
 ---
-title: "@Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@Model"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@Model symbol"
+title: '@Model| Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@Model'
+dev_langs: C++
+helpviewer_keywords: '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d169c83878b19b7d5c011948705a5438b97787c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
-# @Model
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-1 para el modelo de **Minúsculo** , 2 para el modelo de **SMALL** , 3 para el modelo de **Compactarlo** , 4 para el modelo de **Mediano** , 5 para el modelo de **Grande** , 6 para el modelo de **ENORME** , y 7 para el modelo de **Plana** \(num compare\).  
+# <a name="model"></a>@Model
+1 para **MINÚSCULO** de modelo, 2 para **pequeño** de modelo, 3 para **COMPACT** modelar, 4 para **medio** de modelo, 5 para **grande**modelo 6 para **ENORME** modelo y 7 para **FLAT** modelo (equivaler numérico).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## Vea también  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de símbolos](../../assembler/masm/symbols-reference.md)
