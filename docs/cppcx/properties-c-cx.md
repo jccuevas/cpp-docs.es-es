@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1304cd827e80328857571552201601f0e453c1dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-ccx"></a>Propiedades (C++/CX)
 Tipos de Windows Runtime exponen los datos públicos como propiedades. El código de cliente tiene acceso a la propiedad como un objeto datamember público. Internamente, la propiedad se implementa como un bloque que contiene un método de descriptor de acceso get, un método de descriptor de acceso set o ambos. Mediante los métodos de descriptor de acceso, puedes realizar acciones adicionales antes o después de recuperar el valor; por ejemplo, puedes desencadenar un evento o realizar comprobaciones de validación.  

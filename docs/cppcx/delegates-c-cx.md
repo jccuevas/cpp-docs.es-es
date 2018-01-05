@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dee99cf85ff47fe7dbde8bd8bc7f60f708a5ebc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delegates-ccx"></a>Delegados (C++/CX)
 El `delegate` palabra clave se utiliza para declarar un tipo de referencia que es el equivalente de Windows en tiempo de ejecución de un objeto de función en C++ estándar. Una declaración de delegado es similar a una signatura de función; especifica el tipo de valor devuelto y los tipos de parámetros que debe tener la función incluida. Esta es una declaración de delegado definida por el usuario:  
@@ -110,7 +111,7 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]  
   
 > [!WARNING]
->  Si empleas una expresión lambda que captura el puntero “this”, asegúrate de usar el operador `-=` para anular explícitamente el registro del evento antes de salir de la expresión lambda. Para obtener más información, consulta [Events](../cppcx/events-c-cx.md).  
+>  Si empleas una expresión lambda que captura el puntero “this”, asegúrate de usar el operador `-=` para anular explícitamente el registro del evento antes de salir de la expresión lambda. Para más información, vea [Eventos](../cppcx/events-c-cx.md).  
   
 ### <a name="generic-delegates"></a>Delegados genéricos  
  Los delegados genéricos en C++/CX tienen restricciones similares a las declaraciones de clases genéricas. No pueden declararse como públicos. Puedes declarar un delegado genérico interno o privado y utilizarlo desde C++, pero los clientes de .NET o JavaScript no podrán usarlo porque no se emite en los metadatos .winmd. En este ejemplo se declara un delegado genérico que solo se puede utilizar en C++:  
