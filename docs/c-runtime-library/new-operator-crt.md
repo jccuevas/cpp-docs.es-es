@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1718da840a735eecb6bf543abad44f890866c891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e188efd8e1f712b804e0927edcdba2435ca56fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-newcrt"></a>operador new(CRT)
 A partir de Visual Studio 2013, el entorno de tiempo de ejecución de C de Windows Universal ya no admite las funciones operator new y operator delete de C++. Ahora forman parte de la biblioteca estándar de C++. Para obtener más información, vea [Operadores new y delete](../cpp/new-and-delete-operators.md) y [new operator](../cpp/new-operator-cpp.md) en la referencia del lenguaje C++. 

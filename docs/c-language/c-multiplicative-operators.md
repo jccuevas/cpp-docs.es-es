@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77b87e796f71258086aadd5aa6da9845de8095c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-multiplicative-operators"></a>Operadores de multiplicación de C
 Los operadores multiplicativos realizan operaciones de multiplicación (**\***), división (**/**) y resto (`%`).  
@@ -51,7 +52,7 @@ Los operadores multiplicativos realizan operaciones de multiplicación (**\***),
   
  A continuación se describen los operadores multiplicativos de C:  
   
-|Operador|Descripción|  
+|Operador|Description|  
 |--------------|-----------------|  
 |**\***|El operador de multiplicación hace que se multipliquen sus dos operandos.|  
 |**/**|El operador de división hace que el primer operando se divida por el segundo. Si se dividen dos operandos enteros y el resultado no es un entero, se trunca según las reglas siguientes:|  

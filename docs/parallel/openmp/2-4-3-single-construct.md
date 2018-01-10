@@ -1,51 +1,50 @@
 ---
-title: "2.4.3 single Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.4.3 single construcción | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 15c180cd-e462-4b41-bf8c-cb8b1afb1a9b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72dc551986f149bda668c438ac5f51d01d530c51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 2.4.3 single Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directiva de **solo** identifica una construcción que especifique que el bloque estructurado asociado se ejecutan en sólo un subproceso del equipo \(no necesariamente el subproceso principal\).  La sintaxis de la directiva de **solo** es la siguiente:  
+# <a name="243-single-construct"></a>2.4.3 single (Construcción)
+El **único** directiva identifica una construcción que especifica que se ejecuta el bloque estructurado asociado con un solo subproceso en el equipo (no necesariamente el subproceso principal). La sintaxis de la **único** directiva es como sigue:  
   
 ```  
-#pragma omp single [clause[[,] clause] ...] new-line  
-   structured-block  
+#pragma omp single [clause[[,] clause] ...] new-linestructured-block  
 ```  
   
- La cláusula es:  
+ La cláusula es uno de los siguientes:  
   
- *variable\-lista* **\)**de**private \(**  
+ **privada (** *lista de variables* **)**  
   
- *variable\-lista* **\)**de**firstprivate \(**  
+ **firstprivate (** *lista de variables* **)**  
   
- *variable\-lista* **\)**de**copyprivate \(**  
+ **copyprivate (** *lista de variables* **)**  
   
  **nowait**  
   
- hay una barrera implícita después de la construcción de **solo** a menos que se especifique una cláusula de **nowait** .  
+ Hay una barrera implícita después de la **único** construir a menos que un **nowait** se especifica la cláusula.  
   
- Restricciones de la directiva de **solo** son los siguientes:  
+ Restricciones a la **único** directiva son los siguientes:  
   
--   Una sola cláusula de **nowait** puede aparecer en una directiva de **solo** .  
+-   Solo una **nowait** cláusula puede aparecer en un **único** directiva.  
   
--   la cláusula de **copyprivate** no se debe utilizar con la cláusula de **nowait** .  
+-   El **copyprivate** cláusula no debe usarse con el **nowait** cláusula.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   **private**, **firstprivate**, y las cláusulas de **copyprivate** , vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.
+-   **privada**, **firstprivate**, y **copyprivate** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en página 25.

@@ -1,109 +1,48 @@
 ---
-title: "event (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "event"
-  - "event_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "event (palabra clave) [C++]"
+title: eventos (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- event
+- event_cpp
+dev_langs: C++
+helpviewer_keywords: event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 34
-caps.handback.revision: 32
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "34"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# event (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La palabra clave `event` declara un *evento*, que es una notificación a los suscriptores registrados \(*controladores de eventos*\) de que se ha producido algo de interés.  
+# <a name="event--c-component-extensions"></a>event (Extensiones de componentes de C++)
+El `event` palabra clave declara una *eventos*, que es una notificación a los suscriptores registrados (*controladores de eventos*) que se ha producido algo de interés.  
   
-## Todos los runtimes  
- C\+\+ \/ CX admite la declaración de un *miembro de evento* o un *bloque de eventos*.  Un miembro de evento es una forma abreviada para declarar un bloque de eventos.  De forma predeterminada, un miembro de evento declara las funciones `add()`, `remove()`, y `raise()` declaradas explícitamente en un bloque de eventos.  Para personalizar las funciones de un miembro de evento, declare un bloque de eventos en su lugar y, a continuación, reemplace las funciones que necesite.  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ C++ / CX admite la declaración de un *miembro de evento* o un *bloque de eventos*. Un miembro de evento es una forma abreviada para declarar un bloque de eventos. De forma predeterminada, un miembro de evento declara las funciones `add()`, `remove()`, y `raise()` declaradas explícitamente en un bloque de eventos. Para personalizar las funciones de un miembro de evento, declare un bloque de eventos en su lugar y, a continuación, reemplace las funciones que necesite.  
   
  **Sintaxis**  
   
 ```  
   
 // event data member  
-modifier event delegate^ event_name;     
+modifiereventdelegate^ event_name;     
   
 // event block  
-modifier event delegate^ event_name   
+modifiereventdelegate^ event_name   
 {  
-   modifier return_value add(delegate^ name);  
-   modifier void remove(delegate^ name);  
-   modifier void raise(parameters);  
-}  
-```  
-  
- **Parámetros**  
-  
- *modificador*  
- Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son `static` y `virtual`.  
-  
- *delegado*  
- El delegado \([delegate](../windows/delegate-cpp-component-extensions.md)\), cuya firma debe coincidir con la del controlador de eventos.  
-  
- *event\_name*  
- Nombre del evento.  
-  
- *return\_value*  
- El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser `void`.  
-  
- *parameters*  
- \(opcional\) Parámetros para el método `raise` método, que coincide con la firma del parámetro *Delegado*.  
-  
- **Comentarios**  
-  
- Un evento es una asociación entre un delegado \(delegate\) y una función miembro \(controlador de eventos\) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y devuelven el tipo de delegado subyacente.  
-  
- Hay dos tipos de declaraciones de eventos:  
-  
- *miembro de datos de evento*  
- El compilador crea automáticamente almacenamiento para el evento en el formulario de un miembro del tipo delegate y crea funciones miembro internas `add()`, `remove()`, y `raise()` .  Un miembro de datos de evento debe declararse dentro de una clase.  El tipo de valor devuelto del tipo de valor devuelto del delegado debe coincidir con el tipo de valor devuelto del controlador de eventos.  
-  
- *bloque de eventos*  
- Un bloque de eventos le permite personalizar y declarar explícitamente el comportamiento de los métodos `add()`, `remove()`, y `raise()`.  
-  
- Puede utilizar `operators+=` y `operator-=` para agregar y quitar un controlador de eventos, o llamar a los métodos `add()` y `remove()` explícitamente.  
-  
- `event` es una palabra clave contextual; para obtener más información, vea [Palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
-  
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
-  
-### Comentarios  
- Para obtener más información, vea [Eventos \(C\+\+ \/ CX\)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
-  
- Si desea agregar y, a continuación, quitar un controlador de eventos, debe guardar la estructura EventRegistrationToken devuelta por la operación de adición.  A continuación, en la operación de eliminación, debe utilizar la estructura guardada EventRegistrationToken para identificar el controlador de eventos que se va a eliminar.  
-  
-### Requisitos  
- Opción del compilador: **\/ZW**  
-  
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- La palabra clave `event` le permite declarar un evento.  Un evento es una forma que tiene una clase para proporcionar notificaciones cuando ocurre algo de interés.  
-  
- **Sintaxis**  
-  
-```  
-  
-// event data member  
-modifier event delegate^ event_name;   
-  
-// event block  
-modifier event delegate^ event_name   
-{  
-   modifier return_value add(delegate^ name);  
+   modifierreturn_valueadd(delegate^ name);  
    modifier void remove(delegate^ name);  
    modifier void raise(parameters);  
 }  
@@ -115,52 +54,114 @@ modifier event delegate^ event_name
  Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son `static` y `virtual`.  
   
  *delegate*  
- El delegado \([delegate](../windows/delegate-cpp-component-extensions.md)\), cuya firma debe coincidir con la del controlador de eventos.  
+ El [delegar](../windows/delegate-cpp-component-extensions.md), cuya signatura debe coincidir con el controlador de eventos.  
   
- *event\_name*  
+ *event_name*  
  Nombre del evento.  
   
- *return\_value*  
+ *valor_devuelto*  
  El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser `void`.  
   
- *parameters*  
- \(opcional\) Parámetros para el método `raise` método, que coincide con la firma del parámetro *Delegate*.  
+ *parámetros*  
+ (opcional) Parámetros para la `raise` método, que coincide con la firma de la *delegar* parámetro.  
   
  **Comentarios**  
   
- Un evento es una asociación entre un delegado \(delegate\) y una función miembro \(controlador de eventos\) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y devuelven el tipo de delegado \(delegate\) subyacente.  
-  
- El delegado \(delegate\) puede tener uno o varios métodos asociados que se llamarán cuando su código indique que se ha producido el evento.  Un evento de un programa puede estar disponible para otros programas diseñados para Common Language Runtime de .NET Framework .  Vea [Generar eventos definidos en otro ensamblado](../misc/how-to-raise-events-defined-in-a-different-assembly.md) para obtener un ejemplo.  
+ Un evento es una asociación entre un delegado (delegate) y una función miembro (controlador de eventos) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y tipo de valor devuelto del delegado (delegate) subyacente.  
   
  Hay dos tipos de declaraciones de eventos:  
   
- *miembros de datos de eventos*  
- El compilador para eventos de miembro de datos crea el almacenamiento para el evento en forma de un miembro del tipo delegate.  Un miembro de datos de evento debe declararse dentro de una clase.  Esto también se conoce como un evento trivial \(vea el siguiente ejemplo de código\).  
+ *miembro de datos de evento*  
+ El compilador crea automáticamente almacenamiento para el evento en el formulario de un miembro del tipo delegate y crea funciones miembro internas `add()`, `remove()`, y `raise()` . Un miembro de datos de evento debe declararse dentro de una clase. El tipo de valor devuelto del tipo de valor devuelto del delegado debe coincidir con el tipo de valor devuelto del controlador de eventos.  
+  
+ *bloque de eventos*  
+ Un bloque de eventos le permite personalizar y declarar explícitamente el comportamiento de los métodos `add()`, `remove()`, y `raise()`.  
+  
+ Puede utilizar `operators+=` y `operator-=` para agregar y quitar un controlador de eventos, o llamar a los métodos `add()` y `remove()` explícitamente.  
+  
+ `event`es una palabra clave contextual; vea [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md) para obtener más información.  
+  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [eventos (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).  
+  
+ Si desea agregar y, a continuación, quitar un controlador de eventos, debe guardar la estructura EventRegistrationToken devuelta por la operación de adición. A continuación, en la operación de eliminación, debe utilizar la estructura guardada EventRegistrationToken para identificar el controlador de eventos que se va a eliminar.  
+  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
+  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ La palabra clave `event` le permite declarar un evento. Un evento es una forma que tiene una clase para proporcionar notificaciones cuando ocurre algo de interés.  
+  
+ **Sintaxis**  
+  
+```  
+  
+// event data member  
+modifiereventdelegate^ event_name;   
+  
+// event block  
+modifiereventdelegate^ event_name   
+{  
+   modifierreturn_valueadd(delegate^ name);  
+   modifier void remove(delegate^ name);  
+   modifier void raise(parameters);  
+}  
+```  
+  
+ **Parámetros**  
+  
+ *modificador*  
+ Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son `static` y `virtual`.  
+  
+ *delegate*  
+ El [delegar](../windows/delegate-cpp-component-extensions.md), cuya signatura debe coincidir con el controlador de eventos.  
+  
+ *event_name*  
+ Nombre del evento.  
+  
+ *valor_devuelto*  
+ El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser `void`.  
+  
+ *parámetros*  
+ (opcional) Parámetros para la `raise` método, que coincide con la firma de la *delegar* parámetro.  
+  
+ **Comentarios**  
+  
+ Un evento es una asociación entre un delegado (delegate) y una función miembro (controlador de eventos) que responde a la activación del evento y permite a los clientes de cualquier clase registrar los métodos que cumplen con la firma y tipo de valor devuelto del delegado (delegate) subyacente.  
+  
+ El delegado (delegate) puede tener uno o varios métodos asociados que se llamarán cuando su código indique que se ha producido el evento. Un evento de un programa puede estar disponible para otros programas diseñados para Common Language Runtime de .NET Framework .  
+  
+ Hay dos tipos de declaraciones de eventos:  
+  
+ *miembros de datos de evento*  
+ El compilador para eventos de miembro de datos crea el almacenamiento para el evento en forma de un miembro del tipo delegate.  Un miembro de datos de evento debe declararse dentro de una clase. Esto también se conoce como un evento trivial (vea el siguiente ejemplo de código).  
   
  *bloques de eventos*  
- Los bloques de eventos le permiten personalizar el comportamiento de los métodos add, remove y raise mediante su implementación.  La firma de los métodos add, remove y raise debe coincidir con la firma del delegado \(delegate\).  Los eventos del bloque de eventos no son miembros de datos y cualquier uso como un miembro de datos generará un error del compilador.  Vea [Definición de métodos de descriptor de acceso de eventos](../misc/how-to-define-event-accessor-methods.md) para obtener un ejemplo.  
+ Los bloques de eventos le permiten personalizar el comportamiento de los métodos add, remove y raise mediante su implementación. La firma de los métodos add, remove y raise debe coincidir con la firma del delegado (delegate).  Los eventos del bloque de eventos no son miembros de datos y cualquier uso como un miembro de datos generará un error del compilador. 
   
  El tipo de valor devuelto del controlador de eventos debe coincidir con el del delegado.  
   
- En .NET Framework, puede tratar un miembro de datos como si se tratara de un método en sí mismo \(es decir, el método `Invoke` de su delegado correspondiente\).  Debe predefinir el tipo de delegado para declarar un miembro de datos de evento administrado.  En cambio, un método de evento administrado define implícitamente el delegado administrado correspondiente si todavía no se ha definido.  Dispone de un ejemplo de código al final de este tema.  
+ En .NET Framework, puede tratar un miembro de datos como si se tratara de un método en sí mismo (es decir, el método `Invoke` de su delegado correspondiente). Debe predefinir el tipo de delegado para declarar un miembro de datos de evento administrado. En cambio, un método de evento administrado define implícitamente el delegado administrado correspondiente si todavía no se ha definido.  Dispone de un ejemplo de código al final de este tema.  
   
- Al declarar un evento administrado, puede especificar que se agreguen y quiten los descriptores de acceso a los que se llamará cuando se agreguen o quiten los controladores de eventos mediante los operadores \+\= y \-\=.  Los métodos add, remove y raise pueden llamarse de forma explícita.  
+ Al declarar un evento administrado, puede especificar que se agreguen y quiten los descriptores de acceso a los que se llamará cuando se agreguen o quiten los controladores de eventos mediante los operadores += y -=. Los métodos add, remove y raise pueden llamarse de forma explícita.  
   
- A continuación se indican los pasos para crear y utilizar eventos en Visual C\+\+:  
+ A continuación se indican los pasos para crear y utilizar eventos en Visual C++:  
   
-1.  Cree o identifique a un delegado \(delegate\).  Si va a definir su propio evento, también debe asegurarse de que hay un delegado \(delegate\) para usar con la palabra clave `event`.  Si el evento está predefinido, en .NET Framework, por ejemplo, entonces los consumidores del evento solo necesitan conocer el nombre del delegado.  
+1.  Cree o identifique a un delegado (delegate). Si va a definir su propio evento, también debe asegurarse de que hay un delegado (delegate) para usar con la palabra clave `event`. Si el evento está predefinido, en .NET Framework, por ejemplo, entonces los consumidores del evento solo necesitan conocer el nombre del delegado.  
   
 2.  Cree una clase que contenta:  
   
-    -   Un evento creado desde el delegado \(delegate\).  
+    -   Un evento creado desde el delegado (delegate).  
   
-    -   \(opcional\) Un método que compruebe que existe una instancia del delegado \(delegate\) declarada con la palabra clave `event`.  De lo contrario, esta lógica debe colocarse en el código que desencadena el evento.  
+    -   (opcional) Un método que compruebe que existe una instancia del delegado (delegate) declarada con la palabra clave `event`. De lo contrario, esta lógica debe colocarse en el código que desencadena el evento.  
   
-    -   Métodos que llaman al evento.  Estos métodos pueden ser reemplazos de alguna funcionalidad de la clase base.  
+    -   Métodos que llaman al evento. Estos métodos pueden ser reemplazos de alguna funcionalidad de la clase base.  
   
      Esta clase define el evento.  
   
-3.  Defina una o más clases que conecte los métodos con el evento.  Cada una de estas clases se asociará a uno o más métodos con el evento de la clase base.  
+3.  Defina una o más clases que conecte los métodos con el evento. Cada una de estas clases se asociará a uno o más métodos con el evento de la clase base.  
   
 4.  Utilice el evento:  
   
@@ -168,31 +169,17 @@ modifier event delegate^ event_name
   
     -   Cree un objeto de la clase que contenga la definición del evento.  
   
- Para obtener más información sobre eventos [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)], vea:  
+ Para obtener más información sobre C++ / CLI los eventos, vea  
   
 -   [Eventos de una interfaz](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
--   [Invalidar el acceso predeterminado de los métodos add, remove y raise](../misc/how-to-override-default-access-of-add-remove-and-raise-methods.md)  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
--   [Varios controladores de un evento](../misc/how-to-add-multiple-handlers-to-events.md)  
-  
--   [Eventos virtuales administrados](../misc/how-to-implement-managed-virtual-events.md)  
-  
--   [Métodos de descriptor de acceso de eventos](../misc/how-to-define-event-accessor-methods.md)  
-  
--   [Eventos estáticos](../misc/how-to-define-and-use-static-events.md)  
-  
--   [Generar eventos definidos en otro ensamblado](../misc/how-to-raise-events-defined-in-a-different-assembly.md)  
-  
--   [Eventos abstractos](../misc/how-to-implement-abstract-events.md)  
-  
-### Requisitos  
- Opción del compilador: **\/clr**  
-  
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo de código siguiente demuestra la declaración de pares de delegados, eventos y controladores de eventos; suscribir \(agregar\) los controladores de eventos; invocar los controladores de eventos; y, a continuación, cancelar la suscripción \(eliminar\) de los controladores de eventos.  
+ El ejemplo de código siguiente demuestra la declaración de pares de delegados, eventos y controladores de eventos; suscribir (agregar) los controladores de eventos; invocar los controladores de eventos; y, a continuación, cancelar la suscripción (eliminar) de los controladores de eventos.  
   
 ```  
 // mcppv2_events.cpp  
@@ -245,12 +232,17 @@ int main() {
 }  
 ```  
   
- **Resultado**  
+ **Salida**  
   
-  **OnClick: 7, 3.14159**  
- **OnDblClick: Hola** **Ejemplo**  
+```Output  
+OnClick: 7, 3.14159  
   
- El ejemplo de código siguiente demuestra la lógica utilizada para generar el método `raise` de un evento trivial: si el evento tiene uno o varios suscriptores, llamar al método `raise` llama implícita o explícitamente al delegado \(delegate\).  Si el tipo de valor devuelto del delegado tipo no es `void` y si no hay ningún suscriptor de eventos, el método `raise` método devuelve el valor predeterminado para el tipo delegate.  Si no hay ningún suscriptor de eventos, llamar al método `raise` simplemente devuelve y no se genera ninguna excepción.  Si el tipo de valor devuelto del delegado \(delegate\) no es `void`, se devuelve el tipo delegate.  
+OnDblClick: Hello  
+```  
+  
+ **Ejemplo**  
+  
+ El ejemplo de código siguiente demuestra la lógica utilizada para generar el método `raise` de un evento trivial: si el evento tiene uno o varios suscriptores, llamar al método `raise` llama implícita o explícitamente al delegado (delegate). Si el tipo de valor devuelto del delegado tipo no es `void` y si no hay ningún suscriptor de eventos, el método `raise` método devuelve el valor predeterminado para el tipo delegate. Si no hay ningún suscriptor de eventos, llamar al método `raise` simplemente devuelve y no se genera ninguna excepción. Si el tipo de valor devuelto del delegado (delegate) no es `void`, se devuelve el tipo delegate.  
   
 ```  
 // trivial_events.cpp  
@@ -284,9 +276,13 @@ int main() {
 }  
 ```  
   
- **Resultado**  
+ **Salida**  
   
-  **0**  
- **688**   
-## Vea también  
+```Output  
+0  
+  
+688  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

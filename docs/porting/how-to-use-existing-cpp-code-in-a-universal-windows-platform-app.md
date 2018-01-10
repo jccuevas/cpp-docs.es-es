@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b63f8e7bd7d23e75417e28b45d533832c8426e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows
 Quizás la forma más sencilla de conseguir que un programa de escritorio se ejecute en el entorno de UWP es usar las tecnologías de Puente de dispositivo de escritorio. Entre estas se incluye Desktop App Converter, que empaquetará la aplicación existente como una aplicación para UWP sin necesidad de realizar cambios en el código. Para obtener más información, vea [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
@@ -222,7 +223,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 1.  Cree un proyecto de componente de Windows en tiempo de ejecución.  
   
-2.  Cierre el proyectos.  
+2.  Cierre el proyecto.  
   
 3.  En el Explorador de archivos de Windows, busque el proyecto. De forma predeterminada, Visual Studio usa la carpeta Visual Studio 2017\Projects en la carpeta Documentos. Localice el proyecto de biblioteca de C++ que contiene el código que desee traspasar. Copie los archivos de origen (archivos de encabezado, archivos de código y otros recursos, incluidos los de los subdirectorios) desde el proyecto de biblioteca de C++ y péguelos en la carpeta del proyecto, asegurándose de conservar la misma estructura de carpetas.  
   

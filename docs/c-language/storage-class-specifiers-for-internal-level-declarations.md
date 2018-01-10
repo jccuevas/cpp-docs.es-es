@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eea2e2e723a2437c2e7f711d139a023c7740bb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb9af31a202304e59a8b3050033020e49b3e3fa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Especificadores de clase de almacenamiento para las declaraciones de nivel interno
 Puede utilizar cualquiera de cuatro terminales de *storage-class-specifier* para las declaraciones de variable en el nivel interno. Cuando se omite el elemento *storage-class-specifier* de esta declaración, la clase de almacenamiento predeterminada es **auto**. Por consiguiente, la palabra clave **auto** raramente aparece en un programa de C.  

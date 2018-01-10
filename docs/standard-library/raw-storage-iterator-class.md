@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc2caea6fc67fbbcda7713fcda21c01a5f03d958
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fd68bfc788231ddc954b1f6e8a70d63dbcf02592
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator (Clase)
 Una clase de adaptador que se proporciona para permitir que los algoritmos almacenen sus resultados en memoria sin inicializar.  
@@ -41,7 +42,7 @@ class raw_storage_iterator
  `OutputIterator`  
  Especifica el iterador de salida para el objeto que se almacena.  
   
- *ype*  
+ *Type*  
  Tipo de objeto al que se va a asignar almacenamiento.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -57,7 +58,7 @@ class raw_storage_iterator
 |-|-|  
 |[raw_storage_iterator](#raw_storage_iterator)|Crea un iterador de almacenamiento sin formato con un iterador de salida subyacente especificado.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

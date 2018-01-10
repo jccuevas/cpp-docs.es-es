@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4191
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4191
+f1_keywords: C4191
+dev_langs: C++
+helpviewer_keywords: C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5cdd66e6318867a7f4df8ff70b6440ae6e7bfa3a
-ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a40f5a05b4efc030cd545f2ffd27325fca86294
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Advertencia del compilador (nivel 3) C4191
 'operador/operación': conversión no segura de 'tipo de expresión' a 'tipo necesario'  
@@ -60,7 +41,7 @@ ms.lasthandoff: 04/12/2017
   
  Llamar a esta función a través del puntero de resultados, podría provocar el bloqueo del programa.  
   
- De forma predeterminada, esta advertencia está desactivada. Vea [advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obtener más información.  
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
  El ejemplo siguiente genera la advertencia C4191:  
   

@@ -1,32 +1,31 @@
 ---
-title: "omp_init_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_lock OpenMP function"
+title: omp_init_lock | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f89f247a726dd41eaba92e947002d7a28366edd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# omp_init_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ompinitlock"></a>omp_init_lock
 Inicializa un bloqueo simple.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void omp_init_lock(  
@@ -34,14 +33,14 @@ void omp_init_lock(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `lock`  
- una variable de [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md)escrito.  
+ Una variable de tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## Comentarios  
- Para obtener más información, vea [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información, consulte [3.2.1 omp_init_lock y omp_init_nest_lock funciones](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_init_lock.cpp  
@@ -71,45 +70,48 @@ int main() {
 }  
 ```  
   
-  **Subproceso 0 \- iniciar la región bloqueada**  
-**Subproceso 0 \- región bloqueada de cierre**  
-**Subproceso 0 \- iniciar la región bloqueada**  
-**Subproceso 0 \- región bloqueada de cierre**  
-**Subproceso 0 \- iniciar la región bloqueada**  
-**Subproceso 0 \- región bloqueada de cierre**  
-**Subproceso 0 \- iniciar la región bloqueada**  
-**Subproceso 0 \- región bloqueada de cierre**  
-**Subproceso 0 \- iniciar la región bloqueada**  
-**Subproceso 0 \- región bloqueada de cierre**  
-**Subproceso 1 \- iniciar la región bloqueada**  
-**Subproceso 1 \- región bloqueada de cierre**  
-**Subproceso 1 \- iniciar la región bloqueada**  
-**Subproceso 1 \- región bloqueada de cierre**  
-**Subproceso 1 \- iniciar la región bloqueada**  
-**Subproceso 1 \- región bloqueada de cierre**  
-**Subproceso 1 \- iniciar la región bloqueada**  
-**Subproceso 1 \- región bloqueada de cierre**  
-**Subproceso 1 \- iniciar la región bloqueada**  
-**Subproceso 1 \- región bloqueada de cierre**  
-**Subproceso 2 \- iniciar la región bloqueada**  
-**Subproceso 2 \- región bloqueada de cierre**  
-**Subproceso 2 \- iniciar la región bloqueada**  
-**Subproceso 2 \- región bloqueada de cierre**  
-**Subproceso 2 \- iniciar la región bloqueada**  
-**Subproceso 2 \- región bloqueada de cierre**  
-**Subproceso 2 \- iniciar la región bloqueada**  
-**Subproceso 2 \- región bloqueada de cierre**  
-**Subproceso 2 \- iniciar la región bloqueada**  
-**Subproceso 2 \- región bloqueada de cierre**  
-**Subproceso 3 \- iniciar la región bloqueada**  
-**Subproceso 3 \- región bloqueada de cierre**  
-**Subproceso 3 \- iniciar la región bloqueada**  
-**Subproceso 3 \- región bloqueada de cierre**  
-**Subproceso 3 \- iniciar la región bloqueada**  
-**Subproceso 3 \- región bloqueada de cierre**  
-**Subproceso 3 \- iniciar la región bloqueada**  
-**Subproceso 3 \- región bloqueada de cierre**  
-**Subproceso 3 \- iniciar la región bloqueada**  
-**Subproceso 3 \- región bloqueada de cierre**   
-## Vea también  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Funciones](../../../parallel/openmp/reference/openmp-functions.md)

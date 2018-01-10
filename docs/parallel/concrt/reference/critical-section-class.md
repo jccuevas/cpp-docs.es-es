@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5f7b9d6eeda8192fe05a73d25c04527bea2ee80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>critical_section (Clase)
 Una exclusión mutua no reentrante que es explícitamente consciente del runtime de simultaneidad.  
@@ -43,7 +44,7 @@ class critical_section;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`native_handle_type`|Referencia a un objeto `critical_section`.|  
   
@@ -55,14 +56,14 @@ class critical_section;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[critical_section)](#ctor)|Crea una nueva sección crítica.|  
 |[~ critical_section (destructor)](#dtor)|Destruye una sección crítica.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[lock](#lock)|Adquiere esta sección crítica.|  
 |[native_handle](#native_handle)|Devuelve un identificador nativo específico de plataforma, si existe.|  

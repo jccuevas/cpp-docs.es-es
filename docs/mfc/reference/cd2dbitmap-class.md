@@ -62,11 +62,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 057ad4176648155e549b8b061bfe727e7ffe1876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 967bad02cf92b0078d789e5c0b6b55f9644bb17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbitmap-class"></a>Clase CD2DBitmap
 Un contenedor para ID2D1Bitmap.  
@@ -81,7 +82,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Sobrecargado. Construye un objeto CD2DBitmap de HBITMAP.|  
 |[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Destructor. Se llama cuando se destruye un objeto de mapa de bits de D2D.|  
@@ -94,7 +95,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBitmap::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Copia la región especificada del mapa de bits especificado en el mapa de bits actual|  
@@ -112,19 +113,19 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBitmap::CommonInit](#commoninit)|Inicializa el objeto|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Interfaz de ID2D1Bitmap devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE si debe destruirse m_hBmpSrc; en caso contrario, FALSE.|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Identificador de mapa de bits de origen.|  

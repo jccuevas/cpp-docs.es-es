@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>Asignaciones de rutinas
 Las asignaciones de rutinas de texto genérico se definen en TCHAR.H. `_tccpy` y `_tclen` se asignan a funciones del modelo de MBCS. Se asignan a macros o funciones insertadas en los modelos de SBCS y Unicode por razones de integridad. Para obtener información sobre una rutina de texto genérico, vea el tema de Ayuda sobre la rutina correspondiente de `SBCS`, `_MBCS` o `_UNICODE`.  

@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 Esta información se aplica a la interpretación de cadenas de formato en la familia de funciones `scanf`, incluidas las versiones seguras, como `scanf_s`. Por lo general, estas funciones asumen que la secuencia de entrada se divide en una secuencia de tokens. Los tokens está separados por espacios en blanco (espacio, tabulación o nueva línea), o en el caso de los tipos numéricos, mediante el final natural de un tipo de datos numéricos, tal como se indica mediante el primer carácter que no se puede convertir en texto numérico. Sin embargo, la especificación de ancho puede utilizarse para hacer que se detenga el análisis de la entrada antes del fin natural de un token.  

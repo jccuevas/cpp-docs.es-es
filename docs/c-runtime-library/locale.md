@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>Configuración regional
 *Locale* hace referencia a los valores de país o región y de idioma que se pueden usar para personalizar un programa. Entre las categorías dependientes de la configuración regional se encuentran los formatos de presentación de fechas y de valores de moneda. Para obtener más información, vea [Categorías de configuración regional](../c-runtime-library/locale-categories.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="locale-dependent-routines"></a>Rutinas dependientes de la configuración regional  
   
-|Rutina|Uso|dependencia de configuración de categorías `setlocale`|  
+|Rutina|Usar|dependencia de configuración de categorías `setlocale`|  
 |-------------|---------|---------------------------------------------|  
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convierte el carácter en valor de punto flotante|`LC_NUMERIC`|  
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Convierte el carácter en valor entero|`LC_NUMERIC`|  

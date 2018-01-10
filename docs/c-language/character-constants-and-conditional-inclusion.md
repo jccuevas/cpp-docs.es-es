@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1e3d50dd4ecf19b1a7bcee7b5efc0d6e2e57d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373dc99b7c4292501a41e17ba4d7393972c31c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Constantes de caracteres e inclusión condicional
 **ANSI 3.8.1** Si el valor de una constante de caracteres de un solo carácter en una expresión constante que controla la inclusión condicional coincide con el valor de la misma constante de caracteres en el juego de caracteres de la ejecución. Si esta constante de caracteres puede tener un valor negativo  

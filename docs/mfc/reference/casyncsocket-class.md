@@ -85,11 +85,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1043273a7a0c8d34428289664b651ccb158a8e9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (clase)
 Representa un Socket de Windows, un extremo de comunicación de red.  
@@ -104,13 +105,13 @@ class CAsyncSocket : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|Construye un objeto `CAsyncSocket`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAsyncSocket:: Accept](#accept)|Acepta una conexión en el socket.|  
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Notificación de eventos de solicitudes para el socket.|  
@@ -141,7 +142,7 @@ class CAsyncSocket : public CObject
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAsyncSocket::OnAccept](#onaccept)|Notifica a un socket de escucha que puede aceptar solicitudes de conexión pendientes mediante una llamada a **Accept**.|  
 |[CAsyncSocket::OnClose](#onclose)|Notifica a cerró un socket que el socket conectado a él.|  
@@ -152,14 +153,14 @@ class CAsyncSocket : public CObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAsyncSocket::operator =](#operator_eq)|Asigna un nuevo valor a un `CAsyncSocket` objeto.|  
 |[CAsyncSocket::operator SOCKET](#operator_socket)|Utilice este operador para recuperar el **SOCKET** identificador de la `CAsyncSocket` objeto.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAsyncSocket::m_hSocket](#m_hsocket)|Indica el **SOCKET** identificador asociado a este `CAsyncSocket` objeto.|  
   

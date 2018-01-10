@@ -1,43 +1,44 @@
 ---
-title: "fenv_access | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fenv_access"
-  - "fenv_access_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenv_access (pragma)"
-  - "pragma (directivas), fenv_access"
+title: fenv_access | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fenv_access
+- fenv_access_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fenv_access
+- fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 623c9cb9af1d7df137aa7ee92071e34ad99a6331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# fenv_access
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Deshabilita \(ON\) o habilita \(OFF\) las optimizaciones que podrían cambiar las pruebas de marcadores y cambios de modo.  
+# <a name="fenvaccess"></a>fenv_access
+Deshabilita (ON) o habilita (OFF) las optimizaciones que podrían cambiar las pruebas de marcadores y cambios de modo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma fenv_access [ON | OFF]  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  De forma predeterminada, `fenv_access` es OFF.  
   
- Para obtener más información sobre el comportamiento de punto flotante, vea [\/fp \(Especificar comportamiento de punto flotante\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Para obtener más información sobre el comportamiento de punto flotante, consulte [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  Las clases de optimización que están sujetas a `fenv_access` son:  
   
@@ -49,11 +50,11 @@ Deshabilita \(ON\) o habilita \(OFF\) las optimizaciones que podrían cambiar la
   
  Las directivas pragma de punto flotante incluyen:  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -79,9 +80,12 @@ int main() {
 }  
 ```  
   
-  **out\=9,999999776482582e\-003**   
-## Ejemplo  
- El ejemplo siguiente es para un compilador que genera archivos de salida para procesadores Itanium.  **\/fp:precise** conserva los resultados intermedios con una precisión ampliada donde los valores mayores que FLT\_MAX \(3,402823466e\+38F\) se pueden calcular y, como resultado de esa suma, tendrán un resultado de 1,0, como si se calculasen manualmente.  **\/fp:strict** conserva los resultados intermedios en su precisión de origen \(float\) de modo que la primera suma genere un valor infinito, que se conserva en toda la expresión.  
+```Output  
+out=9.999999776482582e-003  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente es para un compilador que genera archivos de salida para procesadores Itanium. **/ fp: precisa** conserva los resultados intermedios con una precisión ampliada donde los valores mayores que FLT_MAX (3, 402823466e + 38F) se pueden calcular y como resultado de esa suma tendrá resultado de 1,0, como debería si se calcula de forma manual. **/ fp: strict** mantiene los resultados intermedios en su precisión de origen (float) para la primera suma genere un valor infinito, que se mantiene a lo largo de la expresión.  
   
 ```  
 // pragma_directive_fenv_access_IPF.cpp  
@@ -104,8 +108,11 @@ int main() {
 }  
 ```  
   
-  **1.000000**   
-## Ejemplo  
+```Output  
+1.000000  
+```  
+  
+## <a name="example"></a>Ejemplo  
  Al marcar como comentario el fragmento `#pragma fenv_access (on)` del ejemplo anterior, observe que el resultado es diferente, porque el compilador realiza la evaluación en tiempo de compilación, que no utiliza el modo de control.  
   
 ```  
@@ -129,6 +136,9 @@ int main() {
 }  
 ```  
   
-  **out\=1.000000000000000e\-002**   
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=1.000000000000000e-002  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

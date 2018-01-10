@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream (Clase)
 Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo de clase [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, con elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`.  
@@ -184,7 +185,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro llama a [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).  
+ Las llamadas a funciones miembro [rdbuf](#rdbuf)  **->**  [cerrar](../standard-library/basic-filebuf-class.md#close).  
   
 ### <a name="example"></a>Ejemplo  
   Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa **close**.  
@@ -200,7 +201,7 @@ bool is_open() const;
  **True** si el archivo está abierto, **False** en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
- La función miembro devuelve [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
+ La función miembro devuelve [rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
 ### <a name="example"></a>Ejemplo  
   Vea [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) para obtener un ejemplo que usa `is_open`.  
@@ -272,7 +273,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
  Puntero a un objeto [basic_filebuf](../standard-library/basic-filebuf-class.md) que representa el búfer de flujo almacenado.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa `rdbuf`.  
+  Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo de uso de `rdbuf`.  
   
 ##  <a name="swap"></a>  basic_ifstream::swap  
  Intercambia el contenido de dos objetos `basic_ifstream`.  

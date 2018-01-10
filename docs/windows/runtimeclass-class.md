@@ -1,133 +1,65 @@
 ---
-title: "RuntimeClass (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClass (clase)"
+title: RuntimeClass (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass
+dev_langs: C++
+helpviewer_keywords: RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Representa una clase con instancias que hereda el número especificado de interfaces y proporciona compatibilidad especificada con [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], COM clásico y referencia débil.  
+# <a name="runtimeclass-class"></a>RuntimeClass (Clase)
+Representa una clase WinRT o COM que hereda las interfaces especificadas y proporciona el especificado en tiempo de ejecución de Windows, COM clásico y soporte técnico de referencia débil.  
   
- Normalmente deriva sus tipos de WRL desde `RuntimeClass` porque esta clase implementa `AddRef`, `Release` y `QueryInterface`, y ayuda a administrar el número de referencia total del módulo.  
+Esta clase proporciona la implementación de código reutilizable de clases de WinRT y COM, que proporciona la implementación de `QueryInterface`, `AddRef`, `Release` etc., administra el recuento de referencias del módulo y tiene compatibilidad para proporcionar el generador de clases para objetos activables.
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-template <  
-   typename I0,  
-   typename I1 = Details::Nil,  
-   typename I2 = Details::Nil,  
-   typename I3 = Details::Nil,  
-   typename I4 = Details::Nil,  
-   typename I5 = Details::Nil,  
-   typename I6 = Details::Nil,  
-   typename I7 = Details::Nil,  
-   typename I8 = Details::Nil,  
-   typename I9 = Details::Nil  
->  
-class RuntimeClass : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT, RuntimeClassFlags<WinRt>>;  
+```
+template <typename ...TInterfaces> class RuntimeClass
+template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
+```
   
-template <  
-   unsigned int classFlags,  
-   typename I0,  
-   typename I1,  
-   typename I2,  
-   typename I3,  
-   typename I4,  
-   typename I5,  
-   typename I6,  
-   typename I7,  
-   typename I8  
->  
-class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT, RuntimeClassFlags<classFlags> >;  
-```  
-  
-#### Parámetros  
- `I0`  
- El id. de interfaz de zeroth. \(Obligatorio\)  
-  
- `I1`  
- El identificador de la primera interfaz. \(Opcional\)  
-  
- `I2`  
- El segundo id. de interfaz. \(Opcional\)  
-  
- `I3`  
- El tercer id. de interfaz. \(Opcional\)  
-  
- `I4`  
- El cuarto id. de interfaz. \(Opcional\)  
-  
- `I5`  
- El identificador de la quinta interfaz. \(Opcional\)  
-  
- `I6`  
- El sexto id. de interfaz \(Opcional\)  
-  
- `I7`  
- El séptimo id. de interfaz. \(Opcional\)  
-  
- `I8`  
- El identificador de octava interfaz. \(Opcional\)  
-  
- `I9`  
- El noveno id. de interfaz \(Opcional\)  
-  
+#### <a name="parameters"></a>Parámetros  
  `classFlags`  
- Combinación de uno o más valores de enumeración [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) .  
+Parámetro opcional. Una combinación de uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeración. El `__WRL_CONFIGURATION_LEGACY__` macros se pueden definir para cambiar el valor predeterminado de classFlags para todas las clases en tiempo de ejecución en el proyecto. Si ha definido, RuntimeClass instancias son no ágiles de forma predeterminada. Cuando no está definido, las instancias de RuntimeClass son ágiles de forma predeterminada. Para evitar la ambigüedad especifique siempre el Microsoft::WRL::FtmBase en `TInterfaces` o RuntimeClassType::InhibitFtmBase. Tenga en cuenta que si InhibitFtmBase y FtmBase son que ambos usan el objeto será ágil.
+ 
+ `TInterfaces`  
+La lista de interfaces que implementa el objeto más allá de IUnknown, IInspectable u otras interfaces controlados por [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). También puede enumerar otras clases que se deriva, en particular Microsoft::WRL::FtmBase para hacer que el objeto agile y hacer que implementar IMarshal.
   
-## Miembros  
-  
-### Constructores públicos  
+## <a name="members"></a>Miembros  
+`RuntimeClassInitialize`Una función que inicializa el objeto si la función de plantilla MakeAndInitialize se utiliza para construir el objeto. Devuelve S_OK si el objeto se inicializó correctamente o un código de error COM si no se pudo inicializar. El código de error COM se propaga como el valor devuelto de MakeAndInitialize. Tenga en cuenta que no se llama al método RuntimeClassInitialize si la función de plantilla Asegúrese de que se utiliza para construir el objeto.
+
+### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[RuntimeClass::RuntimeClass \(Constructor\)](../windows/runtimeclass-runtimeclass-constructor.md)|Inicializa la instancia actual de la clase RuntimeClass.|  
-|[RuntimeClass::~RuntimeClass \(Destructor\)](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Cancela la inicialización de la instancia actual de la clase RuntimeClass.|  
+|[RuntimeClass::RuntimeClass (constructor)](../windows/runtimeclass-runtimeclass-constructor.md)|Inicializa la instancia actual de la clase RuntimeClass.|  
+|[RuntimeClass::~RuntimeClass (destructor)](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Desinicializa la instancia actual de la clase RuntimeClass.|  
   
-## Jerarquía de herencia  
- `I0`  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
+Se trata de un detalle de implementación.
   
- `ChainInterfaces`  
+## <a name="requirements"></a>Requisitos  
+**Encabezado:** implements.h  
   
- `I0`  
+**Espacio de nombres:** Microsoft::WRL  
   
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `RuntimeClass`  
-  
-## Requisitos  
- **Encabezado:** implements.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

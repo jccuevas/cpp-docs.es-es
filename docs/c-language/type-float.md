@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>Tipo float
 Los números de punto flotante utilizan el formato IEEE (Institute of Electrical and Electronics Engineers). Los valores de precisión sencilla con el tipo float tienen 4 bytes, formados por un bit de signo, un exponente binario de 8 bits con exceso 127 y una mantisa de 23 bits. La mantisa representa un número entre 1,0 y 2,0. Puesto que el bit de alto nivel de la mantisa siempre es 1, no se almacena en el número. En esta representación se proporciona un intervalo de aproximadamente 3,4E-38 a 3,4E+38 para el tipo float.  
@@ -40,7 +41,7 @@ Los números de punto flotante utilizan el formato IEEE (Institute of Electrical
   
 |Tipo|Dígitos significativos|Número de bytes|  
 |----------|------------------------|---------------------|  
-|flotante|6 - 7|4|  
+|float|6 - 7|4|  
 |double|15 - 16|8|  
   
  Las variables de punto flotante se representan mediante una mantisa, que contiene el valor del número y un exponente que contiene el orden de magnitud del número.  

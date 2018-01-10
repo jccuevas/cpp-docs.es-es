@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 Define varias clases estándar usadas para notificar excepciones. Las clases forman una jerarquía de derivación, todas ellas derivadas de la clase [exception](../standard-library/exception-class.md), e incluyen dos tipos generales de excepciones: errores lógicos y errores en tiempo de ejecución. Los errores lógicos son errores producidos por el programador. Se derivan de la clase base logic_error e incluyen:  

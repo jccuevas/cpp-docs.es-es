@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4083 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4083"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4083"
+title: Compilador advertencia (nivel 1) C4083 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4083
+dev_langs: C++
+helpviewer_keywords: C4083
 ms.assetid: e7d3344e-5645-4d56-8460-d1acc9145ada
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c777415a35b5ac4d581434c1ede01cd98b405d00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4083
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se espera 'símbolo \(token\)'; se encontró el identificador 'identificador'  
+# <a name="compiler-warning-level-1-c4083"></a>Compilador advertencia (nivel 1) C4083
+se esperaba 'token'; se encontró el identificador 'identificador'  
   
- Hay un identificador en un lugar incorrecto de una instrucción **\#pragma**.  
+ Se produce un identificador en el lugar incorrecto en una **#pragma** instrucción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C4083.cpp  
@@ -37,4 +36,4 @@ se espera 'símbolo \(token\)'; se encontró el identificador 'identificador'
 #pragma warning(disable:4083)   //correct  
 ```  
   
- Compruebe la sintaxis de las directivas [\#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+ Compruebe la sintaxis de la [#pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md) directivas.

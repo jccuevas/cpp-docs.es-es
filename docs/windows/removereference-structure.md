@@ -1,32 +1,33 @@
 ---
-title: "RemoveReference (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RemoveReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RemoveReference (estructura)"
+title: RemoveReference (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RemoveReference
+dev_langs: C++
+helpviewer_keywords: RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4f205d01047a1836eb1e5a056f335a62005a9fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# RemoveReference (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="removereference-structure"></a>RemoveReference (estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -43,28 +44,28 @@ template<
 struct RemoveReference<T&&>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Una clase.  
   
-## Comentarios  
- Elimina el rasgo de referencia o la rvalue\- referencia de parámetro especificado de la plantilla de clase.  
+## <a name="remarks"></a>Comentarios  
+ Elimina el rasgo de referencia o referencia rvalue del parámetro de plantilla de clase especificada.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Typedefs públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|`Type`|Sinónimo del parámetro de plantilla de clase.|  
+|`Type`|Sinónimo para el parámetro de plantilla de clase.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `RemoveReference`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** internal.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -1,26 +1,27 @@
 ---
-title: "ML Nonfatal Errors A2150-A2199 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Errores recuperables A2150-A2199 de ML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8151f355-85c5-4d36-b05f-ed0bdf912d3a
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 18e88fc28ef317648988b8f16b5f5f3b677983d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Errors A2150-A2199
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para obtener más información sobre los errores no graves de ML., vea [Mensajes de error de ML.](../../assembler/masm/ml-error-messages.md)  
+# <a name="ml-nonfatal-errors-a2150-a2199"></a>Errores recuperables A2150-A2199 de ML
+Para obtener más información acerca de errores recuperables de ML, consulte [mensajes de Error de ML](../../assembler/masm/ml-error-messages.md).  
   
-## Vea también  
- [ML Nonfatal Errors](../../assembler/masm/ml-nonfatal-errors.md)
+## <a name="see-also"></a>Vea también  
+ [Errores recuperables de ML](../../assembler/masm/ml-nonfatal-errors.md)

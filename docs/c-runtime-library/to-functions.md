@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to (Funciones)
 Cada una de las funciones **to** y su macro asociada, si la hubiera, convierte un carácter individual a otro carácter.  
@@ -47,7 +48,7 @@ Cada una de las funciones **to** y su macro asociada, si la hubiera, convierte u
 ## <a name="remarks"></a>Comentarios  
  Las funciones **to** y las conversiones de macro son las siguientes.  
   
-|Rutina|Macro|Descripción|  
+|Rutina|Macro|Description|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|Convierte `c` a caracteres ASCII|  
 |`tolower`|`tolower`|Convierte `c` a minúsculas cuando proceda|  
@@ -122,4 +123,4 @@ sOME OF these LETTERS ARE cAPITALS.
 ## <a name="see-also"></a>Vea también  
  [Conversión de datos](../c-runtime-library/data-conversion.md)   
  [Configuración regional](../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../c-runtime-library/is-isw-routines.md)

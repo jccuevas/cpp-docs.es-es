@@ -15,18 +15,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 27412403fe6ce0f1884a2ea99790376acb1c5236
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb071b615d87ab1b605c78e5ba0645be139fba1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="robustness"></a>Solidez
 Use las siguientes funciones de la biblioteca en tiempo de ejecución de C para mejorar la solidez del programa.  
   
 ### <a name="run-time-robustness-functions"></a>Funciones de solidez en tiempo de ejecución  
   
-|Función|Uso|  
+|Función|Usar|  
 |--------------|---------|  
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Transfiere el control al mecanismo de control de errores si el operador `new` no puede asignar memoria.|  
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Controla las excepciones Win32 (excepciones estructuradas de C) como con excepciones con tipo de C++.|  

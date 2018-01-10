@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c43b8453b592369d8179c9d3917bdbcc7381fa00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-worker-threads"></a>Multithreading: Crear subprocesos de trabajo
 Un subproceso de trabajo se usa normalmente para controlar tareas en segundo plano que el usuario no debería tener que esperar para seguir usando la aplicación. Tareas como cálculos repetidos e impresión en segundo plano son buenos ejemplos de subprocesos de trabajo. En este tema se detalla los pasos necesarios para crear un subproceso de trabajo. Entre los temas se incluyen los siguientes:  

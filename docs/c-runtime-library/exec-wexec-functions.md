@@ -64,11 +64,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f571a6d0a84ca6d2990ed4910ef52ea0d54e2d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec (Funciones)
 Cada función de esta familia carga y ejecuta un proceso nuevo:  
@@ -82,7 +83,7 @@ Cada función de esta familia carga y ejecuta un proceso nuevo:
   
  La última letra del nombre de función determina la variación.  
   
-|Sufijo de la función _exec|Descripción|  
+|Sufijo de la función _exec|Description|  
 |----------------------------|-----------------|  
 |`e`|`envp`, una matriz de punteros a la configuración de entorno, se pasa al nuevo proceso.|  
 |`l`|Los argumentos de la línea de comandos se pasan individualmente a la función `_exec`. Se suele usar cuando el número de parámetros para el nuevo proceso se conoce de antemano.|  

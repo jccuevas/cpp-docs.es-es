@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>Interfaz IRegistrar
-Esta interfaz se define en atliface.h y se usa internamente las funciones de miembro CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Esta interfaz se define en atliface.h y se usa internamente las funciones de miembro de CAtlModule como [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +46,7 @@ Vea el tema [utilizar parámetros reemplazables (el preprocesador del registrado
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Registra el recurso. |  
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Anula el registro del recurso.|  
@@ -121,14 +104,14 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
   
  
 ##  <a name="stringregister"></a>IRegistrar::StringRegister  
-  Registra los datos de la cadena especificada.
+  Registra los datos de cadena especificada.
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister( 
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```  
   
 ##  <a name="stringunregister"></a>IRegistrar::StringUnregister
- Anula el registro de los datos de la cadena especificada.  
+ Anula el registro de los datos de cadena especificada.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -159,7 +142,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
  
 ## <a name="see-also"></a>Vea también  
  [Usar parámetros reemplazables (el preprocesador del registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Información general de la clase](../../atl/atl-class-overview.md)   
+ [Información general de clases](../../atl/atl-class-overview.md)   
  [Clases de módulo](../../atl/atl-module-classes.md)   
  [Componente de registro (registrador)](../../atl/atl-registry-component-registrar.md)  
-

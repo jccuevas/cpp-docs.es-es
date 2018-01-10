@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e47cdfaadcf164a3298d06901fe4f723b9aa0f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4fe9411d306e08f16df138786d6d55e4ea1647c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complex-class"></a>complex (Clase)
 La clase de plantilla describe un objeto que almacena dos objetos de tipo **Type**, uno que representa la parte real de un número complejo y otro que representa la parte imaginaria.  
@@ -58,7 +59,7 @@ class complex
 |-|-|  
 |[complex](#complex)|Construye un número complejo con partes reales e imaginarias especificados o como una copia de otro número complejo.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

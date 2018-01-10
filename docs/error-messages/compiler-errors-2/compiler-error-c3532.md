@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3532
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3532
+f1_keywords: C3532
+dev_langs: C++
+helpviewer_keywords: C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4b85baf8e2e53885b07758772d3328f70fe93b35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3532"></a>Error del compilador C3532
 'type': uso incorrecto de 'auto'  

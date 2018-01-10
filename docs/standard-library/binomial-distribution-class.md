@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-- random/std::binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ae3889c06ddc69e81ae5e144c70d68d7dc34c3ce
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution (Clase)
 Genera una distribución binomial.  
@@ -107,7 +104,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener información más detallada sobre la función de probabilidad discreta de distribución binomial, vea el artículo de Wolfram MathWorld sobre la [distribución binomial](http://go.microsoft.com/fwlink/LinkId=398469).  
+Para obtener información más detallada sobre la función de probabilidad discreta de distribución binomial, vea el artículo de Wolfram MathWorld sobre la [distribución binomial](http://go.microsoft.com/fwlink/p/?linkid=398469).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -296,7 +293,6 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
   
 ## <a name="see-also"></a>Vea también  
  [\<random>](../standard-library/random.md)
-
 
 
 

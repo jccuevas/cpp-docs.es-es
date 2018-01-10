@@ -1,40 +1,40 @@
 ---
-title: "Notificaci&#243;n y control de errores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de errores, y notificación"
+title: "Control de errores y notificación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 738721eb3fc37ba076157129cb88a22f2c90e464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Notificaci&#243;n y control de errores
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Para obtener más información sobre la notificación y el control de errores, vea [Función auxiliar](http://msdn.microsoft.com/es-es/6279c12c-d908-4967-b0b3-cabfc3e91d3d).  
+# <a name="error-handling-and-notification"></a>Notificación y control de errores
+Para obtener más información sobre la notificación y control de errores, vea [descripción de la función auxiliar](understanding-the-helper-function.md).  
   
- Para obtener más información sobre las funciones de enlace, vea [Definiciones de estructura y de constante](../../build/reference/structure-and-constant-definitions.md).  
+ Para obtener más información sobre las funciones de enlace, vea [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).  
   
- Si el programa utiliza archivos DLL de carga retrasada, deberá controlar los errores con fiabilidad, ya que los que se produzcan durante su ejecución provocarán excepciones no controladas.  El control de errores se compone de dos partes:  
+ Si el programa utiliza archivos DLL de carga retrasada, deberá controlar los errores Fortalezca de forma Puesto que dará como resultado errores que se producen mientras se ejecuta el programa en las excepciones no controladas. El control de errores está formado por dos partes:  
   
  Recuperación mediante un enlace.  
- Si es necesario recuperar un código o proporcionar una biblioteca y\/o rutina alternativas en caso de error, se puede proporcionar un *enlace* a la función auxiliar que permita solucionar la situación.  La rutina del enlace tiene que devolver un valor apropiado para que pueda continuar el procesamiento \(HINSTANCE o FARPROC\), o el valor 0 para indicar que debe producirse una excepción.  También podría producir su propia excepción o **longjmp**  desde el enlace.  Existen enlaces de notificación y enlaces de error.  
+ Si se necesita el código recuperar o proporcionar una biblioteca y/o rutina alternativas en caso de error, puede proporcionar un enlace a la función auxiliar que puede proporcionar o solucionar el problema. La rutina del enlace tiene que devolver un valor apropiado, de modo que el proceso puede continuar (HINSTANCE o FARPROC) o 0 para indicar que se debe producir una excepción. También podría producir su propia excepción o **longjmp** desde el enlace. Existen enlaces de notificación y enlaces de error.  
   
- Informe a través de una excepción.  
- Si todo lo necesario para controlar el error es anular el procedimiento, no se necesita un enlace mientras el código del usuario pueda controlar la excepción.  
+ Informes a través de una excepción.  
+ Si todo lo que es necesario para controlar el error es anular el procedimiento, ningún enlace es necesario siempre que el código de usuario puede controlar la excepción.  
   
- Los temas siguientes tratan el control y la notificación de errores.  
+ Los temas siguientes describen la notificación y control de errores:  
   
 -   [Enlaces de notificación](../../build/reference/notification-hooks.md)  
   
@@ -42,5 +42,5 @@ Para obtener más información sobre la notificación y el control de errores, v
   
 -   [Excepciones](../../build/reference/exceptions-c-cpp.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)

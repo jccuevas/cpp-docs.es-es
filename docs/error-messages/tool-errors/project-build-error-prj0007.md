@@ -1,37 +1,36 @@
 ---
-title: "Error PRJ0007 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0007"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0007"
+title: Error PRJ0007 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0007
+dev_langs: C++
+helpviewer_keywords: PRJ0007
 ms.assetid: d923948b-acc9-498f-bf3b-f14e41bed61a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5bdeba0c732fbb22f14b349b40a89e4acbbd3d3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error PRJ0007 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-No se puede crear el directorio de resultados 'directorio'.  
+# <a name="project-build-error-prj0007"></a>Error PRJ0007 al compilar el proyecto
+No se pudo crear el directorio de resultados 'directorio'.  
   
- Visual C\+\+ no pudo crear un directorio de resultados.  Las causas posibles son:  
+ Visual C++ no se pudo crear un directorio de salida. Razones posibles incluyen:  
   
--   El directorio en que se iba a crear el directorio de resultados es de sólo lectura.  
+-   El directorio en los que el directorio de salida era crear es de solo lectura.  
   
--   El equipo no tiene suficiente espacio en disco.  
+-   Equipo está fuera del espacio en disco.  
   
--   La ruta de directorio que especificó no es válida.  
+-   Especifica una ruta de acceso de directorio no válido.  
   
--   Los permisos de usuario no son suficientes para crear el directorio.
+-   Permisos de usuario no son suficientes para crear el directorio.

@@ -11,11 +11,14 @@ ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31309f961b392cb7548c3114e1af8604ac872cf3
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 8b9eda4c238ae1a3ea3e59d0e5c39ee6b59cff02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-linux-project"></a>Crear un nuevo proyecto de Linux
 Al codificar para Linux, tiene la opción de crear un proyecto de Visual Studio o un proyecto de CMake. En este tema se describe cómo crear un proyecto de Visual Studio. Para obtener información acerca de los proyectos de CMake, consulte [Configurar un proyecto de CMake de Linux](cmake-linux-project.md).
@@ -27,7 +30,7 @@ Para crear un nuevo proyecto de Linux en Visual Studio, haga lo siguiente:
 
    ![Nuevo proyecto de Linux](media/newproject.png)
 
-   | Tipo de proyecto | Descripción
+   | Tipo de proyecto | Description
    | ------------ | ---
    | **Blink (Raspberry)**           | Proyecto destinado a un dispositivo Raspberry Pi con código de ejemplo escrito para hacer parpadear un LED
    | **Aplicación de consola (Linux)** | Proyecto destinado a cualquier equipo Linux con código de ejemplo escrito para mostrar texto en la consola

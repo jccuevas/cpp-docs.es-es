@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6766b2fcc5d277b86f979252bf22e6ae343e608e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-does-remote-automation-provide"></a>¿Qué proporciona la automatización remota?
 Automatización remota permite a los programas invocar `IDispatch` las implementaciones en un equipo desde otro equipo. También admite otras interfaces requeridas por la automatización, específicamente **IEnumVARIANT** compatibilidad con las colecciones. No proporciona la capacidad de distribuir otras interfaces COM (excepto **IUnknown**, evidentemente) y, al igual que la automatización regular, contiene compatibilidad con cálculo de referencias solo para esos tipos de datos compatibles con la automatización.  

@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8315177848b1beee9b6823ff2ee12f9ca1d02e4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2d059a990b9b01cdfc959284d9fe20f3dfd12af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemodulet-class"></a>Clase de CAtlServiceModuleT
 Esta clase implementa un servicio.  
@@ -75,13 +76,13 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlServiceModuleT:: Handler](#handler)|La rutina del controlador para el servicio.|  
 |[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|Proporciona el valor predeterminado la configuración de seguridad para el servicio.|  
@@ -108,7 +109,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Marca que indica que el programa se ejecuta como un servicio.|  
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Variable de miembro que almacene el identificador del subproceso.|  

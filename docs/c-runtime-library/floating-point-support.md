@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60a2131b08b9f0ac119bdcd414f2d4d1761a9b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 961ede0b381555b3e41d0432f2aa4093ee496ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-support"></a>Compatibilidad con el punto flotante
 La biblioteca en tiempo de ejecución de Microsoft C (CRT) ofrece muchas funciones de la biblioteca matemática de punto flotante, incluidas todas las necesarias en ISO C99. Estas funciones se implementan para equilibrar el rendimiento con exactitud. Dado que es posible que producir el resultado redondeado correctamente sea excesivamente costoso, estas funciones están diseñadas para generar con eficacia una buena aproximación al resultado redondeado correctamente. En la mayoría de los casos, el resultado producido se encuentra dentro de +/-1 ulp del resultado redondeado correctamente, aunque puede haber casos en los que la falta de precisión sea mayor.  

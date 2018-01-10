@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b0c3ae4f8b6cd05fa12fb0121e1b0144b45df8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60deb16628802e61ac411d576558a8659a638410
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>Clase CMFCStandardColorsPropertyPage
 Representa una página de propiedades que los usuarios usan para seleccionar colores estándar en un cuadro de diálogo color.  
@@ -35,14 +36,14 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|Constructor predeterminado.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |`CMFCStandardColorsPropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
 |`CMFCStandardColorsPropertyPage::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
   

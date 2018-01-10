@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06a3976149e11b3fa9f4e61f854bd943a0c762b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da47f0113ec2e36f6df4afa32f6aff84d5ee6dfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiletimespan-class"></a>Clase CFileTimeSpan
 Esta clase proporciona métodos para administrar los valores de tiempo asociados a un archivo y fecha relativa.  
@@ -41,20 +42,20 @@ class CFileTimeSpan
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileTimeSpan::CFileTimeSpan](#cfiletimespan)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileTimeSpan::GetTimeSpan](#gettimespan)|Llamar a este método para recuperar el intervalo de tiempo desde la `CFileTimeSpan` objeto.|  
 |[CFileTimeSpan::SetTimeSpan](#settimespan)|Llamar a este método para establecer el intervalo de tiempo de la `CFileTimeSpan` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileTimeSpan::operator-](#operator_-)|Realiza la resta en una `CFileTimeSpan` objeto.|  
 |[CFileTimeSpan::operator! =](#operator_neq)|Compara dos objetos `CFileTimeSpan` para determinar si no son iguales.|  
@@ -115,7 +116,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
   
 ### <a name="parameters"></a>Parámetros  
  `span`  
- Objeto `CFileTimeSpan`.  
+ Un objeto `CFileTimeSpan`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un `CFileTimeSpan` objeto que representa el resultado de la diferencia entre los dos intervalos de tiempo.  
@@ -143,7 +144,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
   
 ### <a name="parameters"></a>Parámetros  
  `span`  
- Objeto `CFileTimeSpan`.  
+ Un objeto `CFileTimeSpan`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un `CFileTimeSpan` que contiene la suma de la hora de dos abarca del objeto.  
@@ -157,7 +158,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `span`  
- Objeto `CFileTimeSpan`.  
+ Un objeto `CFileTimeSpan`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CFileTimeSpan` que contiene la suma de la hora de dos abarca del objeto.  
@@ -199,7 +200,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `span`  
- Objeto `CFileTimeSpan`.  
+ Un objeto `CFileTimeSpan`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CFileTimeSpan` objeto.  
@@ -213,7 +214,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `span`  
- Objeto `CFileTimeSpan`.  
+ Un objeto `CFileTimeSpan`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CFileTimeSpan` objeto.  

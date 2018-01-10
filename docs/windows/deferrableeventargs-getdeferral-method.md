@@ -13,14 +13,17 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d43aa6d82f44965e8defda2af3e6455e86cba38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2a49fba82867650a80f45de3c6301405f96b5c47
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>Método DeferrableEventArgs::GetDeferral
-Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/?LinkId=526520) el objeto que representa un evento diferido.  
+Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) el objeto que representa un evento diferido.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,7 +33,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
   
 #### <a name="parameters"></a>Parámetros  
  `result`  
- Un puntero que hará referencia a la [aplazamiento](http://go.microsoft.com/fwlink/?LinkId=526520) objeto cuando se complete la llamada.  
+ Un puntero que hará referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto cuando se complete la llamada.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  

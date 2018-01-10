@@ -32,11 +32,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Personaliza los formatos de salida que usan las funciones de E/S con formato.  
@@ -72,7 +73,7 @@ unsigned int _set_output_format(
 |-------------|---------------------|  
 |`_set_output_format`|\<stdio.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

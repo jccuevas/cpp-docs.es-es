@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>E/S de consola y de puerto
 Estas rutinas leen y escriben en la consola o en el puerto especificado. Las rutinas de E/S de consola no son compatibles con las rutinas de la biblioteca de E/S de secuencia o de E/S de bajo nivel. No es necesario abrir ni cerrar la consola o el puerto antes de ejecutar la E/S, por lo que no hay rutinas abiertas ni cerradas en esta categoría. En los sistemas operativos Windows, el resultado de estas funciones siempre se dirige a la consola y no se puede redirigir.  
   
 ### <a name="console-and-port-io-routines"></a>Rutinas de E/S de consola y de puerto  
   
-|Rutina|Uso|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Leer cadena de la consola|  
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Escribir datos con formato en la consola|  

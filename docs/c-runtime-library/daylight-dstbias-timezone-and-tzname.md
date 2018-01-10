@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight, _dstbias, _timezone y _tzname
 `_daylight`, `_dstbias`, `_timezone` y `_tzname` se usan en algunas rutinas de fecha y hora para realizar ajustes de hora local. Estas variables globales han quedado en desuso en las versiones funcionales más seguras, que deben usarse en lugar de la variables globales.  

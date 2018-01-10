@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>Referencia de utilidades de ATL
 ATL proporciona código para manipular las rutas de acceso y las direcciones URL en forma de [CPathT](../atl/reference/cpatht-class.md) y [CUrl](../atl/reference/curl-class.md). Un grupo de subprocesos, [CThreadPool](../atl/reference/cthreadpool-class.md), puede utilizar en las aplicaciones. Este código se puede encontrar en atlpath.h y atlutil.h.  
@@ -34,7 +35,7 @@ ATL proporciona código para manipular las rutas de acceso y las direcciones URL
 |[CUrl (clase)](../atl/reference/curl-class.md)|Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de las otras si analizar una dirección URL existente cadena o generar una cadena desde el principio.|  
 |[CWorkerThread (clase)](../atl/reference/cworkerthread-class.md)|Esta clase crea un subproceso de trabajo o usa uno existente, espera a que en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificado cuando se señala a uno de los controladores.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

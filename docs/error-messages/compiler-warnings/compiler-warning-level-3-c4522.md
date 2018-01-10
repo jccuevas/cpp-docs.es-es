@@ -1,37 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 3) C4522 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4522"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4522"
+title: Compilador advertencia (nivel 3) C4522 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4522
+dev_langs: C++
+helpviewer_keywords: C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bccf54eced4c410310a57d919617850d928ea06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 3) C4522
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'clase' : se han especificado varios operadores de asignaciones  
+# <a name="compiler-warning-level-3-c4522"></a>Advertencia del compilador (nivel 3) C4522
+'class': varios operadores de asignación especificados  
   
- La clase tiene múltiples operadores de asignación de un mismo tipo.  Esta advertencia es informativa; los constructores son invocables en su programa.  
+ La clase tiene múltiples operadores de asignación de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.  
   
- Utilice el pragma [warning](../../preprocessor/warning.md) para deshabilitar esta advertencia.  
+ Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4522.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4522.  
   
 ```  
 // C4522.cpp  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipos de datos de SBCS y MBCS
 Cualquier rutina de biblioteca en tiempo de ejecución de `MBCS` que únicamente controla un solo carácter multibyte, o bien un solo byte de un carácter multibyte que espera un argumento `unsigned int` (donde 0x00 <= valor de carácter <= 0xFFFF y 0x00 <= valor de byte <= 0xFF ). Una rutina `MBCS` que controla bytes de multibyte, o bien caracteres en un contexto de cadena que esperan una cadena de caracteres multibyte para representarse como un puntero `unsigned char`.  

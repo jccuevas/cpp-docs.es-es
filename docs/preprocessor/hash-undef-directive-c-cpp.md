@@ -1,36 +1,34 @@
 ---
-title: "#undef (Directiva) (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#undef"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#undef (directiva)"
-  - "preprocesador, directivas"
-  - "undef (directiva) (#undef)"
+title: '#<a name="undef-directive-cc--microsoft-docs"></a>undef (directiva) (C/C ++) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#undef'
+dev_langs: C++
+helpviewer_keywords:
+- '#undef directive'
+- undef directive (#undef)
+- preprocessor, directives
 ms.assetid: 88900e0e-2c19-4a63-b681-f3d3133c24ca
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aee7babf895b72a5ff4f5fb1485e4bb118e95889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# #undef (Directiva) (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quita \(anula la definición de\) un nombre creado previamente con `#define`.  
+# <a name="undef-directive-cc"></a>#undef (Directiva) (C/C++)
+Quita (anula la definición de) un nombre creado previamente con `#define`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -39,14 +37,14 @@ identifier
   
 ```  
   
-## Comentarios  
- La directiva `#undef` quita la definición actual de *identifier*.  Por consiguiente, el preprocesador omite las apariciones posteriores de *identifier*.  Para quitar una definición de macro utilizando `#undef`, solo hay que proporcionar el *identifier* de macro; no hay que proporcionar una lista de parámetros.  
+## <a name="remarks"></a>Comentarios  
+ El `#undef` directiva quita la definición actual de *identificador*. Por lo tanto, las siguientes apariciones del *identificador* se omiten el preprocesador. Para quitar una definición de macro utilizando `#undef`, asigne a solo la macro *identificador* ; no proporcionan una lista de parámetros.  
   
- También puede aplicar la directiva `#undef` a un identificador que no tenga ninguna definición anterior.  De este modo se garantiza que el identificador no esté definido.  El reemplazo de macros no se realiza dentro de instrucciones `#undef`.  
+ También puede aplicar la directiva `#undef` a un identificador que no tenga ninguna definición anterior. De este modo se garantiza que el identificador no esté definido. El reemplazo de macros no se realiza dentro de instrucciones `#undef`.  
   
- La directiva `#undef` se empareja normalmente con una directiva `#define` para crear una región en un programa de origen en el que un identificador tiene un significado especial.  Por ejemplo, una función específica del programa de origen puede utilizar constantes de manifiesto para definir valores específicos del entorno que no afecten al resto del programa.  La directiva `#undef` también funciona con la directiva `#if` para controlar la compilación condicional del programa de origen.  Vea [Directivas \#if, \#elif, \#else y \#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) para obtener más información.  
+ La directiva `#undef` se empareja normalmente con una directiva `#define` para crear una región en un programa de origen en el que un identificador tiene un significado especial. Por ejemplo, una función específica del programa de origen puede utilizar constantes de manifiesto para definir valores específicos del entorno que no afecten al resto del programa. La directiva `#undef` también funciona con la directiva `#if` para controlar la compilación condicional del programa de origen. Vea [#if, #elif, #else y #endif directivas](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) para obtener más información.  
   
- En el ejemplo siguiente, la directiva `#undef` quita las definiciones de una constante simbólica y una macro.  Observe que solo se proporciona el identificador de la macro.  
+ En el ejemplo siguiente, la directiva `#undef` quita las definiciones de una constante simbólica y una macro. Observe que solo se proporciona el identificador de la macro.  
   
 ```  
 #define WIDTH 80  
@@ -60,9 +58,9 @@ identifier
   
  **Específicos de Microsoft**  
   
- Las macros pueden no definirse desde la línea de comandos mediante la opción \/U seguida de los nombres de las macros que no se definen.  El efecto de emitir este comando equivale a una secuencia de instrucciones `#undef` *macro\-name* al principio del archivo.  
+ Las macros pueden no definirse desde la línea de comandos mediante la opción /U seguida de los nombres de las macros que no se definen. El efecto de emitir este comando es equivalente a una secuencia de `#undef` *nombre de la macro* instrucciones al principio del archivo.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Directivas de preprocesador](../preprocessor/preprocessor-directives.md)

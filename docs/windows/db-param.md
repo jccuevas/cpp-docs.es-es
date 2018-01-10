@@ -1,32 +1,33 @@
 ---
-title: "db_param | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_param"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_param attribute"
+title: db_param | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_param
+dev_langs: C++
+helpviewer_keywords: db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# db_param
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Asociado a la variable miembro especificada a una entrada o parámetro de salida y delimita la variable.  
+# <a name="dbparam"></a>db_param
+La variable de miembro especificado se asocia con un parámetro de entrada o de salida y delimita la variable.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,47 +42,47 @@ Asociado a la variable miembro especificada a una entrada o parámetro de salida
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `ordinal`  
- El número de columnas \(ordinal de**DBCOLUMNINFO** \) correspondiente a un campo del conjunto de filas al enlazar datos.  
+ El número de columna (**DBCOLUMNINFO** ordinal) correspondiente a un campo del conjunto de filas que se va a enlazar los datos.  
   
- *paramtype* \(opcional\)  
- El tipo el conjunto para el parámetro.  Los proveedores admiten los tipos de E\/S de parámetro admitidos por el origen de datos subyacente.  el tipo es una combinación de uno o más valores de **DBPARAMIOENUM** :  
+ *ParamType* (opcional)  
+ El tipo de conjunto para el parámetro. Proveedores admiten solo tipos de E/S de parámetros que son compatibles con el origen de datos subyacente. El tipo es una combinación de uno o varios **DBPARAMIOENUM** valores:  
   
--   **DBPARAMIO\_INPUT** un parámetro de entrada.  
+-   **DBPARAMIO_INPUT** Un parámetro de entrada.  
   
--   **DBPARAMIO\_OUTPUT** un parámetro de salida.  
+-   **DBPARAMIO_OUTPUT** Un parámetro de salida.  
   
--   El descriptor de**DBPARAMIO\_NOTPARAM**no tiene ningún parámetro.  El valor **eParamIO** a este valor en descriptores de fila recuerda al usuario que los parámetros se omiten.  
+-   **DBPARAMIO_NOTPARAM** El descriptor de acceso no tiene ningún parámetro. Establecer **eParamIO** en este valor en la fila descriptores de acceso recuerda al usuario que se omiten los parámetros.  
   
- *dbtype* \(opcional\)  
- OLE DB [Indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para la entrada de la columna.  
+ *DbType* (opcional)  
+ OLE DB [indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para la entrada de la columna.  
   
- *precisión* \(opcional\)  
- la precisión que se utilizará para la entrada de la columna.  Para obtener información detallada, vea la descripción del elemento de **bPrecision** de [estructura de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *precisión* (opcional)  
+ La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de **bPrecision** elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *escala* \(opcional\)  
- la escala que se utilizará para la entrada de la columna.  Para obtener información detallada, vea la descripción del elemento de **bScale** de [estructura de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *escala* (opcional)  
+ La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de **bScale** elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *estado* \(opcional\)  
- Una variable miembro utilizada para contener el estado de esta columna.  El estado indica si el valor de la columna es un valor de datos o algún otro valor, como **NULL**.  Por valores posibles, vea [Estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en *la referencia del*programador.  
+ *estado* (opcional)  
+ Una variable de miembro que se utiliza para almacenar el estado de esta columna. El estado indica si el valor de la columna es un valor de datos o algún otro valor, como **NULL**. Para los valores posibles, vea [estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en el *referencia del programador de OLE DB*.  
   
- *length* \(opcional\)  
- Una variable miembro utilizada para contener el tamaño de la columna en bytes.  
+ *longitud* (opcional)  
+ Una variable de miembro que se usa para contener el tamaño de la columna en bytes.  
   
-## Comentarios  
- **db\_param** define los parámetros que utiliza en comandos; por consiguiente se utiliza con **db\_command**.  Por ejemplo, puede utilizar **db\_param** a los parámetros de enlace en consultas SQL o procedimientos almacenados.  Los parámetros de un procedimiento almacenado son denotados mediante signos de interrogación \(?\), y debe enlazar miembros de datos en el orden en que los parámetros aparecen.  
+## <a name="remarks"></a>Comentarios  
+ **db_param** define los parámetros que utilizar en los comandos; por consiguiente Utilícela con **db_command**. Por ejemplo, puede usar **db_param** para enlazar parámetros en consultas SQL o procedimientos almacenados. Parámetros de un procedimiento almacenado se denotan mediante signos de interrogación (?) y debe enlazar a los miembros de datos en el orden en que aparecen los parámetros.  
   
- **db\_param** delimita los datos de miembro que pueden participar en OLE DB `ICommandWithParameters`\- enlace basado.  Establece el tipo de parámetro \(entrada o salida\), el tipo de OLE DB, la precisión, escala, el estado, y la longitud del parámetro especificado.  Este atributo inserta las macros BEGIN\_PARAM\_MAP de consumidor OLE DB…  END\_PARAM\_MAP.  Cada miembro que se marca con el atributo de **db\_param** ocupará una entrada en el mapa en forma COLUMN\_ENTRY.  
+ **db_param** delimita los datos de miembros que pueden participar en OLE DB `ICommandWithParameters`-basados en el enlace. Establece el tipo de parámetro (entrada o salida), tipo de OLE DB, precisión, escala, estado y longitud para el parámetro especificado. Este atributo inserta las macros de consumidor OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Cada miembro se marca con la **db_param** atributo ocupan una entrada en el mapa en la forma de un COLUMN_ENTRY.  
   
- **db\_param** se utiliza junto con los atributos de [db\_table](../windows/db-table.md) o de [db\_command](../windows/db-command.md) .  
+ **db_param** se usa junto con cualquiera el [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) atributos.  
   
- Cuando el proveedor de atributos de consumidor aplicar este atributo a una clase, el compilador cambiará la clase al \_TheClassNameAccessor, donde es el nombre *TheClassName que* asignó la clase, y el compilador también creará una clase denominada *TheClassName,* que deriva de \_TheClassNameAccessor.  En la vista de clases, verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
-## Ejemplo  
- El ejemplo siguiente crea una clase de comando basada en el procedimiento almacenado de SalesbyYear en la base de datos Northwind.  Asocia el primer parámetro del procedimiento almacenado en la variable de `m_RETURN_VALUE` , y se define como parámetro de salida.  Asocia los últimos dos parámetros \(de entrada\) a `m_Beginning_Date` y a `m_Ending_Date`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea una clase de comando que se basa en el procedimiento SalesbyYear almacenado en la base de datos Northwind. Asocie el primer parámetro del procedimiento almacenado con el `m_RETURN_VALUE` variable y se define como un parámetro de salida. Asocia los dos últimos parámetros (entrados) con `m_Beginning_Date` y `m_Ending_Date`.  
   
- el ejemplo siguiente asocia la variable de `nOutput` a un parámetro de salida.  
+ En el ejemplo siguiente se asocia el `nOutput` variable con un parámetro de salida.  
   
 ```  
 // db_param.cpp  
@@ -117,19 +118,18 @@ struct CSalesbyYear {
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|**clase**, `struct`, miembro, método, local|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)   

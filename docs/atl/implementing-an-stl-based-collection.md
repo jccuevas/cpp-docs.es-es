@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ca1d07a39950c5d5de83ed6e3a09c12c775d4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementación de una colección de basada en la biblioteca estándar de C++
 ATL proporciona el `ICollectionOnSTLImpl` interfaz que le permite implementar rápidamente interfaces de colección basada en la biblioteca estándar de C++ en los objetos. Para entender cómo funciona esta clase, funcionará a través de un ejemplo simple (a continuación) que usa esta clase para implementar una colección de solo lectura dirigida a los clientes de automatización.  

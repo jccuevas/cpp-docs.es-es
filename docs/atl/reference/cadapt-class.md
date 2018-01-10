@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37ce02b9493c47a2c93d9e54e14f73b5c980317d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4e565b1e2c20abf31919774d7bc6eb34f4c5f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cadapt-class"></a>Clase CAdapt
 Esta plantilla se utiliza para ajustar las clases que vuelven a definir el operador address-of para devolver algo distinto de la dirección del objeto.  
@@ -47,13 +48,13 @@ class CAdapt
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAdapt::CAdapt](#cadapt)|El constructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAdapt::operator const T &](#operator_const_t_amp)|Devuelve una referencia `const` a `m_T`.|  
 |[CAdapt::operator T &](#operator_t_amp)|Devuelve una referencia a `m_T`.|  
@@ -63,7 +64,7 @@ class CAdapt
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAdapt::m_T](#m_t)|Datos que se están adaptando.|  
   

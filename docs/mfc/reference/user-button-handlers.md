@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - ON_BN_PAINT
 - ON_BN_DISABLE
 - ON_BN_UNHILITE
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ON_BN_PAINT
 - user buttons [MFC]
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - ON_BN_HILITE [MFC]
 - ON_BN_CLICKED [MFC]
 ms.assetid: 410ea968-478f-4806-b7b8-5d7c8dc2bf42
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 767dbbfc2ae11ebbbca3736467b1f76bb4138609
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: eb5acc7a127af69d65536d131f9b388b4f4ff8f9
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-button-handlers"></a>Controladores del botón de usuario
 Las siguientes entradas de mapa corresponden a los prototipos de función.  
@@ -51,5 +49,4 @@ Las siguientes entradas de mapa corresponden a los prototipos de función.
   
 ## <a name="see-also"></a>Vea también  
  [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
-
 

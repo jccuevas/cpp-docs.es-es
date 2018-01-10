@@ -1,32 +1,33 @@
 ---
-title: "SimpleActivationFactory (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleActivationFactory (clase)"
+title: SimpleActivationFactory (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory
+dev_langs: C++
+helpviewer_keywords: SimpleActivationFactory class
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# SimpleActivationFactory (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona un mecanismo fundamental para crear un tiempo de ejecución de Windows o una clase base de COM del trabajo clásica.  
+# <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (clase)
+Proporciona un mecanismo fundamental para crear una clase base de Windows Runtime o COM clásico.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -35,28 +36,28 @@ template<
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `Base`  
  Una clase base.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La clase base debe proporcionar un constructor predeterminado.  
   
- El ejemplo de código siguiente muestra cómo utilizar SimpleActivationFactory con la macro de [ActivatableClassWithFactoryEx](../Topic/ActivatableClass%20Macros.md) .  
+ En el ejemplo de código siguiente se muestra cómo utilizar SimpleActivationFactory con el [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[SimpleActivationFactory::ActivateInstance \(Método\)](../windows/simpleactivationfactory-activateinstance-method.md)|Crea una instancia de la interfaz especificada.|  
-|[SimpleActivationFactory::GetRuntimeClassName \(Método\)](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtiene el nombre de clase en tiempo de ejecución de una instancia de la clase especificada por el parámetro de plantilla de clase de `Base` .|  
-|[SimpleActivationFactory::GetTrustLevel \(Método\)](../Topic/SimpleActivationFactory::GetTrustLevel%20Method.md)|Obtiene el nivel de confianza de una instancia de la clase especificada por el parámetro de plantilla de clase de `Base` .|  
+|[SimpleActivationFactory::ActivateInstance (método)](../windows/simpleactivationfactory-activateinstance-method.md)|Crea una instancia de la interfaz especificada.|  
+|[SimpleActivationFactory::GetRuntimeClassName (método)](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Obtiene el nombre de clase en tiempo de ejecución de una instancia de la clase especificada por el `Base` parámetro de plantilla de clase.|  
+|[SimpleActivationFactory::GetTrustLevel (método)](../windows/simpleactivationfactory-gettrustlevel-method.md)|Obtiene el nivel de confianza de una instancia de la clase especificada por el `Base` parámetro de plantilla de clase.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `I0`  
   
  `ChainInterfaces`  
@@ -79,10 +80,10 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `SimpleActivationFactory`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95bb322944b6a7c68c5b9abde53e67382fe73ced
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsource-class"></a>EventSource (clase)
 Representa un evento. Funciones de miembro EventSource agregarán, quitarán e invocan controladores de eventos.  
@@ -41,13 +44,13 @@ class EventSource;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[EventSource::EventSource (constructor)](../windows/eventsource-eventsource-constructor.md)|Inicializa una nueva instancia de la clase EventSource.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[EventSource::Add (método)](../windows/eventsource-add-method.md)|Anexa el controlador del evento representado por la interfaz de delegado especificado para el conjunto de controladores de eventos para el objeto de origen de eventos actual.|  
 |[EventSource::GetSize (método)](../windows/eventsource-getsize-method.md)|Recupera el número de controladores de eventos asociados con el objeto EventSource actual|  
@@ -56,7 +59,7 @@ class EventSource;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[EventSource::addRemoveLock_ (miembro de datos)](../windows/eventsource-addremovelock-data-member.md)|Sincroniza el acceso a la [targets_](../windows/eventsource-targets-data-member.md) matriz al agregar, quitar o invocar controladores de eventos.|  
 |[EventSource::targets_ (miembro de datos)](../windows/eventsource-targets-data-member.md)|Una matriz de uno o más controladores de eventos.|  

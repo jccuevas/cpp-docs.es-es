@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>Contenedores de la biblioteca estándar de C++
 La biblioteca estándar proporciona contenedores con seguridad de tipos para almacenar colecciones de objetos relacionados. Los contenedores son plantillas de clase; al declarar una variable de contenedor, debe especificar el tipo de los elementos que se incluirán en el contenedor. Los contenedores se pueden construir con las listas de inicializadores. Tienen funciones miembro para agregar y quitar elementos, así como para realizar otras operaciones.  
@@ -159,7 +160,7 @@ int main()
  Algunas operaciones en los contenedores también podrían requerir un constructor público predeterminado y un operador de equivalencia público. Por ejemplo, los contenedores asociativos sin ordenar requieren la compatibilidad de algoritmos hash y de igualdad.  
   
 ## <a name="accessing-container-elements"></a>Elementos contenedores de acceso  
- El acceso a los elementos de contenedores se realiza mediante iteradores. Para más información, vea [Iteradores](../standard-library/iterators.md).  
+ El acceso a los elementos de contenedores se realiza mediante iteradores. Para obtener más información, consulta [Iteradores](../standard-library/iterators.md).  
   
 > [!NOTE]
 >  También se pueden usar [bucles for basados en intervalos](../cpp/range-based-for-statement-cpp.md) para recorrer en iteración colecciones de la biblioteca estándar de C++.  

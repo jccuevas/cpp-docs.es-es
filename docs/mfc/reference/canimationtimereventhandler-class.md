@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], CreateInstance
 - CAnimationTimerEventHandler [MFC], OnPostUpdate
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: dc2dd4ddc96ab589d88b34d3d31fb131ab49fbc2
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationtimereventhandler-class"></a>Clase CAnimationTimerEventHandler
 Implementa una devolución de llamada, a la que llama la API de animación cuando se producen eventos de control de tiempo.  
@@ -49,7 +47,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Crea una instancia de `CAnimationTimerEventHandler` devolución de llamada.|  
 |[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Controla los eventos que se producen una vez finalizada una actualización de la animación. (Invalida `CUIAnimationTimerEventHandlerBase::OnPostUpdate`).|  
@@ -134,4 +132,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

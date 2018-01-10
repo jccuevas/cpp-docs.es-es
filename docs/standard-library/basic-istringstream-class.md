@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f5ba9776b27ec98967f64d3c2bfb114c62c36fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream (Clase)
 Describe un objeto que controla la extracción de elementos y objetos codificados de un búfer de flujo de clase [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
@@ -60,7 +61,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|  
 |[basic_istringstream](#basic_istringstream)|Construye un objeto de tipo `basic_istringstream`.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -149,7 +150,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
  La dirección del búfer de flujo almacenado de tipo **pointer** a basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
 ### <a name="example"></a>Ejemplo  
-  Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo que usa `rdbuf`.  
+  Vea [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) para obtener un ejemplo de uso de `rdbuf`.  
   
 ##  <a name="str"></a>  basic_istringstream::str  
  Establece u obtiene el texto en un búfer de cadena sin cambiar la posición de escritura.  

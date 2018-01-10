@@ -35,11 +35,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a977e6270c9f879ca434c9e71c3438013062ccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dlayer-class"></a>Clase CD2DLayer
 Un contenedor para ID2D1Layer.  
@@ -54,14 +55,14 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Construye un objeto CD2DLayer.|  
 |[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Destructor. Se llama cuando se destruye un objeto de capa de D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLayer::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DLayer::Create](#create)|Crea un CD2DLayer. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -73,13 +74,13 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Interfaz de ID2D1Layer devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|Almacena un puntero a un objeto ID2D1Layer.|  
   

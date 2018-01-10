@@ -37,11 +37,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d825affb04f2172ac3d53e632193345725b93b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd2fcbd4b607df958aba3c1e3635b7a48f3837d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="normaldistribution-class"></a>normal_distribution (Clase)
 Genera una distribución normal.  
@@ -101,7 +102,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener más información sobre la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](http://go.microsoft.com/fwlink/LinkId=400924).  
+Para obtener más información sobre la distribución normal, vea el artículo de Wolfram MathWorld sobre la [distribución normal](http://go.microsoft.com/fwlink/p/?linkid=400924).  
   
 ## <a name="example"></a>Ejemplo  
   

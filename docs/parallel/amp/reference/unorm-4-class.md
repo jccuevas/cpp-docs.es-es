@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm4-class"></a>unorm_4 (Clase)
 Representa un vector corto de cuatro números normales sin signo.  
@@ -315,19 +299,19 @@ class unorm_4;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |unorm_4:: get_w||  
 |unorm_4:: get_wx||  
@@ -468,7 +452,7 @@ class unorm_4;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |unorm_4:: operator-||  
 |unorm_4:: operator--||  
@@ -481,13 +465,13 @@ class unorm_4;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
-|[tamaño (constante)](#unorm_4__size)||  
+|[cambio de tamaño constante](#unorm_4__size)||  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |unorm_4:: a||  
 |unorm_4:: AB||  
@@ -624,7 +608,7 @@ class unorm_4;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_short_vectors.h  
   
- **Namespace:** Graphics  
+ **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a>unorm_4 
 
@@ -708,7 +692,7 @@ explicit inline unorm_4(
  El valor de inicialización.  
   
  `_Other`  
- Objeto utilizado para inicializar.  
+ El objeto utilizado para inicializar.  
   
 ##  <a name="unorm_4__size"></a>tamaño 
 
@@ -718,4 +702,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

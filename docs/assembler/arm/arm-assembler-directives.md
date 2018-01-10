@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>Directiva del ensamblador de ARM
-En su mayor parte, el ensamblador de ARM de Microsoft usa el lenguaje de ensamblador ARM, que se describe en el capítulo 7 de la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102). Sin embargo, las implementaciones de Microsoft de algunas directivas de ensamblado diferencian de las directivas de ensamblado ARM. En este artículo se explica las diferencias.  
+En su mayor parte, el ensamblador de ARM de Microsoft usa el lenguaje de ensamblador ARM, que se describe en el capítulo 7 de la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Sin embargo, las implementaciones de Microsoft de algunas directivas de ensamblado diferencian de las directivas de ensamblado ARM. En este artículo se explica las diferencias.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementaciones de directivas de ensamblado ARM Microsoft  
  ÁREA  
  El ensamblador de ARM de Microsoft es compatible con estos atributos de área: alinear código, CODEALIGN, datos, NOINIT, solo lectura, lectura y escritura, THUMB, ARM.  
   
- Todas excepto THUMB y ARM funcionan como se documenta en la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Todas excepto THUMB y ARM funcionan como se documenta en la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  En el ensamblador de ARM de Microsoft, THUMB indica que una sección de código contiene código Thumb y es el valor predeterminado para las secciones de código.  ARM indica que la sección contiene código ARM.  
   

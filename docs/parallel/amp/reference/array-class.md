@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array (Clase)
 Representa un contenedor de datos que se utiliza para mover datos a una tecla de aceleración.  
@@ -59,13 +60,13 @@ friend class array;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor de matriz](#ctor)|Inicializa una nueva instancia de la clase `array`.|  
 |[~ array (destructor)](#dtor)|Destruye el objeto `array`.|  
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Copia el contenido de la matriz en otra matriz.|  
 |[data](#data)|Devuelve un puntero a los datos sin procesar de la matriz.|  
@@ -79,7 +80,7 @@ friend class array;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operador std:: vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` para convertir implícitamente la matriz en un std::[vector](../../../standard-library/vector-class.md) objeto.|  
 |[Operator()](#operator_call)|Devuelve el valor del elemento especificado por los parámetros.|  
@@ -88,13 +89,13 @@ friend class array;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[Rank (constante)](#rank)|Almacena el rango de la matriz.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accelerator_view](#accelerator_view)|Obtiene el [accelerator_view](accelerator-view-class.md) objeto que representa la ubicación donde se asigna la matriz. Esta propiedad puede tener acceso solo en la CPU.|  
 |[associated_accelerator_view](#associated_accelerator_view)|Obtiene la segunda [accelerator_view](accelerator-view-class.md) objeto que se pasa como un parámetro cuando se llama a un constructor de almacenamiento provisional para crear instancias de la `array` objeto.|  

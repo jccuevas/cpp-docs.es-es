@@ -1,32 +1,33 @@
 ---
-title: "WeakReference::Resolve (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::Resolve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resolve (método)"
+title: "WeakReference:: Resolve (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::Resolve
+dev_langs: C++
+helpviewer_keywords: Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d4da4689ffd8fa0a633b3f481b0292d060e57345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# WeakReference::Resolve (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="weakreferenceresolve-method"></a>WeakReference::Resolve (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,29 +37,29 @@ STDMETHOD(Resolve)
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- Un identificador de interfaz  
+ Id. de interfaz.  
   
  `ppvObject`  
- Cuando esta operación completa, una copia de la referencia segura actual si el recuento de referencia es distinto de cero.  
+ Cuando se completa esta operación, una copia de la referencia segura actual si el recuento de referencia segura es distinto de cero.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
--   S\_OK si esta operación es correcta y el recuento seguros de referencia es cero.  El valor del parámetro `ppvObject` se establece en `nullptr`.  
+-   S_OK si esta operación se realiza correctamente y el recuento de referencia segura es cero. El parámetro `ppvObject` debe establecerse en `nullptr`.  
   
--   S\_OK si esta operación es correcta y el recuento seguros de referencia es distinto de cero.  El parámetro de `ppvObject` se establece en la referencia segura.  
+-   S_OK si esta operación se realiza correctamente y el recuento de referencia segura es distinto de cero. El `ppvObject` parámetro está establecido en la referencia segura.  
   
--   Si no, un HRESULT que indica la razón esta operación no.  
+-   En caso contrario, un valor HRESULT que indica la razón por la operación falló.  
   
-## Comentarios  
- Establece el puntero especificado en el valor de referencia segura actual si el recuento de referencia es distinto de cero.  
+## <a name="remarks"></a>Comentarios  
+ Establece el puntero especificado en el valor de referencia segura actual si el recuento de referencia segura es distinto de cero.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [WeakReference \(Clase\)](../windows/weakreference-class1.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [WeakReference Class1](../windows/weakreference-class1.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

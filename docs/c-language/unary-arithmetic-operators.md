@@ -24,16 +24,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a655523a22c66d4b255d82d071a4efff29e6a6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9741286ba4af5820f8d8eebadfd88d3bb14abaef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-arithmetic-operators"></a>Operadores aritméticos unarios
 Los operadores de C unario más, negación aritmética, complemento y negación lógica se analizan en la lista siguiente:  
   
-|Operador|Descripción|  
+|Operador|Description|  
 |--------------|-----------------|  
 |**+**|El operador unario más que precede a una expresión entre paréntesis fuerza la agrupación de las operaciones incluidas. Se utiliza con expresiones que implican más de un operador binario asociativo o conmutativo. El operando debe tener tipo aritmético. El resultado es el valor del operando. Un operando entero experimenta una promoción de entero. El tipo del resultado es el tipo del operando promovido.|  
 |**-**|El operador negación aritmética genera el negativo (complemento de dos) de su operando. El operando debe ser un valor entero o flotante. Este operador realiza las conversiones aritméticas habituales.|  

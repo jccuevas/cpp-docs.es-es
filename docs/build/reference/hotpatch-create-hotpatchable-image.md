@@ -1,65 +1,66 @@
 ---
-title: "/hotpatch (Crear una imagen a la que se puede aplicar una revisi&#243;n reciente) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicar una revisión reciente"
-  - "-hotpatch (opción del compilador) [C++]"
-  - "/hotpatch (opción del compilador) [C++]"
-  - "aplicación de revisiones recientes"
+title: -hotpatch (crear una imagen) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad7ab4e6450d33923b728f20c8a35185edd2b05e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /hotpatch (Crear una imagen a la que se puede aplicar una revisi&#243;n reciente)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crear una imagen a la que se puede aplicar una revisión reciente)
 Prepara una imagen para aplicar una revisión activa.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /hotpatch  
 ```  
   
-## Comentarios  
- Cuando se utiliza **\/hotpatch** en una compilación, el compilador se asegura de que la primera instrucción de cada función sea al menos de dos bytes, ya que es necesario para la revisión activa.  
+## <a name="remarks"></a>Comentarios  
+ Cuando **/hotpatch** se utiliza en una compilación, el compilador garantiza que primera instrucción de cada función sea al menos dos bytes, que es necesario para aplicar una revisión activa.  
   
- Para completar la preparación de una imagen para que se le pueda aplicar la revisión activa, después de utilizar **\/hotpatch** para compilar, debe utilizar [\/FUNCTIONPADMIN \(Crear una imagen a la que se puede aplicar una revisión reciente\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) para vincular.  Cuando compila y vincula una imagen mediante una invocación de cl.exe, **\/hotpatch** implica **\/functionpadmin**.  
+ Para completar la preparación para que la imagen admita hotpatch, después de usar **/hotpatch** para compilar, debe usar [/FUNCTIONPADMIN (crear una imagen)](../../build/reference/functionpadmin-create-hotpatchable-image.md) para vincular. Cuando se compila y vincula una imagen mediante una invocación de cl.exe, **/hotpatch** implica **/functionpadmin**.  
   
- Puesto que las instrucciones siempre son de dos bytes o mayores en la arquitectura de ARM y dado que la compilación x64 siempre se trata como si se hubiera especificado **\/hotpatch**, no es necesario especificar **\/hotpatch** al compilar para estos destinos; sin embargo, aún debe vincular mediante **\/functionpadmin** para crear imágenes de ellos a las que se pueda aplicar la revisión activa.  La opción del compilador **\/hotpatch** afecta solo a la compilación de x86.  
+ Dado que las instrucciones siempre son dos bytes o mayores en la arquitectura ARM y porque x64 compilación siempre se trata como si **/hotpatch** se ha especificado, no tiene que especificar **/hotpatch** cuando compilar para estos destinos; Sin embargo, aún debe vincular mediante **/functionpadmin** para crear imágenes de hotpatchable de ellos. El **/hotpatch** solo afecta a x86 compilación de opción de compilador.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Seleccione la carpeta **C\/C\+\+**.  
+2.  Seleccione el **C/C++** carpeta.  
   
-3.  Seleccione la página de propiedades **Línea de comandos**.  
+3.  Seleccione el **línea de comandos** página de propiedades.  
   
-4.  Agregue la opción del compilador al cuadro **Opciones adicionales**.  
+4.  Agregue la opción del compilador para la **opciones adicionales** cuadro.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Guía  
- Para obtener más información sobre la administración de actualizaciones, vea “Guía de seguridad para la administración de actualizaciones” en [http:\/\/www.microsoft.com\/technet\/security\/guidance\/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
+## <a name="guidance"></a>Orientación  
+ Para obtener más información acerca de la administración de actualizaciones, vea "Security Guidance for Update Management" en [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

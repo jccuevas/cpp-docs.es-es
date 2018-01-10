@@ -1,64 +1,68 @@
 ---
-title: "Defining Member Variables for Dialog Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "member variables, defining for controls"
-  - "variables, dialog box control member variables"
-  - "controls [C++], member variables"
-  - "Dialog editor, defining member variables for controls"
+title: "Definir Variables miembro para los controles de cuadro de diálogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- member variables, defining for controls
+- variables, dialog box control member variables
+- controls [C++], member variables
+- Dialog editor, defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb966459695eb048943a12e33c8e909f99fdc92b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Defining Member Variables for Dialog Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defining-member-variables-for-dialog-controls"></a>Definir variables miembro para los controles de cuadro de diálogo
 Para definir una variable miembro para cualquier control de cuadro de diálogo excepto los botones, puede utilizar el método siguiente.  
   
 > [!NOTE]
->  Este artículo se aplica solo a los controles de cuadro de diálogo de un proyecto MFC.  Los proyectos ATL deben usar el nuevo cuadro de diálogo **Nuevos mensajes de Windows y controladores de eventos**.  
+>  Este artículo se aplica solo a los controles de cuadro de diálogo de un proyecto MFC. Los proyectos ATL deben utilizar el **nuevos mensajes de Windows y controladores de eventos** cuadro de diálogo.  
   
-### Para definir una variable miembro para un control de cuadro de diálogo \(que no sea un botón\)  
+### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir una variable miembro para un control de cuadro de diálogo (que no sea un botón)  
   
-1.  Seleccione un control en el [Editor de cuadros de diálogo](../mfc/dialog-editor.md).  
+1.  En el [editor de cuadro de diálogo](../windows/dialog-editor.md), seleccione un control.  
   
-2.  Mientras presiona la tecla **Ctrl**, haga doble clic en el control de cuadro de diálogo.  
+2.  Mientras presiona la **CTRL** clave, haga doble clic en el control de cuadro de diálogo.  
   
-     Aparecerá el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md).  
+     El [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md) aparece.  
   
-3.  Escriba la información correspondiente en el asistente **Agregar variable miembro**.  Para obtener más información, vea [Intercambio de datos de cuadro de diálogo](../mfc/dialog-data-exchange.md).  
+3.  Escriba la información correspondiente en el **agregar variables miembro** asistente. Para obtener más información, consulte [intercambio de datos de cuadros de diálogo](../mfc/dialog-data-exchange.md).  
   
-4.  Haga clic en **Aceptar** para volver al Editor de cuadros de diálogo.  
+4.  Haga clic en **Aceptar** para volver al editor de cuadro de diálogo.  
   
     > [!TIP]
     >  Para saltar de un control de cuadro de diálogo a su controlador existente, haga doble clic en el control.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
- También puede utilizar la ficha **Variables miembro** de **Asistente para clases MFC** para agregar nuevas variables miembro a una clase especificada y ver las que ya se han definido.  
+ También puede usar el **Variables de miembro** ficha **Asistente para clases MFC** para agregar nuevas variables miembro a una clase especificada y verlos que ya se ha definido.  
   
  Requisitos  
   
  MFC  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)   
- [Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md)   
  [Agregar una clase](../ide/adding-a-class-visual-cpp.md)   
  [Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+ [Agregar una Variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Reemplazar una función Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+

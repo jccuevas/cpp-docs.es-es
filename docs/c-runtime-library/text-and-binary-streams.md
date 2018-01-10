@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>Secuencias binarias y de texto
 Una secuencia de texto está formada por una o varias líneas de texto que se pueden escribir en una presentación de texto para que pueda leerlas. Al leer de una secuencia de texto, el programa lee un valor `NL` (nueva línea) al final de cada línea. Al escribir en una secuencia de texto, el programa escribe un valor `NL` para señalar el final de una línea. Para hacer coincidir las distintas convenciones entre entornos de destino para representar texto en archivos, las funciones de biblioteca pueden modificar el número y la representación de caracteres que se transmiten entre el programa y una secuencia de texto.  

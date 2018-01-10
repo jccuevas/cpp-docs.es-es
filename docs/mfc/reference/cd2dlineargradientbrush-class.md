@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DLinearGradientBrush::SetStartPoint
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_pLinearGradientBrush
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], CD2DLinearGradientBrush
 - CD2DLinearGradientBrush [MFC], Attach
@@ -39,16 +37,16 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19c060c846d8dfd12a8b783f0b01153c9a424cfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 50f0c3c8fbfb56e41e492e7dcea7188858a69831
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Clase CD2DLinearGradientBrush
 Un contenedor para ID2D1LinearGradientBrush.  
@@ -63,14 +61,14 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Construye un objeto CD2DLinearGradientBrush.|  
 |[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado lineal D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DLinearGradientBrush::Create](#create)|Crea un CD2DLinearGradientBrush. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -84,13 +82,13 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Interfaz de ID2D1LinearGradientBrush devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Los puntos inicial y final del degradado.|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Un puntero a un ID2D1LinearGradientBrush.|  
@@ -276,4 +274,3 @@ void SetStartPoint(CD2DPointF point);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

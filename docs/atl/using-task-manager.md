@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffe15d74323b798fc6de1b318e55d47602774ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-task-manager"></a>Con el Administrador de tareas
 Una de las maneras más sencillas de depurar un servicio es mediante el uso del Administrador de tareas en Windows NT 4.0 o Windows 2000. Mientras se ejecuta el servicio, inicie el Administrador de tareas y haga clic en el **procesos** ficha. Haga clic en el nombre del archivo EXE y, a continuación, haga clic en **depurar**. Esto inicia Visual C++ conectados a ese proceso en ejecución. Ahora, haga clic en **interrumpir** en el **depurar** menú para que pueda establecer puntos de interrupción en el código. Haga clic en **ejecutar** para que se ejecute en los puntos de interrupción seleccionados.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>Clase CAutoVectorPtr
 Esta clase representa un objeto de puntero inteligente utiliza vector nueva y elimina operadores.  
@@ -68,14 +51,14 @@ class CAutoVectorPtr
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|El constructor.|  
 |[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAutoVectorPtr::Allocate](#allocate)|Llamar a este método para asignar la memoria requerida por la matriz de objetos que señala `CAutoVectorPtr`.|  
 |[CAutoVectorPtr::Attach](#attach)|Llamar a este método para tomar posesión de un puntero existente.|  
@@ -84,14 +67,14 @@ class CAutoVectorPtr
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAutoVectorPtr::operator T *](#operator_t__star)|El operador de conversión.|  
 |[CAutoVectorPtr::operator =](#operator_eq)|El operador de asignación.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAutoVectorPtr::m_p](#m_p)|La variable de miembro de datos de puntero.|  
   
@@ -226,4 +209,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>Vea también  
  [Clase CAutoPtr](../../atl/reference/cautoptr-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

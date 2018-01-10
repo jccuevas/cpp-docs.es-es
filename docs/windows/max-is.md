@@ -1,32 +1,33 @@
 ---
-title: "max_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.max_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_is attribute"
+title: max_is | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.max_is
+dev_langs: C++
+helpviewer_keywords: max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d43ed06797ed79942a43612ab4c9ae774c4fcf17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# max_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica el valor máximo de un índice válido de la matriz.  
+# <a name="maxis"></a>max_is
+Designa el valor máximo para un índice de matriz válida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,35 +36,34 @@ Indica el valor máximo de un índice válido de la matriz.
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *expresión*  
- Una o más expresiones del lenguaje C.  Se permiten las ranuras vacías del argumento.  
+ Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumento vacío.  
   
-## Comentarios  
- el atributo de **max\_is** C\+\+ tiene la misma funcionalidad que el atributo de [max\_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **max_is** atributo C++ tiene la misma funcionalidad que la [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) atributo MIDL.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Campo de `struct` o **union**, parámetro de interfaz, método de interfaz|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|**size\_is**|  
+|**Se aplica a**|Campo de `struct` o **union**, la interfaz de parámetro, el método de interfaz|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|**size_is**|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Ejemplo  
- Vea [first\_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
+## <a name="example"></a>Ejemplo  
+ Vea [first_is](../windows/first-is.md) para obtener un ejemplo de cómo especificar una sección de una matriz.  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [last\_is](../windows/last-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../Topic/size_is.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de parámetro](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [last_is](../windows/last-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

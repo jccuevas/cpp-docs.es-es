@@ -11,11 +11,14 @@ ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dce0c1c190854b7927c6e023edd76c9d1cb5645
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 4ff19875064302e891236c931f28ebef630904e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectarse al equipo Linux remoto
 
@@ -31,7 +34,7 @@ Al compilar, el código de Linux se copia en el equipo remoto Linux y, luego, se
 
 1. Especifique la siguiente información:
 
-   | Entrada | Descripción
+   | Entrada | Description
    | ----- | ---
    | **Nombre de host**           | Nombre o dirección IP del dispositivo de destino
    | **Puerto**                | Puerto en el que se ejecuta el servicio SSH, normalmente 22

@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7576d1a5635cf30084c1f36b4ec14ad2a9f9b74d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f11f7e329b623639fb1441e4d9e18720a6b6b94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chwndrendertarget-class"></a>Clase CHwndRenderTarget
 Un contenedor para ID2D1HwndRenderTarget.  
@@ -56,13 +57,13 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Construye un objeto CHwndRenderTarget de HWND.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHwndRenderTarget::Attach](#attach)|Adjunta existente representar la interfaz de destino para el objeto|  
 |[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indica si se ocluidos el HWND asociado a este destino de representación.|  
@@ -75,13 +76,13 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Interfaz de ID2D1HwndRenderTarget devuelve.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Un puntero a un objeto ID2D1HwndRenderTarget.|  
   

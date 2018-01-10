@@ -59,11 +59,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4de72103a06230c88025e7df8f4f862b9a25ca53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 Define las clases y las clases de plantilla que se van a usar para crear tipos que admitan operaciones atómicas.  
@@ -159,21 +160,21 @@ Define las clases y las clases de plantilla que se van a usar para crear tipos q
   
 ## <a name="structs"></a>Estructuras  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[atomic (Estructura)](../standard-library/atomic-structure.md)|Describe un objeto que realiza operaciones atómicas sobre un valor almacenado.|  
 |[atomic_flag (Estructura)](../standard-library/atomic-flag-structure.md)|Describe un objeto que establece y borra una marca `bool` de forma atómica.|  
   
 ## <a name="enums"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[memory_order (Enumeración)](../standard-library/atomic-enums.md#memory_order_enum)|Proporciona nombres simbólicos para las operaciones de sincronización en ubicaciones de memoria. Estas operaciones afectan a cómo las asignaciones de un subproceso se hacen visibles en otro.|  
   
 ## <a name="functions"></a>Funciones  
  En la lista siguiente, las funciones que no terminan en `_explicit` tienen la semántica `_explicit` correspondiente, salvo que tienen los argumentos implícitos [memory_order](../standard-library/atomic-enums.md#memory_order_enum) de `memory_order_seq_cst`.  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Realiza una operación *atómica de comparación e intercambio*.|  
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Realiza una operación *atómica de comparación e intercambio*.|  

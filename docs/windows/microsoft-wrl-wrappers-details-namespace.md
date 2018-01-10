@@ -1,62 +1,64 @@
 ---
-title: "Microsoft::WRL::Wrappers::Details (Espacio de nombres) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details"
-  - "internal/Microsoft::WRL::Details"
-  - "async/Microsoft::WRL::Details"
-  - "corewrappers/Microsoft::WRL::Wrappers::Details"
-  - "client/Microsoft::WRL::Details"
-  - "module/Microsoft::WRL::Details"
-  - "event/Microsoft::WRL::Details"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Details (espacio de nombres)"
+title: Wrappers Namespace | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- implements/Microsoft::WRL::Details
+- internal/Microsoft::WRL::Details
+- async/Microsoft::WRL::Details
+- corewrappers/Microsoft::WRL::Wrappers::Details
+- client/Microsoft::WRL::Details
+- module/Microsoft::WRL::Details
+- event/Microsoft::WRL::Details
+dev_langs: C++
+helpviewer_keywords: Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 520871366f02ef636eef5b2cc9c19344979c6fb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Microsoft::WRL::Wrappers::Details (Espacio de nombres)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details (Espacio de nombres)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Clases  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[SyncLockT \(Clase\)](../windows/synclockt-class.md)|Representa un tipo que pueda tomar propiedad exclusivo o compartido de un recurso.|  
-|[SyncLockWithStatusT \(Clase\)](../windows/synclockwithstatust-class.md)|Representa un tipo que pueda tomar propiedad exclusivo o compartido de un recurso.|  
-  
-### Métodos  
+### <a name="classes"></a>Clases  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CompareStringOrdinal \(Método\)](../windows/comparestringordinal-method.md)|Compara dos objetos especificados de `HSTRING` y devuelve un entero que indica la posición relativa en un criterio de ordenación.|  
+|[SyncLockT (clase)](../windows/synclockt-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
+|[SyncLockWithStatusT (clase)](../windows/synclockwithstatust-class.md)|Representa un tipo que puede llevar a cabo exclusivo o compartido posesión de un recurso.|  
   
-## Requisitos  
+### <a name="methods"></a>Métodos  
+  
+|Name|Descripción|  
+|----------|-----------------|  
+|[CompareStringOrdinal (método)](../windows/comparestringordinal-method.md)|Compara dos especificado `HSTRING` objetos y devuelve un entero que indica su posición relativa en un criterio de ordenación.|  
+  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [Microsoft::WRL::Wrappers \(Espacio de nombres\)](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

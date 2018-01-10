@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2e8e953d953df96cc145d8752337fa806dfbda7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43de5df2afa0aca7e1634eac0338ae1b49ea9372
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine (Clase)
 Genera una secuencia aleatoria reordenando los valores que devuelve su motor base.  
@@ -47,7 +48,7 @@ class shuffle_order_engine;
  El tipo de motor base.  
   
  `K`  
- **Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa**: `0 < K`  
+ **Tamaño de la tabla**. Número de elementos en el búfer (tabla). **Condición previa:** `0 < K`  
   
 ## <a name="members"></a>Miembros  
   

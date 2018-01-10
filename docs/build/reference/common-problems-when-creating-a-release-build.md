@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d07abc5e2579ac0764d32223b4ded15265e827fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44b5528a2d6bedaaaa7ddce582f58042e084b3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemas comunes al crear versiones de lanzamiento
 Durante el desarrollo, normalmente se genere y pruebe con una versión de depuración del proyecto. Si, a continuación, compilar la aplicación para una versión de lanzamiento, puede obtener una infracción de acceso.  

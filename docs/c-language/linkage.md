@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b05a8d994b1df7140c7f9bd4db984931b1896f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7d2522169588aa285c91c535eb31360679d8136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage"></a>Vinculación
 Los nombres de identificador pueden hacer referencia a identificadores diferentes en ámbitos diferentes. Un identificador declarado en ámbitos diferentes o en el mismo ámbito más de una vez puede establecerse para que haga referencia al mismo identificador o a la misma función mediante un proceso denominado "vinculación". La vinculación determina las partes del programa en las que se puede hacer referencia a un identificador (su "visibilidad"). Hay tres tipos de vinculación: [interna](../c-language/internal-linkage.md), [externa](../c-language/external-linkage.md) y [sin vinculación](../c-language/no-linkage.md).  

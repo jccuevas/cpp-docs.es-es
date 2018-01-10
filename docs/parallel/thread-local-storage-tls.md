@@ -20,13 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64cf1893e2ecaf2b3deda66bd954166a44e7109d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="thread-local-storage-tls"></a>Almacenamiento local de subprocesos (TLS)
+# <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subproceso puede asignar ubicaciones en las que almacenar los datos específicos de esos subproceso. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), y [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Para obtener más información acerca de cómo se implementa el almacenamiento local de subprocesos en Windows, consulte [almacenamiento Local de subprocesos (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.  
   
 ##  <a name="_core_compiler_implementation_for_tls"></a>Implementación del compilador para TLS  

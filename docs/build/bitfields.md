@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebdfd892b164d10fbed46a481184c23113af4bc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 231d84e5d99cd9e6c1238ae12c143636f62ce80d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitfields"></a>Campos de bits
 Campos de bits de estructura se limitan a 64 bits y pueden ser de tipo con signo int, int sin signo, int64 o int64 sin signo. Los campos de bits que cruzan el límite de tipo omitirán bits para alinear el campo de bits para la alineación de tipo siguiente. Por ejemplo, los campos de bits de enteros no pueden cruzar un límite de 32 bits.  

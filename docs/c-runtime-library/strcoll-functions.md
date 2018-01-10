@@ -27,18 +27,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>strcoll (Funciones)
 Cada una de las funciones `strcoll` y `wcscoll` compara dos cadenas según la configuración de la categoría `LC_COLLATE` de la página de código de configuración regional actualmente en uso. Cada una de las funciones `_mbscoll` compara dos cadenas según la página de códigos multibyte actualmente en uso. Use las funciones `coll` para las comparaciones de cadenas cuando haya alguna diferencia entre el orden del juego de caracteres y el orden lexicográfico de los caracteres en la página de códigos actual y dicha diferencia influya en la comparación. Use las funciones `cmp` correspondientes para probar solo las cadenas que son iguales.  
   
 ### <a name="strcoll-functions"></a>strcoll (Funciones)  
   
-|SBCS|Unicode|MBCS|Descripción|  
+|SBCS|Unicode|MBCS|Description|  
 |----------|-------------|----------|-----------------|  
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Intercalar dos cadenas|  
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Intercalar dos cadenas (sin distinción entre mayúsculas y minúsculas)|  

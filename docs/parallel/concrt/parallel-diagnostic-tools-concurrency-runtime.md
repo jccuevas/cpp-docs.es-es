@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Herramientas de diagnóstico paralelo (Runtime de simultaneidad)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] proporciona amplia compatibilidad para depurar aplicaciones de varios subprocesos y generar perfiles de estas.  
@@ -32,13 +33,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="event-tracing"></a>Seguimiento de eventos  
  El Runtime de simultaneidad usa [seguimiento de eventos para Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) para notificar a las herramientas de instrumentación, como los generadores de perfiles, cuando se producen varios eventos. Estos eventos incluyen cuando se activa o desactiva un programador, cuando un contexto comienza, finaliza, se bloquea, desbloquea o da como resultado, y cuando un algoritmo paralelo empieza o termina.  
   
- Herramientas como el [visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidad; por lo tanto, normalmente no tendrá que trabajar directamente con estos eventos. Sin embargo, estos eventos son útiles cuando se está desarrollando un generador de perfiles personalizado o cuando se usan herramientas de traza de eventos como [Xperf](http://go.microsoft.com/fwlink/linkid=160628).  
+ Herramientas como el [visualizador de simultaneidad](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidad; por lo tanto, normalmente no tendrá que trabajar directamente con estos eventos. Sin embargo, estos eventos son útiles cuando se está desarrollando un generador de perfiles personalizado o cuando se usan herramientas de traza de eventos como [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   
  El Runtime de simultaneidad genera estos eventos solo cuando se habilita el seguimiento. Llame a la [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) función para habilitar el seguimiento de eventos y el [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) función para deshabilitar el seguimiento.  
   
  En la tabla siguiente se describe los eventos que el tiempo de ejecución que se genera cuando se habilita el seguimiento de eventos:  
   
-|Evento|Descripción|Valor|  
+|evento|Descripción|Valor|  
 |-----------|-----------------|-----------|  
 
 |[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)| El identificador del proveedor de ETW para el Runtime de simultaneidad. |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  

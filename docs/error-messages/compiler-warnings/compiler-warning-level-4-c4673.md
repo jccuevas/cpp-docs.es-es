@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4673"
+title: Compilador advertencia (nivel 4) C4673 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4673
+dev_langs: C++
+helpviewer_keywords: C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bff39a9045ba1543f42eb7e02b82565421969d8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-si se produce 'identificador' los siguientes tipos no se consideran en el bloque catch  
+# <a name="compiler-warning-level-4-c4673"></a>Advertencia del compilador (nivel 4) C4673
+produce los siguientes tipos de 'identifier' no se considerarán en el bloque catch  
   
- Un objeto throw no se puede controlar en el bloque **catch**.  Cada uno de los tipos que no se pueden controlar aparece en los resultados del error inmediatamente a continuación de la línea que contiene esta advertencia.  Cada tipo no controlado tiene su propia advertencia.  Lea la advertencia de cada tipo concreto para obtener más información.  
+ Un objeto throw no se puede controlar en el **catch** bloque. Cada tipo que no se pueden controlar aparece en la salida de error inmediatamente después de la línea que contiene esta advertencia. Cada tipo no controlado tiene su propia advertencia. Lea la advertencia para cada tipo específico para obtener más información.  
   
- El código siguiente genera el error C4673:  
+ El ejemplo siguiente genera C4673:  
   
 ```  
 // C4673.cpp  

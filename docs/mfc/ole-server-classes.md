@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfac148696a40fcb8b8d054e7ce8d7da7e0daf15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d23c7cb23d9221f8f2183c666a99c70ef149db3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-server-classes"></a>Clases de servidor OLE
 Estas clases se utilizan en aplicaciones de servidor. Documentos de servidor se derivan `COleServerDoc` en lugar de en **CDocument**. Tenga en cuenta que, dado que `COleServerDoc` se deriva de `COleLinkingDoc`, documentos de servidor también pueden ser contenedores que admiten la vinculación.  

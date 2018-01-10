@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>Espacios de nombres
 El compilador configura “espacios de nombres” para distinguir entre los identificadores utilizados para los diferentes tipos de elementos. Los nombres de cada espacio de nombres deben ser únicos para evitar conflictos, pero un nombre idéntico puede aparecer en más de un espacio de nombres. Esto significa que se puede utilizar el mismo identificador para dos o más elementos diferentes, siempre que los elementos estén en diferentes espacios de nombres. El compilador puede resolver referencias en función del contexto sintáctico del identificador en el programa.  

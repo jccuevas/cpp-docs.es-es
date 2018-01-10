@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set (Clase)
 El conjunto de clases contenedoras de la biblioteca estándar de C++ se usa para el almacenamiento y la recuperación de datos de una colección en la que los valores de los elementos contenidos son únicos y sirven como valores de clave según los cuales se ordenan automáticamente los datos. El valor de un elemento de un conjunto no se puede cambiar directamente. Lo que se debe hacer es eliminar los valores antiguos e insertar elementos con nuevos valores.  
@@ -122,7 +123,7 @@ class set
  `Traits`  
  Tipo que proporciona un objeto de función que puede comparar dos valores de elementos como criterios de ordenación para determinar su orden relativo en el conjunto. Este argumento es opcional y el predicado binario **less** *\<Key>* es el valor predeterminado.  
   
- En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers)  
+ En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).  
   
  `Allocator`  
  Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es **allocator***\<Key>.*  
@@ -156,7 +157,7 @@ class set
 |-|-|  
 |[set](#set)|Construye un conjunto que está vacío o que es una copia de todo o de parte de otro conjunto.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -301,7 +302,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>Comentarios  
  Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.  
   
- Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.  
+ Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1422,7 +1423,7 @@ key_compare key_comp() const;
   
  que devuelve **true** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.  
   
- Tenga en cuenta que [key_compare](#key_compare) y [value_compare](#value_compare) son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
+ Tenga en cuenta que [key_compare](#key_compare) y [value_compare](#value_compare) son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1487,7 +1488,7 @@ typedef Traits key_compare;
   
  Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-library/set-class.md).  
   
- Tenga en cuenta que `key_compare` y [value_compare](#value_compare) son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
+ Tenga en cuenta que `key_compare` y [value_compare](#value_compare) son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [key_comp](#key_comp) para obtener un ejemplo de cómo declarar y usar `key_compare`.  
@@ -1504,7 +1505,7 @@ typedef Key key_type;
   
  Para más información sobre `Key`, vea la sección Comentarios del tema [set (Clase)](../standard-library/set-class.md).  
   
- Tenga en cuenta que `key_type` y [value_type](#value_type) son sinónimos para el parámetro de plantilla **Key**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
+ Tenga en cuenta que `key_type` y [value_type](#value_type) son sinónimos para el parámetro de plantilla **Key**. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [value_type](#value_type) para obtener un ejemplo de cómo declarar y usar `key_type`.  
@@ -2254,7 +2255,7 @@ value_compare value_comp() const;
   
  **bool operator**( **const Key&**`_xVal`, **const Key&**`_yVal`);  
   
- que devuelve **true** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.  
+ que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.  
   
  Tenga en cuenta que [value_compare](#value_compare) y [key_compare](#key_compare) son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
   
@@ -2321,7 +2322,7 @@ typedef key_compare value_compare;
   
  Para más información sobre `Traits`, vea el tema [set (Clase)](../standard-library/set-class.md).  
   
- Tenga en cuenta que [key_compare](#key_compare) y **value_compare** son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
+ Tenga en cuenta que [key_compare](#key_compare) y **value_compare** son sinónimos para el parámetro de plantilla **Traits**. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [value_comp](#value_comp) para ver cómo se declara y usa `value_compare`.  
@@ -2338,7 +2339,7 @@ typedef Key value_type;
   
  Para más información sobre `Key`, vea la sección Comentarios del tema [set (Clase)](../standard-library/set-class.md).  
   
- Tenga en cuenta que [key_type](#key_type) y `value_type` son sinónimos para el parámetro de plantilla **Key**. Ambos tipos se proporcionan para las clases de conjunto y conjunto múltiple, donde son idénticos, para la compatibilidad con las clases de mapa y mapa múltiple, donde son distintos.  
+ Tenga en cuenta que [key_type](#key_type) y `value_type` son sinónimos para el parámetro de plantilla **Key**. Ambos tipos se proporcionan para las clases set y multiset, donde son idénticos, para la compatibilidad con las clases map and multimap, donde son distintos.  
   
 ### <a name="example"></a>Ejemplo  
   

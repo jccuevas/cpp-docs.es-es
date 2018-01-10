@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6a524e552728df0cee3e320aa36bf92d687c539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compatibility"></a>Compatibilidad
 La biblioteca en tiempo de ejecución de C Universal (UCRT) admite la mayor parte de la biblioteca estándar de C requerida para la conformidad con C++. Implementa la biblioteca C99 (ISO/IEC 9899:1999), con las excepciones de las macros de tipo genérico definidas en \<tgmath.h> y la compatibilidad de tipos estricta en \<complex.h>. La UCRT también implementa un gran subconjunto de la biblioteca de C POSIX.1 (ISO/IEC 9945-1:1996, la interfaz de programación de aplicaciones de sistema de POSIX), pero no cumple totalmente ningún estándar POSIX concreto.  Además, la UCRT implementa varias macros y funciones específicas de Microsoft que no forman parte de un estándar.  
@@ -37,7 +38,7 @@ La biblioteca en tiempo de ejecución de C Universal (UCRT) admite la mayor part
   
 ## <a name="related-articles"></a>Artículos relacionados  
   
-|Título|Descripción|  
+|Title|Description|  
 |-----------|-----------------|  
 |[Aplicaciones de la Tienda Windows, Windows Runtime y tiempo de ejecución de C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Describe cuándo no son compatibles las rutinas UCRT con aplicaciones universales de Windows o aplicaciones de la Tienda Windows.|  
 |[Conformidad con ANSI C](../c-runtime-library/ansi-c-compliance.md)|Describe la nomenclatura conforme a los estándares en la UCRT.|  

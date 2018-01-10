@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token class
+dev_langs: C++
+helpviewer_keywords: cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token (Clase)
 La clase `cancellation_token` representa la capacidad para determinar si se ha solicitado la cancelación de alguna operación. Se puede asociar un determinado símbolo con un objeto `task_group`, `structured_task_group` o `task` para proporcionar una cancelación implícita. Este token también puede sondearse para la cancelación o puede hacer que se registre una devolución únicamente si se cancela el objeto `cancellation_token_source` asociado.  
@@ -60,14 +43,14 @@ class cancellation_token;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[cancellation_token](#ctor)||  
+|[cancellation_token)](#ctor)||  
 |[~ cancellation_token (destructor)](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[deregister_callback](#deregister_callback)|Quita una devolución de llamada registrada anteriormente mediante el método `register` basándose en el objeto `cancellation_token_registration` devuelto en el momento del registro.|  
 |[is_cancelable](#is_cancelable)|Devuelve una indicación de si este token se puede cancelar o no.|  
@@ -77,7 +60,7 @@ class cancellation_token;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)||  
 |[operator=](#operator_eq)||  
@@ -97,7 +80,7 @@ class cancellation_token;
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a>cancellation_token) 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -205,8 +188,7 @@ template<typename _Function>
  Objeto de función que se volverá a llamar cuando se cancele este objeto `cancellation_token`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Objeto `cancellation_token_registration` que se puede utilizar en el método `deregister` para cancelar el registro de una devolución de llamada previamente registrada y evitar que esta se realice. El método producirá una [invalid_operation](invalid-operation-class.md) excepción si se llama en un `cancellation_token` objeto creado con el [cancellation_token:: None](#none) método.  
+ Objeto `cancellation_token_registration` que se puede utilizar en el método `deregister` para cancelar el registro de una devolución de llamada previamente registrada y evitar que esta se realice. El método producirá una [invalid_operation](invalid-operation-class.md) excepción si se llama en una `cancellation_token` objeto que se creó mediante la [cancellation_token:: None](#none) método.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

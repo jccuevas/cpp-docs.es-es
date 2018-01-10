@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c4254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4254"
+title: Compilador advertencia (nivel 4) C4254 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c4254
+dev_langs: C++
+helpviewer_keywords: C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e3f19b0bca7c53e63039bec207a33a1cfcd3fe1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operador' : conversión de 'tipo1' a 'tipo2', posible pérdida de datos  
+# <a name="compiler-warning-level-4-c4254"></a>Advertencia del compilador (nivel 4) C4245
+'operador': conversión de 'tipo1' a 'tipo2', posible pérdida de datos  
   
- Se asignó un campo de bits a otro campo de bits de menor tamaño.  Puede haberse producido pérdida de datos.  
+ Un campo de bits mayor se asignó a un campo de bits más pequeño. Podría haber una pérdida de datos.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
- El código siguiente genera el error C4254:  
+ El ejemplo siguiente genera C4254:  
   
 ```  
 // C4254.cpp  

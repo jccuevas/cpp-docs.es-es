@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 284d9393f7f967230fd3f7deb497a0e245d78dec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details (Espacio de nombres)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -32,7 +35,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ComPtrRef (clase)](../windows/comptrref-class.md)|Representa una referencia a un objeto de tipo ComPtr\<T >.|  
 |[ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)|Representa la clase base para la [ComPtrRef](../windows/comptrref-class.md) clase.|  
@@ -71,7 +74,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[AsyncStatusInternal (enumeración)](../windows/asyncstatusinternal-enumeration.md)|Especifica una asignación entre enumeraciones internas para el estado de operaciones asincrónicas y el **Windows::Foundation::AsyncStatus** enumeración.|  
   

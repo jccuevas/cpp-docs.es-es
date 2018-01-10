@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6e10a2a2991f314d61bd8c2df22b59d7791b6c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recomendaciones para elegir entre funciones y macros
 La mayoría de las rutinas de la biblioteca en tiempo de ejecución de Microsoft son funciones compiladas o ensambladas, aunque algunas rutinas se implementan como macros. Cuando un archivo de encabezado declara una función y una versión de macro de una rutina, la definición de macro tiene prioridad, porque siempre aparece después de la declaración de función. Cuando se invoca una rutina que se implementa como una función y como una macro, puede forzar al compilador a que utilice la versión de función de dos maneras:  

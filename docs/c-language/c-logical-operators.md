@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b97509fbbfdf0bb169af1dae61e07fa6f4ba31d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-logical-operators"></a>Operadores lógicos de C
 Los operadores lógicos realizan operaciones AND lógicas (**&&**) y OR lógicas (`||`).  
@@ -47,7 +48,7 @@ Los operadores lógicos realizan operaciones AND lógicas (**&&**) y OR lógicas
   
  A continuación se describen los operadores lógicos de C:  
   
-|Operador|Descripción|  
+|Operador|Description|  
 |--------------|-----------------|  
 |**&&**|El operador AND lógico genera el valor 1 si ambos operandos tienen valores distintos de cero. Si alguno de los operandos es igual a 0, el resultado es 0. Si el primer operando de una operación AND lógica es igual a 0, el segundo operando no se evalúa.|  
 |`&#124;&#124;`|El operador OR lógico realiza una operación OR inclusivo en sus operandos. El resultado es 0 si ambos operandos tienen valores 0. Si cualquiera de los operandos tiene un valor distinto de cero, el resultado es 1. Si el primer operando de una operación OR lógica tiene un valor distinto de cero, el segundo operando no se evalúa.|  

@@ -1,55 +1,56 @@
 ---
-title: "float_control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.float_control"
-  - "float_control_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "float_control (pragma)"
-  - "pragma (directivas), float_control"
+title: float_control | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.float_control
+- float_control_CPP
+dev_langs: C++
+helpviewer_keywords:
+- float_control pragma
+- pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 821890c7fdb719b5ab320588476bd1ebb73793ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# float_control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="floatcontrol"></a>float_control
 Especifica el comportamiento de punto flotante de una función.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 float_control( value,setting [push] | push | pop )  
 ```  
   
-## Marcas  
- `value` *,* `setting` **\[push\]**  
- Especifica un comportamiento de punto flotante.  `value` puede ser **precise** o **except**.  Para obtener más información, vea [\/fp \(Especificar comportamiento de punto flotante\)](../build/reference/fp-specify-floating-point-behavior.md).  `setting` puede ser **on** u **off**.  
+## <a name="flags"></a>Marcas  
+ `value`, `setting` **[inserción]**  
+ Especifica un comportamiento en punto flotante. `value`puede ser **precisa** o **excepto**. Para obtener más información, consulte [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md). `setting`puede ser **en** o **desactivar**.  
   
- Si `value` es **precise**, se especifican los valores de **precise** y **except** .  **except** solo se puede establecer en **on** cuando **precise** también se establece en **on**.  
+ Si `value` es **precisa**, la configuración de **precisa** y **excepto** se especifican. **excepto** sólo se puede establecer en **en** cuando **precisa** también se establece en **en**.  
   
- Si se agrega el token opcional **push** , el valor actual de `value` se inserta en la pila interna del compilador.  
+ Si la parte opcional **inserción** símbolo (token) se agrega la actual configuración para `value` se inserta en la pila interna del compilador.  
   
  **push**  
  Inserta el valor de `float_control` actual en la pila interna del compilador.  
   
  **pop**  
- Quita el valor de`float_control` de la parte superior de la pila interna del compilador y lo convierte en el nuevo valor de `float_control`.  
+ Quita el `float_control` de la parte superior de la pila interna del compilador y hace que el nuevo `float_control` configuración.  
   
-## Comentarios  
- No puede desactivar `float_control precise` cuando **except** está activado.  De igual forma, **precise** no se puede desactivar cuando `fenv_access` está activado.  Para pasar del modelo estricto a un modelo rápido con la instrucción pragma `float_control`, utilice el código siguiente:  
+## <a name="remarks"></a>Comentarios  
+ No se puede activar `float_control precise` cuando **excepto** se encuentra en. De forma similar, **precisa** no se puede desactivar cuando `fenv_access` se encuentra en. Para pasar del modelo estricto a un modelo rápido con la instrucción pragma `float_control`, utilice el código siguiente:  
   
 ```  
 #pragma float_control(except, off)  
@@ -71,11 +72,11 @@ float_control( value,setting [push] | push | pop )
   
  Las directivas pragma de punto flotante incluyen:  
   
--   [fenv\_access](../preprocessor/fenv-access.md)  
+-   [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo detectar una excepción de desbordamiento de punto flotante mediante la instrucción pragma `float_control`.  
   
 ```  
@@ -112,6 +113,9 @@ int main( ) {
 }  
 ```  
   
-  **Sin errores**   
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+Pass  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

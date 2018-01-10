@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fac551ed757cf0510f0a8b61522bc969c6b6be6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b38761b27c21dcf0fe3118d5b73e104cbaaa673d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-selection"></a>Selección de elementos de control de árbol
 Cuando se cambia la selección de un elemento a otro, un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envía [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) y [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) mensajes de notificación. Ambas notificaciones incluyen un valor que especifica si el cambio es el resultado de un clic del mouse o una pulsación de tecla. Las notificaciones también incluyen información sobre el elemento que está adquiriendo cada vez la selección y el elemento que está perdiendo la selección. Puede utilizar esta información para establecer atributos de elemento que dependen del estado de selección del elemento. Devolver **TRUE** en respuesta a **TVN_SELCHANGING** impide realizar la selección del cambio; devolver **FALSE** permite el cambio.  

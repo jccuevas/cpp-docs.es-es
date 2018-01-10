@@ -1,37 +1,39 @@
 ---
-title: "C&#243;mo: Declarar y usar punteros internos y matrices administradas (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], administradas"
-  - "punteros, interior"
+title: "Cómo: declarar y utilizar punteros interiores y matrices administradas (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, interior
+- arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: caa0c3cc2c379362972d1b24e80f3ebb94d9f878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Declarar y usar punteros internos y matrices administradas (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El siguiente ejemplo de [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] muestra cómo puede declarar y utilizar un puntero interior en una matriz.  
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Cómo: Declarar y usar punteros internos y matrices administradas (C++/CLI)
+El siguiente C++ / CLI muestra cómo declarar y utilizar un puntero interior a una matriz.  
   
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la opción del compilador **\/clr** , pero no por la opción del compilador **\/ZW** .  
+>  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_arrays.cpp  
@@ -57,7 +59,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 1st element in arr holds: 1  
@@ -65,5 +67,5 @@ ipi points to memory address whose value is: 1
 after incrementing ipi, it points to memory address whose value is: 2  
 ```  
   
-## Vea también  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

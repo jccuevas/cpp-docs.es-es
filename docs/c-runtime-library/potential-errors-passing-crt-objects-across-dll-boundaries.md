@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Errores potenciales que pasan los objetos de CRT entre los límites de DLL
 Al pasar los objetos de tiempo de ejecución de C (CRT) como identificadores de archivos, configuraciones regionales y variables de entorno en un archivo DLL o fuera de este (llamadas de función a través del límite de DLL), puede producirse un comportamiento inesperado si el archivo DLL, así como los archivos que llamen al archivo DLL, utilizan diferentes copias de las bibliotecas de CRT.  
@@ -36,7 +37,7 @@ Al pasar los objetos de tiempo de ejecución de C (CRT) como identificadores de 
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  En este ejemplo se pasa un identificador de archivo a través de un límite de DLL.  
   
  El archivo DLL y .exe se compilan con /MD, de modo que comparten una única copia de CRT.  
@@ -77,7 +78,7 @@ this is a string
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>Description  
  Este ejemplo pasa variables de entorno a través de un límite de DLL.  
   
 ```cpp  

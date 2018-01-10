@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="completionfuture-class"></a>completion_future (Clase)
 Representa un futuro que corresponde a una operación asincrónica de C++ AMP.  
@@ -43,14 +44,14 @@ class completion_future;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[completion_future Constructor](#ctor)|Inicializa una nueva instancia de la clase `completion_future`.|  
 |[~ completion_future (destructor)](#dtor)|Destruye el objeto `completion_future`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get](#get)|Espera hasta que se complete la operación asincrónica asociada.|  
 |[a continuación](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.|  
@@ -62,7 +63,7 @@ class completion_future;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operador std::shared_future\<void >](#operator_shared_future)|Convierte implícitamente el `completion_future` el objeto a un `std::shared_future` objeto.|  
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `completion_future` objeto en éste.|  
@@ -98,7 +99,7 @@ completion_future(
   
 ### <a name="overloads-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`completion_future();`|Inicializa una nueva instancia de la `completion_future` (clase)|  
 |`completion_future(const completion_future& _Other);`|Inicializa una nueva instancia de la `completion_future` clase copiando un constructor.|  
@@ -147,7 +148,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="overloads-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`completion_future& operator=(const completion_future& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una copia en profundidad.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una asignación de movimiento.|  

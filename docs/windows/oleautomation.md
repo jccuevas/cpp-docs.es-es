@@ -1,32 +1,33 @@
 ---
-title: "oleautomation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.oleautomation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oleautomation attribute"
+title: oleautomation | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.oleautomation
+dev_langs: C++
+helpviewer_keywords: oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 277123f28b9fb74676fcb7a657b6e6dbc294a4a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# oleautomation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica que una interfaz es compatible con automatización.  
+# <a name="oleautomation"></a>oleautomation
+Indica que una interfaz es compatible con la automatización.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,26 +35,25 @@ Indica que una interfaz es compatible con automatización.
   
 ```  
   
-## Comentarios  
- el atributo de **oleautomation** C\+\+ tiene la misma funcionalidad que el atributo de [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **oleautomation** atributo C++ tiene la misma funcionalidad que la [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) atributo MIDL.  
   
-## Ejemplo  
- Vea los ejemplos de [defaultvalue](../Topic/defaultvalue.md) y [nonextensible](../Topic/nonextensible.md) para un ejemplo de uso de **oleautomation**.  
+## <a name="example"></a>Ejemplo  
+ Consulte los ejemplos de [defaultvalue](../windows/defaultvalue.md) y [nonextensible](../windows/nonextensible.md) para un ejemplo de uso de **oleautomation**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|`interface`|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
 |**Atributos no válidos**|**dispinterface**|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interfaz](../windows/interface-attributes.md)   

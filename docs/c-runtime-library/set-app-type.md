@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfd7344b01360df6af3ccf7a153eda3451d2482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 Función interna que se usa en el inicio para indicar a CRT si la aplicación es de consola o de interfaz gráfica de usuario.  
@@ -46,7 +47,7 @@ void __cdecl _set_app_type(
  `appType`  
  Valor que indica el tipo de aplicación. Los valores posibles son:  
   
-|Valor|Descripción|  
+|Valor|Description|  
 |----------------|-----------------|  
 |_crt_unknown_app|Tipo de aplicación desconocido.|  
 |_crt_console_app|Aplicación de consola (línea de comandos).|  

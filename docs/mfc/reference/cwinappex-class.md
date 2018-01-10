@@ -129,11 +129,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c79b909df39a9e27b4b66c03df4f700a6aac2d54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 941a496d52dbf38401484bd6ddcd857875849dc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinappex-class"></a>Clase CWinAppEx
 `CWinAppEx`Controla el estado de la aplicación, guarda el estado en el registro, carga el estado del registro, inicializa los administradores de la aplicación y proporciona vínculos a esos mismos administradores de la aplicación.  
@@ -149,13 +150,13 @@ class CWinAppEx : public CWinApp
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinAppEx::CWinAppEx](#cwinappex)|Construye un objeto `CWinAppEx`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinAppEx::CleanState](#cleanstate)|Quita la información acerca de la aplicación desde el registro de Windows.|  
 |[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Especifica si la aplicación cargará el tamaño inicial y la ubicación de la ventana de marco principal desde el registro.|  
@@ -206,7 +207,7 @@ class CWinAppEx : public CWinApp
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|Lo llama el marco cuando el estado de la aplicación se ha cargado.|  
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Llamado por el marco de trabajo cuando cargan el tamaño y la ubicación de la aplicación desde el registro. Los datos cargados incluyen el tamaño y la ubicación del marco principal en el momento de la aplicación se cerró por última vez.|  
@@ -219,7 +220,7 @@ class CWinAppEx : public CWinApp
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Especifica si el marco de trabajo restablecerá todas las imágenes de barra de herramientas cuando se carga la ventana de marco que contiene la barra de herramientas.|  
   

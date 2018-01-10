@@ -1,76 +1,77 @@
 ---
-title: "Invalidaciones expl&#237;citas (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reemplazar, invalidación [C++]"
+title: "Invalidaciones explícitas (extensiones de componentes de C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Invalidaciones expl&#237;citas (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema explica cómo reemplazar explícitamente un miembro de una clase base o interfaz.  Un reemplazo \(explícita\) denominada sólo se debe utilizar para invalidar un método con un método derivado con un nombre diferente.  
+# <a name="explicit-overrides--c-component-extensions"></a>Invalidaciones explícitas (extensiones componentes de C++)
+Este tema describe cómo reemplazar explícitamente un miembro de una clase base o interfaz. Un reemplazo (explícito) con nombre solo debe usarse para reemplazar un método con un método derivado tiene un nombre distinto.  
   
-## Todos los runtimes  
+## <a name="all-runtimes"></a>Todos los runtimes  
  **Sintaxis**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **Parámetros**  
   
- *overriding\-function\-declarator*  
- El tipo de valor devuelto, el nombre, y la lista de argumentos de la función de reemplazo.  Observe que la función de reemplazo no tiene que tener el mismo nombre que la función que se reemplaza.  
+ *declarador de función reemplazar*  
+ La lista valor devuelta de tipo, el nombre y el argumento de la función de reemplazo.  Tenga en cuenta que la función de reemplazo no tiene que tener el mismo nombre que la función que se va a invalidar.  
   
  *type*  
- El tipo base que contiene una función replace.  
+ El tipo base que contiene una función para invalidar.  
   
  *function*  
- Una lista delimitada por comas de uno o más nombres de función a reemplazar.  
+ Una lista delimitada por comas de uno o más nombres de función para invalidar.  
   
- *overriding\-function\-definition*  
- Las instrucciones del cuerpo de la función que definen la función de reemplazo.  
+ *definición de función reemplazar*  
+ Las instrucciones del cuerpo de función que definen la función de reemplazo.  
   
  **Comentarios**  
   
- El uso explícito reemplaza para crear un alias para una firma de método, o proporcionar implementaciones diferentes para los métodos con la misma firma.  
+ Use explícita invalidaciones para crear un alias para una firma de método o para proporcionar diferentes implementaciones de métodos witht la misma firma.  
   
- Para obtener información sobre la modificación del comportamiento de tipos heredados y miembros de tipo heredados, vea [Especificadores de invalidación](../windows/override-specifiers-cpp-component-extensions.md).  
+ Para obtener información acerca de cómo modificar el comportamiento de los tipos heredados y miembros de tipos heredados, consulte [especificadores de reemplazo](../windows/override-specifiers-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- Para obtener información sobre explícita reemplaza en código nativo o código compilado con **\/clr:oldSyntax**, vea [Invalidaciones explícitas](../cpp/explicit-overrides-cpp.md).  
+ Para obtener información sobre explícita invalidaciones en código nativo o código compilado con **/CLR: oldSyntax**, consulte [reemplazos explícitos](../cpp/explicit-overrides-cpp.md).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo de código siguiente muestra un reemplazo simple, implícita y la implementación de un miembro en una interfaz base, no con explícita reemplaza.  
+ En el ejemplo de código siguiente se muestra una invalidación simple, implícita e implementación de un miembro en una interfaz base, no se utiliza de forma explícita.  
   
 ```  
 // explicit_override_1.cpp  
@@ -92,11 +93,15 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **Invalidación X::f de I1::f** **Ejemplo**  
+```Output  
+X::f override of I1::f  
+```  
   
- El siguiente ejemplo de código muestra cómo implementar todos los miembros de la interfaz con una firma común, utilizando la sintaxis de reemplazo explícita.  
+ **Ejemplo**  
+  
+ En el ejemplo de código siguiente se muestra cómo implementar a todos los miembros de interfaz con una firma común, con la sintaxis de reemplazo explícito.  
   
 ```  
   
@@ -124,12 +129,16 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **Reemplazo de X::f de I1::f y de I2::f**  
- **Reemplazo de X::f de I1::f y de I2::f** **Ejemplo**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- El ejemplo de código siguiente muestra cómo un reemplazo de la función puede tener un nombre diferente de la función que implementa.  
+ **Ejemplo**  
+  
+ En el ejemplo de código siguiente se muestra cómo una invalidación de la función puede tener un nombre diferente de la función que implementa.  
   
 ```  
 // explicit_override_3.cpp  
@@ -151,11 +160,15 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **X::g** **Ejemplo**  
+```Output  
+X::g  
+```  
   
- El ejemplo de código siguiente se muestra una implementación de interfaz explícita que implemente una colección seguros de tipo.  
+ **Ejemplo**  
+  
+ En el ejemplo de código siguiente se muestra una implementación explícita de la interfaz que implementa un tipo seguro para la ejecución de recopilación.  
   
 ```  
 // explicit_override_4.cpp  
@@ -180,5 +193,5 @@ public:
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4375b995ec60197f1e1f9f8238f1542ec7d1d313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c6386c5baf4af7447e4d3c711e644cb2ae5209a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctabctrl"></a>Usar CTabCtrl
 Un "control de pestaña" es análogo a los divisores de un bloc de notas o las carpetas con la etiqueta de un archivador. Utilice el control de ficha, representado por la clase [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar varias páginas de información o controles a un usuario, uno en uno, en un formato que sugiere un punto o una relación lógica entre cada página.  

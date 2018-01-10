@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBrush::SetTransform
 - AFXRENDERTARGET/CD2DBrush::m_pBrush
 - AFXRENDERTARGET/CD2DBrush::m_pBrushProperties
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DBrush [MFC], CD2DBrush
 - CD2DBrush [MFC], Attach
@@ -39,16 +37,16 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aeacfecbc97942432b9bf19b23bf8a4cabe0a616
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9dc27dbe16701432e0e51a3c4fda9075dd4b7a83
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbrush-class"></a>Clase CD2DBrush
 Un contenedor para ID2D1Brush.  
@@ -70,7 +68,7 @@ class CD2DBrush : public CD2DResource;
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBrush::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DBrush::Destroy](#destroy)|Destruye un objeto CD2DBrush. (Invalida [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
@@ -84,13 +82,13 @@ class CD2DBrush : public CD2DResource;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|Interfaz de ID2D1Brush devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DBrush::m_pBrush](#m_pbrush)|Almacena un puntero a un objeto ID2D1Brush.|  
 |[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Propiedades del pincel.|  
@@ -249,4 +247,3 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

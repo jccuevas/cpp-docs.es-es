@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>Constantes de tipo de datos
 Las constantes de tipo de datos son intervalos de valores dependientes de la implementación permitidos para los tipos de datos enteros. Las constantes que se muestran a continuación proporcionan los intervalos para los tipos de datos enteros y se definen en LIMITS.H.  
@@ -133,7 +134,7 @@ Las constantes de tipo de datos son intervalos de valores dependientes de la imp
   
  Las siguientes constantes proporcionan el intervalo y otras características de los tipos de datos **double** y **float**, y se definen en FLOAT.H:  
   
-|Constante|Valor|Descripción|  
+|Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**DBL_DIG**|15|Número de dígitos decimales de precisión|  
 |**DBL_EPSILON**|2.2204460492503131e-016|Menor que 1,0+**DBL_EPSILON** !=1,0|  

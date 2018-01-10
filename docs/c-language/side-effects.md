@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 687a5ad1327e1a36a2b854c8a3fcb03d8f45e104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e6e6dff87e447a3885906130b6a08286643d6a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="side-effects"></a>Efectos secundarios
 El orden de evaluación de expresiones está definido por la implementación concreta, excepto cuando el lenguaje garantiza un orden concreto de evaluación (como se indica en [Prioridad y orden de evaluación](../c-language/precedence-and-order-of-evaluation.md)). Por ejemplo, en las siguientes llamadas de función se producen efectos secundarios:  

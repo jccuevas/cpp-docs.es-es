@@ -61,11 +61,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd6322b372a9cfb6ef75875d183d1b3e0a3e79c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Clase CMFCRibbonStatusBar
 La `CMFCRibbonStatusBar` clase implementa un control de barra de estado que puede mostrar los elementos de la cinta de opciones.  
@@ -80,7 +81,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Agrega un elemento dinámico a la barra de estado de la cinta de opciones.|  
 |[CMFCRibbonStatusBar::AddElement](#addelement)|Agrega un nuevo elemento de la cinta de opciones en la barra de estado de la cinta de opciones.|  
@@ -106,7 +107,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Muestra la cadena de información que aparece en la barra cuando está habilitado el modo de obtener información de estado de la cinta de opciones.|  
   

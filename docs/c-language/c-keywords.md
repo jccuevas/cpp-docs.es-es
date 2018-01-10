@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-keywords"></a>Palabras clave de C
 Las "palabras clave" son palabras que tienen un significado especial en C. En las fases de traducción 7 y 8, un identificador no puede escribirse igual, incluido el uso de mayúsculas y minúsculas, que palabra clave de C. (Vea una descripción de las [fases de traducción](../preprocessor/phases-of-translation.md) en la *Referencia del preprocesador*; para obtener información sobre los identificadores, vea [Identificadores](../c-language/c-identifiers.md)). El lenguaje C utiliza las siguientes palabras clave:  

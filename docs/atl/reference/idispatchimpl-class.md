@@ -1,11 +1,10 @@
 ---
-title: Clase de IDispatchImpl | Documentos de Microsoft
+title: IDispatchImpl (clase) | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,43 +15,28 @@ f1_keywords:
 - ATLCOM/ATL::IDispatchImpl::GetTypeInfo
 - ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispatchImpl::Invoke
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dual interfaces, classes
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: fff4cbc0a3f87b584f1a4211f4aad37228ed4da7
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3008d42986fcdc4b98ba6a1f9c85c437f2d335c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl (clase)
-Proporciona una implementación predeterminada para el `IDispatch` parte de una interfaz dual.  
+Proporciona una implementación predeterminada para el `IDispatch` forma parte de una interfaz dual.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -71,10 +55,10 @@ class ATL_NO_VTABLE IDispatchImpl : public T
  Una interfaz dual.  
   
  [in] `piid`  
- Un puntero para el IID de `T`.  
+ Un puntero a lo IID de `T`.  
   
  [in] `plibid`  
- Puntero a LIBID de la biblioteca de tipos que contiene información acerca de la interfaz. De forma predeterminada, se pasa la biblioteca de tipos de nivel de servidor.  
+ Un puntero a LIBID de la biblioteca de tipos que contiene información acerca de la interfaz. De forma predeterminada, se pasa la biblioteca de tipos de nivel de servidor.  
   
  [in] `wMajor`  
  La versión principal de la biblioteca de tipos. De forma predeterminada, el valor es 1.  
@@ -83,35 +67,35 @@ class ATL_NO_VTABLE IDispatchImpl : public T
  La versión secundaria de la biblioteca de tipos. De forma predeterminada, el valor es 0.  
   
  [in] `tihclass`  
- La clase que se utiliza para administrar la información de tipo `T`. De forma predeterminada, el valor es `CComTypeInfoHolder`.  
+ La clase que se usa para administrar la información de tipo para `T`. De forma predeterminada, el valor es `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Miembros  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|El constructor. Llamadas `AddRef` en la variable de miembro protegido que administra la información de tipo de la interfaz dual. El destructor llama a `Release`.|  
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|El constructor. Llamadas `AddRef` en la variable de miembro protegido que administra la información de tipo de interfaz dual. El destructor llama a `Release`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Asigna un conjunto de nombres a un conjunto correspondiente de identificadores de envío.|  
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Recupera la información de tipo para la interfaz dual.|  
+|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Recupera la información de tipo de interfaz dual.|  
 |[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Determina si hay información de tipo para la interfaz dual.|  
-|[IDispatchImpl::Invoke](#invoke)|Proporciona acceso a los métodos y propiedades expuestos por la interfaz dual.|  
+|[IDispatchImpl::Invoke](#invoke)|Proporciona acceso a los métodos y propiedades expuestas por la interfaz dual.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IDispatchImpl`Proporciona una implementación predeterminada para el `IDispatch` parte de cualquier interfaz dual en un objeto. Una interfaz dual se deriva de `IDispatch` y usa sólo los tipos compatibles con la automatización. Al igual que una interfaz dispinterface, una interfaz dual admite el enlace anticipado y el enlace; Sin embargo, una interfaz dual también admite el enlace de vtable.  
+ `IDispatchImpl`Proporciona una implementación predeterminada para el `IDispatch` forma parte de cualquier interfaz dual en un objeto. Una interfaz dual se deriva de `IDispatch` y utiliza únicamente los tipos compatibles con la automatización. Al igual que una interfaz dispinterface, una interfaz dual admite el enlace anticipado y el enlace de tiempo de ejecución; Sin embargo, una interfaz dual también admite el enlace de vtable.  
   
  En el ejemplo siguiente se muestra una implementación típica de `IDispatchImpl`.  
   
- [!code-cpp[NVC_ATL_COM&#47;](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]  
   
- De forma predeterminada, el `IDispatchImpl` busca la información de tipo de clase `T` en el registro. Para implementar una interfaz no registrada, puede usar el `IDispatchImpl` clase sin acceso al registro mediante el uso de un número de versión predefinidas. Si crea un `IDispatchImpl` objeto con 0xFFFF que el valor de `wMajor` y 0xFFFF como el valor de `wMinor`, la `IDispatchImpl` clase recupera la biblioteca de tipos desde el archivo .dll en lugar del registro.  
+ De forma predeterminada, el `IDispatchImpl` busca la información de tipo de clase `T` en el registro. Para implementar una interfaz no registrada, puede usar el `IDispatchImpl` clase sin tener acceso al registro mediante el uso de un número de versión predefinidas. Si crea un `IDispatchImpl` objeto cuya 0xFFFF como el valor de `wMajor` y 0xFFFF como el valor de `wMinor`, la `IDispatchImpl` clase recupera la biblioteca de tipos desde el archivo .dll en lugar del registro.  
   
- `IDispatchImpl`contiene un miembro estático del tipo `CComTypeInfoHolder` que administra la información de tipo de la interfaz dual. Si tiene varios objetos que implementan la misma dual de interfaz, sólo una instancia de `CComTypeInfoHolder` se utiliza.  
+ `IDispatchImpl`contiene un miembro estático del tipo `CComTypeInfoHolder` que administra la información de tipo de interfaz dual. Si tiene varios objetos que implementan la misma dual interfaz, solo una instancia de `CComTypeInfoHolder` se utiliza.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `T`  
@@ -134,10 +118,10 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) en el SDK de Windows.  
   
 ##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
- Recupera la información de tipo para la interfaz dual.  
+ Recupera la información de tipo de interfaz dual.  
   
 ```
 STDMETHOD(GetTypeInfo)(
@@ -147,7 +131,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) en el SDK de Windows.  
   
 ##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
  Determina si hay información de tipo para la interfaz dual.  
@@ -157,17 +141,17 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- See `IDispatch::GetTypeInfoCount` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea `IDispatch::GetTypeInfoCount` en el SDK de Windows.  
   
 ##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
- El constructor. Llamadas `AddRef` en la variable de miembro protegido que administra la información de tipo de la interfaz dual. El destructor llama **versión**.  
+ El constructor. Llamadas `AddRef` en la variable de miembro protegido que administra la información de tipo de interfaz dual. El destructor llama **versión**.  
   
 ```
 IDispatchImpl();
 ```  
   
 ##  <a name="invoke"></a>IDispatchImpl::Invoke  
- Proporciona acceso a los métodos y propiedades expuestos por la interfaz dual.  
+ Proporciona acceso a los métodos y propiedades expuestas por la interfaz dual.  
   
 ```
 STDMETHOD(Invoke)(
@@ -182,8 +166,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) en el SDK de Windows.  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

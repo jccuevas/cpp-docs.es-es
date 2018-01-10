@@ -1,41 +1,42 @@
 ---
-title: "Cadena (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (opción del compilador) [C++], admite cadena"
-  - "admite cadena con /clr"
+title: Cadena (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- string support with /clr
+- /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Cadena (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El compilador de Visual C\+\+ admite *cadenas*, que son objetos que representan texto como una secuencia de caracteres.  Visual C\+\+ admite variables de cadena, cuyo valor es implícito, y literales, cuyo valor es una cadena entre comillas explícita.  
+# <a name="string--c-component-extensions"></a>Cadena (Extensiones de componentes de C++)
+El compilador de Visual C++ admite *cadenas*, que son objetos que representan texto como una secuencia de caracteres. Visual C++ admite variables de cadena, cuyo valor es implícito, y literales, cuyo valor es una cadena entre comillas explícita.  
   
-## Todos los runtimes  
- Windows en tiempo de ejecución y Common Language Runtime representan cadenas como objetos cuya memoria asignada se administra automáticamente.  Es decir, no es necesario descartar explícitamente la memoria de una cadena cuando la variable de cadena está fuera del ámbito o finaliza la aplicación.  Para indicar que la duración de un objeto de cadena se debe administrar automáticamente, declare el tipo de cadena con el modificador [identificador a objeto \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ Windows Runtime y Common Language Runtime representan cadenas como objetos cuya memoria asignada se administra automáticamente. Es decir, no es necesario descartar explícitamente la memoria de una cadena cuando la variable de cadena está fuera del ámbito o finaliza la aplicación. Para indicar que la duración de un objeto de cadena que se administrarán automáticamente, declare el tipo de cadena con el [identificador-a-objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.  
   
-## Windows en tiempo de ejecución  
- La arquitectura de Windows en tiempo de ejecución requiere que Visual C\+\+ implemente el tipo de datos `String` en el espacio de nombres `Platform`.  Para su comodidad, Visual C\+\+ también proporciona el tipo de datos `string`, que es un sinónimo de `Platform::String`, en el espacio de nombres `default`.  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ La arquitectura de Windows en tiempo de ejecución requiere que Visual C++ implemente el tipo de datos `String` en el espacio de nombres `Platform`. Para su comodidad, Visual C++ también proporciona el tipo de datos `string`, que es un sinónimo de `Platform::String`, en el espacio de nombres `default`.  
   
-### Sintaxis  
+### <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-  
 // compile with /ZW  
 using namespace Platform;  
 using namespace default;  
@@ -45,42 +46,40 @@ using namespace default;
   
 ```  
   
-### Comentarios  
- Para obtener más información y ejemplos sobre cadenas, vea [Platform::String, std::wstring, and Literals \(Platform\)](http://msdn.microsoft.com/es-es/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información y ejemplos acerca de las cadenas, vea [Platform:: String, std:: wstring y literales (plataforma)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- En este tema se explica cómo procesa el compilador de Visual C\+\+ literales de cadena cuando se ejecuta mediante la opción del compilador **\/clr**.  Para usar **\/clr**, también debe utilizar Common Language Runtime \(CLR\), la sintaxis de C\+\+\/CLI y objetos administrados.  Para obtener más información sobre **\/clr**, vea [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Este tema describe cómo el compilador de Visual C++ procesa los literales de cadena cuando se ejecutan mediante el **/CLR** opción del compilador. Usar **/CLR**, también debe utilizar common language runtime (CLR), C + / sintaxis CLI y objetos administrados. Para obtener más información acerca de **/CLR**, consulte [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Al compilar con **\/clr**, el compilador convierte los literales de cadena a cadenas de tipo <xref:System.String>.  Para mantener la compatibilidad con el código existente, existen dos excepciones a esto:  
+ Cuando se compila con **/CLR**, el compilador convertirá los literales de cadena a cadenas de tipo <xref:System.String>. Para mantener la compatibilidad con el código existente, existen dos excepciones a esto:  
   
--   Control de excepciones.  Cuando se produce un literal de cadena, el compilador lo detectará como literal de cadena.  
+-   Control de excepciones. Cuando se produce un literal de cadena, el compilador lo detectará como literal de cadena.  
   
--   Deducción de plantilla.  Cuando un literal de cadena se pasa como argumento de plantilla, el compilador no lo convertirá a <xref:System.String>.  Tenga en cuenta que los literales de cadena pasados como argumento genérico se promoverán a <xref:System.String>.  
+-   Deducción de plantilla. Cuando un literal de cadena se pasa como argumento de plantilla, el compilador no lo convertirá a <xref:System.String>. Tenga en cuenta que los literales de cadena pasados como argumento genérico se promoverán a <xref:System.String>.  
   
  El compilador también tiene compatibilidad integrada para tres operadores, que puede invalidar para personalizar su comportamiento:  
   
--   Operador System::String ^ \+\( System::String, System::String\);  
+-   Operador System::String ^ +( System::String, System::String);  
   
--   Operador System::String ^ \+\( System::Object, System::String\);  
+-   Operador System::String ^ +( System::Object, System::String);  
   
--   Operador System::String ^ \+\( System::String, System::Object\);  
+-   Operador System::String ^ +( System::String, System::Object);  
   
- Cuando se pasa <xref:System.String>, el compilador aplicará una conversión boxing, si fuera necesario, y después concatenará el objeto \(con ToString\) con la cadena.  
-  
- Al compilar con **\/clr:oldSyntax**, los literales de cadena no se convertirán en <xref:System.String>.  
+ Cuando se pasa <xref:System.String>, el compilador aplicará una conversión boxing, si fuera necesario, y después concatenará el objeto (con ToString) con la cadena.  
   
 > [!NOTE]
->  El símbolo de intercalación \(“^ "\) indica que la variable declarada es un identificador para un objeto administrado de C\+\+\/CLI.  
+>  El símbolo de intercalación (“^ ") indica que la variable declarada es un identificador para un objeto administrado de C++/CLI.  
   
- Para obtener más información, vea [Literales de cadena y carácter](../cpp/string-and-character-literals-cpp.md).  
+ Para obtener más información, consulte [literales de cadena y carácter](../cpp/string-and-character-literals-cpp.md).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
  En el ejemplo de código siguiente se muestra la concatenación y la comparación de cadenas.  
@@ -140,22 +139,39 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **abcdef**  
- **abcghi**  
- **ghiabc**  
- **c**  
- **abcdefghi**  
- **abczzz**  
- **abc1**  
- **abc97**  
- **abc3.1**  
- **abcdef**  
- **a and b are equal**  
- **a and b are not equal**  
- **abc**  
- **n is empty** **Ejemplo**  
+```Output  
+abcdef  
+  
+abcghi  
+  
+ghiabc  
+  
+c  
+  
+abcdefghi  
+  
+abczzz  
+  
+abc1  
+  
+abc97  
+  
+abc3.1  
+  
+abcdef  
+  
+a and b are equal  
+  
+a and b are not equal  
+  
+abc  
+  
+n is empty  
+```  
+  
+ **Ejemplo**  
   
  En el ejemplo siguiente se muestra cómo sobrecargar los operadores proporcionados por el compilador, y cómo el compilador buscará una sobrecarga de función basada en el tipo <xref:System.String>.  
   
@@ -203,13 +219,21 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **overloaded \+\(String ^ a, String ^ b\)**   
- **overloaded \+\(String ^ a, Object ^ b\)**   
- **overloaded \+\(Object ^ a, String ^ b\)**   
- **String ^ a**  
- **const char \* a** **Ejemplo**  
+```Output  
+overloaded +(String ^ a, String ^ b)   
+  
+overloaded +(String ^ a, Object ^ b)   
+  
+overloaded +(Object ^ a, String ^ b)   
+  
+String ^ a  
+  
+const char * a  
+```  
+  
+ **Ejemplo**  
   
  En el ejemplo siguiente se muestra que el compilador distingue entre cadenas nativas y cadenas <xref:System.String>.  
   
@@ -250,13 +274,19 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **char\***  
- **String^ str**  
- **System.SByte\***  
- **System.String**   
-## Vea también  
+```Output  
+char *  
+  
+String^ str  
+  
+System.SByte*  
+  
+System.String  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)   
  [Literales de cadena y carácter](../cpp/string-and-character-literals-cpp.md)   
- [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/CLR (compilación de common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

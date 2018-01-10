@@ -11,25 +11,18 @@ ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCConfiguration.OutputDirectory
-- VC.Project.VCConfiguration.IntermediateDirectory
-- VC.Project.VCConfiguration.TargetName
-- VC.Project.VCConfiguration.TargetExt
-- VC.Project.VCConfiguration.DeleteExtensionsOnClean
-- VC.Project.VCConfiguration.PlatformToolset
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCConfiguration.ConfigurationType
-- VC.Project.VCConfiguration.UseOfSTL
-ms.openlocfilehash: 4de08a00ddedf1eec97d1872646a986e09c22547
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: d5e6006c3951f8bc435e7a450347ed525d8bfcad
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="general-properties-linux-c"></a>Propiedades generales (C++ para Linux)
 
-Propiedad | Descripción | Opciones
+Property | Description | Opciones
 --- | ---| ---
 Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida; puede incluir variables de entorno.
 Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios; puede incluir variables de entorno.

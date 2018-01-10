@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 176e744423441711715cc32b355278db20491e8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b2deb5c78667e5343bd2be0948252e2f2e154
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling-crt"></a>Control de errores (CRT)
 Utilice estas rutinas para controlar los errores de programa.  
   
 ### <a name="error-handling-routines"></a>Rutinas de control de errores  
   
-|Rutina|Uso|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) (Macro)|Comprueba los errores lógicos de programación. Disponible en las versiones de lanzamiento y depuración de la biblioteca en tiempo de ejecución.|  
 |[_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) (Macros)|Similar a `assert`, pero disponible únicamente en las versiones de depuración de la biblioteca en tiempo de ejecución.|  

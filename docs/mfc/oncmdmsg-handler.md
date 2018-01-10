@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71913ede29f3a8e02c319b3c713d2c33bbcb5b8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 173741ef73cd4bf6426787ef56e8334f504d7c0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg (Controlador)
 Para llevar a cabo el enrutamiento de comandos, llama a cada destino del comando el `OnCmdMsg` función miembro del destino del comando siguiente en la secuencia. Uso de destinos de comandos `OnCmdMsg` para determinar si puede controlar un comando y las enrute a otro destino de comando si no se puede controlarla.  

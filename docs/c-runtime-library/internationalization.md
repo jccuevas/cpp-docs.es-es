@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3220b96f66465af8348fc50f0c702423439d34bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d48af3fb762100fa52b37db58cfc57caca1b6e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internationalization"></a>Internacionalización
 La biblioteca en tiempo de ejecución de Microsoft proporciona muchas rutinas que son útiles para crear versiones diferentes de un programa para los mercados internacionales. Esto incluye [rutinas relacionadas con la configuración regional](../c-runtime-library/locale.md), rutinas de caracteres anchos, rutinas de caracteres multibyte y rutinas de texto genérico. Por comodidad, en esta referencia la mayoría de las rutinas relacionadas con la configuración regional también se clasifican según las operaciones que realizan. En esta sección y en la referencia alfabética, las rutinas de caracteres multibyte y las rutinas de caracteres anchos se describen con sus homólogos de caracteres de un solo byte, cuando existen.  

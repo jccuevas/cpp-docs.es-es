@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ef399ca76493e1666a31f457dca14be5a039e92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2cwex-class"></a>Clase CW2CWEX
 Esta clase se utiliza por las macros de conversión de cadena `CW2CTEX` y `CT2CWEX`y la definición de tipo `CW2W`.  
@@ -46,20 +47,20 @@ class CW2CWEX
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2CWEX::CW2CWEX](#cw2cwex)|El constructor.|  
 |[CW2CWEX:: ~ CW2CWEX](#dtor)|Destructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|Operador de conversión.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2CWEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
   

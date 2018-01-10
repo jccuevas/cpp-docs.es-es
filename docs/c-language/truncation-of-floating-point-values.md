@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 150178bebc87cc3a4902bc056c9427a5a62858c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a63d3c409e671cf5f8531d161c4a713a3aa4d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="truncation-of-floating-point-values"></a>Truncamiento de valores de punto flotante
 **ANSI 3.2.1.4** Dirección de truncamiento o redondeo cuando un número de punto flotante se convierte en un número de punto flotante menor  

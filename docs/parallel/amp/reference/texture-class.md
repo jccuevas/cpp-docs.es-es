@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a891a03f9b54946060cc41d535c7dfc44fd94e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="texture-class"></a>texture (Clase)
 Una textura es un agregado de datos de un `accelerator_view` en el dominio de la extensión. Es una colección de variables, uno para cada elemento en un dominio de la extensión. Cada variable contiene un valor que corresponde al tipo primitivo de C++ ( `unsigned int`, `int`, `float`, `double`), un tipo escalar ( `norm`, o `unorm`), o un tipo de vector corto.  
@@ -55,21 +56,21 @@ class texture;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`scalar_type`|Tipos escalares.|  
 |`value_type`|Los tipos de valor.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor de textura](#ctor)|Inicializa una nueva instancia de la clase `texture`.|  
 |[~ texture (destructor)](#ctor)|Destruye el objeto `texture`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Copia la `texture` objeto en el destino, al hacer una copia en profundidad.|  
 |[data](#data)|Devuelve un puntero de CPU para los datos sin procesar de esta textura.|  
@@ -81,7 +82,7 @@ class texture;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Operator()](#operator_call)|Devuelve el valor del elemento especificado por los parámetros.|  
 |[operator]](#operator_at)|Devuelve el elemento situado en el índice especificado.|  
@@ -89,13 +90,13 @@ class texture;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[Rank (constante)](#rank)|Obtiene el rango de la `texture` objeto.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[associated_accelerator_view](#associated_accelerator_view)|Obtiene el [accelerator_view](accelerator-view-class.md) que es el destino preferido para esta textura se copien en.|  
 |[depth_pitch](#depth_pitch)|Obtiene el número de bytes entre cada sector de profundidad en una textura de ensayo 3D en la CPU.|  

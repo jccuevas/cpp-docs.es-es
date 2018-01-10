@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Especificadores de clase de almacenamiento para las declaraciones de nivel externo
 Las variables externas son variables en el ámbito de archivo. Se definen fuera de cualquier función y pueden estar disponibles para muchas funciones. Las funciones solo se pueden definir en el nivel externo y, por consiguiente, no pueden anidarse. De forma predeterminada, todas las referencias a variables y funciones externas del mismo nombre son referencias al mismo objeto, lo que significa que tienen “vinculación externa”. (Puede utilizar la palabra clave **static** para invalidar esto. Vea la información que aparece más adelante en esta sección para conocer más detalles sobre **static**).  

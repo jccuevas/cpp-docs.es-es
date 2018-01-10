@@ -171,18 +171,19 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-types"></a>Tipos estándar
 La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y definiciones de tipo estándar.  
   
 ### <a name="fixed-width-integral-types-stdinth"></a>Tipos enteros de ancho fijo (stdint.h)  
   
-|Nombre|Tipo integrado equivalente|  
+|nombre|Tipo integrado equivalente|  
 |----------|-------------------------------|  
 |int8\_t, uint8\_t|signed char, unsigned char|  
 |int16\_t, uint16\_t|short, unsigned short|  
@@ -198,7 +199,7 @@ La biblioteca en tiempo de ejecución de Microsoft define los siguientes tipos y
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|  
 |intmax_t, uintmax_t|long long, unsigned long long|  
   
-|Tipo|Descripción|Declarado en|  
+|Tipo|Description|Declarado en|  
 |----------|-----------------|-----------------|  
 |`clock_t` (long)|Almacena valores de hora. Usado por [clock](../c-runtime-library/reference/clock.md).|TIME.H|  
 |`_complex` (estructura)|Almacena partes reales e imaginarias de números complejos. Usado por [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|  

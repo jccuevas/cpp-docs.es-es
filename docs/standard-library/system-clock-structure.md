@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7e57faa98571c59515a9b669d0ce5d53459b103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="systemclock-structure"></a>system_clock (Estructura)
 Representa un *tipo de reloj* basado en el reloj en tiempo real del sistema.  
@@ -48,7 +49,7 @@ struct system_clock;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`system_clock::duration`|Sinónimo de `duration<rep, period>`.|  
 |`system_clock::period`|Sinónimo del tipo que se utiliza para representar el período de ciclo en la creación de instancias contenida de `duration`.|  
@@ -57,7 +58,7 @@ struct system_clock;
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[from_time_t](#from_time_t)|Estático. Devuelve el `time_point` que más se aproxima a una hora especificada.|  
 |[Ahora](#now)|Estático. Devuelve la hora actual.|  
@@ -65,7 +66,7 @@ struct system_clock;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[system_clock::is_monotonic (Constante)](#is_monotonic_constant)|Especifica si el tipo de reloj es monotónico.|  
 |[system_clock::is_steady (Constante)](#is_steady_constant)|Especifica si el tipo de reloj es constante.|  
