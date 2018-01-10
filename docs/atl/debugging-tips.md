@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c29fdaf3d0b0b71afe8d241d4217d695767d7e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe85ea42673e9d4b2b78edb2b2342153ad701fb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-tips"></a>Sugerencias de depuración
 Los temas siguientes describen algunos pasos útiles para depurar el servicio:  
@@ -32,5 +33,5 @@ Los temas siguientes describen algunos pasos útiles para depurar el servicio:
 -   [Ejecutar el programa como un servidor local](../atl/running-the-program-as-a-local-server.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de](../atl/atl-services.md)
+ [Servicios](../atl/atl-services.md)
 

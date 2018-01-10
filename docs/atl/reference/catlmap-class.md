@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d16ff30313a9346aa25f8febfba2f6e0d8307f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166e8f7804a3138d3e891fbe15b54cb0e270811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmap-class"></a>Clase de CAtlMap
 Esta clase proporciona métodos para crear y administrar un objeto de mapa.  
@@ -83,7 +84,7 @@ class CAtlMap
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlMap::KINARGTYPE](#kinargtype)|Tipo que se utiliza cuando una clave se pasa como un argumento de entrada|  
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Tipo que se usa cuando una clave se devuelve como un argumento de salida.|  
@@ -99,21 +100,21 @@ class CAtlMap
   
 ### <a name="cpair-data-members"></a>Miembros de datos de CPair  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CPair::m_key](#m_key)|El miembro de datos que se almacena el elemento key.|  
 |[CPair::m_value](#m_value)|El miembro de datos que se almacena el elemento de valor.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlMap::CAtlMap](#catlmap)|El constructor.|  
 |[CAtlMap:: ~ CAtlMap](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlMap::AssertValid](#assertvalid)|Llamar a este método para hacer que una aserción si el `CAtlMap` no es válido.|  
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Llamar a este método para deshabilitar automática vuelve de la `CAtlMap` objeto.|  
@@ -141,7 +142,7 @@ class CAtlMap
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Reemplaza o agrega un nuevo elemento a la `CAtlMap`.|  
 
@@ -284,7 +285,7 @@ CPair* GetAt(POSITION& pos) throw();
  `key`  
  Parámetro de plantilla que especifica el tipo de clave del mapa.  
   
- *value*  
+ *valor*  
  Especifica el tipo del valor de la asignación de un parámetro de plantilla.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -365,7 +366,7 @@ void GetNextAssoc(
  `key`  
  Parámetro de plantilla que especifica el tipo de clave del mapa.  
   
- *value*  
+ *valor*  
  Especifica el tipo del valor de la asignación de un parámetro de plantilla.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -507,7 +508,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Especifica la clave que identifica el elemento que se va a buscar.  
   
- *value*  
+ *valor*  
  Variable que recibe el valor buscado.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -601,7 +602,7 @@ POSITION SetAt(
  `key`  
  El valor de clave para agregar a la `CAtlMap` objeto.  
   
- *value*  
+ *valor*  
  El valor para agregar a la `CAtlMap` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -650,7 +651,7 @@ void SetValueAt(
  `pos`  
  El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).  
   
- *value*  
+ *valor*  
  El valor para agregar a la `CAtlMap` objeto.  
   
 ### <a name="remarks"></a>Comentarios  

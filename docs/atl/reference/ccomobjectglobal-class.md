@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,38 +15,22 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectGlobal::QueryInterface
 - ATLCOM/ATL::CComObjectGlobal::Release
 - ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectGlobal class
+dev_langs: C++
+helpviewer_keywords: CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 8c371eee9de660a2bb08e67f35a5a6c81d32eee0
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectglobal-class"></a>Clase CComObjectGlobal
-Esta clase administra un recuento de referencias en el módulo que contiene la `Base` objeto.  
+Esta clase administra un recuento de referencias en el módulo que contiene el `Base` objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,14 +47,14 @@ class CComObjectGlobal : public Base
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|El constructor.|  
 |[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectGlobal::AddRef](#addref)|Implementa un global `AddRef`.|  
 |[CComObjectGlobal::QueryInterface](#queryinterface)|Implementa un global `QueryInterface`.|  
@@ -79,14 +62,14 @@ class CComObjectGlobal : public Base
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene el **HRESULT** devuelto durante la construcción de la `CComObjectGlobal` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObjectGlobal`administra un recuento de referencias en el módulo que contiene la `Base` objeto. `CComObjectGlobal`garantiza que no se eliminará el objeto como el módulo no se libera. Cuando el recuento de referencias en todo el módulo llega a cero, sólo se quitará el objeto.  
+ `CComObjectGlobal`administra un recuento de referencias en el módulo que contiene el `Base` objeto. `CComObjectGlobal`garantiza que no se eliminará el objeto siempre y cuando el módulo no está disponible. Cuando el recuento de referencias en todo el módulo llega a cero, solo se quitará el objeto.  
   
- Por ejemplo, mediante `CComObjectGlobal`, un generador de clases puede contener un objeto global común compartida por todos sus clientes.  
+ Por ejemplo, si se usa `CComObjectGlobal`, un generador de clases puede contener un objeto global común compartido por todos sus clientes.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Base`  
@@ -97,27 +80,27 @@ class CComObjectGlobal : public Base
  **Encabezado:** atlcom.h  
   
 ##  <a name="addref"></a>CComObjectGlobal::AddRef  
- El recuento de referencias del objeto se incrementa en 1.  
+ Incrementa el recuento de referencias del objeto en 1.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Un valor que puede ser útil para los diagnósticos y pruebas.  
+ Un valor que puede ser útil para el diagnóstico y prueba.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `AddRef` llamadas **_Module::Lock**, donde **_Module** es la instancia global de [CComModule](../../atl/reference/ccommodule-class.md) o una clase derivada de ella.  
   
 ##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
- El constructor. Llamadas `FinalConstruct` y, a continuación, se establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`.  
+ El constructor. Llamadas `FinalConstruct` y, a continuación, establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`.  
   
 ```
 CComObjectGlobal(void* = NULL));
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Si no se ha derivado la clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar su propio `FinalConstruct` método. El destructor llama a `FinalRelease`.  
+ Si no se ha derivado su clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar sus propios `FinalConstruct` método. El destructor llama a `FinalRelease`.  
   
 ##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  Destructor.  
@@ -145,10 +128,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
   
 ### <a name="parameters"></a>Parámetros  
  `iid`  
- [in] El GUID de la interfaz solicitada.  
+ [in] El GUID de la interfaz que se solicita.  
   
  `ppvObject`  
- [out] Un puntero al puntero de interfaz identificado por el iid, o **NULL** si no se encuentra la interfaz.  
+ [out] Un puntero al puntero de interfaz identificado por iid, o **NULL** si no se encuentra la interfaz.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
@@ -164,7 +147,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- En compilaciones de depuración, **versión** devuelve un valor que puede ser útil para los diagnósticos y pruebas. En versiones no depuradas, **versión** siempre devuelve 0.  
+ En las compilaciones de depuración, **versión** devuelve un valor que puede ser útil para el diagnóstico y prueba. En las compilaciones de depuración no, **versión** siempre devuelve 0.  
   
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, **versión** llamadas **_Module::Unlock**, donde **_Module** es la instancia global de [CComModule](../../atl/reference/ccommodule-class.md) o una clase derivada de ella.  
@@ -173,5 +156,4 @@ STDMETHOD_(ULONG, Release)();
  [Clase CComObjectStack](../../atl/reference/ccomobjectstack-class.md)   
  [CComAggObject (clase)](../../atl/reference/ccomaggobject-class.md)   
  [CComObject (clase)](../../atl/reference/ccomobject-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

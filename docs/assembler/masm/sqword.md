@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b5cc62696d1e3641e26a1d3df19e7701a43d9ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f2a3b28b60c397d9cd5f6514d48d2e8213d7039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqword"></a>SQWORD
 Asigna y, opcionalmente, inicializa 8 bytes con signo de almacenamiento para cada `initializer`. También puede usarse como un especificador de tipo en cualquier lugar un tipo es legal.  

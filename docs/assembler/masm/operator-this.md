@@ -1,39 +1,40 @@
 ---
-title: "operator THIS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "this"
-  - "operator THIS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator THIS"
-  - "THIS operator"
+title: operador THIS | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- this
+- operator THIS
+dev_langs: C++
+helpviewer_keywords:
+- operator THIS
+- THIS operator
 ms.assetid: d795aa0e-6c01-49b7-8c64-8ab111fd82d3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2a5534b45b2ffdeed7d1b1855be95c685f94392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# operator THIS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve un operando de `type` especificado cuyos valores de desplazamiento y el segmento sean iguales al valor de un contador de la ubicación actual.  
+# <a name="operator-this"></a>Operador THIS
+Devuelve un operando de especificado `type` cuyos valores de desplazamiento y segmento son iguales que el valor de contador de ubicación actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 THIS type  
 ```  
   
-## Vea también  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de operadores](../../assembler/masm/operators-reference.md)

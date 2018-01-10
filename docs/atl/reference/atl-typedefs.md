@@ -34,11 +34,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae5a0d527bd503422176fb01f4024d98100ef351
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-typedefs"></a>Definiciones de tipo ATL
 Active Template Library incluye las siguientes definiciones de tipo.  
@@ -159,7 +160,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  Además `CComGlobalsThreadModel`, ATL proporciona el `typedef` nombre [CComObjectThreadModel](#ccomobjectthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal y como se muestra en la tabla siguiente:  
   
-|definición de tipos|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
+|typedef|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
@@ -196,7 +197,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  Además `CComObjectThreadModel`, ATL proporciona el `typedef` nombre [CComGlobalsThreadModel](#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal y como se muestra en la tabla siguiente:  
   
-|definición de tipos|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
+|typedef|Subprocesamiento único|Apartamento de subproceso|Subprocesamiento libre|  
 |-------------|----------------------|-------------------------|--------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  

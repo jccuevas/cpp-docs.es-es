@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8d673b530f67507cd72e6f14a1c0d0ebd48a8f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fb646e6f6d2358018c38439e5bea4c651e9d994
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrelementtraits-class"></a>Clase CHeapPtrElementTraits
 Esta clase proporciona métodos, las funciones estáticas y definiciones de tipos útiles al crear colecciones de punteros del montón.  
@@ -50,7 +51,7 @@ class CHeapPtrElementTraits :
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHeapPtrElementTraits::INARGTYPE](#inargtype)|El tipo de datos que se usará para agregar elementos al objeto de clase de colección.|  
 |[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.|  

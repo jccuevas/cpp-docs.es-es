@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50cb78893eeca685f0b538fad397aca445502776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ienumonstlimpl-class"></a>Clase IEnumOnSTLImpl
 Esta clase define una interfaz de enumerador basándose en una colección de la biblioteca estándar de C++.  
@@ -62,7 +63,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::Clone](#clone)|La implementación de [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
 |[IEnumOnSTLImpl::Init](#init)|Inicializa el enumerador.|  
@@ -72,7 +73,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::m_iter](#m_iter)|El iterador que representa la posición del enumerador actual dentro de la colección.|  
 |[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Un puntero para el contenedor de la biblioteca estándar de C++ que contiene los elementos que se van a enumerar.|  

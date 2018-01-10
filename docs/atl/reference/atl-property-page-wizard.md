@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 Este asistente [agrega una página de propiedades en un proyecto ATL](../../atl/reference/adding-an-atl-property-page.md) o a un proyecto MFC con compatibilidad con ATL. Una página de propiedades ATL proporciona una interfaz de usuario para establecer las propiedades (o llamar a los métodos) de uno o más objetos COM.  
@@ -56,7 +57,7 @@ Este asistente [agrega una página de propiedades en un proyecto ATL](../../atl/
 > [!NOTE]
 >  Si crea el proyecto mediante atributos, o si se indican en esta página del asistente que la página de propiedades utiliza atributos, no se puede cambiar esta opción, ya que ATL no incluye el `coclass` atributo.  
   
- **ype**  
+ **Type**  
  Establece la descripción del objeto que va a aparecer en el registro  
   
  **Id. de programa**  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bbd0adbfa7ccc51093ac087d908360b893ea518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7794cea8906440c0adca94791d08e3ced6af747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mxcsr"></a>MxCsr
 El estado del registro también incluye MxCsr. La convención de llamada divide este registro en una parte volátil y una parte no volátil. La parte variable está compuesta de los indicadores de 6 estado, MXCSR [0:5], mientras que el resto del registro, MXCSR [6:15], se considera no volátil.  

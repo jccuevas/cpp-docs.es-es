@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>Información general sobre MSBuild (Visual C++)  
   
@@ -128,11 +129,11 @@ En la tabla siguiente se enumera varios destinos útiles orientados al usuario.
 |Destino|Descripción|  
 |------------|-----------------|  
 |BscMake|Ejecuta la herramienta Utilidad de mantenimiento de información de examen de Microsoft, bscmake.exe.|  
-|Compilación|Compila el proyecto.<br /><br /> Este es el destino predeterminado para un proyecto.|  
+|Compilar|Compila el proyecto.<br /><br /> Este es el destino predeterminado para un proyecto.|  
 |ClCompile|Ejecuta la herramienta de compilador de Visual C++, cl.exe.|  
 |Limpiar|Crear archivos de eliminaciones temporales e intermedias.|  
 |Lib|Ejecuta la herramienta Administrador de bibliotecas de Microsoft de 32 bits, lib.exe.|  
-|Link|Ejecuta la herramienta del vinculador de Visual C++, link.exe.|  
+|Vínculo|Ejecuta la herramienta del vinculador de Visual C++, link.exe.|  
 |ManifestResourceCompile|Extrae una lista de recursos de un manifiesto y, a continuación, ejecuta la herramienta de compilador de recursos de Microsoft Windows, rc.exe.|  
 |MIDL|Ejecuta la herramienta de compilador de lenguaje de definición de interfaz de Microsoft (MIDL), midl.exe.|  
 |Recompilar|Limpia y, a continuación, compila el proyecto.|  

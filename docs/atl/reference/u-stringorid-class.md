@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ustringorid-class"></a>Clase _U_STRINGorID
 Esta clase de adaptador de argumento permite a ambos nombres de recursos ( `LPCTSTR`s) o identificadores de recursos ( **UINT**s) que se pasan a una función sin necesidad de autor de la llamada convertir el identificador en una cadena mediante el **MAKEINTRESOURCE** macro.  
@@ -42,13 +43,13 @@ class _U_STRINGorID
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|El constructor.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|El identificador de recurso.|  
   

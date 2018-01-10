@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f601c32a1fe2accec2663246a56830fda5ed930
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Recursos localizados en aplicaciones MFC: archivos DLL satélite
 La versión MFC 7.0 y posterior proporciona compatibilidad mejorada con archivos DLL satélite, una característica que le ayuda a crear aplicaciones en varios idiomas. Una licencia de satélite DLL es un [archivo DLL de recursos](../build/creating-a-resource-only-dll.md) que contiene los recursos de una aplicación localizados para un idioma determinado. Cuando la aplicación empieza a ejecutarse, MFC carga automáticamente el recurso localizado más adecuado para el entorno. Por ejemplo, podría tener una aplicación con recursos del idioma inglés con dos archivos DLL satélite, uno que contiene una traducción al francés de los recursos y otra que contiene una traducción de alemán. Cuando la aplicación se ejecuta en un sistema de idioma inglés, utiliza los recursos en inglés. Si se ejecuta en un sistema francés, utiliza los recursos en francés; Si se ejecutan en un sistema en alemán, utiliza los recursos de alemán.  

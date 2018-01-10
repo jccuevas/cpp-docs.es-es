@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComAutoDeleteCriticalSection
 - atlcore/ATL::CComAutoDeleteCriticalSection
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComAutoDeleteCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: eb53a0966d29759bbe7513f6042f72a280801707
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d0a0c5fdd45e819105a3f47e98c02bb5ad3d51be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Clase CComAutoDeleteCriticalSection
-Esta clase proporciona métodos para obtener y liberar la propiedad de un objeto de sección crítica.  
+Esta clase proporciona métodos para la obtención y liberación de propiedad de un objeto de sección crítica.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,10 +34,10 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- `CComAutoDeleteCriticalSection`deriva de la clase [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Sin embargo, `CComAutoDeleteCriticalSection` reemplaza el [término](ccomsafedeletecriticalsection-class.md#term) método `private` acceso, lo que obliga a realizar sólo cuando las instancias de esta clase se salen del ámbito o se eliminan explícitamente de la memoria de la limpieza de memoria interna.  
+ `CComAutoDeleteCriticalSection`deriva de la clase [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Sin embargo, `CComAutoDeleteCriticalSection` invalida la [término](ccomsafedeletecriticalsection-class.md#term) método `private` acceso, lo que obliga a que se producen cuando las instancias de esta clase salen del ámbito o se eliminan explícitamente de la memoria el Liberador de espacio de memoria interna.  
 
   
- Esta clase no incorpora ningún método adicional sobre su clase base. Consulte [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) y [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obtener más información sobre las clases auxiliares de sección crítica.  
+ Esta clase no presenta ningún método adicional a través de su clase base. Vea [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) y [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obtener más información sobre las clases de aplicación auxiliar de sección crítica.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -69,5 +52,4 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ## <a name="see-also"></a>Vea también  
  [Clase CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
  [Clase CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComQIPtr class
+dev_langs: C++
+helpviewer_keywords: CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e2060a0be3f9780191c316c2df41115e66033d4d
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptr-class"></a>Clase CComQIPtr
 Una clase de puntero inteligente para administrar los punteros de interfaz COM.  
@@ -54,27 +37,27 @@ class CComQIPtr: public CComPtr<T>
   
 #### <a name="parameters"></a>Parámetros  
  `T`  
- Una interfaz COM que especifica el tipo de puntero que se almacenará.  
+ Una interfaz COM que especifican el tipo de puntero que se almacenará.  
   
  `piid`  
- Un puntero para el IID de `T`.  
+ Un puntero a lo IID de `T`.  
   
 ## <a name="members"></a>Miembros  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComQIPtr::CComQIPtr](#ccomqiptr)|Constructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComQIPtr::operator =](#operator_eq)|Asigna un puntero al puntero de miembro.|  
   
 ## <a name="remarks"></a>Comentarios  
- ATL utiliza `CComQIPtr` y [CComPtr](../../atl/reference/ccomptr-class.md) para administrar los punteros de interfaz COM, que derivan de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas clases realizan a través de llamadas a de recuento de referencias automático `AddRef` y **versión**. Operadores sobrecargados controlen las operaciones de puntero.  
+ ATL usa `CComQIPtr` y [CComPtr](../../atl/reference/ccomptr-class.md) para administrar los punteros de interfaz COM, que derivan de [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Ambas clases realizan a través de llamadas a de recuento de referencias automático `AddRef` y **versión**. Operadores sobrecargados controlen las operaciones de puntero.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -104,7 +87,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  Una interfaz COM.  
   
  `piid`  
- Un puntero para el IID de `T`.  
+ Un puntero a lo IID de `T`.  
   
 ##  <a name="operator_eq"></a>CComQIPtr::operator =  
  El operador de asignación.  
@@ -123,7 +106,7 @@ T* operator= (IUnknown* lp) throw();
  Una interfaz COM.  
   
  `piid`  
- Un puntero para el IID de `T`.  
+ Un puntero a lo IID de `T`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un puntero a la actualización `CComQIPtr` objeto.  
@@ -132,6 +115,5 @@ T* operator= (IUnknown* lp) throw();
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
  [Clase CComPtrBase](../../atl/reference/ccomptrbase-class.md)   
- [Información general de la clase](../../atl/atl-class-overview.md)   
- [Clase CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)   
+ [CComQIPtrElementTraits (clase)](../../atl/reference/ccomqiptrelementtraits-class.md)

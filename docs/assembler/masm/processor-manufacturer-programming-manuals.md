@@ -1,37 +1,38 @@
 ---
-title: "Manuales de programaci&#243;n de los fabricantes de procesadores | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Manuales de programación de fabricante de procesador | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a9a37c640f0262e24a66e6880d469331826d559
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Manuales de programaci&#243;n de los fabricantes de procesadores
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este artículo se proporciona vínculos a sitios Web que pueden contener información de programación sobre los procesadores que no son manufacturados, vendido, o admitida por Microsoft.  Microsoft no posee ni controla los sitios Web o el contenido en ellos.  
+# <a name="processor-manufacturer-programming-manuals"></a>Manuales de programación de los fabricantes de procesadores
+Este artículo contiene vínculos a sitios Web que puede contener información de programación acerca de los procesadores que no se ha fabricado, vendidas o se compatible con Microsoft. Microsoft no posee o controlar los sitios Web o el contenido en ellos.  
   
-## Sitios web del fabricante del procesador  
+## <a name="processor-manufacturer-websites"></a>Sitios Web del fabricante de procesador  
   
--   [Manuales .N\-POS\=30 de referencia del conjunto de instrucciones AMD64](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
+-   [AMD64 Conjunto de instrucciones manuales de referencia](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
   
--   [Intel 64 y desarrolladores de software Manuals de arquitecturas IA\-32](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
+-   [Manuales de desarrollador de Software de arquitecturas de 64 e IA-32 de Intel](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
   
--   [Intel avanzada de las extensiones de vector \(AVX\)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+-   [Intel avanzada (AVX) las extensiones de Vector](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
   
-## Comentarios  
- Ni [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ni compatibilidad de Microsoft macro assembler todos los procesadores.  
+## <a name="remarks"></a>Comentarios  
+ Ni [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] ni Microsoft Macro Assembler son compatibles con todos los procesadores.  
   
-## Vea también  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

@@ -1,34 +1,35 @@
 ---
-title: "Directivas de macro MASM en ensamblados alineados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "directivas, macros"
-  - "ensamblado en línea, macro (directivas)"
-  - "macros, directivas"
-  - "MASM (Microsoft Macro Assembler), directivas de macro para ensamblados alineados"
+title: "Directivas de Macro MASM de ensamblado en línea | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- directives, macros
+- inline assembly, macro directives
+- macros, directives
+- MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0df9f8584b87e511c43430a5c0df7dac61805ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Directivas de macro MASM en ensamblados alineados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específicos de Microsoft  
- El ensamblador alineado no es un Macro Assembler.  No puede utilizar directivas de macro de MASM \(**MACRO**, `REPT`, **IRC**, `IRP` y `ENDM`\) ni operadores de macro \(**\<\>**, **\!**, **&**, `%` y `.TYPE`\).  Sin embargo, un bloque `__asm` puede usar directivas de preprocesador de C.  Vea [Uso de C o C\+\+ en bloques \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) para obtener más información.  
+# <a name="masm-macro-directives-in-inline-assembly"></a>Directivas de macro de MASM de ensamblado insertado
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ El ensamblador alineado no es un Macro Assembler. No se puede usar directivas de macro MASM (**MACRO**, `REPT`, **IRC**, `IRP`, y `ENDM`) u operadores de macro (**<>**, **!** ,  **&** , `%`, y `.TYPE`). Sin embargo, un bloque `__asm` puede usar directivas de preprocesador de C. Vea [uso de C o C++ en bloques __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md) para obtener más información.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Usar lenguaje de ensamblado en bloques \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Vea también  
+ [Uso del lenguaje de ensamblado en bloques __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

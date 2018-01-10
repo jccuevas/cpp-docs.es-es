@@ -1,1 +1,1 @@
-Visual C\+\+ en Visual Studio 2012
+Visual C++ en Visual Studio 2012

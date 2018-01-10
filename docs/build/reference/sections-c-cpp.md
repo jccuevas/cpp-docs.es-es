@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d1564d068f4d69c3190b8bb24a32e7efb01dbef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 Presenta una sección de uno o varios `definitions` que son especificadores de acceso en secciones en el archivo de salida del proyecto.  

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de escritorio COM de ATL
 La referencia de ATL documenta Active Template Library (ATL), un conjunto de clases de C++ basadas en plantillas que simplifica la programación de objetos de modelo de objetos componentes (COM). Para sacar el máximo provecho de ATL, una familiaridad con COM es muy recomendable.  

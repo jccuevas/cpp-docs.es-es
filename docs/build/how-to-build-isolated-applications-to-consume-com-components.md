@@ -1,51 +1,51 @@
 ---
-title: "C&#243;mo: Compilar aplicaciones aisladas que utilicen componentes COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aplicaciones aisladas [C++]"
+title: "Cómo: compilar aplicaciones aisladas que utilicen componentes COM | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aaeef56f122d10f983313ab1c839db40f4e92aa4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Compilar aplicaciones aisladas que utilicen componentes COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las aplicaciones aisladas son aquéllas que tienen manifiestos integrados en el programa.  Puede crear aplicaciones aisladas para utilizar componentes COM.  
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Cómo: Compilar aplicaciones aisladas que utilicen componentes COM
+Aplicaciones aisladas son aquéllas que tienen manifiestos integrados en el programa. Puede crear aplicaciones aisladas que utilicen componentes COM.  
   
-### Para agregar referencias COM a manifiestos de aplicaciones aisladas  
+### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Para agregar referencias COM a manifiestos de aplicaciones aisladas  
   
-1.  Abra las páginas de propiedades de proyecto correspondientes a la aplicación aislada.  
+1.  Abra las páginas de propiedades de proyecto para la aplicación aislada.  
   
-2.  Expanda el nodo **Propiedades de configuración** y, a continuación, expanda el nodo **Herramienta Manifiesto**.  
+2.  Expanda el **propiedades de configuración** nodo y, a continuación, expanda el **herramienta manifiesto** nodo.  
   
-3.  Seleccione la página de propiedades **COM aislado** y, a continuación, establezca la propiedad **Nombre de archivo del componente** en el nombre del componente COM que la aplicación aislada deba utilizar.  
+3.  Seleccione el **COM aislado** página de propiedades y, después, establezca el **nombre de archivo del componente** propiedad en el nombre del componente COM que desea que la aplicación aislada para consumir.  
   
 4.  Haga clic en **Aceptar**.  
   
-### Para integrar manifiestos en aplicaciones aisladas  
+### <a name="to-build-manifests-into-isolated-applications"></a>Para generar manifiestos en aplicaciones aisladas  
   
-1.  Abra las páginas de propiedades de proyecto correspondientes a la aplicación aislada.  
+1.  Abra las páginas de propiedades de proyecto para la aplicación aislada.  
   
-2.  Expanda el nodo **Propiedades de configuración** y, a continuación, expanda el nodo **Herramienta Manifiesto**.  
+2.  Expanda el **propiedades de configuración** nodo y, a continuación, expanda el **herramienta manifiesto** nodo.  
   
-3.  Seleccione la página de propiedades **Entrada y salida** y, a continuación, establezca la propiedad **Incrustar manifiesto** en **Sí**.  
+3.  Seleccione el **de entrada y salida** página de propiedades y, después, establezca el **incrustar manifiesto** propiedad **Sí**.  
   
 4.  Haga clic en **Aceptar**.  
   
 5.  Compile la solución.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190)   
- [Ensamblados en paralelo](_win32_side_by_side_assemblies)
+ [Acerca de los ensamblados en paralelo](http://msdn.microsoft.com/library/ff951640)

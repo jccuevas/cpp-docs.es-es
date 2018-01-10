@@ -1,93 +1,93 @@
 ---
-title: "Opciones, Asistente para controles ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para controles ATL, opciones"
+title: Opciones, Asistente para controles ATL | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.control.options
+dev_langs: C++
+helpviewer_keywords: ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 60cc90ca5d5c374c223f9fe350d1a6a7357329ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Opciones, Asistente para controles ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Insertar aquí el resumen de "Resultados de la búsqueda".  
+# <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
+Inserte aquí "Búsqueda de resumen de los resultados".  
   
- Utilice esta página del asistente para definir el tipo de control que está creando y el nivel de compatibilidad con interfaces que contiene.  
+ Utilice esta página del Asistente para definir el tipo de control que se va a crear y el nivel de compatibilidad con una interfaz contiene.  
   
-## Lista de UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  **Tipo de control**  
- Tipo de control que se desea crear.  
+ El tipo de control que desea crear.  
   
 -   **Control estándar: un control ActiveX.**  
   
--   **Control compuesto**: un control ActiveX que puede contener \(al igual que un cuadro de diálogo\) otros controles ActiveX o controles de Windows.  Un control compuesto incluye lo siguiente:  
+-   **Controles compuestos**: un control ActiveX que puede contener (al igual que un cuadro de diálogo) otros controles ActiveX o controles de Windows. Un control compuesto incluye lo siguiente:  
   
     -   Una plantilla para el cuadro de diálogo que implementa el control compuesto.  
   
-    -   Un recurso personalizado, REGISTRY, que registra automáticamente el control compuesto al invocarlo.  
+    -   Un recurso personalizado, REGISTRY, que registra automáticamente el control compuesto cuando se invoca.  
   
-    -   Una clase en C\+\+ que implementa el control compuesto.  
+    -   Una clase de C++ que implementa el control compuesto.  
   
     -   Una interfaz COM, expuesta por el control compuesto.  
   
     -   Una página de prueba HTML que contiene el control compuesto.  
   
-     De forma predeterminada, este control establece [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) en true para indicar que se trata de un control con ventana.  Implementa un mapa de recepción de eventos.  Para obtener más información, vea [Compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).  
+     De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) en true, para indicar que se trata de un control con ventanas. Implementa un mapa de receptor. Para obtener más información, consulte [compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).  
   
--   **Control DHTML**: un control DTHML ATL especifica la interfaz de usuario mediante HTML.  La clase de UI DHTML contiene un mapa COM.  De forma predeterminada, este control establece [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) en true para indicar que se trata de un control con ventana.  
+-   **Control DHTML**: control DHTML ATL An especifica la interfaz de usuario mediante HTML. La clase UI DHTML contiene un mapa COM. De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) en true, para indicar que se trata de un control con ventanas.  
   
-     Para obtener más información, vea [Identifying the Elements of the DHTML Control Project](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
+     Para obtener más información, consulte [identifica los elementos del proyecto de Control DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
   
  **Control mínimo**  
- Sólo admite las interfaces que se requieren de forma imprescindible por parte de la mayoría de los contenedores.  Se puede establecer el **Control mínimo** para cualquier tipo de control; es posible crear un control mínimo estándar, un control mínimo compuesto, o un control mínimo DHTML.  
+ Sólo admite las interfaces que sea absolutamente son necesarios para la mayoría de los contenedores. Puede establecer **control mínimo** para cualquiera de los tipos de control: puede crear un control estándar mínimo, un control compuesto mínimo o un control DHTML mínimo.  
   
  **Agregación**  
- Agrega compatibilidad con la agregación para el control que se está creando.  Para obtener más información, vea [Aggregation](../../atl/aggregation.md).  
+ Agrega compatibilidad con la agregación para el control que se va a crear. Para obtener más información, consulte [agregaciones](../../atl/aggregation.md).  
   
--   **Sí**: crea un control que puede agregarse.  
+-   **Sí**: crear un control que se puede agregar.  
   
--   **No**: crea un control que no puede agregarse.  
+-   **Ya no**: crear un control que no se puede agregar.  
   
--   **Sólo**: crea un control del que sólo se pueden crear instancias mediante agregación.  
+-   **Solo**: crear un control que solo se puede crear instancias mediante agregación.  
   
  **Modelo de subprocesos**  
- Especifica el modelo de subprocesos usado por el control.  
+ Especifica que el modelo de subprocesos utilizados por el control.  
   
--   **Único**: el control sólo se ejecutará únicamente en el subproceso COM principal.  
+-   **Solo**: el control sólo se ejecutará en el subproceso COM principal.  
   
--   **Apartamento**: el control puede crearse en cualquier subprocesamiento controlado simple.  Es el formato predeterminado.  
+-   **Apartamento**: el control puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.  
   
- **Interfaz**  
- Tipo de interfaz que expone este control al contenedor.  
+ **Interface**  
+ El tipo de interfaz que expone este control al contenedor.  
   
--   **Doble**: crea una interfaz que expone propiedades y métodos a través de `IDispatch` y directamente a través de VTBL.  
+-   **Dual**: crea una interfaz que expone propiedades y métodos a través de `IDispatch` y directamente a través de VTBL.  
   
--   **Personalizada**: crea una interfaz que expone métodos directamente a través de VTBL.  
+-   **Personalizado**: crea una interfaz que expone métodos directamente a través de VTBL.  
   
-     Si selecciona **Personalizada**, puede especificar que el control sea **Compatible con automatización**.  Si selecciona **Compatible con automatización**, el asistente agrega el atributo [oleautomation](../../windows/oleautomation.md) a la interfaz en el archivo IDL, y el contador de referencias universal puede calcular las referencias de la interfaz en oleaut32.dll.  Vea [Detalles del cálculo de referencias](http://msdn.microsoft.com/library/windows/desktop/ms692621) en [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] para obtener más información.  
+     Si selecciona **personalizado**, a continuación, puede especificar que el control es **compatible con automatización**. Si selecciona **compatible con automatización**, a continuación, el asistente agrega el [oleautomation](../../windows/oleautomation.md) atribuir a la interfaz en el archivo IDL, y se puede serializar la interfaz con el contador de referencias universal en oleaut32.dll. Vea [Marshaling Details](http://msdn.microsoft.com/library/windows/desktop/ms692621) en el SDK de Windows para obtener más información.  
   
-     Asimismo, si selecciona **Compatible con automatización**, todos los parámetros de todos los métodos del control deben ser compatibles con **VARIANT**.  
+     Además, si selecciona **compatible con automatización**, todos los parámetros para todos los métodos en el control deben ser **VARIANT** compatible.  
   
- **Compatibilidad**  
+ **Soporte técnico**  
  Establece diversas compatibilidades adicionales para el control.  
   
--   **Puntos de conexión**: habilita puntos de conexión para el objeto al hacer que su clase correspondiente se derive de [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) y permitir que exponga una interfaz de origen.  
+-   **Puntos de conexión**: habilita puntos de conexión para el objeto mediante la realización de la clase del objeto deriva [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) y permitir que exponga una interfaz de origen.  
   
--   **Con licencia**: agrega al control compatibilidad con [licencias](http://msdn.microsoft.com/library/windows/desktop/ms690543).  Los controles con licencia sólo pueden hospedarse si el equipo cliente posee la licencia adecuada.  
+-   **Licencia**: agrega compatibilidad para el control de [licencias](http://msdn.microsoft.com/library/windows/desktop/ms690543). Solo se pueden hospedar controles con licencia si el equipo cliente tiene la licencia correcta.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Asistente para controles ATL](../../atl/reference/atl-control-wizard.md)
+

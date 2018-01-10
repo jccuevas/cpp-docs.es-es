@@ -1,45 +1,47 @@
 ---
-title: "Formatting Time Values: General-Purpose Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fechas, calculating intervals"
-  - "tiempo transcurrido, string representation"
-  - "formatting [C++], hora"
-  - "time [C++], aplicar formato"
+title: "Formato de los valores de tiempo: Clases de propósito general | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- dates, calculating intervals
+- elapsed time, string representation
+- time [C++], formatting
+- formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4479fea641a21edf3f037924b50247798f5a6e6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Formatting Time Values: General-Purpose Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El siguiente procedimiento muestra cómo dar formato a valores de hora.  
+# <a name="formatting-time-values-general-purpose-classes"></a>Formato de los valores de tiempo: Clases de propósito general
+El siguiente procedimiento muestra cómo dar formato a valores de tiempo.  
   
-#### Para dar formato a una representación de cadena de una hora o un tiempo transcurrido  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>Para dar formato a una representación de cadena de una hora o tiempo transcurrido  
   
-1.  Utilice la función miembro de **formato** de las clases de [CTime](../atl-mfc-shared/reference/ctime-class.md) o de [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) para crear una representación de cadena de caracteres de tiempo o el tiempo transcurrido, como se muestra en el ejemplo siguiente.  
+1.  Use la **formato** función miembro desde el [CTime](../atl-mfc-shared/reference/ctime-class.md) o [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) las clases para crear un carácter de representación de cadena de la hora o el tiempo transcurrido, tal y como se muestra en el ejemplo siguiente.  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/CPP/formatting-time-values-general-purpose-classes_1.cpp)]  
+     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
-## ¿Qué más desea saber?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
   
--   [Programación general de fecha y hora en MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Fecha general y la programación de tiempo en MFC](../atl-mfc-shared/date-and-time.md)  
   
 -   [Trabajar con SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Compatibilidad de automatización de la programación de fecha y hora](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Compatibilidad de automatización de la fecha y la programación de tiempo](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## Vea también  
- [Date and Time: General\-Purpose Classes](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+## <a name="see-also"></a>Vea también  
+ [Fecha y hora: Clases de propósito general](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+

@@ -1,34 +1,33 @@
 ---
-title: "ML Nonfatal Error A2037 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2037"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2037"
+title: Error recuperable A2037 de ML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2037
+dev_langs: C++
+helpviewer_keywords: A2037
 ms.assetid: e7fdb98b-3ce9-4e1f-99fc-1b1ea10b6961
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5817a3cbd50f14b13f08f16f97fa0f3a6dba3aa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2037
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**definición interior no permitida de la estructura de la instrucción**  
+# <a name="ml-nonfatal-error-a2037"></a>Error recuperable A2037 de ML
+**instrucción que no se permiten dentro de la definición de la estructura**  
   
  Una definición de estructura contiene una instrucción no válida.  
   
- Una estructura no puede contener instrucciones, etiquetas, procedimientos, directivas de flujo de control, [.STARTUP](../../assembler/masm/dot-startup.md), o [.EXIT](../../assembler/masm/dot-exit.md).  
+ Una estructura no puede contener instrucciones, etiquetas, procedimientos, directivas de flujo de control, [. Inicio](../../assembler/masm/dot-startup.md), o [. SALIDA](../../assembler/masm/dot-exit.md).  
   
-## Vea también  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Vea también  
+ [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)

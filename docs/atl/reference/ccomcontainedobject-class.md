@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,22 @@ f1_keywords:
 - ATLCOM/ATL::CComContainedObject::GetControllingUnknown
 - ATLCOM/ATL::CComContainedObject::QueryInterface
 - ATLCOM/ATL::CComContainedObject::Release
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontainedobject-class"></a>Clase CComContainedObject
 Esta clase implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delegación para el objeto propietario **IUnknown**.  
@@ -55,14 +53,14 @@ class CComContainedObject : public Base
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|El constructor. Inicializa el puntero de miembro para el objeto propietario `IUnknown`.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComContainedObject::AddRef](#addref)|Incrementa el recuento de referencias en el objeto propietario.|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Recupera el objeto propietario `IUnknown`.|  
@@ -161,4 +159,3 @@ STDMETHOD_(ULONG, Release)();
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)
-

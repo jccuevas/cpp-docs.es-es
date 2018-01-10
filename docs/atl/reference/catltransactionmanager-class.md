@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Clase CAtlTransactionManager
 Clase CAtlTransactionManager proporciona un contenedor para las funciones de administrador de transacciones de Kernel (KTM).  
@@ -57,14 +58,14 @@ class CAtlTransactionManager;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[~ CAtlTransactionManager](#dtor)|Destructor de CAtlTransactionManager.|  
 |[CAtlTransactionManager](#catltransactionmanager)|Constructor CAtlTransactionManager.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Cerrar](#close)|Uno cierra el identificador de transacción.|  
 |[Confirmación](#commit)|Solicitudes que se confirma la transacción.|  
@@ -85,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`Si la reserva es compatible; `FALSE` en caso contrario.|  
 |[m_hTransaction](#m_htransaction)|El identificador de la transacción.|  
@@ -466,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  El nombre del archivo o directorio.  
   
  `dwAttributes`  
- Los atributos de archivo establecido para el archivo. Para obtener más información, consulte [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699).  
+ Los atributos de archivo establecido para el archivo. Para obtener más información, consulte [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
   
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `SetFileAttributesTransacted` función.  

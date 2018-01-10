@@ -1,36 +1,37 @@
 ---
-title: "Importar llamadas a funciones mediante __declspec(dllimport) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__declspec"
-  - "dllimport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) (palabra clave) [C++]"
-  - "dllimport (atributo) [C++], importaciones de llamadas a funciones"
-  - "llamadas a funciones [C++], importar"
-  - "importar llamadas a funciones [C++]"
+title: Importar llamadas a funciones mediante __declspec (dllimport) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __declspec
+- dllimport
+dev_langs: C++
+helpviewer_keywords:
+- importing function calls [C++]
+- dllimport attribute [C++], function call imports
+- __declspec(dllimport) keyword [C++]
+- function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5553bd5e9999a4737dc258358402eb71269b9c40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Importar llamadas a funciones mediante __declspec(dllimport)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El siguiente ejemplo de código muestra la forma de utilizar **\_declspec\(dllimport\)** para importar llamadas a funciones desde un archivo DLL a una aplicación.  Suponga que `func1` es una función que reside en un archivo DLL independiente del archivo .exe que contiene la función **main**.  
+# <a name="importing-function-calls-using-declspecdllimport"></a>Importar llamadas a funciones mediante __declspec(dllimport)
+En el ejemplo de código siguiente se muestra cómo utilizar **_declspec (dllimport)** para importar llamadas a funciones desde un archivo DLL a una aplicación. Se asume que `func1` es una función que reside en un archivo DLL independiente del archivo .exe que contiene el **principal** función.  
   
- Sin **\_\_declspec\(dllimport\)** y dado el código siguiente:  
+ Sin **__declspec (dllimport)**, dado el código:  
   
 ```  
 int main(void)   
@@ -39,29 +40,29 @@ int main(void)
 }  
 ```  
   
- el compilador generará un código con la siguiente apariencia:  
+ el compilador genera código que el siguiente aspecto:  
   
 ```  
 call func1  
 ```  
   
- y el vinculador traducirá la llamada en algo similar a:  
+ y el vinculador traducirá la llamada en algo parecido a esto:  
   
 ```  
 call 0x4000000         ; The address of 'func1'.  
 ```  
   
- Si `func1` existe en otro archivo DLL, el vinculador no podrá resolver esto directamente, porque no podrá saber cuál es la dirección de `func1`.  En entornos de 16 bits, el vinculador agrega esta dirección de código a una lista del archivo .exe que el cargador revisaría en tiempo de ejecución con la dirección correcta.  En entornos de 32 y 64 bits, el vinculador genera código thunk del que conoce la dirección.  En un entorno de 32 bits, el código thunk es similar al siguiente:  
+ Si `func1` existe en otro archivo DLL, el vinculador no puede resolver directamente porque no tiene ninguna manera de saber qué la dirección de `func1` es. En entornos de 16 bits, el vinculador agrega esta dirección de código a una lista en el archivo .exe que el cargador revisaría en tiempo de ejecución con la dirección correcta. En entornos de 32 bits y 64 bits, el vinculador genera un código thunk de los cuales conoce la dirección. En un entorno de 32 bits, el código thunk es similar:  
   
 ```  
 0x40000000:    jmp DWORD PTR __imp_func1  
 ```  
   
- Aquí, `imp_func1` es la dirección correspondiente al área de `func1` de la tabla de direcciones de importación del archivo .exe.  De esta forma, el vinculador conoce todas las direcciones.  El cargador sólo tiene que actualizar en tiempo de carga la tabla de direcciones de importación del archivo .exe para que todo funcione correctamente.  
+ Aquí `imp_func1` es la dirección para el `func1` ranura en la tabla de direcciones de importación del archivo .exe. Por lo tanto, todas las direcciones se conocen como el vinculador. El cargador sólo tiene que actualizar la tabla de direcciones de importación del archivo .exe en tiempo de carga para que todo funcione correctamente.  
   
- Por tanto, es mejor utilizar **\_\_declspec\(dllimport\)**, ya que el vinculador no genera thunk si no es necesario.  Los thunks aumentan el tamaño del código \(en sistemas RISC, pueden ser varias instrucciones\) y pueden reducir el rendimiento de la memoria caché.  Si indica al compilador que la función está en un archivo DLL, puede generar una llamada indirecta.  
+ Por tanto, se usan **__declspec (dllimport)** es mejor porque el vinculador no genera un código thunk si no es necesario. Fragmentos de código thunk que el código sea mayor (en sistemas RISC, pueden ser varias instrucciones) y puede degradar el rendimiento de la memoria caché. Si indica al compilador que la función está en un archivo DLL, puede generar una llamada indirecta.  
   
- Así, el siguiente fragmento de código:  
+ Ahora este código:  
   
 ```  
 __declspec(dllimport) void func1(void);  
@@ -77,9 +78,9 @@ int main(void)
 call DWORD PTR __imp_func1  
 ```  
   
- No hay thunk ni ninguna instrucción `jmp`, por lo que el código será de menor tamaño y más rápido.  
+ No hay ningún código thunk pero no `jmp` instrucciones, por lo que el código es más pequeñas y rápidas.  
   
- Por otra parte, para las llamadas a función dentro de un archivo DLL, no debería ser necesario utilizar una llamada indirecta.  El usuario ya conoce la dirección de una función.  Puesto que se necesita tiempo y espacio para cargar y almacenar la dirección de la función antes que una llamada indirecta; una llamada directa siempre será más rápida y ocupará menos espacio.  Sólo debe utilizar **\_\_declspec\(dllimport\)** al llamar a funciones de archivo DLL desde fuera del archivo DLL.  No utilice **\_\_declspec\(dllimport\)** en funciones dentro de un archivo DLL cuando lo compile.  
+ Por otro lado, para las llamadas de función dentro de un archivo DLL, no desea que deba utilizar una llamada indirecta. Ya sabe dirección de una función. Dado que se requiere tiempo y espacio para cargar y almacenar la dirección de la función antes de una llamada indirecta, una llamada directa siempre es más rápido y más pequeños. Desea usar **__declspec (dllimport)** al llamar a funciones DLL desde fuera el propio archivo DLL. No utilice **__declspec (dllimport)** en funciones dentro de un archivo DLL cuando genere dicho archivo DLL.  
   
-## Vea también  
- [Importar a una aplicación](../build/importing-into-an-application.md)
+## <a name="see-also"></a>Vea también  
+ [Importación a una aplicación](../build/importing-into-an-application.md)

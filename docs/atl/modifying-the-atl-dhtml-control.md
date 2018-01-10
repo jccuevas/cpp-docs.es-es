@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74ed32c0322d23cd3da1d439dcc8d8eadb246c13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modificar el Control DHTML ATL
 El Asistente para controles ATL proporciona código de inicio para que pueda compilar y ejecutar el control, por lo que puede ver cómo los métodos se escriben en los archivos de proyecto y cómo DHTML llama a código de C++ del control mediante los métodos de envío. Puede agregar cualquier método de envío a la interfaz. A continuación, puede llamar a los métodos en el recurso HTML.  

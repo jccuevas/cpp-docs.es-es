@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.dlg.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.dlg.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6cdf16b3e82ce69fa06b3eacda8d7b48643fb3c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 003cda9f3b0916cb7c86dfce874840268a64dbff
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-dialog-wizard"></a>Asistente para cuadros de diálogo ATL
 Este asistente inserta en el proyecto un objeto de cuadro de diálogo ATL, derivado de [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Un cuadro de diálogo derivado de `CAxDialogImpl` puede hospedar controles ActiveX.  
@@ -52,5 +49,4 @@ Este asistente inserta en el proyecto un objeto de cuadro de diálogo ATL, deriv
   
 ## <a name="see-also"></a>Vea también  
  [Cuadro de diálogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)
-
 

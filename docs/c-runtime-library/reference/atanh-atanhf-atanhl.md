@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e21b07685943559bace8b8e2b0fbdebdb3a870c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a9e88a28ca99fdad07e91ab305944b2de276db8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 Calcula la tangente hiperbólica inversa.  
@@ -88,7 +89,7 @@ long double atanhl(
 |--------------|--------------|------------------|  
 |`atanh`, `atanhf`, `atanhl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

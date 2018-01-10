@@ -1,26 +1,27 @@
 ---
-title: "Controlador espec&#237;fico del lenguaje | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Controlador específico del lenguaje | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Controlador espec&#237;fico del lenguaje
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La dirección relativa del controlador específico del lenguaje está presente en UNWIND\_INFO cada vez que se establecen marcadores UNW\_FLAG\_EHANDLER o UNW\_FLAG\_UHANDLER.  Como se describió en la sección anterior, se efectúa una llamada al controlador específico del lenguaje como parte del proceso de búsqueda de un controlador de excepciones o como parte de una operación de desenredo.  Tiene el siguiente prototipo:  
+# <a name="language-specific-handler"></a>Controlador específico del lenguaje
+La dirección relativa del controlador específico del lenguaje está presente en UNWIND_INFO cada vez que se establecen indicadores UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Como se describe en la sección anterior, se denomina controlador específico del lenguaje como parte de la búsqueda de un controlador de excepciones o como parte de una operación de desenredo. Tiene el siguiente prototipo:  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -33,11 +34,11 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
   
  **ExceptionRecord** proporciona un puntero a un registro de excepciones, que tiene la definición de Win64 estándar.  
   
- **EstablisherFrame** es la dirección de la base de la asignación del espacio fijo de la pila correspondiente a esta función.  
+ **EstablisherFrame** es la dirección de la base de la asignación fija de la pila para esta función.  
   
- **ContextRecord** señala al contexto de la excepción en el instante en que ésta se originó \(en el caso del controlador de excepciones\) o el contexto de "desenredo" actual \(en el caso del controlador de terminación\).  
+ **ContextRecord** señala al contexto de la excepción en el momento en que se produjo la excepción (en el caso del controlador de excepción) o actual "desenredo" contexto (en el caso de controlador de terminación).  
   
- **DispatcherContext** señala al contexto del distribuidor para esta función.  Tiene la siguiente definición:  
+ **DispatcherContext** apunta al contexto del distribuidor para esta función. Tiene la siguiente definición:  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -52,21 +53,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc** es el valor de RIP dentro de esta función.  Puede ser una dirección de una excepción o la dirección en la que el control salió de la función establecedora.  Este es el valor de RIP que se utilizará para determinar si el control está dentro de alguna construcción protegida incluida en esta función \(por ejemplo, un bloque \_\_try para \_\_try\/\_\_except o \_\_try\/\_\_finally\).  
+ **ControlPc** es el valor de RIP dentro de esta función. Se trata de una dirección de la excepción o la dirección en la que deja la función establecedora control. Este es el valor de RIP que se utilizará para determinar si el control está dentro de algún tipo de construcción protegida dentro de esta función (por ejemplo, un bloque __try para \__try /\__except o \__try /\__finally).  
   
- **ImageBase** es la imagen base \(dirección de carga\) del módulo que contiene esta función, para agregarse a los desplazamientos de 32 bits empleados en la entrada de la función e información de desenredo para registrar direcciones relativas.  
+ **ImageBase** es la imagen base (dirección de carga) del módulo que contiene esta función, para agregarse a los desplazamientos de 32 bits utilizados en la entrada de la función e información de desenredo para registrar direcciones relativas.  
   
- **FunctionEntry** proporciona un puntero a la entrada de función RUNTIME\_FUNCTION que contiene la función y direcciones de información de desenredo relativas a la imagen base para esta función.  
+ **FunctionEntry** proporciona un puntero a la RUNTIME_FUNCTION que contiene la función de entrada de función y desenredado direcciones relativas de base de la imagen de información para esta función.  
   
- **EstablisherFrame** es la dirección de la base de la asignación del espacio fijo de la pila correspondiente a esta función.  
+ **EstablisherFrame** es la dirección de la base de la asignación fija de la pila para esta función.  
   
- **TargetIp** Proporciona una dirección de instrucción opcional que especifica la dirección de continuación del desenredo.  Esta dirección se omite si no se especifica **EstablisherFrame**.  
+ **TargetIp** proporciona una dirección de instrucción opcional que especifica la dirección de continuación del desenredo. Esta dirección se omite si **EstablisherFrame** no se ha especificado.  
   
- **ContextRecord** señala al contexto de la excepción, para uso por parte del código de distribución\/desenredo de excepciones del sistema.  
+ **ContextRecord** apunta al contexto de la excepción, para su uso por el código de distribución/desenredo de excepción de sistema.  
   
- **LanguageHandler** señala a la rutina del controlador de lenguaje específica del lenguaje a la que se llama.  
+ **LanguageHandler** apunta a la rutina del controlador de lenguaje específica del lenguaje que se va a llamar.  
   
- **HandlerData** señala a los datos del controlador específicos del lenguaje para esta función.  
+ **HandlerData** apunta a los datos del controlador específicos del lenguaje para esta función.  
   
-## Vea también  
- [Control de excepciones \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Vea también  
+ [Control de excepciones (x64)](../build/exception-handling-x64.md)

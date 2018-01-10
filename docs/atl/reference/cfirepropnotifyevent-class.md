@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,23 +12,22 @@ f1_keywords:
 - ATLCTL/ATL::CFirePropNotifyEvent
 - ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
 - ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sinks, notifying of ATL events
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c9571ad4ba928c208c6c028f6e30cf7c27c196d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent (clase)
 Esta clase proporciona métodos para notificar a los receptores del contenedor con respecto a los cambios de propiedad de control.  
@@ -47,7 +45,7 @@ class CFirePropNotifyEvent
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Estático) Notifica a los receptores del contenedor que ha cambiado una propiedad de control.|  
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Estático) Notifica a los receptores del contenedor que una propiedad de control que se va a cambiar.|  
@@ -104,4 +102,3 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)
-

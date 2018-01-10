@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>Paso de parámetros
 Los primeros cuatro argumentos de entero se pasan en registros. Valores enteros se pasan (en orden de izquierda a derecha) en RCX, RDX, R8 y R9. Argumentos de cinco y superior se pasan en la pila. Todos los argumentos son justificado a la derecha en los registros. Esto se hace por lo que el destinatario puede omitir los bits superiores del registro si tienen que ser y puede tener acceso a solo la parte del registro que necesita.  

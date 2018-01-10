@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,38 +25,23 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, property pages
 - snap-ins
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Clase CSnapInPropertyPageImpl
 Esta clase proporciona métodos para implementar un objeto de página de propiedades del complemento.  
@@ -75,13 +59,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|Constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Cambia el estado de la **Aceptar** y **cancelar** botones.|  
 |[CSnapInPropertyPageImpl::Create](#create)|Inicializa un recién creado `CSnapInPropertyPageImpl` objeto.|  
@@ -99,7 +83,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Las ventanas **PROPSHEETPAGE** estructura usada por la `CSnapInPropertyPageImpl` objeto.|  
   
@@ -163,7 +147,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Comentarios  
  Utilice esta estructura para inicializar la apariencia de una página de propiedades después de se construye.  
   
- Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) en el SDK de Windows.  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  Esta función miembro se llama cuando el usuario hace clic en el **Aceptar** o **aplicar ahora** botón.  
@@ -332,4 +316,3 @@ void SetModified(BOOL bChanged = TRUE);
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)
-

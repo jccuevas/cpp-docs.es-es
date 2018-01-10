@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispeventimpl"></a>Compatibilidad con IDispEventImpl
 La clase de plantilla [IDispEventImpl](../atl/reference/idispeventimpl-class.md) puede usarse para proporcionar compatibilidad con receptores de puntos de conexión en una clase ATL. Un receptor de puntos de conexión permite a la clase controlar los eventos desencadenados desde objetos COM externos. Estos receptores de puntos de conexión se asignan a un mapa de receptores de eventos, proporcionado por la clase.  

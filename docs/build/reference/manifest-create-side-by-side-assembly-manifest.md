@@ -1,70 +1,70 @@
 ---
-title: "/MANIFEST (Crear el manifiesto del ensamblado simult&#225;neo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateManifest"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MANIFEST (opción del vinculador)"
-  - "MANIFEST (opción del vinculador)"
-  - "-MANIFEST (opción del vinculador)"
+title: -MANIFIESTO (crear el manifiesto del ensamblado en paralelo) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateManifest
+dev_langs: C++
+helpviewer_keywords:
+- -MANIFEST linker option
+- /MANIFEST linker option
+- MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bb26957109a558b48d6252e042e9082f7357fbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /MANIFEST (Crear el manifiesto del ensamblado simult&#225;neo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crear el manifiesto del ensamblado simultáneo)
 ```  
 /MANIFEST[:{EMBED[,ID=#]|NO}]  
 ```  
   
-## Comentarios  
- \/MANIFEST especifica que el vinculador debe crear un archivo de manifiesto en paralelo.  Para obtener más información sobre los archivos de manifiesto, vea [Referencia de archivos de manifiesto](http://msdn.microsoft.com/library/aa375632).  
+## <a name="remarks"></a>Comentarios  
+ /MANIFEST especifica que el vinculador debe crear un archivo de manifiesto en paralelo. Para obtener más información acerca de los archivos de manifiesto, vea [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632).  
   
- El valor predeterminado es \/MANIFEST.  
+ El valor predeterminado es /MANIFEST.  
   
- La opción \/MANIFEST:EMBED especifica que el vinculador debe incrustar el archivo de manifiesto en la imagen como recurso de tipo RT\_MANIFEST.  El parámetro `ID` opcional es el id. de recurso que se utilizará para el manifiesto.  Utilice un valor de 1 para un archivo ejecutable.  Utilice un valor de 2 en un archivo DLL para habilitarlo si desea especificar dependencias privadas.  Si no se especifica el parámetro `ID`, el valor predeterminado es 2 si se establece la opción \/DLL; de lo contrario, el valor predeterminado es 1.  
+ La opción /MANIFEST:EMBED especifica que el vinculador debe incrustar el archivo de manifiesto en la imagen como recurso de tipo RT_MANIFEST. El parámetro `ID` opcional es el id. de recurso que se utilizará para el manifiesto. Utilice un valor de 1 para un archivo ejecutable. Utilice un valor de 2 en un archivo DLL para habilitarlo si desea especificar dependencias privadas. Si no se especifica el parámetro `ID`, el valor predeterminado es 2 si se establece la opción /DLL; de lo contrario, el valor predeterminado es 1.  
   
- A partir de [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], los archivos de manifiesto para archivos ejecutables contienen una sección en la que se especifica la información de Control de cuentas de usuario \(UAC\).  Si especifica \/MANIFEST pero no especifica [\/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) ni [\/DLL](../../build/reference/dll-build-a-dll.md), se insertará en el manifiesto un fragmento predeterminado de UAC con el nivel de UAC establecido en *asInvoker*.  Para obtener más información sobre los niveles de UAC, vea [\/MANIFESTUAC \(Incrustar información de UAC en el manifiesto\)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ A partir de Visual Studio 2008, archivos de manifiesto para aplicaciones ejecutables contienen una sección que especifica la información de Control de cuentas de usuario (UAC). Si especifica /MANIFEST pero no especifica [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) ni [/DLL](../../build/reference/dll-build-a-dll.md), un fragmento del UAC predeterminado que tiene el nivel de UAC establecido a *asInvoker* se inserta en el manifiesto. Para obtener más información acerca de los niveles UAC, consulte [/MANIFESTUAC (incrustar información de UAC en el manifiesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
  Para cambiar el comportamiento predeterminado de UAC, realice una de las siguientes operaciones:  
   
--   Especifique la opción \/MANIFESTUAC y establezca el nivel de UAC en el nivel deseado.  
+-   Especifique la opción /MANIFESTUAC y establezca el nivel de UAC en el nivel deseado.  
   
--   O bien, especifique la opción \/MANIFESTUAC:NO si no desea generar un fragmento de UAC en el manifiesto.  
+-   O bien, especifique la opción /MANIFESTUAC:NO si no desea generar un fragmento de UAC en el manifiesto.  
   
- Si no especifica \/MANIFEST pero especifica comentarios [\/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md), se creará un archivo de manifiesto.  No se creará un archivo de manifiesto si especifica \/MANIFEST:NO.  
+ Si no especifica /MANIFEST pero especifica [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) los comentarios, se crea un archivo de manifiesto. No se creará un archivo de manifiesto si especifica /MANIFEST:NO.  
   
- Si especifica \/MANIFEST, el nombre del archivo de manifiesto coincidirá con el nombre del archivo de salida, pero se agregará .manifest al nombre de archivo.  Por ejemplo, si el nombre del archivo de salida es MiArchivo.exe, el nombre del archivo de manifiesto será MiArchivo.exe.manifest.  Si especifica \/MANIFESTFILE:*name*, el nombre del manifiesto es el que se especifica en *name*.  
+ Si especifica /MANIFEST, el nombre del archivo de manifiesto coincidirá con el nombre del archivo de salida, pero se agregará .manifest al nombre de archivo. Por ejemplo, si el nombre del archivo de salida es MiArchivo.exe, el nombre del archivo de manifiesto será MiArchivo.exe.manifest.  Si especifica/ManifestFile:*nombre*, el nombre del manifiesto es lo que se especifica en *nombre*.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda el nodo **Propiedades de configuración**.  
+2.  Expanda el **propiedades de configuración** nodo.  
   
-3.  Expanda el nodo **Vinculador**.  
+3.  Expanda el **vinculador** nodo.  
   
-4.  Seleccione la página de propiedades **Archivo de manifiesto**.  
+4.  Seleccione el **archivo de manifiesto** página de propiedades.  
   
-5.  Modifique la propiedad **Generar manifiesto**.  
+5.  Modificar el **Generar manifiesto** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 1.  Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

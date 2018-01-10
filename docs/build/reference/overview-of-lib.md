@@ -1,132 +1,131 @@
 ---
-title: "Informaci&#243;n general sobre LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LIB [C++], modos"
+title: "Información general sobre LIB | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Informaci&#243;n general sobre LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LIB crea bibliotecas estándar, bibliotecas de importación y archivos de exportación que puede utilizar con [LINK](../../build/reference/linker-options.md) al compilar un programa.  Se ejecuta en el símbolo del sistema.  
+# <a name="overview-of-lib"></a>Información general sobre LIB
+LIB crea bibliotecas estándar, bibliotecas de importación y exportación de archivos se pueden usar con [vínculo](../../build/reference/linker-options.md) al compilar un programa. LIB se ejecuta desde un símbolo del sistema.  
   
- Puede utilizar esta herramienta al:  
+ Puede usar LIB en los siguientes modos:  
   
--   [Compilar o modificar una biblioteca COFF](../../build/reference/managing-a-library.md)  
+-   [Crear o modificar una biblioteca COFF](../../build/reference/managing-a-library.md)  
   
--   [Extraer un objeto miembro a un archivo](../../build/reference/extracting-a-library-member.md)  
+-   [Extraer un objeto de miembro a un archivo](../../build/reference/extracting-a-library-member.md)  
   
 -   [Crear un archivo de exportación y una biblioteca de importación](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
- Estos modos son mutuamente exclusivos; sólo puede usar LIB en un modo cada vez.  
+ Estos modos son mutuamente excluyentes; Puede usar LIB en solo modo a la vez.  
   
-## Opciones de LIB  
- La siguiente tabla muestra las opciones de lib.exe, con un vínculo a más información.  
+## <a name="lib-options"></a>Opciones de lib  
+ En la tabla siguiente se enumera las opciones de lib.exe, con un vínculo para obtener más información.  
   
- **\/DEF**  
- Crea una biblioteca de importación y un archivo de exportación.  
+ **/ DEF**  
+ Crear una biblioteca de importación y un archivo de exportación.  
   
- Para obtener más información, vea [Compilar bibliotecas de importación y archivos de exportación](../../build/reference/building-an-import-library-and-export-file.md).  
+ Para obtener más información, consulte [crear bibliotecas de importación y exportación de archivo](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/ERRORREPORT**  
- Envía información a Microsoft sobre los errores internos de lib.exe.  
+ **/ ERRORREPORT**  
+ Enviar información a Microsoft sobre errores internos de lib.exe.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
- **\/EXPORT**  
- Exporta una función del programa.  
+ **/ EXPORTACIÓN**  
+ Exporta una función desde el programa.  
   
- Para obtener más información, vea [Compilar bibliotecas de importación y archivos de exportación](../../build/reference/building-an-import-library-and-export-file.md).  
+ Para obtener más información, consulte [crear bibliotecas de importación y exportación de archivo](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/EXTRACT**  
- Crea un archivo objeto \(.obj\) que contiene una copia de un miembro de una biblioteca existente.  
+ **/ EXTRACT**  
+ Cree un archivo objeto (.obj) que contiene una copia de un miembro de una biblioteca existente.  
   
- Para obtener más información, vea [Extraer un miembro de biblioteca](../../build/reference/extracting-a-library-member.md).  
+ Para obtener más información, consulte [extraer un miembro de biblioteca](../../build/reference/extracting-a-library-member.md).  
   
- **\/INCLUDE**  
+ **/ INCLUYEN**  
  Agrega un símbolo a la tabla de símbolos.  
   
- Para obtener más información, vea [Compilar bibliotecas de importación y archivos de exportación](../../build/reference/building-an-import-library-and-export-file.md).  
+ Para obtener más información, consulte [crear bibliotecas de importación y exportación de archivo](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/LIBPATH**  
- Reemplaza la ruta de la biblioteca de entorno.  
+ **/ LIBPATH**  
+ Reemplaza la ruta de acceso a la biblioteca de entorno.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/LIST**  
- Muestra información sobre la biblioteca de salida en la salida estándar.  
+ **/ LISTA**  
+ Muestra información acerca de la biblioteca de salida a la salida estándar.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/LTCG**  
- Hace que se genere la biblioteca mediante compilación de código en tiempo de vínculo.  
+ **/ LTCG**  
+ Hace que la biblioteca que se crea utilizando la generación de código en tiempo de vínculo.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
- **\/MACHINE**  
- Especifica la plataforma de destino del programa.  
+ **/ MÁQUINA**  
+ Especifica la plataforma de destino para el programa.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
- **\/NAME**  
- Al compilar una biblioteca de importación, especifica el nombre del archivo DLL para el que se va a compilar dicha biblioteca.  
+ **/ NAME**  
+ Cuando se crea una biblioteca de importación, especifica el nombre del archivo DLL para el que se está generando la biblioteca de importación.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/NODEFAULTLIB**  
- Quita una o más bibliotecas predeterminadas de la lista de bibliotecas en las que se busca al resolver referencias externas.  
+ **/ NODEFAULTLIB**  
+ Quita una o más bibliotecas predeterminadas de la lista de bibliotecas que se busca al resolver referencias externas.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/NOLOGO**  
- Suprime la presentación del mensaje con información de copyright y de versión de LIB, e impide que se repitan los archivos de comandos.  
+ **/ NOLOGO**  
+ Suprime la presentación de la LIB copyright mensaje y número de versión e impide el eco de los archivos de comandos.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
- **\/OUT**  
- Reemplaza el nombre de archivo de salida predeterminado.  
+ **/ ENTRADA SALIDA**  
+ Invalida el nombre de archivo de salida predeterminado.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/REMOVE**  
- Omite un objeto de la biblioteca de resultados.  
+ **O QUITAR**  
+ Omite un objeto de la biblioteca de salida.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/SUBSYSTEM**  
- Indica al sistema operativo la forma de ejecutar un programa creado mediante vinculación con la biblioteca de resultados.  
+ **/ SUBSISTEMA**  
+ Indica al sistema operativo cómo ejecutar un programa creado mediante la vinculación a la biblioteca de salida.  
   
- Para obtener más información, vea [Administrar una biblioteca](../../build/reference/managing-a-library.md).  
+ Para obtener más información, consulte [administrar una biblioteca](../../build/reference/managing-a-library.md).  
   
- **\/VERBOSE**  
- Muestra detalles sobre el progreso de la sesión, incluidos los nombres de los archivos .obj que se agregan.  
+ **/ DETALLADO**  
+ Muestra los detalles sobre el progreso de la sesión, incluidos los nombres de los archivos .obj que se va a agregar.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
- **\/WX**  
- Trata las advertencias como errores.  
+ **/WX**  
+ Tratar advertencias como errores.  
   
- Para obtener más información, vea [Ejecutar LIB](../../build/reference/running-lib.md).  
+ Para obtener más información, consulte [ejecutar LIB](../../build/reference/running-lib.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia de LIB](../../build/reference/lib-reference.md)   
  [Archivos de entrada de LIB](../../build/reference/lib-input-files.md)   
- [Archivos de resultados de LIB](../../build/reference/lib-output-files.md)   
+ [Archivos de resultados LIB](../../build/reference/lib-output-files.md)   
  [Otros resultados de LIB](../../build/reference/other-lib-output.md)   
  [Estructura de una biblioteca](../../build/reference/structure-of-a-library.md)

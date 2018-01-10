@@ -1,1 +1,1 @@
-Biblioteca de plantillas de Windows Runtime C\+\+
+Biblioteca de plantillas de Windows Runtime C++

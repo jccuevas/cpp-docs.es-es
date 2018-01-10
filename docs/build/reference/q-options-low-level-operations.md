@@ -1,47 +1,47 @@
 ---
-title: "/Q (Opciones) (Operaciones de bajo nivel) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/q"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Q (opción del compilador) [C++]"
-  - "-Q (opción del compilador) [C++]"
-  - "/Q (opción del compilador) [C++]"
+title: Opciones -Q (operaciones de bajo nivel) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /q
+dev_langs: C++
+helpviewer_keywords:
+- Q compiler option [C++]
+- -Q compiler option [C++]
+- /Q compiler option [C++]
 ms.assetid: 9fa738b9-630a-4bde-bc87-bdfa30552be4
-caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d970c2de5e34840ab2ed77f229c329db3c6f72fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /Q (Opciones) (Operaciones de bajo nivel)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Puede usar las opciones del compilador **\/Q** para realizar las siguientes operaciones de compilador de bajo nivel:  
+# <a name="q-options-low-level-operations"></a>/Q (Opciones) (Operaciones de bajo nivel)
+Puede usar el **/q** opciones del compilador para realizar las siguientes operaciones de compilador de bajo nivel:  
   
--   [\/Qfast\_transcendentals \(Force Fast Transcendentals\)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): genera funciones transcendentales rápidas.  
+-   [/ Qfast_transcendentals (Force funciones transcendentales rápidas)](../../build/reference/qfast-transcendentals-force-fast-transcendentals.md): genera funciones transcendentales rápidas.  
   
--   [\/QIfist \(Suprimir \_ftol\)](../../build/reference/qifist-suppress-ftol.md): suprime `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero \(solo x86\).  
+-   [/QIfist (suprimir _ftol)](../../build/reference/qifist-suppress-ftol.md): suprime `_ftol` cuando una conversión de un tipo de punto flotante a un tipo entero es necesaria (sólo x86).  
   
--   [\/Qimprecise\_fwaits \(Quitar comandos fwait en los bloques Try\)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): quita los comandos `fwait` del interior de los bloques `try`.  
+-   [/ Qimprecise_fwaits (quitar comandos fwait en los bloques Try)](../../build/reference/qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): quita `fwait` comandos dentro de `try` bloques.  
   
--   [\/Qpar \(Paralelizador automático\)](../../build/reference/qpar-auto-parallelizer.md): habilita la paralelización automática de los bucles marcados con la directiva [\#pragma loop\(\)](../../preprocessor/loop.md).  
+-   [/Qpar (Paralelizador automático)](../../build/reference/qpar-auto-parallelizer.md): habilita la paralelización automática de bucles marcados con el [#pragma loop()](../../preprocessor/loop.md) directiva.  
   
--   [\/Qpar\-report \(Nivel de información de paralelizador automático\)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): habilita los niveles de informe para la paralelización automática.  
+-   [/ Qpar-report (nivel de información de Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md): habilita los niveles de ejecución en paralelo automática de informe.  
   
--   [\/Qsafe\_fp\_loads](../../build/reference/qsafe-fp-loads.md): suprime las optimizaciones para las cargas de Registro de punto flotante y para los movimientos entre la memoria y los registros MMX.  
+-   [/ Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md): suprime las optimizaciones de registro de punto flotante carga y para mover entre la memoria y MMX registra.  
   
--   [\/Qvec\-report \(Nivel de información de vectorizador automático\)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): habilita los niveles de informe para la vectorización automática.  
+-   [/ Qvec-report (nivel de información de Vectorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md): permite niveles de informe para la vectorización automática.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -30,11 +30,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 281bc00e46cf28f7cc7d5f1e072fd41ad4cce61a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Clase CAtlPreviewCtrlImpl
 Esta clase es una implementación de ATL de una ventana que se coloca en una ventana host proporcionada por el Shell de vista previa avanzada.  
@@ -52,14 +53,14 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Se destruye un objeto de control de vista previa.|  
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Construye un objeto de control de vista previa.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|Llama a un controlador de vista previa avanzada para crear la ventana de Windows.|  
 |[CAtlPreviewCtrlImpl::Destroy](#destroy)|Llama a un controlador de vista previa avanzada cuando es necesario destruir este control.|  
@@ -72,19 +73,19 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Lo llama el marco de trabajo para representar la vista previa.|  
   
 ### <a name="protected-constants"></a>Constantes protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fuente utilizada para mostrar texto en la ventana de vista previa.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Color de fondo de la ventana de vista previa.|  
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Color del texto de la ventana de vista previa.|  

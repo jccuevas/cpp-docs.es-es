@@ -1,31 +1,32 @@
 ---
-title: "Especificar archivos DLL para carga retrasada | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAYLOAD (opción del vinculador)"
-  - "carga retrasada de archivos DLL"
-  - "carga retrasada de archivos DLL, especificar"
-  - "DELAYLOAD (opción del vinculador)"
+title: Especificar archivos DLL para carga retrasada | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DELAYLOAD linker option
+- delayed loading of DLLs
+- delayed loading of DLLs, specifying
+- /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d7c04b0885228bcef65b1b53cda6d28dc6755379
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Especificar archivos DLL para carga retrasada
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Puede especificar de qué archivos DLL retrasar la carga con la opción del vinculador [\/delayload](../../build/reference/delayload-delay-load-import.md):`dllname`.  Si no piensa usar su propia versión de una función auxiliar, también debe vincular el programa con delayimp.lib \(para aplicaciones de escritorio\) o dloadhelper.lib \(para aplicaciones de la tienda\).  
+# <a name="specifying-dlls-to-delay-load"></a>Especificar archivos DLL para carga retrasada
+Puede especificar qué archivos DLL para retrasar la cargan con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` opción del vinculador. Si no piensa usar su propia versión de una función auxiliar, también debe vincular el programa con delayimp.lib (para aplicaciones de escritorio) o dloadhelper.lib (para aplicaciones de la tienda).  
   
  El siguiente es un ejemplo sencillo de retraso de la carga de un archivo DLL:  
   
@@ -42,7 +43,7 @@ int main() {
 }  
 ```  
   
- Genera la versión de depuración del proyecto.  Recorra el código usando el depurador y observará que el archivo user32.dll solo se carga cuando realiza la llamada a `MessageBox`.  
+ Genera la versión de depuración del proyecto. Recorra el código usando el depurador y observará que el archivo user32.dll solo se carga cuando realiza la llamada a `MessageBox`.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)

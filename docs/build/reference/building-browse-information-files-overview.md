@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51a922e75d0cc7232a7e45472e505440b7b1631c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-browse-information-files-overview"></a>Compilar archivos de información de examen: información general
 Para crear información de exploración para la exploración de símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente en el proyecto, a continuación, BSCMAKE. EXE concatena los archivos .sbr en un archivo .bsc.  

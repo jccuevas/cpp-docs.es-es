@@ -1,37 +1,37 @@
 ---
-title: "Referencia de LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Administrador de bibliotecas de 32 bits"
-  - "LIB [C++]"
-  - "Administrador de bibliotecas"
-  - "bibliotecas estáticas"
-  - "bibliotecas estáticas, establecer opciones IDE"
+title: Referencia de LIB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- static libraries
+- static libraries, setting IDE options
+- Library Manager
+- LIB [C++]
+- 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4db7def12f6b5d08c774bef51e2a15ea5994f5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Referencia de LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El Administrador de bibliotecas de Microsoft \(LIB.exe\) permite crear y administrar una biblioteca de archivos objeto COFF \(formato de archivo objeto común\).  También se puede utilizar LIB para crear archivos de exportación y bibliotecas de importación con el fin de hacer referencia a definiciones exportadas.  
+# <a name="lib-reference"></a>Referencia de LIB
+El Administrador de bibliotecas de Microsoft (LIB.exe) crea y administra una biblioteca de archivos objeto con formato de archivo de objeto común (COFF). LIB también puede utilizarse para crear archivos de exportación y bibliotecas de importación para las definiciones de referencia que se exportan.  
   
 > [!NOTE]
->  Sólo puede iniciar esta herramienta desde el símbolo del sistema de [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  No puede iniciar desde una ventana del símbolo del sistema o desde el Explorador de archivos.  
+>  Puede iniciar esta herramienta solo desde el símbolo del sistema de [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.  
   
 -   [Información general sobre LIB](../../build/reference/overview-of-lib.md)  
   
@@ -45,5 +45,5 @@ El Administrador de bibliotecas de Microsoft \(LIB.exe\) permite crear y adminis
   
 -   [Trabajar con bibliotecas de importación y archivos de exportación](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
-## Vea también  
- [Herramientas de compilación de C\/C\+\+](../../build/reference/c-cpp-build-tools.md)
+## <a name="see-also"></a>Vea también  
+ [Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)

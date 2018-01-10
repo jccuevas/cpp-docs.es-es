@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f11d86eda98696ea85899817dbecc276d5533a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (clase)
 Esta clase implementa un cuadro de diálogo (modal o no modal) que hospeda los controles ActiveX.  
@@ -58,7 +59,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAxDialogImpl:: AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.|  
 |[CAxDialogImpl::Create](#create)|Llamar a este método para crear un cuadro de diálogo no modal.|  
@@ -71,7 +72,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Una variable que existe solo en versiones de depuración se compila y se está establecida en true si el cuadro de diálogo es modal.|  
   

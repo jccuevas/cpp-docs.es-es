@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>Sintaxis de las partes de un nombre de archivo
 Sintaxis de partes del nombre de archivo en los comandos representa componentes del primer nombre de archivo dependiente (que puede ser un dependiente implícito). Componentes de nombre de archivo son unidad, ruta de acceso, nombre base y extensión tal como se especifica, el archivo no tal como existe en el disco. Use **%s** para representar el nombre de archivo completo. Use **% &#124;** [*elementos*]**F** (una barra vertical el signo de porcentaje) para representar las partes del nombre de archivo, donde *elementos* puede ser cero o más de las siguientes letras, en cualquier orden.  

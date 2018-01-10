@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4e00fc1f703df824daf7c0f1fc5fbaed05beb32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectstack-class"></a>Clase CComObjectStack
 Esta clase crea un objeto COM temporal y le proporciona una implementación básica de **IUnknown**.  
@@ -47,14 +48,14 @@ class CComObjectStack
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|El constructor.|  
 |[CComObjectStack:: ~ CComObjectStack](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectStack::AddRef](#addref)|Devuelve el valor cero. En modo de depuración, llama a `_ASSERTE`.|  
 |[CComObjectStack::QueryInterface](#queryinterface)|Devuelve **E_NOINTERFACE**. En modo de depuración, llama a `_ASSERTE`.|  
@@ -62,7 +63,7 @@ class CComObjectStack
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene el **HRESULT** devuelto durante la construcción de la `CComObjectStack` objeto.|  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,19 @@ f1_keywords:
 - ATLUTIL/ATL::CNoWorkerThread::Initialize
 - ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CNoWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CNoWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnoworkerthread-class"></a>Clase CNoWorkerThread
 Utilice esta clase como argumento para el `MonitorClass` parámetro de plantilla a las clases de caché si desea deshabilitar el mantenimiento de la memoria caché dinámica.  
@@ -50,7 +47,7 @@ class CNoWorkerThread
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CNoWorkerThread::AddHandle](#addhandle)|No funcional equivalente de [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
 |[CNoWorkerThread::AddTimer](#addtimer)|No funcional equivalente de [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
@@ -171,4 +168,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="remarks"></a>Comentarios  
  La implementación proporcionada por esta clase no hace nada.
-

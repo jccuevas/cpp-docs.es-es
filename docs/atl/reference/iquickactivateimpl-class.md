@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c11185314c06e0e576d1832cef62899dd2151538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iquickactivateimpl-class"></a>Clase IQuickActivateImpl
 Esta clase combina la inicialización del control de contenedores en una única llamada.  
@@ -51,7 +52,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Recupera el tamaño de presentación actual para un control que se ejecuta.|  
 |[IQuickActivateImpl::QuickActivate](#quickactivate)|Realiza la inicialización rápida de controles que se va a cargar.|  
