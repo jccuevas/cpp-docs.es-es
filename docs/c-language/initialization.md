@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 599052b4515c4d297996d7afa329f508673edd33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81b4414d663e24ac0e5186ef7722c313b2755950
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initialization"></a>Inicialización
 Un "inicializador" es un valor o una secuencia de valores que se deben asignar a la variable que se declara. Se puede establecer una variable en un valor inicial si se aplica un inicializador al declarador en la declaración de variable. El valor o los valores del inicializador se asignan a la variable.  

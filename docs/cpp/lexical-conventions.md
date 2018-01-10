@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 317fdaadd622571f6e90be11a2b55a778806c39e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c132def87ce2ba2fbe72f8a4696071ab62fda82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lexical-conventions"></a>Convenciones léxicas
 En esta sección se presentan los elementos fundamentales de un programa de C++. Estos elementos, denominados "elementos léxicos" o "tokens", se usan para construir instrucciones, definiciones, declaraciones, etc., que, a su vez, se usan para construir programas completos. Los elementos léxicos siguientes se tratan en esta sección:  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 Configurar las opciones de configuración regional por subproceso.  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  Recupera el valor actual de este subproceso concreto.  
   
- Estas funciones afectan al comportamiento de `setlocale`, `_tsetlocale`, y `_wsetlocale`. Cuando la configuración regional por subproceso está deshabilitado, cualquier llamada subsiguiente a `setlocale` o `_wsetlocale` cambia la configuración regional de todos los subprocesos que utilizan la configuración regional global. Cuando se habilita la configuración regional por subproceso, `setlocale` o `_wsetlocale` afecta solo a la configuración regional del subproceso actual.  
+ Estas funciones afectan al comportamiento de `setlocale`, `_tsetlocale`, `_wsetlocale`, y `_setmbcp`. Cuando la configuración regional por subproceso está deshabilitado, cualquier llamada subsiguiente a `setlocale` o `_wsetlocale` cambia la configuración regional de todos los subprocesos que utilizan la configuración regional global. Cuando se habilita la configuración regional por subproceso, `setlocale` o `_wsetlocale` afecta solo a la configuración regional del subproceso actual.  
   
  Si usa `_configurethreadlocale` para habilitar una configuración regional por subproceso, se recomienda llamar a `setlocale` o `_wsetlocale` para establecer la configuración regional preferida en ese subproceso inmediatamente después.  
   
@@ -216,4 +199,3 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Subprocesamiento múltiple y configuraciones regionales](../../parallel/multithreading-and-locales.md)  
-

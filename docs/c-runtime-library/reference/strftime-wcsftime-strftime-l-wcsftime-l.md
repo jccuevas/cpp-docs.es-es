@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Da formato a una cadena de hora.  
@@ -112,7 +95,7 @@ size_t _wcsftime_l(
  Cadena de control de formato.  
   
  `timeptr`  
-Estructura de datos  `tm`.  
+ Estructura de datos `tm`.  
   
  `locale`  
  Configuración regional que se va a usar.  
@@ -130,7 +113,7 @@ Estructura de datos  `tm`.
 > [!NOTE]
 >  En las versiones anteriores de Visual C++ 2005, en la documentación se describía que el parámetro `format` de `wcsftime` tenía el tipo de datos `const wchar_t *`, aunque la implementación real del tipo de datos `format` era `const char *`. La implementación de la `format` tipo de datos se ha actualizado para reflejar la documentación anterior y actual, es decir, `const wchar_t *`.  
   
- Esta función valida sus parámetros. Si `strDest`, `format`, o `timeptr` es un puntero nulo, o si la `tm` estructura de datos mencionado en `timeptr` no es válida (por ejemplo, si contiene valores fuera del intervalo para la fecha u hora), o si la `format` cadena contiene un código de formato no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece `errno` en `EINVAL`.  
+ Esta función valida sus parámetros. Si `strDest`, `format`, o `timeptr` es un puntero nulo, o si la `tm` estructura de datos mencionado en `timeptr` no es válida (por ejemplo, si contiene valores fuera del intervalo para la fecha u hora), o si el `format` cadena contiene un código de formato no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece `errno` en `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
@@ -138,7 +121,7 @@ Estructura de datos  `tm`.
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- El argumento `format` consta de uno o más códigos; como en `printf`, los códigos de formato están precedidos por un signo de porcentaje (`%`). Caracteres que no comienzan por `%` se copiarán sin ninguna modificación a `strDest`. La categoría `LC_TIME` de la configuración regional actual afecta al formato de salida de `strftime` (para obtener más información sobre `LC_TIME`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)). Las funciones que no tienen el sufijo `_l` usan la configuración regional establecida en ese momento. Las versiones de estas funciones que tienen el sufijo `_l` son idénticas, salvo que toman la configuración regional como un parámetro y lo usan en vez de la configuración regional establecida en ese momento. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El argumento `format` consta de uno o más códigos; como en `printf`, los códigos de formato están precedidos por un signo de porcentaje (`%`). Caracteres que no comienzan por `%` se copiarán sin ninguna modificación a `strDest`. La categoría `LC_TIME` de la configuración regional actual afecta al formato de salida de `strftime` (para obtener más información sobre `LC_TIME`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)). Las funciones que no tienen el sufijo `_l` usan la configuración regional establecida en ese momento. Las versiones de estas funciones que tienen el sufijo `_l` son idénticas, salvo que toman la configuración regional como un parámetro y lo usan en vez de la configuración regional establecida en ese momento. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  A continuación se detallan los códigos de formato de `strftime`:  
   
@@ -226,7 +209,7 @@ Estructura de datos  `tm`.
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [time](../../c-runtime-library/reference/time-time32-time64.md).  

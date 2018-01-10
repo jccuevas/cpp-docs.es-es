@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 960ded27c68e5e22825375f7242cbaef08f4b5c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b64f00a805fc54f295d4cf86df6c4a780bb7bdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 Determina si un carácter determinado es un carácter de puntuación.  
@@ -68,7 +69,7 @@ int _ismbbpunct_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbpunct` devuelve un valor distinto de cero si el entero `c` es un símbolo de puntuación no ASCII. `_ismbbpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional. `_ismbbpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbpunct` devuelve un valor distinto de cero si el entero `c` es un símbolo de puntuación no ASCII. `_ismbbpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional. `_ismbbpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,4 +82,4 @@ int _ismbbpunct_l(
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

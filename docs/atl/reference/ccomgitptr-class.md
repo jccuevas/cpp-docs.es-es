@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54a1cebd11fbb1d7fffad69fadd5a588c0c1a04d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>Clase CComGITPtr
 Esta clase proporciona métodos para trabajar con punteros de interfaz y la tabla de interfaz global (GIT).  
@@ -48,14 +49,14 @@ class CComGITPtr
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|El constructor.|  
 |[CComGITPtr:: ~ CComGITPtr](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComGITPtr::Attach](#attach)|Llamar a este método para registrar el puntero de interfaz en la tabla de interfaz global (GIT).|  
 |[CComGITPtr::CopyTo](#copyto)|Llamar a este método para copiar la interfaz de la tabla de interfaz global (GIT) en el puntero ha pasado.|  
@@ -65,14 +66,14 @@ class CComGITPtr
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComGITPtr::operator DWORD](#operator_dword)|Devuelve la cookie de la `CComGITPtr` objeto.|  
 |[CComGITPtr::operator =](#operator_eq)|Operador de asignación.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|La cookie.|  
   

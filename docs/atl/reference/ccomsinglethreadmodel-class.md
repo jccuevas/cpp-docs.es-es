@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,21 @@ f1_keywords:
 - ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
 - ATLBASE/ATL::CComSingleThreadModel::Decrement
 - ATLBASE/ATL::CComSingleThreadModel::Increment
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - single-threaded applications
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 65af9492f3721fd642def72a3049552cdff75ce6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e7fe0d3ea0b8fc5b42546f12c17d890250752260
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Clase CComSingleThreadModel
 Esta clase proporciona métodos para aumentar y disminuir el valor de una variable.  
@@ -47,7 +44,7 @@ class CComSingleThreadModel
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSingleThreadModel::AutoCriticalSection](#autocriticalsection)|Hace referencia a clase [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|  
 |[CComSingleThreadModel::CriticalSection](#criticalsection)|Hace referencia a clase `CComFakeCriticalSection`.|  
@@ -55,7 +52,7 @@ class CComSingleThreadModel
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSingleThreadModel::Decrement](#decrement)|Disminuye el valor de la variable especificada. Esta implementación no es segura para subprocesos.|  
 |[CComSingleThreadModel::Increment](#increment)|Incrementa el valor de la variable especificada. Esta implementación no es segura para subprocesos.|  
@@ -66,7 +63,7 @@ class CComSingleThreadModel
  Normalmente, se utiliza `CComSingleThreadModel` a través de uno de dos `typedef` nombres, ya sea [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) o [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). La clase que se hace referencia a cada uno de ellos `typedef` depende del modelo de subprocesos utilizado, tal y como se muestra en la tabla siguiente:  
 
   
-|definición de tipos|Modelo de subprocesamiento sencillo|Modelo de subprocesamiento controlado|Modelo de subprocesamiento libre|  
+|typedef|Modelo de subprocesamiento sencillo|Modelo de subprocesamiento controlado|Modelo de subprocesamiento libre|  
 |-------------|----------------------------|-------------------------------|--------------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
@@ -173,4 +170,3 @@ typedef CComSingleThreadModel ThreadModelNoCS;
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)
-

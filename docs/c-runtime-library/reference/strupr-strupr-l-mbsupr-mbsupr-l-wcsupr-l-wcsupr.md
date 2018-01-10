@@ -71,11 +71,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88362cf0100a7b8d118f38632e9751afa79ae4e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 Cambia la cadena a mayúsculas. Hay disponibles versiones más seguras de estas funciones; vea [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
@@ -147,7 +148,7 @@ unsigned char *_mbsupr_l(
  Devuelve un puntero a la cadena modificada. Dado que la modificación se hace en contexto, el puntero devuelto es el mismo que el puntero que se pasa como argumento de entrada. No se reserva ningún valor devuelto para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_strupr` convierte, en su sitio, cada minúscula de `str` en mayúscula. El valor de la categoría `LC_CTYPE` de la configuración regional determina la conversión. Otros caracteres no resultan afectados. Para obtener más información sobre `LC_CTYPE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `_strupr` convierte, en su sitio, cada minúscula de `str` en mayúscula. El valor de la categoría `LC_CTYPE` de la configuración regional determina la conversión. Otros caracteres no resultan afectados. Para obtener más información sobre `LC_CTYPE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  `_wcsupr` y `_mbsupr` son versiones de caracteres anchos y multibyte de `_strupr`. El argumento y el valor devuelto de `_wcsupr` son cadenas de caracteres anchos; los de `_mbsupr` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
   

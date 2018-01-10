@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="secure-template-overloads"></a>Sobrecargas de plantilla seguras
 Microsoft ha dejado de usar muchas funciones de la biblioteca en tiempo de ejecución (CRT) en favor de versiones con seguridad mejorada. Por ejemplo, `strcpy_s` es la sustitución más segura para `strcpy`. Las funciones en desuso son orígenes comunes de errores de seguridad, ya que no impiden operaciones que pueden sobrescribir la memoria. De forma predeterminada, el compilador genera una advertencia de desuso cuando se usa una de estas funciones. La biblioteca CRT proporciona sobrecargas de plantilla de C++ para estas funciones con el fin de facilitar la transición a variantes más seguras.  

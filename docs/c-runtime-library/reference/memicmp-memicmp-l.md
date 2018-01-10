@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 569191999535054aaf90239daefe89bcafd3eedd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfbab425e5765ce23522612c628b5b83da444b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 Compara los caracteres de dos búferes (distingue entre mayúsculas y minúsculas).  
@@ -91,7 +92,7 @@ int _memicmp_l(
   
  Si `buf1` o `buf2` son un puntero nulo, esta función invoca a un controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve `_NLSCMPERROR` y establece en `errno` en `EINVAL`.  
   
- `_memicmp` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_memicmp_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_memicmp` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_memicmp_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -100,7 +101,7 @@ int _memicmp_l(
 |`_memicmp`|\<memory.h> o \<string.h>|  
 |`_memicmp_l`|\<memory.h> o \<string.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

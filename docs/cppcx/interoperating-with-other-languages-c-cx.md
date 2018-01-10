@@ -1,24 +1,28 @@
 ---
-title: "Interoperar con otros lenguajes (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Interoperar con otros lenguajes (C++ / CX) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72f8aec06388c0d548da1de903bf47225c05c734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Interoperar con otros lenguajes (C++/CX)
-En esta parte de la documentación se describe cómo usar [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) para crear componentes de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] que puedan usarse por otras bibliotecas y lenguajes de programación. También puede crear componentes que no pueden usarse por todos los idiomas. En esta sección se describen diferentes aspectos que se deben tener en cuenta cuando su aplicación [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] interactúe con componentes que se escriben con JavaScript, un lenguaje administrado de .NET Framework o la biblioteca de plantillas de C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)].  
+# <a name="interoperating-with-other-languages-ccx"></a>Interoperar con otros lenguajes (C++/CX)
+Esta parte de la documentación describe cómo utilizar C++ / CX para crear componentes de Windows en tiempo de ejecución que puedan usarse por otras bibliotecas y lenguajes de programación. También puede crear componentes que no pueden usarse por todos los idiomas. En esta sección describe diferentes aspectos que tener en cuenta cuando su C + / aplicación CX interactúe con componentes que se escriben con JavaScript, un lenguaje de .NET Framework administrado o la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  
   
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
   
 -   [Integración de JavaScript](../cppcx/javascript-integration-c-cx.md)  
   
@@ -26,4 +30,4 @@ En esta parte de la documentación se describe cómo usar [!INCLUDE[cppwrt](../c
   
 -   [Integración de WRL](../cppcx/wrl-integration-c-cx.md)  
   
--   [Referencia del lenguaje Visual C\+\+](../cppcx/visual-c-language-reference-c-cx.md)
+-   [Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

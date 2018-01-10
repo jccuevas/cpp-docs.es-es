@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ba88017e0003c7a552c985516dba9a6254317a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generación de manifiestos en la línea de comandos
 Al compilar aplicaciones de C o C++ desde la línea de comandos mediante nmake o herramientas similares, se genera el manifiesto, el vinculador ha procesado todos los archivos objeto y se genera el archivo binario final. El vinculador recopila información de ensamblado almacenada en los archivos objeto y combina esta información en un archivo de manifiesto final. De forma predeterminada, el vinculador generará un archivo denominado < nombredebinario >. \<extensión > Manifest para describir el archivo binario final. El vinculador no incrusta un archivo de manifiesto dentro del archivo binario y sólo puede generar un manifiesto como un archivo externo. Hay varias maneras para incrustar un manifiesto dentro del archivo binario final, como el uso de la [herramienta manifiesto (mt.exe)](http://msdn.microsoft.com/library/aa375649) o compilar el manifiesto en un archivo de recursos. Es importante tener en cuenta que determinadas reglas deben seguirse al incrustar un manifiesto dentro del archivo binario final para habilitar características como la vinculación incremental, firma, y editar y continuar. Éstas y otras opciones se describen en [Cómo: incrustar un manifiesto dentro de una aplicación de C/C ++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) al compilar en la línea de comandos.  

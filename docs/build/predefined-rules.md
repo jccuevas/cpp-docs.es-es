@@ -17,30 +17,31 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6541dc5dc262f5d00325c594d64637b5e87a45d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3be1c8eea7b11f60e9ce9a7cbf5ebc0c2b99b698
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-rules"></a>Reglas predefinidas
 Las reglas de inferencia predefinidas utilizan macros de comando y de opciones proporcionadas por NMAKE.  
   
-|Regla|Comando|Predeterminado<br /><br /> predeterminada|por lotes<br /><br /> Regla|Plataforma donde se ejecuta NMAKE|  
+|Regla|Comando|Default<br /><br /> predeterminada|por lotes<br /><br /> Regla|Plataforma donde se ejecuta NMAKE|  
 |----------|-------------|------------------------|--------------------|----------------------------|  
-|.asm.exe|$(AS) $(AFLAGS) $<|ml $<|no|x86|  
+|.asm.exe|$(AS) $(AFLAGS) $<|ml $<|No|x86|  
 |.asm.obj|$(AS) $(AFLAGS) /c $<|ml /c $<|sí|x86|  
 |.asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|No|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|sí|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|.c.exe|$(CC) $(CFLAGS) $<|cl $<|no|todas|  
-|.c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|sí|todas|  
-|.cc.exe|$(CC) $(CFLAGS) $<|cl $<|no|todas|  
-|.cc.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|sí|todas|  
-|.cpp.exe|$(CPP) $(CPPFLAGS) $<|cl $<|no|todas|  
-|.cpp.obj|$(CPP) $(CPPFLAGS) /c $<|cl /c $<|sí|todas|  
-|.cxx.exe|$(CXX) $(CXXFLAGS) $<|cl $<|no|todas|  
-|.cxx.obj|$(CXX) $(CXXFLAGS) /c $<|cl /c $<|sí|todas|  
-|.rc.res|$(RC) $(RFLAGS) /r $<|rc /r $<|no|todo|  
+|.c.exe|$(CC) $(CFLAGS) $<|cl $<|no|todo|  
+|.c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|sí|todo|  
+|.cc.exe|$(CC) $(CFLAGS) $<|cl $<|no|todo|  
+|.cc.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|sí|todo|  
+|.cpp.exe|$(CPP) $(CPPFLAGS) $<|cl $<|no|todo|  
+|.cpp.obj|$(CPP) $(CPPFLAGS) /c $<|cl /c $<|sí|todo|  
+|.cxx.exe|$(CXX) $(CXXFLAGS) $<|cl $<|no|todo|  
+|.cxx.obj|$(CXX) $(CXXFLAGS) /c $<|cl /c $<|sí|todo|  
+|.rc.res|$(RC) $(RFLAGS) /r $<|rc /r $<|No|todo|  
   
 ## <a name="see-also"></a>Vea también  
  [Reglas de inferencia](../build/inference-rules.md)

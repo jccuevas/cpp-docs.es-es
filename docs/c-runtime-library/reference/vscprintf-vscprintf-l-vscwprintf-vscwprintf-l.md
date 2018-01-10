@@ -53,11 +53,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a52c7643a465bfaf24db6988d531943284e6416
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 Devuelve el número de caracteres de la cadena con formato mediante un puntero a una lista de argumentos.  
@@ -98,11 +99,11 @@ int _vscwprintf_l(
  Para más información, vea [Especificaciones de formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_vscprintf` devuelve el número de caracteres que se generarían si la cadena a la que apunta la lista de argumentos se imprimiera o enviara a un archivo o búfer mediante los códigos de formato especificados. El valor devuelto no incluye el carácter nulo de finalización. `_vscwprintf` realiza la misma función para caracteres anchos.  
+ `_vscprintf` devuelve el número de caracteres que se generarían si la cadena a la que apunta la lista de argumentos se imprimiera o enviara a un archivo o búfer mediante los códigos de formato especificados. El valor devuelto no incluye el carácter nulo de finalización. `_vscwprintf` lleva a cabo la misma función para caracteres anchos.  
   
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   
- Si `format` es un puntero nulo, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen `errno` en `EINVAL`.  
+ Si `format` es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y establecen `errno` en `EINVAL`.  
   
 ## <a name="remarks"></a>Comentarios  
  Cada `argument` (si existe) se convierte según la especificación de formato correspondiente en `format`. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el argumento `format` de [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
@@ -124,7 +125,7 @@ int _vscwprintf_l(
 |`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
 |`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
@@ -135,4 +136,4 @@ int _vscwprintf_l(
  [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf (Funciones)](../../c-runtime-library/vprintf-functions.md)
+ [vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)

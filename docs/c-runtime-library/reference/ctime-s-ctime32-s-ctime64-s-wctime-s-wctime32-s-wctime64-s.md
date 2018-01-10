@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -60,30 +58,16 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a2029db9b38ca1edad0e20764278ec77d205c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 Convierte un valor de hora en cadena y lo ajusta según la configuración de zona horaria local. Se trata de versiones de [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -168,9 +152,9 @@ errno_t _wctime64_s(
   
 |`buffer`|`numberOfElements`|`time`|Volver|Valor de `buffer`|  
 |--------------|------------------------|------------|------------|-----------------------|  
-|`NULL`|cualquiera|cualquiera|`EINVAL`|No modificado|  
-|No `NULL` (apunta a la memoria válida)|0|cualquiera|`EINVAL`|No modificado|  
-|No `NULL`|0< tamaño < 26|cualquiera|`EINVAL`|Cadena vacía|  
+|`NULL`|any|any|`EINVAL`|No modificado|  
+|No `NULL` (apunta a la memoria válida)|0|any|`EINVAL`|No modificado|  
+|No `NULL`|0< tamaño < 26|any|`EINVAL`|Cadena vacía|  
 |No `NULL`|>= 26|NULL|`EINVAL`|Cadena vacía|  
 |No `NULL`|>= 26|< 0|`EINVAL`|Cadena vacía|  
   
@@ -187,7 +171,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  `_wctime32_s` y `_wctime64_s` son las versiones de caracteres anchos de `_ctime32_s` y `_ctime64_s`; devuelven un puntero a una cadena de caracteres anchos. De lo contrario, `_ctime64_s`, `_wctime32_s` y `_wctime64_s` se comportan exactamente igual que `_ctime32_s`.  
   
- `ctime_s` es una función insertada que se evalúa como `_ctime64_s`, y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t` de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `ctime_s` se evaluará como `_ctime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
+ `ctime_s` es una función insertada que se evalúa como `_ctime64_s`, y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t`de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `ctime_s` se evaluará como `_ctime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
   
  En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
   
@@ -206,7 +190,7 @@ Wed Jan 02 02:03:55 1980\n\0
 |`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
 |`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

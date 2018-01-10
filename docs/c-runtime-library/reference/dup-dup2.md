@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f267ebf6526ed46cf3ef5670c6aeeb93a5a075e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 Crea un segundo descriptor de archivo para un archivo abierto (`_dup`), o reasigna un descriptor de archivo (`_dup2`).  
@@ -70,7 +71,7 @@ int _dup2(
 ## <a name="return-value"></a>Valor devuelto  
  `_dup` devuelve un descriptor de archivo nuevo. `_dup2` devuelve 0 para indicar que la operación ha sido correcta. Si se produce un error, cada función devuelve -1 y establece `errno` a `EBADF` si el descriptor de archivo no es válido o a `EMFILE` si no hay más descriptores de archivo disponibles. En el caso de un descriptor de archivo no válido, la función invoca también al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
   
- Para obtener más información sobre estos y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Las funciones `_dup` y `_dup2` asocian un segundo descriptor de archivo a un archivo abierto actualmente. Estas funciones se pueden usar para asociar un descriptor de archivo predefinido, como el de `stdout`, a otro archivo. Las operaciones en el archivo se pueden realizar con cualquiera de los dos descriptores de archivo. El tipo de acceso permitido al archivo no se ve afectado por la creación de un nuevo descriptor. `_dup` devuelve el siguiente descriptor de archivo disponible para el archivo especificado. `_dup2` obliga a `fd2` a hacer referencia al mismo archivo que `fd1`. Si `fd2` se asocia a un archivo abierto en el momento de la llamada, dicho archivo se cierra.  
@@ -88,7 +89,7 @@ int cstderr = _dup( _fileno( stderr ));
 |`_dup`|\<io.h>|  
 |`_dup2`|\<io.h>|  
   
- La consola no se admite en las aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Se deben redirigir los identificadores estándar de flujo que están asociados a la consola, `stdin`, `stdout` y `stderr`, antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ La consola no se admite en las aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Se deben redirigir los identificadores estándar de flujo que están asociados a la consola, `stdin`, `stdout` y `stderr`, antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

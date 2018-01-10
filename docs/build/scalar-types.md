@@ -1,53 +1,54 @@
 ---
-title: "Tipos escalares | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Tipos escalares | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Tipos escalares
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aunque el acceso de datos se puede derivar de cualquier alineación, se recomienda que los datos se alineen según su límite natural, para evitar una disminución del rendimiento \(o una multiplicidad de ello\).  Las enumeraciones son enteros constantes y se tratan como enteros de 32 bits.  La tabla siguiente describe la definición de tipos y el almacenamiento recomendado para ello según su relación con la alineación utilizando los valores de alineación siguientes:  
+# <a name="scalar-types"></a>Tipos escalares
+Aunque el acceso a los datos puede provenir de cualquier alineación, se recomienda que los datos se alineen según su límite natural, para evitar la pérdida de rendimiento (o una multiplicidad de ello). Las enumeraciones son enteros constantes y se tratan como enteros de 32 bits. En la tabla siguiente describe la definición de tipo y el almacenamiento recomendado para él, ya que pertenece a la alineación con los siguientes valores de alineación:  
   
--   Byte \- 8 bits  
+-   Byte - 8 bits  
   
--   Palabra \- 16 bits  
+-   Palabra - 16 bits  
   
--   Palabra doble \- 32 bits  
+-   Palabra doble - 32 bits  
   
--   Palabra cuádruple \- 64 bits  
+-   Palabra cuádruple - 64 bits  
   
--   Palabra octal \- 128 bits  
+-   Palabra octal - 128 bits  
   
 |||||  
 |-|-|-|-|  
-|Tipo escalar|Tipo de datos en C|Espacio de almacenamiento \(en bytes\)|Alineación recomendada|  
-|**Int8**|`char`|1|Byte|  
-|**UInt8**|`unsigned char`|1|Byte|  
-|**Int16**|**short**|2|Word|  
-|**UInt16**|**unsigned short**|2|Word|  
-|**Int32**|**int, long**|4|Doubleword|  
-|**UInt32**|**int sin signo, long sin signo**|4|Doubleword|  
-|**Int64**|`__int64`|8|Quadword|  
-|**UInt64**|**unsigned \_\_int64**|8|Quadword|  
-|**FP32 \(precisión sencilla\)**|**float**|4|Doubleword|  
-|**FP64 \(precisión doble\)**|**double**|8|Quadword|  
-|**POINTER**|**\***|8|Quadword|  
-|`__m64`|**struct \_\_m64**|8|Quadword|  
-|`__m128`|**struct \_\_m128**|16|Octaword|  
+|Tipo escalar|Tipo de datos C|Tamaño de almacenamiento (en bytes)|Alineación recomendada|  
+|**INT8**|`char`|1|Byte|  
+|**UINT8**|`unsigned char`|1|Byte|  
+|**INT16**|**short**|2|Palabra|  
+|**UINT16**|**unsigned short**|2|Palabra|  
+|**INT32**|**int, long**|4|Palabra doble|  
+|**UINT32**|**int sin signo, largo sin signo**|4|Palabra doble|  
+|**INT64**|`__int64`|8|Quadword|  
+|**UINT64**|**unsigned __int64**|8|Quadword|  
+|**FP32 (precisión simple)**|**float**|4|Palabra doble|  
+|**FP64 (precisión doble)**|**double**|8|Quadword|  
+|**PUNTERO**|**\***|8|Quadword|  
+|`__m64`|**__m64 (struct)**|8|Quadword|  
+|`__m128`|**__m128 (struct)**|16|Octaword|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos y almacenamiento](../build/types-and-storage.md)

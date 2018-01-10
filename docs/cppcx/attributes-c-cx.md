@@ -1,27 +1,31 @@
 ---
-title: "Atributos (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Atributos (C++ / CX) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6dcd3818d21b644211891ae4779a6b9bf5074e6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Atributos (C++/CX)
-Un atributo es un tipo especial de clase ref que se puede anteponer entre corchetes a los tipos y métodos de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] para especificar determinados comportamientos en la creación de metadatos. Varios atributos predefinidos, por ejemplo, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), normalmente se usan en código [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]. En este ejemplo se muestra cómo se aplica el atributo a una clase:  
+# <a name="attributes-ccx"></a>Atributos (C++/CX)
+Un atributo es un tipo especial de clase ref que se puede anteponer entre corchetes a tipos de Windows en tiempo de ejecución y métodos para especificar determinados comportamientos en la creación de metadatos. Varios atributos predefinidos, por ejemplo, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), se suelen usar en C++ / código CX. En este ejemplo se muestra cómo se aplica el atributo a una clase:  
   
- [!code-cpp[cx_attributes#01](../snippets/cpp/VS_Snippets_Misc/cx_attributes/cpp/class1.h#01)]  
+ [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
-## Atributos personalizados  
- También puedes definir atributos personalizados. Los atributos personalizados deben cumplir estas reglas de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]:  
+## <a name="custom-attributes"></a>Atributos personalizados  
+ También puedes definir atributos personalizados. Atributos personalizados deben cumplir estas reglas en tiempo de ejecución de Windows:  
   
 -   Los atributos personalizados solo pueden contener campos públicos.  
   
@@ -29,9 +33,9 @@ Un atributo es un tipo especial de clase ref que se puede anteponer entre corche
   
 -   Un campo puede ser de uno de estos tipos:  
   
-    -   int32 \(int\)  
+    -   int32 (int)  
   
-    -   uint32 \(int sin signo\)  
+    -   uint32 (int sin signo)  
   
     -   bool  
   
@@ -41,13 +45,13 @@ Un atributo es un tipo especial de clase ref que se puede anteponer entre corche
   
     -   Platform::Type^  
   
-    -   clase de enumeración pública \(incluye enumeraciones definidas por el usuario\)  
+    -   clase de enumeración pública (incluye enumeraciones definidas por el usuario)  
   
  En el ejemplo siguiente se muestra cómo definir un atributo personalizado y e inicializarlo después cuando lo utilices.  
   
- [!code-cpp[cx_attributes#02](../snippets/cpp/VS_Snippets_Misc/cx_attributes/cpp/class1.h#02)]  
+ [!code-cpp[cx_attributes#02](../cppcx/codesnippet/CPP/cx_attributes/class1.h#02)]  
   
-## Vea también  
- [Sistema de tipos \(C\+\+\/CX\)](../cppcx/type-system-c-cx.md)   
- [Referencia del lenguaje Visual C\+\+](../cppcx/visual-c-language-reference-c-cx.md)   
+## <a name="see-also"></a>Vea también  
+ [Sistema de tipos (C++/CX)](../cppcx/type-system-c-cx.md)   
+ [Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

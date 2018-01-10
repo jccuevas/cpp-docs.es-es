@@ -58,11 +58,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55b71dc2cd76894a948bac8443a8961409cf21d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 789ac892ab4d91ea88e563079599ae4422e55a79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 Anexa caracteres a una cadena. Estas versiones de [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -176,9 +177,9 @@ errno_t _mbsncat_s_l(
   
 |`strDestination`|`numberOfElements`|`strSource`|Valor devuelto|Contenido de `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` o sin terminar|any|cualquiera|`EINVAL`|no modificado|  
-|any|cualquiera|`NULL`|`EINVAL`|no modificado|  
-|any|0, o demasiado pequeño|cualquiera|`ERANGE`|no modificado|  
+|`NULL` o sin terminar|any|any|`EINVAL`|no modificado|  
+|any|any|`NULL`|`EINVAL`|no modificado|  
+|any|0, o demasiado pequeño|any|`ERANGE`|no modificado|  
   
 ## <a name="remarks"></a>Comentarios  
  Estas funciones intentan anexar los primeros caracteres `D` de `strSource` al final de `strDest`, donde `D` es el valor menor de `count` o la longitud de `strSource`. Si los caracteres `D` que se van a anexar caben en `strDest` (cuyo tamaño se da como `numberOfElements`) y todavía queda espacio para un terminador nulo, entonces se anexan, empezando a partir del terminador nulo original de `strDest`, y se anexa un nuevo terminador nulo; de lo contrario, `strDest`[0] se establece en el carácter nulo y se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
@@ -209,9 +210,9 @@ errno_t _mbsncat_s_l(
   
  `wcsncat_s` y `_mbsncat_s` son versiones de caracteres anchos y multibyte de `strncat_s`. Los argumentos de cadena y el valor devuelto de `wcsncat_s` son cadenas de caracteres anchos; los de `_mbsncat_s` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

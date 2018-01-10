@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ebc62a975e534d89fd99dbb05a65e8d6cb379bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>Campos de bits de C
 Además de los declaradores para los miembros de una estructura o unión, un declarador de estructura también puede ser un número especificado de bits, denominado un "campo de bits". Su longitud se establece en el declarador del nombre de campo mediante un signo de dos puntos. Un campo de bits se interpreta como un tipo entero.  

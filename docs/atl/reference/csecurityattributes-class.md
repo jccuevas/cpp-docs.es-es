@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ed8a9336a60b3577f856f0bc2bd6baa358aec6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecurityattributes-class"></a>Clase de CSecurityAttributes
 Esta clase es un contenedor fino para la estructura de atributos de seguridad.  
@@ -41,13 +42,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSecurityAttributes:: Set](#set)|Llamar a este método para establecer los atributos de la `CSecurityAttributes` objeto.|  
   

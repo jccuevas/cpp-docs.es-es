@@ -41,11 +41,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b19cbd69d5045ee51b3a1a8ae621300b0ba4b545
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7846d9169db45f4176ad97dfc3c0b9d5a3c346c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 Genere nombres que se puedan usar para crear archivos temporales. Estas son versiones de [tmpnam y _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -86,10 +87,10 @@ errno_t _wtmpnam_s(
 |||||  
 |-|-|-|-|  
 |`str`|`sizeInChars`|**Valor devuelto**|**Contenido de** `str`|  
-|`NULL`|cualquiera|`EINVAL`|no modificado|  
+|`NULL`|any|`EINVAL`|no modificado|  
 |no `NULL` (apunta a la memoria válida)|demasiado corto|`ERANGE`|no modificado|  
   
- Si `str` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
+ Si `str` es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
   
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones devuelve el nombre de un archivo que no existe en este momento. `tmpnam_s` devuelve un nombre único en el directorio de trabajo actual. Tenga en cuenta que cuando un nombre de archivo va precedido por una barra diagonal inversa sin información de ruta de acceso, como \fname21, esto indica que el nombre es válido para el directorio de trabajo actual.  
@@ -113,7 +114,7 @@ errno_t _wtmpnam_s(
 |`tmpnam_s`|\<stdio.h>|  
 |`_wtmpnam_s`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

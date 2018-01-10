@@ -39,11 +39,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f358376a16d811274978ccc730268e7cbe806df7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 327c55d92b9d23644807ecd52dbecf0fd0b62375
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 Convierte un carácter multibyte de doble byte en el carácter multibyte de un solo byte correspondiente.  
@@ -76,7 +77,7 @@ unsigned int _mbctombb_l(
 ## <a name="remarks"></a>Comentarios  
  El `_mbctombb` y `_mbctombb_l` funciones convierten un carácter multibyte dado a un carácter multibyte de un solo byte correspondiente. Caracteres deben corresponder a los caracteres de byte único dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo `_l` usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión con el sufijo `_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo `_l` usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión con el sufijo `_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  En versiones anteriores, `_mbctombb` se denominaba `zentohan`. Utilice `_mbctombb` en su lugar.  
   

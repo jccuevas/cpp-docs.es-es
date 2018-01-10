@@ -90,11 +90,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e7e3ab049a7fc7935b9027746fc4cdebb3428cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6109bfaf29ee26053bc1dcbb5af8f56a0612215
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontrolbase-class"></a>Clase CComControlBase
 Esta clase proporciona métodos para crear y administrar los controles ATL.  
@@ -112,20 +113,20 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComControlBase::AppearanceType](#appearancetype)|Invalidar si su `m_nAppearance` propiedad estándar no es de tipo `short`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|El constructor.|  
 |[CComControlBase:: ~ CComControlBase](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Recupera un puntero a la interfaz solicitada.|  
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Comprueba que la `iVerb` parámetro utilizado por `IOleObjectImpl::DoVerb` una interfaz de usuario del control se activa ( `iVerb` es igual a `OLEIVERB_UIACTIVATE`), define la acción realizada cuando el usuario hace doble clic en el control ( `iVerb` es igual a `OLEIVERB_PRIMARY`), muestra el control ( `iVerb` es igual a `OLEIVERB_SHOW`), o activa el control ( `iVerb` es igual a **OLEIVERB_INPLACEACTIVATE**).|  
@@ -176,7 +177,7 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComControlBase::m_bAutoSize](#m_bautosize)|Marca que indica que el control no puede ser cualquier otro tamaño.|  
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Marca que indica que `IDataObjectImpl::GetData` y `CComControlBase::GetZoomInfo` debe establecer el tamaño del control de `m_sizeNatural` en lugar de en `m_sizeExtent`.|  

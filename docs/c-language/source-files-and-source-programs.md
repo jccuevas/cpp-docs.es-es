@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8355dd04376e73618a215fa73160dc1ee64dae2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06d237478a790437eea433d6060c8d7dca977782
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-files-and-source-programs"></a>Archivos de código fuente y programas de origen
 Un programa de origen se puede dividir en uno o más "archivos de código fuente" o "unidades de traducción". La entrada del compilador se denomina "unidad de traducción".  

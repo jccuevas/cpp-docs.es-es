@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e05cb6ca1aa9ffd9a827fd9f907fdc39d5bde13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb60fcef5fdfd30b4121f5c2277667829772dcd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="curl-class"></a>Clase de cUrl
 Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de las otras si analizar una dirección URL existente cadena o generar una cadena desde el principio.  
@@ -67,14 +68,14 @@ class CUrl
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CUrl::CUrl](#curl)|El constructor.|  
 |[CUrl:: ~ CUrl](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CUrl::Canonicalize](#canonicalize)|Llame a este método para convertir la cadena de dirección URL en forma canónica.|  
 |[CUrl::Clear](#clear)|Llamar a este método para borrar todos los campos de dirección URL.|  
@@ -106,7 +107,7 @@ class CUrl
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CUrl::operator =](#operator_eq)|Asigna especificado `CUrl` objeto al actual `CUrl` objeto.|  
   

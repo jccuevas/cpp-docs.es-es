@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bffed7658232d11dd7741900d6eca14de341e855
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b372666ba2b623450eb0e58a6c0ff372559ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** es una utilidad de Windows NT 4.0 que permite configurar diversos valores específicos de DCOM en el registro. El **DCOMCNFG** ventana tiene tres páginas: seguridad predeterminada, propiedades predeterminadas y aplicaciones. En Windows 2000 está presente una cuarta página protocolos predeterminados.  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
 -   La página extremos enumera el conjunto de protocolos y extremos disponibles para su uso por los clientes del servidor DCOM seleccionado.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de](../atl/atl-services.md)
+ [Servicios](../atl/atl-services.md)
 

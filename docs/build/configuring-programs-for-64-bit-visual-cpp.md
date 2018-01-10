@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1506eb2f2220ebfdf4c116c8e7b4a41ccf0e9085
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurar Visual C++ de 64 bits, x64 destinos
 
@@ -31,7 +32,7 @@ Esta sección contiene temas sobre cómo destinar 64-bit x64 herramientas de gen
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Cómo: configurar proyectos de Visual C++ para tener como destino de 64 bits, x64 plataformas](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
+-   [Cómo configurar proyectos de Visual C++ en plataformas de destino de 64 bits, x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)  
   
 -   [Procedimiento para habilitar un conjunto de herramientas de Visual C++ de 64 bits en la línea de comandos](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   

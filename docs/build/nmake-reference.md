@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acae66ff8de61854d1fbaf38955ab275a01cffda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-reference"></a>Referencia de NMAKE
 La utilidad de mantenimiento de programas de Microsoft (NMAKE.EXE) es una herramienta de línea de comandos incluida con [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] que compila proyectos a partir de los comandos contenidos en un archivo de descripción.  
@@ -49,6 +50,6 @@ La utilidad de mantenimiento de programas de Microsoft (NMAKE.EXE) es una herram
 ## <a name="see-also"></a>Vea también  
  [Compilar el código de C o C++ en la línea de comandos](../build/building-on-the-command-line.md)   
  [Herramientas de compilación de C/c ++](../build/reference/c-cpp-build-tools.md)   
- [Crear y administrar proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Creación y administración de proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
  [Referencia de compilación de C/C++](../build/reference/c-cpp-building-reference.md)

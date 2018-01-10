@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fea2e0a3f52db6a9ed54b98fae0a66282cdb52b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cd9c040ba6c2afc76966c1268b3765ec2119bdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-of-this-manual"></a>Ámbito de este manual
 C es un lenguaje flexible que permite al programador tomar muchas decisiones de programación. De acuerdo con esta filosofía, C impone pocas restricciones en materias como la conversión de tipos. Aunque esta característica del lenguaje puede simplificar el trabajo de programación, debe conocer bien el lenguaje para comprender cómo se comportarán los programas. En esta guía se proporciona información sobre los componentes del lenguaje C y las características de implementación de Microsoft. La sintaxis del lenguaje C procede de ANSI X3.159-1989, *American National Standard for Information Systems – Programming Language – C* (en adelante denominado estándar ANSI C), aunque no forma parte del estándar ANSI C. En [Resumen de la sintaxis del lenguaje C](../c-language/c-language-syntax-summary.md) se proporciona la sintaxis y una descripción de cómo leer y usar las definiciones de sintaxis.  

@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Asigna una cadena de caracteres a otra, para lo que realiza una transformación de dependiente de la configuración regional especificada. Esta función también puede usarse para generar un criterio de ordenación para la cadena de entrada.  
@@ -75,7 +76,7 @@ int __crtLCMapStringW(
  Cero indica un error. Para obtener información de errores extendida, realice una llamada a la función `GetLastError` .  
   
 ## <a name="remarks"></a>Comentarios  
- Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función `LCMapString` en [MSDN Library](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Si `cchSrc` es mayor que cero y `lpSrcStr` es una cadena terminada en NULL, `__crtLCMapStringW` establece `cchSrc` en la longitud de la cadena. Después, `__crtLCMapStringW` llama a la versión de cadena de caracteres anchos (Unicode) de la función `LCMapString` con los parámetros especificados. Para obtener más información sobre los parámetros y el valor devuelto de esta función, vea la función `LCMapString` en [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Requisitos  
   

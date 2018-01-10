@@ -36,11 +36,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9315791023b94fe7a2cdc97f1cec632c05ddbd2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Obtiene una cadena de caracteres de la consola. Hay disponibles versiones más seguras de estas funciones; vea [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -97,7 +98,7 @@ wchar_t *_cgetws(
 |`_cgets`|\<conio.h>|  
 |`_cgetws`|\<conio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

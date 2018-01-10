@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>Clase de CContainedWindowT
 Esta clase implementa una ventana dentro de otro objeto.  
@@ -83,13 +67,13 @@ class CContainedWindowT : public TBase
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Constructor. Inicializa los miembros de datos para especificar qué mapa de mensajes procesará los mensajes de la ventana independiente.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CContainedWindowT:: Create](#create)|Crea una ventana.|  
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Proporciona el procesamiento de mensajes predeterminado.|  
@@ -102,7 +86,7 @@ class CContainedWindowT : public TBase
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Identifica qué mapa de mensajes procesará los mensajes de la ventana independiente.|  
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Especifica el nombre de una clase de ventana existente en el que se basará una nueva clase de ventana.|  
@@ -121,18 +105,18 @@ class CContainedWindowT : public TBase
   
  Cuando se usa el **Agregar control basado en** opción en el Asistente para proyectos ATL, el asistente agregará automáticamente una `CContainedWindowT` miembro de datos a la clase que implementa el control. En el ejemplo siguiente se muestra cómo se declara la ventana independiente:  
   
- [!code-cpp[NVC_ATL_Windowing #38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing Nº 40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |Para obtener más información sobre|Vea|  
 |--------------------------------|---------|  
 |Crear controles|[Tutorial ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Utilizar ventanas en ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|  
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en la[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en el SDK de Windows|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `TBase`  
@@ -237,10 +221,10 @@ HWND Create(
  [in] Especifica el nombre de la ventana. El valor predeterminado es **NULL**.  
   
  `dwStyle`  
- [in] El estilo de la ventana. El valor predeterminado es **WS_CHILD | WS_VISIBLE**. Para obtener una lista de valores posibles, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] El estilo de la ventana. El valor predeterminado es **WS_CHILD &#124; WS_VISIBLE**. Para obtener una lista de valores posibles, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) del SDK de Windows.  
   
  `dwExStyle`  
- [in] El estilo de ventana extendidos. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] El estilo de ventana extendidos. El valor predeterminado es 0, lo que significa que ningún estilo extendido. Para obtener una lista de valores posibles, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) del SDK de Windows.  
   
  `MenuOrID`  
  [in] Para una ventana secundaria, el identificador de ventana. Para una ventana de nivel superior, un identificador de menú de la ventana. El valor predeterminado es **0U**.  
@@ -319,7 +303,7 @@ LPTSTR m_lpszClassName;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando se crea una ventana, [crear](#create) registra una nueva clase de ventana que se basa en la clase existente pero utiliza [CContainedWindowT::WindowProc](#windowproc).  
+ Cuando se crea una ventana, [crear](#create) registra una nueva clase de ventana que se basa en la clase existente pero usa [CContainedWindowT::WindowProc](#windowproc).  
   
  `m_lpszClassName`se inicializa el constructor. Para obtener un ejemplo, vea el [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) información general.  
   
@@ -450,4 +434,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

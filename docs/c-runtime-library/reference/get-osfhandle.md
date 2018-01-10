@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft Docs
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3b15b4577d1d8c0b24df82acff76494474c4e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b810edac60b08ccc31d6767cb11b7176fb981b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -55,15 +56,16 @@ intptr_t _get_osfhandle(
   
 ### <a name="parameters"></a>Parámetros
 
-*FD* descriptor del archivo existente.  
+*FD*  
+Descriptor del archivo existente.  
   
 ## <a name="return-value"></a>Valor devuelto
 
-Identificador de un archivo de sistema operativo si *fd* es válida. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve `INVALID_HANDLE_VALUE` (-1) y establece `errno` a `EBADF`, que indica un identificador de archivo no válido.  
+Devuelve un identificador de archivo del sistema operativo si *fd* es válida. De lo contrario, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve `INVALID_HANDLE_VALUE` (-1) y establece `errno` a `EBADF`, que indica un identificador de archivo no válido.  
   
 ## <a name="remarks"></a>Comentarios
 
-Para cerrar un archivo cuyo identificador de archivo del sistema operativo se obtiene mediante `_get_osfhandle`, llame a [ \_cerrar](../../c-runtime-library/reference/close.md) en el descriptor de archivo *fd*. El identificador subyacente también se cierra mediante una llamada a `_close`, por lo que no es necesario llamar a la función `CloseHandle` de Win32 en el identificador original.  
+Para cerrar un archivo cuyo identificador de archivos del sistema operativo (SO) se obtiene mediante `_get_osfhandle`, llame a [ \_cerrar](../../c-runtime-library/reference/close.md) en el descriptor de archivo *fd*. No llame a `CloseHandle` en el valor devuelto de esta función. El identificador de archivo del sistema operativo subyacente pertenece a la *fd* descriptor de archivo y se cierra cuando `_close` se llama en *fd*. Si el descriptor de archivo pertenece a un `FILE *` secuencia, a continuación, llamar a [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) en ese `FILE *` secuencia cierra el descriptor de archivo y el identificador de archivo del sistema operativo subyacente. En este caso, no llame a `_close` en el descriptor de archivo.
   
 ## <a name="requirements"></a>Requisitos  
   

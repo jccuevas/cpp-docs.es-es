@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59f6fa9ada7c69814d1841b350afc247ec489704
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Vinculación a CRT en un proyecto ATL
 El [bibliotecas en tiempo de ejecución de C](../c-runtime-library/crt-library-features.md) (CRT) proporcionan muchas funciones útiles que pueden realizar programación mucho más fácil durante el desarrollo de ATL. Todos los proyectos ATL se vinculan a la biblioteca CRT. Puede ver las ventajas y desventajas de vinculación de método en [ventajas e inconvenientes del método que se utiliza para vincular a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  

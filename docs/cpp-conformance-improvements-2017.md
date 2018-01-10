@@ -11,11 +11,12 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c0fe11f502fbfedda226e1d699a2822bdfd676a
-ms.sourcegitcommit: 78f3f8208d49b7c1d87f4240f4a1496b7c29333e
+ms.workload: cplusplus
+ms.openlocfilehash: 3a1010d7061fb8df20cc821e26e903e356050850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Mejoras de conformidad de C++ en Visual Studio 2017, versiones 15.0, [15.3](#improvements_153) y [15.5](#improvements_155).
 
@@ -696,7 +697,7 @@ Para corregir el código, prescinda del uso de la instrucción N::f si lo que qu
 
 ### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660: Declaraciones de función locales y búsquedas dependientes de argumentos
 Las declaraciones de función locales ocultan la declaración de función en el ámbito de inclusión y deshabilitan la búsqueda dependiente de argumentos.
-Sin embargo, en este caso, las versiones anteriores del compilador de Visual C++ realizaban búsquedas dependientes de argumentos, lo que podía dar lugar a que se eligiera la sobrecarga incorrecta y que se produjera un comportamiento inesperado del entorno de ejecución. Este error suele deberse a una firma incorrecta de la declaración de función local. En el siguiente ejemplo, Visual Studio 2017 versión 15.3 muestra correctamente el error C2660, que informa de que la función "f" no puede tomar dos argumentos:
+Sin embargo, en este caso, las versiones anteriores del compilador de Visual C++ realizaban búsquedas dependientes de argumentos, lo que podía dar lugar a que se eligiera la sobrecarga incorrecta y que se produjera un comportamiento inesperado del entrono de ejecución. Este error suele deberse a una firma incorrecta de la declaración de función local. En el siguiente ejemplo, Visual Studio 2017 versión 15.3 muestra correctamente el error C2660, que informa de que la función "f" no puede tomar dos argumentos:
 
 ```cpp
 struct S {}; 

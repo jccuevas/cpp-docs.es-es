@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67f546afa3059508787c7d3a5295d2b85651f125
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8eff0ac1a97c9a1d48b82601eb0d6dc0bb8bed0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 Obtiene un valor de error del sistema operativo antes de traducirse a un valor `errno`.  
@@ -55,7 +56,7 @@ errno_t _get_doserrno(
  Puntero a un entero que se va a rellenar con el valor actual de la macro global `_doserrno`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Si `_get_doserrno` es correcto, devuelve cero; si no, devuelve un código de error. Si `pValue` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
+ Si `_get_doserrno` es correcto, devuelve cero; si no, devuelve un código de error. Si `pValue` es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
   
 ## <a name="remarks"></a>Comentarios  
  La macro global `_doserrno` se establece en cero durante la inicialización de CRT, antes de que la ejecución del proceso comience. Se establece en el valor de error de sistema operativo devuelto por una llamada de función de nivel de sistema que devuelve un error de sistema operativo, y nunca se restablece a cero durante la ejecución. Cuando escriba código para comprobar el valor de error devuelto por una función, borre siempre `_doserrno` mediante [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) antes de la llamada de función. Dado que existe la posibilidad de que otra llamada de función sobrescriba `_doserrno`, compruebe el valor usando `_get_doserrno` inmediatamente después de la llamada de función.  
@@ -70,7 +71,7 @@ errno_t _get_doserrno(
 |-------------|---------------------|---------------------|  
 |`_get_doserrno`|\<stdlib.h>, \<cstdlib> (C++)|\<errno.h>, \<cerrno> (C++)|  
   
- `_get_doserrno` es una extensión de Microsoft. Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ `_get_doserrno` es una extensión de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)   

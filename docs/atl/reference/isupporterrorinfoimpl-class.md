@@ -4,51 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ISupportErrorInfo ATL implementation
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 320cb27d1d22a5e4240861c934e9bcfabd731bad
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 61e8dc6b277f8eb59ade428d3ef8ea3dd5c083ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl (clase)
-Esta clase proporciona una implementación predeterminada de la [interfaz ISupportErrorInfo](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) y se puede utilizar cuando sólo una única interfaz genera errores en un objeto.  
+Esta clase proporciona una implementación predeterminada de la [interfaz ISupportErrorInfo](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) y se puede usar cuando solo una única interfaz genera errores en un objeto.  
   
 > [!IMPORTANT]
->  Esta clase y sus miembros no se pueden utilizar en las aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,22 +44,22 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>Parámetros  
  `piid`  
- Un puntero para el IID de interfaz que admite [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
+ Un puntero a lo IID de una interfaz que admite [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
   
 ## <a name="members"></a>Miembros  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indica si la interfaz identificado por `riid` admite el [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaz.|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Indica si la interfaz identificado por `riid` es compatible con la [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaz.|  
   
 ## <a name="remarks"></a>Comentarios  
  El [interfaz ISupportErrorInfo](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) garantiza que se puede devolver información de error al cliente. Objetos que utilizan **IErrorInfo** debe implementar **ISupportErrorInfo**.  
   
- Clase `ISupportErrorInfoImpl` proporciona una implementación predeterminada de **ISupportErrorInfo** y se puede utilizar cuando sólo una única interfaz genera errores en un objeto. Por ejemplo:  
+ Clase `ISupportErrorInfoImpl` proporciona una implementación predeterminada de **ISupportErrorInfo** y se puede usar cuando solo una única interfaz genera errores en un objeto. Por ejemplo:  
   
- [!code-cpp[NVC_ATL_COM Nº&48;](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ISupportErrorInfo`  
@@ -86,17 +70,17 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **Encabezado:** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- Indica si la interfaz identificado por `riid` admite el [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaz.  
+ Indica si la interfaz identificado por `riid` es compatible con la [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaz.  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- Consulte [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) en el SDK de Windows.  
   
 ##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
- Llame a este método para obtener el número de subprocesos en el grupo.  
+ Llamar a este método para obtener el número de subprocesos en el grupo.  
   
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
@@ -107,13 +91,13 @@ STDMETHOD(GetSize)(int* pnNumThreads);
  [out] Dirección de la variable que se ejecuta correctamente, recibe el número de subprocesos en el grupo.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities&#134;](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
 ##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
- Llame a este método para obtener el tiempo máximo en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
+ Llamar a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
@@ -121,13 +105,13 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
   
 ### <a name="parameters"></a>Parámetros  
  `pdwMaxWait`  
- [out] Dirección de la variable que se ejecuta correctamente, recibe el tiempo máximo en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
+ [out] Dirección de la variable que se ejecuta correctamente, recibe el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Vea [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
  Llame a este método para establecer el número de subprocesos en el grupo.  
@@ -140,18 +124,18 @@ STDMETHOD(SetSize)int nNumThreads);
  `nNumThreads`  
  El número solicitado de subprocesos en el grupo.  
   
- Si `nNumThreads` es negativo, su valor absoluto se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
+ Si `nNumThreads` es negativo, su valor absoluto se multiplicará por el número de procesadores en el equipo para obtener el número total de subprocesos.  
   
- Si `nNumThreads` es cero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) se multiplicará por el número de procesadores del equipo para obtener el número total de subprocesos.  
+ Si `nNumThreads` es cero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) se multiplicará por el número de procesadores en el equipo para obtener el número total de subprocesos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Vea [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
- Llame a este método para establecer el tiempo máximo en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
+ Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
@@ -159,14 +143,13 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
   
 ### <a name="parameters"></a>Parámetros  
  `dwMaxWait`  
- Tiempo máximo solicitado en milisegundos que se va a esperar un subproceso cerrar el grupo de subprocesos.  
+ El tiempo máximo solicitado en milisegundos que esperará el grupo de subprocesos para que un subproceso a apagar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK en caso de éxito o error HRESULT en caso de error.  
+ Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
 ### <a name="example"></a>Ejemplo  
- Consulte [IThreadPoolConfig::GetSize](#getsize).  
+ Vea [IThreadPoolConfig::GetSize](#getsize).  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de la clase](../../atl/atl-class-overview.md)
-
+ [Información general de clases](../../atl/atl-class-overview.md)

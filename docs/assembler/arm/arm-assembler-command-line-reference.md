@@ -1,28 +1,29 @@
 ---
-title: "ARM Assembler Command-Line Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Referencia de línea de comandos de ensamblador ARM | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
-# ARM Assembler Command-Line Reference
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este artículo proporciona información de línea de comandos sobre el ensamblador Microsoft ARM,  *armasm*, que compila pulgar ARMv7 lenguaje de ensamblado en la implementación de Microsoft del formato de archivo de objeto común \(COFF\).  El vinculador puede vincular código COFF con código de objeto que se produce por el ensamblador de ARM o en el compilador de C, junto con las bibliotecas de objetos creados por el bibliotecario.  
+# <a name="arm-assembler-command-line-reference"></a>Referencia de la línea de comandos de ensamblador de ARM
+Este artículo proporciona información de línea de comandos sobre el ensamblador de ARM de Microsoft, *armasm*, que compila el lenguaje ensamblador ARMv7 Thumb en la implementación de Microsoft de formato de archivo de objeto común (COFF). El vinculador puede vincular código COFF con el código objeto generado por el ensamblador ARM o por el compilador de C, junto con bibliotecas de objetos que se crean mediante el bibliotecario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 armasm [[options]] sourcefile objectfile  
@@ -32,65 +33,65 @@ armasm [[options]] sourcefile objectfile
 armasm [[options]] -o objectfile sourcefile  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `options`  
- \-errores`filename`  
- Redirigir mensajes de error y advertencia para `filename`.  
+ -errores`filename`  
+ Redirigir los mensajes de error y advertencia para `filename`.  
   
- \-i`dir[;dir]`  
- Agregar los directorios especificados para la ruta de búsqueda.  
+ -i`dir[;dir]`  
+ Agregue los directorios especificados en la ruta de acceso de búsqueda de inclusión.  
   
- \-definir previamente`directive`  
- Especificar una directiva SETA, SETL o conjuntos de predefinir un símbolo.  Ejemplo: **armasm.exe \-predefine "COUNT SETA 150" source.asm**.  Para obtener más información, consulte el [manual de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ -predefinir`directive`  
+ Especifique una directiva NODOSUNA, SETL o conjuntos de predefinir un símbolo. Ejemplo: **armasm.exe-predefinir "COUNT NODOSUNA 150" source.asm**. Para obtener más información, consulte el [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
- nowarn\-  
+ -nowarn  
  Deshabilitar todos los mensajes de advertencia.  
   
- \-Omitir`warning`  
- Desactivar el aviso especificado.  Para los valores posibles, vea la sección acerca de las advertencias.  
+ -Omitir`warning`  
+ Deshabilitar la advertencia especificada. Para los valores posibles, vea la sección acerca de las advertencias.  
   
- \-Ayuda  
+ -Ayuda  
  Imprimir el mensaje de Ayuda de línea de comandos.  
   
- \-máquina`machine`  
- Especificar el tipo de equipo para establecer en el encabezado de PE.  Los posibles valores de `machine` son:   
-**ARM**: Permite definir el tipo de máquina en IMAGE\_FILE\_MACHINE\_ARMNT.  Éste es el valor predeterminado.   
-**THUMB**: Permite definir el tipo de máquina en IMAGE\_FILE\_MACHINE\_THUMB.  
+ -machine`machine`  
+ Especifique el tipo de equipo para establecer en el encabezado PE.  Valores posibles de `machine` son:  
+**ARM**: establece el tipo de equipo a IMAGE_FILE_MACHINE_ARMNT. Este es el valor predeterminado.   
+**THUMB**: establece el tipo de equipo a IMAGE_FILE_MACHINE_THUMB.  
   
- \-oldit  
- Generar estilo ARMv7 bloques de TI.  De forma predeterminada, ARMv8\-compatible con bloques de TI se generan.  
+ -oldit  
+ Generar estilo ARMv7 bloques de TI.  De forma predeterminada, ARMv8 compatible se generan bloques de TI.  
   
- \-a través de`filename`  
- Leer argumentos de línea de comandos adicionales de `filename`.  
+ -a través de`filename`  
+ Lea los argumentos de línea de comandos adicionales de `filename`.  
   
- \-16  
- Ensamblar código fuente como instrucciones de control de posición de 16 bits.  Éste es el valor predeterminado.  
+ -16  
+ Ensamblar origen como instrucciones de Thumb de 16 bits.  Este es el valor predeterminado.  
   
- \-32  
- Ensamblar código fuente como instrucciones ARM de 32 bits.  
+ -32  
+ Ensamblar origen como instrucciones de ARM de 32 bits.  
   
- \-g  
+ -g  
  Generar información de depuración.  
   
- \-errorReport:`option`  
- Especificar cómo interno ensamblador se informan de errores a Microsoft.  Los posibles valores de `option` son:   
-**none**: No enviar informes.   
-**prompt**: Pedir al usuario que envíe informes inmediatamente.   
-**queue**: Pedir al usuario que envíe informes en el siguiente inicio de sesión de administrador.  Éste es el valor predeterminado.   
-**send**: Enviar informes automáticamente.  
+ -errorReport:`option`  
+ Especifique cómo interno ensamblador se notifican errores a Microsoft.  Valores posibles de `option` son:   
+**Ninguno**: no enviar informes.   
+**símbolo del sistema**: preguntar al usuario para enviar los informes inmediatamente.   
+**cola**: preguntar al usuario para enviar los informes en el siguiente inicio de sesión de administrador. Este es el valor predeterminado.   
+**enviar**, enviar automáticamente informes.  
   
  `sourcefile`  
  El nombre del archivo de origen.  
   
  `objectfile`  
- El nombre del archivo objeto \(salida\).  
+ El nombre del archivo objeto (salida).  
   
- En el ejemplo siguiente se muestra cómo utilizar armasm en un escenario típico.  En primer lugar, utilice armasm para generar un archivo de origen \(.asm\) de lenguaje ensamblador para un archivo objeto \(.obj\).  A continuación, utilizar el compilador de c de la línea de comandos de CL para compilar un archivo de origen \(.c\) y también especificar la opción del vinculador para vincular el archivo de objeto ARM.  
+ En el ejemplo siguiente se muestra cómo utilizar armasm en un escenario típico. En primer lugar, use armasm para generar un archivo de origen (ASM) de lenguaje de ensamblado a un archivo objeto (.obj). A continuación, usar el compilador de C de línea de comandos de CL para compilar un archivo de origen (.c) y especificar la opción del vinculador para vincular el archivo de objeto ARM.  
   
- **armasm myasmcode.asm \-o myasmcode.obj**  
+ **armasm myasmcode.asm -o myasmcode.obj**  
   
- **cl myccode.c \/link myasmcode.obj**  
+ **CL myccode.c /link myasmcode.obj**  
   
-## Vea también  
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
- [ARM Assembler Directives](../../assembler/arm/arm-assembler-directives.md)
+## <a name="see-also"></a>Vea también  
+ [Mensajes de diagnóstico de ensamblador de ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)   
+ [Directivas del ensamblador de ARM](../../assembler/arm/arm-assembler-directives.md)

@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09906e3cdf8455a2a221601f475074a18a72b1b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 103ff4077bdc68b8886c5181ce317b5c0d0d2b79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expand"></a>_expand
 Cambia el tamaño de un bloque de memoria.  
@@ -72,7 +73,7 @@ void *_expand(
   
  Si no hay memoria suficiente disponible para expandir el bloque hasta el tamaño especificado sin moverlo, la función devuelve `NULL`. `_expand` nunca devuelve un bloque expandido a un tamaño inferior al solicitado. Si se produce un error, `errno` indica la naturaleza del error. Para obtener más información sobre `errno`, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para comprobar el nuevo tamaño del elemento, use `_msize`. Para obtener un puntero a un tipo distinto a `void`, use una conversión de tipo en el valor devuelto.  
+ El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para comprobar el nuevo tamaño del elemento, use `_msize`. Para obtener un puntero a un tipo distinto de `void`, use una conversión de tipo en el valor devuelto.  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_expand` cambia el tamaño de un bloque de memoria asignado previamente intentando expandir o contraer el bloque sin mover su ubicación en el montón. El parámetro `memblock` apunta al principio del bloque. El parámetro `size` proporciona el nuevo tamaño del bloque (en bytes). El contenido del bloque queda sin modificar hasta el menor de los tamaños nuevos y antiguos. `memblock` no debe ser un bloque que se ha liberado.  
@@ -90,7 +91,7 @@ void *_expand(
 |--------------|---------------------|  
 |`_expand`|\<malloc.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

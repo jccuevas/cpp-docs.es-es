@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9420a191174d0f2c03d7d3e30f797106784a3dc0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b65f17d1c433879ad7ea4f0a3af53d4ab740b8bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-structure-alignment"></a>Ejemplos de alineación de estructuras
 Los cuatro ejemplos siguientes declaran que una estructura alineada o union y las cifras correspondientes muestran el diseño de esa estructura o unión en memoria. Cada columna de una figura representa un byte de memoria y el número de la columna indica el desplazamiento de ese byte. El nombre de la segunda fila de cada figura corresponde al nombre de una variable en la declaración. Las columnas sombreadas indican el relleno que es necesaria para lograr la alineación especificadas.  

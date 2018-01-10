@@ -1,59 +1,60 @@
 ---
-title: "/BASE (Direcci&#243;n base) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/base"
-  - "VC.Project.VCLinkerTool.BaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/BASE (opción del vinculador)"
-  - "@ (símbolo para dirección base)"
-  - "en el símbolo de signo para la dirección base"
-  - "direcciones base [C++]"
-  - "BASE (opción del vinculador)"
-  - "-BASE (opción del vinculador)"
-  - "DLL [C++], vincular"
-  - "variables de entorno [C++], LIB"
-  - "archivos ejecutables [C++], dirección base"
-  - "tamaño de dirección clave"
-  - "LIB (variable de entorno)"
-  - "programas [C++], dirección base"
-  - "programas [C++], impedir la reubicación"
-  - "punto y coma [C++], especificador"
+title: "-BASE (dirección Base) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /base
+- VC.Project.VCLinkerTool.BaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- programs [C++], preventing relocation
+- semicolon [C++], specifier
+- -BASE linker option
+- key address size
+- environment variables [C++], LIB
+- programs [C++], base address
+- LIB environment variable
+- BASE linker option
+- DLLs [C++], linking
+- /BASE linker option
+- '@ symbol for base address'
+- executable files [C++], base address
+- at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ddf399757d881484817be676ca3077b4fc21709
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /BASE (Direcci&#243;n base)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="base-base-address"></a>/BASE (Dirección base)
 ```  
 /BASE:{address[,size] | @filename,key}  
 ```  
   
- La opción \/BASE establece una dirección base para el programa, con lo que se reemplaza la ubicación predeterminada de los archivos .exe \(0x400000\) o DLL \(0x10000000\).  En primer lugar, el sistema operativo intenta cargar los programas en la dirección base especificada o predeterminada.  Si en ella no hay espacio suficiente, el sistema cambiará la ubicación del programa.  Para evitarlo, se deberá utilizar la opción [\/FIXED](../../build/reference/fixed-fixed-base-address.md).  
+ La opción BASE establece una dirección base para el programa, se reemplaza la ubicación predeterminada de .exe o archivo DLL. La dirección base predeterminada para un archivo .exe es 0 x 400000 para imágenes de 32 bits o 0x140000000 para las imágenes de 64 bits. Para un archivo DLL, la dirección base predeterminada es 0 x 10000000 para imágenes de 32 bits o 0x180000000 para las imágenes de 64 bits. En sistemas operativos que no admiten la selección aleatoria de diseño de espacio de direcciones (ASLR) o cuando se establece la opción /DYNAMICBASE:NO, en primer lugar el sistema operativo intenta cargar un programa en su especificado o la dirección base predeterminada. Si suficiente espacio no está disponible, el sistema vuelve a colocar el programa. Para evitarlo, use la [/FIXED](../../build/reference/fixed-fixed-base-address.md) opción.  
   
- Si *address* no es un múltiplo de 64K, el vinculador generará un error.  Opcionalmente, puede especificar el tamaño del programa, de modo que el vinculador le advierta si el programa no puede ajustarse al tamaño especificado.  
+ El vinculador emite un error si *dirección* no es un múltiplo de 64 K. También puede especificar el tamaño del programa; el vinculador emite una advertencia si el programa no cabe en el tamaño especificado.  
   
- En la línea de comandos, otro método para especificar la dirección base consiste en usar *filename* precedido del signo arroba \(@\) e incluir `key` en el archivo.  *filename* es un archivo de texto que contiene la ubicación y el tamaño de todas las DLL que va a usar el programa.  El vinculador busca *filename* en la ruta de acceso especificada o, de no especificarse, en los directorios mencionados en la variable de entorno LIB.  Cada línea de *filename* representa una DLL y tiene la siguiente sintaxis:  
+ En la línea de comandos, otro método para especificar la dirección base es mediante un archivo de respuesta de la dirección base. Un archivo de respuesta de la dirección base es un archivo de texto que contiene las direcciones base y los tamaños opcionales de todas las DLL que se va a usar el programa y una clave de texto única para cada dirección base. Para especificar una dirección base mediante un archivo de respuesta, use una arroba (@) seguido del nombre del archivo de respuesta, *filename*, seguido de una coma, la `key` valor para la dirección base para utilizarla en el archivo. El vinculador busca *filename* en la ruta especificada, o si no se especifica ninguna ruta de acceso, en los directorios especificados en la variable de entorno LIB. Cada línea en *filename* representa una DLL y tiene la siguiente sintaxis:  
   
 ```  
   
-key address [size] ;comment  
+key address [size] ;comment  
 ```  
   
- El parámetro `key` está formado por una cadena de caracteres alfanuméricos sin distinción entre mayúsculas y minúsculas.  Normalmente, aunque no de forma obligatoria, es el nombre de una DLL.  El parámetro `key` va seguido de una dirección base \(*address*\) en lenguaje C, con notación decimal o hexadecimal, y de un tamaño máximo opcional \(`size`\).  Los tres argumentos van separados por espacios o tabulaciones.  El vinculador mostrará una advertencia si el tamaño especificado \(`size`\) es inferior al espacio virtual de direcciones requerido por el programa.  `comment` se especifica con un punto y coma \(;\) y puede estar en esa misma línea o en una línea aparte.  El vinculador omitirá cualquier texto situado entre el punto y coma y el final de la línea.  En este ejemplo se muestra parte de un archivo como el mencionado:  
+ El `key` es una cadena de caracteres alfanuméricos y no distingue mayúsculas de minúsculas. Suele ser el nombre de un archivo DLL, pero no es necesario tener. El `key` va seguido de una base de *dirección* en notación de lenguaje C, hexadecimal o decimal y un máximo opcional `size`. Los tres argumentos están separados por espacios o tabulaciones. El vinculador emite una advertencia si especificado `size` es menor que el espacio de direcciones virtuales requerido por el programa. Un `comment` se especifica mediante un punto y coma (;) y puede estar en la misma o una línea independiente. El vinculador omite todo el texto desde el punto y coma al final de la línea. Este ejemplo muestra parte de un archivo:  
   
 ```  
 main   0x00010000    0x08000000    ; for PROJECT.exe  
@@ -61,31 +62,31 @@ one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL  
 ```  
   
- Si el archivo que contiene estas líneas se denomina DLLS.txt, el comando del ejemplo siguiente aplicará esta información:  
+ Si el archivo que contiene estas líneas se denomina DLLS.txt, el comando de ejemplo siguiente aplica esta información:  
   
 ```  
 link dlltwo.obj /dll /base:@dlls.txt,two  
 ```  
   
-## Comentarios  
- Es posible reducir la paginación y mejorar el rendimiento de un programa asignando direcciones base para evitar que las DLL se superpongan en el espacio de direcciones.  
+## <a name="remarks"></a>Comentarios  
+ Por motivos de seguridad, Microsoft recomienda usar la [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) opción en lugar de especificar las direcciones base para los archivos ejecutables. Esto genera una imagen ejecutable que se pueda reorganizar aleatoriamente en tiempo de carga mediante el uso de la característica de selección aleatoria (ASLR) de diseño del espacio de direcciones de Windows. La opción/DynamicBase está activada de forma predeterminada.  
   
- Otra forma de establecer la dirección base es por medio del argumento *BASE* en una instrucción [NAME](../../build/reference/name-c-cpp.md) o [LIBRARY](../../build/reference/library.md).  Las opciones \/BASE y [\/DLL](../../build/reference/dll-build-a-dll.md) juntas equivalen a la instrucción **LIBRARY**.  
+ Otra manera de establecer la dirección base es mediante el uso de la *BASE* argumento en un [nombre](../../build/reference/name-c-cpp.md) o [biblioteca](../../build/reference/library.md) instrucción. El /BASE y [/DLL](../../build/reference/dll-build-a-dll.md) opciones juntas equivalen a la **biblioteca** instrucción.  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Expanda el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Avanzadas**.  
+3.  Elija la **avanzadas** página de propiedades.  
   
-4.  Modifique la propiedad **Dirección base**.  
+4.  Modificar el **dirección Base** propiedad.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

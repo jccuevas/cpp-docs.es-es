@@ -48,11 +48,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c1678b523b9225e7ea0986e5ef8d00c5fd31391
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08a476172291c52865fe2abb9fb872e388078ac5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 Convierte cadenas en un valor entero largo sin signo.  
@@ -114,7 +115,7 @@ long _wcstol_l(
 |`_tcstol`|`strtol`|`strtol`|`wcstol`|  
 |`_tcstol_l`|`_strtol_l`|`_strtol_l`|`_wcstol_l`|  
   
- El valor de la categoría `LC_NUMERIC` de la configuración regional actual determina el reconocimiento del carácter de base de `nptr`*.* Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las funciones sin el sufijo `_l` usan la configuración regional actual; `_strtol_l` y `_wcstol_l` son idénticas a las funciones correspondientes sin el sufijo `_l`, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de la categoría `LC_NUMERIC` de la configuración regional actual determina el reconocimiento del carácter de base de `nptr`*.* Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las funciones sin el sufijo `_l` usan la configuración regional actual; `_strtol_l` y `_wcstol_l` son idénticas a las funciones correspondientes sin el sufijo `_l`, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` no es `NULL`, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que señala `endptr`. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de `nptr` se almacena en la ubicación a la que señala `endptr`.  
   

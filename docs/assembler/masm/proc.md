@@ -1,32 +1,31 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: PROC | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las marcas inician y final de un bloque de procedimiento denominado *etiqueta*.  Las instrucciones del bloque se pueden llamar a la instrucción de **Llamada** o la directiva de [INVOCAR](../../assembler/masm/invoke.md) .  
+# <a name="proc"></a>PROC
+Marca el principio y final de un bloque de procedimiento llamado *etiqueta*. Las instrucciones del bloque se pueden llamar con la **llamar a** instrucción o [INVOKE](../../assembler/masm/invoke.md) directiva.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -37,14 +36,14 @@ statements
 label ENDP  
 ```  
   
-## Comentarios  
- \[FRAME \[:*la ehandler\-dirección*\]\] sólo es válido con ml64.exe, haga MASM para generar una entrada de tabla de la función en .pdata y desenredar la información en .xdata para el control de excepciones estructurado de una función desenredo el comportamiento.  
+## <a name="remarks"></a>Comentarios  
+ [Marco [:*ehandler dirección*]] sólo es válido con ml64.exe y hace que MASM generar una entrada de tabla de funciones en .pdata e información de desenredo en .xdata para una función de la estructura comportamiento de desenredo del control de excepciones.  
   
- Cuando se utiliza el atributo de **Marco** , debe ir seguido de una directiva de [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) .  
+ Cuando el **marco** se usa el atributo, debe ir seguido por un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) directiva.  
   
- Vea [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obtener más información sobre cómo utilizar ml64.exe.  
+ Vea [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) para obtener más información sobre el uso de ml64.exe.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -66,7 +65,7 @@ _text ENDS
 END  
 ```  
   
- El código anterior emitirá la tabla de función siguiente y desenrollará información:  
+ El código anterior se emita la siguiente tabla de funciones e información de desenredo:  
   
 ```  
 FileHeader->Machine 34404  
@@ -89,5 +88,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

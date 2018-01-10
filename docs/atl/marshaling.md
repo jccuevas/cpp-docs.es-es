@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec8c85606f0f0ef3de67a61181ead6537fde179e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89b64794c50e381c07749984ce61579951fa02f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaling"></a>el cálculo de referencias
 La técnica de COM de la serialización permite interfaces expuestas por un objeto en un proceso para su uso en otro proceso. En el cálculo de referencias, COM proporciona el código (o utiliza el código proporcionado por el implementador de la interfaz) para empaquetar los parámetros del método en un formato que se puede mover entre procesos (y, a través de la conexión a procesos que se ejecutan en otras máquinas) y para desempaquetar dichos parámetros en el otro extremo. Del mismo modo, COM debe realizar estos mismos pasos en la devolución de la llamada.  

@@ -1,49 +1,50 @@
 ---
-title: "Definir una macro NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "definir macros de NMAKE"
-  - "macros, NMAKE"
-  - "NMAKE (macros), definir"
+title: Definir una Macro NMAKE | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, NMAKE
+- defining NMAKE macros
+- NMAKE macros, defining
 ms.assetid: 45aae451-9d33-4a3d-8799-2e0cae17070d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 96799bbd10d442c50d66ac4e84169864b9b989ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Definir una macro NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Sintaxis  
+# <a name="defining-an-nmake-macro"></a>Definir una macro NMAKE
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 macroname=string  
 ```  
   
-## Comentarios  
- El argumento *macroname* es una combinación de letras, dígitos y caracteres de subrayado \(\_\) que puede tener hasta 1.024 caracteres y distingue entre mayúsculas y minúsculas.  Puede contener una macro a la que se ha llamado.  Si consta en su totalidad de una macro a la que se ha llamado, ésta no puede ser nula o no estar definida.  
+## <a name="remarks"></a>Comentarios  
+ El *Nombredelamacro* es una combinación de letras, dígitos y caracteres de subrayado (_) hasta 1.024 caracteres y distingue mayúsculas de minúsculas. El *Nombredelamacro* puede contener una macro invocada. Si *Nombredelamacro* consta únicamente de una macro, la macro que se va a invocar no puede ser null ni indefinido.  
   
- El argumento `string` puede ser cualquier secuencia con varios caracteres o ninguno.  Una cadena nula no contiene caracteres; sólo puede contener espacios o tabulaciones.  El argumento `string` puede contener una llamada de macro.  
+ La `string` puede ser cualquier secuencia de cero o más caracteres. Una cadena nula contiene cero caracteres o solo espacios o tabulaciones. La `string` puede contener una llamada de macro.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
  [Caracteres especiales en las macros](../build/special-characters-in-macros.md)  
   
- [Macros Null y no definidas](../build/null-and-undefined-macros.md)  
+ [Macros nulos y no definidas](../build/null-and-undefined-macros.md)  
   
  [Dónde definir macros](../build/where-to-define-macros.md)  
   
- [La precedencia en las definiciones de macro](../build/precedence-in-macro-definitions.md)  
+ [Prioridad en definiciones de macro](../build/precedence-in-macro-definitions.md)  
   
-## Vea también  
- [Las macros y NMAKE](../build/macros-and-nmake.md)
+## <a name="see-also"></a>Vea también  
+ [Macros y NMAKE](../build/macros-and-nmake.md)

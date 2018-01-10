@@ -30,11 +30,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50dab1d85b4ad733874225f98489ff295202c1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d77f0f7eb0c9eabf8626a920e04534c79048bd90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freads"></a>fread_s
 Lee datos desde una secuencia. Esta versión de [fread](../../c-runtime-library/reference/fread.md) incluye mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -65,7 +66,7 @@ size_t fread_s(
  Número máximo de elementos que se va a leer.  
   
  `stream`  
- Puntero a la estructura `FILE`.  
+ Puntero a la estructura `FILE` .  
   
 ## <a name="return-value"></a>Valor devuelto  
  `fread_s` devuelve el número de elementos (completos) que se han leído en el búfer, que puede ser menor que `count` si se encuentra un error de lectura o el final del archivo antes de llegar a `count`. Use la función `feof` o `ferror` para distinguir una condición de error de una condición de final de archivo. Si `size` o `count` es 0, `fread_s` devuelve 0 y el contenido del búfer queda sin cambios. Si `stream` o `buffer` es un puntero nulo, `fread_s` invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  

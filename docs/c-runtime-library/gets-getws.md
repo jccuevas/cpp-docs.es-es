@@ -38,11 +38,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc8a2277995cc9ddbb36cbceda68e0ba4a862b59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gets-getws"></a>gets, _getws
 Obtiene una línea del flujo `stdin` . Hay disponibles versiones más seguras de estas funciones; vea [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -100,7 +101,7 @@ wchar_t *_getws(
 |`gets`|\<stdio.h>|  
 |`_getws`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

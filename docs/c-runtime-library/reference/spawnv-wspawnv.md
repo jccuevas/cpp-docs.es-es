@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - wspawnv
 - _spawnv
 - _wspawnv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wspawnv function
 - processes, creating
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7e379ff312e481d74412a6337de352adb113dd6e
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1d7f8adb0822ee43af21a2a31143ba8ee871b407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 Crea y ejecuta un nuevo proceso.  
@@ -102,7 +86,7 @@ intptr_t _wspawnv(
  La lista de argumentos supera los 1024 bytes.  
   
  `EINVAL`  
-El argumento `mode` no es válido.  
+ El argumento `mode` no es válido.  
   
  `ENOENT`  
  El archivo o la ruta de acceso no se encuentra.  
@@ -127,7 +111,7 @@ El argumento `mode` no es válido.
 |`_spawnv`|\<stdio.h> o \<process.h>|  
 |`_wspawnv`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

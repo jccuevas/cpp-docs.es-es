@@ -1,35 +1,36 @@
 ---
-title: "Conflictos con el compilador de x86 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Entra en conflicto con el x86 compilador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8e47f0d3-afe0-42d9-9efa-de239ddd3a05
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b2b9c4cf871e8436a8da34a862d205541e7dc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Conflictos con el compilador de x86
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los tipos de datos que son mayores que 4 bytes no están alineados automáticamente en la pila al utilizar el compilador de x86 para compilar una aplicación.  Puesto que la arquitectura para el compilador de x86 es una pila alineada de 4 bytes, algo mayor que 4 bytes, por ejemplo, un entero de 64 bits, no puede estar alineado automáticamente a una dirección de 8 bytes.  
+# <a name="conflicts-with-the-x86-compiler"></a>Conflictos con el compilador de x86
+Tipos de datos que son mayores de 4 bytes no se alinean automáticamente en la pila cuando se usa el x86 compilador para compilar una aplicación. Dado que la arquitectura de la x86 compilador es una pila alineada de 4 bytes, cualquier valor mayor de 4 bytes, por ejemplo, un entero de 64 bits, no se alineará automáticamente con una dirección de 8 bytes.  
   
- Trabajar con datos no alineados tiene dos consecuencias.  
+ Trabajar con datos no alineados tiene dos implicaciones.  
   
--   Puede llevar mucho más tiempo tener acceso a las ubicaciones desalineadas que el tiempo que se tarda en tener acceso a las ubicaciones alineadas.  
+-   Puede tardar más tiempo en obtener acceso a ubicaciones desalineadas necesario para tener acceso a ubicaciones alineadas.  
   
--   Las ubicaciones desalineadas no se pueden utilizar en operaciones entrelazadas.  
+-   Ubicaciones desalineadas no se puede usar en las operaciones de interbloqueos.  
   
- Si se necesita una alineación más estricta, use `__declspec(align(N)) on your variable declarations`.  Esto provoca que el compilador alinee la pila de forma dinámica para cumplir sus especificaciones.  Sin embargo, ajustar la pila dinámicamente en tiempo de ejecución puede provocar una ejecución más lenta de la aplicación.  
+ Si necesita una alineación más estricta, utilice `__declspec(align(N)) on your variable declarations`. Esto hace que el compilador alinear dinámicamente la pila para cumplir sus especificaciones. Sin embargo, al ajustar la pila dinámicamente en tiempo de ejecución, puede producir una ejecución más lenta de la aplicación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos y almacenamiento](../build/types-and-storage.md)   
  [align](../cpp/align-cpp.md)

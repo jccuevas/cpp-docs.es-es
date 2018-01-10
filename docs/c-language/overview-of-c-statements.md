@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc4f9bc1b34ed884548a2614444c75efd2277287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 473a91651e52d04dbeb15301520c6c8984808551
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-c-statements"></a>Información general sobre las instrucciones de C
 Las instrucciones de C se componen de tokens, expresiones y otras instrucciones. Una instrucción que forma un componente de otra instrucción se denomina el “cuerpo” de la instrucción de inclusión. En esta sección se analiza cada tipo de instrucción que se da con la sintaxis siguiente.  

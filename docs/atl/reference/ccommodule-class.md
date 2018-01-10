@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>CComModule (clase)
 A partir de ATL 7.0, `CComModule` está en desuso: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
@@ -81,7 +65,7 @@ class CComModule : public _ATL_MODULE
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComModule::GetClassObject](#getclassobject)|Crea un objeto de CLSID especificado. Para las DLL solo.|  
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Devuelve `m_hInst`.|  
@@ -102,7 +86,7 @@ class CComModule : public _ATL_MODULE
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComModule::m_csObjMap](#m_csobjmap)|Se garantiza un acceso sincronizado a la información de asignación de objeto.|  
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Se garantiza un acceso sincronizado a la información de la biblioteca de tipos.|  
@@ -194,7 +178,7 @@ HINSTANCE GetResourceInstance() throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Interfaz `HINSTANCE`.  
+ Una clase `HINSTANCE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Devuelve el [m_hInstResource](#m_hinstresource) miembro de datos.  
@@ -207,7 +191,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Interfaz `HINSTANCE`.  
+ Una clase `HINSTANCE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Devuelve el [m_hInstTypeLib](#m_hinsttypelib) miembro de datos.  
@@ -363,10 +347,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `dwClsContext`  
- [in] Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, o **CLSCTX_LOCAL_SERVER**. Para obtener una descripción de estos valores, consulte [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, o **CLSCTX_LOCAL_SERVER**. Para obtener una descripción de estos valores, consulte [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) del SDK de Windows.  
   
  `dwFlags`  
- [in] Determina los tipos de conexión para el objeto de clase. Los valores posibles son **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, o **REGCLS_MULTI_SEPARATE**. Para obtener una descripción de estos valores, consulte [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Determina los tipos de conexión para el objeto de clase. Los valores posibles son **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, o **REGCLS_MULTI_SEPARATE**. Para obtener una descripción de estos valores, consulte [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) del SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  
@@ -642,4 +626,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)
-

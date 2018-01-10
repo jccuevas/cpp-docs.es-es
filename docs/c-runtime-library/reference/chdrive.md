@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chdrive
+apiname: _chdrive
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - chdrive
 - _chdrive
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - drives, changing
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 946f5bee25b093d024eecc030527be39ad1a0162
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b7733a366ade87dd937eb20eab97a5258db8787a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chdrive"></a>_chdrive
 Cambia la unidad de trabajo actual.  
@@ -82,7 +65,7 @@ int _chdrive(
 ## <a name="remarks"></a>Comentarios  
  Si `drive` no está comprendido en el rango de 1 a 26, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función **_chdrive** devuelve -1, `errno` se establece en `EACCES` y `_doserrno`, en `ERROR_INVALID_DRIVE`.  
   
- La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vaya a [Catálogo de referencia y API de Microsoft](http://go.microsoft.com/fwlink/?LinkID=150542) y busque **SetCurrentDirectory**.  
+ La función **_chdrive** no es segura para subprocesos porque depende de la función **SetCurrentDirectory**, que a su vez no es segura para subprocesos. Para usar **_chdrive** de forma segura en una aplicación multiproceso, debe proporcionar su propia sincronización de subprocesos. Para obtener más información, vaya a [Catálogo de referencia y API de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=150542) y busque **SetCurrentDirectory**.  
   
  La función **_chdrive** solo cambia la unidad de trabajo actual; **_chdir** cambia el directorio de trabajo actual.  
   
@@ -92,7 +75,7 @@ int _chdrive(
 |-------------|---------------------|  
 |**_chdrive**|\<direct.h>|  
   
- Para obtener más información, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Consulte el ejemplo de [_getdrive](../../c-runtime-library/reference/getdrive.md).  

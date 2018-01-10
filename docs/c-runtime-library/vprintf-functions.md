@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>vprintf (Funciones)
 Cada una de las funciones `vprintf` toma un puntero a una lista de argumentos y, después, aplica formato a los datos determinados y los escribe en un destino concreto. Las funciones se diferencian en la validación de parámetros realizada, si las funciones adoptan cadenas de caracteres de byte único o de caracteres anchos, el destino de salida y la posibilidad de especificar el orden en que se usan los parámetros en la cadena de formato.  
@@ -73,7 +74,7 @@ Cada una de las funciones `vprintf` toma un puntero a una lista de argumentos y,
 |`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Memoria a la que apunta el *búfer*|Buscar valores Null.|No|  
 |`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|Memoria a la que apunta el *búfer*|Buscar valores Null.|No|  
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Memoria a la que apunta el *búfer*|Buscar valores Null.|No|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Memoria a la que apunta el *búfer*|Buscar valores Null.|no|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|Memoria a la que apunta el *búfer*|Buscar valores Null.|No|  
   
  El argumento `argptr` es del tipo `va_list`, que se define en VARARGS.H y STDARG.H. La variable `argptr` debe inicializarse mediante **va_start,** y debe reinicializarse con llamadas posteriores a `va_arg`; `argptr` apunta después al principio de una lista de argumentos que se convierten y transmiten para la salida según las especificaciones correspondientes del argumento *format*. El *formato* tiene la misma forma y función que el argumento *format* de [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Ninguna de estas funciones invoca a `va_end`. Para obtener una descripción más completa de cada función `vprintf`, vea la descripción de su función equivalente, como se muestra en la tabla anterior.  
   
