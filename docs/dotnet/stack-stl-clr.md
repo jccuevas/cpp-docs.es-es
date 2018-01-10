@@ -1,36 +1,38 @@
 ---
-title: "stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/stack> (encabezado) [STL/CLR]"
-  - "<stack> (encabezado) [STL/CLR]"
-  - "clase de pila [STL/CLR]"
+title: pila (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack
+dev_langs: C++
+helpviewer_keywords:
+- <stack> header [STL/CLR]
+- <cliext/stack> header [STL/CLR]
+- stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un objeto que controla una secuencia de la variar\- longitud de elementos que tenga acceso de último en entrar, primero en salir\).  Utiliza el adaptador `stack` de contenedor para administrar un contenedor subyacente como pila de inserción \- a continuación.  
+# <a name="stack-stlclr"></a>stack (STL/CLR)
+La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tenga acceso a la última en salir. Usar el adaptador de contenedor `stack` para administrar un contenedor subyacente como una pila de inserción.  
   
- En la descripción siguiente, `GValue` es igual que `Value` a menos que este último es un tipo de referencia, en este caso es `Value^`.  De igual forma, `GContainer` es igual que `Container` a menos que este último es un tipo de referencia, en este caso es `Container^`.  
+ En la descripción siguiente, `GValue` es el mismo que `Value` a menos que el segundo es un tipo de referencia, en cuyo caso es `Value^`. De forma similar, `GContainer` es el mismo que `Container` a menos que el segundo es un tipo de referencia, en cuyo caso es `Container^`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Value,  
@@ -42,71 +44,71 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  Valor  
  Tipo de un elemento de la secuencia controlada.  
   
- Contenedor  
+ contenedor  
  Tipo del contenedor subyacente.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|[stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)|El tipo de una referencia constante a un elemento.|  
-|[stack::container\_type](../dotnet/stack-container-type-stl-clr.md)|Tipo del contenedor subyacente.|  
-|[stack::difference\_type](../dotnet/stack-difference-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
-|[stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)|El tipo de interfaz genérica para el adaptador del contenedor.|  
-|[stack::generic\_value](../dotnet/stack-generic-value-stl-clr.md)|El tipo de un elemento de la interfaz genérica para el adaptador del contenedor.|  
-|[stack::reference](../dotnet/stack-reference-stl-clr.md)|El tipo de una referencia a un elemento.|  
-|[stack::size\_type](../dotnet/stack-size-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
-|[stack::value\_type](../dotnet/stack-value-type-stl-clr.md)|El tipo de un elemento.|  
+|---------------------|-----------------|  
+|[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|El tipo de una referencia constante a un elemento.|  
+|[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Tipo del contenedor subyacente.|  
+|[stack::difference_type (STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
+|[stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|El tipo de la interfaz genérica para el adaptador de contenedor.|  
+|[stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|El tipo de un elemento de la interfaz genérica para el adaptador de contenedor.|  
+|[stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)|El tipo de una referencia a un elemento.|  
+|[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|El tipo de una distancia con signo entre dos elementos.|  
+|[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|El tipo de un elemento.|  
   
-|Función de miembro|Descripción|  
-|------------------------|-----------------|  
-|[stack::assign](../dotnet/stack-assign-stl-clr.md)|Reemplaza todos los elementos.|  
-|[stack::empty](../dotnet/stack-empty-stl-clr.md)|Comprueba si no hay elementos presentes.|  
-|[stack::get\_container](../dotnet/stack-get-container-stl-clr.md)|Tiene acceso al contenedor subyacente.|  
-|[stack::pop](../dotnet/stack-pop-stl-clr.md)|Quita el último elemento.|  
-|[stack::push](../dotnet/stack-push-stl-clr.md)|Agrega un nuevo elemento pasado.|  
-|[stack::size](../dotnet/stack-size-stl-clr.md)|Cuenta el número de elementos.|  
-|[stack::stack](../dotnet/stack-stack-stl-clr.md)|Construye un objeto contenedor.|  
-|[stack::top](../dotnet/stack-top-stl-clr.md)|Tiene acceso al último elemento.|  
-|[stack::to\_array](../dotnet/stack-to-array-stl-clr.md)|Copia la secuencia controlada a una nueva matriz.|  
+|Función miembro|Descripción|  
+|---------------------|-----------------|  
+|[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Reemplaza todos los elementos.|  
+|[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Comprueba si no hay ningún elemento presente.|  
+|[stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|Se tiene acceso del contenedor subyacente.|  
+|[stack::pop (STL/CLR)](../dotnet/stack-pop-stl-clr.md)|Quita el último elemento.|  
+|[stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)|Agrega un nuevo elemento de la última.|  
+|[stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)|Cuenta el número de elementos.|  
+|[stack::stack (STL/CLR)](../dotnet/stack-stack-stl-clr.md)|Construye un objeto contenedor.|  
+|[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Obtiene acceso al último elemento.|  
+|[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Copia la secuencia controlada en una nueva matriz.|  
   
-|Propiedad|Descripción|  
-|---------------|-----------------|  
-|[stack::top\_item](../dotnet/stack-top-item-stl-clr.md)|Tiene acceso al último elemento.|  
+|Property|Descripción|  
+|--------------|-----------------|  
+|[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Obtiene acceso al último elemento.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|[stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)|Reemplaza la secuencia controlada.|  
-|[operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)|Determina si un objeto de `stack` no es igual a otro objeto de `stack` .|  
-|[operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)|Determina si un objeto de `stack` es menor que otro objeto de `stack` .|  
-|[operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Determina si un objeto de `stack` menor o igual que otro objeto de `stack` .|  
-|[operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)|Determina si un objeto de `stack` es igual a otro objeto de `stack` .|  
-|[operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)|Determina si un objeto de `stack` es mayor que otro objeto de `stack` .|  
-|[operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Determina si un objeto de `stack` mayor o igual que otro objeto de `stack` .|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Reemplaza la secuencia controlada.|  
+|[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Determina si un `stack` no es igual a otro objeto `stack` objeto.|  
+|[operator< (stack) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|Determina si un `stack` objeto es menor que otro `stack` objeto.|  
+|[operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Determina si un `stack` objeto es menor o igual que otro `stack` objeto.|  
+|[operator== (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|Determina si un `stack` es igual a otro objeto `stack` objeto.|  
+|[operator> (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|Determina si un `stack` es mayor que otro objeto `stack` objeto.|  
+|[operator>= (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Determina si un `stack` objeto es mayor o igual que otro `stack` objeto.|  
   
-## Interfaces  
+## <a name="interfaces"></a>Interfaces  
   
 |Interfaz|Descripción|  
-|--------------|-----------------|  
-|<xref:System.ICloneable>|Dupliquen un objeto.|  
-|IStackValue\<, contenedor\>|Mantenga el adaptador genérico del contenedor.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Duplicar un objeto.|  
+|IStack\<valor, contenedor >|Mantener el adaptador de contenedor genérico.|  
   
-## Comentarios  
- El objeto asigna y libera el almacenamiento de la secuencia que controla a través de un contenedor subyacente, de `Container`escrito, que almacena los elementos de `Value` y crece a petición.  El objeto limita el acceso a insertar y a extraen solo el último elemento, implementando una cola de último en entrar, primero en salir \(también conocida como una cola LIFO, o montón\).  
+## <a name="remarks"></a>Comentarios  
+ El objeto asigna y libera almacenamiento para la secuencia que controla a través de un contenedor subyacente, de tipo `Container`, que almacena `Value` elementos y crece a petición. El objeto restringe el acceso a insertar y retirar solo el último elemento, la implementación de una cola de último en entrar en salir (también conocido como una cola de LIFO o pila).  
   
-## Requisitos  
- cliext \<\/pila de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/pila >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [vector](../dotnet/vector-stl-clr.md)   
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Referencia de la biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

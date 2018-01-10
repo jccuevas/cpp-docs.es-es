@@ -51,11 +51,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 737cf083eeca60cd0d6ac95cccbe570c56968fd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59eb92e44a26577866a797243f3a32d53b854365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Clase CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -72,14 +73,14 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCOutlookBarPane::CMFCOutlookBarPane`|Constructor predeterminado.|  
 |`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Agrega un botón en el panel de la barra de Outlook.|  
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Determina si se puede acoplar el panel a otra panel o ventana de marco. (Invalida [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|  
@@ -107,7 +108,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Especifica qué elementos del menú contextual se muestran en el modo de personalización.|  
 |[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Quita todos los botones en el panel de la barra de Outlook. (Invalida [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  

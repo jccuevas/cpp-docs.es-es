@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbcb9a458863c7175b29c2c56800f4fd89308451
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3855"></a>Error del compilador C3855
 'clase': parámetro de tipo 'param' no es compatible con la declaración  
@@ -39,7 +40,7 @@ template <char N>
 void C<N>::f() {}   // C3855  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3855b.cpp  
@@ -70,7 +71,7 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3855d.cpp  

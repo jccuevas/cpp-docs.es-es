@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 93bb3b8f1b765b70128537b096142a9d7ac3ae8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 845c2fab98d246ccee51aff721b1ceb011e3803c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma y la palabra clave __pragma
 Las directivas pragma especifican características del compilador específicas del equipo o del funcionamiento. La palabra clave `__pragma`, que es específica del compilador de Microsoft, permite la codificación de directivas pragma dentro de definiciones de macro.  

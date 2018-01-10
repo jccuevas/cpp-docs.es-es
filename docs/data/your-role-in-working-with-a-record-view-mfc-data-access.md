@@ -1,45 +1,48 @@
 ---
-title: "Rol del programador al utilizar una vista de registros (acceso a datos MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, vistas de registros"
-  - "vistas de registros, personalizar el código predeterminado"
+title: El rol cuando se trabaja con una vista de registros (acceso a datos MFC) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- record views, customizing default code
+- MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 03d64715f3bdfb6028fdb039451d4b4b004a059e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Rol del programador al utilizar una vista de registros (acceso a datos MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Rol del programador al utilizar una vista de registros (acceso a datos MFC)
 La siguiente tabla muestra qué se debe hacer normalmente para trabajar con una vista de registros y qué tareas realiza el marco de trabajo.  
   
-### Trabajar con una vista de registros: el programador y el marco de trabajo  
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabajar con una vista de registros: el programador y el marco de trabajo  
   
 |El programador|El marco de trabajo|  
-|--------------------|-------------------------|  
-|Utiliza el editor de cuadros de diálogo de Visual C\+\+ para diseñar el formulario.|Crea un recurso de plantilla de cuadro de diálogo con controles.|  
-|Usa el [Asistente para aplicaciones MFC](../mfc/reference/database-support-mfc-application-wizard.md) para crear clases derivadas de [CRecordView](../mfc/reference/crecordview-class.md) y [CRecordset](../mfc/reference/crecordset-class.md) o de [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) y [CDaoRecordset](../mfc/reference/cdaorecordset-class.md).|Escribe las clases.|  
+|---------|-------------------|  
+|Utiliza el editor de cuadros de diálogo de Visual C++ para diseñar el formulario.|Crea un recurso de plantilla de cuadro de diálogo con controles.|  
+|Use la [Asistente para aplicaciones MFC](../mfc/reference/database-support-mfc-application-wizard.md) para crear clases derivadas de [CRecordView](../mfc/reference/crecordview-class.md) y [CRecordset](../mfc/reference/crecordset-class.md).|Escribe las clases.|  
 |Asigna controles de vista de registros a miembros de datos de campo de conjuntos de registros.|Proporciona DDX entre los controles y los campos de conjuntos de registros.|  
-||Proporciona controladores de comandos predeterminados para los comandos **Mover primero**, **Mover último**, **Mover siguiente** y **Mover anterior** de los menús o botones de la barra de herramientas.|  
+||Proporciona predeterminada de controladores de comandos para **mover primero**, **Mover último**, **Mover siguiente**, y **mover anterior** comandos de menús o barra de herramientas botones.|  
 ||Actualiza los cambios en el origen de datos.|  
-|\[Opcional\] Escribe código para rellenar cuadros de lista, cuadros combinados u otros controles con datos de otro conjunto de registros.||  
-|\[Opcional\] Escribe código para las validaciones especiales.||  
-|\[Opcional\] Escribe código para agregar o eliminar registros.||  
+|[Opcional] Escribe código para rellenar cuadros de lista, cuadros combinados u otros controles con datos de otro conjunto de registros.||  
+|[Opcional] Escribe código para las validaciones especiales.||  
+|[Opcional] Escribe código para agregar o eliminar registros.||  
   
- La programación basada en formularios es solo una forma de trabajar con una base de datos.  Para obtener información sobre las aplicaciones con otra interfaz de usuario o sin interfaz de usuario, consulte [MFC: Utilizar clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md) y [MFC: Utilizar clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md).  Para conocer otras maneras de mostrar registros de la base de datos, consulte las clases [CListView](../mfc/reference/clistview-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md).  
+ La programación basada en formularios es solo una forma de trabajar con una base de datos. Para obtener información acerca de las aplicaciones con otra interfaz de usuario o sin interfaz de usuario, consulte [MFC: utilizar clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md) y [MFC: utilizar clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md). Para conocer otras maneras de mostrar registros de base de datos, vea clases [CListView](../mfc/reference/clistview-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md).  
   
-## Vea también  
- [Vistas de registros \(acceso a datos MFC\)](../data/record-views-mfc-data-access.md)   
+## <a name="see-also"></a>Vea también  
+ [Vistas de registros (acceso a datos MFC)](../data/record-views-mfc-data-access.md)   
  [Lista de controladores ODBC](../data/odbc/odbc-driver-list.md)

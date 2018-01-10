@@ -1,72 +1,74 @@
 ---
-title: "CRowset::Update | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.Update"
-  - "ATL.CRowset.Update"
-  - "ATL.CRowset<TAccessor>.Update"
-  - "ATL::CRowset<TAccessor>::Update"
-  - "CRowset<TAccessor>::Update"
-  - "CRowset::Update"
-  - "CRowset<TAccessor>.Update"
-  - "ATL::CRowset::Update"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Update (método)"
+title: 'CRowset:: Update | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.Update
+- ATL.CRowset.Update
+- ATL.CRowset<TAccessor>.Update
+- ATL::CRowset<TAccessor>::Update
+- CRowset<TAccessor>::Update
+- CRowset::Update
+- CRowset<TAccessor>.Update
+- ATL::CRowset::Update
+dev_langs: C++
+helpviewer_keywords: Update method
 ms.assetid: cd5fedc8-2b85-4cb8-8c40-c79576316903
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Update
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Transmite los cambios pendientes realizados en la fila actual desde la última recuperación o llamada a de **Actualización** en ella.  
+# <a name="crowsetupdate"></a>CRowset::Update
+Los cambios pendientes realizados en la fila actual desde la última recuperación transmite o **actualización** llamar en ella.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT Update(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
+      HRESULT Update(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW* phRow = NULL,   
+   DBROWSTATUS* pStatus = NULL    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pcRows`  
- \[out\] Un puntero a la ubicación donde **Actualización** devuelve el número de filas que intentó actualizar, si es necesario.  
+ [out] Un puntero a la ubicación donde **actualizar** devuelve el número de filas que intentó actualizar, si es necesario.  
   
  `phRow`  
- \[out\] Un puntero a la ubicación donde **Actualización** devuelve el identificador de la fila que intentó actualizar.  No se devuelve ningún identificador si `phRow` es null.  
+ [out] Un puntero a la ubicación donde **actualizar** devuelve el identificador de la fila intentó actualizar. No hay ningún identificador se devuelve si `phRow` es null.  
   
  `pStatus`  
- \[out\] Un puntero a la ubicación donde **Actualización** devuelve el valor de estado de fila.  No se devuelve ningún estado si `pStatus` es null.  
+ [out] Un puntero a la ubicación donde **actualización** devuelve el valor de estado de fila. Si no se devuelve ningún estado `pStatus` es null.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Transmite los cambios pendientes realizados en la fila actual puesto que la fila se capturada o actualizada por última vez \(mediante **Actualización** o [UpdateAll](../../data/oledb/crowset-updateall.md)\).  Normalmente se llama a [SetData](../../data/oledb/crowset-setdata.md) para establecer valores de datos de columnas de una fila, y después llama **Actualización** para transmitir los cambios.  
+## <a name="remarks"></a>Comentarios  
+ Los cambios pendientes realizados en la fila actual desde que se capturan o se actualizó por última esa fila transmite (mediante **actualización** o [UpdateAll](../../data/oledb/crowset-updateall.md)). Se suele llamar a [SetData](../../data/oledb/crowset-setdata.md) para establecer los valores de datos de columnas de una fila y, a continuación, llame a **actualización** para transmitir los cambios.  
   
- Este método requiere la interfaz opcional `IRowsetUpdate`, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetUpdate** a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+ Este método requiere que la interfaz opcional `IRowsetUpdate`, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetUpdate** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
+ [IRowsetUpdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset:: UpdateAll](../../data/oledb/crowset-updateall.md)   
  [CRowset::SetData](../../data/oledb/crowset-setdata.md)

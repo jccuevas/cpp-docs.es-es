@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 Convierte un valor de punto flotante en una cadena. Se trata de una versión de [_gcvt](../../c-runtime-library/reference/gcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -85,9 +86,9 @@ errno_t _gcvt_s(
   
 |`buffer`|`sizeInBytes`|`value`|`digits`|Volver|Valor de `buffer`|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|`EINVAL`|No modificado.|  
-|No `NULL` (apunta a la memoria válida)|cero|any|cualquiera|`EINVAL`|No modificado.|  
-|No `NULL` (apunta a la memoria válida)|any|cualquiera|>= `sizeInBytes`|`EINVAL`|No se ha modificado.|  
+|`NULL`|any|any|any|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|cero|any|any|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|any|any|>= `sizeInBytes`|`EINVAL`|No modificado.|  
   
  **Problemas de seguridad**  
   
@@ -96,7 +97,7 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>Comentarios  
  La función `_gcvt_s` convierte un `value` de punto flotante en una cadena de caracteres (que incluye un separador decimal y un posible byte con signo) y almacena la cadena en `buffer`. `buffer` debe ser lo suficientemente grande como para contener el valor convertido más un carácter nulo final, que se anexa automáticamente. Un búfer de longitud `_CVTBUFSIZE` es suficiente para cualquier valor de punto flotante. Si se usa un tamaño de búfer de `digits` + 1, la función no sobrescribirá el final del búfer, así que asegúrese de proporcionar un búfer suficiente para esta operación. `_gcvt_s` intenta generar `digits` dígitos en formato decimal. En caso contrario, produce `digits` dígitos en formato exponencial. Los ceros finales pueden suprimirse en la conversión.  
   
- En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -106,7 +107,7 @@ errno_t _gcvt_s(
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

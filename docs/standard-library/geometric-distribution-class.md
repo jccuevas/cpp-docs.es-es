@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator!=
-- random/std::geometric_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::geometric_distribution [C++]
 - std::geometric_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 23ab208a32b193c8cf30eefd9382ac253e2518d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 21665d4ef570f7451e3c1f9739eafaf067659541
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution (Clase)
 Genera una distribución geométrica.  
@@ -102,7 +99,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución geométrica](http://go.microsoft.com/fwlink/LinkId=400529).  
+Para obtener información detallada sobre la distribución chi cuadrado, vea el artículo de Wolfram MathWorld sobre la [distribución geométrica](http://go.microsoft.com/fwlink/p/?linkid=400529).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -267,6 +264,5 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
   
 ## <a name="see-also"></a>Vea también  
 [\<random>](../standard-library/random.md)
-
 
 

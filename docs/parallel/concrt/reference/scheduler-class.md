@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69f26f344fd4cdccd2ff2a700dcd7e7d473e26a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-class"></a>Scheduler (Clase)
 Representa una abstracción para un programador del runtime de simultaneidad.  
@@ -57,7 +58,7 @@ class Scheduler;
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Asociar](#attach)|Adjunta al programador al contexto de la llamada. Después de que este método devuelve, el contexto de llamada está administrado por el programador y el programador se convierte en el programador actual.|  
 |[Crear](#create)|Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro, coloca una referencia inicial en el programador y devuelve un puntero a ella.|  

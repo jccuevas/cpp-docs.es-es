@@ -1,80 +1,81 @@
 ---
-title: "__incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incgsdword"
-  - "__incgsqword_cpp"
-  - "__incgsword_cpp"
-  - "__incgsword"
-  - "__incgsbyte"
-  - "__incgsbyte_cpp"
-  - "__incgsqword"
-  - "__incgsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incgsbyte (función intrínseca)"
-  - "__incgsword (función intrínseca)"
-  - "__incgsqword (función intrínseca)"
-  - "__incgsdword (función intrínseca)"
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incgsdword
+- __incgsqword_cpp
+- __incgsword_cpp
+- __incgsword
+- __incgsbyte
+- __incgsbyte_cpp
+- __incgsqword
+- __incgsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incgsbyte intrinsic
+- __incgsword intrinsic
+- __incgsqword intrinsic
+- __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7540219843a3a01968f62c58370cb979e5572943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __incgsbyte, __incgsword, __incgsdword, __incgsqword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Específicos de Microsoft**  
   
- Agregue uno al valor en una ubicación de memoria especificada por un desplazamiento en relación con el principio del segmento de `GS` .  
+ Agregue uno para el valor en una ubicación de memoria especificada por un desplazamiento relativo al principio de la `GS` segmento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __incgsbyte(   
-   unsigned long Offset   
+void __incgsbyte(   
+   unsigned long Offset   
 );  
-void __incgsword(   
-   unsigned long Offset   
+void __incgsword(   
+   unsigned long Offset   
 );  
-void __incgsdword(   
+void __incgsdword(   
    unsigned long Offset  
 );  
-void __incgsqword(   
-   unsigned long Offset   
+void __incgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Offset`  
- El desplazamiento desde el inicio de `GS`.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Offset`  
+ El desplazamiento desde el principio de `GS`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
-## Comentarios  
- Estos intrínseco solo están disponibles en modo kernel, y rutinas sólo están disponibles como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Estas funciones intrínsecas solo están disponibles en modo kernel, y las rutinas solo están disponibles como intrínsecos.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [\_\_addgsbyte, \_\_addgsword, \_\_addgsdword, \_\_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [\_\_readgsbyte, \_\_readgsdword, \_\_readgsqword, \_\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>Vea también  
+ [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
+ [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
-helpviewer_keywords:
-- Concurrency namespace
+dev_langs: C++
+helpviewer_keywords: Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2e5a153359b2696b281a25794a85b5c676f179ce
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 El espacio de nombres `Concurrency` proporciona las clases y funciones que dan acceso al Runtime de simultaneidad, un marco de programación simultáneo para C++. Para obtener más información, consulte [Runtime de simultaneidad](../../../parallel/concrt/concurrency-runtime.md).  
@@ -71,7 +54,7 @@ namespace concurrency;
 |----------|-----------------|  
 |[Concurrency::Extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |Name|Descripción|  
 |----------|-----------------|  
@@ -82,7 +65,7 @@ namespace concurrency;
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[affinity_partitioner (clase)](affinity-partitioner-class.md)|La clase `affinity_partitioner` es similar a la clase `static_partitioner`, pero mejora la afinidad de caché eligiendo la asignación de subintervalos para subprocesos de trabajo. Esta clase puede mejorar considerablemente el rendimiento cuando un bucle se vuelve a ejecutar sobre el mismo conjunto de datos, y los datos se ajustan al caché. Observe que el mismo objeto `affinity_partitioner` debe utilizarse con iteraciones posteriores de un bucle paralelo que se ejecuta sobre un conjunto de datos determinado, para beneficiarse de la situación de los datos.|  
 |[agent (clase)](agent-class.md)|Una clase diseñada para usarse como una clase base para todos los agentes independientes. Se usa para ocultar el estado de otros agentes e interactuar con el paso de mensajes.|  
@@ -186,21 +169,21 @@ namespace concurrency;
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
-|[agent_status](concurrency-namespace-enums.md#agent_status)|Los estados válidos para un `agent`.|  
+|[agent_status)](concurrency-namespace-enums.md#agent_status)|Los estados válidos para un `agent`.|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Los tipos de eventos a los que se puede realiza un seguimiento utilizando la funcionalidad de seguimiento proporcionada por la Biblioteca de agentes.|  
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|Los tipos de eventos a los que se puede realizar un seguimiento utilizando la funcionalidad de seguimiento proporcionada por el runtime de simultaneidad.|  
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|Marcas de seguimiento para los tipos de evento|  
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|El tipo de región crítica dentro del que se encuentra un contexto.|  
 |[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|La usa la directiva `DynamicProgressFeedback` para describir si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador, o únicamente se basarán en procesadores virtuales que entran y salen del estado de inactividad a través de llamadas a los métodos `Activate` y `Deactivate` en la interfaz `IVirtualProcessorRoot`. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
-|[join_type](concurrency-namespace-enums.md#join_type)|El tipo de un bloque de mensajería `join`.|  
-|[message_status](concurrency-namespace-enums.md#message_status)|Las respuestas válidas para una oferta de un objeto `message` a un bloque.|  
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Claves de directiva que describen aspectos de comportamiento del programador. Cada elemento de directiva se describe mediante un par clave-valor. Para obtener más información acerca de las directivas del programador y su impacto en los programadores, vea [programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|  
+|[join_type)](concurrency-namespace-enums.md#join_type)|El tipo de un bloque de mensajería `join`.|  
+|[message_status)](concurrency-namespace-enums.md#message_status)|Las respuestas válidas para una oferta de un objeto `message` a un bloque.|  
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Claves de directiva que describen aspectos de comportamiento del programador. Cada elemento de directiva se describe mediante un par clave-valor. Para obtener más información sobre las directivas del programador y su impacto en los programadores, vea [programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|  
 |[SchedulerType](concurrency-namespace-enums.md#schedulertype)|Utilizado por la directiva `SchedulerKind` para describir el tipo de subprocesos que el programador debería usar para contextos de ejecución subyacentes. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
 |[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|La usa la directiva `SchedulingProtocol` para describir el algoritmo de programación que utilizará el programador. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Se usa para denotar el estado en el que se encuentra un proxy del subproceso, cuando se ejecuta un cambio de contexto cooperativo en un proxy del subproceso diferente.|  
-|[task_group_status](concurrency-namespace-enums.md#task_group_status)|Describe el estado de ejecución de un objeto `task_group` o `structured_task_group`. Numeroso métodos que esperan tareas programadas para que se complete un grupo de tareas, devuelven un valor de este tipo.|  
+|[task_group_status)](concurrency-namespace-enums.md#task_group_status)|Describe el estado de ejecución de un objeto `task_group` o `structured_task_group`. Numeroso métodos que esperan tareas programadas para que se complete un grupo de tareas, devuelven un valor de este tipo.|  
 |[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows en tiempo de ejecución en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
   
 ### <a name="functions"></a>Funciones  
@@ -287,9 +270,8 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Un identificador GUID de categoría que describe eventos ETW desencadenados por el runtime de simultaneidad que están directamente relacionados con los procesadores virtuales.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
+ **Encabezado:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ List.h ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia](reference-concurrency-runtime.md)
-
 

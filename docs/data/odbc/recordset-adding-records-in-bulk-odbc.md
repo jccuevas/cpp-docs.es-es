@@ -1,47 +1,50 @@
 ---
-title: "Conjunto de registros: Agregar registros de forma masiva (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "agregar registros de forma masiva a conjuntos de registros"
-  - "conjuntos de registros ODBC, agregar registros"
-  - "conjuntos de registros, agregar registros"
+title: 'Conjunto de registros: Agregar registros de forma masiva (ODBC) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, adding records
+- recordsets, adding records
+- bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 251d2fa4b7c28c1458fdc5643c9b17c53ba1b0ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros: Agregar registros de forma masiva (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-adding-records-in-bulk-odbc"></a>Conjunto de registros: Agregar registros de forma masiva (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
   
- La clase [CRecordset](../../mfc/reference/crecordset-class.md) de MFC tiene una nueva optimización que mejora la eficacia cuando se agregan nuevos registros a una tabla de forma masiva.  
+ La MFC [CRecordset](../../mfc/reference/crecordset-class.md) clase tiene nuevas características de optimización que mejoran la eficiencia al agregar nuevos registros de forma masiva a una tabla.  
   
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas.  Si utiliza la obtención masiva de filas, vea [Conjunto de registros: Obtener registros de forma masiva \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se usa la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Una nueva opción para el parámetro **dwOptions** de la función miembro [CRecordset::Open](../Topic/CRecordset::Open.md), **optimizeBulkAdd**, mejora el rendimiento al agregar varios registros de forma consecutiva sin llamar a **Requery** o **Close**.  Sólo aquellos campos modificados antes de la primera llamada a **Update** se marcan como tales en posteriores llamadas a `AddNew`\/**Update**.  
+ Una opción nueva para el **dwOptions** parámetro a la [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) función miembro, **optimizeBulkAdd**, mejora el rendimiento al agregar varios registros consecutivamente sin llamar a **Requery** o **cerrar**. Solo los campos que están desfasados antes del primer **actualización** llamada están marcados como modificados para posteriores `AddNew` / **actualización** llamadas.  
   
- Si se utilizan las clases de base de datos para aprovechar la función **::SQLSetPos** de la API ODBC al agregar, editar y eliminar registros, esta optimización no es necesaria.  
+ Si está usando las clases de base de datos para aprovechar la **:: SQLSetPos** función de API de ODBC para agregar, editar, y eliminar registros, esta optimización no es necesario.  
   
- Si está cargada la biblioteca de cursores ODBC o el controlador ODBC no admite agregar, editar o eliminar registros mediante **::SQLSetPos**, esta optimización debe mejorar el rendimiento al agregar registros de forma masiva.  Para activarla, establezca de la forma siguiente el parámetro **dwOptions** de la llamada a **Open** en el conjunto de registros:  
+ Si se carga la biblioteca de cursores ODBC o el controlador ODBC no admite la adición, edición y eliminación a través de **:: SQLSetPos**, esta optimización debe mejorar masiva agregar rendimiento. Para activar esta optimización, establezca el **dwOptions** parámetro en el **abiertos** llamar a para el conjunto de registros a la siguiente:  
   
 ```  
 appendOnly | optimizeBulkAdd  
 ```  
   
-## Vea también  
- [Conjunto de registros \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Agregar, actualizar y eliminar registros \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
- [Conjunto de registros: Bloquear registros \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Conjunto de registros: Bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

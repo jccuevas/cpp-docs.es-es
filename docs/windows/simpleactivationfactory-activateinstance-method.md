@@ -1,53 +1,60 @@
 ---
-title: "SimpleActivationFactory::ActivateInstance (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivateInstance (método)"
+title: "Simpleactivationfactory:: Activateinstance (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
+dev_langs: C++
+helpviewer_keywords: ActivateInstance method
 ms.assetid: 4f836e51-5a6c-4bad-b871-9f25199298b4
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6bbe9d8c215674f087c6e0fa4ca7f3439fb89b78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# SimpleActivationFactory::ActivateInstance (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance (Método)
 
-Crea una instancia de la interfaz especificada.  
-  
-## Sintaxis  
-  
-```  
-STDMETHOD(  
-   ActivateInstance  
-)(_Deref_out_ IInspectable **ppvObject);  
-```  
-  
-#### Parámetros  
- `ppvObject`  
- Cuando esta operación finaliza, el puntero a una instancia del objeto especificado por el parámetro de plantilla de clase de `Base` .  
-  
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que indica el error.  
-  
-## Comentarios  
- Si se define el \_\_WRL\_STRICT, se emite si la clase base especificada en el parámetro de plantilla de clase no se deriva de [RuntimeClass](../windows/runtimeclass-class.md), o no se configura un error validar con el valor de enumeración de WinRt o de WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) .  
-  
-## Requisitos  
- **Encabezado:** module.h  
-  
- **Espacio de nombres:** Microsoft::WRL  
-  
-## Vea también  
- [SimpleActivationFactory \(Clase\)](../windows/simpleactivationfactory-class.md)
+Crea una instancia de la interfaz especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+STDMETHOD( ActivateInstance )(
+    _Deref_out_ IInspectable **ppvObject
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ppvObject*  
+Cuando se completa esta operación, puntero a una instancia del objeto especificado por el `Base` parámetro de plantilla de clase.
+
+## <a name="return-value"></a>Valor devuelto
+
+S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
+
+## <a name="remarks"></a>Comentarios
+
+Si &#95; &#95; WRL_STRICT &#95; &#95; está definido, se genera un error de aserción si no se deriva la clase base especificada en el parámetro de plantilla de clase [RuntimeClass](../windows/runtimeclass-class.md), o no está configurado con el WinRt o WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeración.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** module.h
+
+**Espacio de nombres:** Microsoft::WRL
+
+## <a name="see-also"></a>Vea también
+
+[SimpleActivationFactory (clase)](../windows/simpleactivationfactory-class.md)

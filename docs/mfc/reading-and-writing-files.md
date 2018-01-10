@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ea8f37c09c852acb0309ee7361589b6006a44d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reading-and-writing-files"></a>Leer y escribir en archivos
 Si ha usado las funciones de control de archivos de biblioteca en tiempo de ejecución de C, lectura y escritura de las operaciones de MFC le resultarán familiar. Este artículo describe directamente leer y escribir directamente a un `CFile` objeto. También puede búfer E/S de archivos con la [CArchive](../mfc/reference/carchive-class.md) clase.  

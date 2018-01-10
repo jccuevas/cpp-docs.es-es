@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27d3a1fc08dea41add59b19ec42d4b18db940648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfontinfo-class"></a>Clase CMFCFontInfo
 La `CMFCFontInfo` clase describe el nombre y otros atributos de una fuente.  
@@ -48,19 +49,19 @@ class CMFCFontInfo : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCFontInfo`|Construye un objeto `CMFCFontInfo`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCFontInfo::GetFullName](#getfullname)|Recupera los nombres concatenados de una fuente y el carácter del conjunto (script).|  
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Un valor que especifica el juego de caracteres (script) asociado a la fuente.|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Un valor que especifica el tono y la familia de la fuente.|  

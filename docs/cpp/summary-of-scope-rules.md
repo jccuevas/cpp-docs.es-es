@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class scope [C++], rules
 - classes [C++], scope
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e4a728d23dc9a04b62c9852823f359c3a7cb150
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>Resumen de reglas de ámbito
 El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en que se determina la sobrecarga). Si el nombre indica una función, la función no debe ser ambigua respecto al número y tipo de parámetros. Si el nombre se mantiene no ambiguo, [acceso a miembros](../cpp/member-access-control-cpp.md) se aplican las reglas.  
@@ -46,7 +44,7 @@ El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en
 ## <a name="qualified-names"></a>Nombres completos  
  Los nombres utilizados con el operador binario de resolución de ámbito (`::`) se denominan “nombres completos”. El nombre especificado detrás del operador binario de resolución de ámbito debe ser un miembro de la clase especificada a la izquierda del operador o un miembro de su clase o clases base.  
   
- Nombres especificados detrás del operador de selección de miembro (**.** o ** -> **) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o miembros de su clase o clases base. Nombres especificados a la derecha del operador de selección de miembro (**->**) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de ** -> ** es un objeto de clase y que la clase define un operador de selección de miembro sobrecargado (**->**) que se evalúa como un puntero a algún otro tipo de clase. (Esta especificación se explica con más detalle en [acceso a miembros de clase](../cpp/member-access.md).)  
+ Nombres especificados detrás del operador de selección de miembro (**.** o  **->** ) deben ser miembros del tipo de clase del objeto especificado a la izquierda del operador o miembros de su clase o clases base. Nombres especificados a la derecha del operador de selección de miembro (**->**) también pueden ser objetos de otro tipo de clase, siempre que el lado izquierdo de  **->**  es un objeto de clase y que la clase define un operador de selección de miembro sobrecargado (**->**) que se evalúa como un puntero a algún otro tipo de clase. (Esta especificación se explica con más detalle en [acceso a miembros de clase](../cpp/member-access.md).)  
   
  El compilador busca los nombres en el orden siguiente y se detiene cuando encuentra el nombre:  
   
@@ -66,7 +64,7 @@ El uso de un nombre debe ser inequívoco dentro de su ámbito (hasta el punto en
   
 1.  Los nombres precedidos por `::` obligan a que la búsqueda se inicie en el ámbito global.  
   
-2.  Nombres precedidos por la **clase**, `struct`, y **union** palabras clave hacen que el compilador para buscar solo **clase**, `struct`, o **union ** nombres.  
+2.  Nombres precedidos por la **clase**, `struct`, y **union** palabras clave hacen que el compilador para buscar solo **clase**, `struct`, o **union**  nombres.  
   
 3.  Nombres en el lado izquierdo del operador de resolución de ámbito (`::`) solo puede ser **clase**, `struct`, **espacio de nombres**, o **union** nombres.  
   

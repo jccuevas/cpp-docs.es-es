@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f6e9da311a4141f50c49c8096ef9f0c95493c73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b441077de3a81de569627b6d7acf7cee8ca17b33
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relación entre un objeto Window de C++ y un HWND
 La ventana *objeto* es un objeto de C++ `CWnd` clase (o una clase derivada) que el programa crea directamente. Incluye y se quita en respuesta a las llamadas de constructor y el destructor de su programa. Las ventanas *ventana*, por otro lado, es un identificador opaco para una estructura de datos interna de Windows que corresponde a una ventana y consume recursos del sistema cuando está presente. Una ventana de Windows se identifica mediante un "identificador de ventana" (`HWND`) y se crea después la `CWnd` objeto se crea mediante una llamada a la **crear** función miembro de clase `CWnd`. Puede destruir la ventana por una llamada de programa o por una acción del usuario. El identificador de ventana se almacena en el objeto de ventana `m_hWnd` variable miembro. En la siguiente ilustración muestra la relación entre el objeto de ventana de C++ y la ventana de Windows. Creación de ventanas se describe en [crear ventanas](../mfc/creating-windows.md). Destruir ventanas se describe en [destruir objetos de ventana](../mfc/destroying-window-objects.md).  

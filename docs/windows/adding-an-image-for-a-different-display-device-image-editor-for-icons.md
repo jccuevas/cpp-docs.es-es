@@ -1,43 +1,47 @@
 ---
-title: "Adding an Image for a Different Display Device (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "New Device Image command"
-  - "display devices, adding images"
-  - "cursors, adding"
-  - "icons, adding"
+title: "Agregar una imagen para otro dispositivo de presentación (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- New Device Image command
+- display devices, adding images
+- cursors, adding
+- icons, adding
 ms.assetid: 394f87dd-ea19-49d8-bb9e-139cd28b69c2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1fea1cecc63c1c2ec997c9acb0ea1ce19572af4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Adding an Image for a Different Display Device (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para agregar una imagen para otro dispositivo de presentación  
+# <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Agregar una imagen para otro dispositivo de presentación (Editar imágenes para iconos)
+### <a name="to-add-an-image-for-a-different-display-device"></a>Para agregar una imagen para otro dispositivo de presentación  
   
-1.  En el menú **Imagen**, haga clic en **Nueva imagen de dispositivo** \(o haga clic con el botón secundario en el panel del **Editor de imágenes** y elija **Nueva imagen de dispositivo** en el menú contextual\).  
+1.  En el **imagen** menú, haga clic en **nueva imagen de dispositivo** (o pulse el botón derecho en el **Editor de imágenes** panel y elija **nueva imagen de dispositivo** desde el menú contextual).  
   
-2.  Seleccione el tipo de imagen que desea agregar.  También puede hacer clic en **Personalizar** para crear un icono cuyo tamaño no figure en la lista predeterminada.  
+2.  Seleccione el tipo de imagen que se va a agregar. También puede hacer clic en **personalizado** para crear un icono cuyo tamaño no está disponible en la lista predeterminada.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- None  
+ Ninguna  
   
-## Vea también  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c2179d3745f42164ef8cf70162ed560b331d783
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-interface-wizard"></a>Asistente para implementar interfaces
 Este asistente implementa una interfaz para un objeto COM. Las implementaciones de las interfaces se incluyen en las bibliotecas COM disponibles con Visual Studio y Windows. Una implementación de interfaz está asociada a un objeto cuando se crea una instancia de ese objeto, así como los servicios que ofrece el objeto.  
@@ -32,7 +33,7 @@ Este asistente implementa una interfaz para un objeto COM. Las implementaciones 
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Proyecto**|La biblioteca de tipos es parte del proyecto.|  
-|**Registro**|La biblioteca de tipos está registrada en el sistema. Bibliotecas de tipos registradas aparecen en **bibliotecas de tipos disponibles**.|  
+|**Registry**|La biblioteca de tipos está registrada en el sistema. Bibliotecas de tipos registradas aparecen en **bibliotecas de tipos disponibles**.|  
 |**Archivo**|La biblioteca de tipos no está necesariamente registrada en el sistema pero está contenida en un archivo. Debe proporcionar la ubicación del archivo en **ubicación**.|  
   
  **Bibliotecas de tipos disponibles**  

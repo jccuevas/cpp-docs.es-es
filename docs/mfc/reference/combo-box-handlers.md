@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ON_CBN_SELCHANGE
 - ON_CBN_SETFOCUS
 - ON_CBN_SELENDCANCEL
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ON_CBN_CLOSEUP
 - ON_CBN_SETFOCUS
@@ -36,16 +34,16 @@ helpviewer_keywords:
 - ON_CBN_SELENDOK
 - ON_CBN_SELCHANGE
 ms.assetid: 7f092412-01b7-4242-95ec-41ba506b9d71
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c6a61b1e3570f0e4cb5fea680eb1ff427676ddce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 70c4e1f8bc553d155aa21879f986c4361f15a2ae
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combo-box-handlers"></a>Controladores de cuadro combinado
 Las siguientes entradas de mapa corresponden a los prototipos de función.  
@@ -66,5 +64,4 @@ Las siguientes entradas de mapa corresponden a los prototipos de función.
   
 ## <a name="see-also"></a>Vea también  
  [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
-
 

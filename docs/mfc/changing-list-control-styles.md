@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c226d59ee3444abb32789d40ccf68a05c535b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6758cce9ab42c0dea490dd8ac9803588edceac5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-list-control-styles"></a>Cambiar los estilos de control de lista
 Puede cambiar el estilo de ventana de un control de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) en cualquier momento después de crearlo. Al cambiar el estilo de ventana, cambiar el tipo de vista que usa el control. Por ejemplo, para emular el explorador, se podrían proporcionar elementos de menú o botones de barra de herramientas para cambiar el control entre las distintas vistas: vista de iconos, vista de lista y así sucesivamente.  

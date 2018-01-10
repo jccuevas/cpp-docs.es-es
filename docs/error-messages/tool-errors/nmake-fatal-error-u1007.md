@@ -1,31 +1,30 @@
 ---
-title: "Error grave de NMAKE U1007 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1007"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1007"
+title: Error grave de NMAKE U1007 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1007
+dev_langs: C++
+helpviewer_keywords: U1007
 ms.assetid: 64fd78a6-5b27-4aa8-92ea-f1c55e6e5edd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 464ae1f75ae11f0c030a9bd445cfeac22db8849a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error grave de NMAKE U1007
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-comillas no permitidas en nombre  
+# <a name="nmake-fatal-error-u1007"></a>Error grave de NMAKE U1007
+no se permite en nombre de un signo de comillas dobles  
   
- El nombre de destino o el nombre de archivo especificado contiene un signo de comillas \(**"**\).  
+ El nombre de destino especificado o el nombre de archivo contiene un signo de comillas dobles (**"**).  
   
- Los signos de comillas pueden ir a ambos lados de un nombre de archivo pero no dentro del mismo.
+ Puede encerrar el nombre de archivo entre comillas dobles, pero no pueden estar contenidas dentro de él.

@@ -1,45 +1,46 @@
 ---
-title: "priority_queue::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign (miembro) [STL/CLR]"
+title: priority_queue::assign (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 00cd3623-ecd0-4dde-ba5c-777c1c0bc0b5
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf9eec9f8e8905cbc22d670d0ca33b1f89eaa4b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueueassign-stlclr"></a>priority_queue::assign (STL/CLR)
 Reemplaza todos los elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void assign(priority_queue<Value, Container>% right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
- Adaptador de contenedor que se va a insertar.  
+ Adaptador de contenedor para insertar.  
   
-## Comentarios  
- La función miembro asigna `right``.get_container()` al contenedor subyacente.  Se utiliza para cambiar el contenido completo de la cola.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro asigna `right.get_container()` al contenedor subyacente. Usa para cambiar todo el contenido de la cola.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_priority_queue_assign.cpp   
@@ -70,13 +71,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+c a b  
+c a b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

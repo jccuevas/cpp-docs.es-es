@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6721620490a00da0b9c8fa039be0379f4d7dd1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="srwlock-class"></a>SRWLock (clase)
 Representa un bloqueo finos de lector/escritor.  
@@ -44,14 +47,14 @@ class SRWLock;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[SRWLock::SRWLock (constructor)](../windows/srwlock-srwlock-constructor.md)|Inicializa una nueva instancia de la clase SRWLock.|  
 |[SRWLock::~SRWLock (destructor)](../windows/srwlock-tilde-srwlock-destructor.md)|Desinicializa una instancia de la clase SRWLock.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[SRWLock::LockExclusive (método)](../windows/srwlock-lockexclusive-method.md)|Adquiere un objeto SRWLock en modo exclusivo.|  
 |[SRWLock::LockShared (método)](../windows/srwlock-lockshared-method.md)|Adquiere un objeto SRWLock en modo compartido.|  
@@ -60,7 +63,7 @@ class SRWLock;
   
 ### <a name="protected-data-member"></a>Miembro de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[SRWLock::SRWLock_ (miembro de datos)](../windows/srwlock-srwlock-data-member.md)|Contiene la variable subyacente de bloqueo para el objeto de SRWLock actual.|  
   

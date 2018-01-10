@@ -1,35 +1,36 @@
 ---
-title: "IID_PPV_ARGS_Helper (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/IID_PPV_ARGS_Helper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IID_PPV_ARGS_Helper (función)"
+title: "IID_PPV_ARGS_Helper (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/IID_PPV_ARGS_Helper
+dev_langs: C++
+helpviewer_keywords: IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9839fe71439fde54545a18ef107cec178b8bdcd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IID_PPV_ARGS_Helper (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba que el tipo de argumento especificado se deriva de la interfaz de `IUnknown` .  
+# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (función)
+Comprueba que el tipo del argumento especificado que se deriva de la `IUnknown` interfaz.  
   
 > [!IMPORTANT]
->  Esta una especialización de plantilla admite la infraestructura de WRL y no está diseñada para utilizarse directamente desde el código.  Utilice en su lugar [IID\_PPV\_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) .  
+>  Esta especialización de plantilla es compatible con la infraestructura WRL y no está diseñada para utilizarse directamente desde el código. Use [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) en su lugar.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -40,21 +41,21 @@ void** IID_PPV_ARGS_Helper(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- El tipo de argumento `pp`.  
+ El tipo del argumento `pp`.  
   
  `pp`  
- Un puntero doble\-indirecto.  
+ Un puntero indirecto doble.  
   
-## Valor devuelto  
- El argumento `pp` convertido a un puntero\-a\-uno\- puntero a `void`.  
+## <a name="return-value"></a>Valor devuelto  
+ Argumento `pp` convierte en un puntero-a-a-puntero a `void`.  
   
-## Comentarios  
- Se genera un error en tiempo de compilación si el parámetro `T` de plantilla no deriva de `IUnknown`.  
+## <a name="remarks"></a>Comentarios  
+ Se genera un error de tiempo de compilación si el parámetro de plantilla `T` no derivan de `IUnknown`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
-## Vea también  
- [Reference \(Windows Runtime Library\)](http://msdn.microsoft.com/es-es/00000000-0000-0000-0000-000000000000)
+## <a name="see-also"></a>Vea también  
+ [Referencia (biblioteca de tiempo de ejecución de Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)

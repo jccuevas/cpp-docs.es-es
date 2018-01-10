@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e336b7c9ed868e4aa1538c6673371b33123a4072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4f1ba8d59e85a480af38e5b9778fee0c714a0db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmodulet-class"></a>Clase CAtlModuleT
 Esta clase implementa un módulo ATL.  
@@ -48,13 +49,13 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlModuleT::CAtlModuleT](#catlmodulet)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlModuleT::InitLibId](#initlibid)|Inicializa al miembro de datos que contiene el GUID del módulo actual.|  
 |[CAtlModuleT::RegisterAppId](#registerappid)|Agrega el archivo EXE en el registro.|  

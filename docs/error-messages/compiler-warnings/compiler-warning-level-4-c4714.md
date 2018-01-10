@@ -1,50 +1,49 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4714"
+title: Compilador advertencia (nivel 4) C4714 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4714
+dev_langs: C++
+helpviewer_keywords: C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d49ff1bbf6538965d277b0afdd6c96fd9c71ef0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la función 'función' marcada como \_\_forceinline no está entre líneas  
+# <a name="compiler-warning-level-4-c4714"></a>Advertencia del compilador (nivel 4) C4714
+la función 'función' marcada como __forceinline no está entre línea  
   
- La función dada fue seleccionada para la expansión en línea, pero el compilador no realizó la expansión.  
+ La función especificada se seleccionaron para la expansión en línea, pero el compilador no realizó la inserción.  
   
- Si bien `__forceinline` es una indicación de mayor prioridad para el compilador que `__inline`, la inclusión en línea continúa realizándose a discreción del compilador, pero no se utiliza heurística para determinar los beneficios de aplicar la inclusión a esta función.  
+ Aunque `__forceinline` es una indicación de mayor prioridad al compilador que `__inline`, inclusión aún se realice a discreción del compilador, pero no se utiliza heurística para determinar los beneficios de inclusión esta función.  
   
- En algunos casos, el compilador no incluye en línea una determinada función por motivos mecánicos.  Por ejemplo, el compilador no incluirá en línea:  
+ En algunos casos, el compilador no insertará una determinada función por motivos mecánicos. Por ejemplo, el compilador no insertará:  
   
--   Una función si como resultado de ello se mezcla SEH y C\+\+ EH.  
+-   Una función de si el resultado de la combinación de SEH y C++ EH.  
   
--   Algunas funciones con objetos construidos mediante copia y pasados por valor con la opción GX\/EHs\/EHa activada.  
+-   Algunas funciones de copia construyen objetos que se pasan por valor cuando - GX//EHs//EHa está activada.  
   
--   Algunas funciones que devuelven un objeto no desenredable por valor con la opción GX\/EHs\/EHa activada.  
+-   Funciones que devuelven un objeto no se pueden desenredar por valor cuando - GX//EHs//EHa está activada.  
   
--   Las funciones que contienen ensamblado en línea al compilar sin \-Og\/Ox\/O1\/O2.  
+-   Funciones con código ensamblador en línea al compilar sin - Og/Ox/O1/O2.  
   
--   Las funciones con una lista de argumentos de variable.  
+-   Funciones con una lista de argumentos de variable.  
   
--   Una función con una instrucción **try** \(control de excepciones de C\+\+\).  
+-   Una función con un **intente** instrucción (control de excepciones de C++).  
   
- El código siguiente genera el error C4714:  
+ El ejemplo siguiente genera C4714:  
   
 ```  
 // C4714.cpp  

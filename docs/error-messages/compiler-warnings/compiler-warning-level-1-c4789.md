@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4789 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4789"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4789"
+title: Error de compilador advertencia (nivel 1) C4789 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4789
+dev_langs: C++
+helpviewer_keywords: C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fde48ccbcf3a4ddec6884ac9e0c259739954772
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4789
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4789"></a>Advertencia del compilador (nivel 1) C4789
 se producirá una saturación del búfer 'identificador' con un tamaño de N bytes; se escribirán M bytes empezando en el desplazamiento L  
   
- Advierte de saturación del búfer cuando se usan funciones específicas de tiempo de ejecución de C \(CRT\), se pasan parámetros y se realizan asignaciones, de forma que el tamaño de los datos se conoce en tiempo de compilación.  Esta advertencia se usa en situaciones en las que puede eludirse la detección de discrepancias de tamaño de datos.  
+ Advierte de saturación del búfer cuando se usan funciones específicas de tiempo de ejecución de C (CRT), se pasan parámetros y se realizan asignaciones, de forma que el tamaño de los datos se conoce en tiempo de compilación. Esta advertencia se usa en situaciones en las que puede eludirse la detección de discrepancias de tamaño de datos.  
   
- La advertencia aparece cuando los datos, cuya longitud se conoce en tiempo de compilación, se copian y se colocan en un bloque de datos cuyo tamaño se revela —en tiempo de compilación— insuficiente para albergar los datos.  La copia debe hacerse mediante la forma intrínseca de una de las siguientes funciones de CRT:  
+ La advertencia aparece cuando los datos, cuya longitud se conoce en tiempo de compilación, se copian y se colocan en un bloque de datos cuyo tamaño se revela —en tiempo de compilación— insuficiente para albergar los datos. La copia debe hacerse mediante la forma intrínseca de una de las siguientes funciones de CRT:  
   
 -   [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)  
   
@@ -38,7 +37,7 @@ se producirá una saturación del búfer 'identificador' con un tamaño de N byt
   
  La advertencia también aparece cuando se produce un error de coincidencia de tipos de datos de parámetro al usar una conversión de tipos y, a continuación, se intenta realizar una asignación de copia de una referencia lvalue.  
   
- Visual C\+\+ puede generar esta advertencia para una ruta de acceso del código que no se ejecuta nunca.  La advertencia se puede deshabilitar temporalmente con `#pragma`, como se muestra en este ejemplo:  
+ Visual C++ puede generar esta advertencia para una ruta de acceso del código que no se ejecuta nunca. La advertencia se puede deshabilitar temporalmente con `#pragma`, como se muestra en este ejemplo:  
   
  `#pragma(push)`  
   
@@ -48,9 +47,9 @@ se producirá una saturación del búfer 'identificador' con un tamaño de N byt
   
  `#pragma(pop)`  
   
- Esto impide que Visual C\+\+ genera la advertencia para ese bloque de código específico.  `#pragma(push)` conserva el estado antes de que `#pragma warning(disable: 4789)` lo cambie.  `#pragma(pop)` restaura el estado insertado y quita los efectos de la `#pragma warning(disable:4789)`.  Para obtener más información sobre la directiva de preprocesador de C\+\+ `#pragma`, consulte [warning](../../preprocessor/warning.md) y [Directives pragma y la palabra clave \_\_pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+ Esto impide que Visual C++ genera la advertencia para ese bloque de código específico. `#pragma(push)` conserva el estado antes de que `#pragma warning(disable: 4789)` lo cambie. `#pragma(pop)` restaura el estado insertado y quita los efectos de la `#pragma warning(disable:4789)`. Para obtener más información acerca de la directiva de preprocesador de C++ `#pragma`, consulte [advertencia](../../preprocessor/warning.md) y [directivas Pragma y la palabra clave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C4789.  
   
 ```  
@@ -73,7 +72,7 @@ int main()
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente también genera el error C4789.  
   
 ```  

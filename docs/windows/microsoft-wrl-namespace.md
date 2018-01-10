@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b3c3bef713bd63b7b82761ce36ab039556e63c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
 Define los tipos fundamentales que componen la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  
@@ -48,7 +51,7 @@ namespace Microsoft::WRL;
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ActivationFactory (clase)](../windows/activationfactory-class.md)|Habilita una o más clases que activa Windows Runtime.|  
 |[AsyncBase (clase)](../windows/asyncbase-class.md)|Implementa la máquina de estados asincrónica de Windows Runtime.|  
@@ -75,7 +78,7 @@ namespace Microsoft::WRL;
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[AsyncResultType (enumeración)](../windows/asyncresulttype-enumeration.md)|Especifica el tipo de resultado devuelto por el método GetResults().|  
 |[ModuleType (enumeración)](../windows/moduletype-enumeration.md)|Especifica si un módulo debe admitir un servidor en proceso o un servidor fuera de proceso.|  

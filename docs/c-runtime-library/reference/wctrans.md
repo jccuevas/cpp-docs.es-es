@@ -1,50 +1,49 @@
 ---
-title: "wctrans | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctrans"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctrans"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "códigos de caracteres, wctrans"
-  - "caracteres, códigos"
-  - "caracteres, convertir"
-  - "wctrans (función)"
+title: wctrans | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctrans
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords: wctrans
+dev_langs: C++
+helpviewer_keywords:
+- character codes, wctrans
+- characters, codes
+- characters, converting
+- wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: babda33f03b29e2b8ccaa9967038c3299c4bc6ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# wctrans
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determina una asignación a partir de un conjunto de códigos de carácter a otro.  
+# <a name="wctrans"></a>wctrans
+Determina una asignación desde un conjunto de códigos de caracteres a otro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 wctrans_t wctrans(  
@@ -52,32 +51,32 @@ wctrans_t wctrans(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `property`  
- Una cadena que especifica una de las transformaciones válidas.  
+ Cadena que especifica una de las transformaciones válidas.  
   
-## Valor devuelto  
- Si la categoría de `LC_CTYPE` de la configuración regional actual no define una asignación cuyo nombre coincida con la cadena `property`de propiedades, la función devuelve cero.  De lo contrario, devuelve un valor distinto de cero adecuado para el uso como segundo argumento a una llamada subsiguiente a [towctrans](../../c-runtime-library/reference/towctrans.md).  
+## <a name="return-value"></a>Valor devuelto  
+ Si la categoría `LC_CTYPE` de la configuración regional actual no define una asignación cuyo nombre coincida con la cadena de propiedad `property`, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](../../c-runtime-library/reference/towctrans.md).  
   
-## Comentarios  
- Esta función determina una asignación a partir de un conjunto de códigos de carácter a otro.  
+## <a name="remarks"></a>Comentarios  
+ Esta función determina una asignación desde un conjunto de códigos de caracteres a otro.  
   
- Los siguientes pares de llamadas tienen el mismo comportamiento en todas las configuraciones regionales, pero es posible definir asignaciones adicionales incluso en la configuración regional “c”:  
+ Los siguientes pares de llamadas tienen el mismo comportamiento en todas las configuraciones regionales, aunque es posible definir asignaciones adicionales incluso en la configuración regional "C":  
   
 |Función|Igual que|  
-|-------------|---------------|  
+|--------------|-------------|  
 |`tolower(`  `c`  `)`|`towctrans(`  `c` `, wctrans("towlower" ) )`|  
 |`towupper(`  `c`  `)`|`towctrans(`  `c` `, wctrans( "toupper" ) )`|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`wctrans`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`wctrans`|\<wctype.h>|  
   
  Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // crt_wctrans.cpp  
@@ -106,10 +105,13 @@ int main()
 }  
 ```  
   
-  **97**  
-**1**  
-**0**  
-**65**   
-## Vea también  
+```Output  
+97  
+1  
+0  
+65  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

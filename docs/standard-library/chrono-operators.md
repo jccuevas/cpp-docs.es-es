@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- chrono/std::operator modulo
+f1_keywords: chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltchronogt-operators"></a>Operadores de &lt;chrono&gt;
 ||||  
@@ -58,10 +56,10 @@ constexpr typename common_type<Duration1, Duration2>::type
  Objeto `duration` o `time_point` derecho.  
   
  `Time`  
- Objeto `time_point`.  
+ Un objeto `time_point`.  
   
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera función devuelve un objeto `duration` cuya longitud del intervalo es la diferencia entre los intervalos de tiempo de los dos argumentos.  
@@ -70,7 +68,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  La tercera función devuelve un objeto `duration` que representa el intervalo de tiempo entre `Left` y `Right`.  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Operador de desigualdad para objetos [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md).  
   
 ```  
@@ -117,7 +115,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
  `Mult`  
  Valor entero.  
@@ -149,7 +147,7 @@ constexpr typename common_type<Rep1, Rep2>::type
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
  `Div`  
  Valor entero.  
@@ -200,17 +198,17 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
  Objeto `duration` o `time_point` derecho.  
   
  `Time`  
- Objeto `time_point`.  
+ Un objeto `time_point`.  
   
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La primera función devuelve un objeto `duration` cuyo intervalo de tiempo es igual a la suma de los intervalos de `Left` y `Right`.  
   
  Las funciones segunda y tercera devuelven un objeto `time_point` que representa un punto en el tiempo que está desplazado, según el intervalo `Dur`, con respecto al punto en el tiempo `Time`.  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es menor que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -238,7 +236,7 @@ constexpr bool operator<(
   
  La segunda función devuelve `true` si `Left` precede a `Right`. De lo contrario, la función devuelve `false`.  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es menor o igual que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -290,7 +288,7 @@ constexpr bool operator==(
   
  La segunda función devuelve `true` si `Left` y `Right` representan el mismo punto en el tiempo. De lo contrario, la función devuelve `false`.  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es mayor que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -315,7 +313,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>Valor devuelto  
  Cada función devuelve `Right < Left`.  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Determina si un objeto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) es mayor o igual que otro objeto `duration` o `time_point`.  
   
 ```  
@@ -359,7 +357,7 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
  `Div`  
  Valor entero.  
@@ -377,5 +375,4 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
   
 ## <a name="see-also"></a>Vea también  
  [\<chrono>](../standard-library/chrono.md)
-
 

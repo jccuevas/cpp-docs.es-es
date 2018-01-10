@@ -1,33 +1,32 @@
 ---
-title: "Error PRJ0008 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0008"
+title: Error PRJ0008 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0008
+dev_langs: C++
+helpviewer_keywords: PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1740b0cf1edfc90258de4fe26478298ddf2875c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error PRJ0008 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-No se puede eliminar el archivo 'nombre\_archivo'.  
+# <a name="project-build-error-prj0008"></a>Error PRJ0008 al compilar el proyecto
+No se pudo eliminar el archivo 'archivo'.  
   
- **Compruebe que el archivo no está abierto en otro proceso y que no está protegido contra escritura.**  
+ **Asegúrese de que el archivo no está abierto en otro proceso y no está protegida contra escritura.**  
   
- Al recompilar o al limpiar, Visual C\+\+ elimina todos los archivos intermedios y archivos de salida utilizados para compilar, así como los archivos que satisfagan las especificaciones de comodines establecidas en la propiedad **Extensiones para eliminar al limpiar** de la [página de propiedades Valores de configuración](../../ide/general-property-page-project.md).  
+ Al volver a generar o al limpiar, Visual C++ elimina todos los archivos conocidos de intermedios y de salida de la compilación, así como los archivos que cumplen las especificaciones de comodines en el **extensiones para eliminar al limpiar** propiedad en la [General Página de propiedades de configuración de configuración](../../ide/general-property-page-project.md).  
   
- Verá este error si Visual C\+\+ no puede eliminar un archivo.  Para solucionarlo, convierta en grabable el archivo y el directorio que lo contiene para el usuario que va a compilar.
+ Verá este error si no se puede eliminar un archivo de Visual C++. Para resolver el error, asigne al archivo y su directorio de escritura para el usuario que se va a generar.

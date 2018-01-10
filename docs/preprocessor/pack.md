@@ -1,76 +1,77 @@
 ---
-title: "pack | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pack_CPP"
-  - "vc-pragma.pack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pack (pragma)"
-  - "pragma (directivas), pack"
+title: "módulo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pack_CPP
+- vc-pragma.pack
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, pack
+- pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# pack
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pack"></a>pack
 Especifica la alineación de empaquetado de los miembros de estructura, unión y clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
-## Comentarios  
- Empaquetar una clase consiste en colocar sus miembros uno tras otro en la memoria, lo que puede conllevar que algunos o todos los miembros se alineen en un límite menor que la alineación predeterminada de la arquitectura de destino.  `pack` proporciona control en el nivel de declaración de datos.  Esto difiere de la opción del compilador [\/Zp](../build/reference/zp-struct-member-alignment.md), que solo proporciona control en el nivel de módulo.  `pack` tiene efecto en la primera declaración `struct`, `union` o `class` después de ver la directiva pragma.  `pack` no tiene ningún efecto en las definiciones.  La llamada a `pack` sin argumentos establece `n` en el valor establecido en la opción del compilador **\/Zp**.  Si no se establece la opción del compilador, el valor predeterminado es 8.  
+## <a name="remarks"></a>Comentarios  
+ Empaquetar una clase consiste en colocar sus miembros uno tras otro en la memoria, lo que puede conllevar que algunos o todos los miembros se alineen en un límite menor que la alineación predeterminada de la arquitectura de destino. `pack` proporciona control en el nivel de declaración de datos. Esto difiere de la opción de compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que solo proporciona control de nivel de módulo. `pack` tiene efecto en la primera declaración `struct`, `union` o `class` después de ver la directiva pragma. `pack` no tiene ningún efecto en las definiciones. Al llamar a `pack` sin argumentos establece `n` en el valor establecido en la opción del compilador **/Zp**. Si no se establece la opción del compilador, el valor predeterminado es 8.  
   
  Si cambia la alineación de una estructura, puede que no use tanto espacio en la memoria, pero es posible que vea una disminución del rendimiento o incluso que obtenga una excepción generada por el hardware debido al acceso no alineado.  Puede modificar este comportamiento de excepción mediante [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
- **show** \(opcional\)  
- Muestra el valor de byte actual para la alineación de empaquetamiento.  El valor se muestra mediante un mensaje de advertencia.  
+ **Mostrar** (opcional)  
+ Muestra el valor de byte actual para la alineación de empaquetamiento. El valor se muestra mediante un mensaje de advertencia.  
   
- **push** \(opcional\)  
- Inserta el valor de alineación de empaquetado actual en la pila interna del compilador y establece el valor actual de la alineación de empaquetado en `n`.  Si no se especifica `n`, se inserta el valor actual de la alineación de empaquetado.  
+ **inserción** (opcional)  
+ Inserta el valor de alineación de empaquetado actual en la pila interna del compilador y establece el valor actual de la alineación de empaquetado en `n`. Si no se especifica `n`, se inserta el valor actual de la alineación de empaquetado.  
   
- **pop** \(opcional\)  
- Quita el registro de la parte superior de la pila interna del compilador.  Si no se especifica `n` con **pop**, el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de la alineación de empaquetado.  Si se especifica `n`, por ejemplo, `#pragma pack(pop, 16)`, `n` se convierte en el nuevo valor de la alineación de empaquetado.  Si saca con `identifier`, por ejemplo, `#pragma pack(pop, r1)`, se sacan todos los registros de la pila hasta encontrar el registro que tiene `identifier`.  Ese registro se saca y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado.  Si saca con un `identifier` que no se encuentre en ningún registro de la pila, **pop** se omite.  
+ **confirmación** (opcional)  
+ Quita el registro de la parte superior de la pila interna del compilador. Si `n` no se especifica con **pop**, entonces el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si se especifica `n`, por ejemplo, `#pragma pack(pop, 16)`, `n` se convierte en el nuevo valor de la alineación de empaquetado. Si saca con `identifier`, por ejemplo, `#pragma pack(pop, r1)`, se sacan todos los registros de la pila hasta encontrar el registro que tiene `identifier`. Ese registro se saca y el valor de empaquetado asociado al registro resultante en la parte superior de la pila es el nuevo valor de alineación de empaquetado. Si saca con un `identifier` que no se encuentra en ningún registro en la pila, la **pop** se omite.  
   
- `identifier` \(opcional\)  
- Cuando se usa con **push**, asigna un nombre al registro en la pila interna del compilador.  Cuando se usa con **pop**, extrae los registros de la pila interna hasta que se quita el `identifier`; si no se encuentra el `identifier` en la pila interna, no se extrae nada.  
+ `identifier` (opcional)  
+ Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae registros de la pila interna hasta que `identifier` se quita; si `identifier` no se encuentra en la pila interna, se extrae nada.  
   
- `n` \(opcional\)  
- Especifica el valor, en bytes, que se usará para el empaquetado.  Si no se establece la opción del compilador [\/Zp](../build/reference/zp-struct-member-alignment.md) para el módulo, el valor predeterminado de `n` es 8.  Los valores válidos son 1, 2, 4, 8 y 16.  La alineación de un miembro estará en un límite que sea un múltiplo de `n` o un múltiplo del tamaño del miembro, lo que sea menor.  
+ `n` (opcional)  
+ Especifica el valor, en bytes, que se usará para el empaquetado. Si la opción del compilador [/Zp](../build/reference/zp-struct-member-alignment.md) no está establecida para el módulo, el valor predeterminado de `n` es 8. Los valores válidos son 1, 2, 4, 8 y 16. La alineación de un miembro estará en un límite que sea un múltiplo de `n` o un múltiplo del tamaño del miembro, lo que sea menor.  
   
- `#pragma pack(pop,` `identifier``,` `n``)` está sin definir.  
+ `#pragma pack(pop, identifier, n)`no está definido.  
   
  Para obtener más información acerca de cómo modificar la alineación, vea estos temas:  
   
--   [\_\_alignof](../cpp/alignof-operator.md)  
+-   [__alignof](../cpp/alignof-operator.md)  
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_unaligned](../cpp/unaligned.md)  
+-   [__unaligned](../cpp/unaligned.md)  
   
--   [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md) \(específico de x64\)  
+-   [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md) (x64 específico)  
   
     > [!WARNING]
-    >  Tenga en cuenta que en Visual Studio 2015 y posterior puede usar los operadores estándar alignof y alignas, que, a diferencia de `__alignof` y `declspec( align )`, son portátiles entre compiladores.  El estándar de C\+\+ no se ocupa del empaquetado, por lo que deberá usar `pack` \(o la extensión que corresponda en otros compiladores\) para especificar alineaciones que sean inferiores al tamaño de palabra de la arquitectura de destino.  
+    >  Tenga en cuenta que en Visual Studio 2015 y posterior puede usar los operadores estándar alignof y alignas, que, a diferencia de `__alignof` y `declspec( align )`, son portátiles entre compiladores. El estándar de C++ no se ocupa del empaquetado, por lo que deberá usar `pack` (o la extensión que corresponda en otros compiladores) para especificar alineaciones que sean inferiores al tamaño de palabra de la arquitectura de destino.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar la directiva pragma `pack` para cambiar la alineación de una estructura.  
   
 ```  
@@ -107,8 +108,8 @@ int main() {
 0 4 6  
 ```  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra cómo usar la sintaxis **push**, **pop** y **show**.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra cómo utilizar el **inserción**, **pop**, y **mostrar** sintaxis.  
   
 ```  
 // pragma_directives_pack_2.cpp  
@@ -123,5 +124,5 @@ int main() {
 #pragma pack(show)   // C4810  
 ```  
   
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

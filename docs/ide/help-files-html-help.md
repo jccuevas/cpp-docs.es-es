@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b97c73514d534ba6092c8b1c3ec5cfa676500538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="help-files-html-help"></a>Archivos de ayuda (Ayuda HTML)
 Los siguientes archivos se crean al agregar el tipo de Ayuda HTML de ayuda y soporte técnico a la aplicación seleccionando el **ayuda contextual** casilla de verificación y, a continuación, seleccione **formato de Ayuda HTML** en el [Características avanzadas](../mfc/reference/advanced-features-mfc-application-wizard.md) página del Asistente para aplicaciones MFC.  

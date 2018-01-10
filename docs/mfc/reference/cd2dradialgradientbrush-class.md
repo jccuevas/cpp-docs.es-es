@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a190bbe75a7b0d0f26d210e299d58e8b6ba6caa7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Clase CD2DRadialGradientBrush
 Un contenedor para ID2D1RadialGradientBrush.  
@@ -68,14 +69,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Construye un objeto CD2DLinearGradientBrush.|  
 |[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado radial D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DRadialGradientBrush::Create](#create)|Crea un CD2DRadialGradientBrush. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -93,13 +94,13 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Interfaz de ID2D1RadialGradientBrush devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Un puntero a un ID2D1RadialGradientBrush.|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|El centro, el desplazamiento de degradado de origen y el radio x y la radio y el pincel de degradado.|  

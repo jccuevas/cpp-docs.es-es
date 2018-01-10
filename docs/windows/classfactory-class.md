@@ -1,32 +1,33 @@
 ---
-title: "ClassFactory (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ClassFactory (clase)"
+title: ClassFactory (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory
+dev_langs: C++
+helpviewer_keywords: ClassFactory class
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c37c016809d31fcb072f23768e9f54313331016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="classfactory-class"></a>ClassFactory (clase)
 Implementa la funcionalidad básica de la interfaz IClassFactory.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -44,9 +45,9 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `I0`  
- La interfaz de zeroth.  
+ La interfaz de cero.  
   
  `I1`  
  La primera interfaz.  
@@ -54,31 +55,31 @@ class ClassFactory : public Details::RuntimeClass<
  `I2`  
  La segunda interfaz.  
   
-## Comentarios  
- Utilice `ClassFactory` para proporcionar una implementación definido por el usuario del generador.  
+## <a name="remarks"></a>Comentarios  
+ Utilizar `ClassFactory` para proporcionar una implementación de generador definido por el usuario.  
   
- El modelo de programación siguiente muestra cómo utilizar la estructura de [Implementa](../Topic/Implements%20Structure.md) para especificar más de tres interfaces en un generador de clases.  
+ El modelo de programación siguiente muestra cómo utilizar el [implementa](../windows/implements-structure.md) estructura para especificar más de tres interfaces en un generador de clases.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[ClassFactory::ClassFactory \(Constructor\)](../Topic/ClassFactory::ClassFactory%20Constructor.md)||  
-  
-### Métodos públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[ClassFactory::AddRef \(Método\)](../Topic/ClassFactory::AddRef%20Method.md)|Incrementa el recuento de referencias para el objeto actual de ClassFactory.|  
-|[ClassFactory::LockServer \(Método\)](../windows/classfactory-lockserver-method.md)|Aumenta o disminuye el número de objetos subyacentes que son seguido del objeto actual de ClassFactory.|  
-|[ClassFactory::QueryInterface \(Método\)](../windows/classfactory-queryinterface-method.md)|Recupera un puntero a la interfaz especificada por parámetro.|  
-|[ClassFactory::Release \(Método\)](../windows/classfactory-release-method.md)|Disminuye el recuento de referencias para el objeto actual de ClassFactory.|  
+|[ClassFactory::ClassFactory (constructor)](../windows/classfactory-classfactory-constructor.md)||  
   
-## Jerarquía de herencia  
+### <a name="public-methods"></a>Métodos públicos  
+  
+|Name|Descripción|  
+|----------|-----------------|  
+|[ClassFactory::AddRef (método)](../windows/classfactory-addref-method.md)|Incrementa el recuento de referencias para el objeto ClassFactory actual.|  
+|[ClassFactory::LockServer (método)](../windows/classfactory-lockserver-method.md)|Incrementa o disminuye el número de subyacente de objetos que se realiza un seguimiento del objeto ClassFactory actual.|  
+|[ClassFactory::QueryInterface (método)](../windows/classfactory-queryinterface-method.md)|Recupera un puntero a la interfaz especificada por el parámetro.|  
+|[ClassFactory::Release (método)](../windows/classfactory-release-method.md)|Disminuye el recuento de referencias para el objeto ClassFactory actual.|  
+  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `I0`  
   
  `ChainInterfaces`  
@@ -99,11 +100,11 @@ class ClassFactory : public Details::RuntimeClass<
   
  `ClassFactory`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)   
- [RuntimeClassType \(Enumeración\)](../windows/runtimeclasstype-enumeration.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)   
+ [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md)

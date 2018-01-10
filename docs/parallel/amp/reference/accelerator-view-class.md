@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d98297d681f3c2c377a7bccb7b988169aca76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acceleratorview-class"></a>accelerator_view (Clase)
 Representa una abstracción del dispositivo virtual en un acelerador C++ AMP de datos en paralelo.  
@@ -50,14 +51,14 @@ class accelerator_view;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accelerator_view Constructor](#ctor)|Inicializa una nueva instancia de la clase `accelerator_view`.|  
 |[~ accelerator_view (destructor)](#dtor)|Destruye el objeto `accelerator_view`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[create_marker](#create_marker)|Devuelve un futuro para realizar el seguimiento de la finalización de todos los comandos enviados hasta ahora a este `accelerator_view` objeto.|  
 |[flush](#flush)|Envía todos los comandos pendientes en cola para el `accelerator_view` objeto para el Acelerador para su ejecución.|  
@@ -70,7 +71,7 @@ class accelerator_view;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Compara este `accelerator_view` objeto con otro y devuelve `false` si son iguales; en caso contrario, devuelve `true`.|  
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `accelerator_view` objeto en éste.|  
@@ -78,7 +79,7 @@ class accelerator_view;
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Acelerador](#accelerator)|Obtiene el objeto `accelerator` para el objeto `accelerator_view`.|  
 |[is_auto_selection](#is_auto_selection)|Obtiene un valor booleano que indica si el tiempo de ejecución seleccionará automáticamente un acelerador adecuado cuando la `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  

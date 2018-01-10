@@ -1,32 +1,33 @@
 ---
-title: "Escribir funciones con ensamblados alineados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (palabra clave) [C++], en funciones"
-  - "ensamblador [C++], escribir funciones"
-  - "funciones [C++], ensamblado en línea"
-  - "ensamblado alineado [C++], escribir funciones"
+title: "Escribir funciones con código ensamblador en línea | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], inline assembly
+- inline assembly [C++], writing functions
+- assembler [C++], writing functions
+- __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f2fc9e6a1d2c94e74ef8aabf085af8fc4dc0bc28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Escribir funciones con ensamblados alineados
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Específicos de Microsoft  
- Si escribe una función con código de ensamblado alineado, es fácil pasar argumentos a la función y devolver un valor de ella.  En los ejemplos siguientes se compara una función escrita primero para un ensamblador independiente y después reescrita para el ensamblador alineado.  La función, denominada `power2`, recibe dos parámetros y multiplica el primer parámetro por 2 elevado a la potencia del segundo parámetro.  Escrita para un ensamblador independiente, la función podría ser así:  
+# <a name="writing-functions-with-inline-assembly"></a>Escribir funciones con ensamblado alineado
+## <a name="microsoft-specific"></a>Específicos de Microsoft  
+ Si escribe una función con código de ensamblado alineado, es fácil pasar argumentos a la función y devolver un valor de ella. En los ejemplos siguientes se compara una función escrita primero para un ensamblador independiente y después reescrita para el ensamblador alineado. La función, denominada `power2`, recibe dos parámetros y multiplica el primer parámetro por 2 elevado a la potencia del segundo parámetro. Escrita para un ensamblador independiente, la función podría ser así:  
   
 ```  
 ; POWER.ASM  
@@ -50,9 +51,9 @@ _TEXT   ENDS
         END  
 ```  
   
- Puesto que se escribió para un ensamblador independiente, la función requiere un archivo de código fuente independiente y pasos de ensamblado y vinculación.  Los argumentos de función de C y C\+\+ se pasan normalmente en la pila, por lo que esta versión de la función `power2` obtiene acceso a sus argumentos por sus posiciones en la pila. \(Observe que la directiva **MODEL**, disponible en MASM y otros ensambladores, también permite obtener acceso a argumentos de la pila y a variables locales de la pila por nombre\).  
+ Puesto que se escribió para un ensamblador independiente, la función requiere un archivo de código fuente independiente y pasos de ensamblado y vinculación. Los argumentos de función de C y C++ se pasan normalmente en la pila, por lo que esta versión de la función `power2` obtiene acceso a sus argumentos por sus posiciones en la pila. (Tenga en cuenta que la **modelo** directiva, disponible en MASM y otros ensambladores, también permite obtener acceso a argumentos de la pila y variables locales de la pila por nombre.)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Este programa escribe la función `power2` con código de ensamblado alineado:  
   
 ```  
@@ -81,11 +82,11 @@ int power2( int num, int power )
 }  
 ```  
   
- La versión alineada de la función `power2` hace referencia a sus argumentos por nombre y aparece en el mismo archivo de código fuente que el resto del programa.  Esta versión también requiere menos instrucciones de ensamblado.  
+ La versión alineada de la función `power2` hace referencia a sus argumentos por nombre y aparece en el mismo archivo de código fuente que el resto del programa. Esta versión también requiere menos instrucciones de ensamblado.  
   
- Dado que la versión alineada de `power2` no ejecuta la instrucción de C\+\+ `return`, provoca una advertencia inofensiva si se compila en el nivel de advertencia 2 o más alto.  La función devuelve un valor, pero el compilador no lo percibe en ausencia de una instrucción `return`.  Puede utilizar [\#pragma warning](../../preprocessor/warning.md) para deshabilitar la generación de esta advertencia.  
+ Dado que la versión alineada de `power2` no ejecuta la instrucción de C++ `return`, provoca una advertencia inofensiva si se compila en el nivel de advertencia 2 o más alto. La función devuelve un valor, pero el compilador no lo percibe en ausencia de una instrucción `return`. Puede usar [#pragma warning](../../preprocessor/warning.md) para deshabilitar la generación de esta advertencia.  
   
  **FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Usar C o C\+\+ en bloques \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Vea también  
+ [Uso de C o C++ en bloques __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

@@ -53,11 +53,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b932abd77f660214a752fc2a18868f84bd22942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cobarray-class"></a>CObArray (clase)
 Admite matrices de punteros `CObject` .  
@@ -72,13 +73,13 @@ class CObArray : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CObArray::CObArray](#cobarray)|Construye una matriz vacía para `CObject` punteros.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CObArray::Add](#add)|Agrega un elemento al final de la matriz; aumenta el tamaño de la matriz si es necesario.|  
 |[CObArray::Append](#append)|Anexa otra matriz a la matriz; aumenta el tamaño de la matriz si es necesario.|  
@@ -100,7 +101,7 @@ class CObArray : public CObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[[] CObArray::operator](#operator_at)|Establece u obtiene el elemento en el índice especificado.|  
   

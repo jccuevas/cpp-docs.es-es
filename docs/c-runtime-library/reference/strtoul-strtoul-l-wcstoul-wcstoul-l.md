@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d75842fc678290468b63912ac9733fd7c23c98e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32bc9c63ec148d8e5c39d2aa6a38da974bfc6d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 Convierte cadenas en un valor entero largo sin signo.  
@@ -102,7 +103,7 @@ unsigned long _wcstoul_l(
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones convierte la cadena de entrada `nptr` en un `unsigned` `long`.  
   
- `strtoul` deja de leer la cadena `nptr` en el primer carácter que no reconoce como parte de un número. Puede tratarse del carácter nulo final o del primer carácter numérico mayor o igual que `base`. El valor de la categoría `LC_NUMERIC` de la configuración regional determina el reconocimiento del carácter de base de `nptr`. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul` y `wcstoul` usan la configuración regional actual; `_strtoul_l` y `_wcstoul_l` son idénticos, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `strtoul` deja de leer la cadena `nptr` en el primer carácter que no reconoce como parte de un número. Puede tratarse del carácter nulo final o del primer carácter numérico mayor o igual que `base`. El valor de la categoría `LC_NUMERIC` de la configuración regional determina el reconocimiento del carácter de base de `nptr`. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoul` y `wcstoul` usan la configuración regional actual; `_strtoul_l` y `_wcstoul_l` son idénticos, salvo que usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` no es `NULL`, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que señala `endptr`. Si no se puede realizar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de `nptr` se almacena en la ubicación a la que señala `endptr`.  
   
@@ -130,7 +131,7 @@ unsigned long _wcstoul_l(
 |`_strtoul_l`|\<stdlib.h>|  
 |`_wcstoul_l`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  

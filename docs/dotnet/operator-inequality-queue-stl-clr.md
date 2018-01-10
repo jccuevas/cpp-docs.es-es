@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18a0700acea20cb4f30a93d144c5bf217200bd77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6282acabb882ac2921835c958c2a7e138b0a6742
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-queue-stlclr"></a>operator!= (queue) (STL/CLR)
 La cola de comparación no es igual.  
@@ -37,7 +40,7 @@ template<typename Value,
  izquierda  
  Contenedor izquierdo que se va a comparar.  
   
- derecha  
+ right  
  Contenedor derecho que se va a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

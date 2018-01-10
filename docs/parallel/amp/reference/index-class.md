@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a1c4213ee94c063a7dff2a5b2c5e156b0ee91a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04a10524a46fe7351b881e436d7aaf422b2a9acb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-class"></a>index (Clase)
 Define un *N*-dimensional índice pographics-cpp-amp.md.  
@@ -42,13 +43,13 @@ class index;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[índice de Constructor](#ctor)|Inicializa una nueva instancia de la clase `index`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator--](#operator--)|Disminuye cada elemento de la `index` objeto.|  
 |[Operator(MOD) =](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento de la `index` del objeto cuando dicho elemento se divide por un número.|  
@@ -63,7 +64,7 @@ class index;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[Rank (constante)](#rank)|Almacena el rango de la `index` objeto.|  
   
@@ -170,7 +171,7 @@ index<_Rank>& operator/=(
 ### <a name="parameters"></a>Parámetros
 _Rhs el número que se va a dividir.
 
-## <a name="operator_at"></a>  operator\[\]  
+## <a name="operator_at"></a> operator\[\]  
 Devuelve el componente del índice en la ubicación especificada.
 
 ```

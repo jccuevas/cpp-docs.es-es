@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en TCHAR.H
 Para simplificar la conversión de código para uso internacional, la biblioteca en tiempo de ejecución de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] proporciona asignaciones de texto genérico específicas de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] para muchos tipos de datos, rutinas y otros objetos. Se pueden usar estas asignaciones, que están definidas en Tchar.h, para crear código genérico que se puede compilar para juegos de caracteres de un solo byte, multibyte o [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], en función de la constante de manifiesto que se defina con la instrucción `#define`. Las asignaciones de texto genérico son extensiones de [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] que no son compatibles con [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)].  

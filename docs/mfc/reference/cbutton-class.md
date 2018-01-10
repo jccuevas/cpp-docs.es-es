@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>Clase CButton
 Proporciona la funcionalidad de los controles de botón de Windows.  
@@ -104,13 +105,13 @@ class CButton : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CButton::CButton](#cbutton)|Construye un objeto `CButton`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CButton::Create](#create)|Crea el control de botón de Windows y lo adjunta a la `CButton` objeto.|  
 |[CButton::DrawItem](#drawitem)|Invalidación para dibujar un dibujado por el propietario `CButton` objeto.|  
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  `true`Si este método se realiza correctamente; en caso contrario, `false`.  
   
 ### <a name="remarks"></a>Comentarios  
- Si un control de botón o comando de link requiere el permiso de seguridad con privilegios elevados para realizar una acción, establecer el control `elevation required` estado. Como consecuencia, Windows muestra el icono de escudo de Control de cuentas de usuario (UAC) en el control. Para obtener más información, vea "User Account Control" en [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+ Si un control de botón o comando de link requiere el permiso de seguridad con privilegios elevados para realizar una acción, establecer el control `elevation required` estado. Como consecuencia, Windows muestra el icono de escudo de Control de cuentas de usuario (UAC) en el control. Para obtener más información, vea "User Account Control" en [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Este método envía el [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) mensaje, que se describe en el SDK de Windows.  
   

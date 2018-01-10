@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 471f0b2b89d8c44f17567dd9af6add535be7fbcf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
 Para que aplicaciones de Visual Basic (o aplicaciones programadas en otros lenguajes, como Pascal o Fortran) para llamar a funciones en un archivo DLL de C o C++, las funciones deben exportarse con la convención llamada correcta sin ninguna decoración de nombres realizarla el compilador.  

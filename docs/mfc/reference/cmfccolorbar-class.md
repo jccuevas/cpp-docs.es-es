@@ -85,11 +85,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 031a26d0b7b461c64bd111d26811ccf4031694c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04dcf7628e45d4c43ffbd5bbcd85132092ca04a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbar-class"></a>Clase CMFCColorBar
 La `CMFCColorBar` clase representa una barra de controles de acoplamiento que puede seleccionar los colores en un documento o aplicación.  
@@ -110,7 +111,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCColorBar::ContextToSize](#contexttosize)|Calcula los márgenes horizontales y verticales que son necesarios para contener los botones en el control de barra de colores y, a continuación, ajusta la ubicación de estos botones.|  
 |[CMFCColorBar::CreateControl](#createcontrol)|Crea una ventana de control de barra de colores, que se conecta a la `CMFCColorBar` de objetos y cambia el tamaño del control para que contenga la paleta de colores especificada.|  
@@ -132,7 +133,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Ajusta las posiciones de los botones de color en el control de barra de color.|  
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Indica si se puede cambiar la etiqueta de texto de los botones de color.|  
@@ -153,7 +154,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`m_bInternal`|Un campo booleano que determina si se procesan los eventos del mouse. Normalmente, se procesan los eventos del mouse cuando este campo es `TRUE` y modo de personalización es `FALSE`.|  
 |`m_bIsEnabled`|Un valor booleano que indica si un control está habilitado.|  

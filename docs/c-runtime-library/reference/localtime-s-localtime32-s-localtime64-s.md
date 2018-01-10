@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 571cb758016d3682289ee787dc8886768538d27b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 Convierte un valor de hora y lo corrige para la zona horaria local. Estas son versiones de [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -83,7 +84,7 @@ errno_t _localtime64_s(
   
 |`_tm`|`time`|Valor devuelto|Valor de `_tm`|Invoca el controlador de parámetros no válidos|  
 |-----------|------------|------------------|--------------------|---------------------------------------|  
-|`NULL`|cualquiera|`EINVAL`|No modificado|Sí|  
+|`NULL`|any|`EINVAL`|No modificado|Sí|  
 |No `NULL` (apunta a la memoria válida)|`NULL`|`EINVAL`|Todos los campos establecidos en -1|Sí|  
 |No `NULL` (apunta a la memoria válida)|menor que 0 o mayor que `_MAX__TIME64_T`|`EINVAL`|Todos los campos establecidos en -1|No|  
   
@@ -99,7 +100,7 @@ errno_t _localtime64_s(
   
  `_localtime64_s`, que usa la estructura `__time64_t`, permite expresar fechas hasta las 23:59:59 del 18 de enero de 3001, hora universal coordinada (UTC), mientras que `_localtime32_s` representa fechas hasta las 23:59:59 del 18 de enero de 2038, hora UTC.  
   
- `localtime_s` es una función insertada que se evalúa como `_localtime64_s` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t` de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `localtime_s` se evaluará como `_localtime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
+ `localtime_s` es una función insertada que se evalúa como `_localtime64_s` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t`de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `localtime_s` se evaluará como `_localtime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
   
  Los campos del tipo de estructura [tm](../../c-runtime-library/standard-types.md) almacenan los valores siguientes, cada uno de los cuales es un `int`.  
   
@@ -138,7 +139,7 @@ errno_t _localtime64_s(
 |`_localtime32_s`|\<time.h>|  
 |`_localtime64_s`|\<time.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

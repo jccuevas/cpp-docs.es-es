@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3457
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3457
+f1_keywords: C3457
+dev_langs: C++
+helpviewer_keywords: C3457
 ms.assetid: 5c1e366a-fa75-4cca-b9a3-86d4ebe4090e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a85e746667371a625d137b0c21faec2172c1a382
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: d2550bdaa8d070b046ab9dbab6b21b691eed6f49
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3457"></a>Error del compilador C3457
 'atributo': el atributo no admite argumentos sin nombre  

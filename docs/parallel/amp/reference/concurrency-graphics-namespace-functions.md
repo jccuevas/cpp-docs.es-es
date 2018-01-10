@@ -1,5 +1,5 @@
 ---
-title: Funciones del espacio de nombres Graphics | Documentos de Microsoft
+title: 'Funciones de espacio de nombres Concurrency:: Graphics | Documentos de Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,26 +9,26 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Funciones del espacio de nombres Graphics
+# <a name="concurrencygraphics-namespace-functions"></a>Funciones de espacio de nombres Concurrency:: Graphics
 |||  
 |-|-|  
-|[copy](#copy)|[copy_async](#copy_async)|  
+|[copy](#copy)|[copy_async)](#copy_async)|  
   
-##  <a name="copy"></a>Copy (función) (Namespace Graphics)  
- Copia una textura de origen en un búfer de destino, o copia un búfer de origen en un búfer de destino. La forma general de esta función es `copy(src, dest)`.  
+##  <a name="copy"></a>Copy (función) (Namespace Concurrency:: Graphics)  
+ Copia una textura de origen en un búfer de destino, o un búfer de origen se copian en un búfer de destino. La forma general de esta función es `copy(src, dest)`.  
   
 ```  
 template <
@@ -138,13 +138,13 @@ void copy (
  El alcance de la sección de textura que se copiará.  
   
  `_Dst`  
- Objeto que se va a copiar a.  
+ Objeto que se va a copiar en.  
   
  `_Dst_byte_size`  
  El número de bytes en el destino.  
   
  `_Dst_type`  
- El tipo del objeto de destino.  
+ El tipo de objeto de destino.  
   
  `_Dst_offset`  
  Desplazamiento en el destino en el que se comienzan a copiar.  
@@ -171,10 +171,10 @@ void copy (
  Un iterador de comienzo en el contenedor de origen.  
   
  `last`  
- Un iterador final en el contenedor de origen.  
+ Un iterador de final en el contenedor de origen.  
   
-##  <a name="copy_async"></a>copy_async (función) (Namespace Graphics)  
- Copia de forma asincrónica una textura de origen en un búfer de destino, o un búfer de origen se copia en un búfer de destino y, a continuación, devuelve un [completion_future](completion-future-class.md) objeto que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.  
+##  <a name="copy_async"></a>copy_async (función) (Namespace Concurrency:: Graphics)  
+ Copia de forma asincrónica una textura de origen en un búfer de destino, o un búfer de origen se copian en un búfer de destino y, a continuación, devuelve un [completion_future](completion-future-class.md) objeto que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.  
   
 ```  
 template<
@@ -280,13 +280,13 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  El alcance de la sección de textura que se copiará.  
   
  `_Dst`  
- Objeto que se va a copiar a.  
+ Objeto que se va a copiar en.  
   
  `_Dst_byte_size`  
  El número de bytes en el destino.  
   
  `_Dst_type`  
- El tipo del objeto de destino.  
+ El tipo de objeto de destino.  
   
  `_Dst_offset`  
  Desplazamiento en el destino en el que se comienzan a copiar.  
@@ -313,13 +313,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Un iterador de comienzo en el contenedor de origen.  
   
  `last`  
- Un iterador final en el contenedor de origen.  
+ Un iterador de final en el contenedor de origen.  
 
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_graphics.h  
   
- **Namespace:** Graphics 
+ **Namespace:** Concurrency:: Graphics 
 
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

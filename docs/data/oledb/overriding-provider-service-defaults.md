@@ -1,44 +1,47 @@
 ---
-title: "Reemplazar los valores predeterminados de servicio de un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "servicios OLE DB [OLE DB], reemplazar valores predeterminados"
-  - "proveedores de servicios [OLE DB]"
+title: Reemplazar los valores predeterminados de servicio de proveedor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- service providers [OLE DB]
+- OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Reemplazar los valores predeterminados de servicio de un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El valor del Registro del proveedor para **OLEDB\_SERVICES** se devuelve como valor predeterminado para la propiedad de inicialización [DBPROP\_INIT\_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) sobre el objeto de origen de datos.  
+# <a name="overriding-provider-service-defaults"></a>Reemplazar los valores predeterminados de servicio de un proveedor
+El valor del proveedor del registro para **OLEDB_SERVICES** se devuelve como el valor predeterminado para la [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) propiedad de inicialización en el objeto de origen de datos.  
   
- Con tal de que exista la entrada del Registro, se agregan los objetos del proveedor y el usuario puede reemplazar el valor predeterminado del proveedor para servicios habilitados estableciendo el valor de la propiedad **DBPROP\_INIT\_OLEDBSERVICES** antes de la inicialización.  Para habilitar o deshabilitar un servicio determinado, generalmente el usuario obtiene el valor actual de la propiedad **DBPROP\_INIT\_OLEDBSERVICES**, establece o desactiva el bit de la propiedad concreta como habilitada o deshabilitada, y restablece el valor de la propiedad.  Se puede establecer directamente el valor de **DBPROP\_INIT\_OLEDBSERVICES** en OLE DB o en la cadena de conexión pasada a ADO o **IDataInitialize::GetDatasource**.  Los valores correspondientes para habilitar o deshabilitar servicios individuales se muestran en la tabla siguiente.  
+ Siempre que exista la entrada del registro, se agregan los objetos del proveedor y el usuario puede invalidar configuración predeterminada del proveedor en la para servicios habilitados estableciendo el **DBPROP_INIT_OLEDBSERVICES** propiedad antes de la inicialización. Para habilitar o deshabilitar un servicio determinado, el usuario normalmente obtiene el valor actual de la **DBPROP_INIT_OLEDBSERVICES** propiedad, Establece o borra el bit de la propiedad concreta habilitar o deshabilitar y restablece la propiedad. **DBPROP_INIT_OLEDBSERVICES** puede establecerse directamente en OLE DB o en la cadena de conexión pasada a ADO o **IDataInitialize:: GetDatasource**. Los valores correspondientes para habilitar o deshabilitar servicios individuales se muestran en la tabla siguiente.  
   
-|Servicios predeterminados habilitados|Valor de propiedad DBPROP\_INIT\_OLEDBSERVIC|Valor de la cadena de conexión|  
-|-------------------------------------------|--------------------------------------------------|------------------------------------|  
-|Todos los servicios \(predeterminado\)|**DBPROPVAL\_OS\_ENABLEALL**|"OLE DB Services \= \-1;"|  
-|Todos los servicios excepto Pooling y AutoEnlistment|**DBPROPVAL\_OS\_ENABLEALL &**<br /><br /> **~DBPROPVAL\_OS\_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL\_OS\_TXNENLISTMENT**|"OLE DB Services \= \-4;"|  
-|Todos los servicios excepto Client Cursor|**DBPROPVAL\_OS\_ENABLEALL** &<br /><br /> ~**DBPROPVAL\_OS\_CLIENTCURSOR**|"OLE DB Services \= \-5;"|  
-|Todos los servicios, excepto Pooling, AutoEnlistment y Client Cursor|**DBPROPVAL\_OS\_ENABLEALL &**<br /><br /> **~DBPROPVAL\_OS\_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL\_OS\_CLIENTCURSOR**|"OLE DB Services \= \-7;"|  
-|Ningún servicio|~**DBPROPVAL\_OS\_ENABLEALL**|"OLE DB Services \= 0;"|  
+|Servicios predeterminados habilitados|Valor de la propiedad DBPROP_INIT_OLEDBSERVICES|Valor de cadena de conexión|  
+|------------------------------|------------------------------------------------|--------------------------------|  
+|Todos los servicios (valor predeterminado)|**DBPROPVAL_OS_ENABLEALL**|"Servicios OLE DB = -1;"|  
+|Todas excepto Pooling y AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|"Servicios OLE DB = de -4;"|  
+|Todos los servicios excepto Client Cursor|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_RESOURCEPOOLING**|"Servicios OLE DB = -5;"|  
+|Todos excepto Pooling, AutoEnlistment y Cursor de cliente|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING**|"Servicios OLE DB = -7;"|  
+|No hay servicios|~**DBPROPVAL_OS_ENABLEALL**|"Servicios OLE DB = 0;"|  
   
- Si no existe ninguna entrada del Registro para el proveedor, los Administradores de componentes no agregarán los objetos del proveedor y no se invocará ningún servicio, aunque lo solicite explícitamente el usuario.  
+ Si la entrada del registro no existe para el proveedor, los administradores de componentes, no se agregan los objetos del proveedor y no se invocará ningún servicio, incluso si se solicita explícitamente por el usuario.  
   
-## Vea también  
- [Resource Pooling](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
- [How Consumers Use Resource Pooling](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
- [How Providers Work Effectively with Resource Pooling](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
+## <a name="see-also"></a>Vea también  
+ [Agrupación de recursos](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
+ [Cómo utilizan los consumidores la agrupación de recursos](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
+ [Funcionan de proveedores de forma eficaz con la agrupación de recursos](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   
  [Habilitar y deshabilitar servicios OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)

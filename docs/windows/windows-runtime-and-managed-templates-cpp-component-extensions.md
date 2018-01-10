@@ -1,51 +1,52 @@
 ---
-title: "Windows en tiempo de ejecuci&#243;n y plantillas administradas (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas, con tipos CLR"
+title: "En tiempo de ejecución de Windows y plantillas administradas (extensiones de componentes de C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Windows en tiempo de ejecuci&#243;n y plantillas administradas (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las plantillas le permiten definir un prototipo de un tipo en tiempo de ejecución o de Common Language Runtime de Windows, y después crean instancias variaciones de ese tipo utilizando diferentes parámetros de tipo de plantilla.  
+# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime y plantillas administradas (Extensiones de componentes de C++)
+Plantillas le permiten definir un prototipo de un tiempo de ejecución de Windows o un tipo common language runtime y, a continuación, crear instancias de las variaciones de ese tipo mediante el uso de parámetros de tipo de plantilla diferente.  
   
-## Todos los runtimes  
- Puede crear plantillas de valor o tipos de referencia.  Para obtener más información sobre cómo crear valor o tipos de referencia, vea [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ Puede crear plantillas de tipos de valor o referencia.  Para obtener más información acerca de cómo crear tipos de valor o referencia, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Para obtener más información sobre las plantillas estándar de la clase de C\+\+, vea [Plantillas de clase](../cpp/class-templates.md).  
+ Para obtener más información acerca de las plantillas de clase estándares de C++, vea [plantillas de clase](../cpp/class-templates.md).  
   
-## Windows en tiempo de ejecución  
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución\).  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- Hay algunas limitaciones para crear plantillas de clase de tipos administrados, que se muestran en los ejemplos de código siguientes.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Existen algunas limitaciones a la creación de plantillas de clase desde los tipos administrados, que se muestran en los siguientes ejemplos de código.  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no puede crear instancias de una plantilla administrada con un parámetro genérico de la plantilla de tipo.  Esto es porque se resuelven los tipos genéricos en tiempo de ejecución.  Para obtener más información, vea [Genéricos y plantillas \(Visual C\+\+\)](../windows/generics-and-templates-visual-cpp.md).  
+ Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de plantilla de tipo genérico.  Esto es porque los tipos genéricos se resuelven en tiempo de ejecución.  Para obtener más información, consulte [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -69,7 +70,7 @@ ref class R {
   
  **Ejemplo**  
   
- Un tipo o una función genérica no puede estar anidado en una plantilla administrada.  
+ Un tipo genérico o una función no se pueden anidar en una plantilla administrada.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -82,7 +83,7 @@ template<class T> public ref class R {
   
  **Ejemplo**  
   
- No puede tener acceso a las plantillas definidas en un ensamblado al que se hace referencia con sintaxis de lenguaje de C\+\+\/CLI, pero puede utilizar la reflexión.  Si una plantilla no se crea instancias, no se genera en los metadatos.  Si se crea una instancia de una plantilla, sólo las funciones a las que se hace referencia de miembro aparecerán en metadatos.  
+ No se puede tener acceso a plantillas definidas en un ensamblado de referencia con C++ / sintaxis del lenguaje de CLI, pero se puede usar la reflexión.  Si no se crea una instancia de una plantilla, no se emite en los metadatos.  Si se crea una instancia de una plantilla, solo las funciones de miembro que se hace referencia aparecerán en metadatos.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -114,7 +115,7 @@ int main() {
   
  **Ejemplo**  
   
- Puede cambiar el modificador administrado de una clase en una especialización parcial o la especialización explícita de una plantilla de clase.  
+ Puede cambiar el modificador administrado de una clase en una especialización parcial o una especialización explícita de una plantilla de clase.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -142,5 +143,5 @@ class A <int> {};
   
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,46 +1,48 @@
 ---
-title: "Crear un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proveedores OLE DB, crear"
+title: Crear un proveedor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6e590461d359c2ab2ee750f0393f6c2f9ec7ac95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Crear un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-#### Para crear un proveedor OLE DB con el Asistente para proveedores OLE DB ATL  
+# <a name="creating-the-provider"></a>Crear un proveedor
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Para crear un proveedor OLE DB con el Asistente para proveedores OLE DB ATL  
   
-1.  Haga clic con el botón secundario en el proyecto.  
+1.  Haga clic en el proyecto.  
   
-2.  En el menú contextual, haga clic en **Agregar** y, a continuación, en **Agregar clase**.  
+2.  En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.  
   
-3.  En el cuadro de diálogo **Agregar clase**, seleccione el icono **Proveedor OLE DB ATL** y, a continuación, haga clic en **Abrir**.  
+3.  En el **Agregar clase** cuadro de diálogo, seleccione la **proveedor OLE DB ATL** icono y, a continuación, haga clic en **abiertos**.  
   
-4.  En el Asistente para proveedores OLE DB ATL, escriba un nombre corto para el proveedor en el cuadro **Nombre corto**.  En los temas siguientes se utiliza el nombre corto "MyProvider", pero se puede utilizar cualquier otro nombre.  Los otros cuadros de nombre se crean en función del nombre que escriba.  
+4.  En el Asistente para proveedores OLE DB ATL, escriba un nombre corto para el proveedor en el **nombre corto** cuadro. Los temas siguientes utiliza el nombre corto "MyProvider", pero puede usar otro nombre. Los otros cuadros de nombre se rellenan según el nombre especificado.  
   
-5.  Modifique los otros cuadros de nombre, si es necesario.  Además de los nombres de objeto y de archivo, puede editar lo siguiente:  
+5.  Edite los otros cuadros de nombre, si es necesario. Además de los nombres de objeto y el archivo, puede modificar lo siguiente:  
   
-    -   **Coclass**: nombre que utiliza COM para crear el proveedor.  
+    -   **Coclase**: el nombre que utiliza COM para crear el proveedor.  
   
-    -   **ProgID**: identificador de programación, una cadena de texto que se puede utilizar en lugar de un GUID.  
+    -   **Id. de programa**: el identificador de programación, que es una cadena de texto que se puede usar en lugar de un GUID.  
   
-    -   **Versión**: se utiliza con los valores de ProgID y CoClass para generar un identificador para programación dependiente de la versión.  
+    -   **Versión**: utilizar con los ProgID y coclass para generar un identificador de programación dependientes de la versión.  
   
 6.  Haga clic en **Finalizar**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

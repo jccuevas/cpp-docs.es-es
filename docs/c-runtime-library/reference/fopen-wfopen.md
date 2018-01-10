@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tfopen
 - corecrt_wstdio/_wfopen
 - stdio/fopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - wfopen function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 Abre un archivo. Hay disponibles versiones más seguras de estas funciones que realizan una validación de parámetros adicional y devuelven códigos de error; consulte [fopen_s, _wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md).  
@@ -95,7 +79,7 @@ FILE *_wfopen(
  Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
- La función `fopen` abre el archivo especificado por `filename`. De forma predeterminada, las cadenas `filename` estrechas se interpretan con la página de códigos de ANSI (CP_ACP). En las aplicaciones de escritorio de Windows, se puede cambiar a la página de códigos del OEM (CP_OEMCP) con la función [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) . Puede usar la función [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) para determinar si `filename` se interpreta mediante la página de códigos de ANSI o del OEM predeterminado del sistema. `_wfopen` es una versión con caracteres anchos de `fopen`; los argumentos a `_wfopen` son cadenas de caracteres anchos. De lo contrario, los objetos `_wfopen` y `fopen` se comportan de forma idéntica. Si solo se usa `_wfopen` , no afectará al juego de caracteres codificado que se use en la secuencia del archivo.  
+ La función `fopen` abre el archivo especificado por `filename`. De forma predeterminada, las cadenas `filename` estrechas se interpretan con la página de códigos de ANSI (CP_ACP). En las aplicaciones de escritorio de Windows, se puede cambiar a la página de códigos del OEM (CP_OEMCP) con la función [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) . Puede usar la función [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) para determinar si `filename` se interpreta mediante la página de códigos de ANSI o del OEM predeterminado del sistema. `_wfopen` es una versión con caracteres anchos de `fopen`; los argumentos a `_wfopen` son cadenas de caracteres anchos. De lo contrario, los objetos `_wfopen` y `fopen` se comportan de forma idéntica. Si solo se usa `_wfopen`, no afectará al juego de caracteres codificado que se use en la secuencia del archivo.  
   
  `fopen` acepta las rutas válidas en el sistema de archivos en el momento de la ejecución; `fopen` acepta las rutas UNC y las rutas que requieren unidades de red asignadas siempre y cuando el sistema que ejecuta el código tenga acceso al recurso compartido o a la unidad asignada en el momento de la ejecución. Al construir rutas para `fopen`, asegúrese de que las unidades, rutas de acceso o recursos compartidos de red están disponibles en el entorno de ejecución. Puede usar barras diagonales (/) o barras diagonales inversas (\\) como separadores de directorio en una ruta de acceso.  
   
@@ -203,12 +187,12 @@ FILE *_wfopen(
   
 |Caracteres en cadena de modo|Valor `oflag` equivalente para `_open`/`_sopen`|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(normalmente `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
+|`a`|`_O_WRONLY &#124; _O_APPEND` (normalmente `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
 |`a+`|`_O_RDWR &#124; _O_APPEND` (normalmente `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(normalmente `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(normalmente `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (normalmente `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (normalmente `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Ninguna|  
@@ -345,7 +329,7 @@ int main(int argc, char** argv)
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [Interpretación de secuencias de caracteres multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+ [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   

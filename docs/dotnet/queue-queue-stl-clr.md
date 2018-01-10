@@ -1,32 +1,33 @@
 ---
-title: "queue::queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "queue (miembro) [STL/CLR]"
+title: 'Queue:: Queue (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::queue
+dev_langs: C++
+helpviewer_keywords: queue member [STL/CLR]
 ms.assetid: 6106c07f-d5eb-4f0b-82df-ee4e2e751047
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6c4b24ad40bf19b7a20aafcfa2d02fb6490fed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# queue::queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuequeue-stlclr"></a>queue::queue (STL/CLR)
 Construye un objeto de adaptador de contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 queue();  
@@ -35,39 +36,39 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
- Objeto a la copia.  
+ Objeto que se va a copiar.  
   
  ajustado  
- Contenedor ajustado a utilizar.  
+ Contenedor ajustada que se va a usar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `queue();`  
   
- crea un contenedor ajustado vacío.  Se utiliza para especificar una secuencia controlada inicial vacía.  
+ crea un contenedor vacío ajustado. Se usa para especificar una secuencia controlada inicial vacía.  
   
  El constructor:  
   
  `queue(queue<Value, Container>% right);`  
   
- crea un contenedor ajustado que es una copia de `right.get_container()`.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de cola `right`.  
+ crea un contenedor ajustado que es una copia de `right.get_container()`. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de cola `right`.  
   
  El constructor:  
   
  `queue(queue<Value, Container>^ right);`  
   
- crea un contenedor ajustado que es una copia de `right->get_container()`.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de cola `*right`.  
+ crea un contenedor ajustado que es una copia de `right->get_container()`. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de cola `*right`.  
   
  El constructor:  
   
  `explicit queue(container_type wrapped);`  
   
- utilice el contenedor existente `wrapped` como contenedor ajustado.  Se utiliza para construir una cola de un contenedor existente.  
+ usa el contenedor existente `wrapped` como el contenedor ajustado. Se utiliza para crear una cola desde un contenedor existente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_queue_construct.cpp   
@@ -107,17 +108,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::assign](../dotnet/queue-assign-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)   
+ [Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

@@ -1,45 +1,46 @@
 ---
-title: "Funciones de administraci&#243;n de memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funciones de administración de memoria [Runtime de simultaneidad]"
+title: "Funciones de administración de memoria | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 309080a807a1325bbf921657a152cff60e87cb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Funciones de administraci&#243;n de memoria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este documento se describen las funciones de administración de memoria que el runtime de simultaneidad proporciona para ayudarle a asignar y liberar memoria de manera simultánea.  
+# <a name="memory-management-functions"></a>Funciones de administración de memoria
+Este documento describe las funciones de administración de memoria que el Runtime de simultaneidad proporciona para ayudarle a asignar y liberar memoria de manera simultánea.  
   
 > [!TIP]
->  El runtime de simultaneidad proporciona un programador predeterminado y, por tanto, no es necesario crear uno en la aplicación.  Dado que el programador de tareas ayuda a ajustar el rendimiento de las aplicaciones, se recomienda que comience con [Parallel Patterns Library \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md) si no ha usado antes el runtime de simultaneidad.  
+>  Runtime de simultaneidad proporciona un programador predeterminado, por lo que no deberá crear uno en la aplicación. Dado que el programador de tareas permite ajustar el rendimiento de las aplicaciones, es recomendable que comience con la [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md) si está nuevo para el Runtime de simultaneidad.  
   
- El Runtime de simultaneidad proporciona dos funciones de administración de memoria que se optimizan para asignar y liberar los bloques de memoria de manera simultánea.  La función de [concurrency::Alloc](../Topic/Alloc%20Function.md) asigna un bloque de memoria con el tamaño especificado.  La función de [concurrency::Free](../Topic/Free%20Function.md) libera la memoria que se asignó mediante `Alloc`.  
-  
-> [!NOTE]
->  Las funciones `Free` y `Alloc` confían la una en la otra.  Use la función `Free` solo para liberar memoria que se asigna utilizando la función `Alloc`.  Asimismo, cuando se usa la función `Alloc` para asignar memoria, use solo la función `Free` para liberar dicha memoria.  
-  
- Utilice las funciones `Free` y `Alloc` cuando asigna y libera un conjunto fijo de tamaños de asignación de subprocesos o tareas diferentes.  El Runtime de simultaneidad almacena en caché la memoria que asigna del montón del Runtime de C.  El Runtime de simultaneidad contiene una memoria caché independiente para cada subproceso; por consiguiente, el runtime administra la memoria sin el uso de bloqueos ni barreras de memoria.  Una aplicación se beneficia más de las funciones `Free` y `Alloc` cuando se tiene acceso a la memoria caché con más frecuencia.  Por ejemplo, un subproceso que llama con frecuencia a `Alloc` y `Free` es más beneficioso que un subproceso que llama principalmente a `Alloc` o `Free`.  
+ El Runtime de simultaneidad proporciona dos funciones de administración de memoria que se optimizan para asignar y liberar bloques de memoria de forma simultánea. El [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) función asigna un bloque de memoria utilizando el tamaño especificado. El [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) función libera la memoria asignada por `Alloc`.  
   
 > [!NOTE]
->  Cuando se usan estas funciones de administración de memoria y la aplicación usa mucha memoria, la aplicación puede producir un problema de memoria insuficiente antes de lo que se espera.  Dado que los bloques de memoria que un subproceso almacena en memoria caché no están disponibles para otro subproceso, si un subproceso contiene mucha memoria, esa memoria no está disponible.  
+>  El `Alloc` y `Free` funciones confían entre sí. Use la `Free` función solo para liberar la memoria que se asigna utilizando el `Alloc` función. Además, cuando se usa el `Alloc` función para asignar memoria, use solo la `Free` función liberar esa memoria.  
   
-## Ejemplo  
- Para obtener un ejemplo que utiliza funciones `Free` y `Alloc` para mejorar el rendimiento de la memoria, vea [Cómo: Usar Alloc y Free para mejorar el rendimiento de la memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
+ Use la `Alloc` y `Free` funciona cuando se asignan y liberan un conjunto fijo de tamaños de asignación de subprocesos diferentes o tareas. El Runtime de simultaneidad almacena en memoria caché de memoria que asigna del montón en tiempo de ejecución de C. El Runtime de simultaneidad contiene una memoria caché independiente para cada subproceso en ejecución; por lo tanto, el runtime administra la memoria sin el uso de bloqueos ni barreras de memoria. Una aplicación beneficia más de los `Alloc` y `Free` funciona cuando se tiene acceso a la memoria caché con más frecuencia. Por ejemplo, un subproceso que llama con frecuencia a ambos `Alloc` y `Free` ventajas más de un subproceso que llama principalmente `Alloc` o `Free`.  
   
-## Vea también  
+> [!NOTE]
+>  Cuando utilice estas funciones de administración de memoria y las aplicación utiliza muchos de memoria, la aplicación pueden especificar una condición de memoria insuficiente antes de lo que espera. Dado que los bloques de memoria que se almacenan en caché por un subproceso no están disponibles para ningún otro subproceso, si un subproceso tiene una gran cantidad de memoria, dicha memoria no está disponible.  
+  
+## <a name="example"></a>Ejemplo  
+ Para obtener un ejemplo que usa el `Alloc` y `Free` funciones para mejorar el rendimiento de memoria, vea [Cómo: Usar Alloc y Free para mejorar el rendimiento de memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
+  
+## <a name="see-also"></a>Vea también  
  [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Cómo: Usar Alloc y Free para mejorar el rendimiento de la memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+ [Procedimiento para usar Alloc y Free para mejorar el rendimiento de la memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+

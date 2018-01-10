@@ -1,56 +1,55 @@
 ---
-title: "OMP_NESTED | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_NESTED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_NESTED OpenMP environment variable"
+title: OMP_NESTED | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_NESTED
+dev_langs: C++
+helpviewer_keywords: OMP_NESTED OpenMP environment variable
 ms.assetid: c43f5287-a548-40d0-bd54-0c6b2b9f9a53
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d90d43727227593cccbd3d885f71f5cabaf10429
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# OMP_NESTED
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica si el paralelismo anidados está habilitado, a menos que el paralelismo anidados está habilitado o deshabilitado con `omp_set_nested`.  
+# <a name="ompnested"></a>OMP_NESTED
+Especifica si está habilitado paralelismo anidado, a menos que paralelismo anidado está habilitado o deshabilitado con `omp_set_nested`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 set OMP_NESTED[=TRUE | =FALSE]  
 ```  
   
-## Comentarios  
- La variable de entorno `OMP_NESTED` puede reemplazarse por la función de [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) .  
+## <a name="remarks"></a>Comentarios  
+ El `OMP_NESTED` variable de entorno puede reemplazarse por la [omp_set_nested ()](../../../parallel/openmp/reference/omp-set-nested.md) (función).  
   
- El valor predeterminado de implementación de Visual C\+\+ del estándar de OpenMP se `OMP_DYNAMIC=FALSE`.  
+ El valor predeterminado en la implementación de Visual C++ del estándar OpenMP es `OMP_DYNAMIC=FALSE`.  
   
- Para obtener más información, vea [4.4 OMP\_NESTED](../Topic/4.4%20OMP_NESTED.md).  
+ Para obtener más información, consulte [OMP_NESTED 4.4](../../../parallel/openmp/4-4-omp-nested.md).  
   
-## Ejemplo  
- El comando siguiente establece la variable de entorno `OMP_NESTED` TRUE:  
+## <a name="example"></a>Ejemplo  
+ El comando siguiente establece la `OMP_NESTED` variable de entorno a TRUE:  
   
 ```  
 set OMP_NESTED=TRUE  
 ```  
   
- El comando siguiente muestra la configuración actual de la variable de entorno `OMP_NESTED` :  
+ El comando siguiente muestra la configuración actual de la `OMP_NESTED` variable de entorno:  
   
 ```  
 set OMP_NESTED  
 ```  
   
-## Vea también  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>Vea también  
+ [Variables de entorno](../../../parallel/openmp/reference/openmp-environment-variables.md)

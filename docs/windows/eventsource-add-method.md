@@ -1,29 +1,30 @@
 ---
-title: "EventSource::Add (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::Add"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Add (método)"
+title: "EventSource:: Add (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::Add
+dev_langs: C++
+helpviewer_keywords: Add method
 ms.assetid: 8bded85b-929e-4425-a464-e5de67bb774c
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6e5a39abdced8929ac1a01db596a6099c70853c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# EventSource::Add (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="eventsourceadd-method"></a>EventSource::Add (Método)
 Anexa el controlador del evento representado por la interfaz de delegado especificado para el conjunto de controladores de eventos para el objeto de origen de eventos actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,10 +38,10 @@ HRESULT Add(
   
 #### <a name="parameters"></a>Parámetros  
  `delegateInterface`  
- La interfaz para un objeto de delegado, que representa un controlador de eventos.  
+ La interfaz a un objeto de delegado, que representa un controlador de eventos.  
   
  `token`  
- Cuando se complete esta operación, un identificador que representa el evento. Use este token como parámetro para el [Remove()](../Topic/EventSource::Remove%20Method.md) método descartar el controlador de eventos.  
+ Cuando se completa esta operación, un identificador que representa el evento. Usar este token como parámetro a la [Remove()](../windows/eventsource-remove-method.md) método para descartar el controlador de eventos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  

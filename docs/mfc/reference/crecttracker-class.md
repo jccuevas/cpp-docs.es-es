@@ -49,11 +49,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b151912140a2aa228b26a0afa7d620467d729386
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 Permite que un elemento para mostrar, mover y cambiar el tamaño de distintas maneras.  
@@ -68,13 +69,13 @@ class CRectTracker
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRectTracker::CRectTracker](#crecttracker)|Construye un objeto `CRectTracker`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRectTracker::AdjustRect](#adjustrect)|Se llama cuando se cambia el tamaño del rectángulo.|  
 |[CRectTracker::Draw](#draw)|Representa el rectángulo.|  
@@ -90,7 +91,7 @@ class CRectTracker
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Determina el tamaño de los controladores de tamaño.|  
 |[CRectTracker::m_nStyle](#m_nstyle)|Style(s) actual de la herramienta de seguimiento.|  

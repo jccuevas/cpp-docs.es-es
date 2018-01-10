@@ -1,29 +1,28 @@
 ---
-title: "Advertencia del compilador (nivel 2) C4007 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4007"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4007"
+title: Compilador advertencia (nivel 2) C4007 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4007
+dev_langs: C++
+helpviewer_keywords: C4007
 ms.assetid: 56a70c07-59a5-4fd7-80ed-63592c65cbb7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f16c819c83c54e90d32e321992004d466077d269
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 2) C4007
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función' : debe ser 'atributo'  
+# <a name="compiler-warning-level-2-c4007"></a>Compilador C4007 de advertencia (nivel 2)
+'función': debe ser 'atributo'  
   
- Un atributo requerido para una función no está expresado explícitamente.  Por ejemplo, la función **main** debe tener el atributo `__cdecl`.  El compilador fuerza el atributo.
+ Un atributo necesario para una función no se ha indicado explícitamente. Por ejemplo, la función **principal** debe tener el `__cdecl` atributo. El compilador fuerza el atributo.

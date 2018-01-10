@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e98fa16413be77def6780989f1313a9713eeed58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fb62a905d092a347103ea98fcd323e3778ed458
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccacheddatapathproperty-class"></a>Clase de CCachedDataPathProperty
 Implementa una propiedad de control OLE transferida de forma asincrónica y almacenada en memoria caché en un archivo de memoria.  
@@ -40,13 +41,13 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Construye un objeto `CCachedDataPathProperty`.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`objeto en el que los datos en caché.|  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5ff7825299d0547862ec228ccc8565b3ad42d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd1db02541927b9ccb3827ee1fdd9e35543a7d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxdll-versions"></a>Versiones de AFXDLL
 En lugar de compilar la aplicación al vincular estáticamente a las bibliotecas de código objeto MFC, puede compilar su aplicación para que use una de las bibliotecas AFXDLL, que contienen MFC en un archivo DLL que pueden compartir varias aplicaciones en ejecución. Para una tabla de nombres de AFXDLL, vea [archivos DLL: convenciones de nomenclatura](../build/naming-conventions-for-mfc-dlls.md).  

@@ -1,67 +1,69 @@
 ---
-title: "CreatorMap (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap"
-  - "implements/Microsoft::WRL::Details::CreatorMap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreatorMap (estructura)"
+title: CreatorMap (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::CreatorMap
+- implements/Microsoft::WRL::Details::CreatorMap
+dev_langs: C++
+helpviewer_keywords: CreatorMap structure
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Es compatible con la infraestructura de [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] y no está diseñado para que se utilice directamente desde el código.  
+# <a name="creatormap-structure"></a>CreatorMap (estructura)
+Admite la infraestructura de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 struct CreatorMap;  
 ```  
   
-## Comentarios  
- Contiene información sobre cómo inicializar, registrar, y los objetos del registro.  
+## <a name="remarks"></a>Comentarios  
+ Contiene información sobre cómo inicializar, registrar y anular el registro de objetos.  
   
- CreatorMap contiene la siguiente información:  
+ CreatorMap contiene la información siguiente:  
   
--   Cómo inicializar, registrar, y los objetos del registro.  
+-   Cómo inicializar, registrar y anular el registro de objetos.  
   
--   Cómo comparar datos de activación dependiendo de COM o de un generador clásico de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] .  
+-   Cómo se comparan los datos de activación según una fábrica de Windows Runtime o COM clásico.  
   
--   Información sobre el nombre de caché y de servidor de generador de una interfaz.  
+-   Información sobre el nombre de caché y del servidor de fábrica de una interfaz.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[CreatorMap::activationId \(Miembro de datos\)](../windows/creatormap-activationid-data-member.md)|Representa un identificador de objeto que se identifica mediante un identificador clásico de la clase COM o un nombre de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] .|  
-|[CreatorMap::factoryCache \(Miembro de datos\)](../windows/creatormap-factorycache-data-member.md)|Almacena el puntero a la memoria caché del generador del CreatorMap.|  
-|[CreatorMap::factoryCreator \(Miembro de datos\)](../Topic/CreatorMap::factoryCreator%20Data%20Member.md)|Crea un generador para el CreatorMap especificado.|  
-|[CreatorMap::serverName \(Miembro de datos\)](../windows/creatormap-servername-data-member.md)|Almacena el nombre del CreatorMap.|  
+|[CreatorMap::activationId (miembro de datos)](../windows/creatormap-activationid-data-member.md)|Representa un identificador de objeto que se identifica mediante un identificador de clase COM clásico o un nombre en tiempo de ejecución de Windows.|  
+|[CreatorMap::factoryCache (miembro de datos)](../windows/creatormap-factorycache-data-member.md)|Almacena el puntero a la memoria caché del generador para el CreatorMap.|  
+|[CreatorMap::factoryCreator (miembro de datos)](../windows/creatormap-factorycreator-data-member.md)|Crea un generador para el CreatorMap especificado.|  
+|[CreatorMap::serverName (miembro de datos)](../windows/creatormap-servername-data-member.md)|Almacena el nombre del servidor para el CreatorMap.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CreatorMap`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

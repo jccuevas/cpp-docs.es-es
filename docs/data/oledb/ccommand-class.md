@@ -1,34 +1,36 @@
 ---
-title: "CCommand (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CCommand"
-  - "CCommand"
-  - "ATL.CCommand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCommand (clase)"
+title: CCommand (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CCommand
+- CCommand
+- ATL.CCommand
+dev_langs: C++
+helpviewer_keywords: CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ccommand-class"></a>CCommand (Clase)
 Proporciona métodos para establecer y ejecutar un comando.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -45,48 +47,48 @@ class CCommand :
    public TMultiple  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TAccessor`  
- El tipo de clase de descriptor de acceso \(como `CDynamicParameterAccessor`, `CDynamicStringAccessor`, o `CEnumeratorAccessor`\) que desea que el comando de utilizar.  El valor predeterminado es `CNoAccessor`, que especifica que los parámetros de la clase o columnas no admiten la salida.  
+ El tipo de clase de descriptor de acceso (como `CDynamicParameterAccessor`, `CDynamicStringAccessor`, o `CEnumeratorAccessor`) que desea que el comando que se utilizará. El valor predeterminado es `CNoAccessor`, que especifica que la clase no admite parámetros o columnas de salida.  
   
  `TRowset`  
- El tipo de clase de conjunto de filas \(como `CArrayRowset` o `CNoRowset`\) que desea que el comando de utilizar.  El valor predeterminado es `CRowset`.  
+ El tipo de clase de conjunto de filas (como `CArrayRowset` o `CNoRowset`) que desea que el comando que se utilizará. De manera predeterminada, es `CRowset`.  
   
  `TMultiple`  
- Para utilizar un comando OLE DB que puede devolver varios resultados, especifique [CMultipleResults](../../data/oledb/cmultipleresults-class.md).  Si no, utilice [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md).  Para obtener información detallada, vea [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
+ Para usar un comando de OLE DB que puede devolver varios resultados, especifique [CMultipleResults](../../data/oledb/cmultipleresults-class.md). De lo contrario, utilice [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Para obtener más información, consulte [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
-  
-|||  
-|-|-|  
-|[Cerrar](../../data/oledb/ccommand-close.md)|Cierre el comando actual.|  
-|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Captura el resultado siguiente al utilizar varios conjuntos de resultados.|  
-|[Abrir](../../data/oledb/ccommand-open.md)|Ejecuta y enlaza opcionalmente el comando.|  
-  
-### Métodos heredados  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[Create](../../data/oledb/ccommand-create.md)|Crea un nuevo comando para la sesión especificada, establezca el texto de comando.|  
+|[Cerrar](../../data/oledb/ccommand-close.md)|Cierra el comando actual.|  
+|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Captura el resultado siguiente al utilizar conjuntos de resultados múltiples.|  
+|[Abrir](../../data/oledb/ccommand-open.md)|Se ejecuta y, opcionalmente, enlaza el comando.|  
+  
+### <a name="inherited-methods"></a>Métodos heredados  
+  
+|||  
+|-|-|  
+|[Crear](../../data/oledb/ccommand-create.md)|Crea un nuevo comando para la sesión especificada, a continuación, Establece el texto del comando.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Crea un nuevo comando.|  
-|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Obtiene una lista de parámetros del comando, sus nombres, y sus tipos.|  
-|[Preparación](../../data/oledb/ccommand-prepare.md)|Valida y optimiza el comando actual.|  
-|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Libera el descriptor de parámetros en caso necesario, continuación libera el comando.|  
-|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Especifica el tipo nativo de cada parámetro de comando.|  
-|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Descarta el plan de ejecución actual del comando.|  
+|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Obtiene una lista de parámetros del comando, sus nombres y sus tipos.|  
+|[Preparar](../../data/oledb/ccommand-prepare.md)|Valida y optimiza el comando actual.|  
+|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Libera el descriptor de acceso de parámetro si es necesario, a continuación, libera el comando.|  
+|[SetParameterInfo.](../../data/oledb/ccommand-setparameterinfo.md)|Especifica el tipo nativo de cada parámetro de comando.|  
+|[Cancelación de preparación](../../data/oledb/ccommand-unprepare.md)|Descarta el plan de ejecución del comando actual.|  
   
-## Comentarios  
- Utilice esta clase cuando necesite realizar una operación basada en parámetros o ejecutar un comando  Si sólo tiene que abrir un conjunto de filas, utilice [CTable](../../data/oledb/ctable-class.md) en su lugar.  
+## <a name="remarks"></a>Comentarios  
+ Utilice esta clase cuando necesite realizar una operación basada en parámetros o ejecutar un comando. Si simplemente tiene que abrir un conjunto de filas simple, use [CTable](../../data/oledb/ctable-class.md) en su lugar.  
   
- La clase de descriptor de acceso que usa determina el método de enlazar parámetros y datos.  
+ La clase de descriptor de acceso que se usa determina el método de enlace de parámetros y datos.  
   
- Tenga en cuenta que no puede utilizar procedimientos almacenados con el proveedor OLE DB para Jet porque ese proveedor no admite procedimientos almacenados \(sólo se permiten constantes en cadenas de consulta\).  
+ Tenga en cuenta que no puede usar los procedimientos almacenados con el proveedor OLE DB para Jet porque ese proveedor no admite almacena procedimientos (sólo se permiten constantes en cadenas de consulta).  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

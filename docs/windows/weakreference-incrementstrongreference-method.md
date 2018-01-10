@@ -1,29 +1,30 @@
 ---
-title: "WeakReference::IncrementStrongReference (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::IncrementStrongReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IncrementStrongReference (método)"
+title: "WeakReference:: Incrementstrongreference (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::IncrementStrongReference
+dev_langs: C++
+helpviewer_keywords: IncrementStrongReference method
 ms.assetid: d0232426-a8cb-48b4-99d4-165de2d66cb9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 355f1c07d8185c83fd92fa76810ef57547ebd599
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# WeakReference::IncrementStrongReference (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference (Método)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,16 +34,16 @@ ULONG IncrementStrongReference();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- El recuento de referencias fuertes incrementado.  
+ El recuento de referencia segura incrementado.  
   
 ## <a name="remarks"></a>Comentarios  
- Incrementa el recuento de referencia segura del actual objeto WeakReference.  
+ Incrementa el recuento de referencia segura del objeto WeakReference actual.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** wrl  
+ **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
 [WeakReference (clase)](../windows/weakreference-class1.md)  
- [Espacio de nombres de wrl](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

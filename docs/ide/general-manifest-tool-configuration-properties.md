@@ -1,53 +1,52 @@
 ---
-title: "General, Herramienta Manifiesto, Propiedades de configuraci&#243;n, P&#225;ginas de propiedades de &lt;Projectname&gt; (Cuadro de di&#225;logo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.MergeRulesFile"
-  - "VC.Project.VCManifestTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCManifestTool.SuppressStartupBanner"
-  - "VC.Project.VCManifestTool.UseFAT32Workaround"
-  - "VC.Project.VCManifestTool.VerboseOutput"
-  - "VC.Project.VCManifestTool.AssemblyIdentity"
-dev_langs: 
-  - "C++"
+title: "Manifiesto de propiedades de configuración de la herramienta (Visual C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.MergeRulesFile
+- VC.Project.VCManifestTool.UseUnicodeResponseFiles
+- VC.Project.VCManifestTool.SuppressStartupBanner
+- VC.Project.VCManifestTool.UseFAT32Workaround
+- VC.Project.VCManifestTool.VerboseOutput
+- VC.Project.VCManifestTool.AssemblyIdentity
+dev_langs: C++
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5e56c823a7a30850e24e393a545f0df6a6637a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# General, Herramienta Manifiesto, Propiedades de configuraci&#243;n, P&#225;ginas de propiedades de &lt;Projectname&gt; (Cuadro de di&#225;logo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este cuadro de diálogo se utiliza para especificar las opciones generales de [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>General, herramienta manifiesto, propiedades de configuración, &lt;Projectname&gt; cuadro de diálogo páginas de propiedades
+Utilice este cuadro de diálogo para especificar las opciones generales de [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Para tener acceso a este cuadro de diálogo de página de propiedades, abra las páginas de propiedades correspondientes al proyecto, o bien la hoja de propiedades.  Expanda el nodo de la **Herramienta Manifiesto** bajo **Propiedades de configuración** y, a continuación, seleccione **General**.  
+ Para obtener acceso a este cuadro de diálogo de la página de propiedades, abra las páginas de propiedades para el proyecto o la hoja de propiedades. Expanda el **herramienta manifiesto** nodo bajo **propiedades de configuración**y, a continuación, seleccione **General**.  
   
-## Lista de UIElement  
- **Suprimir la pancarta de inicio**  
- **Sí \(\/nologo\)** especifica que se ocultarán los datos de copyright de Microsoft con carácter estándar cuando se inicie la herramienta de manifiesto.  Use esta opción para suprimir el resultado no deseado en los archivos de registro, cuando ejecute mt.exe como parte de un proceso de compilación o desde un entorno de compilación.  
+## <a name="uielement-list"></a>Lista de UIElement  
+ **Suprimir el titular de inicio**  
+ **Sí (/ nologo)** especifica que los datos de copyright de Microsoft estándares se ocultan cuando se inicia la herramienta de manifiesto. Utilice esta opción para suprimir la salida no deseado en los archivos de registro, cuando ejecute mt.exe como parte de un proceso de compilación o de un entorno de compilación.  
   
- **Resultado detallado**  
- **Sí \(\/verbose\)** especifica que se mostrará información de compilación adicional durante la generación del manifiesto.  
+ **Resultados detallados**  
+ **Sí (/verbose)** especifica que se mostrará información adicional de compilación durante la generación del manifiesto.  
   
  **Identidad del ensamblado**  
- Utiliza la opción \/identity para especificar una cadena de identidad, que comprende los atributos de [Elemento \<assemblyIdentity\>](../Topic/%3CassemblyIdentity%3E%20Element%20\(ClickOnce%20Application\).md).  Una cadena de identidad comienza con el valor del atributo `name` y va seguida de los pares *atributo* \= *valor*.  Una coma delimita los atributos en una cadena de identidad.  
+ Utiliza la opción /identity para especificar una cadena de identidad, que incluye los atributos para el [ \<assemblyIdentity > elemento](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Una cadena de identidad comienza con el valor de la `name` atributo y va seguida por *atributo* = *valor* pares. Los atributos en una cadena de identidad se delimitan mediante una coma.  
   
- A continuación se muestra un ejemplo de una cadena de identidad:  
+ El siguiente es un ejemplo de cadena de identidad:  
   
  `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   
-## Vea también  
- [Manifiesto de aplicación ClickOnce](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Herramienta Manifiesto \(Páginas de propiedades\)](../ide/manifest-tool-property-pages.md)   
- [Cómo: Abrir páginas de propiedades del proyecto](../misc/how-to-open-project-property-pages.md)   
- [Cómo: Editar hojas de propiedades de proyecto](../misc/how-to-edit-project-property-sheets.md)
+## <a name="see-also"></a>Vea también  
+ [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
+ [Páginas de propiedades de la herramienta manifiesto](../ide/manifest-tool-property-pages.md)   
+ [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)   

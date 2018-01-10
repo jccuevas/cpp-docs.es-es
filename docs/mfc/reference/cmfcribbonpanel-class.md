@@ -125,11 +125,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab6ca8710c2ee05f05157175eaafa5ae281470e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c91cdd7b793195e0afb05acfe3fc33694fdb60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>Clase CMFCRibbonPanel
 Implementa un panel que contiene un conjunto de elementos de cinta. Cuando se dibuja el panel, muestra tantos elementos como es posible, dado el tamaño del panel.  
@@ -153,7 +154,7 @@ class CMFCRibbonPanel : public CObject
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Cmfcribbonpanel:: Add](#add)|Agrega un elemento de la cinta de opciones en el panel.|  
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Agrega un separador en el panel de la cinta.|  

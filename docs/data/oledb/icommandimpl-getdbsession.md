@@ -1,34 +1,36 @@
 ---
-title: "ICommandImpl::GetDBSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::GetDBSession"
-  - "GetDBSession"
-  - "ICommandImpl.GetDBSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetDBSession (método)"
+title: 'ICommandImpl:: Getdbsession | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::GetDBSession
+- GetDBSession
+- ICommandImpl.GetDBSession
+dev_langs: C++
+helpviewer_keywords: GetDBSession method
 ms.assetid: e5b1cb13-453f-4698-90bf-f6bfe6814a54
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6d848b9bc541c74d6820932335542707c12263e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl::GetDBSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icommandimplgetdbsession"></a>ICommandImpl::GetDBSession
 Devuelve un puntero de interfaz a la sesión que creó el comando.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,14 +40,14 @@ Devuelve un puntero de interfaz a la sesión que creó el comando.
 );  
 ```  
   
-#### Parámetros  
- Vea [ICommand::GetDBSession](https://msdn.microsoft.com/en-us/library/ms719622.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [ICommand::GetDBSession](https://msdn.microsoft.com/en-us/library/ms719622.aspx) en el *referencia del programador OLE DB*.  
   
-## Comentarios  
- Útil para recuperar propiedades de la sesión.  
+## <a name="remarks"></a>Comentarios  
+ Es útil para recuperar las propiedades de la sesión.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [ICommandImpl \(Clase\)](../../data/oledb/icommandimpl-class.md)
+## <a name="see-also"></a>Vea también  
+ [ICommandImpl (Clase)](../../data/oledb/icommandimpl-class.md)

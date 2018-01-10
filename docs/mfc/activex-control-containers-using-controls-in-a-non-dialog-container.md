@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e773085167266cd413b4d2279863d2b68c52bed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Contenedores de controles ActiveX: Usar controles en un contenedor sin cuadro de diálogo
 En algunas aplicaciones, como un SDI o una aplicación MDI, desea incrustar un control en una ventana de la aplicación. El **crear** función miembro de la clase contenedora, insertada por Visual C++, puede crear una instancia del control dinámicamente, sin necesidad de un cuadro de diálogo.  

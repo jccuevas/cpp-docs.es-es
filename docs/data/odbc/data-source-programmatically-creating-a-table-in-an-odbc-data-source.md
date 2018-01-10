@@ -1,45 +1,48 @@
 ---
-title: "Origen de datos: Crear una tabla en un origen de datos ODBC mediante programaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "orígenes de datos ODBC, crear tablas"
-  - "crear tablas ODBC mediante programación [C++]"
-  - "tablas [C++]"
-  - "tablas [C++], crear mediante programación"
+title: "Crear mediante programación una tabla en un origen de datos ODBC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- programmatically creating ODBC tables [C++]
+- tables [C++]
+- ODBC data sources, creating tables in
+- tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43be9c8a2339bb47d598304145a8c34f391b11c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Origen de datos: Crear una tabla en un origen de datos ODBC mediante programaci&#243;n
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Este tema explica cómo se crea una tabla para el origen de datos, utilizando la función miembro `ExecuteSQL` de la clase `CDatabase` y pasando a la función una cadena que contiene la instrucción SQL **CREATE TABLE**.  
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Origen de datos: Crear una tabla en un origen de datos ODBC mediante programación
+En este tema se explica cómo crear una tabla para los datos de origen, con el `ExecuteSQL` función miembro de clase `CDatabase`, pasa a la función una cadena que contiene un **CREATE TABLE** instrucción SQL.  
   
- Para obtener información general sobre orígenes de datos ODBC en MFC, vea [Origen de datos \(ODBC\)](../../data/odbc/data-source-odbc.md).  El tema [Origen de datos: Configurar un origen de datos ODBC mediante programación](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) describe cómo se crean orígenes de datos.  
+ Para obtener información general acerca de los orígenes de datos ODBC de MFC, vea [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md). El tema [origen de datos: configuración mediante programación de un origen de datos ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) describe crear orígenes de datos.  
   
- Una vez establecido el origen de datos, se pueden crear fácilmente tablas usando la función miembro `ExecuteSQL` y la instrucción SQL **CREATE TABLE**.  Por ejemplo, si se tuviese un objeto `CDatabase` denominado `myDB`, se podría utilizar el siguiente código MFC para crear una tabla:  
+ Una vez establecido el origen de datos, puede crear fácilmente tablas usando la `ExecuteSQL` función miembro y **CREATE TABLE** instrucción SQL. Por ejemplo, si tuviera un `CDatabase` objeto denominado `myDB`, podría utilizar el siguiente código MFC para crear una tabla:  
   
 ```  
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",   
                          OfficeName TEXT(10))");  
 ```  
   
- Este código de ejemplo crea una tabla denominada "OFFICES" en la conexión al origen de datos de Microsoft Access mantenida por `myDB`; la tabla contiene dos campos, "OfficeID" y "OfficeName".  
+ Este ejemplo de código crea una tabla denominada "OFFICES" en la conexión de origen de datos de Microsoft Access mantenida por `myDB`; la tabla contiene dos campos, "OfficeID" y "OfficeName".  
   
 > [!NOTE]
->  Los tipos de campo especificados en la instrucción SQL **CREATE TABLE** pueden variar dependiendo del controlador ODBC que se esté utilizando.  El programa Microsoft Query \(distribuido con Visual C\+\+ 1.5\) es una forma de detectar los tipos de campo que están disponibles para un origen de datos.  En Microsoft Query, haga clic en **Archivo**, haga clic en **Definición de tabla**, seleccione una tabla de un origen de datos y mire el tipo mostrado en el cuadro combinado **Tipo**.  También existe sintaxis SQL para crear índices.  
+>  Los tipos de campo especificados en la **CREATE TABLE** instrucción SQL puede variar según el controlador ODBC que está utilizando. El programa Microsoft Query (distribuido con Visual C++ 1.5) es una manera de detectar los tipos de campo están disponibles para un origen de datos. En Microsoft Query, haga clic en **archivo**, haga clic en **definición de tabla**, seleccione una tabla en un origen de datos y cuál es el tipo que se muestra en el **tipo** cuadro combinado. También existe sintaxis SQL para crear índices.  
   
-## Vea también  
- [Origen de datos \(ODBC\)](../../data/odbc/data-source-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)

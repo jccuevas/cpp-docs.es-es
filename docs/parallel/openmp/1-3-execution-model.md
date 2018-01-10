@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dddc4c10a77ca5dd277435837169478e0d5daca5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="13-execution-model"></a>1.3 Modelo de ejecución
 OpenMP usa el modelo de tipo bifurcar-recombinar de ejecución en paralelo. Aunque este modelo del tipo bifurcar-recombinar puede ser útil para resolver diversos problemas, algo ha sido diseñado para aplicaciones basadas en matrices de gran tamaño. OpenMP está destinado a los programas de soporte técnico que se ejecutarán correctamente ambos como paralelo programas (varios subprocesos de ejecución y una biblioteca de compatibilidad con OpenMP completa) y como programas secuenciales (directivas pasa por alto y una biblioteca de código auxiliar de OpenMP simple). Sin embargo, es posible y permiten desarrollar un programa que no se comporten correctamente cuando se ejecutan secuencialmente. Además, diferentes grados de paralelismo pueden generar resultados numéricos diferentes debido a los cambios en la asociación de operaciones numéricas. Por ejemplo, una reducción de adición de serie puede tener un patrón diferente de asociaciones de adición de una reducción en paralelo. Estas asociaciones diferentes pueden cambiar los resultados de la adición de punto flotante.  

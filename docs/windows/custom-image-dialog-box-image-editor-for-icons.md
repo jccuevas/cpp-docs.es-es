@@ -1,43 +1,43 @@
 ---
-title: "Tipo de imagen personalizada (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.customimage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Tipo de imagen personalizada (cuadro de diálogo)"
+title: "Cuadro de diálogo imagen personalizada (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.customimage
+dev_langs: C++
+helpviewer_keywords: Custom Image dialog box
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Tipo de imagen personalizada (Cuadro de di&#225;logo) (Editor de im&#225;genes para iconos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permite crear una imagen nueva de un tamaño y número de colores personalizados.  Para obtener más información sobre las dimensiones de los iconos que Windows utiliza, vea [Iconos](_win32_Icons_cpp) en la documentación del SDK de Windows.  
-  
+# <a name="custom-image-dialog-box-image-editor-for-icons"></a>Tipo de imagen personalizada (Cuadro de diálogo) (Editor de imágenes para iconos)
+Le permite crear una nueva imagen con un tamaño personalizado y el número de colores.
  **Ancho**  
- Proporciona un espacio para especificar el ancho de la imagen personalizada en píxeles \(1 \- 512, límite de 2048\).  
+ Proporciona un espacio para que escriba el ancho de la imagen personalizada en píxeles (1-512, límite de 2048).  
   
  **Alto**  
- Proporciona un espacio para especificar el alto de la imagen personalizada en píxeles \(1 \- 512, límite de 2048\).  
+ Proporciona un espacio especificar el alto de la imagen personalizada en píxeles (1-512, límite de 2048).  
   
- **Colors**  
- Proporciona un espacio para elegir el número de colores de la imagen personalizada: 2, 16 ó 256.  
+ **Colores**  
+ Proporciona un espacio para que pueda elegir el número de colores de la imagen personalizada: 2, 16 ó 256.  
   
-## Requisitos  
- None  
+## <a name="requirements"></a>Requisitos  
+ Ninguna  
   
-## Vea también  
- [Cuadro de diálogo Nuevo tipo de imagen de \<dispositivo\>](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Nueva \<dispositivo > cuadro de diálogo tipo de imagen](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+ [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

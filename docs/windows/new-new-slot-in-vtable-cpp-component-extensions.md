@@ -1,54 +1,52 @@
 ---
-title: "new (nueva ranura en vtable) (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new (palabra clave) [C++]"
+title: New (nueva ranura en vtable) (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# new (nueva ranura en vtable) (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nueva ranura en vtable) (Extensiones de componentes de C++)
 La palabra clave `new` indica que un miembro virtual obtendrá una nueva ranura en vtable.  
   
-> [!NOTE]
->  La palabra clave `new` tiene muchos usos y significados.  Para obtener más información, vea el tema sobre eliminación de ambigüedades [new](../misc/new.md).  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ (No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes).  
   
-## Todos los runtimes  
- \(No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes.\)  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ No se admite en tiempo de ejecución de Windows.  
   
-## Windows en tiempo de ejecución  
- No se admite en la [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
-  
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- En una compilación **\/clr**, `new` indica que un miembro virtual obtendrá una nueva ranura en vtable; que la función no reemplaza un método de clase base.  
+ En un **/CLR** compilación, `new` indica que un miembro virtual obtendrá una nueva ranura en vtable; que la función no reemplaza un método de clase base.  
   
  `new` hace que el modificador newslot se agregue al IL para la función.  Para obtener más información sobre newslot, vea:  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="e9bb59a12f97840a5c3173bb77c6b5b1" class\="tgtSentence"\>Método MethodInfo.GetBaseDefinition\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Método MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [\<caps:sentence id\="tgt12" sentenceid\="f6ceddd85a425f38e7ed06e94a9808a9" class\="tgtSentence"\>Enumeración MethodAttributes\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [Enumeración MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
  En el siguiente ejemplo se muestra el efecto de `new`.  
@@ -100,13 +98,20 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **C::f\(\) called**  
- **D::f\(\) called**  
- **D::g\(\) called**  
- **D::g\(\) called**  
- **E::f\(\) called**   
-## Vea también  
+```Output  
+C::f() called  
+  
+D::f() called  
+  
+D::g() called  
+  
+D::g() called  
+  
+E::f() called  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)   
  [Especificadores de invalidación](../windows/override-specifiers-cpp-component-extensions.md)

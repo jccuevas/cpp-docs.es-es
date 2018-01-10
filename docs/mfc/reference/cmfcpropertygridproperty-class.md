@@ -177,11 +177,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5f31a6c16e14152f624c3bc6225337621cc887b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b60e2355636ca0cf30ed0a0141ec07f1312f760f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Clase CMFCPropertyGridProperty
 Un `CMFCPropertyGridProperty` objeto representa un elemento de lista en un control de lista de propiedades.  
@@ -198,14 +199,14 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Construye un objeto `CMFCPropertyGridProperty`.|  
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Agrega un nuevo elemento de lista a un control de lista de propiedades.|  
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Agrega un elemento secundario a una propiedad.|  
@@ -278,7 +279,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Lo llama el marco de trabajo para agregar un cuadro combinado a una propiedad.|  
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Indica si una propiedad contiene un botón.|  
@@ -291,7 +292,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Cadena de formato para un valor de tipo double.|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Cadena de formato para un valor de tipo float.|  
@@ -1258,7 +1259,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `CWnd`|(No utilizado). Puntero a una ventana.|  
+|[in] `CWnd`|(No usado). Puntero a una ventana.|  
   
 ### <a name="return-value"></a>Valor devuelto  
  Este método devuelve siempre `TRUE`.  

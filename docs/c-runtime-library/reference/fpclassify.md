@@ -1,44 +1,46 @@
 ---
-title: "fpclassify | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fpclassify"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "fpclassify"
-  - "math/fpclassify"
-helpviewer_keywords: 
-  - "fpclassify (macro)"
-  - "fpclassify (función)"
+title: fpclassify | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fpclassify
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- fpclassify
+- math/fpclassify
+helpviewer_keywords:
+- fpclassify macro
+- fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f1dac5272bbc8cf956bf8bcfdbd31b1f71b4708
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# fpclassify
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve la clasificación del argumento de punto flotante.  
+# <a name="fpclassify"></a>fpclassify
+Devuelve la clasificación de punto flotante del argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int fpclassify(   
@@ -59,32 +61,32 @@ int fpclassify(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `x`  
  Valor de punto flotante que se va a probar.  
   
-## Valor devuelto  
- `fpclassify` Devuelve un valor entero que indica la clase de punto flotante del argumento `x`. Esta tabla muestra los posibles valores devueltos por `fpclassify`, definido en \< math.h \>.  
+## <a name="return-value"></a>Valor devuelto  
+ La función `fpclassify` devuelve un valor entero que indica la clasificación de punto flotante del argumento `x`. Esta tabla muestra los posibles valores devueltos por `fpclassify`, que se definen en \<math.h>.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`FP_NAN`|Un silencioso, señalización o indeterminado NaN|  
-|`FP_INFINITE`|Un valor infinito positivo o negativo|  
-|`FP_NORMAL`|Un valor distinto de cero normalizado positivo o negativo|  
-|`FP_SUBNORMAL`|Un valor positivo o negativo sin normalizar|  
-|`FP_ZERO`|Positivo o negativo de valor cero|  
+|`FP_NAN`|NaN reservado, de señalización o indeterminado|  
+|`FP_INFINITE`|Infinito positivo o negativo|  
+|`FP_NORMAL`|Valor positivo o negativo normalizado distinto de cero|  
+|`FP_SUBNORMAL`|Valor positivo o negativo no normalizado|  
+|`FP_ZERO`|Valor cero positivo o negativo|  
   
-## Comentarios  
- En C, `fpclassify` es una macro; en C\+\+, `fpclassify` es una función sobrecargada con tipos de argumento de `float`, `double`, o `long double`. En cualquier caso, el valor devuelto depende del tipo efectiva de la expresión de argumento y no de cualquier representación intermedia. Por ejemplo, normal `double` o `long double` valor puede ser un infinito, desnormalizado, cero o valor cuando se convierte en un `float`.  
+## <a name="remarks"></a>Comentarios  
+ En C, `fpclassify` es una macro; en C++, `fpclassify` es una función sobrecargada con tipos de argumento de `float`, `double` o `long double`. En cualquier caso, el valor devuelto depende del tipo efectivo de la expresión de argumento y no de alguna representación intermedia. Por ejemplo, un valor `double` o `long double` normal puede convertirse en un valor infinito, no normalizado o cero cuando se convierte en un `float`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función o Macro|Encabezado necesario \(C\)|Encabezado necesario \(C\+\+\)|  
-|---------------------|--------------------------------|------------------------------------|  
-|`fpclassify`|\<math.h\>|\<math.h\> o \<cmath\>|  
+|Función o macro|Encabezado necesario (C)|Encabezado necesario (C++)|  
+|---------------------|---------------------------|-------------------------------|  
+|`fpclassify`|\<math.h>|\<math.h> o \<cmath>|  
   
- El `fpclassify` macro y `fpclassify` funciones que se ajustan a la C99 y especificaciones de C \+\+ 11. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ La macro `fpclassify` y las funciones `fpclassify` se ajustan a las especificaciones C99 y C++11. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [isNaN, \_isnan, \_isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+ [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)

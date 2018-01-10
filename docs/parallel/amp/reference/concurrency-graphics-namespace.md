@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics (Espacio de nombres)
 El espacio de nombres de gráficos proporciona tipos y funciones que están diseñadas para la programación de gráficos.  
@@ -45,14 +46,14 @@ namespace graphics;
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[address_mode (enumeración)](concurrency-graphics-namespace-enums.md#address_mode).|Especifica los modos de dirección que se admite para el muestreo de textura.|  
 |[filter_mode (enumeración)](concurrency-graphics-namespace-enums.md#filter_mode)|Especifica los modos de filtro compatibles para el muestreo de textura.|  
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[texture (clase)](texture-class.md)|Una textura es un agregado en una accelerator_view en el dominio de la extensión de datos. Es una colección de variables, uno para cada elemento en un dominio de la extensión. Cada variable contiene un valor que corresponde al tipo primitivo de C++ (unsigned int, int, float, double) o norma de tipo escalar, o unorm (definido en Concurrency:: Graphics) o tipos de vector corto elegibles definen en Concurrency:: Graphics.|  
 |[writeonly_texture_view (clase)](writeonly-texture-view-class.md)|Un writeonly_texture_view está proporciona acceso de writeonly a una textura.|  

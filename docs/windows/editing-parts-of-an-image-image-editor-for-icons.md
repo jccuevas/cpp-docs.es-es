@@ -1,87 +1,91 @@
 ---
-title: "Editing Parts of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], editing images"
-  - "Clipboard [C++], pasting"
-  - "images [C++], editing"
-  - "images [C++], deleting selected parts"
-  - "images [C++], copying selected parts"
-  - "images [C++], moving selected parts"
-  - "images [C++], dragging and replicating selected parts"
-  - "images [C++], pasting into"
-  - "graphics [C++], editing"
+title: "Editar partes de una imagen (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], editing images
+- Clipboard [C++], pasting
+- images [C++], editing
+- images [C++], deleting selected parts
+- images [C++], copying selected parts
+- images [C++], moving selected parts
+- images [C++], dragging and replicating selected parts
+- images [C++], pasting into
+- graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acd4859bf7c80cf2bbe6cd2d86c39d0fc596351d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Editing Parts of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En una [selección](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md) pueden realizarse las operaciones de edición normales, es decir, cortar, copiar, borrar y mover, sea la selección la imagen completa o solamente una parte de ella.  Como el editor de Imágenes utiliza el Portapapeles de Windows, pueden transferirse imágenes entre el editor de Imágenes y otras aplicaciones para Windows.  
+# <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Editar partes de una imagen (Editor de imágenes para iconos)
+Puede realizar operaciones de edición estándares, cortar, copiar, borrar y mover: en un [selección](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), si la selección es la imagen completa o solamente una parte de ella. Dado que el editor de imágenes utiliza el Portapapeles de Windows, pueden transferirse imágenes entre el editor de imágenes y otras aplicaciones para Windows.  
   
- Asimismo, el tamaño de la selección puede cambiarse, incluya a la imagen completa o solamente una parte de ella.  
+ Además, puede cambiar la selección, si incluye toda la imagen o solo una parte.  
   
-### Para cortar la selección actual y moverla al Portapapeles  
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Cortar la selección actual y colocarlo en el Portapapeles  
   
-1.  En el menú **Edición**, haga clic en **Cortar**.  
+1.  Haga clic en **cortar** en el **editar** menú.  
   
-### Para copiar la selección  
+### <a name="to-copy-the-selection"></a>Para copiar la selección  
   
-1.  Sitúe el puntero dentro del borde de la selección o en cualquier posición sobre él excepto los cuadros de tamaño.  
+1.  Coloque el puntero dentro del borde de selección o en cualquier lugar en él excepto los controladores de tamaño.  
   
-2.  Mantenga presionada la tecla **CTRL** mientras arrastra la selección a otro lugar.  El área de la selección original no varía.  
+2.  Mantenga presionada la **CTRL** clave mientras arrastra la selección a una nueva ubicación. El área de la selección original se ha modificado.  
   
-3.  Para copiar la selección en la imagen, en su ubicación actual, haga clic fuera del cursor de selección.  
+3.  Para copiar la selección en la imagen en su ubicación actual, haga clic fuera del cursor de selección.  
   
-### Para pegar el contenido del Portapapeles en una imagen  
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Para pegar el contenido del Portapapeles en una imagen  
   
-1.  En el menú **Edición**, elija **Pegar**.  
+1.  Desde el **editar** menú, elija **pegar**.  
   
-     Aparece el contenido del Portapapeles, rodeado por el borde de selección, en la esquina superior izquierda del panel.  
+     El contenido del Portapapeles, rodeado por el borde de selección, aparece en la esquina superior izquierda del panel.  
   
-2.  Sitúe el puntero dentro del borde de selección y arrastre la imagen a la posición que desee en la imagen.  
+2.  Coloque el puntero dentro del borde de selección y arrastre la imagen a la ubicación deseada en la imagen.  
   
 3.  Para fijar la imagen en su nueva ubicación, haga clic fuera del borde de selección.  
   
-### Para eliminar la selección actual sin moverla al Portapapeles  
+### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Para eliminar la selección actual sin moverlo en el Portapapeles  
   
-1.  En el menú **Edición**, elija **Eliminar**.  
+1.  Desde el **editar** menú, elija **eliminar**.  
   
-     El área original de la selección se rellena con el color de fondo actual.  
+     La zona original de la selección se rellena con el color de fondo actual.  
   
     > [!NOTE]
-    >  Los comandos Cortar, Copiar, Pegar y Eliminar están disponibles cuando se hace clic con el botón secundario del mouse en la ventana Vista de recursos.  
+    >  Puede tener acceso a cortar, copiar, pegar y eliminar comandos haciendo clic en la ventana Vista de recursos.  
   
-### Para mover la selección  
+### <a name="to-move-the-selection"></a>Para mover la selección  
   
-1.  Sitúe el puntero dentro del borde de la selección o en cualquier posición sobre él excepto los cuadros de tamaño.  
+1.  Coloque el puntero dentro del borde de selección o en cualquier lugar en él excepto los controladores de tamaño.  
   
-2.  Arrastre la selección hasta su nueva ubicación.  
+2.  Arrastre la selección a su nueva ubicación.  
   
 3.  Para delimitar la selección en la imagen en su nueva ubicación, haga clic fuera del borde de selección.  
   
- Para obtener más información sobre cómo dibujar con una selección, vea [Crear un pincel personalizado](../mfc/creating-a-custom-brush-image-editor-for-icons.md).  
+ Para obtener más información sobre cómo dibujar con una selección, consulte [crear un pincel personalizado](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- None  
+ Ninguna  
   
-## Vea también  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
+

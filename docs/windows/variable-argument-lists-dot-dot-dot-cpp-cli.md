@@ -1,39 +1,41 @@
 ---
-title: "Listas de argumentos de variables (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices de parámetros"
-  - "listas de argumentos variables"
+title: Listas de argumentos variables (...) (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b78b244a93bea0c669c37b5df32ec7146f7ac3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Listas de argumentos de variables (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este ejemplo muestra cómo utilizar la sintaxis `...` en Visual C\+\+ para implementar funciones que tienen un número variable de argumentos.  
+# <a name="variable-argument-lists--ccli"></a>Listas de argumentos de variables (...) (C++/CLI)
+Este ejemplo muestra cómo se puede utilizar el `...` sintaxis de Visual C++ para implementar funciones que tienen un número variable de argumentos.  
   
 > [!NOTE]
->  Este tema pertenece a C\+\+\/CLI.  Para obtener información sobre cómo usar `...` en ISO Standard C\+\+, vea [Puntos suspensivos y plantillas variádicas](../cpp/ellipses-and-variadic-templates.md) y [Elipse y argumentos predeterminados](../misc/ellipses-and-default-arguments.md).  
+>  Este tema corresponde a C++ / CLI. Para obtener información sobre el uso de la `...` en ISO C++ estándar, consulte [puntos suspensivos y plantillas Variádicas](../cpp/ellipses-and-variadic-templates.md) y elipse y argumentos predeterminados en [expresiones de postfijo](../cpp/postfix-expressions.md).  
   
- El parámetro que utiliza `...` debe ser el último parámetro de la lista de parámetros.  
+ El parámetro que usa `...` debe ser el último parámetro en la lista de parámetros.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +56,14 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 3  
 ```  
   
-## Ejemplo de código  
- El ejemplo siguiente muestra cómo llamar desde C\# a una función de Visual C\+\+ que toma un número variable de argumentos.  
+## <a name="code-example"></a>Ejemplo de código  
+ En el ejemplo siguiente se muestra cómo llamar a desde C#, una función de Visual C++ que toma un número variable de argumentos.  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +76,9 @@ public:
 };  
 ```  
   
- Puede llamarse a la función `f` desde C\# o Visual Basic, por ejemplo, como si fuera una función que puede tomar un número variable de argumentos.  
+ La función `f` pueden llamarse desde C# o Visual Basic, por ejemplo, como si fuese una función que puede tomar un número variable de argumentos.  
   
- En C\#, un argumento que se pasa un parámetro `ParamArray` se puede llamar mediante un número variable de argumentos.  El siguiente ejemplo de código está en C\#:  
+ En C#, un argumento que se pasa a un `ParamArray` parámetro puede llamarse mediante un número variable de argumentos. El ejemplo de código siguiente es en C#.  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +95,7 @@ public class X {
 }  
 ```  
   
- Una llamada a `f` en Visual C\+\+ puede pasar una matriz inicializado o una matriz de longitud variable.  
+ Una llamada a `f` en Visual C++, puede pasar una matriz inicializada o una matriz de longitud variable.  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +113,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Matrices](../windows/arrays-cpp-component-extensions.md)

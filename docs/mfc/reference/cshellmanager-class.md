@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 550851e383acf988aa9a816ab1d15675da5b54b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e1e3fcff06b2937df8218ce1ab32b91ddf22a7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cshellmanager-class"></a>Clase CShellManager
 Implementa varios métodos que permiten trabajar con punteros en listas de identificadores (PIDL).  
@@ -58,13 +59,13 @@ class CShellManager : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|Construye un objeto `CShellManager`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CShellManager::BrowseForFolder](#browseforfolder)|Muestra un cuadro de diálogo que permite al usuario seleccionar una carpeta del shell.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Concatena dos PIDL.|  

@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 839a597624c0f1a00ab983ecd5f2f31aeefbd953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
 Controles ActiveX existente (antes controles OLE) puede utilizarse en Internet sin modificaciones. Sin embargo, puede modificar los controles para mejorar su rendimiento. Cuando se utiliza el control en una página Web, existen consideraciones adicionales. El archivo .ocx y todos los archivos auxiliares deben estar en el equipo de destino o descargarse a través de Internet. Esto hace que el tamaño del código y una consideración importante de tiempo de descarga. Descargas se pueden empaquetar en un archivo .cab firmado. Puede marcar el control como seguros para scripting así como para inicializar.  
@@ -85,7 +86,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  Archivos contenedores son la forma recomendada para empaquetar controles ActiveX que utiliza MFC. Empaquetar un control ActiveX de MFC en un archivo .cab permite que un archivo .inf que debe incluirse para controlar la instalación del control ActiveX y cualquier DLL dependientes (como las DLL de MFC). Mediante el archivo .cab automáticamente comprime el código para agilizar la descarga. Si está utilizando un archivo .cab de descarga de componentes, es más rápido firmar el archivo .cab completo que cada componente individual.  
   
 ### <a name="creating-cab-files"></a>Creación de archivos CAB  
- Puede descargar el Kit de desarrollo desde el artículo de Knowledge Base [310618: Kit de desarrollo de Software de Microsoft archivador](http://go.microsoft.com/fwlink/linkid=148204). En este kit encontrará las herramientas necesarias para crear archivos CAB.  
+ Puede descargar el Kit de desarrollo desde el artículo de Knowledge Base [310618: Kit de desarrollo de Software de Microsoft archivador](http://go.microsoft.com/fwlink/p/?linkid=148204). En este kit encontrará las herramientas necesarias para crear archivos CAB.  
   
  El archivo .cab que señala `CODEBASE` debe contener el archivo .ocx para el control ActiveX y un archivo .inf para controlar su instalación. Crear el archivo .cab especificando el nombre de archivo del control y un archivo .inf. No incluya archivos DLL dependientes que puedan existir en el sistema en este archivo contenedor. Por ejemplo, los archivos DLL de MFC están empaquetadas en un archivo .cab independiente y que hace referencia el archivo .inf del control.  
   

@@ -1,53 +1,56 @@
 ---
-title: "event_source | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.event_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "control de eventos, atributos"
-  - "registros de eventos, origen del evento"
-  - "orígenes del evento, crear"
-  - "event_source (atributo)"
-  - "orígenes del evento"
-  - "control de eventos, crear un origen del evento"
+title: event_source | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.event_source
+dev_langs: C++
+helpviewer_keywords:
+- event handling, attributes
+- event logs, event source
+- event sources, creating
+- event_source attribute
+- event sources
+- event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05371b5c2d9acd091adcbdf81d2994f205e36ef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# event_source
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="eventsource"></a>event_source
 Crea un origen de eventos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-       [ event_source(  
-       type,  
-optimize=[speed | size],  
-decorate=[true | false]) ]  
+      [ event_source(  
+   type,  
+   optimize=[speed | size],  
+   decorate=[true | false]  
+) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `type`  
  Enumeración de uno de los valores siguientes:  
   
--   `native` para código de C\/C\+\+ no administrado \(valor predeterminado para las clases no administradas\).  
+-   `native` para código de C/C++ no administrado (valor predeterminado para las clases no administradas).  
   
--   `com` para código COM. Debe usar `coclass` cuando `type`\=`com`. Este valor requiere que se incluyan los archivos de encabezado siguientes:  
+-   `com` para código COM. Debe usar `coclass` cuando `type`=`com`. Este valor requiere que se incluyan los archivos de encabezado siguientes:  
   
     ```  
     #define _ATL_ATTRIBUTES  
@@ -56,37 +59,36 @@ decorate=[true | false]) ]
     ```  
   
  **optimize**  
- Cuando `type` es **native**, puede especificar **optimize\=size** para indicar que hay 4 bytes de almacenamiento \(mínimo\) para todos los eventos de una clase u **optimize\=speed** \(valor predeterminado\) para indicar que hay 4 \* \(número de eventos\) bytes de almacenamiento.  
+ Cuando `type` es **native**, puede especificar **optimize=size**para indicar que hay 4 bytes de almacenamiento (mínimo) para todos los eventos de una clase u **optimize=speed** (valor predeterminado) para indicar que hay 4 * (número de eventos) bytes de almacenamiento.  
   
  **decorate**  
- Cuando `type` es **native**, puede especificar **decorate\=false** para indicar que el nombre expandido del archivo combinado \(.mrg\) no debe incluir el nombre de la clase envolvente.[\/Fx](../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg.**decorate\=false**, que es el valor predeterminado, da lugar a nombres de tipo completo en el archivo combinado.  
+ Cuando `type` es **native**, puede especificar **decorate=false**para indicar que el nombre expandido del archivo combinado (.mrg) no debe incluir el nombre de la clase envolvente. [/Fx](../build/reference/fx-merge-injected-code.md) permite generar archivos .mrg. **decorate=false**, que es el valor predeterminado, da lugar a nombres de tipo completo en el archivo combinado.  
   
-## Comentarios  
- El atributo de C\+\+ **event\_source** especifica que la clase o estructura a la que se aplica será un origen del evento.  
+## <a name="remarks"></a>Comentarios  
+ El atributo de C++ **event_source** especifica que la clase o estructura a la que se aplica será un origen del evento.  
   
- **event\_source** se usa junto con el atributo [event\_receiver](../windows/event-receiver.md) y la palabra clave [\_\_event](../cpp/event.md). Use **event\_receiver** para crear receptores de eventos. Use `__event` en métodos del origen del evento para especificar dichos métodos como eventos.  
+ **event_source** se usa junto con el atributo [event_receiver](../windows/event-receiver.md) y la palabra clave [__event](../cpp/event.md) . Use **event_receiver** para crear receptores de eventos. Use `__event` en métodos del origen del evento para especificar dichos métodos como eventos.  
   
 > [!NOTE]
 >  Una clase o struct basada en plantilla no puede contener eventos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|**class**, `struct`|  
 |**Reiterativo**|No|  
-|**Atributos requeridos**|**coclass** cuando `type`\=**com**|  
+|**Atributos requeridos**|**coclass** cuando `type`=**com**|  
 |**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [event\_receiver](../windows/event-receiver.md)   
- [\_\_event](../cpp/event.md)   
- [\_\_hook](../cpp/hook.md)   
- [\_\_unhook](../cpp/unhook.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de compilador](../windows/compiler-attributes.md)   
+ [event_receiver](../windows/event-receiver.md)   
+ [__event](../cpp/event.md)   
+ [__hook](../cpp/hook.md)   
+ [__unhook](../cpp/unhook.md)   
+ [Atributos de clase](../windows/class-attributes.md)   

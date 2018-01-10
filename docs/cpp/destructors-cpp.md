@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Destructores (C++)
 Un destructor es una función miembro que se invoca automáticamente cuando el objeto queda fuera del ámbito o se destruyeron de forma explícita mediante una llamada a `delete`. Un destructor tiene el mismo nombre que la clase, precedido por una tilde (`~`). Por ejemplo, el destructor de la clase `String` se declara como: `~String()`. Si no se define un destructor, el compilador proporcionará un valor predeterminado; para muchas clases de esto es suficiente. Solo necesita definir un destructor personalizado cuando la clase almacena los identificadores de recursos de sistema que necesitan que se liberen o punteros que poseen la memoria que señalan a.
@@ -71,7 +72,7 @@ int main() {
   
  En el ejemplo anterior, el destructor `String::~String` utiliza el operador `delete` para desasignar el espacio asignado dinámicamente para el almacenamiento de texto.  
   
-## <a name="delcaring-destructors"></a>Declarar destructores  
+## <a name="declaring-destructors"></a>Declarar destructores  
  Los destructores son funciones con el mismo nombre que la clase pero precedidos por una tilde (`~`).  
   
  Varias reglas rigen la declaración de destructores. Destructores:  

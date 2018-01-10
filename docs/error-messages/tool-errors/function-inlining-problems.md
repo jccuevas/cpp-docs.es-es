@@ -1,37 +1,38 @@
 ---
-title: "Problemas en la inclusi&#243;n de funciones en l&#237;nea | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Ob1 (opción del compilador de C++)"
-  - "/Ob2 (opción del compilador de C++)"
-  - "problemas en la inclusión de funciones en línea"
-  - "funciones inline, problemas"
-  - "-Ob1 (opción del compilador) [C++]"
-  - "-Ob2 (opción del compilador de C++)"
+title: "Problemas en la inclusión de función | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- /Ob1 C++ compiler option
+- inline functions, problems
+- -Ob1 C++ compiler option
+- /Ob2 C++ compiler option
+- -Ob2 C++ compiler option
+- function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Problemas en la inclusi&#243;n de funciones en l&#237;nea
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Si se usa la inclusión de funciones en línea, es necesario:  
+# <a name="function-inlining-problems"></a>Problemas en la inclusión de funciones en línea
+Si usas la inclusión de funciones, debe:  
   
--   Implementar las funciones en línea en el archivo de encabezado incluido.  
+-   Tiene las funciones en línea que se implementa en el archivo de encabezado que incluya.  
   
--   Activar la inclusión de funciones en línea en el archivo de encabezado.  
+-   Tiene la inclusión encendido en el archivo de encabezado.  
   
 ```  
 // LNK2019_function_inline.cpp  
@@ -46,7 +47,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }  
 ```  
   
- Y, a continuación,  
+ Y luego,  
   
 ```  
 // LNK2019_function_inline_2.cpp  
@@ -63,11 +64,11 @@ int main() {
 }  
 ```  
   
- Si utiliza la directiva del compilador `#pragma inline_depth`, asegúrese de que tiene un valor de 2 o un conjunto superior.  Un valor igual a cero desactiva la inclusión de funciones en línea.  También debe asegurarse de que está utilizando las opciones del compilador **\/Ob1** o **\/Ob2**.  
+ Si usas el `#pragma inline_depth` compilador directivas, asegúrese de tener un valor de 2 o más establecido. Un valor de cero se apagará la inclusión. También asegúrese de que está usando el **/Ob1** o **/Ob2** opciones del compilador.  
   
- Mezclar opciones de compilación en línea y no en línea en módulos diferentes puede causar el error LNK2001.  Si se crea una biblioteca de C\+\+ con la inclusión de funciones en línea activada \([\/Ob1](../../build/reference/ob-inline-function-expansion.md) u [\/Ob2](../../build/reference/ob-inline-function-expansion.md)\) pero el archivo de encabezado correspondiente que describe las funciones la tiene desactivada \(no hay ninguna opción\), se obtiene el error LNK2001.  No se insertan las funciones en línea en el código a partir del archivo de encabezado, pero, al no encontrarse en el archivo de biblioteca, no hay dirección para resolver la diferencia.  
+ Mezcla de opciones de compilación en línea y no en línea en módulos diferentes, en ocasiones puede causar problemas. Si se crea una biblioteca de C++ con la inclusión de funciones activada ([/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)) pero el archivo de encabezado correspondiente que describe las funciones tiene desactivada (ninguna opción), obtendrá el error LNK2001. Las funciones no se insertan en el código desde el archivo de encabezado, pero puesto que no están en el archivo de biblioteca no hay ninguna dirección para resolver la referencia.  
   
- Igualmente, un proyecto que utilice la inclusión de funciones en línea, pero que defina las funciones en un archivo .cpp en lugar de en el archivo de encabezado, también generará el error LNK2019.  El archivo de encabezado se incluye en cualquier lugar donde se considere apropiado, pero las funciones sólo se incluyen cuando el archivo .cpp pasa por el compilador; por tanto, el vinculador ve las funciones como símbolos externos no resueltos al utilizarse en otros módulos.  
+ De forma similar, un proyecto que usa la inclusión de funciones todavía define las funciones en un archivo .cpp en lugar de en el encabezado de archivo también obtendrán LNK2019. El archivo de encabezado se incluye en todas partes lo considera apropiado, pero solo las funciones insertadas cuando el archivo .cpp pasa por el compilador; por lo tanto, el vinculador ve las funciones como externos sin resolver cuando se utiliza en otros módulos.  
   
 ```  
 // LNK2019_FIP.h  
@@ -76,7 +77,7 @@ struct testclass {
 };  
 ```  
   
- y, a continuación,  
+ Y entonces  
   
 ```  
 // LNK2019_FIP.cpp  
@@ -85,7 +86,7 @@ struct testclass {
 inline void testclass::PublicStatMemFunc1(void) {}  
 ```  
   
- y, a continuación,  
+ Y entonces  
   
 ```  
 // LNK2019_FIP_2.cpp  
@@ -100,5 +101,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Error de las herramientas del vinculador LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

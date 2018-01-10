@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289c505cc66e70a9634e3c183ae9511d99276940
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy (Clase)
 La clase `SchedulerPolicy` contiene un conjunto de pares clave-valor, uno para cada elemento de directiva, que controla el comportamiento de una instancia del programador.  
@@ -40,14 +41,14 @@ class SchedulerPolicy;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[SchedulerPolicy](#ctor)|Sobrecargado. Construye una nueva directiva del programador y lo rellena con valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.|  
 |[~ SchedulerPolicy (destructor)](#dtor)|Destruye una directiva de programador.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[GetPolicyValue](#getpolicyvalue)|Recupera el valor de la clave de directiva proporcionado como el parámetro `key`.|  
 |[SetConcurrencyLimits](#setconcurrencylimits)|Simultáneamente establece las directivas `MinConcurrency` y `MaxConcurrency` en el objeto `SchedulerPolicy`.|  
@@ -55,7 +56,7 @@ class SchedulerPolicy;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|Asigna la directiva de programador a partir de otra directiva de programador.|  
   

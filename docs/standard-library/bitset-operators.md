@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>Operadores &lt;bitset&gt;
 ||||  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 |[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
 |[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="op_amp"></a>  operator&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  Efectúa una operación bit a bit `AND` entre dos conjuntos de bits.  
   
 ```  
@@ -83,7 +84,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Inserta una representación de texto de la secuencia de bits en el flujo de salida.  
   
 ```  
@@ -104,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Comentarios  
  La función de plantilla sobrecarga **operator<<**, lo que permite que se escriba un conjunto de bits sin convertirlo primero en una cadena. La función de plantilla ejecuta eficazmente:  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -137,7 +138,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Lee una cadena de caracteres de bit en un conjunto de bits.  
   
 ```  
@@ -161,7 +162,7 @@ _Istr,
  La función de plantilla devuelve la cadena `_Istr`.  
   
 ### <a name="remarks"></a>Comentarios  
- La función de plantilla sobrecarga **operator>>** para almacenar en el conjunto de bits _ *Right* el valor bitset( `str`), donde `str` es un objeto de tipo [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extraído de `_Istr`.  
+ La función de plantilla sobrecarga **operator>>** para almacenar en el conjunto de bits _ *Right* el valor bitset( `str`), donde `str` es un objeto de tipo [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** extraído de `_Istr`.  
   
  La función de plantilla extrae elementos de `_Istr` y los inserta en el conjunto de bits hasta que:  
   

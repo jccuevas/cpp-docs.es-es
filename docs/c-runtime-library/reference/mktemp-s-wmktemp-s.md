@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d87ba7e23ccc50cb6debbdb91912f1ae3e90ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 Crea un nombre de archivo único. Se trata de versiones de [_mktemp, _wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -86,8 +87,8 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**valor devuelto**|**nuevo valor en la plantilla**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|cualquiera|`EINVAL`|`NULL`|  
-|Formato incorrecto (vea la sección `Remarks` para ver el formato correcto)|cualquiera|`EINVAL`|cadena vacía|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|Formato incorrecto (vea la sección `Remarks` para ver el formato correcto)|any|`EINVAL`|cadena vacía|  
 |any|<= número de X|`EINVAL`|cadena vacía|  
   
  Si se da alguna de las condiciones de error anteriores, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `EINVAL`.  
@@ -129,7 +130,7 @@ fna12345
   
  `_mktemp_s` puede crear un máximo de 26 nombres de archivo únicos para cualquier combinación de valores de base y de plantilla. Por lo tanto, FNZ12345 es el último nombre de archivo único que `_mktemp_s` puede crear para los valores `base` y `template` usados en este ejemplo.  
   
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -138,7 +139,7 @@ fna12345
 |`_mktemp_s`|\<io.h>|  
 |`_wmktemp_s`|\<io.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -99,11 +99,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce9135d298a0b80cedae87f20d65f4e012502cae
-ms.sourcegitcommit: 0bbc9aac12c926b2b03726ae5b4a09d916e17d6b
+ms.workload: cplusplus
+ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-class"></a>map (Clase)
 Se utiliza para el almacenamiento y la recuperación de datos de una colección en la que cada elemento es un par que tiene un valor de datos y una clave de ordenación. El valor de la clave es único y se utiliza para ordenar los datos automáticamente.  
@@ -171,7 +172,7 @@ class map;
 |-|-|  
 |[map](#map)|Crea una lista de un tamaño concreto o con elementos de un valor concreto o con un `allocator` específico o como copia de algún otro mapa.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -2518,7 +2519,7 @@ value_compare value_comp() const;
 ### <a name="remarks"></a>Comentarios  
  Para un mapa *m*, si dos elementos *e*1( *k*1, *d*1) y *e*2( *k*2, `d`2) son objetos de tipo `value_type`, donde *k*1 y *k*2 son sus claves de tipo `key_type`, y `d`1 y `d`2 son sus datos de tipo `mapped_type`, entonces *m.*`value_comp`( *e*1, *e*2) es equivalente a *m.*`key_comp`*(k*1, *k*2). Un objeto almacenado define la función miembro  
   
- **bool operator**( **value_type&**`left`, **value_type&**`right`);  
+ **BOOL (operador)**( **value_type &**`left`, **value_type &**`right`);  
   
  que devuelve **True** si el valor de clave de `left` precede y no es igual al valor de clave de `right` en el criterio de ordenación.  
   

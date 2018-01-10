@@ -1,44 +1,46 @@
 ---
-title: "Espacios de nombres de plataforma, predeterminado y CLI (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "lang"
-  - "cli"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cli (espacio de nombres)"
-  - "lang (espacio de nombres)"
+title: Plataforma, predeterminado y cli espacios de nombres (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- lang
+- cli
+dev_langs: C++
+helpviewer_keywords:
+- lang namespace
+- cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Espacios de nombres de plataforma, predeterminado y CLI (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un espacio de nombres califica los nombres de los elementos de lenguaje de modo que no entren en conflicto con nombres que por lo demás son idénticos en otra parte del código fuente.  Por ejemplo, si se produce una colisión de nombres, es posible que el compilador no reconozca las [Palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  El compilador utiliza los espacios de nombres, pero no se conservan en el ensamblado compilado.  
+# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Espacios de nombres de plataforma, predeterminado y CLI (Extensiones de componentes de C++)
+Un espacio de nombres califica los nombres de los elementos de lenguaje de modo que no entren en conflicto con nombres que por lo demás son idénticos en otra parte del código fuente. Por ejemplo, un conflicto de nombres puede evitar que el compilador reconozca [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md). El compilador utiliza los espacios de nombres, pero no se conservan en el ensamblado compilado.  
   
-## Todos los runtimes  
- Visual C\+\+ proporciona un espacio de nombres predeterminado para el proyecto cuando se crea.  Puede cambiar manualmente el espacio de nombres, aunque en [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] el nombre del archivo .winmd debe coincidir con el del espacio de nombres de la raíz.  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ Visual C++ proporciona un espacio de nombres predeterminado para el proyecto cuando se crea. Puede cambiar manualmente el espacio de nombres, aunque en tiempo de ejecución de Windows el nombre del archivo .winmd debe coincidir con el nombre del espacio de nombres raíz.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Para obtener más información, consulte [Visibilidad de espacios de nombres y tipos \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ Para obtener más información, consulte [visibilidad de espacios de nombres y el tipo (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Sintaxis**  
   
 ```  
@@ -47,22 +49,22 @@ using namespace cli;
   
  **Comentarios**  
   
- [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] admite el espacio de nombres `cli`.  Al compilar con **\/clr**, la instrucción `using` de la sección Sintaxis está implícita.  
+ C++ / CLI admite el `cli` espacio de nombres. Cuando se compila con **/CLR**, el `using` instrucción en la sección sintaxis está implícita.  
   
  Las características de lenguaje siguientes están en el espacio de nombres `cli`:  
   
 -   [Matrices](../windows/arrays-cpp-component-extensions.md)  
   
--   [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)  
+-   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
--   [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)  
+-   [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)  
   
--   [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)  
+-   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
  En el ejemplo de código siguiente se demuestra que se puede usar un símbolo en el espacio de nombres `cli` como símbolo definido por el usuario en el código.  Sin embargo, después de realizar esta acción, deberá calificar explícita o implícitamente las referencias al elemento de lenguaje `cli` del mismo nombre.  
@@ -83,5 +85,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

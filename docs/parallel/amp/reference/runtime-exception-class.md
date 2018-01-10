@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffc18357c4c10eec4fde900cda001cd0d3528680
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (clase)
 El tipo base para las excepciones en la biblioteca de C++ Accelerated Massive Parallelism (AMP).  
@@ -38,21 +39,21 @@ class runtime_exception : public std::exception;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[runtime_exception (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `runtime_exception`.|  
 |[~ runtime_exception (destructor)](#dtor)|Destruye el objeto `runtime_exception`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get_error_code](#runtime_exception__get_error_code)|Devuelve el código de error que provocó la excepción.|  
 
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `runtime_exception` objeto en éste.|  
   

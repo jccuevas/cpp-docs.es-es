@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>texture_view (Clase)
 Proporciona acceso de lectura y escritura en una textura. `texture_view`solo puede usarse para leer las texturas cuyo tipo de valor es `int`, `unsigned int`, o `float` que tienen bpse de 32 bits de forma predeterminada. Para leer otros formatos de textura, utilice `texture_view<const value_type, _Rank>`.  
@@ -60,7 +61,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`|El tipo de los elementos de los agregados de textura.|  
 |`coordinates_type`|El tipo de la coordenada se utiliza para especificar un elemento de textura en el `texture_view`, es decir, un `short_vector` que tienen la misma clasificación como la textura asociada que tiene un tipo de valor de `float`.|  
@@ -68,14 +69,14 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[texture_view Constructor](#ctor)|Sobrecargado. Construye un `texture_view` instancia.|  
 |[~ texture_view (destructor)](#ctor)|Destruye el `texture_view` instancia.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[gather_alpha](#gather_alpha)|Sobrecargado. Ejemplos de la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes alfa (w) de los cuatro elementos de textura muestreadas.|  
 |[gather_blue](#gather_blue)|Sobrecargado. Ejemplos de la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes de azul (z) de los cuatro elementos de textura muestreadas.|  
@@ -87,7 +88,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Operator()](#operator_call)|Sobrecargado. Obtiene el valor del elemento por índice.|  
 |[operator]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|  
@@ -95,7 +96,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[value_type](#value_type)|El tipo de valor de los elementos de la `texture_view`.|  
   

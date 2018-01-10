@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ff0c2a3700c20c78d3cbbf9b67810a65bb89fc3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e206fcfe0c8c4d82276e8c477061fd0522fe5722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Cómo: Envolver una clase nativa para utilizarla en C#
 Este ejemplo muestra cómo ajustar una clase de C++ nativo, por lo que puede ser utilizado por código creado en C# u otro lenguaje. NET.  

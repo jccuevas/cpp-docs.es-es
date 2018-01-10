@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- AMP/Concurrency
-dev_langs:
-- C++
-helpviewer_keywords:
-- Concurrency namespace
+f1_keywords: AMP/Concurrency
+dev_langs: C++
+helpviewer_keywords: Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 38c3154244b163202bcb8e271f96b393231247ca
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-c-amp"></a>Espacio de nombres de simultaneidad (C++ AMP)
-Proporciona clases y funciones que aceleran la ejecución de código C++ en el hardware de datos en paralelo. Para obtener más información, consulte [Introducción a C++ AMP](../cpp-amp-overview.md)  
+Proporciona clases y funciones que aceleran la ejecución de código C++ en el hardware de datos en paralelo. Para obtener más información, vea [Introducción a C++ AMP](../cpp-amp-overview.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,13 +44,13 @@ namespace Concurrency;
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accelerator (clase)](accelerator-class.md)|Representa una abstracción de un nodo de cálculo físico optimizado para DP.|  
 |[accelerator_view (clase)](accelerator-view-class.md)|Representa una abstracción del dispositivo virtual en un acelerador C++ AMP de datos en paralelo.|  
 |[accelerator_view_removed (clase)](accelerator-view-removed-class.md)|La excepción que se produce cuando una llamada de DirectX subyacente produce un error debido al mecanismo de detección de tiempo de espera y recuperación de Windows.|  
 |[array (clase)](array-class.md)|Un agregado de datos de una `accelerator_view` en el dominio de la cuadrícula. Es una colección de variables, una para cada elemento de un dominio de la cuadrícula. Cada variable contiene un valor correspondiente a algún tipo de C++.|  
-|[array_view (clase)](array-view-class.md)|Representa una vista de los datos en una matriz\<T, N >.|  
+|[array_view (clase)](array-view-class.md)|Representa una vista en los datos en una matriz\<T, N >.|  
 |[completion_future (clase)](completion-future-class.md)|Representa un futuro que corresponde a la operación asincrónica de C++ AMP.|  
 |[extent (Clase)](extent-class.md)|Representa un vector de valores enteros de n que especifican los límites de un espacio de n dimensiones que tiene un origen de 0. Los valores del vector de coordenadas se ordenan desde el más significativo al menos significativo. Por ejemplo, en el espacio cartesiano de 3 dimensiones, el vector de medida (7,5,3) representa un espacio en el cual la coordenada Z está comprendida entre 0 y 7, la coordenada Y está comprendida entre 0 y 5 y la coordenada x está comprendida entre 0 y 3.|  
 |[index (clase)](index-class.md)|Define un punto de índice de n dimensiones.|  
@@ -83,7 +65,7 @@ namespace Concurrency;
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[access_type (enumeración)](concurrency-namespace-enums-amp.md#access_type)|Especifica el tipo de acceso de los datos.|  
 |[queuing_mode (enumeración)](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica los modos de la puesta en cola que se admiten en el acelerador.|  
@@ -93,9 +75,9 @@ namespace Concurrency;
 |Operador|Descripción|  
 |--------------|-----------------|  
 |[Operator == (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Determina si las estructuras de datos especificadas son iguales.|  
-|[operador! = (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Determina si las estructuras de datos especificadas no son iguales.|  
+|[operador! = (operador) (C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Determina si las estructuras de datos especificadas no son iguales.|  
 |[operador + (operador) (C++ AMP)](concurrency-namespace-operators-amp.md#operator_add)|Calcula la suma de todos los componentes de los argumentos especificados.|  
-|[Operator (operador) (C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Calcula la diferencia de todos los componentes entre los argumentos especificados.|  
+|[Operator-(operador) (C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Calcula la diferencia de todos los componentes entre los argumentos especificados.|  
 |[operador * (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_star)|Calcula el producto de todos los componentes de los argumentos especificados.|  
 |[operador / (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_div)|Calcula el cociente de todos los componentes de los argumentos especificados.|  
 |[operador % (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcula el módulo del primer argumento especificado dividido por el segundo argumento especificado.|  
@@ -105,7 +87,7 @@ namespace Concurrency;
 |Name|Descripción|  
 |----------|-----------------|  
 |[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Bloquea la ejecución de todos los subprocesos de un mosaico hasta que se hayan completado todos los accesos a memoria.|  
-|[amp_uninitialize)](concurrency-namespace-functions-amp.md#amp_uninitialize)|Anula la inicialización del runtime de C++ AMP.|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Anula la inicialización del runtime de C++ AMP.|  
 |[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Sobrecargado. Si el valor almacenado en la ubicación especificada es igual al primer valor especificado, el segundo valor especificado se almacena en la misma ubicación como una operación atómica.|  
 |[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en el valor especificado como una operación atómica.|  
 |[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en la suma de ese valor y un valor especificado como una operación atómica.|  
@@ -118,7 +100,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en la diferencia entre ese valor y un valor especificado como una operación atómica.|  
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en el operador `xor` bit a bit de ese valor y un valor especificado como una operación atómica.|  
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copia un objeto C++ AMP. Se cumplen todos los requisitos sincrónicos de transferencia de datos. Los datos no se pueden copiar cuando el código está ejecutando código en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia un objeto C++ AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
+|[copy_async)](concurrency-namespace-functions-amp.md#copy_async)|Copia un objeto C++ AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula la ejecución de una función con la cláusula de restricción `restrict(amp)`.|  
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime una cadena con formato en Visual Studio **salida** ventana y genera un [runtime_exception](runtime-exception-class.md) excepción que tiene el mismo formato de cadena.|  
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime una cadena con formato en Visual Studio **salida** ventana. Se le llama desde una función con la cláusula de restricción `restrict(amp)`.|  
@@ -138,7 +120,6 @@ namespace Concurrency;
   
 ## <a name="see-also"></a>Vea también  
  [Referencia (C++ AMP)](reference-cpp-amp.md)
-
 
 
 

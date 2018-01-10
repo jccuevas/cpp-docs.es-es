@@ -1,33 +1,36 @@
 ---
-title: "Declaraci&#243;n de &#237;ndices de propiedad | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indizadores predeterminados"
-  - "predeterminados, indizadores"
-  - "propiedades indizadas, C++"
-  - "indizadores"
+title: "Declaración de índice de la propiedad | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Declaraci&#243;n de &#237;ndices de propiedad
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintaxis para declarar una propiedad indizada ha cambiado de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="property-index-declaration"></a>Declaración de índices de propiedad
+La sintaxis para declarar una propiedad indizada ha cambiado de extensiones administradas para C++ a Visual C++.  
   
- Los dos inconvenientes principales de la compatibilidad del lenguaje de Extensiones administradas con las propiedades indizadas es la incapacidad de proporcionar suscripción en el nivel de clase; es decir, se tiene que asignar nombre a todas las propiedades indizadas, y por ello no hay modo, por ejemplo, de facilitar un operador de subscripción administrado que se pueda aplicar directamente a un objeto de clase `Vector` o `Matrix`.  Un segundo inconveniente importante es que es difícil distinguir visualmente una propiedad de una propiedad indizada, el número de parámetros es la única indicación.  Finalmente, las propiedades indizadas sufren los mismos problemas que las propiedades no indizadas, los descriptores de acceso no se tratan como una unidad atómica, sino de forma independiente como métodos individuales.  Por ejemplo:  
+ Los dos inconvenientes principales de la compatibilidad de lenguaje de extensiones administradas de las propiedades indizadas es la incapacidad para proporcionar los subíndices de nivel de clase; es decir, todas las propiedades indizadas son necesarias para proporcionar un nombre y, por tanto, hay ninguna manera, por ejemplo, para proporcionar un operador de subíndice administrado que se puede aplicar directamente a un `Vector` o `Matrix` objeto de clase. Un segundo inconveniente importante es que resulta difícil visualmente distinguir una propiedad de una propiedad indizada, el número de parámetros es la única indicación. Por último, las propiedades indizadas sufren los mismos problemas que las propiedades no indizadas, los descriptores de acceso no se tratan como una unidad atómica, sino que divide en los métodos individuales.  Por ejemplo:  
   
 ```  
 public __gc class Vector;  
@@ -43,7 +46,7 @@ public:
 };  
 ```  
   
- Como puede ver aquí, los indizadores sólo se distinguen por los parámetros adicionales para especificar un índice de una o dos dimensiones.  En la nueva sintaxis, los indizadores se distinguen por los corchetes \(\[,\]\) seguidos del nombre del indizador e indicando el número y el tipo de cada índice:  
+ Como puede ver aquí, los indizadores sólo se distinguen por los parámetros adicionales para especificar una de dos o único índice de dimensión. En la nueva sintaxis, los indizadores se distinguen por los corchetes ([,]) después del nombre del indizador e indique el número y tipo de cada índice:  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +67,7 @@ public:
 };  
 ```  
   
- Para indicar un indizador en el nivel de clase que se puede aplicar directamente a objetos de la clase en la nueva sintaxis, la palabra clave `default` se reutiliza para sustituir a un nombre explícito.  Por ejemplo:  
+ Para indicar un indizador de nivel de clase que se pueden aplicar directamente a los objetos de la clase en la nueva sintaxis, la `default` palabra clave se reutiliza para sustituir a un nombre explícito. Por ejemplo:  
   
 ```  
 public ref class Matrix {  
@@ -74,10 +77,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- En la nueva sintaxis, cuando se especifica la propiedad indizada predeterminada, se reservan los dos nombres siguientes: `get_Item` y `set_Item`.  Esto se debe a que éstos son los nombres subyacentes generados para la propiedad indizada predeterminada.  
+ En la nueva sintaxis, al indizar el valor predeterminado, se especifica la propiedad, los dos nombres siguientes están reservados: `get_Item` y `set_Item`. Esto es porque son los nombres subyacentes generados para la propiedad indizada predeterminada.  
   
- Observe que no hay ninguna sintaxis de índice simple análoga a la sintaxis de propiedad simple.  
+ Tenga en cuenta que no hay ninguna sintaxis de índice simple análoga a la sintaxis de propiedad simple.  
   
-## Vea también  
- [Declaraciones de miembros en una clase o interfaz \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Cómo: Usar las propiedades indizadas](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>Vea también  
+ [Declaraciones de miembros en una clase o interfaz (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

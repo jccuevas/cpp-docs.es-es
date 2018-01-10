@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0217c62ff207ad706dbcb1cd172e878c2b96daee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 399f9fcea216adf5480bf38b8aba051c60eed496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-support-in-atl-projects"></a>Compatibilidad con MFC en ATL (proyectos)
 Si selecciona **compatibilidad con MFC** en el Asistente para proyectos ATL, el proyecto declarará la aplicación como un objeto de aplicación MFC (clase). El proyecto inicializa la biblioteca MFC y crea una instancia de una clase (clase *Nombre_proyecto*) que se deriva de [CWinApp](../../mfc/reference/cwinapp-class.md).  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -45,33 +43,19 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
-Convierte una hora UTC representada por un `tm``struct` en una hora UTC representada por un tipo `time_t`.  
+Convierte una hora UTC representada por un `tm struct` en una hora UTC representada por un tipo `time_t`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -90,7 +74,7 @@ __time64_t _mkgmtime64(
   
 #### <a name="parameters"></a>Parámetros  
  `timeptr`  
- Puntero a la hora UTC como `struct``tm` que se debe convertir.  
+ Puntero a la hora UTC como `struct tm` que se debe convertir.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Cantidad de tipo `__time32_t` o `__time64_t` que representa el número de segundos transcurridos desde la medianoche del 1 de enero de 1970, hora universal coordinada (UTC). Si la fecha está fuera del intervalo (vea la sección Comentarios) o la entrada no se puede interpretar como una hora válida, el valor devuelto es -1.  

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed952fbca90647bd3a43c554d3e39e224437d618
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 339577e11ac377bf8062860e2ebe307c798f9b49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minus-struct"></a>minus (Struct)
 Objeto de función predefinido que realiza la operación de resta (`operator-` binario) sobre sus argumentos.  
@@ -56,7 +57,7 @@ struct minus<void>
  Operando derecho de la operación. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El resultado de `Left - Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator-`.  
+ Resultado de `Left - Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator-`.  
   
 ## <a name="example"></a>Ejemplo  
   

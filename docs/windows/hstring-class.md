@@ -1,75 +1,77 @@
 ---
-title: "HString (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString"
-dev_langs: 
-  - "C++"
+title: Hstring (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString
+dev_langs: C++
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# HString (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona compatibilidad para manipular los identificadores HSTRING.  
+# <a name="hstring-class"></a>HString (Clase)
+Una clase auxiliar para administrar la duración de HSTRING utilizando el modelo RAII.
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 class HString;  
 ```  
   
-## Comentarios  
- El [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] proporciona acceso a las cadenas a través de identificadores de HSTRING.  La clase HString proporciona funciones y operadores de comodidad para simplificar mediante identificadores de HSTRING.  
+## <a name="remarks"></a>Comentarios  
+ El tiempo de ejecución de Windows proporciona acceso a las cadenas a través de identificadores HSTRING. La clase HString proporciona funciones de comodidad y operadores para simplificar el uso de identificadores HSTRING. Esta clase puede controlar la duración de la HSTRING posee a través de un modelo RAII. 
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[HString::HString \(Constructor\)](../windows/hstring-hstring-constructor.md)|Inicializa una nueva instancia de la clase HString.|  
-|[HString::~HString \(Destructor\)](../windows/hstring-tilde-hstring-destructor.md)|Destruye la instancia actual de la clase HString.|  
-  
-### Miembros  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HString::Set \(Método\)](../Topic/HString::Set%20Method.md)|Establece el valor del objeto HString actual en la cadena de caracteres anchos o el parámetro HString especificados.|  
-|[HString::Attach \(Método\)](../windows/hstring-attach-method.md)|Asocia el objeto HString especificado al objeto HString actual.|  
-|[HString::CopyTo \(Método\)](../windows/hstring-copyto-method.md)|Copia el objeto HString actual a un objeto HSTRING.|  
-|[HString::Detach \(Método\)](../Topic/HString::Detach%20Method.md)|Desasocia el objeto especificado de HString de su valor subyacente.|  
-|[HString::GetAddressOf \(Método\)](../windows/hstring-getaddressof-method.md)|Recupera un puntero al identificador HSTRING subyacente.|  
-|[HString::Get \(Método\)](../Topic/HString::Get%20Method.md)|Recupera el valor del identificador HSTRING subyacente.|  
-|[HString::Release \(Método\)](../windows/hstring-release-method.md)|Elimina el valor de cadena subyacente e inicializa el objeto HString actual con un valor vacío.|  
-|[HString::MakeReference \(Método\)](../Topic/HString::MakeReference%20Method.md)|Crea un objeto HStringReference a partir de un parámetro de cadena específico.|  
+|[HString::HString (constructor)](../windows/hstring-hstring-constructor.md)|Inicializa una nueva instancia de la clase HString.|  
+|[HString::~HString (destructor)](../windows/hstring-tilde-hstring-destructor.md)|Destruye la instancia actual de la clase HString.|  
   
-### Operadores públicos  
+### <a name="members"></a>Miembros  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HString::Operator\= \(Operador\)](../Topic/HString::Operator=%20Operator.md)|Mueve el valor de otro objeto HString al objeto HString actual.|  
-|[HString::Operator\=\= \(Operador\)](../windows/hstring-operator-equality-operator.md)|Indica si los dos parámetros son iguales.|  
-|[HString::Operator\!\= \(Operador\)](../windows/hstring-operator-inequality-operator.md)|Indica si los dos parámetros no son iguales.|  
+|[HString::Set (método)](../windows/hstring-set-method.md)|Establece el valor del objeto HString actual en la cadena de caracteres anchos especificada o el parámetro de HString.|  
+|[HString::Attach (método)](../windows/hstring-attach-method.md)|Asocia el objeto HString especificado con el objeto de HString actual.|  
+|[HString::CopyTo (método)](../windows/hstring-copyto-method.md)|Copia el HString actual objeto a un objeto HSTRING.|  
+|[HString::Detach (método)](../windows/hstring-detach-method.md)|Desasocia el objeto especificado de HString de su valor subyacente.|  
+|[HString::GetAddressOf (método)](../windows/hstring-getaddressof-method.md)|Recupera un puntero al identificador de HSTRING subyacente.|  
+|[HString::Get (método)](../windows/hstring-get-method.md)|Recupera el valor del identificador HSTRING subyacente.|  
+|[HString::Release (método)](../windows/hstring-release-method.md)|Elimina el valor de cadena subyacente e inicializa el objeto de HString actual en un valor vacío.|  
+|[HString::MakeReference (método)](../windows/hstring-makereference-method.md)|Crea un objeto HStringReference de un parámetro de cadena especificada.|  
   
-## Jerarquía de herencia  
+### <a name="public-operators"></a>Operadores públicos  
+  
+|Name|Descripción|  
+|----------|-----------------|  
+|[HString::Operator= (operador)](../windows/hstring-operator-assign-operator.md)|Mueve el valor de otro objeto de HString al objeto HString actual.|  
+|[HString::Operator== (operador)](../windows/hstring-operator-equality-operator.md)|Indica si los dos parámetros son iguales.|  
+|[HString::Operator!= (operador)](../windows/hstring-operator-inequality-operator.md)|Indica si los dos parámetros no son iguales.|  
+  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `HString`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [Microsoft::WRL::Wrappers \(Espacio de nombres\)](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Wrappers (espacio de nombres)](../windows/microsoft-wrl-wrappers-namespace.md)

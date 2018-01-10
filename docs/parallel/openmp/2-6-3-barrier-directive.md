@@ -1,33 +1,33 @@
 ---
-title: "2.6.3 barrier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.3 barrier (directiva) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4485a3d7-533f-4fec-8128-a131bec7fa16
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9c64787d9c6cc2dd0809f75f8f9db9819174d0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.3 barrier Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la directiva de **barrera** sincroniza todos los subprocesos en un equipo.  Cuando se encuentra, cada subproceso del equipo espera hasta que todos los demás hayan alcanzado este punto.  La sintaxis de la directiva de **barrera** es la siguiente:  
+# <a name="263-barrier-directive"></a>2.6.3 barrier (Directiva)
+El **barrera** directiva sincroniza todos los subprocesos en un equipo. Cuando encuentra, cada subproceso en el equipo espera hasta que todos los demás han alcanzado este punto. La sintaxis de la **barrera** directiva es como sigue:  
   
 ```  
 #pragma omp barrier new-line  
 ```  
   
- Después de que todos los subprocesos del equipo hayan encontrado la barrera, cada subproceso del equipo se inicia ejecutando las instrucciones después de la directiva de la barrera en paralelo.  Dado que la directiva de **barrera** no tiene instrucciones de lenguaje de C\/C\+\+. como parte de la sintaxis, hay algunas restricciones en su posición dentro de un programa.  Vea [Apéndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) para la gramática formal.  El ejemplo siguiente muestra estas restricciones.  
+ Después de que todos los subprocesos en el equipo han detectado la barrera, cada subproceso en el equipo empieza a ejecutar las instrucciones después de la directiva de barrera en paralelo. Tenga en cuenta que, dado el **barrera** directiva no tiene una instrucción del lenguaje C como parte de su sintaxis, hay algunas restricciones en su posición dentro de un programa. Vea [Apéndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) para la gramática formal. En el ejemplo siguiente se muestra estas restricciones.  
   
 ```  
 /* ERROR - The barrier directive cannot be the immediate  

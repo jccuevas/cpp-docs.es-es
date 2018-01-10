@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaf8bb7cf4cd3c078ac4f4d47667ff9656df1450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 471201d1817bc19b76ac1357c33a97da75587790
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-threading-models"></a>Modelos de subprocesos de automatización remota
 Automatización remota es compatible con el subproceso único y los modelos de subprocesamiento controlado de COM. En plataformas de 32 bits y 64 bits, que todo lo que son compatibles con Visual C++, el modelo de subprocesamiento debe establecerse en "apartamento". Para que obtener más información acerca de cómo y dónde se hace esto, vea [crear programas que utilizan la automatización remota](../mfc/creating-programs-that-use-remote-automation.md).  

@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a40b73d752a40c94a8ea47acef40ea12f2e4504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itarget-class"></a>ITarget (Clase)
 La clase `ITarget` es la interfaz para todos los bloques de destino. Los bloques de destinos consumen mensajes ofrecidos por los bloques `ISource`.  
@@ -47,20 +48,20 @@ class ITarget;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`filter_method`|La firma de cualquier método usado por el bloque que devuelve un `bool` valor para determinar si se debe aceptar un mensaje proporcionado.|  
 |`type`|Un alias de tipo para `T`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[~ ITarget (destructor)](#dtor)|Destruye el objeto `ITarget`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[propagar](#propagate)|Cuando se invalida en una clase derivada, forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
 |[send](#send)|Cuando se invalida en una clase derivada, forma sincrónica, pasa un mensaje al bloque de destino.|  
@@ -68,7 +69,7 @@ class ITarget;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[link_source](#link_source)|Cuando se invalida en una clase derivada, vincula un bloque de origen especificado a este `ITarget` bloque.|  
 |[unlink_source](#unlink_source)|Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado desde este `ITarget` bloque.|  

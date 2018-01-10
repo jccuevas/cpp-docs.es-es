@@ -1,73 +1,73 @@
 ---
-title: "P&#225;gina de propiedades NMake | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.ReBuildCommandLine"
-  - "VC.Project.VCNMakeTool.CleanCommandLine"
-  - "VC.Project.VCNMakeTool.Output"
-  - "VC.Project.VCNMakeTool.BuildCommandLine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMake (página de propiedades)"
+title: "Página de propiedades NMake (ventanas de C++) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCNMakeTool.ReBuildCommandLine
+- VC.Project.VCNMakeTool.CleanCommandLine
+- VC.Project.VCNMakeTool.Output
+- VC.Project.VCNMakeTool.BuildCommandLine
+dev_langs: C++
+helpviewer_keywords: NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cc9f6dc7c5fec4a184ed189cfaae230df3f1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# P&#225;gina de propiedades NMake
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La página de propiedades **NMake** permite especificar la configuración de compilación para proyectos NMake.  
+# <a name="nmake-property-page"></a>NMake (página de propiedades)
+El **NMake** página de propiedades le permite especificar opciones de compilación para proyectos NMake.  
   
- Para obtener más información sobre proyectos NMake, vea [Crear un proyecto de archivos MAKE](../ide/creating-a-makefile-project.md).  
+ Para obtener más información acerca de los proyectos NMake, vea [crear un proyecto de archivos MAKE](../ide/creating-a-makefile-project.md). Para proyectos de archivos MAKE non_Windows, consulte [propiedades del proyecto de archivos MAKE (C++ Linux)](../linux/prop-pages/makefile-linux.md), [propiedades del proyecto General (Android archivo MAKE de C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) o [NMake propiedades (C++ Android)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- La página de propiedades **NMake** contiene las siguientes propiedades.  
+ El **NMake** página de propiedades contiene las siguientes propiedades.  
   
-## Lista de UIElement  
- **Línea de comandos de Compilar**  
- Especifica el comando que se va a ejecutar cuando se haga clic en **Compilar** en el menú **Compilar**.  
+## <a name="uielement-list"></a>Lista de UIElement  
+ **Compilar la línea de comandos**  
+ Especifica el comando que se ejecutará cuando **generar** se hace clic en el **generar** menú.  
   
- **Línea de comandos de Recompilar todo**  
- Especifica la línea de comandos que se va a ejecutar cuando se haga clic en **Recompilar todo** en el menú **Compilar**.  
+ **Volver a generar todos los de línea de comandos**  
+ Especifica el comando que se ejecutará cuando **volver a generar todo** se hace clic en el **generar** menú.  
   
- **Línea de comandos de Limpiar**  
- Especifica el comando que se va a ejecutar cuando se haga clic en **Limpiar** en el menú **Compilar**.  
+ **Limpiar la línea de comandos**  
+ Especifica el comando que se ejecutará cuando **limpiar** se hace clic en el **generar** menú.  
   
- **Output**  
- Especifica el nombre del archivo que contendrá los resultados de la línea de comandos.  De manera predeterminada, el nombre de archivo se basa en el nombre del proyecto.  
+ **Salida**  
+ Especifica el nombre del archivo que contendrá la salida de la línea de comandos. De forma predeterminada, este nombre de archivo se basa en el nombre del proyecto.  
   
- **Definiciones del preprocesador**  
- Especifica cualquier definición del preprocesador que usa los archivos de origen.  La plataforma y configuración actual determinan el valor predeterminado.  
+ **Definiciones de preprocesador**  
+ Especifica las definiciones del preprocesador que el origen de archivos de uso. El valor predeterminado se determina por la plataforma actual y la configuración.  
   
- **Incluir Ruta de búsqueda**  
+ **Incluir la ruta de acceso de búsqueda**  
  Especifica los directorios donde el compilador busca los archivos de inclusión.  
   
- **Archivos de inclusión forzados**  
- Especifica archivos que el preprocesador procesa automáticamente aun cuando no están incluidos en los archivos de proyecto.  
+ **Fuerza incluye**  
+ Especifica los archivos que el preprocesador procesa automáticamente aun cuando no se incluyen en los archivos de proyecto.  
   
  **Ruta de acceso de búsqueda de ensamblado**  
- Especifica los directorios donde .NET Framework busca sus intentos para resolver los ensamblados .NET.  
+ Especifica los directorios donde .NET Framework busca cuando se intenta resolver ensamblados. NET.  
   
  **Ensamblados de uso forzados**  
- Especifica ensamblados que .NET Framework procesa automáticamente.  
+ Especifica los ensamblados de .NET Framework procesa automáticamente.  
   
  **Opciones adicionales**  
- Especifica cualquier modificador de compilador adicional para que IntelliSense lo utilice cuando analiza archivos C\+\+.  
+ Especifica los modificadores del compilador adicionales de IntelliSense que se usará cuando analiza los archivos de C++.  
   
- Para obtener información acerca de cómo tener acceso a la página de propiedades **NMake**, vea [Cómo: Especificar propiedades de proyecto con páginas de propiedades](../misc/how-to-specify-project-properties-with-property-pages.md).  
+ Para obtener información sobre cómo obtener acceso a la **NMake** página de propiedades, vea [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md).  
   
- Para obtener información sobre cómo tener acceso mediante programación a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+ Para obtener información acerca de cómo mediante programación el acceso a los miembros de este objeto, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
  [Cómo: Habilitar IntelliSense para proyectos de archivos MAKE](../ide/how-to-enable-intellisense-for-makefile-projects.md)

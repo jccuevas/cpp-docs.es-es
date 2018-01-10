@@ -1,32 +1,33 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind2nd (función) [STL/CLR]"
+title: bind2nd (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera `binder2nd` para un argumento y un functor.  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+Genera un `binder2nd` por un functor y un argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun,  
@@ -35,24 +36,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Parámetros de plantilla  
- Argumento  
+## <a name="template-parameters"></a>Parámetros de plantilla  
+ Arg  
  Tipo del argumento.  
   
- Debería  
- El tipo de functor.  
+ Fun  
+ El tipo del functor.  
   
-## Parámetros de función  
+## <a name="function-parameters"></a>Parámetros de función  
  functor  
- El functor a ajustar.  
+ El functor que va a contener.  
   
  right  
- El segundo argumento de ajustar.  
+ El segundo argumento que va a contener.  
   
-## Comentarios  
- La función de la plantilla devuelve [binder2nd](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`.  Se utiliza como una manera cómoda de ajustar un functor de dos\- argumento y el segundo argumento en un functor de uno\- argumento que lo llame con un primer argumento.  
+## <a name="remarks"></a>Comentarios  
+ Devuelve la función de plantilla [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos y el segundo argumento en un functor de un argumento que se llama con un primer argumento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -95,13 +96,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [binder2nd](../dotnet/binder2nd-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)

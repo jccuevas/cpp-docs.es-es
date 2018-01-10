@@ -16,18 +16,18 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7589f0054e9393f938bf69d4e1751202cbc02456
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 ||||  
@@ -35,8 +35,8 @@ ms.lasthandoff: 03/17/2017
 |[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
 |[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
 |[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
-|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
-|[message_status](#message_status)|[task_group_status](#task_group_status)|  
+|[WinRTInitializationType](#winrtinitializationtype)|[agent_status)](#agent_status)|[join_type)](#join_type)|  
+|[message_status)](#message_status)|[task_group_status)](#task_group_status)|  
   
 ##  <a name="agent_status"></a>agent_status (enumeración)  
  Los estados válidos para un `agent`.  
@@ -49,9 +49,9 @@ enum agent_status;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`agent_canceled`|`agent` se canceló.|  
-|`agent_created`|El `agent` se ha creado pero no se ha iniciado.|  
+|`agent_created`|El `agent` se ha creado pero no se inició.|  
 |`agent_done`|El `agent` terminó sin ser cancelado.|  
-|`agent_runnable`|El `agent` se ha iniciado, pero no se ha introducido su `run` método.|  
+|`agent_runnable`|El `agent` se ha iniciado, pero no se especificó su `run` método.|  
 |`agent_started`|El `agent` se ha iniciado.|  
 
 ### <a name="remarks"></a>Comentarios  
@@ -73,7 +73,7 @@ enum Agents_EventType;
 |----------|-----------------|  
 |`AGENTS_EVENT_CREATE`|Un tipo de evento que representa la creación de un objeto|  
 |`AGENTS_EVENT_DESTROY`|Un tipo de evento que representa la eliminación de un objeto|  
-|`AGENTS_EVENT_END`|Procesamiento de un tipo de evento que representa la finalización de algunos|  
+|`AGENTS_EVENT_END`|Procesamiento de un tipo de evento que representa la conclusión de algunas|  
 |`AGENTS_EVENT_LINK`|Un tipo de evento que representa la vinculación de bloques de mensajes|  
 |`AGENTS_EVENT_NAME`|Un tipo de evento que representa el nombre de un objeto|  
 |`AGENTS_EVENT_SCHEDULE`|Un tipo de evento que representa la programación de un proceso|  
@@ -96,15 +96,15 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_ATTACH`|Un tipo de evento que representa la acción de adjuntarse a un programador.|  
 |`CONCRT_EVENT_BLOCK`|Un tipo de evento que representa la acción de un bloqueo de contexto.|  
 |`CONCRT_EVENT_DETACH`|Un tipo de evento que representa la acción de desasociarse de un programador.|  
-|`CONCRT_EVENT_END`|Un tipo de evento que marca el principio de un par de eventos de inicio y finalización.|  
+|`CONCRT_EVENT_END`|Un tipo de evento que marca el principio de un par de eventos de inicio/fin.|  
 |`CONCRT_EVENT_GENERIC`|Un tipo de evento usado para varios eventos.|  
-|`CONCRT_EVENT_IDLE`|Un tipo de evento que representa la acción de un contexto se vuelve inactivo.|  
-|`CONCRT_EVENT_START`|Un tipo de evento que marca el principio de un par de eventos de inicio y finalización.|  
+|`CONCRT_EVENT_IDLE`|Un tipo de evento que representa la acción de un contexto llega a estar inactivo.|  
+|`CONCRT_EVENT_START`|Un tipo de evento que marca el principio de un par de eventos de inicio/fin.|  
 |`CONCRT_EVENT_UNBLOCK`|Un tipo de evento que representa la acción de desbloquear un contexto.|  
-|`CONCRT_EVENT_YIELD`|Un tipo de evento que representa la acción de obtención de un contexto.|  
+|`CONCRT_EVENT_YIELD`|Un tipo de evento que representa la acción de un contexto produciendo.|  
   
 ### <a name="requirements"></a>Requisitos  
- **Encabezado:** concrt.h  **Namespace:** simultaneidad
+ **Encabezado:** concrt.h **Namespace:** simultaneidad
 
 ##  <a name="concrt_traceflags"></a>Concrt_TraceFlags (enumeración)  
  Marcas de seguimiento para los tipos de evento  
@@ -137,8 +137,8 @@ enum CriticalRegionType;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`InsideCriticalRegion`|Indica que el contexto está dentro de una región crítica. Dentro de una región crítica, las suspensiones asincrónicas se ocultan del programador. Debe ocurrir una suspensión, el Administrador de recursos esperará el subproceso se convierta en ejecutable y simplemente reanudarlo en lugar de invocar el programador de nuevo. Los bloqueos tomados dentro de este tipo de región deben realizarse con extremo cuidado.|  
-|`InsideHyperCriticalRegion`|Indica que el contexto está dentro de una región hipercrítica. Dentro de una región hipercrítica, suspensiones sincrónicas y asincrónicas se ocultan del programador. Debe una suspensión o de bloqueo se producen, el Administrador de recursos esperará el subproceso se convierta en ejecutable y simplemente reanudarlo en lugar de invocar al programador de nuevo. Los bloqueos tomados dentro de este tipo de región nunca deben compartirse con código que se ejecuta fuera de una región. Esto provocará un interbloqueo impredecible.|  
+|`InsideCriticalRegion`|Indica que el contexto está dentro de una región crítica. Cuando esté en una región crítica, suspensiones asincrónicas se ocultan del programador. Debería ocurrir una suspensión, el Administrador de recursos esperará a que el subproceso se convierta en ejecutable y simplemente reanudarlo en lugar de invocar el programador de nuevo. Los bloqueos tomados dentro de una región deben realizarse con extremo cuidado.|  
+|`InsideHyperCriticalRegion`|Indica que el contexto está dentro de una región hyper crítica. Dentro de una región hyper crítica, suspensiones sincrónicas y asincrónicas se ocultan del programador. Debe dicha suspensión o bloqueo se producen, el Administrador de recursos esperará a que el subproceso se convierta en ejecutable y simplemente reanudarlo en lugar de invocar al programador de nuevo. Nunca se deben compartir bloqueos tomados dentro de una región con código que se ejecuta fuera de una región. Si lo hace, provocará un interbloqueo impredecible.|  
 |`OutsideCriticalRegion`|Indica que el contexto está fuera de una región crítica.|  
   
 ### <a name="requirements"></a>Requisitos  
@@ -154,8 +154,8 @@ enum DynamicProgressFeedbackType;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`ProgressFeedbackDisabled`|El programador no recopila información de progreso. Reajuste se hace basado únicamente en el nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Este valor está reservado para su uso en tiempo de ejecución.|  
-|`ProgressFeedbackEnabled`|El programador recopila información de progreso y lo pasa al administrador de recursos. El Administrador de recursos usará esta información estadística para equilibrar los recursos en nombre del programador además del nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
+|`ProgressFeedbackDisabled`|El programador no recopila información de progreso. Reequilibrio se realiza basándose únicamente en el nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Este valor está reservado para su uso en tiempo de ejecución.|  
+|`ProgressFeedbackEnabled`|El programador recopila información de progreso y lo pasa al administrador de recursos. El Administrador de recursos usará esta información estadística para equilibrar los recursos en nombre del programador además del nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
 ##  <a name="join_type"></a>join_type (enumeración)  
  El tipo de un bloque de mensajería `join`.  
   
@@ -166,8 +166,8 @@ enum join_type;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`greedy`|Uniones expansivas `join` bloques de mensajería inmediatamente aceptan un mensaje en la propagación. Esto es más eficaz, pero existe la posibilidad de bloqueo activo, dependiendo de la configuración de red.|  
-|`non_greedy`|No expansivo `join` bloques de mensajería posponen mensajes y pruebe y consumen después de haber llegado todos. Estos están garantizados para funcionar, pero más lentamente.|  
+|`greedy`|Expansivo `join` bloques de mensajería aceptan inmediatamente un mensaje en la propagación. Esto es más eficaz, pero tiene la posibilidad de un bloqueo activo, dependiendo de la configuración de red.|  
+|`non_greedy`|No expansivo `join` bloques de mensajería posponer mensajes y pruebe y consumen después de haber llegado todos. Estos son siempre funciona, pero más lentamente.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** agents.h  
@@ -182,16 +182,16 @@ enum message_status;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`accepted`|El destino aceptó el mensaje.|  
-|`declined`|El destino no aceptó el mensaje.|  
+|`accepted`|El destino acepta el mensaje.|  
+|`declined`|El destino no ha aceptado el mensaje.|  
 |`missed`|El destino intentó aceptar el mensaje, pero ya no estaba disponible.|  
-|`postponed`|El destino ha pospuesto el mensaje.|  
+|`postponed`|El destino pospone el mensaje.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** agents.h  
 
 ##  <a name="policyelementkey"></a>PolicyElementKey (enumeración)  
- Claves de directiva que describen aspectos de comportamiento del programador. Cada elemento de directiva se describe mediante un par clave-valor. Para obtener más información acerca de las directivas del programador y su impacto en los programadores, vea [programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+ Claves de directiva que describen aspectos de comportamiento del programador. Cada elemento de directiva se describe mediante un par clave-valor. Para obtener más información sobre las directivas del programador y su impacto en los programadores, vea [programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
 enum PolicyElementKey;
@@ -200,16 +200,16 @@ enum PolicyElementKey;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`ContextPriority`|La prioridad del subproceso de sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Valores válidos: cualquiera de los valores válidos para las ventanas `SetThreadPriority` función y el valor especial`INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado:`THREAD_PRIORITY_NORMAL`|  
-|`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Valores válidos: enteros positivos<br /><br /> Valor predeterminado: `0`, que indica que se pueden utilizar valor predeterminado del proceso para el tamaño de la pila.|  
-|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo se basarán en el nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Valores válidos: un miembro de la `DynamicProgressFeedbackType` (enumeración), ya sea `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valor predeterminado:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|Cuando el `SchedulingProtocol` clave de directiva se establece en el valor `EnhanceScheduleGroupLocality`, especifica el número máximo de contextos ejecutables que pueden almacenarse en caché por colas locales del procesador virtual. Normalmente, estos contextos se ejecutarán en orden de último en el primero en salir (LIFO) en el procesador virtual que provocó que se convierta en ejecutable. Tenga en cuenta que esta clave de directiva no tiene ningún significado cuando la `SchedulingProtocol` clave se establece en el valor `EnhanceForwardProgress`.<br /><br /> Valores válidos: enteros no negativos<br /><br /> Valor predeterminado:`8`|  
-|`MaxConcurrency`|Simultaneidad máximo nivel deseado por el programador. El Administrador de recursos intentará asignar inicialmente este a muchos procesadores virtuales. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad deseado es el mismo que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MinConcurrency` es mayor que el número de subprocesos de hardware en el equipo y `MaxConcurrency` se especifica como `MaxExecutionResources`, el valor de `MaxConcurrency` se genera para que coincida con lo que se establece para `MinConcurrency`.<br /><br /> Valores válidos: enteros positivos y el valor especial`MaxExecutionResources`<br /><br /> Valor predeterminado:`MaxExecutionResources`|  
+|`ContextPriority`|La prioridad de subproceso de sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Los valores válidos: cualquiera de los valores válidos para las ventanas `SetThreadPriority` función y el valor especial`INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado:`THREAD_PRIORITY_NORMAL`|  
+|`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Los valores válidos: enteros positivos<br /><br /> Valor predeterminado: `0`, e indica que se utilizó el valor predeterminado de la variable del proceso para el tamaño de pila.|  
+|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo se basarán en el nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Los valores válidos: un miembro de la `DynamicProgressFeedbackType` enumeración, ya sea `ProgressFeedbackEnabled` o`ProgressFeedbackDisabled`<br /><br /> Valor predeterminado:`ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|Cuando el `SchedulingProtocol` clave de la directiva se establece en el valor `EnhanceScheduleGroupLocality`, esto especifica el número máximo de contextos ejecutables que pueden almacenarse en caché por colas locales del procesador virtual. Normalmente, estos contextos se ejecutarán en orden de último en primero en salir (LIFO) en el procesador virtual que provocó que se convierta en ejecutable. Tenga en cuenta que esta clave de directiva no tiene ningún significado cuando la `SchedulingProtocol` clave se establece en el valor `EnhanceForwardProgress`.<br /><br /> Los valores válidos: enteros no negativos<br /><br /> Valor predeterminado:`8`|  
+|`MaxConcurrency`|La simultaneidad máxima nivel deseada por el programador. El Administrador de recursos intentará asignar inicialmente este a muchos procesadores virtuales. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad deseado es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MinConcurrency` es mayor que el número de subprocesos de hardware en el equipo y `MaxConcurrency` se especifica como `MaxExecutionResources`, el valor de `MaxConcurrency` se genera para que coincida con lo que se establece para `MinConcurrency`.<br /><br /> Los valores válidos: enteros positivos y el valor especial`MaxExecutionResources`<br /><br /> Valor predeterminado:`MaxExecutionResources`|  
 |`MaxPolicyElementKey`|La clave del elemento de directiva máxima. No es una clave de elemento válido.|  
-|`MinConcurrency`|El nivel de simultaneidad mínimo que el Administrador de recursos debe proporcionar al programador. El número de procesadores virtuales asignados a un programador nunca pasará por debajo del mínimo. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad mínimo es el mismo que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MaxConcurrency` es menor que el número de subprocesos de hardware en el equipo y `MinConcurrency` se especifica como `MaxExecutionResources`, el valor de `MinConcurrency` se reduce para que coincida con lo que se establece para `MaxConcurrency`.<br /><br /> Valores válidos: enteros no negativos y el valor especial `MaxExecutionResources`. Tenga en cuenta que para las directivas del programador para la construcción de los programadores del Runtime de simultaneidad, el valor `0` no es válido.<br /><br /> Valor predeterminado:`1`|  
-|`SchedulerKind`|El tipo de subprocesos que el programador utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType](#schedulertype).<br /><br /> Valores válidos: un miembro de la `SchedulerType` enumeración, por ejemplo,`ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce a subprocesos de Win32 en todos los sistemas operativos.|  
-|`SchedulingProtocol`|Describe qué algoritmo de programación utilizará el programador. Para obtener más información, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Valores válidos: un miembro de la `SchedulingProtocolType` (enumeración), ya sea `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valor predeterminado:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|Número provisional de procesadores virtuales por subproceso de hardware. El factor de la suscripción excesiva puede aumentarse el Administrador de recursos, si es necesario, para satisfacer `MaxConcurrency` con los subprocesos de hardware en el equipo.<br /><br /> Valores válidos: enteros positivos<br /><br /> Valor predeterminado:`1`|  
+|`MinConcurrency`|El nivel de simultaneidad mínimo que se debe proporcionar al programador mediante el Administrador de recursos. El número de procesadores virtuales asignados a un programador no superará nunca por debajo del mínimo. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad mínimo es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MaxConcurrency` es menor que el número de subprocesos de hardware en el equipo y `MinConcurrency` se especifica como `MaxExecutionResources`, el valor de `MinConcurrency` disminuye para que coincida con lo que se establece para `MaxConcurrency`.<br /><br /> Los valores válidos: enteros no negativos y el valor especial `MaxExecutionResources`. Tenga en cuenta que para las directivas de programador permiten la construcción de programadores del Runtime de simultaneidad, el valor `0` no es válido.<br /><br /> Valor predeterminado:`1`|  
+|`SchedulerKind`|El tipo de subprocesos que el programador utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType](#schedulertype).<br /><br /> Los valores válidos: un miembro de la `SchedulerType` enumeración, por ejemplo,`ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce en subprocesos de Win32 en todos los sistemas operativos.|  
+|`SchedulingProtocol`|Describe el algoritmo de programación que se usará en el programador. Para obtener más información, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Los valores válidos: un miembro de la `SchedulingProtocolType` enumeración, ya sea `EnhanceScheduleGroupLocality` o`EnhanceForwardProgress`<br /><br /> Valor predeterminado:`EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|Número provisional de procesadores virtuales por subproceso de hardware. El factor de la suscripción excesiva de destino puede aumentarse el Administrador de recursos, si es necesario, para satisfacer los requisitos `MaxConcurrency` con los subprocesos de hardware en el equipo.<br /><br /> Los valores válidos: enteros positivos<br /><br /> Valor predeterminado:`1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Requisitos  
@@ -227,7 +227,7 @@ enum SchedulerType;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`ThreadScheduler`|Indica una solicitud explícita de subprocesos Win32 normales.|  
-|`UmsThreadDefault`|Subprocesos programables en modo usuario (UMS) no se admiten en el Runtime de simultaneidad en Visual Studio 2013. Usando `UmsThreadDefault` como valor de la directiva `SchedulerType` no se producirá un error. Sin embargo, un programador creado con esa directiva establecerá el uso de subprocesos Win32 como valor predeterminado.|  
+|`UmsThreadDefault`|Subprocesos programables en modo de usuario (UMS) no se admiten en el Runtime de simultaneidad en Visual Studio 2013. Usando `UmsThreadDefault` como valor de la directiva `SchedulerType` no se producirá un error. Sin embargo, un programador creado con esa directiva establecerá el uso de subprocesos Win32 como valor predeterminado.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
@@ -242,8 +242,8 @@ enum SchedulingProtocolType;
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`EnhanceForwardProgress`|El programador prefiere round robin a través de grupos de programación después de ejecutar cada tarea. Contextos desbloqueados se programan normalmente en un modo de primero en el primero en salir (FIFO). Procesadores virtuales no almacenan en caché contextos desbloqueados.|  
-|`EnhanceScheduleGroupLocality`|El programador prefiere continuar trabajando en tareas dentro del grupo de programación actual antes de pasar a otro grupo de programación. Contextos desbloqueados se almacenan en caché por procesador virtual y se programan normalmente en forma de último en el primero en salir (LIFO) mediante el procesador virtual que los desbloqueó.|  
+|`EnhanceForwardProgress`|El programador prefiere round-robin a través de los grupos de programación después de ejecutar cada tarea. Contextos desbloqueados se programan normalmente en forma de primero en el primero en salir (FIFO). Procesadores virtuales no almacenan en caché contextos desbloqueados.|  
+|`EnhanceScheduleGroupLocality`|El programador prefiere continuar trabajando en tareas dentro del grupo de programación actual antes de trasladarse a otro grupo de programación. Contextos desbloqueados se almacenan en caché por procesador virtual y se programan normalmente en forma de último en primero en salir (LIFO) mediante el procesador virtual que los desbloqueó.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** concrt.h  
@@ -259,13 +259,13 @@ enum SwitchingProxyState;
 |Nombre|Descripción|  
 |----------|-----------------|  
 |`Blocking`|Indica que el subproceso que realiza la llamada está bloqueando de forma cooperativa y debería ser propiedad exclusiva de la llamada hasta que vuelva a ejecutar posteriormente y realizar otra acción.|  
-|`Idle`|Indica que el subproceso de llamada ya no es necesario el programador y se devuelve al administrador de recursos. El contexto que se enviaba ya no es capaz de utilizar el Administrador de recursos.|  
+|`Idle`|Indica que el subproceso que realiza la llamada ya no es necesario por el programador y se devuelve al administrador de recursos. El contexto que se enviaba ya no es capaz de utilizarse el Administrador de recursos.|  
 |`Nesting`|Indica que el subproceso que realiza la llamada está anidando a un programador secundario y el llamador necesita para adjuntar a un programador diferente.|  
 
 ### <a name="remarks"></a>Comentarios  
  Un parámetro de tipo `SwitchingProxyState` se pasa al método `IThreadProxy::SwitchTo` para indicar que el Administrador de recursos a cómo tratar el proxy del subproceso que realiza la llamada.  
   
- Para obtener más información sobre el uso de este tipo, consulte [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
+ Para obtener más información sobre cómo se utiliza este tipo, consulte [IThreadProxy:: SwitchTo](ithreadproxy-structure.md#switchto).  
   
 ##  <a name="task_group_status"></a>task_group_status (enumeración)  
  Describe el estado de ejecución de un objeto `task_group` o `structured_task_group`. Numeroso métodos que esperan tareas programadas para que se complete un grupo de tareas, devuelven un valor de este tipo.  
@@ -302,4 +302,3 @@ enum WinRTInitializationType;
 
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
-

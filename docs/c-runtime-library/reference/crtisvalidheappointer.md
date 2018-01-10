@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtIsValidHeapPointer
+apiname: _CrtIsValidHeapPointer
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0af543a4462c5cc9dec32c279750be744efa7303
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 87b944cfce1f61aa2ff6469210b719d2e7b92430
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 Comprueba si un puntero especificado se encuentra en un montón asignado por alguna biblioteca en tiempo de ejecución de C, pero no necesariamente por la biblioteca CRT del autor de llamada. En las versiones de CRT anteriores a Visual Studio 2010, comprueba que el puntero especificado se encuentre en el montón local (solo en la versión de depuración).  
@@ -70,7 +67,7 @@ Comprueba si un puntero especificado se encuentra en un montón asignado por alg
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );  
 ```  
   
- Para obtener más información sobre cómo usar `_CrtIsValidHeapPointer` con otras macros y funciones de depuración, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Para obtener más información sobre cómo usar `_CrtIsValidHeapPointer` con otras macros y funciones de depuración, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -78,7 +75,7 @@ _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 |-------------|---------------------|  
 |`_CrtIsValidHeapPointer`|\<crtdbg.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
@@ -135,7 +132,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
   
 ```  
 my_pointer has read and write accessibility.  

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d827b375cd382ff4f298f2933fc8a3109d2f846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958ade238317d1577bd93d373b9e8ce4aa1f4234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Específicos de Microsoft**  
@@ -83,7 +84,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>Resultado  
+## <a name="output"></a>Salida  
   
 ```  
 10000  

@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClass::GetWeakReference (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetWeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetWeakReference (método)"
+title: "Runtimeclass:: Getweakreference (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+dev_langs: C++
+helpviewer_keywords: GetWeakReference method
 ms.assetid: 26656ace-7f20-4364-87c9-4a75dd30912e
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba87fe5097f9aff52b54770c1d438be2be425259
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::GetWeakReference (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtiene un puntero al objeto débil de referencia para el objeto actual de RuntimeClass.  
+# <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference (Método)
+Obtiene un puntero al objeto de referencia débil para el objeto de RuntimeClass actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `weakReference`  
- Cuando esta operación finaliza, un puntero a un objeto débil de referencia.  
+ Cuando se completa esta operación, un puntero a un objeto de referencia débil.  
   
-## Valor devuelto  
- Siempre S\_OK.  
+## <a name="return-value"></a>Valor devuelto  
+ Siempre S_OK.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [RuntimeClass \(Clase\)](../windows/runtimeclass-class.md)
+## <a name="see-also"></a>Vea también  
+ [RuntimeClass (clase)](../windows/runtimeclass-class.md)

@@ -1,41 +1,44 @@
 ---
-title: "Or&#237;genes de datos y sesiones | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conexiones [C++], origen de datos"
-  - "orígenes de datos [C++], OLE DB"
-  - "plantillas de consumidor OLE DB [C++], orígenes de datos"
+title: "Orígenes de datos y sesiones | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data sources [C++], OLE DB
+- connections [C++], data source
+- OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2bb675897e29a26446b3070b2192b4f5c3e8fd2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Or&#237;genes de datos y sesiones
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La ilustración siguiente muestra las clases que permiten conectar y obtener acceso a un origen de datos.  Cada clase está basada en una implementación de componente de OLE DB estándar.  
+# <a name="data-sources-and-sessions"></a>Orígenes de datos y sesiones
+En la siguiente ilustración se muestra las clases que permiten conectar y obtener acceso a un origen de datos. Cada clase se basa en una implementación estándar de componente de OLE DB.  
   
- ![Clases de origen de datos y sesión](../../data/oledb/media/vcdatasourcesessionclasses.png "vcDataSourceSessionClasses")  
+ ![Clases de sesión y el origen de datos](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses")  
 Clases de origen de datos y sesión  
   
- Las clases son las siguientes:  
+ Las clases son:  
   
--   [CDataSource](../../data/oledb/cdatasource-class.md) Esta clase genera una instancia del objeto de origen de datos, que crea y administra una conexión a un origen de datos por medio de un proveedor OLE DB.  El origen de datos toma la información \(como la dirección del origen de datos y los datos de autenticación\) como una cadena de conexión.  
+-   [CDataSource](../../data/oledb/cdatasource-class.md) esta clase crea una instancia del objeto de origen de datos, que crea y administra una conexión a un origen de datos mediante un proveedor OLE DB. El origen de datos toma información como la información de autenticación y la dirección de origen de datos en forma de una cadena de conexión.  
   
-     También merece la pena resaltar que la clase auxiliar [CEnumerator](../../data/oledb/cenumerator-class.md) se suele usar antes de establecer una conexión para obtener una lista de los proveedores disponibles registrados en un sistema.  Ello permite seleccionar un proveedor como origen de datos.  Por ejemplo, el cuadro de diálogo **Propiedades de vínculo de datos** usa esta clase para llenar la lista de proveedores de la ficha **Proveedores**.  Equivale a las funciones **SQLBrowseConnect** o **SQLDriverConnect**.  
+     También merece la pena mencionar que la clase auxiliar [CEnumerator](../../data/oledb/cenumerator-class.md) a menudo se usa antes de establecer cualquier conexión para obtener una lista de proveedores disponibles y registrados en un sistema. Esto le permite seleccionar un proveedor como un origen de datos. Por ejemplo, el **propiedades de vínculo de datos** cuadro de diálogo utiliza esta clase para rellenar la lista de proveedores en el **proveedores** ficha. Es equivalente a la **SQLBrowseConnect** o **SQLDriverConnect** función.  
   
--   [CSession](../../data/oledb/csession-class.md) Esta clase crea una instancia del objeto de sesión, que representa una sesión única de acceso al origen de datos.  Sin embargo, se pueden crear varias sesiones en un origen de datos.  Por cada sesión, se pueden crear conjuntos de filas, comandos y otros objetos para obtener acceso a los datos que contiene el origen de datos.  La sesión controla las transacciones.  
+-   [CSession](../../data/oledb/csession-class.md) esta clase crea instancias del objeto de sesión, que representa una sesión única de acceso al origen de datos. Sin embargo, puede crear varias sesiones en un origen de datos. Para cada sesión, puede crear conjuntos de filas, comandos y otros objetos para tener acceso a datos desde el origen de datos. La sesión controla las transacciones.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

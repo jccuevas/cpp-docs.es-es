@@ -1,70 +1,72 @@
 ---
-title: "CRowset::MoveToBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::MoveToBookmark"
-  - "ATL::CRowset<TAccessor>::MoveToBookmark"
-  - "ATL.CRowset.MoveToBookmark"
-  - "ATL.CRowset<TAccessor>.MoveToBookmark"
-  - "MoveToBookmark"
-  - "CRowset::MoveToBookmark"
-  - "CRowset.MoveToBookmark"
-  - "CRowset<TAccessor>::MoveToBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToBookmark (método)"
+title: 'CRowset:: MoveToBookmark | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::MoveToBookmark
+- ATL::CRowset<TAccessor>::MoveToBookmark
+- ATL.CRowset.MoveToBookmark
+- ATL.CRowset<TAccessor>.MoveToBookmark
+- MoveToBookmark
+- CRowset::MoveToBookmark
+- CRowset.MoveToBookmark
+- CRowset<TAccessor>::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08e570d6d2cbc8c5943ce0591c280b74be573e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::MoveToBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Captura la fila marcada por un marcador o una fila de un desplazamiento especificado \(`lSkip`\) del marcador.  
+# <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
+Recopila la fila marcada por fila en un desplazamiento especificado o un marcador (`lSkip`) de ese marcador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT MoveToBookmark(   
-   const CBookmarkBase& bookmark,   
-   LONG lSkip = 0    
+      HRESULT MoveToBookmark(   
+   const CBookmarkBase& bookmark,   
+   LONG lSkip = 0    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `bookmark`  
- \[in\] Un marcador que marca la ubicación desde la que desea capturar datos.  
+ [in] Un marcador marcar la ubicación desde la que va a capturar datos.  
   
  `lSkip`  
- \[in\] El recuento del número de filas de marcador a la fila de destino.  Si `lSkip` es cero, la primera fila capturada es la fila marcada.  Si `lSkip` es 1, la primera fila capturada es la fila después de la fila marcada.  Si es `lSkip` – 1, la primera fila capturada es la fila antes de la fila marcada.  
+ [in] El recuento de número de filas de marcador a la fila de destino. Si `lSkip` es cero, la primera fila es la fila marcada. Si `lSkip` es 1, la primera fila es la fila después de la fila marcada. Si `lSkip` es -1, la primera fila es la fila antes de la fila marcada.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método requiere la interfaz opcional `IRowsetLocate`, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetLocate** a `VARIANT_TRUE` y a **DBPROP\_CANFETCHBACKWARDS** determinado a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Este método requiere que la interfaz opcional `IRowsetLocate`, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetLocate** a `VARIANT_TRUE` y establecer **DBPROP_CANFETCHBACKWARDS** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
- Para obtener información sobre cómo utilizar marca una dirección de la Internet en consumidores, vea [Mediante los marcadores](../../data/oledb/using-bookmarks.md).  
+ Para obtener información sobre el uso de marcadores en los consumidores, consulte [Using Bookmarks](../../data/oledb/using-bookmarks.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
- [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
- [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
- [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
- [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
+ [CRowset:: MoveNext](../../data/oledb/crowset-movenext.md)   
+ [CRowset:: MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [IRowsetLocate:: GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
+ [CRowset:: MovePrev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

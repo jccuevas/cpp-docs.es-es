@@ -1,65 +1,66 @@
 ---
-title: "data_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "data_seg_CPP"
-  - "vc-pragma.data_seg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "data_seg (pragma)"
-  - "pragma (directivas), data_seg"
+title: data_seg | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- data_seg_CPP
+- vc-pragma.data_seg
+dev_langs: C++
+helpviewer_keywords:
+- data_seg pragma
+- pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dbc581e1237b25404b611e24bf8af46af4a166b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# data_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dataseg"></a>data_seg
 Especifica el segmento de datos en el que las variables inicializadas se almacenan en el archivo .obj.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## Comentarios  
- Los términos *segmento* y *sección* son sinónimos en este tema.  
+## <a name="remarks"></a>Comentarios  
+ El significado de los términos de *segmento* y *sección* son sinónimos en este tema.  
   
- Los archivos OBJ se pueden ver con la aplicación [dumpbin](../build/reference/dumpbin-command-line.md).  El segmento predeterminado en el archivo .obj para las variables inicializadas es .data.  Las variables que no están inicializadas se consideran inicializadas en cero y se almacenan en .bss.  
+ Archivos OBJ se pueden ver con el [dumpbin](../build/reference/dumpbin-command-line.md) aplicación. El segmento predeterminado en el archivo .obj para las variables inicializadas es .data. Las variables que no están inicializadas se consideran inicializadas en cero y se almacenan en .bss.  
   
- **data\_seg** sin parámetros restablece el segmento en .data.  
+ **data_seg** sin parámetros restablece el segmento en. Data.  
   
- **push**\(opcional\)  
- Inserta un registro en la pila interna del compilador.  **push** puede tener *identifier* y *segment\-name*.  
+ **inserción**(opcional)  
+ Inserta un registro en la pila interna del compilador. A **inserción** puede tener un *identificador* y *nombre de segmento*.  
   
- **pop** \(opcional\)  
+ **confirmación** (opcional)  
  Quita un registro de la parte superior de la pila interna del compilador.  
   
- *identifier* \(opcional\)  
- Cuando se utiliza con **push**, asigna un nombre al registro en la pila interna del compilador.  Cuando se usa con **pop**, extrae los registros de la pila interna hasta que se quita el *identifier*; si no se encuentra el *identifier* en la pila interna, no se extrae nada.  
+ *identificador* (opcional)  
+ Cuando se usa con **inserción**, asigna un nombre para el registro en la pila interna del compilador. Cuando se usa con **pop**, extrae registros de la pila interna hasta que *identificador* se quita; si *identificador* no se encuentra en la pila interna, se extrae nada.  
   
- El elemento *identifier* permite que se extraigan varios registros con un solo comando **pop**.  
+ *identificador* permite varios registros sacar con una sola **pop** comando.  
   
- *"segment\-name"* \(opcional\)  
- Nombre de un segmento*.* Cuando se utiliza con **pop**, se extrae la pila y *segment\-name* se convierte en el nombre de segmento activo.  
+ *"segment-name"*(opcional)  
+ Nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.  
   
- *"segment\-class"* \(opcional\)  
- Se incluye por compatibilidad con C\+\+ antes de la versión 2.0.  Se omite.  
+ *"clase de segmento"* (opcional)  
+ Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // pragma_directive_data_seg.cpp  
@@ -78,11 +79,11 @@ int main() {
 }  
 ```  
   
- Los datos asignados mediante **data\_seg** no conservan información sobre su ubicación.  
+ Datos asignados mediante **data_seg** no conserva toda la información sobre su ubicación.  
   
- Para obtener una lista de los nombres que no debe utilizar cuando cree una sección, vea [\/SECTION](../build/reference/section-specify-section-attributes.md).  
+ Vea [/SECTION](../build/reference/section-specify-section-attributes.md) para obtener una lista de nombres que no se debe utilizar cuando cree una sección.  
   
- También puede especificar secciones para las variables const \([const\_seg](../preprocessor/const-seg.md)\), los datos inicializados \([bss\_seg](../preprocessor/bss-seg.md)\) y las funciones \([code\_seg](../preprocessor/code-seg.md)\).  
+ También puede especificar secciones para las variables const ([const_seg](../preprocessor/const-seg.md)), datos inicializados ([bss_seg](../preprocessor/bss-seg.md)) y funciones ([code_seg](../preprocessor/code-seg.md)).  
   
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

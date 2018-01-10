@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutual-imports"></a>Importaciones mutuas
 Exportar o importar a otro archivo ejecutable presenta complicaciones cuando las importaciones mutuas (o circulares). Por ejemplo, dos archivos DLL importan símbolos entre sí, similar a funciones mutuamente recursivas.  
@@ -83,7 +84,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- .Dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Si utiliza símbolos independientes para cada DLL `CExampleB` se exporta y `CExampleA` se importa al generar B.dll.. `CExampleA`se exporta al generar A.dll y se importa al ser utilizada por B.dll (o algún otro cliente).  
+ .Dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Si utiliza símbolos independientes para cada DLL `CExampleB` se exporta y `CExampleA` se importa al generar B.dll. `CExampleA`se exporta al generar A.dll y se importa al ser utilizada por B.dll (o algún otro cliente).  
   
  No se puede realizar este tipo de distribución en capas cuando se usa la integrada **AFX_EXT_CLASS** y `_AFXEXT` símbolos de preprocesador. La técnica descrita anteriormente soluciona este problema de forma no al contrario que el mecanismo de MFC utiliza al generar sus tecnologías activas, base de datos y archivos DLL de extensión de MFC de la red.  
   

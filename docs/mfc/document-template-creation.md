@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a96002cd4cb86fe92a21bc81a1475b4a6abfc583
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04950601a74b1ed3e44b236e1d07dcdff997eca6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-creation"></a>Clear plantillas de documentos
 Al crear un nuevo documento en respuesta a un `New` o **abiertos** línea de comandos desde el **archivo** menú, la plantilla de documento también crea una nueva ventana de marco a través de la que se va a ver el documento.  

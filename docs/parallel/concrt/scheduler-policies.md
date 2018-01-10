@@ -1,65 +1,70 @@
 ---
-title: "Directivas del programador | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "directivas del programador"
+title: Las directivas del programador | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Directivas del programador
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-En este documento se describe el rol de las directivas de programador en el runtime de simultaneidad.  Una *directiva de programador* controla la estrategia que el programador usa cuando administra tareas.  Por ejemplo, considere una aplicación que requiere algunas tareas de ejecutarse en `THREAD_PRIORITY_NORMAL` y otras tareas se ejecuten en `THREAD_PRIORITY_HIGHEST`.  Puede crear dos instancias del programador: una que especifica la directiva de `ContextPriority` para ser `THREAD_PRIORITY_NORMAL` y otra que especifica la misma directiva para ser `THREAD_PRIORITY_HIGHEST`.  
+# <a name="scheduler-policies"></a>Directivas de Scheduler
+Este documento describe el rol de las directivas del programador en el Runtime de simultaneidad. A *directiva de programador* controla la estrategia que el programador utiliza cuando administra tareas. Por ejemplo, considere una aplicación que requiere algunas tareas que se ejecutan en `THREAD_PRIORITY_NORMAL` y otras tareas que se ejecutan en `THREAD_PRIORITY_HIGHEST`.  Puede crear dos instancias del programador: uno que especifica la `ContextPriority` directiva sea `THREAD_PRIORITY_NORMAL` y otro que especifica la misma directiva para que sea `THREAD_PRIORITY_HIGHEST`.  
   
- Mediante directivas de programador, puede dividir los recursos de procesamiento disponibles y asignar un conjunto fijo de recursos a cada programador.  Por ejemplo, considere un algoritmo paralelo que no se amplía para más de cuatro procesadores.  Puede crear una directiva de programador que limite las tareas para que no usen más de cuatro procesadores simultáneamente.  
+ Mediante el uso de las directivas del programador, puede dividir los recursos de procesamiento disponibles y asignar un conjunto fijo de recursos a cada programador. Por ejemplo, considere un algoritmo paralelo que no se escala más allá de cuatro procesadores. Puede crear una directiva de programador que limite las tareas para utilizar no más de cuatro procesadores simultáneamente.  
   
 > [!TIP]
->  El runtime de simultaneidad proporciona un programador predeterminado.  Por consiguiente, no tiene que crear uno en la aplicación.  Dado que el programador de tareas ayuda a ajustar el rendimiento de las aplicaciones, se recomienda que comience con [Parallel Patterns Library \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md) si no ha usado antes el runtime de simultaneidad.  
+>  El Runtime de simultaneidad proporciona a un programador predeterminado. Por lo tanto, no tienes que crear uno en la aplicación. Dado que el programador de tareas permite ajustar el rendimiento de las aplicaciones, es recomendable que comience con la [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md) si está nuevo para el Runtime de simultaneidad.  
   
- Cuando se utiliza [concurrency::CurrentScheduler::Create](../Topic/CurrentScheduler::Create%20Method.md), [concurrency::Scheduler::Create](../Topic/Scheduler::Create%20Method.md), o un método de [concurrency::Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md) para crear una instancia de programador, se proporciona un objeto de [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) que contiene una colección de pares clave\-valor que especifican el comportamiento del programador.  El constructor `SchedulerPolicy` toma un número variable de argumentos.  El primer argumento es el número de elementos de directiva que está a punto de especificar.  Los argumentos restantes son los pares clave\-valor para cada elemento de directiva.  En el siguiente ejemplo se crea un objeto `SchedulerPolicy` que especifica tres elementos de directiva.  El runtime utiliza los valores predeterminados para las claves de directiva que no se especifican.  
+ Cuando se usa el [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create), [concurrency::Scheduler::Create](reference/scheduler-class.md#create), o [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) método para crear una instancia del programador, proporcione un [Concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) objeto que contiene una colección de pares clave-valor que especifican el comportamiento del programador. El `SchedulerPolicy` constructor toma un número variable de argumentos. El primer argumento es el número de elementos de directiva que va a especificar. Los argumentos restantes son pares clave / valor para cada elemento de directiva. En el ejemplo siguiente se crea un `SchedulerPolicy` objeto que especifica tres elementos de directiva. El runtime usa valores predeterminados para las claves de directiva que no se especifican.  
+
   
- [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/CPP/scheduler-policies_1.cpp)]  
+ [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/cpp/scheduler-policies_1.cpp)]  
   
- La enumeración de [concurrency::PolicyElementKey](../Topic/PolicyElementKey%20Enumeration.md) define las claves de directiva asociadas al Programador de tareas.  En la siguiente tabla se describen las claves de directiva y el valor predeterminado que el runtime usa para cada uno de ellos.  
+
+ El [concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) enumeración define las claves de directiva que están asociadas con el programador de tareas. La tabla siguiente describen las claves de directiva y el valor predeterminado que el runtime usa para cada uno de ellos.  
   
 |Clave de directiva|Descripción|Valor predeterminado|  
-|------------------------|-----------------|--------------------------|  
-|`SchedulerKind`|Un valor de [concurrency::SchedulerType](../Topic/SchedulerType%20Enumeration.md) que especifica el tipo de subprocesos para utilizar para programar tareas.|`ThreadScheduler` \(subprocesos normales\).  Éste es el único valor válido para esta clave.|  
-|`MaxConcurrency`|Valor `unsigned int` que especifica el número máximo de recursos de simultaneidad que el programador usa.|[concurrency::MaxExecutionResources](../Topic/MaxExecutionResources%20Constant.md)|  
-|`MinConcurrency`|Un valor `unsigned int` que especifica el número mínimo de recursos de simultaneidad que el programador utiliza.|`1`|  
-|`TargetOversubscriptionFactor`|Un valor `unsigned int` que especifica cuántos subprocesos se asignan a cada recurso de procesamiento.|`1`|  
-|`LocalContextCacheSize`|Un valor `unsigned int` que especifica el número máximo de contextos que pueden estar almacenados en memoria caché en la cola local de cada procesador virtual.|`8`|  
-|`ContextStackSize`|Un valor `unsigned int` que especifica el tamaño de la pila, en kilobytes, que se reserva para cada contexto.|`0` \(usa el tamaño de pila predeterminado\)|  
-|`ContextPriority`|Un valor `int` que especifica la prioridad del subproceso de cada contexto.  Puede ser cualquier valor que se pueda pasar a [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) o `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
-|`SchedulingProtocol`|Un valor de [concurrency::SchedulingProtocolType](../Topic/SchedulingProtocolType%20Enumeration.md) que especifica el algoritmo de programación para utilizar.|`EnhanceScheduleGroupLocality`|  
-|`DynamicProgressFeedback`|Un valor de [concurrency::DynamicProgressFeedbackType](../Topic/DynamicProgressFeedbackType%20Enumeration.md) que especifica si se van a volver a equilibrar los recursos según la información estadística\- basada progreso.<br /><br /> **Nota** No establezca esta directiva a `ProgressFeedbackDisabled` porque se reserva para uso en tiempo de ejecución.|`ProgressFeedbackEnabled`|  
+|----------------|-----------------|-------------------|  
+|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valor que especifica el tipo de subprocesos que se utilizarán para programar tareas.|`ThreadScheduler`(usa subprocesos normales). Este es el único valor válido para esta clave.|  
+|`MaxConcurrency`|Un `unsigned int` valor que especifica el número máximo de recursos de simultaneidad que el programador utiliza.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
+|`MinConcurrency`|Un `unsigned int` valor que especifica el número mínimo de recursos de simultaneidad que el programador utiliza.|`1`|  
+|`TargetOversubscriptionFactor`|Un `unsigned int` valor que especifica cuántos subprocesos se asignan a cada recurso de procesamiento.|`1`|  
+|`LocalContextCacheSize`|Un `unsigned int` valor que especifica el número máximo de contextos que pueden almacenarse en caché en la cola local de cada procesador virtual.|`8`|  
+|`ContextStackSize`|Un `unsigned int` valor que especifica el tamaño de la pila, en kilobytes, que se reserva para cada contexto.|`0`(use el tamaño de pila predeterminado)|  
+|`ContextPriority`|Un `int` valor que especifica la prioridad del subproceso de cada contexto. Esto puede ser cualquier valor que se puede pasar a [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) o `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
+
+|`SchedulingProtocol`| A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valor que especifica el algoritmo de programación para usar. |`EnhanceScheduleGroupLocality`|  
+|`DynamicProgressFeedback`| A [concurrency::DynamicProgressFeedbackType](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) valor que especifica si se va a equilibrar los recursos según la información de progreso basada en estadísticas.<br /><br /> **Tenga en cuenta** no establezca esta directiva en `ProgressFeedbackDisabled` porque está reservada para su uso en tiempo de ejecución. |`ProgressFeedbackEnabled`|  
+
   
- Cada programador utiliza su propia directiva cuando programa tareas.  Las directivas que están asociadas a un programador no afectan al comportamiento de otros programadores.  Además, no puede cambiar la directiva de programador después de crear el objeto `Scheduler`.  
+ Cada programador utiliza su propia directiva al programar tareas. Las directivas que están asociadas a un programador no afectan al comportamiento de cualquier otro programador. Además, no se puede cambiar la directiva del programador después de crear el `Scheduler` objeto.  
   
 > [!IMPORTANT]
->  Use solo directivas de programador para controlar los atributos de los subprocesos que el runtime crea.  No cambie la afinidad de subprocesos o la prioridad de los subprocesos creados por el tiempo de ejecución porque podría producir un comportamiento indefinido.  
+>  Usar solo las directivas del programador para controlar los atributos para los subprocesos creados por el tiempo de ejecución. No cambie la afinidad de subprocesos o la prioridad de subprocesos que se crean en tiempo de ejecución, ya que podría provocar un comportamiento indefinido.  
   
- El runtime creará un programador predeterminado si no crea uno explícitamente.  Si desea usar el programador predeterminado en la aplicación, pero desea especificar una directiva para que use el programador, llame al método de [concurrency::Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md) antes de que se programe trabajo paralelo.  Si no llama al método `Scheduler::SetDefaultSchedulerPolicy`, el runtime utiliza los valores de directiva predeterminados de la tabla.  
+ El runtime crea a un programador predeterminado si no crea explícitamente una. Si desea usar el programador predeterminado en la aplicación, pero desea especificar una directiva de programador a la utilice, llame a la [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) método para programar el trabajo paralelo. Si no se llama a la  `Scheduler::SetDefaultSchedulerPolicy` /método siguiente, el tiempo de ejecución utiliza la directiva predeterminada de los valores de la tabla.  
   
- Utilice [concurrency::CurrentScheduler::GetPolicy](../Topic/CurrentScheduler::GetPolicy%20Method.md) y los métodos de [concurrency::Scheduler::GetPolicy](../Topic/Scheduler::GetPolicy%20Method.md) para recuperar una copia de la directiva de programador.  Los valores de directiva que se reciben de estos métodos pueden diferir de los valores de directiva que se especifican cuando se crea el programador.  
+ Use la [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-class.md#getpolicy) y [concurrency::Scheduler::GetPolicy](reference/scheduler-class.md#getpolicy) métodos para recuperar una copia de la directiva del programador. Los valores de directiva que reciben de estos métodos pueden diferir de los valores de directiva que especifican cuando se crea el programador.  
   
-## Ejemplo  
- Para examinar los ejemplos que utilizan directivas de programador concretas para controlar el comportamiento del programador, vea [Cómo: Especificar directivas de programador concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) y [Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
+## <a name="example"></a>Ejemplo  
+ Para examinar ejemplos que utilizan directivas de programador concretas para controlar el comportamiento del programador, consulte [Cómo: especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) y [Cómo: crear agentes que Use Specific Scheduler Policies](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Cómo: Especificar directivas de programador concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
- [Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+ [Cómo: especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
+ [Procedimiento para crear agentes que usen directivas de Scheduler concretas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e360e075cf8c721b9357746b2afa3a08df3c851a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Códigos auxiliares para las funciones de la biblioteca de tiempo de ejecución
 Esta sección proporciona código auxiliar para las funciones de biblioteca en tiempo de ejecución definidas en OpenMP C y C++ API. El código auxiliar se proporciona para habilitar la portabilidad para plataformas que no son compatibles con OpenMP C y C++ API. En estas plataformas, programas de OpenMP deben vincularse a una biblioteca que contiene estas funciones de código auxiliar. Las funciones de código auxiliar se supone que se omiten las directivas en el programa de OpenMP. Por lo tanto, imitan la semántica de la serie.  

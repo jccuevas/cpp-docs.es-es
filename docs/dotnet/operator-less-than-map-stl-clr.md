@@ -1,33 +1,33 @@
 ---
-title: "operator&lt; (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< (miembro) [STL/CLR]"
+title: operador&lt; (map) (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 9ff87b44-663e-4b99-9dba-d775d9f6f853
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 73004f03191ba09eefdf1a0ea91dbdbe14d973d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt; (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lista menos que comparación.  
+# <a name="operatorlt-map-stlclr"></a>operador&lt; (map) (STL/CLR)
+Lista inferior comparación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Key,  
@@ -36,17 +36,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### Parámetros  
- left  
- Contenedor izquierdo a comparar.  
+#### <a name="parameters"></a>Parámetros  
+ izquierda  
+ Contenedor izquierdo que se va a comparar.  
   
  right  
- Contenedor derecho a comparar.  
+ Contenedor derecho que se va a comparar.  
   
-## Comentarios  
- La función de operador devuelve true si, para la posición inferior `i` para la que `!(``right``[i] <` `left``[i])` también son true que `left``[i] <` `right``[i]`.  De lo contrario, devuelve el uso de `left``->size() <` `right``->size()` Que consiste en probar si `left` se le antes de `right` cuando los dos asignaciones son elemento comparado al lado de elemento.  
+## <a name="remarks"></a>Comentarios  
+ El operador función devuelve true si, para la posición más baja `i` que `!(right[i] < left[i])` es también true que `left[i] < right[i]`. De lo contrario, devuelve `left->size() < right->size()` se usa para comprobar si `left` está ordenado antes `right` cuando los dos mapas son comparado elemento por elemento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_operator_lt.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
- **\[un 1\] \[b 2\] \[d 4\]**  
-**\[una c\] \< b \[una b c\] es False**  
-**\[una c\] \< b \[una d b\] es True**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operator\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)   
- [operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [operador == (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [operador! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [operador > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operador > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)   
+ [operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

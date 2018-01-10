@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014e1792a3431fee8dad673d17afdb84ef620936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-library-overview"></a>Información general de la biblioteca de clases
 Esta información general clasifica y describe las clases en la versión 9.0 de Microsoft Foundation clase biblioteca (MFC). Las clases de MFC, en conjunto, constituyen un marco de aplicación, el marco de trabajo de una aplicación escrita para la API de Windows. La tarea de programación consiste en rellenar en el código que se refiere a la aplicación.  

@@ -1,52 +1,53 @@
 ---
-title: "__debugbreak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__debugbreak_cpp"
-  - "__debugbreak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__debugbreak (intrínseco)"
-  - "puntos de interrupción, __debugbreak (intrínseco)"
+title: __debugbreak | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __debugbreak_cpp
+- __debugbreak
+dev_langs: C++
+helpviewer_keywords:
+- breakpoints, __debugbreak intrinsic
+- __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 07cac11754a8b5f242c38d5fd45d4c7f0707d69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __debugbreak
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="debugbreak"></a>__debugbreak
 **Específicos de Microsoft**  
   
  Produce un punto de interrupción en el código, donde se pedirá al usuario que ejecute el depurador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __debugbreak();  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|Header|  
-|------------------------|------------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
+|---------------|------------------|------------|  
+|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
   
-## Comentarios  
- La función intrínseca del compilador `__debugbreak`, similar a [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), es una forma portable de Win32 para producir un punto de interrupción.  
+## <a name="remarks"></a>Comentarios  
+ El `__debugbreak` compilador intrínseco, de forma similar a [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), es una manera portable de Win32 para hacer que un punto de interrupción.  
   
 > [!NOTE]
->  Al compilar con **\/clr**, se compilará en MSIL una función que contiene `__debugbreak`.  `asm int 3` produce una función que se va a compilar en código nativo.  Para obtener más información, vea [\_\_asm](../assembler/inline/asm.md).  
+>  Cuando se compila con **/CLR**, una función que contiene `__debugbreak` se compila en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, consulte [__asm](../assembler/inline/asm.md).  
   
  Por ejemplo:  
   
@@ -70,8 +71,8 @@ main() {
   
  Esta rutina solo está disponible como función intrínseca.  
   
-## FIN de Específicos de Microsoft  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)

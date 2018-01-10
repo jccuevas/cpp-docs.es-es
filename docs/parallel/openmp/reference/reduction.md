@@ -1,58 +1,57 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "reducción | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que una o más variables que son privadas para cada subproceso son el asunto de una operación de reducción en el final de la región paralela.  
+# <a name="reduction"></a>reduction
+Especifica que una o más variables que son privadas para cada subproceso son el asunto de una operación de reducción al final de la región paralela.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
  `operation`  
- El operador para que la operación realiza en variables \(`var`\) al final de la región paralela.  
+ El operador para la operación a realizar en las variables (`var`) al final de la región paralela.  
   
  `var`  
- Uno más variables en las que realizar la reducción escalar.  Si se especifica más de una variable, los nombres de variable separados por una coma.  
+ Uno más más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.  
   
-## Comentarios  
- `reduction` se aplica a las siguientes directivas:  
+## <a name="remarks"></a>Comentarios  
+ `reduction`se aplica a las siguientes directivas:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [secciones](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Para obtener más información, vea [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md).  
+ Para obtener más información, consulte [2.7.2.6 reducción](../../../parallel/openmp/2-7-2-6-reduction.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_reduction.cpp  
@@ -159,7 +158,11 @@ int main( )
 }  
 ```  
   
-  **La sección paralela se ejecutó 4 veces en paralelo.  La suma de los enteros consecutivos comprendido entre 1 y 10, es 55**  
-**En todas las funciones, func1 con func5 se completaron correctamente\!**    
-## Vea también  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

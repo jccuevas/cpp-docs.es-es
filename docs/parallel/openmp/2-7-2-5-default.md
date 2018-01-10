@@ -1,51 +1,51 @@
 ---
-title: "2.7.2.5 default | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.5 predeterminado | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee328be7f9f0c4876738f8179c26e700c57702c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La cláusula de **predeterminado** permite al usuario afecta a los atributos de datos de las variables.  La sintaxis de la cláusula de **predeterminado** es la siguiente:  
+# <a name="2725-default"></a>2.7.2.5 default
+El **predeterminado** cláusula permite al usuario que afecta a los atributos de uso compartido de datos de variables. La sintaxis de la **predeterminado** cláusula es como sigue:  
   
 ```  
 default(shared | none)  
 ```  
   
- Especificar **valor predeterminado \(compartido\)** equivale explícitamente a enumerar cada variable actualmente visible en una cláusula de **compartido** , a menos que sea **threadprivate** o **con**`t`\- completo.  En ausencia de una cláusula explícita de **predeterminado** , el comportamiento predeterminado es el mismo que si **valor predeterminado \(compartido\)** fuera especificado.  
+ Especificar **default(shared)** equivale a enumerar explícitamente cada variable visible en ese momento en un **compartido** cláusula, a menos que sea **threadprivate** o **inconvenientes**`t`-completo. En ausencia de explícito **predeterminado** cláusula, el comportamiento predeterminado es el mismo que if **default(shared)** se especificaron.  
   
- Especificar **establezca como valor predeterminado \(ninguno\)** requiere que por lo menos uno de los siguientes debe ser true para cada referencia a una variable en la extensión léxica de construcción paralela:  
+ Especificar **default (None)** requiere que al menos uno de los siguientes debe ser true para todas las referencias a una variable de la extensión de la construcción paralela léxica:  
   
--   La variable explícitamente aparece en una cláusula de atributo de uso compartido de datos de una construcción que contiene la referencia.  
+-   La variable se muestra explícitamente en una cláusula de atributo de uso compartido de datos de una construcción que contiene la referencia.  
   
--   la variable se declara dentro de la construcción paralela.  
+-   La variable se declara dentro de la construcción paralela.  
   
--   la variable es **threadprivate**.  
+-   La variable es **threadprivate**.  
   
--   La variable tiene **const**\- tipo completo.  
+-   La variable tiene un **const**-calificado tipo.  
   
--   La variable es la variable de control de bucle para un bucle de **Para** que inmediatamente siga una directiva de **Para** o de **paralelo para** , y la referencia variable aparece dentro del bucle.  
+-   La variable es la variable de control de bucle para un **para** bucle que sigue inmediatamente a un **para** o **for paralelos** directiva y la referencia de variable aparece dentro del bucle .  
   
- Especificando una variable en **firstprivate**, **lastprivate**, o la cláusula de **informe detallado** de una directiva incluida produce una referencia implícita a la variable en el contexto envolvente.  Dichas referencias implícitas son también bajo los requisitos anteriores.  
+ Especificar una variable en un **firstprivate**, **lastprivate**, o **reducción** cláusula de una directiva adjunta hace una referencia implícita a la variable en la envolvente contexto. Tales referencias implícitas también están sujetos a los requisitos mencionados anteriormente.  
   
- Una sola cláusula de **predeterminado** se puede especificar en una directiva de **Paralelo** .  
+ Solo una **predeterminado** cláusula se puede especificar en una **paralelo** directiva.  
   
- El atributo predeterminado de uso compartido de datos de una variable se puede reemplazar utilizando **private**, **firstprivate**, **lastprivate**, **informe detallado**, y las cláusulas de **compartido** , tal como se muestra en el ejemplo siguiente:  
+ Predeterminado de una variable atributos de uso compartido de datos se pueden invalidar mediante la **privada**, **firstprivate**, **lastprivate**, **reducción**, y **compartido** cláusulas, como se muestra en el ejemplo siguiente:  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

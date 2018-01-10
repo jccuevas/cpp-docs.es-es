@@ -171,11 +171,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b834b46a9a899b9b5ae7cce0d399593588ff2d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarbutton-class"></a>Clase CMFCToolBarButton
 Proporciona funcionalidad de botón en barras de herramientas.  
@@ -190,14 +191,14 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Construye e inicializa un objeto `CMFCToolBarButton`.|  
 |`CMFCToolBarButton::~CMFCToolBarButton`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Especifica si un usuario puede colocar un botón en un menú o barra de herramientas durante la personalización.|  
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Especifica si el botón se puede almacenar.|  
@@ -269,7 +270,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Especifica si una imagen se muestra en el botón.|  
 |[CMFCToolBarButton::m_bText](#m_btext)|Especifica si se muestra una etiqueta de texto en el botón.|  
