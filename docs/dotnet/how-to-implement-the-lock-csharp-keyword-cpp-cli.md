@@ -1,34 +1,36 @@
 ---
-title: "C&#243;mo: Implementar la palabra clave lock de C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock (palabra clave) de C# [C++]"
-  - "lock (instrucción)"
+title: "Cómo: implementar la palabra clave de C# lock (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e016a0f481063711cb5daafe45110a1d53b16253
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Implementar la palabra clave lock de C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra la forma de implementar en Visual C\+\+ la palabra clave `lock` de C\#.  Para obtener más información, vea [lock \(Instrucción\)](../Topic/lock%20Statement%20\(C%23%20Reference\).md).  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>Cómo: Implementar la palabra clave lock de C# (C++/CLI)
+Este tema muestra cómo implementar el C# `lock` palabra clave en Visual C++. 
   
- También puede utilizar la clase `lock` de la Biblioteca de compatibilidad de C\+\+.  Para obtener más información, vea [Sincronización \(Clase lock\)](../dotnet/synchronization-lock-class.md).  
+ También puede usar el `lock` class en la biblioteca de compatibilidad de C++. Vea [sincronización (clase lock)](../dotnet/synchronization-lock-class.md) para obtener más información.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +67,5 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Interoperabilidad con otros lenguajes de .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Interoperabilidad con otros lenguajes de .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

@@ -1,36 +1,38 @@
 ---
-title: "ICommandImpl::m_bIsExecuting | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl.m_bIsExecuting"
-  - "ATL::ICommandImpl::m_bIsExecuting"
-  - "m_bIsExecuting"
-  - "ATL.ICommandImpl.m_bIsExecuting"
-  - "ICommandImpl::m_bIsExecuting"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bIsExecuting"
+title: 'ICommandImpl:: M_bisexecuting | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl.m_bIsExecuting
+- ATL::ICommandImpl::m_bIsExecuting
+- m_bIsExecuting
+- ATL.ICommandImpl.m_bIsExecuting
+- ICommandImpl::m_bIsExecuting
+dev_langs: C++
+helpviewer_keywords: m_bIsExecuting
 ms.assetid: 1e152164-514c-4116-88a3-16984af99991
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 54e0cfd9c0cd2a21bf483024827d998bc046b659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl::m_bIsExecuting
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icommandimplmbisexecuting"></a>ICommandImpl::m_bIsExecuting
 Indica si el comando se está ejecutando actualmente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,12 +40,12 @@ unsigned m_bIsExecuting:1;
   
 ```  
   
-## Comentarios  
- El método de **Ejecución** de la clase de comando puede establecer esta variable en **true**.  
+## <a name="remarks"></a>Comentarios  
+ El **Execute** método de la clase de comando puede establecer esta variable en **true**.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [ICommandImpl \(Clase\)](../../data/oledb/icommandimpl-class.md)   
- [ICommandImpl::m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)
+## <a name="see-also"></a>Vea también  
+ [ICommandImpl (clase)](../../data/oledb/icommandimpl-class.md)   
+ [ICommandImpl::m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)

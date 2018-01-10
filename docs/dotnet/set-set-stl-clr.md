@@ -1,32 +1,33 @@
 ---
-title: "set::set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set (miembro) [STL/CLR]"
+title: 'Set:: Set (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::set
+dev_langs: C++
+helpviewer_keywords: set member [STL/CLR]
 ms.assetid: 0cce8501-92ed-431c-b711-14e0b7be7375
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 381473ceebe696bce549732de6a738f733161403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# set::set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setset-stlclr"></a>set::set (STL/CLR)
 Construye un objeto contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 set();  
@@ -43,79 +44,71 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo que se va a insertar.  
+ Comienzo del intervalo que se va a insertar.  
   
  last  
  Final del intervalo que se va a insertar.  
   
  pred  
- Ordenar el predicado de la secuencia controlada.  
+ Orden de predicado de la secuencia controlada.  
   
  right  
- Objeto o intervalo para insertar.  
+ Objeto o intervalo que se va a insertar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `set();`  
   
- inicializa la secuencia controlada sin elementos, con el predicado de ordenación predeterminado `key_compare()`.  Se utiliza para especificar una secuencia controlada inicial vacía, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada con ningún elemento con el predicado del orden predeterminado `key_compare()`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado del orden predeterminado.  
   
  El constructor:  
   
  `explicit set(key_compare^ pred);`  
   
- inicializa la secuencia controlada sin elementos, con el predicado de ordenación `pred`.  Se utiliza para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.  
+ Inicializa la secuencia controlada con ningún elemento con el predicado ordenación `pred`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.  
   
  El constructor:  
   
  `set(set<Key>% right);`  
   
- inicializa la secuencia controlada con la secuencia `[``right``.`[set::begin](../dotnet/set-begin-stl-clr.md)`(),` `right``.`[set::end](../dotnet/set-end-stl-clr.md)`())`, con el predicado de ordenación predeterminado.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto determinado `right`, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`right.begin()`, `right.end()`), con el predicado del orden predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de conjunto `right`, con el predicado del orden predeterminado.  
   
  El constructor:  
   
  `set(set<Key>^ right);`  
   
- inicializa la secuencia controlada con la secuencia `[``right``->`[set::begin](../dotnet/set-begin-stl-clr.md)`(),` `right``->`[set::end](../dotnet/set-end-stl-clr.md)`())`, con el predicado de ordenación predeterminado.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto determinado `right`, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`right->begin()`, `right->end()`), con el predicado del orden predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto de conjunto `right`, con el predicado del orden predeterminado.  
   
  El constructor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> set(InIter first, InIter last);`  
   
- `set(InIter first, InIter last);`  
-  
- inicializa la secuencia controlada con la secuencia `[``first``,` `last``)`, con el predicado de ordenación predeterminado.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`first`, `last`), con el predicado del orden predeterminado. Usa para hacer una copia de otra secuencia de la secuencia controlada con el predicado del orden predeterminado.  
   
  El constructor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`  
   
- `set(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inicializa la secuencia controlada con la secuencia `[``first``,` `last``)`, con el predicado de ordenación `pred`.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia, con el predicado de ordenación especificado.  
+ Inicializa la secuencia controlada a la secuencia [`first`, `last`), con el predicado ordenación `pred`. Usa para realizar una copia de otra secuencia, con el predicado especificado de ordenación de la secuencia controlada.  
   
  El constructor:  
   
  `set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inicializa la secuencia controlada con la secuencia indicada por el enumerador `right`, con el predicado de ordenación predeterminado.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada con la secuencia designada por el enumerador `right`, con el predicado del orden predeterminado. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado del orden predeterminado de la secuencia controlada.  
   
  El constructor:  
   
- `set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Inicializa la secuencia controlada con la secuencia designada por el enumerador `right`, con el predicado ordenación `pred`. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado especificado de ordenación de la secuencia controlada.  
   
- inicializa la secuencia controlada con la secuencia indicada por el enumerador `right`, con el predicado de ordenación `pred`.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación especificado.  
+## <a name="example"></a>Ejemplo  
   
-## Ejemplo  
-  
-```  
+```cpp  
 // cliext_set_construct.cpp   
 // compile with: /clr   
 #include <cliext/set>   
@@ -187,22 +180,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **b a c**  
- **a b c**  
- **b a c**  
- **a b c**  
- **b a c**  
- **b a c**  
- **a b c**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+ a b c  
+ c b a  
+ a b c  
+ c b a  
+ c b a  
+ a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_container](../dotnet/set-generic-container-stl-clr.md)   
- [set::operator\=](../dotnet/set-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)   
+ [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

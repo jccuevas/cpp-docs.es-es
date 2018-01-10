@@ -1,40 +1,42 @@
 ---
-title: "for each, in | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::foreach"
-  - "for"
-  - "each"
-  - "in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "foreach (palabra clave) [C++]"
+title: para cada uno, en | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::foreach
+- for
+- each
+- in
+dev_langs: C++
+helpviewer_keywords: for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# for each, in
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Procesa una iteración a través de una matriz o colección.  Esta palabra clave no estándar está disponible en C\+\+\/CLI y proyectos nativos de C\+\+.  Sin embargo, no se recomienda su uso.  Considere la posibilidad de utilizar un [Instrucción for basada en intervalo \(C\+\+\)](../cpp/range-based-for-statement-cpp.md) estándar en su lugar.  
+# <a name="for-each-in"></a>for each, in
+Procesa una iteración a través de una matriz o colección. Esta palabra clave no estándar está disponible en C++/CLI y proyectos nativos de C++. Sin embargo, no se recomienda su uso. Considere el uso de un estándar [basados en intervalos de instrucción (C++)](../cpp/range-based-for-statement-cpp.md) en su lugar.  
   
-## Todos los runtimes  
+## <a name="all-runtimes"></a>Todos los runtimes  
  **Sintaxis**  
   
 ```  
   
-        for each (type identifier in expression) {  
+      for each (typeidentifierinexpression) {  
    statements  
 }  
   
@@ -46,25 +48,25 @@ Procesa una iteración a través de una matriz o colección.  Esta palabra clave
  Tipo de `identifier`.  
   
  `identifier`  
- Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [Operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.  
+ Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.  
   
  `expression`  
- Colección o expresión de matriz.  El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.  
+ Colección o expresión de matriz. El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.  
   
  `statements`  
  Instrucción o instrucciones que se van a ejecutar.  
   
  **Comentarios**  
   
- La instrucción `for each` se utiliza para procesar una iteración en una colección.  Puede modificar los elementos de una colección, pero no puede agregar ni eliminar elementos.  
+ La instrucción `for each` se utiliza para procesar una iteración en una colección. Puede modificar los elementos de una colección, pero no puede agregar ni eliminar elementos.  
   
- Las instrucciones *statements* se ejecutan para cada elemento de la matriz o colección.  Cuando la iteración se ha completado en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `for each`.  
+ El *instrucciones* se ejecutan para cada elemento de la matriz o colección. Cuando la iteración se ha completado en todos los elementos de la colección, el control se transfiere a la instrucción que sigue al bloque `for each`.  
   
- `for each` e `in` son [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each`y `in` son [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para obtener más información:  
   
--   [Iterar por una colección STL mediante for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
+-   [Recorrer en iteración la colección de biblioteca estándar de C++ mediante for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
   
 -   [Cómo: Iterar por matrices con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
   
@@ -72,12 +74,12 @@ Procesa una iteración a través de una matriz o colección.  Esta palabra clave
   
 -   [Cómo: Iterar por una colección definida por el usuario con for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-### Ejemplo  
+### <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se usa `for each` para procesar una iteración en una cadena.  
   
 ```  
@@ -108,22 +110,26 @@ int main() {
   
  **Salida**  
   
-  **abcd**  
- **Pruebas**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+```Output  
+abcd  
+  
+Testing  
+```  
+  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
- La sintaxis de CLR es igual que la de **todos los runtimes**, excepto por lo siguiente.  
+ La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto como se indica a continuación.  
   
- *expression*  
- Expresión o colección de matriz administrada.  El elemento de la colección debe ser de un tipo que el compilador pueda convertir de <xref:System.Object> al tipo *identifier*.  
+ *expresión*  
+ Expresión o colección de matriz administrada. El elemento de la colección debe ser de tipo que el compilador puede convertir desde <xref:System.Object> a la *identificador* tipo.  
   
- *expression* se evalúa como un tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> o un tipo que define un método `GetEnumerator` que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos definidos en `IEnumerator`.  
+ *expresión* se evalúa como un tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo que define un `GetEnumerator` método que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos que se definen en `IEnumerator`.  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplo  
+### <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se usa `for each` para procesar una iteración en una cadena.  
   
 ```  
@@ -153,7 +159,11 @@ int main() {
   
  **Salida**  
   
-  **abcd**  
- **Pruebas**    
-## Vea también  
+```Output  
+abcd  
+  
+Testing   
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

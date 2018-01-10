@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderSource (MyProviderDS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ""myproviderds.h""
-  - "cmyprovidersource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderSource (clase): MyProviderDS.H"
-  - "proveedores OLE DB, archivos generados por el asistente"
+title: CMyProviderSource (MyProviderDS.H) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- myproviderds.h
+- cmyprovidersource
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderSource (MyProviderDS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las clases de proveedor utilizan herencia múltiple.  El siguiente fragmento de código muestra la cadena de herencia para el objeto de origen de datos:  
+# <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
+Las clases de proveedor utilizan herencia múltiple. El código siguiente muestra la cadena de herencia para el objeto de origen de datos:  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -42,12 +44,12 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Todos los componentes COM se derivan de `CComObjectRootEx` y `CComCoClass`.  `CComObjectRootEx` proporciona toda la implementación de la interfaz **IUnknown**.  Puede administrar cualquier modelo de subprocesos.  `CComCoClass` administra la compatibilidad con el control de errores.  Si desea enviar información más completa sobre los errores al cliente, puede utilizar algunas de las API para errores de `CComCoClass`.  
+ Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx`proporciona toda la implementación para la **IUnknown** interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass`controla cualquier soporte de error que se requiere. Si desea enviar transmite información de error al cliente, se pueden utilizar algunas de las API para errores de `CComCoClass`.  
   
- El objeto de origen de datos también hereda de varias clases 'Impl'.  Cada clase proporciona la implementación de una interfaz.  El objeto de origen de datos implementa las interfaces `IPersist`, `IDBProperties`, **IDBInitialize** y **IDBCreateSession**.  OLE DB requiere cada interfaz para implementar el objeto de origen de datos.  Puede elegir ofrecer o no una funcionalidad concreta heredando o no desde una de estas clases 'Impl'.  Si desea proporcionar compatibilidad con la interfaz **IDBDataSourceAdmin**, debe heredar de la clase **IDBDataSourceAdminImpl** para obtener la funcionalidad necesaria.  
+ El objeto de origen de datos también hereda de varias clases 'Impl'. Cada clase proporciona la implementación de una interfaz. Los datos del origen de objeto implementa la `IPersist`, `IDBProperties`, **IDBInitialize**, y **IDBCreateSession** interfaces. OLE DB requiere cada interfaz para implementar el objeto de origen de datos. Puede elegir admitir o no una funcionalidad concreta heredando o no heredando de una de estas clases 'Impl'. Si desea admitir la **IDBDataSourceAdmin** interfaz se hereda de la **IDBDataSourceAdminImpl** clase para obtener la funcionalidad necesaria.  
   
-## Mapa COM  
- Siempre que el cliente llame a `QueryInterface` para una interfaz en el origen de datos, recorre el mapa COM que se muestra a continuación:  
+## <a name="com-map"></a>Mapa de COM  
+ Cada vez que el cliente llama a `QueryInterface` para una interfaz en el origen de datos, se lleva a cabo la asignación COM siguiente:  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,10 +61,10 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- Las macros COM\_INTERFACE\_ENTRY pertenecen a ATL e indican a la implementación de `QueryInterface` en `CComObjectRootEx` que devuelva las interfaces apropiadas.  
+ Las macros COM_INTERFACE_ENTRY pertenecen a ATL e indican a la implementación de `QueryInterface` en `CComObjectRootEx` para devolver las interfaces adecuadas.  
   
-## Mapa de propiedades  
- El mapa de propiedades especifica todas las propiedades designadas por el proveedor:  
+## <a name="property-map"></a>Asignación de propiedad  
+ La asignación de propiedad especifica todas las propiedades designadas por el proveedor:  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -132,9 +134,9 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- Las propiedades de OLE DB están agrupadas.  El objeto de origen de datos tiene dos grupos de propiedades: uno para el conjunto **DBPROPSET\_DATASOURCEINFO** y otro para el conjunto **DBPROPSET\_DBINIT**.  El conjunto **DBPROPSET\_DATASOURCEINFO** corresponde a propiedades del proveedor y su origen de datos.  El conjunto **DBPROPSET\_DBINIT** corresponde a propiedades utilizadas en la inicialización.  Las Plantillas de proveedores OLE DB controlan estos conjuntos con las macros PROPERTY\_SET.  Las macros crean un bloque que contiene una matriz de propiedades.  Siempre que el cliente llame a la interfaz `IDBProperties`, el proveedor utiliza el mapa de propiedades.  
+ Propiedades de OLE DB se agrupan. El objeto de origen de datos tiene dos grupos de propiedades: uno para la **DBPROPSET_DATASOURCEINFO** conjunto y otro para el **DBPROPSET_DBINIT** establecido. El **DBPROPSET_DATASOURCEINFO** conjunto corresponde a las propiedades del proveedor y su origen de datos. El **DBPROPSET_DBINIT** conjunto corresponde a las propiedades utilizadas en la inicialización. Las plantillas de proveedor OLE DB controlan estos conjuntos con las macros PROPERTY_SET. Las macros crean un bloque que contiene una matriz de propiedades. Cada vez que el cliente llama a la `IDBProperties` interfaz, el proveedor utiliza la asignación de propiedad.  
   
- En este caso, no será necesario implementar cada propiedad de la especificación.  Sin embargo, debe proporcionar compatibilidad con las propiedades necesarias; vea la especificación de conformidad de nivel 0 para obtener más información.  Si no desea ofrecer compatibilidad con una propiedad, puede quitarla del mapa.  Si desea proporcionarla, agréguela al mapa mediante una macro PROPERTY\_INFO\_ENTRY.  La macro corresponde a la estructura **UPROPINFO**, como se muestra en el siguiente fragmento de código:  
+ No es necesario implementar todas las propiedades en la especificación. Sin embargo, debe admitir las propiedades necesarias; vea la especificación de conformidad de nivel 0 para obtener más información. Si no desea admitir una propiedad, puede quitarlo de la asignación. Si desea admitir una propiedad, agregar a la asignación mediante una macro PROPERTY_INFO_ENTRY. La macro corresponde a la **UPROPINFO** estructura tal como se muestra en el código siguiente:  
   
 ```  
 struct UPROPINFO  
@@ -152,16 +154,16 @@ struct UPROPINFO
 };  
 ```  
   
- Cada elemento de la estructura representa información para controlar la propiedad.  Contiene un identificador **DBPROPID** para determinar el GUID y el Id. para la propiedad.  También contiene entradas para determinar el tipo y el valor de la propiedad.  
+ Cada elemento de la estructura representa información para controlar la propiedad. Contiene un **DBPROPID** para determinar el GUID y el identificador de la propiedad. También contiene entradas para determinar el tipo y el valor de la propiedad.  
   
- Si desea cambiar el valor predeterminado de una propiedad \(tenga en cuenta que un consumidor puede modificar el valor de una propiedad modificable cuando lo desee\), puede utilizar las macros PROPERTY\_INFO\_ENTRY\_VALUE o PROPERTY\_INFO\_ENTRY\_EX.  Estas macros permiten especificar un valor para la propiedad correspondiente.  La macro PROPERTY\_INFO\_ENTRY\_VALUE es una anotación abreviada que permite modificar el valor.  La macro PROPERTY\_INFO\_ENTRY\_VALUE llama a la macro PROPERTY\_INFO\_ENTRY\_EX.  Esta macro permite agregar o modificar todos los atributos de la estructura **UPROPINFO**.  
+ Si desea cambiar el valor predeterminado de una propiedad (tenga en cuenta que un consumidor puede cambiar el valor de propiedad de escritura en cualquier momento), puede utilizar la macro del PROPERTY_INFO_ENTRY_VALUE o PROPERTY_INFO_ENTRY_EX. Estas macros permiten especificar un valor para la propiedad correspondiente. La macro PROPERTY_INFO_ENTRY_VALUE es una notación abreviada que permite cambiar el valor. La macro PROPERTY_INFO_ENTRY_VALUE llama a la macro PROPERTY_INFO_ENTRY_EX. Esta macro permite agregar o modificar todos los atributos en el **UPROPINFO** estructura.  
   
- Si desea definir su propio conjunto de propiedades, puede agregarlo mediante una combinación BEGIN\_PROPSET\_MAP\/END\_PROPSET\_MAP adicional.  Debe definir un GUID para el conjunto de propiedades y después definir sus propias propiedades.  Si tiene propiedades específicas del proveedor, agréguelas a un nuevo conjunto de propiedades en lugar de utilizar un conjunto existente.  De esta forma, evitará problemas en las versiones posteriores de OLE DB.  
+ Si desea definir su propio conjunto de propiedades, puede agregar uno mediante la realización de una combinación BEGIN_PROPSET_MAP/END_PROPSET_MAP adicional. Debe definir un GUID para el conjunto de propiedades y, a continuación, definir sus propias propiedades. Si tiene propiedades específicas del proveedor, agregar una nueva propiedad establecida en lugar de utilizar uno existente. Esto evita problemas en versiones posteriores de OLE DB.  
   
-## Conjuntos de propiedades definidos por el usuario  
- Visual C\+\+ .NET ofrece compatibilidad con los conjuntos de propiedades definidas por el usuario.  Ya no tendrá que reemplazar **GetProperties** o `GetPropertyInfo`.  En su lugar, las plantillas detectan cualquier conjunto de propiedades definido por el usuario y lo agregan al objeto apropiado.  
+## <a name="user-defined-property-sets"></a>Conjuntos de propiedades definidas por el usuario  
+ Visual C++ admite conjuntos de propiedades definidas por el usuario. No es necesario invalidar **GetProperties** o `GetPropertyInfo`. En su lugar, las plantillas de detectan cualquier conjunto de propiedades definidas por el usuario y agregan al objeto apropiado.  
   
- Si tiene un conjunto de propiedades definido por el usuario que debe estar disponible en la inicialización \(es decir, antes de que el consumidor llame a **IDBInitialize::Initialize**\), puede especificarlo mediante el marcador **UPROPSET\_USERINIT** junto con la macro BEGIN\_PROPERTY\_SET\_EX.  El conjunto de propiedades debe estar en el objeto de origen de datos para que esto funcione \(como requiere la especificación OLE DB\).  Por ejemplo:  
+ Si tiene un conjunto de propiedades definidas por el usuario que debe estar disponible durante la inicialización (es decir, antes de que el consumidor llama **IDBInitialize:: Initialize**), puede especificarlo mediante el **UPROPSET_USERINIT** marca junto con la macro BEGIN_PROPERTY_SET_EX. El conjunto de propiedades debe estar en el objeto de origen de datos para que funcione (como requiere la especificación OLE DB). Por ejemplo:  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -169,5 +171,5 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)

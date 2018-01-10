@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d9de718397d7af13b2c3a4aa9b015ce756362c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 981799a9ac33e77664abc75949bebc1843abf484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
 Comprueba si un carácter multibyte es un carácter de puntuación.  
@@ -68,7 +69,7 @@ int _ismbbkpunct_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbkpunct` devuelve un valor distinto de cero si el entero `c` es un signo de puntuación no ASCII; de lo contrario, devuelve 0. Por ejemplo, en la página de códigos 932 únicamente, `_ismbbkpunct` prueba si hay signos de puntuación katakana. `_ismbbkpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional. `_ismbbkpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbkpunct` devuelve un valor distinto de cero si el entero `c` es un signo de puntuación no ASCII; de lo contrario, devuelve 0. Por ejemplo, en la página de códigos 932 únicamente, `_ismbbkpunct` prueba si hay signos de puntuación katakana. `_ismbbkpunct` usa la configuración regional actual para cualquier valor de los caracteres dependientes de la configuración regional. `_ismbbkpunct_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,4 +82,4 @@ int _ismbbkpunct_l(
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

@@ -1,33 +1,35 @@
 ---
-title: "CRowsetImpl::NameFromDBID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.NameFromDBID"
-  - "CRowsetImpl::NameFromDBID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NameFromDBID (método)"
+title: 'CRowsetImpl:: Namefromdbid | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.NameFromDBID
+- CRowsetImpl::NameFromDBID
+dev_langs: C++
+helpviewer_keywords: NameFromDBID method
 ms.assetid: 6aa5b074-90c7-4434-adfd-c64c13e76c78
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: afe16dfefa719760c998c25cc107ba99caacff84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::NameFromDBID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dibuja una cadena de **DBID** y cópiela en `bstr` pasado.  
+# <a name="crowsetimplnamefromdbid"></a>CRowsetImpl::NameFromDBID
+Extrae una cadena de un **DBID** y lo copia en el `bstr` pasado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,24 +40,24 @@ Dibuja una cadena de **DBID** y cópiela en `bstr` pasado.
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *pDBID*  
- \[in\] Un puntero a **DBID** de las que para extraer una cadena.  
+ [in] Un puntero a la **DBID** desde el que se va a extraer de una cadena.  
   
  `bstr`  
- \[in\] Una referencia de [CComBSTR](../../atl/reference/ccombstr-class.md) para colocar una copia de la cadena de **DBID** .  
+ [in] A [CComBSTR](../../atl/reference/ccombstr-class.md) referencia para colocar una copia de la **DBID** cadena.  
   
  `bIndex`  
- \[in\] **true** si un índice **DBID**; **false** si una tabla **DBID**.  
+ [in] **true** si un índice **DBID**; **false** si una tabla **DBID**.  
   
-## Valor devuelto  
- `HRESULT`estándar.  Dependiendo de si **DBID** es una tabla o un índice \(denotado por `bIndex`\), el método devolverá **DB\_E\_NOINDEX** o **DB\_E\_NOTABLE**.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar. Dependiendo de si la **DBID** es una tabla o un índice (indicado por `bIndex`), el método le: devolución **DB_E_NOINDEX** o **DB_E_NOTABLE**.  
   
-## Comentarios  
- Este método llama las implementaciones de `CRowsetImpl` de [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) y de [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md).  
+## <a name="remarks"></a>Comentarios  
+ Este método es invocado por el `CRowsetImpl` las implementaciones de [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) y [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [CRowsetImpl \(Clase\)](../../data/oledb/crowsetimpl-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRowsetImpl (Clase)](../../data/oledb/crowsetimpl-class.md)

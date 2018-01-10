@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Estas funciones reciben el nombre de funciones sobrecargadas y se describen detalladamente en el tema Sobrecarga. Las funciones sobrecargadas permiten a los programadores proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos.  
@@ -219,7 +220,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 Over default constructor  

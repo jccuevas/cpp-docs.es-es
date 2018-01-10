@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>Control de proceso y de entorno
 Utilice las rutinas del control de proceso para iniciar, detener, y administrar procesos dentro de un programa. Utilice las rutinas de control de entorno para obtener y cambiar información sobre el entorno del sistema operativo.  
   
 ### <a name="process-and-environment-control-functions"></a>Funciones del control de proceso y entorno  
   
-|Rutina|Uso|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|Anular proceso sin vaciar los búferes ni llamar a las funciones registradas por `atexit` y `_onexit`|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Prueba de error lógico|  

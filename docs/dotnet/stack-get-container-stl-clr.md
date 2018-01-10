@@ -1,41 +1,42 @@
 ---
-title: "stack::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container (miembro) [STL/CLR]"
+title: Stack::get_container (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: ba6fc541-fc18-4d1c-8e3f-6baaed427cbb
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 721cd51a268a487e9fe18f988e98bfcf5e9d714b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# stack::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso al contenedor subyacente.  
+# <a name="stackgetcontainer-stlclr"></a>stack::get_container (STL/CLR)
+Se tiene acceso del contenedor subyacente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un identificador para el contenedor subyacente.  Se utiliza para omitir las restricciones impuestas por el contenedor del contenedor.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un identificador para el contenedor subyacente. Usa para omitir las restricciones impuestas por el contenedor del contenedor.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_stack_get_container.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisitos  
- cliext \<\/pila de**Encabezado:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/pila >  
   
-## Vea también  
- [pila](../dotnet/stack-stl-clr.md)   
- [stack::container\_type](../dotnet/stack-container-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [pila (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)

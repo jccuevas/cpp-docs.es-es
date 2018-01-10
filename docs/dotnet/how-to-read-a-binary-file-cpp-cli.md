@@ -1,34 +1,36 @@
 ---
-title: "C&#243;mo: Leer un archivo binario (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "archivos binarios, leer en C++"
-  - "archivos [C++], binaria"
+title: "Cómo: leer un archivo binario (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], binary
+- binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Leer un archivo binario (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente muestra cómo leer datos binarios de un archivo, utilizando dos clases del espacio de nombres <xref:System.IO?displayProperty=fullName>: <xref:System.IO.FileStream> y <xref:System.IO.BinaryReader>.  La clase <xref:System.IO.FileStream> representa al propio archivo.  La clase <xref:System.IO.BinaryReader> proporciona una interfaz a la secuencia que permite el acceso binario.  
+# <a name="how-to-read-a-binary-file-ccli"></a>Cómo: Leer un archivo binario (C++/CLI)
+En el ejemplo de código siguiente se muestra cómo leer datos binarios de un archivo, mediante el uso de dos clases de la <xref:System.IO?displayProperty=fullName> espacio de nombres: <xref:System.IO.FileStream> y <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream>representa al propio archivo. <xref:System.IO.BinaryReader>Proporciona una interfaz a la secuencia que permite el acceso binario.  
   
- El ejemplo de código lee un archivo denominado data.bin y contiene enteros en formato binario.  Para obtener información sobre este tipo de archivo, vea [Cómo: Escribir un archivo binario](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
+ El ejemplo de código lee un archivo que se denomina data.bin y contiene enteros en formato binario. Para obtener información sobre este tipo de archivo, consulte [Cómo: escribir un archivo binario (C++ / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // binary_read.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [E\/S de archivos y secuencias](../Topic/File%20and%20Stream%20I-O.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de archivos y secuencias](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

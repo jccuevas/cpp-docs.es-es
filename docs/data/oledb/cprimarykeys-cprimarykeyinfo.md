@@ -1,76 +1,79 @@
 ---
-title: "CPrimaryKeys, CPrimaryKeyInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_nOrdinal"
-  - "m_szTableSchema"
-  - "m_nColumnPropID"
-  - "CPrimaryKeys"
-  - "COLUMN_GUID"
-  - "CPrimaryKeyInfo"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "ORDINAL"
-  - "m_szTableName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CPrimaryKeyInfo (clase de parámetro)"
-  - "CPrimaryKeys (clase de definiciones de tipo)"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_nOrdinal"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "ORDINAL (miembro de datos)"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CPrimaryKeys, CPrimaryKeyInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_nOrdinal
+- m_szTableSchema
+- m_nColumnPropID
+- CPrimaryKeys
+- COLUMN_GUID
+- CPrimaryKeyInfo
+- m_szColumnName
+- m_szTableCatalog
+- COLUMN_PROPID
+- m_guidColumn
+- ORDINAL
+- m_szTableName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szTableSchema
+- TABLE_CATALOG
+- ORDINAL data member
+- CPrimaryKeys typedef class
+- TABLE_NAME
+- m_nColumnPropID
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szTableName
+- m_nOrdinal
+- CPrimaryKeyInfo parameter class
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: c27b97a4-a156-4f66-89e3-95f85d7d6281
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 98eaa6c7f9eb215959ce2e189d98acc7feee8101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CPrimaryKeys, CPrimaryKeyInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Asigne a la clase **CPrimaryKeys** typedef para implementar la clase **CPrimaryKeyInfo**del parámetro.  
+# <a name="cprimarykeys-cprimarykeyinfo"></a>CPrimaryKeys, CPrimaryKeyInfo
+Llamar a la clase de typedef **CPrimaryKeys** para implementar su clase de parámetro **CPrimaryKeyInfo**.  
   
-## Comentarios  
- Vea [Clases de conjunto de filas de esquema y clases de Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre cómo utilizar clases typedef.  
+## <a name="remarks"></a>Comentarios  
+ Vea [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre el uso de clases typedef.  
   
- Esta clase identifica las columnas de clave principal definida en el catálogo por un usuario determinado.  
+ Esta clase identifica las columnas de clave principal definidas en el catálogo por un usuario determinado.  
   
- La tabla siguiente se enumeran los miembros de datos de la clase y sus columnas correspondientes de OLE DB.  Vea [Conjunto de filas PRIMARY\_KEYS](https://msdn.microsoft.com/en-us/library/ms714362.aspx) en *la referencia del* programador para obtener más información sobre el esquema y las columnas.  
+ En la tabla siguiente se enumera los miembros de datos de la clase y sus columnas OLE DB correspondiente. Vea [conjunto de filas PRIMARY_KEYS](https://msdn.microsoft.com/en-us/library/ms714362.aspx) en el *referencia del programador de OLE DB* para obtener más información sobre el esquema y las columnas.  
   
 |Miembros de datos|Columnas de OLE DB|  
-|-----------------------|------------------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nOrdinal|ORDINAL|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nOrdinal|ORDINAL|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRestrictions (Clase)](../../data/oledb/crestrictions-class.md)

@@ -40,11 +40,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d724ce89deadc6900f3d622763ce1895109af230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a13f387c47199dd2b73470aa6124eb391c9f7ae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cviews-cviewinfo"></a>CViews, CViewInfo
 Llamar a la clase de typedef **CViews** para implementar su clase de parámetro **CViewInfo**.  
@@ -64,7 +67,7 @@ Llamar a la clase de typedef **CViews** para implementar su clase de parámetro 
 |m_szDefinition|VIEW_DEFINITION|  
 |m_bCheckOption|CHECK_OPTION|  
 |m_bIsUpdatable|IS_UPDATABLE|  
-|m_szDescription|DESCRIPCIÓN|  
+|m_szDescription|DESCRIPTION|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbsch.h  

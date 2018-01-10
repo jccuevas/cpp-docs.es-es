@@ -1,45 +1,46 @@
 ---
-title: "for_each (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::for_each"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for_each (función) [STL/CLR]"
+title: for_each (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::for_each
+dev_langs: C++
+helpviewer_keywords: for_each function [STL/CLR]
 ms.assetid: 4c391ecf-cd35-499e-a3f5-35b965e0da9b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60a30015720c4877d2e94f219364798ce5cfc54e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# for_each (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se aplica un objeto especificado de la función a cada elemento en un orden frontal dentro de un intervalo y devuelve el objeto function.  
+# <a name="foreach-stlclr"></a>for_each (STL/CLR)
+Aplica un objeto de función especificado a cada elemento en un orden hacia delante dentro de un intervalo y devuelve el objeto de función.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt, class _Fn1> inline  
     _Fn1 for_each(_InIt _First, _InIt _Last, _Fn1 _Func);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `for_each`STL.  Para obtener más información, vea [for\_each](../Topic/for_each.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `for_each`. Para obtener más información, consulte [for_each](../standard-library/algorithm-functions.md#for_each).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

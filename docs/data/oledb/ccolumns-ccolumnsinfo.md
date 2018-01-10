@@ -1,178 +1,181 @@
 ---
-title: "CColumns, CColumnsInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szDomainSchema"
-  - "CColumns"
-  - "m_guidType"
-  - "COLLATION_CATALOG"
-  - "m_szTableSchema"
-  - "COLUMN_DEFAULT"
-  - "IS_NULLABLE"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "m_szColumnDefault"
-  - "m_szCollationCatalog"
-  - "m_nDateTimePrecision"
-  - "m_szDomainCatalog"
-  - "m_nOrdinalPosition"
-  - "m_szDomainName"
-  - "COLUMN_GUID"
-  - "CHARACTER_SET_NAME"
-  - "m_nColumnFlags"
-  - "DOMAIN_NAME"
-  - "m_szCollationName"
-  - "m_szColumnName"
-  - "CHARACTER_SET_SCHEMA"
-  - "COLUMN_FLAGS"
-  - "m_szCharSetName"
-  - "NUMERIC_PRECISION"
-  - "DOMAIN_SCHEMA"
-  - "DOMAIN_CATALOG"
-  - "m_nDataType"
-  - "m_szTableCatalog"
-  - "CHARACTER_SET_CATALOG"
-  - "m_szCharSetSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "m_nNumericScale"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_szCharSetCatalog"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "m_bColumnHasDefault"
-  - "m_szTableName"
-  - "m_nNumericPrecision"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "CColumnsInfo"
-  - "m_szCollationSchema"
-  - "m_bIsNullable"
-  - "COLUMN_HASDEFAULT"
-  - "DATETIME_PRECISION"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumns (clase de definiciones de tipo)"
-  - "CColumnsInfo (clase de parámetro)"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "CHARACTER_SET_CATALOG"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "COLLATION_CATALOG"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "COLUMN_DEFAULT"
-  - "COLUMN_FLAGS"
-  - "COLUMN_GUID"
-  - "COLUMN_HASDEFAULT"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "DATA_TYPE"
-  - "DATETIME_PRECISION"
-  - "DESCRIPTION (miembro de datos de clase)"
-  - "DOMAIN_CATALOG"
-  - "DOMAIN_NAME"
-  - "DOMAIN_SCHEMA"
-  - "IS_NULLABLE"
-  - "m_bColumnHasDefault"
-  - "m_bIsNullable"
-  - "m_guidColumn"
-  - "m_guidType"
-  - "m_nColumnFlags"
-  - "m_nColumnPropID"
-  - "m_nDataType"
-  - "m_nDateTimePrecision"
-  - "m_nMaxLength"
-  - "m_nNumericPrecision"
-  - "m_nNumericScale"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_szCharSetCatalog"
-  - "m_szCharSetName"
-  - "m_szCharSetSchema"
-  - "m_szCollationCatalog"
-  - "m_szCollationName"
-  - "m_szCollationSchema"
-  - "m_szColumnDefault"
-  - "m_szColumnName"
-  - "m_szDescription"
-  - "m_szDomainCatalog"
-  - "m_szDomainName"
-  - "m_szDomainSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CColumns, CColumnsInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szDomainSchema
+- CColumns
+- m_guidType
+- COLLATION_CATALOG
+- m_szTableSchema
+- COLUMN_DEFAULT
+- IS_NULLABLE
+- m_nColumnPropID
+- ORDINAL_POSITION
+- m_szColumnDefault
+- m_szCollationCatalog
+- m_nDateTimePrecision
+- m_szDomainCatalog
+- m_nOrdinalPosition
+- m_szDomainName
+- COLUMN_GUID
+- CHARACTER_SET_NAME
+- m_nColumnFlags
+- DOMAIN_NAME
+- m_szCollationName
+- m_szColumnName
+- CHARACTER_SET_SCHEMA
+- COLUMN_FLAGS
+- m_szCharSetName
+- NUMERIC_PRECISION
+- DOMAIN_SCHEMA
+- DOMAIN_CATALOG
+- m_nDataType
+- m_szTableCatalog
+- CHARACTER_SET_CATALOG
+- m_szCharSetSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- m_nNumericScale
+- COLUMN_PROPID
+- m_guidColumn
+- m_szCharSetCatalog
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- COLLATION_NAME
+- COLLATION_SCHEMA
+- m_bColumnHasDefault
+- m_szTableName
+- m_nNumericPrecision
+- DATA_TYPE
+- m_nOctetLength
+- CColumnsInfo
+- m_szCollationSchema
+- m_bIsNullable
+- COLUMN_HASDEFAULT
+- DATETIME_PRECISION
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- COLUMN_PROPID
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_nDateTimePrecision
+- m_bColumnHasDefault
+- m_szCollationName
+- m_guidType
+- CColumnsInfo parameter class
+- COLLATION_SCHEMA
+- m_szDomainSchema
+- COLUMN_HASDEFAULT
+- CHARACTER_OCTET_LENGTH
+- m_szDomainName
+- DOMAIN_NAME
+- DOMAIN_SCHEMA
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCharSetCatalog
+- m_szColumnDefault
+- TABLE_NAME
+- COLUMN_FLAGS
+- m_szDomainCatalog
+- m_nOrdinalPosition
+- m_nColumnPropID
+- NUMERIC_SCALE
+- COLLATION_CATALOG
+- DATETIME_PRECISION
+- TABLE_SCHEMA
+- m_nNumericPrecision
+- m_szColumnName
+- COLUMN_NAME
+- m_nOctetLength
+- IS_NULLABLE
+- m_bIsNullable
+- m_szTableCatalog
+- COLLATION_NAME
+- m_szDescription
+- m_szTableName
+- CColumns typedef class
+- m_nDataType
+- m_nNumericScale
+- m_szCollationCatalog
+- m_szCollationSchema
+- CHARACTER_SET_NAME
+- m_nColumnFlags
+- COLUMN_GUID
+- CHARACTER_MAXIMUM_LENGTH
+- m_szCharSetName
+- m_guidColumn
+- CHARACTER_SET_SCHEMA
+- CHARACTER_SET_CATALOG
+- DOMAIN_CATALOG
+- m_szCharSetSchema
+- COLUMN_DEFAULT
 ms.assetid: 7a4ca8e8-e041-4def-8c1a-00c211f7da0b
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 90ec0d78dc9a95f80dec04141184f5376d0e6556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CColumns, CColumnsInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Asigne a la clase **CColumns** typedef para implementar la clase **CColumnsInfo**del parámetro.  
+# <a name="ccolumns-ccolumnsinfo"></a>CColumns, CColumnsInfo
+Llamar a la clase de typedef **CColumns** para implementar su clase de parámetro **CColumnsInfo**.  
   
-## Comentarios  
- Vea [Clases de conjunto de filas de esquema y clases de Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre cómo utilizar clases typedef.  
+## <a name="remarks"></a>Comentarios  
+ Vea [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre el uso de clases typedef.  
   
- Esta clase identifica las columnas de las tablas definidas en el catálogo que se puede tener acceso un usuario determinado.  
+ Esta clase identifica las columnas de tablas definidas en el catálogo que son accesibles para un usuario determinado.  
   
- La tabla siguiente se enumeran los miembros de datos de la clase y sus columnas correspondientes de OLE DB.  Vea [Conjunto de filas COLUMNS](https://msdn.microsoft.com/en-us/library/ms723052.aspx) en *la referencia del* programador para obtener más información sobre el esquema y las columnas.  
+ En la tabla siguiente se enumera los miembros de datos de la clase y sus columnas OLE DB correspondiente. Vea [conjunto de filas COLUMNS](https://msdn.microsoft.com/en-us/library/ms723052.aspx) en el *referencia del programador de OLE DB* para obtener más información sobre el esquema y las columnas.  
   
 |Miembros de datos|Columnas de OLE DB|  
-|-----------------------|------------------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_bColumnHasDefault|COLUMN\_HASDEFAULT|  
-|m\_szColumnDefault|COLUMN\_DEFAULT|  
-|m\_nColumnFlags|COLUMN\_FLAGS|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_guidType|TYPE\_GUID|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nNumericPrecision|NUMERIC\_PRECISION|  
-|m\_nNumericScale|NUMERIC\_SCALE|  
-|m\_nDateTimePrecision|DATETIME\_PRECISION|  
-|m\_szCharSetCatalog|CHARACTER\_SET\_CATALOG|  
-|m\_szCharSetSchema|CHARACTER\_SET\_SCHEMA|  
-|m\_szCharSetName|CHARACTER\_SET\_NAME|  
-|m\_szCollationCatalog|COLLATION\_CATALOG|  
-|m\_szCollationSchema|COLLATION\_SCHEMA|  
-|m\_szCollationName|COLLATION\_NAME|  
-|m\_szDomainCatalog|DOMAIN\_CATALOG|  
-|m\_szDomainSchema|DOMAIN\_SCHEMA|  
-|m\_szDomainName|DOMAIN\_NAME|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_bColumnHasDefault|COLUMN_HASDEFAULT|  
+|m_szColumnDefault|COLUMN_DEFAULT|  
+|m_nColumnFlags|COLUMN_FLAGS|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_guidType|TYPE_GUID|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nNumericPrecision|NUMERIC_PRECISION|  
+|m_nNumericScale|NUMERIC_SCALE|  
+|m_nDateTimePrecision|DATETIME_PRECISION|  
+|m_szCharSetCatalog|CHARACTER_SET_CATALOG|  
+|m_szCharSetSchema|CHARACTER_SET_SCHEMA|  
+|m_szCharSetName|CHARACTER_SET_NAME|  
+|m_szCollationCatalog|COLLATION_CATALOG|  
+|m_szCollationSchema|COLLATION_SCHEMA|  
+|m_szCollationName|COLLATION_NAME|  
+|m_szDomainCatalog|DOMAIN_CATALOG|  
+|m_szDomainSchema|DOMAIN_SCHEMA|  
+|m_szDomainName|DOMAIN_NAME|  
+|m_szDescription|DESCRIPTION|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CatDB](../../top/visual-cpp-samples.md)   
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Vea también  
+ [CatDB](../../visual-cpp-samples.md)   
+ [CRestrictions (Clase)](../../data/oledb/crestrictions-class.md)

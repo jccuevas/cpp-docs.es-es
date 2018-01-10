@@ -1,32 +1,33 @@
 ---
-title: "IAccessorImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IAccessorImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAccessorImpl (clase)"
+title: IAccessorImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IAccessorImpl
+dev_langs: C++
+helpviewer_keywords: IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IAccessorImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona una implementación de la interfaz de [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) .  
+# <a name="iaccessorimpl-class"></a>IAccessorImpl (Clase)
+Proporciona una implementación de la [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -40,39 +41,39 @@ template <
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- La clase de conjunto de filas o del objeto de comando.  
+ La clase de objeto de conjunto de filas o un comando.  
   
  `BindType`  
- Unidad de almacenamiento para la información de enlace.  El valor predeterminado es la estructura de **ATLBINDINGS** \(vea atldb.h\).  
+ Unidad de almacenamiento de información de enlace. El valor predeterminado es el **ATLBINDINGS** estructura (vea atldb.h).  
   
  `BindingVector`  
- Unidad de almacenamiento para la información de columna.  El valor predeterminado es [CAtlMap](../../atl/reference/catlmap-class.md) donde es un valor el elemento clave de **HACCESSOR** y el elemento del valor es un puntero a una estructura de `BindType` .  
+ Unidad de almacenamiento para obtener información de columna. El valor predeterminado es [CAtlMap](../../atl/reference/catlmap-class.md) donde el elemento clave es un **HACCESSOR** valor y el elemento de valor es un puntero a un `BindType` estructura.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
-  
-|||  
-|-|-|  
-|[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)|Constructor.|  
-  
-### Métodos de interfaz  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Agrega un contador de referencias a un descriptor de acceso existente.|  
-|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Crea un descriptor de acceso a partir de un conjunto de enlaces.|  
+|[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)|El constructor.|  
+  
+### <a name="interface-methods"></a>Métodos de interfaz  
+  
+|||  
+|-|-|  
+|[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Agrega un recuento de referencias a un descriptor de acceso existente.|  
+|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Crea un descriptor de acceso de un conjunto de enlaces.|  
 |[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Devuelve los enlaces de un descriptor de acceso.|  
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Libera un descriptor de acceso.|  
   
-## Comentarios  
- Esto es obligatorio en conjuntos de filas y los comandos.  OLE DB requiere los proveedores implementar **HACCESSOR**, que es una etiqueta a una matriz de estructuras de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) .  S para**HACCESSOR**proporcionada por `IAccessorImpl` es direcciones de estructuras de `BindType` .  De forma predeterminada, `BindType` se define como **ATLBINDINGS** en la definición de plantilla de `IAccessorImpl` .  `BindType` proporciona un mecanismo utilizado por `IAccessorImpl` para realizar el seguimiento del número de elementos de la matriz de **DBBINDING** junto con un recuento de referencia y los indicadores de descriptor de acceso.  
+## <a name="remarks"></a>Comentarios  
+ Esto es obligatorio en conjuntos de filas y comandos. OLE DB requiere que los proveedores implementar un **HACCESSOR**, que es una etiqueta a una matriz de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) estructuras. **HACCESSOR**s proporcionado por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un **ATLBINDINGS** en `IAccessorImpl`de definición de plantilla. `BindType`Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su **DBBINDING** de matriz, así como una marcas de recuento y el descriptor de acceso de referencia.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

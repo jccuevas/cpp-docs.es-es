@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversiones de tipos enteros sin signo
 Un entero sin signo se convierte en un entero con o sin signo menor truncando los bits de orden superior, o en un entero con o sin signo mayor mediante la extensión de cero (vea la tabla [Conversiones de tipos enteros sin signo](#_clang_table_4..3)).  
@@ -46,7 +47,7 @@ printf_s( "%hd\n", j );   // Prints -3
   
 ### <a name="conversions-from-unsigned-integral-types"></a>Conversiones de tipos enteros sin signo  
   
-|De|Para|Método|  
+|De|En|Método|  
 |----------|--------|------------|  
 |`unsigned char`|`char`|Se conserva el patrón de bits; el bit de orden superior se convierte en el bit de signo|  
 |`unsigned char`|**short**|Extensión de cero|  

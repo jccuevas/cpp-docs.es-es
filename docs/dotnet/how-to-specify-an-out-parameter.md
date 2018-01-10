@@ -1,34 +1,37 @@
 ---
-title: "C&#243;mo: Especificar un par&#225;metro out | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parámetros de la función"
-  - "out (parámetros)"
+title: "Cómo: especificar una espera parámetro | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- function parameters
+- out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0905220a1e2ab3e209fe80598ec67903999245b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Especificar un par&#225;metro out
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este ejemplo se muestra la forma de especificar que el parámetro de una función es un parámetro out y la forma de llamar a dicha función desde un programa de C\#.  
+# <a name="how-to-specify-an-out-parameter"></a>Cómo: Especificar un parámetro out
+Este ejemplo muestra cómo especificar que un parámetro de función es un parámetro de salida y cómo llamar a esa función desde un programa de C#.  
   
- Para especificar un parámetro out en Visual C\+\+ se utiliza <xref:System.Runtime.InteropServices.OutAttribute>.  
+ Para especificar un parámetro out en Visual C++ con <xref:System.Runtime.InteropServices.OutAttribute> .  
   
-## Ejemplo  
- La primera parte de este ejemplo es un archivo DLL de Visual C\+\+ con un tipo que contiene una función con un parámetro out.  
+## <a name="example"></a>Ejemplo  
+ La primera parte de este ejemplo es un archivo DLL de Visual C++ con un tipo que contiene una función con un parámetro de salida.  
   
 ```  
 // cpp_out_param.cpp  
@@ -41,8 +44,8 @@ public value struct TestStruct {
 };  
 ```  
   
-## Ejemplo  
- Éste es un cliente de C\# que utiliza el componente de Visual C\+\+ creado en el ejemplo anterior.  
+## <a name="example"></a>Ejemplo  
+ Se trata de un cliente de C# que utiliza el componente de Visual C++ creado en el ejemplo anterior.  
   
 ```  
 // cpp_out_param_2.cs  
@@ -57,6 +60,9 @@ class TestClass {
 }  
 ```  
   
-  **cadena**   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+a string  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

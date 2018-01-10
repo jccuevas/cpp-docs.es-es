@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3be1384c12ece809bd8fc275625efd4acef5a407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a55cbad7606eb5ce204e3363b1d292c787b59740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bitwise-operators"></a>Operadores bit a bit de C
 Los operadores bit a bit realizan operaciones AND bit a bit (**&**), OR exclusivo bit a bit (**^**) y OR inclusivo bit a bit (**&#124;**).  
@@ -53,7 +54,7 @@ Los operadores bit a bit realizan operaciones AND bit a bit (**&**), OR exclusiv
   
  A continuación se describen los operadores bit a bit de C:  
   
-|Operador|Descripción|  
+|Operador|Description|  
 |--------------|-----------------|  
 |**&**|El operador AND bit a bit compara cada bit de su primer operando con el bit correspondiente de su segundo operando. Si ambos bits son 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.|  
 |**^**|El operador OR exclusivo bit a bit compara cada bit de su primer operando con el bit correspondiente de su segundo operando. Si un bit es 0 y el otro bit es 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.|  

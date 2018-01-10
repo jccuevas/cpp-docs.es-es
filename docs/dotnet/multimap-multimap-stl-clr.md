@@ -1,32 +1,33 @@
 ---
-title: "multimap::multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multimap (miembro) [STL/CLR]"
+title: 'multimap:: multimap (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::multimap
+dev_langs: C++
+helpviewer_keywords: multimap member [STL/CLR]
 ms.assetid: cdf9c5dc-774c-424e-aeea-7554643e401c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6ab4f50af1a7fd161ec192890fb7be3134ad4c72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapmultimap-stlclr"></a>multimap::multimap (STL/CLR)
 Construye un objeto contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 multimap();  
@@ -43,79 +44,71 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo que se va a insertar.  
+ Comienzo del intervalo que se va a insertar.  
   
  last  
  Final del intervalo que se va a insertar.  
   
  pred  
- Ordenar el predicado de la secuencia controlada.  
+ Orden de predicado de la secuencia controlada.  
   
  right  
- Objeto o intervalo para insertar.  
+ Objeto o intervalo que se va a insertar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `multimap();`  
   
- inicializa la secuencia controlada sin elementos, con el predicado de ordenación predeterminado `key_compare()`.  Se utiliza para especificar una secuencia controlada inicial vacía, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada con ningún elemento con el predicado del orden predeterminado `key_compare()`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado del orden predeterminado.  
   
  El constructor:  
   
  `explicit multimap(key_compare^ pred);`  
   
- inicializa la secuencia controlada sin elementos, con el predicado de ordenación `pred`.  Se utiliza para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.  
+ Inicializa la secuencia controlada con ningún elemento con el predicado ordenación `pred`. Se usa para especificar una secuencia controlada inicial vacía, con el predicado de ordenación especificado.  
   
  El constructor:  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- inicializa la secuencia controlada con la secuencia `[``right``.`[multimap::begin](../dotnet/multimap-begin-stl-clr.md)`(),` `right``.`[multimap::end](../dotnet/multimap-end-stl-clr.md)`())`, con el predicado de ordenación predeterminado.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto `right`de multimap, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`right.begin()`, `right.end()`), con el predicado del orden predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap `right`, con el predicado del orden predeterminado.  
   
  El constructor:  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- inicializa la secuencia controlada con la secuencia `[``right``->`[multimap::begin](../dotnet/multimap-begin-stl-clr.md)`(),` `right``->`[multimap::end](../dotnet/multimap-end-stl-clr.md)`())`, con el predicado de ordenación predeterminado.  Se utiliza para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto `right`de multimap, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`right->begin()`, `right->end()`), con el predicado del orden predeterminado. Se usa para especificar una secuencia controlada inicial que es una copia de la secuencia controlada por el objeto multimap `right`, con el predicado del orden predeterminado.  
   
  El constructor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> multimap(InIter first, InIter last);`  
   
- `multimap(InIter first, InIter last);`  
-  
- inicializa la secuencia controlada con la secuencia `[``first``,` `last``)`, con el predicado de ordenación predeterminado.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada a la secuencia [`first`, `last`), con el predicado del orden predeterminado. Usa para hacer una copia de otra secuencia de la secuencia controlada con el predicado del orden predeterminado.  
   
  El constructor:  
   
- `template<typename InIter>`  
+ `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inicializa la secuencia controlada con la secuencia `[``first``,` `last``)`, con el predicado de ordenación `pred`.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia, con el predicado de ordenación especificado.  
+ Inicializa la secuencia controlada a la secuencia [`first`, `last`), con el predicado ordenación `pred`. Usa para realizar una copia de otra secuencia, con el predicado especificado de ordenación de la secuencia controlada.  
   
  El constructor:  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inicializa la secuencia controlada con la secuencia indicada por el enumerador `right`, con el predicado de ordenación predeterminado.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación predeterminado.  
+ Inicializa la secuencia controlada con la secuencia designada por el enumerador `right`, con el predicado del orden predeterminado. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado del orden predeterminado de la secuencia controlada.  
   
  El constructor:  
   
- `multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Inicializa la secuencia controlada con la secuencia designada por el enumerador `right`, con el predicado ordenación `pred`. Usa para realizar una copia de otra secuencia descrita por un enumerador con el predicado especificado de ordenación de la secuencia controlada.  
   
- inicializa la secuencia controlada con la secuencia indicada por el enumerador `right`, con el predicado de ordenación `pred`.  Se utiliza para hacer la secuencia controlada una copia de otra secuencia descrita por un enumerador, con el predicado de ordenación especificado.  
+## <a name="example"></a>Ejemplo  
   
-## Ejemplo  
-  
-```  
+```cpp  
 // cliext_multimap_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +182,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[un 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[un 1\]**  
- **\[un 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[un 1\]**  
- **\[un 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[un 1\]**  
- **\[c 3\] \[b 2\] \[un 1\]**  
- **\[un 1\] \[b 2\] \[c 3\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

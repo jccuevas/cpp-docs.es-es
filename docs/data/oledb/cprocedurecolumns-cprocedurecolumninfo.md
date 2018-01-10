@@ -70,11 +70,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e1262dc92f91541b092e3c5cca38b2fa5cbef5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b11e91c450e082cbb46e2f17975ff98a95f8d25d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprocedurecolumns-cprocedurecolumninfo"></a>CProcedureColumns, CProcedureColumnInfo
 Llamar a la clase de typedef **CProcedureColumns** para implementar su clase de parámetro **CProcedureColumnInfo**.  
@@ -103,7 +106,7 @@ Llamar a la clase de typedef **CProcedureColumns** para implementar su clase de 
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|  
 |m_nPrecision|NUMERIC_PRECISION|  
 |m_nScale|NUMERIC_SCALE|  
-|m_szDescription|DESCRIPCIÓN|  
+|m_szDescription|DESCRIPTION|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbsch.h  

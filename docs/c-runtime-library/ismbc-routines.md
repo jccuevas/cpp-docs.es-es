@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc (Rutinas)
 Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una condición determinada.  
@@ -80,4 +81,4 @@ Cada rutina de **_ismbc** prueba si un carácter multibyte `c` dado cumple una c
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../c-runtime-library/character-classification.md)   
  [is, isw (Rutinas)](../c-runtime-library/is-isw-routines.md)   
- [_ismbb (Rutinas)](../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../c-runtime-library/ismbb-routines.md)

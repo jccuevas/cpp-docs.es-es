@@ -1,32 +1,33 @@
 ---
-title: "logical_not (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not (función) [STL/CLR]"
+title: logical_not (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_not
+dev_langs: C++
+helpviewer_keywords: logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# logical_not (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor que, cuando se invoca, devuelve true solo si cualquier argumento prueba como false.  Se utiliza especifica un objeto de función en términos del tipo de argumento.  
+# <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si su argumento prueba como false. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Arg>  
@@ -47,33 +48,33 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Argumento  
+#### <a name="parameters"></a>Parámetros  
+ Arg  
  El tipo de los argumentos.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|argument\_type|El tipo de argumento de functor.|  
-|delegate\_type|El tipo de delegado genérico.|  
-|result\_type|El tipo de resultado de functor.|  
+|---------------------|-----------------|  
+|argument_type|El tipo del argumento functor.|  
+|delegate_type|El tipo de delegado genérico.|  
+|result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|logical\_not|Construye el functor.|  
+|------------|-----------------|  
+|logical_not|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|delegate\_type^ de operador|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|operador delegate_type ^|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de uno\- argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelve true solo si su argumento prueba como false.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si su argumento pruebas como false.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_logical_not.cpp   
@@ -106,12 +107,15 @@ int main()
   
 ```  
   
-  **4 0**  
- **0 1**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 0  
+0 1  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [negate](../dotnet/negate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

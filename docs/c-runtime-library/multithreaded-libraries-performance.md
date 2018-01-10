@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8eeadc61c41d37247b08bdc8e3806da6d6200e4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 240b2baf8f3d59465b7b8313197086fec4c13285
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreaded-libraries-performance"></a>Rendimiento de bibliotecas multiproceso
 El CRT de un solo subproceso ya no está disponible. En este tema se describe cómo obtener el máximo rendimiento de las bibliotecas multiproceso.  

@@ -1,42 +1,44 @@
 ---
-title: "C&#243;mo: Leer los contadores de rendimiento de Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contadores, leer los contadores de rendimiento de Windows"
-  - "rendimiento"
-  - "contadores de rendimiento"
-  - "contadores de rendimiento, leer los contadores de rendimiento de Windows"
-  - "supervisión del rendimiento"
-  - "supervisión del rendimiento, contadores de rendimiento de Windows"
-  - "rendimiento, contadores"
+title: "Cómo: leer los contadores de rendimiento de Windows (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Leer los contadores de rendimiento de Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Algunas aplicaciones y subsistemas de Windows exponen datos de rendimiento a través del sistema de rendimiento de Windows.  Se puede tener acceso a estos contadores utilizando las clases <xref:System.Diagnostics.PerformanceCounterCategory> y <xref:System.Diagnostics.PerformanceCounter>, que residen en el espacio de nombres <xref:System.Diagnostics?displayProperty=fullName>.  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>Cómo: Leer los contadores de rendimiento de Windows (C++/CLI)
+Algunas aplicaciones y subsistemas de Windows exponen los datos de rendimiento a través del sistema de rendimiento de Windows. Estos contadores son accesibles mediante la <xref:System.Diagnostics.PerformanceCounterCategory> y <xref:System.Diagnostics.PerformanceCounter> las clases, que residen en el <xref:System.Diagnostics?displayProperty=fullName> espacio de nombres.  
   
- En el ejemplo de código siguiente se utilizan estas clases para recuperar y mostrar un contador actualizado por Windows con el fin de indicar el porcentaje de tiempo de ocupación del procesador.  
+ En el ejemplo de código siguiente se usa estas clases para recuperar y mostrar un contador que se actualiza mediante Windows para indicar el porcentaje de tiempo que el procesador está ocupado.  
   
 > [!NOTE]
->  Este ejemplo requiere que se ejecuten privilegios administrativos en Windows Vista.  
+>  Este ejemplo exige privilegios administrativos para ejecutarse en Windows Vista.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +127,7 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/es-es/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Operaciones de Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción a la supervisión de rendimiento](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Operaciones de Windows (C++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

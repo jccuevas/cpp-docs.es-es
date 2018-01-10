@@ -1,47 +1,50 @@
 ---
-title: "Crear un proveedor OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas del proveedor OLE DB, crear proveedores"
-  - "proveedores OLE DB, crear"
+title: Crear un proveedor OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 97d5edb8e65729f8bee68043b316fa74f78fb0da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Crear un proveedor OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La forma recomendada de crear un proveedor OLE DB es utilizar los asistentes para crear un proyecto COM compatible con ATL y un proveedor, y después modificar los archivos mediante las plantillas OLE DB.  Al personalizar el proveedor puede marcar como comentarios las propiedades que no desee y agregar interfaces opcionales.  
+# <a name="creating-an-ole-db-provider"></a>Crear un proveedor OLE DB
+La manera recomendada para crear un proveedor OLE DB es usar los asistentes para crear un proyecto ATL COM y un proveedor y, a continuación, modificar los archivos mediante las plantillas OLE DB. Mientras personaliza el proveedor, puede Comente propiedades que no desee y agregar interfaces opcionales.  
   
- Éstos son los pasos básicos:  
+ Estos son los pasos básicos:  
   
-1.  Utilice el Asistente para proyectos ATL para crear los archivos básicos del proyecto y el Asistente para proveedores OLE DB ATL para crear el proveedor \(seleccione **Proveedor OLE DB ATL** en la carpeta Visual C\+\+ de **Agregar clase**\).  
+1.  Usar el Asistente para proyectos ATL para crear los archivos básicos del proyecto y el Asistente para proveedores OLE DB ATL para crear el proveedor (seleccione **proveedor OLE DB ATL** desde la carpeta de Visual C++ en **Agregar clase**).  
   
-2.  Modifique el código del método `Execute` en CMyProviderRS.h.  Encontrará un ejemplo en [Leer cadenas desde el proveedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
+2.  Modificar el código en el `Execute` método en CMyProviderRS.h. Para obtener un ejemplo, vea [leer cadenas en el proveedor OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
   
-3.  Edite los mapas de propiedades que se encuentran en MyProviderDS.h, MyProviderSess.h y MyProviderRS.h.  El asistente crea mapas de propiedades que contienen todas las propiedades que un proveedor podría implementar.  Recorra los mapas de propiedades y quite o marque como comentario las propiedades para las que no es necesario que el proveedor ofrezca compatibilidad.  
+3.  Editar las asignaciones de propiedad en MyProviderDS.h, MyProviderSess.h y MyProviderRS.h. El asistente crea mapas de propiedades que contienen todas las propiedades que puede implementar un proveedor. Vaya a través de los mapas de propiedades y quite o tu comentario las propiedades que no es necesario que el proveedor admite.  
   
-4.  Actualice la macro PROVIDER\_COLUMN\_MAP, la cual reside en MyProviderRS.h.  Encontrará un ejemplo en [Almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
+4.  Actualice la macro PROVIDER_COLUMN_MAP, que se encuentra en MyProviderRS.h. Para obtener un ejemplo, vea [almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Cuando esté preparado para probar el proveedor, puede intentar buscarlo en la lista de proveedores.  Si desea consultar ejemplos de código de prueba que busquen un proveedor en una lista, vea los ejemplos [CATDB](http://msdn.microsoft.com/es-es/003d516b-2bf6-444e-8be5-4ebaa0b66046) y [DBVIEWER](http://msdn.microsoft.com/es-es/07620f99-c347-4d09-9ebc-2459e8049832), o el ejemplo de [Implementar un consumidor simple](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Cuando esté listo para probar el proveedor, puede probarlo, intentando encontrar el proveedor de una enumeración de proveedor. Para obtener ejemplos de código de prueba que busquen un proveedor en una enumeración, consulte la [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) y [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) muestras o en el ejemplo de [implementar un consumidor Simple](../../data/oledb/implementing-a-simple-consumer.md).  
   
-6.  Agregue las interfaces adicionales que desee.  Vea el ejemplo de [Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+6.  Agregue las interfaces adicionales que desee. Para obtener un ejemplo, vea [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
     > [!NOTE]
-    >  De manera predeterminada, los asistentes generan código compatible con el nivel 0 de OLE DB.  Para asegurarse de que la aplicación mantiene la compatibilidad con el nivel 0, no quite del código ninguna de las interfaces generadas por el asistente.  
+    >  De forma predeterminada, los asistentes generan código que es el nivel 0 compatibles con OLE DB. Para asegurarse de que la aplicación siga siendo el nivel 0 compatible, no quite cualquiera de las interfaces generadas por el asistente desde el código.  
   
-## Vea también  
- [CATDB](http://msdn.microsoft.com/es-es/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/es-es/07620f99-c347-4d09-9ebc-2459e8049832)
+## <a name="see-also"></a>Vea también  
+ [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)

@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>E/S de secuencia
 Estas funciones procesan datos de diferentes tamaños y formatos, desde caracteres individuales a estructuras de datos de gran tamaño. También proporcionan almacenamiento en búfer, que puede mejorar el rendimiento. El tamaño predeterminado de un búfer de secuencia es 4K. Estas rutinas afectan sólo a los búferes creados por las rutinas de biblioteca en tiempo de ejecución y no tienen ningún efecto en los búferes creados por el sistema operativo.  
   
 ### <a name="stream-io-routines"></a>Rutinas de E/S de secuencia  
   
-|Rutina|Uso|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Indicador de borrar error para la secuencia|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Cerrar secuencia|  

@@ -1,35 +1,37 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock (constructor)"
+title: Lock::lock | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construye un objeto de `lock` , esperando opcionalmente para adquirir el bloqueo para siempre, por un tiempo determinado, o en absoluto.  
+# <a name="locklock"></a>lock::lock
+Construye un `lock` objeto, opcionalmente esperando a adquirir el bloqueo indefinidamente, durante un período determinado de tiempo, o no en absoluto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class T> lock(  
@@ -49,27 +51,27 @@ template<class T> lock(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `_object`  
  Objeto que se va a bloquear.  
   
  `_timeout`  
- Valor de tiempo de espera en milisegundos o como <xref:System.TimeSpan>.  
+ Valor de tiempo de espera en milisegundos o como un <xref:System.TimeSpan>.  
   
-## Excepciones  
- Produce <xref:System.ApplicationException> si la adquisición de bloqueo no aparece antes del tiempo de espera.  
+## <a name="exceptions"></a>Excepciones  
+ Produce <xref:System.ApplicationException> si no se producen de adquisición de bloqueo antes de tiempo de espera.  
   
-## Comentarios  
- Los primeros tres formas de constructor intentan adquirir un bloqueo en `_object` dentro del período de tiempo de espera especificado \(o de <xref:System.Threading.Timeout.Infinite> si no se especifica ninguno\).  
+## <a name="remarks"></a>Comentarios  
+ Las tres primeras formas del constructor intentan adquirir un bloqueo en `_object` dentro del período de tiempo de espera especificado (o <xref:System.Threading.Timeout.Infinite> si no se especifica ninguno).  
   
- El cuarto formulario de constructor no adquiere un bloqueo en `_object`.  `lock_later` es miembro de [lock\_when \(Enumeración\)](../dotnet/lock-when-enum.md).  Utilice [lock::acquire](../dotnet/lock-acquire.md) o [lock::try\_acquire](../dotnet/lock-try-acquire.md) para adquirir el bloqueo en este caso.  
+ La cuarta forma del constructor no adquiere un bloqueo en `_object`. `lock_later`es un miembro de la [lock_when (enumeración)](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) a adquirir el bloqueo en este caso.  
   
- El bloqueo automáticamente se liberará cuando se llama al destructor.  
+ El bloqueo se libera automáticamente cuando se llama al destructor.  
   
- El valor de `_object` no puede ser <xref:System.Threading.ReaderWriterLock>.  Si es, un error del compilador lo.  
+ El valor de `_object` no puede ser <xref:System.Threading.ReaderWriterLock>.  Si es así, se producirá un error del compilador.  
   
-## Ejemplo  
- Este ejemplo utiliza una sola instancia de una clase a través de varios subprocesos.  La clase utiliza un bloqueo en sí misma para garantizar que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase compruebe periódicamente para ver si todavía existen algunos subprocesos de trabajo, y espera para salir hasta que todos los subprocesos de trabajo completen sus tareas.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo seguirán existan y espera hasta salir hasta que todos los subprocesos de trabajo ha completado sus tareas.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +145,27 @@ int main() {
 }  
 ```  
   
-  **En el subproceso 3, contador \= 0**  
-**En el subproceso 3, contador \= 10**  
-**En el subproceso 5, contador \= 0**  
-**En el subproceso 5, contador \= 10**  
-**En el subproceso 7, contador \= 0**  
-**En el subproceso 7, contador \= 10**  
-**En el subproceso 4, contador \= 0**  
-**En el subproceso 4, contador \= 10**  
-**En el subproceso 6, contador \= 0**  
-**En el subproceso 6, contador \= 10**  
-**Todos los subprocesos completos.**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
- [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
+ [bloqueo:: ~ bloqueo](../dotnet/lock-tilde-lock.md)   
+ [Lock::acquire](../dotnet/lock-acquire.md)   
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

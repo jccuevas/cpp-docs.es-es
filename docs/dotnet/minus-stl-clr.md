@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76017cd4a63f6c8bd1956c6f871fc10027b9b6d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 950f0fb677094c368f580fff28dd920733b9ac93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 La clase de plantilla describe un functor que, cuando se llama, devuelve el primer argumento menos la segunda. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  

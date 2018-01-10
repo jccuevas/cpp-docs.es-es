@@ -1,32 +1,33 @@
 ---
-title: "includes (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::includes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "includes (función) [STL/CLR]"
+title: incluye (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::includes
+dev_langs: C++
+helpviewer_keywords: includes function [STL/CLR]
 ms.assetid: 566307f4-92e0-4acc-ba49-caa48f3ec744
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ba313a960b986412a5fc41293b0770ace01211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# includes (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Prueba si un intervalo ordenados contiene todos los elementos contenidos en un intervalo ordenados segundo, donde el orden o el criterio de equivalencia entre los elementos se pueden especificar mediante un predicado binario.  
+# <a name="includes-stlclr"></a>includes (STL/CLR)
+Prueba si un intervalo ordenado contiene todos los elementos incluidos en un segundo intervalo ordenado, donde el criterio de ordenación o equivalencia entre los elementos se pueden especificar mediante un predicado binario.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt1, class _InIt2> inline  
@@ -37,13 +38,13 @@ template<class _InIt1, class _InIt2, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `includes`STL.  Para obtener más información, vea [includes](../Topic/includes.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `includes`. Para obtener más información, consulte [incluye](../standard-library/algorithm-functions.md#includes).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

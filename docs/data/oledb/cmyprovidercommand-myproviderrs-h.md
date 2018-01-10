@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidercommand"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderCommand (clase): MyProviderRS.H"
-  - "proveedores OLE DB, archivos generados por el asistente"
+title: CMyProviderCommand (MyProviderRS.H) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidercommand
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderCommand (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La clase `CMyProviderCommand` es la implementación para el objeto de comando del proveedor.  Proporciona la implementación para las interfaces `IAccessor`, `ICommandText` e **ICommandProperties**.  La interfaz `IAccessor` es la misma que la del conjunto de filas.  El objeto de comando utiliza el descriptor de acceso para especificar enlaces de parámetros.  El objeto de conjunto de filas los utiliza para especificar enlaces de columnas de resultados.  La interfaz `ICommandText` proporciona una forma útil de especificar un comando de forma textual.  En este ejemplo se utiliza posteriormente la interfaz `ICommandText` al agregar código personalizado; también se reemplaza el método `ICommand::Execute`.  La interfaz **ICommandProperties** controla todas las propiedades de los objetos de comando y de conjunto de filas.  
+# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+La `CMyProviderCommand` clase es la implementación para el objeto de comando de proveedor. Proporciona la implementación para la `IAccessor`, `ICommandText`, y **ICommandProperties** interfaces. La `IAccessor` interfaz es la misma que del conjunto de filas. El objeto de comando utiliza el descriptor de acceso para especificar enlaces de parámetros. El objeto de conjunto de filas los utiliza para especificar enlaces para las columnas de salida. La `ICommandText` interfaz es una forma útil de especificar un comando textualmente. Este ejemplo se utiliza la `ICommandText` interfaz más adelante cuando agrega código personalizado; también invalida la `ICommand::Execute` método. El **ICommandProperties** interfaz controla todas las propiedades de los objetos de comando y el conjunto de filas.  
   
 ```  
 // CMyProviderCommand  
@@ -42,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- La interfaz `IAccessor` administra todos los enlaces utilizados en comandos y conjuntos de filas.  El consumidor llama a **IAccessor::CreateAccessor** con una matriz de estructuras **DBBINDING**.  Cada estructura **DBBINDING** contiene la información sobre cómo controlar los enlaces de columna \(como tipo y longitud\).  El proveedor recibe las estructuras y determina cómo deben transferirse los datos y si es necesario realizar conversiones.  La interfaz `IAccessor` se utiliza en el objeto de comando para controlar los parámetros del comando.  
+ El `IAccessor` interfaz administra todos los enlaces utilizados en comandos y conjuntos de filas. El consumidor llama **IAccessor:: CreateAccessor** con una matriz de **DBBINDING** estructuras. Cada **DBBINDING** estructura contiene la información acerca de cómo se deben tratar los enlaces de columna (por ejemplo, tipo y longitud). El proveedor recibe las estructuras y, a continuación, determina cómo se deben transferir los datos y si es necesaria ninguna conversión. El `IAccessor` interfaz se utiliza en el objeto de comando para controlar los parámetros en el comando.  
   
- El objeto de comando también proporciona una implementación de `IColumnsInfo`.  OLE DB requiere la interfaz `IColumnsInfo`.  La interfaz permite al consumidor recuperar información acerca de los parámetros del comando.  El objeto de conjunto de filas utiliza la interfaz `IColumnsInfo` para devolver al proveedor información acerca de las columnas de resultados.  
+ El objeto de comando también proporciona una implementación de `IColumnsInfo`. OLE DB requiere la `IColumnsInfo` interfaz. La interfaz permite al consumidor recuperar información acerca de los parámetros del comando. El objeto de conjunto de filas utiliza la `IColumnsInfo` interfaz para devolver información acerca de las columnas de salida para el proveedor.  
   
- El proveedor también contiene una interfaz denominada `IObjectWithSite`.  La interfaz `IObjectWithSite` se implementó en ATL 2.0 y permite al implementador pasar información acerca de sí mismo al objeto secundario.  El objeto de comando utiliza la información de `IObjectWithSite` para indicar a los objetos de conjunto de filas generados el programador que los creó.  
+ El proveedor también contiene una interfaz denominada `IObjectWithSite`. El `IObjectWithSite` interfaz se implementó en ATL 2.0 y permite al implementador pasar información acerca de sí mismo a su elemento secundario. El objeto de comando utiliza el `IObjectWithSite` genera la información para indicar a cualquiera de los objetos de conjunto de filas que los creó.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Archivos generados por el Asistente para proveedores](../../data/oledb/provider-wizard-generated-files.md)

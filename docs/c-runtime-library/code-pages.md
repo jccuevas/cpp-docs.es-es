@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0899f5f617fd28d121b85183280bd28fe91ee46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="code-pages"></a>Páginas de códigos
 `code page` es un juego de caracteres, que puede incluir números, signos de puntuación y otros glifos. Idiomas y configuraciones regionales distintas pueden usar páginas de códigos distintas. Por ejemplo, la página de códigos ANSI 1252 se usa para el inglés y para la mayoría de idiomas europeos, mientras que la página de códigos OEM 932 se usa para los caracteres Kanji del japonés.  

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 642a811f1be5afcda31d83abfd22c122e7d1b369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversiones de tipos y seguridad de tipos (C++ moderno)
 En este documento se identifican problemas comunes de la conversión de tipos y se describe cómo evitarlos en el código de C++.  
@@ -32,7 +33,7 @@ En este documento se identifican problemas comunes de la conversión de tipos y 
 ### <a name="widening-conversions-promotion"></a>Conversiones de ampliación (promoción)  
  En una conversión de ampliación, un valor de una variable menor se asigna a una variable mayor sin pérdida de datos. Dado que las conversiones de ampliación siempre son seguras, el compilador las realiza de forma silenciosa y no emite advertencias. Las conversiones siguientes son de ampliación.  
   
-|De|Para|  
+|De|En|  
 |----------|--------|  
 |Cualquier tipo entero con o sin signo, excepto `long long` o `__int64`|`double`|  
 |`bool` o `char`|Cualquier otro tipo integrado|  

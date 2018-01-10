@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- thread_cpp
-dev_langs:
-- C++
+f1_keywords: thread_cpp
+dev_langs: C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 7261dc1d6d76eeac8a6b2959bc9bb6fc3c98a66e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>subproceso
 
 **Específicos de Microsoft**  
-El **subproceso** modificador de clase de almacenamiento extendida se utiliza para declarar una variable local de subproceso. Para la función portable equivalente en C ++ 11 y versiones posterior, use la [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de clase de almacenamiento.
+El **subproceso** modificador de clase de almacenamiento extendida se utiliza para declarar una variable local de subproceso. Para la función portable equivalente en C ++ 11 y versiones posterior, use la [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de clase de almacenamiento para el código portable. En Windows **thread_local** se implementa con **__declspec (Thread)**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +39,7 @@ __declspec( thread ) declarator
 
 ## <a name="remarks"></a>Comentarios
 
-El almacenamiento local de subprocesos (TLS) es el mecanismo por el que cada subproceso de un proceso con varios subprocesos asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener una explicación completa de subprocesos, vea [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+El almacenamiento local para el subproceso (TLS) es el mecanismo por el que cada subproceso de un proceso con varios subproceso asigna almacenamiento para los datos específicos de ese subproceso. En los programas multiproceso estándar, los datos se comparten entre todos los subproceso de un proceso dado, mientras que el almacenamiento local para el subproceso es el mecanismo para asignar datos por subproceso. Para obtener una explicación completa de subprocesos, vea [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 Las declaraciones de variables locales de subproceso deben utilizar [extendidos la sintaxis de atributo](../cpp/declspec.md) y `__declspec` palabra clave con el **subproceso** (palabra clave). Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
 
@@ -50,13 +47,18 @@ Las declaraciones de variables locales de subproceso deben utilizar [extendidos 
 __declspec( thread ) int tls_i = 1;  
 ```
 
-Debe seguir estas instrucciones cuando declare objetos y variables locales para el subproceso:
+Cuando use variables locales de subproceso en las bibliotecas que se cargan dinámicamente, debe tener en cuenta los factores que pueden causar una variable local de subproceso no se inicialice correctamente:
+
+1) Si la variable se inicializa con una llamada de función (incluidos constructores), solo se llamará a esta función para el subproceso que produjo el binario o la DLL cargar en el proceso y para esos subprocesos que se inició después de que se cargó el archivo binario o la DLL. No se llaman a las funciones de inicialización para ningún otro subproceso que ya se estaba ejecutando cuando se cargó la DLL. Inicialización dinámica produce en la llamada de DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca obtiene que si el archivo DLL no se encuentra en el proceso cuando se inicia el subproceso del mensaje. 
+
+2) Por lo general, las variables locales de subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad en el compilador de Microsoft C++ mediante el cual variables constexpr recepción dinámica en lugar de inicialización estática.  
+  
+   Nota: Estos dos problemas se esperan que se solucione en futuras actualizaciones del compilador.
+
+
+Además, debe seguir estas instrucciones cuando declare variables y objetos locales de subproceso:
 
 - Puede aplicar el **subproceso** atributo únicamente a la clase y las declaraciones de datos y de las definiciones; **subproceso** no se puede usar en declaraciones de función o definiciones.
-
-- El uso de la **subproceso** atributo puede interferir con [carga retrasada](../build/reference/linker-support-for-delay-loaded-dlls.md) de importaciones de DLL.
-
-- En los sistemas XP, **subproceso** podría no funcionar correctamente si un archivo DLL usa datos de __declspec (Thread) y se carga dinámicamente mediante LoadLibrary.
 
 - Puede especificar el **subproceso** atributo solamente a los elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. No se puede declarar objetos de datos automáticos con el **subproceso** atributo.
 
@@ -100,4 +102,3 @@ Debe seguir estas instrucciones cuando declare objetos y variables locales para 
 [__declspec](../cpp/declspec.md)  
 [Palabras clave](../cpp/keywords-cpp.md)  
 [Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)
-

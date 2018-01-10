@@ -1,41 +1,43 @@
 ---
-title: "Debug (Clase) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], Debug (clase)"
-  - "Debug (clase)"
-  - "Trace (clase), Visual C++"
+title: Debug (clase) (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Trace class, Visual C++
+- .NET Framework [C++], Debug class
+- Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 236a40873d3cbd660f9999880d46df4f91632b2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Debug (Clase) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se utiliza <xref:System.Diagnostics.Debug> en una aplicación de Visual C\+\+, el comportamiento no cambia entre una depuración y una versión de lanzamiento.  
+# <a name="debug-class-ccli"></a>Debug (Clase) (C++/CLI)
+Cuando se usa <xref:System.Diagnostics.Debug> en una aplicación de Visual C++, el comportamiento no cambia entre una depuración y una versión de lanzamiento.  
   
-## Comentarios  
- El comportamiento para <xref:System.Diagnostics.Trace> es idéntico al comportamiento para la clase Debug, pero depende del símbolo TRACE que se defina.  Es decir, debe aplicarse `#ifdef` al código relacionado con Trace para evitar un comportamiento de depuración en una versión de lanzamiento.  
+## <a name="remarks"></a>Comentarios  
+ El comportamiento de <xref:System.Diagnostics.Trace> es idéntico al comportamiento de la clase Debug, pero depende del símbolo TRACE que se está definiendo. Esto significa que deben `#ifdef` cualquier código relacionado con el seguimiento para evitar un comportamiento de depuración en una versión de lanzamiento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente siempre ejecuta las instrucciones de salida, independientemente de que la compilación se realice con **\/DDEBUG** o **\/DTRACE**.  
+### <a name="description"></a>Descripción  
+ El ejemplo siguiente siempre ejecuta las instrucciones de salida, independientemente de si se compila con **/DDEBUG** o **/DTRACE**.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // mcpp_debug_class.cpp  
@@ -57,7 +59,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
     Entering Main  
@@ -66,12 +68,12 @@ Hello World.
 test  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- Para obtener el comportamiento esperado \(es decir, que no se imprima "test" en una versión de lanzamiento\), deben utilizarse las directivas `#ifdef` y `#endif`.  A continuación modificamos el ejemplo de código anterior para mostrar la corrección:  
+### <a name="description"></a>Descripción  
+ Para obtener el comportamiento esperado (es decir, que no se imprima "test" para una versión de lanzamiento), debe utilizar el `#ifdef` y `#endif` directivas. El ejemplo de código anterior se modifica a continuación para demostrar esta revisión:  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // mcpp_debug_class2.cpp  
@@ -98,5 +100,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
