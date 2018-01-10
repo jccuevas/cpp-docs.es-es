@@ -1,32 +1,33 @@
 ---
-title: "control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Control attribute"
+title: control | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.control
+dev_langs: C++
+helpviewer_keywords: Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 00e9ce0a3e310ad9d07f41b0053ed5249a35a339
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-especifica que el tipo definido por el usuario es un control.  
+# <a name="control"></a>control
+Especifica que el tipo definido por el usuario es un control.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,10 +35,10 @@ especifica que el tipo definido por el usuario es un control.
   
 ```  
   
-## Comentarios  
- el atributo de **control** implica el atributo de [CoClass](../windows/coclass.md) .  el atributo de Control\-C \+\+ tiene la misma funcionalidad que el atributo de [control](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **control** atributo implica la [coclase](../windows/coclass.md) atributo. El **control** atributo C++ tiene la misma funcionalidad que la [control](http://msdn.microsoft.com/library/windows/desktop/aa366764) atributo MIDL.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cpp_attr_ref_control.cpp  
@@ -54,21 +55,20 @@ __interface ICustom {
 class CTest : public ICustom {};  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|**clase**, `struct`|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|**class**, `struct`|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   
+ [Typedef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   

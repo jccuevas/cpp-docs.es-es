@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bb90e8a2c364e67dabfbefe656393fe5fa1f8fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Cómo: Organizar archivos de resultados de proyectos para la compilación
 En este tema se describe procedimientos recomendados para organizar los archivos de salida del proyecto. Compilar pueden producirse errores al configurar archivos de salida del proyecto de forma incorrecta. Este tema también describen las ventajas y desventajas de cada alternativa para organizar los archivos de salida del proyecto.  

@@ -1,29 +1,27 @@
 ---
-title: "Error de las herramientas del vinculador LNK1248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1248"
-ms.assetid: bcddf9e5-d6df-474c-a207-af28d086f491
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+title: Las herramientas del vinculador LNK1248 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1248
+dev_langs: C++
+helpviewer_keywords: LNK1248
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb5c1792fa86636a72d492c86170a20bdce19309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
-# Error de las herramientas del vinculador LNK1248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-error-lnk1248"></a>Error de las herramientas del vinculador LNK1248
 
-el tamaño de imagen \('tamaño'\) supera el tamaño máximo permitido \(80000000\)  
-  
- El vinculador determinó que el tamaño del archivo de salida superará el máximo permitido para una imagen de programa.  Puede que desee convertir el programa en varias DLL.  Para obtener más información sobre el programa \(PE\) ejecutable, vea el artículo “Peering Inside the PE: Un paseo por el formato de archivo de Win32 Portable Executable” en [MSDN Library](http://go.microsoft.com/fwlink/?linkid=556).
+> tamaño de la imagen ('*tamaño*') supera el tamaño máximo permitido (80000000)
+
+El vinculador determinó que el tamaño del archivo de salida superará el mayor tamaño posible para una imagen de programa de 32 bits. Puede que los programas a varios archivos DLL.

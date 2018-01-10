@@ -85,11 +85,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f56f356de8cb85bb919469a189618220c0843f3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd64d6a2cf4fe36e62f5c6599521780c4ee002ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleserveritem-class"></a>Clase COleServerItem
 Proporciona la interfaz del servidor a elementos OLE.  
@@ -110,7 +111,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Coloca los formatos de presentación y conversión en un `COleDataSource` objeto.|  
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Copia el elemento en el Portapapeles.|  
@@ -143,7 +144,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleServerItem::GetDataSource](#getdatasource)|Obtiene el objeto que se usa para almacenar los formatos de conversión.|  
 |[COleServerItem::OnHide](#onhide)|Lo llama el marco para ocultar el elemento OLE.|  
@@ -152,7 +153,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Informa al servidor acerca de la cantidad del elemento OLE está visible.|  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20025ae47491084436864481357125e741ccc486
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f851fe628b7ac69fe3d327c290881561219a011
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-constants"></a>Constantes de tipo entero de C
 Una "constante de tipo entero" es un número decimal (base 10), octal (base 8) o hexadecimal (base 16) que representa un valor de tipo entero. Utilice las constantes de tipo entero para representar valores de tipo entero que no se pueden modificar.  

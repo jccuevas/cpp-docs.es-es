@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.doctemp
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, document template strings
+f1_keywords: vc.appwiz.mfc.exe.doctemp
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Cadenas de plantillas de documentos, Asistente para aplicaciones MFC
 En esta página del Asistente para aplicaciones MFC, puede proporcionar o refinar las siguientes opciones para facilitar la localización y administración de documentos. Cadenas de plantillas de documento están disponibles para las aplicaciones que incluyen **compatibilidad con la arquitectura documento/vista** en el [tipo de aplicación](../../mfc/reference/application-type-mfc-application-wizard.md). No están disponibles para los cuadros de diálogo. Dado que la mayoría de las cadenas de plantilla de documento son visibles y son utilizadas por los usuarios de la aplicación, las páginas están localizadas en el **idioma de recurso** indicada en el **tipo de aplicación** página del asistente.  
@@ -51,5 +47,4 @@ En esta página del Asistente para aplicaciones MFC, puede proporcionar o refina
   
 ## <a name="see-also"></a>Vea también  
  [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)
-
 

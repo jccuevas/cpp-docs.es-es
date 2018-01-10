@@ -1,30 +1,29 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4532"
+title: Compilador advertencia (nivel 1) C4532 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4532
+dev_langs: C++
+helpviewer_keywords: C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 44aae61190b20bf1ef93b586c02e88837d487324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'continue' : al saltar desde el bloque \_\_finally\/finally se produce un comportamiento no definido durante el control de finalización  
+# <a name="compiler-warning-level-1-c4532"></a>Advertencia del compilador (nivel 1) C4532
+'continue': saltar desde el bloque __finally/finally tiene un comportamiento indefinido durante el control de terminación  
   
  El compilador encontró una de las siguientes palabras clave:  
   
@@ -34,13 +33,13 @@ caps.handback.revision: 9
   
 -   [goto](../../cpp/goto-statement-cpp.md)  
   
- causando un salto fuera de un bloque [\_\_finally](../../cpp/try-finally-statement.md) o [finally](../../dotnet/finally.md) durante una terminación anormal.  
+ causando un salto fuera de un [__finally](../../cpp/try-finally-statement.md) o [finalmente](../../dotnet/finally.md) bloque durante la terminación anormal.  
   
- Si se produce una excepción mientras se está desenredando la pila, durante la ejecución de los controladores de terminación \(los bloques `__finally` o finally\), y el código salta fuera de un bloque `__finally` antes de que éste finalice, el comportamiento será indefinido.  El control no puede regresar al código de desenredo, por lo que no es posible controlar la excepción adecuadamente.  
+ Si se produce una excepción, y mientras se está desenredando la pila durante la ejecución de los controladores de terminación (la `__finally` o bloques finally), y el código salta fuera de un `__finally` bloquear antes de la `__finally` bloque finaliza, el comportamiento es indefinido. Puede no devolver el control al código de desenredado, por lo que la excepción no puede controlar correctamente.  
   
- Si se desea saltar fuera de un bloque **\_\_finally**, se debe comprobar antes si existe terminación anormal.  
+ Si debe saltar fuera de un **__finally** bloquear, busque primero la terminación anómala.  
   
- El ejemplo siguiente genera la advertencia C4532; basta con convertir en comentario las instrucciones de salto para resolver las advertencias.  
+ El ejemplo siguiente genera la advertencia C4532; comenta simplemente las instrucciones de salto para resolver las advertencias.  
   
 ```  
 // C4532.cpp  

@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4240
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4240
+f1_keywords: C4240
+dev_langs: C++
+helpviewer_keywords: C4240
 ms.assetid: a2657cdb-18e1-493f-882b-4e10c0bca71d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0539f8892d017a58d224fdb5afe5037c29917702
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 662aaeb3246fac20bd0ac9f3412424bfacac5698
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4240"></a>Advertencia del compilador (nivel 3) C4240
-extensión no estándar utilizada: acceso a 'nombredeclase' como 'especificador de acceso', previamente se definió para ser 'especificador de acceso'  
+ha utilizado una extensión no estándar: acceso a 'nombredeclase' ahora definida como 'especificador de acceso', previamente se definió para ser 'especificador de acceso'  
   
- La compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), no se puede cambiar el acceso a una clase anidada. Con las extensiones de Microsoft predeterminadas (/Ze), puede hacerlo con esta advertencia.  
+ La compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), no se puede cambiar el acceso a una clase anidada. En las extensiones de Microsoft (/Ze) de manera predeterminada, es posible, con esta advertencia.  
   
 ## <a name="example"></a>Ejemplo  
   

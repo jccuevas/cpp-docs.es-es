@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a0747147f247f7400e2455fdf5f63e61378e96e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16e4a707c4bc1f0fde76ab3a146424d2d34d5ec8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-information"></a>Información de elementos de control de árbol
 Controles de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) tiene un número de funciones de miembro que recuperan información sobre los elementos del control. El [GetItem](../mfc/reference/ctreectrl-class.md#getitem) función miembro recupera algunos o todos los datos asociados a un elemento. Estos datos podrían incluir el texto del elemento, estado, imágenes, recuento de elementos secundarios y un valor de datos definido por la aplicación de 32 bits. También hay un [SetItem](../mfc/reference/ctreectrl-class.md#setitem) función que puede establecer algunos o todos los datos asociados a un elemento.  

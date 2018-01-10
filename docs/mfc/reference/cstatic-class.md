@@ -39,11 +39,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8956572096240f8fbbc3a2dd116f55b67c42fc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3319535bdcf3693fcf9427572e3902f96261d33e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstatic-class"></a>Clase CStatic
 Proporciona la funcionalidad de un control estático de Windows.  
@@ -58,13 +59,13 @@ class CStatic : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CStatic::CStatic](#cstatic)|Construye un objeto `CStatic`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CStatic::Create](#create)|Crea el control estático de Windows y lo adjunta a la `CStatic` objeto.|  
 |[CStatic::DrawItem](#drawitem)|Reemplace este valor para dibujar un control estático dibujado por el propietario.|  

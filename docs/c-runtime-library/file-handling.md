@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Control de archivos
 Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y comprobar permisos de acceso a archivos.  
@@ -48,7 +49,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas operan sobre archivos especificados por una ruta de acceso o un nombre de archivo.  
   
-|Rutina|Use|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Comprobar la configuración de los permisos de archivo|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Cambiar la configuración de los permisos de archivo|  
@@ -66,7 +67,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas abren archivos.  
   
-|Rutina|Use|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Abrir un archivo y devolver un puntero al archivo abierto|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Abrir un flujo con uso compartido de archivos y devolver un puntero al archivo abierto|  
@@ -77,7 +78,7 @@ Use estas rutinas para crear, eliminar y controlar archivos, y para establecer y
   
  Estas rutinas proporcionan una forma de cambiar la representación del archivo, que puede ser una estructura de `FILE`, un descriptor de archivo o un identificador de archivos de Win32.  
   
-|Rutina|Uso|  
+|Rutina|Usar|  
 |-------------|---------|  
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Asociar un flujo a un archivo que se ha abierto previamente para E/S de bajo nivel y devolver un puntero al flujo abierta|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|Obtener el descriptor de archivo asociado a un flujo|  

@@ -1,39 +1,38 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4237 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4237"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4237"
+title: Las herramientas del vinculador LNK4237 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4237
+dev_langs: C++
+helpviewer_keywords: LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 718058dae02e9dfe9b653abea91993ec6662f5c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4237
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se especificó \/SUBSYSTEM:NATIVE al importar desde 'dll'; Utilice \/SUBSYSTEM:CONSOLE o \/SUBSYSTEM:WINDOWS.  
+# <a name="linker-tools-warning-lnk4237"></a>Advertencia de las herramientas del vinculador LNK4237
+/ SUBSYSTEM: Native especificado al importar desde 'dll'; Utilice /SUBSYSTEM:CONSOLE o/SUBSYSTEM: Windows.  
   
- [Se especificó \/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) al compilar una aplicación Windows \(Win32\) que utiliza directamente uno o varios de los siguientes archivos:  
+ [/ SUBSYSTEM: Native](../../build/reference/subsystem-specify-subsystem.md) se especificó al generar una aplicación de windows (Win32) que utiliza directamente uno o varios de los siguientes:  
   
 -   kernel32.dll  
   
--   gdi32.dll  
+-   Gdi32.dll  
   
 -   user32.dll  
   
--   una de las DLL msvcrt\*.  
+-   uno de los archivos DLL msvcrt *.  
   
- Para resolver esta advertencia no especifique **\/SUBSYSTEM:NATIVE**.
+ Resolver esta advertencia, no especifica **/SUBSYSTEM: Native**.

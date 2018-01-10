@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Clase CMFCVisualManagerVS2005
 `CMFCVisualManagerVS2005`Proporciona una aplicación un aspecto de Microsoft Visual Studio 2005.  
@@ -68,7 +69,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|El marco de trabajo llama a este método cuando dibuja un panel que está acoplado y con pestañas. (Invalida [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|El marco de trabajo llama a este método para determinar el tamaño del borde de una ventana /mditabs antes de que dibuja la ventana. (Invalida [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  

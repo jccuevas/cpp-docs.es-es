@@ -151,11 +151,12 @@ caps.latest.revision: "46"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ecbde31fe41ed8b1089ced2ebc989276002bd14c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9c0aea3837239e401592e907fd2049f231dbb74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Clase CMFCVisualManagerWindows
 `CMFCVisualManagerWindows`simula el aspecto de Microsoft Windows XP o Microsoft Vista cuando el usuario selecciona un tema de Vista o Windows XP.  
@@ -172,13 +173,13 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Constructor predeterminado.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|El marco de trabajo llama a este método para determinar si las pestañas 3D siempre deben aparecer resaltadas en la aplicación. (Invalida [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|  
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Invalida `CMFCVisualManager::DrawComboBorderWinXP`).|  
@@ -249,7 +250,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Especifica si el tema de Windows XP muestra pestañas 3D.|  
   

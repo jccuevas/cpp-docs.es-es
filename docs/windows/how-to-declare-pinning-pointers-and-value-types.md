@@ -1,33 +1,36 @@
 ---
-title: "C&#243;mo: Declarar punteros anclados y tipos de valor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fijar punteros"
-  - "tipos de valor, declarar"
+title: "Cómo: declarar punteros anclados y los tipos de valor | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- value types, declaring
+- pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e928fc267bb9e5ec13aeb4f07718454742e60ded
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Declarar punteros anclados y tipos de valor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un tipo de valor puede aplicar la conversión boxing implícita.  Puede declarar un puntero anclado al objeto del propio tipo de y utilizar **pin\_ptr** al tipo de valor de conversión boxing.  
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Cómo: Declarar punteros anclados y tipos de valor
+Un tipo de valor puede ser implícitamente la conversión boxing. A continuación, puede declarar un puntero anclado para el objeto de tipo de valor propio y usar un **pin_ptr** para el tipo de valor con conversión boxing.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // pin_ptr_value.cpp  
@@ -47,7 +50,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 8  
@@ -55,5 +58,5 @@ int main() {
 7  
 ```  
   
-## Vea también  
- [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)
+## <a name="see-also"></a>Vea también  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

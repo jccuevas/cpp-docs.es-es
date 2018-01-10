@@ -1,29 +1,28 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4409 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4409"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4409"
+title: Compilador advertencia (nivel 1) C4409 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4409
+dev_langs: C++
+helpviewer_keywords: C4409
 ms.assetid: 2be63c86-d9c9-4073-ab71-e654dd9f450f
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 698b34d9f2114f9d5efb89fe2b78cb71832bc7a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4409
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-tamaño de instrucción máquina no válido  
+# <a name="compiler-warning-level-1-c4409"></a>Advertencia del compilador (nivel 1) C4409
+tamaño de la instrucción no válida  
   
- La instrucción de código máquina no tenía el tamaño especificado.  Se utilizó el tamaño permitido más pequeño.
+ La instrucción no tenía un formulario con el tamaño especificado. Se usó el tamaño permitido más pequeño.

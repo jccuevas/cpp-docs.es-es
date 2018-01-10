@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4530"
+title: Compilador advertencia (nivel 1) C4530 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4530
+dev_langs: C++
+helpviewer_keywords: C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: adfa006e3b84517601237bbd844ac983115e74ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se ha utilizado el controlador de excepciones de C\+\+, pero la semántica de desenredo no está habilitada.Especifique \/EHsc  
+# <a name="compiler-warning-level-1-c4530"></a>Advertencia del compilador (nivel 1) C4530
+Controlador de excepciones de C++ utiliza, pero la semántica de desenredo no están habilitadas. Especifique/EHsc  
   
- Se ha utilizado el control de excepciones de C\+\+, pero no se seleccionó la opción [\/EHsc](../../build/reference/eh-exception-handling-model.md).  
+ Se usó el control de excepciones de C++ pero [/EHsc](../../build/reference/eh-exception-handling-model.md) no se ha seleccionado.  
   
- Cuando no está habilitada la opción \/EHsc, un objeto que posea almacenamiento automático en el marco, entre la función que realiza la captura y la función que produce la captura, no se destruirá.  Sin embargo, un objeto con almacenamiento automático creado en un bloque **try** o **catch** sí se destruirá.  
+ Cuando no se habilitó la opción/EHsc, un objeto con almacenamiento automático en el marco, entre la función que realiza la captura y la función que se detecte el inicio, no se destruirá. Sin embargo, se crea un objeto con almacenamiento automático en un **intente** o **catch** se destruirán de bloque.  
   
- El código siguiente genera el error C4530:  
+ El ejemplo siguiente genera C4530:  
   
 ```  
 // C4530.cpp  
@@ -40,4 +39,4 @@ int main() {
 }  
 ```  
   
- Compile el ejemplo con \/EHsc para resolver la advertencia.
+ Compile el ejemplo con /EHsc para resolver la advertencia.

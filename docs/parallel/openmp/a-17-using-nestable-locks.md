@@ -1,27 +1,27 @@
 ---
-title: "A.17   Using Nestable Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.17 mediante bloqueos anidable | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8ef386ed-ddc4-4d40-80aa-cc39f0fb5e4b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6e7bfaa0f03eec11cf4a45115c03a8553ad54fb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# A.17   Using Nestable Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente \(para [sección 3,2](../../parallel/openmp/3-2-lock-functions.md) en la página 41\) muestra cómo un bloqueo encajable se puede utilizar para sincronizar las actualizaciones a una estructura completa y uno de sus miembros.  
+# <a name="a17---using-nestable-locks"></a>A.17 Usar bloqueos anidables
+En el ejemplo siguiente (para [sección 3.2](../../parallel/openmp/3-2-lock-functions.md) en la página 41) muestra cómo se puede utilizar un bloqueo anidable para sincronizar las actualizaciones a una estructura completa y a uno de sus miembros.  
   
 ```  
 #include <omp.h>  

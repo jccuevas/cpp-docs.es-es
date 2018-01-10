@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::abrg
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2a974f97837ff6e4d57aec3c3f2558077a65b3c9
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int4-class"></a>int_4 (Clase)
 Representa un vector corto de cuatro enteros.  
@@ -315,19 +299,19 @@ class int_4;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor int_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |int_4:: get_w||  
 |int_4:: get_wx||  
@@ -468,33 +452,33 @@ class int_4;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|operador int_4::-||  
-|operador int_4::--||  
-|operador int_4:: % =||  
-|operador int_4:: aspecto =||  
-|operador int_4:: * =||  
-|operador int_4:: / =||  
-|operador int_4:: ^ =||  
-|operador int_4:: | =||  
+|int_4:: operator-||  
+|int_4:: operator--||  
+|int_4:: operator % =||  
+|int_4:: operator & =||  
+|int_4:: operator * =||  
+|int_4:: operator / =||  
+|int_4:: operator ^ =||  
+|operador int_4:: &#124; =||  
 |operador int_4:: ~||  
-|operador int_4:: ++||  
-|operador int_4:: +=||  
-|operador int_4::\<=||  
-|operador int_4:: =||  
-|operador int_4:: =||  
+|int_4:: operator ++||  
+|int_4:: operator +=||  
+|int_4:: operator <\<=||  
+|int_4:: operator =||  
+|int_4:: operator =||  
 |operador int_4:: >> =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
-|[tamaño (constante)](#int_4__size)||  
+|[cambio de tamaño constante](#int_4__size)||  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |int_4:: a||  
 |int_4:: AB||  
@@ -631,7 +615,7 @@ class int_4;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_short_vectors.h  
   
- **Namespace:** Graphics  
+ **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a>int_4 
 
@@ -702,7 +686,7 @@ explicit inline int_4(
  El valor de inicialización.  
   
  `_Other`  
- Objeto utilizado para inicializar.  
+ El objeto utilizado para inicializar.  
   
 ##  <a name="int_4__size"></a>tamaño 
 
@@ -712,4 +696,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

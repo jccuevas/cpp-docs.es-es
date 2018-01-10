@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (clase)
 Representa una conexión a una base de datos, a través de la que puede trabajar con los datos.  
@@ -88,13 +89,13 @@ class CDaoDatabase : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Construye un objeto `CDaoDatabase`. Llame a **abiertos** para conectar el objeto a una base de datos.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoDatabase::CanTransact](#cantransact)|Devuelve un valor distinto de cero si la base de datos admite transacciones.|  
 |[CDaoDatabase::CanUpdate](#canupdate)|Devuelve un valor distinto de cero si la `CDaoDatabase` objeto es actualizable (no de solo lectura).|  
@@ -122,7 +123,7 @@ class CDaoDatabase : public CObject
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Un puntero al objeto de base de datos DAO subyacente.|  
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Un puntero a la [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) objeto que contiene la base de datos y define su espacio de transacciones.|  

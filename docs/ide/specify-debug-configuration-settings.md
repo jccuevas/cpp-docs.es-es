@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Especifique los valores de configuración de Debug, Asistente para crear nuevo proyecto de archivos de código fuente existentes.
 Utilice esta página del Asistente para crear nuevo proyecto de archivos de código existentes para especificar la configuración de proyecto de configuración de depuración.  
@@ -40,7 +41,7 @@ Utilice esta página del Asistente para crear nuevo proyecto de archivos de cód
  Especifica la ruta del directorio de los archivos de salida para la configuración de depuración del nuevo proyecto. Esta opción está habilitada cuando la **sistema de compilación utilice dicha** opción está seleccionada en el **especificar configuración de proyecto** página; en caso contrario, no está disponible.  
   
  **Definiciones del preprocesador (/ d.)**  
- Define símbolos de preprocesador para el nuevo proyecto. Para obtener más información, vea [/D (definiciones de preprocesador)](../build/reference/d-preprocessor-definitions.md).  
+ Define símbolos de preprocesador para el nuevo proyecto. Para obtener más información, vea [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
  **Incluir la ruta de acceso de búsqueda (/ I)**  
  Especifica las rutas de acceso de directorio para agregar a la lista de directorios que el compilador debe buscar resolver las referencias de archivo pasado a directivas de preprocesador en el nuevo proyecto. Para obtener más información, consulte [/I (Directorios de inclusión adicionales)](../build/reference/i-additional-include-directories.md).  

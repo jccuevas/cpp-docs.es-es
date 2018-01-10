@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +20,21 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c0629e57c518334b84ed3110e3dab14a5d259fc
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funciones de intercambio de datos de cuadro de diálogo para controles OLE
 Este tema enumeran las funciones DDX_OC utilizadas para intercambiar datos entre una propiedad de un control OLE en un cuadro de diálogo, vista de formulario o el objeto de vista de control y un miembro de datos del cuadro de diálogo, la vista de formulario o el objeto de vista de control.  
@@ -79,7 +77,7 @@ void AFXAPI DDX_OCBool(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -109,7 +107,7 @@ void AFXAPI DDX_OCBoolRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -139,7 +137,7 @@ void AFXAPI DDX_OCColor(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -169,7 +167,7 @@ void AFXAPI DDX_OCColorRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -205,7 +203,7 @@ void AFXAPI DDX_OCFloat(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -241,7 +239,7 @@ void AFXAPI DDX_OCFloatRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -277,7 +275,7 @@ void AFXAPI DDX_OCInt(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -313,7 +311,7 @@ void AFXAPI DDX_OCIntRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -343,7 +341,7 @@ void AFXAPI DDX_OCShort(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -373,7 +371,7 @@ void AFXAPI DDX_OCShortRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -403,7 +401,7 @@ void AFXAPI DDX_OCText(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -433,7 +431,7 @@ void AFXAPI DDX_OCTextRO(
  `dispid`  
  Identificador de envío de una propiedad del control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -444,4 +442,3 @@ void AFXAPI DDX_OCTextRO(
     
 ## <a name="see-also"></a>Vea también  
  [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
-

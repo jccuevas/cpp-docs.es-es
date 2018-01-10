@@ -189,11 +189,12 @@ caps.latest.revision: "39"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de4de5d693e786cd2cb1f7e4a0e45c9f7df66d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewndex-class"></a>Clase CFrameWndEx
 Implementa la funcionalidad de una interfaz de un único documento (SDI) de Windows superpuesta o una ventana de marco emergente y proporciona miembros para administrar la ventana. Extiende la [CFrameWnd](../../mfc/reference/cframewnd-class.md) clase.  
@@ -208,7 +209,7 @@ class CFrameWndEx : public CFrameWnd
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ajusta el diseño del elemento de cliente OLE y el área de cliente del marco.|  
 |`CFrameWndEx::AddDockSite`|No se utiliza este método.|  

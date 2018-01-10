@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81964c410f01505ef49c75b51ef2629daed2f6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adb4ba4fdcc141438b2eeb87b4e3c9151bb9a5c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Archivos de encabezado y código fuente de controles o programas MFC
 Los siguientes archivos se crean al crear un proyecto MFC en Visual Studio, dependiendo de las opciones que seleccione para el proyecto que cree. Por ejemplo, el proyecto contiene *Nombre_proyecto*dlg.cpp y *Nombre_proyecto*dlg.h archivos solo si crea un proyecto basado en el cuadro de diálogo o una clase.  

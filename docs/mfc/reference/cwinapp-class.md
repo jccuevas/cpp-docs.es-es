@@ -203,11 +203,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07c01988c3bd70f6889a687111cca162b180407b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99e773dc7c5039574901c2a13433615f8a0c0aad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinapp-class"></a>CWinApp (clase)
 La clase base de la que se deriva un objeto de aplicación Windows.  
@@ -222,13 +223,13 @@ class CWinApp : public CWinThread
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinApp::CWinApp](#cwinapp)|Construye un objeto `CWinApp`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinApp:: AddDocTemplate](#adddoctemplate)|Agrega una plantilla de documento a la lista de la aplicación de plantillas de documentos disponibles.|  
 |[CWinApp::AddToRecentFileList](#addtorecentfilelist)|Agrega un nombre de archivo a la lista de archivos usa más recientemente (MRU).|  
@@ -296,7 +297,7 @@ class CWinApp : public CWinThread
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinApp::EnableShellOpen](#enableshellopen)|Permite al usuario abrir los archivos de datos desde el Administrador de archivos de Windows.|  
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Estándar de carga. Característica de lista de los archivos de configuración del archivo INI y habilita lo elementos utilizados Recientemente.|  
@@ -315,7 +316,7 @@ class CWinApp : public CWinThread
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Indica si el usuario está en modo de contexto de ayuda (invocado habitualmente con MAYÚS + F1).|  
 |[CWinApp::m_eHelpType](#m_ehelptype)|Especifica el tipo de ayuda utilizado por la aplicación.|  
@@ -332,7 +333,7 @@ class CWinApp : public CWinThread
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Indicadores que determinan cómo se comporta el Administrador de reinicio.|  
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|El período de tiempo en milisegundos entre guarda.|  

@@ -33,11 +33,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d30a06cc420b5e9f00f0340e92295ca629ad6fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Incluye las funciones API de Windows, proporcionando una interfaz orientada a objetos que se utiliza para tener acceso al registro.  
@@ -52,13 +53,13 @@ class CSettingsStore : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Construye un objeto `CSettingsStore`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSettingsStore::Close](#close)|Cierra la clave del registro abierta.|  
 |[CSettingsStore::CreateKey](#createkey)|Se abre la clave especificada o lo crea si no existe.|  
@@ -128,7 +129,7 @@ CSettingsStore(
  Parámetro booleano que especifica si la `CSettingsStore` objeto se crea en modo de solo lectura.  
   
 ### <a name="remarks"></a>Comentarios  
- Si `bAdmin` está establecido en `false`, `m_hKey` variable miembro está establecida en `HKEY_LOCAL_MACHINE`. Si establece `bAdmin` a `true`, `m_hKey` está establecido en `HKEY_CURRENT_USER`.  
+ Si `bAdmin` está establecido en `true`, `m_hKey` variable miembro está establecida en `HKEY_LOCAL_MACHINE`. Si establece `bAdmin` a `false`, `m_hKey` está establecido en `HKEY_CURRENT_USER`.  
   
  El acceso de seguridad depende del `bReadOnly` parámetro. Si `bReadonly` es `false`, el acceso de seguridad se establecerá en `KEY_ALL_ACCESS`. Si `bReadyOnly` es `true`, el acceso de seguridad se establecerá en una combinación de `KEY_QUERY_VALUE, KEY_NOTIFY` y `KEY_ENUMERATE_SUB_KEYS`. Para obtener más información acerca del acceso de seguridad junto con el registro, consulte [derechos de acceso y seguridad de clave del registro](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   

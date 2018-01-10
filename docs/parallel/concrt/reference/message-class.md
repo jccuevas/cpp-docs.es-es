@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message (Clase)
 El sobre del mensaje básico que contiene la carga de datos que se pasa entre bloques de mensajería.  
@@ -46,20 +47,20 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`type`|Un alias de tipo para `T`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[message](#ctor)|Sobrecargado. Construye un objeto `message`.|  
 |[~ message (destructor)](#dtor)|Destruye el objeto `message`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[add_ref](#add_ref)|Agrega al recuento de referencias para el `message` objeto. Se utiliza para los bloques de mensaje que necesitan el recuento de referencias para determinar la duración del mensaje.|  
 |[msg_id](#msg_id)|Devuelve el identificador de la `message` objeto.|  
@@ -67,7 +68,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[carga](#payload)|La carga de la `message` objeto.|  
   

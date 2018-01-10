@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 104ee89c45d8a1134611535ab6aa9c62f09e139c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fea1dce2c872b1ab472c228f64d5937b81f9943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3254"></a>Error del compilador C3254
 'reemplazo explícito': clase contiene el reemplazo explícito 'reemplazo' pero no se deriva de una interfaz que contiene la declaración de función  

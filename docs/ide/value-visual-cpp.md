@@ -1,48 +1,48 @@
 ---
-title: "&lt;value&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "value"
-  - "<value>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<value> (etiqueta XML) [C++]"
-  - "value (etiqueta XML) [C++]"
+title: '&lt;valor&gt; (Visual C++) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- value
+- <value>
+dev_langs: C++
+helpviewer_keywords:
+- value C++ XML tag
+- <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;value&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La etiqueta de \<value\> permite describir métodos de una propiedad y el descriptor de acceso de la propiedad.  Tenga en cuenta que cuando se agrega una propiedad con el asistente para código en el entorno de desarrollo integrado de Visual Studio, agregará una etiqueta de [\<summary\>](../ide/summary-visual-cpp.md) para la nueva propiedad.  A continuación, se debe agregar manualmente una etiqueta \<value\> que describa el valor que representa la propiedad.  
+# <a name="ltvaluegt-visual-c"></a>&lt;valor&gt; (Visual C++)
+El \<valor > etiqueta permite describir una propiedad y métodos de descriptor de acceso de propiedad. Tenga en cuenta que cuando se agrega una propiedad con un asistente de código en el entorno de desarrollo integrado de Visual Studio, se agregará un [ \<resumen >](../ide/summary-visual-cpp.md) etiqueta para la nueva propiedad. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <value>property-description</value>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `property-description`  
- Descripción de la propiedad.  
+ Una descripción de la propiedad.  
   
-## Comentarios  
- Compile con el parámetro [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+## <a name="remarks"></a>Comentarios  
+ Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // xml_value_tag.cpp  
@@ -66,5 +66,5 @@ public:
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentación de XML](../ide/xml-documentation-visual-cpp.md)

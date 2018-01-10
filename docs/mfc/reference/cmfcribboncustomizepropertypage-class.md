@@ -23,11 +23,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc2cade4bf896cb7e2f4085178c50d078aaf5f72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Clase CMFCRibbonCustomizePropertyPage
 Implementa una página personalizada para la **personalizar** cuadro de diálogo de las aplicaciones basadas en cinta de opciones.  
@@ -44,7 +45,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Construye un objeto `CMFCRibbonCustomizePropertyPage`.|  
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destructor.|  
   
@@ -52,7 +53,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Agrega una categoría personalizada a la **comandos** cuadro combinado.|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
