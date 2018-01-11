@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a3202ba5bd5b42b3f4853348258d5c4e3e5a2072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a759541dd31121f12283f9b2b0c5b468da477554
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 Puede usar Visual Studio para crear un archivo DLL para Win32 estándar o un componente de Windows Runtime DLL que puede utilizarse en aplicaciones de la plataforma Universal de Windows. Un archivo DLL estándar que se creó con una versión de Visual Studio o el compilador de Visual C++ anterior a la de Visual Studio 2012 puede no cargarse correctamente en una aplicación de plataforma Universal de Windows y puede no pasar la prueba de comprobación de la aplicación en el [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)].  
