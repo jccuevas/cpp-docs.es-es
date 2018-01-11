@@ -40,11 +40,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d391e24a5b14bd015b43f88b2a687011d84d35fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 Obtiene un valor del entorno actual. Estas versiones de [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md) incluyen mejoras de seguridad, tal como se describe en [Características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -101,9 +102,9 @@ errno_t _wgetenv_s(
   
 |`pReturnValue`|`buffer`|`numberOfElements`|`varname`|Valor devuelto|  
 |--------------------|--------------|------------------------|---------------|------------------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|`EINVAL`|  
-|cualquiera|`NULL`|>0|cualquiera|`EINVAL`|  
-|cualquiera|cualquiera|cualquiera|`NULL`|`EINVAL`|  
+|`NULL`|any|any|any|`EINVAL`|  
+|any|`NULL`|>0|any|`EINVAL`|  
+|any|any|any|`NULL`|`EINVAL`|  
   
  Cualquiera de estas condiciones de error invoca un controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
   
@@ -143,7 +144,7 @@ errno_t _wgetenv_s(
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

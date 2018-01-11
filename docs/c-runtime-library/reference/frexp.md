@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- frexp
+apiname: frexp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c281f59ebf90030abf2046e8639135aa47fc6058
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 86152082b081cb93ba264e607b256a2448874af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frexp"></a>frexp
 Obtiene la mantisa y el exponente de un número de punto flotante.  
@@ -92,7 +75,7 @@ long double frexp(
  `frexp` devuelve la mantisa. Si `x` es 0, la función devuelve 0 para la mantisa y el exponente. Si `expptr` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `frexp` desglosa el valor de punto flotante (`x`) en una mantisa (`m`) y un exponente (`n`), de modo que el valor absoluto de `m` sea mayor o igual a 0,5 e inferior a 1,0, y `x` = `m`*2<sup>n</sup>. El exponente de entero `n` se almacena en la ubicación a la que apunta `expptr`.  
+ El `frexp` función desglosa el valor de punto flotante (`x`) en una mantisa (`m`) y un exponente (`n`), de modo que el valor absoluto de `m` es mayor o igual a 0,5 y menor que 1,0 y `x`  =  `m`* 2<sup>n</sup>. El exponente de entero `n` se almacena en la ubicación a la que apunta `expptr`.  
   
  Dado que C++ admite sobrecargas, puede llamar a las sobrecargas de `frexp`. En un programa de C, `frexp` siempre toma un valor double y un entero, y devuelve un valor double.  
   
@@ -102,7 +85,7 @@ long double frexp(
 |--------------|---------------------|  
 |`frexp`|\<math.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

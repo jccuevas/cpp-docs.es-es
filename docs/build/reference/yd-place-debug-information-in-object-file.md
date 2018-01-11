@@ -1,93 +1,93 @@
 ---
-title: "/Yd (Incluir informaci&#243;n de depuraci&#243;n en un archivo objeto) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Yd (opción del compilador) [C++]"
-  - "depurar [C++], archivos de información de depuración"
-  - "Yd (opción del compilador) [C++]"
-  - "-Yd (opción del compilador) [C++]"
+title: "-Yd (incluir información de depuración en el archivo objeto) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yd
+dev_langs: C++
+helpviewer_keywords:
+- /Yd compiler option [C++]
+- -Yd compiler option [C++]
+- debugging [C++], debug information files
+- Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /Yd (Incluir informaci&#243;n de depuraci&#243;n en un archivo objeto)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Incluye la información de depuración completa en todos los archivos objeto creados a partir de un archivo de encabezado precompilado \(.pch\) cuando se utiliza con las opciones [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) y [\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md).  Obsoleto.  
+# <a name="yd-place-debug-information-in-object-file"></a>/Yd (Incluir información de depuración en un archivo objeto)
+Prueba completada de información de depuración en todos los archivos de objeto creado a partir de un archivo de encabezado precompilado (.pch) cuando se usa con la [/Yc](../../build/reference/yc-create-precompiled-header-file.md) y [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opciones. Desusado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Yd  
 ```  
   
-## Comentarios  
- **\/Yd** está desusado; ahora [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] admite que varios objetos escriban en un archivo .pdb único; use **\/Zi** en su lugar.  Para obtener más información, vea [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/es-es/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+## <a name="remarks"></a>Comentarios  
+ **/Yd** está en desuso; [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ahora admite varios objetos de escritura en un archivo .pdb único, use **/Zi** en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y quitar opciones de compilador** en [opciones de compilador enumerados por categoría](../../build/reference/compiler-options-listed-by-category.md).  
   
- A menos que necesite distribuir una biblioteca que contiene información de depuración, utilice la opción [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) en lugar de **\/Z7** y **\/Yd**.  
+ A menos que necesite distribuir una información de depuración que contiene la biblioteca, use la [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opción en lugar de **/Z7** y **/Yd**.  
   
- El almacenamiento de la información de depuración completa en todos los archivos .obj sólo es necesario para distribuir bibliotecas que contienen información de depuración.  Su compilación es más lenta y requiere un espacio en el disco considerable.  Si se utiliza **\/Yc** y **\/Z7** sin **\/Yd**, el compilador almacena la información de depuración común en el primer archivo .obj creado a partir del archivo .pch.  El compilador no inserta esta información en los archivos .obj creados con posterioridad a partir del archivo .pch, sino que inserta referencias cruzadas a la información.  Con independencia del número de archivos .obj que use el archivo .pch, solamente uno de ellos contiene la información de depuración común.  
+ Almacenar información de depuración completa en todos los archivos .obj sólo es necesario para distribuir bibliotecas que contienen información de depuración. Se reduce la compilación y se requiere espacio en disco considerable. Cuando **/Yc** y **/Z7** se usan sin **/Yd**, el compilador almacena la información de depuración común en el primer archivo .obj creado a partir del archivo .pch. El compilador no inserta esta información en los archivos .obj creados posteriormente desde el archivo .pch; Inserta las referencias cruzadas a la información. Independientemente de cuántos archivos .obj que use el archivo .pch, solo un archivo .obj contiene la información de depuración comunes.  
   
- Aunque este comportamiento predeterminado logra tiempos de compilación mucho más cortos y reduce las demandas de espacio en el disco, no es conveniente si un cambio pequeño requiere recompilar el archivo .obj que contiene la información de depuración común.  En este caso, el compilador debe recompilar todos los archivos .obj que contengan referencias cruzadas al archivo .obj original.  Asimismo, si proyectos diferentes utilizan un archivo .pch común, confiar las referencias cruzadas a un solo archivo .obj es difícil.  
+ Aunque este comportamiento predeterminada produce más rápidamente el tiempo de compilación y reduce las demandas de espacio en disco, no es conveniente si un cambio pequeño requiere volver a generar el archivo .obj que contiene la información de depuración comunes. En este caso, el compilador debe volver a generar todos los archivos .obj que contengan referencias cruzadas al archivo .obj original. Además, si se utiliza un archivo .pch común por proyectos diferentes, dependencia de referencias cruzadas a un solo archivo .obj es difícil.  
   
- Para obtener más información acerca de los encabezados precompilados, vea:  
+ Para obtener más información sobre encabezados precompilados, vea:  
   
--   [\/Y \(Encabezados precompilados\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (encabezados precompilados)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Crear archivos de encabezado precompilados](../../build/reference/creating-precompiled-header-files.md)  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción del compilador en el cuadro **Opciones adicionales** .  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Ejemplos  
- Supongamos que cuenta con dos archivos base, F.cpp y G.cpp, cada uno de los cuales contiene estas instrucciones **\#include**:  
+## <a name="examples"></a>Ejemplos  
+ Suponga que tiene dos archivos base, F.cpp y G.cpp, cada uno con estos **#include** instrucciones:  
   
 ```  
 #include "windows.h"  
 #include "etc.h"  
 ```  
   
- El comando siguiente crea el archivo de encabezado precompilado ETC.pch y el archivo objeto F.obj:  
+ El siguiente comando crea el encabezado precompilado ETC.pch y el archivo objeto F.obj de archivos:  
   
 ```  
 CL /YcETC.H /Z7 F.CPP  
 ```  
   
- El archivo objeto F.obj incluye información de tipos y símbolos para WINDOWS.h y ETC.h \(y cualquier otro archivo de encabezado que incluya\).  Ahora puede usar el encabezado precompilado ETC.pch para compilar el archivo de código fuente G.cpp:  
+ El archivo objeto F.obj incluye el tipo y la información de símbolos para WINDOWS.h y ETC.h (y otros archivos de encabezado incluyen). Ahora puede usar el encabezado precompilado ETC.pch para compilar el archivo de código fuente G.cpp:  
   
 ```  
 CL /YuETC.H /Z7 G.CPP  
 ```  
   
- El archivo objeto G.obj no incluye la información de depuración correspondiente al encabezado precompilado, sino sencillamente referencias a dicha información en el archivo F.obj.  Tenga en cuenta que debe crear un vínculo con el archivo F.obj.  
+ El archivo objeto G.obj no incluye la información de depuración para el encabezado precompilado pero simplemente hace referencia a esa información en el archivo F.obj. Tenga en cuenta que debe vincularse con el archivo F.obj.  
   
- Si el encabezado precompilado no fue compilado con **\/Z7**, sigue siendo posible usarlo en compilaciones posteriores con **\/Z7**.  No obstante, la información de depuración se coloca en el archivo objeto actual, pero los símbolos locales de funciones y tipos definidos en el encabezado precompilado no estarán disponibles para el depurador.  
+ Si el encabezado precompilado no se compiló con **/Z7**, puede usarlo en posteriores compilaciones con **/Z7**. Sin embargo, la información de depuración se coloca en el archivo de objeto actual y los símbolos locales para las funciones y tipos definidos en el encabezado precompilado no estarán disponibles para el depurador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

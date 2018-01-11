@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 22afb96f3bc20ab769f3ef18015c721218ea7339
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06f5d48395c0395a85c90096bf2dbad8627ac41a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-macros-and-options-macros"></a>Macros de comando y macros de opciones
 Las macros de comando están predefinidas para productos de Microsoft. Macros de opciones representan opciones para estos productos y no están definidas de forma predeterminada. Ambos se usan en las reglas de inferencia predefinidas y se pueden usar en bloques de descripción o las reglas de inferencia definidas por el usuario. Pueden volver a definir las macros de comando para representar la parte o la totalidad de una línea de comandos, incluidas las opciones. Macros de opciones generan una cadena nula si ha dejado sin definir.  

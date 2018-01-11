@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8908fb93cf6bc1c5a0c19cbbdb6597451c1cfa51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b88f895255c698f04b6988e63b8b75372fa59b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Estados de módulos de un archivo DLL de MFC estándar vinculado dinámicamente a MFC
 La capacidad de vincular dinámicamente normal DLL de MFC con la DLL de MFC permite realizar algunas configuraciones que están muy complicadas. Por ejemplo, una DLL de MFC normal y el archivo ejecutable que lo usa pueden ambos vincular dinámicamente con la DLL de MFC y los archivos DLL de extensión MFC.  

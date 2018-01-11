@@ -1,34 +1,36 @@
 ---
-title: "C&#243;mo: Determinar si se ha iniciado el cierre del sistema (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework, cierre"
-  - "aplicaciones [C++], cierre"
-  - "cierre"
-  - "terminación"
+title: "Cómo: determinar si ha iniciado el apagado (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .NET Framework, shutdown
+- shutdown
+- termination
+- applications [C++], shutdown
 ms.assetid: a8d39731-dea8-4f0a-96b7-2a5de09b21d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d89fa475c997e0842ef9de5a21c26e664f25d78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Determinar si se ha iniciado el cierre del sistema (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el ejemplo de código siguiente se muestra la forma de determinar si está finalizando actualmente la aplicación o .NET Framework.  Esto es útil para el acceso a los elementos estáticos de .NET Framework porque, durante el cierre, estas construcciones son finalizadas por el sistema y no se pueden utilizar de forma fiable.  Si comprueba primero la propiedad <xref:System.Environment.HasShutdownStarted%2A>, puede evitar posibles errores por la ausencia de acceso a estos elementos.  
+# <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Cómo: Determinar si se ha iniciado el cierre del sistema (C++/CLI)
+En el ejemplo de código siguiente se muestra cómo determinar si la aplicación o .NET Framework actualmente está finalizando. Esto es útil para tener acceso a elementos estáticos de .NET Framework porque, durante el cierre, estas construcciones son finalizadas por el sistema y no se puede usar de forma confiable. Comprobando el <xref:System.Environment.HasShutdownStarted%2A> propiedad en primer lugar, puede evitar posibles errores si no tiene acceso a estos elementos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // check_shutdown.cpp  
@@ -44,6 +46,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Operaciones de Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Operaciones de Windows (C++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

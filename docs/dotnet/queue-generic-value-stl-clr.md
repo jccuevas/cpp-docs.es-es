@@ -1,41 +1,42 @@
 ---
-title: "queue::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value (miembro) [STL/CLR]"
+title: Queue::generic_value (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 5efd9812-6b4d-4e59-b8e8-c4975ae61667
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4e3dbf57b9dd3535a430066cfd4c0eeda26ef92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# queue::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tipo de un elemento con la interfaz genérica para el contenedor.  
+# <a name="queuegenericvalue-stlclr"></a>queue::generic_value (STL/CLR)
+El tipo de un elemento para su uso con la interfaz genérica para el contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Comentarios  
- El tipo describe un objeto de `GValue` tipo que describa el valor almacenado de elemento para el uso con la interfaz genérica para esta clase de contenedor de plantilla. \(`GValue` es `value_type` o `value_type^` si `value_type` es un tipo de referencia\).  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto de tipo `GValue` que describe el valor del elemento almacenado para su uso con la interfaz genérica para esta clase de contenedor de plantilla. (`GValue` sea `value_type` o `value_type^` si `value_type` es un tipo de referencia.)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_queue_generic_value.cpp   
@@ -74,15 +75,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+a b c  
+a b c  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::value\_type](../dotnet/queue-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)

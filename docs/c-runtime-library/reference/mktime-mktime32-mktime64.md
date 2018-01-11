@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: ced40f391f4a4085531d624acc45094e06e1f0a8
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 Convierte la hora local en un valor de calendario.  
@@ -87,9 +71,9 @@ __time64_t _mktime64(
  Puntero a la estructura de hora; vea [asctime](../../c-runtime-library/reference/asctime-wasctime.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_mktime32` devuelve la hora de calendario especificada codificada como valor de tipo [time_t](../../c-runtime-library/standard-types.md). Si *timeptr* hace referencia a una fecha anterior a la medianoche del 1 de enero de 1970, o si no se puede representar la hora de calendario, `_mktime32` devuelve -1 convertir al tipo `time_t`. Cuando se usa `_mktime32` y si *timeptr* hace referencia a una fecha posterior a las 23:59:59 del 18 de enero de 2038, hora Universal coordinada (UTC), devolverá -1 convertir al tipo `time_t`.  
+ `_mktime32` devuelve la hora de calendario especificada codificada como valor de tipo [time_t](../../c-runtime-library/standard-types.md). Si *timeptr* hace referencia a una fecha anterior a la medianoche del 1 de enero de 1970, o si no se puede representar la hora de calendario, `_mktime32` devuelve -1 que se convierte al tipo `time_t`. Cuando se usa `_mktime32` y si *timeptr* hace referencia a una fecha posterior a las 23:59:59 del 18 de enero de 2038, hora Universal coordinada (UTC), devolverá -1 que se convierte al tipo `time_t`.  
   
- `_mktime64`se devolverá -1 convertir al tipo `__time64_t` si *timeptr* hace referencia a una fecha posterior a 23:59:59 del 31 de diciembre de 3000, UTC.  
+ `_mktime64`se devolverá -1 que se convierte al tipo `__time64_t` si *timeptr* hace referencia a una fecha posterior a 23:59:59 del 31 de diciembre de 3000, UTC.  
   
 ## <a name="remarks"></a>Comentarios  
  Las funciones `mktime`, `_mktime32` y `_mktime64` convierten la estructura de tiempo proporcionada (posiblemente incompleta) a la que señala *timeptr* en una estructura totalmente definida con valores normalizados y, después, la convierte en un valor de tiempo de calendario de `time_t`. El tiempo convertido tiene la misma codificación que los valores devueltos por la función [time](../../c-runtime-library/reference/time-time32-time64.md). Se omiten los valores originales de los componentes `tm_wday` y `tm_yday` de la estructura *timeptr* y los valores originales de los demás componentes no se limitan a los intervalos normales.  
@@ -120,7 +104,7 @@ __time64_t _mktime64(
 |`_mktime32`|\<time.h>|  
 |`_mktime64`|\<time.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

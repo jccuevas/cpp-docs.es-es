@@ -1,105 +1,105 @@
 ---
-title: "MFC: Utilizar clases de base de datos sin documentos ni vistas | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "asistentes para aplicaciones [C++], crear aplicaciones de bases de datos"
-  - "CDaoRecordView (clase), utilizar en aplicaciones de bases de datos"
-  - "CRecordView (clase), utilizar en aplicaciones de bases de datos"
-  - "DAO [C++], compatibilidad de archivos en aplicaciones de bases de datos"
-  - "DAO [C++], escribir aplicaciones"
-  - "aplicaciones de base de datos [C++], opciones del asistente para aplicaciones"
-  - "aplicaciones de base de datos [C++], sin documentos"
-  - "aplicaciones de base de datos [C++], sin vistas"
-  - "clases de base de datos [C++], MFC"
-  - "arquitectura documento/vista [C++], en bases de datos"
-  - "documentos [C++], aplicaciones sin"
-  - "archivos [C++], MFC"
-  - "ODBC [C++], compatibilidad de archivos en aplicaciones de bases de datos"
-  - "aplicaciones ODBC [C++]"
-  - "aplicaciones ODBC [C++], sin documentos"
-  - "aplicaciones ODBC [C++], sin vistas"
-  - "interfaz de usuario [C++], dibujar información"
+title: 'MFC: Utilizar clases de base de datos sin documentos ni vistas | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC applications [C++], without views
+- documents [C++], applications without
+- ODBC applications [C++]
+- document/view architecture [C++], in databases
+- files [C++], MFC
+- database classes [C++], MFC
+- CRecordView class, using in database applications
+- database applications [C++], without views
+- database applications [C++], application wizard options
+- application wizards [C++], creating database applications
+- ODBC [C++], file support in database applications
+- ODBC applications [C++], without documents
+- database applications [C++], without documents
+- user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1691d1f90201b25cc53cd07e80626e98c447e66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# MFC: Utilizar clases de base de datos sin documentos ni vistas
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En ocasiones no se tiene interés en utilizar la arquitectura documento\/vista del marco de trabajo en las aplicaciones de base de datos.  En este tema se explica:  
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Utilizar clases de base de datos sin documentos ni vistas
+A veces, no puede usar la arquitectura de documento/vista del marco de trabajo en las aplicaciones de base de datos. En este tema se explica:  
   
--   [Cuándo no debe utilizar documentos](#_core_when_you_don.92.t_need_documents); por ejemplo, en la serialización de documentos.  
+-   [Cuando no necesite usar documentos](#_core_when_you_don.92.t_need_documents) como la serialización de documentos.  
   
--   [Opciones del Asistente para aplicaciones](#_core_appwizard_options_for_documents_and_views), que admiten aplicaciones sin serialización y sin comandos del menú **Archivo** relacionados con los documentos, como **Nuevo**, **Abrir**, **Guardar** y **Guardar como**.  
+-   [Opciones del Asistente para aplicaciones](#_core_appwizard_options_for_documents_and_views) para admitir aplicaciones sin serialización y sin relacionadas con el documento **archivo** comandos de menú como **New**, **abrir**, **Guardar**, y **Guardar como**.  
   
 -   [Cómo trabajar con una aplicación que utiliza un documento mínimo](#_core_applications_with_minimal_documents).  
   
 -   [Cómo estructurar una aplicación sin documentos ni vistas](#_core_applications_with_no_document).  
   
-##  <a name="_core_when_you_don.92.t_need_documents"></a> Cuándo no debe utilizar documentos  
- Algunas aplicaciones utilizan un concepto distinto de lo que es un documento.  Estas aplicaciones suelen cargar la mayoría o la totalidad de un archivo desde el medio de almacenamiento en memoria a través de un comando **Archivo Abrir**.  Vuelven a escribir el archivo actualizado en el medio de almacenamiento al mismo tiempo con un comando **Guardar archivo** o **Guardar como**.  Lo que el usuario ve es un archivo de datos.  
+##  <a name="_core_when_you_don.92.t_need_documents"></a>Cuando no necesite documentos  
+ Algunas aplicaciones tienen un concepto distinto de un documento. Estas aplicaciones suelen cargar todos o la mayoría de un archivo de almacenamiento en la memoria con un **abrir archivo** comando. Reescribir el archivo actualizado en el almacenamiento a la vez con un **Guardar archivo** o **Guardar como** comando. Lo que el usuario ve es un archivo de datos.  
   
- Algunas categorías de aplicaciones, sin embargo, no requieren un documento.  Las aplicaciones de base de datos funcionan basándose en transacciones.  La aplicación selecciona registros de una base de datos y los presenta al usuario, con frecuencia uno a la vez.  Lo que el usuario suele ver es un solo registro activo, que puede ser el único existente en la memoria.  
+ Sin embargo, algunas categorías de aplicaciones, no requieren un documento. Las aplicaciones de base de datos funcionan en cuanto a las transacciones. La aplicación selecciona los registros de una base de datos y las presenta al usuario, a menudo uno en uno. Lo que el usuario ve suele ser un único registro actual, que podría ser la única persona en la memoria.  
   
- Si la aplicación no requiere un documento para almacenar datos, se puede omitir parte o toda la arquitectura documento\/vista del marco de trabajo.  La proporción en que se prescinda de ella dependerá del enfoque elegido.  Se puede:  
+ Si la aplicación no requiere un documento para almacenar los datos, se puede omitir algunos o todos de arquitectura de documento/vista del marco de trabajo. ¿Cuánto Prescinda de ella dependerá el enfoque que prefiera. Es posible que:  
   
--   Usar un documento mínimo como lugar para almacenar una conexión al origen de datos y prescindir de algunas características habituales de los documentos, como la serialización.  Es útil si se desea tener varias vistas de los datos y sincronizarlas todas, actualizándolas a la vez, etc.  
+-   Usar un documento mínimo como un lugar para almacenar una conexión al origen de datos pero dispensar con características de documento normal, como la serialización. Esto es útil cuando desea tener varias vistas de los datos y desea sincronizar todas las vistas, actualizarlos todos a la vez y así sucesivamente.  
   
--   Utilizar una ventana de marco, en la que se dibuja directamente en lugar de usar una vista.  En este caso, se omite el documento y se almacenan los datos o las conexiones de datos en los objetos de la ventana de marco.  
+-   Utilice una ventana de marco, en la que dibujar directamente, en lugar de usar una vista. En este caso, se omite el documento y almacenan los datos o conexiones de datos en el objeto de ventana de marco.  
   
-##  <a name="_core_appwizard_options_for_documents_and_views"></a> Opciones del Asistente para aplicaciones para documentos y vistas  
- El Asistente para aplicaciones MFC tiene varias opciones en **Seleccionar compatibilidad con bases de datos**, que se detallan en la siguiente tabla.  Si utiliza el asistente para crear una aplicación, todas estas opciones producen aplicaciones con documentos y vistas.  Algunas opciones proporcionan documentos y vistas que omiten la funcionalidad del documento no requerida.  Para obtener más información, vea [Compatibilidad con bases de datos, Asistente para aplicaciones MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
+##  <a name="_core_appwizard_options_for_documents_and_views"></a>Opciones del Asistente para aplicaciones de documentos y vistas  
+ El Asistente para aplicaciones MFC tiene varias opciones **selecciona la compatibilidad con la base de datos**, que se muestran en la tabla siguiente. Si utiliza al Asistente para aplicaciones MFC para crear una aplicación, todas estas opciones producen aplicaciones con documentos y vistas. Algunas opciones proporcionan documentos y vistas que omiten la funcionalidad de los documentos. Para obtener más información, consulte [compatibilidad de base de datos, Asistente para aplicaciones MFC](../mfc/reference/database-support-mfc-application-wizard.md).  
   
-|Opción|View|Documento|  
-|------------|----------|---------------|  
-|**None**|Se deriva de `CView`.|No proporciona compatibilidad con bases de datos.  Ésta es la opción predeterminada.<br /><br /> Si selecciona la opción **Compatibilidad con la arquitectura documento\/vista** en la página [Tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md), obtendrá compatibilidad total con documentos, incluida la serialización y los comandos `New`, **Abrir**, **Guardar** y **Guardar como** del menú **Archivo**.  Vea [Aplicaciones sin documentos](#_core_applications_with_no_document).|  
-|**Sólo archivos de encabezado**|Se deriva de `CView`.|Proporciona el nivel básico de compatibilidad con bases de datos para la aplicación.<br /><br /> Incluye Afxdb.h.  Agrega bibliotecas de vínculos, pero no crea clases específicas de bases de datos.  Puede crear conjuntos de registros posteriormente y utilizarlos para examinar y actualizar registros.|  
-|**Vista de base de datos sin compatibilidad con archivos**|Derivada de `CRecordView`.|Proporciona compatibilidad con documentos pero no con la serialización.  El documento puede almacenar el conjunto de registros y coordinar varias vistas, pero no admite serialización ni los comandos `New`, **Abrir**, **Guardar** ni **Guardar como**.  Vea [Aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents).  Si elige incluir una vista de base de datos, debe especificar el origen de los datos.<br /><br /> Incluye archivos de encabezado de base de datos, bibliotecas de vínculos, una vista y un conjunto de registros. Sólo está disponible para aplicaciones que tengan seleccionada la opción **Compatibilidad con la arquitectura documento\/vista** en la página [Tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md).|  
-|**Vista de base de datos con compatibilidad con archivos**|Derivada de `CRecordView`.|Proporciona compatibilidad total con documentos, incluida la serialización y los comandos del menú **Archivo** relativos a los documentos.  Las aplicaciones de base de datos suelen funcionar registro a registro, en lugar de archivo a archivo, por lo que no necesitan la serialización.  Sin embargo, es posible que tenga una necesidad especial de la serialización.  Vea [Aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents).  Si elige incluir una vista de base de datos, debe especificar el origen de los datos.<br /><br /> Incluye archivos de encabezado de base de datos, bibliotecas de vínculos, una vista y un conjunto de registros. Sólo está disponible para aplicaciones que tengan seleccionada la opción **Compatibilidad con la arquitectura documento\/vista** en la página [Tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md).|  
+|Opción|Ver|Documento|  
+|------------|----------|--------------|  
+|**Ninguno**|Se deriva de `CView`.|No proporciona ninguna compatibilidad de base de datos. Ésta es la opción predeterminada.<br /><br /> Si selecciona el **compatibilidad con la arquitectura documento/vista** opción el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página, obtendrá compatibilidad total con documentos incluidos serialización y `New`,  **Abra**, **guardar**, y **Guardar como** comandos en el **archivo** menú. Vea [aplicaciones sin documentos](#_core_applications_with_no_document).|  
+|**Sólo los archivos de encabezado**|Se deriva de `CView`.|Proporciona el nivel básico de compatibilidad de base de datos para la aplicación.<br /><br /> Incluye Afxdb.h. Agrega bibliotecas de vínculos, pero no crea las clases específicas de la base de datos. También puede crear conjuntos de registros más tarde y usarlos para examinar y actualizar registros.|  
+|**Vista de base de datos sin compatibilidad con archivos**|Deriva de`CRecordView`|Proporciona compatibilidad con documentos pero no hay compatibilidad con la serialización. Documento puede almacenar el conjunto de registros y coordinar varias vistas; no admite la serialización o la `New`, **abiertos**, **guardar**, y **Guardar como** comandos. Vea [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de los datos.<br /><br /> Incluye archivos de encabezado de la base de datos, bibliotecas de vínculos, una vista de registros y un conjunto de registros. (Disponible únicamente para las aplicaciones con la **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|  
+|**Vista de base de datos con compatibilidad con archivos**|Deriva de`CRecordView`|Proporciona compatibilidad total con documentos, incluida la serialización y relacionadas con el documento **archivo** comandos de menú. Las aplicaciones de base de datos suelen funcionan en una base por registro en lugar de en un archivo por base de modo que no necesitan la serialización. Sin embargo, podría tener un uso especial para la serialización. Vea [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de los datos.<br /><br /> Incluye archivos de encabezado de la base de datos, bibliotecas de vínculos, una vista de registros y un conjunto de registros. (Disponible únicamente para las aplicaciones con la **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|  
   
- Para obtener un análisis de alternativas a la serialización y usos alternativos para la serialización, vea [Serialización: Serialización frente a entrada\/salida de bases de datos](../mfc/serialization-serialization-vs-database-input-output.md).  
+ Para obtener una explicación de las alternativas a la serialización y usos alternativos para la serialización, vea [serialización: serialización frente. Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).  
   
-##  <a name="_core_applications_with_minimal_documents"></a> Aplicaciones con documentos mínimos  
- El Asistente para aplicaciones MFC tiene dos opciones que admiten las aplicaciones de acceso a datos basadas en formularios.  Cada opción crea una clase de vista derivada de `CRecordView` y un documento.  Se diferencian en lo que dejan fuera del documento.  
+##  <a name="_core_applications_with_minimal_documents"></a>Aplicaciones con documentos mínimos  
+ El Asistente para aplicaciones MFC tiene dos opciones que admiten aplicaciones de acceso a datos basado en formularios. Cada opción crea un `CRecordView`-deriva la clase de vista y un documento. Se diferencian en lo que dejan fuera del documento.  
   
-###  <a name="_core_a_document_without_file_support"></a> Documento sin compatibilidad con archivos  
- Seleccione la opción **Vista de base de datos sin compatibilidad con archivos** en el asistente para aplicaciones si no necesita la serialización de documentos.  El documento sirve a los siguientes propósitos de utilidad:  
+###  <a name="_core_a_document_without_file_support"></a>Documento sin compatibilidad con archivos  
+ Seleccione la opción de base de datos del Asistente para aplicaciones **vista sin compatibilidad con archivos de base de datos** si no necesita la serialización de documentos. El documento tiene los siguientes objetivos útiles:  
   
--   Es una ubicación adecuada para almacenar un objeto `CRecordset`.  
+-   Es un lugar conveniente para almacenar un `CRecordset` objeto.  
   
-     Este uso refleja los usos habituales de los documentos: el documento almacena los datos \(o en este caso, un conjunto de registros\) y la vista es una vista del documento.  
+     Conceptos de documento normal asemeja a este uso: el documento almacena los datos (o, en este caso, un conjunto de registros) y la vista es una vista del documento.  
   
--   Si la aplicación presenta múltiples vistas \(como por ejemplo múltiples vistas de registros\), utilizar un documento permite coordinarlas.  
+-   Si la aplicación presenta varias vistas (por ejemplo, varias vistas de registros), un documento admite coordinar las vistas.  
   
-     Si varias vistas muestran los mismos datos, se puede utilizar la función miembro `CDocument::UpdateAllViews` para coordinar las actualizaciones de todas las vistas cuando en una de ellas se modifican los datos.  
+     Si varias vistas muestran los mismos datos, puede usar el `CDocument::UpdateAllViews` función de miembro para coordinar las actualizaciones de todas las vistas cuando cualquier vista cambia los datos.  
   
- Normalmente se utiliza esta opción para aplicaciones sencillas basadas en formularios.  El Asistente para aplicaciones MFC permite el uso de una estructura eficaz para este tipo de aplicaciones, de manera automática.  
+ Normalmente se utiliza esta opción para las aplicaciones sencillas basadas en formularios. El Asistente para la aplicación es compatible con una estructura adecuada para dichas aplicaciones automáticamente.  
   
-###  <a name="_core_a_document_with_file_support"></a> Documento con compatibilidad con archivos  
- Seleccione la opción **Vista de base de datos con compatibilidad con archivos** en el Asistente para aplicaciones cuando tenga un uso alternativo para los comandos del menú **Archivo** relacionados con documentos y la serialización de documentos.  En la parte de acceso a datos del programa, se puede utilizar un documento de la misma forma que se describe en [Documento sin compatibilidad con archivos](#_core_a_document_without_file_support).  También es posible usar la capacidad de serialización del documento, por ejemplo, para leer y escribir un documento de perfil de usuario serializado que almacene las preferencias del usuario o cualquier otra información útil.  Para obtener más ideas, vea [Serialización: Serialización frente a entrada\/salida de bases de datos](../mfc/serialization-serialization-vs-database-input-output.md).  
+###  <a name="_core_a_document_with_file_support"></a>Documento con compatibilidad con archivos  
+ Seleccione la opción de base de datos del Asistente para aplicaciones **vista con compatibilidad con archivos de base de datos** cuando tenga un uso alternativo para el objeto relacionado en el documento de **archivo** comandos de menú y serialización de documentos. Para la parte de acceso a datos del programa, puede usar el documento de la misma manera como se describe en [documento sin compatibilidad con archivos](#_core_a_document_without_file_support). Puede usar la funcionalidad de serialización del documento, por ejemplo, para leer y escribir un documento de perfil de usuario serializado que almacena las preferencias del usuario u otra información útil. Para obtener más ideas, vea [serialización: serialización frente. Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).  
   
- El Asistente para aplicaciones MFC admite esta opción, pero se debe escribir el código que serializa el documento.  Almacene la información serializada en miembros de datos de documento.  
+ El Asistente para la aplicación es compatible con esta opción, pero debe escribir el código que serializa el documento. Almacene la información serializada en miembros de datos del documento.  
   
-##  <a name="_core_applications_with_no_document"></a> Aplicaciones sin documentos  
- A veces se desea crear una aplicación que no utilice documentos ni vistas.  Sin la presencia de documentos, los datos \(como por ejemplo un objeto `CRecordset`\) se almacenan en la clase de ventana de marco o en la clase de aplicación.  Cualquier otro argumento adicional depende de si la aplicación posee interfaz de usuario.  
+##  <a name="_core_applications_with_no_document"></a>Aplicaciones sin documentos  
+ En ocasiones, puede escribir una aplicación que no utilice documentos ni vistas. Sin documentos, almacenar los datos (como un `CRecordset` objeto) en la clase de ventana de marco o la clase de aplicación. Los requisitos adicionales dependen de si la aplicación presenta una interfaz de usuario.  
   
-###  <a name="_core_database_support_with_a_user_interface"></a> Compatibilidad con bases de datos con interfaz de usuario  
- Si nuestra aplicación dispone de interfaz de usuario \(que no sea, por ejemplo, una línea de comandos de consola\), dibujará los datos directamente en el área cliente de la ventana de marco en lugar de hacerlo en una vista.  Una aplicación de este tipo no utiliza `CRecordView`, `CFormView` ni `CDialog` para la interfaz de usuario principal, sino que se suele utilizar`CDialog` para los cuadros de diálogo normales.  
+###  <a name="_core_database_support_with_a_user_interface"></a>Compatibilidad de base de datos con una interfaz de usuario  
+ Si tiene una interfaz de usuario (que no sea, por ejemplo, una interfaz de línea de comandos de consola), la aplicación dibuja directamente en el área de cliente de la ventana de marco en lugar de a una vista. Este tipo de aplicación no utiliza `CRecordView`, `CFormView`, o `CDialog` para su interfaz de usuario principal, pero suele usar `CDialog` para cuadros de diálogo normales.  
   
-###  <a name="_core_writing_applications_without_documents"></a> Crear aplicaciones sin documentos  
- El Asistente para aplicaciones no admite la creación de aplicaciones sin documentos; por tanto, debe crear su propia clase derivada de `CWinApp` y, en caso necesario, también una clase `CFrameWnd` o `CMDIFrameWnd`.  Reemplace `CWinApp::InitInstance` y declare un objeto de aplicación como:  
+###  <a name="_core_writing_applications_without_documents"></a>Escribir aplicaciones sin documentos  
+ Dado que el Asistente para aplicaciones no admite la creación de aplicaciones sin documentos, debe escribir su propio `CWinApp`-clase derivada y, si es necesario, cree también un `CFrameWnd` o `CMDIFrameWnd` clase. Invalidar `CWinApp::InitInstance` y declarar un objeto de aplicación como:  
   
 ```  
 CYourNameApp theApp;  
@@ -107,20 +107,20 @@ CYourNameApp theApp;
   
  El marco de trabajo proporciona el mecanismo de mapa de mensajes y muchas otras características.  
   
-###  <a name="_core_database_support_separate_from_the_user_interface"></a> Compatibilidad con bases de datos independiente de la interfaz de usuario  
- Algunas aplicaciones no necesitan interfaz de usuario, o un uso mínimo de ésta.  Por ejemplo, supongamos que creamos:  
+###  <a name="_core_database_support_separate_from_the_user_interface"></a>Independiente de compatibilidad de base de datos de la interfaz de usuario  
+ Algunas aplicaciones necesitan ninguna interfaz de usuario o solo una mínima. Por ejemplo, suponga que está escribiendo:  
   
--   Un objeto intermedio de acceso a datos al que otras aplicaciones \(clientes\) llaman para el procesamiento especial de datos entre la aplicación y el origen de datos.  
+-   Un objeto de acceso a datos intermedio que llaman otras aplicaciones (clientes) para un procesamiento especial de datos entre la aplicación y el origen de datos.  
   
--   Una aplicación que procesa datos sin intervención del usuario, como una aplicación que mueve datos de un formato de base de datos a otro u otra que realiza cálculos y actualizaciones por lotes.  
+-   Una aplicación que procesa datos sin intervención del usuario, por ejemplo, una aplicación que mueve datos de un formato de base de datos a otro u otra que realiza cálculos y actualizaciones por lotes.  
   
- Debido a que ningún documento es el propietario de los objetos `CRecordset` o `CDaoRecordset`, probablemente sea conveniente almacenarlos como miembro de datos incrustado en la clase de aplicación derivada de `CWinApp`.  Las alternativas comprenden:  
+ Debido a que no hay ningún documento posee la `CRecordset` objeto, probablemente desee almacenar como un miembro de datos incrustado en su `CWinApp`-deriva la clase de la aplicación. Las alternativas incluyen:  
   
--   No mantener ningún objeto `CRecordset` o `CDaoRecordset` permanente.  Se puede pasar **NULL** a los constructores de clases de conjunto de registros.  En ese caso, el marco de trabajo crea un objeto `CDatabase` o `CDaoDatabase` temporal con la información de la función miembro `GetDefaultConnect` del conjunto de registros.  Éste es el enfoque alternativo más probable.  
+-   No se debe mantener un permanente `CRecordset` objeto en absoluto. Puede pasar **NULL** a los constructores de clase de conjunto de registros. En ese caso, el marco de trabajo crea un archivo temporal `CDatabase` objeto según se indica en el conjunto de registros `GetDefaultConnect` función miembro. Éste es el enfoque alternativo más probable.  
   
--   Hacer del objeto `CRecordset` o `CDaoRecordset` una variable global.  Esta variable debe ser un puntero a un objeto de conjunto de registros que se crea dinámicamente al reemplazar `CWinApp::InitInstance`.  De esta forma, se evita el intento de construir el objeto antes de que se inicialice el marco de trabajo.  
+-   Realizar la `CRecordset` una variable global del objeto. Esta variable debe ser un puntero a un objeto de conjunto de registros que se crea dinámicamente en su `CWinApp::InitInstance` invalidar. Esto evita el intento de construir el objeto antes de que se inicialice el marco de trabajo.  
   
--   Utilizar objetos de conjunto de registros al igual que se haría en el contexto de un documento o vista.  Crear conjuntos de registros en las funciones miembro de los objetos de aplicación o ventana de marco.  
+-   Uso de objetos de conjunto de registros como lo haría en el contexto de un documento o una vista. Crear conjuntos de registros en el miembro de las funciones de la aplicación o los objetos de ventana de marco.  
   
-## Vea también  
- [Clases de base de datos MFC \(ODBC y DAO\)](../data/mfc-database-classes-odbc-and-dao.md)
+## <a name="see-also"></a>Vea también  
+ [Clases de bases de datos MFC](../data/mfc-database-classes-odbc-and-dao.md)

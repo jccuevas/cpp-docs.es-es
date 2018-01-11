@@ -43,11 +43,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Comprueba si un carácter multibyte es una minúscula o una mayúscula.  
@@ -87,7 +88,7 @@ int _ismbcupper_l(
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones prueba si un carácter multibyte dado cumple una condición determinada.  
   
- Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|  
 |-------------|--------------------|---------------------------|  
@@ -113,4 +114,4 @@ int _ismbcupper_l(
  [Configuración regional](../../c-runtime-library/locale.md)   
  [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

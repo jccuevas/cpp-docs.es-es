@@ -1,68 +1,69 @@
 ---
-title: "Descripci&#243;n de la funci&#243;n auxiliar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper (función)"
-  - "__delayLoadHelper2 (función)"
-  - "carga retrasada de archivos DLL, función auxiliar"
-  - "delayhlp.cpp"
-  - "delayimp.h"
-  - "delayimp.lib"
-  - "funciones auxiliares"
+title: "Descripción de la función auxiliar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, helper function
+- __delayLoadHelper2 function
+- delayimp.lib
+- __delayLoadHelper function
+- delayhlp.cpp
+- delayimp.h
+- helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Descripci&#243;n de la funci&#243;n auxiliar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función auxiliar para efectuar carga retrasada compatible con el vinculador es lo que carga realmente la DLL en tiempo de ejecución.  Se puede modificar la función auxiliar para personalizar su comportamiento creando una función propia y vinculándola al programa, en lugar de usar la función auxiliar proporcionada en Delayimp.lib.  Una función auxiliar sirve a todas las DLL de carga retrasada.  
+# <a name="understanding-the-helper-function"></a>Descripción de la función auxiliar
+La función auxiliar de carga retrasada admitidos por el vinculador es lo que carga realmente la DLL en tiempo de ejecución. Puede modificar la función auxiliar para personalizar su comportamiento escribiendo su propia función y vincularlo a su programa en lugar de usar la función auxiliar proporcionada en Delayimp.lib. Una función auxiliar sirve a todos los archivos DLL de carga retrasada.  
   
- Se puede proporcionar una versión propia de la función auxiliar si se desea realizar un procesamiento específico basado en los nombres de las DLL o las importaciones.  
+ Puede proporcionar su propia versión de la función auxiliar si desea realizar un procesamiento específico basado en los nombres de las DLL o las importaciones.  
   
  La función auxiliar realiza las siguientes acciones:  
   
--   Comprueba el identificador almacenado para la biblioteca con el fin de ver si ya se ha cargado.  
+-   Comprueba el identificador almacenado para la biblioteca para ver si ya se ha cargado  
   
--   Llama a **LoadLibrary** para intentar cargar la DLL.  
+-   Llamadas **LoadLibrary** al intentar cargar la DLL  
   
--   Llama a **GetProcAddress** para intentar obtener la dirección del procedimiento.  
+-   Llamadas **GetProcAddress** al intentar obtener la dirección del procedimiento  
   
--   Vuelve al thunk de importación de carga retrasada para llamar al punto de entrada cargado actualmente.  
+-   Devuelve a la importación de retraso carga código thunk para llamar al punto de entrada cargado actualmente.  
   
- La función auxiliar puede devolver la llamada a un enlace de notificación del programa después de cada una de las siguientes acciones:  
+ La función auxiliar puede devolver la llamada a un enlace de notificación en el programa después de cada una de las siguientes acciones:  
   
--   Cuando se inicia la función auxiliar.  
+-   Cuando se inicia la función auxiliar  
   
--   Inmediatamente antes de que se llame a **LoadLibrary** en la función auxiliar.  
+-   Justo antes **LoadLibrary** se llama en la función auxiliar  
   
--   Inmediatamente antes de que se llame a **GetProcAddress** en la función auxiliar.  
+-   Justo antes **GetProcAddress** se llama en la función auxiliar  
   
--   Si se produce un error en la llamada a **LoadLibrary** en la función auxiliar.  
+-   Si la llamada a **LoadLibrary** en la función auxiliar error  
   
--   Si se produce un error en la llamada a **GetProcAddress** en la función auxiliar.  
+-   Si la llamada a **GetProcAddress** en la función auxiliar error  
   
--   Después del procesamiento de la función auxiliar.  
+-   Después de la aplicación auxiliar se realiza la función de procesamiento  
   
- Cada uno de estos puntos de enlace puede devolver un valor que modificará, en cierto modo, el procesamiento normal de la rutina auxiliar, excepto el thunk de importación de carga retrasada.  
+ Cada uno de estos puntos de enlace puede devolver un valor que modificará el procesamiento normal de la rutina de aplicación auxiliar de alguna manera excepto volver al thunk de importación de carga de retraso.  
   
- El código auxiliar predeterminado puede encontrarse en Delayhlp.cpp y Delayimp.h \(en vc\\include\) y ésta compilado en Delayimp.lib \(en vc\\lib\).  Será necesario incluir esta biblioteca en las compilaciones, a menos que se escriba una función auxiliar propia.  
+ El código auxiliar predeterminado puede encontrarse en Delayhlp.cpp y Delayimp.h (en vc\include) y ésta compilado en Delayimp.lib (en vc\lib). Debe incluir esta biblioteca en las compilaciones a menos que escriba una función auxiliar personalizada.  
   
  Los temas siguientes describen la función auxiliar:  
   
--   [Cambios en la función auxiliar de carga retrasada de DLL desde Visual C\+\+ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
+-   [Cambios en la función auxiliar de carga retrasada de DLL desde Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
   
 -   [Convenciones de llamada, parámetros y tipo de valor devuelto](../../build/reference/calling-conventions-parameters-and-return-type.md)  
   
@@ -72,5 +73,5 @@ La función auxiliar para efectuar carga retrasada compatible con el vinculador 
   
 -   [Descargar un archivo DLL de carga retrasada](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)

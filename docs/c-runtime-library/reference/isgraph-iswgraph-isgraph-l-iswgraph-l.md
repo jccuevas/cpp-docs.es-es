@@ -48,11 +48,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5141944b387de8866e2d4c5009e818e3359ee65c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc1dd32d2b427f6d22fad330cc25804ac528ea83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 Determina si un entero representa un carácter gráfico.  
@@ -83,7 +84,7 @@ int _iswgraph_l(
 ## <a name="return-value"></a>Valor devuelto  
  Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter imprimible que no sea un espacio. `isgraph` devuelve un valor distinto de cero si `c` es un carácter imprimible que no sea un espacio. `iswgraph` devuelve un valor distinto de cero si `c` es un carácter ancho imprimible que no sea un espacio de carácter ancho. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
- Las versiones de estas funciones con el sufijo `_l` usan la configuración regional que se pasa en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones con el sufijo `_l` usan la configuración regional que se pasa en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  El comportamiento de `isgraph` e `_isgraph_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
   
@@ -103,9 +104,9 @@ int _iswgraph_l(
 |`_isgraph_l`|\<ctype.h>|  
 |`_iswgraph_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)

@@ -1,47 +1,46 @@
 ---
-title: "Using IDispEventSimpleImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventSimpleImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDispEventSimpleImpl class, utilizar"
+title: Utilizar IDispEventSimpleImpl (ATL) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventSimpleImpl
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed21c862d61686e86efd684a6e88795e4b7bbe51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Using IDispEventSimpleImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Al utilizar `IDispEventSimpleImpl` para controlar eventos, necesitará:  
+# <a name="using-idispeventsimpleimpl"></a>Utilizar IDispEventSimpleImpl
+Cuando se usa `IDispEventSimpleImpl` para controlar los eventos, deberá:  
   
--   derive la clase de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
+-   Derive la clase de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
   
--   agregue [mapa de receptor de eventos](../Topic/BEGIN_SINK_MAP.md) a la clase.  
+-   Agregue un mapa de receptores de eventos a la clase.  
   
--   defina las estructuras de [\_ATL\_FUNC\_INFORMATION](../atl/reference/atl-func-info-structure.md) que describen los eventos.  
+-   Definir [estructuras _ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) estructuras que describen los eventos.  
   
--   Agregue las entradas al receptor de eventos asignado mediante la macro de [SINK\_ENTRY\_INFORMATION](../Topic/SINK_ENTRY_INFO.md) .  
+-   Agregar entradas en el mapa de receptor de eventos mediante el [macro SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) macro.  
   
--   Implemente los métodos que está interesado en administrar.  
+-   Implemente los métodos que está interesado en el control.  
   
--   Advise y unadvise el origen de eventos.  
+-   Aconsejar y desaconsejar el origen del evento.  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo controlar el evento de **DocumentChange** desencadenado por el objeto de **Aplicación** de word.  Este evento se define como un método en el dispinterface de **ApplicationEvents** .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo controlar la **DocumentChange** eventos desencadenados por de Word **aplicación** objeto. Este evento se define como un método en el **ApplicationEvents** dispinterface.  
   
- el ejemplo es de [Ejemplo ATLEventHandling](../top/visual-cpp-samples.md).  
+ El ejemplo está tomado del [ejemplo ATLEventHandling](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -71,20 +70,21 @@ Al utilizar `IDispEventSimpleImpl` para controlar eventos, necesitará:
   
  `};`  
   
- El ejemplo utiliza `#import` para generar los archivos de encabezado necesarios de la biblioteca de tipos de word.  Si desea utilizar este ejemplo con otras versiones de word, debe especificar el archivo correcto DLL mso.  Por ejemplo, Office 2000 proporciona mso9.dll y Office XP proporciona mso.dll.  Este código se simplifica stdafx.h:  
+ El ejemplo se utiliza `#import` para generar los archivos de encabezado necesarios desde la biblioteca de tipos de Word. Si desea utilizar este ejemplo con otras versiones de Word, debe especificar el archivo mso dll correcto. Por ejemplo, Office 2000 proporciona mso9.dll y OfficeXP proporciona mso.dll. Este código se ha simplificado de stdafx.h:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/CPP/using-idispeventsimpleimpl_1.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- La única información de la biblioteca de tipos utilizada realmente en este ejemplo es el CLSID del objeto de **Aplicación** de word y el IID de la interfaz de **ApplicationEvents** .  Esta información se utiliza en tiempo de compilación.  
+ La única información de la biblioteca de tipos que realmente utilizada en este ejemplo es el CLSID de la palabra **aplicación** objeto y el IID de la **ApplicationEvents** interfaz. Esta información solo se usa en tiempo de compilación.  
   
- el código siguiente aparece en Simple.h.  El código pertinente es anotado por comentarios:  
+ Aparece el siguiente código en Simple.h. El código relevante se anota mediante comentarios:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/CPP/using-idispeventsimpleimpl_2.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   
- el código siguiente es de Simple.cpp:  
+ El siguiente código proviene de Simple.cpp.  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/CPP/using-idispeventsimpleimpl_3.cpp)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de eventos](../atl/event-handling-and-atl.md)   
- [Ejemplo ATLEventHandling](../top/visual-cpp-samples.md)
+ [Ejemplo ATLEventHandling](../visual-cpp-samples.md)
+

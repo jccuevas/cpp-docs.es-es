@@ -1,32 +1,33 @@
 ---
-title: "CreatorMap::activationId (Miembro de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap::activationId"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "activationId (miembro de datos)"
+title: Miembro de datos Creatormap | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreatorMap::activationId
+dev_langs: C++
+helpviewer_keywords: activationId data member
 ms.assetid: 77518b76-6e6a-4b48-8e2e-a4c7c67769e0
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 912b18ff3e1be04913cb9345e4ac5bde25d2e039
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap::activationId (Miembro de datos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId (Miembro de datos)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 union {   
@@ -35,21 +36,21 @@ union {
 } activationId;  
 ```  
   
-## Parámetros  
+## <a name="parameters"></a>Parámetros  
  `clsid`  
- Un identificador de interfaz  
+ Id. de interfaz.  
   
  `getRuntimeName`  
- Una función que recupera el nombre en tiempo de ejecución de Windows de un objeto.  
+ Una función que recupera el nombre de un objeto en tiempo de ejecución de Windows.  
   
-## Comentarios  
- Representa un identificador de objeto que se identifica mediante un identificador clásico de la clase COM o un nombre en tiempo de ejecución de Windows.  
+## <a name="remarks"></a>Comentarios  
+ Representa un identificador de objeto que se identifica mediante un identificador de clase COM clásico o un nombre de Windows en tiempo de ejecución.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [CreatorMap \(Estructura\)](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [CreatorMap (estructura)](../windows/creatormap-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

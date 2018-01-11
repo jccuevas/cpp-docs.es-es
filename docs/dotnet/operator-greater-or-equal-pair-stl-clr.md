@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fa93ffbb83a4ebb5ea3e8e6a3987330f1c4aaba2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 196b2a16a5720b8d4862fafdf78f6d9768e3ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-pair-stlclr"></a>operador&gt;= (par) (STL/CLR)
 Comparación igual o mayor del par.  
@@ -37,7 +40,7 @@ template<typename Value1,
  izquierda  
  Par izquierdo para comparar.  
   
- derecha  
+ right  
  Par derecho a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

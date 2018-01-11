@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f661152774c8d5313a294e243a0f5a0083b4e114
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4d5fe0a83c5fbc3c4793699975d2045df5fbd8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-error-bk1509"></a>Error de BSCMAKE BK1509
 espacio de montón insuficiente  
   
  BSCMAKE se quedó sin memoria, incluida la memoria virtual.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo  
   
 1.  Libere espacio en disco.  
   

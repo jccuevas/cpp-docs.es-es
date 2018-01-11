@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - mbccpy
 - _tccpy
 - _ftccpy
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tccpy function
 - _tccpy_l function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a2c085e754e43e0909552a68d36b8393708cf7ac
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 96273d317409f8c79740b1c7200af1533467d9f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 Copia un carácter multibyte de una cadena en otra. Hay disponibles versiones más seguras de estas funciones; vea [_mbccpy_s, _mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
@@ -103,7 +87,7 @@ void _mbccpy_l(
   
  Esta función valida sus parámetros. Si se pasa un puntero nulo a `_mbccpy` para `dest` o `src`, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL`.  
   
- `_mbccpy` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_mbccpy_l` y `_mbccpy` son exactamente iguales, salvo que `_mbccpy_l` usa la configuración regional que se pasa para todo comportamiento dependiente de la configuración regional. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_mbccpy` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_mbccpy_l` y `_mbccpy` son exactamente iguales, salvo que `_mbccpy_l` usa la configuración regional que se pasa para todo comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  **Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada.  
   
@@ -112,7 +96,7 @@ void _mbccpy_l(
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tccpy`|Se asigna a una macro o una función insertada|`_mbccpy`|Se asigna a una macro o una función insertada|  
-|`_tccpy_l`|no disponible|`_mbccpy_l`|no disponible|  
+|`_tccpy_l`|N/D|`_mbccpy_l`|N/D|  
   
 ## <a name="requirements"></a>Requisitos  
   

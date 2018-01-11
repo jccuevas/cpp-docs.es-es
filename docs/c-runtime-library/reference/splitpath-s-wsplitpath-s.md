@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 Divide un nombre de ruta de acceso en componentes. Se trata de versiones de [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) que incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -160,7 +144,7 @@ errno_t _wsplitpath_s(
  Si alguno de los búferes es demasiado pequeño para contener el resultado, estas funciones borran todos los búferes en cadenas vacías, establecen `errno` en `ERANGE` y devuelven `ERANGE`.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_splitpath_s` divide una ruta de acceso en los cuatro componentes respectivos. `_splitpath_s` controla automáticamente los argumentos de cadenas de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte de acuerdo con la página de códigos multibyte actualmente en uso. `_wsplitpath_s` es una versión con caracteres anchos de `_splitpath_s`; los argumentos a `_``wsplitpath_s` son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
+ La función `_splitpath_s` divide una ruta de acceso en los cuatro componentes respectivos. `_splitpath_s` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wsplitpath_s` es una versión con caracteres anchos de `_splitpath_s`; los argumentos a `_wsplitpath_s` son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
@@ -172,7 +156,7 @@ errno_t _wsplitpath_s(
   
  En la tabla siguiente se enumeran los valores de las constantes de manifiesto.  
   
-|Nombre|Valor|  
+|nombre|Valor|  
 |----------|-----------|  
 |_MAX_DRIVE|3|  
 |_MAX_DIR|256|  
@@ -181,7 +165,7 @@ errno_t _wsplitpath_s(
   
  Si la ruta de acceso completa no contiene ningún componente (por ejemplo, un nombre de archivo), `_splitpath_s` asigna una cadena vacía al búfer correspondiente.  
   
- En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -192,7 +176,7 @@ errno_t _wsplitpath_s(
 |`_splitpath_s`|\<stdlib.h>|  
 |`_wsplitpath_s`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  

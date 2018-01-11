@@ -1,32 +1,33 @@
 ---
-title: "binary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate (función) [STL/CLR]"
+title: binary_negate (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3780c89c178c0c71f3388d2bd846ed7d52af3ceb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# binary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor que, cuando se invoca, devuelve la negación lógica de su functor almacenado de dos\- argumento.  Se utiliza especifica un objeto de función en términos de su functor almacenado.  
+# <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
+La clase de plantilla describe un functor que, cuando se llama, devuelve la operación lógica no de su almacenado functor de dos argumentos. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun>  
@@ -50,35 +51,35 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Debería  
- El tipo de functor almacenado.  
+#### <a name="parameters"></a>Parámetros  
+ Fun  
+ El tipo del functor almacenado.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|delegate\_type|El tipo de delegado genérico.|  
-|first\_argument\_type|El tipo del primer argumento de functor.|  
-|result\_type|El tipo de resultado de functor.|  
-|second\_argument\_type|El tipo de argumento de functor segundo.|  
-|stored\_function\_type|El tipo de functor.|  
+|---------------------|-----------------|  
+|delegate_type|El tipo de delegado genérico.|  
+|first_argument_type|El tipo del primer argumento functor.|  
+|result_type|El tipo del resultado functor.|  
+|second_argument_type|El tipo del segundo argumento functor.|  
+|stored_function_type|El tipo del functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|binary\_negate|Construye el functor.|  
+|------------|-----------------|  
+|binary_negate|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|operador delegate\_type^\(\)|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|operador delegate_type^()|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de dos\- argumento que almacena otro functor de dos\- argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelve la negación lógica de functor almacenado denominado con los dos argumentos.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de dos argumentos que almacena otro functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve la operación lógica no del functor almacenado llama con los dos argumentos.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +129,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [not2](../dotnet/not2-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [not2 (STL/CLR)](../dotnet/not2-stl-clr.md)

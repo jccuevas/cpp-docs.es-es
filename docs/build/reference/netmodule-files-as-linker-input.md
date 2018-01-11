@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b07e82fe8d7d191dc328645efd99ab3a9a4f6fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="netmodule-files-as-linker-input"></a>.Archivos netmodule como entrada del vinculador
 Link.exe ahora acepta archivos MSIL .obj y .netmodule como entrada. El archivo de salida generado por el vinculador será un ensamblado o un archivo .netmodule sin ninguna dependencia de tiempo de ejecución de cualquiera de los archivos .obj o .netmodule que se utilizaron como entrada al vinculador.  

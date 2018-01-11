@@ -1,32 +1,33 @@
 ---
-title: "negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "negate (función) [STL/CLR]"
+title: Negate (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::negate
+dev_langs: C++
+helpviewer_keywords: negate function [STL/CLR]
 ms.assetid: 58e4c339-0dee-4db8-b2cc-de8920977039
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7a9ae9fa1270a2a7f417e46681b21120eeded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor que, cuando se invoca, devuelva el argumento negado.  Se utiliza especifica un objeto de función en términos del tipo de argumento.  
+# <a name="negate-stlclr"></a>negate (STL/CLR)
+La clase de plantilla describe un functor que, cuando se llama, devuelve su argumento negada. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Arg>  
@@ -47,33 +48,33 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Argumento  
+#### <a name="parameters"></a>Parámetros  
+ Arg  
  El tipo de los argumentos.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|argument\_type|El tipo de argumento de functor.|  
-|delegate\_type|El tipo de delegado genérico.|  
-|result\_type|El tipo de resultado de functor.|  
+|---------------------|-----------------|  
+|argument_type|El tipo del argumento functor.|  
+|delegate_type|El tipo de delegado genérico.|  
+|result_type|El tipo del resultado functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
+|------------|-----------------|  
 |negate|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|delegate\_type^ de operador|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|operador delegate_type ^|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de uno\- argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelva el argumento negado.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de un argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve su argumento negada.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_negate.cpp   
@@ -106,12 +107,15 @@ int main()
   
 ```  
   
-  **4 \-3**  
- **\-4 3**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 -3  
+-4 3  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [logical\_not](../dotnet/logical-not-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [logical_not (STL/CLR)](../dotnet/logical-not-stl-clr.md)

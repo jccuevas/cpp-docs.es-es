@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c07cc20c344e6ccd5c3f7798cfd471e7111fe47d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d71c8b5c7f6c90dc0193626e57b736a549be87e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException (Clase)
 Se produce cuando un subproceso llama mediante un puntero de interfaz para un objeto proxy que no pertenece al contenedor del subproceso.  
@@ -40,7 +41,7 @@ public ref class WrongThreadException : COMException,    IException,    IPrintab
   
  **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd  
   

@@ -1,41 +1,42 @@
 ---
-title: "set::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end (miembro) [STL/CLR]"
+title: 'Set:: end (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 3fe66e73-5eb9-4972-8a07-01f2eb4d1ccb
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 70611bf9b8e7f99f034709499d82d05b24b817b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# set::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setend-stlclr"></a>set::end (STL/CLR)
 Designa el final de la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator end();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un iterador bidireccional que señala simplemente más allá del final de la secuencia controlada.  Se usa para obtener un iterador que señala el final de la secuencia controlada; el cambio de doesn de estado no si la longitud de los cambios en los elementos de la secuencia.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un iterador bidireccional que apunta justo después del final de la secuencia controlada. Utilícelo para obtener un iterador que designa el final de la secuencia controlada; su no de estado de cambio si cambia la longitud de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_set_end.cpp   
@@ -65,14 +66,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [set](../dotnet/set-stl-clr.md)   
- [set::begin](../dotnet/set-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)

@@ -1,42 +1,43 @@
 ---
-title: "__lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt (función intrínseca)"
-  - "lzcnt (instrucción)"
-  - "lzcnt16 (función intrínseca)"
-  - "lzcnt (función intrínseca)"
-  - "__lzcnt16 (función intrínseca)"
-  - "lzcnt64 (función intrínseca)"
-  - "__lzcnt64 (función intrínseca)"
+title: __lzcnt16, __lzcnt, __lzcnt64 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __lzcnt16, __lzcnt, __lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 **Específicos de Microsoft**  
   
- Cuenta el número de ceros iniciales en un entero de 16 \-, 32 \-, o 64 bytes.  
+ El número de la izquierda de recuentos de ceros finales en un 16, 32 o entero de 64 bytes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +51,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `value`  
- Los 16 \-, 32 \-, o 64 bits enteros sin signo a examinar para los ceros iniciales.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `value`  
+ Los 16, 32 o entero sin signo de 64 bits para buscar los ceros iniciales.  
   
-## Valor devuelto  
- El número de bits de cero a la izquierda en el parámetro de `value` .  Si `value` es cero, el valor devuelto es el tamaño del operando de entrada \(16, 32, 64\).  Si el bit más significativo de `value` es uno, el valor devuelto es cero.  
+## <a name="return-value"></a>Valor devuelto  
+ El número de iniciales bits cero en el `value` parámetro. Si `value` es cero, el valor devuelto es el tamaño de la entrada de los operandos (16, 32 o 64). Si la mayoría bit significativo de `value` es uno, el valor devuelto es cero.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
-|`__lzcnt16`|Manipulación de bits avanzadas|  
-|`__lzcnt`|Manipulación de bits avanzadas|  
-|`__lzcnt64`|Manipulación de bits avanzada en modo de 64 bits.|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD: Manipulación de bits avanzada (ABN)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD: Manipulación de bits avanzada (ABN)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD: Opciones avanzadas manipulación de bits (ABN) en modo de 64 bits.<br /><br /> Intel: Haswell|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Cada uno de estos intrínseco genera la instrucción de `lzcnt` .  El tamaño del valor que la instrucción de`lzcnt` devuelve es igual que el tamaño de su argumento.  En modo de 32 bits hay registros de propósito general no 64 bits, por consiguiente ningún `lzcnt`64 bits.  
+## <a name="remarks"></a>Comentarios  
+ Cada una de estas funciones intrínsecas genera el `lzcnt` instrucción.  El tamaño del valor que el `lzcnt` instrucción devuelve es el mismo que el tamaño de su argumento.  En modo de 32 bits no hay ningún 64-bit registros de propósito general, por lo tanto, no de 64 bits `lzcnt`.  
   
- Para determinar la compatibilidad de hardware para la instrucción de`lzcnt` llame a intrínsecos de `__cpuid` con `InfoType=0x80000001` y compruebe el bit 5 de `CPUInfo[2] (ECX)`.  Este bit será 1 si se admite la instrucción, y 0 de otra manera.  Si ejecuta el código que utiliza este intrínseco en el hardware que no admite la instrucción de`lzcnt` , los resultados son imprevisibles.  
+ Para determinar la compatibilidad de hardware con el `lzcnt` llamada la `__cpuid` intrínseco con `InfoType=0x80000001` y compruebe el bit 5 de `CPUInfo[2] (ECX)`. Este bit será 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `lzcnt` instrucciones, los resultados son imprevisibles.  
   
-## Ejemplo  
+ En procesadores Intel que no admiten la `lzcnt` la codificación de bytes de la instrucción se ejecuta la instrucción, como `bsr` (bit inversa de examen). Si la portabilidad del código es un problema, considere la posibilidad de uso de la `_BitScanReverse` intrínseco en su lugar. Para obtener más información, consulte [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).  
+  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,9 +103,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16 \(0x0\) \= 16 \_\_lzcnt16 \(0xff\) \= 8 \_\_lzcnt16 \(0xffff\) \= 0 \_\_lzcnt 32 de \_\_lzcnt \(0x0\) \= \(0xff\) \= 24 \_\_lzcnt 16 de \_\_lzcnt \(0xffff\) \= \(0xffffffff\) \= 0**   
-## Específico de Microsoft de FINAL  
- Copyright 2007 por Advanced Micro Devices, Inc reservados todos los derechos.  Optimizado con permiso de Advanced Micro Devices, Inc  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## Vea también  
+**FIN de Específicos de Microsoft**  
+ Algunas partes de este contenido son Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

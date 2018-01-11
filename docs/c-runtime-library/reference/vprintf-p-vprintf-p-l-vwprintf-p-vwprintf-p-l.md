@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9695992fca625bc9b39f8d25074764af031da73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33f7c8f834e9e1e67a5322d15494423bf10190e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 Escribe salida con formato mediante un puntero a una lista de argumentos, y habilita la especificación del orden en el que se usan los argumentos.  
@@ -103,7 +104,7 @@ int _vwprintf_p_l(
  `_vprintf_p` y `_vwprintf_p` devuelven el número de caracteres escritos, sin incluir el carácter de terminación nulo, o un valor negativo si se produce un error de salida.  
   
 ## <a name="remarks"></a>Comentarios  
- Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en `stdout`. Estas funciones solo se diferencian de `vprintf_s` y `vwprintf_s` en que tienen la capacidad de especificar el orden en el que se usan los argumentos. Para más información, vea [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en `stdout`. Estas funciones solo se diferencian de `vprintf_s` y `vwprintf_s` en que tienen la capacidad de especificar el orden en el que se usan los argumentos. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  `_vwprintf_p` es la versión de caracteres anchos de `_vprintf_p`. Las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. `_vprintf_p` no admite actualmente la salida en un flujo UNICODE.  
   
@@ -142,4 +143,4 @@ int _vwprintf_p_l(
  [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
  [_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)   
  [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md)
+ [printf_p (parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md)

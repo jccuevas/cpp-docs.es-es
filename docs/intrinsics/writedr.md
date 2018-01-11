@@ -1,58 +1,57 @@
 ---
-title: "__writedr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writedr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__writedr (función intrínseca)"
+title: __writedr | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writedr
+dev_langs: C++
+helpviewer_keywords: __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e58523995bfe3bb47d915e161a937149bcf4f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __writedr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Escriba el valor especificado en el registro especificado de depuración.  
+# <a name="writedr"></a>__writedr
+Escribe el valor especificado en el registro de depuración especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __writedr(unsigned DebugRegister, unsigned DebugValue);  
 void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
 ```  
   
-#### Parámetros  
- \[in\] `DebugRegister`  
- Un número de 0 a 7 que identifica el registro de depuración.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `DebugRegister`  
+ Registrar un número entre 0 y 7 que identifica la depuración.  
   
- \[in\]`DebugValue`  
- Un valor a escribir en el registro de depuración.  
+ [in] `DebugValue`  
+ Registrar un valor para escribir en la depuración.  
   
-## Comentarios  
- Estos intrínseco solo están disponibles en modo kernel, y rutinas solo están disponibles como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Estas funciones intrínsecas están disponibles solo en modo kernel y las rutinas sólo están disponibles como intrínsecos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [\_\_readdr](../intrinsics/readdr.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [__readdr](../intrinsics/readdr.md)

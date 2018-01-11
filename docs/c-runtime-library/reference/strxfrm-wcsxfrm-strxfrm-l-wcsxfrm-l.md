@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strxfrm
 - _tcsxfrm
 - wcsxfrm
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strxfrm_l function
 - _tcsxfrm function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 Transforma una cadena en función de la información específica de la configuración regional.  
@@ -116,7 +100,7 @@ size_t wcsxfrm_l(
  Devuelve la longitud de la cadena transformada, sin contar el carácter nulo de terminación. Si el valor devuelto es mayor o igual a `count`, el contenido de `strDest` es imprevisible. Si se produce un error, cada función establece `errno` y devuelve `INT_MAX`. Para un carácter no válido, `errno` se establece en `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `strxfrm` transforma la cadena señalada por `strSource` en un nuevo formulario intercalado que se almacena en `strDest`. En la cadena resultante no se transforman ni colocan más de `count` caracteres (incluido el carácter nulo). La transformación se efectúa con el valor de la categoría `LC_COLLATE` de la configuración regional. Para obtener más información sobre `LC_COLLATE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm` usa la configuración regional actual para el comportamiento dependiente de la configuración regional; `_strxfrm_l` es idéntico, salvo que usa la configuración regional que se pasa en lugar de usar la configuración regional actual. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `strxfrm` transforma la cadena señalada por `strSource` en un nuevo formulario intercalado que se almacena en `strDest`. En la cadena resultante no se transforman ni colocan más de `count` caracteres (incluido el carácter nulo). La transformación se efectúa con el valor de la categoría `LC_COLLATE` de la configuración regional. Para obtener más información sobre `LC_COLLATE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm` usa la configuración regional actual para el comportamiento dependiente de la configuración regional; `_strxfrm_l` es idéntico, salvo que usa la configuración regional que se pasa en lugar de usar la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Después de la transformación, si se efectúa una llamada a `strcmp` con las dos cadenas transformadas, se generarán unos resultados idénticos a los que se generarían en una llamada a `strcoll` aplicada a las dos cadenas originales. Al igual que con `strcoll` y `stricoll`, `strxfrm` controla automáticamente las cadenas de caracteres multibyte según corresponda.  
   
@@ -131,7 +115,7 @@ size_t wcsxfrm_l(
 |`_tcsxfrm`|`strxfrm`|`strxfrm`|`wcsxfrm`|  
 |`_tcsxfrm_l`|`_strxfrm_l`|`_strxfrm_l`|`_wcsxfrm_l`|  
   
- En la configuración regional "C", el orden de los caracteres del juego de caracteres (juego de caracteres ASCII) es el mismo que el orden lexicográfico de los caracteres. Sin embargo, en otras configuraciones regionales, el orden de los caracteres del juego de caracteres puede diferir del orden lexicográfico de los caracteres. Por ejemplo, en algunas configuraciones regionales europeas, el carácter “a” (valor 0x61) precede al carácter “&\#x00E4;” (valor 0xE4) en el juego de caracteres, pero el carácter “ä” precede al carácter “a” lexicográficamente.  
+ En la configuración regional "C", el orden de los caracteres del juego de caracteres (juego de caracteres ASCII) es el mismo que el orden lexicográfico de los caracteres. Sin embargo, en otras configuraciones regionales, el orden de los caracteres del juego de caracteres puede diferir del orden lexicográfico de los caracteres. Por ejemplo, en algunas configuraciones regionales europeas, el carácter "a" (valor 0 x 61) precede el carácter ' &\#x00E4;' (valor 0xE4) en el juego de caracteres, pero el carácter "ä" precede el carácter 'a' lexicográficamente.  
   
  En las configuraciones regionales en las que el juego de caracteres y el orden de los caracteres lexicográficos son distintos, use `strxfrm` en las cadenas originales y `strcmp` en las cadenas resultantes para generar una comparación de cadenas lexicográfica de acuerdo con el valor de la categoría `LC_COLLATE` de la configuración regional actual. Por lo tanto, para comparar dos cadenas de manera lexicográfica en la configuración regional anterior, use `strxfrm` en las cadenas originales y, luego, `strcmp` en las cadenas resultantes. Como alternativa, puede usar `strcoll` en lugar de `strcmp` en las cadenas originales.  
   

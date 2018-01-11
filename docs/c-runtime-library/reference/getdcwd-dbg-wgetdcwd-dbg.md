@@ -41,11 +41,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8afa6156185ac1d375834bdc22df35f2a94638fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2009a88f522b60305c6f910a155faa8e675e2147
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 Versiones de depuración de las funciones [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) (disponibles únicamente durante la depuración).  
@@ -91,7 +92,7 @@ wchar_t *_wgetdcwd_dbg(
  Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor `NULL`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero a `buffer`. Un valor devuelto de `NULL` indica un error, y `errno` se establece en `ENOMEM`, que indica que no hay memoria suficiente para asignar los bytes de `maxlen` (cuando un argumento de `NULL` se proporciona como `buffer`), o en `ERANGE`, que indica que la ruta de acceso es más larga que los caracteres de `maxlen`. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Devuelve un puntero a `buffer`. Un valor devuelto de `NULL` indica un error, y `errno` se establece en `ENOMEM`, que indica que no hay memoria suficiente para asignar los bytes de `maxlen` (cuando un argumento de `NULL` se proporciona como `buffer`), o en `ERANGE`, que indica que la ruta de acceso es más larga que los caracteres de `maxlen` . Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Las funciones `_getdcwd_dbg` y `_wgetdcwd_dbg` son idénticas a `_getdcwd` y `_wgetdcwd`, salvo que, si se define `_DEBUG`, estas funciones usan la versión de depuración de `malloc` y `_malloc_dbg` para asignar memoria si se pasa `NULL` como parámetro de `buffer`. Para obtener más información, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  

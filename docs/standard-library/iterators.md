@@ -16,13 +16,14 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0a9b850100d78a18e39e5cc552cb8461b3726a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f03b62e045fe0130f981d55767c756df89bca9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="iterators"></a>Iteradores
+# <a name="iterators"></a>Iterators
 Un iterador es un objeto que puede iterar sobre los elementos de un contenedor de la biblioteca estándar de C++ y proporcionar acceso a los elementos individuales. Todos los contenedores de la biblioteca estándar de C++ proporcionan los iteradores para que los algoritmos puedan tener acceso a sus elementos de manera estándar sin tener que preocuparse por el tipo de contenedor en el que están almacenados los elementos.  
   
  Puede usar iteradores de forma explícita con funciones miembro y globales, como begin() y end() y operadores como ++ y -- para desplazarse hacia delante o hacia atrás. También puede usar iteradores de forma implícita con un bucle de tipo range-for o (en algunos tipos de iterador) el operador de subíndice [].  

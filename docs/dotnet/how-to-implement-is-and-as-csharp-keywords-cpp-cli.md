@@ -1,34 +1,34 @@
 ---
-title: "C&#243;mo: Implementar las palabras claves is y as de C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "as (palabra clave) en C# [C++]"
-  - "is (palabra clave) en C# [C++]"
+title: "Cómo: implementar el es y como palabras clave de C# (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- as C# keyword [C++]
+- is C# keyword [C++]
 ms.assetid: bc66c0d1-696b-480d-977c-5d9d1ad1ece6
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d73cc06a79dd20743044803dd9c53b9e67e72995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Implementar las palabras claves is y as de C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra cómo implementar la funcionalidad de las palabras clave de C\# `is` y `as` en Visual C\+\+.  
+# <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Cómo: Implementar las palabras claves is y as de C# (C++/CLI)
+Este tema muestra cómo implementar la funcionalidad de la `is` y `as` palabras clave de C# en Visual C++.  
   
- Para obtener más información, vea [is](../Topic/is%20\(C%23%20Reference\).md) y [as](../Topic/as%20\(C%23%20Reference\).md).  
-  
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // CS_is_as.cpp  
@@ -61,6 +61,9 @@ int main() {
 }  
 ```  
   
-  **o es una cadena**   
-## Vea también  
- [Interoperabilidad con otros lenguajes de .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+o is a string  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Interoperabilidad con otros lenguajes de .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

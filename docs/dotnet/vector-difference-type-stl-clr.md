@@ -1,41 +1,42 @@
 ---
-title: "vector::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (miembro) [STL/CLR]"
+title: 'Vector:: difference_type (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 1e47c569-107b-4a44-adf4-b1473e1f8d4c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91b4c651bdb8e801b7e10a5aaafbfc0a5c9ce105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# vector::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los tipos de una distancia firmados entre dos elementos.  
+# <a name="vectordifferencetype-stlclr"></a>vector::difference_type (STL/CLR)
+Los tipos de una distancia con signo entre dos elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Comentarios  
- El tipo describe un recuento firmado del elemento.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un recuento con signo del elemento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_vector_difference_type.cpp   
@@ -70,14 +71,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\- inicio \(\) \= 3**  
-**begin\(\)\- final \(\) \= \-3**   
-## Requisitos  
- cliext \<\/vector de**Encabezado:** \>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/vector >  
   
-## Vea también  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::size\_type](../dotnet/vector-size-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)

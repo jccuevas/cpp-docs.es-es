@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (método)"
+title: PTR::QueryInterface | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las consultas el objeto COM propiedad para una interfaz y asocia el resultado a otro `com::ptr`.  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+El propio objeto COM de una interfaz de consulta y se adjunta el resultado a otro `com::ptr`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `other`  
- `com::ptr` que obtendrá la interfaz.  
+ El `com::ptr` que obtendrá la interfaz.  
   
-## Excepciones  
- Internamente, `QueryInterface` se llama en el objeto COM en propiedad y los errores `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Excepciones  
+ Internamente, `QueryInterface` se llama en el propio objeto COM y cualquier error `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Comentarios  
- Utilice este método para crear un contenedor COM para otra interfaz de objeto COM que pertenece al contenedor actual.  Este método llama a `QueryInterface` a través del objeto COM propiedad para solicitar un puntero a una interfaz específica del objeto COM y asocia el puntero devuelto de interfaz a pasar\- en `com::ptr`.  
+## <a name="remarks"></a>Comentarios  
+ Utilice este método para crear un contenedor COM de una interfaz diferente del objeto COM que posee el contenedor actual. Este método llama a `QueryInterface` a través del propio objeto COM para solicitar un puntero a una interfaz específica de la COM del objeto y conecta el puntero de interfaz devuelto en el pasado `com::ptr`.  
   
-## Ejemplo  
- Este ejemplo implementa una clase CLR que utilice `com::ptr` para ajustar su objeto de `IXMLDOMDocument` miembro privado.  La función miembro de `WriteTopLevelNode` utiliza `QueryInterface` para rellenar `com::ptr` local con `IXMLDOMNode` y pasa `com::ptr` \(siguiendo referencia\) a una función miembro privado que escriba el nombre y las propiedades de texto de nodo en la consola.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto. El `WriteTopLevelNode` utiliza la función miembro `QueryInterface` para rellenar una variable local `com::ptr` con una `IXMLDOMNode` y, a continuación, pasa el `com::ptr` (de referencia de seguimiento) a una función de miembro privado que se escribe las propiedades de nombre y el texto del nodo en la consola.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#documentpersnickety\/\#document\>\<\>**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\com\\ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
   
- msclr::com de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\com\ptr.h >  
   
-## Vea también  
- [ptr \(Miembros\)](../dotnet/ptr-members.md)   
+ **Namespace** msclr::com  
+  
+## <a name="see-also"></a>Vea también  
+ [PTR (miembros)](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

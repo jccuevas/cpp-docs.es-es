@@ -1,48 +1,49 @@
 ---
-title: "ICommandImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandImpl (clase)"
+title: ICommandImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandImpl
+dev_langs: C++
+helpviewer_keywords: ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c553effb6ad6a4aa9571eed62f30e4e83910afbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona la implementación de la interfaz de [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) .  
+# <a name="icommandimpl-class"></a>ICommandImpl (Clase)
+Proporciona la implementación para la [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T, class CommandBase = ICommand>   
 class ATL_NO_VTABLE ICommandImpl : public CommandBase  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- La clase, derivada de `ICommandImpl`.  
+ La clase derivada de `ICommandImpl`.  
   
  `CommandBase`  
- Una interfaz de comando.  El valor predeterminado es `ICommand`.  
+ Una interfaz de comandos. De manera predeterminada, es `ICommand`.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
@@ -51,22 +52,22 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|Crea un objeto de conjunto de filas.|  
 |[Ejecutar](../../data/oledb/icommandimpl-execute.md)|Ejecuta el comando.|  
 |[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Devuelve un puntero de interfaz a la sesión que creó el comando.|  
-|[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|Constructor.|  
+|[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|El constructor.|  
   
-### Miembros de datos  
+### <a name="data-members"></a>Miembros de datos  
   
 |||  
 |-|-|  
-|[m\_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|Indica si el comando debe cancelarse.|  
-|[el m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|Indica si el comando se cancelará al ejecutarse.|  
-|[el m\_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|Indica si el comando se está ejecutando actualmente.|  
+|[m_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|Indica si se puede cancelar el comando.|  
+|[m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|Indica si se cancelará cuando se ejecuta el comando.|  
+|[m_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|Indica si el comando se está ejecutando actualmente.|  
   
-## Comentarios  
- Una interfaz de enlace en el objeto de comando.  
+## <a name="remarks"></a>Comentarios  
+ Una interfaz obligatoria en el objeto de comando.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

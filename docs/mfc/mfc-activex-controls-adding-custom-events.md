@@ -1,142 +1,143 @@
 ---
-title: "Controles ActiveX MFC: Agregar eventos personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Click (evento), eventos personalizados"
-  - "ClickIn (evento)"
-  - "COleControl (clase), eventos personalizados"
-  - "eventos personalizados"
-  - "eventos personalizados, agregar a controles ActiveX"
-  - "EVENT_CUSTOM (macro)"
-  - "EVENT_CUSTOM (prefijo)"
-  - "eventos [C++], controles ActiveX"
-  - "FireClickIn (evento)"
-  - "FireEvent (método), agregar eventos personalizados"
-  - "InCircle (método)"
-  - "controles ActiveX en MFC, eventos"
+title: 'Controles ActiveX MFC: Agregar eventos personalizados | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], events [MFC]
+- EVENT_CUSTOM prefix [MFC]
+- custom events [MFC], adding to ActiveX controls
+- EVENT_CUSTOM macro [MFC]
+- InCircle method [MFC]
+- ClickIn event
+- FireClickIn event
+- COleControl class [MFC], custom events [MFC]
+- Click event, custom events [MFC]
+- events [MFC], ActiveX controls
+- custom events [MFC]
+- FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Controles ActiveX MFC: Agregar eventos personalizados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los eventos personalizados difieren de los eventos comunes en que automáticamente no son desencadenados por la clase `COleControl`.  Un evento personalizado reconoce acción, determinado por el programador de controles, como un evento.  Las entradas del mapa de eventos para los eventos personalizados se representan mediante la macro de `EVENT_CUSTOM` .  La sección siguiente implementa un evento personalizado para un proyecto de control ActiveX creado mediante el asistente para controles ActiveX.  
+# <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: Agregar eventos personalizados
+Eventos personalizados se diferencian de los eventos estándar en que no se activan automáticamente por la clase `COleControl`. Un evento personalizado reconoce una acción determinada, determinada por el desarrollador del control, como un evento. Las entradas del mapa de eventos para los eventos personalizados se representan mediante el `EVENT_CUSTOM` macro. En la siguiente sección implementa un evento personalizado para un proyecto de control ActiveX que se creó mediante el Asistente para controles ActiveX.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Agregar un evento personalizado con el asistente para agregar eventos  
- El procedimiento siguiente se agrega un evento personalizado específico, ClickIn.  Puede utilizar este procedimiento para agregar otros eventos personalizados.  Sustituya el nombre de evento personalizado y los parámetros para el nombre de evento y los parámetros de ClickIn.  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Agregar un evento personalizado con el Asistente para agregar eventos  
+ El siguiente procedimiento agrega un evento personalizado específico, ClickIn. Puede usar este procedimiento para agregar otros eventos personalizados. Sustituya el nombre del evento personalizado y sus parámetros para el nombre del evento ClickIn y los parámetros.  
   
-#### Para agregar el evento personalizado de ClickIn mediante el asistente para agregar eventos  
+#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Para agregar el evento personalizado ClickIn mediante el Asistente para agregar eventos  
   
-1.  Cargue el proyecto de control.  
+1.  Cargue el proyecto del control.  
   
-2.  En la vista de clases, haga clic con el botón secundario en la clase de control ActiveX para abrir el menú contextual.  
+2.  En la vista de clases, haga clic en la clase del control ActiveX para abrir el menú contextual.  
   
-3.  En el menú contextual, haga clic en **Add** y haga clic en **Agregar evento**.  
+3.  En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar evento**.  
   
-     Se abrirá el asistente para agregar eventos.  
+     Se abrirá al Asistente para agregar eventos.  
   
-4.  En el cuadro de **Nombre de evento** , seleccione primero cualquier evento existente, haga clic en el botón de opción de **Custom** , el tipo `ClickIn`.  
+4.  En el **nombre del evento** cuadro, primero seleccione cualquier evento existente y luego haga clic en el **personalizado** radio button, a continuación, escriba `ClickIn`.  
   
-5.  En el cuadro de **Nombre interno** , escriba el nombre de la función del desencadenamiento del evento.  En este ejemplo, use el valor predeterminado proporcionado por el asistente para agregar eventos \(`FireClickIn`\).  
+5.  En el **nombre interno** , escriba el nombre de función de activación del evento. En este ejemplo, utilice el valor predeterminado proporcionado por el Asistente para agregar eventos (`FireClickIn`).  
   
-6.  Agregue un parámetro, denominado `xCoord` \(tipo `OLE_XPOS_PIXELS`\), utilizando los controles de **Nombre del parámetro** y de **Tipo de parámetro** .  
+6.  Agregue un parámetro, denominado `xCoord` (tipo `OLE_XPOS_PIXELS`), usando la **nombre de parámetro** y **tipo de parámetro** controles.  
   
-7.  Agregue un segundo parámetro, denominado `yCoord` \(tipo `OLE_YPOS_PIXELS`\).  
+7.  Agregue un segundo parámetro, denominado `yCoord` (tipo `OLE_YPOS_PIXELS`).  
   
-8.  Haga clic en **Finalizar** para crear el evento.  
+8.  Haga clic en **finalizar** para crear el evento.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a> Agregue los cambios del asistente de eventos para los eventos personalizados  
- Cuando se agrega un evento personalizado, el asistente para agregar eventos realiza cambios en la clase de control. Archivos de h, de .CPP, y de .IDL.  Los siguientes ejemplos de código son específicos del evento de ClickIn.  
+##  <a name="_core_classwizard_changes_for_custom_events"></a>Agregar los cambios del Asistente para eventos para los eventos personalizados  
+ Cuando se agrega un evento personalizado, el Asistente para agregar eventos realiza cambios en la clase de control. H. CPP, y. IDL (archivos). Los ejemplos de código siguientes son específicos del evento ClickIn.  
   
- Las líneas siguientes se agregan al encabezado \(. H\) archivo de clase de control:  
+ Las líneas siguientes se agregan al encabezado (. (H) del archivo de la clase del control:  
   
- [!code-cpp[NVC_MFC_AxUI#7](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#7](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_1.h)]  
   
- Este código declara una función inline denominada `FireClickIn` que llame a [COleControl::FireEvent](../Topic/COleControl::FireEvent.md) con los parámetros de ClickIn que definió mediante el asistente para agregar eventos.  
+ Este código declara una función inline denominada `FireClickIn` que llama [a COleControl:: FireEvent](../mfc/reference/colecontrol-class.md#fireevent) con el evento ClickIn y los parámetros definidos mediante el Asistente para agregar eventos.  
   
- Además, la siguiente línea se agrega al mapa del control, ubicado en el archivo de implementación \(.CPP\) de la clase de control:  
+ Además, se agrega la siguiente línea al mapa de eventos para el control, situado en la implementación (. Archivo CPP) de la clase del control:  
   
- [!code-cpp[NVC_MFC_AxUI#8](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#8](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_2.cpp)]  
   
- Este código asigna el evento ClickIn a la función inline `FireClickIn`, pasando los parámetros que definió mediante el asistente para agregar eventos.  
+ Este código asigna el evento ClickIn a la función insertada `FireClickIn`, pasando los parámetros definidos mediante el Asistente para agregar eventos.  
   
- Finalmente, la siguiente línea se agrega al archivo de .IDL de control:  
+ Por último, se agrega la siguiente línea a su control. Este archivo IDL:  
   
- [!code-cpp[NVC_MFC_AxUI#9](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_3.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#9](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_3.idl)]  
   
- Esta línea asigna a eventos de ClickIn el número de identificación concreto, tomado de la posición del evento en la lista de eventos del asistente para agregar eventos.  La entrada de la lista de eventos permite que un contenedor prever el evento.  Por ejemplo, puede proporcionar el código del controlador que se ejecuta cuando se desencadena el evento.  
+ Esta línea asigna al evento ClickIn un número de identificador específico, obtenido desde la posición del evento en la lista de eventos del Asistente para agregar eventos. La entrada en la lista de eventos permite que un contenedor prever el evento. Por ejemplo, puede proporcionar el código del controlador que se ejecuta cuando se desencadena el evento.  
   
-##  <a name="_core_calling_fireclickin"></a> Llamada FireClickIn  
- Ahora que ha agregado el evento personalizado de ClickIn mediante el asistente para agregar eventos, debe decidir cuando este evento se desencadena.  Puede hacerlo llamando a `FireClickIn` cuando la acción correspondiente aparece.  Para este tutorial, el control utiliza la función de `InCircle` dentro de un controlador de mensajes `WM_LBUTTONDOWN` para desencadenar el evento de ClickIn cuando un usuario haga clic dentro de una región circular o elíptico.  El procedimiento siguiente agrega el controlador de `WM_LBUTTONDOWN` .  
+##  <a name="_core_calling_fireclickin"></a>Llamar a FireClickIn  
+ Ahora que ha agregado el evento personalizado ClickIn mediante el Asistente para agregar eventos, debe decidir si este evento es que se deben activar. Para ello, al llamar a `FireClickIn` cuando se produce la acción apropiada. Para este análisis, el control usa la `InCircle` función dentro de un `WM_LBUTTONDOWN` el controlador de mensajes para desencadenar el evento ClickIn cuando un usuario hace clic dentro de una región circular o elíptica. El procedimiento siguiente se agrega el `WM_LBUTTONDOWN` controlador.  
   
-#### Para agregar un controlador de mensajes con el asistente para agregar eventos  
+#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Para agregar un controlador de mensajes con el Asistente para agregar eventos  
   
-1.  Cargue el proyecto de control.  
+1.  Cargue el proyecto del control.  
   
-2.  En la vista de clases, seleccione la clase de control ActiveX.  
+2.  En la vista de clases, seleccione la clase del control ActiveX.  
   
-3.  En la ventana Propiedades, haga clic en el botón **Mensajes**.  
+3.  En la ventana Propiedades, haga clic en el **mensajes** botón.  
   
-     La ventana Propiedades muestra una lista de mensajes que se pueden controlar mediante el control ActiveX.  Cualquier mensaje mostrado en negrita ya tiene una función controladora asignada al.  
+     La ventana Propiedades muestra una lista de mensajes que pueda ser controlada por el control ActiveX. Cualquier mensaje que se muestra en negrita ya tiene una función de controlador asignada a él.  
   
-4.  De la ventana Propiedades, seleccione el mensaje que desea controlar.  Para este ejemplo, seleccione `WM_LBUTTONDOWN`.  
+4.  En la ventana Propiedades, seleccione el mensaje que desea controlar. En este ejemplo, seleccione `WM_LBUTTONDOWN`.  
   
-5.  En el cuadro de lista desplegable a la derecha, seleccione **\<Add\> OnLButtonDown**.  
+5.  En el cuadro de lista desplegable de la derecha, seleccione  **\<Agregar > OnLButtonDown**.  
   
-6.  Haga doble clic en la nueva función de controlador en la vista de clases para saltar al código de controlador de mensajes en el archivo de implementación \(.CPP\) del control ActiveX.  
+6.  Haga doble clic en la nueva función de controlador en la vista de clases para saltar al código del controlador de mensaje en la implementación (. Archivo CPP) del control ActiveX.  
   
- El siguiente ejemplo de código llama a la función de **InCircle** cada vez que el botón primario se hace clic en la ventana de control.  Este ejemplo se puede encontrar en la función de controlador de `WM_LBUTTONDOWN` , `OnLButtonDown`, en el resumen de [Ejemplo de Circ](../top/visual-cpp-samples.md) .  
+ El siguiente código de ejemplo llama el **InCircle** función cada vez que se hace clic en el botón primario del mouse en la ventana de control. Este ejemplo puede encontrarse en el `WM_LBUTTONDOWN` función de controlador, `OnLButtonDown`, en la [ejemplo Circ](../visual-cpp-samples.md) abstracta.  
   
- [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   
 > [!NOTE]
->  Cuando el asistente para agregar eventos crea controladores de mensajes para las acciones del botón del mouse, una llamada al mismo controlador de mensajes de la clase base se agregará automáticamente.  No quite esta llamada.  Si el control utiliza mensajes comunes cualquiera de los del mouse, los controladores de mensajes en la clase base deben llamar para asegurarse de que la captura del mouse está controlada correctamente.  
+>  Cuando el Asistente para agregar eventos crea controladores de mensajes de acciones de los botones del mouse, se agrega automáticamente una llamada al mismo controlador de mensajes de la clase base. No quite esta llamada. Si el control utiliza cualquiera de los mensajes estándar del mouse, se deben llamar los controladores de mensajes en la clase base para asegurarse de que la captura del mouse se administran correctamente.  
   
- En el ejemplo siguiente, el evento se activa cuando el clic se produce dentro de un área circular o elíptica dentro del control.  Para lograr este comportamiento, puede colocar la función de `InCircle` en el archivo de implementación del control \(.CPP\):  
+ En el ejemplo siguiente, el evento desencadena únicamente cuando se produce el clic dentro de una región circular o elíptica dentro del control. Para conseguir este comportamiento, puede colocar el `InCircle` función en la implementación del control (. Archivo CPP):  
   
- [!code-cpp[NVC_MFC_AxUI#11](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#11](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_5.cpp)]  
   
- También necesitará agregar la siguiente declaración de función de `InCircle` al encabezado del control \(. H\) archivo:  
+ También necesitará agregar la siguiente declaración de la `InCircle` función al encabezado del control (. H) archivo:  
   
- [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-events_6.h)]  
+ [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a> Eventos personalizados con nombres de acción  
- Puede crear eventos personalizados con el mismo nombre que los eventos comunes, no obstante no puede implementar ambos en el mismo control.  Por ejemplo, puede crear un evento personalizado denominado el clic en que no desencadena cuando haga clic común de evento se activaría normalmente.  A continuación desencadenar el evento Click en cualquier momento llamando a la función bounce.  
+##  <a name="_core_custom_events_with_stock_names"></a>Eventos personalizados con nombres de cotizaciones  
+ Puede crear eventos personalizados con el mismo nombre que los eventos estándar, sin embargo, no se pueden implementar tanto en el mismo control. Por ejemplo, puede crear un evento personalizado denominado Click que no se activa cuando el evento estándar haga clic en normalmente volvería a activarlo. A continuación, se desencadena el evento Click en cualquier momento llamando a su función de activación.  
   
- El procedimiento siguiente se agrega un evento Click personalizado.  
+ El siguiente procedimiento agrega un Click personalizado eventos.  
   
-#### Para agregar un evento personalizado que utiliza un nombre de evento común  
+#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>Para agregar un evento personalizado que usa un nombre de evento estándar  
   
-1.  Cargue el proyecto de control.  
+1.  Cargue el proyecto del control.  
   
-2.  En la vista de clases, haga clic con el botón secundario en la clase de control ActiveX para abrir el menú contextual.  
+2.  En la vista de clases, haga clic en la clase del control ActiveX para abrir el menú contextual.  
   
-3.  En el menú contextual, haga clic en **Add** y haga clic en **Agregar evento**.  
+3.  En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar evento**.  
   
-     Se abrirá el asistente para agregar eventos.  
+     Se abrirá al Asistente para agregar eventos.  
   
-4.  En la lista desplegable de **Nombre de evento** , seleccione un nombre de evento común.  Para este ejemplo, seleccione **Hacer clic en**.  
+4.  En el **nombre del evento** lista desplegable, seleccione un nombre de evento estándar. En este ejemplo, seleccione **haga clic en**.  
   
-5.  Para **Tipo de evento**, seleccione **Custom**.  
+5.  Para **tipo de evento**, seleccione **personalizado**.  
   
-6.  Haga clic en **Finalizar** para crear el evento.  
+6.  Haga clic en **finalizar** para crear el evento.  
   
-7.  Llame a `FireClick` en los lugares adecuados en el código.  
+7.  Llamar a `FireClick` en lugares adecuados en el código.  
   
-## Vea también  
- [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)   
- [COleControl Class](../mfc/reference/colecontrol-class.md)
+## <a name="see-also"></a>Vea también  
+ [Controles ActiveX de MFC](../mfc/mfc-activex-controls.md)   
+ [Controles ActiveX de MFC: métodos](../mfc/mfc-activex-controls-methods.md)   
+ [COleControl (clase)](../mfc/reference/colecontrol-class.md)

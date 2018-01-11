@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xloctime/std::time_get_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- time_get_byname class
+f1_keywords: xloctime/std::time_get_byname
+dev_langs: C++
+helpviewer_keywords: time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 37fc7d81148b0829d8e4b58552cca808e30ae618
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b46b1b88b623c1f1bec315ef2bd488ae3675d0b0
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timegetbyname-class"></a>time_get_byname (Clase)
 La clase de plantilla derivada describe un objeto que puede actuar como una faceta de configuración regional de tipo `time_get`\<CharType, InputIterator>.  
@@ -67,7 +63,6 @@ protected:
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

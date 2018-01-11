@@ -1,42 +1,44 @@
 ---
-title: "C&#243;mo: Calcular las referencias de cadenas COM mediante la interoperabilidad de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interoperabilidad de C++, cadenas"
-  - "COM [C++], calcular las referencias de cadenas"
-  - "cálculo de referencias de datos [C++], cadenas"
-  - "interoperabilidad [C++], cadenas"
-  - "calcular las referencias [C++], cadenas"
+title: "Cómo: serializar cadenas COM mediante la interoperabilidad de C++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Calcular las referencias de cadenas COM mediante la interoperabilidad de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tema siguiente muestra cómo se puede hacer que BSTR \(el formato de cadena básico preferido en programación COM\) pase de una función administrada a no administrada, y al contrario.  Para interoperar con otros tipos de cadenas, consulte los temas siguientes:  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Cómo: serializar cadenas COM mediante la interoperabilidad de C++
+Este tema muestra cómo puede ser una cadena BSTR (el formato de cadena básico preferido en programación COM) pase de una en una función no administrada y viceversa. Para interoperar con otros tipos de cadenas, vea los temas siguientes:  
   
--   [Cómo: Calcular las referencias de cadenas Unicode mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Cómo: Serializar cadenas Unicode mediante la interoperabilidad de C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Cómo: Calcular las referencias de cadenas ANSI mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [Cómo: Serializar cadenas ANSI mediante la interoperabilidad de C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- En los siguientes ejemplos de código, se utilizan las directivas \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero sin que éstas dejen de interactuar como si se hubieran definido en archivos separados.  No es necesario compilar con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) los archivos que contienen únicamente funciones no administradas.  
+ El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. No es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo se puede hacer que BSTR \(un formato de cadena utilizado en programación COM\) pase de una función administrada a no administrada.  La función administrada de llamada usa <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obtener la dirección de una representación de BSTR del contenido de una System.String de .NET.  Este puntero se ancla mediante [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md), para asegurarse de que su dirección física no cambie durante un ciclo de recolección de elementos no utilizados mientras se ejecuta la función no administrada.  El recolector de elementos no utilizados no puede de ningún modo mover la memoria hasta que [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) salga del ámbito.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo se puede pasar una cadena BSTR (un formato de cadena utilizado en programación COM) de administrado a una función no administrada. Administrados de la llamada a función usa <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obtener la dirección de una representación de BSTR del contenido de una System.String. NET. Este puntero se ancla mediante [pin_ptr (C++ / CLI)](../windows/pin-ptr-cpp-cli.md) para asegurarse de que su dirección física no cambie durante un ciclo de recopilación de elementos no utilizados mientras se ejecuta la función no administrada. El recolector de elementos no utilizados está prohibido al mover la memoria hasta que el [pin_ptr (C++ / CLI)](../windows/pin-ptr-cpp-cli.md) sale del ámbito.  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -71,8 +73,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo se puede hacer que BSTR pase de una función no administrada a una administrada.  La función administrada receptora puede utilizar la cadena como BSTR, o usar <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> para convertirla en <xref:System.String> y poder utilizarla con otras funciones administradas.  Dado que la memoria que representa BSTR está asignada en el montón no administrado, no es necesario anclar, ya que no hay recolección de elementos no utilizados en dicho montón.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo se puede pasar una cadena BSTR de no administrado a una función no administrada. La recepción puede usar la cadena de como una cadena BSTR o usar función administrada <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> para convertirlo en un <xref:System.String> para su uso con otras funciones administradas. Dado que la memoria que representa BSTR está asignada en el montón no administrado, no es necesario fijar, porque no hay ninguna colección de elementos no utilizados en el montón no administrado.  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -109,5 +111,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

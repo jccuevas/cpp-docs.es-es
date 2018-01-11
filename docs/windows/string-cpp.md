@@ -1,33 +1,33 @@
 ---
-title: "string (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string attribute"
+title: cadena (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.string
+dev_langs: C++
+helpviewer_keywords: string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# string (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica que `char`unidimensional, `wchar_t`, la matriz de **byte** \(o equivalente\) o un puntero a este tipo de matriz se deben tratar como una cadena.  
+# <a name="string-c"></a>string (C++)
+Indica que unidimensional `char`, `wchar_t`, **bytes** (o equivalente) matriz o el puntero a una matriz de este tipo debe tratarse como una cadena.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,11 +35,11 @@ Indica que `char`unidimensional, `wchar_t`, la matriz de **byte** \(o equivalent
   
 ```  
   
-## Comentarios  
- el atributo de **cadena** C\+\+ tiene la misma funcionalidad que el atributo de [cadena](http://msdn.microsoft.com/library/windows/desktop/aa367270) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **cadena** atributo C++ tiene la misma funcionalidad que la [cadena](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.  
   
-## Ejemplo  
- El código siguiente se muestra cómo utilizar **cadena** en una interfaz y en una definición:  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo utilizar **cadena** en una interfaz y en una definición de tipo:  
   
 ```  
 // cpp_attr_ref_string.cpp  
@@ -54,21 +54,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Matriz o puntero a una matriz, parámetro de interfaz, método de interfaz|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|Matriz o un puntero a una matriz, el parámetro de interfaz, el método de interfaz|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Array Attributes](../windows/array-attributes.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de la matriz](../windows/array-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

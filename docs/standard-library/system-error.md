@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7869ba251868241c082080d3485d5a82c492b8f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68bfea40f926ed74afd6fd246b57d39b7225cdf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 Incluya el encabezado `<system_error>` para definir la clase de excepción `system_error` y las plantillas relacionadas para el procesamiento de errores del sistema de bajo nivel.  
@@ -39,7 +40,7 @@ Incluya el encabezado `<system_error>` para definir la clase de excepción `syst
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Representa la categoría de errores genéricos.|  
 |[system_category](../standard-library/system-error-functions.md#system_category)|Representa la categoría de los errores causados por desbordamientos del sistema de bajo nivel.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

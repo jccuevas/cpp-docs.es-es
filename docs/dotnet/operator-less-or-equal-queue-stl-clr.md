@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= (miembro) [STL/CLR]"
+title: operador&lt;= (cola) (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: 63b7f908-4f6b-40d6-bcc6-22970760789d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bb43f8e43197d86f692a84d36e7abe41f88f198c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cola menor o comparación igual.  
+# <a name="operatorlt-queue-stlclr"></a>operador&lt;= (cola) (STL/CLR)
+Menor o igual la cola comparación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Parámetros  
- left  
- Contenedor izquierdo a comparar.  
+#### <a name="parameters"></a>Parámetros  
+ izquierda  
+ Contenedor izquierdo que se va a comparar.  
   
  right  
- Contenedor derecho a comparar.  
+ Contenedor derecho que se va a comparar.  
   
-## Comentarios  
- La función de operador devuelve `!(``right` `<` `left``)`.  Se utiliza para probar si `left` no se le después de `right` cuando las dos colas son elemento comparado al lado de elemento.  
+## <a name="remarks"></a>Comentarios  
+ Devuelve la función de operador `!(right < left)`. Se usa para comprobar si `left` no está ordenado después `right` cuando las dos colas están comparado elemento por elemento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_queue_operator_le.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **una d b**  
-**\[una b c\] \<\= \[una b c\] es True**  
-**\[una d b\] \<\= \[una b c\] es False**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [operador == (cola) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [operador! = (cola) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [operador\< (cola) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [operador > = (cola) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)

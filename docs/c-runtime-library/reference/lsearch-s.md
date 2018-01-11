@@ -38,11 +38,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb44e7b2c79b1e8719768634bfe028207b9e8d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Realiza una búsqueda lineal de un valor. Versión de [_lsearch](../../c-runtime-library/reference/lsearch.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -88,10 +89,10 @@ void *_lsearch_s(
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|  
-|cualquiera|`NULL`|cualquiera|!= 0|cualquiera|`EINVAL`|  
-|cualquiera|cualquiera|cualquiera|any|cero|`EINVAL`|  
-|any|cualquiera|`NULL`|an|cualquiera|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|cero|`EINVAL`|  
+|any|any|`NULL`|an|cualquiera|`EINVAL`|  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_lsearch_s` realiza una búsqueda lineal del valor `key` en una matriz de `num` elementos, cada uno de ellos de `width` bytes. A diferencia de `bsearch_s`, para `_lsearch_s` no es necesario que la matriz esté ordenada. Si no se encuentra `key`, `_lsearch_s` lo agrega al final de la matriz e incrementa `num`.  

@@ -1,38 +1,39 @@
 ---
-title: "Asignaci&#243;n de espacio de pila | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Asignación de pila | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 514b20847f588dab7a5c205be36c1fbd725df17d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Asignaci&#243;n de espacio de pila
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El prólogo de una función es responsable de asignar espacio de pila para variables locales, registros guardados, parámetros de pila y parámetros de registro.  
+# <a name="stack-allocation"></a>Asignación de espacio de pila
+Prólogo de una función es responsable de asignar espacio de pila para las variables locales, registros guardados, parámetros de pila y parámetros de registro.  
   
- El área de parámetros siempre está al final de la pila \(incluso si se usa alloca\), de modo que siempre estará adyacente a la dirección devuelta durante una llamada a cualquier función.  Contiene por lo menos cuatro entradas, pero siempre hay suficiente espacio para contener todos los parámetros que pueda necesitar una función a la que se pueda llamar.  Tenga en cuenta que siempre se asigna espacio para los parámetros de registro, incluso si estos parámetros nunca se hospedan en la pila; se puede tener la seguridad de que una función llamada siempre tendrá espacio asignado para todos sus parámetros.  Los argumentos de registro requieren direcciones iniciales, por lo tanto, hay un área contigua disponible por si la función llamada necesitase tomar la dirección de la lista de argumentos \(va\_list\) o un argumento concreto.  Esta área también es un lugar apropiado para guardar argumentos de registro durante la ejecución de código thunk y como opción de depuración \(por ejemplo, hace que sea fácil localizar los argumentos durante la depuración si están almacenados en sus direcciones iniciales en el código de prólogo\).  Aunque la función llamada tenga menos de 4 parámetros, estas 4 ubicaciones de la pila pertenecen de manera efectiva a dicha función, que puede utilizarlas para otros fines, además de guardar valores de registro de parámetros.  Así, el llamador no puede guardar información en esta región de la pila durante una llamada a la función.  
+ El área de parámetros siempre está en la parte inferior de la pila (incluso si se usa alloca), de modo que siempre será junto a la dirección de remite durante cualquier llamada a función. Contiene al menos cuatro entradas, pero siempre se necesita espacio suficiente para contener todos los parámetros para cualquier función que se puede llamar. Tenga en cuenta que siempre se asigna espacio para los parámetros de registro, incluso si estos parámetros nunca se hospedan en la pila; un destinatario se garantiza que se haya asignado espacio para todos sus parámetros. Direcciones particulares son necesarias para los argumentos del registro para que esté disponible un área contigua en caso de que la función llamada necesitase tomar la dirección de la lista de argumentos (va_list) o un argumento individual. Esta área también proporciona un lugar cómodo para guardar argumentos de registro durante la ejecución de código thunk y como opción de depuración (por ejemplo, hace que los argumentos fáciles de encontrar durante la depuración si están almacenados en sus direcciones iniciales en el código de prólogo). Incluso si la función llamada tiene menos de 4 parámetros, estas ubicaciones de 4 pila eficazmente pertenecen a la función llamada y pueden usar la función llamada para otros fines aparte de guardar los valores de registros de parámetro.  Lo que el llamador no puede guardar información en esta región de pila a través de una llamada de función.  
   
- Si el espacio se asigna dinámicamente \(alloca\) en una función, se debe utilizar un registro no variable como puntero de marco para marcar la base de la parte fija de la pila, y el registro debe estar guardado e inicializado en el prólogo.  Tenga en cuenta que, cuando se utiliza alloca, las llamadas al mismo destinatario desde el mismo llamador pueden tener direcciones iniciales diferentes para sus parámetros de registro.  
+ Si el espacio se asigna dinámicamente (alloca) en una función, un registro permanente debe usarse como un puntero de marco para marcar la base de la parte fija de la pila y ese registro se debe guardar e inicializado en el prólogo. Tenga en cuenta que cuando se utiliza alloca, las llamadas al mismo destinatario desde el mismo llamador pueden tener direcciones iniciales diferentes para sus parámetros de registro.  
   
- La pila siempre se mantendrá con alineación de 16 bits, excepto en el prólogo \(por ejemplo, después de insertar la dirección devuelta\) y excepto donde se indica en [Tipos de funciones](../build/function-types.md) para una determinada clase de funciones de marco.  
+ La pila siempre se mantendrá 16 bytes alineados, excepto en el prólogo (por ejemplo, una vez que se inserta la dirección de devolución) y excepto donde se indicó en [tipos de función](../build/function-types.md) para una determinada clase de funciones de marco.  
   
- A continuación, se muestra un ejemplo del diseño de pila, donde la función A llama a una función B sin hoja.  El prólogo de la función A ya ha asignado espacio para todos los parámetros de registro y de pila requeridos por la B al final de la pila.  La llamada inserta la dirección de devolución y el prólogo de B asigna espacio para sus variables locales, registros no variables y el espacio necesario para que pueda llamar a funciones.  Si B utiliza alloca, el espacio se asigna entre el área para guardar variables locales y registros no variables y el área de la pila para parámetros.  
+ A continuación se muestra un ejemplo del diseño de pila donde llamadas de función A una hoja no funcionan prólogo B. de la función A ya ha asignado espacio para todos los parámetros de registro y de pila requeridos por la B en la parte inferior de la pila. La llamada inserta la dirección de devolución y prólogo de B asigna espacio para las variables locales, los registros no volátiles y el espacio necesario llamar a funciones. Si B utiliza alloca, el espacio se asigna entre el registro local de variable o no volátil área de almacenamiento y el área de la pila de parámetro.  
   
- ![Ejemplo de conversión AMD](../build/media/vcamd_conv_ex_5.png "vcAmd\_conv\_ex\_5")  
+ ![Ejemplo de conversión AMD](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- Cuando la función B llama a otra función, la dirección de devolución se inserta justo debajo de la dirección inicial para RCX.  
+ Cuando la función B llama a otra función, la dirección de devolución se inserta justo debajo de la dirección particular para RCX.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Uso de las pilas](../build/stack-usage.md)

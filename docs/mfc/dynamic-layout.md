@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b92185e8be3e66a89a6278ba7b7b1051b8b409f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
 Con MFC en Visual Studio 2015, puede crear cuadros de diálogo que el usuario puede cambiar el tamaño y se puede controlar la manera en que el diseño se ajusta al cambio de tamaño. Por ejemplo, puede adjuntar los botones de la parte inferior de un diálogo al borde inferior para que permanezcan siempre en la parte inferior. También puede configurar ciertos controles, como cuadros de lista, cuadros de edición y campos de texto, para que se expandan cuando el usuario expanda el diálogo.  

@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: fba35e6847339287d3fa2a3d922c0d9e481a0754
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ede3cfecadbe87caf5182e0d3df9c25a481f3079
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext (Enumeración)
 Especifica el contexto del subproceso en el que se ejecuta una función de devolución de llamada (controlador de eventos).  
@@ -42,6 +43,6 @@ enum class CallbackContext {};
   
  **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd

@@ -1,48 +1,49 @@
 ---
-title: "Conversiones de estilo C con /clr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversiones de estilo C y /clr"
+title: Convierte de estilo C con - clr (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e529a40f8eb876791f49559d3970696fdece489d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Conversiones de estilo C con /clr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tema siguiente se aplica sólo a Common Language Runtime.  
+# <a name="c-style-casts-with-clr-ccli"></a>Conversiones de estilo C con /clr (C++/CLI)
+El siguiente tema se aplica solo a Common Language Runtime.  
   
- Cuando se utiliza con los tipos de CLR, el compilador intenta asignar el estilo de C echado a una de las conversiones que se enumeran a continuación, en el orden siguiente:  
+ Cuando se usa con tipos CLR, el compilador intenta asignar estilo C convierte en una de las conversiones de tipos que se enumeran a continuación, en el orden siguiente:  
   
-1.  const\_cast  
+1.  const_cast  
   
-2.  safe\_cast  
+2.  safe_cast  
   
-3.  safe\_cast más const\_cast  
+3.  safe_cast más const_cast  
   
-4.  static\_cast  
+4.  static_cast  
   
-5.  static\_cast más const\_cast  
+5.  static_cast más const_cast  
   
- Si ninguna de las conversiones enumeradas anteriormente son válidas, y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, se asigna la conversión de estilo C a tiempo de ejecución\- CHECK \(instrucción de MSIL de los castclass\).  Si no, c. la conversión de estilo se considera no válido y el compilador emite un error.  
+ Si ninguna de las conversiones de tipos enumerados anteriormente es válida y si el tipo de la expresión y el tipo de destino son tipos de referencia CLR, conversión de estilo C se asigna a una comprobación en tiempo de ejecución (instrucción de MSIL castclass). En caso contrario, una conversión de estilo C se considera no válida y el compilador emitirá un error.  
   
-## Comentarios  
- C. la conversión de estilo no se recomienda.  Al compilar con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md), utilice [safe\_cast](../windows/safe-cast-cpp-component-extensions.md).  
+## <a name="remarks"></a>Comentarios  
+ Una conversión de estilo C no se recomienda. Cuando se compila con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), use [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `const_cast`.  
   
 ```  
 // cstyle_casts_1.cpp  
@@ -56,7 +57,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a `safe_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast`.  
   
 ```  
 // cstyle_casts_2.cpp  
@@ -68,7 +69,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a `safe_cast` más `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `safe_cast` más `const_cast`.  
   
 ```  
 // cstyle_casts_3.cpp  
@@ -89,7 +90,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a `static_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast`.  
   
 ```  
 // cstyle_casts_4.cpp  
@@ -110,7 +111,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a `static_cast` más `const_cast`.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a un `static_cast` más `const_cast`.  
   
 ```  
 // cstyle_casts_5.cpp  
@@ -131,7 +132,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente muestra c. el estilo echado que asigna a una comprobación en tiempo de ejecución.  
+ El ejemplo siguiente muestra una conversión de estilo C que se asigna a una comprobación en tiempo de ejecución.  
   
 ```  
 // cstyle_casts_6.cpp  
@@ -152,7 +153,7 @@ int main() {
 }  
 ```  
   
- El ejemplo siguiente se muestra una conversión no válida de estilo C, que hace que el compilador emita un error.  
+ El ejemplo siguiente muestra un válido conversión de estilo C, que hace que el compilador emita un error.  
   
 ```  
 // cstyle_casts_7.cpp  
@@ -164,8 +165,8 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- Opción del compilador: **\/clr**  
+## <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

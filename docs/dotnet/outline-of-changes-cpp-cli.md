@@ -1,35 +1,37 @@
 ---
-title: "Esquema de cambios (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Esquema de cambios (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Esquema de cambios (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestran ejemplos de algunos de los cambios que ha sufrido el lenguaje de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  Para obtener más información, siga el vínculo que acompaña a cada producto.  
+# <a name="outline-of-changes-ccli"></a>Esquema de cambios (C++/CLI)
+Este tema muestran ejemplos de algunos de los cambios en el lenguaje de extensiones administradas para C++ a Visual C++. Siga el vínculo que acompaña a cada elemento para obtener más información.  
   
-## Ninguna palabra clave con subrayado doble  
- Se ha quitado el subrayado doble que precedía a todas las palabras clave, con una sola excepción.  Así, `__value` se convierte en `value` y `__interface` se convierte en `interface`, etc.  Para evitar conflictos entre los nombres de las palabras clave y de los identificadores en el código de usuario, las palabras clave se tratan principalmente como contextuales.  
+## <a name="no-double-underscore-keywords"></a>No hay palabras clave de subrayado doble  
+ Se quitó el carácter de subrayado doble delante de todas las palabras clave, con una excepción. Por lo tanto, `__value` se convierte en `value`, y `__interface` se convierte en `interface`, y así sucesivamente. Para evitar conflictos de nombres entre palabras clave y los identificadores del código de usuario, palabras clave se trata principalmente como contextuales.  
   
- Para obtener más información, vea [Palabras clave del lenguaje \(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md).  
+ Vea [palabras clave del lenguaje (C++ / CLI)](../dotnet/language-keywords-cpp-cli.md) para obtener más información.  
   
-## Declaraciones de clase  
- Sintaxis de Extensiones administradas:  
+## <a name="class-declarations"></a>Declaraciones de clase  
+ Sintaxis de extensiones administradas:  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -49,10 +51,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- Para obtener más información, vea [Tipos administrados \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md).  
+ Vea [tipos administrados (C++ / CL)](../dotnet/managed-types-cpp-cl.md) para obtener más información.  
   
-## Declaración de objetos  
- Sintaxis de Extensiones administradas:  
+## <a name="object-declaration"></a>Declaración de objeto  
+ Sintaxis de extensiones administradas:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -75,10 +77,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- Para obtener más información, vea [Declaración de un objeto de una clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vea [declaración de un objeto de clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obtener más información.  
   
-### Asignación del montón administrado  
- Sintaxis de Extensiones administradas:  
+### <a name="managed-heap-allocation"></a>Asignación en el montón administrado  
+ Sintaxis de extensiones administradas:  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -94,10 +96,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- Para obtener más información, vea [Declaración de un objeto de una clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vea [declaración de un objeto de clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obtener más información.  
   
-### Una referencia de seguimiento a ningún objeto  
- Sintaxis de Extensiones administradas:  
+### <a name="a-tracking-reference-to-no-object"></a>Una referencia de seguimiento a ningún objeto  
+ Sintaxis de extensiones administradas:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -123,15 +125,15 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Para obtener más información, vea [Declaración de un objeto de una clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vea [declaración de un objeto de clase de referencia de CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) para obtener más información.  
   
-## Declaración de matrices  
- Se ha rediseñado la matriz CLR.  Es similar a la colección de plantillas stl `vector`, pero se asigna a la clase `System::Array` subyacente; es decir, no es una implementación de plantilla.  
+## <a name="array-declaration"></a>Declaración de matriz  
+ Se ha rediseñado la matriz CLR. Es similar a la stl `vector` colección de plantilla, pero se asigna a subyacente `System::Array` clase; es decir, no es una implementación de plantilla.  
   
- Para obtener más información, vea [Declaración de una matriz de CLR](../dotnet/declaration-of-a-clr-array.md).  
+ Vea [declaración de una matriz de CLR](../dotnet/declaration-of-a-clr-array.md) para obtener más información.  
   
-### Matriz como parámetro  
- Sintaxis de matriz de Extensiones administradas:  
+### <a name="array-as-parameter"></a>Matriz como parámetro  
+ Sintaxis de matriz de extensiones administradas:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
@@ -145,8 +147,8 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### Matriz como tipo de devolución  
- Sintaxis de matriz de Extensiones administradas:  
+### <a name="array-as-return-type"></a>Matriz como tipo de valor devuelto  
+ Sintaxis de matriz de extensiones administradas:  
   
 ```  
 Int32 f() [];   
@@ -160,8 +162,8 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
-### Inicialización rápida de la matriz CLR local  
- Sintaxis de matriz de Extensiones administradas:  
+### <a name="shorthand-initialization-of-local-clr-array"></a>Inicialización rápida de la matriz CLR Local  
+ Sintaxis de matriz de extensiones administradas:  
   
 ```  
 int GetArray() __gc[] {  
@@ -184,8 +186,8 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### Declaración explícita de la matriz CLR  
- Sintaxis de matriz de Extensiones administradas:  
+### <a name="explicit-clr-array-declaration"></a>Declaración de matriz CLR explícita  
+ Sintaxis de matriz de extensiones administradas:  
   
 ```  
 Object* myArray[] = new Object*[2];  
@@ -208,8 +210,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## Propiedades escalares  
- Sintaxis de propiedad de Extensiones administradas:  
+## <a name="scalar-properties"></a>Propiedades escalares  
+ Sintaxis de la propiedad de extensiones administradas:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -232,7 +234,7 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
@@ -247,10 +249,10 @@ public:
 };  
 ```  
   
- Para obtener más información, vea [Declaración de propiedades](../dotnet/property-declaration.md).  
+ Vea [declaración de propiedad](../dotnet/property-declaration.md) para obtener más información.  
   
-## Propiedades indizadas  
- Sintaxis de propiedad indizada de Extensiones administradas:  
+## <a name="indexed-properties"></a>Propiedades indizadas  
+ Sintaxis de la propiedad habían indizada de extensiones administradas:  
   
 ```  
 public __gc class Matrix {  
@@ -276,7 +278,7 @@ public:
 };  
 ```  
   
- Nuevo en el lenguaje: propiedad indizada en el nivel de clase  
+ Nuevo en el lenguaje: propiedad indizada de nivel de clase  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +298,10 @@ public:
 };  
 ```  
   
- Para obtener más información, vea [Declaración de índices de propiedad](../dotnet/property-index-declaration.md).  
+ Vea [Property Index Declaration](../dotnet/property-index-declaration.md) para obtener más información.  
   
-## Operadores sobrecargados  
- Sintaxis de sobrecarga de operadores de Extensiones administradas:  
+## <a name="overloaded-operators"></a>Operadores sobrecargados  
+ Sintaxis de sobrecarga de operador de extensiones administradas:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -321,7 +323,7 @@ int main() {
 }  
 ```  
   
- Nueva sintaxis de sobrecarga de operadores:  
+ Nueva sintaxis de sobrecarga de operador:  
   
 ```  
 public ref class Vector sealed {  
@@ -342,10 +344,10 @@ int main() {
 }  
 ```  
   
- Para obtener más información, vea [Operadores sobrecargados](../dotnet/overloaded-operators.md).  
+ Vea [operadores sobrecargados](../dotnet/overloaded-operators.md) para obtener más información.  
   
-## Operadores de conversión  
- Sintaxis de operador de conversión de Extensiones administradas:  
+## <a name="conversion-operators"></a>Operadores de conversión  
+ Sintaxis de operador de conversión de extensiones administradas:  
   
 ```  
 __gc struct MyDouble {  
@@ -366,10 +368,10 @@ public:
 };  
 ```  
   
- Para obtener más información, vea [Cambios en los operadores de conversión](../dotnet/changes-to-conversion-operators.md).  
+ Vea [cambia a los operadores de conversión](../dotnet/changes-to-conversion-operators.md) para obtener más información.  
   
-## Reemplazo explícito de un miembro de interfaz  
- Sintaxis de reemplazo explícita de Extensiones administradas:  
+## <a name="explicit-override-of-an-interface-member"></a>Reemplazo explícito de un miembro de interfaz  
+ Sintaxis de reemplazo explícita de extensiones administradas:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -381,7 +383,7 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- Nueva sintaxis de reemplazo explícita:  
+ Nueva sintaxis de reemplazo explícito:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -393,10 +395,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- Para obtener más información, vea [Reemplazo explícito de un miembro de interfaz](../dotnet/explicit-override-of-an-interface-member.md).  
+ Vea [la invalidación explícita de un miembro de interfaz](../dotnet/explicit-override-of-an-interface-member.md) para obtener más información.  
   
-## Funciones virtuales privadas  
- Sintaxis de función virtual privada de Extensiones administradas:  
+## <a name="private-virtual-functions"></a>Funciones virtuales privadas  
+ Sintaxis de función virtual privada de extensiones administradas:  
   
 ```  
 __gc class Base {  
@@ -428,10 +430,10 @@ public:
 };  
 ```  
   
- Para obtener más información, vea [Funciones virtuales privadas](../dotnet/private-virtual-functions.md).  
+ Vea [Private Virtual Functions](../dotnet/private-virtual-functions.md) para obtener más información.  
   
-## Tipo de enumeración de CLR  
- Sintaxis de enumeración de Extensiones administradas:  
+## <a name="clr-enum-type"></a>Tipo de enumeración de CLR  
+ Sintaxis de enumeración de extensiones administradas:  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -451,18 +453,18 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- Aparte de este pequeño cambio sintáctico, el comportamiento del tipo de enumeración CLR ha cambiado en muchos aspectos:  
+ Aparte de este pequeño cambio sintáctico, el comportamiento del tipo de enumeración CLR se ha cambiado en una de varias maneras:  
   
 -   Ya no se admite una declaración adelantada de una enumeración CLR.  
   
--   La resolución de sobrecarga entre los tipos aritméticos integrados y la jerarquía de clases Object se ha invertido entre Extensiones administradas y [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  Como efecto secundario, las enumeraciones CLR ya no se convierten implícitamente en tipos aritméticos.  
+-   La resolución de sobrecarga entre los tipos aritméticos integrados y la jerarquía de clases de objeto se ha invertido entre extensiones administradas y Visual C++. Como efecto secundario, las enumeraciones CLR ya no es implícitamente se convierten en tipos aritméticos.  
   
--   En la nueva sintaxis, una enumeración CLR mantiene su propio ámbito, que no es el caso en Extensiones administradas.  Previamente, los enumeradores estaban visibles dentro del ámbito contenedor de la enumeración; ahora, los enumeradores se encapsulan dentro del ámbito de la enumeración.  
+-   En la nueva sintaxis, una enumeración de CLR mantiene su propio ámbito, que no es el caso en extensiones administradas. Anteriormente, los enumeradores estaban visibles dentro del ámbito contenedor de la enumeración; Ahora, los enumeradores se encapsulan dentro del ámbito de la enumeración.  
   
- Para obtener más información, vea [Tipo de enumeración de CLR](../dotnet/clr-enum-type.md).  
+ Vea [tipo de enumeración de CLR](../dotnet/clr-enum-type.md) para obtener más información.  
   
-## Eliminación de la palabra clave \_\_box  
- Sintaxis de conversión boxing de Extensiones administradas:  
+## <a name="removal-of-box-keyword"></a>Eliminación de __box (palabra clave)  
+ Sintaxis de conversión boxing de extensiones administradas:  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
@@ -474,10 +476,10 @@ Object *o = __box( 1024 ); // explicit boxing
 Object ^o = 1024; // implicit boxing  
 ```  
   
- Para obtener más información, vea [Controlador de seguimiento de un valor al que se le ha aplicado la conversión boxing](../dotnet/a-tracking-handle-to-a-boxed-value.md).  
+ Vea [A Tracking Handle en un valor a una conversión boxing](../dotnet/a-tracking-handle-to-a-boxed-value.md) para obtener más información.  
   
-## Punteros anclados  
- Sintaxis de puntero anclado de Extensiones administradas:  
+## <a name="pinning-pointer"></a>Puntero anclado  
+ Sintaxis de puntero anclado de extensiones administradas:  
   
 ```  
 __gc struct H { int j; };  
@@ -499,10 +501,10 @@ int main() {
 }  
 ```  
   
- Para obtener más información, vea [Semántica de los tipos de valor](../dotnet/value-type-semantics.md).  
+ Vea [la semántica de tipos de valor](../dotnet/value-type-semantics.md) para obtener más información.  
   
-## La palabra clave \_\_typeof se convierte en typeid  
- Sintaxis de typeof de Extensiones administradas:  
+## <a name="typeof-keyword-becomes-typeid"></a>__typeof (palabra clave) se convierte en typeid  
+ Sintaxis de typeof de extensiones administradas:  
   
 ```  
 Array* myIntArray =   
@@ -516,9 +518,10 @@ Array^ myIntArray =
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- Para obtener más información, vea [T::typeid reemplaza typeof](../dotnet/typeof-goes-to-t-typeid.md).  
+ Vea [: typeid reemplaza typeof](../dotnet/typeof-goes-to-t-typeid.md) para obtener más información.  
   
-## Vea también  
- [Manual de migraciones C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/es-es/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
+## <a name="see-also"></a>Vea también  
+ [C++ / CLI manual de migraciones](../dotnet/cpp-cli-migration-primer.md)   
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+
+

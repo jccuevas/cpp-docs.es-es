@@ -1,35 +1,34 @@
 ---
-title: "Error de las herramientas del vinculador LNK1312 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1312"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1312"
+title: Las herramientas del vinculador LNK1312 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1312
+dev_langs: C++
+helpviewer_keywords: LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d7f7b57512f58402403a50bf57176f975769573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error de las herramientas del vinculador LNK1312
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-archivo dañado o no válido: no se puede importar el ensamblado  
+# <a name="linker-tools-error-lnk1312"></a>Error de las herramientas del vinculador LNK1312
+archivo no válido o dañado: no se puede importar el ensamblado  
   
- Al crear un ensamblado, se ha pasado a la opción del vinculador **\/ASSEMBLYMODULE** un archivo que no es un módulo o ensamblado compilado con **\/clr**.  Si ha pasado un archivo objeto a **\/ASSEMBLYMODULE**, simplemente hay que pasar el objeto directamente al vinculador, en lugar de pasárselo a **\/ASSEMBLYMODULE**.  
+ Al compilar un ensamblado, un archivo que no sea un módulo o ensamblado compilado con **/CLR** se pasó a la **/ASSEMBLYMODULE** opción del vinculador.  Si se pasa a un archivo de objeto para **/ASSEMBLYMODULE**, simplemente pase el objeto directamente al vinculador, en lugar de al **/ASSEMBLYMODULE**.  
   
-## Ejemplo  
- El ejemplo siguiente creó el archivo .obj.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente crea el archivo .obj.  
   
 ```  
 // LNK1312.cpp  
@@ -40,7 +39,7 @@ public:
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error LNK1312.  
   
 ```  

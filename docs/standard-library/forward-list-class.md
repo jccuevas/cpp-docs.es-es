@@ -91,11 +91,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eba062342aeb0ecc6e9818d7da9eead94b81a9af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forwardlist-class"></a>forward_list (Clase)
 Describe un objeto que controla una secuencia de elementos de longitud variable. La secuencia se almacena como una lista de nodos vinculada individualmente, cada uno de los cuales contiene un miembro de tipo `Type`.  
@@ -131,7 +132,7 @@ class forward_list
 |-|-|  
 |[forward_list](#forward_list)|Construye un objeto de tipo `forward_list`.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

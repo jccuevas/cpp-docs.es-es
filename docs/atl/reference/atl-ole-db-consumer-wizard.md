@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ffb86fed1f7a3a4b6960fd13db84cdb3da7ce7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 Este asistente configura una clase de consumidor OLE DB con los enlaces de datos necesario para tener acceso al origen de datos especificados a través del proveedor OLE DB especificado.  
@@ -165,7 +166,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
  Vea [mecanismos básicos de los atributos](../../windows/basic-mechanics-of-attributes.md) para obtener más información.  
   
- **ype**  
+ **Type**  
  Seleccione uno de estos botones de radio para especificar si se derivará de la clase de consumidor `CTable` o `CCommand` (valor predeterminado).  
   
  **Table**  

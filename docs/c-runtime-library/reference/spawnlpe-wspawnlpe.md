@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wspawnlpe
 - _spawnlpe
 - wspawnlpe
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wspawnlpe function
 - wspawnlpe function
@@ -40,36 +38,22 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9831f7056ef91f64bba54740fbf7a372beb8f335
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 46c3677ac1f00597d4ed435f919bde21b4904582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 Crea y ejecuta un nuevo proceso.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -114,7 +98,7 @@ intptr_t _wspawnlpe(
  La lista de argumentos supera los 1024 bytes.  
   
  `EINVAL`  
-El argumento `mode` no es válido.  
+ El argumento `mode` no es válido.  
   
  `ENOENT`  
  El archivo o la ruta de acceso no se encuentra.  
@@ -125,7 +109,7 @@ El argumento `mode` no es válido.
  `ENOMEM`  
  Memoria insuficiente para ejecutar el nuevo proceso.  
   
- Para obtener más información sobre estos y otros códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones crea y ejecuta un proceso nuevo, pasa cada argumento de la línea de comandos como parámetro independiente y pasa una matriz de punteros a la configuración del entorno. Estas funciones usan la variable de entorno `PATH` para buscar el archivo que se va a ejecutar.  
@@ -139,7 +123,7 @@ El argumento `mode` no es válido.
 |`_spawnlpe`|\<process.h>|  
 |`_wspawnlpe`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

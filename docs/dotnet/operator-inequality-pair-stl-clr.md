@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7abfefd389d7e65b9baf7867eb850ef65819350e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a94de96f011fffaebaf7c4419adb24a7ae220d31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-pair-stlclr"></a>operator!= (pair) (STL/CLR)
 Pares de comparación no es igual.  
@@ -37,7 +40,7 @@ template<typename Value1,
  izquierda  
  Par izquierdo para comparar.  
   
- derecha  
+ right  
  Par derecho a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

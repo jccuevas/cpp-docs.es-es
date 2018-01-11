@@ -1,41 +1,42 @@
 ---
-title: "map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (miembro) [STL/CLR]"
+title: 'Map:: Empty (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: ce41d37a-2896-48df-87ea-d3f3b3e5ab45
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b2b0a94d416d4b84e46a89bd3013f06f063741a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba si no hay elementos presentes.  
+# <a name="mapempty-stlclr"></a>map::empty (STL/CLR)
+Comprueba si no hay ningún elemento presente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool empty();  
 ```  
   
-## Comentarios  
- La función miembro devuelve true para una secuencia controlada vacía.  Es equivalente a [map::size](../dotnet/map-size-stl-clr.md)`() == 0`.  Se utiliza para probar si la asignación está vacía.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve true para una secuencia controlada vacía. Es equivalente a [Map:: Size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`. Se usa para comprobar si el mapa está vacío.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [map::size](../dotnet/map-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)

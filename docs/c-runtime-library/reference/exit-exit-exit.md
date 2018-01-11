@@ -1,11 +1,10 @@
 ---
 title: exit, _Exit, _exit | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,119 +30,110 @@ f1_keywords:
 - process/_Exit
 - stdlib/exit
 - stdlib/_Exit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exit function
 - _exit function
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.assetid: b1501fa6-27c2-478c-9e93-cc4fd802a01f
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8d6f75bb19c2cfd89d8714ed87ff91ddf340055e
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dbb54b756363da2069bbc4bface4e971fcab91e4
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
-Finaliza el proceso de llamada. La función `exit` lo finaliza después de la limpieza; `_exit` y `_Exit` lo finalizan inmediatamente.  
-  
+
+Finaliza el proceso de llamada. La función `exit` lo finaliza después de la limpieza; `_exit` y `_Exit` lo finalizan inmediatamente.
+
 > [!NOTE]
->  No utilice este método para cerrar una aplicación de la Plataforma universal de Windows (UWP) o una aplicación de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] , excepto en escenarios de pruebas o depuración. Las formas de cerrar una aplicación de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] mediante programación o la interfaz de usuario no se permiten. Para más información sobre las aplicaciones de Windows 8 y 8.1, consulte [Ciclo de vida de la aplicación](http://go.microsoft.com/fwlink/?LinkId=262853). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void exit(   
-   int const status   
-);  
-void _Exit(   
-   int const status   
-);  
-void _exit(   
-   int const status   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `status`  
- Código de estado de salida.  
-  
-## <a name="remarks"></a>Comentarios  
- Las funciones `exit`, `_Exit` y `_exit` finalizan el proceso que realiza la llamada. La función `exit` llama a destructores para los objetos locales para el subproceso y, después, llama (en orden LIFO, donde el último en entrar es primero en salir) a las funciones registradas por `atexit` y `_onexit`para, a continuación, vaciar todos los búferes de archivo antes de finalizar el proceso. Las funciones `_Exit` y `_exit` finalizan el proceso sin destruir objetos locales para el subproceso ni procesar funciones `atexit` o `_onexit` y sin vaciar los búferes de secuencia.  
-  
- Aunque las llamadas a `exit`, `_Exit` y `_exit` no devuelven ningún valor, el byte de orden inferior de `status` se pone a disposición del proceso de llamada en espera o de entorno de host, si existe uno de ellos, una vez que ha finalizado el proceso. Normalmente, el autor de la llamada establece el valor de `status` en 0 para indicar una salida normal, o en otro valor para indicar un error. El valor de `status` está disponible para el comando de proceso por lotes `ERRORLEVEL` del sistema operativo y se representa mediante una de dos constantes: `EXIT_SUCCESS`, que representa un valor de 0, o `EXIT_FAILURE`, que representa un valor de 1.  
-  
- Las funciones `exit`, `_Exit`, `_exit`, `quick_exit`, `_cexit`y `_c_exit` se comportan como sigue.  
-  
-|Función|Descripción|  
-|--------------|-----------------|  
-|`exit`|Realiza procedimientos completos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|  
-|`_Exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|  
-|`_exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|  
-|`quick_exit`|Realiza procedimientos rápidos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|  
-|`_cexit`|Realiza procedimientos completos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|  
-|`_c_exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|  
-  
- Cuando se llama a la función `exit`,  `_Exit` o `_exit` , no se llama a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático se define en una función en la que el objeto no se declara como estático. Un objeto temporal es un objeto creado por el compilador. Para destruir un objeto automático antes de llamar a `exit`, `_Exit`o `_exit`, llame explícitamente al destructor del objeto, como se indica a continuación:  
-  
-```  
-myObject.myClass::~myClass();  
-```  
-  
- No use `DLL_PROCESS_ATTACH` para llamar a `exit` desde `DllMain`. Si desea cerrar la función `DLLMain` , devuelva `FALSE` desde `DLL_PROCESS_ATTACH`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`exit`, `_Exit`, `_exit`|\<process.h> o \<stdlib.h>|  
-  
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_exit.c  
-// This program returns an exit code of 1. The  
-// error code could be tested in a batch file.  
-  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   exit( 1 );  
-}  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [_cexit, _c_exit](../../c-runtime-library/reference/cexit-c-exit.md)   
- [_exec, _wexec (Funciones)](../../c-runtime-library/exec-wexec-functions.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [quick_exit](../../c-runtime-library/reference/quick-exit1.md)   
- [_spawn, _wspawn (Funciones)](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> No utilice este método para cerrar una aplicación de plataforma Universal de Windows (UWP), excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación de UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void exit(
+   int const status
+);
+void _Exit(
+   int const status
+);
+void _exit( 
+   int const status
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+_status_  
+Código de estado de salida.
+
+## <a name="remarks"></a>Comentarios
+
+Las funciones `exit`, `_Exit` y `_exit` finalizan el proceso que realiza la llamada. La función `exit` llama a destructores para los objetos locales para el subproceso y, después, llama (en orden LIFO, donde el último en entrar es primero en salir) a las funciones registradas por `atexit` y `_onexit`para, a continuación, vaciar todos los búferes de archivo antes de finalizar el proceso. Las funciones `_Exit` y `_exit` finalizan el proceso sin destruir objetos locales para el subproceso ni procesar funciones `atexit` o `_onexit` y sin vaciar los búferes de secuencia.
+
+Aunque la `exit`, `_Exit` y `_exit` llamadas no devuelven un valor, el valor de _estado_ estará disponible para el entorno de host o el proceso de llamada en espera, si la hay, al salir del proceso. Normalmente, el llamador establece el _estado_ valor en 0 para indicar una salida normal o a algún otro valor para indicar un error. El _estado_ valor está disponible para el comando por lotes del sistema operativo `ERRORLEVEL` y se representa mediante uno de dos constantes: `EXIT_SUCCESS`, que representa un valor de 0, o `EXIT_FAILURE`, que representa un valor de 1.
+
+Las funciones `exit`, `_Exit`, `_exit`, `quick_exit`, `_cexit`y `_c_exit` se comportan como sigue.
+
+|Función|Descripción|
+|--------------|-----------------|
+|`exit`|Realiza procedimientos completos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
+|`_Exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
+|`_exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
+|`quick_exit`|Realiza procedimientos rápidos de finalización de la biblioteca de C, finaliza el proceso y proporciona el código de estado facilitado al entorno de host.|
+|`_cexit`|Realiza procedimientos completos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
+|`_c_exit`|Realiza procedimientos mínimos de finalización de la biblioteca de C y vuelve al llamador. No finaliza el proceso.|
+
+Cuando se llama a la función `exit`,  `_Exit` o `_exit` , no se llama a los destructores de ningún objeto temporal o automático que exista en el momento de la llamada. Un objeto automático es un objeto local no estático definido en una función. Un objeto temporal es un objeto creado por el compilador, como un valor devuelto por una llamada de función. Para destruir un objeto automático antes de llamar a `exit`, `_Exit`, o `_exit`, explícitamente llame al destructor del objeto, como se muestra aquí:
+
+```cpp
+void last_fn() {}
+    struct SomeClass {} myInstance{};
+    // ...
+    myInstance.~SomeClass(); // explicit destructor call
+    exit(0);
+}
+```
+
+No use `DLL_PROCESS_ATTACH` para llamar a `exit` desde `DllMain`. Para salir del `DLLMain` funcionar, devolver `FALSE` de `DLL_PROCESS_ATTACH`.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|`exit`, `_Exit`, `_exit`|\<process.h> o \<stdlib.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_exit.c
+// This program returns an exit code of 1. The
+// error code could be tested in a batch file.
+
+#include <stdlib.h>
+
+int main( void )
+{
+   exit( 1 );
+}
+```
+
+## <a name="see-also"></a>Vea también
+
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)  
+[abort](../../c-runtime-library/reference/abort.md)  
+[atexit](../../c-runtime-library/reference/atexit.md)  
+[_cexit, _c_exit](../../c-runtime-library/reference/cexit-c-exit.md)  
+[_exec, _wexec (funciones)](../../c-runtime-library/exec-wexec-functions.md)  
+[_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)  
+[quick_exit](../../c-runtime-library/reference/quick-exit1.md)  
+[_spawn, _wspawn (funciones)](../../c-runtime-library/spawn-wspawn-functions.md)  
+[system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)  

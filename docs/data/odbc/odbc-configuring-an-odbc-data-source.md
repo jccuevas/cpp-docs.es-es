@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e347683a079227226513ce82f9623860e826228
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5bf7d2b1708e74d50adb417f531c741a467ed889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: Configurar un origen de datos ODBC
 Para usar un [origen de datos](../../data/odbc/data-source-odbc.md) con una aplicación que haya desarrollado, debe usar el Administrador de ODBC para configurarlo. El Administrador de ODBC realiza un seguimiento de los orígenes de datos disponibles y su información de conexión en el registro de Windows. Utilice el Administrador de ODBC para agregar, modificar y eliminar orígenes de datos en el **orígenes de datos** cuadro de diálogo y para agregar y eliminar controladores ODBC.  
