@@ -1,32 +1,33 @@
 ---
-title: "ChainInterfaces (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChainInterfaces (estructura)"
+title: ChainInterfaces (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces
+dev_langs: C++
+helpviewer_keywords: ChainInterfaces structure
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica las funciones de comprobación y de inicialización que se pueden aplicar a un conjunto de id. de la interfaz.  
+# <a name="chaininterfaces-structure"></a>ChainInterfaces (estructura)
+Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -59,36 +60,36 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `I0`  
- Identificador \(necesario\) 0 de la interfaz.  
+ (Obligatorio) Id. de interfaz 0.  
   
  `I1`  
- Identificador \(necesario\) 1. de interfaz.  
+ (Obligatorio) Id. de interfaz 1.  
   
  `I2`  
- \(Opcional\) Identificador 2. de interfaz.  
+ (Opcional) Id. de interfaz 2.  
   
  `I3`  
- \(Opcional\) Identificador 3. de interfaz.  
+ (Opcional) Id. de interfaz 3.  
   
  `I4`  
- \(Opcional\) Identificador 4. de interfaz.  
+ (Opcional) Id. de interfaz 4.  
   
  `I5`  
- \(Opcional\) Identificador 5. de interfaz.  
+ (Opcional) Id. de interfaz 5.  
   
  `I6`  
- \(Opcional\) Identificador 6. de interfaz.  
+ (Opcional) Id. de interfaz 6.  
   
  `I7`  
- \(Opcional\) Identificador 7. de interfaz.  
+ (Opcional) Id. de interfaz 7.  
   
  `I8`  
- \(Opcional\) Identificador 8. de interfaz.  
+ (Opcional) Id. de interfaz 8.  
   
  `I9`  
- \(Opcional\) Identificador 9. de interfaz.  
+ (Opcional) Id. de interfaz 9.  
   
  `DerivedType`  
  Un tipo derivado.  
@@ -97,34 +98,34 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
  El tipo base de un tipo derivado.  
   
  `hasImplements`  
- Un valor booleano que si `true`, significa que no se puede utilizar una estructura de [MixIn](../windows/mixin-structure.md) con una clase que no se deriva de la estructura de [Implementa](../Topic/Implements%20Structure.md) .  
+ Valor de un valor booleano que si `true`, significa que no se puede usar un [MixIn](../windows/mixin-structure.md) estructura con una clase que no se deriva de la [implementa](../windows/implements-structure.md) estructura.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos protegidos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[ChainInterfaces::CanCastTo \(Método\)](../Topic/ChainInterfaces::CanCastTo%20Method.md)|Indica si el identificador de interfaz especificado se puede convertir a cada una de las especializaciones definidas por los parámetros de plantilla de ChainInterface.|  
-|[ChainInterfaces::CastToUnknown \(Método\)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz de tipo definido por el parámetro de plantilla de `I0` a un puntero a IUnknown.|  
-|[ChainInterfaces::FillArrayWithIid \(Método\)](../Topic/ChainInterfaces::FillArrayWithIid%20Method.md)|Almacena el identificador de interfaz especificado por el parámetro de plantilla de `I0` en una ubicación especificada de una matriz de id. de la interfaz.|  
-|[ChainInterfaces::Verify \(Método\)](../windows/chaininterfaces-verify-method.md)|Comprueba que cada interfaz definida por los parámetros `I0` de plantilla con `I9` hereda de IUnknown o de IInspectable, y que `I0` hereda de `I1` con `I9`.|  
-  
-### Constantes protegidas  
+### <a name="protected-methods"></a>Métodos protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount \(Constante\)](../windows/chaininterfaces-iidcount-constant.md)|El número total de id. de interfaz contenidos en las interfaces especificadas por los parámetros `I0` de plantilla con `I9`.|  
+|[ChainInterfaces::CanCastTo (método)](../windows/chaininterfaces-cancastto-method.md)|Indica si el identificador de interfaz especificado se puede convertir a cada una de las especializaciones definidas por los parámetros de plantilla ChainInterface.|  
+|[ChainInterfaces::CastToUnknown (método)](../windows/chaininterfaces-casttounknown-method.md)|Convierte el puntero de interfaz del tipo definido por el `I0` parámetro de plantilla a un puntero a IUnknown.|  
+|[ChainInterfaces::FillArrayWithIid (método)](../windows/chaininterfaces-fillarraywithiid-method.md)|Almacena el identificador de interfaz definido por el `I0` parámetro de plantilla en una ubicación especificada de una matriz especificada de identificadores de interfaz.|  
+|[ChainInterfaces::Verify (método)](../windows/chaininterfaces-verify-method.md)|Comprueba que cada interfaz definido por los parámetros de plantilla `I0` a través de `I9` hereda de IUnknown o IInspectable y que `I0` hereda de `I1` a través de `I9`.|  
   
-## Jerarquía de herencia  
+### <a name="protected-constants"></a>Constantes protegidos  
+  
+|nombre|Descripción|  
+|----------|-----------------|  
+|[ChainInterfaces::IidCount (constante)](../windows/chaininterfaces-iidcount-constant.md)|El número total de identificadores contenidos en las interfaces especificadas por los parámetros de plantilla interfaz `I0` a través de `I9`.|  
+  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `I0`  
   
  `ChainInterfaces`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

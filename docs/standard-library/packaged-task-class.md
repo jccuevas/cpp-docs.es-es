@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,26 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::packaged_task [C++]
+- std::packaged_task [C++], packaged_task
+- std::packaged_task [C++], get_future
+- std::packaged_task [C++], make_ready_at_thread_exit
+- std::packaged_task [C++], reset
+- std::packaged_task [C++], swap
+- std::packaged_task [C++], valid
+ms.workload: cplusplus
+ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="packagedtask-class"></a>packaged_task (Clase)
 Describe un *proveedor asincrónico* que es un contenedor de llamadas cuya signatura de llamada es `Ty(ArgTypes...)`. Su *estado asincrónico asociado* contiene una copia del objeto al que se puede llamar, además del resultado posible.  
@@ -60,14 +52,14 @@ class packaged_task;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[packaged_task](#packaged_task)|Construye un objeto `packaged_task`.|  
 |[packaged_task::~packaged_task (Destructor)](#dtorpackaged_task_destructor)|Destruye un objeto `packaged_task`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get_future](#get_future)|Devuelve un objeto [future](../standard-library/future-class.md) que tiene el mismo estado asincrónico asociado.|  
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Llama al objeto que se puede llamar que está almacenado en el estado asincrónico asociado y almacena el valor devuelto de forma atómica.|  
@@ -77,7 +69,7 @@ class packaged_task;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[packaged_task::operator=](#op_eq)|Transfiere un estado asincrónico asociado de un objeto especificado.|  
 |[packaged_task::operator()](#op_call)|Llama al objeto que se puede llamar que está almacenado en el estado asincrónico asociado, almacena el valor devuelto de forma atómica y establece el estado en *Listo*.|  
@@ -125,7 +117,7 @@ packaged_task& operator=(packaged_task&& Right);
   
 ### <a name="parameters"></a>Parámetros  
  `Right`  
- Objeto `packaged_task`.  
+ Un objeto `packaged_task`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `*this`  
@@ -173,7 +165,7 @@ template <class Fn, class Alloc>
   
 ### <a name="parameters"></a>Parámetros  
  `Right`  
- Objeto `packaged_task`.  
+ Un objeto `packaged_task`.  
   
  `alloc`  
  Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).  
@@ -219,7 +211,7 @@ void swap(packaged_task& Right) noexcept;
   
 ### <a name="parameters"></a>Parámetros  
  `Right`  
- Objeto `packaged_task`.  
+ Un objeto `packaged_task`.  
   
 ##  <a name="valid"></a> packaged_task::valid  
  Especifica si el objeto tiene `associated asynchronous state`.  
@@ -234,7 +226,6 @@ bool valid() const;
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
-
 
 
 

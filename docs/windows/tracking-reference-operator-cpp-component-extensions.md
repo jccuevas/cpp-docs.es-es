@@ -1,50 +1,51 @@
 ---
-title: "Operador de referencia de seguimiento (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "% referencia de seguimiento [C++]"
-  - "referencias de seguimiento"
+title: Seguimiento de operador de referencia (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '%'
+dev_langs: C++
+helpviewer_keywords:
+- tracking references
+- '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-caps.latest.revision: 31
-caps.handback.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "31"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 71389a622b02d5c0379b2be1a91783e8235077bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Operador de referencia de seguimiento (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una *referencia de seguimiento* \(`%`\) se comporta como una referencia de C\+\+ normal \(`&`\) excepto en que, cuando se asigna un objeto a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.  
+# <a name="tracking-reference-operator-c-component-extensions"></a>Operador de referencia de seguimiento (Extensiones de componentes de C++)
+A *referencia de seguimiento* (`%`) se comporta como una referencia de C++ normal (`&`) excepto que cuando un objeto se asigna a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.  
   
-## Todas las plataformas  
+## <a name="all-platforms"></a>Todas las plataformas  
  Una referencia de seguimiento tiene las siguientes características.  
   
 -   La asignación de un objeto a una referencia de seguimiento hace que el recuento de referencias del objeto se incremente.  
   
--   Una referencia nativa \(&\) es el resultado de deshacer una referencia de \*.  Una referencia de seguimiento \(%\) es el resultado de deshacer una referencia de ^.  Siempre que tenga % para un objeto, el objeto permanecerá activo en memoria.  
+-   Una referencia nativa (&) es el resultado de deshacer una referencia de *. Una referencia de seguimiento (%) es el resultado de deshacer una referencia de ^. Siempre que tenga % para un objeto, el objeto permanecerá activo en memoria.  
   
--   Se utiliza el operador de acceso a miembros de punto \(`.`\) para tener acceso a un miembro del objeto.  
+-   Se utiliza el operador de acceso a miembros de punto (`.`) para tener acceso a un miembro del objeto.  
   
--   Las referencias de seguimiento son válidas para identificadores y tipos de valor \(por ejemplo, `String^`\).  
+-   Las referencias de seguimiento son válidas para identificadores y tipos de valor (por ejemplo, `String^`).  
   
--   A una referencia de seguimiento no se puede asignar un valor null o `nullptr`.  Una referencia de seguimiento se puede reasignar a otro objeto válido tantas veces como sea necesario.  
+-   A una referencia de seguimiento no se puede asignar un valor null o `nullptr`. Una referencia de seguimiento se puede reasignar a otro objeto válido tantas veces como sea necesario.  
   
 -   Una referencia de seguimiento no se puede utilizar como un operador de toma de direcciones unario.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Una referencia de seguimiento se comporta como una referencia de C\+\+ estándar, salvo que un % se cuenta como referencia.  El siguiente fragmento de código muestra cómo convertir entre tipos % y ^:  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ Una referencia de seguimiento se comporta como una referencia de C++ estándar, salvo que un % se cuenta como referencia. El siguiente fragmento de código muestra cómo convertir entre tipos % y ^:  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -69,32 +70,25 @@ ref class Foo sealed {};
     {  
         if (f != nullptr) { UseFooHelper(*f); }  
     }  
-  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- En C\+\+\/CLI puede usar una referencia de seguimiento a un identificador cuando enlaza a un objeto de un tipo CLR en el montón de recolección de elementos no utilizados.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ En C++/CLI puede usar una referencia de seguimiento a un identificador cuando enlaza a un objeto de un tipo CLR en el montón de recolección de elementos no utilizados.  
   
  En CLR, el valor de una variable de referencia de seguimiento se actualiza de manera automática siempre que el recolector de elementos no utilizados mueve el objeto de referencia.  
   
- Una referencia de seguimiento solo se puede declarar en la pila.  Una referencia de seguimiento no puede ser un miembro de una clase.  
+ Una referencia de seguimiento solo se puede declarar en la pila. Una referencia de seguimiento no puede ser un miembro de una clase.  
   
- No es posible tener una referencia de C\+\+ nativa a un objeto en el montón de recolección de elementos no utilizados.  
+ No es posible tener una referencia de C++ nativa a un objeto en el montón de recolección de elementos no utilizados.  
   
- Para obtener más información sobre las referencias de seguimiento en C\+\+\/CLI, vea:  
+ Para obtener más información sobre las referencias de seguimiento en C++/CLI, vea:  
   
--   [Cómo: Usar referencias de seguimiento en C\+\+\/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)  
+-   [Cómo: Usar referencias de seguimiento en C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
--   [Cómo: Usar referencias de seguimiento y tipos de valor](../misc/how-to-use-tracking-references-and-value-types.md)  
-  
--   [Cómo: Usar referencias de seguimiento y punteros interiores](../misc/how-to-use-tracking-references-and-interior-pointers.md)  
-  
--   [Cómo: Escribir funciones de plantilla que toman parámetros nativos, de valor o de referencia](../misc/how-to-write-template-functions-that-take-native-value-or-reference-parameters.md)  
-  
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo siguiente para C\+\+\/CLI se muestra cómo usar una referencia de seguimiento con tipos administrados y nativos.  
+ En el ejemplo siguiente para C++/CLI se muestra cómo usar una referencia de seguimiento con tipos administrados y nativos.  
   
 ```  
 // tracking_reference_1.cpp  
@@ -135,7 +129,7 @@ int main() {
   
  **Ejemplo**  
   
- En el ejemplo siguiente para C\+\+\/CLI se muestra la manera de enlazar una referencia de seguimiento a una matriz.  
+ En el ejemplo siguiente para C++/CLI se muestra la manera de enlazar una referencia de seguimiento a una matriz.  
   
 ```  
 // tracking_reference_2.cpp  
@@ -152,7 +146,9 @@ int main() {
 }  
 ```  
   
- **Resultado**  
+ **Salida**  
   
-  **21**  
- **222**
+```Output  
+21  
+222  
+```

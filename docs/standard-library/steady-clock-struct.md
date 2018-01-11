@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fa9b54e4fb65fe9e3309b06c87dc713df92ec16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd10ebcb9a068e78109c1a232b04c6beff9ebac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 Representa un reloj `steady`.  
@@ -46,7 +47,7 @@ struct steady_clock;
   
 ## <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`system_clock::is_steady`|Contiene `true`. `steady_clock` es *constante*.|  
   

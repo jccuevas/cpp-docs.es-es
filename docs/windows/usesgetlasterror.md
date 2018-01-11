@@ -1,32 +1,33 @@
 ---
-title: "usesgetlasterror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.usesgetlasterror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "usesgetlasterror attribute"
+title: usesgetlasterror | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.usesgetlasterror
+dev_langs: C++
+helpviewer_keywords: usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05c74f1254230270654b3dc0b44f541e4fe9ef2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# usesgetlasterror
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica al llamador que si hay un error al llamar a la función, el llamador puede llamar `GetLastError` para recuperar el código de error.  
+# <a name="usesgetlasterror"></a>usesgetlasterror
+Indica que el llamador que si se produce un error al llamar a esa función, a continuación, el llamador puede, a continuación, llamar a `GetLastError` para recuperar el código de error.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,25 +35,24 @@ Indica al llamador que si hay un error al llamar a la función, el llamador pued
   
 ```  
   
-## Comentarios  
- el atributo de **usesgetlasterror** C\+\+ tiene la misma funcionalidad que el atributo de [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **usesgetlasterror** atributo C++ tiene la misma funcionalidad que la [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) atributo MIDL.  
   
-## Ejemplo  
- Vea el ejemplo de [idl\_module](../windows/idl-module.md) para obtener un ejemplo de cómo utilizar **usesgetlasterror**.  
+## <a name="example"></a>Ejemplo  
+ Consulte la [idl_module](../windows/idl-module.md) ejemplo para obtener un ejemplo de cómo usar **usesgetlasterror**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|atributo de**módulo**|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|**módulo** atributo|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   

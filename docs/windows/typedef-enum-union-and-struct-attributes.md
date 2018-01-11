@@ -1,118 +1,121 @@
 ---
-title: "Typedef, Enum, Union, and Struct Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "union attributes"
-  - "attributes [C++], reference topics"
-  - "struct attributes"
-  - "typedef attributes"
-  - "enum attributes"
+title: TypeDef, Enum, Union y Struct (atributos) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- union attributes
+- attributes [C++], reference topics
+- struct attributes
+- typedef attributes
+- enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Typedef, Enum, Union, and Struct Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los atributos siguientes se aplican a [typedef](http://msdn.microsoft.com/es-es/cc96cf26-ba93-4179-951e-695d1f5fdcf1), a [struct](../cpp/struct-cpp.md), y palabras clave de [enumeración](../cpp/enumerations-cpp.md) C\+\+.  
+# <a name="typedef-enum-union-and-struct-attributes"></a>Typedef, Enum, Union y Struct (Atributos)
+Los siguientes atributos se aplican a la [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struct](../cpp/struct-cpp.md), y [enum](../cpp/enumerations-cpp.md) palabras clave de C++.  
   
-### definición de tipos  
+### <a name="typedef"></a>typedef  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[case](../windows/case-cpp.md)|utilizado con el atributo de [switch\_type](../windows/switch-type.md) en **union**.|  
-|[custom](../windows/custom-cpp.md)|Permite definir dispone de atributo.|  
-|[export](../windows/export.md)|Genera una estructura de datos que se almacena en el archivo .idl.|  
-|[first\_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitirá.|  
-|[helpcontext](../windows/helpcontext.md)|Especifica un Id. de contexto que deje la información de la vista de usuario sobre este elemento en el archivo de Ayuda.|  
-|[helpfile](../Topic/helpfile.md)|Establece el nombre del archivo de Ayuda para una biblioteca de tipos.|  
-|[helpstring](../windows/helpstring.md)|Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.|  
-|[library\_block](../windows/library-block.md)|Coloca una construcción dentro del bloque de la biblioteca del archivo .idl.|  
-|[PTR](../windows/ptr.md)|Elija un puntero como puntero completo.|  
-|[public](../windows/public-cpp-attributes.md)|Garantiza que una definición entre la biblioteca de tipos aunque no se haga referencia dentro del archivo .idl.|  
+|---------------|-----------------|  
+|[case](../windows/case-cpp.md)|Usar con el [switch_type](../windows/switch-type.md) de atributo en un **union**.|  
+|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[export](../windows/export.md)|Hace que una estructura de datos que se colocarán en el archivo IDL.|  
+|[first_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|  
+|[helpcontext](../windows/helpcontext.md)|Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.|  
+|[helpfile](../windows/helpfile.md)|Establece el nombre del archivo de ayuda para una biblioteca de tipos.|  
+|[helpstring](../windows/helpstring.md)|Especifica una cadena de caracteres que se utiliza para describir el elemento al que se aplica.|  
+|[library_block](../windows/library-block.md)|Coloca una construcción en bloque de biblioteca del archivo .idl.|  
+|[ptr](../windows/ptr.md)|Designa un puntero como un puntero completo.|  
+|[public](../windows/public-cpp-attributes.md)|Garantiza que una definición de tipo pasará a la biblioteca de tipos aunque no se hace referencia desde dentro del archivo .idl.|  
 |[ref](../windows/ref-cpp.md)|Identifica un puntero de referencia.|  
-|[switch\_is](../windows/switch-is.md)|Especifica la expresión o el identificador que actúa como la combinación discriminante que selecciona a la union.|  
-|[switch\_type](../windows/switch-type.md)|Identifica el tipo de la variable utilizada como unión discriminante.|  
-|[único](../windows/unique-cpp.md)|especifica un puntero único.|  
-|[wire\_marshal](../windows/wire-marshal.md)|Especifica un tipo de datos que se usará para la transmisión en lugar de un tipo de datos específico de la aplicación.|  
+|[switch_is](../windows/switch-is.md)|Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.|  
+|[switch_type](../windows/switch-type.md)|Identifica el tipo de la variable utilizada como la unión discriminante.|  
+|[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
+|[wire_marshal](../windows/wire-marshal.md)|Especifica un tipo de datos que se usará para la transmisión en lugar de un tipo de datos específicos de la aplicación.|  
   
-### enum  
-  
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|[custom](../windows/custom-cpp.md)|Permite definir dispone de atributo.|  
-|[export](../windows/export.md)|Genera una estructura de datos que se almacena en el archivo .idl.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
-|[v1\_enum](../windows/v1-enum.md)|Dirige que transmiten al tipo enumerado especificado como entidad de 32 bits, en lugar del valor predeterminado de 16 bits.|  
-  
-### union  
+### <a name="enum"></a>enum  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[custom](../windows/custom-cpp.md)|Permite definir dispone de atributo.|  
-|[export](../windows/export.md)|Genera una estructura de datos que se almacena en el archivo .idl.|  
-|[first\_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitirá.|  
-|[last\_is](../windows/last-is.md)|Especifica el índice del elemento de la matriz pasado que se transmitirá.|  
-|[length\_is](../windows/length-is.md)|especifica el número de elementos de matriz que se transmitirán.|  
-|[max\_is](../windows/max-is.md)|Indica el valor máximo de un índice válido de la matriz.|  
-|[size\_is](../Topic/size_is.md)|Especifica el tamaño de memoria asignado para punteros ordenados, punteros a punteros ordenados, y solo ordenados o matrices multidimensionales.|  
-|[único](../windows/unique-cpp.md)|especifica un puntero único.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
+|---------------|-----------------|  
+|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[export](../windows/export.md)|Hace que una estructura de datos que se colocarán en el archivo IDL.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
+|[v1_enum](../windows/v1-enum.md)|Indica que el tipo enumerado especificado se transmiten como una entidad de 32 bits, en lugar de con el valor predeterminado de 16 bits.|  
   
-### unión de Nonencapsulated  
+### <a name="union"></a>union  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[ms\_union](../windows/ms-union.md)|controla la alineación de la representación de datos de la red de uniones nonencapsulated.|  
-|[no\_injected\_text](../windows/no-injected-text.md)|Evita que el compilador inserte código como resultado de uso del atributo.|  
+|---------------|-----------------|  
+|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[export](../windows/export.md)|Hace que una estructura de datos que se colocarán en el archivo IDL.|  
+|[first_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|  
+|[last_is](../windows/last-is.md)|Especifica el índice del último elemento de matriz que se transmitan.|  
+|[length_is](../windows/length-is.md)|Especifica el número de elementos de la matriz que se transmitan.|  
+|[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|  
+|[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo o matrices multidimensionales.|  
+|[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
   
-### struct  
+### <a name="nonencapsulated-union"></a>Unión nonencapsulated  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[aggregatable](../Topic/aggregatable.md)|indica que la clase admite la agregación.|  
-|[agregados](../windows/aggregates.md)|Indica que un control agrega la clase de destino.|  
-|[appobject](../Topic/appobject.md)|Identifica la coclase como objeto application, que está asociado a una aplicación completa .exe, e indica que las funciones y propiedades coclass son globalmente disponible en esta biblioteca de tipos.|  
-|[CoClass](../windows/coclass.md)|crea un control ActiveX.|  
-|[com\_interface\_entry](../Topic/com_interface_entry%20\(C++\).md)|Agrega una entrada de interfaz a un mapa COM.|  
-|[Control](../windows/control.md)|especifica que el tipo definido por el usuario es un control.|  
-|[custom](../windows/custom-cpp.md)|Permite definir dispone de atributo.|  
-|[db\_column](../windows/db-column.md)|Enlaza una columna especificada al conjunto de filas.|  
-|[db\_command](../windows/db-command.md)|Crea un comando OLE DB.|  
-|[db\_param](../windows/db-param.md)|Asociado a la variable miembro especificada a una entrada o parámetro de salida y delimita la variable.|  
-|[db\_source](../windows/db-source.md)|crea una conexión a un origen de datos.|  
-|[db\_table](../windows/db-table.md)|Abra una tabla de OLE DB.|  
-|[default](../windows/default-cpp.md)|Indica que la personalizado o el dispinterface definido dentro de una coclase representa la interfaz predeterminada de la programación.|  
-|[defaultvtable](../windows/defaultvtable.md)|Define una interfaz como interfaz vtable predeterminada de un control.|  
-|[event\_receiver](../windows/event-receiver.md)|Crea un receptor de eventos.|  
-|[event\_source](../windows/event-source.md)|crea un origen de eventos.|  
-|[export](../windows/export.md)|Genera una estructura de datos que se almacena en el archivo .idl.|  
-|[first\_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitirá.|  
-|[hidden](../Topic/hidden.md)|Indica que el elemento existe pero no se debe mostrar en un explorador del usuario.|  
-|[implements\_category](../Topic/implements_category.md)|Especifica implementó categorías componentes para la clase.|  
-|[last\_is](../windows/last-is.md)|Especifica el índice del elemento de la matriz pasado que se transmitirá.|  
-|[length\_is](../windows/length-is.md)|especifica el número de elementos de matriz que se transmitirán.|  
-|[max\_is](../windows/max-is.md)|Indica el valor máximo de un índice válido de la matriz.|  
-|[requires\_category](../windows/requires-category.md)|Especifica las categorías componentes necesarias de la clase de destino.|  
-|[size\_is](../Topic/size_is.md)|Especifica el tamaño de memoria asignado para punteros ordenados, punteros a punteros ordenados, y solo ordenados o matrices multidimensionales.|  
-|[source](../Topic/source%20\(C++\).md)|En una clase, especifica las interfaces del origen de objetos COM de los puntos de conexión.  En una propiedad o método, indica que el miembro devuelve un objeto o un VARIANT que son un origen de eventos.|  
+|---------------|-----------------|  
+|[ms_union](../windows/ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|  
+|[no_injected_text](../windows/no-injected-text.md)|Evita que el compilador inserte código como resultado del uso de atributos.|  
+  
+### <a name="struct"></a>struct  
+  
+|Atributo|Descripción|  
+|---------------|-----------------|  
+|[aggregatable](../windows/aggregatable.md)|Indica que la clase compatible con la agregación.|  
+|[aggregates](../windows/aggregates.md)|Indica que un control agrega la clase de destino.|  
+|[appobject](../windows/appobject.md)|Identifica la coclase como un objeto de aplicación, que está asociado a una aplicación .exe completa y se indican que las funciones y propiedades de la coclase que están disponibles globalmente en esta biblioteca de tipos.|  
+|[coclass](../windows/coclass.md)|Crea un control ActiveX.|  
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Agrega una entrada de la interfaz a un mapa COM.|  
+|[control](../windows/control.md)|Especifica que el tipo definido por el usuario es un control.|  
+|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[db_column](../windows/db-column.md)|Enlaza una columna especificada en el conjunto de filas.|  
+|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
+|[db_param](../windows/db-param.md)|La variable de miembro especificado se asocia con un parámetro de entrada o de salida y delimita la variable.|  
+|[db_source](../windows/db-source.md)|Crea una conexión a un origen de datos.|  
+|[db_table](../windows/db-table.md)|Se abre una tabla de OLE DB.|  
+|[default](../windows/default-cpp.md)|Indica que la interfaz personalizada o dispinterface definida en una coclase representa la interfaz de programación predeterminada.|  
+|[defaultvtable](../windows/defaultvtable.md)|Define una interfaz como la interfaz de vtable predeterminada para un control.|  
+|[event_receiver](../windows/event-receiver.md)|Crea un receptor de eventos.|  
+|[event_source](../windows/event-source.md)|Crea un origen de eventos.|  
+|[export](../windows/export.md)|Hace que una estructura de datos que se colocarán en el archivo IDL.|  
+|[first_is](../windows/first-is.md)|Especifica el índice del primer elemento de matriz que se transmitan.|  
+|[hidden](../windows/hidden.md)|Indica que el elemento existe pero no se debe mostrar en un explorador orientado al usuario.|  
+|[implements_category](../windows/implements-category.md)|Especifica las categorías de componentes implementados para la clase.|  
+|[last_is](../windows/last-is.md)|Especifica el índice del último elemento de matriz que se transmitan.|  
+|[length_is](../windows/length-is.md)|Especifica el número de elementos de la matriz que se transmitan.|  
+|[max_is](../windows/max-is.md)|Designa el valor máximo para un índice de matriz válida.|  
+|[requires_category](../windows/requires-category.md)|Especifica las categorías de los componentes necesarios de la clase de destino.|  
+|[size_is](../windows/size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo o matrices multidimensionales.|  
+|[origen](../windows/source-cpp.md)|En una clase, especifica las interfaces de origen del objeto COM para puntos de conexión. En una propiedad o método, indica que el miembro devuelve un objeto o una variante que consiste en un origen de eventos.|  
 |[subprocesamiento](../windows/threading-cpp.md)|Especifica el modelo de subprocesos de un objeto COM.|  
-|[único](../windows/unique-cpp.md)|especifica un puntero único.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
-|[version](../windows/version-cpp.md)|Identifica una determinada versión entre varias versiones de una clase.|  
-|[vi\_progid](../windows/vi-progid.md)|especifica un formulario de la versión\-independiente de ProgID.|  
+|[unique](../windows/unique-cpp.md)|Especifica un puntero único.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Especifica el identificador único para una clase o interfaz.|  
+|[version](../windows/version-cpp.md)|Identifica una versión determinada entre varias versiones de una clase.|  
+|[vi_progid](../windows/vi-progid.md)|Especifica una forma independiente de la versión de ProgID.|  
   
-## Vea también  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Vea también  
+ [Atributos por uso](../windows/attributes-by-usage.md)

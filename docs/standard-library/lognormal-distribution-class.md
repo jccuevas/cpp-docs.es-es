@@ -37,11 +37,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53bef5714a90958a36c74e6dea6656f02778e78e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution (Clase)
 Genera una distribución log-normal.  
@@ -97,7 +98,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener más información sobre la distribución LogNormal, vea el artículo de Wolfram MathWorld sobre la [distribución LogNormal](http://go.microsoft.com/fwlink/LinkId=400917).  
+Para obtener más información sobre la distribución LogNormal, vea el artículo de Wolfram MathWorld sobre la [distribución LogNormal](http://go.microsoft.com/fwlink/p/?linkid=400917).  
   
 ## <a name="example"></a>Ejemplo  
   

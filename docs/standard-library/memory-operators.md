@@ -14,19 +14,18 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 95563f5eeb70d33e3ebba4de0aead276a2230669
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt-operators"></a>Operadores &lt;memory&gt;
 ||||  
@@ -273,7 +272,7 @@ bool operator>=(
 ### <a name="remarks"></a>Comentarios  
  Los operadores de plantilla devuelven `left.get() >= right.get()`.  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Comprueba si un objeto es menor que un segundo objeto.  
   
 ```  
@@ -332,7 +331,7 @@ bool operator<=(
 ### <a name="remarks"></a>Comentarios  
  Los operadores de plantilla devuelven`left.get() <= right.get()`  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Comprueba si un objeto es mayor que un segundo objeto.  
   
 ```  
@@ -413,5 +412,4 @@ sp0 == 3f3040 (varies)
   
 ## <a name="see-also"></a>Vea también  
  [\<memory>](../standard-library/memory.md)
-
 

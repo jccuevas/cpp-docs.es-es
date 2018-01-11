@@ -1,54 +1,55 @@
 ---
-title: "RuntimeClassType (Enumeraci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClassType (enumeración)"
+title: "RuntimeClassType (enumeración) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassType
+dev_langs: C++
+helpviewer_keywords: RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 26016e8c95807af76484504c491ca1e6e08f8f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassType (Enumeraci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica el tipo de instancia de [RuntimeClass](../windows/runtimeclass-class.md) se admite que.  
+# <a name="runtimeclasstype-enumeration"></a>RuntimeClassType (enumeración)
+Especifica el tipo de [RuntimeClass](../windows/runtimeclass-class.md) instancia que se admite.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 enum RuntimeClassType;  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Valores  
+### <a name="values"></a>Valores  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`ClassicCom`|Una clase COM clásica en tiempo de ejecución.|  
+|`ClassicCom`|Una clase de tiempo de ejecución COM clásica.|  
 |`Delegate`|Equivalente a **ClassicCom**.|  
-|`InhibitFtmBase`|Deshabilita `FtmBase` admiten mientras `__WRL_CONFIGURATION_LEGACY__` no está definido.|  
-|`InhibitWeakReference`|Deshabilita la compatibilidad parcial de referencia.|  
-|`WinRt`|Clase [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].|  
+|`InhibitFtmBase`|Deshabilita `FtmBase` soporte técnico al `__WRL_CONFIGURATION_LEGACY__` no está definido.|  
+|`InhibitWeakReference`|Deshabilita la compatibilidad de la referencia débil.|  
+|`WinRt`|Una clase en tiempo de ejecución de Windows.|  
 |`WinRtClassicComMix`|Combinación de `WinRt` y `ClassicCom`.|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

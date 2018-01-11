@@ -1,29 +1,30 @@
 ---
-title: "Tipos de par&#225;metros de atributo (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributos personalizados, tipos de parámetros"
+title: "Tipos de parámetro (extensiones de componentes de C++) de atributo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Tipos de par&#225;metros de atributo (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los valores pasados a los atributos deben saber el compilador en tiempo de compilación.  Parámetros de atributo pueden ser de los tipos siguientes:  
+# <a name="attribute-parameter-types--c-component-extensions"></a>Tipos de parámetros de atributo (Extensiones de componentes de C++)
+El compilador deben conocer valores que se pasan a los atributos en tiempo de compilación.  Parámetros de atributo pueden ser de los siguientes tipos:  
   
 -   `bool`  
   
@@ -41,7 +42,7 @@ Los valores pasados a los atributos deben saber el compilador en tiempo de compi
   
 -   `wchar_t`  
   
--   `char*`, `wchar_t*` ó `System::String*`  
+-   `char*`o `wchar_t*` o`System::String*`  
   
 -   `System::Type ^`  
   
@@ -49,9 +50,9 @@ Los valores pasados a los atributos deben saber el compilador en tiempo de compi
   
 -   `enum`  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // attribute_parameter_types.cpp  
@@ -74,12 +75,12 @@ ref struct MyStruct {
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- Al especificar atributos, los argumentos \(posicionales\) todo sin nombre deben preceder a los argumentos con nombre.  
+### <a name="description"></a>Descripción  
+ Al especificar atributos, todos los argumentos (posicionales) sin nombre deben preceder a los argumentos con nombre.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // extending_metadata_c.cpp  
@@ -107,12 +108,12 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
+### <a name="description"></a>Descripción  
  Parámetros de atributo pueden ser matrices unidimensionales de los tipos anteriores.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // extending_metadata_d.cpp  
@@ -129,5 +130,5 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Atributos definidos por el usuario](../windows/user-defined-attributes-cpp-component-extensions.md)

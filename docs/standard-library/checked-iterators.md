@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbd902066e86d2dbe04e4bc709a1042c40dffe8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8997741b4290214aa8f147aa7b841424467e296b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 Los iteradores comprobados garantizan que los límites del contenedor no se han sobrescrito. Los iteradores comprobados se aplican a las compilaciones de depuración y de lanzamiento. Para obtener más información sobre cómo usar iteradores de depuración cuando se compila en modo depuración, vea [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md).  
@@ -227,5 +228,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
- [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 

@@ -1,52 +1,54 @@
 ---
-title: "CancelTransitionPolicy (Enumeraci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled"
-  - "module/Microsoft::WRL::CancelTransitionPolicy::RemainCanceled"
-  - "module/Microsoft::WRL::CancelTransitionPolicy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CancelTransitionPolicy (Enumeración)"
+title: "CancelTransitionPolicy (enumeración) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled
+- module/Microsoft::WRL::CancelTransitionPolicy::RemainCanceled
+- module/Microsoft::WRL::CancelTransitionPolicy
+dev_langs: C++
+helpviewer_keywords: CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14c3016d767e38e032a745a5957fa93d51f2dae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CancelTransitionPolicy (Enumeraci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica cómo el intento de una operación asincrónica para la transición a un estado terminal de completo o error debe comportarse con respecto a un estado cancelado cliente\- solicitada.  
+# <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy (Enumeración)
+Indica cómo una operación asincrónica de intentar realizar la transición a un estado terminal de completado o debe comportarse el error con respecto a un estado cancelado solicitada por el cliente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 enum CancelTransitionPolicy;  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Valores  
+### <a name="values"></a>Valores  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|`RemainCanceled`|Si la operación asincrónica se encuentra en un estado cancelado cliente\- solicitada, esto indica que permanecerá en el estado cancelado en comparación con la transición a un terminal completado o el estado de error.|  
-|`TransitionFromCanceled`|Si la operación asincrónica se encuentra en un estado cancelado cliente\- solicitada, esto indica que estado si la transición del estado cancelado el estado terminal de completo o error determinado por la llamada que utiliza este marcador.|  
+|`RemainCanceled`|Si la operación asincrónica está actualmente en un estado cancelado solicitada por el cliente, esto indica que permanecerá en el estado cancelado en lugar de realizar la transición a un estado de error o terminal completado.|  
+|`TransitionFromCanceled`|Si la operación asincrónica está actualmente en un estado cancelado solicitada por el cliente, esto indica que el estado deberá pasar desde que se completó estado cancelado para el estado terminal de o error según lo determinado por la llamada que usa esta marca.|  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** async.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

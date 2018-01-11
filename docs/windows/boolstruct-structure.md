@@ -1,56 +1,57 @@
 ---
-title: "BoolStruct (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::BoolStruct"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BoolStruct (estructura)"
+title: BoolStruct (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::BoolStruct
+dev_langs: C++
+helpviewer_keywords: BoolStruct structure
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7daa7527c8eea2cfca3b8933b9c3e1f042883e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# BoolStruct (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="boolstruct-structure"></a>BoolStruct (estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 struct BoolStruct;  
 ```  
   
-## Comentarios  
- La estructura de BoolStruct define si un ComPtr administra la duración de objeto de una interfaz.  BoolStruct es utilizado internamente por el operador de [BoolType\(\)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) .  
+## <a name="remarks"></a>Comentarios  
+ BoolStruct (estructura) define si una ComPtr administra la duración de los objetos de una interfaz. BoolStruct se usa internamente el [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operador.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Miembros de datos públicos  
+### <a name="public-data-members"></a>Miembros de datos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[BoolStruct::Member \(Miembro de datos\)](../Topic/BoolStruct::Member%20Data%20Member.md)|Especifica que es [ComPtr](../windows/comptr-class.md) , o no, administrar la duración de objeto de una interfaz.|  
+|[BoolStruct::Member (miembro de datos)](../windows/boolstruct-member-data-member.md)|Especifica que un [ComPtr](../windows/comptr-class.md) es o no lo está, administrar la duración de los objetos de una interfaz.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `BoolStruct`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** internal.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)   
- [ComPtr::operator Microsoft::WRL::Details::BoolType \(Operador\)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)
+## <a name="see-also"></a>Vea también  
+ [Namespace wrl](../windows/microsoft-wrl-details-namespace.md)   
+ [ComPtr::operator Microsoft::WRL::Details::BoolType (operador)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

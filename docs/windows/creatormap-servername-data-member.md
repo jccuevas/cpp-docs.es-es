@@ -1,45 +1,46 @@
 ---
-title: "CreatorMap::serverName (Miembro de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap::serverName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "serverName (miembro de datos)"
+title: Miembro de datos Creatormap | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreatorMap::serverName
+dev_langs: C++
+helpviewer_keywords: serverName data member
 ms.assetid: 07a853f7-98cd-47a1-a2ff-0db74dc4cb37
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5ced2e57d640025f0df34c7ddc2e75aaafc1e3f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap::serverName (Miembro de datos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="creatormapservername-data-member"></a>CreatorMap::serverName (Miembro de datos)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 const wchar_t* serverName;  
 ```  
   
-## Comentarios  
- Almacena el nombre del CreatorMap.  
+## <a name="remarks"></a>Comentarios  
+ Almacena el nombre del servidor para el CreatorMap.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [CreatorMap \(Estructura\)](../windows/creatormap-structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [CreatorMap (estructura)](../windows/creatormap-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

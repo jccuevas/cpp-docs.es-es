@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_trivially_copy_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_copy_constructible
+f1_keywords: type_traits/std::is_trivially_copy_constructible
+dev_langs: C++
+helpviewer_keywords: is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4e8029abe737aad771edf588e31b4a91d22fa092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3c99808198c527fb60105d9a2d5629d177da5461
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible (Clase)
 Comprueba si el tipo tiene un constructor de copia trivial.  
@@ -52,7 +48,6 @@ struct is_trivially_copy_constructible;
   
 ## <a name="see-also"></a>Vea también  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

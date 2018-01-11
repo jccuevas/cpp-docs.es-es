@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,10 +16,9 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -33,12 +31,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
+ms.workload: cplusplus
+ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4cc20303a02fbf21fd54e18569f964e268809439
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="promise-class"></a>promise (Clase)
 Describe un *proveedor asincrónico*.  
@@ -54,13 +52,13 @@ class promise;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Promise](#promise)|Construye un objeto `promise`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get_future](#get_future)|Devuelve un objeto [future](../standard-library/future-class.md) asociado a este compromiso.|  
 |[set_exception](#set_exception)|Establece de forma atómica el resultado de este compromiso para indicar una excepción.|  
@@ -71,7 +69,7 @@ class promise;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[promise::operator=](#op_eq)|Asignación del estado compartido de este objeto promise.|  
   
@@ -104,7 +102,7 @@ promise& operator=(promise&& Other) noexcept;
   
 ### <a name="parameters"></a>Parámetros  
  `Other`  
- Objeto `promise`.  
+ Un objeto `promise`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  `*this`  
@@ -127,7 +125,7 @@ promise(promise&& Other) noexcept;
  Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).  
   
  `Other`  
- Objeto `promise`.  
+ Un objeto `promise`.  
   
 ### <a name="remarks"></a>Comentarios  
  El primer constructor crea un objeto `promise` *vacío*.  
@@ -248,5 +246,4 @@ void swap(promise& Other) noexcept;
 
 
  
-
 

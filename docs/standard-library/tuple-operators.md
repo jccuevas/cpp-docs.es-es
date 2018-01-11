@@ -13,17 +13,15 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-operators"></a>Operadores de &lt;tuple&gt;
 ||||  
@@ -31,7 +29,7 @@ ms.lasthandoff: 10/03/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Compara objetos `tuple` para determinar si no son iguales.  
   
 ```  
@@ -93,7 +91,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Compara objetos `tuple` para determinar si son inferiores.  
   
 ```  
@@ -155,7 +153,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Compara objetos `tuple` para detectar valores inferiores o iguales.  
   
 ```  
@@ -279,7 +277,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Compara objetos `tuple` para determinar si son mayores.  
   
 ```  
@@ -341,7 +339,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Compara objetos `tuple` para determinar si son mayores o iguales.  
   
 ```  
@@ -405,5 +403,4 @@ false
   
 ## <a name="see-also"></a>Vea también  
  [\<tuple>](../standard-library/tuple.md)
-
 

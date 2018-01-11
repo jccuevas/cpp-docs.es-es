@@ -1,34 +1,36 @@
 ---
-title: "GetActivationFactory (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::GetActivationFactory"
-  - "client/ABI::Windows::Foundation::GetActivationFactory"
-  - "client/Windows::Foundation::GetActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetActivationFactory (función)"
+title: "GetActivationFactory (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::GetActivationFactory
+- client/ABI::Windows::Foundation::GetActivationFactory
+- client/Windows::Foundation::GetActivationFactory
+dev_langs: C++
+helpviewer_keywords: GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6419ef4d48c3f151f8acfb49d40e10853f5d17f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# GetActivationFactory (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="getactivationfactory-function"></a>GetActivationFactory (función)
 Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -40,23 +42,23 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- Un parámetro de plantilla que especifica el tipo de generador de activación.  
+ Un parámetro de plantilla que especifica el tipo de la fábrica de activación.  
   
  `activatableClassId`  
- El nombre de la clase de generador de activación puede generar.  
+ El nombre de la clase que puede producir el generador de activación.  
   
  `factory`  
- Cuando esta operación finaliza, una referencia al generador de activación para `T`escrito.  
+ Cuando se completa esta operación, una referencia a la fábrica de activación para su tipo `T`.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un error HRESULT que indica el error de esta operación.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, un error HRESULT que indica el motivo del error de esta operación.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
- **Espacio de nombres:** Windows::Foundation  
+ **Namespace:** Windows::Foundation  
   
-## Vea también  
- [Windows::Foundation \(Espacio de nombres\)](../Topic/Windows::Foundation%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Windows::Foundation (espacio de nombres)](../windows/windows-foundation-namespace.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase (clase)
 Implementa la máquina de estados asincrónica de Windows Runtime.  
@@ -56,13 +59,13 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[AsyncBase::AsyncBase (constructor)](../windows/asyncbase-asyncbase-constructor.md)|Inicializa una instancia de la clase AsyncBase.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[AsyncBase::Cancel (método)](../windows/asyncbase-cancel-method.md)|Cancela una operación asincrónica.|  
 |[AsyncBase::Close (método)](../windows/asyncbase-close-method.md)|Cierra la operación asincrónica.|  
@@ -80,7 +83,7 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[AsyncBase::CheckValidStateForDelegateCall (método)](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Comprueba si se pueden modificar propiedades de delegado en el actual estado asincrónico.|  
 |[AsyncBase::CheckValidStateForResultsCall (método)](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Comprueba si se pueden recopilar los resultados de una operación asincrónica en el actual estado asincrónico.|  

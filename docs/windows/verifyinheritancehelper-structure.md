@@ -1,32 +1,33 @@
 ---
-title: "VerifyInheritanceHelper (Estructura) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VerifyInheritanceHelper (estructura)"
+title: VerifyInheritanceHelper (estructura) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+dev_langs: C++
+helpviewer_keywords: VerifyInheritanceHelper structure
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9e740dc15618388fe9c1428705b47bd495a1c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# VerifyInheritanceHelper (Estructura)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (estructura)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -40,31 +41,31 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `I`  
  Un tipo.  
   
  `Base`  
- Otro.  
+ Otro tipo.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Comprueba si una interfaz se deriva de otra interfaz.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[VerifyInheritanceHelper::Verify \(Método\)](../windows/verifyinheritancehelper-verify-method.md)|Prueba las dos interfaces especificadas por los parámetros actuales de la plantilla y determina si una interfaz se deriva de la otra.|  
+|[VerifyInheritanceHelper::Verify (método)](../windows/verifyinheritancehelper-verify-method.md)|Comprueba las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `VerifyInheritanceHelper`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>Información general sobre la biblioteca estándar de C++
 Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o varios encabezados estándar. Esta implementación incluye dos encabezados adicionales, `<hash_map>` y `<hash_set>`, que no son necesarios en el estándar de C++. Para obtener una lista completa de los encabezados que admite esta implementación, vea [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md).  
@@ -55,7 +56,7 @@ Todas las entidades de la biblioteca de C++ declaradas o definidas en uno o vari
   
 -   [Iteradores comprobados](../standard-library/checked-iterators.md)  
   
--   [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)  
+-   [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 -   [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)  
   

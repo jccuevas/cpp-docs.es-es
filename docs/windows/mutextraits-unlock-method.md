@@ -1,32 +1,33 @@
 ---
-title: "MutexTraits::Unlock (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock (método)"
+title: "Mutextraits:: Unlock (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 7c4e5664-6d95-498a-95bb-d30b5e866c2c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 55c1252dfa1464d68b28f2da520b5ac8319ae096
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# MutexTraits::Unlock (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Control exclusivo de un recurso compartido.  
+# <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock (Método)
+Devuelve el control exclusivo de un recurso compartido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 inline static void Unlock(  
@@ -34,16 +35,16 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `h`  
- Identificador a un objeto mutex.  
+ Identificador de un objeto de exclusión mutua.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** handletraits  
   
-## Vea también  
- [MutexTraits \(Estructura\)](../windows/mutextraits-structure.md)
+## <a name="see-also"></a>Vea también  
+ [MutexTraits (estructura)](../windows/mutextraits-structure.md)

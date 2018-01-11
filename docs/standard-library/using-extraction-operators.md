@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- extraction operators
-- '>> operator, extraction operators'
+- extraction operators [C++]
+- '&gt;&gt; operator [C++], extraction operators'
 - operators [C++], extraction
-f1_keywords: []
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9effd7c9675b1a936b0a05a6da0498ae436f19cf
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 13019040c2deed5c9dd3549d7ab6207553a52bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-extraction-operators"></a>Usar operadores de extracción
 El operador de extracción (`>>`), que está preprogramado para todos los tipos de datos estándar de C++, es la forma más sencilla de obtener los bytes de un objeto de flujo de entrada.  
@@ -48,5 +31,4 @@ El operador de extracción (`>>`), que está preprogramado para todos los tipos 
   
 ## <a name="see-also"></a>Vea también  
  [Flujos de entrada](../standard-library/input-streams.md)
-
 

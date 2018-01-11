@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c0c486b4ea510de8e998bf1fd4e9b0ee80117c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution (Clase)
 Genera una distribución de Poisson.  
@@ -98,7 +99,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](http://go.microsoft.com/fwlink/LinkId=401112).  
+Para obtener información detallada sobre la distribución de Poisson, vea el artículo de Wolfram MathWorld sobre la [distribución de Poisson](http://go.microsoft.com/fwlink/p/?linkid=401112).  
   
 ## <a name="example"></a>Ejemplo  
   

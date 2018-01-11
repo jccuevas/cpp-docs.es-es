@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::logical_and
-- logical_and
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::logical_and
+dev_langs: C++
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 8108658a9efceeb048aac2c9aa4ffd160626a31b
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 033cb6ffdfab217be5642f5ce5c9bb6ab9af68fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-struct"></a>logical_and (Struct)
 Objeto de función predefinido que realiza la operación de conjunción lógica (`operator&&`) sobre sus argumentos.  
@@ -75,7 +57,7 @@ struct logical_and<void>
  Operando derecho de la operación de conjunción lógica. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Resultado de `Left``&&``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator&&`.  
+ Resultado de `Left && Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por `operator&&`.  
   
 ## <a name="remarks"></a>Comentarios  
  Para los tipos definidos por el usuario, no se realiza la evaluación cortocircuitada de los operandos. `operator&&` evalúa ambos argumentos.  
@@ -160,7 +142,6 @@ The deque which is the conjuction of d1 & d2 is:
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 
