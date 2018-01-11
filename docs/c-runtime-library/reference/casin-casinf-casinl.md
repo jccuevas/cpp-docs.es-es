@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a059d34110e064a6e945d02bf83d39e6b5af637
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bed6a29a270ae6c3e54cd1931a351d3752e2c818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 Recupera el arcoseno de un número complejo, con cortes de bifurcación fuera del intervalo [-1, + 1] en el eje real.  
@@ -88,7 +89,7 @@ _Lcomplex casinl(
 |-------------|--------------|------------------|  
 |`casin`,               `casinf`, `casinl`|\<complex.h>|\<ccomplex>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

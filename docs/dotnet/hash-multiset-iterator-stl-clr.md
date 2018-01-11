@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator (miembro) [STL/CLR]"
+title: 'hash_multiset:: Iterator (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: 47c565d9-2bbc-45d8-801f-cab43ed45ab4
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c86481bf178ebefbfbfaea9141406a8661f79d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetiterator-stlclr"></a>hash_multiset::iterator (STL/CLR)
 El tipo de un iterador para la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Comentarios  
- El tipo describe un objeto de tipo sin especificar `T1` que sirva como iterador bidireccional para la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto de tipo no especificado `T1` que puede actuar como un iterador bidireccional para la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_hash_multiset_iterator.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Encabezado:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/hash_set >  
   
-## Vea también  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::const\_iterator](../dotnet/hash-multiset-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::const_iterator (STL/CLR)](../dotnet/hash-multiset-const-iterator-stl-clr.md)

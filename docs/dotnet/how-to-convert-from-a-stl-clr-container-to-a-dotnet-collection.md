@@ -1,41 +1,43 @@
 ---
-title: "C&#243;mo: Convertir un contenedor STL/CLR en una colecci&#243;n .NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenedores STL/CLR [STL/CLR]"
-  - "STL/CLR, convertir a colecciones .NET"
+title: "Cómo: convertir un contenedor STL/CLR en una colección .NET | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Containers [STL/CLR]
+- STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa58c8db46d1443ca5b39449222cc22e31eafb5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Convertir un contenedor STL/CLR en una colecci&#243;n .NET
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra cómo convertir los contenedores de STL\/CLR a las colecciones equivalentes de .NET.  Como ejemplo, mostramos cómo convertir un STL\/CLR [vector](../dotnet/vector-stl-clr.md) a .NET <xref:System.Collections.Generic.ICollection%601> y cómo convertir un STL\/CLR [Mapa](../dotnet/map-stl-clr.md) a .NET <xref:System.Collections.Generic.IDictionary%602>, pero el procedimiento es similar para todas las colecciones y contenedores.  
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Cómo: Convertir un contenedor STL/CLR en una colección .NET
+Este tema muestra cómo convertir los contenedores STL/CLR en sus colecciones de .NET equivalentes. Por ejemplo, se muestra cómo convertir un STL/CLR [vector](../dotnet/vector-stl-clr.md) para .NET <xref:System.Collections.Generic.ICollection%601> y cómo convertir un STL/CLR [mapa](../dotnet/map-stl-clr.md) para .NET <xref:System.Collections.Generic.IDictionary%602>, pero el procedimiento es similar para todas las colecciones y contenedores.  
   
-### Para crear una colección de un contenedor  
+### <a name="to-create-a-collection-from-a-container"></a>Para crear una colección de un contenedor  
   
 1.  Use uno de los métodos siguientes:  
   
-    -   Para convertir la parte de un contenedor, llamar a la función de [make\_collection](../dotnet/make-collection-stl-clr.md) , y pasar el iterador de inicio y el iterador de final del contenedor de STL\/CLR se copie en la colección de .NET.  Esta función de plantilla toma un iterador de STL\/CLR como argumento de plantilla.  El primer ejemplo se muestra este método.  
+    -   Para convertir la parte de un contenedor, llame a la [make_collection](../dotnet/make-collection-stl-clr.md) función y pase el iterador de inicio y el iterador de final del contenedor STL/CLR que se copiará en la colección de .NET. Esta función de plantilla tiene un iterador STL/CLR como un argumento de plantilla. El primer ejemplo muestra este método.  
   
-    -   Para convertir un contenedor completo, convierta el contenedor a una colección adecuada de la interfaz de intercalación o interfaz.NET.  El segundo ejemplo se muestra este método.  
+    -   Para convertir todo un contenedor, convierte el contenedor para una interfaz de colección adecuada de .NET o una colección de interfaz. El segundo ejemplo muestra este método.  
   
-## Ejemplo  
- En este ejemplo, creamos un STL\/CLR `vector` y agregamos 5 elementos a.  A continuación, creamos una colección .NET llamando a la función de `make_collection` .  Finalmente, se muestra el contenido de la colección recién creada.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, crearemos un STL/CLR `vector` y agregarle 5 elementos. A continuación, creamos una colección .NET mediante una llamada a la `make_collection` (función). Por último, se muestra el contenido de la colección recién creada.  
   
 ```  
 // cliext_convert_vector_to_icollection.cpp  
@@ -70,12 +72,15 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **El contenido de System::Collections::Generic::ICollection son:**  
-**3**  
-**5**  
-**7**   
-## Ejemplo  
- En este ejemplo, creamos un STL\/CLR `map` y agregamos 5 elementos a.  A continuación, creamos .NET <xref:System.Collections.Generic.IDictionary%602> y asignar `map` directamente al.  Finalmente, se muestra el contenido de la colección recién creada.  
+```Output  
+The contents of the System::Collections::Generic::ICollection are:  
+3  
+5  
+7  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, crearemos un STL/CLR `map` y agregarle 5 elementos. A continuación, creamos un .NET <xref:System.Collections.Generic.IDictionary%602> y asignar el `map` directamente a él. Por último, se muestra el contenido de la colección recién creada.  
   
 ```  
 // cliext_convert_map_to_idictionary.cpp  
@@ -107,13 +112,16 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **El contenido de IDictionary son:**  
-**Clave: valor 0.00: 0**  
-**Clave: valor 13.00: 13**  
-**Clave: valor 22.00: 22**  
-**Clave: valor 42.00: 42**  
-**Clave: valor 74.00: 74**   
-## Vea también  
- [Biblioteca STL\/CLR](../dotnet/stl-clr-library-reference.md)   
- [Cómo: Convertir una colección .NET en un contenedor STL\/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+```Output  
+The contents of the IDictionary are:  
+Key: 0.00 Value: 0  
+Key: 13.00 Value: 13  
+Key: 22.00 Value: 22  
+Key: 42.00 Value: 42  
+Key: 74.00 Value: 74  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Referencia de la biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)   
+ [Cómo: convertir una colección .NET en un contenedor STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

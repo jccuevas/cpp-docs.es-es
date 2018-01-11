@@ -1,32 +1,33 @@
 ---
-title: "multimap::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator (miembro) [STL/CLR]"
+title: multimap::generic_reverse_iterator (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: c84d2512-fb93-4dc6-bc24-5aaa4bbb04f0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f47686043ce7d39f84b1cf817c75878802de4b73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tipo de un iterador inverso para el uso con la interfaz genérica para el contenedor.  
+# <a name="multimapgenericreverseiterator-stlclr"></a>multimap::generic_reverse_iterator (STL/CLR)
+El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;  
 ```  
   
-## Comentarios  
- El tipo describe un iterador inverso genérico que se puede utilizar con la interfaz genérica para esta clase de contenedor de plantilla.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un iterador inverso genérico que puede usarse con la interfaz genérica para esta clase de contenedor de plantilla.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_multimap_generic_reverse_iterator.cpp   
@@ -72,15 +73,18 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
- **\[un 1\] \[b 2\] \[c 3\]**  
- **\[c 3\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[c 3]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::generic\_iterator](../dotnet/multimap-generic-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap::generic_iterator (STL/CLR)](../dotnet/multimap-generic-iterator-stl-clr.md)

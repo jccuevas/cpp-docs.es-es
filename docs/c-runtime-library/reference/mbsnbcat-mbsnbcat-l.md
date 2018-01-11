@@ -43,11 +43,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 Anexa, como máximo, los primeros `n` bytes de una cadena de caracteres multibyte en otra. Hay disponibles versiones más seguras de estas funciones; vea [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
@@ -103,7 +104,7 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>Comentarios  
  La función `_mbsnbcat` anexa, como máximo, los primeros `count` bytes de `src` a `dest`. Si el byte que precede inmediatamente al carácter nulo en `dest` es un byte inicial, byte inicial de `src` sobrescribe este byte inicial. De lo contrario, el byte inicial de `src` sobrescribe el carácter nulo de terminación de `dest`. Si hay un byte nulo en `src` antes de que se anexen `count` bytes, `_mbsnbcat` anexa todos los bytes de `src`, hasta el carácter nulo. Si `count` es mayor que la longitud de `src`, se usa la longitud de `src` en lugar de `count`. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión `_mbsnbcat` de esta función usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión `_mbsnbcat_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión `_mbsnbcat` de esta función usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión `_mbsnbcat_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  **Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   

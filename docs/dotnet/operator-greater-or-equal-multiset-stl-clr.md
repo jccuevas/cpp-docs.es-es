@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c6c7d6eaefe69105e2cb08cbc263826f8058a35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 22f95612a8e1eb50ff9ecc021f4b8dfb5abc1d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-multiset-stlclr"></a>operador&gt;= (multiset) (STL/CLR)
 Comparación igual o mayor de la lista.  
@@ -36,7 +39,7 @@ template<typename Key>
  izquierda  
  Contenedor izquierdo que se va a comparar.  
   
- derecha  
+ right  
  Contenedor derecho que se va a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

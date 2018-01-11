@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fad1dce3ca6b707ab8e9e687a5c31b4ecb49d411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2676"></a>Error del compilador C2676
 'operador' binario : 'tipo' no define este operador o una conversión a un tipo aceptable para el operador predefinido  

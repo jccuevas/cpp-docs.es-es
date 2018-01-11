@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a9ce2bba389546967073dd2f3de80ad66616756
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d258b56a1768499fe1546adeccc590211dc12bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-stack-stlclr"></a>operador&gt;= (pila) (STL/CLR)
 Comparación igual o superior de la pila.  
@@ -37,7 +40,7 @@ template<typename Value,
  izquierda  
  Contenedor izquierdo que se va a comparar.  
   
- derecha  
+ right  
  Contenedor derecho que se va a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container (miembro) [STL/CLR]"
+title: priority_queue::get_container (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: bd3cc63b-776f-495c-bf81-a9e8ba189a56
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60f2a5d1fa3a5e00d7b3aeb066672464381d45a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso al contenedor subyacente.  
+# <a name="priorityqueuegetcontainer-stlclr"></a>priority_queue::get_container (STL/CLR)
+Se tiene acceso del contenedor subyacente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 container_type get_container();  
 ```  
   
-## Comentarios  
- La función miembro devuelve el contenedor subyacente.  Se utiliza para omitir las restricciones impuestas por el contenedor del contenedor.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve el contenedor subyacente. Usa para omitir las restricciones impuestas por el contenedor del contenedor.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_priority_queue_get_container.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **c a b**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+c a b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::container\_type](../dotnet/priority-queue-container-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)

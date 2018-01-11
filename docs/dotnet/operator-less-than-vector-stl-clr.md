@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30d31e9b67b4cceb9c0b3c6a1c4559c1d8176de5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa4437304f6c2aa05c8e0785c472b5de43925cd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-vector-stlclr"></a>operador&lt; (vector) (STL/CLR)
 Vector de comparación menor.  
@@ -36,7 +39,7 @@ template<typename Value>
  izquierda  
  Contenedor izquierdo que se va a comparar.  
   
- derecha  
+ right  
  Contenedor derecho que se va a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

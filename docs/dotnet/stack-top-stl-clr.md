@@ -1,41 +1,42 @@
 ---
-title: "stack::top (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::top"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top (miembro) [STL/CLR]"
+title: Stack (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::top
+dev_langs: C++
+helpviewer_keywords: top member [STL/CLR]
 ms.assetid: 5d8b7b69-336e-4d01-8b91-413a17aa2533
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4888bc63c40a76578788f3b1f90c897aed179c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# stack::top (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso al último elemento.  
+# <a name="stacktop-stlclr"></a>stack::top (STL/CLR)
+Obtiene acceso al último elemento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reference top();  
 ```  
   
-## Comentarios  
- La función miembro devuelve una referencia al último elemento de la secuencia controlada, que no puede estar vacía.  Se utiliza para tener acceso al último elemento, cuando lo conoce existe.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve una referencia al último elemento de la secuencia controlada, que debe ser no está vacío. Usa para tener acceso al último elemento, cuando se sabe que existe.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_stack_top.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**top\(\) \= c**  
- **una b x**   
-## Requisitos  
- cliext \<\/pila de**Encabezado:** \>  
+```Output  
+ a b c  
+top() = c  
+ a b x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/pila >  
   
-## Vea también  
- [pila](../dotnet/stack-stl-clr.md)   
- [stack::top\_item](../dotnet/stack-top-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [pila (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)

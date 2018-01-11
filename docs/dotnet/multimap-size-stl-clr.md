@@ -1,41 +1,42 @@
 ---
-title: "multimap::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size (miembro) [STL/CLR]"
+title: 'multimap:: Size (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 79a14142-a528-49ab-b4fd-340f5a4e70f9
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b10c60f9c551436c0569962d5d1b3faa482ef9c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapsize-stlclr"></a>multimap::size (STL/CLR)
 Cuenta el número de elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 size_type size();  
 ```  
   
-## Comentarios  
- La función miembro devuelve la longitud de la secuencia controlada.  Se utiliza para determinar el número de elementos actualmente en la secuencia controlada.  Si todo lo que se utiliza es de si la secuencia tiene un tamaño distinto de cero, vea [multimap::empty](../dotnet/multimap-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve la longitud de la secuencia controlada. Usa para determinar el número de elementos actualmente en la secuencia controlada. Si todo lo que le interesa es si la secuencia tiene tamaño distinto de cero, vea [multimap:: Empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_multimap_size.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0 después de borrar**  
-**size\(\) \= 2 después de agregar 2**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::empty](../dotnet/multimap-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)

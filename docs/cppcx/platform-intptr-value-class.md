@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4bd0fcdf8f7b7f825a087a2176babeb59bac4f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 787e8aaa0dc46a651fc4d0ac8b16d9521aebd010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr (Clase de valor)
 Representa un puntero o un identificador con signo cuyo tamaño es específico de la plataforma (32 bits o 64 bits).  
@@ -47,7 +48,7 @@ public value struct IntPtr
   
  **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd  
 
@@ -61,7 +62,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- valor  
+ value  
  Un identificador o un puntero de 64 bits, o un puntero a un valor de 64 bits, o un valor de 32 bits que se puede convertir en un valor de 64 bits.  
   
 

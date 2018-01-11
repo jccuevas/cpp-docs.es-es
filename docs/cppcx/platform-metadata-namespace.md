@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c108dd9435d433076ea2f2c9b573f2ebf3685e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce300956045c0a111deef6d514d1699bea8d794b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 Este espacio de nombres contiene atributos que modifican las declaraciones de tipos.  
@@ -36,7 +37,7 @@ namespace Platform {
 ### <a name="members"></a>Miembros  
  Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.  
   
-|Nombre|Observación|  
+|nombre|Observación|  
 |----------|------------|  
 |Atributo|La clase base de los atributos.|  
 |[Platform::Metadata::DefaultMemberAttribute (Atributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la función preferida que se va a invocar entre varias funciones sobrecargadas posibles.|  

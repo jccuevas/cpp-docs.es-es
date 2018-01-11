@@ -1,90 +1,93 @@
 ---
-title: "C&#243;mo: Compilar c&#243;digo de MFC y ATL mediante /clr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (opción del compilador) [C++], compilar código de MFC y ATL"
-  - "ATL [C++], interoperabilidad"
-  - "DLL de extensión [C++], /clr (opción del compilador)"
-  - "interoperabilidad [C++], /clr (opción del compilador)"
-  - "interoperabilidad [C++], /clr (opción del compilador)"
-  - "MFC [C++], interoperabilidad"
-  - "ensamblados mixtos [C++], código ATL"
-  - "ensamblados mixtos [C++], código MFC"
-  - "DLLs regulares [C++], /clr (opción del compilador)"
+title: "Cómo: compilar código ATL y MFC mediante clr-| Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], interoperability
+- ATL [C++], interoperability
+- mixed assemblies [C++], MFC code
+- mixed assemblies [C++], ATL code
+- /clr compiler option [C++], compiling ATL and MFC code
+- interoperability [C++], /clr compiler option
+- regular MFC DLLs [C++], /clr compiler option
+- interop [C++], /clr compiler option
+- extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f03e324cf4f88d47232cba5e15ec65181af91feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Compilar c&#243;digo de MFC y ATL mediante /clr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema explica cómo compilar los programas MFC y ATL existentes para utilizarlos en Common Language Runtime.  
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Cómo: Compilar código de MFC y ATL mediante /clr
+Este tema describe cómo compilar programas MFC y ATL existentes para tener como destino el Common Language Runtime.  
   
-### Para compilar un ejecutable de MFC o un archivo DLL estándar mediante \/clr  
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Para compilar una DLL de MFC MFC normales o ejecutable con /clr  
   
-1.  Haga clic con el botón secundario en el proyecto en el **Explorador de soluciones** y, a continuación, haga clic en **Propiedades**.  
+1.  Haga clic en el proyecto en **el Explorador de soluciones** y, a continuación, haga clic en **propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades del proyecto**, expanda el nodo situado junto a **Propiedades de configuración** y seleccione **General**.  En el panel derecho, en **Valores predeterminados del proyecto**, establezca **Compatibilidad con Common Language Runtime** en **Compatible con Common Language Runtime \(\/clr\)**.  
+2.  En el **propiedades del proyecto** cuadro de diálogo, expanda el nodo junto a **propiedades de configuración** y seleccione **General**. En el panel derecho, en **valores predeterminados del proyecto**, establezca **compatible con Common Language Runtime** a **compatible con Common Language Runtime (/ clr)**.  
   
-     En el mismo panel, asegúrese de que la opción **Uso de MFC** esté establecida en **Utilizar MFC en un archivo DLL compartido**.  
+     En el mismo panel, asegúrese de que **uso de MFC** está establecido en **utilizar MFC en un archivo DLL compartido**.  
   
-3.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  Asegúrese de que la opción **Formato de la información de depuración** esté establecida en **Base de datos de programa \(\/Zi\)** \(y no en **\/ZI**\).  
+3.  En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. Asegúrese de que **formato de información de depuración** está establecido en **/Zi de base de datos de programa** (no **/Zi**).  
   
-4.  Seleccione el nodo **Generación de código**.  Establezca **Habilitar recompilación mínima** en **No \(\/Gm\-\)**.  Establezca también **Comprobaciones básicas en tiempo de ejecución** en **Predeterminado**.  
+4.  Seleccione el **generación de código** nodo. Establecer **habilitar recompilación mínima** a **No (/ Gm-)**. Establecer **comprobaciones en tiempo de ejecución básicas** a **predeterminado**.  
   
-5.  En **Propiedades de configuración**, seleccione **C\/C\+\+** y, a continuación, **Generación de código**.  Asegúrese de que la opción **Biblioteca en tiempo de ejecución** esté establecida en **DLL de depuración multiproceso \(\/MDd\)** o **DLL multiproceso \(\/MD\)**.  
+5.  En **propiedades de configuración**, seleccione **C/C++** y, a continuación, **generación de código**. Asegúrese de que **biblioteca en tiempo de ejecución** está establecido en **DLL de depuración multiproceso (/ MDd)** o **DLL multiproceso (/ MD)**.  
   
-6.  En Stdafx.h, agregue la línea siguiente.  
+6.  En Stdafx.h, agregue la siguiente línea.  
   
     ```  
     #using <System.Windows.Forms.dll>  
     ```  
   
-### Para compilar un archivo DLL de extensión de MFC mediante \/clr  
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Para compilar un archivo DLL de extensión MFC con /clr  
   
-1.  Siga los pasos descritos en "Para compilar un ejecutable de MFC o un archivo DLL estándar mediante \/clr".  
+1.  Siga los pasos descritos en "To compila una DLL de MFC MFC normales o ejecutable con/CLR".  
   
-2.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **Encabezados precompilados**.  Establezca **Crear o utilizar encabezado precompilado** en **No utilizar encabezados precompilados**.  
+2.  En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **encabezados precompilados**. Establecer **crear o utilizar encabezado precompilado** a **no utilizar encabezados precompilados**.  
   
-     Como alternativa, en el **Explorador de soluciones**, haga clic con el botón secundario en Stdafx.cpp y, a continuación, haga clic en **Propiedades**.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  Establezca **Compilar con compatibilidad para Common Language Runtime** en **No es compatible con Common Language Runtime**.  
+     Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.  
   
-3.  Para el archivo que contiene DllMain y cualquier objeto que invoque, en el **Explorador de soluciones**, haga clic con el botón secundario en el archivo y, a continuación, haga clic en **Propiedades**.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  En el panel derecho, en **Valores predeterminados del proyecto**, establezca **Compilar con compatibilidad para Common Language Runtime** en **No es compatible con Common Language Runtime**.  
+3.  Para el archivo que contiene DllMain y cualquier aplicación llama, en **el Explorador de soluciones**, haga clic en el archivo y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. En el panel derecho, en **valores predeterminados del proyecto**, establezca **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.  
   
-### Para compilar un ejecutable de ATL mediante \/clr  
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Para compilar un ejecutable ATL mediante /clr  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en el proyecto y, a continuación, seleccione **Propiedades**.  
+1.  En **el Explorador de soluciones**, haga clic en el proyecto y, a continuación, haga clic en **propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades del proyecto**, expanda el nodo situado junto a **Propiedades de configuración** y seleccione **General**.  En el panel derecho, en **Valores predeterminados del proyecto**, establezca **Compatibilidad con Common Language Runtime** en **Compatible con Common Language Runtime \(\/clr\)**.  
+2.  En el **propiedades del proyecto** cuadro de diálogo, expanda el nodo junto a **propiedades de configuración** y seleccione **General**. En el panel derecho, en **valores predeterminados del proyecto**, establezca **compatible con Common Language Runtime** a **compatible con Common Language Runtime (/ clr)**.  
   
-3.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  Asegúrese de que la opción **Formato de la información de depuración** esté establecida en **Base de datos de programa \(\/Zi\)** \(y no en **\/ZI**\).  
+3.  En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. Asegúrese de que **formato de información de depuración** está establecido en **/Zi de base de datos de programa** (no **/Zi**).  
   
-4.  Seleccione el nodo **Generación de código**.  Establezca **Habilitar recompilación mínima** en **No \(\/Gm\-\)**.  Establezca también **Comprobaciones básicas en tiempo de ejecución** en **Predeterminado**.  
+4.  Seleccione el **generación de código** nodo. Establecer **habilitar recompilación mínima** a **No (/ Gm-)**. Establecer **comprobaciones en tiempo de ejecución básicas** a **predeterminado**.  
   
-5.  En **Propiedades de configuración**, seleccione **C\/C\+\+** y, a continuación, **Generación de código**.  Asegúrese de que la opción **Biblioteca en tiempo de ejecución** esté establecida en **DLL de depuración multiproceso \(\/MDd\)** o **DLL multiproceso \(\/MD\)**.  
+5.  En **propiedades de configuración**, seleccione **C/C++** y, a continuación, **generación de código**. Asegúrese de que **biblioteca en tiempo de ejecución** está establecido en **DLL de depuración multiproceso (/ MDd)** o **DLL multiproceso (/ MD)**.  
   
-6.  Para cada archivo generado por MIDL \(archivos de C\), haga clic con el botón secundario del mouse en el archivo en el **Explorador de soluciones** y, a continuación, haga clic en **Propiedades**.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  Establezca **Compilar con compatibilidad para Common Language Runtime** en **No es compatible con Common Language Runtime**.  
+6.  Para cada archivo generados por MIDL (archivos de C), haga clic en el archivo en **el Explorador de soluciones** y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.  
   
-### Para compilar un archivo DLL de ATL mediante \/clr  
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Para compilar una DLL de ATL mediante /clr  
   
-1.  Siga los pasos descritos en "Para compilar un ejecutable de ATL mediante \/clr".  
+1.  Siga los pasos descritos en la sección "para compilar un ejecutable de ATL mediante /clr".  
   
-2.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **Encabezados precompilados**.  Establezca **Crear o utilizar encabezado precompilado** en **No utilizar encabezados precompilados**.  
+2.  En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **encabezados precompilados**. Establecer **crear o utilizar encabezado precompilado** a **no utilizar encabezados precompilados**.  
   
-     Como alternativa, en el **Explorador de soluciones**, haga clic con el botón secundario en Stdafx.cpp y, a continuación, haga clic en **Propiedades**.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  Establezca **Compilar con compatibilidad para Common Language Runtime** en **No es compatible con Common Language Runtime**.  
+     Como alternativa, en **el Explorador de soluciones**, haga clic en Stdafx.cpp y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. Establecer **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.  
   
-3.  Para el archivo que contiene DllMain y cualquier objeto que invoque, en el **Explorador de soluciones**, haga clic con el botón secundario en el archivo y, a continuación, haga clic en **Propiedades**.  En **Propiedades de configuración**, expanda el nodo situado junto a **C\/C\+\+** y seleccione **General**.  En el panel derecho, en **Valores predeterminados del proyecto**, establezca **Compilar con compatibilidad para Common Language Runtime** en **No es compatible con Common Language Runtime**.  
+3.  Para el archivo que contiene DllMain y cualquier aplicación llama, en **el Explorador de soluciones**, haga clic en el archivo y, a continuación, haga clic en **propiedades**. En **propiedades de configuración**, expanda el nodo junto a **C/C++** y seleccione **General**. En el panel derecho, en **valores predeterminados del proyecto**, establezca **compilar con compatibilidad con Common Language Runtime** a **soporte técnico No Common Language Runtime**.  
   
-## Vea también  
- [Ensamblados mixtos \(nativos y administrados\)](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>Vea también  
+ [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md)

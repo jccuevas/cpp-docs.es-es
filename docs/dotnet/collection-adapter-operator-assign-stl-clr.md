@@ -1,46 +1,46 @@
 ---
-title: "collection_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (miembro) [STL/CLR]"
+title: collection_adapter::operator = (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 45365a33-3b56-4cb7-962f-81c20d8901d3
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f7d0dc96f34da1c5924f7d80c9a03477c480f23b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Reemplaza el identificador almacenado de BCL.  
+# <a name="collectionadapteroperator-stlclr"></a>collection_adapter::operator= (STL/CLR)
+Reemplaza el identificador BCL almacenado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
- Adaptador a copiar.  
+ Adaptador para copiar.  
   
-## Comentarios  
- El miembro que el operador copia `right` al objeto, en que devuelve `*this`.  Se utiliza para reemplazar el identificador almacenado de BCL con una copia del identificador almacenado de BCL en `right`.  
+## <a name="remarks"></a>Comentarios  
+ Las copias de operador de miembro `right` en el objeto, a continuación, devuelve `*this`. Úselo para reemplazar el identificador BCL almacenado con una copia del identificador BCL almacenado en `right`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_collection_adapter_operator_as.cpp   
@@ -74,12 +74,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Requisitos  
- cliext \<\/adaptador de**Encabezado:** \>  
+```Output  
+a b c  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/adaptador >  
   
-## Vea también  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 91000dba7d7fe1ff505eee30d60bc60936ef4971
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 50c1dc9f064b5920a136766ffa17628501d732be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 Crea y ejecuta un nuevo proceso.  
@@ -109,7 +93,7 @@ intptr_t _wspawnl(
  La lista de argumentos supera los 1024 bytes.  
   
  `EINVAL`  
-El argumento `mode` no es válido.  
+ El argumento `mode` no es válido.  
   
  `ENOENT`  
  El archivo o la ruta de acceso no se encuentra.  
@@ -134,7 +118,7 @@ El argumento `mode` no es válido.
 |`_spawnl`|\<process.h>|  
 |`_wspawnl`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

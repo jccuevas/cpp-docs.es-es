@@ -1,41 +1,42 @@
 ---
-title: "vector::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin (miembro) [STL/CLR]"
+title: 'Vector:: rbegin (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: fad410b9-fe79-4820-9be5-6b7e0219a1af
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b438e55f10a9f0f355d57f7cc259d4ea0bdaa1cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# vector::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorrbegin-stlclr"></a>vector::rbegin (STL/CLR)
 Designa el principio de la secuencia controlada inversa.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un iterador inversa que señale el último elemento de la secuencia controlada, o simplemente más allá del principio de una secuencia vacía.  Por lo tanto, designa el parámetro `beginning` de la secuencia inversa.  Se usa para obtener un iterador que designe el principio de la secuencia controlada mostrada en orden inverso, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un iterador inverso que designa el último elemento de la secuencia controlada o inmediatamente después del principio de una secuencia vacía. Por tanto, designa el `beginning` de la secuencia inversa. Utilícelo para obtener un iterador que designa el `current` a partir de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_vector_rbegin.cpp   
@@ -70,17 +71,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**  
- **una y x**   
-## Requisitos  
- cliext \<\/vector de**Encabezado:** \>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+ a y x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/vector >  
   
-## Vea también  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::begin](../dotnet/vector-begin-stl-clr.md)   
- [vector::end](../dotnet/vector-end-stl-clr.md)   
- [vector::rend](../dotnet/vector-rend-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)   
+ [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)   
+ [vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)

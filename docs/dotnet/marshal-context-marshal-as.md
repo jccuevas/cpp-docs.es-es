@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cf8d8728a71f268db994efdc60f4be0dc5a65a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e56e225d136fb02445eeeb398937adc075f2dae7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshalcontextmarshalas"></a>serializar_context::serializar_as
 Realiza el cálculo de referencias en un objeto de datos específico para convertir entre administrado y un tipo de datos nativos.  
@@ -48,7 +51,7 @@ To_Type marshal_as<To_Type>(
   
  Si se intenta serializar un par de tipos de datos que no son compatibles, `marshal_as` generará un error [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) en tiempo de compilación. Lea el mensaje proporcionado con el error para obtener más información. El error `C4996` se puede generar para algunas funciones, aparte de las desusadas. Dos condiciones que se generarán este error se intenta serializar un par de tipos de datos que no son compatibles y que va a usar `marshal_as` para realizar una conversión que requiere un contexto.  
   
- La biblioteca de cálculo de referencias se compone de varios archivos de encabezado. Cualquier conversión requiere solo un archivo, pero puede incluir archivos adicionales si los necesita para otras conversiones. La tabla de `Marshaling Overview in C++` indica qué archivo de cálculo de referencias debe incluirse en cada conversión.  
+ La biblioteca de serialización se compone de varios archivos de encabezado. Cualquier conversión requiere solo un archivo, pero puede incluir archivos adicionales si los necesita para otras conversiones. La tabla de `Marshaling Overview in C++` indica qué archivo de cálculo de referencias debe incluirse en cada conversión.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo crea un contexto de serialización de un `System::String` a una `const char *` tipo de variable. Los datos convertidos no será válidos después de la línea que elimina el contexto.  

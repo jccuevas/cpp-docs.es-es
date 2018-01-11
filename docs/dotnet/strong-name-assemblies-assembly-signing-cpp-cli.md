@@ -1,37 +1,39 @@
 ---
-title: "Ensamblados de nombre seguro (Firma de ensamblados) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], firma de ensamblados"
-  - "ensamblados [C++]"
-  - "ensamblados [C++], firmar"
-  - "vinculador [C++], firma de ensamblados"
-  - "firmar ensamblados"
-  - "ensamblados con nombre seguro [C++]"
+title: Ensamblados de nombre seguro (firma de ensamblados) (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++]
+- signing assemblies
+- .NET Framework [C++], assembly signing
+- assemblies [C++], signing
+- linker [C++], assembly signing
+- strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Ensamblados de nombre seguro (Firma de ensamblados) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema explica cómo puede firmar el ensamblado, lo que a menudo se conoce como dar un nombre seguro al ensamblado.  
+# <a name="strong-name-assemblies-assembly-signing-ccli"></a>Ensamblados de nombre seguro (Firma de ensamblados) (C++/CLI)
+Este tema describe cómo se puede firmar el ensamblado, a menudo se denomina dando un nombre seguro a su ensamblado.  
   
-## Comentarios  
- Cuando utilice Visual C\+\+, use las opciones del vinculador para firmar el ensamblado con el fin de evitar problemas relacionados con los atributos CLR para la firma de ensamblados:  
+## <a name="remarks"></a>Comentarios  
+ Cuando utilice Visual C++, use las opciones del vinculador para firmar el ensamblado para evitar problemas relacionados con los atributos CLR para firmar el ensamblado:  
   
 -   <xref:System.Reflection.AssemblyDelaySignAttribute>  
   
@@ -39,21 +41,21 @@ Este tema explica cómo puede firmar el ensamblado, lo que a menudo se conoce co
   
 -   <xref:System.Reflection.AssemblyKeyNameAttribute>  
   
- Entre las razones para no utilizar los atributos está el hecho de que el nombre clave es visible en los metadatos del ensamblado, lo cual puede significar un riesgo para la seguridad si el nombre de archivo incluye información confidencial.  A su vez, el proceso de compilación usado por el entorno de desarrollo de Visual C\+\+ invalidará la clave con la que está firmado el ensamblado si utiliza atributos CLR para asignar al ensamblado un nombre seguro y, a continuación, ejecuta una herramienta de procesamiento posterior como mt.exe en el ensamblado.  
+ Razones para no utilizar los atributos incluyen el hecho de que el nombre de clave es visible en los metadatos de ensamblado, que pueden suponer un riesgo de seguridad si el nombre de archivo incluye información confidencial. Además, el proceso de compilación utilizado por el entorno de desarrollo de Visual C++ invalidará la clave con la que se firma el ensamblado si usa atributos CLR para asignar un nombre seguro al ensamblado y, a continuación, ejecute una herramienta de procesamiento posterior como mt.exe en el ensamblado.  
   
- Si compila desde la línea de comandos, usa opciones del vinculador para firmar el ensamblado y, a continuación, ejecuta una herramienta de procesamiento posterior \(como mt.exe\), deberá volver a firmar el ensamblado con sn.exe.  De forma alternativa, puede compilar el ensamblado y retrasar su firma y, después de ejecutar herramientas de procesamiento posterior, completar la firma.  
+ Compilar en la línea de comandos, utilice las opciones del vinculador para firmar el ensamblado y, a continuación, ejecutar una herramienta de procesamiento posterior (como mt.exe), debe volver a firmar el ensamblado con sn.exe. Como alternativa, puede compilar y retrasar la firma del ensamblado y después de ejecutar herramientas de procesamiento posterior, completar la firma.  
   
- Si utiliza los atributos de firma durante la compilación en el entorno de desarrollo, puede firmar satisfactoriamente el ensamblado llamando explícitamente a sn.exe \([Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md)\) en un evento posterior a la compilación.  Para obtener más información, vea [Especificar eventos de compilación](../ide/specifying-build-events.md).  Los tiempos de generación pueden ser inferiores si utiliza atributos y un evento posterior a la compilación, en lugar de utilizar las opciones de un vinculador.  
+ Si utiliza los atributos de firma al compilar en el entorno de desarrollo, se puede firmar el ensamblado correctamente llamando explícitamente a sn.exe ([Sn.exe (herramienta de nombre seguro)](/dotnet/framework/tools/sn-exe-strong-name-tool)) en un evento posterior a la compilación. Para obtener más información, consulte [especificar eventos de compilación](../ide/specifying-build-events.md). Los tiempos de compilación pueden ser menor si usa atributos y un evento posterior a la compilación, en comparación con el uso de opciones de un vinculador.  
   
- Las siguientes opciones del vinculador admiten la firma de ensamblados:  
+ Las siguientes opciones del vinculador admiten la firma de un ensamblado:  
   
--   [\/DELAYSIGN \(Firmar parcialmente un ensamblado\)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN (firmar parcialmente un ensamblado)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/KEYFILE \(Especificar una clave o par de claves para firmar un ensamblado\)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE (especificar clave o par de claves para firmar un ensamblado)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER \(Especificar un contenedor de claves para firmar un ensamblado\)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER (especificar un contenedor de claves para firmar un ensamblado)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
- Para obtener más información sobre los ensamblados con nombre seguro, vea [Crear y utilizar ensamblados con nombre seguro](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md).  
+ Para obtener más información sobre los ensamblados seguro, consulte [crear y utilizar ensamblados](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
   
-## Vea también  
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

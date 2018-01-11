@@ -1,41 +1,42 @@
 ---
-title: "multiset::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type (miembro) [STL/CLR]"
+title: 'MULTISET:: size_type (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 6ddadf69-ab2d-4b06-a59c-982c2e29f718
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 75c740a19ebc516e8f942e95b58fa2eae10e2ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tipo de una distancia firmados entre el elemento dos.  
+# <a name="multisetsizetype-stlclr"></a>multiset::size_type (STL/CLR)
+El tipo de una distancia con signo entre dos elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Comentarios  
- El tipo describe un recuento negativo del elemento.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un recuento de elemento no negativo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_multiset_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\- inicio \(\) \= 3**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::empty](../dotnet/multiset-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [MULTISET (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ee3debcaf651a2a11ef51cac405edf816c5b8ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos que tiene acceso aleatorio. Utilice el contenedor de `vector` para administrar una secuencia de elementos como un bloque contiguo de almacenamiento. El bloque se implementa como una matriz que aumenta de tamaño a petición.  
@@ -91,7 +94,7 @@ template<typename Value>
 |[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Copia la secuencia controlada en una nueva matriz.|  
 |[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Construye un objeto contenedor.|  
   
-|Propiedad|Descripción|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Obtiene acceso al último elemento.|  
 |[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Obtiene acceso al primer elemento.|  

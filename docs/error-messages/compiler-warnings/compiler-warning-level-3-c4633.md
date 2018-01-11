@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 3) C4633 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4633"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4633"
+title: Compilador advertencia (nivel 3) C4633 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4633
+dev_langs: C++
+helpviewer_keywords: C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a93b660ea7cd4291b3546166d9f7a9c387ea749a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 3) C4633
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Destino del comentario del documento XML: error: razón  
+# <a name="compiler-warning-level-3-c4633"></a>Advertencia del compilador (nivel 1) C4633
+Destino del comentario de documento XML: error: razón  
   
- Un nombre pasado a la etiqueta de [\<parámetro\>](../../ide/param-visual-cpp.md) el compilador no ha encontrado.  
+ Transmite un nombre a la [ \<param >](../../ide/param-visual-cpp.md) etiqueta no se encontró el compilador.  
   
- El código siguiente genera el error C4633:  
+ El ejemplo siguiente genera C4633:  
   
 ```  
 // C4633.cpp  

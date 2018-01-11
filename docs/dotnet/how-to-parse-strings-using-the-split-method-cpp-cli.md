@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be3443995966c5ce7b9c2fe4a156c8d6c79069d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7494a615d1a253c6617601f38e5d01755c718b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Cómo: Analizar cadenas con el método Split (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo utilizar el método <xref:System.String.Split%2A?displayProperty=fullName> para extraer todas las palabras de una cadena. Se construye una cadena que contiene varios tipos de perfiladores de palabras y, a continuación, se analiza llamando a <xref:System.String.Split%2A> con una lista de los perfiladores. Finalmente, se muestran todas las palabras de la frase independientemente.  

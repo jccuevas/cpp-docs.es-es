@@ -1,34 +1,36 @@
 ---
-title: "C&#243;mo: Leer un archivo de texto (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "leer archivos de texto"
-  - "archivos de texto, leer"
+title: "Cómo: leer un archivo de texto (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reading text files
+- text files, reading
 ms.assetid: 80551c01-d769-4b6d-8db7-fd53bde21b62
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Leer un archivo de texto (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el siguiente ejemplo de código se muestra cómo abrir y leer un archivo de texto una línea cada vez, utilizando la clase <xref:System.IO.StreamReader>, que se define en el espacio de nombres <xref:System.IO?displayProperty=fullName>.  Se utiliza una instancia de esta clase para abrir un archivo de texto y, a continuación, se usa el método <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> para recuperar cada línea.  
+# <a name="how-to-read-a-text-file-ccli"></a>Cómo: Leer un archivo de texto (C++/CLI)
+En el ejemplo de código siguiente se muestra cómo abrir y leer un archivo una línea de texto a la vez, mediante el uso de la <xref:System.IO.StreamReader> clase que se define en el <xref:System.IO?displayProperty=fullName> espacio de nombres. Una instancia de esta clase se utiliza para abrir un archivo de texto y, a continuación, el <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> método se utiliza para recuperar cada línea.  
   
- Este ejemplo de código lee un archivo denominado textfile.txt y contiene el texto.  Para obtener información sobre este tipo de archivo, vea [Cómo: Escribir un archivo de texto](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
+ Este ejemplo de código lee un archivo que tiene denominado textfile.txt y contiene texto. Para obtener información sobre este tipo de archivo, consulte [Cómo: escribir un archivo de texto (C++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // text_read.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [E\/S de archivos y secuencias](../Topic/File%20and%20Stream%20I-O.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de archivos y secuencias](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

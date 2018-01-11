@@ -1,31 +1,34 @@
 ---
-title: "Operadores sobrecargados | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sobrecarga de operadores, en una clase de CLR"
-  - "operadores [C++], sobrecargar"
+title: Operadores sobrecargados | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Operadores sobrecargados
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sobrecarga de operadores ha cambiado significativamente de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="overloaded-operators"></a>Operadores sobrecargados
+Sobrecarga de operadores ha cambiado significativamente desde extensiones administradas para C++ a Visual C++.  
   
- En la declaración de un tipo de referencia, por ejemplo, en lugar de utilizar la sintaxis `operator+` nativa, debe escribir explícitamente el nombre interno subyacente del operador; en este caso, `op_Addition`.  Además, la invocación de un operador debe realizarse de forma explícita mediante ese nombre, lo que elimina las dos ventajas principales de la sobrecarga de operadores: \(a\) la sintaxis intuitiva y \(b\) la posibilidad de combinar nuevos tipos con tipos existentes.  Por ejemplo:  
+ En la declaración de un tipo de referencia, por ejemplo, en lugar de usar nativo `operator+` sintaxis, debe escribir explícitamente el nombre interno subyacente del operador - en este caso, `op_Addition`. Además, tiene la invocación de un operador que se debe invocar explícitamente a través de ese nombre, lo que elimina las dos ventajas principales de la sobrecarga de operadores: (a) la sintaxis intuitiva y (b) la capacidad de entremezclar nuevos tipos con tipos existentes. Por ejemplo:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +55,7 @@ int main()
 }  
 ```  
   
- En la nueva sintaxis, se recuperan las expectativas usuales de un programador de C\+\+ nativo, tanto en la declaración como en el uso de operadores estáticos.  Ésta es la clase `Vector` traducida a la nueva sintaxis:  
+ En la nueva sintaxis, se restauran las expectativas usuales de un programador de C++ nativo, tanto en la declaración y el uso de operadores estáticos. Este es el `Vector` clase traduce la nueva sintaxis:  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +82,5 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Declaraciones de miembros en una clase o interfaz \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Declaraciones de miembros en una clase o interfaz (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

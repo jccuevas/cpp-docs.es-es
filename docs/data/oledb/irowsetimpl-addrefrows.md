@@ -1,36 +1,38 @@
 ---
-title: "IRowsetImpl::AddRefRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl::AddRefRows"
-  - "AddRefRows"
-  - "IRowsetImpl.AddRefRows"
-  - "ATL::IRowsetImpl::AddRefRows"
-  - "ATL.IRowsetImpl.AddRefRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRefRows (método)"
+title: 'IRowsetImpl:: Addrefrows | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl::AddRefRows
+- AddRefRows
+- IRowsetImpl.AddRefRows
+- ATL::IRowsetImpl::AddRefRows
+- ATL.IRowsetImpl.AddRefRows
+dev_langs: C++
+helpviewer_keywords: AddRefRows method
 ms.assetid: adc0989b-7592-432e-82d9-df4445431531
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bfca0b0d8549ab04fa7808f22d4f757d35913754
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetImpl::AddRefRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Agrega un contador de referencias a un identificador de fila existente.  
+# <a name="irowsetimpladdrefrows"></a>IRowsetImpl::AddRefRows
+Agrega un recuento de referencias a un identificador de fila existente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -42,14 +44,14 @@ Agrega un contador de referencias a un identificador de fila existente.
 );  
 ```  
   
-#### Parámetros  
- Vea [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) en el *referencia del programador OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IRowsetImpl \(Clase\)](../../data/oledb/irowsetimpl-class.md)   
- [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)   
- [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)   
+## <a name="see-also"></a>Vea también  
+ [IRowsetImpl (clase)](../../data/oledb/irowsetimpl-class.md)   
+ [IRowsetImpl:: Refrows](../../data/oledb/irowsetimpl-refrows.md)   
+ [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)   
  [IRowsetImpl::ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)

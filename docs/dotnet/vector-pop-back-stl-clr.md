@@ -1,41 +1,42 @@
 ---
-title: "vector::pop_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::pop_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_back (miembro) [STL/CLR]"
+title: 'Vector:: pop_back (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::pop_back
+dev_langs: C++
+helpviewer_keywords: pop_back member [STL/CLR]
 ms.assetid: 7e9fb72c-e733-4434-a71c-e4389629a821
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fd4d93caf98a9a79ccf88799239d93bcefc830f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# vector::pop_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorpopback-stlclr"></a>vector::pop_back (STL/CLR)
 Quita el último elemento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void pop_back();  
 ```  
   
-## Comentarios  
- La función miembro quita el último elemento de la secuencia controlada, que no puede estar vacía.  Se utiliza para acortar el vector por un elemento en la reproducción.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro quita el último elemento de la secuencia controlada, que debe ser no está vacío. Se usar para acortar el vector por un elemento en la parte posterior.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_vector_pop_back.cpp   
@@ -64,13 +65,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **una b**   
-## Requisitos  
- cliext \<\/vector de**Encabezado:** \>  
+```Output  
+a b c  
+a b  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/vector >  
   
-## Vea también  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::push\_back](../dotnet/vector-push-back-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)

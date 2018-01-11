@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1111a94943188162793ac3270d4a21989c3850e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Determina si un entero representa un carácter de puntuación.  
@@ -82,7 +83,7 @@ int _iswpunct_l(
 ## <a name="return-value"></a>Valor devuelto  
  Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter de puntuación. `ispunct` devuelve un valor distinto de cero para todo carácter imprimible que no sea un carácter de espacio o un carácter para el que `isalnum` es distinto de cero. `iswpunct` devuelve un valor distinto de cero para cualquier carácter ancho imprimible que no sea ni el carácter ancho de espacio ni un carácter ancho para el que `iswalnum` es distinto de cero. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
- El resultado de la condición de prueba para la función `ispunct` depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El resultado de la condición de prueba para la función `ispunct` depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  El comportamiento de `ispunct` e `_ispunct_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
   
@@ -101,9 +102,9 @@ int _iswpunct_l(
 |`_ispunct_l`|\<ctype.h>|  
 |`_iswpunct_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)

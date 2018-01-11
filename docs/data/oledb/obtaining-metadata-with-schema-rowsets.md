@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2a57fd92183c60e245ecdd1ba237da74c9e575b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtener metadatos con conjuntos de filas de esquema
 En ciertas ocasiones necesitará obtener información sobre un proveedor, un conjunto de filas, una tabla, ciertas columnas u otros datos relacionados con la base de datos sin abrir el conjunto de filas. Los datos sobre la estructura de la base de datos se denominan metadatos y se pueden recuperar con métodos diversos. Uno de ellos consiste en usar conjuntos de filas de esquema.  
@@ -59,7 +62,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  El [CRestrictions](../../data/oledb/crestrictions-class.md) clase proporciona la compatibilidad con las restricciones. Después de crear una instancia del conjunto de filas de esquema, llame a [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Este método devuelve un conjunto de resultados basado en las restricciones especificadas.  
   
- Para especificar las restricciones, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/?linkid=64681) y buscar el conjunto de filas que está usando. Por ejemplo, **CColumns** corresponde a la [conjunto de filas COLUMNS](http://go.microsoft.com/fwlink/?linkid=64682); ese tema enumera las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.  
+ Para especificar las restricciones, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) y buscar el conjunto de filas que está usando. Por ejemplo, **CColumns** corresponde a la [conjunto de filas COLUMNS](http://go.microsoft.com/fwlink/p/?linkid=64682); ese tema enumera las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.  
   
  Por lo tanto, por ejemplo, si desea restringir por nombre de tabla, observe que TABLE_NAME es la tercera columna de restricción y, a continuación, llame a **abiertos**, especificando el nombre de tabla deseado como tercer parámetro de restricción, tal como se muestra en el ejemplo siguiente.  
   
@@ -89,7 +92,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Para la referencia del conjunto de filas de esquema, clases typedef proporcionan en las plantillas OLE DB (consulte [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Para obtener más información acerca de los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/?linkid=64681) en referencia de la base de datos del programador de OLE.  
+ Para obtener más información acerca de los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) en referencia de la base de datos del programador de OLE.  
   
  Para obtener ejemplos más complejos de cómo usar las clases de conjunto de filas de esquema, consulte el [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) y [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ejemplos.  
   

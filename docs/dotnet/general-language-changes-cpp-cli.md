@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 87ff7f55b67c4e8a84d15099432962ee0939d13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-language-changes-ccli"></a>Cambios generales en el lenguaje (C++/CLI)
 Un número de características del lenguaje CLR ha cambiado de extensiones administradas para C++ a Visual C++.  

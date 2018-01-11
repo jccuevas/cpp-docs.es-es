@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type (miembro) [STL/CLR]"
+title: 'hash_multiset:: KEY_TYPE (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: e3888fa3-5daf-4fc6-acf3-df7215c5d9ff
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bdb50ad0f91a9bb94eef233fe8674af292d506bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetkeytype-stlclr"></a>hash_multiset::key_type (STL/CLR)
 El tipo de una clave de ordenación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## Comentarios  
- El tipo es un sinónimo para el parámetro `Key`de la plantilla.  
+## <a name="remarks"></a>Comentarios  
+ El tipo es un sinónimo del parámetro de plantilla `Key`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_hash_multiset_key_type.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisitos  
- cliext \<\/hash\_set de**Encabezado:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/hash_set >  
   
-## Vea también  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::key\_compare](../dotnet/hash-multiset-key-compare-stl-clr.md)   
- [hash\_multiset::value\_type](../dotnet/hash-multiset-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)   
+ [hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "queue::back_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::back_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back_item (miembro) [STL/CLR]"
+title: Queue::back_item (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::back_item
+dev_langs: C++
+helpviewer_keywords: back_item member [STL/CLR]
 ms.assetid: 721e44e1-eb46-41bf-8b3c-0fcbc02fb155
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb3776b091d31cfc0ed6cba9c148494db95c9d8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# queue::back_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso al último elemento.  
+# <a name="queuebackitem-stlclr"></a>queue::back_item (STL/CLR)
+Obtiene acceso al último elemento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 property value_type back_item;  
 ```  
   
-## Comentarios  
- La propiedad tiene acceso al último elemento de la secuencia controlada, que no puede estar vacía.  Se utiliza para leer o escribir el último elemento, cuando lo conoce existe.  
+## <a name="remarks"></a>Comentarios  
+ La propiedad accede al último elemento de la secuencia controlada, que debe ser no está vacío. Usa para leer o escribir el último elemento, cuando se sabe que existe.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_queue_back_item.cpp   
@@ -68,16 +69,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\_item \= c**  
- **una b x**   
-## Requisitos  
- cliext \<\/cola de**Encabezado:** \>  
+```Output  
+ a b c  
+back_item = c  
+ a b x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/cola >  
   
-## Vea también  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [cola (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue:: back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [Queue:: front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

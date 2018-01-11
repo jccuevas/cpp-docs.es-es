@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f87d8ac152eff3b0bdc5e3fe472920160c63cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstdiofile-class"></a>Clase CStdioFile
 Representa un archivo de secuencia de tiempo de ejecución de C tal como lo abre la función en tiempo de ejecución [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -48,13 +49,13 @@ class CStdioFile : public CFile
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CStdioFile::CStdioFile](#cstdiofile)|Construye un `CStdioFile` objeto de un puntero de archivo o ruta de acceso.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CStdioFile::Open](#open)|Sobrecargado. Abrir está diseñado para su uso con el valor predeterminado `CStdioFile` constructor (reemplaza a [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
 |[CStdioFile::ReadString](#readstring)|Lee una sola línea de texto.|  
@@ -63,7 +64,7 @@ class CStdioFile : public CFile
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CStdioFile::m_pStream](#m_pstream)|Contiene un puntero a un archivo abierto.|  
   

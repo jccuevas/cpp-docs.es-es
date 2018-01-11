@@ -1,54 +1,57 @@
 ---
-title: "C&#243;mo: Calcular las referencias a estructuras mediante PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cálculo de referencias de datos [C++], estructuras"
-  - "interoperabilidad [C++], estructuras"
-  - "calcular las referencias [C++], estructuras"
-  - "invocación de plataforma [C++], estructuras"
+title: "Cómo: serializar estructuras mediante PInvoke | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], structures
+- platform invoke [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Calcular las referencias a estructuras mediante PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este documento se explica cómo se puede llamar a funciones nativas que aceptan cadenas de lenguaje C desde funciones administradas que proporcionan una instancia de <xref:System.String> utilizando P\/Invoke.  Aunque recomendamos el uso de características de interoperabilidad de C\+\+ en lugar de P\/Invoke porque P\/Invoke proporciona pocos informes de errores en tiempo de compilación, no tiene seguridad de tipos y puede ser tedioso de implementar, si la API no administrada se empaqueta como archivo DLL y el código fuente no está disponible, P\/Invoke es la única opción.  De lo contrario, vea los siguientes documentos:  
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Cómo: serializar estructuras mediante PInvoke
+Este documento explica cómo a funciones nativas que aceptan cadenas de estilo C pueden llamarse desde las funciones administradas que proporcionan una instancia de <xref:System.String> mediante el uso de P/Invoke. Aunque recomendamos que use las características de interoperabilidad de C++ en lugar de P/Invoke porque P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa de implementar, si la API no administrada se empaqueta como un archivo DLL y el código fuente no es está disponible, P/Invoke es la única opción. En caso contrario, consulte los siguientes documentos:  
   
--   [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [How to: Marshal Structures Using PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [Cómo: Serializar estructuras mediante PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
   
- De forma predeterminada, las estructuras nativas y las administradas se distribuyen de manera diferente en la memoria, por lo que, para pasar correctamente estructuras por el límite entre administrado y no administrado, se requieren pasos adicionales para preservar la integridad de los datos.  
+ De forma predeterminada, estructuras nativas y administradas se distribuyen de manera diferente en la memoria, correctamente estructuras para pasar a través del límite administrado y no es necesario realizar pasos adicionales para preservar la integridad de datos.  
   
- En este documento se explican los pasos necesarios para definir equivalentes administrados de estructuras nativas y cómo se pueden pasar las estructuras resultantes a funciones no administradas.  En este documento se supone que se utilizan estructuras simples \(las que no contienen cadenas o punteros\).  Para obtener información sobre interoperabilidad que no puede transferirse en bloque de bits, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  P\/Invoke no puede contener tipos que no pueden transferirse en bloque de bits como valor devuelto.  Los tipos que pueden transferirse en bloque de bits tienen la misma representación en código administrado y no administrado.  Para obtener más información, vea [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md).  
+ Este documento explican los pasos necesarios para definir equivalentes administrados de estructuras nativas y cómo se pueden pasar las estructuras resultantes a funciones no administradas. Este documento se da por supuesto que simple estructuras: aquellos que no contienen cadenas o punteros: se usan. Para obtener información acerca de la interoperabilidad de no bits/bytes, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke no pueden tener tipos de no bits/bytes como un valor devuelto. Tipos que pueden o que tienen la misma representación en código no administrado y no administrado. Para obtener más información, consulte [bits/bytes y tipos no-bits/bytes](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
   
- El cálculo de referencias en estructuras simples que pueden transferirse en bloque de bits entre el límite entre administrado y no administrado requiere en primer lugar que se definan versiones administradas de cada estructura nativa.  Estas estructuras pueden tener cualquier nombre válido; no existe ninguna relación entre la versión nativa y la administrada de las dos estructuras, salvo su distribución de datos.  Por consiguiente, es vital que la versión administrada contenga campos que tengan el mismo tamaño y que estén en el mismo orden que en la versión nativa. \(No existe un mecanismo para garantizar que las versiones administrada y nativa de la estructura sean equivalentes, por lo que las incompatibilidades no se pondrán de manifiesto hasta el tiempo de ejecución.  Es responsabilidad del programador asegurarse de que las dos estructuras tienen la misma distribución de datos.\)  
+ Cálculo de referencias simple, estructuras de bits/bytes a través del límite administrado y primero requiere que se definan versiones administradas de cada estructura nativa. Estas estructuras pueden tener cualquier nombre válido; No hay ninguna relación entre la versión nativa y administrada de las dos estructuras que no sea su distribución de datos. Por lo tanto, es esencial que la versión administrada contiene campos que tienen el mismo tamaño y en el mismo orden que la versión nativa. (No hay ningún mecanismo para garantizar que las versiones administradas y nativas de la estructura son equivalentes, por lo que las incompatibilidades no serán evidentes hasta el tiempo de ejecución. Es responsabilidad del programador asegurarse de que las dos estructuras tienen el mismo diseño de datos).  
   
- Dado que, en ocasiones, los miembros de estructuras administradas se reorganizan por motivos de rendimiento, es necesario utilizar el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> para indicar que la estructura tiene una distribución secuencial.  También es buena idea establecer explícitamente la configuración de empaquetado de la estructura para que sea igual a la que utiliza la estructura nativa \(aunque, de manera predeterminada, Visual C\+\+ utiliza un empaquetado de la estructura de 8 bytes para ambos códigos administrados\).  
+ Dado que a veces, los miembros de estructuras administradas se reorganizan para optimizar el rendimiento, es necesario utilizar el <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributo para indicar que la estructura se disponen secuencialmente. También es una buena idea establecer explícitamente la estructura de configuración para ser el mismo que el utilizado por la estructura nativa de empaquetado. (Aunque de forma predeterminada, Visual C++ utiliza una empaquetado para el código administrado de la estructura de 8 bytes).  
   
-1.  A continuación, utilice <xref:System.Runtime.InteropServices.DllImportAttribute> para declarar puntos de entrada que correspondan a cualquier función no administrada que acepte la estructura, pero use la versión administrada de la estructura en las firmas de la función, lo que es un punto discutible si se usa el mismo nombre para ambas versiones de la estructura.  
+1.  A continuación, use <xref:System.Runtime.InteropServices.DllImportAttribute> para declarar puntos de entrada que corresponden a las funciones no administradas que acepte la estructura, pero use la versión administrada de la estructura en las firmas de función, que es un punto sea irrelevante si usa el mismo nombre en ambas versiones de la estructura.  
   
-2.  Así, el código administrado ya puede pasar la versión administrada de la estructura a las funciones no administradas como si realmente se tratase de funciones administradas.  Estas estructuras se pueden pasar por valor o por referencia, como se muestra en el ejemplo siguiente.  
+2.  Ahora código administrado puede pasar la versión administrada de la estructura a las funciones no administradas como si fueran funciones administradas realmente. Estas estructuras se pueden pasar por valor o por referencia, como se muestra en el ejemplo siguiente.  
   
-## Ejemplo  
- El código siguiente está compuesto por módulo administrado y en uno no administrado.  El módulo no administrado es un archivo DLL que define una estructura llamada Location y una función llamada GetDistance, que acepta dos instancias de la estructura Location.  El segundo módulo es una aplicación de línea de comandos administrada, que importa la función GetDistance, pero la define en cuanto a un equivalente administrado de la estructura Location: MLocation.  En la práctica, es probable que ambas versiones de la estructura utilizasen el mismo nombre; sin embargo, aquí se usa un nombre distinto para mostrar que el prototipo DllImport se define en cuanto a la versión administrada.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una estructura llamada Location y una función llamada GetDistance, que acepta dos instancias de la estructura de ubicación. El segundo módulo es una aplicación de línea de comandos administrada que importa la función GetDistance, pero la define en cuanto a un equivalente administrado de la estructura Location: MLocation. En la práctica probablemente se podría utilizar el mismo nombre en ambas versiones de la estructura; Sin embargo, un nombre diferente se usa aquí para mostrar que el prototipo DllImport se define en términos de la versión administrada.  
   
- El módulo administrado se compila con \/clr, pero \/clr:pure también funciona.  
+ El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
- Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional directiva \#include.  De hecho, sólo se puede obtener acceso al archivo DLL en tiempo de ejecución, por lo que no se detectarán problemas con funciones importadas con DllImport en tiempo de compilación.  
+ Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado utilizando tradicional #include (directiva). De hecho, se tiene acceso a la DLL en tiempo de ejecución, por lo que no se detectarán problemas con funciones importadas con DllImport en tiempo de compilación.  
   
 ```  
 // TraditionalDll3.cpp  
@@ -94,7 +97,7 @@ void InitLocation(Location* lp) {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // MarshalStruct_pi.cpp  
@@ -133,9 +136,12 @@ int main() {
 }  
 ```  
   
-  **\[no administrado\] loc1\(0,0\) loc2\(100,100\)**  
-**\[administrado\] distancia \= 141.42135623731**  
-**\[no administrado\] Inicializar ubicación...**  
-**\[administrado\] x\=50 y\=50**   
-## Vea también  
- [Utilizar un elemento PInvoke explícito en C\+\+ \(Atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+```Output  
+[unmanaged] loc1(0,0) loc2(100,100)  
+[managed] distance = 141.42135623731  
+[unmanaged] Initializing location...  
+[managed] x=50 y=50  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Usar un elemento PInvoke explícito en C++ (Atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

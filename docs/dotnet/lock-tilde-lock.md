@@ -1,47 +1,48 @@
 ---
-title: "lock::~lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "~lock"
-  - "msclr.lock.~lock"
-  - "lock.~lock"
-  - "msclr::lock::~lock"
-  - "lock::~lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~lock (destructor)"
+title: 'bloqueo:: ~ bloqueo | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ~lock
+- msclr.lock.~lock
+- lock.~lock
+- msclr::lock::~lock
+- lock::~lock
+dev_langs: C++
+helpviewer_keywords: ~lock destructor
 ms.assetid: 55fa9f6c-d7a6-48ef-9236-ee03342c1d20
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f81ebc097d53029dc4d4e161c9cf43e15e37b94d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# lock::~lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs un objeto de `lock` .  
+# <a name="locklock"></a>lock::~lock
+Destructs un `lock` objeto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 ~lock();  
 ```  
   
-## Comentarios  
- Las llamadas [lock::release](../dotnet/lock-release.md)del destructor.  
+## <a name="remarks"></a>Comentarios  
+ El destructor llama [lock::release](../dotnet/lock-release.md).  
   
-## Ejemplo  
- Este ejemplo utiliza una sola instancia de una clase a través de varios subprocesos.  La clase utiliza un bloqueo en sí misma para garantizar que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase compruebe periódicamente para ver si todavía existen algunos subprocesos de trabajo, y espera para salir hasta que todos los subprocesos de trabajo completen sus tareas.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo seguirán existan y espera hasta salir hasta que todos los subprocesos de trabajo ha completado sus tareas.  
   
 ```  
 // msl_lock_dtor.cpp  
@@ -115,22 +116,25 @@ int main() {
 }  
 ```  
   
-  **En el subproceso 3, contador \= 0**  
-**En el subproceso 3, contador \= 10**  
-**En el subproceso 5, contador \= 0**  
-**En el subproceso 5, contador \= 10**  
-**En el subproceso 7, contador \= 0**  
-**En el subproceso 7, contador \= 10**  
-**En el subproceso 4, contador \= 0**  
-**En el subproceso 4, contador \= 10**  
-**En el subproceso 6, contador \= 0**  
-**En el subproceso 6, contador \= 10**  
-**Todos los subprocesos completos.**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
  [lock::lock](../dotnet/lock-lock.md)

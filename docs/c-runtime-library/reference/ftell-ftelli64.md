@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b37db89ca7d9e3facb7de2fbce2dc819cfa03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 Obtiene la posición actual de un puntero de archivo.  
@@ -74,7 +75,7 @@ __int64 _ftelli64(
   
  En modo de texto, CTRL+Z se interpreta como un carácter de final de archivo en la entrada. En archivos abiertos para lectura/escritura, `fopen` y todas las rutinas relacionadas buscan un CTRL+Z al final del archivo y, si es posible, lo eliminan. Se hace así porque el uso de `ftell` y `fseek` o `_ftelli64` y `_fseeki64` para desplazarse por un archivo que finaliza con un CTRL+Z puede hacer que `ftell` o `_ftelli64` se comporten de forma incorrecta cerca del final del archivo.  
   
- Esta función bloquea el subproceso de llamada durante la ejecución y por lo tanto es segura para subprocesos. Para obtener una versión que no sea de bloqueo, vea `_ftell_nolock`.  
+ Esta función bloquea el subproceso de llamada durante la ejecución y por lo tanto es segura para subprocesos. Para consultar una versión que no realiza el bloqueo, vea `_ftell_nolock`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -83,7 +84,7 @@ __int64 _ftelli64(
 |`ftell`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

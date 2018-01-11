@@ -1,41 +1,42 @@
 ---
-title: "map::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "miembro de referencia [STL/CLR]"
+title: 'Map:: Reference (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 7bbfeb61-f12a-42d1-b5ae-7b6421c1d33c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 53ea7b8723a0db47e35cbacd5d9bd778543c2ea3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# map::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapreference-stlclr"></a>map::reference (STL/CLR)
 El tipo de una referencia a un elemento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El tipo describe una referencia a un elemento.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_reference.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [map::const\_reference](../dotnet/map-const-reference-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

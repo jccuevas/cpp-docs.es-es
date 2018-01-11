@@ -36,11 +36,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53581ad182a451adf3dde28ba463985ab82dd34e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8699a96dcd7c04bc1b2707e964afb4b68068147e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Comprobaciones de errores en tiempo de ejecución)
 Usar para habilitar y deshabilitar la característica de comprobaciones de errores de tiempo de ejecución, junto con el [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  

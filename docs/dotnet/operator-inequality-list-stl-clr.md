@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 840fc420829a7c0cd9efe236207e7ab7a4285c47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9411ff9e6e4a6f96059c89893eb4770442be7671
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-list-stlclr"></a>operator!= (list) (STL/CLR)
 Lista de comparación no es igual.  
@@ -36,7 +39,7 @@ template<typename Value>
  izquierda  
  Contenedor izquierdo que se va a comparar.  
   
- derecha  
+ right  
  Contenedor derecho que se va a comparar.  
   
 ## <a name="remarks"></a>Comentarios  

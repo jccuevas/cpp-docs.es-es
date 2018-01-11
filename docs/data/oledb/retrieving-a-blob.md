@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 36ffc4fca7859b49067517e1085e1d854f733e24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-a-blob"></a>Recuperar un objeto BLOB
 Puede recuperar un objeto grande binario (BLOB) de varias maneras. Puede usar **DBTYPE_BYTES** para recuperar el BLOB como una secuencia de bytes o usar una interfaz como `ISequentialStream`. Para obtener más información, consulte [objetos BLOB y OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) en el *referencia del programador de OLE DB*.  

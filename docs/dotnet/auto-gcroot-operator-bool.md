@@ -1,48 +1,50 @@
 ---
-title: "auto_gcroot::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator bool"
-  - "auto_gcroot::operator bool"
-  - "msclr.auto_gcroot.operator bool"
-  - "msclr::auto_gcroot::operator bool"
-  - "operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bool (operador)"
+title: bool auto_gcroot::operator | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator bool
+- auto_gcroot::operator bool
+- msclr.auto_gcroot.operator bool
+- msclr::auto_gcroot::operator bool
+- operator bool
+dev_langs: C++
+helpviewer_keywords: bool operator
 ms.assetid: 87d38498-4221-4de8-8d02-c2dd2e6274ec
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c327f0ff6e1be74831bb3e0f319ebaf429e7ca70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operador para utilizar `auto_gcroot` en una expresión condicional.  
+# <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
+Operador para el uso de `auto_gcroot` en una expresión condicional.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 operator bool() const;  
 ```  
   
-## Valor devuelto  
- `true` si el objeto temperaturescale es válido; `false` de otra manera.  
+## <a name="return-value"></a>Valor devuelto  
+ `true`Si el objeto encapsulado es válido; `false` en caso contrario.  
   
-## Comentarios  
- Este operador convierte realmente a `_detail_class::_safe_bool` que es más seguro que `bool` porque no puede convertirse a un tipo entero.  
+## <a name="remarks"></a>Comentarios  
+ Este operador convierte realmente en `_detail_class::_safe_bool` que es más seguro que `bool` porque no se puede convertir a un tipo entero.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_auto_gcroot_operator_bool.cpp  
@@ -65,14 +67,17 @@ int main() {
 }  
 ```  
   
-  **s no es válida**  
-**s es válida ahora**  
-**s no es válida ahora**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s is invalid  
+now s is valid  
+now s is invalid  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\auto_gcroot.h >  
   
-## Vea también  
- [auto\_gcroot \(Miembros\)](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator\!](../dotnet/auto-gcroot-operator-logical-not.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [auto_gcroot (miembros)](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)

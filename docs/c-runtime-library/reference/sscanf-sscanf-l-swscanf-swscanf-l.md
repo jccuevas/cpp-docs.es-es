@@ -51,11 +51,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 487ea05ad72ec1854255b05f3da3acf64d399115
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2143605464eafb569fae003a6e574c51be4e2453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 Lea datos con formato de una cadena. Hay disponibles versiones más seguras de estas funciones; vea [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  
@@ -131,7 +132,7 @@ int _swscanf_l(
 |`sscanf`, `_sscanf_l`|\<stdio.h>|  
 |`swscanf`, `_swscanf_l`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

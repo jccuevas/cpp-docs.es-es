@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - tanf
 - tanhf
 - tanhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tanl function
 - tanhl function
@@ -53,31 +51,16 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f52084801f695fe6c435e9c46520a6b2b3c9e754
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a418683e23525d6e3c46853312b217788c0969e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
 Calcula la tangente (`tan`, `tanf` o `tanl`) o la tangente hiperbólica (`tanh`, `tanhf` o `tanhl`).  
@@ -140,7 +123,7 @@ long double tanhl(
 |-------------|---------------------|  
 |`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,34 +1,36 @@
 ---
-title: "IDBCreateSessionImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBCreateSessionImpl"
-  - "ATL.IDBCreateSessionImpl"
-  - "ATL::IDBCreateSessionImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBCreateSessionImpl (clase)"
+title: IDBCreateSessionImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBCreateSessionImpl
+- ATL.IDBCreateSessionImpl
+- ATL::IDBCreateSessionImpl
+dev_langs: C++
+helpviewer_keywords: IDBCreateSessionImpl class
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f5f8cb4e35c14ddbb8a7f8df3fe3686025cf5eae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IDBCreateSessionImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona una implementación de la interfaz de [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx) .  
+# <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl (Clase)
+Proporciona una implementación para el [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <class T, class SessionClass>  
@@ -36,27 +38,27 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
- SU CLASS, DERIVADA OF  
+ LA CLASE, DERIVADA DE  
   
  `SessionClass`  
- Objeto de sesión.  
+ El objeto de sesión.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos de interfaz  
+### <a name="interface-methods"></a>Métodos de interfaz  
   
 |||  
 |-|-|  
-|[CreateSession](../../data/oledb/idbcreatesessionimpl-createsession.md)|Crea una nueva sesión del objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.|  
+|[CreateSession](../../data/oledb/idbcreatesessionimpl-createsession.md)|Crea una nueva sesión desde el objeto de origen de datos y devuelve la interfaz solicitada en la sesión recién creada.|  
   
-## Comentarios  
- Una interfaz de enlace en objetos de origen de datos.  
+## <a name="remarks"></a>Comentarios  
+ Una interfaz obligatoria en los objetos de origen de datos.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

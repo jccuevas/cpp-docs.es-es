@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f232929282b8884f1362985d9c9b68bf0fc5a1cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>_chsize
 Cambia el tamaño de un archivo. Hay disponible una versión más segura; consulte [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  

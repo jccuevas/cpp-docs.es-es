@@ -1,32 +1,35 @@
 ---
-title: "T::typeid reemplaza typeof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__typeof (palabra clave)"
-  - "typeid (palabra clave) [C++]"
-  - "typeid (operador)"
+title: typeid reemplaza typeof | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- typeid operator
+- __typeof keyword
+- typeid keyword [C++]
 ms.assetid: 6a0d35a7-7a1a-4070-b187-cff37cfdc205
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 09ec4aef4c8bc68f8a808193b30d86b8519ba881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# T::typeid reemplaza typeof
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La palabra clave `typeid` ha suplantado al operador `typeof` utilizado en Extensiones administradas para C\+\+ en [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="typeof-goes-to-ttypeid"></a>T::typeid reemplaza typeof
+El `typeof` operador que se utiliza en extensiones administradas para C++ ha suplantado por el `typeid` palabra clave en Visual C++.  
   
- En Extensiones administradas, el operador `__typeof()` devuelve el objeto `Type*` asociado cuando se pasa el nombre de un tipo administrado.  Por ejemplo:  
+ En extensiones administradas, el `__typeof()` operador devuelve asociado `Type*` objeto cuando se pasa el nombre de un tipo administrado. Por ejemplo:  
   
 ```  
 // Creates and initializes a new Array instance.  
@@ -34,7 +37,7 @@ Array* myIntArray =
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- En la nueva sintaxis, un formulario adicional de `typeid` que devuelve `Type^` ha reemplazado a `__typeof` cuando se especifica un tipo administrado.  
+ En la nueva sintaxis, `__typeof` se ha reemplazado por un método adicional de `typeid` que devuelve un `Type^` cuando se especifica un tipo administrado.  
   
 ```  
 // Creates and initializes a new Array instance.  
@@ -42,6 +45,6 @@ Array^ myIntArray =
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
-## Vea también  
- [Cambio general en el lenguaje](../dotnet/general-language-changes-cpp-cli.md)   
- [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md)
+## <a name="see-also"></a>Vea también  
+ [Cambios del lenguaje general (C++ / CLI)](../dotnet/general-language-changes-cpp-cli.md)   
+ [typeid](../windows/typeid-cpp-component-extensions.md)

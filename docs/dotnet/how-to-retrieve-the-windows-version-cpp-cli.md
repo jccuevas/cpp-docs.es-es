@@ -1,32 +1,34 @@
 ---
-title: "C&#243;mo: Recuperar la versi&#243;n de Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows [C++], recuperar una versión utilizando Visual C++"
-  - "Windows [C++], versión"
+title: "Cómo: recuperar la versión de Windows (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b29d77b7bcc56baa9866c2855065052b1d2607c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Recuperar la versi&#243;n de Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente muestra cómo recuperar la plataforma e información de versión del sistema operativo actual.  Esta información se almacena en la propiedad <xref:System.Environment.OSVersion%2A?displayProperty=fullName> y está formada por una enumeración que describe la versión de Windows en términos más amplios y un objeto <xref:System.Environment.Version%2A> que contienen la versión exacta del sistema operativo.  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>Cómo: Recuperar la versión de Windows (C++/CLI)
+En el ejemplo de código siguiente se muestra cómo recuperar la información de plataforma y la versión del sistema operativo actual. Esta información se almacena en la <xref:System.Environment.OSVersion%2A?displayProperty=fullName> propiedad y consta de una enumeración que describe la versión de Windows en términos generales y un <xref:System.Environment.Version%2A> objeto que contiene la versión exacta del sistema operativo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // os_ver.cpp  
@@ -64,6 +66,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [Operaciones de Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Operaciones de Windows (C++ / CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

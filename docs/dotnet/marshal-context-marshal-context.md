@@ -1,52 +1,54 @@
 ---
-title: "marshal_context::marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::interop::marshal_context::marshal_context"
-  - "marshal_context::marshal_context"
-  - "msclr.interop.marshal_context.marshal_context"
-  - "marshal_context.marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context (clase) [C++], operaciones"
+title: 'serializar_context:: serializar_context | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::interop::marshal_context::marshal_context
+- marshal_context::marshal_context
+- msclr.interop.marshal_context.marshal_context
+- marshal_context.marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a91b4f1c5f30711c46550dabb4369e380214fce1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_context::marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construye un objeto de `marshal_context` necesarios para la conversión de datos entre los tipos de datos administrados y nativos.  
+# <a name="marshalcontextmarshalcontext"></a>serializar_context::serializar_context
+Construye un `marshal_context` objeto que se va a usar para la conversión de datos entre los tipos de datos administrados y nativos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 marshal_context();  
 ```  
   
-## Comentarios  
- Algunas conversiones de datos requieren un contexto de cálculo de referencias.  Vea [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) para obtener más información acerca de las traducciones requieren un contexto y la que tiene que incluir el archivo de cálculo de referencias en la aplicación.  
+## <a name="remarks"></a>Comentarios  
+ Algunas conversiones de datos requieren un contexto de cálculo de referencias. Vea [información general de serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md) para obtener más información acerca de qué traducciones requieren un contexto y el archivo de cálculo de referencias que debe incluirse en la aplicación.  
   
-## Ejemplo  
- Consulte el ejemplo de [marshal\_context::marshal\_as](../dotnet/marshal-context-marshal-as.md).  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [serializar_context:: serializar_as](../dotnet/marshal-context-marshal-as.md).  
   
-## Requisitos  
- **Archivo de encabezado:** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\>, o \<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado:** \<msclr\marshal. h >, \<msclr\serializar_windows. h >, \<msclr\serializar_cppstd. h >, o \<msclr\serializar_atl. h >  
   
- **Espacio de nombres:** msclr::interop  
+ **Namespace:** msclr:: Interop  
   
-## Vea también  
- [Información general del cálculo de referencias en C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context \(Clase\)](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>Vea también  
+ [Información general de la serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context (Clase)](../dotnet/marshal-context-class.md)

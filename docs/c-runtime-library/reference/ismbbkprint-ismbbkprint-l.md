@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c3f0f105b27c97a0ed775ab18ff3331e7c8627f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d2eff34518abd778ac5c19efce9ebedebf7a16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 Determina si un carácter multibyte determinado es un signo de puntuación.  
@@ -68,7 +69,7 @@ int _ismbbkprint_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbkprint` devuelve un valor distinto de cero si el entero `c` es un texto no ASCII o un signo de puntuación no ASCII; de lo contrario devuelve 0. Por ejemplo, solo en la página de códigos 932, `_ismbbkprint` comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). `_ismbbkprint` usa la configuración regional actual para los valores de caracteres dependientes de la configuración regional. `_ismbbkprint_l` es exactamente igual, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbkprint` devuelve un valor distinto de cero si el entero `c` es un texto no ASCII o un signo de puntuación no ASCII; de lo contrario devuelve 0. Por ejemplo, solo en la página de códigos 932, `_ismbbkprint` comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). `_ismbbkprint` usa la configuración regional actual para los valores de caracteres dependientes de la configuración regional. `_ismbbkprint_l` es exactamente igual, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,4 +82,4 @@ int _ismbbkprint_l(
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

@@ -1,41 +1,42 @@
 ---
-title: "set::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend (miembro) [STL/CLR]"
+title: 'Set:: rend (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 4a98d138-ad89-4dee-b757-e798da2e0c0e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cbcbf0386930f054388884a93dfd4ded155f3a05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# set::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setrend-stlclr"></a>set::rend (STL/CLR)
 Designa el final de la secuencia controlada inversa.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un iterador inversa que elija simplemente más allá del principio de la secuencia controlada.  Por lo tanto, designa el parámetro `end` de la secuencia inversa.  Se usa para obtener un iterador que designe el final de la secuencia controlada mostrada en orden inverso, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un iterador inverso que apunta inmediatamente después del principio de la secuencia controlada. Por tanto, designa el `end` de la secuencia inversa. Utilícelo para obtener un iterador que designa el `current` final de la secuencia controlada mostrada en orden inverso, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_set_rend.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a**   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [set](../dotnet/set-stl-clr.md)   
- [set::begin](../dotnet/set-begin-stl-clr.md)   
- [set::end](../dotnet/set-end-stl-clr.md)   
- [set::rbegin](../dotnet/set-rbegin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)   
+ [Set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)   
+ [set::rbegin (STL/CLR)](../dotnet/set-rbegin-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "list::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back (miembro) [STL/CLR]"
+title: 'List:: push_back (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: f2c70470-a899-4e5f-8f3e-b55d6a8bff0e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 87908a4b0e54f764d52308b24ce5c78d41c6f3f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# list::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Agrega un nuevo elemento pasado.  
+# <a name="listpushback-stlclr"></a>list::push_back (STL/CLR)
+Agrega un nuevo elemento de la última.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## Comentarios  
- La función miembro inserta un elemento con el valor `val` al final de la secuencia controlada.  Se utiliza para anexar otro elemento a la lista.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro inserta un elemento con el valor `val` al final de la secuencia controlada. Usarlo para anexar otro elemento a la lista.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_push_back.cpp   
@@ -58,14 +59,17 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_back](../dotnet/list-pop-back-stl-clr.md)   
- [list::pop\_front](../dotnet/list-pop-front-stl-clr.md)   
- [list::push\_front](../dotnet/list-push-front-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
+ [List:: pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)   
+ [list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)

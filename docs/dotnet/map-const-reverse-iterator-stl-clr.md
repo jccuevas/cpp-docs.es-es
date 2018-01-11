@@ -1,41 +1,42 @@
 ---
-title: "map::const_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator (miembro) [STL/CLR]"
+title: 'Map:: const_reverse_iterator (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: 056a765c-4f59-4bd8-99f4-c308a6f29c12
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ea55945736a73e9d7391e1d97383b1ad0487c6af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# map::const_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El tipo de un iterador inverso constante para la secuencia controlada.  
+# <a name="mapconstreverseiterator-stlclr"></a>map::const_reverse_iterator (STL/CLR)
+El tipo de un iterador inverso constante para la secuencia controlada...  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## Comentarios  
- El tipo describe un objeto de tipo sin especificar `T4` que sirva como iterador inverso constante para la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto de tipo no especificado `T4` que puede actuar como un iterador inverso constante para la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_const_reverse_iterator.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **\[c 3\] \[b 2\] \[un 1\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [map::reverse\_iterator](../dotnet/map-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)

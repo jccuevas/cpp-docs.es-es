@@ -1,32 +1,33 @@
 ---
-title: "list::merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "merge (miembro) [STL/CLR]"
+title: 'List:: Merge (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::merge
+dev_langs: C++
+helpviewer_keywords: merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# list::merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listmerge-stlclr"></a>list::merge (STL/CLR)
 Combina dos secuencias controladas ordenadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void merge(list<Value>% right);  
@@ -34,21 +35,21 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  pred  
- Comparador de los pares de elemento.  
+ Comparador para los pares de elemento.  
   
  right  
- Contenedor para combinar en.  
+ Contenedor que se va a combinar.  
   
-## Comentarios  
- La primera función miembro quita todos los elementos de la secuencia controlada por `right` y los inserta en la secuencia controlada.  Las dos secuencias se deben ordenar previamente por `operator<` \-\- los elementos no debe disminuir en valor a medida que avance con cualquier secuencia.  La secuencia resultante también está ordenada por `operator<`.  Utiliza esta función miembro para combinar dos secuencias ese aumento de valor en una secuencia que también aumenta en valor.  
+## <a name="remarks"></a>Comentarios  
+ La primera función miembro quita todos los elementos de la secuencia controlada por `right` e insertarlos en la secuencia controlada. Ambas secuencias deben estar ordenados previamente por `operator<` --no deben disminuir elementos de valor a medida que avanza a través de cualquier secuencia. La secuencia resultante también se ordena por `operator<`. Utilice esta función miembro para combinar dos secuencias que aumenten de valor en una secuencia que también aumenta en valor.  
   
- La segunda función miembro se comporta igual que el primero, salvo que las secuencias se ordenan por `pred` \-\- `pred``(X, Y)` debe ser false para cualquier elemento `X` que siga el elemento `Y` en la secuencia.  Se utiliza para combinar dos secuencias ordenadas por una función de predicado o para delegarlas especificado.  
+ La segunda función miembro comporta igual que la primera, salvo que las secuencias se ordenan por `pred`  --  `pred(X, Y)` debe ser false para cualquier elemento `X` que sigue elemento `Y` en la secuencia. Usarlo para combinar dos secuencias ordenadas por una función de predicado o un delegado que especifique.  
   
- Ambas funciones realizan una combinación estable \-\- no es ningún par de elementos en ninguna de las secuencias controladas originales en la secuencia controlada resultante.  Además, si un par de elementos `X` y `Y` en la secuencia controlada resultante tiene el orden equivalente \-\- `!(X < Y) && !(X < Y)` \-\- un elemento de la secuencia controlada original aparece antes de un elemento de la secuencia controlada por `right`.  
+ Las funciones realizan una combinación estable: ningún par de elementos de cualquiera de las secuencias controladas originales se ha invertido en la secuencia controlada resultante. Además, si algún par de elementos `X` y `Y` en la secuencia controlada resultante tiene una ordenación equivalente-- `!(X < Y) && !(X < Y)` --un elemento de la secuencia controlada original aparece antes de un elemento de la secuencia controlada por `right`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_merge.cpp   
@@ -107,20 +108,23 @@ int main()
   
 ```  
   
-  **C. e**  
- **f de d b**  
- **a b c d e f**  
-**c2.size\(\) \= 0**  
- **Comunidad Europea a**  
- **b a c de d de f e**  
- **b c c de d de f e e a**  
-**c1.size\(\) \= 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)   
+ [list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)

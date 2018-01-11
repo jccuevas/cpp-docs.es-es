@@ -1,32 +1,33 @@
 ---
-title: "stable_sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stable_sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stable_sort (función) [STL/CLR]"
+title: stable_sort (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stable_sort
+dev_langs: C++
+helpviewer_keywords: stable_sort function [STL/CLR]
 ms.assetid: c28fc2df-c68b-4923-ac16-9f8edd926fbb
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7b3d3f99e910bb353fbe39174b4a8b3e314214a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# stable_sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Organiza los elementos en un intervalo especificado en nondescending petición o según un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de elementos equivalentes.  
+# <a name="stablesort-stlclr"></a>stable_sort (STL/CLR)
+Organiza los elementos de un intervalo especificado en un orden no descendente o de acuerdo con un criterio de ordenación especificado por un predicado binario y conserva el orden relativo de los elementos equivalentes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _BidIt> inline  
@@ -35,13 +36,13 @@ template<class _BidIt, class _Pr> inline
     void stable_sort(_BidIt _First, _BidIt _Last, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `stable_sort`STL.  Para obtener más información, vea [stable\_sort](../Topic/stable_sort.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `stable_sort`. Para obtener más información, consulte [stable_sort](../standard-library/algorithm-functions.md#stable_sort).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

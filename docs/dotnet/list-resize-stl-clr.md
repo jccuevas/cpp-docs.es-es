@@ -1,49 +1,50 @@
 ---
-title: "list::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize (miembro) [STL/CLR]"
+title: 'List:: Resize (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c4b8d41f-a62b-4dbc-8568-0e0a9da24016
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca91c9764f1fe438d0d7dfb66c52797d5d97aae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# list::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listresize-stlclr"></a>list::resize (STL/CLR)
 Cambia el número de elementos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### Parámetros  
- new\_size  
+#### <a name="parameters"></a>Parámetros  
+ NEW_SIZE  
  Nuevo tamaño de la secuencia controlada.  
   
- val  
+ Val  
  Valor del elemento de relleno.  
   
-## Comentarios  
- Las funciones miembro ambos asegurarse de que [list::size](../dotnet/list-size-stl-clr.md)`()` en adelante devuelve `new_size`.  Si debe crear la secuencia controlada más larga, la primera función miembro anexa elementos con el valor `value_type()`, mientras que la segunda función miembro anexa elementos con el valor `val`.  Para crear la secuencia controlada más corta, ambas funciones miembro desactive eficazmente los tiempos pasan de [list::size](../dotnet/list-size-stl-clr.md)`() -` `new_size` del elemento.  Se utiliza para garantizar que la secuencia controlada tiene un tamaño `new_size`, por la reducción o el relleno la secuencia controlada actual.  
+## <a name="remarks"></a>Comentarios  
+ Las funciones de miembro tanto asegúrese de que [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` de ahora en adelante devuelve `new_size`. Si la secuencia controlada tiene que ser más larga, la primera función miembro anexa elementos con el valor `value_type()`, mientras que la segunda función miembro anexa elementos con el valor `val`. Para realizar la secuencia controlada más corta, ambas funciones miembro borrar eficazmente el último elemento [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` veces. Úsela para asegurarse de que la secuencia controlada tiene tamaño `new_size`, recortar o relleno de la secuencia controlada actual.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_resize.cpp   
@@ -74,17 +75,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)

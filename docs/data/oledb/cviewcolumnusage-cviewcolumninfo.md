@@ -1,80 +1,83 @@
 ---
-title: "CViewColumnUsage, CViewColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "m_nColumnPropID"
-  - "COLUMN_GUID"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "CViewColumnInfo"
-  - "m_szSchema"
-  - "CViewColumnUsage"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_szTableName"
-  - "m_szName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CViewColumnInfo (clase de parámetro)"
-  - "CViewColumnUsage (clase de definiciones de tipo)"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CViewColumnUsage, CViewColumnInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- m_nColumnPropID
+- COLUMN_GUID
+- m_szColumnName
+- m_szTableCatalog
+- CViewColumnInfo
+- m_szSchema
+- CViewColumnUsage
+- COLUMN_PROPID
+- m_guidColumn
+- m_szTableName
+- m_szName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szSchema
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- m_nColumnPropID
+- CViewColumnInfo parameter class
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szName
+- m_szTableCatalog
+- CViewColumnUsage typedef class
+- m_szTableName
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: 4af14d6b-b224-4d72-b035-9d3aaacde32f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 74f2e2a76934f30c5b65a83c6570d14ccebd1fc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CViewColumnUsage, CViewColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Asigne a la clase **CViewColumnUsage** typedef para implementar la clase **CViewColumnInfo**del parámetro.  
+# <a name="cviewcolumnusage-cviewcolumninfo"></a>CViewColumnUsage, CViewColumnInfo
+Llamar a la clase de typedef **CViewColumnUsage** para implementar su clase de parámetro **CViewColumnInfo**.  
   
-## Comentarios  
- Vea [Clases de conjunto de filas de esquema y clases de Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre cómo utilizar clases typedef.  
+## <a name="remarks"></a>Comentarios  
+ Vea [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre el uso de clases typedef.  
   
- Esta clase identifica las columnas en las que vio tablas, definido en el catálogo y que pertenecen a un usuario determinado, depende.  
+ Esta clase identifica las columnas en que se ven tablas, definidas en el catálogo y pertenecen a un usuario determinado, son dependientes.  
   
- La tabla siguiente se enumeran los miembros de datos de la clase y sus columnas correspondientes de OLE DB.  Vea [Conjunto de filas de VIEW\_COLUMN\_USAGE](https://msdn.microsoft.com/en-us/library/ms714896.aspx) en *la referencia del* programador para obtener más información sobre el esquema y las columnas.  
+ En la tabla siguiente se enumera los miembros de datos de la clase y sus columnas OLE DB correspondiente. Vea [conjunto de filas VIEW_COLUMN_USAGE](https://msdn.microsoft.com/en-us/library/ms714896.aspx) en el *referencia del programador de OLE DB* para obtener más información sobre el esquema y las columnas.  
   
 |Miembros de datos|Columnas de OLE DB|  
-|-----------------------|------------------------|  
-|m\_szCatalog|VIEW\_CATALOG|  
-|m\_szSchema|VIEW\_SCHEMA|  
-|m\_szName|VIEW\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
+|------------------|--------------------|  
+|m_szCatalog|VIEW_CATALOG|  
+|m_szSchema|VIEW_SCHEMA|  
+|m_szName|VIEW_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRestrictions (Clase)](../../data/oledb/crestrictions-class.md)

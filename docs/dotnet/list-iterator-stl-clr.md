@@ -1,41 +1,42 @@
 ---
-title: "list::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator (miembro) [STL/CLR]"
+title: 'List:: Iterator (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: a62893c5-a53c-48ca-9f95-1eb3306b5ddf
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 31ce5165c9f6168b1dcfa708282babf8e64e3ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# list::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listiterator-stlclr"></a>list::iterator (STL/CLR)
 El tipo de un iterador para la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Comentarios  
- El tipo describe un objeto de tipo sin especificar `T1` que sirva como iterador de acceso aleatorio para la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto de tipo no especificado `T1` que puede actuar como un iterador de acceso aleatorio de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_iterator.cpp   
@@ -66,13 +67,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **b c x**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+a b c  
+x b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)

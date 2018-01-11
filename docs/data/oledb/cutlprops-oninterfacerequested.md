@@ -1,32 +1,33 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested (método)"
+title: 'CUtlProps:: Oninterfacerequested | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c458eaf7c1e41ade5d29fa020bacfebb2b278e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Orden de los identificadores una interfaz opcional cuando un consumidor llama a un método en una de las interfaces de la creación de objetos.  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+Administra las solicitudes de una interfaz opcional cuando un consumidor llama a un método en uno de los objetos interfaces de creación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,16 +36,16 @@ Orden de los identificadores una interfaz opcional cuando un consumidor llama a 
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- \[in\] El IID de la interfaz solicitada.  Para obtener más detalles, vea la descripción del parámetro de `riid` de `ICommand::Execute` en *la referencia del* programador \(en *el SDK de MDAC*\).  
+ [in] El IID de la interfaz solicitada. Para obtener más información, vea la descripción de la `riid` parámetro de `ICommand::Execute` en el *referencia del programador de OLE DB* (en el *SDK de MDAC*).  
   
-## Comentarios  
- **OnInterfaceRequested** controla las solicitudes de consumidor una interfaz opcional cuando un consumidor llama a un método en una de las interfaces de creación de objeto \(como **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, o `ICommand`\).  Establece la propiedad correspondiente de OLE DB para la interfaz solicitada.  Por ejemplo, si el consumidor solicita **IID\_IRowsetLocate**, **OnInterfaceRequested** establece la interfaz de **DBPROP\_IRowsetLocate** .  Al hacer mantiene tan al estado correcto durante la creación del conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ **OnInterfaceRequested** administra las solicitudes de consumidor de una interfaz opcional cuando un consumidor llama a un método en uno de los objetos interfaces de creación (como **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, o `ICommand`). Establece la propiedad de OLE DB correspondiente para la interfaz solicitada. Por ejemplo, si el consumidor solicita **IID_IRowsetLocate**, **OnInterfaceRequested** establece la **DBPROP_IRowsetLocate** interfaz. Si lo hace, mantiene el estado correcto durante la creación del conjunto de filas.  
   
- Se llama a este método cuando el consumidor llama a **IOpenRowset::OpenRowset** o `ICommand::Execute`.  
+ Se llama a este método cuando el consumidor llama **IOpenRowset:: OpenRowset** o `ICommand::Execute`.  
   
- Si un usuario abre un objeto y solicita una interfaz opcional, el proveedor debe establecer la propiedad asociada a la interfaz a `VARIANT_TRUE`.  Para permitir el procesamiento propiedad\- concreto, **OnInterfaceRequested** se denomina antes de llamar al método de **Ejecución** del proveedor.  De forma predeterminada, **OnInterfaceRequested** controla las siguientes interfaces:  
+ Si un consumidor abre un objeto y solicita una interfaz opcional, el proveedor debe establecer la propiedad asociada con esa interfaz a `VARIANT_TRUE`. Debe permitir el procesamiento específico de la propiedad, **OnInterfaceRequested** se invoca antes que el proveedor **Execute** se llama al método. De forma predeterminada, **OnInterfaceRequested** controla las siguientes interfaces:  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +57,10 @@ Orden de los identificadores una interfaz opcional cuando un consumidor llama a 
   
 -   `IRowsetScroll`  
   
- Si desea administrar otras interfaces, invalide esta función en el origen de datos, sesión, el comando, o la clase de conjunto de filas de procesar funciones.  El reemplazo debe realizar el determinado normal\/obtiene interfaces de propiedades para asegurarse de que establecer propiedades también establece todas las propiedades encadenada \(vea [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)\).  
+ Si desea controlar otras interfaces, invalidan esta función en la clase de origen, session, comando o conjunto de filas de datos a las funciones de proceso. La invalidación debe avanzar por las interfaces de propiedades get/set normal para asegurarse de que establecer las propiedades también establece las propiedades encadenadas (vea [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [CUtlProps \(Clase\)](../../data/oledb/cutlprops-class.md)
+## <a name="see-also"></a>Vea también  
+ [CUtlProps (Clase)](../../data/oledb/cutlprops-class.md)

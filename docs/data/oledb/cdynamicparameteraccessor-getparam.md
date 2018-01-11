@@ -1,77 +1,79 @@
 ---
-title: "CDynamicParameterAccessor::GetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParam"
-  - "ATL.CDynamicParameterAccessor.GetParam"
-  - "CDynamicParameterAccessor::GetParam<ctype>"
-  - "CDynamicParameterAccessor.GetParam"
-  - "GetParam"
-  - "ATL::CDynamicParameterAccessor::GetParam<ctype>"
-  - "ATL::CDynamicParameterAccessor::GetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParam (método)"
+title: 'CDynamicParameterAccessor:: GetParam | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParam
+- ATL.CDynamicParameterAccessor.GetParam
+- CDynamicParameterAccessor::GetParam<ctype>
+- CDynamicParameterAccessor.GetParam
+- GetParam
+- ATL::CDynamicParameterAccessor::GetParam<ctype>
+- ATL::CDynamicParameterAccessor::GetParam
+dev_langs: C++
+helpviewer_keywords: GetParam method
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7cdd27cfdd173e556bb9d4c6fd27a9d801a7f8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera los datos recursos para un parámetro de búfer especificado del parámetro.  
+# <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
+Recupera los datos que no sean para un parámetro especificado desde el búfer de parámetro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      template < class ctype > bool GetParam(   
-   DBORDINAL nParam,   
-   ctype* pData    
+      template < class ctype > bool GetParam(   
+   DBORDINAL nParam,   
+   ctype* pData    
 ) const throw( );  
-template < class ctype > bool GetParam(   
-   TCHAR* pParamName,   
-   ctype* pData    
+template < class ctype > bool GetParam(   
+   TCHAR* pParamName,   
+   ctype* pData    
 ) const throw( );  
-void* GetParam(   
-   DBORDINAL nParam    
+void* GetParam(   
+   DBORDINAL nParam    
 ) const throw( );  
-void* GetParam(   
-   TCHAR* pParamName    
+void* GetParam(   
+   TCHAR* pParamName    
 ) const throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `ctype`  
- Un parámetro con plantillas que es el tipo de datos.  
+ Un parámetro de plantilla que es el tipo de datos.  
   
  `nParam`  
- \[in\] El parámetro número \(desplazamiento desde 1\).  El parámetro 0 se reserva por valores devueltos.  El parámetro número es el índice del parámetro basándose en su orden de SQL o la llamada a un procedimiento almacenado.  Vea [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
+ [in] El número de parámetro (desplazamiento de 1). Parámetro 0 está reservado para los valores devueltos. El número de parámetro es el índice del parámetro basándose en su orden en el SQL o una llamada al procedimiento almacenado. Vea [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
   
  `pParamName`  
- \[in\] Nombre del parámetro.  
+ [in] El nombre del parámetro.  
   
  `pData`  
- \[out\] El puntero a la memoria que contiene los datos recuperados del búfer.  
+ [out] Puntero a la memoria que contiene los datos recuperados desde el búfer.  
   
-## Valor devuelto  
- Para las versiones nontemplated, señala la memoria que contiene los datos recuperados del búfer.  Para las versiones con plantilla, devuelve **true** en correctamente o **false** en el error.  
+## <a name="return-value"></a>Valor devuelto  
+ En las versiones sin plantilla, apunta a la memoria que contiene los datos recuperados desde el búfer. En las versiones con plantilla, devuelve **true** en caso de éxito o **false** en caso de error.  
   
- Utilice `GetParam` para recuperar datos recursos de parámetros del búfer.  Utilice [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) para recuperar datos del parámetro de cadena del búfer.  
+ Use `GetParam` para recuperar datos de parámetro que no sean del búfer. Use [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) para recuperar datos de parámetro de cadena desde el búfer.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicParameterAccessor \(Clase\)](../../data/oledb/cdynamicparameteraccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -1,77 +1,175 @@
 ---
-title: "Platform::Collections::InputIterator (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections::InputIterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InputIterator (Clase)"
+title: Inputiterator (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs: C++
+helpviewer_keywords: InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Collections::InputIterator (Clase)
-Proporciona un InputIterator de la Biblioteca de plantillas estándar para las colecciones derivadas de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)].  
+# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator (Clase)
+Proporciona un InputIterator de la biblioteca de plantillas estándar para las colecciones derivadas de Windows Runtime.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-template <  
-   typename X  
->  
+template <typename X>  
 class InputIterator;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `X`  
  El typename de la clase de plantilla InputIterator.  
   
-## Miembros  
+### <a name="members"></a>Miembros  
   
-### Definiciones de tipos públicas  
+### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
-|------------|-----------------|  
-|`difference_type`|Una diferencia de puntero \(ptrdiff\_t\).|  
-|`iterator_category`|La categoría de un iterador de entrada \(::std::input\_iterator\_tag\).|  
-|`pointer`|Puntero a `const` `X`|  
-|`reference`|Referencia a `const` `X`|  
-|`value_type`|El typename `X`.|  
+|Name|Descripción|  
+|----------|-----------------|  
+|`difference_type`|Una diferencia de puntero (ptrdiff_t).|  
+|`iterator_category`|La categoría de un iterador de entrada (::std::input_iterator_tag).|  
+|`pointer`|Puntero a `const X`|  
+|`reference`|Referencia a `const X`|  
+|`value_type`|El typename `X` .|  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
-|------------|-----------------|  
-|[InputIterator::InputIterator \(Constructor\)](../cppcx/inputiterator-inputiterator-constructor.md)|Inicializa una nueva instancia de la clase InputIterator.|  
+|Name|Descripción|  
+|----------|-----------------|  
+|[Inputiterator](#ctor)|Inicializa una nueva instancia de la clase InputIterator.|  
   
-### Operadores públicos  
+### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
-|------------|-----------------|  
-|[InputIterator::operator\!\= \(Operador\)](../cppcx/inputiterator-operator-inequality-operator.md)|Indica si el objeto InputIterator actual no es igual a un objeto InputIterator especificado.|  
-|[InputIterator::operator\* \(Operador\)](../cppcx/inputiterator-operator-decrementoperator.md)|Recupera una referencia al elemento especificado por el objeto InputIterator actual.|  
-|[InputIterator::operator\+\+ \(Operador\)](../cppcx/inputiterator-operator-increment-operator.md)|Incrementa el objeto InputIterator actual.|  
-|[InputIterator::operator\=\= \(Operador\)](../cppcx/inputiterator-operator-equality-operator.md)|Indica si el objeto InputIterator actual es igual que un objeto InputIterator especificado.|  
-|[InputIterator::operator\-\> \(Operador\)](../cppcx/inputiterator-operator-arrow-operator.md)|Recupera la dirección del elemento al que hace referencia el objeto InputIterator actual.|  
+|Name|Descripción|  
+|----------|-----------------|  
+|[InputIterator::operator!= (Operador)](#operator-inequality)|Indica si el objeto InputIterator actual no es igual a un objeto InputIterator especificado.|  
+|[InputIterator::operator* (Operador)](#operator-decrement)|Recupera una referencia al elemento especificado por el objeto InputIterator actual.|  
+|[InputIterator::operator++ (Operador)](#operator-increment)|Incrementa el objeto InputIterator actual.|  
+|[InputIterator::operator== (Operador)](#operator-equality)|Indica si el objeto InputIterator actual es igual que un objeto InputIterator especificado.|  
+|[InputIterator::operator-> (Operador)](#operator-arrow)|Recupera la dirección del elemento al que hace referencia el objeto InputIterator actual.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `InputIterator`  
   
-## Requisitos  
+### <a name="requirements"></a>Requisitos  
  **Encabezado:** collection.h  
   
  **Espacio de nombres:** Platform::Collections  
+
+## <a name="ctor"></a>Constructor Inputiterator
+Inicializa una nueva instancia de la clase InputIterator.  
   
-## Vea también  
- [Espacio de nombres de plataforma \(NOTINBUILD\)](http://msdn.microsoft.com/es-es/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+InputIterator();  
+explicit InputIterator(Windows::Foundation::Collections<X>^ iter);  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `iter`  
+ Objeto de iterador.  
+  
+
+
+## <a name="operator-arrow"></a>Inputiterator:: operator -&gt; (operador)
+Recupera la dirección del elemento especificado por el objeto InputIterator actual.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+pointer operator->() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Dirección del elemento especificado por el objeto InputIterator actual.  
+  
+
+
+## <a name="operator-dereference"></a>Operador de inputiterator:: operator
+Recupera una referencia al elemento especificado por el objeto InputIterator actual.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+reference operator*() const;  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ El elemento especificado por el objeto InputIterator actual.  
+  
+
+
+## <a name="operator-equality"></a>Inputiterator:: operator == (operador)
+Indica si el objeto InputIterator actual es igual que un objeto InputIterator especificado.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+bool operator== (const InputIterator& other) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `other`  
+ Otro objeto InputIterator.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si el objeto InputIterator actual es igual que `other`; en caso contrario, `false`.  
+  
+
+
+## <a name="operator-increment"></a>Inputiterator:: operator ++ (operador)
+Incrementa el objeto InputIterator actual.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```    
+InputIterator& operator++();   
+InputIterator operator++(int);  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ La primera sintaxis incrementa y devuelve después el objeto InputIterator actual. La segunda sintaxis devuelve una copia del objeto InputIterator actual e incrementa después el objeto InputIterator actual.  
+  
+### <a name="remarks"></a>Comentarios  
+ Lo primera sintaxis de InputIterator incrementa previamente el objeto InputIterator actual.  
+  
+ La segunda sintaxis incrementa posteriormente el objeto InputIterator actual. El tipo `int` de la segunda sintaxis indica una operación de incremento posterior, no un operando entero real.  
+  
+
+
+## <a name="operator-inequality"></a>Inputiterator:: operator! = (operador)
+Indica si el objeto InputIterator actual no es igual a un objeto InputIterator especificado.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```  
+bool operator!=(const InputIterator& other) const;  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ `other`  
+ Otro objeto InputIterator.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si el objeto InputIterator actual no es igual a `other`; en caso contrario, `false`.   
+
+  
+## <a name="see-also"></a>Vea también  
+ [Namespace de plataforma](platform-namespace-c-cx.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d33382e520a13c5cd131cdc03f21fb4708cb9eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09c436d55ad7087d407ba580be0b63286b056898
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-precompiled-header-files"></a>Crear archivos de encabezado precompilados
   
@@ -153,13 +154,13 @@ Cuando se utiliza un encabezado precompilado creado mediante /Yc o/Yu, el compil
   
 Esta tabla enumera las opciones de compilador que pueden desencadenar una advertencia de incoherencia cuando se utiliza un encabezado precompilado:  
   
-|Opción|Nombre|Regla|  
+|Opción|nombre|Regla|  
 |------------|----------|----------|  
 |/D|Definir constantes y macros|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. No se comprueba el estado de constantes definidas, pero pueden producirse resultados imprevisibles si los archivos dependen de los valores de las constantes que cambian.|  
 |/E o /EP|Copia los resultados del preprocesador a resultados estándar|Los encabezados precompilados no funcionan con la opción /E o/EP.|  
 |/FR o/fr|Generar información del explorador de código fuente de Microsoft|Para que las opciones /Fr y /FR sean válidas con la opción/Yu, debe también han tenido en vigor cuando se creó el encabezado precompilado. Compilaciones subsiguientes que utilizan el encabezado precompilado también generan información del explorador de origen. Información del explorador se coloca en un único archivo .sbr y otros archivos al que hace referencia en la misma manera que la información de CodeView. No se puede invalidar la ubicación de la información del explorador de origen.|  
 |/ GA, /GD, /GE, /Gw o /GW|Opciones de protocolo de Windows|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. Si las opciones difieren, se produce un mensaje de advertencia.|  
-|/Zi|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones subsiguientes que utilizan la precompilación pueden utilizar esa información de depuración. Si /Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones subsiguientes que utilizan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo de objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|  
+|/ZI|Generar información de depuración completa|Si esta opción está en vigor cuando se crea el encabezado precompilado, las compilaciones subsiguientes que utilizan la precompilación pueden utilizar esa información de depuración. Si /Zi no está en vigor cuando se crea el encabezado precompilado, las compilaciones subsiguientes que utilizan la precompilación y la opción/Zi desencadenan una advertencia. La información de depuración se coloca en el archivo de objeto actual y los símbolos locales definidos en el encabezado precompilado no están disponibles para el depurador.|  
   
 > [!NOTE]
 >  La funcionalidad de encabezado precompilado está pensada para su uso únicamente en los archivos de código fuente de C y C++.  

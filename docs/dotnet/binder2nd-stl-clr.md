@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 237bf8bee11234939d93c5af0aa0114f9379cd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos llamada con el primer argumento proporcionado y el segundo argumento almacenado. Se usa especificar un objeto de función en cuanto a su functor almacenado.  

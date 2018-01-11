@@ -1,29 +1,28 @@
 ---
-title: "Error PRJ0017 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0017"
+title: Error PRJ0017 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0017
+dev_langs: C++
+helpviewer_keywords: PRJ0017
 ms.assetid: a192729f-bb10-486a-bfda-a7843fa259b2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 546ddc729620f26294b4d82695068ed8c160675a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error PRJ0017 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="project-build-error-prj0017"></a>Error PRJ0017 al compilar el proyecto
 El directorio de trabajo actual no es válido.  
   
- La longitud de la ruta de acceso al directorio de trabajo actual es mayor que el valor de \_MAXPATH.  Para solucionar este error, cree el proyecto cuyo nivel de profundidad sea menor.
+ La ruta de acceso al directorio de trabajo actual es mayor que _MAXPATH. Para resolver este error, no cree el proyecto en un nivel profundo de este tipo.

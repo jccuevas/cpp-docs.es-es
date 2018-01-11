@@ -56,11 +56,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16876148aa73fada420a58aa4ba38b8a557ab93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-functions"></a>Funciones de intercambio de campos de registros
 Este tema enumeran el intercambio de campos de registro (RFX, RFX masivo y DFX) funciones que se usan para automatizar la transferencia de datos entre un objeto de conjunto de registros y su origen de datos y realizar otras operaciones en los datos.  
@@ -144,7 +145,7 @@ void RFX_Binary(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo [CByteArray](cbytearray-class.md), se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `nMaxLength`  
@@ -178,7 +179,7 @@ void RFX_Bool(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **BOOL**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -206,7 +207,7 @@ void RFX_Byte(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **bytes**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -244,7 +245,7 @@ void RFX_Date(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado; valor que se transferirán. Las distintas versiones de la función realizar diferentes tipos de datos de valor:  
   
  La primera versión de la función toma una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto. Para una transferencia de conjunto de registros al origen de datos, este valor se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
@@ -279,7 +280,7 @@ void RFX_Double(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **doble**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -307,7 +308,7 @@ void RFX_Int(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo `int`, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -336,7 +337,7 @@ value );
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **largo**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -364,7 +365,7 @@ void RFX_LongBinary(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo `CLongBinary`, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -392,7 +393,7 @@ void RFX_Single(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **float**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -424,7 +425,7 @@ void RFX_Text(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo `CString`, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `nMaxLength`  
@@ -697,7 +698,7 @@ void RFX_Int(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo `int`, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
 ### <a name="example"></a>Ejemplo  
@@ -873,7 +874,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo [CByteArray](cbytearray-class.md), se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `nPreAllocSize`  
@@ -915,7 +916,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **BOOL**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -953,7 +954,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **bytes**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -991,7 +992,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, este valor se toma del miembro de datos especificado, de tipo [COleCurrency](colecurrency-class.md). Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1029,7 +1030,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. La función toma una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto. Para una transferencia de conjunto de registros al origen de datos, este valor se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1070,7 +1071,7 @@ void AFXAPI DFX_Double(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **doble**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1108,7 +1109,7 @@ void AFXAPI DFX_Long(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **largo**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1148,7 +1149,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo [CLongBinary](clongbinary-class.md), se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  *dwPreAllocSize*  
@@ -1189,7 +1190,7 @@ void AFXAPI DFX_Short(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **corto**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Single(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo **float**, se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `dwBindOptions`  
@@ -1270,7 +1271,7 @@ void AFXAPI DFX_Text(
  `szName`  
  El nombre de una columna de datos.  
   
- *value*  
+ *valor*  
  El valor almacenado en el miembro de datos indicado, el valor que se transferirá. Para una transferencia de conjunto de registros al origen de datos, el valor de tipo [CString](../../atl-mfc-shared/reference/cstringt-class.md), se toma del miembro de datos especificado. Para una transferencia de origen de datos al conjunto de registros, el valor se almacena en el miembro de datos especificado.  
   
  `nPreAllocSize`  

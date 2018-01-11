@@ -1,7 +1,7 @@
 ---
 title: "Errores de compilación de C/c ++ | Documentos de Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>Errores de compilación de C/C++
-En los artículos de esta sección de la documentación se explican los mensajes de error generados por las herramientas de compilación. Las herramientas de compilación y el compilador de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] pueden notificar muchas clases de errores y advertencias. Las herramientas de compilación pueden realizar suposiciones sobre la intención del código e intentar continuar después de un error o una advertencia, para poder notificar más problemas al mismo tiempo. Si las herramientas hacen una suposición incorrecta, es posible que los errores o advertencias posteriores no se apliquen al proyecto. Cuando corrija problemas en el proyecto, empiece siempre por el primer error o advertencia notificados y recompile a menudo.  
-  
- Para obtener ayuda sobre un mensaje de error concreto en Visual Studio, seleccione un número de error en la **salida** página ventana y presione la tecla F1 para abrir el sitio MSDN para ese error. En MSDN, también puede buscar artículos sobre errores o examinar la lista de errores por categoría en el panel de navegación.  
-  
-> [!NOTE]
->  No todos [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] error o advertencia está documentado en MSDN. En muchos casos, el mensaje de diagnóstico proporciona toda la información que está disponible. Si cree que un mensaje de error necesita una explicación adicional, puede enviarnos su opinión. Puede utilizar el formulario de comentarios de esta página, o vaya a la barra de menús de Visual Studio y elija **ayuda**, **notificar un error**, o puede enviar un informe de sugerencia o un error en [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Puede encontrar ayuda adicional sobre errores y advertencias en los foros públicos de MSDN. El [lenguaje Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) es foro para preguntas y debate sobre el [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintaxis del lenguaje y compilador. El [General de Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) es foro para preguntas sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] que no se debaten en otros foros. También puede encontrar ayuda sobre los errores y advertencias en [desbordamiento de la pila](http://stackoverflow.com/).  
-  
- Para obtener vínculos a recursos adicionales sobre [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], consulte [ayuda de Visual C++ y de la Comunidad](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Los artículos de esta sección de la documentación explican diagnóstico mensajes de error y advertencia generados por las herramientas de compilación.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de compilación de C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

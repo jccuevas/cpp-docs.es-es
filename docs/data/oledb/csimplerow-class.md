@@ -1,64 +1,66 @@
 ---
-title: "CSimpleRow (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSimpleRow"
-  - "ATL::CSimpleRow"
-  - "ATL.CSimpleRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleRow (clase)"
+title: CSimpleRow (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSimpleRow
+- ATL::CSimpleRow
+- ATL.CSimpleRow
+dev_langs: C++
+helpviewer_keywords: CSimpleRow class
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8a5d8777a1219e204e0db1a16858ef30009dc67d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CSimpleRow (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en la clase de [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .  
+# <a name="csimplerow-class"></a>CSimpleRow (Clase)
+Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en el [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) clase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CSimpleRow  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
-  
-|||  
-|-|-|  
-|[AddRefRow](../../data/oledb/csimplerow-addrefrow.md)|Agrega un contador de referencias a un identificador de fila existente.|  
-|[Comparar](../../data/oledb/csimplerow-compare.md)|Compara dos filas para ver si hacen referencia a la misma instancia de fila.|  
-|[CSimpleRow](../../data/oledb/csimplerow-csimplerow.md)|Constructor.|  
-|[ReleaseRow](../../data/oledb/csimplerow-releaserow.md)|Libera filas.|  
-  
-### Miembros de datos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[m\_dwRef](../../data/oledb/csimplerow-m-dwref.md)|Recuento de referencias en un identificador de fila existente.|  
-|[m\_iRowset](../../data/oledb/csimplerow-m-irowset.md)|Un índice el conjunto de filas que representa el cursor.|  
+|[AddRefRow](../../data/oledb/csimplerow-addrefrow.md)|Agrega un recuento de referencias a un identificador de fila existente.|  
+|[Compare](../../data/oledb/csimplerow-compare.md)|Compara dos filas para comprobar si hacen referencia a la misma instancia de fila.|  
+|[CSimpleRow](../../data/oledb/csimplerow-csimplerow.md)|El constructor.|  
+|[ReleaseRow](../../data/oledb/csimplerow-releaserow.md)|Versiones de filas.|  
   
-## Comentarios  
- Un identificador de fila es lógicamente etiqueta única para una fila de resultados.  `IRowsetImpl` crea nuevo `CSimpleRow` para cada fila solicitada en [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).  `CSimpleRow` también se puede reemplazar con dispone de la implementación del identificador de fila, porque es un argumento de plantilla predeterminado a `IRowsetImpl`.  El único requisito a reemplazar esta clase es que la clase de reemplazo proporcione un constructor que acepte un solo parámetro de **LONG**escrito.  
+### <a name="data-members"></a>Miembros de datos  
   
-## Requisitos  
- **Header:** atldb.h  
+|||  
+|-|-|  
+|[m_dwRef](../../data/oledb/csimplerow-m-dwref.md)|Recuento de referencias para un identificador de fila existente.|  
+|[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)|Un índice en el conjunto de filas que representa el cursor.|  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [IRowsetImpl \(Clase\)](../../data/oledb/irowsetimpl-class.md)
+## <a name="remarks"></a>Comentarios  
+ Un identificador de fila es, lógicamente, una etiqueta única para una fila de resultados. `IRowsetImpl`crea un nuevo `CSimpleRow` para todas las filas solicitaron en [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow`También se puede reemplazar con su propia implementación del identificador de fila, ya que es un argumento de plantilla predeterminado a `IRowsetImpl`. El único requisito para reemplazar esta clase es que la clase de reemplazo proporciona un constructor que acepta un único parámetro de tipo **largo**.  
+  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
+  
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ [IRowsetImpl (Clase)](../../data/oledb/irowsetimpl-class.md)

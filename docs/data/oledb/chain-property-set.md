@@ -1,32 +1,33 @@
 ---
-title: "CHAIN_PROPERTY_SET | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHAIN_PROPERTY_SET"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHAIN_PROPERTY_SET (macro)"
+title: CHAIN_PROPERTY_SET | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CHAIN_PROPERTY_SET
+dev_langs: C++
+helpviewer_keywords: CHAIN_PROPERTY_SET macro
 ms.assetid: 2bcf6d7d-f4e5-480d-9140-1e32a0994c94
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1de482b285f24ce9ed68bd70fa7b21b0b66a4d56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CHAIN_PROPERTY_SET
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Grupos de esta de la macro propiedad strings junto.  
+# <a name="chainpropertyset"></a>CHAIN_PROPERTY_SET
+Esta macro encadena grupos de propiedades.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -36,18 +37,18 @@ ChainClass
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *ChainClass*  
- \[in\] El nombre de la clase para encadenar las propiedades para.  Esta es una clase generada por el asistente para proyectos ATL que ya contiene un mapa \(como una sesión, un comando, o una clase de objeto de origen de datos\).  
+ [in] El nombre de la clase a las propiedades de cadena para. Se trata de una clase generada por el Asistente para proyectos de ATL que ya contiene un mapa (por ejemplo, una clase de objeto origen de datos, comando o sesión).  
   
-## Comentarios  
- Puede encadenar una propiedad establecida de otra clase a dispone de la clase, se tiene acceso a las propiedades directamente de la clase.  
+## <a name="remarks"></a>Comentarios  
+ Puede encadenar un conjunto de propiedades de otra clase en su propia clase, a continuación, obtener acceso a las propiedades directamente desde la clase.  
   
 > [!CAUTION]
->  Use esta macro con moderación.  El uso incorrecto puede hacer un consumidor un error en las pruebas de conformidad de OLE DB.  
+>  Use esta macro con moderación. El uso incorrecto puede hacer que un consumidor a producirá un error en las pruebas de conformidad de OLE DB.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)

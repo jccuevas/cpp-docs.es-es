@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d434d687eca53deb4cad41615fcfd676836dda5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-namespace-ccx"></a>Platform (Espacio de nombres) (C++/CX)
 Contiene tipos integrados que son compatibles con Windows en tiempo de ejecución.  

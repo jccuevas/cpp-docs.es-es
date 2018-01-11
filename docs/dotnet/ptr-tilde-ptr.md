@@ -1,47 +1,48 @@
 ---
-title: "ptr::~ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: 'PTR:: ~ ptr | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8eb71e9975f06bfae5fe20c3ccae6d296a47f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs `com::ptr`.  
+# <a name="ptrptr"></a>ptr::~ptr
+Destructs un `com::ptr`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 ~ptr();  
 ```  
   
-## Comentarios  
- En la destrucción, libera de `com::ptr` todas las referencias que pertenece al objeto COM.  Suponiendo que no hay ninguna otras referencias contenía el objeto COM, el objeto COM se eliminará y su memoria se liberará.  
+## <a name="remarks"></a>Comentarios  
+ En la destrucción, el `com::ptr` libera todas las referencias pertenece a su objeto COM. Suponiendo que no hay ningún otras referencias que se mantienen para el objeto COM, se eliminará el objeto COM y liberar su memoria.  
   
-## Ejemplo  
- Este ejemplo implementa una clase CLR que utilice `com::ptr` para ajustar su objeto de `IXMLDOMDocument` miembro privado.  En función de `main` , destructores los dos de los objetos de `XmlDocument` se llamará cuando salen del ámbito del bloque de `try` , por lo que `com::ptr` subyacente destructor llamado, liberando todas las referencias que pertenecen al objeto COM.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  En el `main` función, los dos `XmlDocument` destructores de los objetos que se llamará cuando salen fuera del ámbito de la `try` bloque, lo que produce subyacente `com::ptr` destructor que se llama, liberando propiedad todas las referencias a lo COM objeto.  
   
 ```  
 // comptr_dtor.cpp  
@@ -102,12 +103,12 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\com\ptr.h >  
   
- msclr::com de**Namespace**  
+ **Namespace** msclr::com  
   
-## Vea también  
- [ptr \(Miembros\)](../dotnet/ptr-members.md)   
- [ptr::ptr](../dotnet/ptr-ptr.md)   
+## <a name="see-also"></a>Vea también  
+ [PTR (miembros)](../dotnet/ptr-members.md)   
+ [PTR::PTR](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

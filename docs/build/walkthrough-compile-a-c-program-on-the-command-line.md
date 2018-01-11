@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfd16b0c3393b6b0a27e88a971042cf772fbd9b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7520e2d78c924ee21c489d2e8327c4bda9b973aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 Visual C++ incluye un compilador de C que puede usar para crear cualquier cosa, desde los programas de consola básicas hasta completas aplicaciones de escritorio de Windows, aplicaciones móviles y mucho más.  
@@ -33,7 +34,7 @@ Visual C++ incluye un compilador de C que puede usar para crear cualquier cosa, 
   
  Visual Studio es un entorno de desarrollo integrado que admite un editor con todas las características, los administradores de recursos, depuradores y compiladores para muchos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [VisualStudio.com](https://www.visualstudio.com/).  
   
- Las herramientas de compilación de Visual Studio instala los compiladores de línea de comandos, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solamente las herramientas de línea de comandos, descargue [herramientas de compilación de Visual Studio](https://go.microsoft.com/fwlink/?linkid=840931) y ejecute el programa de instalación. Para obtener más información, consulte [herramientas de compilación de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Las herramientas de compilación de Visual Studio instala los compiladores de línea de comandos, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para los laboratorios de compilación o aula ejercita e instala relativamente rápidamente. Para instalar solamente las herramientas de línea de comandos, descargue [herramientas de compilación de Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) y ejecute el programa de instalación. Para obtener más información, consulte [herramientas de compilación de Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
  Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que se instalan las herramientas, y que puede tener acceso a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos para encontrar herramientas, encabezados y bibliotecas que utiliza. **No se puede usar Visual C++ en una ventana del símbolo del sistema sin formato**. Necesita un *símbolo* ventana, que es una ventana de símbolo del sistema normal que tiene todas las variables de entorno necesarias establecido. Afortunadamente, Visual C++ instala accesos directos para iniciar el símbolo del sistema de desarrollador que tienen el entorno configurada para compilaciones de línea de comandos. Desgraciadamente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde se encuentran son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial consiste en buscar el método abreviado de derecho a usar.  
   

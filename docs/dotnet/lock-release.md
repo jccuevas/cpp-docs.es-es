@@ -1,47 +1,49 @@
 ---
-title: "lock::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock.release"
-  - "msclr::lock::release"
-  - "lock::release"
-  - "msclr.lock.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::release"
+title: Lock::Release | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock.release
+- msclr::lock::release
+- lock::release
+- msclr.lock.release
+dev_langs: C++
+helpviewer_keywords: lock::release
 ms.assetid: b73d48fc-cf98-4b78-b39d-813d4a12fa84
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e702ffda531d43a2ff8a0d41b10d1f053bdc6e11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# lock::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Libere un bloqueo.  
+# <a name="lockrelease"></a>lock::release
+Libera un bloqueo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void release();  
 ```  
   
-## Comentarios  
- Si no se mantiene ningún bloqueo, `release` no hace nada.  
+## <a name="remarks"></a>Comentarios  
+ Si no se encuentra ningún bloqueo, `release` no hace nada.  
   
- No tiene que llamar a esta función explícitamente; cuando un objeto de `lock` sale del ámbito, el destructor llama `release`.  
+ No es necesario llamar a esta función de forma explícita; Cuando un `lock` objeto queda fuera del ámbito, sus llamadas de destructor `release`.  
   
-## Ejemplo  
- Este ejemplo utiliza una sola instancia de una clase a través de varios subprocesos.  La clase utiliza un bloqueo en sí misma para garantizar que los accesos a sus datos internos son coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase compruebe periódicamente para ver si todavía existen algunos subprocesos de trabajo, y espera para salir hasta que todos los subprocesos de trabajo completen sus tareas.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo utiliza una única instancia de una clase en varios subprocesos.  La clase utiliza un bloqueo en sí mismo para asegurarse de que los accesos a sus datos internos sean coherentes para cada subproceso.  El subproceso de aplicación principal utiliza un bloqueo en la misma instancia de la clase para comprobar periódicamente para ver si los subprocesos de trabajo seguirán existan y espera hasta salir hasta que todos los subprocesos de trabajo ha completado sus tareas.  
   
 ```  
 // msl_lock_release.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **En el subproceso 3, contador \= 0**  
-**En el subproceso 3, contador \= 10**  
-**En el subproceso 5, contador \= 0**  
-**En el subproceso 5, contador \= 10**  
-**En el subproceso 7, contador \= 0**  
-**En el subproceso 7, contador \= 10**  
-**En el subproceso 4, contador \= 0**  
-**En el subproceso 4, contador \= 10**  
-**En el subproceso 6, contador \= 0**  
-**En el subproceso 6, contador \= 10**  
-**Todos los subprocesos completos.**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\lock.h >  
   
-## Vea también  
- [lock \(Miembros\)](../dotnet/lock-members.md)   
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [lock (miembros)](../dotnet/lock-members.md)   
  [lock::~lock](../dotnet/lock-tilde-lock.md)

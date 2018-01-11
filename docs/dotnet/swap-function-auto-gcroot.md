@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5aecd0e745566a357612af2df3cf7f1be9d5ebe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8696d5029b0ed412f31a2be3fe7af35239a99e3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swap-function-autogcroot"></a>swap (Función) (auto_gcroot)
 Intercambia los objetos entre uno `auto_gcroot` y otro.  
@@ -38,7 +41,7 @@ void swap(
   
 #### <a name="parameters"></a>Parámetros  
  `_left`  
- Interfaz `auto_gcroot`.  
+ Una clase `auto_gcroot`.  
   
  `_right`  
  Otra `auto_gcroot`.  

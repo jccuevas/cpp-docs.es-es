@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8fe3e0dd20ae07f3378bd528d7e19986c2aed6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 320c3c4223996826fe1e7b3104540baddd82da5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapmap-stlclr"></a>map::map (STL/CLR)
 Construye un objeto contenedor.  
@@ -51,7 +54,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
  pred  
  Orden de predicado de la secuencia controlada.  
   
- derecha  
+ right  
  Objeto o intervalo que se va a insertar.  
   
 ## <a name="remarks"></a>Comentarios  

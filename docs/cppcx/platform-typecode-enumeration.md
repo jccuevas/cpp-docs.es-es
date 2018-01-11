@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0c217824496f0cf4e69c8fba89fd614a8049a8c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 353649f63a8e5522329459b1c9f740450818a3af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (Enumeración)
 Especifica una categoría numérica que representa un tipo integrado.  
@@ -44,7 +45,7 @@ enum class TypeCode {};
 |Int32|Tipo de default::int32.|  
 |Int64|Tipo de default::int64.|  
 |Int8|Tipo de default::int8.|  
-|Objeto|Tipo de Platform::Object.|  
+|Object|Tipo de Platform::Object.|  
 |Single|Tipo de default::float32.|  
 |String|Tipo de Platform::String.|  
 |UInt16|Tipo de default::uint16.|  
@@ -57,6 +58,6 @@ enum class TypeCode {};
   
  **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd

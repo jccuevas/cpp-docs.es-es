@@ -1,33 +1,36 @@
 ---
-title: "Admitir el subprocesamiento libre en un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proveedores OLE DB, con subprocesamiento múltiple"
-  - "subprocesamiento [C++], proveedores"
+title: Admitir el subprocesamiento libre en un proveedor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, multithreaded
+- threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14bd61bc4f319a50abdbf76d7f6e60e511e57312
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Admitir el subprocesamiento libre en un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Todas las clases de proveedor OLE DB son seguras para subprocesos y se establecerán las entradas del Registro de acuerdo con esto.  Es recomendable admitir el subprocesamiento libre para ayudar a proporcionar un alto nivel de rendimiento en situaciones multiusuario.  Para ayudar a mantener la seguridad de subprocesos del proveedor, debe comprobar que el código está correctamente bloqueado.  Siempre que escriba o almacene datos debe bloquear el acceso con secciones críticas.  
+# <a name="supporting-free-threading-in-your-provider"></a>Admitir el subprocesamiento libre en un proveedor
+Todas las clases de proveedor de OLE DB son seguras para subprocesos y entradas del registro se establecen en consecuencia. Es una buena idea para admitir el subprocesamiento libre para ayudar a proporcionar un alto nivel de rendimiento en situaciones multiusuario. Para ayudar a mantener su proveedor de subprocesos, debe comprobar que el código está bloqueado correctamente. Cada vez que intenta escribir o almacena los datos, debe bloquear el acceso con secciones críticas.  
   
- Cada objeto de plantilla del proveedor OLE DB tiene su propia sección crítica.  Para facilitar el bloqueo, cada clase nueva que cree deberá ser una plantilla que utilice el nombre de la clase primaria como argumento.  
+ Cada objeto de plantilla de proveedor OLE DB tiene su propia sección crítica. Para facilitar el bloqueo, cada clase nueva que cree debe ser una clase de plantilla que toma la clase primaria nombre como un argumento.  
   
- En el ejemplo siguiente, se muestra cómo bloquear el código:  
+ En el ejemplo siguiente se muestra cómo bloquear el código:  
   
 ```  
 template <class T>  
@@ -46,9 +49,9 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Para obtener información sobre cómo proteger las secciones críticas mediante `Lock` y `Unlock`, vea [Multithreading: Uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+ Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [subprocesamiento múltiple: cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- También debe comprobar que los métodos que reemplace \(como `Execute`\) sean seguros para subprocesos.  
+ También debe comprobar que todos los métodos de invalidación (como `Execute`) son seguras para subprocesos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

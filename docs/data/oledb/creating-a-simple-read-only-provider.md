@@ -1,35 +1,38 @@
 ---
-title: "Crear un proveedor sencillo de s&#243;lo lectura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas del proveedor OLE DB, crear proveedores"
-  - "proveedores OLE DB, crear"
+title: "Crear un proveedor sencillo de sólo lectura | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b5f840a6f401d8eb1bcca598d86622deb8f86cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Crear un proveedor sencillo de s&#243;lo lectura
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cuando haya creado un proveedor OLE DB mediante el Asistente para proyectos ATL y el Asistente para proveedores OLE DB ATL, puede agregarle más funcionalidad para la que desee ofrecer compatibilidad.  Cuando empiece a diseñar el proveedor, examine el tipo de datos que va a enviar al consumidor y las condiciones en que va a hacerlo.  Es muy importante determinar si se va a necesitar compatibilidad con comandos, transacciones y otros objetos opcionales.  Un buen diseño inicial acelerará la implementación y las pruebas.  
+# <a name="creating-a-simple-read-only-provider"></a>Crear un proveedor sencillo de sólo lectura
+Una vez haya creado un proveedor de OLE DB mediante el Asistente para proyectos ATL y el Asistente para proveedores OLE DB ATL, puede agregar otra funcionalidad que desee admitir. Empezar a diseñar el proveedor mediante el examen de los tipos de datos que se va a enviar al consumidor y bajo qué condiciones. Es especialmente importante determinar si necesita admitir comandos, transacciones y otros objetos opcionales. Un buen diseño por adelantado acelerará la implementación y pruebas.  
   
- El ejemplo se presenta en dos partes:  
+ En el ejemplo se presenta en dos partes:  
   
--   En la primera parte se muestra la forma de [crear un proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) que lea un par de cadenas.  
+-   La primera parte se muestra cómo [crear un proveedor sencillo de sólo lectura](../../data/oledb/implementing-the-simple-read-only-provider.md) que lee un par de cadenas.  
   
--   En la segunda parte se muestra la forma de [mejorar el proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md) agregando la interfaz `IRowsetLocate`.  
+-   La segunda parte se muestra cómo [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md) agregando el `IRowsetLocate` interfaz.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Crear un proveedor OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,32 +1,33 @@
 ---
-title: "push_heap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::push_heap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_heap (función) [STL/CLR]"
+title: push_heap (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::push_heap
+dev_langs: C++
+helpviewer_keywords: push_heap function [STL/CLR]
 ms.assetid: 184fe1d9-5f75-4c11-adbb-84b6b5c8ecd3
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: da6ede7d42f5f431d49951d4e9e69f29ac8541da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# push_heap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Agrega un elemento que está al final de un intervalo una pila existente que se compone de los elementos anteriores en el intervalo.  
+# <a name="pushheap-stlclr"></a>push_heap (STL/CLR)
+Agrega un elemento que está al final de un intervalo a un montón existente que se compone de los elementos anteriores del intervalo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _RanIt> inline  
@@ -35,13 +36,13 @@ template<class _RanIt, class _Pr> inline
     void push_heap(_RanIt _First, _RanIt _Last, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `push_heap`STL.  Para obtener más información, vea [push\_heap](../Topic/push_heap.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `push_heap`. Para obtener más información, consulte [push_heap](../standard-library/algorithm-functions.md#push_heap).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

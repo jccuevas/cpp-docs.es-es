@@ -1,45 +1,46 @@
 ---
-title: "set::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find (miembro) [STL/CLR]"
+title: 'Set:: Find (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 916e581c-2815-4c07-a51a-6c5ddfa730c1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 82296d6da1a2b995026d75a2e2973335cd00ef5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# set::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Busca un elemento que coincida con una clave especificada.  
+# <a name="setfind-stlclr"></a>set::find (STL/CLR)
+Busca un elemento que coincide con una clave especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Parámetros  
- clave  
+#### <a name="parameters"></a>Parámetros  
+ key  
  Valor de clave que se va a buscar.  
   
-## Comentarios  
- Si por lo menos un elemento de la secuencia controlada tiene equivalente de ordenación con `key`, la función miembro devuelve un iterador que elija uno de esos elementos; si no devuelve [set::end](../dotnet/set-end-stl-clr.md)`()`.  Se utiliza para buscar un elemento actualmente en la secuencia controlada que coincide con una clave especificada.  
+## <a name="remarks"></a>Comentarios  
+ Si al menos un elemento de la secuencia controlada tiene una ordenación equivalente con `key`, la función miembro devuelve un iterador que designa uno de esos elementos; de lo contrario, devuelve [Set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Usa para buscar un elemento actualmente en la secuencia controlada que coincida con una clave especificada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_set_find.cpp   
@@ -70,20 +71,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**busque A \= False**  
-**busque la b \= b**  
-**busque C \= False**   
-## Descripción  
- Observe que `find` no garantiza cuáles de varios encuentra el elemento él.  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## Requisitos  
- cliext \<o conjunto de**Encabezado:** \>  
+## <a name="description"></a>Descripción  
+ Tenga en cuenta que `find` no garantiza que varios elemento que se encuentra.  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/set >  
   
-## Vea también  
- [set](../dotnet/set-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)   
- [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)   
- [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [Set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Set:: equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)   
+ [Set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)   
+ [set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)

@@ -1,36 +1,40 @@
 ---
-title: "Platform::COMException (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::COMException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::COMException (Clase)"
+title: COMException (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::COMException
+- VCCORLIB/Platform::Exception::HResult
+- VCCORLIB/Platform::Exception::Message
+dev_langs: C++
+helpviewer_keywords: Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::COMException (Clase)
+# <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 Representa los errores COM que se producen durante la ejecución de una aplicación. COMException es la clase base para un conjunto de excepciones estándar predefinidas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Miembros  
+### <a name="members"></a>Miembros  
  La clase COMException hereda de la clase Object y las interfaces IException, IPrintable e IEquatable.  
   
  COMException también tiene los siguientes tipos de miembros.  
@@ -38,49 +42,92 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
  **Constructores**  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|`COMException`|Inicializa una nueva instancia de la clase COMException.|  
+|------------|-----------------|  
+|[COMException](#ctor)|Inicializa una nueva instancia de la clase COMException.|  
   
  **Métodos**  
   
- La clase COMException hereda los métodos Equals\(\), Finalize\(\), GetHashCode\(\), GetType\(\), MemberwiseClose\(\) y ToString\(\) de [Platform::Object \(Clase\)](../cppcx/platform-object-class.md).  
+ La clase COMException hereda los métodos Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() y ToString() de [Platform::Object Class](../cppcx/platform-object-class.md).  
   
  **Propiedades**  
   
  La clase COMException tiene las propiedades siguientes.  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|[Exception::HResult \(Propiedad\)](../cppcx/exception-hresult-property.md)|HRESULT correspondiente a la excepción.|  
-|[Exception::Message \(Propiedad\)](../cppcx/exception-message-property.md)|Mensaje que describe la excepción.|  
+|------------|-----------------|  
+|[Exception](#hresult)|HRESULT correspondiente a la excepción.|  
+|[Exception](#message)|Mensaje que describe la excepción.|  
   
-## Excepciones derivadas  
+## <a name="derived-exceptions"></a>Excepciones derivadas  
  Las excepciones predefinidas siguientes se derivan de COMException. Difieren de COMException únicamente en su nombre, el nombre de su constructor y el valor HRESULT subyacente.  
   
-|Nombre|HRESULT subyacente|Descripción|  
-|------------|------------------------|-----------------|  
+|nombre|HRESULT subyacente|Descripción|  
+|----------|------------------------|-----------------|  
 |COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido de una llamada al método COM.|  
-|AccessDeniedException|E\_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|  
-|ChangedStateException|E\_CHANGED\_STATE|Se produce cuando los métodos de un iterador de colección o de una vista de colección se invocan después de que la colección principal haya cambiado, invalidando los resultados del método.|  
-|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Se produce cuando una clase COM no se ha registrado.|  
-|DisconnectedException|RPC\_E\_DISCONNECTED|Se produce cuando un objeto se desconecta de sus clientes.|  
-|FailureException|E\_FAIL|Se produce cuando una operación no es correcta.|  
-|InvalidArgumentException|E\_INVALIDARG|Se produce cuando uno de los argumentos proporcionados a un método no es válido.|  
-|InvalidCastException|E\_NOINTERFACE|Se produce cuando un tipo no puede convertirse a otro tipo.|  
-|NotImplementedException|E\_NOTIMPL|Se produce si un método de interfaz no se ha implementado en una clase.|  
-|NullReferenceException|E\_POINTER|Se produce cuando se intenta desreferenciar una referencia de un objeto null.|  
-|OperationCanceledException|E\_ABORT|Se produce cuando se anula una operación.|  
-|OutOfBoundsException|E\_BOUNDS|Se produce cuando una operación intenta tener acceso a datos que están fuera del intervalo válido.|  
-|OutOfMemoryException|E\_OUTOFMEMORY|Se produce cuando la memoria es insuficiente para completar la operación.|  
+|AccessDeniedException|E_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|  
+|ChangedStateException|E_CHANGED_STATE|Se produce cuando los métodos de un iterador de colección o de una vista de colección se invocan después de que la colección principal haya cambiado, invalidando los resultados del método.|  
+|ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Se produce cuando una clase COM no se ha registrado.|  
+|DisconnectedException|RPC_E_DISCONNECTED|Se produce cuando un objeto se desconecta de sus clientes.|  
+|FailureException|E_FAIL|Se produce cuando una operación no es correcta.|  
+|InvalidArgumentException|E_INVALIDARG|Se produce cuando uno de los argumentos proporcionados a un método no es válido.|  
+|InvalidCastException|E_NOINTERFACE|Se produce cuando un tipo no puede convertirse a otro tipo.|  
+|NotImplementedException|E_NOTIMPL|Se produce si un método de interfaz no se ha implementado en una clase.|  
+|NullReferenceException|E_POINTER|Se produce cuando se intenta desreferenciar una referencia de un objeto null.|  
+|OperationCanceledException|E_ABORT|Se produce cuando se anula una operación.|  
+|OutOfBoundsException|E_BOUNDS|Se produce cuando una operación intenta tener acceso a datos que están fuera del intervalo válido.|  
+|OutOfMemoryException|E_OUTOFMEMORY|Se produce cuando la memoria es insuficiente para completar la operación.|  
   
-## Requisitos  
- **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisitos  
+ **Cliente mínimo admitido:** Windows 8  
   
- **Servidor mínimo admitido:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd  
+
+## <a name="ctor"></a>COMException Constructor
+Inicializa una nueva instancia de la clase COMException.  
   
-## Vea también  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+COMException( int hresult )  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ hresult  
+ Valor HRESULT de error representado por la excepción.  
+  
+
+
+## <a name="hresult"></a>Propiedad COMException
+HRESULT correspondiente a la excepción.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:property int HResult {    int get();}  
+```  
+  
+## <a name="property-value"></a>Valor de propiedad  
+ Valor HRESULT que especifica el error.  
+  
+### <a name="remarks"></a>Comentarios  
+ Para obtener más información acerca de cómo interpretar el valor HRESULT, vea [estructura de códigos de Error COM](http://go.microsoft.com/fwlink/p/?LinkId=262045).  
+
+## <a name="message"></a>Propiedad COMException
+Mensaje que describe la excepción.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:property String^ Message {    String^ get();}  
+```  
+  
+### <a name="property-value"></a>Valor de propiedad  
+ Descripción de la excepción.  
+    
+
+## <a name="see-also"></a>Vea también  
  [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

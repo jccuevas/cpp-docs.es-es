@@ -1,41 +1,42 @@
 ---
-title: "map::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin (miembro) [STL/CLR]"
+title: 'Map:: begin (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: a909d278-6214-4e11-984d-509fa528bfa3
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 77113ca16dd2c3676162c7e5f7ed12991cc7f5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# map::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapbegin-stlclr"></a>map::begin (STL/CLR)
 Designa el principio de la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator begin();  
 ```  
   
-## Comentarios  
- La función miembro devuelve un iterador bidireccional que señala el primer elemento de la secuencia controlada, o simplemente más allá del final de una secuencia vacía.  Se usa para obtener un iterador que designe el principio de la secuencia controlada, indicado por `current`, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve un iterador bidireccional que designa el primer elemento de la secuencia controlada o más allá del final de una secuencia vacía. Utilícelo para obtener un iterador que designa el `current` a partir de la secuencia controlada, pero su estado puede cambiar si cambia la longitud de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_map_begin.cpp   
@@ -67,14 +68,17 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
-**\*begin\(\) \= \[un 1\]**  
-**\*\+\+begin\(\) \= \[b 2\]**   
-## Requisitos  
- cliext \<de**Encabezado:** \/asignado\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*begin() = [a 1]  
+*++begin() = [b 2]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/mapa >  
   
-## Vea también  
- [map](../dotnet/map-stl-clr.md)   
- [map::end](../dotnet/map-end-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [asignar (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)

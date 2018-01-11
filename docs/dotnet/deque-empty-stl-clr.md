@@ -1,41 +1,42 @@
 ---
-title: "deque::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (miembro) [STL/CLR]"
+title: 'deque:: Empty (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 6ff3dd07-ebdf-47f9-b0d2-8a3229390d3b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3f9ceb0664ca8cd6081a3de6e1819c4ea4bf7e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# deque::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba si no hay elementos presentes.  
+# <a name="dequeempty-stlclr"></a>deque::empty (STL/CLR)
+Comprueba si no hay ningún elemento presente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool empty();  
 ```  
   
-## Comentarios  
- La función miembro devuelve true para una secuencia controlada vacía.  Es equivalente a [deque::size](../dotnet/deque-size-stl-clr.md)`() == 0`.  Se utiliza para probar si el deque está vacío.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve true para una secuencia controlada vacía. Es equivalente a [deque (STL/CLR)](../dotnet/deque-size-stl-clr.md)`() == 0`. Se usa para comprobar si el deque está vacío.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_deque_empty.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisitos  
- **Encabezado:** \<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/deque >  
   
-## Vea también  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::size](../dotnet/deque-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)
