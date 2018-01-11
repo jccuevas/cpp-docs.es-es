@@ -26,11 +26,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentqueue-class"></a>Clase concurrent_queue
 La clase `concurrent_queue` es una clase de contenedor de secuencias que permite el acceso primero en entrar, primero en salir a sus elementos. Habilita un conjunto limitado de operaciones seguras para simultaneidad, como `push` y `try_pop`.  
@@ -53,7 +54,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`allocator_type`|Tipo que representa la clase de asignador de la cola simultánea.|  
 |`const_iterator`|Un tipo que representa un no subprocesos `const` iterador sobre los elementos en una cola simultánea.|  
@@ -66,14 +67,14 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|Sobrecargado. Construye una cola simultánea.|  
 |[~ concurrent_queue (destructor)](#dtor)|Destruye la cola simultánea.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[clear](#clear)|Borra la cola simultánea, los destruyendo actualmente los elementos en cola. Este método no es seguro para la simultaneidad.|  
 |[empty](#empty)|Comprueba si la cola simultánea está vacía en el momento en que se llama a este método. Este método es seguro para simultaneidad.|  

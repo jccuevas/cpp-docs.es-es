@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f48a2e704c1f11517bd7d36ffb1bffc6c35fa040
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d64200b38fb206426b037c0c12d008739e0509b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 Escribe un resultado con formato mediante un puntero a una lista de argumentos, con la posibilidad de especificar el orden en que se usan los argumentos.  
@@ -116,7 +117,7 @@ int _vswprintf_p_l(
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la memoria a la que señala `buffer`.  
   
- Estas funciones se diferencian de `vsprintf_s` y `vswprintf_s` únicamente en que admiten parámetros de posición. Para más información, vea [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Estas funciones se diferencian de `vsprintf_s` y `vswprintf_s` únicamente en que admiten parámetros de posición. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   

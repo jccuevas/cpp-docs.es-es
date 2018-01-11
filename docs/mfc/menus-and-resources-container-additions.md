@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3c8bec06315982725cce531476cbe7daaf154a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-container-additions"></a>Menús y recursos: Adiciones de contenedor
 En este artículo se describen los cambios que deben realizarse en los menús y otros recursos en una aplicación de contenedor de edición visual.  
@@ -84,7 +85,7 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
 ##  <a name="_core_string_table_additions_for_container_applications"></a>Agregar tablas de cadenas para aplicaciones de contenedor  
  La mayoría de los cambios en las tablas de cadenas para aplicaciones contenedoras corresponde a los elementos de menú adicionales mencionados en [adiciones de menú de contenedor](#_core_container_menu_additions). Que suministran el texto mostrado en la barra de estado cuando se muestra cada elemento de menú. Por ejemplo, aquí están las entradas de tabla de cadenas que genera el Asistente para aplicaciones:  
   
-|Id.|Cadena|  
+|Id.|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|Error de inicialización de OLE. Asegúrese de que las bibliotecas OLE tienen la versión correcta.|  
 |**IDP_FAILED_TO_CREATE**|No se pudo crear el objeto. Asegúrese de que el objeto especificado en el registro del sistema.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltseegt-visual-c"></a>&lt;consulte&gt; (Visual C++)
 La etiqueta \<see> permite especificar un vínculo desde el texto. Use [ \<seealso >](../ide/seealso-visual-cpp.md) para indicar el texto que desea que aparezca en una sección Vea también.  
@@ -41,7 +42,7 @@ La etiqueta \<see> permite especificar un vínculo desde el texto. Use [ \<seeal
  El compilador comprueba si el elemento de código dado existe y resuelve `member` al nombre de elemento en el resultado XML.  El compilador emite una advertencia si no encuentra `member`.  
   
 ## <a name="remarks"></a>Comentarios  
- Compile con el parámetro [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
  Vea [ \<resumen >](../ide/summary-visual-cpp.md) para obtener un ejemplo del uso de \<vea >.  
   

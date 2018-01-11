@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9c7c14dc24bf76444b62adb0870b85fac449e67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (estructura)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -48,7 +51,7 @@ struct InterfaceList;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`FirstT`|Sinónimo de parámetro de plantilla `T`.|  
 |`RestT`|Sinónimo de parámetro de plantilla `U`.|  

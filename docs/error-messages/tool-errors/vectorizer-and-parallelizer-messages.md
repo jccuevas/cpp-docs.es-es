@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensajes del vectorizador y paralelizador
 Puede usar las opciones del compilador de Visual C++ [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) y [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) para establecer el [paralelización y vectorización automática](../../parallel/auto-parallelization-and-auto-vectorization.md) para generar códigos de motivo y mensajes informativos sobre la actividad. En este artículo se explican los códigos de motivo y los mensajes.  
@@ -989,7 +990,7 @@ void code_1505(int *A, int *B)
   
 ## <a name="see-also"></a>Vea también  
  [Paralelización y vectorización automática](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [Programación paralela en código nativo](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop()](../../preprocessor/loop.md)   
  [Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)   
  [/ Qpar-informe (Paralelizador automático Reporting nivel)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

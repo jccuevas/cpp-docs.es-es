@@ -1,78 +1,80 @@
 ---
-title: "CDynamicAccessor::SetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.SetValue"
-  - "ATL::CDynamicAccessor::SetValue"
-  - "ATL::CDynamicAccessor::SetValue<ctype>"
-  - "CDynamicAccessor.SetValue"
-  - "ATL.CDynamicAccessor.SetValue<ctype>"
-  - "CDynamicAccessor::SetValue"
-  - "CDynamicAccessor::SetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetValue (método)"
+title: 'CDynamicAccessor:: SetValue | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.SetValue
+- ATL::CDynamicAccessor::SetValue
+- ATL::CDynamicAccessor::SetValue<ctype>
+- CDynamicAccessor.SetValue
+- ATL.CDynamicAccessor.SetValue<ctype>
+- CDynamicAccessor::SetValue
+- CDynamicAccessor::SetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: SetValue method
 ms.assetid: ecc18850-96e5-4845-abe5-ab34ad467238
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bdd334f916257d3688658e941522b6cc20b12b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Almacena datos a una columna especificada.  
+# <a name="cdynamicaccessorsetvalue"></a>CDynamicAccessor::SetValue
+Almacena los datos en una columna especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      template < class ctype >    
-bool SetValue(   
-   DBORDINAL nColumn,   
-   const ctype& data    
+      template < class ctype >    
+bool SetValue(   
+   DBORDINAL nColumn,   
+   const ctype& data    
 ) throw( );  
-template < class ctype >    
-bool SetValue(   
-   const CHAR * pColumnName,   
-   const ctype& data    
+template < class ctype >    
+bool SetValue(   
+   const CHAR * pColumnName,   
+   const ctype& data    
 ) throw( );  
-template <class ctype>   
+template <class ctype>   
 bool SetValue(  
    const WCHAR *pColumnName,  
    const ctype& data   
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `ctype`  
- \[in\] Un parámetro con plantillas que controla cualquier tipo de datos excepto los tipos string \(**CHAR\***, **WCHAR\***\), que requieren un control especial.  `GetValue` utiliza el tipo de datos adecuado en función de lo que se especifiquen aquí.  
+ [in] Un parámetro de plantilla que controla cualquier tipo de datos excepto los tipos de cadena (**CHAR\***, **WCHAR\***), que requieren un tratamiento especial. `GetValue`usa el tipo de datos adecuado en función de lo que especifique aquí.  
   
  `pColumnName`  
- \[in\] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
+ [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
   
  `data`  
- \[in\] El puntero a la memoria que contiene los datos.  
+ [in] Puntero a la memoria que contiene los datos.  
   
  `nColumn`  
- \[in\] El número de columnas.  Los números de columnas empiezan por 1.  Un valor de 0 hace referencia a la columna de marcador, si la hay.  
+ [in] El número de columna. Números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si lo hay.  
   
-## Valor devuelto  
- Si desea establecer datos de cadena, utilice las versiones nontemplated de `GetValue`.  Las versiones nontemplated de este método devuelve **void\***, que apunta a la parte del búfer que contiene los datos de columna especificados.  Devuelve **nulo** si la columna no se encuentra.  
+## <a name="return-value"></a>Valor devuelto  
+ Si desea establecer los datos de cadena, utilice las versiones sin plantilla de `GetValue`. Las versiones sin plantilla de este método devuelven **void\***, que señala a la parte del búfer que contiene los datos de la columna especificada. Devuelve **NULL** si no se encuentra la columna.  
   
- Para el resto de los tipos de datos, es más fácil usar las versiones con plantilla de `GetValue`.  Las versiones con plantilla devuelven **true** en correctamente o **false** en el error.  
+ Para los demás tipos de datos, resulta más sencillo de usar las versiones de plantillas de `GetValue`. Las versiones con plantilla devuelven **true** en caso de éxito o **false** en caso de error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicAccessor \(Clase\)](../../data/oledb/cdynamicaccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)

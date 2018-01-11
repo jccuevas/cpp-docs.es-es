@@ -1,78 +1,78 @@
 ---
-title: "Asistente para agregar clases a partir de un control ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.axcontrol"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para controles ActiveX de MFC"
-  - "Asistente para agregar clases a partir de un control ActiveX [C++]"
+title: Agregar clase de Asistente para controles ActiveX | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.class.axcontrol
+dev_langs: C++
+helpviewer_keywords:
+- ActiveX Control Wizard
+- Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Asistente para agregar clases a partir de un control ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este asistente se utiliza para agregar clases MFC a partir de un control ActiveX disponible.  El asistente crea una clase para cada interfaz que se agregue desde el control ActiveX seleccionado.  
+# <a name="add-class-from-activex-control-wizard"></a>Asistente para agregar clases a partir de un control ActiveX
+Use este asistente para agregar una clase MFC desde un control ActiveX disponible. El asistente crea una clase para cada interfaz que se agregue desde el control ActiveX seleccionado.  
   
- **Agregar clase desde**  
- Especifica la ubicación de la biblioteca de tipos desde la que se crea la clase.  
+ **Agregar clase de**  
+ Especifica la ubicación de la biblioteca de tipos, desde el que se creó la clase.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Registro**|La biblioteca de tipos se registra en el sistema.  Las bibliotecas de tipos registradas aparecen en **Controles ActiveX disponibles**.|  
-|**Archivo**|La biblioteca de tipos no tiene por qué estar registrada en el sistema, pero sí está contenida en un archivo.  Deberá especificar la ubicación del archivo en **Ubicación**.|  
+|**Registry**|La biblioteca de tipos está registrada en el sistema. Bibliotecas de tipos registradas aparecen en **controles ActiveX disponible**.|  
+|**Archivo**|La biblioteca de tipos no está necesariamente registrada en el sistema pero está contenida en un archivo. Debe proporcionar la ubicación del archivo en **ubicación**.|  
   
  **Controles ActiveX disponibles**  
- Especifica los controles ActiveX actualmente registrados en el sistema.  Seleccione un control ActiveX de esta lista para ver sus interfaces en la lista **Interfaces**.  Vea [Controles ActiveX de MFC: distribuir controles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) para obtener más información sobre cómo registrar controles ActiveX.  
+ Especifica los controles ActiveX actualmente registrados en el sistema. Seleccione un control ActiveX de esta lista para ver sus interfaces en la **Interfaces** lista. Vea [controles ActiveX MFC: distribuir controles ActiveX](../mfc/mfc-activex-controls-distributing-activex-controls.md) para obtener más información sobre cómo registrar controles ActiveX.  
   
- Si eligió **Archivo** en **Agregar clase desde**, no podrá realizar cambios en este cuadro.  
+ Si hace clic en **archivo** en **Agregar clase desde**, este cuadro no está disponible para el cambio.  
   
  **Ubicación**  
- Especifica la ubicación del control ActiveX.  Si eligió **Archivo** en **Agregar clase desde**, podrá especificar aquí la ubicación del archivo que contiene la biblioteca de tipos.  Para buscar la ubicación del archivo, haga clic en el botón de puntos suspensivos.  
+ Especifica la ubicación del control ActiveX. Si hace clic en **archivo** en **Agregar clase desde**, puede proporcionar la ubicación del archivo que contiene la biblioteca de tipos. Para ir a la ubicación del archivo, haga clic en el botón de puntos suspensivos.  
   
- Si eligió **Registro** en **Agregar clase desde**, no podrá realizar cambios en este cuadro.  
+ Si hace clic en **registro** en **Agregar clase desde**, este cuadro no está disponible para el cambio.  
   
  **Interfaces**  
- Especifica las interfaces del control ActiveX actualmente seleccionado en **Controles ActiveX disponibles** o en la biblioteca de tipos del archivo especificado en **Ubicación**.  
+ Especifica las interfaces del control ActiveX actualmente seleccionado en **controles ActiveX disponible** o en la biblioteca de tipos en el archivo especificado en **ubicación**.  
   
 |Botón de transferencia|Descripción|  
-|----------------------------|-----------------|  
-|**\>**|Agrega la interfaz seleccionada en la lista **Interfaces**.  No estará disponible si no hay ninguna interfaz seleccionada.|  
-|**\>\>**|Agrega todas las interfaces del control ActiveX actualmente seleccionado en **Controles ActiveX disponibles** o en la biblioteca de tipos del archivo especificado en **Ubicación**.|  
-|**\<**|Quita la clase que está seleccionada en la lista **Clases generadas**.  No estará disponible si no hay ninguna clase seleccionada en la lista **Clases generadas**.|  
-|**\<\<**|Quita todas las clases de la lista **Clases generadas**.  No estará disponible si la lista **Clases generadas** está vacía.|  
+|---------------------|-----------------|  
+|**>**|Agrega la interfaz seleccionada en la **Interfaces** lista. No está disponible si no se ha seleccionado ninguna interfaz.|  
+|**>>**|Agrega todas las interfaces del control ActiveX actualmente seleccionado en **controles ActiveX disponible** o en la biblioteca de tipos en el archivo especificado en **ubicación**.|  
+|**<**|Quita la clase seleccionada actualmente en el **clases generadas** lista. No está disponible si no hay ninguna clase está seleccionada actualmente en el **clases generadas** lista.|  
+|**<\<**|Quita todas las clases en el **clases generadas** lista. If no está disponible la **clases generadas** lista está vacía.|  
   
  **Clases generadas**  
- Especifica los nombres de las clases que se generarán a partir de las interfaces agregadas con los botones  **\>** o **\>\>**.  Puede hacer clic en este cuadro para seleccionar una clase y, a continuación, desplazarse en la lista mediante las teclas arriba o abajo, ver el nombre de las clases en el cuadro `Class` y el nombre del archivo en el cuadro **Archivo .H** que el asistente genera cuando se hace clic en **Finalizar**.  En esta casilla sólo puede seleccionar una clase cada vez.  
+ Especifica los nombres de clase que se generarán a partir de las interfaces agregadas con la  **>**  o  **>>**  botón. Puede hacer clic en esta casilla para seleccionar una clase y, a continuación, utilice el arriba o abajo teclas para desplazarse a través de la lista ver cada nombre de clase en el `Class` cuadro y nombre de archivo en el **archivo .h** cuadro que genera el asistente al hacer clic en  **Finalizar**. Puede seleccionar solo una clase a la vez en este cuadro.  
   
- Para quitar una clase, deberá seleccionarla en la lista y hacer clic en **\<**.  Para quitar todas las clases no es necesario seleccionar una clase en el cuadro **Clases generadas**; sencillamente haga clic en **\<\<** .  
+ Puede quitar una clase, selecciónelo en esta lista y haga clic en  **<** . No es necesario seleccionar una clase en el **clases generadas** cuadro para quitar todas las clases; haciendo clic  **<<** , quite todas las clases de la **clases generadas** cuadro.  
   
  `Class`  
- Especifica el nombre de la clase seleccionada en el cuadro **Clases generadas** que agrega el asistente cuando se hace clic en **Finalizar**.  Puede editar el nombre en el cuadro `Class`.  
+ Especifica el nombre de la clase seleccionada en el **clases generadas** cuadro que el asistente agrega al hacer clic en **finalizar**. Puede modificar el nombre de la `Class` cuadro.  
   
- **Archivo .H**  
- Establece el nombre del archivo de encabezado para la clase del nuevo objeto.  De forma predeterminada, este nombre está basado en el nombre suministrado en **Clases generadas**.  Haga clic en el botón de los puntos suspensivos para guardar el nombre de archivo en la ubicación que desee o para anexar la declaración de la clase a un archivo existente.  Si elige un archivo ya existente, el asistente no lo guardará en la ubicación seleccionada hasta que seleccione **Finalizar** en el asistente.  
+ **archivo .h**  
+ Establece el nombre del archivo de encabezado para la nueva clase del objeto. De forma predeterminada, este nombre se basa en el nombre que proporcione en **clases generadas**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación de su elección, o para anexar la declaración de clase a un archivo existente. Si elige un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **finalizar** en el asistente.  
   
- El asistente no sobrescribe ningún archivo.  Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar** el asistente le preguntará si desea anexar la declaración de la clase al contenido del archivo.  Haga clic en **Sí** para anexar el archivo; haga clic en **No** para regresar al asistente y especificar otro nombre de archivo.  
+ El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **finalizar**, el asistente le preguntará si para indicar si se debe anexar la declaración de clase para el contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **n** para volver al asistente y especificar otro nombre de archivo.  
   
- **Archivo .cpp**  
- Establece el nombre del archivo de implementación para la clase del nuevo objeto.  De forma predeterminada, este nombre está basado en el nombre suministrado en **Clases generadas**.  Haga clic en el botón de los puntos suspensivos para guardar el nombre de archivo en la ubicación que desee.  El archivo no quedará guardado en la ubicación seleccionada hasta que haga clic en **Finalizar** en el asistente.  
+ **archivo .cpp**  
+ Establece el nombre del archivo de implementación para la nueva clase del objeto. De forma predeterminada, este nombre se basa en el nombre que proporcione en **clases generadas**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación de su elección. El archivo no se guarda en la ubicación seleccionada hasta que haga clic **finalizar** en el asistente.  
   
- El asistente no sobrescribe ningún archivo.  Si selecciona el nombre de un archivo que ya existe, al hacer clic en **Finalizar**, el asistente solicitará que especifique si la implementación de la clase debe anexarse al contenido del archivo.  Haga clic en **Sí** para anexar el archivo; haga clic en **No** para regresar al asistente y especificar otro nombre de archivo.  
+ El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **finalizar**, el asistente le preguntará si para indicar si se debe anexar a la implementación de la clase para el contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **n** para volver al asistente y especificar otro nombre de archivo.  
   
-## Vea también  
- [Agregar una clase desde un control ActiveX](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   
+## <a name="see-also"></a>Vea también  
+ [Agregar una clase desde un Control ActiveX](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   
  [Clientes de automatización: Usar bibliotecas de tipos](../mfc/automation-clients-using-type-libraries.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d4d324e16a40db6da5bef20ed5190cdac4f2279
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 22c9e440383963662bd5cb050da7ecb056d52f0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Utilizar ODBC para trabajar con otros usuarios
 Utilizar ODBC en entornos donde varios usuarios están trabajando con la misma base de datos ODBC.  

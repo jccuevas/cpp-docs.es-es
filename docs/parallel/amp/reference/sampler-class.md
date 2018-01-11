@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sampler-class"></a>sampler (Clase)
 Los agregados de clase muestra información de configuración que se usará para el muestreo de textura de muestreo.  
@@ -42,13 +43,13 @@ class sampler;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[muestra de Constructor](#ctor)|Sobrecargado. Crea una instancia de muestra.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get_address_mode](#get_address_mode)|Devuelve el `address_mode` que ha asociado al objeto de muestra.|  
 |[get_border_color](#get_border_color)|Devuelve el color del borde que esté asociada con el objeto de muestra.|  
@@ -56,13 +57,13 @@ class sampler;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|Sobrecargado. Operador de asignación.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[address_mode](#address_mode)|Obtiene el modo de direccionamiento de la `sampler` objeto.|  
 |[border_color](#border_color)|Obtiene el color del borde de la `sampler` objeto.|  

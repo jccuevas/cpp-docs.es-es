@@ -1,35 +1,36 @@
 ---
-title: "OpenMP Environment Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Las Variables de entorno de OpenMP | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e285ab34c7bf993b919a2c917f44828c21970f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# OpenMP Environment Variables
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-proporciona vínculos a las variables de entorno utilizadas en el OpenMP API.  
+# <a name="openmp-environment-variables"></a>Variables de entorno de OpenMP
+Proporciona vínculos a las variables de entorno que se utilizan en la API de OpenMP.  
   
- Implementación de Visual C\+\+ del estándar de OpenMP incluye las siguientes variables de entorno.  Estas variables de entorno se leen en el inicio del programa y modificaciones a sus valores se omiten en tiempo de ejecución \(por ejemplo, mediante [\_putenv, \_wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)\).  
+ La implementación de Visual C++ de la OpenMP estándar incluye las siguientes variables de entorno. Estas variables de entorno se leen al inicio del programa y se pasan por alto las modificaciones realizadas en sus valores en tiempo de ejecución (por ejemplo, si se usa [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).  
   
 |Variable de entorno|Descripción|  
-|-------------------------|-----------------|  
-|[OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)|Especifica si el runtime de OpenMP puede ajustar el número de subprocesos en una región paralela.|  
-|[OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md)|Especifica si el paralelismo anidados está habilitado, a menos que el paralelismo anidados está habilitado o deshabilitado con `omp_set_nested`.|  
-|[OMP\_NUM\_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)|Establece el número máximo de subprocesos de la región paralela, a menos que se reemplace con [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num\_threads](../../../parallel/openmp/reference/num-threads.md).|  
-|[OMP\_SCHEDULE](../../../parallel/openmp/reference/omp-schedule.md)|modifica el comportamiento de la cláusula de [schedule](../../../parallel/openmp/reference/schedule.md) cuando `schedule(runtime)` se especifica en una directiva de `for` o de `parallel for` .|  
+|--------------------------|-----------------|  
+|[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)|Especifica si el tiempo de ejecución de OpenMP puede ajustar el número de subprocesos en una región paralela.|  
+|[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)|Especifica si está habilitado paralelismo anidado, a menos que paralelismo anidado está habilitado o deshabilitado con `omp_set_nested`.|  
+|[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)|Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](../../../parallel/openmp/reference/num-threads.md).|  
+|[OMP_SCHEDULE](../../../parallel/openmp/reference/omp-schedule.md)|Modifica el comportamiento de la [programación](../../../parallel/openmp/reference/schedule.md) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.|  
   
-## Vea también  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de la biblioteca](../../../parallel/openmp/reference/openmp-library-reference.md)

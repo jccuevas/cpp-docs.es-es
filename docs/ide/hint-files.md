@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c82128fb40577544b28eb50dc0a107e14c41cbd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 A *archivo de indicaciones* ayuda a Visual Studio el entorno de desarrollo integrado (IDE) interpretar los identificadores de Visual C++, como los nombres de funciones y macros. Al abrir un proyecto de Visual C++, el IDE *analizar sistema* analiza el código en cada archivo de código fuente en el proyecto y recopila información sobre cada identificador. A continuación, el IDE usa dicha información para admitir características como la **vista de clases** explorador y **barra de navegación**.  
@@ -256,7 +257,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     #define _In_count_(size)  
     ```  
   
--   Depurar  
+-   Depuración  
   
     ```  
     // Debug  

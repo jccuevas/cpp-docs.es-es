@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '[]'
-dev_langs:
-- C++
+f1_keywords: '[]'
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21831cbd727477336c53e9d72e4bea95e123aa81
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscript-operator"></a>Operador de subíndice:
 ## <a name="syntax"></a>Sintaxis  
@@ -52,7 +49,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  En el ejemplo anterior, la expresión `nArray[2]` es idéntica a `2[nArray]`. El motivo es que el resultado de una expresión de subíndice *e1***[** *e2* **]** viene dado por:  
   
- **\*((** *e2* **)** * + * **(***e1***))**  
+ **\*((** *e2* **)**  *+*  **(***e1***))**  
   
  La dirección producida por la expresión no es *e2* bytes a partir de la dirección *e1*. En su lugar, la dirección se ha ampliado para producir el siguiente objeto de la matriz *e2*. Por ejemplo:  
   

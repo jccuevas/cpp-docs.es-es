@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65417079c3241feca9c43e058026674c6e35d18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-server-additions"></a>Menús y recursos: Adiciones de servidor
 En este artículo se describen los cambios que deben realizarse en los menús y otros recursos en una aplicación de servidor (componente) de edición visual. Una aplicación de servidor requiere agregar muchos elementos a la estructura de menús y otros recursos porque puede iniciarse en uno de los tres modos: independiente, incrustado, o en su lugar. Como se describe en el [menús y recursos (OLE)](../mfc/menus-and-resources-ole.md) artículo, hay un máximo de cuatro conjuntos de menús. Los cuatro se usan para una aplicación de servidor completo MDI, mientras que sólo se utilizan tres para un miniservidor. El Asistente para aplicaciones creará el diseño de menú necesarios para el tipo de servidor al que desea. Alguna personalización puede ser necesario.  
@@ -67,7 +68,7 @@ En este artículo se describen los cambios que deben realizarse en los menús y 
 ##  <a name="_core_string_table_additions_for_server_applications"></a>Agregar tablas de cadenas para las aplicaciones de servidor  
  Adición de cadena solo una tabla es necesario en una aplicación de servidor: una cadena para indicar que no se pudo la inicialización de OLE. Por ejemplo, aquí es la entrada de tabla de cadenas que genera el Asistente para aplicaciones:  
   
-|Id.|Cadena|  
+|Id.|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|Error de inicialización de OLE. Asegúrese de que las bibliotecas OLE tienen la versión correcta.|  
   

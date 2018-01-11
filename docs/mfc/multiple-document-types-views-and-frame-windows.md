@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54f04a8add767805bb2ee6a8e554a9937a825a7b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 La relación estándar entre un documento, su vista y su ventana de marco se describe en [Document/View Creation](../mfc/document-view-creation.md)(Creación de documentos/vistas). Muchas aplicaciones admiten un único tipo de documento (aunque probablemente permitan que haya muchos documentos abiertos de ese tipo) con una sola vista en el documento y una sola ventana de marco por documento. Pero puede que algunas aplicaciones necesiten modificar uno o varios de estos valores predeterminados.  

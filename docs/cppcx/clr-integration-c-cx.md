@@ -1,29 +1,33 @@
 ---
-title: "Integraci&#243;n de CLR (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integración de CLR (C++ / CX) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9851a7aa0d1dad84a37504b479c551ffa63bcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Integraci&#243;n de CLR (C++/CX)
-Algunos tipos [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] reciben un tratamiento especial en [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] y los lenguajes basados en Common Language Runtime \(CLR\). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. De forma similar, [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] asigna especialmente tipos como Platform::Delegate y Platform::String.  
+# <a name="clr-integration-ccx"></a>Integración de CLR (C++/CX)
+Algunos tipos de Windows en tiempo de ejecución reciben un tratamiento especial en C++ / CX y los idiomas que se basan en common language runtime (CLR). En este artículo se describe la manera en que varios tipos de un lenguaje se asignan a otro lenguaje. Por ejemplo, CLR asigna Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap to System.Collections.IDictionary, etc. De forma similar, C++ / CX asigna especialmente tipos como Platform:: Delegate y Platform:: String.  
   
-## Asignación de [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] a [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]  
- Cuando [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] lee un archivo de metadatos \(.winmd\) de Windows, el compilador asigna automáticamente espacios de nombres [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] comunes y tipos a tipos y espacios de nombres [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]. Por ejemplo, el tipo [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] numérico `UInt32` se asigna automáticamente a `default::uint32`.  
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Asignación de Windows Runtime c++ / CX  
+ Cuando C++ / CX lee un archivo de metadatos (.winmd) de Windows, el compilador asigna automáticamente espacios de nombres comunes de Windows Runtime y tipos de c++ / CX espacios de nombres y tipos. Por ejemplo, el tipo en tiempo de ejecución de Windows numérico `UInt32` se asignan automáticamente a `default::uint32`.  
   
- [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] asigna varios otros tipos [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] al espacio de nombres **Platform**. Por ejemplo, el controlador HSTRING **Windows::Foundation**, que representa una cadena de texto Unicode de solo lectura, se asigna a la clase [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] `Platform::String`. Cuando una operación [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] devuelve un HRESULT de error, se asigna a [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] `Platform::Exception`. Para obtener más información, consulta [Built\-in Types](http://msdn.microsoft.com/es-es/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C++ / CX asigna varios otros tipos en tiempo de ejecución de Windows para la **plataforma** espacio de nombres. Por ejemplo, el **Windows::Foundation** controlador HSTRING, que representa una cadena de texto Unicode de solo lectura, se asigna a C++ / CX `Platform::String` clase. Cuando una operación de Windows Runtime devuelve un HRESULT de error, se asigna a C++ / CX `Platform::Exception`. Para obtener más información, consulta [Built-in Types](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f).  
   
- [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] también asigna determinados tipos en espacios de nombres [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] para mejorar la funcionalidad del tipo. Para estos tipos, [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] ofrece métodos y constructores auxiliares que son específicos de C\+\+ y que no están disponibles en el archivo .winmd estándar del tipo.  
+ C++ / CX también asigna determinados tipos de espacios de nombres en tiempo de ejecución de Windows para mejorar la funcionalidad del tipo. Para estos tipos, C++ / CX proporciona constructores auxiliares y métodos que son específicas de C++ y no están disponibles en el archivo de .winmd estándar del tipo.  
   
  En las listas siguientes se muestran estructuras de valor que admiten nuevos métodos auxiliares y constructores. Si ha escrito código anteriormente que usa listas de inicialización de estructuras, cámbielo para usar los constructores recién agregados.  
   
@@ -67,10 +71,10 @@ Algunos tipos [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] reciben un tratamient
   
 -   Matrix3D  
   
-## Asignación de CLR a [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]  
- Cuando los compiladores de Visual C\+\+ o C\# leen un archivo .winmd, asignan automáticamente determinados tipos del archivo de metadatos a los tipos de CLR o [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] adecuados. Por ejemplo, en el CLR, la interfaz de IVector\<T\> se asigna a IList\<T\>. Pero en [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)], la interfaz de IVector\<T\> no se asigna a otro tipo.  
+## <a name="mapping-the-clr-to-ccx"></a>Asignación de CLR en C++ / CX  
+ Cuando los compiladores de C# o Visual C++ leen un archivo .winmd, asignan automáticamente determinados tipos en el archivo de metadatos adecuado c++ / CX o CLR de tipos. Por ejemplo, en el CLR, la IVector\<T > interfaz se asigna a IList\<T >. Pero en C++ / CX, el IVector\<T > interfaz no está asignada a otro tipo.  
   
- IReference\<T\> en [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] asigna a Nullable\<T\> en. NET.  
+ IReference\<T > en el tiempo de ejecución de Windows se asigna a Nullable\<T > en. NET.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)

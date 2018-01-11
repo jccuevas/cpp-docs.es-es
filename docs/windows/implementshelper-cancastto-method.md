@@ -1,32 +1,33 @@
 ---
-title: "ImplementsHelper::CanCastTo (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo (método)"
+title: "Implementshelper:: Cancastto (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 9ae6fa17-d0b1-4e31-9ae5-da6ae4026e32
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c52123710c73c9d78dad4f731736654ee2267d2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ImplementsHelper::CanCastTo (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,27 +42,27 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- Referencia a un identificador de interfaz  
+ Referencia a un identificador de interfaz.  
   
  `ppv`  
- Si esta operación es correcta, un puntero a la interfaz especificada por `riid` o `iid`.  
+ Si esta operación se realiza correctamente, un puntero a la interfaz especificada por `riid` o `iid`.  
   
  `iid`  
- Referencia a un identificador de interfaz  
+ Referencia a un identificador de interfaz.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que indica el error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
-## Comentarios  
- Obtiene un puntero al identificador especificado de la interfaz  
+## <a name="remarks"></a>Comentarios  
+ Obtiene un puntero al identificador de interfaz especificado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [ImplementsHelper \(Estructura\)](../windows/implementshelper-structure.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [ImplementsHelper (estructura)](../windows/implementshelper-structure.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

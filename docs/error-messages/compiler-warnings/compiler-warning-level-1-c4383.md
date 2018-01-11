@@ -1,39 +1,38 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4383 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4383"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4383"
+title: Compilador advertencia (nivel 1) C4383 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4383
+dev_langs: C++
+helpviewer_keywords: C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c478783c7f908125de7b97a1d21a9f1ece029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4383
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operador\_desreferenciar\_instancias' : el significado de desreferenciar un identificador puede cambiar cuando existe un operador 'operador' definido por el usuario; escriba el operador como función estática para que sea explícito con relación al operando  
+# <a name="compiler-warning-level-1-c4383"></a>Advertencia del compilador (nivel 1) C4383
+'operador_eliminacióndereferencias_instancias': el significado de desreferenciar un identificador puede cambiar cuando existe un operador definido por el usuario 'operador'; escribir el operador como una función estática para indicar explícitamente el operando  
   
- Cuando se agrega un reemplazo de instancias definido por el usuario del operador de desreferenciación en un tipo administrado, es probable que se reemplace la capacidad del operador de eliminación de referencias del tipo para devolver el objeto del identificador.  Considere la posibilidad de escribir un operador de desreferenciación estático definido por el usuario.  
+ Cuando se agrega un reemplazo de instancias definido por el usuario del operador de desreferenciación en un tipo administrado, podría invalidar la capacidad de operador de desreferenciación del tipo para devolver el objeto del identificador. Considere la posibilidad de escribir un estático definido por el usuario operador de desreferenciación.  
   
- Para obtener más información, vea [Identificador a un operador de objeto \(^\)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) y [Operador de referencia de seguimiento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
+ Para obtener más información, consulte [identificador a un operador de objeto (^)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md) y [operador de referencia de seguimiento](../../windows/tracking-reference-operator-cpp-component-extensions.md).  
   
- Además, un operador de instancias no está disponible para otros compiladores de lenguaje a través de los metadatos a los que hace referencia.  Para obtener más información, vea [Operadores definidos por el usuario](../../dotnet/user-defined-operators-cpp-cli.md).  
+ Además, un operador de la instancia no está disponible para otros compiladores de lenguaje a través de los metadatos que se hace referencia. Para obtener más información, consulte [operadores definidos por el usuario (C++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4383.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4383.  
   
 ```  
 // C4383.cpp  

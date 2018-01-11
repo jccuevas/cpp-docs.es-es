@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Clases de almacenamiento (C++)  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 Cosas que debe saber sobre el `thread_local` especificador:  
+
+- Las variables locales de subproceso inicializadas dinámicamente en archivos DLL no pueden inicializarse correctamente en todos los subprocesos que realiza la llamada. Para obtener más información, consulte [subproceso](thread.md).
   
 -  El `thread_local` especificador puede combinarse con `static` o `extern`.  
   
 -  Puede aplicar `thread_local` únicamente para datos declaraciones y definiciones; `thread_local` no se puede usar en declaraciones de función o definiciones.  
-  
--  El uso de `thread_local` puede interferir con [carga retrasada](../build/reference/linker-support-for-delay-loaded-dlls.md) de importaciones de DLL. 
-  
--  En los sistemas XP, `thread_local` podría no funcionar correctamente si utiliza un archivo DLL `thread_local` datos y se carga dinámicamente mediante `LoadLibrary`.  
   
 -  Solo puede especificar `thread_local` en elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto `static` y `extern`), objetos estáticos locales y miembros de datos estáticos de clases. Cualquier variable local declarada `thread_local` es implícitamente estático si no se proporciona ninguna otra clase de almacenamiento; es decir, en el ámbito de bloque `thread_local` es equivalente a `thread_local static`. 
   

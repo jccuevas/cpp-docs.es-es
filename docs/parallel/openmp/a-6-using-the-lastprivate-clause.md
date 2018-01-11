@@ -1,27 +1,27 @@
 ---
-title: "A.6   Using the lastprivate Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.6 mediante la cláusula lastprivate | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: cf3bf0cc-aa46-4e44-9433-e2969e3be2c1
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1744787e1dfb90fa9af93db5dba4eecd600b4334
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# A.6   Using the lastprivate Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La ejecución correcta depende a veces el valor que la última iteración de las asignaciones de un bucle a una variable.  Tales programas deben enumerar todas las variables como argumentos a una cláusula de `lastprivate` \([sección 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) en la página 27\) de modo que los valores de las variables son iguales que cuando el bucle se ejecuta secuencialmente.  
+# <a name="a6---using-the-lastprivate-clause"></a>A.6 Usar la cláusulas lastprivate
+A veces, la ejecución correcta depende del valor que la última iteración de un bucle que se asigna a una variable. Estos programas deben enumerar todas las variables como argumentos a un `lastprivate` cláusula ([sección 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) en página 27) para que los valores de las variables son el mismo que cuando se ejecuta el bucle secuencialmente.  
   
 ```  
 #pragma omp parallel  
@@ -33,4 +33,4 @@ La ejecución correcta depende a veces el valor que la última iteración de las
 a[i]=b[i];  
 ```  
   
- En el ejemplo anterior, el valor de `i` al final de la región paralela será igual que `n–1`, como en el caso secuencial.
+ En el ejemplo anterior, el valor de `i` será igual al final de la región paralela `n-1`, como en el caso secuencial.

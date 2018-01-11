@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Clase CMFCEditBrowseCtrl
 La `CMFCEditBrowseCtrl` clase es compatible con el control de exploración de edición, que es un cuadro de texto editable que contiene opcionalmente un botón Examinar. Cuando el usuario hace clic en el botón Examinar, el control realiza una acción personalizada o muestra un cuadro de diálogo estándar que contiene un explorador de archivos o un explorador de carpetas.  
@@ -56,14 +57,14 @@ class CMFCEditBrowseCtrl : public CEdit
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Constructor predeterminado.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Habilita o deshabilita (oculta) el botón Examinar.|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Habilita el botón Examinar y coloca el control de exploración de edición en *Examinar archivo* modo.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) acelera la ejecución de código C++ aprovechando las ventajas de hardware de datos en paralelo, como una unidad de procesamiento de gráficos (GPU) en una tarjeta gráfica discreta. Mediante el uso de C++ AMP, puede codificar algoritmos de datos multidimensionales para que se puede acelerar la ejecución mediante el uso de paralelismo en hardware heterogéneas. El modelo de programación de C++ AMP incluye matrices multidimensionales, indización, transferencia de memoria, disposición en mosaico y una biblioteca de funciones matemáticas. Puede usar las extensiones del lenguaje C++ AMP para controlar cómo se mueven los datos de la CPU a la GPU y viceversa, por lo que puede mejorar el rendimiento.  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>Bibliotecas de matemáticas  
- C++ AMP incluye dos bibliotecas de matemáticas. La biblioteca de precisión doble en el [precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) proporciona compatibilidad para las funciones de precisión doble. También proporciona compatibilidad para las funciones de precisión sencilla, aunque sigue siendo necesaria la compatibilidad de doble precisión en el hardware. Cumpla el [especificación C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887). El acelerador debe admitir completa de doble precisión. Puede determinar si realiza comprobando el valor de la [accelerator::supports_double_precision miembro de datos](reference/accelerator-class.md#supports_double_precision). La biblioteca matemática rápido, en la [fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene otro conjunto de funciones matemáticas. Estas funciones, que solo admiten `float` operandos, ejecutarse con mayor rapidez, pero no es tan precisos como los de la biblioteca matemática de precisión doble. Las funciones se encuentran en el \<amp_math.h > archivo de encabezado y todos se declaran con `restrict(amp)`. Las funciones de la \<cmath > archivo de encabezado se importan en ambos el `fast_math` y `precise_math` los espacios de nombres. El `restrict` palabra clave se utiliza para distinguir el \<cmath > versión y la versión de C++ AMP. El código siguiente calcula el logaritmo en base 10, con el método rápido de cada valor que se encuentra en el dominio de cálculo.  
+ C++ AMP incluye dos bibliotecas de matemáticas. La biblioteca de precisión doble en el [precise_math Namespace](../../parallel/amp/reference/concurrency-precise-math-namespace.md) proporciona compatibilidad para las funciones de precisión doble. También proporciona compatibilidad para las funciones de precisión sencilla, aunque sigue siendo necesaria la compatibilidad de doble precisión en el hardware. Cumpla el [especificación C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). El acelerador debe admitir completa de doble precisión. Puede determinar si realiza comprobando el valor de la [accelerator::supports_double_precision miembro de datos](reference/accelerator-class.md#supports_double_precision). La biblioteca matemática rápido, en la [fast_math Namespace](../../parallel/amp/reference/concurrency-fast-math-namespace.md), contiene otro conjunto de funciones matemáticas. Estas funciones, que solo admiten `float` operandos, ejecutarse con mayor rapidez, pero no es tan precisos como los de la biblioteca matemática de precisión doble. Las funciones se encuentran en el \<amp_math.h > archivo de encabezado y todos se declaran con `restrict(amp)`. Las funciones de la \<cmath > archivo de encabezado se importan en ambos el `fast_math` y `precise_math` los espacios de nombres. El `restrict` palabra clave se utiliza para distinguir el \<cmath > versión y la versión de C++ AMP. El código siguiente calcula el logaritmo en base 10, con el método rápido de cada valor que se encuentra en el dominio de cálculo.  
 
   
 ```cpp  
@@ -469,13 +470,13 @@ void MathExample() {
   
 - [Uso de C++ AMP en aplicaciones de la Tienda Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [Tutorial: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [Tutorial: Crear un componente básico de Windows Runtime en C++ y llamarlo desde JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [Optimizador de recorridos, una aplicación de tienda Windows en JavaScript y C++ mapas de Bing](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [Optimizador de recorridos, una aplicación de tienda Windows en JavaScript y C++ mapas de Bing](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [Cómo usar C++ AMP de C# con el tiempo de ejecución de Windows](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [Cómo usar C++ AMP de C# con el tiempo de ejecución de Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [Cómo usar C++ AMP de C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [Cómo usar C++ AMP de C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [Llamar a funciones nativas desde código administrado](../../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -492,7 +493,7 @@ void MathExample() {
   
 - [Canales (vista de subprocesos)](/visualstudio/profiling/channels-threads-view)  
   
-- [Análisis de código de AMP de C++ con el visualizador de simultaneidad](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [Análisis de código de AMP de C++ con el visualizador de simultaneidad](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>Recomendaciones de rendimiento  
  División de enteros sin signo y el módulo tienen un rendimiento significativamente mejor que la división de enteros con signo y el módulo. Se recomienda utilizar enteros sin signo siempre que sea posible.  
@@ -501,4 +502,4 @@ void MathExample() {
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Sintaxis de expresiones lambda](../../cpp/lambda-expression-syntax.md)   
  [Referencia (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=238472)

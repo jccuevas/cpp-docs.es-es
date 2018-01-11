@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65c1fd6d86c153881f8674732db2b61edcfab8cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfont-class"></a>CFont (clase)
 Encapsula una fuente de la Interfaz de dispositivo gráfico (GDI) de Windows y proporciona funciones miembro para manipular la fuente.  
@@ -50,13 +51,13 @@ class CFont : public CGdiObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFont::CFont](#cfont)|Construye un objeto `CFont`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFont:: CreateFont](#createfont)|Inicializa un `CFont` con las características especificadas.|  
 |[CFont::CreateFontIndirect](#createfontindirect)|Inicializa un `CFont` objeto con las características que figuran un `LOGFONT` estructura.|  
@@ -67,7 +68,7 @@ class CFont : public CGdiObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFont::operator HFONT](#operator_hfont)|Devuelve el identificador de la fuente de GDI de Windows asociado a la `CFont` objeto.|  
   

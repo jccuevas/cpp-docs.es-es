@@ -1,33 +1,35 @@
 ---
-title: "CRowsetImpl::ValidateCommandID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.ValidateCommandID"
-  - "CRowsetImpl::ValidateCommandID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ValidateCommandID (método)"
+title: 'CRowsetImpl:: ValidateCommandID | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.ValidateCommandID
+- CRowsetImpl::ValidateCommandID
+dev_langs: C++
+helpviewer_keywords: ValidateCommandID method
 ms.assetid: cdde6088-41bc-4b8f-a32b-f36f7d9b5ec0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1e59ca9d64ea71edcf52d151a592848434a109f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::ValidateCommandID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Comprueba si algún o s para **DBID**contiene valores de cadena, y si es así los copian los miembros de datos [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) y [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
+# <a name="crowsetimplvalidatecommandid"></a>CRowsetImpl::ValidateCommandID
+Comprueba para ver si alguno o ambos **DBID**contienen valores de cadena y si es así, los copia a sus miembros de datos [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) y [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -37,22 +39,22 @@ Comprueba si algún o s para **DBID**contiene valores de cadena, y si es así lo
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pTableID`  
- \[in\] Un puntero a **DBID** que representa el identificador de la tabla  
+ [in] Un puntero a la **DBID** que representa el identificador de tabla.  
   
  `pIndexID`  
- \[in\] Un puntero a **DBID** que representa el índice identificación  
+ [in] Un puntero a la **DBID** que representa el identificador de índice.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método llama a través de una conversión estática para `CRowsetImpl` para rellenar los miembros [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) y [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)de los datos.  De forma predeterminada, este método comprueba si o tanto s de **DBID**contiene valores de cadena, y si es así los copian los miembros de datos.  Colocando un método con esta firma en `CRowsetImpl`\- la clase derivada, el método se denominaría en lugar de la implementación base.  
+## <a name="remarks"></a>Comentarios  
+ Se llama a este método a través de una conversión hacia arriba estático por `CRowsetImpl` para rellenar sus miembros de datos [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) y [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). De forma predeterminada, este método comprueba para ver si alguno o ambos **DBID**contienen valores de cadena y si es así, los copia a sus miembros de datos. Mediante la colocación de un método con esta firma en el `CRowsetImpl`-clase derivada, se llamará al método en lugar de la implementación base.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [CRowsetImpl \(Clase\)](../../data/oledb/crowsetimpl-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowsetImpl (clase)](../../data/oledb/crowsetimpl-class.md)   
  [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)

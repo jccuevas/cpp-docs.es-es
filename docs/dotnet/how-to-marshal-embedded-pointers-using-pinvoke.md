@@ -1,41 +1,44 @@
 ---
-title: "C&#243;mo: Calcular las referencias de punteros incrustados mediante PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cálculo de referencias de datos [C++], punteros incrustados"
-  - "punteros incrustados [C++]"
-  - "interoperabilidad [C++], punteros incrustados"
-  - "calcular las referencias [C++], punteros incrustados"
-  - "invocación de plataforma [C++], punteros incrustados"
+title: "Cómo: serializar punteros incrustados mediante PInvoke | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Calcular las referencias de punteros incrustados mediante PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se puede llamar a las funciones que se implementan en archivos DLL no administrados desde código administrado utilizando la funcionalidad de invocación de plataforma \(P\/Invoke\).  Si el código fuente para el archivo DLL no está disponible, P\/Invoke es la única opción para interoperar.  Sin embargo, al contrario que en otros lenguajes de .NET, Visual C\+\+ proporciona una alternativa a P\/Invoke.  Para obtener más información, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: Calcular las referencias de punteros incrustados mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Cómo: serializar punteros incrustados mediante PInvoke
+Puede llamar a funciones que se implementan en archivos DLL no administradas desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
-## Ejemplo  
- El paso de estructuras a código nativo requiere la creación de una estructura administrada que sea equivalente a la estructura nativa en cuanto a la distribución de los datos.  Sin embargo, las estructuras que contienen punteros requieren un tratamiento especial.  Para cada puntero incrustado en la estructura nativa, la versión administrada de la estructura debe contener una instancia del tipo <xref:System.IntPtr>.  Además, la memoria para estas instancias se debe asignar, inicializar y liberar explícitamente utilizando los métodos <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> y <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>.  
+## <a name="example"></a>Ejemplo  
+ Pasar estructuras a código nativo, es necesario que se crea una estructura administrada que es equivalente en términos de diseño de datos a la estructura nativa. Sin embargo, las estructuras que contienen punteros requieren un tratamiento especial. Para cada puntero incrustado en la estructura nativa, la versión administrada de la estructura debe contener una instancia de la <xref:System.IntPtr> tipo. Además, memoria para estas instancias se deben asignar explícitamente, inicializar y liberar utilizando la <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, y <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> métodos.  
   
- El código siguiente está compuesto por módulo administrado y en uno no administrado.  El módulo no administrado es un archivo DLL que define una función que acepta una estructura llamada ListString que contiene un puntero y una función llamada TakesListStruct.  El módulo administrado es una aplicación de línea de comandos que importa la función TakesListStruct y define una estructura llamada MListStruct que es equivalente a la ListStruct nativa excepto en que double\* se representa con una instancia <xref:System.IntPtr>.  Antes de llamar a TakesListStruct, la función principal asigna e inicializa la memoria a la que hace referencia este campo.  
+ El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una función que acepta una estructura llamada ListString que contiene un puntero y una función llamada TakesListStruct. El módulo administrado es una aplicación de línea de comandos que importa la función TakesListStruct y define una estructura llamada MListStruct que es equivalente a la ListStruct nativa excepto en que double * se representa con un <xref:System.IntPtr> instancia. Antes de llamar a TakesListStruct, la función principal asigna e inicializa la memoria que hace referencia a este campo.  
   
- El módulo administrado se compila con \/clr, pero \/clr:pure también funciona.  
+ El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -65,7 +68,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -107,7 +110,7 @@ int main() {
 }  
 ```  
   
- Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado mediante la tradicional directiva \#include.  De hecho, sólo se puede obtener acceso al archivo DLL en tiempo de ejecución, por lo que no se detectarán problemas con funciones importadas con <xref:System.Runtime.InteropServices.DllImportAttribute> en tiempo de compilación.  
+ Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado utilizando tradicional #include (directiva). De hecho, se tiene acceso a la DLL en tiempo de ejecución, por lo que los problemas con las funciones que se importan con <xref:System.Runtime.InteropServices.DllImportAttribute> no se detectarán durante la compilación.  
   
-## Vea también  
- [Utilizar un elemento PInvoke explícito en C\+\+ \(Atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vea también  
+ [Usar un elemento PInvoke explícito en C++ (Atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

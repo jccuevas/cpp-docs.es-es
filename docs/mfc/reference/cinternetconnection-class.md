@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bac6982ed037ff3338ea64ecdf8fddaa15fe124
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetconnection-class"></a>Clase de objeto CInternetConnection
 Administra la conexión a un servidor de Internet.  
@@ -44,13 +45,13 @@ class CInternetConnection : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CInternetConnection::CInternetConnection](#cinternetconnection)|Construye un objeto `CInternetConnection`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CInternetConnection::GetContext](#getcontext)|Obtiene el identificador de contexto para este objeto de conexión.|  
 |[CInternetConnection::GetServerName](#getservername)|Obtiene el nombre del servidor asociado con la conexión.|  
@@ -58,7 +59,7 @@ class CInternetConnection : public CObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CInternetConnection::operator HINTERNET](#operator_hinternet)|Un identificador para una sesión de Internet.|  
   

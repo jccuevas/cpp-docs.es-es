@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4930 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4930"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4930"
+title: Compilador advertencia (nivel 1) C4930 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4930
+dev_langs: C++
+helpviewer_keywords: C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7a09baa7f7918bfe861bea1b3d67744e87098a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4930
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'prototipo' : no se ha llamado a la función prototipo \(¿se pensó una definición de variable?\)  
+# <a name="compiler-warning-level-1-c4930"></a>Advertencia del compilador (nivel 1) C4930
+'prototipo': no se llama a la función prototipo (era pensada una definición de variable?)  
   
- El compilador detectó un prototipo de función no utilizado.  Si se pensó utilizar el prototipo como declaración de variable, quite los paréntesis de apertura y cierre.  
+ El compilador detectó un prototipo de función no utilizado. Si el prototipo se ha diseñado como una declaración de variable, quite los paréntesis de apertura y cierre.  
   
- El código siguiente genera el error C4930:  
+ El ejemplo siguiente genera el error C4930:  
   
 ```  
 // C4930.cpp  
@@ -48,9 +47,9 @@ int main() {
 }  
 ```  
   
- El error C4930 también puede producirse cuando el compilador no puede distinguir entre una declaración de prototipo de función y una llamada a la función.  
+ C4930 también puede producirse cuando el compilador no puede distinguir entre una declaración de prototipo de función y una llamada de función.  
   
- El código siguiente genera el error C4930:  
+ El ejemplo siguiente genera el error C4930:  
   
 ```  
 // C4930b.cpp  
@@ -121,4 +120,4 @@ int main()
 }  
 ```  
   
- En el ejemplo anterior, el resultado de un método que no toma ningún argumento se pasa como argumento al constructor de una variable de clase local sin nombre.  Puede eliminarse la ambigüedad de la llamada asignando un nombre a la variable local o anteponiendo a la llamada al método una instancia de objeto junto con el operador de puntero a miembro adecuado.
+ En el ejemplo anterior, el resultado de un método que no toma ningún argumento se pasa como argumento al constructor de una variable de clase local sin nombre. La llamada puede eliminar la ambigüedad denominación la variable local o un prefijo de la llamada al método con una instancia de objeto junto con el operador de puntero a miembro adecuado.

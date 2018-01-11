@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f8c9a570dc883839bd4b51cb99fd43f4f605402f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb67656ef5d864a5acec2dce304a8ea8fd011c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inputoutput-streams"></a>Flujos de entrada/salida
 `basic_iostream`, que se define en el archivo de encabezado \<istream>, es la plantilla de clase para los objetos que administran flujos de E/S basados en caracteres de entrada y de salida.  

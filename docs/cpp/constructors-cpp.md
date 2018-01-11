@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 Un constructor es una especie de función miembro que inicializa una instancia de su clase. Un constructor tiene el mismo nombre que la clase y no devuelve ningún valor. Los constructores pueden tener un número indeterminado de parámetros y, a su vez, una clase puede tener un número indeterminado de constructores sobrecargados. Los constructores pueden tener cualquier tipo de accesibilidad, ya sea pública, protegida o privada. Si no define ningún constructor, el compilador generará un constructor predeterminado que no toma ningún parámetro; puede invalidar este comportamiento declarando un constructor predeterminado como eliminado.  
@@ -597,7 +598,7 @@ class Derived : T {
   
 ### <a name="default-and-copy-constructors"></a>Constructores predeterminados y de copias  
   
-|Clase de construcción|Argumentos|Finalidad|  
+|Clase de construcción|Argumentos|Propósito|  
 |--------------------------|---------------|-------------|  
 |Constructor predeterminado|Se puede llamar sin argumentos|Crear un objeto predeterminado del tipo de clase|  
 |Constructor de copias|Puede aceptar un solo argumento de referencia al mismo tipo de clase|Copiar objetos del tipo de clase|  

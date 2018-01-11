@@ -1,30 +1,31 @@
 ---
-title: "Module::GenericReleaseNotifier (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GenericReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GenericReleaseNotifier (clase)"
+title: Genericreleasenotifier (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GenericReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: GenericReleaseNotifier class
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c87205d1d52c8273ac7eea55fcc5385810349f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Module::GenericReleaseNotifier (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Invoca un controlador de eventos cuando se libera el último objeto del módulo actual. El controlador de eventos se especifica en una expresión lambda, un functor o un puntero a función.  
+# <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier (Clase)
+Invoca un controlador de eventos cuando se libera el último objeto en el módulo actual. El controlador de eventos se especifica por en una expresión lambda, functor o puntero a función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,21 +44,21 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[Genericreleasenotifier (Constructor)](../Topic/Module::GenericReleaseNotifier::GenericReleaseNotifier%20Constructor.md)|Inicializa una nueva instancia de la clase genericreleasenotifier.|  
+|[Module::GenericReleaseNotifier::GenericReleaseNotifier (constructor)](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Inicializa una nueva instancia de la clase genericreleasenotifier.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[Genericreleasenotifier:: Invoke (método)](../windows/module-genericreleasenotifier-invoke-method.md)|Llama al controlador de eventos asociado con el objeto de genericreleasenotifier actual.|  
+|[Module::GenericReleaseNotifier::Invoke (método)](../windows/module-genericreleasenotifier-invoke-method.md)|Llama al controlador de eventos asociado con el objeto de genericreleasenotifier actual.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
-|[Miembro de datos callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Contiene la expresión lambda, un functor o un controlador de eventos de puntero a función asociado con el objeto de genericreleasenotifier actual.|  
+|[Module::GenericReleaseNotifier::callback_ (miembro de datos)](../windows/module-genericreleasenotifier-callback-data-member.md)|Contiene la expresión lambda, functor o controlador de eventos de puntero a función asociado con el objeto de genericreleasenotifier actual.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ReleaseNotifier`  

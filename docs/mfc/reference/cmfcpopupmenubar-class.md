@@ -57,11 +57,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6be3c3b6028bab04ae3d8ec32f9063d26012778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (clase)
 Una barra de menús incrustada en un menú emergente.  
@@ -76,7 +77,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Inmediatamente, vuelve a calcular el diseño de un panel. (Invalida [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Carga los elementos de menú emergente de un recurso de menú especificado.|  
@@ -100,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Especifica si se mostrará la barra lateral deshabilitada cuando la aplicación tiene un aspecto de Windows XP.|  
   

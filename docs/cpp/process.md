@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d7eaeb62f3d8231d7b1a5bca503cd355f7a7aca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process"></a>proceso
 Especifica que el proceso de la aplicación administrada debe tener una única copia de una variable global determinada, una variable miembro estática o una variable local estática compartida en todos los dominios de aplicación del proceso. Está diseñado principalmente para usarse cuando se compila con **/CLR: pure**, porque en **/CLR: puro** variables globales y estáticas son por dominio de aplicación, de forma predeterminada. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015. Cuando se compila con **/CLR**, variables globales y estáticas son por proceso de forma predeterminada (no es necesario usar `__declspec(process)`.  

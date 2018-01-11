@@ -117,11 +117,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d5766a883c8bec143a7a635a657ba2545d1d612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c27f27b8369aeb5fdb15d37dc196556a5f508d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (clase)
 Proporciona la funcionalidad de una ventana de marco de interfaz de un único documento (SDI) de Windows superpuesta o emergente, junto con los miembros para administrar la ventana.  
@@ -136,13 +137,13 @@ class CFrameWnd : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFrameWnd::CFrameWnd](#cframewnd)|Construye un objeto `CFrameWnd`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFrameWnd::ActivateFrame](#activateframe)|Hace que el marco visible y disponible para el usuario.|  
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Establece la ventana de marco en modal.|  
@@ -191,7 +192,7 @@ class CFrameWnd : public CWnd
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFrameWnd::OnCreateClient](#oncreateclient)|Crea una ventana de cliente para el marco.|  
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Se llama antes de que el menú de la aplicación MFC actual está oculto.|  
@@ -199,7 +200,7 @@ class CFrameWnd : public CWnd
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Controles automática habilitar y deshabilitar la funcionalidad de los elementos de menú.|  
 |[CFrameWnd::rectDefault](#rectdefault)|Pase este estático `CRect` como un parámetro al crear un `CFrameWnd` objeto para permitir que Windows elija el tamaño inicial y la posición de la ventana.|  

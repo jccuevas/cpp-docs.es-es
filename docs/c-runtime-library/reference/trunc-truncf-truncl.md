@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2a78deabb758a7d8fe8b0da61899bf7ad11dd8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 911636e4fa843afa1220dc99e1f679d5bfe88d7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 Determina el entero más cercano menor o igual que el valor de punto flotante especificado.  
@@ -88,7 +89,7 @@ long double truncl(
   
 |Problema|Volver|  
 |-----------|------------|  
-|`x` = ±INFINITY|x|  
+|`x`= ±INFINITY|x|  
 |`x` =  ±0|x|  
 |`x` = NaN|NaN|  
   
@@ -107,7 +108,7 @@ long double truncl(
 |--------------|--------------|------------------|  
 |`trunc`,                `truncf`,  `truncl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

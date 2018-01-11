@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>Funciones de miembro de flujo de archivos de salida
 Las funciones miembro de flujo de salida tienen tres tipos: las que son equivalentes a los manipuladores, las que realizan operaciones de escritura sin formato y las que, de otro modo, modifican el estado de la secuencia y no tienen un manipulador ni un operador de inserción equivalente. Para la salida con formato secuencial, solo puede usar operadores de inserción y manipuladores. Para la salida de disco binario de acceso aleatorio, use otras funciones miembro, con o sin operadores de inserción.  

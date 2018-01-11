@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -81,8 +80,7 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -115,30 +113,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 Obtenga información de estado sobre un archivo.  
@@ -217,10 +201,10 @@ int _wstat64i32(
   
  Variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits, y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (`32` o `64`) indica el tamaño del tipo de tiempo usado; el segundo sufijo es `i32` o `i64`, lo que indica si el tamaño del archivo se representa como un entero de 32 o 64 bits.  
   
- `_stat` equivale a `_stat64i32`y `struct``_stat` contiene una hora de 64 bits. This is true unless `_USE_32BIT_TIME_T` is defined, in which case the old behavior is in effect; `_stat` uses a 32-bit time, and `struct``_stat` contains a 32-bit time. Lo mismo ocurre para `_stati64`.  
+ `_stat` equivale a `_stat64i32`y `struct _stat` contiene una hora de 64 bits. Esto es así a menos que se defina `_USE_32BIT_TIME_T` , en cuyo caso el comportamiento anterior está en vigor; `_stat` usa un tiempo de 32 bits y `struct _stat` contiene un tiempo de 32 bits. Lo mismo ocurre para `_stati64`.  
   
 > [!NOTE]
->  `_wstat` no funciona con vínculos simbólicos [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] . En estos casos, `_wstat` siempre notificará un tamaño de archivo de 0. `_stat` funciona correctamente con vínculos simbólicos.  
+>  `_wstat` no funciona con vínculos simbólicos [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. En estos casos, `_wstat` siempre notificará un tamaño de archivo de 0. `_stat` funciona correctamente con vínculos simbólicos.  
   
  Esta función valida sus parámetros. Si `path` o `buffer` es `NULL`, se invoca el controlador de parámetros no válido, como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md).  
   
@@ -291,7 +275,7 @@ int _wstat64i32(
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h> seguido de \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> seguido de \<sys/stat.h> o \<wchar.h>|\<errno.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

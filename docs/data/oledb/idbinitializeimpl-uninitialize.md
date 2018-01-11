@@ -1,48 +1,50 @@
 ---
-title: "IDBInitializeImpl::Uninitialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBInitializeImpl.Uninitialize"
-  - "Uninitialize"
-  - "IDBInitializeImpl::Uninitialize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Uninitialize (método)"
+title: 'Idbinitializeimpl:: UnInitialize | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBInitializeImpl.Uninitialize
+- Uninitialize
+- IDBInitializeImpl::Uninitialize
+dev_langs: C++
+helpviewer_keywords: Uninitialize method
 ms.assetid: ba37fc74-f84e-40b0-abb6-41bddd505269
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4ad85aab3209365265ea83cce0e73c181d5bdec7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IDBInitializeImpl::Uninitialize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Coloca el objeto de origen de datos en un estado no inicializado libera recursos internos como compatibilidad con la propiedad.  
+# <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
+Coloca los datos del origen de objeto en un estado no inicializado liberando recursos internos, como el soporte de propiedad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      STDMETHOD(Uninitialize)(   
-   void    
+      STDMETHOD(Uninitialize)(   
+   void    
 );  
 ```  
   
-## Comentarios  
- Vea [IDBInitialize::Uninitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx) en *la referencia del*programador.  
+## <a name="remarks"></a>Comentarios  
+ Vea [IDBInitialize:: UnInitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx) en el *referencia del programador OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IDBInitializeImpl \(Clase\)](../../data/oledb/idbinitializeimpl-class.md)   
+## <a name="see-also"></a>Vea también  
+ [IDBInitializeImpl (clase)](../../data/oledb/idbinitializeimpl-class.md)   
  [IDBInitializeImpl::Initialize](../../data/oledb/idbinitializeimpl-initialize.md)

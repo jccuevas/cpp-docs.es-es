@@ -76,11 +76,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 632d0c29612d8209d162fcdf357aad3f149653f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c926c23553545a76bc8e1d0a0427c20ea65f3156
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Compara el número de caracteres especificado de dos cadenas sin distinción entre mayúsculas y minúsculas.  
@@ -152,7 +153,7 @@ int _mbsnicmp_l(
   
  Los caracteres 91 a 96 en la tabla ASCII ("[", "\\", "]", "^", "_" y "\`") se consideran menores que cualquier carácter alfabético. Esta ordenación es idéntica a la de `stricmp`.  
   
- `_wcsnicmp` y `_mbsnicmp` son versiones de caracteres anchos y multibyte de `_strnicmp`. Los argumentos de `_wcsnicmp` son cadenas de caracteres anchos; los de `_mbsnicmp` son cadenas de caracteres multibyte. `_mbsnicmp` reconoce secuencias de caracteres multibyte según la página actual de códigos multibyte y devuelve `_NLSCMPERROR` cuando se produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual. Estas funciones se ven afectadas por la configuración regional. Las versiones que no tienen el sufijo `_l` usan la configuración regional local para el comportamiento que depende de la configuración regional; las versiones que sí tienen el sufijo `_l` utilizan la `locale` pasada. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_wcsnicmp` y `_mbsnicmp` son versiones de caracteres anchos y multibyte de `_strnicmp`. Los argumentos de `_wcsnicmp` son cadenas de caracteres anchos; los de `_mbsnicmp` son cadenas de caracteres multibyte. `_mbsnicmp` reconoce secuencias de caracteres multibyte según la página actual de códigos multibyte y devuelve `_NLSCMPERROR` cuando se produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual. Estas funciones se ven afectadas por la configuración regional. Las versiones que no tienen el sufijo `_l` usan la configuración regional local para el comportamiento que depende de la configuración regional; las versiones que sí tienen el sufijo `_l` utilizan la `locale` pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Todas estas funciones validan sus parámetros. Si `string1` o `string2` es un puntero nulo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `_NLSCMPERROR` y establecen `errno` en `EINVAL`.  
   

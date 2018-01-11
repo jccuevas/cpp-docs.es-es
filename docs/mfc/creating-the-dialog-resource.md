@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57ac3b4221beee40255aee9f5cb3b3e1eee551f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c94bd3a31d74f2870ae2016bf734739da212c3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-dialog-resource"></a>Crear el recurso de cuadro de diálogo
 Diseño de la [cuadro de diálogo](../mfc/dialog-boxes.md) y crear el recurso de cuadro de diálogo, utilizar el [editor de cuadro de diálogo](../windows/dialog-editor.md). En el editor de cuadro de diálogo, hacer lo siguiente:  

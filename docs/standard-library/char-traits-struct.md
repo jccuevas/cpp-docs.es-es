@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>char_traits (Struct)
 La estructura char_traits describe los atributos asociados a un carácter.  
@@ -61,7 +62,7 @@ struct char_traits;
 ## <a name="remarks"></a>Comentarios  
  La estructura de plantilla describe varios rasgos de caracteres del tipo **CharType**. La clase de plantilla [basic_string](../standard-library/basic-string-class.md) y varias clases de plantilla de iostream, incluida [basic_ios](../standard-library/basic-ios-class.md), usan esta información para manipular elementos de tipo **CharType**. Un tipo de elemento de este tipo no debe requerir ni una construcción ni una destrucción explícita. Debe proporcionar un constructor predeterminado, un constructor de copias y un operador de asignación, con la semántica esperada. Una copia bit a bit debe tener el mismo efecto que una asignación. Ninguna de las funciones miembro de la estructura char_traits puede iniciar excepciones.  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

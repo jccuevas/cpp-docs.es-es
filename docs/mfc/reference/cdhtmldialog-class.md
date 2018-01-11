@@ -127,11 +127,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a82079e43a5c4e1bfbcb9bb339663314d4ab2a49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb546ffc35438e19bd5230d6e71db28061109bc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdhtmldialog-class"></a>Clase CDHtmlDialog
 Se utiliza para crear cuadros de diálogo que utilizan HTML en lugar de recursos de cuadro de diálogo para implementar la interfaz de usuario.  
@@ -146,14 +147,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Construye un objeto CDHtmlDialog.|  
 |[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destruye un objeto CDHtmlDialog.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Reemplazable se llama como una comprobación de acceso para ver si pueden tener acceso a los objetos de scripting en la página cargar la entrega externa de sitio del control. Se comprueba para asegurarse de que el envío es ser seguro para secuencias de comandos o la zona actual permite para los objetos que no son seguros para scripting.|  
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Reemplazable usado para crear una instancia de sitio de control para hospedar el control WebBrowser en el cuadro de diálogo.|  
@@ -206,7 +207,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Indica si se usa el título del documento HTML como el título del cuadro de diálogo.|  
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Recurso Id. de recurso HTML que se mostrará.|  
@@ -394,7 +395,7 @@ void DDX_DHtml_CheckBox(
  `szId`  
  El valor especificado para el parámetro Id. del control HTML.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ### <a name="example"></a>Ejemplo  
@@ -463,7 +464,7 @@ void DDX_DHtml_ElementText(
  *DISPID*  
  El identificador de envío del elemento HTML con el que desea intercambiar datos.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
@@ -483,7 +484,7 @@ void DDX_DHtml_Radio(
  `szId`  
  El valor especificado para el parámetro Id. del control HTML.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
@@ -503,7 +504,7 @@ void DDX_DHtml_SelectIndex(
  `szId`  
  El valor especificado para el parámetro Id. del control HTML.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
@@ -523,7 +524,7 @@ void DDX_DHtml_SelectString(
  `szId`  
  El valor especificado para el parámetro Id. del control HTML.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ##  <a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
@@ -543,7 +544,7 @@ void DDX_DHtml_SelectValue(
  `szId`  
  El valor especificado para el parámetro Id. del control HTML.  
   
- *value*  
+ *valor*  
  El valor que se va a intercambiar.  
   
 ### <a name="example"></a>Ejemplo  

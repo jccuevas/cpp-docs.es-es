@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1c629355db7f2e77ef0854a52c86848adb70c6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="call-class"></a>Clase call
 Un bloque de mensajería `call` es un `target_block` con varios orígenes y ordenado, que invoca una función especificada al recibir un mensaje.  
@@ -50,14 +51,14 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[llamar a](#ctor)|Sobrecargado. Construye un `call` bloque de mensajería.|  
 |[~ Llame al Destructor](#dtor)|Destruye el `call` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Ejecuta la función de llamada en los mensajes de entrada.|  
 |[process_message](#process_message)|Procesa un mensaje que fue aceptado por este `call` bloque de mensajería.|  

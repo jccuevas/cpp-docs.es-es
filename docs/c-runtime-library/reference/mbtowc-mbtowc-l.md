@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7104ed2cee86ceb0fe298bec61a74a0782e0bd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52f2c1d3defb822f00095a24bfcc87bd07fc8cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 Convierte un carácter multibyte en el carácter ancho correspondiente.  
@@ -77,7 +78,7 @@ int _mbtowc_l(
  Si **mbchar** no es **NULL** y si el objeto al que apunta `mbchar` forma un carácter multibyte válido, `mbtowc` devuelve la longitud en bytes del carácter multibyte. Si `mbchar` es **NULL** o el objeto al que apunta es un carácter nulo de caracteres anchos (L '\0'), la función devuelve 0. Si el objeto que `mbchar` puntos que no forman un carácter multibyte válido en los primeros *recuento* caracteres, devuelve -1.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `mbtowc` convierte *count* o menos bytes a los que apunta `mbchar` (si `mbchar` no es **NULL**) en el carácter ancho correspondiente. `mbtowc` almacena el carácter ancho resultante en *wchar* si *wchar* no es **NULL**. `mbtowc` no examina más de `MB_CUR_MAX` bytes. `mbtowc` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbtowc_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `mbtowc` convierte *count* o menos bytes a los que apunta `mbchar` (si `mbchar` no es **NULL**) en el carácter ancho correspondiente. `mbtowc` almacena el carácter ancho resultante en *wchar* si *wchar* no es **NULL**. `mbtowc` no examina más de `MB_CUR_MAX` bytes. `mbtowc` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbtowc_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -86,7 +87,7 @@ int _mbtowc_l(
 |`mbtowc`|\<stdlib.h>|  
 |**_mbtowc_l**|\<stdlib.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

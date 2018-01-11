@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40c0f03b09a5f056ae260641c588996d3bd2043b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>Control de acceso a miembros (C++)
 Controles de acceso le permiten separar la [pública](../cpp/public-cpp.md) interfaz de una clase desde la [privada](../cpp/private-cpp.md) detalles de implementación y la [protegido](../cpp/protected-cpp.md) los miembros que son únicamente para usar por clases derivadas. El especificador de acceso se aplica a todos los miembros declarados después de él hasta que se encuentra el especificador de acceso siguiente.  
@@ -71,7 +72,7 @@ protected:      // Declare protected function for derived classes only.
   
 ### <a name="member-access-in-base-class"></a>Acceso a miembros de clase base  
   
-|private|protected|Público|  
+|private|protected|Public|  
 |-------------|---------------|------------|  
 |Siempre inaccesible independientemente del acceso de derivación|Privado en la clase derivada si se utiliza la derivación privada|Privado en la clase derivada si se utiliza la derivación privada|  
 ||Protegido en la clase derivada si se utiliza la derivación protegida|Protegido en la clase derivada si se utiliza la derivación protegida|  

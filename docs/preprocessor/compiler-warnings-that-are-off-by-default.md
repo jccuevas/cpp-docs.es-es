@@ -11,11 +11,12 @@ ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1dec9728679629f25ddbea93956fd25d9b29ef59
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 48afd89f4b795a4f582d8b9506c527a602a1d2b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
 
@@ -89,7 +90,7 @@ Las siguientes advertencias están deshabilitadas de forma predeterminada.
 |C4647 (nivel 3)|cambio de comportamiento: __is_pod (*tipo*) tiene un valor diferente en las versiones anteriores|
 |C4654 (nivel 4)|Incluir código se coloca antes del encabezado precompilado se pasará por alto de línea. Agregue código al encabezado precompilado.|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (nivel 4)|'*símbolo*'no está definido como macro de preprocesador y se reemplaza por '0' para'*directivas*'|
-|C4682 (nivel 4)|'*símbolo*': parámetro direccional se especificó ningún atributo, el valor predeterminado [in]|
+|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (nivel 4)|'*símbolo*': parámetro direccional se especificó ningún atributo, el valor predeterminado [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (nivel 3)|'*tipo definido por el usuario*': posible cambio de comportamiento, cambio de UDT devuelta de convención de llamada|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (nivel 1)|'*función*': firma de un miembro no privado contiene el tipo nativo privado de ensamblado 'tipo_nativo'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (nivel 4)|'*función*': función no está entre línea|

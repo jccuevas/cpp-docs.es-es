@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4994b018cfbe8395f453cd5964f1d1733f3117e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e018a2c1b20bef640852ced913dc90266e733c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="27-data-environment"></a>2.7 Entorno de datos
 Esta sección presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de regiones en paralelo, como se indica a continuación:  

@@ -1,37 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: Compilador advertencia (nivel 1) C4581 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59bf4eafe722283f5fced046e845c6b46ca3ce82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-comportamiento obsoleto: '"cadena1"' se ha reemplazado por 'cadena2' para procesar el atributo  
+# <a name="compiler-warning-level-1-c4581"></a>Advertencia del compilador (nivel 1) C4581
+comportamiento en desuso: '"cadena1" ' reemplazado por 'cadena2' para procesar el atributo  
   
- Este error puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual C\+\+ 2005: comprobación de parámetros de los atributos de Visual C\+\+.  
+ Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.  
   
- En las versiones anteriores, se aceptaban los valores de atributo, tanto si se incluían entre comillas como si no.  Si el valor es una enumeración, no debe incluirse entre comillas.  
+ En versiones anteriores, los valores de atributo se aceptaron si o no se incluían entre comillas. Si el valor es una enumeración, no debe incluirse entre comillas.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4581.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4581.  
   
 ```  
 // C4581.cpp  

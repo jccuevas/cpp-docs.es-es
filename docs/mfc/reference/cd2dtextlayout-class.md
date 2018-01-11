@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DTextLayout::SetFontFamilyName
 - AFXRENDERTARGET/CD2DTextLayout::SetLocaleName
 - AFXRENDERTARGET/CD2DTextLayout::m_pTextLayout
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DTextLayout [MFC], CD2DTextLayout
 - CD2DTextLayout [MFC], Create
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9dc216014fb88ac7995b9283ab59d0c011f3184f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 3d1307eb4f747fa06a21d9b2b8fd65dec2defbe5
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dtextlayout-class"></a>Clase CD2DTextLayout
 Un contenedor para IDWriteTextLayout.  
@@ -61,14 +59,14 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Construye un objeto CD2DTextLayout.|  
 |[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Destructor. Se llama cuando se destruye un objeto de diseño de texto de D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DTextLayout::Create](#create)|Crea un CD2DTextLayout. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DTextLayout::Destroy](#destroy)|Destruye un objeto CD2DTextLayout. (Invalida [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
@@ -82,13 +80,13 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Interfaz de IDWriteTextLayout devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Un puntero a un IDWriteTextLayout.|  
   
@@ -279,4 +277,3 @@ BOOL SetLocaleName(
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

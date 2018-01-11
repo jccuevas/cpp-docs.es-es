@@ -1,97 +1,98 @@
 ---
-title: "interior_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "stdcli::language::interior_ptr"
-  - "interior_ptr_cpp"
-  - "interior_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interior_ptr (palabra clave) [C++]"
+title: interior_ptr (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- stdcli::language::interior_ptr
+- interior_ptr_cpp
+- interior_ptr
+dev_langs: C++
+helpviewer_keywords: interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Un puntero interior* declara un puntero dentro de un tipo de referencia, pero no al propio objeto.  Un puntero interior puede señalar a un identificador de referencia, tipo de valor, identificador ha de tipo, miembro de un tipo administrado, o a un elemento de una matriz administrada.  
+# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+Un *puntero interior* declara un puntero a dentro de un tipo de referencia, pero no para el propio objeto. Un puntero interior puede apuntar a un identificador de referencia, tipo de valor, el identificador del tipo de conversión boxing, miembro de un tipo administrado, o a un elemento de una matriz administrada.  
   
-## Todos los runtimes  
- \(No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes.\)  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ (No hay notas para esta característica de lenguaje que se apliquen a todos los runtimes).  
   
-## Windows en tiempo de ejecución  
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución\).  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- El ejemplo de sintaxis siguiente muestra un puntero interior.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ En el ejemplo de sintaxis siguiente se muestra un puntero interior.  
   
-### Sintaxis  
+### <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 cli::interior_ptr<cv_qualifier type> var = &initializer;  
 ```  
   
-### Parámetros  
- *cv\_qualifier*  
- **const** o calificadores de `volatile` .  
+### <a name="parameters"></a>Parámetros  
+ *cv_qualifier*  
+ **Const** o `volatile` calificadores.  
   
  *type*  
- Tipo de *initializer*.  
+ El tipo de *inicializador*.  
   
  *var*  
- El nombre de la variable de `interior_ptr` .  
+ El nombre de la `interior_ptr` variable.  
   
  *initializer*  
- Un miembro de un tipo de referencia, un elemento de una matriz administrada, o de cualquier otro objeto que puede asignar a un puntero nativo.  
+ Un miembro de un tipo de referencia, el elemento de una matriz administrada o cualquier otro objeto que se puede asignar a un puntero nativo.  
   
-### Comentarios  
- Puntero nativo no puede seguir un elemento como cambia su ubicación en el montón administrado, resultante de instancias móviles del recolector de elementos no utilizados de un objeto.  Para que un puntero correctamente hace referencia a la instancia, el runtime necesita actualizar el puntero al objeto recién colocado.  
+### <a name="remarks"></a>Comentarios  
+ Un puntero nativo no es capaz de realizar el seguimiento de un elemento como cambios en su ubicación en el montón administrado, lo que resulta del recolector de elementos no utilizados mueve instancias de un objeto. Si hay un puntero hacer referencia correctamente a la instancia, el tiempo de ejecución debe actualizar el puntero al objeto recién posicionado.  
   
- `interior_ptr` representa un supraconjunto de la funcionalidad de un puntero nativo.  Por consiguiente, cualquier elemento que se puede asignar a un puntero nativo se puede asignar a `interior_ptr`.  Permiten a un puntero interior para realizar el mismo conjunto de operaciones que punteros nativos, incluidos comparación y la aritmética con punteros.  
+ Un `interior_ptr` representa un supraconjunto de la funcionalidad de un puntero nativo.  Por lo tanto, todo lo que puede asignarse a un puntero nativo también pueden asignarse a un `interior_ptr`.  Se permite un puntero interior a realizar el mismo conjunto de operaciones como punteros nativos, incluida la comparación y la aritmética con punteros.  
   
- Un puntero interior sólo se puede declarar en la pila.  Un puntero interior no se puede declarar como miembro de una clase.  
+ Solo se puede declarar un puntero interior en la pila.  Un puntero interior no pueden declararse como un miembro de una clase.  
   
- Puesto que los punteros interiores sólo existen en la pila, tomando la dirección de un puntero interior produce un puntero no administrado.  
+ Puesto que los punteros interiores existen solo en la pila, tomar la dirección de un puntero interior da como resultado un puntero no administrado.  
   
- `interior_ptr` tiene una conversión implícita a `bool`, que permite su uso en instrucciones condicionales.  
+ `interior_ptr`tiene una conversión implícita a `bool`, lo que permite su uso en instrucciones condicionales.  
   
- Para obtener información sobre cómo declarar un puntero interior que apunte a un objeto que no se puede mover en la pila basura\- obtenida, vea [pin\_ptr](../Topic/pin_ptr%20\(C++-CLI\).md).  
+ Para obtener información sobre cómo declarar un puntero interior que apunta a un objeto que no se pueden mover en el montón de recolección, consulte [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` está en el espacio de nombres cli.  Para obtener más información, vea [Espacios de nombres de plataforma, predeterminado y CLI](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `interior_ptr` se encuentra en el espacio de nombres cli.  Vea [plataforma, predeterminado y cli espacios de nombres](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) para obtener más información.  
   
- Para obtener más información sobre punteros interiores, vea  
+ Para obtener más información sobre los punteros interiores, vea  
   
--   [Cómo: Declarar y usar punteros internos y matrices administradas \(C\+\+\/CLI\)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Procedimiento para declarar y usar punteros internos y matrices administradas (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [Cómo: Declarar tipos de valor con la palabra clave interior\_ptr \(C\+\+\/CLI\)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Procedimiento para declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [Cómo: Sobrecargar funciones con punteros internos y punteros nativos \(C\+\+\/CLI\)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Procedimiento para sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [Cómo: Declarar punteros internos con la palabra clave const \(C\+\+\/CLI\)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Procedimiento para declarar punteros internos con la palabra clave const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo siguiente se muestra cómo declarar y utilizar un puntero interior de un tipo de referencia.  
+ El ejemplo siguiente muestra cómo declarar y utilizar un puntero interior en un tipo de referencia.  
   
 ```cpp  
 // interior_ptr.cpp  
@@ -119,10 +120,13 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
- **1**   
-**2**   
-**3**   
-## Vea también  
+```Output  
+1  
+2  
+3  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

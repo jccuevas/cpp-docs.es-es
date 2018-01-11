@@ -114,11 +114,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8f76e8ace4eff6bd02efeba8a42554a27618bc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcontroller-class"></a>Clase CAnimationController
 Implementa el controlador de animación, que proporciona una interfaz central para crear y administrar las animaciones.  
@@ -133,14 +134,14 @@ class CAnimationController : public CObject;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationController::CAnimationController](#canimationcontroller)|Crea un controlador de animación.|  
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Destructor. Se llama cuando se está destruyendo el objeto de controlador de animación.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Agrega un objeto de animación a un grupo al que pertenece el controlador de animación.|  
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Agrega un fotograma clave al grupo.|  
@@ -183,14 +184,14 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Sobrecargado. Una aplicación auxiliar que limpie el grupo.|  
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Lo llama el marco cuando solo se ha programado una animación para el grupo especificado.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Un fotograma clave que representa el inicio del guión gráfico.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Especifica si un controlador de animación es válido o no. Este miembro se establece en FALSE si el sistema operativo actual no es compatible con la API de animación de Windows.|  

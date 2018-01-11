@@ -1,31 +1,33 @@
 ---
-title: "Opening a Resource for Binary Editing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary data, editing"
-  - "resources [Visual Studio], opening for binary editing"
+title: Abrir un recurso para editarlo en modo binario | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- binary data, editing
+- resources [Visual Studio], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 92a0c0459626f139b7a8d7ae2313439c66d2a11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Opening a Resource for Binary Editing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para abrir un recurso de escritorio de Windows para editarlo en modo binario  
+# <a name="opening-a-resource-for-binary-editing"></a>Abrir un recurso para editarlo en modo binario
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir un recurso de escritorio de Windows para editarlo en modo binario  
   
 1.  En la [Vista de recursos](../windows/resource-view-window.md), seleccione el archivo de recursos específico que quiera editar.  
   
@@ -35,33 +37,34 @@ caps.handback.revision: 9
 2.  Haga clic con el botón secundario en el recurso y haga clic en **Abrir datos binarios** en el menú contextual.  
   
     > [!NOTE]
-    >  Si usa la ventana [Vista de recursos](../windows/resource-view-window.md) para abrir un recurso con un formato que Visual Studio no reconozca \(como RCDATA o un recurso personalizado\), el recurso se abrirá automáticamente en el editor binario.  
+    >  Si usa la ventana [Vista de recursos](../windows/resource-view-window.md) para abrir un recurso con un formato que Visual Studio no reconozca (como RCDATA o un recurso personalizado), el recurso se abrirá automáticamente en el editor binario.  
   
-### Para abrir un recurso para editarlo para la edición binaria  
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir un recurso para editarlo para la edición binaria  
   
 1.  En el Explorador de soluciones, seleccione el archivo de recursos específico que quiera editar.  
   
 2.  Haga clic con el botón secundario en el recurso y elija **Abrir con** en el menú contextual.  
   
-3.  En el cuadro de diálogo **Abrir con**, seleccione **Editor binario**.  
+3.  En el cuadro de diálogo **Abrir con** , seleccione **Editor binario**.  
   
     > [!NOTE]
-    >  Se puede usar el [Editor de imágenes](../mfc/image-editor-for-icons.md) y el [Editor binario](../mfc/binary-editor.md) para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.  
+    >  Se puede usar el [Editor de imágenes](../windows/image-editor-for-icons.md) y el [Editor binario](binary-editor.md) para trabajar con archivos de recursos en proyectos administrados. Todos los recursos administrados que vaya a editar deberán estar vinculados. Los editores de recursos de Visual Studio no admiten la edición de recursos incrustados.  
   
     > [!NOTE]
-    >  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, obtener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+    >  Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).   
   
- ![Editor binario](../mfc/media/vcbinaryeditor2.png "vcBinaryEditor2")  
+ ![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 Datos binarios de un cuadro de diálogo que aparece en el editor binario  
   
- Solo determinados valores ASCII se representan en el editor binario \(de 0x20 a 0x7E\). Los caracteres extendidos se muestran como puntos en la sección de valor ASCII del editor binario \(el panel derecho\). Los caracteres "imprimibles" son valores ASCII de 32 a 126.  
+ Solo determinados valores ASCII se representan en el editor binario (de 0x20 a 0x7E). Los caracteres extendidos se muestran como puntos en la sección de valor ASCII del editor binario (el panel derecho). Los caracteres "imprimibles" son valores ASCII de 32 a 126.  
   
 > [!NOTE]
 >  Si quiere usar el editor binario en un recurso que ya se está editando en otra ventana del editor, cierre primero la otra ventana del editor.  
   
  **Requisitos**  
   
- Ninguno  
+ Ninguna  
   
-## Vea también  
- [Binary Editor](../mfc/binary-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Binary Editor](binary-editor.md)
+

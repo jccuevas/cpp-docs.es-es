@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 779ecfc7bd546e2acbd013be9cbb229df2c5e62d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder (clase)
 Implementa una propiedad de imagen, que permite al usuario mostrar una imagen en el control.  
@@ -58,13 +59,13 @@ class CPictureHolder
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPictureHolder::CPictureHolder](#cpictureholder)|Construye un objeto `CPictureHolder`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPictureHolder::CreateEmpty](#createempty)|Crea un objeto `CPictureHolder` vacío.|  
 |[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Crea un `CPictureHolder` objeto de un mapa de bits.|  
@@ -78,7 +79,7 @@ class CPictureHolder
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPictureHolder::m_pPict](#m_ppict)|Un puntero a un objeto de imagen.|  
   

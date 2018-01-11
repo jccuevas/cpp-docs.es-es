@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0da7872ab6a93b737bf402ded085a4fb18551798
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e2b48630fab9d27bf5db442617a5184bd26de5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Duración de objetos y administración de recursos (C++ moderno)
 A diferencia de los lenguajes administrados, C++ no tiene colección de elementos no utilizados (GC), que automáticamente libera los recursos de memoria no más-utilizados mientras se ejecuta un programa. En C++, administración de recursos está directamente relacionado con duración de los objetos. Este documento describe los factores que afectan a la duración de los objetos de C++ y cómo administrarla.  

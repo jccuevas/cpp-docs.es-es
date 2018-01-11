@@ -1,39 +1,41 @@
 ---
-title: "Module::ReleaseNotifier::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::ReleaseNotifier::Release"
-dev_langs: 
-  - "C++"
+title: Module::ReleaseNotifier::Release | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::ReleaseNotifier::Release
+dev_langs: C++
 ms.assetid: 77282c47-b955-483e-9969-43f73056cdc1
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 555d3168a14538aa106a76e76286f627a6401bf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Module::ReleaseNotifier::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Elimina el objeto actual de Module::ReleaseNotifier si el objeto se creó con un parámetro de `true`.  
+# <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
+Elimina el objeto de releasenotifier actual si el objeto se construyó con un parámetro de `true`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 void Release() throw();  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Module::ReleaseNotifier \(Clase\)](../Topic/Module::ReleaseNotifier%20Class.md)
+## <a name="see-also"></a>Vea también  
+ [Module::ReleaseNotifier (clase)](../windows/module-releasenotifier-class.md)

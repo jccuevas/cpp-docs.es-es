@@ -1,57 +1,56 @@
 ---
-title: "__writeeflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writeeflags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__writeeflags (funciones intrínsecas)"
+title: __writeeflags | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writeeflags
+dev_langs: C++
+helpviewer_keywords: __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c614ce90f7e579263769d379ed0078eb7b79dd17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __writeeflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Escriba el valor especificado en el registro de estado y control de programa \(EFLAGS\).  
+# <a name="writeeflags"></a>__writeeflags
+Escribe el valor especificado en el programa de estado y control (EFLAGS) se registran.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __writeeflags(unsigned Value);  
 void __writeeflags(unsigned __int64 Value);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|\[in\] `Value`|El valor a escribir en el registro de EFLAGS.  El parámetro de `Value` es 32 bits long para una plataforma de 32 bits y 64 bits long para una plataforma de 64 bits.|  
+|[in] `Value`|El valor para escribir en el registro EFLAGS. El `Value` parámetro es de 32 bits para una plataforma de 32 bits y 64 bits para una plataforma de 64 bits.|  
   
-## Comentarios  
- Estas rutinas solo están disponibles como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Estas rutinas sólo están disponibles como intrínsecos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [\_\_readeflags](../intrinsics/readeflags.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [__readeflags](../intrinsics/readeflags.md)

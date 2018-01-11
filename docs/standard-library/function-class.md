@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da4c8dd6a3141b16b9960720c6bb1789cd06f317
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-class"></a>function (Clase)
 Contenedor para un objeto al que se puede llamar.  
@@ -116,7 +117,7 @@ public:
 |-|-|  
 |[function](#function)|Crea un contenedor que está vacío o almacena un objeto al que se puede llamar de tipo arbitrario con una signatura fija.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -128,7 +129,7 @@ public:
 |-|-|  
 |[assign](#assign)|Asigna un objeto al que se puede llamar a este objeto de función.|  
 |[swap](#swap)|Intercambia dos objetos a los que se puede llamar.|  
-|[destino](#target)|Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.|  
+|[target](#target)|Comprueba si se puede llamar al objeto al que se puede llamar según lo especificado.|  
 |[target_type](#target_type)|Obtiene información de tipo en el objeto al que se puede llamar.|  
   
 ### <a name="operators"></a>Operadores  

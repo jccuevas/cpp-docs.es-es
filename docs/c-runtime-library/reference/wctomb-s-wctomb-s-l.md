@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wctomb_s function
 - wctomb_s_l function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: ac97c0bc957c28d8d0837199157d52d4ac0536e1
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 Convierte un carácter ancho en el carácter multibyte correspondiente. Versión de [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -108,7 +92,7 @@ errno_t _wctomb_s_l(
 |`mbchar`|`sizeInBytes`|Valor devuelto|`pRetValue`|  
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|no modificado|  
-|cualquiera|>`INT_MAX`|`EINVAL`|no modificado|  
+|any|>`INT_MAX`|`EINVAL`|no modificado|  
 |any|demasiado pequeño|`EINVAL`|no modificado|  
   
  Si se da alguna de las condiciones de error anteriores, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `wctomb` devuelve `EINVAL` y establece `errno` en `EINVAL`.  
@@ -118,7 +102,7 @@ errno_t _wctomb_s_l(
   
  Si `wctomb_s` convierte el carácter ancho en un carácter multibyte, coloca el número de bytes (que nunca es mayor que `MB_CUR_MAX`) en el carácter ancho en el entero al que apunta `pRetValue`. Si `wchar` es el carácter nulo ancho (L'\0'), `wctomb_s` rellena `pRetValue` con 1. Si el puntero de destino `mbchar` es NULL, `wctomb_s` pone 0 en `pRetValue`. Si la conversión no es posible en la configuración regional actual, `wctomb_s` pone -1 en `pRetValue`.  
   
- `wctomb_s` usa la configuración regional actual para la información dependiente de la configuración regional; `_wctomb_s_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `wctomb_s` usa la configuración regional actual para la información dependiente de la configuración regional; `_wctomb_s_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   

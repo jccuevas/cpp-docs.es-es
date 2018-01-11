@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>Clase CMap
 Una clase de colección de diccionarios que asigna claves únicas a valores.  
@@ -81,19 +82,19 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-structures"></a>Estructuras públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|Una estructura anidada que contiene un valor de clave y el valor del objeto asociado.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMap::CMap](#cmap)|Construye una colección que asigna claves a valores.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|Devuelve el número de elementos de esta asignación.|  
 |[CMap::GetHashTableSize](#gethashtablesize)|Devuelve el número de elementos en la tabla hash.|  
@@ -112,7 +113,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[[] CMap::operator](#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|  
   
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  Especifica una referencia a un **posición** valor devuelto por un anterior `GetNextAssoc` o `GetStartPosition` llamar.  
   
- *CLAVE*  
+ *KEY*  
  Parámetro de plantilla que especifica el tipo de clave del mapa.  
   
  `rKey`  

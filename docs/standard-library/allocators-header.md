@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <allocators>
-dev_langs:
-- C++
-helpviewer_keywords:
-- allocators header
+f1_keywords: <allocators>
+dev_langs: C++
+helpviewer_keywords: allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b87e52294ccd61cd349ed6a85eca6760ace2c473
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cf6f722eaa4f71a808ec416aa7646c7fe4de2689
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 Define varias plantillas que ayudan a asignar y liberar bloques de memoria para contenedores basados en nodos.  
@@ -177,7 +173,6 @@ Define varias plantillas que ayudan a asignar y liberar bloques de memoria para 
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

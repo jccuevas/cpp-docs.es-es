@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f4bceac05f72c609c7aef8702c6313572ed6db5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29f6e16e665d8076ed5a1fe593e1bb9437f1406a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-in-expressions"></a>Matrices en expresiones
 Cuando un identificador de un tipo de matriz aparece en una expresión distinta de `sizeof`, dirección de (**&**), o la inicialización de una referencia, se convierte en un puntero al primer elemento de matriz. Por ejemplo:  

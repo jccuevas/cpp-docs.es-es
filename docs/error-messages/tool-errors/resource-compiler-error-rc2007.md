@@ -1,29 +1,28 @@
 ---
-title: "Error del compilador de recursos RC2007 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2007"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2007"
+title: Error del compilador de recursos RC2007 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2007
+dev_langs: C++
+helpviewer_keywords: RC2007
 ms.assetid: a616e506-bef2-4155-9fe0-dbccac8954d3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c7129ab22ccb286edad13c2a2389211aca6c5851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error del compilador de recursos RC2007
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-sintaxis de \#define  
+# <a name="resource-compiler-error-rc2007"></a>Error del compilador de recursos RC2007
+\#definir la sintaxis  
   
- Se esperaba un identificador a continuación de `#define` en una directiva de preprocesamiento.
+ Se esperaba un identificador después `#define` en una directiva de preprocesamiento.

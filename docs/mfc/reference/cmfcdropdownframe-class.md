@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c80d8617047c2c4428ccffb12cc3e89e562102f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01b3e5b56621d7bf8d42aad12e216208338bbacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdownframe-class"></a>Clase CMFCDropDownFrame
 Proporciona funcionalidad de la ventana de marco de la lista desplegable para las barras de herramientas de la lista desplegable y botones de barra de herramientas de lista desplegable.  
@@ -48,7 +49,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Constructor predeterminado.|  
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destructor.|  
   
@@ -56,7 +57,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |[CMFCDropDownFrame::Create](#create)|Crea un objeto `CMFCDropDownFrame`.|  
 |`CMFCDropDownFrame::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Recupera la barra de menús principal del marco de lista desplegable.|  

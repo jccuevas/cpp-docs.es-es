@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7f23265601411c0a1913b1e06b9fffa62bfa07f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ac591a1d27792d3b825336ed46e38fa5d002fa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray (Clase)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -39,14 +42,14 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[EventTargetArray::EventTargetArray (constructor)](../windows/eventtargetarray-eventtargetarray-constructor.md)|Inicializa una nueva instancia de la clase EventTargetArray.|  
 |[EventTargetArray::~EventTargetArray (destructor)](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Desinicializa la EventTargetArray (clase) actual.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[EventTargetArray::AddTail (método)](../windows/eventtargetarray-addtail-method.md)|El controlador de eventos especificado se anexa al final de la matriz interna de controladores de eventos.|  
 |[EventTargetArray::Begin (método)](../windows/eventtargetarray-begin-method.md)|Obtiene la dirección del primer elemento de la matriz interna de controladores de eventos.|  

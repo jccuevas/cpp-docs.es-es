@@ -1,39 +1,41 @@
 ---
-title: "C&#243;mo: Mostrar im&#225;genes con .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GDI+ [C++], mostrar imágenes"
-  - "gráficos [C++], mostrar imágenes"
+title: "Cómo: mostrar imágenes con .NET Framework | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+ [C++], displaying images
+- graphics [C++], displaying images
 ms.assetid: c0eddfa1-4bd6-4af5-a533-1fa84b360325
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7c12d6a67f6fbe73802d3b876621a2ea606af553
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
-# C&#243;mo: Mostrar im&#225;genes con .NET Framework
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente modifica el controlador de eventos OnPaint para recuperar un puntero al objeto <xref:System.Drawing.Graphics> para el formulario principal.  La función <xref:System.Windows.Forms.Form.OnPaint%2A> se ha diseñado para una aplicación de Windows Forms, probablemente creada con un asistente para aplicaciones de Visual Studio.  
+# <a name="how-to-display-images-with-the-net-framework"></a>Cómo: Mostrar imágenes con .NET Framework
+En el ejemplo de código siguiente se modifica el controlador de eventos OnPaint para recuperar un puntero a la <xref:System.Drawing.Graphics> objeto para el formulario principal. El <xref:System.Windows.Forms.Form.OnPaint%2A> función está diseñado para una aplicación de formularios Windows Forms, probablemente creada con un Asistente para aplicaciones de Visual Studio.  
   
- La imagen se representa mediante la clase <xref:System.Drawing.Image>.  Los datos de la imagen se cargan desde un archivo .jpg utilizando el método <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName>.  Antes de llevar la imagen al formulario, se cambia el tamaño del formulario para que quepa la imagen.  El traslado de la imagen se realiza con el método <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName>.  
+ La imagen se representa mediante la <xref:System.Drawing.Image> clase. Los datos de imagen se cargan desde un archivo .jpg utilizando el <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> método. Antes de que se dibuja la imagen al formulario, el formulario cambia de tamaño para dar cabida a la imagen. El dibujo de la imagen se realiza con el <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> método.  
   
- Las clases <xref:System.Drawing.Graphics> y <xref:System.Drawing.Image> están en el espacio de nombres <xref:System.Drawing?displayProperty=fullName>.  
+ El <xref:System.Drawing.Graphics> y <xref:System.Drawing.Image> clases están en el <xref:System.Drawing?displayProperty=fullName> espacio de nombres.  
   
 > [!NOTE]
->  GDI\+ se incluye con Windows XP y está disponible como componente redistribuible con Windows NT 4.0 SP 6, Windows 2000, Windows 98 y Windows Me.  Para descargar el último redistribuible, vea [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232).  Para obtener más información, consulte la documentación existente sobre SDK de GDI\+ en [GDI\+](_gdiplus_GDI_start_cpp).  
+>  GDI + se incluye con Windows XP y está disponible como componente redistribuible para Windows NT 4.0 Service Pack 6, Windows 2000, Windows 98 y Windows Millennium Edition. Para descargar el último redistribuible, vea [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232).   
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 #using <system.drawing.dll>  
@@ -51,6 +53,6 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe) override
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Drawing?displayProperty=fullName>   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

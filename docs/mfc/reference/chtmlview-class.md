@@ -205,11 +205,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c78414e5262ef8157e5b0706835ab20d0490f4bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a855100aaab28e5fead062d4a0941741742cf1a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 Proporciona la funcionalidad del control WebBrowser en el contexto de la arquitectura de vista/documento de MFC.  
@@ -224,7 +225,7 @@ class CHtmlView : public CFormView
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHtmlView::Create](#create)|Crea el control WebBrowser.|  
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Reemplazable usado para crear una instancia del sitio de control para hospedar un control en el formulario.|  

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Requisitos de compilación para los controles comunes de Windows Vista
 La biblioteca (Microsoft Foundation Classes) admite la versión 6.1 de controles comunes de Windows. Los controles comunes se incluyen en [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] y la biblioteca se incluye en el [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. La biblioteca proporciona nuevos métodos que mejoran las clases existentes y nuevas clases y métodos que admiten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] controles comunes. Cuando se compila la aplicación, debe cumplir los requisitos de compilación y la migración que se describen en las secciones siguientes.  

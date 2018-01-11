@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 135c082e4d972b18af057bf22a718ac9c4170718
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e7ae79ed3505e4570b453e7fd56b68730010388
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoa-ltow"></a>_ltoa, _ltow
 Convierte un entero largo en cadena. Hay disponibles versiones más seguras de estas funciones; vea [_ltoa_s, _ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md).  
@@ -96,7 +97,7 @@ wchar_t *_ltow(
 > [!IMPORTANT]
 >  Para evitar las saturaciones del búfer, asegúrese de que el búfer de `str` tiene el tamaño suficiente para contener los dígitos convertidos más el carácter nulo final y un carácter de signo.  
   
- En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, estas funciones tienen sobrecargas de plantilla. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   
@@ -111,7 +112,7 @@ wchar_t *_ltow(
 |`_ltoa`|\<stdlib.h>|  
 |`_ltow`|\<stdlib.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md).  

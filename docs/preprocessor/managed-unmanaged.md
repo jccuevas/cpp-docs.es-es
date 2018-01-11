@@ -1,69 +1,70 @@
 ---
-title: "managed, unmanaged | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.unmanaged"
-  - "managed_CPP"
-  - "unmanaged_CPP"
-  - "vc-pragma.managed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragma administrada"
-  - "pragma (directivas), administradas"
-  - "pragma (directivas), no administrados"
-  - "pragma no administrada"
+title: Managed, unmanaged | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.unmanaged
+- managed_CPP
+- unmanaged_CPP
+- vc-pragma.managed
+dev_langs: C++
+helpviewer_keywords:
+- managed pragma
+- pragmas, unmanaged
+- pragmas, managed
+- unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d8e2b50f7d505a4e262559b6cb69b0bab81ffcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# managed, unmanaged
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="managed-unmanaged"></a>managed, unmanaged
 Habilite el control de nivel de función para compilar las funciones como administradas o no administradas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-        #pragma managed  
+      #pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
-## Comentarios  
- La opción del compilador [\/clr](../build/reference/clr-common-language-runtime-compilation.md) proporciona control de nivel de módulo para compilar las funciones como administradas o no administradas.  
+## <a name="remarks"></a>Comentarios  
+ El [/CLR](../build/reference/clr-common-language-runtime-compilation.md) opción del compilador proporciona control de nivel de módulo para compilar las funciones como administradas o no administrado.  
   
  Una función no administrada se compilará para la plataforma nativa, a la cual Common Language Runtime pasará la ejecución de esa parte del programa.  
   
- Las funciones se compilan como administradas de forma predeterminada cuando se utiliza **\/clr**.  
+ Las funciones se compilan como administradas de forma predeterminada cuando **/CLR** se utiliza.  
   
  Al aplicar estas pragmas:  
   
 -   Agregue la pragma que precede a una función, pero no dentro del cuerpo de la función.  
   
--   Agregue la pragma después de las instrucciones `#include`.  No use estas pragmas antes de las instrucciones `#include`.  
+-   Agregue la pragma después de las instrucciones `#include`. No use estas pragmas antes de las instrucciones `#include`.  
   
- El compilador omite las pragmas `managed` y `unmanaged` si no se utiliza **\/clr** en la compilación.  
+ El compilador omite la `managed` y `unmanaged` pragmas si **/CLR** no se utiliza en la compilación.  
   
  Cuando se crea una función de plantilla, el estado de pragma en el momento de definir la plantilla determina si es managed o unmanaged.  
   
- Para obtener más información, vea [Inicialización de ensamblados mixtos](../dotnet/initialization-of-mixed-assemblies.md).  
+ Para obtener más información, consulte [inicialización de ensamblados mixtos](../dotnet/initialization-of-mixed-assemblies.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // pragma_directives_managed_unmanaged.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -92,6 +93,10 @@ int main() {
 }  
 ```  
   
-  **En la función administrada.  En la función no administrada.**    
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+In managed function.  
+In unmanaged function.  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

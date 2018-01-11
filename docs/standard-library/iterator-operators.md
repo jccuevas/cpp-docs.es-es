@@ -15,10 +15,9 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -26,12 +25,11 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiteratorgt-operators"></a>Operadores de &lt;iterator&gt;
 ||||  
@@ -40,7 +38,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
 |[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Comprueba si el objeto iterador del lado izquierdo del operador no es igual que el objeto iterador del lado derecho.  
   
 ```  
@@ -231,7 +229,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Comprueba si el objeto iterador del lado izquierdo del operador es menor que el objeto iterador del lado derecho.  
   
 ```  
@@ -318,7 +316,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Comprueba si el objeto iterador del lado izquierdo del operador es menor o igual que el objeto iterador del lado derecho.  
   
 ```  
@@ -409,7 +407,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Comprueba si el objeto iterador del lado izquierdo del operador es mayor que el objeto iterador del lado derecho.  
   
 ```  
@@ -494,7 +492,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Comprueba si el objeto iterador del lado izquierdo del operador es mayor o igual que el objeto iterador del lado derecho.  
   
 ```  
@@ -752,5 +750,4 @@ The difference: rVPOS2 - rVPOS1= 4.
   
 ## <a name="see-also"></a>Vea también  
  [\<iterator>](../standard-library/iterator.md)
-
 

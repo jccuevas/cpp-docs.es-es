@@ -1,30 +1,31 @@
 ---
-title: "Module::RegisterCOMObject (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterCOMObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RegisterCOMObject (método)"
+title: "Module:: registercomobject (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterCOMObject
+dev_langs: C++
+helpviewer_keywords: RegisterCOMObject method
 ms.assetid: 59f223dc-03c6-429d-95da-b74b3f73b702
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a2984d5950464385ea47301db356b7364707e667
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Module::RegisterCOMObject (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Registra uno o más objetos COM para que otras aplicaciones pueden conectarse a ellos.  
+# <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject (Método)
+Registra uno o varios objetos COM para que otras aplicaciones puedan conectarse a ellos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,10 +47,10 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
  Una matriz de CLSID para registrar.  
   
  `factories`  
- Una matriz de interfaces IUnknown de los objetos de clase cuya disponibilidad se está publicando.  
+ Una matriz de interfaces de IUnknown de los objetos de clase se está publicando cuya disponibilidad.  
   
  `cookies`  
- Cuando finaliza la operación, una matriz de punteros a valores que identifican la clase de objetos que se han registrado. Estos valores se utilizarán posteriormente revocar el registro.  
+ Cuando se complete la operación, una matriz de punteros a valores que identifican la clase de objetos que se registraron. Estos valores se utilizarán posteriormente revocar el registro.  
   
  `count`  
  El número de CLSID para registrar.  
@@ -58,9 +59,9 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
  S_OK si consiga; en caso contrario, un valor HRESULT como CO_E_OBJISREG que indica el motivo por el error en la operación.  
   
 ## <a name="remarks"></a>Comentarios  
- Los objetos COM se registran con el enumerador de la enumeración CLSCTX CLSCTX_LOCAL_SERVER.  
+ Los objetos COM están registrados con el enumerador CLSCTX_LOCAL_SERVER de la enumeración CLSCTX.  
   
- Se especifica el tipo de conexión para los objetos registrados por una combinación de actual `comflag` parámetro de plantilla y el enumerador REGCLS_SUSPENDED de la enumeración REGCLS.  
+ El tipo de conexión a los objetos registrados se especifica mediante una combinación de actual `comflag` parámetro de plantilla y el enumerador REGCLS_SUSPENDED de la enumeración REGCLS.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  

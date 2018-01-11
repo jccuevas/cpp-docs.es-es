@@ -1,46 +1,46 @@
 ---
-title: "ComPtrRef::operator void** (Operador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator void**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator void** (operador)"
+title: 'Comptrref:: operator void ** (operador) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator void**
+dev_langs: C++
+helpviewer_keywords: operator void** operator
 ms.assetid: f020045c-9de4-4392-8783-73f0fc0761c6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a86f36f075dcee9688ee0eeca55e22a6eb7bb6fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef::operator void** (Operador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void** (Operador)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 operator void**() const;  
 ```  
   
-## Comentarios  
- Elimina el objeto actual de ComPtrRef, convierte el puntero a la interfaz que se representada por el objeto de ComPtrRef como a puntero\-a\-puntero\- a `void`, y devuelve el puntero de la conversión.  
+## <a name="remarks"></a>Comentarios  
+ Elimina el objeto ComPtrRef actual, convierte el puntero a la interfaz que se ha representado por el objeto ComPtrRef como un puntero-a-puntero-to `void`y, a continuación, devuelve el puntero de conversión.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [ComPtrRef \(Clase\)](../Topic/ComPtrRef%20Class.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtrRef (clase)](../windows/comptrref-class.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

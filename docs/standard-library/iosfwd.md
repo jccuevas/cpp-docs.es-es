@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 046fb6b682191f40545b95c41cea97bb7802c3e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a86259fc066ff97ed84c3387140180d79b5eebfc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 Declara referencias adelantadas a varias clases de plantilla usadas en iostreams. Estas clases de plantilla se definen en otros encabezados estándar. Este encabezado se incluye explícitamente solo cuando se necesita una de sus declaraciones, pero no su definición.  
@@ -31,7 +32,7 @@ Declara referencias adelantadas a varias clases de plantilla usadas en iostreams
   
 ```  
   
-## <a name="typedefs"></a>Definiciones de tipo  
+## <a name="typedefs"></a>Typedefs  
   
 ```
 typedef T1 streamoff;

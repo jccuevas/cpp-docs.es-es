@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ce4066da49c70cb604d613e10d3eba841c4b15e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dd12aabee7e7284e2f3d12f81403b9b499e8e68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-types-mfc"></a>Tipos de datos (MFC)
 Este tema enumeran los tipos de datos que suelen usados en la biblioteca Microsoft Foundation Class. La mayoría de los tipos de datos es los mismos que en el Kit de desarrollo de Software de plataforma (SDK), mientras que otras son exclusivas de MFC.  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
 La biblioteca estándar de C++ admite varios gramáticas de expresiones regulares. Este tema tratan las variaciones de gramática disponibles mediante expresiones regulares.  
@@ -34,7 +35,7 @@ La gramática de expresiones regulares para usar por especificado por el uso de 
 -   `extended`: El POSIX extender las expresiones regulares o ERE.
 -   `awk`: Es `extended`, pero tiene más caracteres de escape para los caracteres no imprimibles.
 -   `grep`: Es `basic`, pero también permite la nueva línea ('\n') caracteres separar alternancias.
--   `egrep`: Se trata de `extended`, sino que también permite caracteres de nueva línea separar alternatios.
+-   `egrep`: Se trata de `extended`, sino que también permite caracteres de nueva línea separar alternancias.
 
 De forma predeterminada, si no se especifica ninguna gramática, `ECMAScript` se da por hecho. Se puede especificar sólo una gramática.  
   

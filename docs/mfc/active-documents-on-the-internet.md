@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos activos en Internet
 Documentos activos proporcionan una extensión para los objetos incrustados tradicionales. Los documentos activos pueden ser varias páginas y se muestran en el área de clientes en su totalidad. No tradicional negociación de menús y se pueden editar en contexto, así como en una ventana abierta en la aplicación de servidor. En lugar de mostrar como un pequeño rectángulo rodeado por un borde sombreado, documentos activos son un marco completo y siempre en el contexto activo.  

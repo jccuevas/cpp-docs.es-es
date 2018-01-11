@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e76d0cda4dfe1644c590c555d9589c17b67686a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94e386827ae747fb3289354ba380d390756359ff
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmstgi"></a>__svm_stgi
 **Específicos de Microsoft**  
@@ -37,7 +38,7 @@ void __svm_stgi(void);
 ## <a name="remarks"></a>Comentarios  
  El `__svm_stgi` función es equivalente a la `STGI` instrucción máquina. El indicador de interrupción global determina si el microprocesador omite, pospone o controla las interrupciones a causa de eventos como una finalización de E/S, una alerta de temperatura de hardware o una excepción de depuración.  
   
- Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "volumen de Manual del programador de arquitectura AMD64 2: programación de sistema," número 24593, 3.11, de revisión del documento en el [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) sitio.  
+ Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento "volumen de Manual del programador de arquitectura AMD64 2: programación de sistema," número 24593, 3.11, de revisión del documento en el [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   

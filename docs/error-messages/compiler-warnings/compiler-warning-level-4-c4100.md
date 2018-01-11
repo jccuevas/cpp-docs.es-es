@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4100 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4100"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4100"
+title: Compilador (nivel 4) de la advertencia C4100 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4100
+dev_langs: C++
+helpviewer_keywords: C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72236ee0c100388906689121a0936daf23c58e89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4100
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificador': parámetro formal no referenciado  
+# <a name="compiler-warning-level-4-c4100"></a>Advertencia del compilador (nivel 4) C4100
+'identificador': parámetro formal sin referencia  
   
- No se hace referencia al parámetro formal en el cuerpo de la función.  Se omite el parámetro no referenciado.  
+ No se hace referencia el parámetro formal en el cuerpo de la función. Se omite el parámetro sin referencia.  
   
- También puede emitirse C4100 cuando el código llama a un destructor en un parámetro de tipo primitivo no referenciado de otra forma.  Esta es una limitación del compilador de Visual C\+\+.  
+ También se puede emitir C4100 cuando el código llama a un destructor en una sin ninguna referencia parámetro de tipo primitivo.  Se trata de una limitación del compilador de Visual C++.  
   
- El código siguiente genera el error C4100:  
+ El ejemplo siguiente genera C4100:  
   
 ```  
 // C4100.cpp  

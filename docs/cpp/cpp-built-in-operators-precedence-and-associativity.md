@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Los operadores integrados de C++, prioridad y asociatividad
 
@@ -63,7 +64,7 @@ Operador *prioridad* especifica el orden de las operaciones en las expresiones q
 |[Dirección de](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Direccionamiento indirecto](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Crear objeto](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[Destruir objeto](../cpp/delete-operator-cpp.md)|[eliminar](../cpp/delete-operator-cpp.md)|
+|[Destruir objeto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Conversión de tipos](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Prioridad de grupo 4, de izquierda a derecha asociatividad**|
 |[Puntero a miembro (objetos o punteros)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; o -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -72,7 +73,7 @@ Operador *prioridad* especifica el orden de las operaciones en las expresiones q
 |[División](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Módulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Prioridad de grupo 6, de izquierda a derecha asociatividad**|
-|[Adición](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Suma](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Resta](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**Prioridad 7, de izquierda a derecha asociatividad de grupo**|
 |[Desplazamiento a la izquierda](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|

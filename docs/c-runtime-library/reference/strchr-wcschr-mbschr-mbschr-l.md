@@ -51,11 +51,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca72da21f6d3b5699e9b4fa354f3fd280a35631f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 593b4ab918a40f5388d6d0de2eb8d52e0995a476
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 Busca un carácter en una cadena con la configuración regional actual o una categoría especificada de conversión de estado LC_CTYPE.  
@@ -137,7 +138,7 @@ const unsigned char *_mbschr_l(
   
  `wcschr`, `_mbschr` y `_mbschr_l` son versiones de caracteres anchos y multibyte de `strchr`. Los argumentos y el valor devuelto de `wcschr` son cadenas de caracteres anchos; los de `_mbschr` son cadenas de caracteres multibyte. `_mbschr` reconoce secuencias de caracteres multibyte. Además, si la cadena es un puntero nulo, `_mbschr` invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `_mbschr` devuelve `NULL` y establece `errno` en `EINVAL`. `strchr` y `wcschr` no validan sus parámetros. Estas tres funciones se comportan exactamente igual.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  En C, estas funciones toman un puntero `const` como primer argumento. En C++, hay disponibles dos sobrecargas. La sobrecarga que toma un puntero a `const` devuelve un puntero a `const`; la versión que contiene un puntero a un valor que no es `const` devuelve un puntero a un valor que no es `const`. La macro `_CRT_CONST_CORRECT_OVERLOADS` se define si tanto el `const` y no-`const` versiones de estas funciones están disponibles. Si necesitas no es`const` comportamiento para ambas sobrecargas de C++, defina el símbolo `_CONST_RETURN`.  
   

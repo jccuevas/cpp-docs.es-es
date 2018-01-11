@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5861a4931a1241a213157b94ca189c6b95f0fb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1dcbb3b54cbde323cda0856ca68b2281d669cb7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccli-migration-primer"></a>Manual de migraciones C++/CLI
 Se trata de una guía para mover los programas de Visual C++ de extensiones administradas para C++ a Visual C++. Para obtener un resumen de la lista de comprobación de cambios sintácticos, vea [(NOTINBUILD) de extensiones administradas para C++ Syntax Upgrade Checklist](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada).  

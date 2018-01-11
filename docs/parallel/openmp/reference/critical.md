@@ -1,32 +1,31 @@
 ---
-title: "critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Critical"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "critical OpenMP directive"
+title: "crítico | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2a70c53272415789ef381874fe4bc46327381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# critical
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que es el código se ejecuta sólo en un subproceso cada vez.  
+# <a name="critical"></a>critical
+Especifica que el código es solo pueden ejecutar en un subproceso a la vez.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp critical [(name)]  
@@ -35,18 +34,18 @@ Especifica que es el código se ejecuta sólo en un subproceso cada vez.
 }  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
- \(`name`\) \(opcional\)  
- un nombre para identificar el código crítico.  Observe que el nombre se debe agregar entre paréntesis.  
+ (`name`) (opcional)  
+ Un nombre para identificar el código crítico. Tenga en cuenta que este nombre debe incluirse entre paréntesis.  
   
-## Comentarios  
- la directiva de **Crtico** no admite ninguna cláusula de OpenMP.  
+## <a name="remarks"></a>Comentarios  
+ El **crítico** directiva es compatible con ningún cláusulas de OpenMP.  
   
- Para obtener más información, vea [2.6.2 critical Construct](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Para obtener más información, consulte [2.6.2 crítico construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_critical.cpp  
@@ -90,16 +89,19 @@ int main()
 }  
 ```  
   
-  **41**  
-**18467**  
-**6334**  
-**26500**  
-**19169**  
-**15724**  
-**11478**  
-**29358**  
-**26962**  
-**24464**  
-**\= 29358 máximos**   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+41  
+18467  
+6334  
+26500  
+19169  
+15724  
+11478  
+29358  
+26962  
+24464  
+max = 29358  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

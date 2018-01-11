@@ -43,11 +43,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b584d3e255bf3b2add52d5db00c6325b578ebf51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77a0a297413c053dee3e165ece07034487535b06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime, _localtime32, _localtime64
 Convierta un valor de hora y corríjalo para la zona horaria local. Hay disponibles versiones más seguras de estas funciones; vea [localtime_s, _localtime32_s, _localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md).  
@@ -81,7 +82,7 @@ struct tm *_localtime64(
   
  `_localtime64`, que usa la estructura `__time64_t`, permite expresar fechas hasta las 23:59:59 del 31 de diciembre de 3000, hora universal coordinada (UTC), mientras que `_localtime32` representa fechas hasta las 23:59:59 del 18 de enero de 2038, hora UTC.  
   
- `localtime` es una función insertada que se evalúa como `_localtime64` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t` de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `localtime` se evaluará como `_localtime32`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
+ `localtime` es una función insertada que se evalúa como `_localtime64` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t`de 32 bits, puede definir `_USE_32BIT_TIME_T`. Al hacerlo, `localtime` se evaluará como `_localtime32`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
   
  Los campos del tipo de estructura [tm](../../c-runtime-library/standard-types.md) almacenan los valores siguientes, cada uno de los cuales es un `int`:  
   

@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72de3b05dad581b2b0f4f3eec19e15d211bba601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleconvertdialog-class"></a>Clase de la clase COleConvertDialog
 Para obtener más información, consulte el [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estructura en el SDK de Windows.  
@@ -52,13 +53,13 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Construye un objeto `COleConvertDialog`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleConvertDialog::DoConvert](#doconvert)|Realiza la conversión especificada en el cuadro de diálogo.|  
 |[COleConvertDialog::DoModal](#domodal)|Muestra el cuadro de diálogo elemento OLE cambio.|  
@@ -69,7 +70,7 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleConvertDialog::m_cv](#m_cv)|Una estructura que controla el comportamiento del cuadro de diálogo.|  
   

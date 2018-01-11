@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ae8cf30ac23ec366b08917c93ffecf23bc16715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a381664f64f89f2a7040b04885b1f01efe885c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putc-putwc"></a>putc, putwc
 Escribe un carácter en un flujo.  
@@ -73,7 +74,7 @@ wint_t putwc(
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, `putc` y `putchar` devuelven `EOF`, mientras que `putwc` y `putwchar` devuelven **WEOF**. Para las cuatro rutinas, use [ferror](../../c-runtime-library/reference/ferror.md) o [feof](../../c-runtime-library/reference/feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para `stream`, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `EOF` o **WEOF** y establecen `errno` en `EINVAL`.  
   
- Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.  
+ Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.  
   
 ## <a name="remarks"></a>Comentarios  
  La rutina `putc` escribe el carácter individual `c` en la salida `stream` en la posición actual. Se puede pasar cualquier entero a `putc`, pero solo se escriben los 8 bits inferiores. La rutina `putchar` es idéntica a **putc(** `c`**, stdout)**. Para cada rutina, si se produce un error de lectura, se establece el indicador de error para el flujo. `putc` y `putchar` se parecen a `fputc` y `_fputchar`, respectivamente, pero se implementan como funciones y como macros (vea [Elegir entre funciones y macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` y `putwchar` son versiones con caracteres anchos de `putc` y `putchar`, respectivamente. `putwc` y `putc` se comportan exactamente igual si el flujo se abre en modo ANSI. `putc` no admite actualmente la salida en un flujo UNICODE.  

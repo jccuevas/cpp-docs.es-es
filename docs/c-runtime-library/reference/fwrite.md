@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 98d965b6a8e12e2f27d1544bec07357c28c3b7ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b830dfd7b0a9dace46336f8f02da14fc268daf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fwrite"></a>fwrite
 Escribe datos en un flujo.  
@@ -62,7 +63,7 @@ size_t fwrite(
  Número máximo de elementos que se va a escribir.  
   
  `stream`  
- Puntero a la estructura `FILE`.  
+ Puntero a la estructura `FILE` .  
   
 ## <a name="return-value"></a>Valor devuelto  
  `fwrite` devuelve el número de elementos completos escritos realmente, que puede ser menor que `count` si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si `stream` o `buffer` es un puntero nulo, o si un número impar de bytes que se debe escribir se especifica en modo Unicode, la función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  

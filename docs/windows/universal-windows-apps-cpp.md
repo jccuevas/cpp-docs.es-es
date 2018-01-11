@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 656c8ac642ae9c8a6a76e1ed52ca014b5515e65f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="universal-windows-apps-c"></a>Aplicaciones Windows universales (C++)
 Aplicaciones universales de plataforma de Windows (UWP) representan un conjunto de principios de diseño que crear interfaces de usuario simple que están centradas en el contenido que se ajusta automáticamente a los diferentes tamaños de pantalla en diversos dispositivos. La interfaz de usuario se crea en el marcado XAML y el código subyacente en C++ nativo. También puede crear componentes (archivos DLL) que las aplicaciones para UWP escritas en otros lenguajes pueden consumir. La superficie de API para aplicaciones UWP es el tiempo de ejecución de Windows, que es una biblioteca factorizada correctamente que proporciona una amplia variedad de servicios del sistema operativo.  

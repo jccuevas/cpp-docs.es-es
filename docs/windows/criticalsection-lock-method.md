@@ -1,32 +1,33 @@
 ---
-title: "CriticalSection::Lock (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lock (método)"
+title: "CriticalSection:: lock (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+dev_langs: C++
+helpviewer_keywords: Lock method
 ms.assetid: 37cb184c-e13c-49ef-b6a0-13908a956414
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: af996faeebd0fcddb85993badd71ceecd32d494e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSection::Lock (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Espera la propiedad del objeto especificado de sección crítica.  La función devuelve cuando el subproceso de la llamada tiene su propiedad.  
+# <a name="criticalsectionlock-method"></a>CriticalSection::Lock (Método)
+Esperas de propiedad del objeto de sección crítica especificado. La función devuelve cuando el subproceso que realiza la llamada se concede la propiedad.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 SyncLock Lock();  
@@ -36,20 +37,20 @@ SyncLock Lock();
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `cs`  
- Un objeto definido por el usuario de la sección crítica.  
+ Un objeto de sección crítica especificado por el usuario.  
   
-## Valor devuelto  
- Un objeto de bloqueo que se puede utilizar para desbloquear la sección crítica actual.  
+## <a name="return-value"></a>Valor devuelto  
+ Un objeto de bloqueo que puede usarse para desbloquear la sección crítica actual.  
   
-## Comentarios  
- La primera función de **Lock** afecta al objeto actual de sección crítica.  La segunda función de **Lock** afecta a una sección crítica definida por el usuario.  
+## <a name="remarks"></a>Comentarios  
+ La primera **bloqueo** el objeto de sección crítica actual afecta a la función. El segundo **bloqueo** function afecta a una sección crítica especificado por el usuario.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [CriticalSection \(Clase\)](../Topic/CriticalSection%20Class.md)
+## <a name="see-also"></a>Vea también  
+ [CriticalSection (clase)](../windows/criticalsection-class.md)

@@ -1,35 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4239 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4239"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4239"
+title: Compilador advertencia (nivel 4) C4239 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4239
+dev_langs: C++
+helpviewer_keywords: C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 18f1c6d700de0c621ebde02c7dcb2817091677cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4239
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se ha utilizado una extensión no estándar : 'símbolo \(token\)' : conversión de 'tipo' a 'tipo'  
+# <a name="compiler-warning-level-4-c4239"></a>Advertencia del compilador (nivel 4) C4239
+ha utilizado una extensión no estándar: 'token': conversión de 'tipo' a 'tipo'  
   
- Esta conversión de tipo no se permite en el estándar de C\+\+, pero sí aquí como extensión.  Esta advertencia siempre viene precedida de una explicación de al menos una línea que describe la regla del lenguaje que se ha infringido.  
+ Esta conversión de tipo no está permitida por el estándar de C++, pero se permite aquí como una extensión. Esta advertencia siempre va seguida de al menos una línea de explicación que describe la regla de idioma que se ha infringido.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4239.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4239.  
   
 ```  
 // C4239.cpp  
@@ -45,10 +44,10 @@ void func(void) {
 }  
 ```  
   
-## Ejemplo  
- No se permite estrictamente la conversión de un tipo entero a un tipo enum.  
+## <a name="example"></a>Ejemplo  
+ Conversión de tipo entero a un tipo enum no se permite estrictamente.  
   
- El ejemplo siguiente genera el error C4239.  
+ El ejemplo siguiente genera C4239.  
   
 ```  
 // C4239b.cpp  

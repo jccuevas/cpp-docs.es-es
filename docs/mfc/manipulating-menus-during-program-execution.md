@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de15306c7ba9f9c36fd9159b40f209fd09b89c47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00d688cc5aede196e5060113de07358e35dbba81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Manipular menús durante la ejecución de programas
 Utilice la clase `CMenu` para manipular los menús y elementos de menú sobre la marcha. `CMenu`Encapsula un Windows `HMENU` controlar y proporciona funciones miembro para trabajar con menús.  

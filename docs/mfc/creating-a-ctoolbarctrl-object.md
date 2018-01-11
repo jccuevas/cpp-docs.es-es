@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eecb599d84cedd742a15c4a5572ce4c130b19669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Crear un objeto CToolBarCtrl
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objetos contienen varias estructuras de datos internas: una lista de mapas de bits de imagen de botón, una lista de cadenas de etiqueta de botón y una lista de `TBBUTTON` estructuras: que asociar una imagen o de cadena con la posición, el estilo, el estado, y Identificador de comando del botón. Cada uno de los elementos de estas estructuras de datos se conoce por un índice de base cero. Para poder usar un `CToolBarCtrl` de objeto, debe configurar estas estructuras de datos. Para obtener una lista de las estructuras de datos, vea [controles de barra de herramientas](https://msdn.microsoft.com/library/47xcww9x.aspx) en el SDK de Windows. La lista de cadenas sólo puede utilizarse para las etiquetas de botón; no se puede recuperar las cadenas de la barra de herramientas.  
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objetos contienen varias estructuras de datos internas: una lista de mapas de bits de imagen de botón, una lista de cadenas de etiqueta de botón y una lista de `TBBUTTON` estructuras: que asociar una imagen o de cadena con la posición, el estilo, el estado, y Identificador de comando del botón. Cada uno de los elementos de estas estructuras de datos se conoce por un índice de base cero. Para poder usar un `CToolBarCtrl` de objeto, debe configurar estas estructuras de datos. Para obtener una lista de las estructuras de datos, vea [controles de barra de herramientas](controls-mfc.md) en el SDK de Windows. La lista de cadenas sólo puede utilizarse para las etiquetas de botón; no se puede recuperar las cadenas de la barra de herramientas.  
   
  Para usar un `CToolBarCtrl` de objeto, normalmente se siguen estos pasos:  
   

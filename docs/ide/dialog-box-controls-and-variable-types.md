@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3976e9455966914e124fbfd5a4d2479866305b17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>Tipos de controles de cuadro de diálogo y tipos de variable
 Puede usar el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md) para agregar una variable de miembro a un control de cuadro de diálogo creado mediante MFC. El tipo de control para el que se agregue la variable miembro determina las opciones que aparecen en el cuadro de diálogo.  
@@ -35,7 +36,7 @@ Puede usar el [Asistente para agregar variables miembro](../ide/add-member-varia
 |Casilla de verificación|COMPROBAR|[CButton](../mfc/reference/cbutton-class.md)|**BOOL**|Valor de máximo y mínimo|  
 |Cuadro combinado|CUADRO COMBINADO|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Número máximo de caracteres|  
 |Control de selector de fecha hora|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Valor de máximo y mínimo|  
-|Cuadro de edición|EDICIÓN|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, o **COleCurrency**|Valor de máximo y mínimo; Algunos caracteres como máximo soporte técnico|  
+|Cuadro de edición|EDITAR|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime`, o **COleCurrency**|Valor de máximo y mínimo; Algunos caracteres como máximo soporte técnico|  
 |Control de tecla de acceso rápido|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|None; sólo el control|N/D|  
 |Cuadro de lista|CUADRO DE LISTA|[CListBox](../mfc/reference/clistbox-class.md)|`CString`|Número máximo de caracteres|  
 |List (control)|SysListView32|[CListCtrl](../mfc/reference/clistctrl-class.md)|None; sólo el control|N/D|  

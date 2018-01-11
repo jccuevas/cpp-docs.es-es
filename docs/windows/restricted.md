@@ -1,32 +1,33 @@
 ---
-title: "restricted | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.restricted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "restricted attribute"
+title: restringido | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.restricted
+dev_langs: C++
+helpviewer_keywords: restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# restricted
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Especifica que un miembro de módulo, interfaz, o de dispinterface no puede ser llamado arbitrariamente.  
+# <a name="restricted"></a>restricted
+Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispinterface arbitrariamente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,15 +36,15 @@ Especifica que un miembro de módulo, interfaz, o de dispinterface no puede ser 
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `interfaces`  
- Una o más interfaces que no se puede llamar arbitrariamente en un objeto COM.  Este parámetro sólo es válido cuando se aplica a una clase.  
+ Una o más interfaces que no se llama de forma arbitraria en un objeto COM. Este parámetro solo es válido cuando se aplica a una clase.  
   
-## Comentarios  
- el atributo de **Restringido** C\+\+ tiene la misma funcionalidad que el atributo de [Restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **restringido** atributo C++ tiene la misma funcionalidad que la [restringido](http://msdn.microsoft.com/library/windows/desktop/aa367157) atributo MIDL.  
   
-## Ejemplo  
- el código siguiente muestra cómo utilizar el atributo de **Restringido** :  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo utilizar el **restringido** atributo:  
   
 ```  
 // cpp_attr_ref_restricted.cpp  
@@ -68,21 +69,20 @@ class c : public a, public b
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|método de interfaz, `interface`, **clase**, `struct`|  
-|**repetible**|No|  
-|**Atributos necesarios**|**CoClass** \(cuando se aplica a **clase** o a `struct`\)|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|Método, la interfaz `interface`, **clase**,`struct`|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|**coclase** (cuando se aplica a **clase** o `struct`)|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de interfaz](../windows/interface-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   

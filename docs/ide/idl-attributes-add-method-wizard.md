@@ -17,16 +17,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 583b2c0ec67c4799753fe52d74131e7238b11d46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idl-attributes-add-method-wizard"></a>Atributos IDL, Asistente para agregar métodos
 Utilice esta página del Asistente para agregar método para especificar la configuración de idioma (IDL) de definición de interfaz para el método.  
   
- **id**  
+ **identificador**  
  Establece el identificador numérico que identifica el método. Vea [identificador](http://msdn.microsoft.com/library/windows/desktop/aa367040) en el *MIDL referencia*.  
   
  Este cuadro no está disponible para las interfaces personalizadas y no está disponible para interfaces dispinterface MFC.  

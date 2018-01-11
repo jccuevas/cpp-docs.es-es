@@ -1,31 +1,32 @@
 ---
-title: "C&#243;mo: Probar la igualdad (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "igualdad, comprobar"
+title: "Cómo: probar la igualdad (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: equality, testing for
 ms.assetid: 9115e298-9f75-452d-bdfb-6eeb0fa0b3c6
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 19b573ca0069031cda6d7c8108d51f8bf4fa83ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Probar la igualdad (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el ejemplo siguiente, una prueba de igualdad que usa Extensiones administradas para C\+\+ se basa en el objeto al que hacen referencia los identificadores.  
+# <a name="how-to-test-for-equality-ccli"></a>Cómo: Probar la igualdad (C++/CLI)
+En el ejemplo siguiente, una prueba de igualdad que usa Extensiones administradas para C++ se basa en lo que hacen referencia los identificadores.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // mcppv2_equality_test.cpp  
@@ -39,12 +40,12 @@ bool Test1() {
 }  
 ```  
   
- El lenguaje intermedio para este programa muestra que el valor devuelto se implementa mediante una llamada a op\_Equality.  
+ El lenguaje intermedio para este programa muestra que el valor devuelto se implementa mediante una llamada a op_Equality.  
   
 ```  
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
                                                                string)  
 ```  
   
-## Vea también  
- [Tipos administrados](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Tipos administrados (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

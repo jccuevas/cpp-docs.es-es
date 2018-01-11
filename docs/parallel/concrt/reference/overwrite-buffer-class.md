@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a9098f6f8f0374ad10396f30cf5aa636d9843d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overwritebuffer-class"></a>Clase overwrite_buffer
 Un bloque de mensajería `overwrite_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado que es capaz de almacenar un único mensaje cada vez. Los nuevos mensajes sobrescriben a los retenidos previamente.  
@@ -54,21 +55,21 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Sobrecargado. Construye un `overwrite_buffer` bloque de mensajería.|  
 |[~ overwrite_buffer (destructor)](#dtor)|Destruye el `overwrite_buffer` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[has_value](#has_value)|Comprueba si este `overwrite_buffer` bloque de mensajería aún tiene un valor.|  
 |[value](#value)|Obtiene una referencia a la carga actual del mensaje que se almacena en la `overwrite_buffer` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Acepta un mensaje que fue proporcionado por este `overwrite_buffer` bloque de mensajería, devolviendo una copia del mensaje al llamador.|  
 |[consume_message](#consume_message)|Consume un mensaje proporcionado anteriormente por el `overwrite_buffer` bloque de mensajería y reservado por el destino, devolviendo una copia del mensaje al llamador.|  

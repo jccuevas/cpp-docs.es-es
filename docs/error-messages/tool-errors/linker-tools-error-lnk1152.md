@@ -1,29 +1,28 @@
 ---
-title: "Error de las herramientas del vinculador LNK1152 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1152"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1152"
+title: Las herramientas del vinculador LNK1152 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1152
+dev_langs: C++
+helpviewer_keywords: LNK1152
 ms.assetid: 2523b61a-1359-4612-9c16-7d1f705f32e6
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d2171b41a3601e6d20913118893f714bd6555a25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error de las herramientas del vinculador LNK1152
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no se puede resolver uno o varios símbolos no representativos  
+# <a name="linker-tools-error-lnk1152"></a>Error de las herramientas del vinculador LNK1152
+no se puede resolver uno o más símbolos no representativos  
   
- Este error viene precedido de una advertencia [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) por cada símbolo no representativo que no puede resolverse, y al menos por dos advertencias [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) por cada símbolo duplicado que se encuentre para el símbolo no representativo.
+ Este error está precedido por una advertencia [LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md) para cada símbolo no representativo que no se puede resolver y al menos dos advertencias [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) para los símbolos duplicados encontrados para el símbolo no representativo.

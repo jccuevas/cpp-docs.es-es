@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - splitpath
 - _wsplitpath
 - _tsplitpath
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _splitpath function
 - pathnames
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bbd6a163df9daf8e699f3ecf52325786fe89d8ea
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ad76dd59e0119e46030eb19223d678927b3fd077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 Divida un nombre de ruta de acceso en componentes. Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
@@ -106,7 +90,7 @@ void _wsplitpath(
  Extensión de nombre de archivo, incluido el punto inicial (`.`). Puede pasar `NULL` para este parámetro si no necesita la extensión de nombre de archivo.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_splitpath` divide una ruta de acceso en los cuatro componentes respectivos. `_splitpath` controla automáticamente los argumentos de cadenas de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte de acuerdo con la página de códigos multibyte actualmente en uso. `_wsplitpath` es una versión con caracteres anchos de `_splitpath`; los argumentos a `_wsplitpath` son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
+ La función `_splitpath` divide una ruta de acceso en los cuatro componentes respectivos. `_splitpath` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wsplitpath` es una versión con caracteres anchos de `_splitpath`; los argumentos a `_wsplitpath` son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
   
  **Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
   
@@ -122,7 +106,7 @@ void _wsplitpath(
   
  En la tabla siguiente se enumeran los valores de las constantes de manifiesto.  
   
-|Nombre|Valor|  
+|nombre|Valor|  
 |----------|-----------|  
 |_MAX_DRIVE|3|  
 |_MAX_DIR|256|  
@@ -142,7 +126,7 @@ void _wsplitpath(
 |`_splitpath`|\<stdlib.h>|  
 |`_wsplitpath`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  

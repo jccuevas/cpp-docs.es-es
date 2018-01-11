@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -51,31 +49,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 35501213c0d9e0ee60472e4082bc03eabe8440e0
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Escriba datos con formato en una cadena con la capacidad de especificar el orden en el que se usan los parámetros en la cadena de formato.  
@@ -133,7 +116,7 @@ int _swprintf_p_l(
  El número de caracteres escritos, o -1 si se produjo un error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_sprintf_p` da formato y almacena una serie de caracteres y valores en `buffer`. Cada argumento de la `argument_list` (si existe) se convierte y sale según la especificación de formato correspondiente de `format`. El `format` argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Se anexa un carácter `NULL` después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre `_sprintf_p` y `sprintf_s` es que `_sprintf_p` admite parámetros posicionales, lo que permite especificar el orden en el que se usan los argumentos en la cadena de formato. Para obtener más información, vea [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
+ La función `_sprintf_p` da formato y almacena una serie de caracteres y valores en `buffer`. Cada argumento de la `argument_list` (si existe) se convierte y sale según la especificación de formato correspondiente de `format`. El `format` argumento utiliza la [formato de sintaxis de especificación de funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Se anexa un carácter `NULL` después del último carácter escrito. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido. La diferencia entre `_sprintf_p` y `sprintf_s` es que `_sprintf_p` admite parámetros posicionales, lo que permite especificar el orden en el que se usan los argumentos en la cadena de formato. Para obtener más información, consulte [printf_p (Parámetros de posición)](../../c-runtime-library/printf-p-positional-parameters.md).  
   
  `_swprintf_p` es una versión con caracteres anchos de `_sprintf_p`; los argumentos de puntero a `_swprintf_p` son cadenas de carácter ancho. La detección de errores de codificación en `_swprintf_p` puede diferir de la de `_sprintf_p`. `_swprintf_p` y `fwprintf_p` se comportan exactamente igual, salvo por el hecho de que `_swprintf_p` escribe la salida en una cadena y no en un destino de tipo `FILE`, y `_swprintf_p` requiere el parámetro `count` para especificar el número máximo de caracteres que se escribirán. Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   
@@ -153,7 +136,7 @@ int _swprintf_p_l(
 |`_sprintf_p`, `_sprintf_p_l`|\<stdio.h>|  
 |`_swprintf_p`, `_swprintf_p_l`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

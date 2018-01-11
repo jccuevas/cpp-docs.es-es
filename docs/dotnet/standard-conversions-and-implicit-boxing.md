@@ -1,30 +1,32 @@
 ---
-title: "Conversiones est&#225;ndar y conversi&#243;n boxing impl&#237;cita | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing (conversión), implícita"
+title: "Conversiones estándar y conversión Boxing implícita | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ade776e2d1eab0fe244254a91a2ed3830ffbda6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Conversiones est&#225;ndar y conversi&#243;n boxing impl&#237;cita
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una conversión estándar se elegida por el compilador sobre una conversión que requiere la conversión boxing.  
+# <a name="standard-conversions-and-implicit-boxing"></a>Conversiones estándar y conversión boxing implícita
+Una conversión estándar se elegirá el compilador sobre una conversión que requiere la conversión boxing.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // clr_implicit_boxing_Std_conversion.cpp  
@@ -43,6 +45,9 @@ int main() {
 }  
 ```  
   
- **2**   
-## Vea también  
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Conversión boxing](../windows/boxing-cpp-component-extensions.md)

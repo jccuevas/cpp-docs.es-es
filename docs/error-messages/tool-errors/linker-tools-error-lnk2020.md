@@ -1,40 +1,39 @@
 ---
-title: "Error de las herramientas del vinculador LNK2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2020"
+title: Las herramientas del vinculador LNK2020 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2020
+dev_langs: C++
+helpviewer_keywords: LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 394cafe23851df5320a78a4e165a90422fc305de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error de las herramientas del vinculador LNK2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-símbolo \(token\) sin resolver 'token'  
+# <a name="linker-tools-error-lnk2020"></a>Error de las herramientas del vinculador LNK2020
+símbolo (token) 'token' sin resolver  
   
- Similar a un error de símbolo externo no definido, salvo que la referencia tiene lugar a través de los metadatos.  En los metadatos, se deben definir todos los datos y funciones.  
+ Es similar a un error externo no definido, excepto en que la referencia es a través de metadatos. En los metadatos, deben definirse todas las funciones y datos.  
   
- Para resolverlo:  
+ Para resolver:  
   
--   Defina la función o los datos que faltan, o bien  
+-   Definir la función que faltan o los datos, o  
   
--   Incluya el archivo objeto o biblioteca donde la función o los datos que faltan ya están definidos.  
+-   Incluir el archivo objeto o biblioteca en la que la función o los datos que faltan ya está definidos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error LNK2020.  
   
 ```  
@@ -52,8 +51,8 @@ ref struct B {
 };  
 ```  
   
-## Ejemplo  
- También puede producirse el error LNK2020 si se crea una variable de un tipo de plantilla administrado, pero no se crean también instancias del tipo.  
+## <a name="example"></a>Ejemplo  
+ También se producirá el error LNK2020 si se crea una variable de un tipo de plantilla administrado, pero no también crear instancias del tipo.  
   
  El ejemplo siguiente genera el error LNK2020.  
   

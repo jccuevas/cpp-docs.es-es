@@ -1,33 +1,33 @@
 ---
-title: "ref (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ref"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref attribute"
+title: ref (C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ref
+dev_langs: C++
+helpviewer_keywords: ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fc63f89b8b8ff40198efbff69c64c3553dafd12f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ref (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ref-c"></a>ref (C++)
 Identifica un puntero de referencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,11 +35,11 @@ Identifica un puntero de referencia.
   
 ```  
   
-## Comentarios  
- el atributo de `ref` C\+\+ tiene la misma funcionalidad que el atributo de [referencia](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El `ref` atributo C++ tiene la misma funcionalidad que la [ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) atributo MIDL.  
   
-## Ejemplo  
- el código siguiente muestra cómo utilizar el atributo de `ref` :  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo utilizar el `ref` atributo:  
   
 ```  
 // cpp_attr_ref_ref.cpp  
@@ -53,21 +53,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|`typedef`, parámetro de interfaz, método de interfaz|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|`typedef`, parámetro de interfaz, el método de interfaz|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union y Struct (atributos)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Atributos de parámetro](../windows/parameter-attributes.md)   

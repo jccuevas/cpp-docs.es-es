@@ -40,11 +40,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df67b3dbacd4cf8fcc7652b55643371c5e59c025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24d5ad81bb19f5a33eb70f6dc40ef41cc5d761d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 Obtiene la posición actual de un puntero de archivo, sin bloquear el subproceso.  
@@ -77,7 +78,7 @@ __int64 _ftelli64_nolock(
 |`ftell_nolock`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   

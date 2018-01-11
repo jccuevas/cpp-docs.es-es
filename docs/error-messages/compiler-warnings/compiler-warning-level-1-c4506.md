@@ -1,33 +1,32 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4506 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4506"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4506"
+title: Compilador advertencia (nivel 1) C4506 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4506
+dev_langs: C++
+helpviewer_keywords: C4506
 ms.assetid: aa682869-65d1-4dad-ba32-198f10b44f91
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26143e45a567390d64a6d899c31c34dde532194b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4506
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no hay una definición para la función inline 'función'  
+# <a name="compiler-warning-level-1-c4506"></a>Advertencia del compilador (nivel 1) C4506
+ninguna definición para la función inline 'function'  
   
- La función dada se declaró y marcó para su ejecución en línea, pero no se definió.  
+ La función especificada se declaró y marcada para la inclusión pero no se definió.  
   
- El compilador no procesó la función en línea.  
+ El compilador no no alinear la función.  
   
- Asegúrese de que las funciones externas que haya que procesar en línea se declaren con la palabra clave `extern`.
+ Asegúrese de que se declaran las funciones externas que se alinean con el `extern` palabra clave.

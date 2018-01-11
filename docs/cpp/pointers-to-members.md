@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 Las declaraciones de punteros a miembros son casos especiales de declaraciones de puntero.  Se declaran mediante la siguiente secuencia:  
@@ -52,7 +50,7 @@ Las declaraciones de punteros a miembros son casos especiales de declaraciones d
   
     -   El operador ::.  
   
-    -   El ** \* ** operador.  
+    -   El  **\***  operador.  
   
     -   Opcional **const** o `volatile` especificadores.  
   
@@ -60,9 +58,9 @@ Las declaraciones de punteros a miembros son casos especiales de declaraciones d
   
     -   Un inicializador opcional:  
   
- El ** = ** operador.  
+ El  **=**  operador.  
   
- El ** & ** operador.  
+ El  **&**  operador.  
   
  Nombre completo de la clase.  
   
@@ -116,9 +114,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La diferencia entre el **.\* ** y ** -> \* ** operadores (los operadores de puntero a miembro) es que la **.\* ** operador selecciona los miembros con un objeto o una referencia de objeto, mientras el ** -> \* ** operador selecciona los miembros a través de un puntero. (Para obtener más información acerca de estos operadores, vea [expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ La diferencia entre el **.\***  y  **-> \***  operadores (los operadores de puntero a miembro) es que la **.\***  operador selecciona los miembros con un objeto o una referencia de objeto, mientras el  **-> \***  operador selecciona los miembros a través de un puntero. (Para obtener más información acerca de estos operadores, vea [expresiones con operadores de puntero a miembro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- El resultado de los operadores de puntero a miembro es el tipo del miembro: en este caso, **char \* **.  
+ El resultado de los operadores de puntero a miembro es el tipo del miembro: en este caso, **char \*** .  
   
  El fragmento de código siguiente invoca las funciones miembro `GetCaption` y `SetCaption` mediante punteros a miembros:  
   

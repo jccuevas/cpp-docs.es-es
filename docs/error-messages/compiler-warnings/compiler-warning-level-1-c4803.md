@@ -1,53 +1,35 @@
 ---
-title: La advertencia C4803 de compilador advertencia (nivel 1) | Documentos de Microsoft
+title: Compilador advertencia (nivel 1) C4803 | Documentos de Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4803
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4803
+f1_keywords: C4803
+dev_langs: C++
+helpviewer_keywords: C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b6725685e84e1c9ce0fc5c3f58f4ff163870d278
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Advertencia del compilador (nivel 1) C4803
 'método': el método raise tiene una clase de almacenamiento distinta de la del evento, 'event'  
   
-Métodos de evento deben tener la misma clase de almacenamiento que la declaración del evento. El compilador ajusta los métodos del evento para que las clases de almacenamiento son los mismos.  
+Los métodos de evento deben tener la misma clase de almacenamiento que la declaración del evento. El compilador ajusta los métodos del evento para que las clases de almacenamiento son los mismos.  
   
 Esta advertencia puede producirse si tiene una clase que implementa un evento de una interfaz. El compilador no genera implícitamente un método raise para un evento en una interfaz. Cuando implemente esa interfaz en una clase, el compilador genera implícitamente un método raise y dicho método no será virtual, por lo tanto, la advertencia. Para obtener más información sobre eventos, vea [eventos](../../windows/event-cpp-component-extensions.md).  
   
-Consulte [advertencia](../../preprocessor/warning.md) pragma para obtener información sobre cómo desactivar una advertencia.  
+Vea [advertencia](../../preprocessor/warning.md) pragma para obtener información sobre cómo desactivar una advertencia.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C4803.  
@@ -89,4 +71,3 @@ int main() {
    ep->E1();  
 }  
 ```  
-

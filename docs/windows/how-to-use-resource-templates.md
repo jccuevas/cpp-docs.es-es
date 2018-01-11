@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a072fb02c1821e2174671465d570944078b08f7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-resource-templates"></a>Cómo: Usar plantillas de recursos
 Una plantilla de recursos es un recurso personalizado que ha guardado como un archivo .rct. Por lo tanto, una plantilla de recursos puede servir como punto de partida para crear otros recursos. Las plantillas de recursos ahorran tiempo en el desarrollo de recursos adicionales o grupos de recursos que comparten características, como los controles estándar y otros elementos repetidos. Por ejemplo, debe incluir un botón de ayuda y el icono del logotipo de una empresa en varios cuadros de diálogo. Para hacerlo de una forma rápida, cree una nueva plantilla de cuadro de diálogo y personalícela con el logotipo y el botón de ayuda.  

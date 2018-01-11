@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60d7c2276a980dfe1bfb6a6f99981a3a9d72994e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ea93e9e56b676e4dfef33ecbcabfd9754458024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relationships-among-mfc-objects"></a>Relaciones entre objetos MFC
 Con el fin de colocar el proceso de creación de documento/vista en perspectiva, considere la posibilidad de un programa en ejecución: un documento, la ventana de marco que se usa para contener la vista y la vista asociada con el documento.  

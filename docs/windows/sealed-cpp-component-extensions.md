@@ -1,77 +1,77 @@
 ---
-title: "sealed (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sealed_cpp"
-  - "sealed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sealed (palabra clave) [C++]"
+title: sealed (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sealed_cpp
+- sealed
+dev_langs: C++
+helpviewer_keywords: sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# sealed (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sealed--c-component-extensions"></a>sealed (Extensiones de componentes de C++)
 `sealed` es una palabra clave contextual para las clases ref que indica que no se puede reemplazar un miembro virtual o que no se puede usar un tipo como tipo base.  
   
 > [!NOTE]
->  El lenguaje estándar ISO C \+\+ 11 tiene la palabra clave [final](../cpp/final-specifier.md), que es compatible con Visual Studio.  Use `final` en clases estándar y `sealed` en las clases ref.  
+>  El ISO C ++ 11 estándar lenguaje tiene la [final](../cpp/final-specifier.md) palabra clave, que se admite en Visual Studio. Use `final` en clases estándar y `sealed` en las clases ref.  
   
-## Todos los runtimes  
- **Sintaxis**  
+## <a name="all-runtimes"></a>Todos los runtimes  
+  
+## <a name="syntax"></a>Sintaxis
   
 ```  
-  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
-  
 ```  
   
- **Parámetros**  
+### <a name="parameters"></a>Parámetros  
   
- *identificador*  
+ *identifier*  
  Nombre de la función o clase.  
   
  *tipo de valor devuelto*  
  Tipo devuelto por una función.  
   
- **Comentarios**  
+## <a name="remarks"></a>Comentarios  
   
- En el primer ejemplo de sintaxis, una clase está sellada.  En el segundo ejemplo, una función virtual está sellada.  
+ En el primer ejemplo de sintaxis, una clase está sellada. En el segundo ejemplo, una función virtual está sellada.  
   
- La palabra clave `sealed` es válida para destinos nativos, así como para [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] y Common Language Runtime \(CLR\).  Para obtener más información, consulte [Declarar especificadores de invalidación en las compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ El `sealed` palabra clave es válida para destinos nativos y también para el tiempo de ejecución de Windows y common language runtime (CLR). Para obtener más información, consulte [especificadores de invalidación y compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Puede detectar en tiempo de compilación si un tipo está sellado usando el rasgo de tipo `__is_sealed (``type``)`.  Para obtener más información, consulte [Compatibilidad de compilador para type traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Puede detectar en tiempo de compilación si un tipo está sellado usando el `__is_sealed(type)` rasgo de tipo. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed` es una palabra clave contextual.  Para obtener más información, consulte [Palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `sealed` es una palabra clave contextual.  Para obtener más información, consulte [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Consulte [Ref \(Clases y structs\)](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ Vea [clases y structs Ref](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- \(No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime\).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Common Language Runtime).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  Este ejemplo de código siguiente muestra el efecto de `sealed` en un miembro virtual.  
   
 ```cpp  
@@ -117,11 +117,13 @@ int main() {
 }  
 ```  
   
- **Resultado**  
+```Output  
+X::f override of I1::f  
+X::f override of I1::g  
+Y::f override of I1::f  
+```  
   
-  **Invalidación de X::f de I1::f**  
- **Invalidación de X::f de I1::g**  
- **Invalidación de Y::f de I1::f** En el ejemplo de código siguiente se muestra cómo marcar una clase como sellada.  
+ En el ejemplo de código siguiente se muestra cómo marcar una clase como sellada.  
   
 ```cpp  
 // sealed_keyword_2.cpp  
@@ -141,5 +143,5 @@ public:
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

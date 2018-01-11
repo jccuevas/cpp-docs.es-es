@@ -1,32 +1,33 @@
 ---
-title: "unique_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unique_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique_copy (función) [STL/CLR]"
+title: unique_copy (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unique_copy
+dev_langs: C++
+helpviewer_keywords: unique_copy function [STL/CLR]
 ms.assetid: 37aa5b06-42c5-420d-94c5-00f00ad26471
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca88897a16a78dcb0f331f2ce56db29ab692a3c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# unique_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia los elementos de un intervalo de origen en un rango de destino salvo los elementos duplicados que se adyacente a sí.  
+# <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
+Copia los elementos de un intervalo de origen a un intervalo de destino salvo los elementos duplicados que son adyacentes entre sí.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -36,13 +37,13 @@ template<class _InIt, class _OutIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `unique_copy`STL.  Para obtener más información, vea [unique\_copy](../Topic/unique_copy.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `unique_copy`. Para obtener más información, consulte [unique_copy](../standard-library/algorithm-functions.md#unique_copy).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

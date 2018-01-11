@@ -53,11 +53,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd7c3fd10461033c6b66a96eecd4d5e6ec5941b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fe06748a6e349f612fdf564c9aed917e43f164b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 Convierte un carácter a minúsculas.  
@@ -95,7 +96,7 @@ int _towlower_l(
  Cada una de estas rutinas convierte una copia de `c` a minúsculas, si la conversión es posible, y devuelve el resultado. No se reserva ningún valor devuelto para indicar un error.  
   
 ## <a name="remarks"></a>Comentarios  
- Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión de mayúsculas y minúsculas de `towlower` es específica de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el sufijo `_l` usan la configuración regional establecida en ese momento. Las versiones de estas funciones que tienen el sufijo `_l` toman la configuración regional como un parámetro y lo usan en lugar de la configuración regional establecida en ese momento. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Cada una de estas rutinas convierte una determinada letra mayúscula en una letra minúscula si es posible y pertinente. La conversión de mayúsculas y minúsculas de `towlower` es específica de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el sufijo `_l` usan la configuración regional establecida en ese momento. Las versiones de estas funciones que tienen el sufijo `_l` toman la configuración regional como un parámetro y lo usan en lugar de la configuración regional establecida en ese momento. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Para que `_tolower` produzca los resultados esperados, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) e [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) deben devolver un valor distinto de cero.  
   

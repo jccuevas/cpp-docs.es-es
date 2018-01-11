@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _gmtime64_s
 - gmtime_s
 - _gmtime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - gmtime_s function
 - gmtime32_s function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e130b125651c29a4ba2607b47b02b95c81468869
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f0d0fc911c052e58b1f2aeb9b656f737746bd2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 Convierte un valor de hora en una estructura. Estas son versiones de [_gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -103,7 +87,7 @@ errno_t _gmtime64_s(
   
 |`_tm`|`time`|Volver|Valor de `_tm`|  
 |-----------|------------|------------|--------------------|  
-|`NULL`|cualquiera|`EINVAL`|No modificado.|  
+|`NULL`|any|`EINVAL`|No modificado.|  
 |No `NULL` (apunta a la memoria válida)|`NULL`|`EINVAL`|Todos los campos establecidos en -1.|  
 |No `NULL`|< 0|`EINVAL`|Todos los campos establecidos en -1.|  
   
@@ -146,7 +130,7 @@ errno_t _gmtime64_s(
   
  `_gmtime64_s`, que usa la estructura de `__time64_t`, permite expresar fechas hasta las 23:59:59 del 31 de diciembre de 3000, hora UTC, mientras que `gmtime32_s` solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, hora UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para ambas funciones.  
   
- `gmtime_s` es una función insertada que se evalúa como `_gmtime64_s` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t` de 32 bits, puede definir `_USE_32BIT_TIME_T`. Si lo hace, hará que `gmtime_s` se inserte en `_gmtime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
+ `gmtime_s` es una función insertada que se evalúa como `_gmtime64_s` y `time_t` es equivalente a `__time64_t`. Si necesita forzar el compilador para interpretar `time_t` como el antiguo `time_t`de 32 bits, puede definir `_USE_32BIT_TIME_T`. Si lo hace, hará que `gmtime_s` se inserte en `_gmtime32_s`. Esto no es recomendable porque puede producir un error en la aplicación después del 18 de enero de 2038 y no se permite en plataformas de 64 bits.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -156,7 +140,7 @@ errno_t _gmtime64_s(
 |`_gmtime32_s`|\<time.h>|  
 |`_gmtime64_s`|\<time.h>|  
   
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,86 +1,85 @@
 ---
-title: "Procesamiento de archivos .Xml | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentación XML, procesar archivos XML"
+title: . Procesamiento de archivos XML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Procesamiento de archivos .Xml
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El compilador genera una cadena id. por cada construcción del código marcada para generar documentación.  Para obtener más información, vea [Comentarios de documentación recomendados de etiquetas](../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  La cadena id. identifica de forma exclusiva cada construcción.  Programas que procesan el archivo .xml pueden utilizar la cadena de identificador para identificar los metadatos de .NET Framework o el elemento correspondientes de la reflexión para los que la documentación se aplica.  
+# <a name="xml-file-processing"></a>Procesamiento de archivos .Xml
+El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. Para obtener más información, consulte [recomienda comentarios de documentación de etiquetas](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo .xml pueden usar la cadena de identificador para identificar el .NET Framework metadatos o la reflexión elemento correspondiente a la que se aplica la documentación.  
   
  El archivo .xml no es una representación jerárquica del código, es una lista plana con un identificador generado para cada elemento.  
   
- El compilador cumple las siguientes reglas cuando genera las cadenas id.:  
+ El compilador cumple las siguientes reglas cuando genera las cadenas de identificador:  
   
--   No se coloca ningún espacio en blanco en la cadena.  
+-   Ningún espacio en blanco se coloca en la cadena.  
   
--   La primera parte de la cadena de id. identifica el tipo de miembro por medio de un único carácter seguido de dos puntos.  Se utilizan los siguientes tipos de miembros:  
+-   La primera parte de la cadena de identificador identifica el tipo de miembro que se identifican con un único carácter seguido de dos puntos. Se utilizan los siguientes tipos de miembros:  
   
     |Carácter|Descripción|  
-    |--------------|-----------------|  
-    |N|Espacio de nombres<br /><br /> No puede agregar los comentarios de documentación a un espacio de nombres, referencias cref a un espacio de nombres es posible.|  
-    |T|tipo: class, interface, struct, enum, delegate|  
+    |---------------|-----------------|  
+    |N|namespace<br /><br /> No se puede agregar comentarios de documentación a un espacio de nombres, referencias cref a un espacio de nombres son posibles.|  
+    |T|tipo: clase, interfaz, estructura, enumeración y delegado|  
     |D|definición de tipos|  
     |F|campo|  
-    |P|propiedad \(incluidos indizadores u otras propiedades indizadas\)|  
-    |M|método \(incluidos métodos especiales como constructores, operadores, etc.\)|  
+    |P|propiedad (incluidos indizadores u otras propiedades indizadas)|  
+    |M|método (incluidos métodos especiales como constructores, operadores, etc.)|  
     |E|evento|  
-    |\!|cadena de error<br /><br /> El resto de la cadena proporciona información acerca del error.  El compilador de Visual C\+\+ genera información de error para los vínculos que no pueden resolver.|  
+    |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual C++ genera información de error para vínculos que no se puede resolver.|  
   
--   La segunda parte de la cadena es el nombre completo del elemento, empezando en la raíz del espacio de nombres.  Separan el nombre del elemento, el tipo contenedor o tipos, y el espacio de nombres durante períodos.  Si el propio nombre del elemento contiene puntos, éstos se reemplazan por el signo \#.  Se supone que ningún elemento tiene un hash\- signo directamente en su nombre.  Por ejemplo, el nombre completo del constructor de `String` sería “System.String.\#ctor”.  
+-   La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, sus envolvente tipo o tipos y espacio de nombres separados por puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento contiene un signo # directamente en su nombre. Por ejemplo, el nombre completo de la `String` constructor sería "# ctor".  
   
--   Para propiedades y métodos, si existen argumentos para el método, la lista de argumentos que se encuentra entre paréntesis aparece a continuación.  Si no existen argumentos, no se escribe ningún paréntesis.  Los argumentos se separan por comas.  La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:  
+-   Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:  
   
-    -   Tipos base.  Los tipos normales \(ELEMENT\_TYPE\_CLASS o ELEMENT\_TYPE\_VALUETYPE\) se representan como el nombre completo del tipo.  
+    -   Tipos base. Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.  
   
-    -   Tipos intrínsecos \(por ejemplo, ELEMENT\_TYPE\_I4, ELEMENT\_TYPE\_OBJECT, ELEMENT\_TYPE\_STRING, ELEMENT\_TYPE\_TYPEDBYREF.  y ELEMENT\_TYPE\_VOID\) se representan como el nombre completo del tipo completo correspondiente, por ejemplo, **System.Int32** o **System.TypedReference**.  
+    -   Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente, por ejemplo, **System.Int32** o **System.TypedReference**.  
   
-    -   ELEMENT\_TYPE\_PTR se representa con un '\*' a continuación del tipo modificado.  
+    -   ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.  
   
-    -   ELEMENT\_TYPE\_BYREF se representa con un signo '@' a continuación del tipo modificado.  
+    -   ELEMENT_TYPE_BYREF se representa como "@" después del tipo modificado.  
   
-    -   ELEMENT\_TYPE\_PINNED se representa con un signo '^' a continuación del tipo modificado.  El compilador de Visual C\+\+ nunca genera esto.  
+    -   ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.  
   
-    -   ELEMENT\_TYPE\_CMOD\_REQ se representa como una '&#124;' y el nombre completo de la clase modificadora, a continuación del tipo modificado.  El compilador de Visual C\+\+ nunca genera esto.  
+    -   ELEMENT_TYPE_CMOD_REQ se representa como "&#124;" y el nombre completo de la clase modificadora, después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.  
   
-    -   ELEMENT\_TYPE\_CMOD\_OPT se representa como '\!' y el nombre completo de la clase modificadora, a continuación del tipo modificado.  
+    -   ELEMENT_TYPE_CMOD_OPT se representa como "!" y el nombre completo de la clase modificadora, después del tipo modificado.  
   
-    -   ELEMENT\_TYPE\_SZARRAY se representa como "\[\]" a continuación del tipo de elemento de la matriz.  
+    -   ELEMENT_TYPE_SZARRAY se representa como "[]" después del tipo de elemento de la matriz.  
   
-    -   ELEMENT\_TYPE\_GENERICARRAY se representa como "\[?\]" a continuación del tipo de elemento de la matriz.  El compilador de Visual C\+\+ nunca genera esto.  
+    -   ELEMENT_TYPE_GENERICARRAY se representa como "[?]" después del tipo de elemento de la matriz. El compilador de Visual C++ nunca genera este resultado.  
   
-    -   ELEMENT\_TYPE\_ARRAY se representa como \[*límite inferior*:`size`,*límite inferior*:`size`\] donde el número de comas es el rango, 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimal.  Si no se especifica un límite inferior ni un tamaño, simplemente se omite.  Si el límite inferior y el tamaño de una dimensión particular se omiten, el signo ':' también se omite.  Por ejemplo, una matriz de dos dimensiones con 1 como límites inferiores y sin tamaños especificados se representa como \[1:,1:\].  
+    -   ELEMENT_TYPE_ARRAY se representa como [*límite inferior*:`size`,*límite inferior*:`size`], donde el número de comas es la clasificación - 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimales. Si no se especifican un límite inferior ni un tamaño, simplemente se omiten. Si se omiten el límite inferior y el tamaño de una dimensión determinada, también se omite ":". Por ejemplo, una matriz de dos dimensiones con 1 como los límites inferiores y tamaños no especificados es [1:,1:].  
   
-    -   ELEMENT\_TYPE\_FNPTR se representa como "\=FUNC:`type` \(*firma*\)", donde `type` es el tipo de valor devuelto y *firma* corresponde a los argumentos del método.  Si no existen argumentos, los paréntesis se omiten.  El compilador de Visual C\+\+ nunca genera esto.  
+    -   ELEMENT_TYPE_FNPTR se representa como "=FUNC:`type`(*signature*)", donde `type` es el tipo de valor devuelto y *signature* se corresponde con los argumentos del método. Si no hay ningún argumento, se omiten los paréntesis. El compilador de Visual C++ nunca genera este resultado.  
   
-     Los siguientes componentes de una firma no se representan porque nunca se utilizan para diferenciar métodos sobrecargados:  
+     Los siguientes componentes de la firma no se representan porque nunca se usan para diferenciar métodos sobrecargados:  
   
-    -   convención de llamadas  
+    -   Convención de llamada  
   
-    -   tipo de valor devuelto  
+    -   Tipo de valor devuelto  
   
-    -   ELEMENT\_TYPE\_SENTINEL  
+    -   ELEMENT_TYPE_SENTINEL  
   
--   Para los operadores de conversión sólo, el valor devuelto del método se codifica como “~” seguido del tipo de valor devuelto, como codificado previamente.  
+-   Para los operadores de conversión, el valor devuelto del método se codifica como un ' ~' seguido por el tipo de valor devuelto codificado anteriormente.  
   
--   En los tipos genéricos, el nombre del tipo va seguido de un acento invertido y de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
+-   Para tipos genéricos, el nombre del tipo irá seguido de una tilde aguda y después de un número que indica el número de parámetros de tipo genérico.  Por ejemplo,  
   
     ```  
     <member name="T:MyClass`2">  
@@ -88,10 +87,10 @@ El compilador genera una cadena id. por cada construcción del código marcada p
   
      Para un tipo que se define como `public class MyClass<T, U>`.  
   
-     Para métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números con un acento invertido antepuesto \(por ejemplo \`0, \`1\).  Cada número representa una notación de matrices basada en cero en los parámetros genéricos del tipo.  
+     Para métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números va precedidos de tics atrás (por ejemplo \`0, \`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.  
   
-## Ejemplo  
- Los ejemplos siguientes muestran cómo generarían cadenas de una clase y sus miembros.  
+## <a name="example"></a>Ejemplo  
+ Los ejemplos siguientes muestran cómo las cadenas de ID para una clase y sus miembros se generará.  
   
 ```  
 // xml_id_strings.cpp  
@@ -187,5 +186,5 @@ namespace N {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentación de XML](../ide/xml-documentation-visual-cpp.md)

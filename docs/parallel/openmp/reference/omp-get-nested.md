@@ -1,47 +1,46 @@
 ---
-title: "omp_get_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_nested OpenMP function"
+title: omp_get_nested () | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_nested
+dev_langs: C++
+helpviewer_keywords: omp_get_nested OpenMP function
 ms.assetid: e9784847-516e-40d3-89f7-b8b6898d8667
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 557625a40707119633adc1d73775b1e66f67efec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# omp_get_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve un valor que indica si se habilita el paralelismo anidados.  
+# <a name="ompgetnested"></a>omp_get_nested
+Devuelve un valor que indica si está habilitado el paralelismo anidado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int omp_get_nested( );  
 ```  
   
-## Valor devuelto  
- Si es distinto de cero, se habilita el paralelismo anidados.  
+## <a name="return-value"></a>Valor devuelto  
+ Si está habilitado el paralelismo es distinto de cero, anidado.  
   
-## Comentarios  
- El paralelismo anidados se especifica con [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) y [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
+## <a name="remarks"></a>Comentarios  
+ Paralelismo anidado se especifica con [omp_set_nested ()](../../../parallel/openmp/reference/omp-set-nested.md) y [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
   
- Para obtener más información, vea [3.1.10 omp\_get\_nested Function](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
+ Para obtener más información, consulte [3.1.10 omp_get_nested (función)](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
   
-## Ejemplo  
- Vea [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) para obtener un ejemplo de `omp_get_nested`mediante.  
+## <a name="example"></a>Ejemplo  
+ Vea [omp_set_nested ()](../../../parallel/openmp/reference/omp-set-nested.md) para obtener un ejemplo del uso de `omp_get_nested`.  
   
-## Vea también  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>Vea también  
+ [Funciones](../../../parallel/openmp/reference/openmp-functions.md)

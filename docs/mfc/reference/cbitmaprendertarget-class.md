@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - AFXRENDERTARGET/CBitmapRenderTarget::GetBitmap
 - AFXRENDERTARGET/CBitmapRenderTarget::GetBitmapRenderTarget
 - AFXRENDERTARGET/CBitmapRenderTarget::m_pBitmapRenderTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBitmapRenderTarget [MFC], CBitmapRenderTarget
 - CBitmapRenderTarget [MFC], Attach
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f07e3783de7efe4e279a4f8d69563349cb72a362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9438bbdeef811019003cd53c426ff688ce178ea7
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbitmaprendertarget-class"></a>Clase CBitmapRenderTarget
 Un contenedor para ID2D1BitmapRenderTarget.  
@@ -51,13 +49,13 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Construye un objeto CBitmapRenderTarget.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::Attach](#attach)|Adjunta existente representar la interfaz de destino para el objeto|  
 |[CBitmapRenderTarget::Detach](#detach)|Separa la interfaz de destino de representación del objeto|  
@@ -66,13 +64,13 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Interfaz de ID2D1BitmapRenderTarget devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Un puntero a un objeto ID2D1BitmapRenderTarget.|  
   
@@ -157,4 +155,3 @@ operator ID2D1BitmapRenderTarget*();
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

@@ -1,69 +1,69 @@
 ---
-title: "__movsb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsb (instrucción)"
-  - "rep movsb (instrucción)"
-  - "__movsb (función intrínseca)"
+title: __movsb | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsb
+dev_langs: C++
+helpviewer_keywords:
+- movsb instruction
+- rep movsb instruction
+- __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92d748b9242dcf9e068774703cceba86fce747c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __movsb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="movsb"></a>__movsb
 **Específicos de Microsoft**  
   
- Genera una instrucción de la cadena de movimiento \(`rep movsb`\).  
+ Genera una cadena mover (`rep movsb`) instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
+void __movsb(   
+   unsigned char* Destination,   
+   unsigned const char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parámetros  
- \[out\] `Destination`  
+#### <a name="parameters"></a>Parámetros  
+ [out] `Destination`  
  Un puntero al destino de la copia.  
   
- \[in\] `Source`  
+ [in] `Source`  
  Un puntero al origen de la copia.  
   
- \[in\] `Count`  
+ [in] `Count`  
  Número de bytes que se van a copiar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__movsb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- El resultado es que los primeros bytes de `Count` indicada por `Source` se copiarán en la cadena de `Destination` .  
+## <a name="remarks"></a>Comentarios  
+ El resultado es que la primera `Count` bytes que señala `Source` se copian en el `Destination` cadena.  
   
- Esta rutina sólo está disponible como intrínseco.  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // movsb.cpp  
@@ -83,9 +83,11 @@ int main()
 }  
 ```  
   
-  **Grandes dog negro.**  
- **Grandes dog negro.**   
-## Específico de Microsoft de FINAL  
+```Output  
+A big black dog. A big black dog.  
+```  
   
-## Vea también  
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

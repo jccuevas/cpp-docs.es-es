@@ -1,46 +1,45 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: "único | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Permite especificar que una sección de código debe ejecutarse en un subproceso, no necesariamente el subproceso principal.  
+# <a name="single"></a>única
+Le permite especificar que una sección de código debe ejecutarse en un solo subproceso, no necesariamente el subproceso principal.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### Parámetros  
- `clause` \(opcional\)  
- cero o más cláusula.  Vea la sección comentarios para obtener una lista de las cláusulas admitidas por **solo**.  
+#### <a name="parameters"></a>Parámetros  
+ `clause` (opcional)  
+ Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **único**.  
   
-## Comentarios  
- La directiva de **solo** admite las siguientes cláusulas de OpenMP:  
+## <a name="remarks"></a>Comentarios  
+ El **único** directiva es compatible con las cláusulas de OpenMP siguientes:  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -50,11 +49,11 @@ Permite especificar que una sección de código debe ejecutarse en un subproceso
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- La directiva de [master](../../../parallel/openmp/reference/master.md) permite especificar que una sección de código se debe ejecutar solo en el subproceso principal.  
+ El [maestro](../../../parallel/openmp/reference/master.md) directiva permite especificar que una sección de código debe ejecutarse solo en el subproceso principal.  
   
- Para obtener más información, vea [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Para obtener más información, consulte [2.4.3 único construir](../../../parallel/openmp/2-4-3-single-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +78,12 @@ int main() {
 }  
 ```  
   
-  **entrada de lectura**  
-**resultado del cálculo**  
-**resultado del cálculo**  
-**salida de escritura**   
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

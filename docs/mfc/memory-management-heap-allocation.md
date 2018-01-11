@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8be6dabf4eaae1c76ebe31c35ad5b7b30743953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34fbb82a28c145ad2d376f0647fbd75faeb9401c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-heap-allocation"></a>Administración de memoria: Asignación del montón
 El montón está reservado para las necesidades de asignación de memoria del programa. Es un área además del código del programa y la pila. Los programas de C Typical utilizan las funciones `malloc` y **libre** para asignar y desasignar memoria del montón. La versión de depuración de MFC proporciona versiones modificadas de los operadores integrados de C++ **nueva** y **eliminar** para asignar y desasignar objetos en la memoria del montón.  

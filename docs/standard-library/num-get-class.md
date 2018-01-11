@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 908f7f595f2312bc16a01cdc3b6784c3e56f21bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numget-class"></a>num_get (clase)
 Una clase de plantilla que describe un objeto que puede actuar como una faceta de la configuración regional para controlar las conversiones de las secuencias de tipo `CharType` en valores numéricos.  
@@ -57,7 +58,7 @@ class num_get : public locale::facet;
 |-|-|  
 |[num_get](#num_get)|Constructor para los objetos de tipo `num_get` que se usan para extraer valores numéricos de secuencias.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

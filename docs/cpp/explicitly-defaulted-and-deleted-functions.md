@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e1d52d1c13e2defa51a5cab9da625b75aac757
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 En C++11, las funciones establecidas como valor predeterminado y eliminadas proporcionan un control explícito sobre si las funciones miembro especiales se generan automáticamente. Las funciones eliminadas también proporcionan un lenguaje simple para impedir que se realicen promociones de tipo problemáticas en argumentos de funciones de todos los tipos (funciones miembro especiales, así como funciones miembro normales y funciones no miembro) que podrían provocar una llamada a función no deseada.  
@@ -46,7 +47,7 @@ En C++11, las funciones establecidas como valor predeterminado y eliminadas prop
 > [!NOTE]
 >  Además, el estándar C++11 especifica las reglas adicionales siguientes:  
 >   
->  -   Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está desusada.  
+>  -   Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está en desuso.  
 > -   Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está desusada.  
 >   
 >  En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.  

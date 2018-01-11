@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd4ddd4e7caf042ac16c5947a6b48aa21ab5739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdbd32bbc59d9c18df5544f07ec7e7097b9e02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2004"></a>Error de las herramientas del vinculador LNK2004
 desbordamiento de corrección relativo de GP en 'destino'; breve sección 'sección' es demasiado grande o fuera del intervalo.  

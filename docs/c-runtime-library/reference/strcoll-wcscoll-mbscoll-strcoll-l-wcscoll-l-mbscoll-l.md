@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -52,31 +50,16 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 43953fbd9473f491d628fd7389c4b9a62294e2b6
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3e65837945b8c28ee0968dbeaded4fbdbf7e79c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 Compara cadenas usando la configuración regional actual o una categoría de conversión de estado LC_COLLATE especificada.  
@@ -139,7 +122,7 @@ int _mbscoll_l(
   
  Todas estas funciones validan sus parámetros. Si `string1` o `string2` es un puntero nulo, o si `count` es mayor que `INT_MAX`, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `_NLSCMPERROR` y establecen `errno` en `EINVAL`.  
   
- La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas a la función correspondiente sin el sufijo, salvo que usan la configuración regional que se pasa como parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas a la función correspondiente sin el sufijo, salvo que usan la configuración regional que se pasa como parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   

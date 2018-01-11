@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - tmpnam
 - _wtempnam
 - _tempnam
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wtempnam function
 - file names [C++], creating temporary
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9708c23fc76095a591a2eceafcb875ce173383ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 Genere nombres que se puedan usar para crear archivos temporales. Hay disponibles versiones más seguras de algunas de estas funciones; vea [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
@@ -127,7 +111,7 @@ wchar_t *_wtmpnam(
   
  El nombre devuelto por `_tempnam` será una concatenación de `prefix` y un número secuencial que se combinarán para crear un nombre de archivo único para el directorio especificado. `_tempnam` genera nombres de archivo sin extensión. `_tempnam` usa [malloc](../../c-runtime-library/reference/malloc.md) para asignar espacio para el nombre de archivo; el programa es responsable de liberar este espacio cuando ya no es necesario.  
   
- `_tempnam` y `tmpnam` controlan automáticamente argumentos de cadena de caracteres multibyte como sea necesario, reconociendo las secuencias de caracteres multibyte en función de la página de códigos OEM obtenida del sistema operativo. `_wtempnam` es una versión con caracteres anchos de `_tempnam`; los argumentos y el valor devuelto de `_wtempnam` son cadenas de caracteres anchos. `_wtempnam` y `_tempnam` se comportan de manera idéntica, salvo que `_wtempnam` no controla cadenas de caracteres multibyte. `_wtmpnam` es una versión con caracteres anchos de `tmpnam`; el argumento y el valor devuelto de `_wtmpnam` son cadenas de caracteres anchos. `_wtmpnam` y `tmpnam` se comportan de manera idéntica, salvo que `_wtmpnam` no controla cadenas de caracteres multibyte.  
+ `_tempnam` y `tmpnam` controlan automáticamente argumentos de cadena de caracteres multibyte como sea necesario, reconociendo las secuencias de caracteres multibyte en función de la página de códigos OEM obtenida del sistema operativo. `_wtempnam` es una versión con caracteres anchos de `_tempnam`; los argumentos y el valor devuelto de `_wtempnam` son cadenas de caracteres anchos. `_wtempnam` y `_tempnam` se comportan de manera idéntica, salvo que `_wtempnam` no controla las cadenas de caracteres multibyte. `_wtmpnam` es una versión con caracteres anchos de `tmpnam`; el argumento y el valor devuelto de `_wtmpnam` son cadenas de caracteres anchos. `_wtmpnam` y `tmpnam` se comportan de manera idéntica, salvo que `_wtmpnam` no controla las cadenas de caracteres multibyte.  
   
  Si `_DEBUG` y `_CRTDBG_MAP_ALLOC` están definidos, `_tempnam` y `_wtempnam` se sustituyen por llamadas a [_tempnam_dbg y _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md).  
   
@@ -146,7 +130,7 @@ wchar_t *_wtmpnam(
 |`_wtempnam`, `_wtmpnam`|\<stdio.h> o \<wchar.h>|  
 |`tmpnam`|\<stdio.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

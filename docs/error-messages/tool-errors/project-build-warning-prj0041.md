@@ -1,33 +1,32 @@
 ---
-title: "Advertencia PRJ0041 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0041"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0041"
+title: Advertencia PRJ0041 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0041
+dev_langs: C++
+helpviewer_keywords: PRJ0041
 ms.assetid: dc9f4cf9-6bd5-4222-89e8-7802a59bb96b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 231b58cb0c13d1a3f87e010a5100da564b0be806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia PRJ0041 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-No se puede encontrar la dependencia 'dependencia' que falta para el archivo 'archivo'.El proyecto aún puede compilarse, pero puede que continúe pareciendo obsoleto hasta que se encuentre este archivo.  
+# <a name="project-build-warning-prj0041"></a>Advertencia PRJ0041 al compilar el proyecto
+No se puede encontrar que falta la dependencia 'dependencia' archivo 'archivo'. El proyecto aún puede generarse, pero puede seguir apareciendo obsoletos hasta que se encuentra este archivo.  
   
- Un archivo \(de recursos, .odl o .idl\) contiene una instrucción include que el sistema del proyecto no puede resolver.  
+ Un archivo (archivo de recursos o.idl/.odl, por ejemplo, contiene una instrucción include que el sistema del proyecto no se pudo resolver.  
   
- Dado que el sistema del proyecto no procesa las instrucciones del preprocesador \(por ejemplo, \#if\), es posible que la instrucción que genera el error no forme parte realmente de la compilación.  
+ Dado que el sistema del proyecto no procesa las instrucciones de preprocesador (por ejemplo, #if), la instrucción infractor no sea realmente parte de la compilación.  
   
- Parra corregir esta advertencia, elimine todo el código que no sea necesario en los archivos .rc o agregue archivos de marcadores de posición con el nombre adecuado.
+ Para resolver esta advertencia, elimine todo el código necesario en los archivos .rc o agregue archivos de marcador de posición del nombre adecuado.

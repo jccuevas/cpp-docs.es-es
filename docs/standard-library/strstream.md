@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0487fc2aa09568523c6a7d0bbcf4973beee309ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91e127c30b8e360295d7451aa4b35ca8bd420e52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 Define varias clases que admiten operaciones de iostreams en secuencias almacenadas en una matriz asignada de objeto `char`. Estas secuencias se convierten fácilmente a y desde cadenas de C.  

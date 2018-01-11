@@ -1,31 +1,32 @@
 ---
-title: "Callback (Funci&#243;n) (Biblioteca de plantillas C++ de Windows en tiempo de ejecuci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "Función de devolución de llamada (biblioteca de plantillas C++ de Windows en tiempo de ejecución) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Callback (Funci&#243;n) (Biblioteca de plantillas C++ de Windows en tiempo de ejecuci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Callback (Función) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)
 Crea un objeto cuya función de miembro es un método de devolución de llamada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -198,7 +199,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `TDelegateInterface`  
  Un parámetro de plantilla que especifica la interfaz del delegado al que se llamará cuando se produzca un evento.  
   
@@ -244,16 +245,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  La función miembro a la que se llamará cuando se produzca un evento.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Un objeto cuya función miembro es el método de devolución de llamada especificado.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La base de un objeto delegado debe ser IUnknown, no IInspectable.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** event.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

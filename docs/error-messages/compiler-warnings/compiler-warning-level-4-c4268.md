@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4268 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4268"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4268"
+title: Compilador advertencia (nivel 4) C4268 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4268
+dev_langs: C++
+helpviewer_keywords: C4268
 ms.assetid: d0511e80-904f-4ee1-b4d7-39b5c0bd8234
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b88e7c44099d49eb76d1bee9c68dd8a94413074a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4268
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificador' : los datos estáticos\/globales 'const' inicializados con el constructor predeterminado generado por compilador rellenan el objeto con ceros  
+# <a name="compiler-warning-level-4-c4268"></a>Advertencia del compilador (nivel 4) C4268
+'identificador': los datos estáticos/globales 'const' inicializados con el constructor predeterminado de generados por el compilador rellenan el objeto con ceros  
   
- Una instancia global o estática **const** de una clase no trivial se inicializa con un constructor predeterminado generado por el compilador.  
+ A **const** instancia global o estática de una clase no trivial se inicializa con un constructor predeterminado generado por el compilador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C4268.cpp  
@@ -41,4 +40,4 @@ public:
 const X x1;   // C4268  
 ```  
   
- Puesto que la instancia de la clase es **const**, el valor de `m_data` no puede modificarse.
+ Como esta instancia de la clase es **const**, el valor de `m_data` no se puede cambiar.

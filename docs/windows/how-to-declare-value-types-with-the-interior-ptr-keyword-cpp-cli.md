@@ -1,40 +1,42 @@
 ---
-title: "C&#243;mo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr (palabra clave)"
-  - "tipos de valor, declarar"
+title: "Cómo: declarar tipos de valor con la palabra clave interior_ptr (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`interior_ptr` se puede utilizar con un tipo de valor.  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Cómo: Declarar tipos de valor con la palabra clave interior_ptr (C++/CLI)
+Un `interior_ptr` puede utilizarse con un tipo de valor.  
   
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la opción del compilador **\/clr** , pero no por la opción del compilador **\/ZW** .  
+>  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El siguiente ejemplo de [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] muestra cómo utilizar `interior_ptr` con un tipo de valor.  
+### <a name="description"></a>Descripción  
+ El siguiente C++ / CLI muestra cómo utilizar un `interior_ptr` con un tipo de valor.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 1  
@@ -75,14 +77,14 @@ int main() {
 3  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- En un tipo de valor, el puntero de `this` evalúa un interior\_ptr.  
+### <a name="description"></a>Descripción  
+ En un tipo de valor, el `this` se evalúa como puntero en interior_ptr.  
   
- En el cuerpo de una miembro\- función no estática de un tipo de valor `V`, `this` es una expresión de `interior_ptr<V>` tipo cuyo valor es la dirección del objeto para el que se llama a la función.  
+ En el cuerpo de una función miembro no estático de un tipo de valor `V`, `this` es una expresión de tipo `interior_ptr<V>` cuyo valor es la dirección del objeto para el que se llama a la función.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +98,14 @@ value struct V {
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo siguiente se muestra cómo utilizar el dirección\- de operator con miembros estáticos.  
+### <a name="description"></a>Descripción  
+ El ejemplo siguiente muestra cómo utilizar el operador address-of con miembros estáticos.  
   
- La dirección de un miembro de tipo Visual C\+\+ de estático produce un puntero nativo.  La dirección de un miembro estático del tipo de valor es un puntero administrado porque asignan en el montón en tiempo de ejecución y se puede desplazar el miembro de tipo de valor por el recolector de elementos no utilizados.  
+ La dirección de un miembro de tipo estático de Visual C++ produce un puntero nativo.  La dirección de un miembro de tipo de valor estático es un puntero administrado porque el miembro de tipo de valor se asigna en el montón en tiempo de ejecución y se puede mover por el recolector de elementos no utilizados.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +131,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 22  
@@ -137,5 +139,5 @@ int main() {
 hello  
 ```  
   
-## Vea también  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4794
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4794
+f1_keywords: C4794
+dev_langs: C++
+helpviewer_keywords: C4794
 ms.assetid: badc9c36-fa1a-4fec-929b-7bfda7a7b79f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8f73e3da504960f737f175fff4c9d7b07084833a
-ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5c6878e2e0fb3fed9cb349bd0dd651a24c02aae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4794"></a>Advertencia del compilador (nivel 1) C4794
 Segmento de la variable de almacenamiento local 'variable' que cambió de 'section name' a '.tls$'  
   
- Se utiliza [#pragma data_seg](../../preprocessor/data-seg.md) para colocar una variable tls en una sección que no comenzaba con .tls$.  
+ Usó [#pragma data_seg](../../preprocessor/data-seg.md) para colocar una variable tls en una sección que no comenzaba por .tls$.  
   
- .Tls$*x* sección existirá en el archivo objeto donde [__declspec (Thread)](../../cpp/thread.md) se definen variables. Una sección .tls del archivo EXE o DLL será el resultado de estas secciones.  
+ La sección .tls$*x* existirá en el archivo objeto donde están definidas las variables [__declspec(thread)](../../cpp/thread.md) . Una sección .tls del archivo EXE o DLL será el resultado de estas secciones.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera la advertencia C4794:  

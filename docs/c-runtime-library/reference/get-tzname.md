@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 Recupera la representación de cadena de caracteres del nombre de zona horaria o el nombre de zona de hora estándar de horario de verano (DST).  
@@ -78,8 +79,8 @@ errno_t _get_tzname(
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |tamaño de nombre de ZH|`NULL`|0|0 o 1|0|no modificado|  
 |tamaño de nombre de ZH|any|> 0|0 o 1|0|Nombre de ZH|  
-|no modificado|`NULL`|> 0|cualquiera|`EINVAL`|no modificado|  
-|no modificado|any|cero|cualquiera|`EINVAL`|no modificado|  
+|no modificado|`NULL`|> 0|any|`EINVAL`|no modificado|  
+|no modificado|any|cero|any|`EINVAL`|no modificado|  
 |no modificado|any|> 0|> 1|`EINVAL`|no modificado|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -101,7 +102,7 @@ errno_t _get_tzname(
 |-------------|---------------------|  
 |`_get_tzname`|\<time.h>|  
   
- Para obtener más información, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

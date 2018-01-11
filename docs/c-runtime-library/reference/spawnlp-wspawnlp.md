@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wspawnlp
 - wspawnlp
 - _spawnlp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wspawnlp function
 - _spawnlp function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 66172824d106860b6fa4408f85cba4a10bce696e
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c3b68a8e404dcfce1b1cf98a092dc9bc17435ffb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 Crea y ejecuta un nuevo proceso.  
@@ -108,7 +92,7 @@ intptr_t _wspawnlp(
  La lista de argumentos supera los 1024 bytes.  
   
  `EINVAL`  
-El argumento `mode` no es válido.  
+ El argumento `mode` no es válido.  
   
  `ENOENT`  
  El archivo o la ruta de acceso no se encuentra.  
@@ -133,7 +117,7 @@ El argumento `mode` no es válido.
 |`_spawnlp`|\<process.h>|  
 |`_wspawnlp`|\<stdio.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [Funciones _spawn y _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,33 +14,19 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], duration
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>duration (Clase)
 Describe un tipo que contiene un *intervalo de tiempo*, que es el tiempo transcurrido entre dos puntos en el tiempo.  
@@ -64,20 +49,20 @@ class duration <duration<Rep, Period1>, Period2>;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |duration::period (Typedef)|Representa un sinónimo para el parámetro de plantilla `Period`.|  
 |duration::rep (Typedef)|Representa un sinónimo para el parámetro de plantilla `Rep`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[duración](#duration)|Construye un objeto `duration`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[count](#count)|Devuelve el número de pasos del reloj del intervalo de tiempo.|  
 |[max](#max)|Estático. Devuelve el valor máximo permitido del parámetro de plantilla `Ref`.|  
@@ -86,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[duration::operator-](#operator-)|Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.|  
 |[duration::operator--](#operator--)|Disminuye el recuento de pasos almacenado.|  
@@ -268,7 +253,7 @@ duration& operator+=(const duration& Dur);
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la suma.  
@@ -282,7 +267,7 @@ duration& operator-=(const duration& Dur);
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `duration` después del cual se realiza la resta.  
@@ -312,4 +297,3 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [duration_values (Estructura)](../standard-library/duration-values-structure.md)
-

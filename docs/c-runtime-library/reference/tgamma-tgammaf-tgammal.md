@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Determina la función gamma del valor especificado.  
@@ -88,7 +89,7 @@ long double tgammal(
   
 |Problema|Volver|  
 |-----------|------------|  
-|x = ±0|±INFINITY|  
+|x = ± 0|±INFINITY|  
 |x = entero negativo|NaN|  
 |x = -INFINITY|NaN|  
 |x = +INFINITY|+INFINITY|  
@@ -111,7 +112,7 @@ long double tgammal(
 |--------------|--------------|------------------|  
 |`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

@@ -1,41 +1,42 @@
 ---
-title: "FtmBase::FtmBase (Constructor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::FtmBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FtmBase, constructor"
+title: Constructor Ftmbase | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::FtmBase
+dev_langs: C++
+helpviewer_keywords: FtmBase, constructor
 ms.assetid: 37e326dd-5ec3-405c-8e6e-96271f95e474
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2e0764f15c034e69dbbc5f1f669ab7fae327cde1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::FtmBase (Constructor)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inicializa una nueva instancia de la clase de FtmBase.  
+# <a name="ftmbaseftmbase-constructor"></a>FtmBase::FtmBase (Constructor)
+Inicializa una nueva instancia de la clase FtmBase.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 FtmBase();  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** ftm.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [FtmBase \(Clase\)](../windows/ftmbase-class.md)
+## <a name="see-also"></a>Vea también  
+ [FtmBase (clase)](../windows/ftmbase-class.md)

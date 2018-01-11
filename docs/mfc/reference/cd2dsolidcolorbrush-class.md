@@ -37,11 +37,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54509981af3222d455a822c99bec506f6a861408
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd1f4d6de1565ae4c457a562d9056c020d44f771
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Clase CD2DSolidColorBrush
 Un contenedor para ID2D1SolidColorBrush.  
@@ -56,14 +57,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Sobrecargado. Construye un objeto CD2DSolidColorBrush.|  
 |[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Destructor. Se llama cuando se destruye un objeto de pincel sólido D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::Attach](#attach)|Adjunta existente de la interfaz de recurso para el objeto|  
 |[CD2DSolidColorBrush::Create](#create)|Crea un CD2DSolidColorBrush. (Invalida [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -75,13 +76,13 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Interfaz de ID2D1SolidColorBrush devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pincel de color sólido.|  
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Almacena un puntero a un objeto ID2D1SolidColorBrush.|  

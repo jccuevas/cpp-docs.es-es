@@ -249,11 +249,12 @@ caps.latest.revision: "41"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59032e700fe81c3343959252bc28433b0f6ae460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementa la funcionalidad básica para las ventanas con pestañas.  
@@ -269,7 +270,7 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Agrega una pestaña nueva a la ventana con pestañas.|  
@@ -387,13 +388,13 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Crea un contenedor para un objeto derivado de [CWnd](../../mfc/reference/cwnd-class.md) que no deriva de `CDockablePane`. Para acoplar un objeto `CMFCBaseTabCtrl` , cada control incrustado debe tener un contenedor de acoplamiento o bien debe derivarse de `CDockablePane`.<br /><br /> Establece la clase del contenedor mediante `SetDockingBayWrapperRTC`.|  
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Especifica si las pestañas se seleccionan con un clic en el botón izquierdo o secundario del mouse.|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Especifica si los paneles incluidos en las pestañas se destruyen automáticamente.|  

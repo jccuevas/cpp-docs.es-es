@@ -14,10 +14,9 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -27,12 +26,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltthreadgt-operators"></a>Operadores de &lt;thread&gt;
 ||||  
@@ -41,7 +39,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Determina si un objeto `thread::id` es mayor o igual que otro objeto.  
   
 ```cpp  
@@ -63,7 +61,7 @@ bool operator>= (
 ### <a name="remarks"></a>Comentarios  
  Esta función no produce ninguna excepción.  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Determina si un objeto `thread::id` es mayor que otro objeto.  
   
 ```cpp  
@@ -85,7 +83,7 @@ bool operator> (
 ### <a name="remarks"></a>Comentarios  
  Esta función no produce ninguna excepción.  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Determina si un objeto `thread::id` es menor o igual que otro objeto.  
   
 ```cpp  
@@ -131,7 +129,7 @@ bool operator<(
   
  Esta función no produce ninguna excepción.  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Compara dos objetos `thread::id` para determinar si no son iguales.  
   
 ```cpp  
@@ -175,7 +173,7 @@ bool operator== (
 ### <a name="remarks"></a>Comentarios  
  Esta función no produce ninguna excepción.  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Inserta una representación de texto de un objeto `thread::id` en una secuencia.  
   
 ```cpp  
@@ -189,10 +187,10 @@ basic_ostream<Elem, Tr>& operator<<(
  Un objeto [basic_ostream](../standard-library/basic-ostream-class.md).  
   
  `Id`  
- Objeto `thread::id`.  
+ Un objeto `thread::id`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `Ostr`Operador  
+ `Ostr`.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función inserta `Id` en `Ostr`.  
@@ -201,7 +199,6 @@ basic_ostream<Elem, Tr>& operator<<(
   
 ## <a name="see-also"></a>Vea también  
  [\<thread>](../standard-library/thread.md)
-
 
 
 

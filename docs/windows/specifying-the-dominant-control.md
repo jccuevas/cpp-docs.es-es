@@ -1,50 +1,54 @@
 ---
-title: "Specifying the Dominant Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dominant controls"
-  - "Dialog editor, dominant control"
-  - "controls [C++], dominant"
+title: Especificar el Control dominante | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dominant controls
+- Dialog editor, dominant control
+- controls [C++], dominant
 ms.assetid: 42b523a7-192a-417b-9512-d4af795e002f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4902e3849f72ed2d6799e07f7cd9e8412d891a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying the Dominant Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El control seleccionado en primer lugar será el control dominante.  
+# <a name="specifying-the-dominant-control"></a>Especificar el control dominante
+En primer lugar, el control seleccionado es el control dominante.  
   
-### Para especificar el control dominante  
+### <a name="to-specify-the-dominant-control"></a>Para especificar el control dominante  
   
-1.  Mantenga presionada la tecla **CTRL** y haga clic *primero* en el control que desee usar para definir el tamaño o la ubicación de los otros controles.  
+1.  Mantenga presionada la **CTRL** clave y haga clic en el control que desea usar para influir en el tamaño o la ubicación de otros controles *primera*.  
   
-     **Nota** Los cuadros de tamaño del control dominante serán sólidos, mientras que los de los controles subordinados serán huecos.  Todas las operaciones posteriores de cambio de tamaño o alineación se basarán en el control dominante.  
+     **Tenga en cuenta** los controladores de tamaño del control dominante serán sólidos, mientras que los identificadores de los controles subordinados serán huecos. Todos los aún más el cambio de tamaño o alineación se basa en el control dominante.  
   
-### Para cambiar el control dominante  
+### <a name="to-change-the-dominant-control"></a>Para cambiar el control dominante  
   
-1.  Desactive la selección actual, haciendo clic fuera de todos los controles que estén seleccionados.  
+1.  Desactive la selección actual al hacer clic fuera de todos los controles seleccionados actualmente.  
   
-2.  Repita el procedimiento anterior, pero seleccionando primero otro control.  
+2.  Repita el procedimiento anterior, al seleccionar un control diferente en primer lugar.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [Selecting Multiple Controls](../mfc/selecting-multiple-controls.md)   
- [Selecting Controls](../mfc/selecting-controls.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Vea también  
+ [Seleccionar varios controles](../windows/selecting-multiple-controls.md)   
+ [Seleccionar controles](../windows/selecting-controls.md)   
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
+

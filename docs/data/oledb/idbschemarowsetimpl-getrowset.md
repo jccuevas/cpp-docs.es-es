@@ -1,104 +1,90 @@
 ---
-title: "IDBSchemaRowsetImpl::GetRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IDBSchemaRowsetImpl::GetRowset"
-  - "ATL.IDBSchemaRowsetImpl.GetRowset"
-  - "IDBSchemaRowsetImpl<SessionClass>::GetRowset"
-  - "IDBSchemaRowsetImpl.GetRowset"
-  - "IDBSchemaRowsetImpl::GetRowset"
-  - "ATL::IDBSchemaRowsetImpl<SessionClass>::GetRowset"
-  - "GetRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowset (método)"
+title: 'IDBSchemaRowsetImpl:: GetRowset | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IDBSchemaRowsetImpl::GetRowset
+- ATL.IDBSchemaRowsetImpl.GetRowset
+- IDBSchemaRowsetImpl<SessionClass>::GetRowset
+- IDBSchemaRowsetImpl.GetRowset
+- IDBSchemaRowsetImpl::GetRowset
+- ATL::IDBSchemaRowsetImpl<SessionClass>::GetRowset
+- GetRowset
+dev_langs: C++
+helpviewer_keywords: GetRowset method
 ms.assetid: 3ae28c22-e186-4a15-8591-b0192e784a6f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5164bcd56c61868649af6185c8b84ebf20098b18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IDBSchemaRowsetImpl::GetRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbschemarowsetimplgetrowset"></a>IDBSchemaRowsetImpl::GetRowset
 Devuelve un conjunto de filas de esquema.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-STDMETHOD (GetRowset)(  
-   IUnknown *  
-pUnkOuter  
-,  
-   REFGUID   
-rguidSchema  
-,  
-   ULONG   
-cRestrictions  
-,  
-   const VARIANT   
-rgRestrictions  
-[],  
-   REFIID   
-riid  
-,  
-   ULONG   
-cPropertySets  
-,  
-   DBPROPSET   
-rgPropertySets  
-[],  
-   IUnknown **  
-ppRowset  
+      STDMETHOD (GetRowset)(  
+   IUnknown *pUnkOuter,  
+   REFGUID rguidSchema,  
+   ULONG cRestrictions,  
+   const VARIANT rgRestrictions[],  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown **ppRowset   
 );  
-  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pUnkOuter`  
- \[in\] Valor **IUnknown** exterior al agregar; en caso contrario, **NULL**.  
+ [in] Valor **IUnknown** exterior al agregar; en caso contrario, **NULL**.  
   
  `rguidSchema`  
- \[in\] Referencia al GUID del conjunto de filas de esquema solicitado \(por ejemplo, `DBSCHEMA_TABLES`\).  
+ [in] Referencia al GUID del conjunto de filas de esquema solicitado (por ejemplo, `DBSCHEMA_TABLES`).  
   
  `cRestrictions`  
- \[in\] Recuento de restricciones que se aplicarán al conjunto de filas.  
+ [in] Recuento de restricciones que se aplicarán al conjunto de filas.  
   
  `rgRestrictions`  
- \[in\] Matriz de **VARIANT**`cRestrictions` que representa las restricciones.  
+ [in] Matriz de `cRestrictions`**cRestrictions**que representa las restricciones.  
   
  `riid`  
- \[in\] IID que se va a solicitar del conjunto de filas de esquema recién creado.  
+ [in] IID que se va a solicitar del conjunto de filas de esquema recién creado.  
   
  `cPropertySets`  
- \[in\] Número de conjuntos de propiedad que se van a establecer.  
+ [in] Número de conjuntos de propiedad que se van a establecer.  
   
  `rgPropertySets`  
- \[in\/out\] Matriz de estructuras [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) que se van a establecer en el conjunto de filas de esquema recién creado.  
+ [in/out] Matriz de estructuras [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) que se van a establecer en el conjunto de filas de esquema recién creado.  
   
  `ppRowset`  
- \[out\] Puntero a la interfaz solicitada en el conjunto de filas de esquema recién creado.  
+ [out] Puntero a la interfaz solicitada en el conjunto de filas de esquema recién creado.  
   
-## Comentarios  
- Este método exige que el usuario tenga una asignación de esquema en la clase de sesión. Mediante la información de la asignación de esquema, `GetRowset` crea un objeto de conjunto de filas determinado si el parámetro `rguidSchema` es igual a uno de los GUID de las entradas de asignación. Vea [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md) para obtener una descripción de la entrada de asignación.  
+## <a name="remarks"></a>Comentarios  
+ Este método exige que el usuario tenga una asignación de esquema en la clase de sesión. Mediante la información de la asignación de esquema, `GetRowset` crea un objeto de conjunto de filas determinado si el parámetro `rguidSchema` es igual a uno de los GUID de las entradas de asignación. Vea [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) para obtener una descripción de la entrada de asignación.  
   
- Vea [IDBSchemaRowset::GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vea [IDBSchemaRowset:: GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx) en el SDK de Windows.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldb.h  
   
-## Vea también  
- [IDBSchemaRowsetImpl \(Clase\)](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/es-es/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [IDBSchemaRowsetImpl::GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)   
+## <a name="see-also"></a>Vea también  
+ [IDBSchemaRowsetImpl (clase)](../../data/oledb/idbschemarowsetimpl-class.md)   
+ [Miembros de IDBSchemaRowsetImpl (clase)](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [IDBSchemaRowsetImpl:: GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)   
  [Clases de conjunto de filas de esquema y clases typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

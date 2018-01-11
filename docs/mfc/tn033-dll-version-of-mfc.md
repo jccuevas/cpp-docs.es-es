@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1fb4094e5a54f82aa6aeebffe576965838cf7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: Versión de DLL de MFC
 Esta nota describe cómo se puede utilizar el compartidas MFCxx.DLL y MFCxxD.DLL (donde x es el número de versión MFC) bibliotecas de vínculos dinámicos con aplicaciones MFC y archivos DLL de extensión MFC. Para obtener más información sobre archivos DLL de MFC estándar, consulte [utilizar MFC como parte de un archivo DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -246,7 +247,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 { ... class definition .. };  
 ```  
   
- .Dll se genera con **/D A_IMPL** y B.DLL se genera con **/D B_IMPL**. Si utiliza símbolos independientes para cada DLL, CExampleB se exporta y CExampleA se importa al generar B.dll.. CExampleA se exporta al generar A.DLL y se importa al ser utilizada por B.DLL (o algún otro cliente).  
+ .Dll se genera con **/D A_IMPL** y B.DLL se genera con **/D B_IMPL**. Si utiliza símbolos independientes para cada DLL, CExampleB se exporta y CExampleA se importa al generar B.dll. CExampleA se exporta al generar A.DLL y se importa al ser utilizada por B.DLL (o algún otro cliente).  
   
  No se puede realizar este tipo de distribución en capas cuando se usa la integrada **AFX_EXT_CLASS** y `_AFXEXT` símbolos de preprocesador. La técnica descrita anteriormente soluciona este problema de forma no al contrario que el mecanismo de MFC utiliza al generar su archivos DLL de extensión de MFC de la red, OLE y base de datos.  
   

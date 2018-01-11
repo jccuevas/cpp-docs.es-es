@@ -1,32 +1,33 @@
 ---
-title: "binder1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st (función) [STL/CLR]"
+title: binder1st (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 550340bad45c6a71a633f7924afdd0eaf775005f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# binder1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor de uno\- argumento que, cuando se invoca, devuelva el functor almacenado de dos\- argumento con su primer argumento almacenado y el segundo argumento proporcionado.  Se utiliza especifica un objeto de función en términos de su functor almacenado.  
+# <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
+La clase de plantilla describe un functor de un argumento que, cuando se llama, devuelve su almacenado functor de dos argumentos llamada con su primer argumento almacenado y el segundo argumento proporcionado. Se usa especificar un objeto de función en cuanto a su functor almacenado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun>  
@@ -49,35 +50,35 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Debería  
- El tipo de functor almacenado.  
+#### <a name="parameters"></a>Parámetros  
+ Fun  
+ El tipo del functor almacenado.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|delegate\_type|El tipo de delegado genérico.|  
-|first\_argument\_type|El tipo del primer argumento de functor.|  
-|result\_type|El tipo de resultado de functor.|  
-|second\_argument\_type|El tipo de argumento de functor segundo.|  
-|stored\_function\_type|El tipo de functor.|  
+|---------------------|-----------------|  
+|delegate_type|El tipo de delegado genérico.|  
+|first_argument_type|El tipo del primer argumento functor.|  
+|result_type|El tipo del resultado functor.|  
+|second_argument_type|El tipo del segundo argumento functor.|  
+|stored_function_type|El tipo del functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
+|------------|-----------------|  
 |binder1st|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|operador delegate\_type^\(\)|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|operador delegate_type^()|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de uno\- argumento que almacena un functor de dos\- argumento y un primer argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelve el resultado de llamar al functor almacenado con el primer argumento almacenado y el segundo argumento proporcionado.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de un argumento que almacena un functor de dos argumentos y un primer argumento. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, devuelve el resultado de llamar el functor almacenado con el primer argumento almacenado y el segundo argumento proporcionado.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +121,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)

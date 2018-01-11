@@ -1,35 +1,34 @@
 ---
-title: "Error de las herramientas del vinculador LNK2028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2028"
+title: Las herramientas del vinculador LNK2028 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2028
+dev_langs: C++
+helpviewer_keywords: LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7441dcd893e3e814d738f228d002a947e7f43c8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error de las herramientas del vinculador LNK2028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se hace referencia a "exported\_function" \(decorated\_name\) en función "function\_containing\_function\_call \(decorated\_name\)"  
+# <a name="linker-tools-error-lnk2028"></a>Error de las herramientas del vinculador LNK2028
+"exported_function" (decorated_name) al que hace referencia en la función "function_containing_function_call" (decorated_name)  
   
- Cuando importe una función nativa en una imagen pura, recuerde que las convenciones de llamada implícitas son distintas en las compilaciones puras y nativas.  
+ Al intentar importar una función nativa en una imagen pura, recuerde que las convenciones de llamada implícitas son diferentes entre compilaciones nativas y puras.  
   
-## Ejemplo  
- Este ejemplo de código genera un componente con una función nativa exportada, cuya convención de llamada es implícitamente [\_\_cdecl](../../cpp/cdecl.md).  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo de código genera un componente con una función exportada y nativa, cuya convención de llamada es implícitamente [__cdecl](../../cpp/cdecl.md).  
   
 ```  
 // LNK2028.cpp  
@@ -39,8 +38,8 @@ __declspec(dllexport) int func() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente crea un cliente puro que utiliza la función nativa.  Sin embargo, la convención de llamada bajo **\/clr:pure** es [\_\_clrcall](../../cpp/clrcall.md).  El ejemplo siguiente genera el error LNK2028.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente crea a un cliente puro que usa la función nativa. Sin embargo, la convención de llamada en **/CLR: pure** es [__clrcall](../../cpp/clrcall.md). El ejemplo siguiente genera el error LNK2028.  
   
 ```  
 // LNK2028_b.cpp  

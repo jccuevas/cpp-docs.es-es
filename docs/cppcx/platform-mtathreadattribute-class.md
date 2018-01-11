@@ -1,59 +1,120 @@
 ---
-title: "Platform::MTAThreadAttribute (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::MTAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::MTAThreadAttribute (Clase)"
+title: MTAThreadAttribute (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::MTAThreadAttribute::Equals
+- VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
+- VCCORLIB/Platform::MTAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::MTAThreadAttribute (Clase)
-Indica que el modelo de subprocesos de una aplicación es un contenedor multiproceso \(MTA\).  
+# <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (Clase)
+Indica que el modelo de subprocesos de una aplicación es un contenedor multiproceso (MTA).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-## Miembros  
+### <a name="members"></a>Miembros  
   
-### Constructores públicos  
+### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
-|------------|-----------------|  
-|Constructor [MTAThreadAttribute \(Constructor\)](../cppcx/mtathreadattribute-constructor-1.md)|Inicializa una nueva instancia de la clase.|  
+|Name|Descripción|  
+|----------|-----------------|  
+|[MTAThreadAttribute Constructor 1](#ctor) constructor|Inicializa una nueva instancia de la clase.|  
   
-### Métodos públicos  
- El atributo MTAThreadAttribute hereda de [Platform::Object \(Clase\)](../cppcx/platform-object-class.md). MTAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
+### <a name="public-methods"></a>Métodos públicos  
+ El atributo MTAThreadAttribute hereda de [clase Platform:: Object](../cppcx/platform-object-class.md). MTAThreadAttribute también sobrecarga o tiene los siguientes miembros:  
   
-|Nombre|Descripción|  
-|------------|-----------------|  
-|[MTAThreadAttribute::Equals](../cppcx/mtathreadattribute-equals.md)|Determina si el objeto especificado es igual al objeto actual.|  
-|[MTAThreadAttribute::GetHashCode](../cppcx/mtathreadattribute-gethashcode.md)|Devuelve el código hash de esta instancia.|  
-|[MTAThreadAttribute::ToString](../cppcx/mtathreadattribute-tostring.md)|Devuelve una cadena que representa el objeto actual.|  
+|nombre|Descripción|  
+|----------|-----------------|  
+|[MTAThreadAttribute::Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|  
+|[MTAThreadAttribute::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
+|[MTAThreadAttribute::ToString](#tostring)|Devuelve una cadena que representa el objeto actual.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Platform`  
   
-## Requisitos  
+### <a name="requirements"></a>Requisitos  
  **Metadatos:** platform.winmd  
   
  **Espacio de nombres:** Plataforma  
+
+
+
+## <a name="ctor"></a>MTAThreadAttribute (Constructor)
+Inicializa una nueva instancia de la clase MTAThreadAttribute.  
   
-## Vea también  
- [Espacio de nombres de plataforma \(NOTINBUILD\)](http://msdn.microsoft.com/es-es/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:MTAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>MTAThreadAttribute::Equals
+Determina si el objeto especificado es igual al objeto actual.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ obj  
+ Objeto que se va a comparar.  
+  
+### <a name="return-value"></a>Valor devuelto  
+ `true` si los objetos son iguales; en caso contrario, `false`.  
+  
+
+
+## <a name="gethashcode"></a>MTAThreadAttribute::GetHashCode
+Devuelve el código hash de esta instancia.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Código hash de esta instancia.  
+  
+
+
+## <a name="tostring"></a>MTAThreadAttribute::ToString
+Devuelve una cadena que representa el objeto actual.  
+  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>Valor devuelto  
+ Una cadena que representa el objeto actual.  
+    
+## <a name="see-also"></a>Vea también  
+ [Namespace de plataforma](platform-namespace-c-cx.md)

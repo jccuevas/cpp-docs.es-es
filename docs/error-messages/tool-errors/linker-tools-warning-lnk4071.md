@@ -1,29 +1,28 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4071 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4071"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4071"
+title: Las herramientas del vinculador LNK4071 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4071
+dev_langs: C++
+helpviewer_keywords: LNK4071
 ms.assetid: 803f8c34-8219-4f55-a4ae-7133ceff2ba3
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d3be5732ea9fd05fd8bae61773431e7d092dd9c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4071
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-no puede estar vinculado incrementalmente en vínculos subsiguientes  
+# <a name="linker-tools-warning-lnk4071"></a>Advertencia de las herramientas del vinculador LNK4071
+no se puede vincular de forma incremental en los vínculos siguientes  
   
- LINK halló varias definiciones para uno o varios símbolos, pero se utilizaron [\/FORCE](../../build/reference/force-force-file-output.md) o **\/FORCE:MULTIPLE** para crear un archivo de salida a pesar de los errores.  LINK eliminó el archivo de estado incremental \(.ilk\).
+ LINK halló varias definiciones para uno o más símbolos, pero [/FORCE](../../build/reference/force-force-file-output.md) o **/Force: Multiple** se usó para crear un archivo de salida, independientemente de los errores. VÍNCULO elimina el archivo de estado incremental (.ilk).

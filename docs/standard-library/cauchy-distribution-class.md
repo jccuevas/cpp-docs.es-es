@@ -37,11 +37,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4910c1e65ac8e758b1b7790c27b8addf732dc32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution (Clase)
 Genera una distribución de Cauchy.  
@@ -103,7 +104,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
   
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener información detallada sobre la distribución de Cauchy, vea el artículo de Wolfram MathWorld sobre la [distribución de Cauchy](http://go.microsoft.com/fwlink/LinkId=400523).  
+Para obtener información detallada sobre la distribución de Cauchy, vea el artículo de Wolfram MathWorld sobre la [distribución de Cauchy](http://go.microsoft.com/fwlink/p/?linkid=400523).  
   
 ## <a name="example"></a>Ejemplo  
   

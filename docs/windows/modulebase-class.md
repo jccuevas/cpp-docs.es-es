@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe24bd4995acb7a36f6aa50378a03b519c8d8e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b02efe3ee61234b2439c1cbbae07827d6a879b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulebase-class"></a>ModuleBase (Clase)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -37,14 +40,14 @@ class ModuleBase;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ModuleBase::ModuleBase (constructor)](../windows/modulebase-modulebase-constructor.md)|Inicializa una instancia de la clase de módulo.|  
 |[ModuleBase::~ModuleBase (destructor)](../windows/modulebase-tilde-modulebase-destructor.md)|Desinicializa la instancia actual de la clase de módulo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ModuleBase::DecrementObjectCount (método)](../windows/modulebase-decrementobjectcount-method.md)|Cuando se implementa, disminuye el número de objetos de seguimiento por el módulo.|  
 |[ModuleBase::IncrementObjectCount (método)](../windows/modulebase-incrementobjectcount-method.md)|Cuando se implementa, incrementa el número de objetos que se hace un seguimiento mediante el módulo.|  

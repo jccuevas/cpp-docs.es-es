@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits (Estructura)
 short_vector_traits permite recuperar la longitud del vector subyacente y tipo escalar de un tipo de vector corto o un tipo escalar  
@@ -91,19 +92,19 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[short_vector_traits::short_vector_traits Constructor](#ctor)||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[short_vector_traits::Size (constante)](#size)||  
   

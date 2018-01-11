@@ -1,76 +1,77 @@
 ---
-title: "_InterlockedCompareExchange Intrinsic Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedCompareExchange_HLERelease"
-  - "_InterlockedCompareExchange8_nf"
-  - "_InterlockedCompareExchange16_acq_cpp"
-  - "_InterlockedCompareExchange_acq_cpp"
-  - "_InterlockedCompareExchange16_rel_cpp"
-  - "_InterlockedCompareExchange64_rel_cpp"
-  - "_InterlockedCompareExchange_cpp"
-  - "_InterlockedCompareExchange16_cpp"
-  - "_InterlockedCompareExchange64_acq_cpp"
-  - "_InterlockedCompareExchange_acq"
-  - "_InterlockedCompareExchange64_rel"
-  - "_InterlockedCompareExchange64_nf"
-  - "_InterlockedCompareExchange_rel_cpp"
-  - "_InterlockedCompareExchange16_nf"
-  - "_InterlockedCompareExchange8"
-  - "_InterlockedCompareExchange64_np"
-  - "_InterlockedCompareExchange16_rel"
-  - "_InterlockedCompareExchange64_acq"
-  - "_InterlockedCompareExchange8_rel"
-  - "_InterlockedCompareExchange_HLEAcquire"
-  - "_InterlockedCompareExchange64_HLERelease"
-  - "_InterlockedCompareExchange64_cpp"
-  - "_InterlockedCompareExchange_np"
-  - "_InterlockedCompareExchange8_acq"
-  - "_InterlockedCompareExchange16_acq"
-  - "_InterlockedCompareExchange_rel"
-  - "_InterlockedCompareExchange64_HLEAcquire"
-  - "_InterlockedCompareExchange64"
-  - "_InterlockedCompareExchange16"
-  - "_InterlockedCompareExchange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedCompareExchange intrinsic"
-  - "_InterlockedCompareExchange_acq intrinsic"
-  - "_InterlockedCompareExchange_rel intrinsic"
-  - "_InterlockedCompareExchange16 intrinsic"
-  - "_InterlockedCompareExchange64 intrinsic"
-  - "_InterlockedCompareExchange64_acq intrinsic"
-  - "_InterlockedCompareExchange64_rel intrinsic"
-  - "InterlockedCompareExchange intrinsic"
-  - "InterlockedCompareExchange_acq intrinsic"
-  - "InterlockedCompareExchange_rel intrinsic"
-  - "InterlockedCompareExchange16 intrinsic"
-  - "InterlockedCompareExchange64 intrinsic"
-  - "InterlockedCompareExchange64_acq intrinsic"
-  - "InterlockedCompareExchange64_rel intrinsic"
+title: "Intrínsecas de _InterlockedCompareExchange | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedCompareExchange_HLERelease
+- _InterlockedCompareExchange8_nf
+- _InterlockedCompareExchange16_acq_cpp
+- _InterlockedCompareExchange_acq_cpp
+- _InterlockedCompareExchange16_rel_cpp
+- _InterlockedCompareExchange64_rel_cpp
+- _InterlockedCompareExchange_cpp
+- _InterlockedCompareExchange16_cpp
+- _InterlockedCompareExchange64_acq_cpp
+- _InterlockedCompareExchange_acq
+- _InterlockedCompareExchange64_rel
+- _InterlockedCompareExchange64_nf
+- _InterlockedCompareExchange_rel_cpp
+- _InterlockedCompareExchange16_nf
+- _InterlockedCompareExchange8
+- _InterlockedCompareExchange64_np
+- _InterlockedCompareExchange16_rel
+- _InterlockedCompareExchange64_acq
+- _InterlockedCompareExchange8_rel
+- _InterlockedCompareExchange_HLEAcquire
+- _InterlockedCompareExchange64_HLERelease
+- _InterlockedCompareExchange64_cpp
+- _InterlockedCompareExchange_np
+- _InterlockedCompareExchange8_acq
+- _InterlockedCompareExchange16_acq
+- _InterlockedCompareExchange_rel
+- _InterlockedCompareExchange64_HLEAcquire
+- _InterlockedCompareExchange64
+- _InterlockedCompareExchange16
+- _InterlockedCompareExchange
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedCompareExchange16 intrinsic
+- _InterlockedCompareExchange_acq intrinsic
+- InterlockedCompareExchange_acq intrinsic
+- _InterlockedCompareExchange intrinsic
+- InterlockedCompareExchange64 intrinsic
+- _InterlockedCompareExchange64_acq intrinsic
+- InterlockedCompareExchange16 intrinsic
+- _InterlockedCompareExchange_rel intrinsic
+- InterlockedCompareExchange intrinsic
+- InterlockedCompareExchange64_acq intrinsic
+- InterlockedCompareExchange_rel intrinsic
+- _InterlockedCompareExchange64 intrinsic
+- InterlockedCompareExchange64_rel intrinsic
+- _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "26"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e6a29141e233e7e95cc35e6229e9bd37237cf1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedCompareExchange Intrinsic Functions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funciones intrínsecas de _InterlockedCompareExchange
 **Específicos de Microsoft**  
   
  Realiza una comparación e intercambio entrelazados.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 long _InterlockedCompareExchange(  
@@ -185,47 +186,47 @@ __int64 _InterlockedCompareExchange64_rel(
 );  
 ```  
   
-#### Parámetros  
- \[in, out\] `Destination`  
- Puntero al valor de destino.  El signo se omite.  
+#### <a name="parameters"></a>Parámetros  
+ [in, out] `Destination`  
+ Puntero al valor de destino. El signo se omite.  
   
- \[in\] `Exchange`  
- Valor de intercambio.  El signo se omite.  
+ [in] `Exchange`  
+ Valor de intercambio. El signo se omite.  
   
- \[in\] `Comparand`  
- Valor que se compara con el destino.  El signo se omite.  
+ [in] `Comparand`  
+ Valor que se compara con el destino. El signo se omite.  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  El valor devuelto es el valor inicial del puntero `Destination`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Función intrínseca|Arquitectura|Encabezado|  
-|------------------------|------------------|----------------|  
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h\>|  
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h\>|  
+|---------------|------------------|------------|  
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<INTRIN.h >|  
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<INTRIN.h >|  
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
   
-## Comentarios  
- `_InterlockedCompareExchange` realiza una comparación atómica del valor `Destination` con el valor `Comparand`.  Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`.  De lo contrario, no se realiza ninguna operación.  
+## <a name="remarks"></a>Comentarios  
+ `_InterlockedCompareExchange` realiza una comparación atómica del valor `Destination` con el valor `Comparand`. Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no se realiza ninguna operación.  
   
- `_InterlockedCompareExchange` proporciona compatibilidad intrínseca con el compilador para la función [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx) de Win32.  
+ `_InterlockedCompareExchange`proporciona compatibilidad intrínseca del compilador para Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx) (función).  
   
  Hay diversas variaciones en `_InterlockedCompareExchange` que varían en función de los tipos de datos que implican y de si se utiliza la liberación o la adquisición de semántica específica del procesador.  
   
  Mientras que la función `_InterlockedCompareExchange` opera con valores enteros largos, `_InterlockedCompareExchange8` opera con valores enteros de 8 bits, `_InterlockedCompareExchange16` opera con valores enteros cortos y `_InterlockedCompareExchange64` opera con valores enteros de 64 bits  
   
- En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica.  Los intrínsecos ARM con un sufijo `_nf` \("sin límite"\) no actúan como una barrera de memoria.  
+ En plataformas ARM, utilice los intrínsecos con sufijos `_acq` y `_rel` para adquirir y liberar semántica, como al principio y al final de una sección crítica. Los intrínsecos ARM con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.  
   
- Los intrínsecos con un sufijo `_np` \("sin captura previa"\) impiden que el compilador inserte una posible operación de captura previa.  
+ Los intrínsecos con un sufijo `_np` ("sin captura previa") impiden que el compilador inserte una posible operación de captura previa.  
   
- En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware \(HLE\), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware.  Si se llama a estos intrínsecos en plataformas que no son compatibles con HLE, se omite la sugerencia.  
+ En las plataformas de Intel que admiten instrucciones de Elisión de bloqueo de Hardware (HLE), los intrínsecos con sufijos `_HLEAcquire` y `_HLERelease` incluyen una sugerencia para el procesador que puede acelerar el rendimiento mediante la eliminación de un paso de escritura de bloqueo en el hardware. Si se llama a estos intrínsecos en plataformas que no son compatibles con HLE, se omite la sugerencia.  
   
  Estas rutinas solo están disponibles como intrínsecos.  
   
-## Ejemplo  
- En el ejemplo siguiente, se utiliza `_InterlockedCompareExchange` para la sincronización de subprocesos simple de bajo nivel.  El enfoque tiene sus limitaciones como base para la programación multiproceso; se presenta para ilustrar el uso normal de los intrínsecos entrelazados.  Para obtener mejores resultados, utilice la API de Windows.  Para obtener más información acerca de la programación multiproceso, consulte [Crear un programa Win32 multiproceso](../parallel/writing-a-multithreaded-win32-program.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, se utiliza `_InterlockedCompareExchange` para la sincronización de subprocesos simple de bajo nivel. El enfoque tiene sus limitaciones como base para la programación multiproceso; se presenta para ilustrar el uso normal de los intrínsecos entrelazados. Para obtener mejores resultados, utilice la API de Windows. Para obtener más información acerca de la programación multiproceso, consulte [crear un programa Win32 multiproceso](../parallel/writing-a-multithreaded-win32-program.md).  
   
 ```  
 // intrinExample.cpp  
@@ -403,41 +404,44 @@ int main(
 }  
 ```  
   
-  **\<0**  
-**\<1**  
-**\<2**  
-**\<3**  
-**\<4**  
-**\<5**  
-**\<6**  
-**\<7**  
-**\<8**  
-**\<9**  
-**\<10**  
-**\<11**  
-**\<12**  
-**\<13**  
-**\<14**  
-**\<15**  
-**\<16**  
-**\<17**  
-**\<18**  
-**\<19**  
-**\<20**  
-**\<21**  
-**\<22**  
-**\<23**  
-**\<24**  
-**\<25**  
-**\<26**  
-**\<27**  
-**\<28**  
-**\<29**   
-## FIN de Específicos de Microsoft  
+```Output  
+<0  
+<1  
+<2  
+<3  
+<4  
+<5  
+<6  
+<7  
+<8  
+<9  
+<10  
+<11  
+<12  
+<13  
+<14  
+<15  
+<16  
+<17  
+<18  
+<19  
+<20  
+<21  
+<22  
+<23  
+<24  
+<25  
+<26  
+<27  
+<28  
+<29  
+```  
   
-## Vea también  
- [\_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
- [Funciones intrínsecas \_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
- [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)   
- [Palabras clave de C\+\+](../cpp/keywords-cpp.md)   
+**FIN de Específicos de Microsoft**  
+  
+## <a name="see-also"></a>Vea también  
+ [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
+ [Funciones intrínsecas _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
+ [Funciones intrínsecas del compilador](../intrinsics/compiler-intrinsics.md)   
+ [Palabras clave](../cpp/keywords-cpp.md)   
  [Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)

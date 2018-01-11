@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2a7fcd7db19d9dcc6e12c351a3fd55f0e67b118
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-in-mfc"></a>OLE en MFC
 Estos artículos explican los conceptos básicos de programación de OLE mediante MFC. MFC proporciona la manera más fácil de escribir programas que utilizan OLE:  

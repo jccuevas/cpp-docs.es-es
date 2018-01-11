@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30ca86898aa94a2c42f73b2f589c7fc7fc93634
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csettingsstoresp-class"></a>Clase CSettingsStoreSP
 El `CSettingsStoreSP` clase es una clase auxiliar que puede usar para crear instancias de la [clase CSettingsStore](../../mfc/reference/csettingsstore-class.md).  
@@ -42,20 +43,20 @@ class CSettingsStoreSP
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Construye un objeto `CSettingsStoreSP`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSettingsStoreSP::Create](#create)|Crea una instancia de una clase que se deriva de `CSettingsStore`.|  
 |[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Establece la clase en tiempo de ejecución. El `Create` método usa la clase en tiempo de ejecución para determinar qué clase de objetos que se va a crear.|  
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`m_dwUserData`|Datos de usuario personalizado que se almacenarán en la `CSettingsStoreSP` objeto. Proporcione estos datos en el constructor de la `CSettingsStoreSP` objeto.|  
 |`m_pRegistry`|El `CSettingsStore`-derivado del objeto que el `Create` método crea.|  

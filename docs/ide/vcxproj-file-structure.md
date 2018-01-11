@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc57a69b71bd7fbdbf97d5c34e7e6ec0694bb5df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdfd703b819b40a2fc391c1c6cb17edd0eff4cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcxproj-and-props-file-structure"></a>estructura del archivo .vcxproj y .props
 MSBuild es el sistema de proyecto de forma predeterminada en Visual Studio; Cuando eliges **archivo | Nuevo proyecto** en Visual C++ está creando un proyecto de MSBuild cuya configuración se almacena en un archivo de proyecto XML con la extensión `.vcxproj`. El archivo de proyecto también puede importar archivos .props y .targets donde se almacena la configuración. En la mayoría de los casos, nunca debe editar manualmente el archivo de proyecto y, en realidad debería no modificarla manualmente a menos que tenga un buen conocimiento de MSBuild. Siempre que sea posible debe usar las páginas de propiedades de Visual Studio para modificar la configuración de proyecto (vea [trabajar con configuraciones de proyecto](working-with-project-properties.md). Sin embargo, en algunos casos deberá modificar manualmente una proyecto archivo u hoja de propiedades. En esos escenarios, este artículo contiene información básica acerca de la estructura del archivo. 

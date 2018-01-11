@@ -16,11 +16,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16962e39533eb2ac3d698622f8bb3a27d068b0ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferencias en el comportamiento del control de excepciones en /CLR
 [Conceptos básicos del uso de excepciones administradas](../dotnet/basic-concepts-in-using-managed-exceptions.md) describe el control de excepciones en aplicaciones administradas. En este tema se describen las diferencias en el comportamiento estándar de control de excepciones y algunas restricciones en detalle. Para obtener más información, consulte [la función _set_se_translator](../c-runtime-library/reference/set-se-translator.md).  
@@ -95,7 +98,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 Caught a nested exception  
@@ -147,7 +150,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 caught an SEH Exception  
@@ -187,7 +190,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 Counter=-3  
@@ -271,7 +274,7 @@ int main( int argc, char ** argv ) {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 This is invoked since _set_se_translator is not supported when /clr is used  

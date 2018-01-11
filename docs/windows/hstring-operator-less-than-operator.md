@@ -1,54 +1,54 @@
 ---
-title: "HString::Operator&lt; (Operador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator<"
-dev_langs: 
-  - "C++"
+title: 'Hstring:: operator&lt; operador | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator<
+dev_langs: C++
 ms.assetid: 48a051cb-4609-42be-b48c-d35fc99d1eab
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4cbb21e34255d5350702d949792656bdf0a849a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# HString::Operator&lt; (Operador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringoperatorlt-operator"></a>Hstring:: operator&lt; (operador)
 Indica si el primer parámetro es menor que el segundo parámetro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-  
 inline bool operator<(  
     const HString& lhs,   
     const HString& rhs) throw()  
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `lhs`  
- El primer parámetro a comparar.  `lhs` puede ser una referencia a un HString.  
+ El primer parámetro para comparar. `lhs`puede ser una referencia a HString.  
   
  `rhs`  
- El segundo parámetro a comparar.  `rhs` puede ser una referencia a un HString.  
+ El segundo parámetro para comparar. `rhs`puede ser una referencia a HString.  
   
-## Valor devuelto  
- `true` si el parámetro de `lhs` es menor que el parámetro de `rhs` ; si no, `false`.  
+## <a name="return-value"></a>Valor devuelto  
+ `true`Si el `lhs` parámetro es menor que el `rhs` parámetro; en caso contrario, `false`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [HString \(Clase\)](../windows/hstring-class.md)
+## <a name="see-also"></a>Vea también  
+ [HString (clase)](../windows/hstring-class.md)

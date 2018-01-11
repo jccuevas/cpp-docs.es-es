@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b66a95499c64970c31c7d71fe5dc43f1aa7854d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Tutorial: Multiplicación de matrices
 Este tutorial muestra, paso a paso, cómo utilizar C++ AMP para acelerar la ejecución de la multiplicación de matrices. Se presentan dos algoritmos, uno sin mosaico y otro con mosaico.  
@@ -39,7 +40,7 @@ Este tutorial muestra, paso a paso, cómo utilizar C++ AMP para acelerar la ejec
   
 3.  Seleccione **proyecto vacío**, escriba `MatrixMultiply` en el **nombre** cuadro y, a continuación, elija la **Aceptar** botón.  
   
-4.  Elija la **siguiente** botón.  
+4.  Elija el botón **Siguiente**.  
   
 5.  En **el Explorador de soluciones**, abra el menú contextual para **archivos de código fuente**y, a continuación, elija **agregar**, **nuevo elemento**.  
   

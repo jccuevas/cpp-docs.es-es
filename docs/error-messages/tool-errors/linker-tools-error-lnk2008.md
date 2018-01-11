@@ -1,33 +1,32 @@
 ---
-title: "Error de las herramientas del vinculador LNK2008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2008"
+title: Las herramientas del vinculador LNK2008 Error | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2008
+dev_langs: C++
+helpviewer_keywords: LNK2008
 ms.assetid: bbcd83c5-c8ae-439e-a033-63643a5bb373
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a7c2fecff55677653c25c7d87fb22fa984526159
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error de las herramientas del vinculador LNK2008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El destino de la corrección no está alineado 'symbol\_name'  
+# <a name="linker-tools-error-lnk2008"></a>Error de las herramientas del vinculador LNK2008
+Destino de la corrección no está alineado 'symbol_name'  
   
- LINK encontró un destino de corrección en el archivo objeto que no estaba correctamente alineado.  
+ LINK encontró un destino de la corrección en el archivo de objeto que no se ha alineado correctamente.  
   
- Este error puede producirlo una alineación de sección personalizada \(por ejemplo, \#pragma [pack](../../preprocessor/pack.md)\), el modificador [align](../../cpp/align-cpp.md) o el uso de código de lenguaje de ensamblado que modifica la alineación de la sección.  
+ Este error puede deberse a personalizado producirlo una alineación de (por ejemplo, #pragma [pack](../../preprocessor/pack.md)), [alinear](../../cpp/align-cpp.md) modificador, o bien mediante código de lenguaje ensamblador que modifica la alineación.  
   
- Si su código no utiliza lo anterior, el error lo produce el compilador.
+ Si el código no utiliza ninguno de los pasos anteriores, esto puede deberse al compilador.

@@ -1,36 +1,37 @@
 ---
-title: "C&#243;mo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Funciones con punteros interiores y nativos, sobrecargar"
+title: "Cómo: sobrecargar funciones con punteros internos y punteros nativos (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f5f46abca993acb2990c3310e8fefd9ab970b751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las funciones pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o puntero nativo.  
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Cómo: Sobrecargar funciones con punteros internos y punteros nativos (C++/CLI)
+Las funciones se pueden sobrecargar dependiendo de si el tipo de parámetro es un puntero interior o un puntero nativo.  
   
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la opción del compilador **\/clr** , pero no por la opción del compilador **\/ZW** .  
+>  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // interior_ptr_overload.cpp  
@@ -67,12 +68,12 @@ int main() {
 };  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  
   
-## Vea también  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

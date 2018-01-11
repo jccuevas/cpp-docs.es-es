@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb13fc956ffffe2e58953aa29f02c56344b07a44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (clase)
 Una vista que muestra registros de una base de datos en controles.  
@@ -48,7 +49,7 @@ class COleDBRecordView : public CFormView
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleDBRecordView::OnGetRowset](#ongetrowset)|Devuelve un estándar `HRESULT` valor.|  
 |[COleDBRecordView::OnMove](#onmove)|Actualiza el registro actual (si se ha cambiado) en el origen de datos y, a continuación, se mueve al registro especificado (siguiente, anterior, primera o última).|  

@@ -33,11 +33,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7e16801bed2063d60e9151e2afc22a128aeed97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 Asigna memoria en un límite de alineación especificado.  
@@ -56,7 +57,7 @@ void * _aligned_malloc(
  Tamaño de la asignación de memoria solicitada.  
   
  `alignment`  
- El valor de alineación, que debe ser un entero potencia de 2.  
+ Valor de la alineación, que debe ser un entero potencia de 2.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Puntero al bloque de memoria que se asignó o `NULL` si se produjo un error en la operación. El puntero es múltiplo de `alignment`.  

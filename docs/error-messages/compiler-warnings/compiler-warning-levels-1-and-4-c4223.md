@@ -1,29 +1,28 @@
 ---
-title: "Advertencia del compilador (nivels 1 and 4) C4223 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4223"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4223"
+title: Compilador advertencia (niveles 1 y 4) C4223 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4223
+dev_langs: C++
+helpviewer_keywords: C4223
 ms.assetid: 6fc44336-0250-4432-928b-fc5dbe7b7c1c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c7db11d0fcc2107f82b10438256fd0d40b908913
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivels 1 and 4) C4223
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se ha utilizado una extensión no estándar: matriz con valor distinto de valor L convertida a puntero  
+# <a name="compiler-warning-levels-1-and-4-c4223"></a>Advertencia del compilador (nivels 1 and 4) C4223
+ha utilizado una extensión no estándar: matriz de valor distinto de lvalue convertida a puntero  
   
- En C estándar, no se puede convertir una matriz con valor distinto de valor L a un puntero.  Con las extensiones de Microsoft predeterminadas \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\), sí es posible.
+ En C estándar, no se puede convertir una matriz no sea lvalue a un puntero. Con las extensiones de Microsoft predeterminadas ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), es posible.

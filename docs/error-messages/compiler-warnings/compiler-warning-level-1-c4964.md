@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4964 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4964"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4964"
+title: Compilador advertencia (nivel 1) C4964 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4964
+dev_langs: C++
+helpviewer_keywords: C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1c7483b82c363898bc16ed5fc7d48f9cf0b35c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4964
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4964"></a>Advertencia del compilador (nivel 1) C4964
 No se especificaron opciones de optimización; no se recopilará la información de perfil  
   
- Se especificaron [\/GL](../../build/reference/gl-whole-program-optimization.md) y [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md) pero no se solicitaron optimizaciones, de manera que no se generarán archivos .pgc y, por tanto, no serán posibles las optimizaciones guiadas por perfiles.  
+ [/ GL](../../build/reference/gl-whole-program-optimization.md) y [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) se han especificado, pero no hay optimizaciones se solicitaron, por lo que no se generará ningún archivo .pgc y, por lo tanto, no será posibles optimizaciones guiadas por perfiles.  
   
- Si desea generar archivos .pgc cuando ejecuta su aplicación, especifique una de las opciones [\/O](../../build/reference/o-options-optimize-code.md) del compilador.  
+ Si desea que los archivos .pgc generarse cuando se ejecuta la aplicación, especifique uno de los [/O](../../build/reference/o-options-optimize-code.md) opciones del compilador.  
   
- El código siguiente genera el error C4964:  
+ El ejemplo siguiente genera C4964:  
   
 ```  
 // C4964.cpp  

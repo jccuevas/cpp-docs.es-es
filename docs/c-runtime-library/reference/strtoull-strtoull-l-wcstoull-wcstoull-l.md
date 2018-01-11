@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - wcstoull
 - _strtoull_l
 - strtoull
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strtoull function
 - _tcstoull_l function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7ab47ad852aa8b389b20767f5aa3b969368af012
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8af8a6c2d96eb0fa4fd37a41e7f022743ab78d7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 Convierte las cadenas en un valor largo de entero largo sin signo.  
@@ -114,12 +98,12 @@ unsigned long long _wcstoull_l(
 ## <a name="return-value"></a>Valor devuelto  
  `strtoull` devuelve el valor convertido, si existe, o `ULLONG_MAX` si se produce un desbordamiento. `strtoull` devuelve 0 si no se puede realizar ninguna conversión. `wcstoull` devuelve valores de manera parecida a `strtoull`. Para ambas funciones, `errno` se establece en `ERANGE` si se produce un desbordamiento o subdesbordamiento.  
   
- Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Cada una de estas funciones convierte la cadena de entrada `nptr` en un valor entero `unsigned long long`.  
   
- `strtoull` deja de leer la cadena `nptr` en el primer carácter que no reconoce como parte de un número. Puede tratarse del carácter nulo final o del primer carácter numérico mayor o igual a `base`. El valor de la categoría `LC_NUMERIC` de la configuración regional determina el reconocimiento del carácter de base de `nptr`. Para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` y `wcstoull` usan la configuración regional actual, mientras que `_strtoull_l` y `_wcstoull_l` usan la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `strtoull` deja de leer la cadena `nptr` en el primer carácter que no reconoce como parte de un número. Puede tratarse del carácter nulo final o del primer carácter numérico mayor o igual a `base`. El valor de la categoría `LC_NUMERIC` de la configuración regional determina el reconocimiento del carácter de base de `nptr`. Para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` y `wcstoull` usan la configuración regional actual, mientras que `_strtoull_l` y `_wcstoull_l` usan la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Si `endptr` no es `NULL`, se almacena un puntero al carácter que detuvo el análisis en la ubicación a la que señala `endptr`. Si no se puede efectuar ninguna conversión (no se encontraron dígitos válidos o se especificó una base no válida), el valor de `nptr` se almacena en la ubicación a la que señala `endptr`.  
   
@@ -147,7 +131,7 @@ unsigned long long _wcstoull_l(
 |`_strtoull_l`|\<stdlib.h>|  
 |`_wcstoull_l`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Vea el ejemplo de [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  

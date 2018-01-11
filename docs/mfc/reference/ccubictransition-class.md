@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CCubicTransition::m_dblFinalVelocity
 - AFXANIMATIONCONTROLLER/CCubicTransition::m_duration
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCubicTransition [MFC], CCubicTransition
 - CCubicTransition [MFC], Create
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 806a8b92867d120a9ae099b96ecaf6fecfca4ea6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 428b9e05cc2d4f1ead76d8842a31c36637fbb4f0
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccubictransition-class"></a>Clase CCubicTransition
 Encapsula una transición cúbica.  
@@ -49,19 +47,19 @@ class CCubicTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCubicTransition::CCubicTransition](#ccubictransition)|Construye un objeto de transición y se inicializan sus parámetros.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCubicTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|El valor de la variable de animación al final de la transición.|  
 |[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|El progreso de la variable al final de la transición.|  
@@ -139,4 +137,3 @@ UI_ANIMATION_SECONDS m_duration;
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

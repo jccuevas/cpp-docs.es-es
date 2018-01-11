@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fceb15c713eee25c4ae04ef2a095737e587170a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-contexts"></a>Atributos de contexto
 Atributos de C++ se pueden describir con cuatro campos básicos: el destino que se pueden aplicar a (**se aplica a**), si son repetibles o no (**repetible**), el requiere la presencia de otros atributos ( **Atributos requeridos por la**) y las incompatibilidades con otros atributos (**atributos no válidos**). Estos campos se muestran en una tabla que lo acompañan en el tema de referencia de cada atributo. Cada uno de estos campos se describe a continuación.  

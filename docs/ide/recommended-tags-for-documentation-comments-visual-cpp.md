@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65d2161edc4b2aa03cd547467ca0f38158850051
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Etiquetas recomendadas para comentarios de documentación (Visual C++)
 El compilador de Visual C++ procesará los comentarios de documentación en el código y crea un archivo .xdc por cada operación de compilación y xdcmake.exe procesará los archivos .xdc en un archivo XML. Procesar el archivo .xml para crear documentación es un detalle que debe implementarse en el sitio.  

@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a11b7847e83a129099e0f54cccce35032cf68fe4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70262673935e67fc6ee868a400fd57358a31547a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 Establece un punto de interrupción en un número de orden de asignación de objetos especificado (solo versión de depuración).  
@@ -62,7 +63,7 @@ Establece un punto de interrupción en un número de orden de asignación de obj
   
  El número de orden de la asignación de objetos se almacena en el campo *lRequest* de la estructura **_CrtMemBlockHeader**, que se define en Crtdbg.h. Cuando alguna de las funciones de volcado de depuración proporciona información sobre un bloque de memoria, este número aparece encerrado entre llaves, por ejemplo {36}.  
   
- Para obtener más información sobre cómo se puede usar `_CrtSetBreakAlloc` con otras funciones de administración de memoria, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details). Para obtener más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Para obtener más información sobre cómo se puede usar `_CrtSetBreakAlloc` con otras funciones de administración de memoria, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -70,7 +71,7 @@ Establece un punto de interrupción en un número de orden de asignación de obj
 |-------------|---------------------|  
 |`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

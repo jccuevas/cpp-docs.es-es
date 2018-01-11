@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac0b4cd7783cd41d480777fe8116a0facea58a28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Copia bytes entre búferes. Se trata de versiones de [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -81,10 +82,10 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|Valor devuelto|Contenido de `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|cualquiera|cualquiera|0|0|No modificado|  
-|`NULL`|cualquiera|cualquiera|distinto de cero|`EINVAL`|No modificado|  
-|cualquiera|cualquiera|`NULL`|distinto de cero|`EINVAL`|`dest` se pone a cero|  
-|cualquiera|< `count`|cualquiera|distinto de cero|`ERANGE`|`dest` se pone a cero|  
+|any|any|any|0|0|No modificado|  
+|`NULL`|any|any|distinto de cero|`EINVAL`|No modificado|  
+|any|any|`NULL`|distinto de cero|`EINVAL`|`dest` se pone a cero|  
+|any|< `count`|any|distinto de cero|`ERANGE`|`dest` se pone a cero|  
   
 ## <a name="remarks"></a>Comentarios  
  `memcpy_s` copia `count` bytes de `src` a `dest`; `wmemcpy_s` copia `count` caracteres anchos (dos bytes). Si el origen y el destino se superponen, el comportamiento de `memcpy_s` no está definido. Use `memmove_s` para controlar las áreas superpuestas.  

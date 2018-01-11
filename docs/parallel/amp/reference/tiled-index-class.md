@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledindex-class"></a>tiled_index (Clase)
 Proporciona un índice en una [tiled_extent](tiled-extent-class.md) objeto. Esta clase tiene propiedades para tener acceso a elementos con respecto al origen de icono local y con respecto al origen global. Para obtener más información sobre los espacios de mosaico, consulte [usando iconos](../../../parallel/amp/using-tiles.md).  
@@ -74,14 +75,14 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[tiled_index Constructor](#ctor)|Inicializa una nueva instancia de la clase `tile_index`.|  
 
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[get_tile_extent](#tiled_index__get_tile_extent)|Devuelve un [extensión](extent-class.md) objeto que tiene los valores de la `tiled_index` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
 
@@ -89,7 +90,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[Barrier (constante)](#tiled_index__barrier)|Almacena un [tile_barrier](tile-barrier-class.md) objeto que representa una barrera en el mosaico actual de subprocesos.|  
 |||  
@@ -105,7 +106,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|Obtiene un [extensión](extent-class.md) objeto que tiene los valores de la `tiled_index` argumentos de plantilla `tiled_index` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.|  
 
@@ -161,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicializa una nueva instancia de la `tile_index` clase desde el índice de los iconos en coordenadas globales y la posición relativa en el icono en coordenadas locales. El `_Global` y `_Tile_origin` se calculan los parámetros.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializa una nueva instancia de la `tile_index` clase copiando especificado `tiled_index` objeto.|  
 

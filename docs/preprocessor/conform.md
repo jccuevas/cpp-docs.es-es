@@ -1,62 +1,63 @@
 ---
-title: "conform | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "conform_CPP"
-  - "vc-pragma.conform"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conform (pragma)"
-  - "forScope conform (pragma)"
-  - "pragma (directivas), conform"
+title: se ajustan | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- conform_CPP
+- vc-pragma.conform
+dev_langs: C++
+helpviewer_keywords:
+- conform pragma
+- forScope conform pragma
+- pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5f876c1b921a00c251010d22e2cdd000a405a651
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# conform
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos de C\+\+**  
+# <a name="conform"></a>conform
+**Específicos de C++**  
   
- Especifica el comportamiento en tiempo de ejecución de la opción del compilador [\/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md).  
+ Especifica el comportamiento de tiempo de ejecución de la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opción del compilador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  *name*  
- Especifica el nombre de la opción del compilador que se va a modificar.  El único valor válido para *name* es `forScope`.  
+ Especifica el nombre de la opción del compilador que se va a modificar. El único valor válido *nombre* es `forScope`.  
   
- **show** \(opcional\)  
- Hace que el valor actual de *name* \(true o false\) se muestre mediante un mensaje de advertencia durante la compilación.  Por ejemplo: `#pragma conform(forScope, show)`.  
+ **Mostrar** (opcional)  
+ Hace que la configuración actual de *nombre* (true o false) se muestre mediante un mensaje de advertencia durante la compilación. Por ejemplo: `#pragma conform(forScope, show)`.  
   
- **on, off**\(opcional\)  
- Al establecer *name* en **on** se habilita la opción del compilador [\/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md).  El valor predeterminado es **off**.  
+ **activado, desactivado**(opcional)  
+ Establecer *nombre* a **en** permite la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opción del compilador. El valor predeterminado es **desactivar**.  
   
- **push** \(opcional\)  
- Inserta el valor actual de *name* en la pila interna del compilador.  Si se especifica *identifier*, puede especificar el valor de **on** o de **off** para que *name* se inserte en la pila.  Por ejemplo: `#pragma conform(forScope, push, myname, on)`.  
+ **inserción** (opcional)  
+ Inserta el valor actual de *nombre* en la pila interna del compilador. Si especifica *identificador*, puede especificar el **en** o **desactivar** valor *nombre* en insertarse en la pila. Por ejemplo: `#pragma conform(forScope, push, myname, on)`.  
   
- **pop** \(opcional\)  
- Establece el valor de *name* en el valor situado en la parte superior de la pila interna del compilador y luego extrae la pila.  Si el identificador se especifica con **pop**, la pila se vuelve a extraer hasta encontrar el registro con *identifier*, que también se extrae; el valor actual de *name* en el registro siguiente de la pila se convierte en el nuevo valor de *name*.  Si especifica pop con un *identifier* que no está en un registro de la pila, se omite **pop**.  
+ **confirmación** (opcional)  
+ Establece el valor de *nombre* en el valor en la parte superior de la pila interna del compilador y, a continuación, extrae la pila. Si se especifica el identificador con **pop**, se extrae la pila hasta que encuentra el registro con *identificador*, que también se extrae; el valor actual de *nombre* en el registro siguiente en la pila se convierte en el nuevo valor de *nombre*. Si especifica pop con un *identificador* que no está en un registro en la pila, el **pop** se omite.  
   
- *identifier*\(opcional\)  
- Se puede incluir con un comando **push** o **pop**.  Si se utiliza *identifier*, también se puede usar un especificador **on** u **off**.  
+ *identificador*(opcional)  
+ Se puede incluir en un **inserción** o **pop** comando. Si *identificador* se utiliza, a continuación, un **en** o **desactivar** también se puede utilizar el especificador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // pragma_directive_conform.cpp  
@@ -74,5 +75,5 @@ caps.handback.revision: 5
 int main() {}  
 ```  
   
-## Vea también  
- [Directives pragma y la palabra clave \_\_pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vea también  
+ [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

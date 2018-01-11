@@ -1,61 +1,62 @@
 ---
-title: "Usar CTreeCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl (clase), acerca de CTreeCtrl"
-  - "controles de árbol, utilizar"
+title: Usar CTreeCtrl | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CTreeCtrl
+dev_langs: C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], about CTreeCtrl
+- tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ceea56fb3cdc412efe1db3f51f5dc33f2c5f893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Usar CTreeCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un control de árbol, representado por la clase [CTreeCtrl](../mfc/reference/ctreectrl-class.md), es una ventana que muestra una lista jerárquica de los elementos, como los encabezados en un documento, las entradas en un índice, o archivos y directorios en un disco.  Cada elemento consta de una etiqueta y una imagen de mapa de bits opcional, y cada elemento puede tener una lista de subelementos asociados a él.  Haciendo clic en un elemento, el usuario puede expandir y contraer la lista asociada de subelementos.  El árbol de directorios en el panel izquierdo del del archivo es un ejemplo de un control de árbol.  
+# <a name="using-ctreectrl"></a>Usar CTreeCtrl
+Un control de árbol, representado por la clase [CTreeCtrl](../mfc/reference/ctreectrl-class.md), es una ventana que muestra una lista jerárquica de elementos, como los encabezados en un documento, las entradas de un índice, o los archivos y directorios en un disco. Cada elemento se compone de una etiqueta y una imagen de mapa de bits opcional, y cada elemento puede tener una lista de subelementos asociados a él. Si hace clic en un elemento, el usuario puede expandir y contraer la lista asociada de subelementos. El árbol de directorios en el panel izquierdo del explorador de archivos es un ejemplo de un control de árbol.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
   
--   [CTreeCtrl con CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
+-   [CTreeCtrl frente a CTreeView](../mfc/ctreectrl-vs-ctreeview.md)  
   
--   [Mediante los controles de árbol](../mfc/using-tree-controls.md)  
+-   [Uso de controles de árbol](../mfc/using-tree-controls.md)  
   
--   [La comunicación con un control de árbol](../mfc/communicating-with-a-tree-control.md)  
+-   [Comunicación con un control de árbol](../mfc/communicating-with-a-tree-control.md)  
   
--   [Estilos del control de árbol](../mfc/tree-control-styles.md)  
+-   [Estilos de control de árbol](../mfc/tree-control-styles.md)  
   
--   [Elementos primarios y secundarios del control de árbol](../mfc/tree-control-parent-and-child-items.md)  
+-   [Elementos primario y secundario del control de árbol](../mfc/tree-control-parent-and-child-items.md)  
   
--   [Posición del elemento del control de árbol](../mfc/tree-control-item-position.md)  
+-   [Posición de los elementos del control de árbol](../mfc/tree-control-item-position.md)  
   
--   [Etiquetas de elemento del control de árbol](../mfc/tree-control-item-labels.md)  
+-   [Etiquetas de elemento de control de árbol](../mfc/tree-control-item-labels.md)  
   
--   [Edición del control de árbol](../mfc/tree-control-label-editing.md)  
+-   [Edición de etiquetas de control de árbol](../mfc/tree-control-label-editing.md)  
   
--   [El elemento del control de árbol indica información general](../mfc/tree-control-item-states-overview.md)  
+-   [Información general sobre los estados de los elementos de control de árbol](../mfc/tree-control-item-states-overview.md)  
   
 -   [Listas de imágenes del control de árbol](../mfc/tree-control-image-lists.md)  
   
--   [Selección de elementos del control de árbol](../mfc/tree-control-item-selection.md)  
+-   [Selección de elementos de control de árbol](../mfc/tree-control-item-selection.md)  
   
 -   [Operaciones de arrastrar y colocar del control de árbol](../mfc/tree-control-drag-and-drop-operations.md)  
   
--   [Información sobre el elemento del control de árbol](../mfc/tree-control-item-information.md)  
+-   [Información de elementos de control de árbol](../mfc/tree-control-item-information.md)  
   
--   [Mensajes de notificación del control de árbol](../mfc/tree-control-notification-messages.md)  
+-   [Mensajes de notificación de controles de árbol](../mfc/tree-control-notification-messages.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Controles](../mfc/controls-mfc.md)
+

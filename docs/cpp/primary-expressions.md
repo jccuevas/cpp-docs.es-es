@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0a6e811e1fe074ce488b09fca29926989bc7f355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primary-expressions"></a>Expresiones primarias
 Las expresiones primarias son los bloques de creación de expresiones más complejas. Son literales, nombres, y nombres calificados por el operador de resolución de ámbito (`::`).  Una expresión primaria puede tener cualquiera de las formas siguientes:  
@@ -42,7 +40,7 @@ Las expresiones primarias son los bloques de creación de expresiones más compl
   
  El **esto** palabra clave es un puntero a un objeto de clase. Está disponible en funciones miembro no estáticas y señala a la instancia de la clase para la que se ha invocado la función. El **esto** palabra clave no se puede usar fuera del cuerpo de una función miembro de clase.  
   
- El tipo de la **esto** puntero es `type` ** \*const** (donde `type` es el nombre de clase) dentro de las funciones no modifican específicamente el **esta** puntero. En el ejemplo siguiente se muestra el miembro declaraciones de función y los tipos de **esto**:  
+ El tipo de la **esto** puntero es `type`  **\*const** (donde `type` es el nombre de clase) dentro de las funciones no modifican específicamente el **esta** puntero. En el ejemplo siguiente se muestra el miembro declaraciones de función y los tipos de **esto**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

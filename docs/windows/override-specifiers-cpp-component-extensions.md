@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7937e0eec53a800c7bcef2842310af368949bcca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Especificadores de invalidación (Extensiones de componentes de C++)
 *Especificadores de invalidación* modificar cómo heredados tipos y miembros de tipos heredados se comportan en los tipos derivados.  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/24/2017
  Para obtener información sobre cómo reemplazar explícitamente funciones de clase base, vea [reemplazos explícitos](../windows/explicit-overrides-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
- (No hay notas para esta característica de lenguaje que solo se apliquen a Windows en tiempo de ejecución).  
+ (No hay notas para esta característica de lenguaje que solo se apliquen a Windows Runtime).  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  

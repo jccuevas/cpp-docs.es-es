@@ -77,11 +77,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e619cbc049e64c25325ab8327ec6dd9d16e071be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef (clase)
 Representa una definición de consulta o "querydef", normalmente guardada en una base de datos.  
@@ -96,13 +97,13 @@ class CDaoQueryDef : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Construye un **CDaoQueryDef** objeto. A continuación llama a **abiertos** o **crear**, en función de sus necesidades.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoQueryDef:: Append](#append)|Anexa la definición de consulta a la colección de definiciones de consulta de la base de datos como una consulta guardada.|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|Devuelve un valor distinto de cero si la consulta puede actualizar la base de datos.|  
@@ -134,7 +135,7 @@ class CDaoQueryDef : public CObject
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|Un puntero a la interfaz OLE para el objeto de definición de consulta DAO subyacente.|  
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|Un puntero a la `CDaoDatabase` objeto con el que está asociada la definición de consulta. La definición de consulta podría estar guardado en la base de datos o no.|  

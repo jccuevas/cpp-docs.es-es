@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6d42bb76458833614b0a057906ca11d9f9071c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecf0b0590942aad133cb7b8f478200525e4f4519
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 Determina la diferencia positiva entre el primer y el segundo valor.  
@@ -99,7 +100,7 @@ long double fdiml(
   
  De lo contrario, puede que devuelva uno de los siguientes errores:  
   
-|Problema|Valor devuelto|  
+|Problema|Volver|  
 |-----------|------------|  
 |Error de intervalo de desbordamiento|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|  
 |Error de intervalo de subdesbordamiento|valor correcto (después del redondeo)|  
@@ -118,7 +119,7 @@ long double fdiml(
 |--------------|--------------|------------------|  
 |`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

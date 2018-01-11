@@ -1,48 +1,47 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4247 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4247"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4247"
+title: Las herramientas del vinculador LNK4247 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4247
+dev_langs: C++
+helpviewer_keywords: LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 517605993199942f863faa78e14a022529214a64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4247
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-el punto de entrada 'nombre\_representativo\_de\_función' ya tiene un atributo de subproceso; 'atributo' omitido  
+# <a name="linker-tools-warning-lnk4247"></a>Advertencia de las herramientas del vinculador LNK4247
+punto de entrada 'nombre_representativo_de_función' ya tiene un atributo de subproceso; 'atributo' omitido  
   
- Un punto de entrada, especificado con [\/ENTRY \(Símbolo de punto de entrada\)](../../build/reference/entry-entry-point-symbol.md), tenía un atributo de subprocesamiento, pero también se especificó [\/CLRTHREADATTRIBUTE \(Establecer el atributo de subproceso de CLR\)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md), con un modelo de subprocesos diferente.  
+ Un punto de entrada especificado con [/ENTRY (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), tenía un atributo de subprocesamiento, pero [/CLRTHREADATTRIBUTE (Set CLR Thread Attribute)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) también se especificó, con un modelo de subprocesos diferentes.  
   
- El vinculador omitió el valor especificado con \/CLRTHREADATTRIBUTE.  
+ El vinculador omitió el valor especificado con/CLRTHREADATTRIBUTE.  
   
- Para solucionarlo:  
+ Para resolver esta advertencia:  
   
--   Quite \/CLRTHREADATTRIBUTE de su compilación.  
+-   Quitar/CLRTHREADATTRIBUTE de la compilación.  
   
--   Quite el atributo de su archivo de código fuente.  
+-   Quite el atributo de archivo de código fuente.  
   
--   Quite el atributo del código fuente y \/CLRTHREADATTRIBUTE de la compilación, y acepte el modelo de subprocesos de CLR predeterminado.  
+-   Elimine el atributo de origen y/CLRTHREADATTRIBUTE de la compilación y acepte el modelo de subprocesos de CLR de forma predeterminada.  
   
--   Cambie el valor pasado a \/CLRTHREADATTRIBUTE, de modo que no esté en conflicto con el atributo del código fuente.  
+-   Cambie el valor pasado a/CLRTHREADATTRIBUTE, de modo que lo está de acuerdo con el atributo de origen.  
   
--   Cambie el atributo del código fuente, de modo que no esté en conflicto con el valor pasado a \/CLRTHREADATTRIBUTE.  
+-   Cambie el atributo de origen, de modo que lo está de acuerdo con el valor pasado a/CLRTHREADATTRIBUTE.  
   
- En el siguiente ejemplo, se genera la advertencia LNK4247  
+ El ejemplo siguiente genera la advertencia LNK4247  
   
 ```  
 // LNK4247.cpp  

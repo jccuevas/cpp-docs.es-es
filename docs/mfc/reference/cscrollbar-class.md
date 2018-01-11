@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2fb2b5478d6f8af793baf0fc801bdb114999739b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscrollbar-class"></a>Clase CScrollBar
 Proporciona la funcionalidad de un control de barra de desplazamiento de Windows.  
@@ -60,13 +61,13 @@ class CScrollBar : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CScrollBar::CScrollBar](#cscrollbar)|Construye un objeto `CScrollBar`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CScrollBar::Create](#create)|Crea la barra de desplazamiento de Windows y lo adjunta a la `CScrollBar` objeto.|  
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|Habilita o deshabilita una o ambas flechas de una barra de desplazamiento.|  

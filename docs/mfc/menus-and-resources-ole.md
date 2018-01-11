@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11875a7004f8b833869440e59252325558cada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe0a5f6dae2cece571eddabc4094ebb87df175b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-ole"></a>Menús y recursos (OLE)
 Este grupo de artículos explica el uso de menús y recursos en aplicaciones de documentos OLE de MFC.  
@@ -52,7 +53,7 @@ Este grupo de artículos explica el uso de menús y recursos en aplicaciones de 
   
  Debido a estos problemas, aplicaciones de documentos OLE creadas con el Asistente para aplicaciones pueden tener hasta cuatro menús independientes y recursos de la tabla de aceleradores. Se utilizan por las razones siguientes:  
   
-|Nombre del recurso|Uso|  
+|Nombre del recurso|Usar|  
 |-------------------|---------|  
 |**IDR_MAINFRAME**|Utilizar en una aplicación MDI si ningún archivo está abierto, o en una aplicación SDI, independientemente de los archivos abiertos. Este es el menú estándar que se utiliza en aplicaciones no compatibles con OLE.|  
 |**IDR_\<proyecto > tipo**|Se utiliza en una aplicación MDI si hay archivos abiertos. Se utiliza cuando se ejecuta una aplicación independiente. Este es el menú estándar que se utiliza en aplicaciones no compatibles con OLE.|  

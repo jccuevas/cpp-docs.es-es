@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Crea un nombre de ruta de acceso absoluta o completa para el nombre de ruta de acceso relativa especificado.  
@@ -93,7 +94,7 @@ wchar_t *_wfullpath(
 \\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h  
 ```  
   
- `_fullpath` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wfullpath` es una versión con caracteres anchos de `_fullpath`; los argumentos de cadena para `_wfullpath` son cadenas de caracteres anchos. `_wfullpath` y `_fullpath` se comportan de manera idéntica, salvo que `_wfullpath` no controla cadenas de caracteres multibyte.  
+ `_fullpath` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wfullpath` es una versión con caracteres anchos de `_fullpath`; los argumentos de cadena para `_wfullpath` son cadenas de caracteres anchos. `_wfullpath` y `_fullpath` se comportan de manera idéntica, salvo que `_wfullpath` no controla las cadenas de caracteres multibyte.  
   
  Si `_DEBUG` y `_CRTDBG_MAP_ALLOC` se definen, las llamadas a `_fullpath` y `_wfullpath` se reemplazan por llamadas a `_fullpath_dbg` y `_wfullpath_dbg` para admitir asignaciones de memoria de depuración. Para obtener más información, consulte [_fullpath_dbg, _wfullpath_dbg](../../c-runtime-library/reference/fullpath-dbg-wfullpath-dbg.md).  
   
@@ -114,7 +115,7 @@ wchar_t *_wfullpath(
 |`_fullpath`|\<stdlib.h>|  
 |`_wfullpath`|\<stdlib.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

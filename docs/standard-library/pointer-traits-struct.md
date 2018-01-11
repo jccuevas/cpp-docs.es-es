@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d40f9149a9a03e4de40713ba9c7c0ce65f0edad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b82970336c11e8060b01b9c78b48b21accdc67db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointertraits-struct"></a>pointer_traits (Struct)
 Proporciona información que necesita un objeto de clase de plantilla `allocator_traits` para describir un asignador con el tipo de puntero `Ptr`.  
@@ -55,7 +56,7 @@ struct Ptr
    // optional
    };  
 ```
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |Name|Descripción|  
 |----------|-----------------|  
@@ -63,15 +64,15 @@ struct Ptr
 |`typedef T1 element_type`|El tipo `T1` es `Ptr::element_type` si ese tipo existe, de otro modo, `Ty`. Si `Ptr` es un puntero sin formato, el tipo es `Ty`.|  
 |`typedef Ptr pointer`|El tipo es `Ptr`.|  
   
-### <a name="structs"></a>Structs  
+### <a name="structs"></a>Estructuras  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`pointer_traits::rebind`|Intenta convertir el tipo de puntero subyacente en un tipo especificado.|  
   
 ### <a name="methods"></a>Métodos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[pointer_to](#pointer_to)|Convierte una referencia arbitraria en un objeto de clase `Ptr`.|  
   

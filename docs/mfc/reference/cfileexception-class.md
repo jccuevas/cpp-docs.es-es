@@ -35,11 +35,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e63ba0bf91e57880321371a03eea77195bbe87a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46741e2f2896fbed16c052ff9fc340d9394a2e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfileexception-class"></a>Clase CFileException
 Representa una condición de excepción relacionada con archivo.  
@@ -54,13 +55,13 @@ class CFileException : public CException
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileException::CFileException](#cfileexception)|Construye un objeto `CFileException`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileException::ErrnoToException](#errnotoexception)|Devuelve que el código correspondiente a un número de error de tiempo de ejecución.|  
 |[CFileException::GetErrorMessage](#geterrormessage)|Recupera el mensaje que describe una excepción.|  
@@ -70,7 +71,7 @@ class CFileException : public CException
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileException::m_cause](#m_cause)|Contiene código portable que corresponde a la causa de la excepción.|  
 |[CFileException::m_lOsError](#m_loserror)|Contiene el número de error del sistema operativo relacionados.|  

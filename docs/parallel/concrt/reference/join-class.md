@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25a65dae7b030cc1728194cce5d989c34fa06667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-class"></a>join (Clase)
 Un bloque de mensajería `join` es un bloque `propagator_block` de destino único y de varios orígenes ordenado, que combina los mensajes de tipo `T` de cada uno de sus orígenes.  
@@ -55,14 +56,14 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[join](#ctor)|Sobrecargado. Construye un `join` bloque de mensajería.|  
 |[~ join (destructor)](#dtor)|Destruye el `join` bloque.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Acepta un mensaje que fue proporcionado por este `join` bloque de mensajería, transferir la propiedad al llamador.|  
 |[consume_message](#consume_message)|Consume un mensaje proporcionado anteriormente por el `join` bloque de mensajería y reservado por el destino, transfiriendo la propiedad al llamador.|  

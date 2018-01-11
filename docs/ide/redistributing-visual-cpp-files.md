@@ -19,11 +19,12 @@ caps.latest.revision: "50"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b2e0af195270b55f80f7eaba37f273765b3cf4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribuir archivos de Visual C++
 Al implementar una aplicación, también debe implementar los archivos necesarios para asistirla. Si alguno de estos archivos los proporciona Microsoft, compruebe si está permitida su redistribución. Para revisar los términos de licencia de Visual Studio, vea el vínculo términos de licencia en el cuadro de diálogo acerca de Microsoft Visual Studio en el IDE o descargar el [términos de licencia del Software de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=831114) archivo. Para ver la "lista REDIST" que se hace referencia en la sección "Código distribuible" de los términos de licencia del Software de Microsoft para determinadas ediciones de Visual Studio, vea [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098), o para Visual Studio 2015, vea [código distribuible para Microsoft Visual Studio 2015 y Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Para obtener más información acerca de los archivos redistribuibles, consulte [determinar qué archivos DLL se redistribuirán](../ide/determining-which-dlls-to-redistribute.md) y [ejemplos de implementación](../ide/deployment-examples.md).  

@@ -1,48 +1,48 @@
 ---
-title: "&lt;paramref&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "paramref"
-  - "<paramref>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<paramref> (etiqueta XML) [C++]"
-  - "paramref (etiqueta XML) [C++]"
+title: '&lt;paramref&gt; (Visual C++) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- paramref
+- <paramref>
+dev_langs: C++
+helpviewer_keywords:
+- paramref C++ XML tag
+- <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 591aaaff84fa347e2753e2dc3899bb7f6900a5f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;paramref&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La etiqueta de \<paramref\> proporciona una forma de indicar que una palabra es un parámetro.  El archivo .xml se puede procesar para dar formato a este parámetro de alguna manera distinta.  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
+El \<paramref > etiqueta ofrece una manera de indicar que una palabra es un parámetro. El archivo .xml se puede procesar para dar formato a este parámetro de algún modo diferente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <paramref name="name"/>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `name`  
- Nombre del parámetro al que hay que hacer referencia.  Agregue el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
+ Nombre del parámetro al que se hace referencia.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `name`.  
   
-## Comentarios  
- Compile con el parámetro [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+## <a name="remarks"></a>Comentarios  
+ Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // xml_paramref_tag.cpp  
@@ -57,5 +57,5 @@ public ref class MyClass {
 };  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentación de XML](../ide/xml-documentation-visual-cpp.md)

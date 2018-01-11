@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65cb348e19031965d70175d73ed8df94692f9db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
+ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 Define las funciones de plantilla contenedor de la biblioteca estándar de C++ que realizan algoritmos.  
@@ -44,7 +45,7 @@ Define las funciones de plantilla contenedor de la biblioteca estándar de C++ q
   
 -   El sufijo _copy indica que el algoritmo no solo manipula los valores de los elementos, sino que también copia los valores modificados a un intervalo de destino. El algoritmo `reverse` invierte el orden de los elementos dentro de un intervalo y el algoritmo `reverse_copy` también copia el resultado a un intervalo de destino.  
   
- Los algoritmos de la biblioteca estándar de C++ se suelen clasificar en grupos que indican de alguna manera su propósito o sus requisitos. Entre ellos se incluyen algoritmos de modificación que cambian el valor de los elementos, a diferencia de los algoritmos que no son de modificación, que no lo hacen. Los algoritmos de mutación cambian el orden de los elementos, pero no los valores de sus elementos. Los algoritmos de eliminación pueden eliminar elementos de un intervalo o de una copia de un intervalo. Los algoritmos de ordenación reordenan los elementos de un intervalo de varias maneras y los algoritmos de intervalo ordenado solo actúan sobre los algoritmos cuyos elementos se han ordenado de una manera determinada.  
+ Los algoritmos de la biblioteca estándar de C++ se suelen clasificar en grupos que indican de alguna manera su propósito o sus requisitos. Entre ellos se incluyen algoritmos de modificación que cambian el valor de los elementos, a diferencia de los algoritmos que no son de modificación, que no lo hacen. Los algoritmos de mutación cambian el orden de los elementos, pero no los valores de sus elementos. Los algoritmos de eliminación pueden eliminar elementos de un intervalo o de una copia de un intervalo. Algoritmos de ordenación reordenan los elementos de un intervalo de varias maneras y algoritmos de intervalo ordenado solo actúan sobre los intervalos de cuyos elementos se han ordenado de una manera determinada.  
   
  Los algoritmos numéricos de la biblioteca estándar de C++ que se proporcionan para el procesamiento numérico tienen su propio archivo de encabezado [\<numeric>](../standard-library/numeric.md), y los objetos de función y los adaptadores se definen en el encabezado [\<functional>](../standard-library/functional.md). Los objetos de función que devuelven valores booleanos se conocen como predicados. El predicado binario predeterminado es el `operator<` de comparación. En general, los elementos que se van a ordenar deben ser menores que otros comparables para que, dados dos elementos cualesquiera, se pueda determinar que son equivalentes (en el sentido de que ninguno es menor que el otro) o que uno es menor que el otro. Esto produce una ordenación entre los elementos no equivalentes.  
   

@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>Intervalos de tipo de datos
 Los compiladores de 32 bits y 64 bits de Visual C++ reconocen los tipos de la tabla que se incluye más adelante en este artículo.  
@@ -98,7 +99,7 @@ Los compiladores de 32 bits y 64 bits de Visual C++ reconocen los tipos de la ta
 |long long|8|ninguno (pero equivalente a __int64)|De -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|  
 |unsigned long long|8|ninguno (pero equivalente a unsigned __int64)|De 0 a 18.446.744.073.709.551.615|  
 |enum|varía|ninguna| |  
-|flotante|4|ninguna|3,4E +/- 38 (7 dígitos)|  
+|float|4|ninguna|3,4E +/- 38 (7 dígitos)|  
 |double|8|ninguna|1,7E +/- 308 (15 dígitos)|  
 |long double|igual que double|ninguna|igual que double|  
 |wchar_t|2|__wchar_t|De 0 a 65.535|  

@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4521
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4521
+f1_keywords: C4521
+dev_langs: C++
+helpviewer_keywords: C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d05f0a0dc7b671a355d9789583603cbedb1e9ffc
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cb06f8d2cdbc29f5c6f98dfaeb23eeffe1167ef8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4521"></a>Advertencia del compilador (nivel 3) C4521
-'clase': han especificado múltiples constructores de copia  
+'class': han especificado varios constructores de copia  
   
- La clase tiene múltiples constructores de copias de un único tipo. Esta advertencia es informativa; los constructores son invocables en el programa.  
+ La clase tiene varios constructores de copias de un tipo único. Esta advertencia es informativa; los constructores son invocables en el programa.  
   
- Utilice la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.  
+ Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir esta advertencia.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera C4521.  

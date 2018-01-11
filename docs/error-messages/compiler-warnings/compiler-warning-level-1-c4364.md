@@ -1,37 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4364"
+title: Compilador advertencia (nivel 1) C4364 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4364
+dev_langs: C++
+helpviewer_keywords: C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d532ff9cc030c92543bec898f34daf3559531f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#using para el ensamblado 'archivo' ya aparecía previamente en ubicación\(número\_de\_línea\) sin el atributo as\_friend; as\_friend no se aplica  
+# <a name="compiler-warning-level-1-c4364"></a>Advertencia del compilador (nivel 1) C4364
+\#para el ensamblado 'archivo' ya aparecía previamente en ubicación (número_de_línea) sin el atributo as_friend; as_friend que no se aplica  
   
- Había una directiva `#using` repetida para un archivo de metadatos determinado, pero el calificador `as_friend` no se utilizó en la primera aparición; el compilador omitirá el calificador `as_friend` de la segunda directiva.  
+ A `#using` directiva se repite en un archivo de metadatos determinado, pero la `as_friend` calificador no se utilizó en la primera aparición; el compilador ignorará el segundo `as_friend`.  
   
- Para obtener más información, vea [Ensamblados de confianza \(C\+\+\)](../../dotnet/friend-assemblies-cpp.md).  
+ Para obtener más información, consulte [ensamblados Friend (C++)](../../dotnet/friend-assemblies-cpp.md).  
   
-## Ejemplo  
- En el siguiente ejemplo se crea un componente.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea un componente.  
   
 ```  
 // C4364.cpp  
@@ -39,8 +38,8 @@ caps.handback.revision: 8
 ref class A {};  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4364.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4364.  
   
 ```  
 // C4364_b.cpp  

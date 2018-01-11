@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d48e8e41d48b7a663f9dff37adc79f87f9a0c3d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Cómo: Convertir entre distintos tipos de cadenas
 Este tema muestra cómo se convierten a distintos tipos de cadenas de Visual C++ en otras cadenas. Los tipos de cadenas que se tratan incluyen `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), y <xref:System.String?displayProperty=fullName>. En todos los casos, se realiza una copia de la cadena cuando se convierte en el nuevo tipo. Los cambios realizados en la nueva cadena no tendrá ningún efecto en la cadena original y viceversa.  
@@ -698,7 +699,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 Hello, World! (basic_string)  
@@ -806,7 +807,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 Hello, World! (System::String)  

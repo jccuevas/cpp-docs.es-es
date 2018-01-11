@@ -1,32 +1,33 @@
 ---
-title: "db_column | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_column"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_column attribute"
+title: db_column | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_column
+dev_langs: C++
+helpviewer_keywords: db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5fe2d3c5edb4b90676c3880ae422c1fb507cd164
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# db_column
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-enlaza una columna especificada a una variable en el conjunto de filas.  
+# <a name="dbcolumn"></a>db_column
+Enlaza una columna especificada a una variable en el conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,41 +41,41 @@ enlaza una columna especificada a una variable en el conjunto de filas.
 ) ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `ordinal`  
- El número de columnas ordinal \(ordinal de**DBCOLUMNINFO** \) o nombre de columna \(ANSI o cadena Unicode\) correspondiente a un campo del conjunto de filas al enlazar datos.  Si utiliza números, puede omitir ordinales consecutivos \(por ejemplo: 1, 2, 3, 5\).  El nombre puede contener espacios si el proveedor OLE DB que utiliza lo admite.  Por ejemplo, puede utilizar cualquiera de los formatos siguientes:  
+ El número ordinal de la columna (**DBCOLUMNINFO** ordinal) o nombre de columna (cadena ANSI o Unicode) correspondiente a un campo del conjunto de filas que se va a enlazar los datos. Si usa números, puede omitir los ordinales consecutivos (por ejemplo: 1, 2, 3, 5). El nombre puede contener espacios, si lo admite el proveedor OLE DB que utiliza. Por ejemplo, puede usar cualquiera de los siguientes formatos:  
   
 ```  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  
   
- *dbtype* \(opcional\)  
- OLE DB [Indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para la entrada de la columna.  
+ *DbType* (opcional)  
+ OLE DB [indicador de tipo](https://msdn.microsoft.com/en-us/library/ms711251.aspx) para la entrada de la columna.  
   
- *precisión* \(opcional\)  
- la precisión que se utilizará para la entrada de la columna.  Para obtener información detallada, vea la descripción del elemento de `bPrecision` de [estructura de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *precisión* (opcional)  
+ La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *escala* \(opcional\)  
- la escala que se utilizará para la entrada de la columna.  Para obtener información detallada, vea la descripción del elemento de `bScale` de [estructura de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *escala* (opcional)  
+ La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *estado* \(opcional\)  
- Una variable miembro utilizada para contener el estado de esta columna.  El estado indica si el valor de la columna es un valor de datos o algún otro valor, como **NULL**.  Por valores posibles, vea [Estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en *la referencia del*programador.  
+ *estado* (opcional)  
+ Una variable de miembro que se utiliza para almacenar el estado de esta columna. El estado indica si el valor de la columna es un valor de datos o algún otro valor, como **NULL**. Para los valores posibles, vea [estado](https://msdn.microsoft.com/en-us/library/ms722617.aspx) en el *referencia del programador de OLE DB*.  
   
- *length* \(opcional\)  
- Una variable miembro utilizada para contener el tamaño de la columna en bytes.  
+ *longitud* (opcional)  
+ Una variable de miembro que se usa para contener el tamaño de la columna en bytes.  
   
-## Comentarios  
- **db\_column** enlaza la columna de la tabla especificada a una variable en el conjunto de filas.  Delimitan los datos de miembro que pueden participar en OLE DB `IAccessor`\- enlace basado.  Este atributo coloque el normalmente definido asignado columna utilizando las macros [BEGIN\_COLUMN\_MAP](../data/oledb/begin-column-map.md), [END\_COLUMN\_MAP](../data/oledb/end-column-map.md), y [COLUMN\_ENTRY](../data/oledb/column-entry.md)de consumidor OLE DB.  éstos manipulan OLE DB [estructura de DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) para enlazar la columna especificada.  Cada miembro que se marca con el atributo de **db\_column** ocupará una entrada en la columna asignada en forma de entrada de la columna.  Por consiguiente, se llama a este atributo donde se pone el mapa de columnas, es decir, en la clase de comando o tabla.  
+## <a name="remarks"></a>Comentarios  
+ **db_column** enlaza la columna de tabla especificada a una variable en el conjunto de filas. Delimita los datos de miembros que pueden participar en OLE DB `IAccessor`-basados en el enlace. Este atributo configura la asignación de columna normalmente se definen mediante las macros de consumidor OLE DB [BEGIN_COLUMN_MAP](../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../data/oledb/end-column-map.md), y [COLUMN_ENTRY](../data/oledb/column-entry.md). Estos manipulan OLE DB [estructura DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) para enlazar la columna especificada. Cada miembro se marca con la **db_column** atributo ocupan una entrada en el mapa de columnas en el formulario de una entrada de la columna. Por lo tanto, llamar a este atributo donde tendría que poner el mapa de columnas, es decir, en la clase de comando o tabla.  
   
- Utilice **db\_column** junto con los atributos de [db\_table](../windows/db-table.md) o de [db\_command](../windows/db-command.md) .  
+ Use **db_column** junto con cualquiera el [db_table](../windows/db-table.md) o [db_command](../windows/db-command.md) atributos.  
   
- Cuando el proveedor de atributos de consumidor aplicar este atributo a una clase, el compilador cambiará la clase al \_TheClassNameAccessor, donde es el nombre *TheClassName que* asignó la clase, y el compilador también creará una clase denominada *TheClassName,* que deriva de \_TheClassNameAccessor.  En la vista de clases, verá ambas clases.  
+ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase, el compilador cambiará el nombre de la clase a \_ *YourClassName*descriptor de acceso, donde *YourClassName* es el nombre que asignó el clase y el compilador también creará una clase denominada *YourClassName*, que deriva de \_ *YourClassName*descriptor de acceso.  En Vista de clases verá ambas clases.  
   
- Para obtener ejemplos de este atributo se utiliza en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/es-es/52bef5da-c1a0-4223-b4e6-9e464b6db409), y [MultiRead](http://msdn.microsoft.com/es-es/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
+ Para obtener ejemplos de este atributo se usa en una aplicación, vea los ejemplos [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), y [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
-## Ejemplo  
- Este ejemplo enlaza una columna de una tabla a un miembro de datos de **Más** y especificar los campos de estado y longitud.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo enlaza una columna en una tabla para un **largo** miembro de datos y especifica los campos Estado y longitud.  
   
 ```  
 // db_column_1.cpp  
@@ -92,8 +93,8 @@ class CProducts {
 };  
 ```  
   
-## Ejemplo  
- Este ejemplo enlaza cuatro columnas a **Más**, una cadena de caracteres, una marca de tiempo, y un entero de **DB\_NUMERIC** , en ese orden.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo enlaza cuatro columnas a una **largo**, una cadena de caracteres, una marca de tiempo y un **DB_NUMERIC** entero, en ese orden.  
   
 ```  
 // db_column_2.cpp  
@@ -111,20 +112,19 @@ class CProducts {
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
 |**Se aplica a**|**clase**, `struct`, miembro, método|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos de consumidor OLE DB](../windows/ole-db-consumer-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   

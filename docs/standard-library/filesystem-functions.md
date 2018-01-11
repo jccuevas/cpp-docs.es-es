@@ -95,11 +95,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: b6e6523b197be2b55847f23447a6d832f55e880d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edd850087249769fce9e96110dfa29ca37450b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; (Funciones)
 Estas funciones libres del encabezado [\<filesystem>](../standard-library/filesystem.md) realizan operaciones de modificación y consulta en rutas de acceso, archivos, vínculos simbólicos, directorios y volúmenes. Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).  
@@ -242,7 +243,7 @@ bool copy_file(const path& from, const path& to, copy_options opts, error_code& 
   
  Si exists\(to\) && \!\(opts & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options::update_existing\)\), notifican como un error que el archivo ya exista.  
   
- De lo contrario, si \!exists\(to\) &#124;&#124; opts & copy_options::overwrite_existing &#124;&#124; opts & copy_options::update_existing&& last_write_time\(to\) \< last_write_time\(from\) &#124;&#124; \!\(opts & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options:update_existing\)\) , intentan copiar el contenido y los atributos del archivo from de origen al archivo to de destino. Notifican como un error si se produce un error en el intento de copia.  
+ De lo contrario, si \!exists\(to\) &#124;&#124; opts & copy_options::overwrite_existing &#124;&#124; opts & copy_options::update_existing&& last_write_time\(to\) \< last_write_time\(from\) &#124;&#124; \!\(opts & \(copy_options::skip_existing &#124; copy_options::overwrite_existing &#124; copy_options:update_existing\)\) , intentan copiar el contenido y los atributos del archivo from de origen al archivo to de destino. Notifican un error si se produce un error en el intento de copia.  
   
  Las funciones devuelven true si la copia se ha intentado y se realiza correctamente; en caso contrario, devuelven false.  
   

@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a20ff8b10229714a434dc0f77748f37f9c15064a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05c106136c36d09b06e5b168a0c582b87c306d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 Devuelve el tipo de byte en una cadena.  
@@ -88,7 +89,7 @@ int _mbsbtype_l(
 ## <a name="remarks"></a>Comentarios  
  La función `_mbsbtype` determina el tipo de un byte de una cadena de caracteres multibyte. La función solo examina el byte de `count` de desplazamiento en `mbstr`, omitiendo los caracteres no válidos anteriores al byte especificado.  
   
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo `_l` usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión con el sufijo `_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el sufijo `_l` usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión con el sufijo `_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Si la cadena de entrada es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `_MBC_ILLEGAL`.  
   

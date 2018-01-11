@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - out_of_memory
 - AMPRT/out_of_memory
 - AMPRT/Concurrency::out_of_memory::out_of_memory
-dev_langs:
-- C++
-helpviewer_keywords:
-- out_of_memory class
+dev_langs: C++
+helpviewer_keywords: out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b593f8f85d4e36496f2ec2fc7bbadf8f2bfd742e
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6eb7b4e46d0d91779bf7c4c9047cad2f49100cd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="outofmemory-class"></a>out_of_memory (Clase)
+# <a name="outofmemory-class"></a>out_of_memory (clase)
 La excepción se produce cuando un método produce un error debido a la falta de memoria del sistema o del dispositivo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,7 +38,7 @@ class out_of_memory : public runtime_exception;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[out_of_memory (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `out_of_memory`.|  
   
@@ -71,7 +53,7 @@ class out_of_memory : public runtime_exception;
  **Encabezado:** amprt.h  
   
  **Espacio de nombres:** Concurrency  
-## <a name="ctor"></a>out_of_memory 
+## <a name="ctor"></a>out_of_memory) 
 
  Inicializa una nueva instancia de la clase.  
   
@@ -93,5 +75,4 @@ out_of_memory () throw();
   
   
 ## <a name="see-also"></a>Vea también  
- [Namespace de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Espacio de nombres de simultaneidad (C++ AMP)](concurrency-namespace-cpp-amp.md)

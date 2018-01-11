@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>Operadores de &lt;valarray&gt;
 ||||  
@@ -27,7 +54,7 @@ ms.lasthandoff: 04/29/2017
 |[operator-](#operator-)|[operator/](#op_div)|[operator==](#op_eq_eq)|  
 |[operator^](#op_xor)|[operator|](#op_or)|[operator||](#op_lor)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Comprueba si los elementos correspondientes de dos valarray de igual tamaño no son iguales o si todos los elementos de una valarray no son iguales a un valor especificado.  
   
 ```  
@@ -198,7 +225,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="op_amp"></a>  operator&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  Obtiene el **AND** bit a bit entre los elementos correspondientes de dos valarray de igual tamaño o entre una valarray y un valor especificado del tipo de elemento.  
   
 ```  
@@ -232,7 +259,7 @@ operator&(
  Una valarray cuyos elementos son la combinación de elemento de la operación AND bit a bit de `left` y `right`.  
   
 ### <a name="remarks"></a>Comentarios  
- Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void``bool` u otros tipos de datos más complejos.  
+ Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, **longdouble**, `void`, `bool` u otros tipos de datos más complejos.  
   
  El **AND** bit a bit tiene la misma tabla de verdad que el **AND** lógico pero se aplica al tipo de datos en el nivel de los bits individuales. El [operator&&](../standard-library/valarray-operators.md#amp) se aplica en el nivel de elemento, contando todos los valores distintos de cero como true, y el resultado es una valarray de valores booleanos. El **operator& AND** bit a bit, por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.  
   
@@ -283,7 +310,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="op_amp_amp"></a>  operator&amp;&amp;  
+##  <a name="op_amp_amp"></a> operator&amp;&amp;  
  Obtiene el **AND** lógico entre los elementos correspondientes de dos valarray de igual tamaño o entre una valarray y un valor especificado del tipo de elemento de valarray.  
   
 ```  
@@ -366,7 +393,7 @@ The element-by-element result of the logical AND operator&& is the
 *\  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Comprueba si los elementos de una valarray son mayores que los elementos de una valarray de igual tamaño o si todos los elementos de una valarray son mayores o menores que un valor especificado.  
   
 ```  
@@ -540,7 +567,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Desplaza hacia la derecha los bits de cada elemento de una valarray un número especificado de posiciones o una cantidad de elementos especificada por una segunda valarray.  
   
 ```  
@@ -623,7 +650,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Comprueba si los elementos de una valarray son menores que los elementos de una valarray de igual tamaño o si todos los elementos de una valarray son mayores o menores que un valor especificado.  
   
 ```  
@@ -710,7 +737,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Comprueba si los elementos de una valarray son menores o iguales que los elementos de una valarray de igual tamaño, o si todos los elementos de una valarray son mayores, iguales o menores que un valor especificado.  
   
 ```  
@@ -797,7 +824,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Desplaza hacia la izquierda los bits de cada elemento de una valarray un número especificado de posiciones o una cantidad de elementos especificada por una segunda valarray.  
   
 ```  
@@ -1331,7 +1358,7 @@ operator^(
  Una valarray cuyos elementos son la combinación de uno a uno de bit a bit **XOR** el funcionamiento de `left` y `right`.  
   
 ### <a name="remarks"></a>Comentarios  
- Una operación bit a bit solo puede usarse para manipular los bits de los tipos de datos `char` y `int`, y sus variantes, y no en **float**, **double**, `long double`, `void``bool` u otros tipos de datos más complejos.  
+ Una operación bit a bit sólo puede utilizarse para manipular los bits de `char` y `int` tipos de datos y sus variantes y no se encuentra en **float**, **doble**, `long double`, `void`, `bool` u otros, tipos de datos más complejos.  
   
  El `OR` exclusivo bit a bit ( **XOR**) tiene la semántica siguiente: dados los bits *b*1 y *b*2, *b*1 **XOR** *b*2 es **true** si exactamente uno de los bits es true. Es **false** si ambos bits son false o si ambos bits son true.  
   
@@ -1509,7 +1536,7 @@ operator||(
  Una valarray cuyos elementos son de tipo `bool` y son la combinación de elemento de la operación OR lógica de `left` y `right`.  
   
 ### <a name="remarks"></a>Comentarios  
- El `OR``operator||` lógico se aplica en el nivel de elemento, contando todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. La versión bit a bit de `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.  
+ La operación lógica `OR` `operator||` se aplica en un nivel de elemento, recuento de todos los valores distintos de cero como **true**, y el resultado es una valarray de valores booleanos. La versión bit a bit de `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or), por el contrario, puede dar lugar a una valarray de valores distintos de 0 o 1, dependiendo del resultado de la operación bit a bit.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>Vea también  
  [\<valarray>](../standard-library/valarray.md)
-
 

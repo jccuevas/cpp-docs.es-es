@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if (Clase)
 Realiza una instancia de manera condicional de un tipo para la resolución de sobrecarga SFINAE. La definición de tipo anidada `enable_if<Condition,Type>::type` existe y es sinónimo de `Type`, solo si `Condition` es `true`.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- En C++, el error en la sustitución de parámetros de la plantilla no es un error en sí mismo, esto se denomina *SFINAE* (el error en la sustitución no es un error). Normalmente, `enable_if` se utiliza para eliminar candidatos de la resolución de sobrecarga, es decir, selecciona los conjuntos de sobrecarga para que una definición se pueda rechazar en favor de otra. Esto se ajusta al comportamiento SFINAE. Para obtener más información sobre SFINAE, vea el artículo de la Wikipedia sobre [el error en la sustitución no es un error](http://go.microsoft.com/fwlink/LinkId=394798).  
+ En C++, el error en la sustitución de parámetros de la plantilla no es un error en sí mismo, esto se denomina *SFINAE* (el error en la sustitución no es un error). Normalmente, `enable_if` se utiliza para eliminar candidatos de la resolución de sobrecarga, es decir, selecciona los conjuntos de sobrecarga para que una definición se pueda rechazar en favor de otra. Esto se ajusta al comportamiento SFINAE. Para obtener más información sobre SFINAE, vea el artículo de la Wikipedia sobre [el error en la sustitución no es un error](http://go.microsoft.com/fwlink/p/?linkid=394798).  
   
  A continuación, se presentan cuatro escenarios de ejemplo:  
   

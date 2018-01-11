@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ebf163c721d8fd05c5481859cf0158ee22180e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizar las plantillas Agregar nuevo elemento de Visual C++
 Puede agregar fácilmente elementos que son comunes a los proyectos de Visual C++ mediante el uso de la **Agregar nuevo elemento** comando. Cuando se usa el **Agregar nuevo elemento** comando, la `Add New Item` aparece el cuadro de diálogo con una lista de plantillas de elementos, que agregar los archivos apropiados al proyecto.  

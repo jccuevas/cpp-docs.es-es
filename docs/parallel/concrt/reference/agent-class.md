@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3bcd353def1f42269a851c39a1c96e451caa577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc83001328f346aa33d15b0ea6fcfb26eb444ec4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="agent-class"></a>agent (Clase)
 Una clase diseñada para usarse como una clase base para todos los agentes independientes. Se usa para ocultar el estado de otros agentes e interactuar con el paso de mensajes.  
@@ -46,14 +47,14 @@ class agent;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[agente](#ctor)|Sobrecargado. Construye a un agente.|  
 |[~ agent (destructor)](#dtor)|Destruye al agente.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Cancelar](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|  
 |[start](#start)|Mueve un agente de la `agent_created` estado para el `agent_runnable` de estado y el programa para su ejecución.|  
@@ -65,7 +66,7 @@ class agent;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[realiza](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|  
 |[run](#run)|Representa la tarea principal de un agente. `run`se debe invalidar en una clase derivada y especifica lo que debe hacer el agente después de que se ha iniciado.|  

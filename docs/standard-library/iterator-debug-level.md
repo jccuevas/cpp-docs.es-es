@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _ITERATOR_DEBUG_LEVEL
-dev_langs:
-- C++
-helpviewer_keywords:
-- _ITERATOR_DEBUG_LEVEL
+f1_keywords: _ITERATOR_DEBUG_LEVEL
+dev_langs: C++
+helpviewer_keywords: _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 08b69d4f3cf8f5065cbae2708dace20de3b1f63f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 7a49aec5bc9a16900264ce6a5523d458299c2e86
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 La macro `_ITERATOR_DEBUG_LEVEL` controla si están habilitados los [iteradores comprobados](../standard-library/checked-iterators.md) y la [compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md). Esta macro reemplaza y combina la funcionalidad de las macros antiguas `_SECURE_SCL` y `_HAS_ITERATOR_DEBUGGING` .  
@@ -79,4 +75,3 @@ En un archivo de código fuente, especifique la macro antes de los encabezados d
 [Iteradores comprobados](../standard-library/checked-iterators.md)   
 [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)   
 [Bibliotecas seguras: Biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)
-

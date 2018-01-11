@@ -37,11 +37,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c44bd1b407b8e038d722f93aacfe7472e9adaaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 486338d579f304a6de1a54674a7711bb6c56f38c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpalette-class"></a>CPalette (clase)
 Encapsula una paleta de colores de Windows.  
@@ -56,13 +57,13 @@ class CPalette : public CGdiObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPalette::CPalette](#cpalette)|Construye un `CPalette` objeto con ninguna paleta Windows adjuntada. Debe inicializar el `CPalette` objeto con una de las funciones de miembro de inicialización antes de poder utilizarlo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPalette:: AnimatePalette](#animatepalette)|Reemplaza las entradas de la paleta lógica identificado por la `CPalette` objeto. La aplicación no tiene que actualizar su área de cliente, porque Windows asigna las nuevas entradas en la paleta del sistema inmediatamente.|  
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Crea una paleta de semitonos para el contexto de dispositivo y lo adjunta a la `CPalette` objeto.|  
@@ -76,7 +77,7 @@ class CPalette : public CGdiObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPalette::operator HPALETTE](#operator_hpalette)|Devuelve el `HPALETTE` conectado a la `CPalette`.|  
   

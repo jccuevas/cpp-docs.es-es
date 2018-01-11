@@ -1,30 +1,32 @@
 ---
-title: "Agregar una interfaz a un proveedor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas del proveedor OLE DB, interfaces de objetos"
+title: Agregar una interfaz a un proveedor | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Agregar una interfaz a un proveedor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determine qué objeto desea agregar a la interfaz \(normalmente, objetos de origen de datos, conjunto de filas, comando o sesión creados por el Asistente para proveedores OLE DB\).  Es posible que el objeto que desea agregar a la interfaz no sea compatible actualmente con el proveedor.  En ese caso, ejecute el Asistente para proveedores OLE DB ATL para crear el objeto.  En la Vista de clases, haga clic con el botón secundario del mouse en el proyecto, haga clic en **Agregar clase** en el menú **Agregar** y, a continuación, haga clic en **Proveedor OLE DB ATL**.  Es posible que desee colocar el código de la interfaz en un directorio independiente y después copiar los archivos al proyecto de proveedor.  
+# <a name="adding-an-interface-to-your-provider"></a>Agregar una interfaz a un proveedor
+Determinar qué objeto que desea agregar la interfaz a (normalmente datos origen, conjunto de filas, comando o sesión objetos creados por el Asistente para proveedores OLE DB). Es posible que el objeto que se debe agregar a la interfaz es que el proveedor no admite actualmente. En ese caso, ejecute el Asistente para proveedores OLE DB ATL para crear el objeto. Haga clic en el proyecto en la vista de clases, haga clic en **Agregar clase** desde el **agregar** menú y, a continuación, haga clic en **proveedor OLE DB ATL**. Puede colocar el código de interfaz en un directorio independiente y, a continuación, copie los archivos en el proyecto de proveedor.  
   
- Si creó una clase nueva para ofrecer compatibilidad con la interfaz, haga que el objeto herede de la clase.  Por ejemplo, podría agregar la clase **IRowsetIndexImpl** a un objeto de conjunto de filas:  
+ Si ha creado una nueva clase para admitir la interfaz, hacer que el objeto heredar de esa clase. Por ejemplo, puede agregar la clase **IRowsetIndexImpl** a un objeto de conjunto de filas:  
   
 ```  
 template <class Creator>  
@@ -33,7 +35,7 @@ public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
    public IRowsetIndexImpl< ... >   
 ```  
   
- Agregue la interfaz a **COM\_MAP** del objeto mediante la macro COM\_INTERFACE\_ENTRY.  Si no hay ningún mapa, créelo.  Por ejemplo:  
+ Agregar a la interfaz **COM_MAP** en el objeto mediante la macro COM_INTERFACE_ENTRY. Si no existe ninguna asignación, cree uno. Por ejemplo:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -41,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Para el objeto de conjunto de filas, encadene el mapa del objeto primario, de forma que el objeto pueda delegar en la clase primaria.  En este ejemplo, agregue la macro COM\_INTERFACE\_ENTRY\_CHAIN al mapa:  
+ Para el objeto de conjunto de filas, encadene el mapa de su elemento primario del objeto para que el objeto puede delegar a la clase primaria. En este ejemplo, agregue la macro COM_INTERFACE_ENTRY_CHAIN al mapa:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -50,5 +52,5 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de proveedores OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

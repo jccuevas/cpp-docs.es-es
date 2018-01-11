@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04fb17130f82c4b34b461f9d4fe0880b1363d3c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 Hace avanzar un puntero de cadena un carácter.  
@@ -95,7 +96,7 @@ unsigned char *_mbsinc_l(
  Cada una de estas rutinas devuelve un puntero al carácter que sigue inmediatamente a `current`.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_mbsinc` devuelve un puntero al primer byte del carácter multibyte que sigue inmediatamente a `current`. `_mbsinc` reconoce secuencias de caracteres multibyte en función de la [página de códigos multibyte](../../c-runtime-library/code-pages.md) que se usa actualmente; `_mbsinc_l` es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `_mbsinc` devuelve un puntero al primer byte del carácter multibyte que sigue inmediatamente a `current`. `_mbsinc` reconoce secuencias de caracteres multibyte en función de la [página de códigos multibyte](../../c-runtime-library/code-pages.md) que se usa actualmente; `_mbsinc_l` es idéntico, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  La función de texto genérico `_tcsinc`, definida en Tchar.h, se asigna a `_mbsinc` si se ha definido `_MBCS`, o a `_wcsinc` si se ha definido `_UNICODE`. De lo contrario, `_tcsinc` se asigna a `_strinc`. `_strinc` y `_wcsinc` son versiones de caracteres de un solo byte y caracteres anchos de `_mbsinc`. `_strinc` y `_wcsinc` se proporcionan solo para esta asignación y no deben usarse de otra manera. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).  
   

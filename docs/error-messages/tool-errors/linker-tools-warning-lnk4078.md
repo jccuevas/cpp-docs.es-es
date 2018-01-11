@@ -1,41 +1,40 @@
 ---
-title: "Advertencia de las herramientas del vinculador LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: Las herramientas del vinculador LNK4078 advertencia | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8109ef98237f545a2139be8f0502acd11407314b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia de las herramientas del vinculador LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se encontraron varias secciones 'nombre de sección' con atributos diferentes  
+# <a name="linker-tools-warning-lnk4078"></a>Advertencia de las herramientas del vinculador LNK4078
+varias secciones 'nombre de sección' con atributos diferentes  
   
- LINK encontró dos o más secciones con igual nombre pero diferentes atributos.  
+ LINK encontró dos o más secciones que tienen el mismo nombre pero diferentes atributos.  
   
- Esta advertencia puede haberla producido una biblioteca de importación o un archivo de exportaciones creado por una versión anterior de LINK o LIB.  
+ Esta advertencia puede deberse a un archivo de biblioteca o a las exportaciones de importación que se creó con una versión anterior de LINK o LIB.  
   
- Vuelva a crear el archivo y vincule de nuevo.  
+ Vuelva a crear el archivo y vuelva a vincular.  
   
-## Ejemplo  
- La advertencia LNK4078 también puede haberla causado un cambio importante: la sección a la que [init\_seg](../../preprocessor/init-seg.md) asignó un nombre en x86 era de lectura y escritura, mientras que ahora es de sólo lectura.  
+## <a name="example"></a>Ejemplo  
+ LNK4078 también puede deberse a un cambio importante: la sección designada por [init_seg](../../preprocessor/init-seg.md) en x86 era de lectura/escritura, es ahora de solo lectura.  
   
- El ejemplo siguiente genera el error LNK4078.  
+ El ejemplo siguiente genera la advertencia LNK4078.  
   
 ```  
 // LNK4078.cpp  

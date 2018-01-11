@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 Redondea el valor de punto flotante especificado en un entero y devuelve ese valor con un formato de punto flotante.  
@@ -86,8 +87,8 @@ long double nearbyintl(
   
 |Problema|Volver|  
 |-----------|------------|  
-|`x` = ±INFINITY|±INFINITY, sin modificar|  
-|`x` = ±0|±0, sin modificar|  
+|`x`= ±INFINITY|±Infinity, sin cambios|  
+|`x` = ±0|± 0, sin cambios|  
 |`x` = NaN|NaN|  
   
  Los errores no se notifican a través de [_matherr](../../c-runtime-library/reference/matherr.md); en concreto, esta función no notifica ninguna excepción FE_INEXACT.  
@@ -103,7 +104,7 @@ long double nearbyintl(
 |--------------|--------------|------------------|  
 |`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

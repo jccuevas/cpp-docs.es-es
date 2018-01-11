@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>Estructuras de datos de sincronización
 El Runtime de simultaneidad proporciona varias estructuras de datos que permiten sincronizar el acceso a los datos compartidos desde varios subprocesos. Estas estructuras de datos son útiles cuando se comparten los datos que modifican con poca frecuencia. Un objeto de sincronización, por ejemplo, una sección crítica, hace que otros subprocesos esperar hasta que el recurso compartido está disponible. Por lo tanto, si usa este tipo de objeto para sincronizar el acceso a datos que se utilizan con frecuencia, puede perder la escalabilidad de la aplicación. El [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) proporciona el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite compartir un recurso entre varios subprocesos o tareas sin la necesidad de sincronización. Para obtener más información sobre la `combinable` de clases, consulte [contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).  

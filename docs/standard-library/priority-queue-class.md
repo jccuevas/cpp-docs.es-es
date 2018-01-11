@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue (Clase)
 Una clase de adaptador de contenedor de plantilla que proporciona una restricción de la funcionalidad que limita el acceso al elemento superior de algún tipo de contenedor subyacente, que siempre es el más grande o el que tiene una prioridad más alta. Pueden agregarse nuevos elementos a priority_queue y el elemento superior de priority_queue puede inspeccionarse o quitarse.  
@@ -48,7 +49,7 @@ class priority_queue
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ype*  
+ *Type*  
  El tipo de datos de los elementos que se va a almacenar en priority_queue.  
   
  `Container`  
@@ -80,7 +81,7 @@ class priority_queue
 |-|-|  
 |[priority_queue](#priority_queue)|Construye un `priority_queue` que está vacío o que es una copia de un intervalo de un objeto contenedor base o de otro `priority_queue`.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

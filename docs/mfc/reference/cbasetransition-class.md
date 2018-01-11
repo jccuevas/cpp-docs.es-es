@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_pStartKeyframe
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_transition
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBaseTransition [MFC], CBaseTransition
 - CBaseTransition [MFC], AddToStoryboard
@@ -53,16 +51,16 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 2bb7fb5599e508656686637477b776ab7a9708d0
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetransition-class"></a>Clase CBaseTransition
 Representa una transición básica.  
@@ -83,14 +81,14 @@ class CBaseTransition : public CObject;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Construye un objeto de base de transición.|  
 |[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Destructor. Se llama cuando se destruye un objeto de transición.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Agrega una transición a un guión gráfico.|  
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Agrega una transición a un guión gráfico.|  
@@ -107,7 +105,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|Especifica si se ha agregado una transición a un guión gráfico.|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Almacena un puntero al fotograma clave que especifica el final de la transición.|  
@@ -383,4 +381,3 @@ enum TRANSITION_TYPE;
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

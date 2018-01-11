@@ -1,48 +1,47 @@
 ---
-title: "inject_statement | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "inject_statement"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inject_statement (atributo)"
+title: inject_statement | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: inject_statement
+dev_langs: C++
+helpviewer_keywords: inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1ac68cae628f09c9511c4b86eac75da8dff6ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# inject_statement
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Específicos de C\+\+**  
+# <a name="injectstatement"></a>inject_statement
+**Específicos de C++**  
   
  Inserta el argumento como texto original en el encabezado de la biblioteca de tipos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 inject_statement("source_text")  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `source_text`  
  Texto original que se inserta en el archivo de encabezado de la biblioteca de tipos.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El texto se coloca al principio de la declaración de espacio de nombres que incluye el contenido de la biblioteca de tipos en el archivo de encabezado.  
   
- **Específicos de C\+\+: END**  
+ **FIN de específicos de C++**  
   
-## Vea también  
- [\#import \(Atributos\)](../preprocessor/hash-import-attributes-cpp.md)   
- [\#import \(Directiva\)](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [atributos #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import (directiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -1,70 +1,71 @@
 ---
-title: "Aumentar y disminuir punteros | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "disminuir punteros"
-  - "incrementar punteros"
-  - "MBCS [C++], punteros"
-  - "punteros [C++], caracteres multibyte"
+title: Aumentar y disminuir punteros | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- incrementing pointers
+- MBCS [C++], pointers
+- pointers [C++], multibyte characters
+- decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9eccf65f091c8c5c273f6a65cb7e81b0d386afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Aumentar y disminuir punteros
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilice las sugerencias siguientes:  
+# <a name="incrementing-and-decrementing-pointers"></a>Aumentar y disminuir punteros
+Utilice las siguientes sugerencias:  
   
--   Apunte a los bytes iniciales, no a los bytes finales.  Normalmente, es poco seguro utilizar un puntero a un byte final.  Es más seguro examinar una cadena hacia delante y no hacia atrás.  
+-   Seleccione bytes iniciales, bytes finales no. Es por lo general no es seguro tiene un puntero a un byte final. Es más seguro buscar una cadena hacia delante en lugar de en orden inverso.  
   
--   Hay macros y funciones de aumento o disminución de punteros que se desplazan un carácter completo:  
+-   Hay funciones de incremento y decremento de puntero y macros que se mueven a través de un carácter completo:  
   
     ```  
     sz1++;  
     ```  
   
-     se convierte en:  
+     Se convierte en:  
   
     ```  
     sz1 = _mbsinc( sz1 );  
     ```  
   
-     Las funciones `_mbsinc` y `_mbsdec` aumentan y disminuyen correctamente en unidades `character`, con independencia del tamaño del carácter.  
+     El `_mbsinc` y `_mbsdec` funciones correctamente aumentar y disminuir en `character` unidades, independientemente del tamaño de carácter.  
   
--   Para las disminuciones, se necesita un puntero al encabezado de la cadena, como en el siguiente caso:  
+-   Para las disminuciones, se necesita un puntero en el encabezado de la cadena, como en el siguiente ejemplo:  
   
     ```  
     sz2--;  
     ```  
   
-     se convierte en:  
+     Se convierte en:  
   
     ```  
     sz2 = _mbsdec( sz2Head, sz2 );  
     ```  
   
-     De forma alternativa, el puntero de encabezado podría apuntar a un carácter válido de la cadena, como  
+     Como alternativa, el puntero de encabezado podría ser un carácter válido en la cadena, por ejemplo, que:  
   
     ```  
     sz2Head < sz2  
     ```  
   
-     Se debe tener un puntero a un byte inicial válido conocido.  
+     Debe tener un puntero a un byte inicial válidos conocidos.  
   
--   Puede que desee mantener un puntero al carácter anterior para obtener llamadas más rápidas a `_mbsdec`.  
+-   Desea mantener un puntero al carácter anterior para obtener llamadas más rápidas a `_mbsdec`.  
   
-## Vea también  
- [Sugerencias de programación para MBCS](../Topic/MBCS%20Programming%20Tips.md)   
+## <a name="see-also"></a>Vea también  
+ [Sugerencias de programación para MBCS](../text/mbcs-programming-tips.md)   
  [Índices de byte](../text/byte-indices.md)

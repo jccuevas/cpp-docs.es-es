@@ -13,10 +13,9 @@ f1_keywords:
 - list/std::operator&lt;
 - list/std::operator&lt;=
 - list/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (list)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: f3834fcb728d8faf0a2148a5a0c9449fef7e41c8
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltlistgt-operators"></a>Operadores de &lt;list&gt;
 ||||  
@@ -38,7 +36,7 @@ ms.lasthandoff: 10/03/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Comprueba si el objeto de lista del lado izquierdo del operador no es igual que el objeto de lista del lado derecho.  
   
 ```
@@ -85,7 +83,7 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Comprueba si el objeto de lista del lado izquierdo del operador es menor que el objeto de lista del lado derecho.  
   
 ```
@@ -136,7 +134,7 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Comprueba si el objeto de lista del lado izquierdo del operador es menor o igual que el objeto de lista del lado derecho.  
   
 ```
@@ -234,7 +232,7 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Comprueba si el objeto de lista del lado izquierdo del operador es mayor que el objeto de lista del lado derecho.  
   
 ```
@@ -285,7 +283,7 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Comprueba si el objeto de lista del lado izquierdo del operador es mayor o igual que el objeto de lista del lado derecho.  
   
 ```
@@ -339,7 +337,6 @@ List c1 is greater than or equal to list c2.
   
 ## <a name="see-also"></a>Vea también  
  [\<list>](../standard-library/list.md)
-
 
 
 

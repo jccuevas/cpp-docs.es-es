@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a10f66a52dfacca20fed2732a107b35630ffd76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be516725520cb408d9fd8663eaa82d3617396a5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Responder al intercambio dinámico de datos (DDE)
 La ventana de marco puede responder a las solicitudes de intercambio (DDE) de datos dinámicos para abrir los archivos desde el Administrador de archivos (si la extensión de archivo se ha registrado o asociada a la aplicación). Vea [registro de Shell](../mfc/special-cwinapp-services.md).  

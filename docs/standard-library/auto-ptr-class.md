@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr (Clase)
 Encapsula un puntero inteligente en torno a un recurso que garantiza que el recurso se destruye automáticamente cuando el control abandona un bloque.  
@@ -81,7 +82,7 @@ public:
 |-|-|  
 |[auto_ptr](#auto_ptr)|Constructor para los objetos de tipo `auto_ptr`.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -134,7 +135,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 ### <a name="remarks"></a>Comentarios  
  El primer constructor almacena `ptr` en **myptr**, el puntero almacenado al objeto asignado. El segundo constructor transfiere la propiedad del puntero almacenado en `right` al almacenar `right`. [release](#release) en **myptr**.  
   
- El tercer constructor se comporta igual que el segundo, salvo que almacena **right**. `ref`Operador **release** en **myptr**, donde `ref` es la referencia almacenada en `right`.  
+ El tercer constructor se comporta igual que el segundo, salvo que almacena **right**. `ref`. **release** en **myptr**, donde `ref` es la referencia almacenada en `right`.  
   
  El constructor de plantilla se comporta igual que el segundo constructor, siempre que haya un puntero a **Other** que pueda convertirse implícitamente en un puntero a **Type**.  
   

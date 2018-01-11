@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e816c6c837dfd4b7602ce7d683e0ba321b90f27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b97d0003469acbe307b75b3278c8821628e333d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor (Clase)
 Un `ordered_message_processor` es un `message_processor` que permite a los bloques de mensaje procesar los mensajes en el orden que se recibieron.  
@@ -48,20 +49,20 @@ class ordered_message_processor : public message_processor<T>;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`type`|Un alias de tipo para `T`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ordered_message_processor)](#ctor)|Construye un objeto `ordered_message_processor`.|  
 |[~ ordered_message_processor (destructor)](#dtor)|Destruye el objeto `ordered_message_processor`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: async_send](message-processor-class.md#async_send).)|  
 |[inicializar](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de función, el programador y la programación de devolución de llamada adecuada.|  
@@ -71,7 +72,7 @@ class ordered_message_processor : public message_processor<T>;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[process_incoming_message](#process_incoming_message)|La función de procesamiento que se llama de forma asincrónica. Quita de la cola mensajes y empieza a procesarlos. (Invalida [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   

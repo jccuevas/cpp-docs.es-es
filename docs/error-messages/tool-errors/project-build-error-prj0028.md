@@ -1,31 +1,30 @@
 ---
-title: "Error PRJ0028 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0028"
+title: Error PRJ0028 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0028
+dev_langs: C++
+helpviewer_keywords: PRJ0028
 ms.assetid: 0a6e0da7-cb3d-40b6-81a6-6196a9c2526b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a9a72142f46f55db5d9b20ea941741c9045cc907
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error PRJ0028 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El archivo temporal 'archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.  
+# <a name="project-build-error-prj0028"></a>Error PRJ0028 al compilar el proyecto
+Archivo temporal 'nombre_archivo' incluye contenido Unicode que no se puede traducir a la página de códigos ANSI del usuario.  
   
- Se especificó un valor con la opción del vinculador [\/MIDL \(Especificar opciones de línea de comandos para MIDL\)](../../build/reference/midl-specify-midl-command-line-options.md) que la página de códigos del sistema no pudo resolver.  
+ Se especificó un valor con el [/MIDL (especificar las opciones de línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) opción del vinculador que no se pudo resolver por la página de códigos del sistema.  
   
- La página de códigos que se utiliza al especificar el comando MIDL \(la página de códigos de entrada\) debe coincidir con la página de códigos del sistema.
+ La página de códigos que se usa cuando se especifica el comando MIDL (la página de códigos de entrada) debe ser el mismo que la página de códigos del sistema.

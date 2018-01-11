@@ -1,35 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+title: Compilador advertencia (nivel 1) C4929 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfd20538db1f11ab2f7f20ab4079e9ed201bc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'archivo' : la biblioteca de tipos contiene una unión; se omitirá el calificador 'embedded\_idl'  
+# <a name="compiler-warning-level-1-c4929"></a>Advertencia del compilador (nivel 1) C4929
+'archivo': biblioteca de tipos contiene una unión; se omitirá el calificador 'embedded_idl'  
   
- El atributo embedded\_idl de [\#import](../../preprocessor/hash-import-directive-cpp.md) no se puede aplicar a la biblioteca de tipos porque contiene una unión.  Para resolver esta advertencia, no utilice embedded\_idl.  
+ El atributo embedded_idl de [#import](../../preprocessor/hash-import-directive-cpp.md) no se pudo aplicar a la biblioteca de tipos porque una unión está presente en la biblioteca de tipos. Para resolver esta advertencia, no utilice embedded_idl.  
   
-## Ejemplo  
- En el siguiente ejemplo se define un componente.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente define un componente.  
   
 ```  
 // C4929a.cpp  
@@ -61,7 +60,7 @@ struct C : I {
 };  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo siguiente genera el error C4929.  
   
 ```  

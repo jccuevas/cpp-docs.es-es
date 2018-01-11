@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6c567c720f5dc1febe0626754721c7c6ec9af4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbrush-class"></a>CBrush (clase)
 Encapsula un pincel de la Interfaz de dispositivo gráfico (GDI) de Windows.  
@@ -54,13 +55,13 @@ class CBrush : public CGdiObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|Construye un objeto `CBrush`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Inicializa un pincel con el estilo, el color y el patrón especificado en un [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estructura.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Inicializa un pincel con un patrón especificado por un mapa de bits independiente del dispositivo (DIB).|  
@@ -73,7 +74,7 @@ class CBrush : public CGdiObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CBrush::operator HBRUSH](#operator_hbrush)|Devuelve el identificador de Windows asociado a la `CBrush` objeto.|  
   

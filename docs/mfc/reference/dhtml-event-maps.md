@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.macros.shared
-dev_langs:
-- C++
+f1_keywords: vc.macros.shared
+dev_langs: C++
 helpviewer_keywords:
-- event map macros
-- DHTML, event map macros
-- macros, DHTML event map
-- DHTML events, event map
-- DHTML events
+- event map macros [MFC]
+- DHTML [MFC], event map macros
+- macros [MFC], DHTML event map
+- DHTML events [MFC], event map
+- DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
-ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dhtml-event-maps"></a>DHTML (Mapas de eventos)
 Las macros siguientes pueden utilizarse para controlar eventos DHTML.  
@@ -864,7 +847,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
  Colocar `BEGIN_DHTML_URL_EVENT_MAP` en el archivo de implementación de su [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-clase derivada. Siga con [incrustado mapas de eventos DHTML](#begin_embed_dhtml_event_map) y [entradas de direcciones URL](#begin_url_entries)y, a continuación, cierre con [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Incluir el [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) macro dentro de la definición de clase.  
   
 ### <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_MFCDocView #196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxdhtml.h  
@@ -1025,4 +1008,3 @@ END_DHTML_EVENT_MAP_INLINE( )
    
 ### <a name="see-also"></a>Vea también  
  [Macros y funciones globales](mfc-macros-and-globals.md)   
-

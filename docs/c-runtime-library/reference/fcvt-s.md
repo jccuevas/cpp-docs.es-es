@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Convierte un número de punto flotante en una cadena. Se trata de una versión de [_fcvt](../../c-runtime-library/reference/fcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,12 +92,12 @@ errno_t _fcvt_s(
   
 ### <a name="error-conditions"></a>Condiciones de error  
   
-|`buffer`|`sizeInBytes`|valor|count|dec|sign|Valor devuelto|Valor de `buffer`|  
+|`buffer`|`sizeInBytes`|value|count|dec|sign|Volver|Valor de `buffer`|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|No modificado.|  
-|No `NULL` (apunta a la memoria válida)|<=0|any|cualquiera|cualquiera|cualquiera|`EINVAL`|No se ha modificado.|  
-|any|cualquiera|cualquiera|cualquiera|`NULL`|cualquiera|`EINVAL`|No se ha modificado.|  
-|any|cualquiera|cualquiera|cualquiera|cualquiera|`NULL`|`EINVAL`|No se ha modificado.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|<=0|any|any|any|any|`EINVAL`|No se ha modificado.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|No se ha modificado.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|No modificado.|  
   
  **Problemas de seguridad**  
   
@@ -111,7 +112,7 @@ errno_t _fcvt_s(
   
  La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `count`. `_ecvt_s`interpreta `count` como el número total de dígitos en la cadena de salida, y `_fcvt_s` interpreta `count` como el número de dígitos después del separador decimal.  
   
- En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -121,7 +122,7 @@ errno_t _fcvt_s(
 |--------------|---------------------|---------------------|  
 |`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
  **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   

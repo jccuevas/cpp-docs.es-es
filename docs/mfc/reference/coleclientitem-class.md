@@ -175,11 +175,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce200aa3fafcd1475e711eea79cb9c4574588a97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3732f23c2af429d0b5fc965b7f961af8400e2e42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleclientitem-class"></a>Clase de COleClientItem
 Define la interfaz del contenedor a elementos de OLE.  
@@ -194,13 +195,13 @@ class COleClientItem : public CDocItem
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleClientItem::COleClientItem](#coleclientitem)|Construye un objeto `COleClientItem`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleClientItem::Activate](#activate)|Abre el elemento OLE para una operación y, a continuación, ejecuta el verbo especificado.|  
 |[COleClientItem::ActivateAs](#activateas)|Activa el elemento como otro tipo.|  
@@ -274,7 +275,7 @@ class COleClientItem : public CDocItem
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleClientItem:: CanActivate](#canactivate)|Lo llama el marco de trabajo para determinar si se permite la activación en contexto.|  
 |[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|Lo llama el marco cuando cambia la posición de un elemento.|  

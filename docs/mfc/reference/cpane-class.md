@@ -144,11 +144,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e078f094e51b022bc697ba44eec47de1bf452c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56d3d30907a5001b95cdd55bd17fc86eaf5c078f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpane-class"></a>CPane Class
 El `CPane` clase es una mejora de la [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md). Si va a actualizar un proyecto MFC existente, reemplace todas las apariciones de `CControlBar` con `CPane`.  
@@ -163,13 +164,13 @@ class CPane : public CBasePane
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CPane::~CPane`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Inmediatamente, vuelve a calcular el diseño de un panel.|  
 |[CPane::AllocElements](#allocelements)|Asigna almacenamiento para uso interno.|  
@@ -237,7 +238,7 @@ class CPane : public CBasePane
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPane::OnAfterDock](#onafterdock)|Llamado por el marco de trabajo cuando se han acoplado un panel.|  
 |[CPane::OnAfterFloat](#onafterfloat)|Lo llama el marco cuando queda flotando un panel.|  
@@ -246,7 +247,7 @@ class CPane : public CBasePane
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Habilita el control coherente del tamaño mínimo de los paneles.|  
 |[CPANE:: M_recentdockinfo](#m_recentdockinfo)|Contiene información de acoplamiento reciente.|  

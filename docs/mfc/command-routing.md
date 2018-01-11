@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 Su responsabilidad a la hora de trabajar con comandos se limita a crear conexiones de mapa de mensajes entre los comandos y sus funciones de controlador, una tarea para la cual se usa la ventana Propiedades. También debe escribir la mayoría de los controladores de comando.  
