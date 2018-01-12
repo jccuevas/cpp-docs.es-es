@@ -1,67 +1,68 @@
 ---
-title: "Sem&#225;ntica de pila de C++ para los tipos de referencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de referencia, semántica de pila de C++ para"
+title: "Semántica de pila de C++ para tipos de referencia | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Sem&#225;ntica de pila de C++ para los tipos de referencia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Antes de Visual C\+\+ 2005, una instancia de un tipo de referencia se podría crear solo mediante el operador de `new` , que creó el objeto en el montón de recolección.  Sin embargo, ahora puede crear una instancia de un tipo de referencia utilizando la misma sintaxis que utilizaría para crear una instancia de un tipo nativo en la pila.  Por tanto, no necesita utilizar [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia.  Y cuando el objeto salga del ámbito, el compilador de llama al destructor del objeto.  
+# <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
+Antes de Visual C++ 2005, una instancia de un tipo de referencia sólo se creara con el `new` montón restante de operador, que se creó el objeto en los elementos no utilizados. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que utilizaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [gcnew nueva, ref](../windows/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.  
   
-## Comentarios  
- Cuando se crea una instancia de un tipo de referencia mediante la semántica de la pila, el compilador crea internamente la instancia en la pila de recolección \(mediante `gcnew`\).  
+## <a name="remarks"></a>Comentarios  
+ Cuando crea una instancia de un tipo de referencia mediante la semántica de pila, el compilador crea internamente la instancia en el montón de elementos no utilizados (mediante `gcnew`).  
   
- Cuando la firma o tipo de valor devuelto de una función incluye una instancia de un tipo de referencia de por\- valor, la función se marcará en metadatos como requiriendo especial \(con el modreq\).  El este tratamiento especial proporcionado actualmente sólo por los clientes de Visual C\+\+; otros lenguajes no admiten actualmente consumir funciones o datos que utilizan los tipos de referencia creados con la semántica de la pila.  
+ Cuando el tipo de valor devuelto o firma de una función incluye una instancia de un tipo de referencia por valor, la función se marcarán en los metadatos que requieran un tratamiento especial (con modreq). Este tratamiento especial es actualmente sólo proporcionadas por los clientes de Visual C++; otros lenguajes no admiten actualmente consumo funciones o datos que usan los tipos de referencia creados con semántica de pila.  
   
- Una razón para utilizar `gcnew` \(creación dinámica\) en lugar de la semántica de la pila sería si el tipo no tiene ningún destructor.  Además, mediante los tipos de referencia creados con la semántica de la pila en firmas de la función no es posible si desea que las funciones que se consumirán por otros lenguajes distintos de Visual C\+\+.  
+ Una razón para utilizar `gcnew` (asignación dinámica) en lugar de pila semántica sería si el tipo no tenga un destructor. Además, el uso de los tipos de referencia creados con semántica de pila en las firmas de función no sería posible si desea que las funciones para utilizarse en lenguajes diferentes de Visual C++.  
   
- El compilador no generará un constructor de copias para un tipo de referencia.  Por consiguiente, si se define una función que utilice una referencia de por\- valor escribir en la firma, debe definir un constructor de copias para el tipo de referencia.  Un constructor de copias para un tipo de referencia tiene una firma de la forma siguiente: `R(R%){}`.  
+ El compilador no generará un constructor de copias para un tipo de referencia. Por lo tanto, si define una función que usa un tipo de referencia por valor en la firma, debe definir un constructor de copias para el tipo de referencia. Un constructor de copias para un tipo de referencia tiene una firma de la forma siguiente: `R(R%){}`.  
   
- El compilador no generará un operador de asignación predeterminado para un tipo de referencia.  Un operador de asignación permite crear un objeto mediante la semántica de la pila y inicializarlo ésta con un objeto existente creado mediante la semántica de la pila.  Un operador de asignación para un tipo de referencia tiene una firma de la forma siguiente: `void operator=( R% ){}`.  
+ El compilador no generará un operador de asignación predeterminado para un tipo de referencia. Un operador de asignación permite crear un objeto utilizando semántica de pila y se inicializa con un objeto existente que se creó mediante la semántica de pila. Un operador de asignación para un tipo de referencia tiene una firma de la forma siguiente: `void operator=( R% ){}`.  
   
- Si los recursos críticos y el del destructor del tipo usan semántica de pila para los tipos de referencia, no es necesario llamar explícitamente a un destructor \(o llamar a `delete`\).  Para obtener más información sobre los destructores en los tipos de referencia, vea [Destructores y finalizadores de Visual C\+\+](../misc/destructors-and-finalizers-in-visual-cpp.md).  
+ Si el destructor de su tipo libera los recursos críticos y usar semántica de pila para los tipos de referencia, no es necesario llamar explícitamente al destructor (o llamar a `delete`). Para obtener más información acerca de destructores en tipos de referencia, vea [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
- Un operador de asignación compilador\- generado seguirá las reglas estándar habituales de C\+\+ con las siguientes adiciones:  
+ Un operador de asignación generados por el compilador seguirá las reglas habituales de C++ estándares con las siguientes adiciones:  
   
--   Cualquier miembro de datos no estático cuyo tipo es un identificador a un tipo de referencia se bajo copiado \(tratará como un miembro de datos no estático cuyo tipo es un puntero\).  
+-   Los datos no estáticos miembros cuyo tipo es un identificador de un tipo de referencia será shallow copiados (se trata como un miembro de datos no estáticos cuyo tipo es un puntero).  
   
--   Cualquier miembro de datos no estático cuyo tipo es un tipo de valor se bajo copiado.  
+-   Copia de cualquier miembro de datos no estáticos cuyo tipo sea que un tipo de valor será superficial.  
   
--   Cualquier miembro de datos no estático cuyo tipo es una instancia de un tipo de referencia invoque una llamada al constructor de copias de tipo de referencia.  
+-   Cualquier miembro de datos no estáticos cuyo tipo es una instancia de un tipo de referencia invocará una llamada al constructor de copias del tipo de referencia.  
   
- El compilador también proporciona un operador unario de `%` para convertir una instancia de un tipo de referencia creado mediante la semántica de la pila a su tipo subyacente del identificador.  
+ El compilador también ofrece un `%` operador unario para convertir una instancia de un tipo de referencia creado mediante la semántica de pila en su tipo de identificador subyacente.  
   
- Los tipos de referencia siguientes no están disponibles para su uso con la semántica del montón:  
+ Los siguientes tipos de referencia no están disponibles para su uso con semántica de pila:  
   
--   [delegado](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)  
   
 -   [Matrices](../windows/arrays-cpp-component-extensions.md)  
   
 -   <xref:System.String>  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- El ejemplo de código siguiente muestra cómo declarar instancias de tipos de referencia con la semántica de la pila, cómo funciona el constructor del operador de asignación y copiar, y cómo inicializar una referencia de seguimiento con el tipo de referencia creado mediante la semántica de la pila.  
+### <a name="description"></a>Descripción  
+ El ejemplo de código siguiente muestra cómo declarar instancias de tipos de referencia con semántica de pila, el operador de asignación y funciona de constructor de copia y cómo inicializar una referencia de seguimiento con el tipo de referencia creado mediante la semántica de pila.  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // stack_semantics_for_reference_types.cpp  
@@ -109,7 +110,7 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 98  
@@ -119,5 +120,5 @@ int main() {
 13  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)

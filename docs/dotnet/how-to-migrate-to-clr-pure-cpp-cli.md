@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>Cómo: Migrar a /clr:pure (C++/CLI)
 En este tema se aborda los problemas que pueden surgir al migrar a MSIL puro utilizando **/CLR: pure** (consulte [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información). En este tema se da por supuesto que el código que se está migrando está compilado como ensamblado mixto mediante la **/CLR** opción, como la ruta de acceso de migración desde código no administrado a MSIL puro no es directa. Para código no administrado, consulte [Cómo: migrar a/CLR](../dotnet/how-to-migrate-to-clr.md) antes de intentar migrar a MSIL puro.  
