@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebbccf147cc45ce5e3dab512e13a8b059f104cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Cómo: Usar eventos de compilación en proyectos de MSBuild
 Un evento de compilación es un comando que [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] lleva a cabo en una determinada fase del proceso de compilación. El *anterior a la compilación* evento tiene lugar antes de que comience la compilación; el *anterior a la vinculación* evento tiene lugar antes de iniciar el paso de vínculo; y la *posterior a la compilación* evento tiene lugar después de la compilación finaliza correctamente. Se produce un evento de compilación sólo si se produce el paso de compilación asociado. Por ejemplo, el evento anterior a la vinculación no se produce si no se ejecuta el paso de vinculación.  

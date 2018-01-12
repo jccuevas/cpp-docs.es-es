@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97c54a8a07614440e343979f5c2529a3df1b7164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ieee-floating-point-representation"></a>Representación IEE de punto flotante
 Microsoft Visual C++ es coherente con los estándares numéricos de IEEE. Existen tres variedades internas de números reales. Real\*4 y real\*8 se utilizan en Visual C++. Real\*4 se declara con la palabra **float**. Real\*8 se declara con la palabra **doble**. En la programación de Windows de 32 bits, el `long double` se asigna al tipo de datos **doble**. Sin embargo, hay compatibilidad de lenguaje de ensamblado para cálculos que utilicen real * tipo de datos de 10.  

@@ -1,38 +1,40 @@
 ---
-title: "C&#243;mo: Calcular las referencias de estructuras mediante la interoperabilidad de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interoperabilidad de C++, estructuras"
-  - "cálculo de referencias de datos [C++], estructuras"
-  - "interoperabilidad [C++], estructuras"
-  - "calcular las referencias [C++], estructuras"
-  - "estructuras [C++], calcular las referencias"
+title: "Cómo: serializar estructuras mediante la interoperabilidad de C++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85c0b4301b0fb55acdc74344d1ca3fc1b6b393d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Calcular las referencias de estructuras mediante la interoperabilidad de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este tema se muestra un aspecto de la interoperabilidad de Visual C\+\+.  Para obtener más información, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-structures-using-c-interop"></a>Cómo: serializar estructuras mediante la interoperabilidad de C++
+En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- En los siguientes ejemplos de código, se utilizan las directivas \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero sin que éstas dejen de interactuar como si se hubieran definido en archivos separados.  No es necesario compilar con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md) los archivos que contienen únicamente funciones no administradas.  
+ El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. No es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Ejemplo  
- En el ejemplo siguiente se pasa una estructura de una función administrada a una función no administrada, por valor y por referencia.  Dado que la estructura de este ejemplo contiene sólo tipos de datos intrínsecos \(vea [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), no se requiere ningún cálculo de referencias especial.  Para calcular las referencias de estructuras que no pueden transferirse en bloque de bits, como las que contienen punteros, vea [Cómo: Calcular las referencias de punteros incrustados mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo pasar una estructura de administrada a una función no administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene tipos de datos intrínsecos solo simple (vea [bits/bytes y tipos no-bits/bytes](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ninguna serialización especial es necesaria. Para calcular las referencias de estructuras no bits/bytes, como las que contienen punteros, vea [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +90,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se pasa una estructura de una función no administrada a una función administrada, por valor y por referencia.  Dado que la estructura de este ejemplo contiene sólo tipos de datos intrínsecos \(vea [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), no se requiere ningún cálculo de referencias especial.  Para calcular las referencias de estructuras que no pueden transferirse en bloque de bits, como las que contienen punteros, vea [Cómo: Calcular las referencias de punteros incrustados mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo pasar una estructura de no administrado a una función administrada, por valor y por referencia. Dado que la estructura de este ejemplo contiene tipos de datos intrínsecos solo simple (vea [bits/bytes y tipos no](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), ningún cálculo de referencias especial es necesario. Para calcular las referencias de estructuras no bits/bytes, como las que contienen punteros, vea [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +156,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

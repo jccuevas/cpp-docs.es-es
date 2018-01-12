@@ -1,38 +1,41 @@
 ---
-title: "C&#243;mo: Llamar a archivos DLL nativos desde el c&#243;digo administrado mediante PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cálculo de referencias de datos [C++], llamar a DLL nativas"
-  - "interoperabilidad [C++], llamar a DLL nativas"
-  - "calcular las referencias [C++], llamar a DLL nativas"
-  - "invocación de plataforma [C++], llamar a DLL nativas"
+title: "Cómo: llamar a DLL nativas desde código administrado mediante PInvoke | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke [C++], calling native DLLs
+- interop [C++], calling native DLLs
+- marshaling [C++], calling native DLLs
+- data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d22f493a582b6ef09615f94c7b321a7cc535e5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Llamar a archivos DLL nativos desde el c&#243;digo administrado mediante PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se puede llamar a las funciones que se implementan en archivos DLL no administrados desde código administrado utilizando la funcionalidad de invocación de plataforma \(P\/Invoke\).  Si el código fuente para el archivo DLL no está disponible, P\/Invoke es la única opción para interoperar.  Sin embargo, al contrario que en otros lenguajes de .NET, Visual C\+\+ proporciona una alternativa a P\/Invoke.  Para obtener más información, vea [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Cómo: Llamar a archivos DLL nativos desde el código administrado mediante PInvoke
+Puede llamar a funciones que se implementan en archivos DLL no administradas desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
-## Ejemplo  
- El ejemplo de código siguiente utiliza la función [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) de Win32 para recuperar la resolución actual de la pantalla en píxeles.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se utiliza Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) función para recuperar la resolución actual de la pantalla en píxeles.  
   
- Para funciones que utilizan sólo tipos intrínsecos como argumentos y valores devueltos, no se requiere ningún trabajo adicional.  Otros tipos de datos, como punteros a función, matrices y estructuras, requieren atributos adicionales para garantizar un cálculo de referencias de datos apropiado.  
+ Para las funciones que usan solo los tipos intrínsecos como argumentos y valores devuelven, es necesario ningún trabajo adicional. Otros tipos de datos, como punteros de función, matrices y estructuras, requieren atributos adicionales para garantizar la serialización de datos adecuados.  
   
- Aunque no es necesario, sí que es aconsejable hacer declaraciones P\/Invoke miembros estáticos de una clase de valor, de modo que no existan en el espacio de nombres global, como se muestra en este ejemplo.  
+ Aunque no es necesario, es recomendable realizar los miembros estáticos de las declaraciones P/Invoke de una clase de valor para que no existen en el espacio de nombres global, como se muestra en este ejemplo.  
   
 ```  
 // pinvoke_basic.cpp  
@@ -59,5 +62,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar un elemento PInvoke explícito en C\+\+ \(Atributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vea también  
+ [Usar un elemento PInvoke explícito en C++ (Atributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

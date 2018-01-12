@@ -1,73 +1,75 @@
 ---
-title: "Adding Connection Points to an Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "puntos de conexión [C++], agregar a objetos ATL"
-  - "Implement Connection Point ATL wizard"
+title: "Agregar puntos de conexión a un objeto | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connection points [C++], adding to ATL objects
+- Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f63ec5bd9029302192e640e42a3d012df347219d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Connection Points to an Object
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[tutorial de ATL](../atl/active-template-library-atl-tutorial.md) muestra cómo crear un control con compatibilidad para puntos de conexión, cómo agregar eventos, y a continuación cómo implementar el punto de conexión.  ATL implementa los puntos de conexión con la clase de [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) .  
+# <a name="adding-connection-points-to-an-object"></a>Agregar puntos de conexión a un objeto
+El [Tutorial de ATL](../atl/active-template-library-atl-tutorial.md) muestra cómo crear un control con compatibilidad para puntos de conexión, cómo agregar eventos y, a continuación, cómo implementar el punto de conexión. ATL implementa los puntos de conexión con el [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) clase.  
   
  Para implementar un punto de conexión, tiene dos opciones:  
   
--   Implemente poseen origen de eventos de salida, agregando un punto de conexión al control o el objeto.  
+-   Implemente su propio origen de eventos salientes, mediante la adición de un punto de conexión que el objeto o el control.  
   
--   Reutilizar una interfaz de punto de conexión definido en otra biblioteca de tipos.  
+-   Volver a utilizar una interfaz de punto de conexión definida en otra biblioteca de tipos.  
   
- En cualquier caso, el asistente para implementar utiliza una biblioteca de tipos para realizar su trabajo.  
+ En cualquier caso, el Asistente para implementar puntos de conexión utiliza una biblioteca de tipos para realizar su trabajo.  
   
-### Para agregar un punto de conexión a un control o un objeto  
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>Para agregar un punto de conexión a un control o un objeto  
   
-1.  Defina una dispinterface en el bloque de la biblioteca del archivo .idl.  Si habilitó la compatibilidad para los puntos de conexión cuando creó el control con el asistente para controles ATL, el dispinterface se creado.  Si no habilitó la compatibilidad para los puntos de conexión cuando creó el control, debe agregar manualmente dispinterface al archivo .idl.  A continuación se muestra un ejemplo de dispinterface.  Las interfaces de salida no necesitan ser interfaces de implementación pero muchos lenguajes de script como VBScript y JScript requieren esto, por lo que este ejemplo utiliza dos dispinterface:  
+1.  Defina una interfaz dispinterface en el bloque de biblioteca del archivo .idl. Si has habilitado el soporte para los puntos de conexión cuando se creó el control con el Asistente para controles ATL, la dispinterface ya se creará. Si no habilitó la compatibilidad con puntos de conexión cuando se creó el control, debe agregar manualmente una dispinterface al archivo .idl. El siguiente es un ejemplo de una interfaz dispinterface. Interfaces de salida no son necesarias para interfaces de envío, pero muchos lenguajes de scripting como VBScript y JScript requieren esta opción, por lo que este ejemplo usa dos interfaces dispinterface:  
   
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/CPP/adding-connection-points-to-an-object_1.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
   
-     Utilice el uuidgen.exe o la utilidad de guidgen.exe para generar un GUID.  
+     Use el uuidgen.exe o guidgen.exe Utilidad para generar un GUID.  
   
-2.  Agregue el dispinterface como interfaz de `[default,source]` en la coclase para el objeto en el archivo .idl del proyecto.  Una vez más si habilitó la compatibilidad para los puntos de conexión cuando creó el control, el asistente para controles ATL creará la entrada de `[default,source`\].  para agregar manualmente esta entrada, agregue la línea en negrita:  
+2.  Agregue la dispinterface como la `[default,source]` interfaz en la coclase para el objeto en el archivo .idl del proyecto. Una vez más, si has habilitado el soporte para puntos de conexión cuando se creó el control, el Asistente para controles ATL creará el `[default,source`] entrada. Para agregar manualmente esta entrada, agregue la línea en negrita:  
   
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/CPP/adding-connection-points-to-an-object_2.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
   
-     Vea el archivo .idl del ejemplo de [Circ](../top/visual-cpp-samples.md) ATL para un ejemplo.  
+     Vea el archivo .idl en el [Circ](../visual-cpp-samples.md) ejemplo ATL para obtener un ejemplo.  
   
-3.  Vista de clases de uso para agregar métodos y propiedades a la interfaz de eventos.  Haga clic con el botón secundario en la clase en la vista de clases, elija **Agregar** en el menú contextual, haga clic en **Agregar Punto de conexión**.  
+3.  Use la vista de clases para agregar métodos y propiedades para la interfaz de eventos. Haga clic en la clase de vista de clases, seleccione **agregar** en el menú contextual y haga clic en **agregar punto de conexión**.  
   
-4.  En el cuadro de lista de **Interfaces de origen** del asistente para implementar, seleccione **Las interfaces del proyecto**.  Si elige una interfaz para el control y presione **Aceptar**, debe:  
+4.  En el **Interfaces de origen** cuadro de lista del Asistente de punto de conexión de implementar, seleccione **interfaces del proyecto**. Si elige una interfaz para el control y presione **Aceptar**, tendrá que:  
   
-    -   Genere un archivo de encabezado con una clase de proxy del evento que se aplica el código que hará las llamadas salientes para el evento.  
+    -   Generar un archivo de encabezado con una clase de proxy de evento que implementa el código que hará que las llamadas salientes para el evento.  
   
-    -   Agregue una entrada al mapa de puntos de conexión.  
+    -   Agregue una entrada a la asignación de punto de conexión.  
   
-     También verá una lista de todas las bibliotecas de tipos en el equipo.  Debe utilizar sólo una de estas otras bibliotecas de tipos para definir el punto de conexión si desea implementar exactamente la misma interfaz de salida encontrada en otra biblioteca de tipos.  
+     También verá una lista de todas las bibliotecas de tipos en el equipo. Sólo se debe utilizar una de estas otras bibliotecas de tipos para definir el punto de conexión si desea implementar la interfaz de salida mismo exacta que se encuentra en otra biblioteca de tipos.  
   
-### Reutilizar una interfaz de punto de conexión definido en otra biblioteca de tipos  
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Para reutilizar una interfaz de punto de conexión definida en otra biblioteca de tipos  
   
-1.  En la vista de clases, haga clic con el botón secundario en una clase que implemente una macro de **BEGIN\_COM\_MAP** , elija **Agregar** en el menú contextual, haga clic en **Agregar Punto de conexión**.  
+1.  En la vista de clases, haga clic en una clase que implementa un **BEGIN_COM_MAP** (macro), seleccione **agregar** en el menú contextual y haga clic en **agregar punto de conexión**.  
   
-2.  En el asistente para implementar, seleccione una biblioteca de tipos y una interfaz en la biblioteca de tipos y haga clic **Agregar**.  
+2.  En el Asistente para implementar puntos de conexión, seleccione una biblioteca de tipos y una interfaz en la biblioteca de tipos y haga clic en **agregar**.  
   
-3.  Edite el archivo .idl cualquiera:  
+3.  Edite el archivo .idl para:  
   
-    -   Copie el dispinterface del archivo .idl del objeto cuyo se utiliza origen de eventos.  
+    -   Copiar la dispinterface desde el archivo IDL para el objeto cuyo origen de eventos está usándola.  
   
-    -   Utilice la instrucción de **importlib** en la biblioteca de tipos.  
+    -   Use la **importlib** instrucciones sobre la biblioteca de tipos.  
   
-## Vea también  
- [Puntos de conexión](../atl/atl-connection-points.md)
+## <a name="see-also"></a>Vea también  
+ [Punto de conexión](../atl/atl-connection-points.md)
+

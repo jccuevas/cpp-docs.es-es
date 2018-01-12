@@ -1,44 +1,47 @@
 ---
-title: "Obtener acceso a datos XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStreamRowset (clase), recuperar datos XML"
-  - "CXMLAccessor (clase), recuperar datos XML"
-  - "datos [C++], acceso a datos XML"
-  - "acceso a datos [C++], datos XML"
-  - "conjuntos de filas [C++], recuperar datos XML"
-  - "XML [C++], obtener acceso a datos"
+title: Acceso a datos XML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], XML data
+- XML [C++], accessing data
+- CXMLAccessor class, retrieving XML data
+- data [C++], XML data access
+- rowsets [C++], retrieving XML data
+- CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Obtener acceso a datos XML
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Existen dos métodos independientes para recuperar datos XML de un origen de datos: mediante [CStreamRowset](../../data/oledb/cstreamrowset-class.md) o [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
+# <a name="accessing-xml-data"></a>Obtener acceso a datos XML
+Hay dos métodos independientes para recuperar datos XML de un origen de datos: uno usa [CStreamRowset](../../data/oledb/cstreamrowset-class.md) y los demás usos [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
   
 |Funcionalidad|CStreamRowset|CXMLAccessor|  
 |-------------------|-------------------|------------------|  
-|Volumen de datos transferido|Recupera datos de todas las columnas y filas a la vez.|Recupera datos de todas las columnas, pero sólo una fila a la vez.  Para navegar por las filas se requieren métodos como `MoveNext`.|  
-|Dar formato a la cadena|SQL Server da formato a la cadena XML y la envía al consumidor.|Recupera datos del conjunto de filas en su formato nativo \(solicitudes que el proveedor envía como cadenas Unicode\) y a continuación compila la cadena que contiene los datos en formato XML.|  
-|Control sobre el formato|Existe cierto control sobre el formato de la cadena XML al establecer algunas propiedades específicas de SQL Server 2000.|No se dispone de control sobre el formato de la cadena XML generada.|  
+|Cantidad de datos transferidos|Recupera datos de todas las columnas y filas a la vez.|Recupera datos de todas las columnas, pero solo una fila cada vez. Desplazarse por las filas con métodos como `MoveNext`.|  
+|La cadena de formato|SQL Server da formato a la cadena XML y lo envía al consumidor.|Recupera los datos del conjunto de filas en su formato nativo (solicitudes que el proveedor envía como cadenas Unicode) y, a continuación, crea la cadena que contiene los datos en formato XML.|  
+|Control sobre el formato|Tener cierto nivel de control sobre cómo se da formato a la cadena XML al establecer algunas propiedades específicas de SQL Server 2000.|No tiene ningún control sobre el formato de la cadena XML generada.|  
   
- Aunque `CStreamRowset` proporciona una eficacia más amplia para recuperar datos en formato XML, sólo se utiliza en SQL Server 2000.  
+ Mientras `CStreamRowset` proporciona una manera más eficaz general de recuperación de datos en formato XML, solo es compatible con SQL Server 2000.  
   
-## Recuperar datos XML mediante CStreamRowset  
- Se especifica [CStreamRowset](../../data/oledb/cstreamrowset-class.md) como tipo de conjunto de filas en la declaración de `CCommand` o `CTable`.  Se puede utilizar con nuestro descriptor de acceso personal o sin descriptor de acceso, como por ejemplo:  
+## <a name="retrieving-xml-data-using-cstreamrowset"></a>Recuperar datos XML mediante CStreamRowset  
+ Especifique [CStreamRowset](../../data/oledb/cstreamrowset-class.md) como el tipo de conjunto de filas en la `CCommand` o `CTable` declaración. También puede utilizarlo con su propio descriptor de acceso o ningún descriptor de acceso, por ejemplo:  
   
 ```  
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;  
@@ -50,31 +53,31 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Normalmente, cuando se llama a `CCommand::Open` \(especificando, por ejemplo, `CRowset` como la clase `TRowset`\), se obtiene un puntero `IRowset`.  `ICommand::Execute` devuelve un puntero `IRowset`, que se almacena en el miembro `m_spRowset` del objeto `CRowset`.  Los métodos como `MoveFirst`, `MoveNext` y `GetData` usan ese puntero para recuperar los datos.  
+ Normalmente cuando se llama a `CCommand::Open` (especificando, por ejemplo, `CRowset` como el `TRowset` clase), obtiene un `IRowset` puntero. `ICommand::Execute`Devuelve un `IRowset` puntero, que se almacena en la `m_spRowset` miembro de la `CRowset` objeto. Métodos como `MoveFirst`, `MoveNext`, y `GetData` usan ese puntero para recuperar los datos.  
   
- Por el contrario, cuando se llama a `CCommand::Open` \(pero se especifica `CStreamRowset` como la clase `TRowset`\), `ICommand::Execute` devuelve un puntero `ISequentialStream`, que se almacena en el miembro de datos `m_spStream` de [CStreamRowset](../../data/oledb/cstreamrowset-class.md).  Después, se puede usar el método `Read` para recuperar los datos \(cadena Unicode\) en formato XML.  Por ejemplo:  
+ Por el contrario, cuando se llama a `CCommand::Open` (pero especifique `CStreamRowset` como el `TRowset` clase), `ICommand::Execute` devuelve un `ISequentialStream` puntero, que se almacena en la `m_spStream` miembro de datos de [CStreamRowset](../../data/oledb/cstreamrowset-class.md). A continuación, utilice el `Read` método para recuperar los datos (cadena Unicode) en formato XML. Por ejemplo:  
   
 ```  
 myCmd.m_spStream->Read()  
 ```  
   
- SQL Server 2000 aplica el formato XML y devuelve todas las columnas y filas del conjunto de filas como una sola cadena XML.  
+ SQL Server 2000 aplica el formato XML y devuelve todas las columnas y todas las filas del conjunto de filas como una sola cadena XML.  
   
- Para obtener un ejemplo en el que se utiliza el método `Read`, vea "Agregar compatibilidad con XML al consumidor" en [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md).  
+ Para obtener un ejemplo de uso del `Read` método, vea "Agregar compatibilidad con XML al consumidor" en [implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  La compatibilidad con XML mediante `CStreamRowset` sólo funciona con SQL Server 2000 y requiere el uso del proveedor OLE DB para SQL Server 2000 \(instalado con MDAC\).  
+>  Compatibilidad con XML utilizando `CStreamRowset` sólo funciona con SQL Server 2000 y requiere que tenga el proveedor OLE DB para SQL Server 2000 (instalado con MDAC).  
   
-## Recuperar datos XML mediante CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) permite obtener acceso a los datos de un origen de datos como datos de cadena cuando no se conoce el esquema del almacén de datos.  `CXMLAccessor` funciona de manera similar que `CDynamicStringAccessorW`, salvo que el primero convierte todos los datos a los que se obtiene acceso desde el almacén de datos como datos con formato \(etiquetas\) XML.  Los nombres de etiqueta XML coinciden con los nombres de columna del almacén de datos en la medida de lo posible.  
+## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Recuperar datos XML mediante CXMLAccessor  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) permite obtener acceso a datos desde un origen de datos como datos de cadena cuando no tiene ningún conocimiento del esquema del almacén de datos. `CXMLAccessor`funciona como `CDynamicStringAccessorW` excepto en que el primero convierte todos los datos que se tiene acceso desde el almacén de datos como datos (etiquetados) en formato XML. Los nombres de etiqueta XML coinciden con los nombres de columna del almacén de datos lo más fielmente posible.  
   
- `CXMLAccessor` se utiliza como las demás clases de descriptor de acceso, pasándola como un parámetro de plantilla a `CCommand` o `CTable`:  
+ Use `CXMLAccessor` como lo haría con cualquier otra clase de descriptor de acceso, puede pasarlo como un parámetro de plantilla a `CCommand` o `CTable`:  
   
 ```  
 CTable<CXMLAccessor, CRowset> rs;  
 ```  
   
- Utilice [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) para recuperar datos de la tabla, una fila cada vez, y métodos como `MoveNext` para navegar por las filas, por ejemplo:  
+ Use [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md) para recuperar datos de la tabla una fila a la vez y desplazarse por las filas con métodos como `MoveNext`, por ejemplo:  
   
 ```  
 // Open data source, session, and rowset  
@@ -90,7 +93,7 @@ while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 }  
 ```  
   
- [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) se puede usar para recuperar la información de columnas \(tipos de datos\) como datos de cadena con formato XML.  
+ Puede usar [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) para recuperar la información de columna (tipo de datos) como datos de cadena con formato XML.  
   
-## Vea también  
- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vea también  
+ [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

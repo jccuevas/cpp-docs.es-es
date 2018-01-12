@@ -14,17 +14,15 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-operators"></a>Operadores de &lt;regex&gt;
 ||||  
@@ -33,7 +31,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Comparación de desigualdad para varios objetos.  
   
 ```  
@@ -150,7 +148,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Comparación menor que para varios objetos.  
   
 ```  
@@ -258,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Inserta un sub_match en una secuencia.  
   
 ```  
@@ -316,7 +314,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Comparación menor o igual que para varios objetos.  
   
 ```  
@@ -549,7 +547,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Comparación mayor que para varios objetos.  
   
 ```  
@@ -657,7 +655,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Comparación mayor o igual que para varios objetos.  
   
 ```  
@@ -773,6 +771,5 @@ sub >= 'a' == true
 [regex_token_iterator (Clase)](../standard-library/regex-token-iterator-class.md)  
 [regex_traits (Clase)](../standard-library/regex-traits-class.md)  
 [Definiciones de tipo \<regex>](../standard-library/regex-typedefs.md)  
-
 
 

@@ -1,34 +1,33 @@
 ---
-title: "ML Nonfatal Error A2063 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2063"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2063"
+title: Error recuperable A2063 de ML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2063
+dev_langs: C++
+helpviewer_keywords: A2063
 ms.assetid: 12976b25-2159-4e0c-9df3-dcfac61091ee
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0070a291f1ab65b4331f66be6cd1cdd4ffe40937
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2063
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**puede ALINEAR sólo con la eficacia de 2: expresión**  
+# <a name="ml-nonfatal-error-a2063"></a>Error recuperable A2063 de ML
+**Puede alinear solo a la potencia de 2: expresión**  
   
- La expresión especificada con la directiva de [Alinear](../../assembler/masm/align-masm.md) era válida.  
+ La expresión especificada con la [alinear](../../assembler/masm/align-masm.md) directiva no era válida.  
   
- La expresión de **Alinear** debe ser una potencia de 2 entre 2 y 256, y debe ser menor o igual que la alineación de segmentos, de la estructura, unión o de actual.  
+ El **alinear** expresión debe ser una potencia de 2 entre 2 y 256 y debe ser menor o igual que la alineación del segmento actual, estructura o unión.  
   
-## Vea también  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Vea también  
+ [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)

@@ -1,53 +1,54 @@
 ---
-title: "_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_invalid_parameter_handler"
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controlador de parámetro no válido"
-  - "set_invalid_parameter_handler (función)"
-  - "_set_invalid_parameter_handler (función)"
-  - "_set_thread_local_invalid_parameter_handler (función)"
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_invalid_parameter_handler
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+dev_langs: C++
+helpviewer_keywords:
+- invalid parameter handler
+- set_invalid_parameter_handler function
+- _set_invalid_parameter_handler function
+- _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Establece una función que se llamará cuando el CRT detecta un argumento no válido.  
+# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+Establece una función a la que se llamará cuando CRT detecte un argumento no válido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _invalid_parameter_handler _set_invalid_parameter_handler(  
@@ -58,21 +59,21 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `pNew`  
- El puntero de función al nuevo controlador de parámetro no válido.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `pNew`  
+ El puntero de función al nuevo controlador de parámetros no válidos.  
   
-## Valor devuelto  
- Un puntero al controlador de parámetros no válidos antes de la llamada.  
+## <a name="return-value"></a>Valor devuelto  
+ Puntero al controlador de parámetros no válidos antes de la llamada.  
   
-## Comentarios  
- Muchas funciones de C en tiempo de ejecución comprueban la validez de los argumentos pasados a ellos. Si se pasa un argumento no válido, la función puede establecer el `errno` devuelto un código de error o el número de error. En estos casos, también se llama al controlador de parámetro no válido. El tiempo de ejecución de C proporciona un controlador de parámetros no válidos global predeterminado que finaliza el programa y muestra un mensaje de error en tiempo de ejecución. Puede usar el `_set_invalid_parameter_handler` para establecer su propia función como el controlador de parámetros no válidos global. El tiempo de ejecución de C también admite un controlador de parámetro no válido del subproceso local. Si se establece un controlador de parámetro local de subproceso en un subproceso mediante `_set_thread_local_invalid_parameter_handler`, las funciones de tiempo de ejecución de C llamadas desde el subproceso utilizan ese controlador en lugar del controlador global. Sólo una función puede especificarse como el controlador global de argumento no válido a la vez. Se puede especificar sólo una función como el controlador de argumento no válido de subproceso local por subproceso, pero diferentes subprocesos pueden tener diferentes controladores de subproceso local. Esto le permite cambiar el controlador utilizado en una parte del código sin afectar al comportamiento de otros subprocesos.  
+## <a name="remarks"></a>Comentarios  
+ Muchas funciones de tiempo de ejecución de C comprueban la validez de los argumentos pasados. Si se pasa un argumento no válido, la función puede establecer el número de error `errno` o devolver un código de error. En estos casos, también se llama al controlador de parámetros no válidos. El tiempo de ejecución de C proporciona un controlador de parámetros no válidos global predeterminado que finaliza el programa y muestra un mensaje de error en tiempo de ejecución. Puede usar `_set_invalid_parameter_handler` para establecer su propia función como controlador de parámetros no válidos global. El tiempo de ejecución de C también admite un controlador de parámetros no válidos de subproceso local. Si se establece un controlador de parámetros de subproceso local en un subproceso mediante `_set_thread_local_invalid_parameter_handler`, las funciones de tiempo de ejecución de C a las que se llama desde el subproceso usan este controlador en lugar de usar el controlador global. Solo se puede especificar una función a la vez como controlador global de argumentos no válidos. Solo se puede especificar una función como controlador de argumentos no válidos de subproceso local por cada subproceso, aunque puede haber diferentes subprocesos que tengan diferentes controladores de subproceso local. De esta manera, puede cambiar el controlador usado en una parte del código sin que afecte al comportamiento de otros subprocesos.  
   
- Cuando el tiempo de ejecución llama a la función de parámetro no válido, normalmente significa que se ha producido un error irrecuperable. Proporciona la función de controlador de parámetro no válido debe guardar los datos puede anular. No debe devolver control a la función main, a menos que esté seguro de que el error es recuperable.  
+ Cuando el tiempo de ejecución llama a la función de parámetro no válido, suele significar que se ha producido un error irrecuperable. La función del controlador de parámetros no válidos que proporcione debe guardar todos los datos que pueda contener y luego debe anularse. No debe devolver el control a la función principal, a menos que esté seguro de que el error es recuperable.  
   
- La función de controlador de parámetro no válido debe tener el siguiente prototipo:  
+ La función de controlador de parámetros no válidos debe tener el siguiente prototipo:  
   
-```c  
+```  
 void _invalid_parameter(  
    const wchar_t * expression,  
    const wchar_t * function,   
@@ -82,20 +83,20 @@ void _invalid_parameter(
 );  
 ```  
   
- El `expression` argumento es una representación de cadena de caracteres anchos de la expresión de argumento que ha provocado el error. El `function` argumento es el nombre de la función de CRT que recibió un argumento no válido. El `file` argumento es el nombre del archivo de origen CRT que contiene la función. El `line` argumento es el número de línea en ese archivo. El último argumento está reservado. Los parámetros que todos tienen el valor `NULL` a menos que se usa una versión de depuración de la biblioteca CRT.  
+ El argumento `expression` es una representación de cadena de caracteres anchos de la expresión de argumento que provocó el error. El argumento `function` es el nombre de la función de CRT que recibió el argumento no válido. El argumento `file` es el nombre del archivo de origen de CRT que contiene la función. El argumento `line` es el número de línea de ese archivo. Se reserva el último argumento. Todos los parámetros tienen el valor `NULL`, a menos que se use una versión de depuración de la biblioteca de CRT.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |Rutina|Encabezado necesario|  
-|------------|--------------------------|  
-|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \< stdlib.h \><br /><br /> C\+\+: \< cstdlib \> o \< stdlib.h \>|  
+|-------------|---------------------|  
+|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib> o \<stdlib.h>|  
   
- El `_set_invalid_parameter_handler` y `_set_thread_local_invalid_parameter_handler` funciones son específicos de Microsoft. Para obtener información de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Las funciones `_set_invalid_parameter_handler` y `_set_thread_local_invalid_parameter_handler` son específicas de Microsoft. Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Ejemplo  
- En el ejemplo siguiente, se utiliza un controlador de errores de parámetro no válido para imprimir la función que recibe un parámetro no válido y el archivo y la línea en orígenes de CRT. Cuando se utiliza la biblioteca de depuración CRT, errores de parámetro no válido también generan una aserción, que está deshabilitada en este ejemplo se utiliza [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usa un controlador de errores de parámetros no válidos para imprimir la función que recibió el parámetro no válido, así como el archivo y la línea en los orígenes de CRT. Al usar la biblioteca de depuración de CRT, los errores de parámetros no válidos también generan una aserción, que se deshabilita en este ejemplo mediante [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
   
-```c  
+```C  
 // crt_set_invalid_parameter_handler.c  
 // compile with: /Zi /MTd  
 #include <stdio.h>  
@@ -133,10 +134,11 @@ int main( )
 ```  
   
 ```Output  
-Parámetro no válido detectado en la función common_vfprintf. Archivo: línea minkernel\crts\ucrt\src\appcrt\stdio\output.cpp: expresión 32: formato! = nullptr  
+Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucrt\src\appcrt\stdio\output.cpp Line: 32  
+Expression: format != nullptr  
 ```  
   
-## Vea también  
- [\_get\_invalid\_parameter\_handler, \_get\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
+## <a name="see-also"></a>Vea también  
+ [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
  [Versiones de funciones de CRT con seguridad mejorada](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)   
- [errno, \_doserrno, \_sys\_errlist y \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+ [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

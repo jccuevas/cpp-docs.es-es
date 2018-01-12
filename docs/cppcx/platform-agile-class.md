@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4acb38dc8619123fe2f0640366e506f77993edb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformagile-class"></a>Platform::Agile (Clase)
 Representa un objeto que tiene MashalingBehavior=Standard como objeto ágil, lo que reduce en gran medida las posibilidades de excepciones de subprocesamiento en tiempo de ejecución. `Agile<T>` permite que el objeto que no es Agile llame al mismo subproceso o a otro diferente, o que le llame a él. Para obtener más información, consulte [subprocesamiento y serialización](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -50,14 +51,14 @@ class Agile;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Agile](#ctor)|Inicializa una nueva instancia de la clase Agile.|  
 |[Agile::~Agile (Destructor)](#dtor)|Destruye la instancia actual de la clase Agile.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Agile::Get](#get)|Devuelve un identificador al objeto representado por el objeto Agile actual.|  
 |[Agile::GetAddressOf](#getaddressof)|Reinicializa el objeto Agile actual y luego devuelve la dirección de un identificador a un objeto de tipo `T`.|  
@@ -66,7 +67,7 @@ class Agile;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Agile::operator->](#operator-arrow)|Recupera un identificador al objeto representado por el objeto Agile actual.|  
 |[Agile::operator=](#operator-assign)|Asigna el valor especificado al objeto Agile actual.|  
@@ -81,7 +82,7 @@ class Agile;
   
  **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Encabezado:** agile.h  
 

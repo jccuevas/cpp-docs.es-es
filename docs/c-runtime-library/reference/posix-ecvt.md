@@ -28,11 +28,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8eeea608fe3bb41fbc803d6068f3968836d4d60a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b30ed0b11ca19722fa97cf1b9ac1e57c5b9d9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvt"></a>ecvt
 Esta función POSIX está en desuso. En su lugar, use la función [_ecvt](../../c-runtime-library/reference/ecvt.md), compatible con ISO C++, o la función [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md) con mejoras de seguridad.

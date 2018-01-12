@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::GetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor.GetString"
-  - "CDynamicStringAccessor::GetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetString (método)"
+title: 'CDynamicStringAccessor:: GetString | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor.GetString
+- CDynamicStringAccessor::GetString
+dev_langs: C++
+helpviewer_keywords: GetString method
 ms.assetid: 4af27f27-7589-49f5-93d8-6ef05c023c8a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9fee0b531fa96d9767b28751e2dd8b3766278983
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::GetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera los datos de columna especificados como cadena.  
+# <a name="cdynamicstringaccessorgetstring"></a>CDynamicStringAccessor::GetString
+Recupera los datos de la columna especificada como una cadena.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -42,21 +44,21 @@ BaseType* GetString(
 ) const throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nColumn`  
- \[in\] El número de columnas.  Los números de columnas empiezan por 1.  Un valor de 0 hace referencia a la columna de marcador, si la hay.  
+ [in] El número de columna. Números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si lo hay.  
   
  `pColumnName`  
- \[in\] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
+ [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
   
-## Valor devuelto  
- Un puntero al valor de cadena recuperado de la columna especificada.  El valor es de ***BaseType***escrito, dependiendo de las que sea **char** o **WCHAR** si \_UNICODE está definido o no.  Devuelve NULL si la columna especificada no se encuentra.  
+## <a name="return-value"></a>Valor devuelto  
+ Recupera un puntero al valor de cadena de la columna especificada. El valor es de tipo ***BaseType***, que será **CHAR** o **WCHAR** dependiendo de si se ha definido _UNICODE o no. Devuelve NULL si no se encuentra la columna especificada.  
   
-## Comentarios  
- El segundo formulario de reemplazo toma el nombre de columna como cadena ANSI.  El tercer formulario de reemplazo toma el nombre de columna como cadena Unicode.  
+## <a name="remarks"></a>Comentarios  
+ El segundo invalidar formulario toma el nombre de columna como una cadena ANSI. La tercera invalidar formulario toma el nombre de columna como una cadena Unicode.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicStringAccessor \(Clase\)](../../data/oledb/cdynamicstringaccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicStringAccessor (Clase)](../../data/oledb/cdynamicstringaccessor-class.md)

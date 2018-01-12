@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 875dddb961b18378029de08582e728ad626be948
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1630636b0de552712f67bc43b5182f991b10ef0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-of-a-library"></a>Estructura de una biblioteca
 Una biblioteca contiene objetos COFF. Objetos de una biblioteca contienen funciones y datos que pueden hacer referencia externamente otros objetos en un programa. Un objeto en una biblioteca se conoce a veces como un miembro de biblioteca.  

@@ -1,65 +1,64 @@
 ---
-title: "CommandHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CommandHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CommandHandler function"
+title: CommandHandler | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CommandHandler
+dev_langs: C++
+helpviewer_keywords: CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c17d9e731eaee9c6e1a1c584e61db6c9826cf8d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CommandHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`CommandHandler` es la función identificada por el tercer parámetro de la macro de `COMMAND_HANDLER` en el mapa de mensajes.  
+# <a name="commandhandler"></a>CommandHandler
+`CommandHandler`es la función identificada por el tercer parámetro de la `COMMAND_HANDLER` macro en el mapa de mensajes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      LRESULT   
-      CommandHandler  
-      (  
-   WORD wNotifyCode,  
-   WORD wID,  
-   HWND hWndCtl,  
-   BOOL& bHandled   
-);  
+ 
+    LRESULT 
+    CommandHandler 
+ (
+    WORD wNotifyCode,  
+    WORD wID,  
+    HWND hWndCtl,  
+    BOOL& bHandled);
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `wNotifyCode`  
  El código de notificación.  
   
  *wID*  
- El identificador del elemento de menú, del control, o de aceleradores.  
+ El identificador del elemento de menú, control o acelerador.  
   
  *hWndCtl*  
- un identificador a un control de la ventana.  
+ Un identificador para un control de ventana.  
   
  `bHandled`  
- Se llama a los conjuntos `bHandled` del mapa de mensajes a **TRUE** antes de `CommandHandler` .  Si `CommandHandler` no controla totalmente el mensaje, debe establecer `bHandled` a **FALSO** para indicar que el mensaje necesita un procesamiento adicional.  
+ Los conjuntos de mapa de mensajes `bHandled` a **TRUE** antes de `CommandHandler` se llama. Si `CommandHandler` no controla totalmente el mensaje, se debe establecer `bHandled` a **FALSE** para indicar que el mensaje requiere un procesamiento posterior.  
   
-## Valor devuelto  
- El resultado del procesamiento de mensajes.  0 si correctamente.  
+## <a name="return-value"></a>Valor devuelto  
+ El resultado del procesamiento de mensajes. 0 si es correcto.  
   
-## Comentarios  
- Para obtener un ejemplo de cómo usar este controlador de mensajes en un mapa de mensajes, vea [COMMAND\_HANDLER](../Topic/COMMAND_HANDLER.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de mensajes, vea [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
-## Vea también  
- [Implementing a Window](../atl/implementing-a-window.md)   
- [Message Maps](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+## <a name="see-also"></a>Vea también  
+ [Implementar una ventana](../atl/implementing-a-window.md)   
+ [Mapas de mensajes](../atl/message-maps-atl.md)   
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literales numéricos, booleanos y puntero (C++)
 Un literal es un elemento de programa que representa directamente un valor. En este artículo se tratan los literales de tipo entero, de punto flotante, booleanos y de puntero. Para obtener información sobre los literales de cadena y carácter, vea [cadena y literales de carácter (C++)](../cpp/string-and-character-literals-cpp.md). También puede definir sus propios literales basándose en cualquiera de estas categorías; Para obtener más información consulte [literales definidos por el usuario (C++)](../cpp/user-defined-literals-cpp.md)  

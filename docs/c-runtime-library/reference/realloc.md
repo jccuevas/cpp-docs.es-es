@@ -42,11 +42,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3243155fa99ec01e5401d0e5aac77d75807b6c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 525b0f0877471b5bfd6d9fa16551b21908f229a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="realloc"></a>realloc
 Reasigna bloques de memoria.  
@@ -81,7 +82,7 @@ void *realloc(
   
  El argumento `size` proporciona el tamaño nuevo del bloque (en bytes). El contenido del bloque es igual hasta el más pequeño de los tamaños nuevo y antiguo, aunque el bloque nuevo puede estar en otra ubicación. Dado que el bloque nuevo puede estar en una nueva ubicación de memoria, no se garantiza que el puntero devuelto por `realloc` sea el puntero que se pasa a través del argumento `memblock`. `realloc` no establece un cero en la memoria recién asignada en el caso de un crecimiento del búfer.  
   
- `realloc` establece `errno` en `ENOMEM` si se produce un error de asignación de memoria o si la cantidad de memoria solicitada supera `_HEAP_MAXREQ`. Para obtener información sobre este y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ `realloc` establece `errno` en `ENOMEM` si se produce un error de asignación de memoria o si la cantidad de memoria solicitada supera `_HEAP_MAXREQ`. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  `realloc` llama a `malloc` para usar la función [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) de C++ y establecer el nuevo modo de controlador. El nuevo modo de controlador indica si, en caso de error, `malloc` va a llamar a la rutina del nuevo controlador, según lo establecido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). De forma predeterminada, `malloc` no llama a la rutina del nuevo controlador en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando `realloc` no pueda asignar memoria, `malloc` llame a la rutina del nuevo controlador de la misma forma que hace el operador `new` cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a  
   
@@ -91,7 +92,7 @@ _set_new_mode(1)
   
  temprano en un programa o vincúlelo con NEWMODE.OBJ (vea [Opciones de vínculo](../../c-runtime-library/link-options.md)).  
   
- Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, `realloc` se resuelve como [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, vea [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Cuando la aplicación se vincula con una versión de depuración de las bibliotecas en tiempo de ejecución de C, `realloc` se resuelve como [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
  `realloc` está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no modifica las variables globales y que el puntero devuelto no tiene alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).  
   
@@ -101,7 +102,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`realloc`|\<stdlib.h> y \<malloc.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

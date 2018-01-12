@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36edbf47bacd20c06c726451d060dec61bce4e8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef81f58fc2180fcc29e943d0a352d1e6301ca7a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 Determina si un carácter multibyte determinado es un signo de texto no ASCII.  
@@ -68,7 +69,7 @@ int _ismbbkalnum_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbkalnum` devuelve un valor distinto de cero si el entero `c` es un signo de texto no ASCII distinto de los signos de puntuación; de lo contrario devuelve 0. `_ismbbkalnum` usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. `_ismbbkalnum_l` es idéntico a `_ismbbkalnum` , salvo por que utiliza la configuración regional como parámetro. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbkalnum` devuelve un valor distinto de cero si el entero `c` es un signo de texto no ASCII distinto de los signos de puntuación; de lo contrario devuelve 0. `_ismbbkalnum` usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. `_ismbbkalnum_l` es idéntico a `_ismbbkalnum` , salvo por que utiliza la configuración regional como parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -81,4 +82,4 @@ int _ismbbkalnum_l(
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

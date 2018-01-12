@@ -42,11 +42,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d508c70ca1a4c44e2b51dfd85b6f85700c111a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 Anexa una cadena. Estas versiones de [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -106,9 +107,9 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Valor devuelto|Contenido de `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` o sin terminar|any|cualquiera|`EINVAL`|no modificado|  
-|any|cualquiera|`NULL`|`EINVAL`|`strDestination`[0] se establece en 0|  
-|cualquiera|0, o demasiado pequeño|cualquiera|`ERANGE`|`strDestination`[0] se establece en 0|  
+|`NULL` o sin terminar|any|any|`EINVAL`|no modificado|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0] se establece en 0|  
+|any|0, o demasiado pequeño|any|`ERANGE`|`strDestination`[0] se establece en 0|  
   
 ## <a name="remarks"></a>Comentarios  
  La función `strcat_s` anexa `strSource` a `strDestination` y termina la cadena resultante con un carácter nulo. El carácter inicial de `strSource` sobrescribe el carácter nulo de terminación de `strDestination`. El comportamiento de `strcat_s` no se define si las cadenas de origen y de destino se superponen.  
@@ -126,7 +127,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  Si `strDestination` es un puntero nulo o no termina en nulo, o `strSource` es un puntero `NULL` o la cadena de destino es demasiado pequeña, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `EINVAL` y establecen `errno` en `EINVAL`.  
   
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

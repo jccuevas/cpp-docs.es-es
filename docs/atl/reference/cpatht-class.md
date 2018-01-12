@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,19 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpatht-class"></a>Clase CPathT
 Esta clase representa una ruta de acceso.  
@@ -104,7 +87,7 @@ class CPathT
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPathT::PCXSTR](#pcxstr)|Un tipo de cadena constante.|  
 |[CPathT::PXSTR](#pxstr)|Un tipo de cadena.|  
@@ -112,13 +95,13 @@ class CPathT
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPathT::CPathT](#cpatht)|El constructor para la ruta de acceso.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPathT::AddBackslash](#addbackslash)|Llamar a este método para agregar una barra diagonal inversa al final de una cadena para crear la sintaxis correcta para una ruta de acceso.|  
 |[CPathT::AddExtension](#addextension)|Llamar a este método para agregar una extensión de archivo a una ruta de acceso.|  
@@ -160,16 +143,16 @@ class CPathT
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|[CPathT::operator const StringType siguiente](#operator_const_stringtype_amp)|Este operador permite que el objeto se traten como una cadena.|  
+|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Este operador permite que el objeto se traten como una cadena.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Este operador permite que el objeto se traten como una cadena.|  
-|[CPathT::operator StringType siguiente](#operator_stringtype)|Este operador permite que el objeto se traten como una cadena.|  
+|[CPathT::operator StringType &](#operator_stringtype)|Este operador permite que el objeto se traten como una cadena.|  
 |[CPathT::operator +=](#operator_add_eq)|Este operador anexa una cadena a la ruta de acceso.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPathT::m_strPath](#m_strpath)|La ruta de acceso.|  
   

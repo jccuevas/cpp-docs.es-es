@@ -1,91 +1,94 @@
 ---
-title: "CColumnPrivileges, CColumnPrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "CColumnPrivileges"
-  - "m_bIsGrantable"
-  - "m_nColumnPropID"
-  - "m_szPrivilegeType"
-  - "COLUMN_GUID"
-  - "IS_GRANTABLE"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "COLUMN_PRIVILEGES"
-  - "m_szTableName"
-  - "CColumnPrivilegeInfo"
-  - "m_szGrantee"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnPrivilegeInfo (clase de parámetro)"
-  - "CColumnPrivileges (clase de definiciones de tipo)"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PRIVILEGES"
-  - "COLUMN_PROPID"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szColumnName"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szPrivilegeType"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CColumnPrivileges, CColumnPrivilegeInfo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- CColumnPrivileges
+- m_bIsGrantable
+- m_nColumnPropID
+- m_szPrivilegeType
+- COLUMN_GUID
+- IS_GRANTABLE
+- m_szColumnName
+- m_szTableCatalog
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- COLUMN_PROPID
+- m_guidColumn
+- COLUMN_PRIVILEGES
+- m_szTableName
+- CColumnPrivilegeInfo
+- m_szGrantee
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- GRANTOR
+- m_szPrivilegeType
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- COLUMN_PRIVILEGES
+- IS_GRANTABLE
+- m_nColumnPropID
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szGrantee
+- m_szGrantor
+- m_szTableName
+- CColumnPrivileges typedef class
+- COLUMN_GUID
+- GRANTEE
+- m_guidColumn
+- CColumnPrivilegeInfo parameter class
+- m_bIsGrantable
 ms.assetid: 245df365-421f-43c6-9fcd-fb2197c871c6
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae6f0d10b3c7dca22ded5a65ac5930258c89ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CColumnPrivileges, CColumnPrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Asigne a la clase **CColumnPrivileges** typedef para implementar la clase **CColumnPrivilegeInfo**del parámetro.  
+# <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a>CColumnPrivileges, CColumnPrivilegeInfo
+Llamar a la clase de typedef **CColumnPrivileges** para implementar su clase de parámetro **CColumnPrivilegeInfo**.  
   
-## Comentarios  
- Vea [Clases de conjunto de filas de esquema y clases de Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre cómo utilizar clases typedef.  
+## <a name="remarks"></a>Comentarios  
+ Vea [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) para obtener más información sobre el uso de clases typedef.  
   
- Esta clase identifica los privilegios en las columnas de las tablas, definido en el catálogo, a las que están disponibles o concedido por un usuario determinado.  
+ Esta clase identifica los privilegios en columnas de tablas definidas en el catálogo que están disponibles para o concedidos por un usuario determinado.  
   
- La tabla siguiente se enumeran los miembros de datos de la clase y sus columnas correspondientes de OLE DB.  Vea [Conjunto de filas de COLUMN\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms715800.aspx) en *la referencia del* programador para obtener más información sobre el esquema y las columnas.  
+ En la tabla siguiente se enumera los miembros de datos de la clase y sus columnas OLE DB correspondiente. Vea [conjunto de filas COLUMN_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms715800.aspx) en el *referencia del programador de OLE DB* para obtener más información sobre el esquema y las columnas.  
   
 |Miembros de datos|Columnas de OLE DB|  
-|-----------------------|------------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_szPrivilegeType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_szPrivilegeType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Requisitos  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbsch.h  
   
-## Vea también  
- [CRestrictions \(Clase\)](../../data/oledb/crestrictions-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRestrictions (Clase)](../../data/oledb/crestrictions-class.md)

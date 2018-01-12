@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 044f4888e4b9d83ddfcff9f5a1ed5e7a8bc84204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 877bf138fa413e7e162c1f46c2d4010b2cba4613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ymmword"></a>YMMWORD
 Se utiliza en los operandos multimedios de 256 bits con instrucciones de extensiones de Vector avanzadas de Intel (AVX).  

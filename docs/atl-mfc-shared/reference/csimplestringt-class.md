@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,37 +37,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CSimpleStringT::StringLength
 - ATLSIMPSTR/ATL::CSimpleStringT::Truncate
 - ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, CSimpleStringT
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0b60a7b5c58c33ed4d8be67e1de603ef5f711742
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplestringt-class"></a>Clase CSimpleStringT
 Esta clase representa un `CSimpleStringT` objeto.  
@@ -94,14 +78,14 @@ class CSimpleStringT
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleStringT::PCXSTR](#pcxstr)|Un puntero a una cadena de constante.|  
 |[CSimpleStringT::PXSTR](#pxstr)|Un puntero a una cadena.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleStringT::CSimpleStringT](#ctor)|Construye `CSimpleStringT` objetos de varias maneras.|  
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destructor.|  
@@ -109,7 +93,7 @@ class CSimpleStringT
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleStringT::Append](#append)|Anexa un `CSimpleStringT` objeto en una existente `CSimpleStringT` objeto.|  
 |[CSimpleStringT::AppendChar](#appendchar)|Anexa un carácter existente `CSimpleStringT` objeto.|  
@@ -138,7 +122,7 @@ class CSimpleStringT
 
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Obtiene acceso directamente a los caracteres que se almacenan en un `CSimpleStringT` objeto como una cadena de estilo C.|  
 |[CSimpleStringT::operator\[\]](#operator_at)|Devuelve el carácter que ocupa una posición determinada: sustitución de operador para `GetAt`.|  

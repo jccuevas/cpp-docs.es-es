@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,38 +31,21 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="ccomsafearray-class"></a>Clase CComSafeArray
+# <a name="ccomsafearray-class"></a>CComSafeArray (clase)
 Esta clase es un contenedor de la estructura **SAFEARRAY** .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -81,21 +63,21 @@ class CComSafeArray
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|El constructor.|  
 |[CComSafeArray:: ~ CComSafeArray](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSafeArray::Add](#add)|Agrega uno o más elementos, o una estructura **SAFEARRAY** , a `CComSafeArray`.|  
 |[CComSafeArray::Attach](#attach)|Asocia una estructura **SAFEARRAY** a un objeto `CComSafeArray` .|  
 |[CComSafeArray::CopyFrom](#copyfrom)|Copia el contenido de una estructura **SAFEARRAY** en el objeto `CComSafeArray` .|  
-|[CComSafeArray::CopyTo](#copyto)|Crea una copia del objeto `CComSafeArray`.|  
-|[CComSafeArray:: Create](#create)|Crea un objeto `CComSafeArray`.|  
-|[CComSafeArray:: Destroy](#destroy)|Destruye un objeto `CComSafeArray`.|  
+|[CComSafeArray::CopyTo](#copyto)|Crea una copia del objeto `CComSafeArray` .|  
+|[CComSafeArray::Create](#create)|Crea un objeto `CComSafeArray`.|  
+|[CComSafeArray::Destroy](#destroy)|Destruye un objeto `CComSafeArray`.|  
 |[CComSafeArray::Detach](#detach)|Desasocia un elemento **SAFEARRAY** de un objeto `CComSafeArray` .|  
 |[CComSafeArray::GetAt](#getat)|Recupera un único elemento de una matriz unidimensional.|  
 |[CComSafeArray::GetCount](#getcount)|Devuelve el número de elementos de la matriz.|  
@@ -112,7 +94,7 @@ class CComSafeArray
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Transmite un valor a un puntero **SAFEARRAY** .|  
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera un elemento de la matriz.|  
@@ -121,18 +103,18 @@ class CComSafeArray
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComSafeArray::m_psa](#m_psa)|Este miembro de datos contiene la dirección de la estructura **SAFEARRAY** .|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComSafeArray`Proporciona un contenedor para la [tipo de datos SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) (clase), lo que facilita la para crear y administrar matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.  
+ `CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.  
   
  `CComSafeArray` simplifica el paso de matrices entre procesos y, además, proporciona seguridad adicional al comprobar los valores de índice de matriz con los limites superior e inferior.  
   
  El límite inferior de `CComSafeArray` puede empezar por cualquier valor definido por el usuario, pero las matrices a las que se accede a través de C++ usan un límite inferior de 0. Otros lenguajes como Visual Basic pueden usar otros valores límite (por ejemplo, de -10 a 10).  
   
- Use [CComSafeArray:: Create](#create) para crear un `CComSafeArray` objeto, y [CComSafeArray:: Destroy](#destroy) para eliminarlo.  
+ Use [CComSafeArray::Create](#create) para crear un objeto `CComSafeArray` y [CComSafeArray::Destroy](#destroy) para eliminarlo.  
   
  Un elemento `CComSafeArray` puede contener el siguiente subconjunto de tipos de datos VARIANT:  
   
@@ -158,7 +140,7 @@ class CComSafeArray
  **Encabezado:** atlsafe.h  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cpp[NVC_ATL_Utilities #75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  Agrega uno o más elementos, o una estructura **SAFEARRAY** , a `CComSafeArray`.  
@@ -276,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  Este método copia el contenido de un **SAFEARRAY** en actual `CComSafeArray` objeto. Se reemplazará el contenido existente de la matriz.  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
- Crea una copia del objeto `CComSafeArray`.  
+ Crea una copia del objeto `CComSafeArray` .  
   
 ```
 HRESULT CopyTo(LPSAFEARRAY* ppArray);
@@ -292,7 +274,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Comentarios  
  Este método copia el contenido de un `CComSafeArray` objeto en un **SAFEARRAY** estructura.  
   
-##  <a name="create"></a>CComSafeArray:: Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  Crea una interfaz `CComSafeArray`.  
   
 ```
@@ -319,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Comentarios  
  A `CComSafeArray` objeto puede crearse a partir de una **SAFEARRAYBOUND** estructura y el número de dimensiones, o especificando el número de elementos de la matriz y el límite inferior. Si la matriz es estar accesibles desde Visual C++, el límite inferior debe ser 0. Otros lenguajes pueden permitir otros valores para el límite inferior (por ejemplo, Visual Basic permite matrices con elementos con un intervalo como -10 a 10).  
   
-##  <a name="destroy"></a>CComSafeArray:: Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  Destruye un objeto `CComSafeArray`.  
   
 ```
@@ -606,8 +588,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  El `bCopy` marca se tiene en cuenta cuando los elementos de tipo `BSTR` o **VARIANT** se agregan a una matriz. El valor predeterminado de **TRUE** garantiza que se crea una nueva copia de los datos cuando el elemento se agrega a la matriz.  
   
 ## <a name="see-also"></a>Vea también  
- [Tipo de datos SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [CComSafeArray:: Create](#create)   
  [CComSafeArray:: Destroy](#destroy)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

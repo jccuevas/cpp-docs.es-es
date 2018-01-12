@@ -45,11 +45,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cfc812351da16f175e6e7d652d57a11d3a62c79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crect-class"></a>CRect (clase)
 Similar a una ventana de [RECT](../../mfc/reference/rect-structure1.md) estructura.  
@@ -64,13 +65,13 @@ class CRect : public tagRECT
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRect::CRect](#crect)|Construye un objeto `CRect`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRect::BottomRight](#bottomright)|Devuelve el punto de la esquina inferior derecha de `CRect`.|  
 |[CRect::CenterPoint](#centerpoint)|Devuelve el punto central de `CRect`.|  
@@ -97,7 +98,7 @@ class CRect : public tagRECT
 |[CRect::Width](#width)|Calcula el ancho de `CRect`.|  
   
 ### <a name="public-operators"></a>Operadores públicos    
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRect::operator-](#operator_-)|Resta los desplazamientos especificados de `CRect` o desinfla `CRect` y devuelve resultante `CRect`.|  
 |[CRect::operator LPCRECT](#operator_lpcrect)|Convierte un `CRect` a una **LPCRECT**.|  

@@ -1,49 +1,49 @@
 ---
-title: "fegetenv1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fetegenv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fegetenv"
-  - "fenv/fegetenv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fetegenv (función)"
+title: fegetenv1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fetegenv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fegetenv
+- fenv/fegetenv
+dev_langs: C++
+helpviewer_keywords: fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3da1a5837a2c2e3a2cd1c7987363b251bc67b567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# fegetenv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El entorno actual de punto flotante se almacena en el objeto especificado.  
+# <a name="fegetenv"></a>fegetenv
+Almacena el entorno actual de punto flotante en el objeto especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int fegetenv(  
@@ -52,26 +52,26 @@ int fegetenv(
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `penv`  
- Puntero a un `fenv_t` objeto para contener los valores de punto flotante del entorno actual.  
+ Puntero a un objeto `fenv_t` que contiene los valores actuales del entorno de punto flotante.  
   
-## Valor devuelto  
- Devuelve 0 si el entorno de punto flotante se almacenó correctamente en `penv`. De lo contrario, devuelve un valor distinto de cero.  
+## <a name="return-value"></a>Valor devuelto  
+ Devuelve 0 si el entorno de punto flotante se ha almacenado correctamente en `penv`. De lo contrario, devuelve un valor distinto de cero.  
   
-## Comentarios  
- El `fegetenv` función almacena el entorno actual de punto flotante en el objeto al que señala `penv`. Flotante entorno punto es el conjunto de indicadores de estado y control de los modos que afectan a los cálculos de punto flotante. Esto incluye el modo de redondeo de dirección y los indicadores de estado para las excepciones de punto flotante. Si `penv` no señala a una `fenv_t` objeto posterior comportamiento es indefinido.  
+## <a name="remarks"></a>Comentarios  
+ La función `fegetenv` almacena el entorno actual de punto flotante en el objeto al que apunta `penv`. El entorno de punto flotante consiste en el conjunto de marcas de estado y modos de control que afectan a los cálculos de punto flotante. Incluye el modo de dirección de redondeo y las marcas de estado de las excepciones de punto flotante.  Si `penv` no apunta a un objeto `fenv_t` válido, el comportamiento posterior es indefinido.  
   
- Para utilizar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante el uso de la `#pragma fenv_access(on)` Directiva antes de la llamada. Para obtener más información, consulta [fenv\_access](../../preprocessor/fenv-access.md).  
+ Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`fegetenv`|\<fenv.h\>|\<cfenv\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`fegetenv`|\<fenv.h>|\<cfenv>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetenv](../../c-runtime-library/reference/fesetenv1.md)

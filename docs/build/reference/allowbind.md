@@ -1,45 +1,44 @@
 ---
-title: "/ALLOWBIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/allowbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALLOWBIND (opción de editbin)"
-  - "/ALLOWBIND (opción de editbin)"
-  - "-ALLOWBIND (opción de editbin)"
+title: -ALLOWBIND | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /allowbind
+dev_langs: C++
+helpviewer_keywords:
+- ALLOWBIND editbin option
+- /ALLOWBIND editbin option
+- -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a4cbd5c619b0a9e146adb9a8ec9117f59e01b89d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /ALLOWBIND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica si el archivo DLL puede enlazarse.  
+# <a name="allowbind"></a>/ALLOWBIND
+Especifica si se puede enlazar un archivo DLL.  
   
 ```  
   
 /ALLOWBIND[:NO]  
-  
 ```  
   
-## Comentarios  
- Las opciones establecidas de **\/ALLOWBIND** un bit en un encabezado de DLL que indica a Bind.exe que la imagen se permite ser enlazada.  El enlace puede permitir que una imagen cargue más rápidamente cuando el cargador no tiene que rebase y realizar la corrección de la dirección para cada archivo DLL hace referencia.  Puede que no desee DLL que se enlazará si ha sido digitalmente firmar\- enlace reemplaza la firma.  El enlace no tiene ningún efecto si la distribución aleatoria \(ASLR\) de diseño del espacio de direcciones está habilitado para la imagen utilizando **\/DYNAMICBASE** en las versiones de Windows que ASLR admiten.  
+## <a name="remarks"></a>Comentarios  
+ El **/ALLOWBIND** opción establece un bit en el encabezado de un archivo DLL que le indica a Bind.exe que la imagen se permite enlazar. Enlace puede permitir que una imagen que se cargará más rápido cuando el cargador no tiene rebase y realizar la corrección de la dirección para cada DLL que se hace referencia. Puede que no desee un archivo DLL se enlace si se ha firmado digitalmente, el enlace invalida la firma. Enlace no tiene ningún efecto si la selección aleatoria de diseño de espacio de direcciones (ASLR) está habilitada para la imagen mediante el uso de **/DYNAMICBASE** en versiones de Windows compatibles con ASLR.  
   
- Utilice **\/ALLOWBIND:NO** para evitar que Bind.exe enlace DLL.  
+ Use **/ALLOWBIND: no** para impedir que el archivo DLL de enlace Bind.exe.  
   
- Para obtener más información, vea la opción del vinculador [\/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) .  
+ Para obtener más información, consulte el [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) opción del vinculador.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones de EDITBIN](../../build/reference/editbin-options.md)

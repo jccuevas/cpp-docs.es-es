@@ -1,29 +1,28 @@
 ---
-title: "La utilizaci&#243;n de un nombre de funci&#243;n sin () no genera c&#243;digo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funciones [C++], sin paréntesis"
+title: "Uso de nombre de función sin () No genera código | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c03706be0b9853cbbdebe79b58e410f7237692ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# La utilizaci&#243;n de un nombre de funci&#243;n sin () no genera c&#243;digo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se utiliza sin paréntesis un nombre de función declarado en el programa, el compilador no produce código.  Esto ocurrirá independientemente de si la función utiliza o no parámetros, ya que el compilador calcula la dirección de la función; sin embargo, como el operador de llamada a la función "\(\)" no está presente, no se realiza ninguna llamada.  El resultado es similar al siguiente:  
+# <a name="using-function-name-without--produces-no-code"></a>La utilización de un nombre de función sin () no genera código
+Cuando se utiliza el nombre de una función declarado en el programa sin paréntesis, el compilador no genera código. Esto ocurre independientemente de si la función toma parámetros porque el compilador calcula la dirección de la función; Sin embargo, dado que el operador de llamada de función "()" no está presente, se realiza ninguna llamada. El resultado es similar al siguiente:  
   
 ```  
 // compile with /Wall to generate a warning  
@@ -31,9 +30,9 @@ int a;
 a;      // no code generated here either  
 ```  
   
- En Visual C\+\+, no se generan resultados de diagnóstico ni al utilizar el nivel 4 de advertencia.  No se emite ninguna advertencia y no se produce código.  
+ En Visual C++, incluso con el nivel de advertencia 4, genera ninguna salida de diagnóstico. Se genera ninguna advertencia; no se genera ningún código.  
   
- El código de ejemplo siguiente se compila \(con una advertencia\) y vincula correctamente sin error, pero no produce código relacionado con `funcn( )`.  Para que esto funcione correctamente, debe agregar el operador de llamada a función "\(\)".  
+ El código de ejemplo siguiente se compila (con una advertencia) y vincula correctamente sin errores, pero no produce código en referencia a `funcn( )`. Para que funcione correctamente, agregue el operador de llamada de función "()".  
   
 ```  
 #include <stdio.h>  
@@ -49,5 +48,5 @@ void funcn() {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Optimizar el código](../../build/reference/optimizing-your-code.md)

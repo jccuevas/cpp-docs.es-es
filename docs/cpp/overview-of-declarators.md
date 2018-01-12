@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- declarators, about declarators
+dev_langs: C++
+helpviewer_keywords: declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
 Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Especificadores, que se describen en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, se describen en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  
@@ -56,7 +53,7 @@ const char *pch, ch;
   
  **Declaradores de punteros, referencias y matrices**  
   
- Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El ** \* ** operador declara el nombre como puntero; el ** & ** operador declara como referencia.  
+ Los operadores de puntero que se insertan delante del nombre hacen que el objeto sea un puntero o referencia.  El  **\***  operador declara el nombre como puntero; el  **&**  operador declara como referencia.  
   
 ```  
 int *i; // declarator is *i  

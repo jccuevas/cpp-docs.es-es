@@ -1,37 +1,40 @@
 ---
-title: "Obtener datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "datos [C++], obtener"
-  - "obtener"
-  - "plantillas de consumidor OLE DB [C++], obtener datos"
-  - "conjuntos de filas [C++], obtener"
+title: Capturar datos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Obtener datos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible obtener o recuperar datos.  Según el tipo de descriptor de acceso que estemos utilizando, puede resultar conveniente enlazar las columnas.  
+# <a name="fetching-data"></a>Obtener datos
+Después de abrir el origen de datos, sesión y objetos de conjunto de filas, puede capturar datos. Según el tipo de descriptor de acceso que usa, tendrá que enlazar las columnas.  
   
-### Para obtener datos  
+### <a name="to-fetch-data"></a>Para capturar los datos  
   
-1.  Abra el conjunto de filas con el comando **Open** correspondiente.  
+1.  Abra el conjunto de filas con la correspondiente **abiertos** comando.  
   
-2.  Si utiliza `CManualAccessor`, enlace las columnas de resultados si aún no lo ha hecho.  Para enlazar las columnas, llame a `GetColumnInfo` y después cree un descriptor de acceso con los enlaces, como se muestra en el siguiente ejemplo:  
+2.  Si utilizas `CManualAccessor`, enlazar las columnas de salida si aún no lo ha hecho. Para enlazar las columnas, llame a `GetColumnInfo`y, a continuación, cree un descriptor de acceso con los enlaces, tal como se muestra en el ejemplo siguiente:  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible
     rs.Bind();  
     ```  
   
-3.  Cree un bucle `while` para recuperar los datos.  En el bucle, llame a `MoveNext` para hacer avanzar el cursor y probar el valor devuelto con S\_OK, como se muestra en el siguiente ejemplo:  
+3.  Escribir un `while` bucle para recuperar los datos. En el bucle, llame a `MoveNext` para avanzar el cursor y probar el valor devuelto con S_OK, como se muestra en el ejemplo siguiente:  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible
     }  
     ```  
   
-4.  Dentro del bucle `while`, se pueden recuperar los datos de acuerdo con el tipo de descriptor de acceso.  
+4.  En el `while` bucle, puede capturar los datos según el tipo de descriptor de acceso.  
   
-    -   Si utiliza la clase [CAccessor](../../data/oledb/caccessor-class.md), debe haber un registro de usuario que contenga los miembros de datos.  Se puede obtener acceso a los datos por medio de esos miembros de datos, como se muestra en el siguiente ejemplo:  
+    -   Si usas el [CAccessor](../../data/oledb/caccessor-class.md) (clase), debe tener un registro de usuario que contiene miembros de datos. Puede tener acceso a los datos mediante los miembros de datos, como se muestra en el ejemplo siguiente:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible
         }  
         ```  
   
-    -   Si utiliza la clase `CDynamicAccessor` o `CDynamicParameterAccessor`, puede recuperar datos mediante las funciones de acceso `GetValue` y `GetColumn`, como se muestra en el ejemplo siguiente.  Si desea determinar el tipo de datos que está utilizando, use `GetType`.  
+    -   Si usas el `CDynamicAccessor` o `CDynamicParameterAccessor` (clase), se pueden recuperar datos mediante el uso de las funciones de acceso `GetValue` y `GetColumn`, tal y como se muestra en el ejemplo siguiente. Si desea determinar el tipo de datos que usa, use `GetType`.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible
         }  
         ```  
   
-    -   Si utiliza `CManualAccessor`, debe especificar sus propios miembros de datos, enlazarlos personalmente y obtener acceso a ellos directamente, como se muestra en el ejemplo siguiente:  
+    -   Si usa `CManualAccessor`, debe especificar sus propios miembros de datos, enlazarlos personalmente y tener acceso a ellos directamente, como se muestra en el ejemplo siguiente:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ Al abrir los objetos de origen de datos, sesión y conjuntos de filas es posible
         }  
         ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con plantillas de consumidor OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,57 +1,59 @@
 ---
-title: "ccos, ccosf, ccosl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "ccos"
-  - "ccosf"
-  - "ccosl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "ccos"
-  - "ccosf"
-  - "ccosl"
-  - "complex/ccos"
-  - "complex/ccosf"
-  - "complex/ccosl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ccos (función)"
-  - "ccosf (función)"
-  - "ccosl (función)"
+title: ccos, ccosf, ccosl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- ccos
+- ccosf
+- ccosl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- ccos
+- ccosf
+- ccosl
+- complex/ccos
+- complex/ccosf
+- complex/ccosl
+dev_langs: C++
+helpviewer_keywords:
+- ccos function
+- ccosf function
+- ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 263172acd83a5276aab936964cb871744ff3c157
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ccos, ccosf, ccosl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
 Recupera el coseno de un número complejo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _Dcomplex ccos(   
@@ -71,25 +73,25 @@ _Lcomplex ccosl(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `z`  
  Número complejo que representa el ángulo en radianes.  
   
-## Valor devuelto  
- Coseno de `z`, en radianes.  
+## <a name="return-value"></a>Valor devuelto  
+ Coseno de `z` en radianes.  
   
-## Comentarios  
- Puesto que C\+\+ permite las sobrecargas, es posible llamar a las sobrecargas de `ccos` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `ccos` siempre toma y devuelve un `_Dcomplex` valor.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `ccos` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `ccos` siempre toma y devuelve un valor `_Dcomplex` .  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rutina|Encabezado C|Encabezado C\+\+|  
-|------------|------------------|----------------------|  
-|`ccos`, `ccosf`, `ccosl`|\<complex.h\>|\< ccomplex \>|  
+|Rutina|Encabezado C|Encabezado C++|  
+|-------------|--------------|------------------|  
+|`ccos`,               `ccosf`, `ccosl`|\<complex.h>|\<ccomplex>|  
   
  Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
@@ -99,7 +101,7 @@ _Lcomplex ccosl(
  [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [Ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
+ [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
  [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
  [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)

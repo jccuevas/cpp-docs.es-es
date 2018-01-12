@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-schema-rowsets"></a>Admitir conjuntos de filas de esquema
 Conjuntos de filas de esquema que los consumidores puedan obtener información acerca de un almacén de datos sin conocer su estructura subyacente, o esquema. Por ejemplo, un almacén de datos podría tener tablas organizadas en una jerarquía definida por el usuario, por lo que no habría ninguna manera de asegurarse de conocimiento del esquema sin leerlo. (Como otro ejemplo, observe que los asistentes de Visual C++ utilizan conjuntos de filas de esquema para generar descriptores de acceso para el consumidor). Para permitir que el consumidor hacer esto, objeto de sesión del proveedor expone los métodos en el [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaz. En las aplicaciones de Visual C++, usas la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) clase para implementar **IDBSchemaRowset**.  

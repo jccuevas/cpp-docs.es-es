@@ -1,36 +1,38 @@
 ---
-title: "IErrorRecordsImpl::GetBasicErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IErrorRecordsImpl::GetBasicErrorInfo"
-  - "IErrorRecordsImpl::GetBasicErrorInfo"
-  - "GetBasicErrorInfo"
-  - "ATL.IErrorRecordsImpl.GetBasicErrorInfo"
-  - "IErrorRecordsImpl.GetBasicErrorInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBasicErrorInfo (método)"
+title: 'IErrorRecordsImpl:: Getbasicerrorinfo | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IErrorRecordsImpl::GetBasicErrorInfo
+- IErrorRecordsImpl::GetBasicErrorInfo
+- GetBasicErrorInfo
+- ATL.IErrorRecordsImpl.GetBasicErrorInfo
+- IErrorRecordsImpl.GetBasicErrorInfo
+dev_langs: C++
+helpviewer_keywords: GetBasicErrorInfo method
 ms.assetid: d0b4dec3-f32a-4aaa-8365-524f2e7c8395
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8062afd0529970eab2e177182595e91eaa14ceea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetBasicErrorInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve información básica sobre el error, como el código devuelto y el número de error proveedor\- concreto.  
+# <a name="ierrorrecordsimplgetbasicerrorinfo"></a>IErrorRecordsImpl::GetBasicErrorInfo
+Devuelve información básica sobre el error, como el código de retorno y el número de error específico del proveedor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -40,11 +42,11 @@ Devuelve información básica sobre el error, como el código devuelto y el núm
 );  
 ```  
   
-#### Parámetros  
- Vea [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/en-us/library/ms723907.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [IErrorRecords::GetBasicErrorInfo](https://msdn.microsoft.com/en-us/library/ms723907.aspx) en el *referencia del programador OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IErrorRecordsImpl \(Clase\)](../../data/oledb/ierrorrecordsimpl-class.md)
+## <a name="see-also"></a>Vea también  
+ [IErrorRecordsImpl (Clase)](../../data/oledb/ierrorrecordsimpl-class.md)

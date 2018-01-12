@@ -1,32 +1,34 @@
 ---
-title: "C&#243;mo: Enumerar archivos en un directorio (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "directorios [C++], enumerar archivos"
-  - "archivos [C++], enumerar archivos"
+title: "Cómo: enumerar los archivos en un directorio (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], listing files
+- directories [C++], listing files
 ms.assetid: ebfc2666-229f-4b94-a9a1-e8f1b5d946d6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccad9809ac7586fb94f3997e812cb5ca7245b17f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Enumerar archivos en un directorio (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En el ejemplo de código siguiente se muestra cómo recuperar una lista de los archivos de un directorio.  Además, los subdirectorios están enumerados.  El ejemplo de código siguiente utiliza los métodos <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> y <xref:System.IO.Directory.GetDirectories%2A> para mostrar el contenido del directorio C:\\Windows.  
+# <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Cómo: Enumerar archivos en un directorio (C++/CLI)
+En el ejemplo de código siguiente se muestra cómo recuperar una lista de los archivos en un directorio. Además, se enumeran los subdirectorios. El siguiente ejemplo de código utiliza el <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> y <xref:System.IO.Directory.GetDirectories%2A> métodos para mostrar el contenido del directorio C:\Windows.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // enum_files.cpp  
@@ -51,6 +53,6 @@ int main()
 }  
 ```  
   
-## Vea también  
- [E\/S de archivos y secuencias](../Topic/File%20and%20Stream%20I-O.md)   
- [Programación de .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [E/S de archivos y secuencias](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programación de .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

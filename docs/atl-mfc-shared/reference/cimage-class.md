@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,16 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage (clase)
 `CImage`proporciona compatibilidad con mapas de bits mejorada, incluida la capacidad para cargar y guardar imágenes en formatos JPEG, GIF, BMP y gráficos de red portátiles (PNG).  
@@ -104,13 +88,13 @@ class CImage
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CImage::CImage](#cimage)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|Muestra los mapas de bits que tienen píxeles transparentes o semitransparentes.|  
 |[CImage::Attach](#attach)|Asocia un `HBITMAP` a una `CImage` objeto. Puede utilizarse con mapas de bits de sección no DIB o mapas de bits de sección DIB.|  
@@ -154,7 +138,7 @@ class CImage
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CImage::operator HBITMAP](#operator_hbitmap)|Devuelve el identificador de Windows asociado a la `CImage` objeto.|  
   
@@ -195,7 +179,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- Cuando usas `CImage` en un proyecto MFC, tenga en cuenta qué funciones de miembro en el proyecto esperan un puntero a un [CBitmap](../../mfc/reference/cbitmap-class.md) objeto. Si desea usar `CImage` con una función de este tipo, como [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), use [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), pasarlo su `CImage` `HBITMAP`y usar el valor devuelto `CBitmap*`.  
+ Cuando usas `CImage` en un proyecto MFC, tenga en cuenta qué funciones de miembro en el proyecto esperan un puntero a un [CBitmap](../../mfc/reference/cbitmap-class.md) objeto. Si desea usar `CImage` con una función de este tipo, como [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), use [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), pasarlo su `CImage` `HBITMAP`y usar el devuelto`CBitmap*`.  
 
   
 ## <a name="example"></a>Ejemplo  
@@ -391,7 +375,7 @@ BOOL BitBlt(
  Coordenada y lógica de la esquina superior izquierda del rectángulo de destino.  
   
  `dwROP`  
- La operación de trama que se realice. Los códigos de operación de trama definen exactamente cómo combinar los bits del origen, el destino y el patrón (de acuerdo con el pincel seleccionado actualmente) para formar el destino. Vea [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) en la [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obtener una lista de otros códigos de operación de trama y sus descripciones.  
+ La operación de trama que se realice. Los códigos de operación de trama definen exactamente cómo combinar los bits del origen, el destino y el patrón (de acuerdo con el pincel seleccionado actualmente) para formar el destino. Vea [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) en el SDK de Windows para obtener una lista de otros códigos de operación de trama y sus descripciones.  
   
  `pointDest`  
  A [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) estructura para indicar la esquina superior izquierda del rectángulo de destino.  
@@ -418,7 +402,7 @@ BOOL BitBlt(
  Es distinto de cero si es correcto. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Para obtener más información, consulte [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) del SDK de Windows.  
   
 ##  <a name="cimage"></a>CImage::CImage  
  Construye un objeto `CImage`.  
@@ -497,7 +481,7 @@ BOOL CreateEx(
 - **BI_BITFIELDS** se descomprime el formato y la tabla de colores se compone de tres `DWORD` máscaras de color que especifican el rojo, verde y azul, respectivamente, componentes, de cada píxel. Esto es válido cuando se usa con los mapas de bits de 16 y 32 bpp.  
   
  *pdwBitfields*  
- Solo se utiliza si `eCompression` está establecido en **BI_BITFIELDS**, en caso contrario, debe ser **NULL**. Un puntero a una matriz de tres `DWORD` máscaras de bits, especificar qué bits de cada píxel se usan para el rojo, verde y azul del color, los componentes, respectivamente. Para obtener información sobre restricciones para los campos de bits, consulte [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Solo se utiliza si `eCompression` está establecido en **BI_BITFIELDS**, en caso contrario, debe ser **NULL**. Un puntero a una matriz de tres `DWORD` máscaras de bits, especificar qué bits de cada píxel se usan para el rojo, verde y azul del color, los componentes, respectivamente. Para obtener información sobre restricciones para los campos de bits, consulte [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) del SDK de Windows.  
   
  `dwFlags`  
  Especifica si el objeto de mapa de bits no tiene un canal alfa. Puede ser una combinación de cero o más de los siguientes valores:  
@@ -651,7 +635,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Comentarios  
  Este valor determina el número de bits que definen cada píxel y el número máximo de colores del mapa de bits.  
   
- Normalmente, los bits por píxel es 1, 4, 8, 16, 24 o 32. Consulte la **biBitCount** miembro de [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) en la [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obtener más información acerca de este valor.  
+ Normalmente, los bits por píxel es 1, 4, 8, 16, 24 o 32. Consulte la **biBitCount** miembro de [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) en el SDK de Windows para obtener más información acerca de este valor.  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  Recupera los valores de color rojos, verdes, azul (RGB) de un intervalo de entradas en la paleta de la sección DIB.  
@@ -704,7 +688,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  Una matriz de GUID, con cada elemento que corresponde a uno de los tipos de archivo en la cadena. En el ejemplo de `pszAllFilesDescription` a continuación, `aguidFileTypes`[0] es `GUID_NULL` y los valores de matriz restantes son los formatos de archivo de imagen compatibles con el sistema operativo actual.  
   
 > [!NOTE]
->  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** del SDK de Windows.  
   
  `pszAllFilesDescription`  
  Si este parámetro no es **NULL**, la cadena de filtro tendrá un filtro adicional al principio de la lista. Este filtro tendrá el valor actual de `pszAllFilesDescription` para su descripción y acepta archivos con cualquier extensión compatible con cualquier otro exportador de la lista.  
@@ -743,7 +727,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 0 para la carga, el archivo de todos los tipos se incluyen de forma predeterminada  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** para guardar, estos archivos se excluyen de forma predeterminada porque normalmente tienen requisitos especiales.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** para guardar, estos archivos se excluyen de forma predeterminada porque normalmente tienen requisitos especiales.  
   
  `chSeparator`  
  El separador utilizado entre los formatos de imagen. Vea **comentarios** para obtener más información.  
@@ -756,13 +740,13 @@ CImage::GetExporterFilterString(
   
  El parámetro *strExporter* tiene el formato:  
   
- archivo description0 | \*.ext0 | filedescription1 | \*. ext1 |... Descripción de archivo *n*|\*. ext *n*||  
+ archivo description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*. ext1 &#124;... Descripción de archivo  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- donde ' |' es el carácter separador especificado por `chSeparator`. Por ejemplo:  
+ donde ' &#124;' es el carácter separador especificado por `chSeparator`. Por ejemplo:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Use el separador predeterminado ' |' Si esta cadena se pasa a una MFC `CFileDialog` objeto. Use el separador null '\0' Si esta cadena se pasa a un cuadro de diálogo Guardar archivo común.  
+ Use el separador predeterminado ' &#124;' Si esta cadena se pasa a una MFC `CFileDialog` objeto. Use el separador null '\0' Si esta cadena se pasa a un cuadro de diálogo Guardar archivo común.  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  Recupera el alto, en píxeles, de una imagen.  
@@ -793,7 +777,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  Una matriz de GUID, con cada elemento que corresponde a uno de los tipos de archivo en la cadena. En el ejemplo de `pszAllFilesDescription` a continuación, `aguidFileTypes`[0] es `GUID_NULL` con la matriz restante valores son los formatos de archivo de imagen compatibles con el sistema operativo actual.  
   
 > [!NOTE]
->  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** del SDK de Windows.  
   
  `pszAllFilesDescription`  
  Si este parámetro no es **NULL**, la cadena de filtro tendrá un filtro adicional al principio de la lista. Este filtro tendrá el valor actual de `pszAllFilesDescription` para su descripción y acepta archivos con cualquier extensión compatible con cualquier otro exportador de la lista.  
@@ -832,7 +816,7 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 0 para la carga, el archivo de todos los tipos se incluyen de forma predeterminada  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** para guardar, estos archivos se excluyen de forma predeterminada porque normalmente tienen requisitos especiales.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** para guardar, estos archivos se excluyen de forma predeterminada porque normalmente tienen requisitos especiales.  
   
  `chSeparator`  
  El separador utilizado entre los formatos de imagen. Vea **comentarios** para obtener más información.  
@@ -842,13 +826,13 @@ CImage::GetImporterFilterString(
   
  El parámetro *strImporter* tiene el formato:  
   
- archivo description0 | \*.ext0 | filedescription1 | \*. ext1 |... Descripción de archivo *n*|\*. ext *n*||  
+ archivo description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*. ext1 &#124;... Descripción de archivo  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- donde ' |' es el carácter separador especificado por `chSeparator`. Por ejemplo:  
+ donde ' &#124;' es el carácter separador especificado por `chSeparator`. Por ejemplo:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Use el separador predeterminado ' |' Si esta cadena se pasa a una MFC `CFileDialog` objeto. Use el separador null '\0' Si esta cadena se pasa a un común **abrir archivo** cuadro de diálogo.  
+ Use el separador predeterminado ' &#124;' Si esta cadena se pasa a una MFC `CFileDialog` objeto. Use el separador null '\0' Si esta cadena se pasa a un común **abrir archivo** cuadro de diálogo.  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  Recupera el número máximo de entradas en la tabla de colores.  
@@ -1129,7 +1113,7 @@ BOOL MaskBlt(
  El desplazamiento vertical de píxeles para el mapa de bits de la máscara especificada por el `hbmMask` parámetro.  
   
  `dwROP`  
- Especifica el primer plano y fondo trama ternario los códigos de operación que utiliza el método para controlar la combinación de datos de origen y destino. El código de operación de trama de fondo se almacena en el byte de orden superior de la palabra de orden superior de este valor; el código de operación de trama de primer plano se almacena en el byte de orden inferior de la palabra de orden superior de este valor; la palabra de orden inferior de este valor se omite y debe ser cero. Para obtener una explicación de primer plano y fondo en el contexto de este método, consulte `MaskBlt` en el [!INCLUDE[winSDK](./includes/winsdk_md.md)]. Para obtener una lista de códigos de operación de trama comunes, consulte `BitBlt` en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Especifica el primer plano y fondo trama ternario los códigos de operación que utiliza el método para controlar la combinación de datos de origen y destino. El código de operación de trama de fondo se almacena en el byte de orden superior de la palabra de orden superior de este valor; el código de operación de trama de primer plano se almacena en el byte de orden inferior de la palabra de orden superior de este valor; la palabra de orden inferior de este valor se omite y debe ser cero. Para obtener una explicación de primer plano y fondo en el contexto de este método, vea `MaskBlt` en el SDK de Windows. Para obtener una lista de códigos de operación de trama comunes, vea `BitBlt` en el SDK de Windows.  
   
  `rectDest`  
  Una referencia a un `RECT` estructura, que identifica el destino.  
@@ -1185,7 +1169,7 @@ BOOL PlgBlt(
  Un identificador para el contexto de dispositivo de destino.  
   
  *pPoints*  
- Un puntero a una matriz de tres puntos en el espacio lógico que identifican los tres esquinas paralelogramo de destino. La esquina superior izquierda del rectángulo de origen se asigna al primer punto en la esquina inferior izquierda hasta el tercer punto, esta matriz y la esquina superior derecha hasta el segundo punto de esta matriz. La esquina inferior derecha del rectángulo de origen se asigna hasta el cuarto punto implícito en el paralelogramo.  
+ Un puntero a una matriz de tres puntos en el espacio lógico que identifican tres esquinas paralelogramo de destino. La esquina superior izquierda del rectángulo de origen se asigna al primer punto en la esquina inferior izquierda hasta el tercer punto, esta matriz y la esquina superior derecha hasta el segundo punto de esta matriz. La esquina inferior derecha del rectángulo de origen se asigna hasta el cuarto punto implícito en el paralelogramo.  
   
  `hbmMask`  
  Un identificador a un mapa de bits monocromático opcional que se utiliza para enmascarar los colores del rectángulo de origen.  
@@ -1220,7 +1204,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Comentarios  
  Si `hbmMask` identifica un mapa de bits monocromático válido, **PlgBit** usa este mapa de bits para enmascarar los bits de datos de color del rectángulo de origen.  
   
- Este método se aplica a Windows NT, las versiones 4.0 y versiones posteriores únicamente. Vea [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) en la [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obtener más información.  
+ Este método se aplica a Windows NT, las versiones 4.0 y versiones posteriores únicamente. Vea [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) en el SDK de Windows para obtener información más detallada.  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  Libera el contexto de dispositivo.  
@@ -1272,7 +1256,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** A comprimido en formato GIF.  
   
 > [!NOTE]
->  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Para obtener una lista completa de constantes, vea **constantes de formato de archivo de imagen** del SDK de Windows.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un `HRESULT` estándar.  
@@ -1438,7 +1422,7 @@ BOOL StretchBlt(
  El alto, en unidades lógicas, del rectángulo de destino.  
   
  `dwROP`  
- La operación de trama que se realice. Los códigos de operación de trama definen exactamente cómo combinar los bits del origen, el destino y el patrón (de acuerdo con el pincel seleccionado actualmente) para formar el destino. Vea [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) en la [!INCLUDE[winSDK](./includes/winsdk_md.md)] para obtener una lista de otros códigos de operación de trama y sus descripciones.  
+ La operación de trama que se realice. Los códigos de operación de trama definen exactamente cómo combinar los bits del origen, el destino y el patrón (de acuerdo con el pincel seleccionado actualmente) para formar el destino. Vea [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) en el SDK de Windows para obtener una lista de otros códigos de operación de trama y sus descripciones.  
   
  `rectDest`  
  Una referencia a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que identifica el destino.  
@@ -1462,7 +1446,7 @@ BOOL StretchBlt(
  Es distinto de cero si se realiza correctamente, en caso contrario, 0.  
   
 ### <a name="remarks"></a>Comentarios  
- Para obtener más información, consulte [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) en el [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Para obtener más información, consulte [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) del SDK de Windows.  
   
 ##  <a name="transparentblt"></a>CImage:: TransparentBlt  
  Copia un mapa de bits desde el contexto de dispositivo de origen en este contexto de dispositivo actual.  
@@ -1580,10 +1564,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
  [Ejemplo SimpleImage](../../visual-cpp-samples.md)   
  [Mapas de bits independientes del dispositivo](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)
- [mapas de bits independientes del dispositivo](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md) [mapas de bits independientes del dispositivo](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

@@ -22,11 +22,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bfdb54ece1669a2e3630fecad2d23ee55c2ac823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Especificar subsistema)
 ```  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
  Los números opcionales de versión `major` y `minor` mínima y predeterminada de los subsistemas son los siguientes.  
   
-|Subsistema|Mínima|Predeterminado|  
+|Subsistema|Mínima|Default|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
 |CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  

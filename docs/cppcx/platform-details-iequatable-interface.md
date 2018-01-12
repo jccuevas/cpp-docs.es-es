@@ -1,46 +1,47 @@
 ---
-title: "Platform::Details::IEquatable (Interfaz) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Details::IEquatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Details::IEquatable (Interfaz)"
+title: IEquatable (interfaz) | Documentos de Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Details::IEquatable
+dev_langs: C++
+helpviewer_keywords: Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fa871e003fed732e82145ae87bb4c77ecf32cee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Details::IEquatable (Interfaz)
+# <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable (Interfaz)
 Esta interfaz solo está pensada para uso interno y no para usarla en el desarrollo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
   
 interface class IEquatable;  
 ```  
   
-## Comentarios  
+### <a name="remarks"></a>Comentarios  
  Esta interfaz se ofrece únicamente por integridad porque se puede inspeccionar con exploradores.  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `Platform`  
   
-## Requisitos  
+### <a name="requirements"></a>Requisitos  
  **Metadatos:** platform.winmd  
   
  **Espacio de nombres:** Platform::Details  
   
-## Vea también  
- [Espacio de nombres de plataforma \(NOTINBUILD\)](http://msdn.microsoft.com/es-es/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>Vea también  
+ [Namespace de plataforma](platform-namespace-c-cx.md)

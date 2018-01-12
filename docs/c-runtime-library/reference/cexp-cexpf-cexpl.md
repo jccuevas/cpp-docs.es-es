@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fb1a26b4e461e0d542794425008ec81191000b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7138d3853faad1268148ef7517291a849525df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 Calcula el valor exponencial de base e de un número complejo.  
@@ -80,7 +81,7 @@ _Lcomplex cexpl(
  Valor de `e` elevado a la potencia de `z`.  
   
 ## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cexp` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `cexp` siempre toma y devuelve un valor `_Dcomplex` .  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cexp` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex` . En un programa de C, `cexp` siempre toma y devuelve un valor `_Dcomplex` .  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -88,7 +89,7 @@ _Lcomplex cexpl(
 |-------------|--------------|------------------|  
 |`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
- Para obtener información sobre la compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

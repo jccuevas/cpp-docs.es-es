@@ -1,52 +1,54 @@
 ---
-title: "CString Argument Passing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argument passing [C++]"
-  - "argument passing [C++], C strings"
-  - "arguments [C++], pasar"
-  - "CString objects, pasar argumentos"
-  - "funciones [C++], strings as input/output"
-  - "pasar argumentos, C strings"
-  - "string arguments"
-  - "cadenas [C++], as function input/output"
+title: Pasar argumentos de CString | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], as function input/output
+- argument passing [C++]
+- arguments [C++], passing
+- functions [C++], strings as input/output
+- argument passing [C++], C strings
+- passing arguments, C strings
+- CString objects, passing arguments
+- string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d33c8cc46ada41f851c90aaae0cabfadb1466d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CString Argument Passing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="cstring-argument-passing"></a>Paso de argumentos de CString
+Este artículo explica cómo pasar [CString](../atl-mfc-shared/reference/cstringt-class.md) objetos a las funciones y cómo devolver `CString` objetos de las funciones.  
+  
+##  <a name="_core_cstring_argument.2d.passing_conventions"></a>Convenciones de pasar argumentos de CString  
+ Cuando se define una interfaz de clase, debe determinar la convención para pasar argumentos de las funciones de miembro. Hay algunas reglas estándares para pasar y devolver `CString` objetos. Si sigue las reglas descritas en [cadenas como entradas de la función](#_core_strings_as_function_inputs) y [cadenas como resultados de funciones](#_core_strings_as_function_outputs), tendrá el código correcto y eficaz.  
+  
+##  <a name="_core_strings_as_function_inputs"></a>Cadenas como entradas (función)  
+ Una manera más eficaz y segura para utilizar un `CString` objeto en las funciones llamadas consiste en pasar un `CString` objeto a la función. A pesar del nombre, un `CString` objeto no almacena una cadena internamente como una cadena de estilo C que tiene un terminador null. En su lugar, un `CString` objeto mantiene realizar un seguimiento del número de caracteres tiene. Tener `CString` proporcionan un `LPCTSTR` puntero a una cadena terminada en null es una pequeña cantidad de trabajo que puede ser considerable si el código tiene que hacerlo de forma constante. El resultado es temporal porque cualquier cambio en el `CString` contenido invalida copias antiguas de la `LPCTSTR` puntero.  
+  
+ Tiene sentido en algunos casos, para proporcionar una cadena de estilo C. Por ejemplo, puede haber una situación donde una función llamada está escrita en C y no admite objetos. En este caso, forzar el `CString` parámetro `LPCTSTR`, y la función obtendrá una cadena de estilo C terminada en null. También puede ir a la otra dirección y crear un `CString` objeto mediante el uso de la `CString` constructor que acepta un parámetro de cadena de estilo C.  
+  
+ Si el contenido de la cadena que deban cambiarse por una función, declare el parámetro como que no es una constante `CString` referencia (**CString &**).  
+  
+##  <a name="_core_strings_as_function_outputs"></a>Cadenas como resultados de funciones  
+ Por lo general puede devolver `CString` objetos de funciones porque `CString` objetos siguen la semántica de valores como tipos primitivos. Para devolver una cadena de solo lectura, utilice una constante `CString` referencia (**const CString &**). En el ejemplo siguiente se muestra el uso de `CString` parámetros y tipos devueltos:  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]  
+  
+## <a name="see-also"></a>Vea también  
+ [Cadenas (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 
-En este artículo se explica cómo pasar los objetos de [CString](../atl-mfc-shared/reference/cstringt-class.md) a funciones y cómo devolver los objetos de `CString` de funciones.  
-  
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> Convenciones Argumento\-Que Pasan CString  
- Cuando se define una interfaz de clase, debe determinar la convención argumento\-que pasa para las funciones miembro.  Hay algunas reglas estándar para pasar y devolver los objetos de `CString` .  Si sigue las reglas descritas en [cadenas como entradas de la función](#_core_strings_as_function_inputs) y [Cadenas como resultados de la función](#_core_strings_as_function_outputs), tendrá un código eficaz, correcto.  
-  
-##  <a name="_core_strings_as_function_inputs"></a> cadenas como entradas de la función  
- La manera más eficaz y más seguro utilizar un objeto de `CString` a las funciones llamadas es pasar un objeto de `CString` a la función.  A pesar del nombre, un objeto de `CString` no almacena una cadena internamente como c. la cadena de estilo que tiene un carácter null final.  En su lugar, un objeto de `CString` conserva la pista cuidadosa del número de caracteres que tiene.  Teniendo `CString` proporcione un puntero de `LPCTSTR` a una cadena terminada en null es una pequeña cantidad de trabajo que puede resultar significativa si el código hacerlo constantemente.  El resultado es temporal porque cualquier cambio en el contenido de `CString` reemplaza las antiguas copias del puntero de `LPCTSTR` .  
-  
- Tiene sentido de proporcionar en algunos casos una cadena de lenguaje c.  Por ejemplo, puede haber una situación donde una función denominada está escrita en C y no admite objetos.  En este caso, fuerce el parámetro de `CString` a `LPCTSTR`, y la función obtendrá c. cadena terminada en null de estilo.  También puede ir la dirección y crear un objeto de `CString` utilizando el constructor de `CString` que acepta c. parámetro de cadena de estilo.  
-  
- Si fuese el contenido de la cadena a cambiar por una función, declare el parámetro como una referencia`CString` que no es una constante \(**CString&**\).  
-  
-##  <a name="_core_strings_as_function_outputs"></a> Cadenas como resultados de la función  
- Puede devolver normalmente los objetos de `CString` de funciones porque los objetos de `CString` siguen la semántica de valores como tipos primitivos.  para devolver una cadena de sólo lectura, utilice una referencia`CString` constante \(**const CString&**\).  El ejemplo siguiente se muestra el uso de los parámetros y los tipos de devolución de `CString` :  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/CPP/cstring-argument-passing_1.cpp)]  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/CPP/cstring-argument-passing_2.cpp)]  
-  
-## Vea también  
- [Cadenas](../atl-mfc-shared/strings-atl-mfc.md)

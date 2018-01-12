@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 276d93489a714dda5edd721c532c28c03b3ca41f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5f2c1cce980f97e7a99ff2347daceac05f984f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary y AfxFreeLibrary
 Procesos que se vinculan explícitamente a una llamada DLL el [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) funcionar cuando el módulo del archivo DLL ya no es necesario. Esta función disminuye recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.  

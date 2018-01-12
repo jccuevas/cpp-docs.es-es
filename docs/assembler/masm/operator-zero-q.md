@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c882fd2f6dbc94c6cd379ae716314d5af32e6970
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55b61084b5374838a7e75da8623a859e393aa798
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-zero"></a>Operador ZERO?
 Estado de marca de cero. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúa en tiempo de ejecución, no en tiempo de ensamblado.  

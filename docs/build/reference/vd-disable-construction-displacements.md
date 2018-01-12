@@ -1,82 +1,82 @@
 ---
-title: "/vd (Deshabilitar desplazamientos de constructores) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/vd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/vd0 (opción del compilador) [C++]"
-  - "/vd1 (opción del compilador) [C++]"
-  - "/vdn (deshabilitar desplazamientos de constructores): opción del compilador"
-  - "desplazamientos de constructor"
-  - "deshabilitar desplazamientos de constructores (opción del compilador)"
-  - "displacements (opción del compilador)"
-  - "vd0 (opción del compilador) [C++]"
-  - "-vd0 (opción del compilador) [C++]"
-  - "vd1 (opción del compilador) [C++]"
-  - "-vd1 (opción del compilador) [C++]"
-  - "vtordisp (campos)"
+title: -vd (deshabilitar desplazamientos de constructores) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /vd
+dev_langs: C++
+helpviewer_keywords:
+- -vd0 compiler option [C++]
+- vd1 compiler option [C++]
+- /vdn (Disable Construction Displacement) compiler option
+- constructor displacements
+- vtordisp fields
+- /vd0 compiler option [C++]
+- -vd1 compiler option [C++]
+- /vd1 compiler option [C++]
+- displacements compiler option
+- vd0 compiler option [C++]
+- Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /vd (Deshabilitar desplazamientos de constructores)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sintaxis  
+# <a name="vd-disable-construction-displacements"></a>/vd (Deshabilitar desplazamientos de constructores)
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /vdn  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `0`  
- Suprime el miembro de desplazamiento de constructor\/destructor de vtordisp.  Elija esta opción solamente si tiene la certeza de que todos los constructores y destructores de clases llaman a las funciones virtuales de manera virtual.  
+ Suprime al miembro constructor/destructor de vtordisp. Elija esta opción sólo si está seguro de que todos los constructores de clase y destructores llame virtuales funciona prácticamente.  
   
  `1`  
- Habilita la creación de los miembros de desplazamiento de constructor\/destructor de vtordisp ocultos.  Éste es el valor predeterminado.  
+ Habilita la creación de los miembros de desplazamiento de constructor/destructor de vtordisp ocultos. Esta opción es el valor predeterminado.  
   
  `2`  
- Le permite utilizar [dynamic\_cast \(Operador\)](../../cpp/dynamic-cast-operator.md) en un objeto en construcción.  Por ejemplo, un dynamic\_cast de una clase base virtual a una clase derivada.  
+ Le permite usar [dynamic_cast (operador)](../../cpp/dynamic-cast-operator.md) en un objeto que se está construyendo. Por ejemplo, un dynamic_cast de una clase base virtual a una clase derivada.  
   
- **\/vd2** agrega un campo vtordisp cuando hay una base virtual con funciones virtuales.  **\/vd1** debería ser suficiente.  El caso más común en que **\/vd2** es necesario es cuando la única función virtual en la base virtual es un destructor.  
+ **/ vd2** agrega un campo vtordisp cuando tenga una base virtual con funciones virtuales. **/ vd1** debería ser suficiente. La más común caso where **/vd2** es necesario es cuando la función virtual solo en la base virtual es un destructor.  
   
-## Comentarios  
- Estas opciones sólo se aplican al código de C\+\+ que usa bases virtuales.  
+## <a name="remarks"></a>Comentarios  
+ Estas opciones se aplican únicamente al código de C++ que usa bases virtuales.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementa la compatibilidad con el desplazamiento de construcción de C\+\+ en aquellas situaciones donde se utiliza herencia virtual.  Los desplazamientos de construcción resuelven el problema creado cuando desde un constructor se llama a una función virtual, declarada en una base virtual y reemplazada en una clase derivada, durante la construcción de otra clase derivada.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]implementa la compatibilidad con desplazamiento de construcción de C++ en situaciones donde se utiliza herencia virtual. Desplazamientos de constructores resuelve el problema que se crea cuando una función virtual, declarada en una base virtual y se reemplaza en una clase derivada, se llama desde un constructor durante la construcción de una clase derivada posterior.  
   
- El problema es que la función virtual puede recibir un puntero `this` incorrecto como consecuencia de discrepancias entre los desplazamientos a las bases virtuales de una clase y los desplazamientos a sus clases derivadas.  La solución proporciona un solo ajuste de desplazamiento de construcción, denominado campo vtordisp, para cada base virtual de una clase.  
+ El problema es que la función virtual se puede pasar incorrecta `this` puntero como resultado de las diferencias entre los desplazamientos de virtual basa la base de una clase y los desplazamientos de sus clases derivadas. La solución proporciona un ajuste de desplazamiento de construcción único, denominado campo vtordisp, para cada base virtual de una clase.  
   
- De forma predeterminada, los campos vtordisp se introducen siempre que el código define constructores y destructores definidos por el usuario y también reemplaza a funciones virtuales de bases virtuales.  
+ De forma predeterminada, los campos de vtordisp se introducen siempre que el código define los destructores y los constructores definidos por el usuario y también reemplaza a funciones virtuales de bases virtuales.  
   
- Estas opciones afectan a archivos de código fuente completos.  Utilice [vtordisp](../../preprocessor/vtordisp.md) para suprimir campos vtordisp y después volver a habilitarlos clase por clase.  
+ Estas opciones afecta a los archivos de código fuente. Use [vtordisp](../../preprocessor/vtordisp.md) suprimir y, a continuación, volver a habilitar campos vtordisp clase por clase.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción del compilador en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción del compilador en el cuadro **Opciones adicionales** .  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

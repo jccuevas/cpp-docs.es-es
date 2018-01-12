@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30c47c43c5929eb0c10c584e20e485b9bb724e94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc86603127404fe26d6e826d2903733136411c92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
 Determina si el carácter multibyte especificado es un carácter en blanco.  
@@ -61,7 +62,7 @@ int _ismbbblank_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `_ismbbblank` devuelve un valor distinto de cero si `c` representa un carácter de espacio (0x20), un carácter de tabulación horizontal (0x09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para el que `isspace` es «true» (verdadero); en caso contrario, devuelve 0. `_ismbbblank` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbblank_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `_ismbbblank` devuelve un valor distinto de cero si `c` representa un carácter de espacio (0x20), un carácter de tabulación horizontal (0x09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para el que `isspace` es «true» (verdadero); en caso contrario, devuelve 0. `_ismbbblank` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbblank_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -74,4 +75,4 @@ int _ismbbblank_l(
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34208bb376f374f72bf3eb88ead6e10b2f1a7c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Clase IPersistStreamInitImpl
 Esta clase implementa **IUnknown** y proporciona una implementación predeterminada de la [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfaz.  
@@ -54,7 +55,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IPersistStreamInitImpl::GetClassID](#getclassid)|Recupera el CLSID del objeto.|  
 |[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Recupera el tamaño de la secuencia necesaria para guardar los datos del objeto. Devuelve la implementación de ATL **E_NOTIMPL**.|  

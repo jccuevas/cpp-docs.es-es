@@ -1,56 +1,57 @@
 ---
-title: "Allocating and Releasing Memory for a BSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "bstr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR, asignación de memoria"
-  - "memoria [C++], liberación"
-  - "asignación de memoria, BSTR"
-  - "memory deallocation, BSTR memory"
-  - "memory deallocation, string memory"
-  - "cadenas [C++], liberación"
+title: Asignar y liberar memoria para un BSTR | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: bstr
+dev_langs: C++
+helpviewer_keywords:
+- BSTRs, memory allocation
+- memory deallocation, string memory
+- memory [C++], releasing
+- memory allocation, BSTRs
+- memory deallocation, BSTR memory
+- strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 282ceac05587452fad750f05b642c0ffd5b929a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Allocating and Releasing Memory for a BSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="allocating-and-releasing-memory-for-a-bstr"></a>Asignación y liberación de memoria para un BSTR
+Cuando creas `BSTR`s y pasarlos entre objetos COM, debe tener cuidado en el tratamiento de la memoria que se usan con el fin de evitar pérdidas de memoria. Cuando un `BSTR` permanece dentro de una interfaz, debe liberar su memoria cuando haya terminado con él. Sin embargo, cuando un `BSTR` pasa fuera de una interfaz, el objeto receptor responsabiliza de la administración de memoria.  
+  
+ En general, las reglas para asignar y liberar memoria asignan para `BSTR`s son los siguientes:  
+  
+-   Cuando llama a una función que espera un `BSTR` argumento, debe asignar la memoria para la `BSTR` antes de la llamada y liberarla después. Por ejemplo:  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
+  
+-   Cuando llama a una función que devuelve un `BSTR`, debe liberar la cadena. Por ejemplo:  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
+  
+-   Cuando se implementa una función que devuelve un `BSTR`, asigne la cadena pero no la libere. La recepción la función libera la memoria. Por ejemplo:  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
+  
+## <a name="see-also"></a>Vea también  
+ [Cadenas (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
+ [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx)   
+ [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx)
 
-Al crear s para `BSTR`y las pasa entre los objetos COM, debe tener cuidado de tratar la memoria que utilizan para evitar pérdidas de memoria.  Cuando `BSTR` permanece dentro de una interfaz, debe liberar la memoria cuando termine con él.  Sin embargo, cuando `BSTR` pasa de una interfaz, el objeto receptor asume la responsabilidad de la administración de memoria.  
-  
- Normalmente las reglas para asignar y liberar memoria asignada para s para `BSTR`son los siguientes:  
-  
--   Cuando se llama a una función que espera un argumento de `BSTR` , debe asignar memoria para `BSTR` antes de la llamada y que el mercadola después.  Por ejemplo:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_1.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#193](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_2.cpp)]  
-  
--   Cuando se llama a una función que devuelve `BSTR`, debe liberar la cadena personalmente.  Por ejemplo:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#194](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_3.cpp)]  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#195](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_4.cpp)]  
-  
--   Al implementar una función que devuelve `BSTR`, asigna la cadena pero no la libere.  Recibir los lanzamientos desde la función memoria.  Por ejemplo:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#196](../atl-mfc-shared/codesnippet/CPP/allocating-and-releasing-memory-for-a-bstr_5.cpp)]  
-  
-## Vea también  
- [Cadenas](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT::AllocSysString](../Topic/CStringT::AllocSysString.md)   
- [SysAllocString](http://msdn.microsoft.com/es-es/9e0437a2-9b4a-4576-88b0-5cb9d08ca29b)   
- [SysFreeString](http://msdn.microsoft.com/es-es/8f230ee3-5f6e-4cb9-a910-9c90b754dcd3)

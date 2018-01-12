@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494773de5bd64e66c2031a618d7a8d899215c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-rfx"></a>Intercambio de campos de registros (RFX)
 Las clases de base de datos ODBC de MFC automatizan la transferencia de datos entre el origen de datos y un [recordset](../../data/odbc/recordset-odbc.md) objeto. Al derivar una clase de [CRecordset](../../mfc/reference/crecordset-class.md) y no utiliza la obtención masiva de filas, datos se transfieren mediante el mecanismo de campos de registros (RFX) de exchange.  

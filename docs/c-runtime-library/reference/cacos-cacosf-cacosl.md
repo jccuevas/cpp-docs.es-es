@@ -33,37 +33,22 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e61472ce3ae0fa35a772f5b628b468e398c25722
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: de09d89b81b536bd26c0e62d8ab294df3de6c67c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 Recupera el arco coseno de un número complejo, con cortes de bifurcación fuera del intervalo [-1, + 1] en el eje real.  
@@ -93,7 +78,7 @@ _Lcomplex cacosl(
  Número complejo que representa un ángulo en radianes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Arco coseno de `z` en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el intervalo [0, π] a lo largo del eje real. Se producirá un error de dominio si `z` está fuera del intervalo [-1, +1].  
+ Arco coseno de `z` en radianes. El resultado es ilimitado a lo largo del eje imaginario y en el en el intervalo [0, π] en el eje real. Se producirá un error de dominio si `z` está fuera del intervalo [-1, +1].  
   
 ## <a name="remarks"></a>Comentarios  
  Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cacos` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `cacos` siempre toma y devuelve un valor `_Dcomplex` .  
@@ -104,7 +89,7 @@ _Lcomplex cacosl(
 |-------------|--------------|------------------|  
 |`cacos`,               `cacosf`, `cacosl`|\<complex.h>|\<ccomplex>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

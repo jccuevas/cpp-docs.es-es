@@ -38,11 +38,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cbba6a51a51720248667cf04738ad16203717db9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 462fecfcd9400d10dbc943fded0d04fb7a0cf010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 Convierte un carácter ancho en el carácter multibyte correspondiente. Hay disponibles versiones más seguras de estas funciones; vea [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
@@ -72,7 +73,7 @@ int _wctomb_l(
  Si `wctomb` convierte el carácter ancho en un carácter multibyte, devuelve el número de bytes (que nunca es mayor que `MB_CUR_MAX`) en el carácter ancho. Si `wchar` es el carácter nulo ancho (L'\0'), `wctomb` devuelve 1. Si el puntero de destino `mbchar` es NULL, `wctomb` devuelve 0. Si la conversión no es posible en la configuración regional actual, `wctomb` devuelve -1 y `errno` está establecido en `EILSEQ`.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `wctomb` convierte su argumento `wchar` en el carácter multibyte correspondiente y almacena el resultado en `mbchar`. Puede llamar a la función desde cualquier ubicación de cualquier programa. `wctomb` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_wctomb_l` es igual que `wctomb`, salvo que en su lugar usa la configuración regional pasada. Para más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `wctomb` convierte su argumento `wchar` en el carácter multibyte correspondiente y almacena el resultado en `mbchar`. Puede llamar a la función desde cualquier ubicación de cualquier programa. `wctomb` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_wctomb_l` es igual que `wctomb`, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  `wctomb` valida sus parámetros. Si `mbchar` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve -1.  
   

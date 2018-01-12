@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::AddBindEntry"
-  - "ATL.CManualAccessor.AddBindEntry"
-  - "CManualAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CManualAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry (método)"
+title: 'CManualAccessor:: AddBindEntry | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14a2fbae8ee29728d145b3ff8d20a02b4000b5a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
 Agrega una entrada de enlace a las columnas de salida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -44,33 +46,33 @@ Agrega una entrada de enlace a las columnas de salida.
 ) throw ( );  
 ```  
   
-#### Parámetros  
- Vea [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en el *referencia del programador OLE DB*.  
   
  `nOrdinal`  
- \[in\] Número de columnas.  
+ [in] Número de columna.  
   
  `wType`  
- \[in\] Tipo de datos.  
+ [in] Tipo de datos.  
   
  `nColumnSize`  
- \[in\] Tamaño de la columna en bytes.  
+ [in] Tamaño de la columna en bytes.  
   
  `pData`  
- \[in\] Un puntero a los datos de columna almacenados en el búfer.  
+ [in] Un puntero a la columna de datos almacenado en el búfer.  
   
  `pLength`  
- \[in\] Un puntero a la longitud de campo, si es necesario.  
+ [in] Un puntero a la longitud de campo, si es necesario.  
   
  `pStatus`  
- \[in\] Un puntero a la variable que se enlazará el estado de la columna, si es necesario.  
+ [in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.  
   
-## Comentarios  
- Para utilizar esta función, debe llamar primero a [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md).  No puede agregar varias entradas que el número de columnas especificadas en `CreateAccessor`.  
+## <a name="remarks"></a>Comentarios  
+ Para usar esta función, primero debe llamar a [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). No se puede agregar más entradas que el número de columnas especificadas en `CreateAccessor`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CManualAccessor \(Clase\)](../../data/oledb/cmanualaccessor-class.md)   
- [Ejemplo de DBViewer](../../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Vea también  
+ [CManualAccessor (clase)](../../data/oledb/cmanualaccessor-class.md)   
+ [Ejemplo DBViewer](../../visual-cpp-samples.md)

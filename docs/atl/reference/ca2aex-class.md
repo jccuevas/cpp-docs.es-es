@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2aex-class"></a>Clase CA2AEX
 Esta clase se utiliza por las macros de conversión de cadena `CA2TEX` y `CT2AEX`y la definición de tipo **CA2A**.  
@@ -47,20 +48,20 @@ class CA2AEX
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CA2AEX::CA2AEX](#ca2aex)|El constructor.|  
 |[CA2AEX:: ~ CA2AEX](#dtor)|Destructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CA2AEX::operator LPSTR](#operator_lpstr)|Operador de conversión.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CA2AEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|El búfer estático, usado para almacenar la cadena convertida.|  

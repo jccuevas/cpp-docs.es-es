@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0326dc826417287a1695904c99f1f3e9733f1b7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 Determina si un entero representa un carácter de espacio.  
@@ -80,7 +81,7 @@ int _iswspace_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter de espacio. `isspace`Devuelve un valor distinto de cero si `c` es un carácter de espacio en blanco (0 x 09-0x0D o 0 x 20). El resultado de la condición de prueba para la función `isspace` depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter de espacio. `isspace`Devuelve un valor distinto de cero si `c` es un carácter de espacio en blanco (0 x 09-0x0D o 0 x 20). El resultado de la condición de prueba para la función `isspace` depende del valor de la categoría `LC_CTYPE` de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual del comportamiento dependiente de la configuración regional; las versiones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  `iswspace` devuelve un valor distinto de cero si `c` es un carácter ancho que corresponde a un carácter de espacio en blanco estándar.  
   
@@ -101,9 +102,9 @@ int _iswspace_l(
 |`_isspace_l`|\<ctype.h>|  
 |`_iswspace_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>Clase CWorkerThread
 Esta clase crea un subproceso de trabajo o usa uno existente, espera a que en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificado cuando se señala a uno de los controladores.  
@@ -70,20 +53,20 @@ class CWorkerThread
   
 ### <a name="protected-structures"></a>Estructuras protegidas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWorkerThread::CWorkerThread](#cworkerthread)|El constructor para el subproceso de trabajo.|  
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|El destructor para el subproceso de trabajo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CWorkerThread::AddHandle](#addhandle)|Llamar a este método para agregar el identificador de un objeto que puede esperar a la lista mantenida por el subproceso de trabajo.|  
 |[CWorkerThread::AddTimer](#addtimer)|Llamar a este método para agregar un temporizador periódico representan a la lista mantenida por el subproceso de trabajo.|  
@@ -268,11 +251,10 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="remarks"></a>Comentarios  
  Para volver a usar el objeto, llame a [CWorkerThread::Initialize](#initialize) después de llamar a este método.  
   
- Tenga en cuenta que la llamada a **cierre** en un objeto que se inicializa con un puntero a otro `CWorkerThread` objeto no tiene ningún efecto y siempre devuelve S_OK.  
+ Tenga en cuenta que la llamada a **apagado** en un objeto que se inicializa con un puntero a otro `CWorkerThread` objeto no tiene ningún efecto y siempre devuelve S_OK.  
   
 ## <a name="see-also"></a>Vea también  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Clases](../../atl/reference/atl-classes.md)   
  [Subprocesamiento múltiple: Crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient (interfaz)](../../atl/reference/iworkerthreadclient-interface.md)
-

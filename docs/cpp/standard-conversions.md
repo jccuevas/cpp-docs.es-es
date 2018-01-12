@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan "conversiones estándar". (Para obtener más información sobre los tipos, los tipos estándar y los tipos derivados, vea [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -80,11 +78,11 @@ long_num2 = int_num * long_num2;
   
  Las promociones que poseen la cualidad de conservación de valores y las promociones que conservan el tipo signed/unsigned generan normalmente los mismos resultados. Sin embargo, pueden generar resultados diferentes si el objeto que se promueve es uno de los siguientes:  
   
--   Un operando de ** / **, `%`, `/=`, `%=`, ** < **, ** \< = **, ** > **, o**>=**  
+-   Un operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o**>=**  
   
      Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.  
   
--   El operando izquierdo de ** >> ** o**>>=**  
+-   El operando izquierdo de  **>>**  o**>>=**  
   
      Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.  
   
@@ -207,10 +205,10 @@ Gráfico de herencia para ilustrar la accesibilidad de clase base
   
 |Tipo de función|Derivación|Conversión de<br /><br /> ¿B * a\* Legal?|  
 |----------------------|----------------|-------------------------------------------|  
-|Función externa (no de ámbito de clase)|Privado|No|  
+|Función externa (no de ámbito de clase)|Private|No|  
 ||Protegido|No|  
-||Público|Sí|  
-|Función miembro B (en ámbito B)|Privado|Sí|  
+||Public|Sí|  
+|Función miembro B (en ámbito B)|Private|Sí|  
 ||Protegido|Sí|  
 ||Público|Sí|  
 |Función miembro C (en ámbito C)|Privado|No|  
@@ -253,12 +251,12 @@ int main()
  El puntero `pA` es de tipo `A *`, los que se puede interpretar como “puntero a un objeto de tipo `A`”. Los miembros de `bObject` `(`como `BComponent` y `BMemberFunc`) son únicos para tipo `B` y, por tanto, son inaccesibles a través de `pA`. El puntero `pA` solo permite el acceso a esas características (funciones de miembro y datos) del objeto que se definen en la clase `A`.  
   
 ### <a name="pointer-to-function"></a>De puntero a función  
- Un puntero a una función se puede convertir al tipo **void \* **, si tipo **void \* ** es lo suficientemente grande como para contener ese puntero.  
+ Un puntero a una función se puede convertir al tipo **void \*** , si tipo **void \***  es lo suficientemente grande como para contener ese puntero.  
   
 ### <a name="pointer-to-void"></a>De puntero a void  
  Los punteros a tipo `void` se pueden convertir a punteros a cualquier otro tipo, pero solo con una conversión de tipo explícita (a diferencia de C). (Consulte [expresiones con conversiones de tipo explícitas](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) para obtener más información sobre conversiones de tipo.) Un puntero a cualquier tipo se puede convertir implícitamente en un puntero a tipo `void`. Un puntero a un objeto incompleto de un tipo se puede convertir a un puntero a `void` (implícitamente) y viceversa (explícitamente). El resultado de dicha conversión es igual al valor del puntero original. Un objeto se considera incompleto si se declara, pero no hay suficiente información disponible para determinar su tamaño o clase base.  
   
- Un puntero a cualquier objeto que no es **const** o `volatile` puede convertirse implícitamente a un puntero de tipo **void \* **.  
+ Un puntero a cualquier objeto que no es **const** o `volatile` puede convertirse implícitamente a un puntero de tipo **void \*** .  
   
 ### <a name="const-and-volatile-pointers"></a>punteros const y volatile  
  C++ no proporciona una conversión estándar de un **const** o `volatile` tipo a un tipo que no es **const** o `volatile`. Sin embargo, se puede especificar cualquier tipo de conversión mediante conversiones de tipos explícitas (incluidas las conversiones que no son seguras).  

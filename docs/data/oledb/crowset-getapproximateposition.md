@@ -1,69 +1,71 @@
 ---
-title: "CRowset::GetApproximatePosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::GetApproximatePosition"
-  - "ATL::CRowset<TAccessor>::GetApproximatePosition"
-  - "CRowset.GetApproximatePosition"
-  - "CRowset::GetApproximatePosition"
-  - "GetApproximatePosition"
-  - "ATL.CRowset.GetApproximatePosition"
-  - "CRowset<TAccessor>::GetApproximatePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetApproximatePosition (método)"
+title: 'CRowset:: Getapproximateposition | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::GetApproximatePosition
+- ATL::CRowset<TAccessor>::GetApproximatePosition
+- CRowset.GetApproximatePosition
+- CRowset::GetApproximatePosition
+- GetApproximatePosition
+- ATL.CRowset.GetApproximatePosition
+- CRowset<TAccessor>::GetApproximatePosition
+dev_langs: C++
+helpviewer_keywords: GetApproximatePosition method
 ms.assetid: 8f9ccd41-0590-468e-b202-6731d0f99d21
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 86d6e17c3bfe01cc579e9a0afab8f555419e5116
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::GetApproximatePosition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve la posición aproximada de una fila correspondiente a un marcador.  
+# <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
+Devuelve la posición aproximada de una fila que corresponda a un marcador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT GetApproximatePosition(   
-   const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows    
+      HRESULT GetApproximatePosition(   
+   const CBookmarkBase* pBookmark,   
+   DBCOUNTITEM* pPosition,   
+   DBCOUNTITEM* pcRows    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pBookmark`  
- \[in\] Un puntero a un marcador que identifica la fila cuya posición es encontrar.  **nulo** si se requiere el recuento de filas.  
+ [in] Un puntero a un marcador que identifica la fila cuya posición se va a calcular. **NULL** si solo se necesita el recuento de filas.  
   
  *pPosition*  
- \[out\] Un puntero a la ubicación donde `GetApproximatePosition` devuelve la posición de la fila.  **nulo** si la posición no se requiere.  
+ [out] Un puntero a la ubicación donde `GetApproximatePosition` devuelve la posición de la fila. **NULL** si la posición no es necesaria.  
   
  `pcRows`  
- \[out\] Un puntero a la ubicación donde `GetApproximatePosition` devuelve el número total de filas.  **nulo** si el recuento de filas no se requiere.  
+ [out] Un puntero a la ubicación donde `GetApproximatePosition` devuelve el número total de filas. **NULL** si el recuento de filas no es necesario.  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Comentarios  
- Este método requiere la interfaz opcional `IRowsetScroll`, que no se podría admitir en todos los proveedores; si es así, el método devuelve **E\_NOINTERFACE**.  También debe establecer **DBPROP\_IRowsetScroll** a `VARIANT_TRUE` antes de llamar a **Abierta** en la tabla o el comando que contiene el conjunto de filas.  
+## <a name="remarks"></a>Comentarios  
+ Este método requiere que la interfaz opcional `IRowsetScroll`, que no se admite en todos los proveedores; si éste es el caso, el método devuelve **E_NOINTERFACE**. También debe establecer **DBPROP_IRowsetScroll** a `VARIANT_TRUE` antes de llamar a **abiertos** en la tabla o el comando que contiene el conjunto de filas.  
   
- Para obtener información sobre cómo utilizar marca una dirección de la Internet en consumidores, vea [Mediante los marcadores](../../data/oledb/using-bookmarks.md).  
+ Para obtener información sobre el uso de marcadores en los consumidores, consulte [Using Bookmarks](../../data/oledb/using-bookmarks.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Vea también  
+ [CRowset (clase)](../../data/oledb/crowset-class.md)   
  [IRowsetScroll::GetApproximatePosition](https://msdn.microsoft.com/en-us/library/ms712901.aspx)

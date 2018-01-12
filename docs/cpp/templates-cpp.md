@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- template_cpp
-dev_langs:
-- C++
+f1_keywords: template_cpp
+dev_langs: C++
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6ce40029e40906441ebd7c64ff9011a61f26045b
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="templates-c"></a>Plantillas (C++)
 Las plantillas son la base de programación genérica en C++. Como un lenguaje fuertemente tipado, C++ requiere que todas las variables que tienen un tipo específico, ya sea explícitamente declarado por el programador o deduce el compilador. Sin embargo, muchos algoritmos y estructuras de datos tenga el mismo aspecto independientemente del tipo que funcionan en. Habilitar plantillas para definir las operaciones de una clase o función y permitir al usuario especificar qué hormigón tipos esas operaciones debe funcionar en.  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fa1a1b914d7d9725e8f2d9858f0481bb7aa24a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be87c0bad9ab250593847cc24d16158030040054
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="can-i-host-more-than-one-control-in-a-single-window"></a>¿Se puede alojar más de un Control en una sola ventana?
 No es posible hospedar más de un control en una sola ventana de host ATL. Cada ventana host está diseñada para alojar exactamente un control cada vez (Esto permite que un mecanismo sencillo para administrar las propiedades ambiente de reflexión y por control de mensajes). Sin embargo, si necesita que el usuario vea varios controles en una sola ventana, resulta sencillo crear múltiples ventanas host como elementos secundarios de esa ventana.  

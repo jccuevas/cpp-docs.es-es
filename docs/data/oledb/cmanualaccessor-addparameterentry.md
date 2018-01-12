@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddParameterEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CManualAccessor::AddParameterEntry"
-  - "ATL.CManualAccessor.AddParameterEntry"
-  - "CManualAccessor.AddParameterEntry"
-  - "AddParameterEntry"
-  - "ATL::CManualAccessor::AddParameterEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddParameterEntry (método)"
+title: 'CManualAccessor:: AddParameterEntry | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CManualAccessor::AddParameterEntry
+- ATL.CManualAccessor.AddParameterEntry
+- CManualAccessor.AddParameterEntry
+- AddParameterEntry
+- ATL::CManualAccessor::AddParameterEntry
+dev_langs: C++
+helpviewer_keywords: AddParameterEntry method
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66c88bf072cbae6c86949d52ded121dd694c0e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddParameterEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Agrega una entrada de parámetro a las estructuras de entrada de parámetros.  
+# <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
+Agrega una entrada de parámetro a las estructuras de entrada de parámetro.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -45,37 +47,37 @@ Agrega una entrada de parámetro a las estructuras de entrada de parámetros.
 ) throw ( );  
 ```  
   
-#### Parámetros  
- Vea [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) en el *referencia del programador OLE DB*.  
   
  `nOrdinal`  
- \[in\] Número del parámetro.  
+ [in] Número de parámetro.  
   
  `wType`  
- \[in\] Tipo de datos.  
+ [in] Tipo de datos.  
   
  `nColumnSize`  
- \[in\] Tamaño de la columna en bytes.  
+ [in] Tamaño de la columna en bytes.  
   
  `pData`  
- \[in\] Un puntero a los datos de columna almacenados en el búfer.  
+ [in] Un puntero a la columna de datos almacenado en el búfer.  
   
  `pLength`  
- \[in\] Un puntero a la longitud de campo, si es necesario.  
+ [in] Un puntero a la longitud de campo, si es necesario.  
   
  `pStatus`  
- \[in\] Un puntero a la variable que se enlazará el estado de la columna, si es necesario.  
+ [in] Un puntero a la variable esté enlazado con el estado de la columna, si es necesario.  
   
  *eParamIO*  
- \[in\] Especifica si el parámetro al que está asociado el enlace es una entrada, una entrada, o un parámetro de salida.  
+ [in] Especifica si el parámetro al que está asociado el enlace es un parámetro de entrada, entrada/salida o de salida.  
   
-## Comentarios  
- Para utilizar esta función, debe llamar primero a [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).  
+## <a name="remarks"></a>Comentarios  
+ Para usar esta función, primero debe llamar a [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CManualAccessor \(Clase\)](../../data/oledb/cmanualaccessor-class.md)   
- [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)   
- [Ejemplo de DBViewer](../../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Vea también  
+ [CManualAccessor (clase)](../../data/oledb/cmanualaccessor-class.md)   
+ [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)   
+ [Ejemplo DBViewer](../../visual-cpp-samples.md)

@@ -1,93 +1,94 @@
 ---
-title: "Archivos DLL est&#225;ndar vinculados est&#225;ticamente a MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], estándar"
-  - "DLL estándar [C++]"
-  - "DLL estándar [C++], vinculados estáticamente a MFC"
-  - "DLLs vinculadas estáticamente [C++]"
-  - "USRDLL"
-  - "USRDLL, vinculados estáticamente a MFC"
+title: "Archivos DLL MFC regular vinculadas estáticamente a MFC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++]
+- DLLs [C++], regular
+- USRDLLs
+- USRDLLs, statically linked to MFC
+- statically linked DLLs [C++]
+- regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Archivos DLL est&#225;ndar vinculados est&#225;ticamente a MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los archivos DLL estándar vinculados estáticamente a MFC utilizan internamente las funciones de MFC y las funciones que se exportan de los mismos podrán llamarse desde archivos ejecutables basados o no en MFC.  Como su propio nombre indica, este tipo de archivo DLL se compila con la biblioteca de vínculos estáticos de MFC.  Las funciones se suelen exportar desde un archivo DLL estándar mediante la interfaz estándar de C.  Para consultar un ejemplo que ilustra la forma de programar, compilar y utilizar archivos DLL estándar, vea el ejemplo [DLLScreenCap](http://msdn.microsoft.com/es-es/2171291d-3a50-403b-90a1-d93c2acb4f4a).  
+# <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Archivos DLL MFC regular vinculadas estáticamente a MFC
+Normal que MFC DLL vinculado estáticamente a MFC es un archivo DLL que utiliza MFC internamente y las funciones exportadas en el archivo DLL pueden llamarse desde archivos ejecutables MFC o no MFC. Como se describe en el nombre, este tipo de archivo DLL se compila con la versión de biblioteca de vínculos estáticos de MFC. Las funciones se suelen exportar desde DLL de MFC mediante la interfaz estándar de C normal. Para obtener un ejemplo de cómo escribir, crear y usar una DLL normales de MFC, vea el ejemplo [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
   
- Tenga en cuenta que en la documentación de Visual C\+\+ ya no se utiliza el término USRDLL.  Un archivo DLL estándar vinculado estáticamente a MFC tiene las mismas características que el antiguo archivo USRDLL.  
+ Tenga en cuenta que el término USRDLL ya no se usa en la documentación de Visual C++. Una DLL de MFC normal que se vincula estáticamente a MFC tiene las mismas características que el antiguo archivo USRDLL.  
   
- Un archivo DLL estándar, vinculado estáticamente a MFC, presenta las siguientes características:  
+ Una DLL de MFC normales, vinculados estáticamente a MFC, tiene las siguientes características:  
   
--   El archivo ejecutable cliente se puede programar en cualquier lenguaje compatible con el uso de archivos DLL \(C, C\+\+, Pascal, Visual Basic, etc.\); no tiene que ser una aplicación MFC.  
+-   El cliente ejecutable puede escribirse en cualquier lenguaje que admita el uso de archivos DLL (C, C++, Pascal, Visual Basic y así sucesivamente); no tiene que ser una aplicación MFC.  
   
--   El archivo DLL puede vincularse a las mismas bibliotecas de vínculos estáticos de MFC que utilizan las aplicaciones.  Ya no existe una versión independiente de las bibliotecas de vínculos estáticos para archivos DLL.  
+-   El archivo DLL puede vincular a las mismas bibliotecas de vínculos estáticos de MFC usadas las aplicaciones. Ya no es una versión independiente de las bibliotecas de vínculos estáticos para archivos DLL.  
   
--   Antes de la versión 4.0 de MFC, los archivos USRDLL proporcionaban el mismo tipo de funcionalidad que los archivos DLL estándar vinculados estáticamente a MFC.  A partir de Visual C\+\+ versión 4.0, el término USRDLL ha quedado obsoleto.  
+-   Antes de la versión 4.0 de MFC, los archivos USRDLL proporcionaban el mismo tipo de funcionalidad como archivos DLL de MFC estándar vinculados estáticamente a MFC. A partir de Visual C++ versión 4.0, el término USRDLL está obsoleta.  
   
- Los requisitos que debe reunir un archivo DLL estándar vinculado estáticamente a MFC son los siguientes:  
+ Una DLL de MFC normales, vinculados estáticamente a MFC, tiene los siguientes requisitos:  
   
 -   Este tipo de archivo DLL debe crear una instancia de una clase derivada de `CWinApp`.  
   
--   Este tipo de archivo DLL utiliza la función `DllMain` proporcionada por MFC.  Coloque todo el código de inicialización específico del archivo DLL en la función miembro `InitInstance` y el código de finalización en `ExitInstance`, como en una aplicación MFC normal.  
+-   Este tipo de DLL utiliza la `DllMain` proporcionada por MFC. Coloque todo código de inicialización específico del archivo DLL en el `InitInstance` código de función y la terminación de miembro en `ExitInstance` como en una aplicación MFC normal.  
   
--   Aunque ahora el término USRDLL haya quedado obsoleto, todavía tendrá que definir "**\_USRDLL**" en la línea de comandos del compilador.  Esta definición determina las declaraciones que se van a extraer de los archivos de encabezado de MFC.  
+-   Aunque el término USRDLL está obsoleto, todavía tendrá que definir "**_USRDLL**" en la línea de comandos del compilador. Esta definición determina las declaraciones que se extraigan de los archivos de encabezado MFC.  
   
- Los archivos DLL estándar deben contener una clase derivada de `CWinApp` y un solo objeto de dicha clase de aplicación, como sucede en una aplicación MFC.  Sin embargo, el objeto `CWinApp` del archivo DLL no tiene un suministro principal de mensajes, como el objeto `CWinApp` de una aplicación.  
+ archivos DLL de MFC estándar debe tener un `CWinApp`-derivados de clase y un único objeto de esa clase de aplicación, como sucede en una aplicación MFC. Sin embargo, el `CWinApp` objeto de la DLL no tiene un suministro principal de mensajes, como hace el `CWinApp` objeto de una aplicación.  
   
- Tenga en cuenta que el mecanismo `CWinApp::Run` no se aplica a un archivo DLL, ya que la aplicación es propietaria del suministro principal de mensajes.  Si el archivo DLL abre cuadros de diálogo no modales o tiene una ventana de marco principal propia, el suministro principal de mensajes de la aplicación debe llamar a una rutina exportada por el archivo DLL que, a su vez, llama a la función miembro `CWinApp::PreTranslateMessage` del objeto de aplicación del archivo DLL.  
+ Tenga en cuenta que el `CWinApp::Run` mecanismo no se aplica a un archivo DLL, porque la aplicación es propietaria del suministro principal de mensajes. Si el archivo DLL abre los cuadros de diálogo no modales o tiene una ventana de marco principal de su propia, el suministro de mensajes principal de la aplicación debe llamar a una rutina exportada por el archivo DLL que llama a su vez el `CWinApp::PreTranslateMessage` función miembro de objeto de aplicación de los archivos DLL.  
   
- Si desea analizar un ejemplo del uso de esta función, vea el ejemplo DLLScreenCap.  
+ Para obtener un ejemplo de esta función, vea el ejemplo DLLScreenCap.  
   
- Los símbolos se suelen exportar desde un archivo DLL estándar mediante la interfaz estándar de C.  La declaración de una función exportada desde un archivo DLL estándar se parecerá a la siguiente:  
+ Símbolos se suelen exportar desde DLL de MFC mediante la interfaz estándar de C normal. La declaración de una función exportada desde una DLL de MFC normal sería algo parecido a esto:  
   
 ```  
 extern "C" __declspec(dllexport) MyExportedFunction( );  
 ```  
   
- Todas las asignaciones de memoria de un archivo DLL estándar deben permanecer dentro del mismo; no debe haber transferencias entre el archivo DLL y el ejecutable de llamada de:  
+ Todas las asignaciones de memoria dentro de una DLL de MFC regular deben permanecer en el archivo DLL; el archivo DLL no debe pasar a o recibir desde el archivo ejecutable de llamada cualquiera de las siguientes acciones:  
   
--   Punteros a objetos MFC  
+-   punteros a objetos MFC  
   
--   Punteros a memoria asignada por MFC  
+-   punteros a la memoria asignada por MFC  
   
- Si necesita transferir estos punteros o tiene que pasar objetos derivados de MFC entre el archivo ejecutable de llamada y el archivo DLL, deberá compilar un archivo DLL de extensión.  
+ Si necesita realizar cualquiera de los pasos anteriores o necesita pasar objetos derivados de MFC entre el archivo ejecutable de llamada y el archivo DLL, deberá generar un archivo DLL de extensión MFC.  
   
- La transferencia a memoria de punteros asignados por las bibliotecas en tiempo de ejecución de C entre una aplicación y un archivo DLL sólo será segura si hace una copia de los datos.  No debe eliminar ni cambiar el tamaño de estos punteros, ni utilizarlos sin hacer una copia de la memoria.  
+ Es seguro pasar punteros a la memoria que fueron asignados por las bibliotecas de tiempo de ejecución de C entre una aplicación y un archivo DLL solo si se realiza una copia de los datos. No debe eliminar o cambiar el tamaño de estos punteros o utilizarlos sin hacer una copia de la memoria.  
   
- Un archivo DLL vinculado estáticamente a MFC no puede vincularse también dinámicamente a los archivos DLL compartidos de MFC.  Un archivo DLL vinculado estáticamente a MFC se enlaza dinámicamente a una aplicación de la misma manera que cualquier otro archivo DLL; las aplicaciones se vinculan al archivo DLL como a cualquier otro archivo DLL.  
+ Un archivo DLL que está vinculado estáticamente a MFC también dinámicamente no se puede vincular a los archivos DLL de MFC compartida. Un archivo DLL que está vinculado estáticamente a MFC se enlaza dinámicamente a una aplicación igual que cualquier otro archivo DLL; las aplicaciones que se vinculan a él al igual que cualquier otro archivo DLL.  
   
- Los nombres de las bibliotecas de vínculos estáticos estándar de MFC siguen la convención que se describe en el tema [Convenciones de nomenclatura para archivos DLL de MFC](../build/naming-conventions-for-mfc-dlls.md).  No obstante, con la versión 3.0 de MFC y versiones posteriores, ya no es necesario especificar manualmente en el vinculador la versión de la biblioteca MFC que se desea vincular.  En su lugar, los archivos de encabezado MFC determinan automáticamente la versión correcta de la biblioteca MFC con la que se debe vincular según las definiciones del preprocesador, tales como **\_DEBUG** o **\_UNICODE**.  Los archivos de encabezado de MFC agregan directivas \/DEFAULTLIB que indican al vinculador que debe vincular una versión específica de la biblioteca MFC.  
+ Las bibliotecas de vínculos estáticos de MFC estándar se denominan según la convención descrita en [convenciones de nomenclatura para archivos DLL de MFC](../build/naming-conventions-for-mfc-dlls.md). Sin embargo, con la versión 3.0 y versiones posterior de MFC, ya no es necesario especificar manualmente al vinculador la versión de la biblioteca MFC que desea vincular en. En su lugar, los archivos de encabezado MFC determinan automáticamente la versión correcta de la biblioteca MFC debe vincular en preprocesador según define, como  **\_depurar** o **_UNICODE**. Los archivos de encabezado MFC agregan directivas de DEFAULTLIB indica al vinculador que debe vincular una versión específica de la biblioteca MFC.  
   
-## ¿Qué desea hacer?  
+## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
   
--   [Inicializar archivos DLL estándar](../build/initializing-regular-dlls.md)  
+-   [Inicializar archivos DLL de MFC estándar](../build/run-time-library-behavior.md#initializing-regular-dlls)  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?  
   
 -   [Utilizar MFC como parte de un archivo DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
--   [Utilizar archivos DLL de extensión de base de datos, OLE y Sockets en archivos DLL estándar](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [Uso de archivos DLL de extensión MFC de base de datos, OLE y Sockets en archivos DLL de MFC estándar](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
--   [Crear un archivo DLL compatible con MFC](../mfc/reference/mfc-dll-wizard.md)  
+-   [Crear un archivo DLL de MFC](../mfc/reference/mfc-dll-wizard.md)  
   
--   [Archivos DLL estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [Archivos DLL de extensión](../build/extension-dlls-overview.md)  
+-   [Archivos DLL de extensión MFC](../build/extension-dlls-overview.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos de archivos DLL](../build/kinds-of-dlls.md)

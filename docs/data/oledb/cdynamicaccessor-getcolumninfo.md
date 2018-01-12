@@ -1,68 +1,70 @@
 ---
-title: "CDynamicAccessor::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "ATL.CDynamicAccessor.GetColumnInfo"
-  - "ATL::CDynamicAccessor::GetColumnInfo"
-  - "CDynamicAccessor.GetColumnInfo"
-  - "CDynamicAccessor::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo (método)"
+title: 'CDynamicAccessor:: GetColumnInfo | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- ATL.CDynamicAccessor.GetColumnInfo
+- ATL::CDynamicAccessor::GetColumnInfo
+- CDynamicAccessor.GetColumnInfo
+- CDynamicAccessor::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 7f2102ea-b7cc-4714-812f-3ca2857f4b9a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ece75eeb539dff60b29396e3076cd2465571453a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve los metadatos de columna que necesitan la mayoría de los consumidores.  
+# <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
+Devuelve los metadatos de columna necesarios para la mayoría de los consumidores.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      HRESULT GetColumnInfo(   
-   IRowset* pRowset,   
-   DBORDINAL* pColumns,   
-   DBCOLUMNINFO** ppColumnInfo,   
-   OLECHAR** ppStringsBuffer    
+      HRESULT GetColumnInfo(   
+   IRowset* pRowset,   
+   DBORDINAL* pColumns,   
+   DBCOLUMNINFO** ppColumnInfo,   
+   OLECHAR** ppStringsBuffer    
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `pRowset`  
- \[in\] Un puntero a la interfaz de [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) .  
+ [in] Un puntero a la [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) interfaz.  
   
  *pColumns*  
- \[out\] Un puntero a la memoria de la que para devolver el número de columnas del conjunto de filas; este número incluye la columna de marcador, si la hay.  
+ [out] Un puntero a la memoria en el que se va a devolver el número de columnas del conjunto de filas; Este número incluye la columna de marcador, si hay alguno.  
   
  *ppColumnInfo*  
- \[out\] Un puntero a la memoria de la que para devolver una matriz de estructuras de **DBCOLUMNINFO** .  Vea “estructuras de DBCOLUMNINFO” en [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) en *la referencia del*programador.  
+ [out] Un puntero a la memoria en el que se va a devolver una matriz de **DBCOLUMNINFO** estructuras. Vea "Estructuras DBCOLUMNINFO" en [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) en el *referencia del programador OLE DB*.  
   
  `ppStringsBuffer`  
- \[out\] Un puntero a la memoria de la que para devolver un puntero al almacenamiento de todos los valores de cadena \(los nombres utilizó dentro *de columnid* o para *el pwszName*\) dentro de un único bloque de asignación.  
+ [out] Un puntero a la memoria en el que se va a devolver un puntero al almacenamiento de información para todos los valores de cadena (nombres usan ya sea dentro de *columnid* o para *pwszName*) dentro de un bloque de asignación único.  
   
-## Valor devuelto  
- Uno de los valores estándar de `HRESULT` .  
+## <a name="return-value"></a>Valor devuelto  
+ Uno de los estándar `HRESULT` valores.  
   
-## Comentarios  
- Vea [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) en *la referencia del* programador para obtener información sobre los tipos de datos **DBORDINAL**, **DBCOLUMNINFO**, y **OLECHAR**.  
+## <a name="remarks"></a>Comentarios  
+ Vea [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) en el *referencia del programador de OLE DB* para obtener información sobre los tipos de datos **DBORDINAL**, **DBCOLUMNINFO**, y **OLECHAR**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicAccessor \(Clase\)](../../data/oledb/cdynamicaccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)

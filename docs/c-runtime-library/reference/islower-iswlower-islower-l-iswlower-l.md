@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d531b90f623c7435f6bc50d60d01cc858b13024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Determina si un entero representa un carácter en minúscula.  
@@ -90,7 +91,7 @@ int _iswlower_l(
 ## <a name="return-value"></a>Valor devuelto  
  Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter en minúscula. `islower`Devuelve un valor distinto de cero si `c` es un carácter en minúscula (a - z). `iswlower` devuelve un valor distinto de cero si `c` es un carácter ancho que corresponde a una letra minúscula, o si `c` pertenece a un juego de caracteres anchos definido por la implementación para el que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` es distinto de cero. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
- Las versiones de estas funciones con el sufijo `_l` usan la configuración regional que se pasa en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones con el sufijo `_l` usan la configuración regional que se pasa en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  El comportamiento de `islower` e `_islower_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
   
@@ -110,9 +111,9 @@ int _iswlower_l(
 |`_islower_l`|\<ctype.h>|  
 |`_swlower_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)

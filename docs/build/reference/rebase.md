@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
 |Modificador|Acción|  
 |--------------|------------|  
-|BASE de**=***dirección*|Proporciona una dirección inicial para reasignar direcciones base a los archivos. Especifique *dirección* en formato decimal o notación del lenguaje c.. Si no se especifica BASE, la dirección base inicial predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|  
+|BASE de**=***dirección*|Proporciona una dirección inicial para reasignar direcciones base a los archivos. Especifique *dirección* en formato decimal o notación del lenguaje c. Si no se especifica BASE, la dirección base inicial predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|  
 |BASEFILE|Crea un archivo denominado COFFBASE. TXT, que es un archivo de texto en el formato esperado por del vínculo/opción de BASE.|  
 |ABAJO|Hace que EDITBIN reasigne las direcciones base hacia abajo desde una dirección final. Los archivos se vuelven a asignar en el orden especificado, con el primer archivo que se encuentra en la dirección más alta posible bajo el final del intervalo de direcciones. BASE debe usarse con abajo para asegurarse de suficiente espacio de direcciones para basar los archivos. Para determinar el espacio de dirección necesario para los archivos especificados, ejecute EDITBIN con la opción /REBASE en los archivos y agregue 64 KB al tamaño total mostrado.|  
   

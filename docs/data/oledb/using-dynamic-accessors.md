@@ -1,38 +1,41 @@
 ---
-title: "Utilizar descriptores de acceso din&#225;micos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "descriptores de acceso [C++], dinámico"
-  - "descriptores de acceso dinámicos"
+title: "Utilizar descriptores de acceso dinámicos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3d2e722ce96ff7a2f1add779377079a0eaecfc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizar descriptores de acceso din&#225;micos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Los descriptores de acceso dinámicos permiten el acceso a un origen de datos cuando no se conoce el esquema \(estructura subyacente\) de la base de datos.  La biblioteca de plantillas OLE DB proporciona varias clases para ayudarle.  
+# <a name="using-dynamic-accessors"></a>Utilizar descriptores de acceso dinámicos
+Descriptores de acceso dinámicos permiten tener acceso a un origen de datos cuando no tiene ningún conocimiento del esquema de base de datos (estructura subyacente). La biblioteca de plantillas OLE DB proporciona varias clases que le ayudará a hacerlo.  
   
- En el ejemplo [DynamicConsumer](http://msdn.microsoft.com/es-es/2ccc4c61-6749-4e83-aa81-00f8009c0dc3) se muestra cómo usar las clases de descriptor de acceso dinámico para obtener información de columnas y crear dinámicamente descriptores de acceso.  
+ El [DynamicConsumer](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3) ejemplo muestra cómo utilizar las clases de descriptor de acceso dinámico para obtener información de columnas y crear dinámicamente descriptores de acceso.  
   
-## Utilizar CDynamicAccessor  
- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) permite tener acceso a un origen de datos cuando no conoce el esquema de base de datos \(la estructura subyacente de la base de datos\).  Los métodos `CDynamicAccessor` obtienen información de columna como su nombre, recuento y tipo de datos.  Utilice esta información de columna para crear un descriptor de acceso dinámicamente en tiempo de ejecución.  La información de columnas se almacena en un búfer creado y administrado por esta clase.  Para obtener datos del búfer, utilice el método [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
+## <a name="using-cdynamicaccessor"></a>Utilizar CDynamicAccessor  
+ [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) permite obtener acceso a un origen de datos cuando no tiene ningún conocimiento del esquema de base de datos (estructura subyacente de la base de datos). `CDynamicAccessor`los métodos obtienen información de columna como nombres de columna, número y tipo de datos. Utilice esta información de columna para crear un descriptor de acceso de forma dinámica en tiempo de ejecución. La información de columna se almacena en un búfer creado y administrado por esta clase. Obtener datos desde el búfer mediante el [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) método.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // Using_Dynamic_Accessors.cpp  
@@ -98,14 +101,14 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## Utilizar CDynamicStringAccessor  
- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funciona igual que [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), salvo en un aspecto importante.  Si bien `CDynamicAccessor` solicita datos en el formato nativo compatible con el proveedor, `CDynamicStringAccessor` solicita que el proveedor recupere todos los datos a los que se tuvo acceso desde el almacén de datos como datos de cadena.  Esto es de especial utilidad para tareas sencillas que no requieren el cálculo de valores en el almacén de datos, como mostrar o imprimir su contenido.  
+## <a name="using-cdynamicstringaccessor"></a>Utilizar CDynamicStringAccessor  
+ [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) funciona como [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), excepto en un aspecto importante. Mientras `CDynamicAccessor` solicita datos en el formato nativo notificado por el proveedor, `CDynamicStringAccessor` solicita que el proveedor recupere todos los datos que se tiene acceso desde el almacén de datos como datos de cadena. Esto es especialmente útil para tareas sencillas que no requieren el cálculo de valores en el almacén de datos, como mostrar o imprimir el contenido del almacén de datos.  
   
- Para obtener información de columnas, utilice métodos `CDynamicStringAccessor`.  Utilice esta información de columna para crear un descriptor de acceso dinámicamente en tiempo de ejecución.  La información de columnas se almacena en un búfer creado y administrado por esta clase.  Para obtener datos del búfer, utilice [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md); para almacenar datos en el búfer, utilice [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
+ Use `CDynamicStringAccessor` métodos para obtener información de columna. Utilice esta información de columna para crear un descriptor de acceso de forma dinámica en tiempo de ejecución. La información de columna se almacena en un búfer creado y administrado por esta clase. Obtener datos desde el búfer mediante [CDynamicStringAccessor:: GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) ni lo almacena en el búfer mediante [CDynamicStringAccessor:: SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // Using_Dynamic_Accessors_b.cpp  
@@ -160,16 +163,16 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## Utilizar CDynamicParameterAccessor  
- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) es similar a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), excepto que `CDynamicParameterAccessor` obtiene la información de parámetros que se debe establecer mediante una llamada a la interfaz [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx).  El proveedor debe admitir `ICommandWithParameters` para que el consumidor pueda usar esta clase.  
+## <a name="using-cdynamicparameteraccessor"></a>Using CDynamicParameterAccessor  
+ [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) es similar a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), salvo que `CDynamicParameterAccessor` obtiene información de parámetros que puede establecer mediante una llamada a la [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) interfaz. El proveedor debe admitir `ICommandWithParameters` para que el consumidor pueda usar esta clase.  
   
- La información de parámetros se almacena en un búfer creado y administrado por esta clase.  Para obtener los datos de parámetros del búfer, utilice [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) y [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).  
+ La información de parámetros se almacena en un búfer creado y administrado por esta clase. Obtener datos de parámetro desde el búfer mediante [CDynamicParameterAccessor:: GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) y [CDynamicParameterAccessor:: GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).  
   
- Para consultar un ejemplo que muestra cómo utilizar esta clase para ejecutar un procedimiento almacenado de SQL Server y obtener los valores de parámetros de salida, vea el artículo de Knowledge Base Q058860, "HOWTO: Execute Stored Procedure using CDynamicParameterAccessor". Los artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http:\/\/support.microsoft.com](http://support.microsoft.com/).  
+ Para ver un ejemplo que muestra cómo usar esta clase para ejecutar un procedimiento almacenado de SQL Server y obtener los valores de parámetros de salida, consulte el artículo de Knowledge Base Q058860, "HOWTO: Execute Stored Procedure using CDynamicParameterAccessor". Artículos de Knowledge Base están disponibles en la documentación de Visual Studio de MSDN Library o en [http://support.microsoft.com](http://support.microsoft.com/).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)   
- [CDynamicAccessor \(Clase\)](../../data/oledb/cdynamicaccessor-class.md)   
- [CDynamicStringAccessor \(Clase\)](../../data/oledb/cdynamicstringaccessor-class.md)   
- [CDynamicParameterAccessor \(Clase\)](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [DynamicConsumer Sample](http://msdn.microsoft.com/es-es/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)
+ [CDynamicAccessor (clase)](../../data/oledb/cdynamicaccessor-class.md)   
+ [CDynamicStringAccessor (clase)](../../data/oledb/cdynamicstringaccessor-class.md)   
+ [CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)   
+ [Ejemplo DynamicConsumer](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)

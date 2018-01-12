@@ -1,71 +1,73 @@
 ---
-title: "CNoAccessor (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CNoAccessor"
-  - "CNoAccessor"
-  - "ATL.CNoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoAccessor (clase)"
+title: CNoAccessor (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CNoAccessor
+- CNoAccessor
+- ATL.CNoAccessor
+dev_langs: C++
+helpviewer_keywords: CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 799fe151b22748da25901139a5aefe67460b2484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CNoAccessor (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se puede utilizar como argumento de plantilla \(`TAccessor`\) para las clases de plantilla, como `CCommand` y `CTable`, que requieren un argumento de la clase de descriptor de acceso.  
+# <a name="cnoaccessor-class"></a>CNoAccessor (Clase)
+Puede usarse como un argumento de plantilla (`TAccessor`) para las clases de plantilla como `CCommand` y `CTable`, que requieren un argumento de la clase de descriptor de acceso.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CNoAccessor  
 ```  
   
-## Comentarios  
- Utilice `CNoAccessor` como argumento de plantilla cuando no desea la clase para admitir parámetros o generar columnas.  
+## <a name="remarks"></a>Comentarios  
+ Use `CNoAccessor` como un argumento de plantilla cuando no desee que la clase para admitir parámetros o columnas de salida.  
   
- `CNoAccessor` implementa los siguientes métodos de código auxiliar, que corresponden a otros métodos de clase de descriptor de acceso:  
+ `CNoAccessor`implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponde a otros métodos de la clase de descriptor de acceso:  
   
--   **BindColumns** \- enlaza las columnas a los descriptores de acceso.  
+-   **BindColumns** -enlaza las columnas a los descriptores de acceso.  
   
--   `BindParameters` \- enlaza los parámetros creados a las columnas.  
+-   `BindParameters`-Enlaza los parámetros creados a las columnas.  
   
--   **Bind** \- crea enlaces.  
+-   **Enlazar** -crea enlaces.  
   
--   **cerrar** \- Cierra el descriptor de acceso.  
+-   **Cerrar** -cierra el descriptor de acceso.  
   
--   `ReleaseAccessors` \- libera los descriptores de acceso creados por la clase.  
+-   `ReleaseAccessors`-Libera los descriptores de acceso creados por la clase.  
   
--   `FreeRecordMemory` \- libera cualquier columna del registro actual que necesita ser liberado.  
+-   `FreeRecordMemory`-Libera las columnas en el registro actual que deben ser liberados.  
   
--   `GetColumnInfo` \- obtiene la información de la columna de conjunto de filas abierto.  
+-   `GetColumnInfo`-Obtiene información de columna del conjunto de filas abierto.  
   
--   `GetNumAccessors` \- recupera el número de descriptores de acceso creados por la clase.  
+-   `GetNumAccessors`-Recupera el número de descriptores de acceso creado por la clase.  
   
--   `IsAutoAccessor` \- devuelve true si los datos se recupera automáticamente para el descriptor de acceso durante una operación de movimiento.  
+-   `IsAutoAccessor`-Devuelve true si los datos se recuperan automáticamente para el descriptor de acceso durante una operación de movimiento.  
   
--   `GetHAccessor` \- recupera el identificador de descriptor de acceso de un descriptor de acceso especificado.  
+-   `GetHAccessor`-Recupera el identificador de descriptor de acceso de un descriptor de acceso especificado.  
   
--   `GetBuffer` \- recupera el puntero al búfer del marcador.  
+-   `GetBuffer`-Recupera el puntero al búfer de marcador.  
   
--   **NoBindOnNullRowset** \- evita el enlace de datos en conjuntos de filas vacíos.  
+-   **NoBindOnNullRowset** -impide que el enlace de datos en conjuntos de filas vacío.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

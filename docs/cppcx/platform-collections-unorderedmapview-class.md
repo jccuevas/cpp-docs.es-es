@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 13e38563fe542eda08f436439ce3ad91a3e7a53e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -49,13 +50,13 @@ ref class UnorderedMapView sealed;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Unorderedmapview](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Unorderedmapview:: First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|  
 |[Unorderedmapview:: Haskey](#haskey)|Determina si el objeto UnorderedMapView actual contiene la clave especificada.|  

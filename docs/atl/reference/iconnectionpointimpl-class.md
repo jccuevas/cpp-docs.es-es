@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e51322b5ac94688e39c0b4ebad1649a5a25d4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iconnectionpointimpl-class"></a>Clase IConnectionPointImpl
 Esta clase implementa un punto de conexión.  
@@ -55,7 +56,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IConnectionPointImpl::Advise](#advise)|Establece una conexión entre el punto de conexión y un receptor.|  
 |[IConnectionPointImpl::EnumConnections](#enumconnections)|Crea un enumerador para recorrer en iteración las conexiones para el punto de conexión.|  
@@ -65,7 +66,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[IConnectionPointImpl::m_vec](#m_vec)|Administra las conexiones para el punto de conexión.|  
   

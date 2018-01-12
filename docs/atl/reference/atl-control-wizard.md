@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b838ac036f6315209b2a4330c120e9c2b7486d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-control-wizard"></a>Asistente para controles ATL
 Inserciones en un proyecto ATL (o un proyecto MFC con compatibilidad con ATL) un control ATL. Puede utilizar a este asistente para insertar uno de estos tres tipos de controles:  
@@ -84,7 +85,7 @@ Inserciones en un proyecto ATL (o un proyecto MFC con compatibilidad con ATL) un
  **Interface**  
  Establece el nombre de la interfaz para el objeto. De forma predeterminada un nombre de la interfaz se antepone a la "I".  
   
- **ype**  
+ **Type**  
  Establece la descripción del objeto que va a aparecer en el registro  
   
  **Id. de programa**  

@@ -32,11 +32,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd359bd46546bf6b220e83301f92b862bea247c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c84e829876282a43fb9a8a17713a612e387f5216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feupdateenv"></a>feupdateenv
 Guarda las excepciones de punto flotante generadas actualmente, restaura el estado del entorno de punto flotante especificado y luego genera las excepciones de punto flotante guardadas.  
@@ -59,7 +60,7 @@ int feupdateenv(
 ## <a name="remarks"></a>Comentarios  
  La función `feupdateenv` realiza varias acciones. En primer lugar, almacena las marcas de estado de excepción de punto flotante actuales en el almacenamiento automático. Después, establece el entorno actual de punto flotante a partir del valor almacenado en el objeto `fenv_t` al que apunta `penv`. Si `penv` no es FE_DFL_ENV o no apunta a un objeto `fenv_t` válido, el comportamiento posterior es indefinido. Por último, `feupdateenv` genera las excepciones de punto flotante almacenadas localmente.  
   
- Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulte [fenv_access](../../preprocessor/fenv-access.md).  
+ Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -67,7 +68,7 @@ int feupdateenv(
 |--------------|--------------|------------------|  
 |`feupdateenv`|\<fenv.h>|\<cfenv>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   

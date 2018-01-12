@@ -1,33 +1,31 @@
 ---
-title: ".FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".FPO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".FPO directive"
+title: . FPO | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .FPO
+dev_langs: C++
+helpviewer_keywords: .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61d9209b5cf817d89e9e017626222a9cc73e209e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# .FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directiva de .FPO controla la emisión de los registros de depuración al segmento o a la sección de .debug$F.  
+# <a name="fpo"></a>.FPO
+El archivo. Directiva de FPO controla la emisión de los registros de depuración a la sección o segmento de .debug$ F.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -47,24 +45,24 @@ cbFrame
   
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `cdwLocals`  
- número de variables locales, un valor de bit sin signo 32.  
+ Número de variables locales, un valor de 32 bits sin signo.  
   
  `cdwParams`  
- Tamaño de los parámetros en DWORD, un valor de bit sin signo 16.  
+ Tamaño de los parámetros de valores DWORD, un valor de 16 bits sin signo.  
   
  *cbProlog*  
- Número de bytes del código de prólogo de función, un valor de bit sin signo 8.  
+ Número de bytes en el código de prólogo de función, un valor de 8 bits sin signo.  
   
  `cbRegs`  
- Registros de número guardados.  
+ Número de registros guardados.  
   
  `fUseBP`  
- Indica si se ha asignado el registro EBP.  0 o 1.  
+ Indica si se ha asignado el registro EBP. 0 ó 1.  
   
  *cbFrame*  
- Indica el tipo de fotograma.  Para obtener más información, consulte [FPO\_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352).  
+ Indica el tipo de marco.  Vea [FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352) para obtener más información.  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

@@ -69,11 +69,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08e3cd90e4c86365694c098973f45d667621ea98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 Establece la hora de modificación de un archivo.  
@@ -129,7 +130,7 @@ int _wutime64(
  `ENOENT`  
  Ruta de acceso o nombre de archivo no encontrado  
   
- Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para más información sobre estos y otros códigos devueltos.  
+ Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.  
   
  La fecha de un archivo se puede cambiar si la fecha de modificación es posterior a la medianoche del 1 de enero de 1970 y anterior a la fecha de finalización de la función empleada. `_utime` y `_wutime` usan un valor de hora de 64 bits, por lo que la fecha de finalización es 23:59:59, 31 de diciembre de 3000, UTC. Si `_USE_32BIT_TIME_T` se define para forzar el comportamiento anterior, la fecha de finalización es 23:59:59, 18 de enero de 2038, UTC. `_utime32` o `_wutime32` usan un tipo de hora de 32 bits independientemente de si `_USE_32BIT_TIME_T` está definido y siempre tienen la fecha de finalización más temprana. `_utime64` o `_wutime64` usan siempre el tipo de hora de 64 bits, por lo que en todo momento admiten la fecha de finalización más tardía.  
   
@@ -166,7 +167,7 @@ int _wutime64(
 |`_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_wutime`|\<utime.h> o \<wchar.h>|\<errno.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Este programa usa `_utime` para establecer la hora de modificación del archivo en la hora actual.  

@@ -1,47 +1,49 @@
 ---
-title: "Crear un archivo DLL de recursos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], crear"
-  - "DLL sólo de recursos [C++], crear"
+title: Crear un archivo DLL de recursos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resource-only DLLs [C++], creating
+- DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd65085c9a0ecc0479c7d22feb5587d1e94447de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Crear un archivo DLL de recursos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un archivo DLL de recursos es un archivo DLL que sólo contiene recursos, como iconos, mapas de bits, cadenas y cuadros de diálogo.  El uso de este tipo de archivo es una buena manera de compartir el mismo conjunto de recursos entre varios programas.  También es bueno para proporcionar una aplicación con recursos localizados en varios idiomas \(vea [Recursos localizados en aplicaciones MFC: archivos DLL satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)\).  
+# <a name="creating-a-resource-only-dll"></a>Crear un archivo DLL de recursos  
   
- Para crear un archivo DLL de recursos debe crear un nuevo proyecto de archivo DLL para Win32 \(que no esté basado en MFC\) y agregar los recursos al proyecto.  
+Un archivo DLL de recursos es un archivo DLL que sólo contiene recursos, como iconos, mapas de bits, cadenas y cuadros de diálogo. El uso de este tipo de archivo es una buena manera de compartir el mismo conjunto de recursos entre varios programas. También es una buena forma de proporcionar una aplicación con recursos localizados en varios idiomas (vea [recursos localizados en aplicaciones MFC: archivos DLL satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).  
   
--   Seleccione Proyecto Win32 en el cuadro de diálogo **Nuevo proyecto** y especifique un tipo de proyecto de DLL en el Asistente para proyectos Win32.  
+Para crear un archivo DLL de recursos debe crear un nuevo proyecto de archivo DLL para Win32 (que no esté basado en MFC) y agregar los recursos al proyecto.  
   
--   Cree un nuevo script de recursos que contenga los recursos \(como una cadena o un menú\) para el archivo DLL y guarde el archivo .rc.  
+-   Seleccione proyecto Win32 en el **nuevo proyecto** diálogo cuadro y especifique un tipo de proyecto DLL en el Asistente para proyectos Win32.  
   
--   En el menú **Proyecto**, haga clic en **Agregar elemento existente** e inserte el nuevo archivo .rc en el proyecto.  
+-   Cree un nuevo script de recursos que contenga los recursos (como una cadena o un menú) para el archivo DLL y guarde el archivo .rc.  
   
--   Especifique la opción [\/NOENTRY](../build/reference/noentry-no-entry-point.md) del vinculador. \/NOENTRY evita que el vinculador vincule una referencia a \_main en el archivo DLL; esta opción es necesaria para crear un archivo DLL sólo de recursos.  
+-   En el **proyecto** menú, haga clic en **Agregar elemento existente**y, a continuación, inserte el nuevo archivo .rc en el proyecto.  
+  
+-   Especifique el [/NOENTRY](../build/reference/noentry-no-entry-point.md) opción del vinculador. /NOENTRY evita que el vinculador vincule una referencia a `_main` en el archivo DLL; esta opción es necesaria para crear un archivo DLL sólo de recursos.  
   
 -   Compile el archivo DLL.  
   
- La aplicación que utiliza el archivo DLL de recursos debe llamar a **LoadLibrary** para [vincularse explícitamente al archivo DLL](../build/loadlibrary-and-afxloadlibrary.md).  Para tener acceso a los recursos, llame a las funciones genéricas **FindResource** y **LoadResource**, que funcionan en cualquier tipo de recurso, o llame a una de las siguientes funciones específicas para recursos:  
+Debe llamar la aplicación que utiliza el archivo DLL de recursos [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) para vincularse explícitamente al archivo DLL. Para obtener acceso a los recursos, llame a las funciones genéricas `FindResource` y `LoadResource`, que funcionan en cualquier tipo de recurso, o llame a una de las siguientes funciones específicas para recursos:  
   
 -   `FormatMessage`  
   
--   **LoadAccelerators**  
+-   `LoadAccelerators`  
   
 -   `LoadBitmap`  
   
@@ -53,11 +55,9 @@ Un archivo DLL de recursos es un archivo DLL que sólo contiene recursos, como i
   
 -   `LoadString`  
   
- La aplicación debe llamar a **FreeLibrary** cuando deje de utilizar los recursos.  
+La aplicación debe llamar a `FreeLibrary` cuando finaliza con los recursos.  
   
-## ¿Sobre qué desea obtener más información?  
+## <a name="see-also"></a>Vea también  
   
--   [DELETE\_PENDING\_Editing Resources](http://msdn.microsoft.com/es-es/c29d31c7-2d94-40ca-8aa0-c7262883529c)  
-  
-## Vea también  
- [Archivos DLL en Visual C\+\+](../build/dlls-in-visual-cpp.md)
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
+[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)

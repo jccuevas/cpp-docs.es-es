@@ -1,76 +1,77 @@
 ---
-title: "/Oi (Generar funciones intr&#237;nsecas) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions"
-  - "/oi"
-  - "VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Oi (opción del compilador) [C++]"
-  - "generar funciones intrínsecas (opción del compilado) [C++]"
-  - "funciones intrínsecas, generar"
-  - "Oi (opción del compilador) [C++]"
-  - "-Oi (opción del compilador) [C++]"
+title: "-Oi (generar funciones intrínsecas) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
+- /oi
+- VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions
+dev_langs: C++
+helpviewer_keywords:
+- Oi compiler option [C++]
+- intrinsic functions, generate
+- /Oi compiler option [C++]
+- -Oi compiler option [C++]
+- generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0a24830dbc67466e52f3f3c488dda7ac5b4778d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /Oi (Generar funciones intr&#237;nsecas)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Reemplaza algunas llamadas a función con formas intrínsecas o especiales de la función, que aumentan la velocidad de ejecución de la aplicación.  
+# <a name="oi-generate-intrinsic-functions"></a>/Oi (Generar funciones intrínsecas)
+Reemplaza algunas llamadas a función con formas intrínsecas o especiales de la función que le ayudan a la aplicación se ejecute más rápido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /Oi[-]  
 ```  
   
-## Comentarios  
- Los programas que usan funciones intrínsecas son más rápidos porque carecen de la sobrecarga de las llamadas de función, pero pueden tener un mayor tamaño a causa del código adicional que se crea.  
+## <a name="remarks"></a>Comentarios  
+ Programas que usan funciones intrínsecas son más rápidas porque no tiene la sobrecarga de llamadas de función, pero puede ser más grandes debido al código adicional que se creó.  
   
- Vea [intrinsic](../../preprocessor/intrinsic.md) para obtener más información sobre las funciones que tienen formas intrínsecas.  
+ Vea [intrínseco](../../preprocessor/intrinsic.md) para obtener más información en el que las funciones tienen formas intrínsecas.  
   
- **\/Oi** es sólo una solicitud al compilador para que reemplace algunas llamadas a función con formas intrínsecas; el compilador podría llamar a la función \(y no reemplazar la llamada a la función con una forma intrínseca\) si ello produjese una mejora del rendimiento.  
+ **/Oi** es sólo una solicitud al compilador para reemplazar algunas llamadas a función con formas intrínsecas; el compilador puede llamar a la función (y no reemplazar la llamada de función con una función intrínseca) si dará como resultado un mejor rendimiento.  
   
- **Específico de x86**  
+ **x86 específico**  
   
- Las funciones de punto flotante intrínsecas no realizan comprobaciones especiales de los valores de entrada y, por lo tanto, operan sobre intervalos de entrada restringidos, y tienen condiciones de límite y control de excepciones diferentes que las rutinas de biblioteca del mismo nombre.  El uso de formas intrínsecas verdaderas implica la pérdida del control de excepciones IEEE, y la pérdida de la funcionalidad de `_matherr` y `errno`; lo último implica la pérdida de conformidad con ANSI.  No obstante, las formas intrínsecas pueden acelerar considerablemente los programas que hacen un uso intenso de las operaciones de punto flotante y, para muchos programas, los problemas de conformidad tienen poco valor práctico.  
+ Las funciones intrínsecas de punto flotante no se realiza ninguna comprobación especial en valores de entrada y por lo que funcionan en intervalos de entrada restringidos y tener control de excepciones diferentes y las condiciones de límite que las rutinas de biblioteca con el mismo nombre. El uso de las formas intrínsecas auténticas implica pérdida de control de excepciones IEEE y la pérdida de `_matherr` y `errno` funcionalidad; el último implica la pérdida de conformidad con ANSI. Sin embargo, las formas intrínsecas pueden acelerar considerablemente los programas que usan punto flotante y para muchos de los programas, los problemas de conformidad tienen poco valor práctico.  
   
- Puede usar la opción del compilador [Za](../../build/reference/za-ze-disable-language-extensions.md) para invalidar la generación de opciones de punto flotante de formas intrínsecas verdaderas.  En este caso, las funciones se generan como rutinas de biblioteca que pasan los argumentos directamente al chip de punto flotante, en lugar de insertarlos en la pila del programa.  
+ Puede usar el [Za](../../build/reference/za-ze-disable-language-extensions.md) opción del compilador para reemplazar la generación de opciones verdaderas intrínsecas de punto flotante. En este caso, las funciones se generan como rutinas de biblioteca que pasan los argumentos directamente al chip de punto flotante, en lugar de insertarlos en la pila del programa.  
   
- **Específico de END x86**  
+ **END x86 específico**  
   
- También puede usar [intrinsic](../../preprocessor/intrinsic.md) para crear funciones intrínsecas o [función](../../preprocessor/function-c-cpp.md) para forzar explícitamente una llamada a función.  
+ Además de usar [intrínseco](../../preprocessor/intrinsic.md) para crear funciones intrínsecas, o [(función) (C o C++)](../../preprocessor/function-c-cpp.md) para forzar explícitamente una llamada de función.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **C\/C\+\+**.  
+2.  Haga clic en la carpeta **C/C++** .  
   
-3.  Haga clic en la página de propiedades **Optimización**.  
+3.  Haga clic en el **optimización** página de propiedades.  
   
-4.  Modifique la propiedad **Habilitar funciones intrínsecas**.  
+4.  Modificar el **habilitar funciones intrínsecas** propiedad.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.  
   
-## Vea también  
- [\/O \(Opciones\) \(Optimizar código\)](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>Vea también  
+ [Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
  [Intrínsecos del controlador](../../intrinsics/compiler-intrinsics.md)

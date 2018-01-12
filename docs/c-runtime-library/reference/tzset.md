@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _tzset
+apiname: _tzset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _tzset
-dev_langs:
-- C++
+f1_keywords: _tzset
+dev_langs: C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f103da7ca67721f6c654c593746b9427954c6930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tzset"></a>_tzset
 Establece variables de tiempo del entorno.  
@@ -72,7 +54,7 @@ void _tzset( void );
 ## <a name="remarks"></a>Comentarios  
  La función `_tzset` usa la configuración actual de la variable de entorno `TZ` para asignar valores a tres variables globales: `_daylight`, `_timezone`y `_tzname`. Las funciones [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) y [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) usan estas variables para ajustar la hora universal coordinada (UTC) a la hora local. La función `time` las usa para calcular la hora UTC a partir de la hora del sistema. Use la sintaxis siguiente para establecer la variable de entorno `TZ` :  
   
- `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:mm`[`:ss`] ][`dzn`]  
   
  `tzn`  
  Nombre de la zona horaria de tres letras, por ejemplo PST. Debe especificar el desplazamiento correcto de la hora local a la hora UTC.  
@@ -109,7 +91,7 @@ set TZ=GST-1GDT
 |`_daylight`|Valor distinto de cero si se especifica una zona de horario de verano en la configuración de `TZ` ; de lo contrario, 0.|1|  
 |`_timezone`|Diferencia en segundos entre las hora local y la hora UTC.|28800 (28800 segundos equivalen a 8 horas)|  
 |`_tzname`[0]|Valor de cadena del nombre de la zona horaria de la variable de entorno `TZ` ; está vacío si `TZ` no se ha establecido.|PST|  
-|`_tzname`[1]|Valor de cadena de la zona de horario de verano; está vacío si la zona de horario de verano se omite de la variable de entorno `TZ` .|PDT|  
+|`_tzname`[1]|Valor de cadena de la zona de horario de verano; está vacío si la zona de horario de verano se omite de la variable de entorno `TZ`.|PDT|  
   
  Los valores predeterminados de la tabla anterior para `_daylight` y la matriz de `_tzname` corresponden a “PST8PDT”. Si la zona de DST se omite en la variable de entorno `TZ` , el valor de `_daylight` es 0 y las funciones `_ftime`, `gmtime`y `localtime` devuelven 0 para sus marcas de DST.  
   

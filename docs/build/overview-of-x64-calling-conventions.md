@@ -13,18 +13,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Información general sobre las convenciones de llamada x64
 Dos diferencias importantes entre x86 y [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] son la capacidad de direccionamiento de 64 bits y un conjunto simple de 64 bits de 16 registros de uso general. Dado el registros ampliado conjunto, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utiliza la [__fastcall](../cpp/fastcall.md) convención de llamada y un modelo de control de excepciones basado en RISC. El `__fastcall` convención usa registros para los cuatro primeros argumentos y el marco de pila para pasar argumentos adicionales.  
   
  La opción del compilador siguiente ayuda a optimizar la aplicación para [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/favor (optimizar para específicos de la arquitectura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (Optimizar para valores específicos de la arquitectura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Convención de llamada  
  El [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] interfaz binaria de aplicaciones (ABI) usa una cuatro registro fast convención de llamada de forma predeterminada. Se asigna espacio en la pila de llamadas como un almacén de instantáneas para los destinatarios guardar los registros. Hay una correspondencia estricta entre los argumentos de una llamada de función y los registros que se usa para los argumentos. Cualquier argumento que no cabe en 8 bytes, o no es 1, 2, 4 o 8 bytes, debe pasarse por referencia. No hay ningún intento para distribuir un único argumento en varios registros. X87 pila del registro no se utiliza. Puede utilizarse el destinatario de la llamada, pero debe considerarse volátil en las llamadas a funciones. Punto flotante de todas las operaciones se realizan utilizando los 16 registros de XMM. Argumentos de entero se pasan en registros RCX, RDX, R8 y R9. Argumentos se pasan en XMM0L, XMM1L, XMM2L y XMM3L de punto flotante. argumentos de 16 bytes se pasan por referencia. Paso de parámetros se describen en detalle en [pasando el parámetro](../build/parameter-passing.md). Además de estos registros, RAX, R10, R11, XMM4 y XMM5 se consideran volátiles. Todos los demás registros son no volátiles. Uso de registros está documentada en detalle en [registrar el uso del](../build/register-usage.md) y [guardan registra llamador/destinatario](../build/caller-callee-saved-registers.md).  

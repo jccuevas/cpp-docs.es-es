@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfbb97f66065efd0a9ef06de0ff427e893610955
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-simple-object-wizard"></a>Asistente para objetos simples ATL
 Este asistente inserta en el proyecto un objeto COM mínima. Utilice esta página del Asistente para especificar los nombres que identifican los archivos para el objeto y su funcionalidad COM y la clase de C++.  
@@ -74,7 +75,7 @@ Este asistente inserta en el proyecto un objeto COM mínima. Utilice esta págin
 > [!NOTE]
 >  Si crea el proyecto mediante atributos, o si se indican en esta página del asistente que el objeto utiliza atributos, no se puede cambiar esta opción, ya que ATL no incluye el `coclass` atributo.  
   
- **ype**  
+ **Type**  
  Establece la descripción del objeto que va a aparecer en el registro  
   
  **Interface**  

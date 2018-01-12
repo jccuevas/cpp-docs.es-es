@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 993cfcc7247b67fbc84b135e95746ae0df3b6f1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2d3ec38f4c5607b2dbb1739af9449df0f427e93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilidad con otros lenguajes de .NET (C++/CLI)
 Los temas de esta sección muestran cómo crear ensamblados en Visual C++ que utilicen o proporcionen funcionalidad a ensamblados escritos en C# o Visual Basic.  

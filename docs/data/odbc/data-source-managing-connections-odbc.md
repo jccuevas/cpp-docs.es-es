@@ -1,94 +1,97 @@
 ---
-title: "Origen de datos: Administrar conexiones (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cadenas de conexión [C++], generalizar"
-  - "conexiones [C++], origen de datos"
-  - "orígenes de datos [C++], conectar"
-  - "conexiones de bases de datos [C++], crear"
-  - "conexiones de bases de datos [C++], clases ODBC de MFC"
-  - "bases de datos [C++], conectar"
-  - "desconectar de orígenes de datos"
-  - "generalizar cadenas de conexión"
-  - "GetDefaultConnect (método)"
-  - "ODBC [C++], desconectar de orígenes de datos"
-  - "conexiones ODBC [C++], configurar"
-  - "conexiones ODBC [C++], conectar a orígenes de datos"
-  - "conexiones ODBC [C++], desconectar"
-  - "orígenes de datos ODBC [C++], conexiones"
-  - "orígenes de datos ODBC [C++], entornos multiusuario"
+title: 'Origen de datos: Administrar conexiones (ODBC) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC data sources [C++], multiuser environments
+- generalizing connection strings
+- ODBC [C++], disconnecting from data sources
+- connection strings [C++], generalizing
+- database connections [C++], creating
+- GetDefaultConnect method
+- connections [C++], data source
+- ODBC connections [C++], configuring
+- disconnecting from data sources
+- databases [C++], connecting to
+- ODBC connections [C++], disconnecting
+- data sources [C++], connecting to
+- ODBC connections [C++], connecting to data source
+- ODBC data sources [C++], connections
+- database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9b83093496d355fdba8b5d714875d08040ae28ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Origen de datos: Administrar conexiones (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="data-source-managing-connections-odbc"></a>Origen de datos: Administrar conexiones (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
   
  En este tema se explica:  
   
--   [Cómo se configura un origen de datos](#_core_configuring_a_data_source).  
+-   [Cómo configurar un origen de datos](#_core_configuring_a_data_source).  
   
--   [Cómo afecta un entorno multiusuario a un origen de datos y sus conjuntos de registros](#_core_working_in_a_multiuser_environment).  
+-   [Cómo afecta a un entorno multiusuario un origen de datos y sus conjuntos de registros](#_core_working_in_a_multiuser_environment).  
   
--   [Por qué se generaliza una cadena de conexión a un origen de datos](#_core_generalizing_the_connection_string).  
+-   [¿Por qué se generaliza una cadena de conexión a un origen de datos](#_core_generalizing_the_connection_string).  
   
 -   [Cómo conectarse a un origen de datos](#_core_connecting_to_a_specific_data_source).  
   
 -   [Cómo desconectarse de un origen de datos](#_core_disconnecting_from_a_data_source).  
   
--   [Cómo se reutiliza un objeto CDatabase](#_core_reusing_a_cdatabase_object).  
+-   [Cómo reutilizar un objeto CDatabase](#_core_reusing_a_cdatabase_object).  
   
- La acción de conectarse a un origen de datos significa establecer comunicaciones con un DBMS para tener acceso a los datos.  Cuando se establece conexión con un origen de datos desde una aplicación mediante un controlador ODBC, el controlador efectúa la conexión en lugar del usuario, ya sea localmente o a través de una red.  
+ Conectarse a un origen de datos significa establecer comunicaciones con un DBMS para tener acceso a los datos. Cuando se conecta a un origen de datos desde una aplicación a través de un controlador ODBC, el controlador realiza la conexión para usted, ya sea localmente o a través de una red.  
   
- La conexión se puede efectuar con cualquier origen de datos para el que se tenga un controlador ODBC.  Los usuarios de la aplicación también deben tener el mismo controlador ODCB para su origen de datos.  Para obtener más información sobre cómo se redistribuyen los controladores ODBC, vea [Redistribuir componentes ODBC a los clientes](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
+ Puede conectarse a cualquier origen de datos para el que tenga un controlador ODBC. Los usuarios de la aplicación también deben tener el mismo controlador ODBC para su origen de datos. Para obtener más información acerca de la redistribución de controladores ODBC, vea [Redistribuir componentes ODBC a los clientes](../../data/odbc/redistributing-odbc-components-to-your-customers.md).  
   
-##  <a name="_core_configuring_a_data_source"></a> Configurar un origen de datos  
- Para configurar los orígenes de datos se utiliza el Administrador de ODBC.  También se puede utilizar el Administrador de ODBC después de la instalación para agregar o quitar orígenes de datos.  Cuando se crean aplicaciones, se puede dirigir a los usuarios al Administrador de ODBC para que puedan agregar orígenes de datos, o compilar esta funcionalidad en la aplicación haciendo llamadas directas de instalación ODBC.  Para obtener más información, vea [Administrador de ODBC](../../data/odbc/odbc-administrator.md).  
+##  <a name="_core_configuring_a_data_source"></a>Configurar un origen de datos  
+ El Administrador de ODBC se usa para configurar los orígenes de datos. También puede utilizar el Administrador de ODBC después de la instalación para agregar o quitar orígenes de datos. Al crear aplicaciones, se pueden dirigir a los usuarios para el Administrador de ODBC que les permiten agregar orígenes de datos o puede crear esta funcionalidad en la aplicación mediante la realización de llamadas directas de instalación ODBC. Para obtener más información, consulte [Administrador ODBC](../../data/odbc/odbc-administrator.md).  
   
- Se puede utilizar un archivo de Excel como origen de datos; en este caso, es necesario configurar el archivo de forma que se registre y aparezca en el cuadro de diálogo **Seleccionar origen de datos**.  
+ Puede usar un archivo de Excel como origen de datos, y debe configurar el archivo de forma que se ha registrado y aparece en el **Seleccionar origen de datos** cuadro de diálogo.  
   
-#### Para utilizar un archivo de Excel como origen de datos  
+#### <a name="to-use-an-excel-file-as-a-data-source"></a>Para utilizar un archivo de Excel como origen de datos  
   
-1.  Configure el archivo con el Administrador de ODBC de origen de datos.  
+1.  Configure el archivo con el Administrador de orígenes de datos de ODBC.  
   
-2.  En la ficha **DSN de archivo**, haga clic en **Agregar**.  
+2.  En el **DSN de archivo** , haga clic en **agregar**.  
   
-3.  En el cuadro de diálogo **Crear nuevo origen de datos**, seleccione un controlador de Excel y haga clic en **Siguiente**.  
+3.  En el **Create New Data Source** cuadro de diálogo, seleccione un controlador de Excel y, a continuación, haga clic en **siguiente**.  
   
-4.  Haga clic en **Examinar** y seleccione el nombre del archivo que se va a utilizar como origen de datos.  
+4.  Haga clic en **examinar**y seleccione el nombre del archivo que se usará como origen de datos.  
   
 > [!NOTE]
->  Puede que sea necesario seleccionar **Todos los archivos** en el menú desplegable para ver los archivos .xls.  
+>  Tendrá que seleccionar **todos los archivos** en el menú desplegable para ver los archivos .xls.  
   
-1.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
+1.  Haga clic en **Siguiente** y después haga clic en **Finalizar**.  
   
-2.  En el cuadro de diálogo **Configuración de ODBC Microsoft Excel**, seleccione la versión de base de datos y el libro de Excel correspondientes.  
+2.  En el **el programa de instalación de ODBC Microsoft Excel** cuadro de diálogo, seleccione la versión de la base de datos y el libro.  
   
-##  <a name="_core_working_in_a_multiuser_environment"></a> Trabajar en un entorno multiusuario  
- Si hay varios usuarios conectados a un origen de datos, pueden cambiar los datos mientras se manipulan en los conjuntos de registros personales.  De forma similar, los cambios que se efectúen pueden afectar a los conjuntos de registros de otros usuarios.  Para obtener más información, vea [Conjunto de registros: Actualizar los registros \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [Transacción \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+##  <a name="_core_working_in_a_multiuser_environment"></a>Trabajar en un entorno multiusuario  
+ Si varios usuarios están conectados a un origen de datos, pueden cambiar los datos mientras se manipulan en los conjuntos de registros. De forma similar, los cambios podrían afectar a los conjuntos de registros de otros usuarios. Para obtener más información, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_generalizing_the_connection_string"></a> Generalizar la cadena de conexión  
- Los asistentes utilizan una cadena de conexión predeterminada para establecer una conexión con un origen de datos.  Esta conexión se utiliza para ver tablas y columnas mientras se está desarrollando la aplicación.  No obstante, puede que esta cadena de conexión predeterminada no sea apropiada para las conexiones de los usuarios con el origen de datos a través de la aplicación.  Por ejemplo, el origen de datos de los usuarios y la ruta de acceso a su ubicación pueden diferir de los utilizados en el desarrollo de la aplicación.  En este caso, se debe volver a implementar la función miembro [CRecordset::GetDefaultConnect](../Topic/CRecordset::GetDefaultConnect.md) de forma más genérica y descartar la implementación del asistente.  Por ejemplo, utilice uno de los siguientes enfoques:  
+##  <a name="_core_generalizing_the_connection_string"></a>Generalizar la cadena de conexión  
+ Los asistentes utilizan una cadena de conexión predeterminada para establecer una conexión con un origen de datos. Utilice esta conexión para ver las tablas y columnas mientras se desarrolla la aplicación. Sin embargo, esta cadena de conexión predeterminada no sería adecuada para las conexiones de los usuarios con el origen de datos a través de la aplicación. Por ejemplo, su origen de datos y la ruta de acceso a su ubicación podrían ser diferentes del que se usa para desarrollar la aplicación. En ese caso, debe volver a implementar el [CRecordset:: GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) miembro funcione de forma más genérica y descartar la implementación del asistente. Por ejemplo, utilice uno de los métodos siguientes:  
   
--   Registre y administre las cadenas de conexión utilizando el Administrador de ODBC.  
+-   Registrar y administrar las cadenas de conexión mediante el Administrador de ODBC.  
   
--   Modifique la cadena de conexión y quite el nombre del origen de datos.  El marco de trabajo proporciona ODBC como origen de datos; en tiempo de ejecución, ODBC muestra un cuadro de diálogo en el que se solicita el nombre del origen de datos y la información necesaria para la conexión.  
+-   Edite la cadena de conexión y quite el nombre de origen de datos. El marco de trabajo proporciona ODBC como origen de datos; en tiempo de ejecución, ODBC muestra un cuadro de diálogo pide información de conexión necesaria de nombre y cualquier otro origen de datos.  
   
--   Proporcione únicamente el nombre del origen de datos.  ODBC solicita el identificador y la contraseña del usuario, si procede.  Por ejemplo, antes de generalizar, la cadena de conexión tiene este aspecto:  
+-   Proporcione únicamente el nombre del origen de datos. ODBC solicita el Id. de usuario y la contraseña, si es necesario. Por ejemplo, antes de generalizar, la cadena de conexión se ve así:  
   
     ```  
     CString CApp1Set::GetDefaultConnect()  
@@ -97,7 +100,7 @@ Este tema es aplicable a las clases ODBC de MFC.
     }  
     ```  
   
-     Esta cadena de conexión especifica una conexión de confianza, que utiliza seguridad integrada de Windows NT.  Debe evitar incluir contraseñas en el propio código o especificar una contraseña en blanco, ya que se podría poner en peligro la seguridad.  En lugar de ello, puede proporcionar a `GetDefaultConnect` una nueva cadena de conexión de modo que solicite un identificador de usuario y una contraseña.  
+     Esta cadena de conexión especifica una conexión de confianza, que utiliza la seguridad integrada de Windows NT. No se deben codificar de forma rígida una contraseña o especificar una contraseña en blanco, ya que si lo hace, crea una vulnerabilidad de seguridad principales. En su lugar, puede asignar a `GetDefaultConnect` una nueva cadena de conexión para que la consulta para un Id. de usuario y una contraseña.  
   
     ```  
     // User must select data source and supply user ID and password:  
@@ -110,36 +113,36 @@ Este tema es aplicable a las clases ODBC de MFC.
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";  
     ```  
   
-##  <a name="_core_connecting_to_a_specific_data_source"></a> Conectarse a un origen de datos específico  
- Para conectarse a un origen de datos específico, el origen de datos debe estar configurado previamente con el [Administrador de ODBC](../../data/odbc/odbc-administrator.md).  
+##  <a name="_core_connecting_to_a_specific_data_source"></a>Conectarse a un origen de datos específico  
+ Para conectarse a un origen de datos específico, el origen de datos debe haber configurado con [Administrador ODBC](../../data/odbc/odbc-administrator.md).  
   
-#### Para conectarse a un origen de datos específico  
+#### <a name="to-connect-to-a-specific-data-source"></a>Para conectarse a un origen de datos específico  
   
-1.  Construya un objeto `CDatabase`.  
+1.  Construir un `CDatabase` objeto.  
   
-2.  Llame a su función miembro `OpenEx` u **Open** correspondiente.  
+2.  Llame a su `OpenEx` o **abiertos** función miembro.  
   
- Para obtener más información sobre cómo se especifica el origen de datos si se trata de uno diferente del que se especificó con el asistente, vea [CDatabase::OpenEx](../Topic/CDatabase::OpenEx.md) o [CDatabase::Open](../Topic/CDatabase::Open.md) en la *Referencia de MFC*.  
+ Para obtener más información sobre cómo especificar el origen de datos si el problema es distinto del que se especificó con el asistente, consulte [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) en el *MFC Referencia*.  
   
-##  <a name="_core_disconnecting_from_a_data_source"></a> Desconectarse de un origen de datos  
- Se deben cerrar los conjuntos de registros abiertos antes de llamar a la función miembro **Close** de `CDatabase`.  En los conjuntos de registros asociados al objeto `CDatabase` que se desee cerrar, se cancelan las instrucciones `AddNew` o **Edit** pendientes y se revierten todas las transacciones pendientes.  
+##  <a name="_core_disconnecting_from_a_data_source"></a>Desconectarse de un origen de datos  
+ Debe cerrar los conjuntos de registros abiertos antes de llamar a la **cerrar** función miembro de `CDatabase`. En conjuntos de registros asociados con la `CDatabase` objeto que desea las pendientes cerrar, `AddNew` o **editar** instrucciones se cancelan y se revierten todas las transacciones pendientes.  
   
-#### Para desconectarse de un origen de datos  
+#### <a name="to-disconnect-from-a-data-source"></a>Para desconectarse de un origen de datos  
   
-1.  Llame a la función miembro [Close](../Topic/CDatabase::Close.md) del objeto `CDatabase`.  
+1.  Llame a la `CDatabase` del objeto [cerrar](../../mfc/reference/cdatabase-class.md#close) función miembro.  
   
-2.  Destruya el objeto a menos que desee volver a utilizarlo.  
+2.  Destruye el objeto a menos que desee volver a usarla.  
   
-##  <a name="_core_reusing_a_cdatabase_object"></a> Reutilizar un objeto CDatabase  
- Se puede reutilizar un objeto `CDatabase` después de desconectarse del mismo, ya sea para volver a conectarse al mismo origen de datos o para conectarse a un origen de datos diferente.  
+##  <a name="_core_reusing_a_cdatabase_object"></a>Reutilizar un objeto CDatabase  
+ Puede volver a usar un `CDatabase` objeto después de desconectarse de él, independientemente de si usa para volver a conectarse al mismo origen de datos o para conectarse a un origen de datos diferente.  
   
-#### Para reutilizar un objeto CDatabase  
+#### <a name="to-reuse-a-cdatabase-object"></a>Para reutilizar un objeto CDatabase  
   
-1.  Cierre la conexión original al objeto.  
+1.  Cierre la conexión original del objeto.  
   
-2.  En lugar de destruir el objeto, llame de nuevo a la función miembro `OpenEx` u **Open** correspondiente.  
+2.  En lugar de destruir el objeto, llame a su `OpenEx` o **abiertos** volver a la función miembro.  
   
-## Vea también  
- [Origen de datos \(ODBC\)](../../data/odbc/data-source-odbc.md)   
- [Origen de datos: Determinar el esquema del origen de datos \(ODBC\)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Vea también  
+ [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)   
+ [Origen de datos: Determinar el esquema del origen de datos (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)   
+ [CRecordset (clase)](../../mfc/reference/crecordset-class.md)

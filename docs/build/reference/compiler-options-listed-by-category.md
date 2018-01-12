@@ -14,18 +14,19 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 Este artículo contiene una lista por categorías de las opciones del compilador. Para acceder a una lista alfabética, vea [Compiler Options Listed Alphabetically](../../build/reference/compiler-options-listed-alphabetically.md).  
   
 ### <a name="optimization"></a>Optimización  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Crea código pequeño.|  
 |[/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|  
@@ -41,7 +42,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
   
 ### <a name="code-generation"></a>Generación de código  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/arch](../../build/reference/arch-x86.md)|Utiliza instrucciones SSE o SSE2 en la generación de código. (solo x86)|  
 |[/clr](../../build/reference/clr-common-language-runtime-compilation.md)|Genera un archivo de salida para ejecutar en Common Language Runtime.|  
@@ -75,7 +76,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Qpar](../../build/reference/qpar-auto-parallelizer.md)|Habilita la ejecución en paralelo automática de bucles.|  
 |[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)|Habilita los niveles de informe para la ejecución en paralelo automática.|  
 |[/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|  
-|[/ Qvec-informe (Vectorizador automático Reporting nivel)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|  
+|[/Qvec/report (Nivel de información de vectorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|  
 |[/RTC](../../build/reference/rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|  
 |[/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|  
   
@@ -96,7 +97,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
   
 ### <a name="preprocessor"></a>Preprocesador  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/AI](../../build/reference/ai-specify-metadata-directories.md)|Especifica un directorio de búsqueda para resolver las referencias a archivos que se transfieren a la directiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|  
 |[/C](../../build/reference/c-preserve-comments-during-preprocessing.md)|Conserva los comentarios durante el preprocesamiento|  
@@ -137,7 +138,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
   
 ### <a name="linking"></a>Vinculación  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/F](../../build/reference/f-set-stack-size.md)|Establece el tamaño de la pila.|  
 |[/LD](../../build/reference/md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos.|  
@@ -151,7 +152,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
   
 ### <a name="miscellaneous"></a>Varios  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/?](../../build/reference/help-compiler-command-line-help.md)|Enumera las opciones del compilador.|  
 |[@](../../build/reference/at-specify-a-compiler-response-file.md)|Especifica un archivo de respuesta.|  
@@ -202,7 +203,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
   
 ### <a name="deprecated-and-removed-compiler-options"></a>Opciones de compilador en desuso y quitadas  
   
-|Opción|Finalidad|  
+|Opción|Propósito|  
 |------------|-------------|  
 |[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)|Desusado. Utilice [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) en su lugar.|  
 |[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)|Desusado. Crea un archivo de información de examen sin variables locales.|  

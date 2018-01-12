@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e242610d2755091704386b0cb3cd85f3cbba70a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing"></a>Preprocesamiento de archivos MAKE
 Puede controlar la sesión NMAKE mediante directivas y expresiones de preprocesamiento. Las instrucciones de preprocesamiento pueden colocarse en el archivo MAKE o en Tools.ini. Directivas using, se puede procesar el archivo MAKE de condicionalmente, mostrar mensajes de error, incluir otros archivos MAKE, anular la definición de una macro y activar o desactivar determinadas opciones.  

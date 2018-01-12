@@ -1,63 +1,63 @@
 ---
-title: "/link (Pasar opciones al vinculador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/link (opción del compilador) [C++]"
-  - "cl.exe (compilador) [C++], pasar opciones al vinculador"
-  - "link (opción del compilador) [C++]"
-  - "-link (opción del compilador) [C++]"
-  - "vinculador [C++], pasar opciones a"
-  - "pasar opciones al vinculador"
+title: -link (fase de opciones al vinculador) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /link
+dev_langs: C++
+helpviewer_keywords:
+- /link compiler option [C++]
+- pass options to linker
+- link compiler option [C++]
+- linker [C++], passing options to
+- -link compiler option [C++]
+- cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d6732f5a2b144172939e23af4addb37b7605de11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /link (Pasar opciones al vinculador)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pasa una o más opciones del vinculador al vinculador.  
+# <a name="link-pass-options-to-linker"></a>/link (Pasar opciones al vinculador)
+Pasa una o varias opciones del vinculador al vinculador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /link linkeroptions  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `linkeroptions`  
- La opción u opciones que se pasan al vinculador.  
+ La opción del vinculador o las opciones que se pasarán al vinculador.  
   
-## Comentarios  
- La opción **\/link** y sus opciones del vinculador deben aparecer detrás de los nombres de archivo y de las opciones de CL.  Es necesario incluir un espacio entre **\/link** y `linkeroptions`.  Para obtener más información, vea [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md).  
+## <a name="remarks"></a>Comentarios  
+ El **/link** opción y sus opciones del vinculador deben aparecer detrás de los nombres de archivo y las opciones de CL. Se requiere un espacio entre **/link** y `linkeroptions`. Para obtener más información, consulte [establecer las opciones del vinculador](../../build/reference/setting-linker-options.md).  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener información detallada, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
 3.  Haga clic en una página de propiedades del vinculador.  
   
 4.  Modifique una o varias propiedades.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
--   Esta opción del compilador no se puede modificar mediante programación.  
+-   Esta opción del compilador no se puede cambiar mediante programación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

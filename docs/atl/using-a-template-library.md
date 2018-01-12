@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a074b48335f0c359ff240e58b78c85d28021caa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5232d2169ae9442a945b48ba141a609003611a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-template-library"></a>Uso de una biblioteca de plantillas
 Una plantilla es algo parecido a una macro. Al igual que con una macro, llamar a una plantilla hace que expanda (con la sustitución de parámetros adecuada) al código que haya escrito. Sin embargo, una plantilla va más allá de esta opción para permitir la creación de nuevas clases basadas en tipos que pasan como parámetros. Estas nuevas clases implementan la seguridad de tipos de formas de llevar a cabo la operación que se expresa en el código de plantilla.  

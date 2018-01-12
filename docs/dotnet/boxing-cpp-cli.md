@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a103f03b667122e16964c8cd0bb34774a6cc9cda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e49c6f82099e6d7dbcfc47079d19228d7a91dc05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="boxing-ccli"></a>Conversión boxing (C++/CLI)
 La conversión boxing es el proceso de convertir un tipo de valor al tipo `object` o a cualquier tipo de interfaz que implementa el tipo de valor. Cuando common language runtime (CLR) cuadros de un tipo de valor, ajusta el valor de un `System.Object` y lo almacena en el montón administrado. La conversión unboxing extrae el tipo de valor del objeto. La conversión boxing es implícita y la conversión unboxing es explícita.  

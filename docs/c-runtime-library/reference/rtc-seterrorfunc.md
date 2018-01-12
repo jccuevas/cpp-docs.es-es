@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa6d2e05668eac7909cb7805c5843ee6584b941f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de71b832af9e6ed2f734f193e49a7c240193edce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 Designa una función como el controlador para notificar comprobaciones de errores en tiempo de ejecución (RTC). Esta función está en desuso; use `_RTC_SetErrorFuncW` en su lugar.  

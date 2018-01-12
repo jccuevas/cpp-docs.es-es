@@ -1,29 +1,32 @@
 ---
-title: "Trabajar con plantillas de consumidor OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas de consumidor OLE DB, acerca de las plantillas de consumidor"
-  - "aplicaciones de ejemplo [C++], plantillas OLE DB"
+title: Trabajar con plantillas de consumidor OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 333b72f2ad27fb079380ea8f2fb07c06f32e5b26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Trabajar con plantillas de consumidor OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Los temas siguientes proporcionan algunos ejemplos de cómo utilizar las plantillas de consumidor OLE DB en situaciones habituales:  
+# <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
+Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas de consumidor OLE DB en escenarios comunes:  
   
 -   [Simplificar el acceso a datos con atributos de base de datos](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -37,35 +40,35 @@ Los temas siguientes proporcionan algunos ejemplos de cómo utilizar las plantil
   
 -   [Actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md)  
   
--   [Utilizar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)  
+-   [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)  
   
--   [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)  
+-   [Usar descriptores de acceso](../../data/oledb/using-accessors.md)  
   
 -   [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
 -   [Admitir transacciones en OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
--   [Utilizar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)  
+-   [Usar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)  
   
--   [Utilizar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)  
+-   [Usar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)  
   
 -   [Actualizar una columna cuando otra tabla contiene una referencia a la fila](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
--   [Utilizar marcadores](../../data/oledb/using-bookmarks.md)  
+-   [Usar marcadores](../../data/oledb/using-bookmarks.md)  
   
 -   [Recuperar un objeto BLOB](../../data/oledb/retrieving-a-blob.md)  
   
 -   [Recibir notificaciones](../../data/oledb/receiving-notifications.md)  
   
- Para consultar un ejemplo de la creación e implementación de un consumidor OLE DB, vea [Crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
+ Para obtener un ejemplo de creación e implementación de un consumidor OLE DB, vea [crear un consumidor sencillo](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- También encontrará formas de utilizar las plantillas de consumidor OLE DB en los siguientes ejemplos:  
+ También puede encontrar ejemplos de cómo usar las plantillas de consumidor OLE DB en los ejemplos siguientes:  
   
--   [CatDB](http://msdn.microsoft.com/es-es/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/es-es/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/es-es/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

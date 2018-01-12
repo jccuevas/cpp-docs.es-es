@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>CSid (clase)
 Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).  
@@ -71,20 +54,20 @@ class CSid
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSid::CSidArray](#csidarray)|Matriz de objetos `CSid`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|El constructor.|  
 |[CSid:: ~ CSid](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSid::AccountName](#accountname)|Devuelve el nombre de la cuenta asociada con el `CSid` objeto.|  
 |[CSid::Domain](#domain)|Devuelve el nombre de dominio asociado a la `CSid` objeto.|  
@@ -122,7 +105,7 @@ class CSid
   
  Las aplicaciones no deben modificar el `SID` estructura directamente, sino que debe utilizar los métodos proporcionados en esta clase contenedora. Vea también [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), y [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [el Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [el Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
@@ -239,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Devuelve **true** se ejecuta correctamente, **false** en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Vea [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] para obtener más detalles.  
+ Vea [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) en el SDK de Windows para obtener más detalles.  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  Devuelve la longitud de la `CSid` objeto.  
@@ -536,4 +519,3 @@ SID_NAME_USE SidNameUse() const throw();
  [Información general de clases](../../atl/atl-class-overview.md)   
  [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)   
  [Operadores](../../atl/reference/atl-operators.md)
-

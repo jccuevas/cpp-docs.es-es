@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof (Operador)
 C++11 incluye por primera vez el operador `alignof`, que devuelve la alineación del tipo especificado en bytes. Para la máxima portabilidad, use el operador alignof en lugar del operador __alignof específico de Microsoft.  
@@ -91,7 +92,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [__unaligned](../cpp/unaligned.md)  
   
--   [/Zp (alineación de miembros de estructura)](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp (Alineación de miembros de estructura)](../build/reference/zp-struct-member-alignment.md)  
   
 -   [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md) (x64 específico)  
   

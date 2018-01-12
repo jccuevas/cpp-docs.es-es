@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -65,30 +63,16 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3502f864ce5450e86acd673d2911ed7f5393e5fe
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Realiza una comparación de cadenas sin distinción entre mayúsculas y minúsculas.  
@@ -147,7 +131,7 @@ int _mbsicmp_l(
  Si se produce un error, `_mbsicmp` devuelve `_NLSCMPERROR`, que se define en \<string.h> y en \<mbstring.h>.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_stricmp` realiza una comparación ordinal de `string1` y `string2` después de convertir cada carácter a minúsculas y devuelve un valor que indica su relación. `_stricmp` difiere de `_stricoll` en que la comparación `_stricmp` solo se ve afectada por `LC_CTYPE`, que determina qué caracteres van en mayúscula y cuáles en minúscula. La función `_stricoll` compara las cadenas según las categorías `LC_CTYPE` y `LC_COLLATE` de la configuración regional, lo que incluye el uso de mayúsculas y minúsculas y el orden de intercalación. Para obtener más información sobre la categoría `LC_COLLATE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) y [Categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el sufijo `_l` utilizan la configuración regional actual para el comportamiento que depende de la configuración regional. Las versiones con el sufijo son idénticas, salvo que usan el parámetro de configuración regional que se pasa. Si no se ha establecido la configuración regional, se utiliza la configuración regional de C. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ La función `_stricmp` realiza una comparación ordinal de `string1` y `string2` después de convertir cada carácter a minúsculas y devuelve un valor que indica su relación. `_stricmp` difiere de `_stricoll` en que la comparación `_stricmp` solo se ve afectada por `LC_CTYPE`, que determina qué caracteres van en mayúscula y cuáles en minúscula. La función `_stricoll` compara las cadenas según las categorías `LC_CTYPE` y `LC_COLLATE` de la configuración regional, lo que incluye el uso de mayúsculas y minúsculas y el orden de intercalación. Para obtener más información sobre la categoría `LC_COLLATE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) y [Categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el sufijo `_l` utilizan la configuración regional actual para el comportamiento que depende de la configuración regional. Las versiones con el sufijo son idénticas, salvo que usan el parámetro de configuración regional que se pasa. Si no se ha establecido la configuración regional, se utiliza la configuración regional de C. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
 >  `_stricmp` es equivalente a `_strcmpi`. Se pueden indistintamente, pero `_stricmp` es el estándar preferido.  

@@ -1,36 +1,38 @@
 ---
-title: "IRowsetNotifyCP::Fire_OnRowsetChange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Fire_OnRowsetChange"
-  - "IRowsetNotifyCP::Fire_OnRowsetChange"
-  - "IRowsetNotifyCP.Fire_OnRowsetChange"
-  - "ATL::IRowsetNotifyCP::Fire_OnRowsetChange"
-  - "ATL.IRowsetNotifyCP.Fire_OnRowsetChange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Fire_OnRowsetChange (método)"
+title: 'IRowsetNotifyCP:: Fire_onrowsetchange | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Fire_OnRowsetChange
+- IRowsetNotifyCP::Fire_OnRowsetChange
+- IRowsetNotifyCP.Fire_OnRowsetChange
+- ATL::IRowsetNotifyCP::Fire_OnRowsetChange
+- ATL.IRowsetNotifyCP.Fire_OnRowsetChange
+dev_langs: C++
+helpviewer_keywords: Fire_OnRowsetChange method
 ms.assetid: 412a9ec2-5041-4c56-acda-dc8f8e9b35f3
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c86cf959ff2b1b9e05577823aa99da39b90222ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetNotifyCP::Fire_OnRowsetChange
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Propaga un evento de [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) a todos los agentes de escucha del punto de conexión **IID\_IRowsetNotify** para notificar a los consumidores de un cambio que afecta al conjunto de filas completo.  
+# <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
+Difunde un [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) eventos en todos los agentes de escucha en el punto de conexión **IID_IRowsetNotify** notificar a los consumidores de un cambio que afecta a todo el conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -42,11 +44,11 @@ Propaga un evento de [OnRowsetChange](https://msdn.microsoft.com/en-us/library/m
 );  
 ```  
   
-#### Parámetros  
- Vea [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) en *la referencia del*programador.  
+#### <a name="parameters"></a>Parámetros  
+ Vea [IRowsetNotify::OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) en el *referencia del programador OLE DB*.  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [IRowsetNotifyCP \(Clase\)](../../data/oledb/irowsetnotifycp-class.md)
+## <a name="see-also"></a>Vea también  
+ [IRowsetNotifyCP (Clase)](../../data/oledb/irowsetnotifycp-class.md)

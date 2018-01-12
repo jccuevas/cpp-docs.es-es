@@ -51,11 +51,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c895deff6a855a6ccc19f9816d359476907c2f22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Realiza pruebas contextuales para los bytes iniciales y finales de cadenas de caracteres multibyte y determina si un determinado puntero de la subcadena apunta a un byte inicial o un byte final.  
@@ -102,7 +103,7 @@ int _ismbstrail_l(
 ## <a name="remarks"></a>Comentarios  
  `_ismbslead` y `_ismbstrail` son más lentos que las versiones `_ismbblead` y `_ismbbtrail` porque tienen en cuenta el contexto de cadena.  
   
- Las versiones de estas funciones que tienen el sufijo `_l` son idénticas excepto porque, para su comportamiento, usan la configuración regional que se les pasa en lugar de la configuración regional actual. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones que tienen el sufijo `_l` son idénticas excepto porque, para su comportamiento, usan la configuración regional que se les pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -121,4 +122,4 @@ int _ismbstrail_l(
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [_ismbc (Rutinas)](../../c-runtime-library/ismbc-routines.md)   
  [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

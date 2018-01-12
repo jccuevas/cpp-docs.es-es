@@ -1,68 +1,68 @@
 ---
-title: "Enlaces de notificaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "carga retrasada de archivos DLL, enlaces de notificación"
+title: "Enlaces de notificación | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 31490e3bb591af6568ffecddf68219c89a25e055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Enlaces de notificaci&#243;n
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se llama a los enlaces de notificación inmediatamente antes de que se realicen las acciones siguientes en la rutina auxiliar:  
+# <a name="notification-hooks"></a>Enlaces de notificación
+Los enlaces de notificación se llama justo antes de que se realizan las acciones siguientes en la rutina auxiliar:  
   
--   Comprobar si ya se ha cargado el identificador almacenado para la biblioteca.  
+-   El identificador almacenado para la biblioteca se comprueba para ver si ya se ha cargado.  
   
--   Llamar a **LoadLibrary** para intentar la carga de la DLL.  
+-   **LoadLibrary** se llama para tratar la carga del archivo DLL.  
   
--   Llamar a **GetProcAddress** para intentar conseguir la dirección del procedimiento.  
+-   **GetProcAddress** se llama para intentar obtener la dirección del procedimiento.  
   
--   Volver al *thunk* de importación de carga retrasada.  
+-   Volver al thunk de importación de carga de retraso.  
   
- El enlace de notificación se habilita:  
+ Se habilita el enlace de notificación:  
   
--   Si se proporciona una nueva definición del puntero **\_\_pfnDliNotifyHook2** que se inicializa para apuntar a nuestra propia función, la cual recibe las notificaciones.  
+-   Si se suministra una nueva definición del puntero **__pfnDliNotifyHook2** que se inicializa para que señale a su propia función que recibe las notificaciones.  
   
      O bien  
   
--   Si se establece el puntero **\_\_pfnDliNotifyHook2** en la función de enlace antes de que se efectúen llamadas a la DLL cuya carga está retrasando el programa.  
+-   Al establecer el puntero **__pfnDliNotifyHook2** a la función de enlace antes de que todas las llamadas a la DLL que el programa retrasar la carga.  
   
  Si la notificación es **dliStartProcessing**, la función de enlace puede devolver:  
   
  NULL  
- La rutina auxiliar predeterminada controla la carga de la DLL.  Sólo es de utilidad si la llamada tiene fines informativos.  
+ La rutina auxiliar predeterminada controla la carga del archivo DLL. Esto es útil para llamar solo con fines informativos.  
   
- puntero a función  
- Se omite el control de carga retrasada predeterminado.  Esto permite proporcionar un controlador de carga propio.  
+ Puntero a función  
+ Omitir el control de carga retrasada predeterminado. Esto le permite proporcionar su propio controlador de carga.  
   
  Si la notificación es **dliNotePreLoadLibrary**, la función de enlace puede devolver:  
   
--   0, si sólo se desean notificaciones informativas.  
+-   0, si solo se desean notificaciones informativas.  
   
--   HMODULE para la DLL cargada, si HMODULE la ha cargado.  
+-   HMODULE para la DLL cargada, si el propio archivo DLL cargado.  
   
  Si la notificación es **dliNotePreGetProcAddress**, la función de enlace puede devolver:  
   
--   0, si sólo se desean notificaciones informativas.  
+-   0, si solo se desean notificaciones informativas.  
   
--   La dirección de la función importada, si la función de enlace obtiene la propia dirección.  
+-   Dirección de la función importada, si la función de enlace obtiene la propia dirección.  
   
- Si la notificación es **dliNoteEndProcessing**, el valor devuelto de la función de enlace se omite.  
+ Si la notificación es **dliNoteEndProcessing**, se omite el valor devuelto de la función de enlace.  
   
- Si se inicializa este puntero \(valor distinto de cero\), la rutina auxiliar de carga retrasada llamará a la función en determinados puntos de notificación durante su ejecución.  El puntero a función tiene la siguiente definición:  
+ Si se inicializa este puntero (valor distinto de cero), la aplicación auxiliar de carga de retraso invocará la función en determinados puntos de notificación durante su ejecución. El puntero de función tiene la siguiente definición:  
   
 ```  
 // The "notify hook" gets called for every call to the  
@@ -84,7 +84,7 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- Las notificaciones pasan una estructura **DelayLoadInfo** a la función de enlace junto con el valor de notificación.  Estos datos son idénticos a los usados por la rutina auxiliar de carga retrasada.  El valor de notificación será uno de los valores definidos en [Definiciones de estructura y de constante](../../build/reference/structure-and-constant-definitions.md).  
+ Las notificaciones pasan una **DelayLoadInfo** estructura a la función de enlace junto con el valor de notificación. Estos datos son idénticos al utilizado por la rutina de aplicación auxiliar de carga retrasada. El valor de notificación será uno de los valores definidos en [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Notificación y control de errores](../../build/reference/error-handling-and-notification.md)

@@ -1,34 +1,33 @@
 ---
-title: "ML Fatal Error A1009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1009"
+title: Error irrecuperable A1009 de ML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1009
+dev_langs: C++
+helpviewer_keywords: A1009
 ms.assetid: f7a962a6-4280-485e-95cb-2ab8922c66c2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 217ddc0ec0f93b727427ee1495d964d51ef37912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**línea demasiado largo**  
+# <a name="ml-fatal-error-a1009"></a>Error irrecuperable A1009 de ML
+**línea demasiado larga**  
   
- Una línea en un archivo de código fuente supera el límite de 512 caracteres.  
+ Una línea en un archivo de código fuente superó el límite de 512 caracteres.  
   
- Si las líneas físicas varios se concatena con el carácter de continuación de línea \(\\\), la línea lógica resultante todavía está limitado a 512 caracteres.  
+ Si varias líneas físicas se concatenan con el carácter de continuación de línea (\), la línea lógica resultante sigue estando limitada a 512 caracteres.  
   
-## Vea también  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Vea también  
+ [Mensajes de error de ML](../../assembler/masm/ml-error-messages.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Cómo: Recuperar texto del Portapapeles (C++/CLI)
 El siguiente ejemplo de código utiliza el <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> función de miembro para devolver un puntero a la <xref:System.Windows.Forms.IDataObject> interfaz. Esta interfaz, a continuación, puede consultar para el formato de los datos y que utiliza para recuperar los datos reales.  

@@ -35,11 +35,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834cd18283874bc975d896f319bb6f8ebf962792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8194acf1a8a0708d2584745a7a49449ca7f554c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 Mueve un búfer a otro. Se trata de versiones de [memmove, wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -82,9 +83,9 @@ errno_t wmemmove_s(
   
 |`dest`|`numberOfElements`|`src`|Valor devuelto|Contenido de `dest`|  
 |------------|------------------------|-----------|------------------|------------------------|  
-|`NULL`|any|cualquiera|`EINVAL`|no modificado|  
-|any|cualquiera|`NULL`|`EINVAL`|no modificado|  
-|any|< `count`|cualquiera|`ERANGE`|no modificado|  
+|`NULL`|any|any|`EINVAL`|no modificado|  
+|any|any|`NULL`|`EINVAL`|no modificado|  
+|any|< `count`|any|`ERANGE`|no modificado|  
   
 ## <a name="remarks"></a>Comentarios  
  Copias `count` bytes de caracteres de `src` a `dest`. Si algunas regiones del área de origen y del destino se superponen, `memmove_s` se asegura de que se copian los bytes de origen originales en la región superpuesta antes de que se sobrescriban.  

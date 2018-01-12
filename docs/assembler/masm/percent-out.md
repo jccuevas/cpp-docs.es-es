@@ -1,33 +1,31 @@
 ---
-title: "%OUT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "%OUT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "%OUT directive"
+title: '% OUT | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '%OUT'
+dev_langs: C++
+helpviewer_keywords: '%OUT directive'
 ms.assetid: d08c2757-76a3-46a2-a4d1-52f7a7e985f7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0f9cae94503b1d01423485841b3cae6560b7db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# %OUT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="out"></a>%OUT
 Vea [ECHO](../../assembler/masm/echo.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,5 +33,5 @@ Vea [ECHO](../../assembler/masm/echo.md).
   
 ```  
   
-## Vea también  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de directivas](../../assembler/masm/directives-reference.md)

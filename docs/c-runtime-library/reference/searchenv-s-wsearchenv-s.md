@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -45,30 +43,16 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Busca un archivo mediante rutas de acceso del entorno. Estas versiones de [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -127,9 +111,9 @@ errno_t _wsearchenv_s(
   
 |`filename`|`varname`|`pathname`|`numberOfElements`|Valor devuelto|Contenido de `pathname`|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
-|any|cualquiera|`NULL`|any|`EINVAL`|no disponible|  
-|`NULL`|cualquiera|cualquiera|cualquiera|`EINVAL`|no cambia|  
-|any|cualquiera|any|<= 0|`EINVAL`|no cambia|  
+|any|any|`NULL`|any|`EINVAL`|N/D|  
+|`NULL`|any|any|any|`EINVAL`|no cambia|  
+|any|any|any|<= 0|`EINVAL`|no cambia|  
   
  Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
   
@@ -142,7 +126,7 @@ errno_t _wsearchenv_s(
   
  `_wsearchenv_s` es una versión con caracteres anchos de `_searchenv_s`; los argumentos a `_wsearchenv_s` son cadenas de caracteres anchos. Por lo demás, `_wsearchenv_s` y `_searchenv_s` se comportan de forma idéntica.  
   
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   

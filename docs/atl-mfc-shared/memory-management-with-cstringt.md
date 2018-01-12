@@ -1,46 +1,48 @@
 ---
-title: "Memory Management with CStringT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CStringT"
-  - "ATL::CStringT"
-  - "ATL.CStringT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFixedStringT class, description of"
-  - "CString objects, administración de memoria"
-  - "CStringT class, administración de memoria"
-  - "IAtlStringMgr class, utilizar"
-  - "memoria [C++], uso"
-  - "cadenas [C++], custom memory management"
-  - "cadenas [C++], administración de memoria"
+title: "Administración de memoria con CStringT | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CStringT
+- ATL::CStringT
+- ATL.CStringT
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, memory management
+- memory [C++], usage
+- IAtlStringMgr class, using
+- strings [C++], custom memory management
+- CFixedStringT class, description of
+- strings [C++], memory management
+- CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bbf623344ec52abce28a08670e7f3cd09140563b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Memory Management with CStringT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="memory-management-with-cstringt"></a>Administración de memoria con CStringT
+Clase [CStringT](../atl-mfc-shared/reference/cstringt-class.md) es una clase de plantilla usada para manipular las cadenas de caracteres de longitud variable. La memoria para almacenar estas cadenas se asignan y liberan a través de un objeto de administrador de cadenas, asociado a cada instancia de `CStringT`. MFC y ATL proporcionan instancias predeterminadas de `CStringT`, llamado `CString`, `CStringA`, y `CStringW`, que manipulan cadenas de distintos tipos de caracteres. Estos tipos de caracteres son de tipo **TCHAR**, `char`, y `wchar_t`, respectivamente. Estos tipos de cadena predeterminados utilizan un administrador de cadenas que asigna memoria desde el montón de procesos (en ATL) o el montón de CRT (en MFC). En las aplicaciones típicas, este esquema de asignación de memoria es suficiente. Sin embargo, para realizar un uso intensivo de código uso de cadenas (o código multiproceso) que los administradores de memoria predeterminados no pueden tener un óptimo. Este tema describe cómo invalidar el comportamiento predeterminado de administración de memoria de `CStringT`, creando asignadores específicamente optimizado para la tarea en cuestión.  
+  
+-   [Implementación de un administrador de cadenas personalizado (método básico)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
+  
+-   [Evitar la contención del montón](../atl-mfc-shared/avoidance-of-heap-contention.md)  
+  
+-   [Implementación de un administrador de cadenas personalizado (método avanzado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
+  
+-   [CFixedStringT: Un ejemplo de un administrador de cadenas personalizado](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+  
+## <a name="see-also"></a>Vea también  
+ [Ejemplo CustomString](../visual-cpp-samples.md)
 
-la clase [CStringT](../atl-mfc-shared/reference/cstringt-class.md) es una clase de plantilla utilizada para manipular las cadenas de caracteres de longitud variable.  Memoria para contener estas cadenas se asigna y se libera a través de un objeto de administrador de cadena, asociado a cada instancia de `CStringT`.  MFC y ATL proporcionan las instancias predeterminadas de `CStringT`, denominadas `CString`, `CStringA`, y `CStringW`, que manipulan cadenas de diferentes tipos de caracteres.  Estos tipos de caracteres son de **TCHAR**con tipo, de `char`, y de `wchar_t`, respectivamente.  Estos tipos de cadena predeterminados usan un administrador de la cadena que asigna memoria de montón de proceso \(en ATL\) o del montón de CRT \(en MFC\).  para las aplicaciones típicas, este esquema de asignación de memoria es suficiente.  Sin embargo, como código que realiza un uso intensivo de cadenas \(o código multiproceso\) que los administradores de memoria predeterminados no pueden realizar óptimo.  Este tema describe cómo reemplazar el comportamiento predeterminado de administración de memoria de `CStringT`, creando los asignadores optimizados específicamente para la tarea a mano.  
-  
--   [Implementación de un administrador de cadena personalizado \(método básico\)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
-  
--   [Evasión de contención de pila](../atl-mfc-shared/avoidance-of-heap-contention.md)  
-  
--   [Implementación de un administrador de cadena personalizado \(método avanzadas\)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
-  
--   [CFixedStringT: Un ejemplo de un administrador de cadena personalizado](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
-  
-## Vea también  
- [Ejemplo CustomString](../top/visual-cpp-samples.md)

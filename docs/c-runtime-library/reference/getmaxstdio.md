@@ -35,11 +35,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: db700e385fe59d5ff6cc7448c17444cb2b0e8796
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09838423ad687ad2b6459ea605c81e08752683bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
 Devuelve el número de archivos que se permite abrir simultáneamente en el nivel de E/S de secuencia.  
@@ -62,7 +63,7 @@ int _getmaxstdio( void );
 |-------------|---------------------|  
 |`_getmaxstdio`|\<stdio.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

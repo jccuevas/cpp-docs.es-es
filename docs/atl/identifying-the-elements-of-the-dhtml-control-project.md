@@ -1,64 +1,66 @@
 ---
-title: "Identifying the Elements of the DHTML Control Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, ATL support"
-  - "controles HTML, ATL support"
+title: Identificar los elementos del proyecto de Control DHTML | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, ATL support
+- DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Identifying the Elements of the DHTML Control Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El código de control DHTML es exactamente igual que creó para cualquier control ATL.  Para una introducción básica de código genérico, el trabajo con [tutorial de ATL](../atl/active-template-library-atl-tutorial.md), y leer las secciones [Crear un proyecto ATL](../atl/reference/creating-an-atl-project.md) y [Fundamentos de objetos COM de ATL](../atl/fundamentals-of-atl-com-objects.md).  
+# <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificar los elementos del proyecto de Control DHTML
+La mayoría del código control DHTML es exactamente igual al creado para cualquier control ATL. Para obtener una comprensión básica del código genérico, examine la [tutorial ATL](../atl/active-template-library-atl-tutorial.md), y lea las secciones [crear un proyecto ATL](../atl/reference/creating-an-atl-project.md) y [aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md).  
   
  Un control DHTML es similar a cualquier control ATL, excepto:  
   
--   Además de las interfaces regulares un control implementa, implementa una interfaz adicional que se utiliza para la comunicación entre el código de C\+\+ y la interfaz de usuario \(UI\) HTML.  Las llamadas de interfaz de usuario HTML en el código de C\+\+ mediante esta interfaz.  
+-   Además de las interfaces estándar que implementa un control, implementa una interfaz adicional que se utiliza para la comunicación entre el código de C++ y la interfaz de usuario (UI) de HTML. La interfaz de usuario HTML llama al código de C++ mediante esta interfaz.  
   
--   Crea un recurso de HTML para la interfaz de usuario del control.  
+-   Crea un recurso HTML para el control de interfaz de usuario.  
   
--   Permite el acceso al modelo de objetos de DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de [IWebBrowser2](https://msdn.microsoft.com/en-us/library/aa752127.aspx)escrito.  Utilice este puntero para tener acceso a cualquier parte del modelo de objetos de DHTML.  
+-   Permitir el acceso al modelo de objetos DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de tipo [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx). Utilice este puntero para tener acceso a cualquier parte del modelo de objetos DHTML.  
   
- El gráfico siguiente muestra la relación entre el archivo DLL, el control DHTML, el explorador web, y el recurso de HTML.  
+ El siguiente gráfico ilustra la relación entre el archivo DLL, el control DHTML, el explorador Web y el recurso HTML.  
   
- ![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.png "vc52EN1")  
+ ![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.gif "vc52en1")  
   
 > [!NOTE]
->  Los nombres de este gráfico son marcadores.  Los nombres de recurso de HTML y de las interfaces expuestas en el control se basan en los nombres que se asignan en el asistente para controles ATL.  
+>  Los nombres de este gráfico son marcadores de posición. Los nombres de los recursos HTML y las interfaces expuestas en el control se basan en los nombres que se les asigna en el Asistente para controles ATL.  
   
- en este gráfico, los elementos son:  
+ En este gráfico, los elementos son:  
   
--   **My DLL** The DLL creado mediante el asistente para proyectos ATL.  
+-   **El archivo DLL** el archivo DLL creado mediante el Asistente para proyectos ATL.  
   
--   Control de**Control DHTML** \(`m_spBrowser`\) The DHTML, creado con el asistente para objetos ATL.  Este control tiene acceso al objeto del explorador web y sus métodos a través de la interfaz del objeto de explorador web, **IWebBrowser2**.  El propio control expone las dos interfaces siguientes, además de las otras interfaces estándar necesarias para un control.  
+-   **Control DHTML** (`m_spBrowser`) el control DHTML, creado con el Asistente para objetos ATL. Este control tiene acceso a sus métodos y el objeto de explorador Web a través de la interfaz del objeto de explorador Web, **IWebBrowser2**. El propio control expone las dos interfaces siguientes, además de las demás interfaces estándar requeridas para un control.  
   
-    -   Interfaz de**IDHCTL1** The expuesta por el control para utilizarlo sólo en el contenedor.  
+    -   **IDHCTL1** la interfaz expuesta por el control para su uso exclusivo por el contenedor.  
   
-    -   Interfaz de envío de**IDHCTLUI1** The para comunicarse entre el código de C\+\+ y la interfaz de usuario HTML.  El explorador web utiliza la interfaz de envío del control para mostrar el control.  Puede llamar a varios métodos de esta interfaz de envío de la interfaz de usuario del control invocando `window.external`, seguidos por el nombre del método de esta interfaz de envío que desea invocar.  Se obtiene acceso a `window.external` de una etiqueta de SCRIPT dentro de HTML que constituye la interfaz de usuario para este control.  Para obtener más información sobre cómo invocar métodos externos en el archivo de recursos, vea [Código de C\+\+ de llamada DHTML](../atl/calling-cpp-code-from-dhtml.md).  
+    -   **IDHCTLUI1** la interfaz de envío para la comunicación entre el código de C++ y la interfaz de usuario HTML. El explorador Web usa la interfaz de envío del control para mostrar el control. Se pueden llamar a varios métodos de esta interfaz de envío de la interfaz de usuario del control mediante la invocación de `window.external`, seguido del nombre de método en la interfaz de envío que desea invocar. Se obtiene acceso a `window.external` de una etiqueta SCRIPT en el código HTML que compone la interfaz de usuario para este control. Para obtener más información sobre cómo invocar métodos externos en el archivo de recursos, consulte [llamar a código de C++ desde DHTML](../atl/calling-cpp-code-from-dhtml.md).  
   
--   Id. de recurso de**IDR\_CTL1** el recurso de HTML.  El nombre de archivo, en este caso, es ADO CTL1 UI.htm.  El control DHTML utiliza un recurso de HTML que contiene las etiquetas HTML estándar y comandos externos de envío de la ventana que puede modificar con el editor de texto.  
+-   **IDR_CTL1** el identificador de recurso del recurso HTML. Su nombre de archivo, en este caso, es DHCTL1UI.htm. El control DHTML utiliza un recurso HTML que contiene etiquetas HTML estándar y los comandos de envío de ventana externos que se pueden editar con el editor de texto.  
   
--   El explorador web de**Web Browser** The muestra la interfaz de usuario del control, basándose en HTML en el recurso de HTML.  Un puntero a la interfaz de **IWebBrowser2** de explorador web está disponible en el control DHTML permitir el acceso al modelo de objetos de DHTML.  
+-   **Explorador Web** el explorador Web muestra la interfaz de usuario del control, según el código HTML en el recurso HTML. Un puntero en el explorador Web **IWebBrowser2** interfaz está disponible en el control DHTML para permitir el acceso al modelo de objetos DHTML.  
   
- El asistente para controles ATL genera un control con código predeterminado en el recurso de HTML y el archivo .cpp.  Puede compilar y ejecutar el control que se genera en el asistente, y después ver el control en el explorador web o el ActiveX control test container.  La imagen siguiente muestra el control predeterminado ATL DHTML con tres botones mostrados en contenedor de prueba:  
+ El Asistente para controles ATL genera un control con código predeterminado en el recurso HTML y el archivo .cpp. Puede compilar y ejecutar el control como el generado por el asistente y, a continuación, ver el control en el explorador Web o el Control ActiveX Test Container. La figura siguiente muestra el control DHTML ATL predeterminado con tres botones que se muestran en el contenedor de prueba:  
   
- ![Control DHTML ATL](../atl/media/vc52en2.png "vc52EN2")  
+ ![Control DHTML ATL](../atl/media/vc52en2.gif "vc52en2")  
   
- Vea [Crear un Control ATL DHTML](../atl/creating-an-atl-dhtml-control.md) para empezar a crear un control DHTML.  Vea [Propiedades y eventos de pruebas con el contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información sobre cómo tener acceso al contenedor de prueba.  
+ Vea [crear un Control de DHTML ATL](../atl/creating-an-atl-dhtml-control.md) para empezar a compilar un control DHTML. Vea [Probar propiedades y eventos con Test Container](../mfc/testing-properties-and-events-with-test-container.md) para obtener información sobre cómo obtener acceso a Test Container.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con controles DHTML](../atl/atl-support-for-dhtml-controls.md)
+

@@ -1,36 +1,39 @@
 ---
-title: "IRowsetUpdateImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl"
-  - "ATL.IRowsetUpdateImpl"
-  - "ATL::IRowsetUpdateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetUpdateImpl (clase)"
-  - "proveedores, actualizables"
-  - "proveedores actualizables, actualización aplazada"
+title: IRowsetUpdateImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl
+- ATL.IRowsetUpdateImpl
+- ATL::IRowsetUpdateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- IRowsetUpdateImpl class
+- updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La implementación de las plantillas OLE DB de la interfaz de [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) .  
+# <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl (Clase)
+La implementación de plantillas OLE DB de la [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interfaz.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -49,7 +52,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 >  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Una clase derivada de `IRowsetUpdateImpl`.  
   
@@ -60,59 +63,59 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
  Matriz que contiene los datos almacenados en caché para actualizar el conjunto de filas.  
   
  `RowClass`  
- La unidad de almacenamiento para **HROW**.  
+ La unidad de almacenamiento para el **HROW**.  
   
  `MapClass`  
- La unidad de almacenamiento para los identificadores de fila retenidos por el proveedor.  
+ La unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos de interfaz \(utilizados con IRowsetChange\)  
-  
-|||  
-|-|-|  
-|[SetData](../../data/oledb/irowsetupdateimpl-setdata.md)|Establece valores de datos en una o más columnas.|  
-  
-### Métodos de interfaz \(utilizados con IRowsetUpdate\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>Métodos de interfaz (usados con IRowsetChange)  
   
 |||  
 |-|-|  
-|[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Obtiene los datos transmitidos a u recopilados recientemente del origen de datos, omitiendo los cambios pendientes.|  
+|[SetData](../../data/oledb/irowsetupdateimpl-setdata.md)|Establece los valores de datos en una o varias columnas.|  
+  
+### <a name="interface-methods-used-with-irowsetupdate"></a>Métodos de interfaz (usados con IRowsetUpdate)  
+  
+|||  
+|-|-|  
+|[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|Obtiene los datos transmitidos a más recientemente u obtenido del origen de datos, pasando por alto los cambios pendientes.|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|Devuelve una lista de filas con cambios pendientes.|  
-|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Devuelve el estado de filas especificadas.|  
-|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|Deshace cualquier cambio en la fila desde la búsqueda o la última actualización.|  
-|[Actualizar](../../data/oledb/irowsetupdateimpl-update.md)|Transmite cualquier cambio realizado en la fila desde la búsqueda o la última actualización.|  
+|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|Devuelve el estado de las filas especificadas.|  
+|[Deshacer](../../data/oledb/irowsetupdateimpl-undo.md)|Deshace los cambios realizados en la fila desde la última captura o de actualización.|  
+|[Actualizar](../../data/oledb/irowsetupdateimpl-update.md)|Transmite los cambios realizados en la fila desde la última captura o de actualización.|  
   
-### Métodos de implementación \(devolución\)  
-  
-|||  
-|-|-|  
-|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Se utiliza para comprobar la seguridad, integridad, etc. antes de permitir actualizaciones.|  
-  
-### Miembros de datos  
+### <a name="implementation-methods-callback"></a>Métodos de implementación (devolución de llamada)  
   
 |||  
 |-|-|  
-|[m\_mapCachedData](../../data/oledb/irowsetupdateimpl-m-mapcacheddata.md)|Contiene los datos originales para la operación diferida.|  
+|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|Se usa para comprobar la seguridad, la integridad, y así sucesivamente antes de permitir las actualizaciones.|  
   
-## Comentarios  
- Debería leer y entender la documentación para [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), porque se aplica todo describe allí también aquí.  También debería leer el capítulo 6 de `OLE``DB``Programmer's``Reference` en datos del valor.  
+### <a name="data-members"></a>Miembros de datos  
   
- `IRowsetUpdateImpl` implementa la interfaz OLE DB `IRowsetUpdate` , que permite a los consumidores para retrasar la transmisión de los cambios realizados con `IRowsetChange` al origen de datos y deshacer cambia antes de la transmisión.  
+|||  
+|-|-|  
+|[m_mapCachedData](../../data/oledb/irowsetupdateimpl-m-mapcacheddata.md)|Contiene los datos originales para la operación diferida.|  
+  
+## <a name="remarks"></a>Comentarios  
+ En primer lugar debe leer y entender la documentación de [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), porque todo lo descrito se aplica también a continuación. También debe leer el capítulo 6 de la *referencia del programador de OLE DB* acerca de cómo configurar los datos.  
+  
+ `IRowsetUpdateImpl`implementa OLE DB `IRowsetUpdate` interfaz, que permite a los consumidores retrasar la transmisión de los cambios realizados con `IRowsetChange` al origen de datos y deshacer los cambios antes de la transmisión.  
   
 > [!IMPORTANT]
->  Se recomienda leer la documentación siguiente BEFORE que intentar implementar el proveedor:  
+>  Se recomienda encarecidamente que lea la siguiente documentación antes de intentar implementar el proveedor:  
   
 -   [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Chapter 6 de `OLE``DB``Programmer's``Reference`  
+-   Capítulo 6 de la *referencia del programador OLE DB*  
   
--   También vea cómo la clase de `RUpdateRowset` se utiliza en el ejemplo UpdatePV  
+-   Consulte también cómo `RUpdateRowset` clase se utiliza en el ejemplo UpdatePV  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md)

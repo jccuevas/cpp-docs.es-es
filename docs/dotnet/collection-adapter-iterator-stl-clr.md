@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator (miembro) [STL/CLR]"
+title: collection_adapter::Iterator (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: b1078abd-e766-464e-9dc6-32e95ab50695
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e485f79a8a6a6d260c18650118689ab35ab293f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapteriterator-stlclr"></a>collection_adapter::iterator (STL/CLR)
 El tipo de un iterador para la secuencia controlada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Comentarios  
- El tipo describe un objeto de tipo sin especificar `T1` que sirva como iterador de entrada para la secuencia controlada.  
+## <a name="remarks"></a>Comentarios  
+ El tipo describe un objeto de tipo no especificado `T1` que puede actuar como un iterador de entrada para la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_collection_adapter_iterator.cpp   
@@ -63,11 +64,14 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisitos  
- cliext \<\/adaptador de**Encabezado:** \>  
+```Output  
+a b c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/adaptador >  
   
-## Vea también  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

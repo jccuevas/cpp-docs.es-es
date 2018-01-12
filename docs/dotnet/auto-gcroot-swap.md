@@ -1,35 +1,37 @@
 ---
-title: "auto_gcroot::swap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.swap"
-  - "msclr::auto_gcroot::swap"
-  - "auto_gcroot::swap"
-  - "auto_gcroot.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::swap"
+title: auto_gcroot::swap | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.swap
+- msclr::auto_gcroot::swap
+- auto_gcroot::swap
+- auto_gcroot.swap
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::swap
 ms.assetid: 4915c629-6a53-432c-8155-3a7511dc70cb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b3da99d688f6ca60829860d91e3b7b819af4ab26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::swap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Intercambia objetos con otro `auto_gcroot`.  
+# <a name="autogcrootswap"></a>auto_gcroot::swap
+Intercambia los objetos con otro `auto_gcroot`.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void swap(  
@@ -37,11 +39,11 @@ void swap(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `_right`  
- `auto_gcroot` con las que para cambiar objetos.  
+ El `auto_gcroot` con la que se va a intercambiar objetos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_auto_gcroot_swap.cpp  
@@ -63,13 +65,16 @@ int main() {
 }  
 ```  
   
-  **S1 \= “cadena una”, s2 \= “cadena dos”**  
-**S1 \= “cadena dos”, s2 \= “cadena una”**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\auto_gcroot.h >  
   
-## Vea también  
- [auto\_gcroot \(Miembros\)](../dotnet/auto-gcroot-members.md)   
- [swap \(Función\) \(auto\_gcroot\)](../dotnet/swap-function-auto-gcroot.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [auto_gcroot (miembros)](../dotnet/auto-gcroot-members.md)   
+ [swap (Función) (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

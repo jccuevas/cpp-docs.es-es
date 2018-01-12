@@ -1,32 +1,33 @@
 ---
-title: "hash_map::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase (miembro) [STL/CLR]"
+title: 'hash_map:: Erase (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 1d2a79aa-62f7-461c-8f7c-7b660eb189be
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd2f2f68f778aa8a25ea3221fcf9a044a24bd51e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quita los elementos en las posiciones especificadas.  
+# <a name="hashmaperase-stlclr"></a>hash_map::erase (STL/CLR)
+Quita los elementos de las posiciones especificadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator erase(iterator where);  
@@ -34,12 +35,12 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo que se va a borrar.  
+ Comienzo del intervalo que se va a borrar.  
   
- clave  
- Valor de clave que se va a borrar.  
+ key  
+ Valor de clave para borrar.  
   
  last  
  Final del intervalo que se va a borrar.  
@@ -47,16 +48,16 @@ bool erase(key_type key)
  donde  
  Elemento que se va a borrar.  
   
-## Comentarios  
- La primera función miembro quita el elemento de la secuencia controlada designada por a `where`, y devuelve un iterador que señala el primer elemento que permanece más allá del elemento quitado, o [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`()` si no existe ese elemento.  Se utiliza para quitar un solo elemento.  
+## <a name="remarks"></a>Comentarios  
+ La primera función miembro quita el elemento de la secuencia controlada señalada por `where`y devuelve un iterador que designa el primer elemento que permanece más allá del elemento eliminado, o [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()` si no existe ese elemento. Usa para quitar un único elemento.  
   
- La segunda función miembro quita elementos de la secuencia controlada en el intervalo `[``first``,` `last``)`, y devuelve un iterador que señala el primer elemento que permanece más allá de cualquier elemento quitado, o `end()` si no existe ningún elemento.  Se utiliza para quitar elementos cero o más contiguo.  
+ La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`) y devuelve un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o `end()` si ningún elemento existe... Usa para quitar cero o más elementos contiguos.  
   
- La tercera función miembro quita cualquier elemento de la secuencia controlada cuya clave tiene equivalente de ordenación a `key`, y devuelve el número de elementos eliminados.  Se utiliza para quitar y para contar todos los elementos que coinciden con una clave especificada.  
+ La tercera función miembro quita cualquier elemento de la secuencia controlada cuyo criterio de ordenación es equivalente a `key`y devuelve un recuento del número de elementos quitados. Se usa para quitar y recuento de todos los elementos que coinciden con una clave especificada.  
   
- Cada borradura de elemento lleva tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.  
+ La eliminación de cada elemento lleva tiempo proporcional al logaritmo del número de elementos de la secuencia controlada.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_hash_map_erase.cpp   
@@ -104,18 +105,21 @@ int main()
   
 ```  
   
-  **\[un 1\] \[b 2\] \[c 3\]**  
-**erase\(begin\(\)\) \= \[b 2\]**  
- **\[b 2\] \[c 3\] \[d 4\] \[e 5\]**  
-**erase\(begin\(\), end\(\)\-1\) \= \[e 5\]**  
-**size\(\) \= 1**  
-**desactivada \(L'x\) \= 0**  
-**desactivada \(L'e\) \= 1**   
-## Requisitos  
- cliext \<\/hash\_map de**Encabezado:** \>  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/hash_map >  
   
-## Vea también  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::clear](../dotnet/hash-map-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)

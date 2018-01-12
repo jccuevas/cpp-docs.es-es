@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2WEX::CW2WEX
 - ATLCONV/ATL::CW2WEX::m_psz
 - ATLCONV/ATL::CW2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2WEX class
+dev_langs: C++
+helpviewer_keywords: CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2wex-class"></a>Clase CW2WEX
 Esta clase se utiliza por las macros de conversión de cadena `CW2TEX` y `CT2WEX`y la definición de tipo `CW2W`.  
@@ -65,20 +48,20 @@ class CW2WEX
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2WEX::CW2WEX](#cw2wex)|El constructor.|  
 |[CW2WEX:: ~ CW2WEX](#dtor)|Destructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2WEX::operator LPWSTR](#operator_lpwstr)|Operador de conversión.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2WEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|El búfer estático, usado para almacenar la cadena convertida.|  
@@ -169,4 +152,3 @@ operator LPWSTR() const throw();
  [Clase CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Clase CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

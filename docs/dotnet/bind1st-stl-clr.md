@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b17a2bdcfee80b027423c24a7a430095eed6297d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
 Genera un `binder1st` por un functor y un argumento.  
@@ -44,7 +47,7 @@ template<typename Fun,
  functor  
  El functor que va a contener.  
   
- left  
+ izquierda  
  El primer argumento que va a contener.  
   
 ## <a name="remarks"></a>Comentarios  

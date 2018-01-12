@@ -33,11 +33,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834441e90cb6656f308673e8475b1cc2e38fd3a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 Realiza una ordenación rápida. Versión de [qsort](../../c-runtime-library/reference/qsort.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -87,16 +88,16 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
  La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.  
   
- Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve la función y `errno` se establece en `EINVAL`. Para obtener más información, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Si se pasan parámetros no válidos a la función, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve la función y `errno` se establece en `EINVAL`. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ### <a name="error-conditions"></a>Condiciones de error  
   
 |key|base|compare|num|ancho|errno|  
 |---------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|  
-|cualquiera|`NULL`|cualquiera|!= 0|cualquiera|`EINVAL`|  
-|cualquiera|cualquiera|cualquiera|any|<= 0|`EINVAL`|  
-|cualquiera|cualquiera|`NULL`|cualquiera|cualquiera|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|<= 0|`EINVAL`|  
+|any|any|`NULL`|any|any|`EINVAL`|  
   
  `qsort_s` tiene el mismo comportamiento que `qsort`, pero tiene el parámetro `context` y establece `errno`. Si se pasa un parámetro `context`, las funciones de comparación pueden usar un puntero de objeto para obtener acceso a la funcionalidad del objeto o a otra información que no es accesible a través de un puntero de elemento. La adición de la `context` parámetro hace `qsort_s` más segura porque `context` puede usarse para evitar errores de reentrada introducidos mediante el uso de variables estáticas que estén disponibles para la información compartida la `compare` función.  
   
@@ -106,7 +107,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> y \<search.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
  **Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).  
   

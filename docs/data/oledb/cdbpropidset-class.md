@@ -1,61 +1,63 @@
 ---
-title: "CDBPropIDSet (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet"
-  - "ATL.CDBPropIDSet"
-  - "ATL::CDBPropIDSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropIDSet (clase)"
+title: CDBPropIDSet (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet
+- ATL.CDBPropIDSet
+- ATL::CDBPropIDSet
+dev_langs: C++
+helpviewer_keywords: CDBPropIDSet class
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9c75b357b912adc67351510e745fa46f246a74b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropIDSet (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Hereda de la estructura de **DBPROPIDSET** y agregue un constructor que inicializa los campos clave junto con el método de acceso de [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .  
+# <a name="cdbpropidset-class"></a>CDBPropIDSet (Clase)
+Hereda de la **DBPROPIDSET** estructurar y agrega un constructor que inicializa los campos clave, así como la [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) acceder a método.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos  
+### <a name="methods"></a>Métodos  
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Agrega una propiedad al conjunto de identificadores de la propiedad.|  
+|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Agrega una propiedad para el conjunto de Id. de propiedad.|  
 |[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|Constructor.|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Establece el GUID del conjunto de identificadores de la propiedad.|  
+|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Establece el GUID del identificador de propiedad de conjunto.|  
   
-### Operadores  
+### <a name="operators"></a>Operadores  
   
 |||  
 |-|-|  
-|[operador \=](../../data/oledb/cdbpropidset-operator-equal.md)|Asigna el contenido de un identificador de propiedad establecido en otro.|  
+|[operador =](../../data/oledb/cdbpropidset-operator-equal.md)|Asigna el contenido de un identificador de propiedad de un juego a otro.|  
   
-## Comentarios  
- Los consumidores OLE DB utilizan estructuras de **DBPROPIDSET** para pasar una matriz de los id. de propiedad para los que el consumidor desea obtener información de la propiedad.  Las propiedades identificadas en una única estructura de [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) pertenecen a un conjunto de propiedades.  
+## <a name="remarks"></a>Comentarios  
+ Uso de los consumidores de OLE DB **DBPROPIDSET** estructuras para pasar una matriz de identificadores de propiedad para el que el consumidor desea obtener información sobre las propiedades. Las propiedades identificadas en una sola [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) estructura pertenecen al conjunto de una propiedad.  
   
-## Requisitos  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

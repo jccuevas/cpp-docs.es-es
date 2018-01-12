@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,22 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 822a7058afd6588be6f953c5c2b89d41ec02c87f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 Convertir una secuencia de caracteres multibyte en una secuencia correspondiente de caracteres anchos. Versiones de [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) con mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -142,18 +125,18 @@ errno_t _mbstowcs_s_l(
   
  Si `count` es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), `mbstowcs_s` convierte la parte de la cadena que quepa en el búfer de destino, dejando espacio para un terminador nulo.  
   
- Si `mbstowcs_s` convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida, incluido el terminador nulo, en `*``pReturnValue` (siempre que `pReturnValue` no sea `NULL`). Esto ocurre aunque el argumento `wcstr` sea `NULL` y permite determinar el tamaño de búfer necesario. Observe que, si `wcstr` es `NULL`, se omite `count` y `sizeInWords` debe ser 0.  
+ Si `mbstowcs_s` convierte correctamente la cadena de origen, pone el tamaño en caracteres anchos de la cadena convertida, incluido el terminador nulo, en `*pReturnValue` (siempre que `pReturnValue` no sea `NULL`). Esto ocurre aunque el argumento `wcstr` sea `NULL` y permite determinar el tamaño de búfer necesario. Observe que, si `wcstr` es `NULL`, se omite `count` y `sizeInWords` debe ser 0.  
   
- Si `mbstowcs_s` encuentra un carácter multibyte no válido, pone 0 en `*``pReturnValue`, establece el búfer de destino en una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
+ Si `mbstowcs_s` encuentra un carácter multibyte no válido, pone 0 en `*pReturnValue`, establece el búfer de destino en una cadena vacía, establece `errno` en `EILSEQ` y devuelve `EILSEQ`.  
   
  Si las secuencias señaladas por `mbstr` y `wcstr` se superponen, el comportamiento de `mbstowcs_s` no está definido.  
   
 > [!IMPORTANT]
 >  Asegúrese de que `wcstr` y `mbstr` no se superponen, y de que `count` refleja correctamente el número de caracteres multibyte a convertir.  
   
- `mbstowcs_s` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbstowcs_s_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ `mbstowcs_s` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_mbstowcs_s_l` es igual, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisitos  
   

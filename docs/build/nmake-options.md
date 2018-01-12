@@ -1,52 +1,52 @@
 ---
-title: "Opciones de NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE (programa), opciones"
+title: Opciones de NMAKE | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef3b987de737d8300f88690754456b73c946180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Opciones de NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las opciones de NMAKE se describen en la tabla siguiente.  Las opciones van precedidas de una barra oblicua \(\/\) o de un guión \(–\) y no distinguen entre mayúsculas y minúsculas.  Se ha de utilizar [\!CMDSWITCHES](../build/makefile-preprocessing-directives.md) para cambiar los valores de opciones en un archivo MAKE o en Tools.ini.  
+# <a name="nmake-options"></a>Opciones de NMAKE
+Opciones de NMAKE se describen en la tabla siguiente. Opciones de están precedidas por una barra diagonal (/) o un guión (-) y no distinguen mayúsculas de minúsculas. Utilice [! CMDSWITCHES](../build/makefile-preprocessing-directives.md) para cambiar la configuración de opciones en un archivo MAKE o en Tools.ini.  
   
-|Opción|Objetivo|  
-|------------|--------------|  
-|\/A|Fuerza la compilación de todos los destinos evaluados, aunque no estén actualizados con respecto a los dependientes.  No fuerza la compilación de destinos no relacionados.|  
-|\/B|Fuerza la compilación aunque las marcas de tiempo sean iguales.  Sólo se recomienda para sistemas muy rápidos \(resolución de dos segundos o inferior\).|  
-|\/C|Suprime la salida predeterminada, incluidos los errores o advertencias de NMAKE no graves, las marcas de tiempo y el mensaje de copyright de NMAKE.  Suprime las advertencias emitidas mediante \/K.|  
-|\/D|Muestra marcas de tiempo de cada dependiente y destino evaluado, y un mensaje cuando no existe un destino.  Es útil con \/P para la depuración de un archivo MAKE.  Usa **\!CMDSWITCHES** para establecer o desactivar \/D para parte de un archivo MAKE.|  
-|\/E|Provoca que las variables de entorno reemplacen las definiciones de macro de archivos MAKE.|  
-|\/ERRORREPORT\[NONE &#124; PROMPT &#124; QUEUE &#124; SEND \]|Si en nmake.exe se produce un error en tiempo de ejecución, puede utilizar \/ERRORREPORT para enviar información a Microsoft sobre estos errores internos.<br /><br /> Para obtener más información sobre \/ERRORREPORT, vea [\/errorReport \(Informar de los errores del compilador\)](../build/reference/errorreport-report-internal-compiler-errors.md).|  
-|\/F `filename`|Especifica `filename` como un archivo Make.  Delante de `filename` puede haber espacios o tabulaciones.  Se ha de especificar \/F una vez para cada archivo MAKE.  Para proporcionar un archivo MAKE de entrada estándar, se ha de especificar un guión \(–\) para `filename`, y finalizar mediante una acción del teclado con F6 o con CTRL\+Z.|  
-|\/G|Muestra los archivos MAKE incluidos con la directiva \!INCLUDE.  Vea [Directivas de preprocesamiento de archivos MAKE](../build/makefile-preprocessing-directives.md) para obtener más información.|  
-|\/HELP, \/?|Muestra un breve resumen de la sintaxis de la línea de comandos de NMAKE.|  
-|\/I|Omite los códigos de salida de todos los comandos.  Usa **\!CMDSWITCHES** para establecer o desactivar \/I para parte de un archivo MAKE.  Para omitir códigos de salida para parte de un archivo MAKE, se ha de utilizar un modificador de comandos guión \(–\) o [.IGNORE](../build/dot-directives.md).  Reemplaza a \/K si se especifican ambos.|  
-|\/K|Continúa la compilación de dependencias no relacionadas si un comando devuelve un error.  También emite una advertencia y devuelve un código de salida de 1.  De forma predeterminada, NMAKE se detiene si algún comando devuelve un código de salida distinto de cero.  Las advertencias de \/K se suprimen mediante \/C; \/I reemplaza a \/K si se especifican ambos.|  
-|\/N|Muestra comandos pero no los ejecuta; los comandos de preprocesamiento se ejecutan.  No muestra comandos en llamadas recursivas a NMAKE.  Es útil para la depuración de archivos MAKE y la comprobación de marcas de tiempo.  Usa **\!CMDSWITCHES** para establecer o desactivar \/N para parte de un archivo MAKE.|  
-|\/NOLOGO|Suprime el mensaje de copyright de NMAKE.|  
-|\/P|Muestra información \(definiciones de macro, reglas de inferencia, destinos, lista [.SUFFIXES](../build/dot-directives.md)\) para salidas estándar y, a continuación, ejecuta la compilación.  Si no existe ningún destino de línea de comandos o archivo MAKE, sólo muestra información.  Se utiliza con \/D para depurar un archivo MAKE.|  
-|\/Q|Comprueba marcas de tiempo de destinos; no ejecuta la compilación.  Devuelve un código de salida de cero si todos los destinos están actualizados y un código de salida distinto de cero si algún destino no lo está.  Los comandos de preprocesamiento se ejecutan.  Es útil cuando se ejecuta NMAKE a partir de un archivo por lotes.|  
-|\/R|Borra la lista **.SUFFIXES** y omite las reglas de inferencia y macros definidas en el archivo Tools.ini o predefinidas.|  
-|\/S|Suprime la presentación de los comandos ejecutados.  Para suprimir la presentación en parte de un archivo MAKE, usa el modificador de comandos **@** o [.SILENT](../build/dot-directives.md).  Usa **\!CMDSWITCHES** para establecer o desactivar \/S para parte de un archivo MAKE.|  
-|\/T|Actualiza las marcas de tiempo de destinos de línea de comandos \(o el primer destino de archivo MAKE\) y ejecuta los comandos de preprocesamiento, pero no ejecuta la compilación.|  
-|\/U|Se debe usar junto con \/N.  Realiza un volcado de memoria de los archivos NMAKE insertados, de forma que el resultado de \/N se pueda utilizar como un archivo por lotes.|  
-|\/X `filename`|Envía salidas de error de NMAKE a `filename` en lugar de errores estándar.  Delante de `filename` puede haber espacios o tabulaciones.  Para enviar salidas de error a salidas estándar, se ha de especificar un guión \(–\) para `filename`.  No afecta a las salidas de comandos para errores estándar.|  
-|\/Y|Deshabilita las reglas de inferencia de modo por lotes.  Cuando se selecciona esta opción, todas las reglas de inferencia de modo por lotes se consideran reglas de inferencia regulares.|  
+|Opción|Propósito|  
+|------------|-------------|  
+|/A|Fuerza la generación de todos los destinos evaluados, aunque no estén actualizados con respecto a los elementos dependientes. No se fuerza la generación de destinos no relacionados.|  
+|/B|Fuerza la generación aunque las marcas de tiempo son iguales. Se recomienda únicamente para los sistemas muy rápidos (resolución de dos segundos o menos).|  
+|/C|Suprime la salida predeterminada, incluidos los errores NMAKE recuperables o advertencias, marcas de tiempo y mensaje de copyright de NMAKE. Suprime las advertencias emitidas mediante/k.|  
+|/D|Muestra las marcas de tiempo de cada destino evalúan y dependiente y un mensaje cuando un destino no existe. Resulta útil con /P para la depuración de un archivo MAKE. Utilice **! CMDSWITCHES** para activar o desactivar /D para parte de un archivo MAKE.|  
+|/E|Hace que las variables de entorno reemplazar las definiciones de macro de archivos MAKE.|  
+|/ ERRORREPORT [NINGUNO &#124; SÍMBOLO DEL SISTEMA &#124; COLA &#124; ENVÍO]|Si nmake.exe se produce un error en tiempo de ejecución, puede utilizar /ERRORREPORT para enviar información a Microsoft sobre estos errores internos.<br /><br /> Para obtener más información sobre/errorreport, vea [/errorReport (informar de errores de compilador interno)](../build/reference/errorreport-report-internal-compiler-errors.md).|  
+|/F`filename`|Especifica `filename` como un archivo MAKE. Pueden preceder espacios ni tabulaciones `filename`. Especificar /F una vez para cada archivo MAKE. Para proporcionar un archivo MAKE de entrada estándar, especifique un guión (-) para `filename`, una letra y terminar la entrada de teclado con F6 o con CTRL+Z.|  
+|/ G|Muestra los archivos MAKE incluidos con el. INCLUDE (directiva).  Vea [directivas de preprocesamiento de archivos MAKE](../build/makefile-preprocessing-directives.md) para obtener más información.|  
+|¿/ AYUDA, /?|Muestra un breve resumen de sintaxis de línea de comandos de NMAKE.|  
+|/I|Omite los códigos de salida de todos los comandos. Para activar o desactivar /I para parte de un archivo MAKE, utilice **! CMDSWITCHES**. Para omitir los códigos de salida para parte de un archivo MAKE, use un modificador de comando guión (-) o [. OMITIR](../build/dot-directives.md). Reemplaza a /K si se especifican ambos.|  
+|/K|Continúa la creación de dependencias no relacionadas, si un comando devuelve un error. También emite una advertencia y devuelve un código de salida de 1. De forma predeterminada, NMAKE se detiene si algún comando devuelve un código de salida distinto de cero. Las advertencias de /K se suprimen mediante/c; /I reemplaza a /K si se especifican ambos.|  
+|/N|Muestra, pero no ejecuta comandos; se ejecutan comandos de preprocesamiento. No muestra comandos en llamadas recursivas a NMAKE. Es útil para la depuración de archivos MAKE y la comprobación de las marcas de tiempo. Para activar o desactivar /N para parte de un archivo MAKE, utilice **! CMDSWITCHES**.|  
+|/NOLOGO|Suprime el mensaje de copyright de NMAKE.|  
+|/P|Muestra información (definiciones de macro, reglas de inferencia, destinos, [. SUFIJOS](../build/dot-directives.md) lista) a la salida estándar, y, a continuación, se ejecuta la compilación. Si no existe ningún archivo MAKE o un destino de línea de comandos, muestra únicamente información. Utilícelo con /D para depurar un archivo MAKE.|  
+|/ Q|Marcas de tiempo de comprobaciones de destinos; no se ejecuta la compilación. Devuelve un cero código de salida si todos los destinos están actualizados y un código de salida distinto de cero si cualquier destino no lo es. Se ejecutan comandos de preprocesamiento. Resulta útil cuando se ejecuta NMAKE desde un archivo por lotes.|  
+|/ R|Borra la **. SUFIJOS** lista y omite las reglas de inferencia y macros que se definen en el archivo Tools.ini o que están predefinidos.|  
+|/ S|Suprime la presentación de los comandos ejecutados. Para suprimir la presentación en parte de un archivo MAKE, utilice la  **@**  modificador de comando o [. SILENCIOSA](../build/dot-directives.md). Para establecer o borrar /S para parte de un archivo MAKE, utilice **! CMDSWITCHES**.|  
+|/T|Actualiza las marcas de tiempo de destinos de línea de comandos (o el primer destino de archivo MAKE) y ejecuta los comandos de preprocesamiento, pero no se ejecuta la compilación.|  
+|/U|Debe utilizarse junto con/n. Vuelca archivos NMAKE en línea para que la salida /N puede utilizarse como un archivo por lotes.|  
+|/X`filename`|Envía la salida de error NMAKE a `filename` en lugar de error estándar. Pueden preceder espacios ni tabulaciones `filename`. Para enviar la salida de errores a la salida estándar, especificar un guión (-) para `filename`. No afecta a la salida de comandos en el error estándar.|  
+|/Y|Deshabilita las reglas de inferencia de modo por lotes. Cuando se selecciona esta opción, todas las reglas de inferencia de modo por lotes se tratan como reglas de inferencia regulares.|  
   
-## Vea también  
- [Ejecutar NMAKE](../build/running-nmake.md)
+## <a name="see-also"></a>Vea también  
+ [Ejecución de NMAKE](../build/running-nmake.md)

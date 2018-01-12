@@ -1,36 +1,38 @@
 ---
-title: "CSimpleRow::ReleaseRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CSimpleRow::ReleaseRow"
-  - "CSimpleRow::ReleaseRow"
-  - "ReleaseRow"
-  - "CSimpleRow.ReleaseRow"
-  - "ATL.CSimpleRow.ReleaseRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseRow (método)"
+title: 'Csimplerow:: Releaserow | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CSimpleRow::ReleaseRow
+- CSimpleRow::ReleaseRow
+- ReleaseRow
+- CSimpleRow.ReleaseRow
+- ATL.CSimpleRow.ReleaseRow
+dev_langs: C++
+helpviewer_keywords: ReleaseRow method
 ms.assetid: e0ffe844-b87f-4675-86ef-445ba50fa873
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1b7aec738342cc69c07c9fb8173903560a28301a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CSimpleRow::ReleaseRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Filas de una manera subproceso\- segura.  
+# <a name="csimplerowreleaserow"></a>CSimpleRow::ReleaseRow
+Libera las filas de una manera segura para subprocesos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -38,10 +40,10 @@ DWORD ReleaseRow( );
   
 ```  
   
-## Requisitos  
- **Header:** atldb.h  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** atldb.h  
   
-## Vea también  
- [CSimpleRow \(Clase\)](../../data/oledb/csimplerow-class.md)   
- [CSimpleRow::AddRefRow](../../data/oledb/csimplerow-addrefrow.md)   
+## <a name="see-also"></a>Vea también  
+ [CSimpleRow (clase)](../../data/oledb/csimplerow-class.md)   
+ [Csimplerow:: Addrefrow](../../data/oledb/csimplerow-addrefrow.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)

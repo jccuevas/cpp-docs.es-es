@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _popen
 - _wpopen
 - _tpopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tpopen function
 - pipes, creating
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 57476fe794b255bb1822a4446c505897d1668362
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5cf1fc935bbee75eb8acc31cfd7ae0e8d92c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 Crea una canalización y ejecuta un comando.  
@@ -75,16 +59,15 @@ Crea una canalización y ejecuta un comando.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-      FILE *_popen(  
-const char *command,  
-const char *mode   
-);  
-FILE *_wpopen(  
-const wchar_t *command,  
-const wchar_t *mode   
-);  
+```
+FILE *_popen(
+const char *command,
+const char *mode
+);
+FILE *_wpopen(
+const wchar_t *command,
+const wchar_t *mode
+);
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -115,7 +98,7 @@ const wchar_t *mode
  Abrir en modo de texto.  
   
 > [!NOTE]
->  Si se usa en un programa de Windows, la función `_popen` devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. `_popen` funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y la salida, vea [Crear un proceso secundario con redirección de entrada y salida](http://msdn.microsoft.com/library/windows/desktop/ms682499) en [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+>  Si se usa en un programa de Windows, la función `_popen` devuelve un puntero de archivo no válido que hace que el programa deje de responder indefinidamente. `_popen` funciona correctamente en una aplicación de consola. Para crear una aplicación de Windows que redirija la entrada y salida, consulte [crear un proceso secundario con redirección de entrada y salida](http://msdn.microsoft.com/library/windows/desktop/ms682499) del SDK de Windows.  
   
  `_wpopen` es una versión de caracteres anchos de `_popen`; el argumento *path* para `_wpopen` es una cadena de caracteres anchos. Por lo demás, `_wpopen` y `_popen` se comportan de forma idéntica.  
   

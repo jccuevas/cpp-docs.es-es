@@ -1,34 +1,36 @@
 ---
-title: "IRowsetLocateImpl (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marcadores, OLE DB"
-  - "IRowsetLocateImpl (clase)"
-  - "proveedores, marcadores"
+title: IRowsetLocateImpl (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetLocateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, bookmarks
+- IRowsetLocateImpl class
+- bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetLocateImpl (Clase)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementa la interfaz OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) , que captura filas arbitrarias de un conjunto de filas.  
+# <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl (Clase)
+Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz, que captura filas arbitrarias desde un conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template <  
@@ -48,7 +50,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 >  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Una clase derivada de `IRowsetLocateImpl`.  
   
@@ -56,52 +58,52 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
  Una clase derivada de `IRowsetImpl`.  
   
  `RowClass`  
- La unidad de almacenamiento para **HROW**.  
+ La unidad de almacenamiento para el **HROW**.  
   
  `MapClass`  
- La unidad de almacenamiento para los identificadores de fila retenidos por el proveedor.  
+ La unidad de almacenamiento para todos los identificadores de fila mantenidos por el proveedor.  
   
  `BookmarkKeyType`  
- El tipo de marcador de posición, como un LONG o una cadena.  Los marcadores normales deben tener una longitud por lo menos de dos bytes. \(la longitud de Solo\- byte se reserva para OLE DB [marcadores estándar](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK\_FIRST**, **DBBMK\_LAST**, y **DBBMK\_INVALID**.\)  
+ El tipo del marcador, como un valor largo o una cadena. Marcadores normales deben tener una longitud de al menos dos bytes. (Longitud de un solo byte está reservado para OLE DB [marcadores estándares](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, y **DBBMK_INVALID**.)  
   
  `BookmarkType`  
- El mecanismo de asignación para las relaciones de los marcador\-a\- datos que mantienen.  
+ El mecanismo de asignación para mantener las relaciones de marcador para los datos.  
   
  `BookmarkMapClass`  
- La unidad de almacenamiento para los identificadores de fila retenidos por el marcador.  
+ La unidad de almacenamiento para todos los identificadores de fila mantenidos por el marcador.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Métodos de interfaz  
-  
-|||  
-|-|-|  
-|[Comparar](../../data/oledb/irowsetlocateimpl-compare.md)|Compara dos marcadores.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Obtiene las filas que comienzan con la fila especificada por un desplazamiento de un marcador.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Obtiene las filas que coinciden con los marcadores especificados.|  
-|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Devuelve los valores hash para los marcadores especificados.|  
-  
-### Miembros de datos  
+### <a name="interface-methods"></a>Métodos de interfaz  
   
 |||  
 |-|-|  
-|[m\_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Una matriz de marcadores.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Compara dos marcadores.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Captura filas a partir de la fila especificada por un desplazamiento de un marcador.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Captura las filas que coinciden con los marcadores especificados.|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Devuelve el hash valores para los marcadores especificados.|  
   
-## Comentarios  
- `IRowsetLocateImpl` es la implementación de las plantillas OLE DB de la interfaz de [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) .  `IRowsetLocate` se utiliza para capturar filas arbitrarias de un conjunto de filas.  Un conjunto de filas que no implementa esta interfaz es un conjunto de filas de `sequential` .  Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador para las filas; leer esta columna obtendrá un valor de marcador de posición que se puede utilizar para colocar de nuevo a la misma fila.  
+### <a name="data-members"></a>Miembros de datos  
   
- `IRowsetLocateImpl` se utiliza para implementar la compatibilidad con marcadores en proveedores.  Los marcadores son marcadores \(índices en un conjunto de filas\) que permite al consumidor para volver rápidamente a una fila, permitiendo acceso a los datos de alta velocidad.  El proveedor determina qué marcadores pueden identificar de forma única una fila.  Mediante los métodos de `IRowsetLocateImpl` , puede comparar los marcadores, capturar filas por el desplazamiento, capturar filas por el marcador de posición, y devolver valores hash para los marcadores.  
+|||  
+|-|-|  
+|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Una matriz de marcadores.|  
   
- Para admitir los marcadores de OLE DB en un conjunto de filas, haga que el conjunto de filas heredan de esta clase.  
+## <a name="remarks"></a>Comentarios  
+ `IRowsetLocateImpl`es la implementación de plantillas OLE DB de la [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz. `IRowsetLocate`se utiliza para capturar filas arbitrarias de un conjunto de filas. Un conjunto de filas que implementan esta interfaz es un `sequential` conjunto de filas. Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador de las filas; leer esta columna, se obtendrá un valor de marcador que puede usarse para cambiar la posición en la misma fila.  
   
- Para obtener información sobre cómo implementar la compatibilidad con marcadores, vea [Compatibilidad del proveedor con los marcadores](../../data/oledb/provider-support-for-bookmarks.md) en *Visual C\+\+ Programmer's Guide* y [Marcadores](https://msdn.microsoft.com/en-us/library/ms709728.aspx) en *OLE DB Programmer's Reference* en `Platform``SDK`.  
+ `IRowsetLocateImpl`se utiliza para implementar la compatibilidad con marcadores en proveedores. Los marcadores son marcadores de posición (índices en un conjunto de filas) que permiten al consumidor volver rápidamente a una fila, lo que permite acceso a los datos de alta velocidad. El proveedor determina qué marcadores forma única pueden identificar una fila. Usar `IRowsetLocateImpl` métodos, puede comparar los marcadores, fetch filas por offset, fetch filas por marcador y devuelven valores de hash de marcadores.  
   
-## Requisitos  
+ Para admitir marcadores de OLE DB en un conjunto de filas, haga que el conjunto de filas herede de esta clase.  
+  
+ Para obtener información sobre cómo implementar la compatibilidad con marcadores, vea [proveedor admite marcadores](../../data/oledb/provider-support-for-bookmarks.md) en el *Guía del programador de Visual C++* y [marcadores](https://msdn.microsoft.com/en-us/library/ms709728.aspx) en el *Referencia del programador OLE DB* en Platform SDK.  
+  
+## <a name="requirements"></a>Requisitos  
  **Encabezado**: atldb.h  
   
-## Vea también  
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitectura de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vea también  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Arquitectura de la plantilla de proveedores OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
  [Compatibilidad del proveedor con los marcadores](../../data/oledb/provider-support-for-bookmarks.md)   
- [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [Marcadores](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

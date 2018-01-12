@@ -1,57 +1,57 @@
 ---
-title: "C&#243;mo: Incrustar un manifiesto en una aplicaci&#243;n de C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "incrustar manifiestos"
-  - "Make (archivos), actualizar para incrustar manifiestos"
-  - "manifiestos [C++]"
+title: "Cómo: incrustar un manifiesto en una aplicación de C/C ++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Incrustar un manifiesto en una aplicaci&#243;n de C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se recomienda que una aplicación de C\/C\+\+ \(o biblioteca\) tenga su manifiesto incrustado dentro del archivo binario final, ya que así se garantiza un comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios.  De forma predeterminada, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] intenta incrustar el manifiesto cuando compila un proyecto a partir de archivos de código fuente; vea [Generación de manifiestos en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información.  Sin embargo, si una aplicación se compila utilizando nmake, será necesario realizar algunos cambios en el archivo make existente.  En esta sección se muestra cómo cambiar los archivos make existentes para incrustar automáticamente el manifiesto dentro del archivo binario final.  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
+Se recomienda que una aplicación de C/C ++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final, porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen; vea [generación de manifiestos en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar los archivos MAKE existentes para incrustar automáticamente el manifiesto dentro del archivo binario final.  
   
-## Dos enfoques  
- Existen dos formas de incrustar el manifiesto dentro de una aplicación o biblioteca.  
+## <a name="two-approaches"></a>Dos enfoques  
+ Hay dos maneras para incrustar el manifiesto dentro de una aplicación o biblioteca.  
   
--   Si no está realizando una compilación incremental, puede incrustar directamente el manifiesto utilizando una línea de comandos similar a la siguiente como paso posterior a la compilación:  
+-   Si no está realizando una compilación incremental, puede incrustar directamente el manifiesto mediante una línea de comandos similar al siguiente como un paso posterior a la compilación:  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **MT.exe-manifiesto MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
-     \-O bien\-  
+     o  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifiesto MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     \(1 para un archivo EXE, 2 para un archivo DLL.\)  
+     (1 para un archivo EXE, 2 para un archivo DLL).  
   
--   Si está realizando una compilación incremental, al editar el recurso directamente tal como se muestra aquí, se deshabilitará la compilación incremental y se recompilará completamente; por lo tanto, es necesario adoptar un enfoque diferente:  
+-   Si está realizando una compilación incremental, editar el recurso directamente, como se muestra aquí se deshabilitará la compilación incremental y provocar una regeneración completa; por lo tanto, debe tener un enfoque diferente:  
   
     -   Vincule el archivo binario para generar el archivo MyApp.exe.manifest.  
   
     -   Convierta el manifiesto en un archivo de recursos.  
   
-    -   Vuelva a realizar una vinculación \(incremental\) para incrustar el recurso del manifiesto en el archivo binario.  
+    -   Volver a vincular (de forma incremental) para incrustar el recurso del manifiesto en el archivo binario.  
   
- En los siguientes ejemplos se muestra cómo modificar los archivos MAKE para incorporar ambas técnicas.  
+ Los ejemplos siguientes muestran cómo modificar los archivos MAKE para incorporar ambas técnicas.  
   
-## Archivos MAKE \(antes\)  
- Considere el script nmake para MyApp.exe, una aplicación simple compilada a partir de un archivo:  
+## <a name="makefiles-before"></a>MAKE (archivos) (antes)  
+ Tenga en cuenta la secuencia de comandos de nmake para MyApp.exe, una aplicación sencilla basada en un archivo:  
   
 ```  
 # build MyApp.exe  
@@ -71,9 +71,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Si este script se ejecuta tal como está mediante Visual C\+\+, creará correctamente MyApp.exe.  También crea el archivo de manifiesto externo MyApp.exe.manifest, que será utilizado por el sistema operativo durante la ejecución para cargar los ensamblados dependientes.  
+ Si esta secuencia de comandos se ejecuta sin cambios con Visual C++, se creará correctamente MyApp.exe. También crea el archivo de manifiesto externo MyApp.exe.manifest, para su uso por el sistema operativo para cargar ensamblados dependientes en tiempo de ejecución.  
   
- El script nmake para MyLibrary.dll presenta un aspecto muy similar:  
+ La secuencia de comandos de nmake para MyLibrary.dll tiene un aspecto muy similar:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,8 +96,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## Archivos MAKE \(después\)  
- Para poder compilar con manifiestos incrustados, es necesario realizar cuatro pequeños cambios en los archivos MAKE originales.  Para el archivo MAKE de MyApp.exe:  
+## <a name="makefiles-after"></a>Archivos MAKE (después)  
+ Para compilar con incrusta manifiestos que tiene que realizar cuatro pequeños cambios en los archivos MAKE originales. Para el archivo MAKE MyApp.exe:  
   
 ```  
 # build MyApp.exe  
@@ -160,9 +160,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Los archivos MAKE incluyen ahora dos archivos \(makefile.inc y makefile.targ.inc\) que se encargan de realizar el trabajo real.  
+ Los archivos MAKE incluyen ahora dos archivos que realizan el trabajo real, makefile.inc y makefile.targ.inc.  
   
- Cree el archivo makefile.inc y copie en el mismo lo siguiente:  
+ Crear makefile.inc y copie lo siguiente en él:  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -233,7 +233,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- A continuación, cree el archivo makefile.targ.inc y copie en el mismo lo siguiente:  
+ Ahora cree el archivo makefile.targ.inc y copie lo siguiente en él:  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -260,5 +260,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## Vea también  
- [Introducción a la generación de manifiestos para los programas de C\/C\+\+](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción a la generación de manifiestos para los programas de C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

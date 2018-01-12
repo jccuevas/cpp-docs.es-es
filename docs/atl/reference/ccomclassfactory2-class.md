@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce8588ff1ca3349100b608c8ebf4085d7464a235
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory2-class"></a>Clase CComClassFactory2
 Esta clase implementa la [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfaz.  
@@ -54,7 +55,7 @@ class CComClassFactory2 : public IClassFactory2,
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|Crea un objeto del CLSID especificado.|  
 |[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Debido a una clave de licencia, crea un objeto del CLSID especificado.|  

@@ -1,32 +1,33 @@
 ---
-title: "END_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "END_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "END_COLUMN_MAP (macro)"
+title: END_COLUMN_MAP | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: END_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: END_COLUMN_MAP macro
 ms.assetid: b6418f19-84f5-49f4-84c7-67a40ed33364
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5c16f192957f37d03d202130e8718c3ee8ae8fb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# END_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Marca el final de las entradas del mapa de columnas.  
+# <a name="endcolumnmap"></a>END_COLUMN_MAP
+Marca el final de las entradas de asignación de columna.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,17 +35,17 @@ END_COLUMN_MAP( )
   
 ```  
   
-## Comentarios  
- Se utiliza con un único descriptor de acceso en un conjunto de filas.  La macro de `BEGIN_COLUMN_MAP` se completa con la macro de `END_COLUMN_MAP` .  
+## <a name="remarks"></a>Comentarios  
+ Se utiliza con un único descriptor de acceso en un conjunto de filas. La macro `BEGIN_COLUMN_MAP` se completa con la macro `END_COLUMN_MAP` .  
   
-## Ejemplo  
- Vea [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md).  
+## <a name="example"></a>Ejemplo  
+ Vea [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)

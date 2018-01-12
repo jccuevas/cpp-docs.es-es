@@ -33,11 +33,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3da63f898e1bf1b218ae71d6918d09388667c6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c9dfe3b112754d573226fe992d346d57de56406
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcrtomb"></a>wcrtomb
 Convierte un carácter ancho en su representación de carácter multibyte. Hay disponible una versión más segura de esta función; vea [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md).  
@@ -66,7 +67,7 @@ size_t wcrtomb(
  Carácter ancho que se va a convertir.  
   
  [in] `mbstate`  
- Puntero a un objeto `mbstate_t` .  
+ Puntero a un objeto `mbstate_t`.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve el número de bytes necesarios para representar el carácter multibyte convertido; si se produce un error, devuelve -1.  
@@ -78,7 +79,7 @@ size_t wcrtomb(
   
  La función `wcrtomb` difiere de [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) en que se puede reiniciar. El estado de la conversión se almacena en `mbstate` para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría `wcsrlen` en lugar de `wcsnlen` si se empleara una llamada subsiguiente a `wcsrtombs` en lugar de a `wcstombs`.  
   
- En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  La función `wcrtomb` es segura para subprocesos siempre y cuando ninguna función del proceso actual llame a `setlocale` mientras se ejecuta esta función y `mbstate` sea nulo.  

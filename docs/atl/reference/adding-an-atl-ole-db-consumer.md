@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: defc933014bd287eb48f53635efba12a40960711
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Agregar un consumidor OLE DB de ATL
 Use este asistente para agregar un consumidor OLE DB ATL a un proyecto. Un consumidor OLE DB ATL está formada por una OLE DB descriptor de acceso (clase) y enlaces de datos necesarios para tener acceso a un origen de datos. El proyecto se debe haber creado como una aplicación ATL COM o como una aplicación MFC o Win32 que tenga compatibilidad con ATL (que el Asistente para consumidores OLE DB ATL agrega de forma automática).  

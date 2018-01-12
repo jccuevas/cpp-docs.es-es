@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Advertencia del compilador (nivel 1) C4055  
   
 'conversion': del puntero de datos 'type1' al puntero de función 'type2'  

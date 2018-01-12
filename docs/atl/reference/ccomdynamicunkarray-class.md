@@ -29,11 +29,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ad16bacf147e2bafc1cc2ad1a9bb835067ee40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray (clase)
 Esta clase almacena una matriz de **IUnknown** punteros.  
@@ -48,14 +49,14 @@ class CComDynamicUnkArray
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Constructor. Inicializa los valores de la colección **NULL** y el tamaño de la colección a cero.|  
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::Add](#add)|Llamar a este método para agregar un `IUnknown` puntero a la matriz.|  
 |[CComDynamicUnkArray::begin](#begin)|Devuelve un puntero al primer `IUnknown` puntero en la colección.|  

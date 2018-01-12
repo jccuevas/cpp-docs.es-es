@@ -1,71 +1,72 @@
 ---
-title: "plantillas OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plantillas OLE DB"
+title: Plantillas OLE DB | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# plantillas OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las plantillas OLE DB facilitan el acceso a datos de OLE DB más fácil.  Visual C\+\+ proporciona clases de plantilla que implementan muchas de las interfaces OLE DB más comunes.  Puede utilizar las plantillas de consumidor de Visual C\+\+ para escribir una aplicación de cliente \(consumidor\) OLE DB y las plantillas de proveedor para escribir una aplicación de servidor \(proveedor\).  
+# <a name="ole-db-templates"></a>plantillas OLE DB
+Las plantillas OLE DB facilitan el acceso a datos de OLE DB. Visual C++ proporciona clases de plantilla que implementan muchas de las interfaces OLE DB más utilizadas. Puede usar las plantillas de consumidor de Visual C++ para escribir una aplicación de cliente (consumidor) OLE DB y las plantillas de proveedor para escribir una aplicación de servidor (proveedor).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
- Proporciona vínculos a las clases para plantillas de consumidor OLE DB indicadas por el uso.  
+ Proporciona vínculos a las clases de plantillas de consumidor OLE DB enumeradas por uso.  
   
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
- Proporciona vínculos a las clases de plantillas de proveedores OLE DB indicadas por el uso.  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)  
+ Proporciona vínculos a las clases de plantilla de proveedores OLE DB enumeradas por uso.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Información general sobre la programación de OLE DB](../../data/oledb/ole-db-programming-overview.md)  
- Describe qué es y explica OLE DB acceso Universal a los datos en OLE DB.  
+ Describe las novedades de OLE DB y se explican Universal Data Access en OLE DB.  
   
- [Referencia de El programador de OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
- Proporciona vínculos a la documentación de [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] en OLE DB.  
+ [Referencia del programador OLE DB](https://msdn.microsoft.com/en-us/library/ms713643.aspx)  
+ Proporciona vínculos a la documentación del SDK de Windows en OLE DB.  
   
- [Ejemplos de plantillas OLE DB](../../top/visual-cpp-samples.md)  
- Proporciona vínculos a ejemplos de plantillas OLE DB que muestran cómo usar OLE DB en proyectos.  
+ [Ejemplos de plantillas OLE DB](../../visual-cpp-samples.md)  
+ Proporciona vínculos a los ejemplos de plantillas OLE DB que muestran cómo usar OLE DB en los proyectos.  
   
  [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
- Describe el material conceptual sobre las plantillas de consumidor OLE DB.  
+ Describe el material conceptual acerca de las plantillas de consumidor OLE DB.  
   
- [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
- Describe el material conceptual sobre las plantillas de proveedor OLE DB.  
+ [Plantillas del proveedor OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)  
+ Describe el material conceptual acerca de las plantillas de proveedor OLE DB.  
   
  [Crear un consumidor OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)  
- Describe la creación de un consumidor de plantillas OLE DB cualquiera con o sin el asistente para consumidores OLE DB ATL.  
+ Describe cómo crear un consumidor de plantillas OLE DB con o sin el Asistente para consumidores OLE DB ATL.  
   
- [Crear un proveedor sencillo de sólo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)  
- Describe la creación de un proveedor sencillo de sólo lectura que lea un par de cadenas.  
+ [Crear un proveedor sencillo de solo lectura](../../data/oledb/creating-a-simple-read-only-provider.md)  
+ Describe cómo crear un proveedor sencillo de sólo lectura que lee un par de cadenas.  
   
  [Crear un proveedor actualizable](../../data/oledb/creating-an-updatable-provider.md)  
- Describe la creación de proveedores que pueden escribir en el almacén de datos.  
+ Describe los proveedores de creación que pueden escribir en el almacén de datos.  
   
  [Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)  
- Describe una interfaz simplificada para insertar código basado en las plantillas de consumidor OLE DB para crear consumidores OLE DB en funcionamiento.  
+ Describe una interfaz simplificada para insertar código en función de las plantillas OLE DB consumidor para crear consumidores OLE DB en funcionamiento.  
   
- [Referencia de Active Template Library \(ATL\)](../../atl/atl-com-desktop-components.md)  
- Proporciona material de referencia para Biblioteca de ATL, un conjunto de clases de C\+\+ basadas en plantillas que simplifica la programación de objetos COM.  
+ [Referencia Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
+ Proporciona material de referencia para Biblioteca de ATL, un conjunto de clases de C++ basadas en plantillas que simplifica la programación de objetos COM.  
   
- [Bibliotecas de Visual C\+\+](http://msdn.microsoft.com/es-es/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Proporciona vínculos a las diversas bibliotecas suministradas con Visual C\+\+, incluidas las bibliotecas de ATL, MFC, las plantillas OLE DB, la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C\+\+.  
+ [Bibliotecas de Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Proporciona vínculos a las diversas bibliotecas suministradas con Visual C++, incluidas las bibliotecas de ATL, MFC, las plantillas OLE DB, la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++.  
   
- [Depuración](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ [Depuración](/visualstudio/debugger/debugging-in-visual-studio)  
  Proporciona vínculos sobre cómo utilizar el depurador de Visual Studio para corregir errores lógicos en sus aplicaciones o procedimientos almacenados.

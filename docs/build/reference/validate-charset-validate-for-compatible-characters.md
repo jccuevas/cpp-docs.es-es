@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dc33c39534e31212d18cd97cf355952e8f9ddf3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7694eb94fe1b50d1892dab399b523a5b0e6deef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/Validate-CharSet (validar caracteres compatibles)
 Valida que el texto del archivo de origen contiene solo caracteres representables como UTF-8.  
@@ -56,4 +57,4 @@ Valida que el texto del archivo de origen contiene solo caracteres representable
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)   
  [/Execution-CharSet (establecer el juego de caracteres en la ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)   
  [/Source-CharSet (conjunto de juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)   
- [/UTF-8 (establecer origen y el ejecutable juegos de caracteres UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+ [/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

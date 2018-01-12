@@ -1,66 +1,66 @@
 ---
-title: "Archivos de entrada de LINK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "entradas de comandos para los archivos del vinculador [C++]"
-  - "archivos [C++], LINK"
-  - "bibliotecas de importación [C++], archivos del vinculador"
-  - "archivos de entrada [C++], LINK"
-  - "LINK (herramienta) [C++], archivos de entrada"
-  - "vinculador [C++], archivos de entrada"
-  - "archivos de definición de módulos"
-  - "archivos de definición de módulos, archivos del vinculador"
-  - "recursos [C++], archivos del vinculador"
+title: "Archivos de entrada de vínculo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- module definition files
+- resources [C++], linker files
+- LINK tool [C++], input files
+- module definition files, linker files
+- input files [C++], LINK
+- linker [C++], input files
+- import libraries [C++], linker files
+- command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Archivos de entrada de LINK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El vinculador deberá recibir archivos que contengan objetos, bibliotecas estándar y de importación, recursos, definiciones de módulo y entradas de comandos.  LINK no usa las extensiones de archivo para realizar suposiciones sobre el contenido de los archivos.  En lugar de ello, examina cada archivo de entrada para averiguar a qué clase pertenece.  
+# <a name="link-input-files"></a>Archivos de entrada de LINK
+Proporcione al vinculador con archivos que contienen objetos, importación y bibliotecas estándar, recursos, definiciones de módulo y entradas de comandos. LINK no usa las extensiones de archivo para realizar suposiciones sobre el contenido de un archivo. En su lugar, vínculo examina cada archivo de entrada para determinar qué tipo de archivo es.  
   
- Los archivos objeto en la línea de comandos se procesan en el orden que aparecen en la línea de comandos.  También se busca en las bibliotecas en el orden de la línea de comandos, con la limitación siguiente: los símbolos que no están resueltos cuando se recibe un archivo objeto de una biblioteca se buscan primero en esa biblioteca, después, en las bibliotecas siguientes en la línea de comandos y directivas [\/DEFAULTLIB \(Especificar la biblioteca predeterminada\)](../../build/reference/defaultlib-specify-default-library.md) y, por último, en cualquier biblioteca que aparezca en el inicio de la línea de comandos.  
+ Archivos de objeto en la línea de comandos se procesan en el orden en que aparecen en la línea de comandos. Las bibliotecas se buscan, de línea de comandos con la siguiente advertencia: no resuelta símbolos que están al volver a poner en un archivo de objeto de una biblioteca se buscan en esa biblioteca primero y, a continuación, en las bibliotecas siguientes desde la línea de comandos y [/DEFAULTLIB (Especificar biblioteca predeterminada)](../../build/reference/defaultlib-specify-default-library.md) directivas y, a continuación, en cualquier biblioteca al principio de la línea de comandos.  
   
 > [!NOTE]
->  LINK ya no acepta el punto y coma \(ni otro carácter\) como inicio de un comentario en los archivos de respuesta y de orden.  El punto y coma sólo se reconoce como inicio de un comentario en los archivos de definición de módulos \(.def\).  
+>  VÍNCULO ya no acepta un punto y coma (o cualquier otro carácter) como el inicio de un comentario en los archivos de respuesta y los archivos de orden. Punto y coma sólo se reconoce como inicio de un comentario en los archivos de definición de módulo (.def).  
   
- LINK usa los siguientes tipos de archivos de entrada:  
+ VÍNCULO utiliza los siguientes tipos de archivos de entrada:  
   
--   [archivos .obj](../../build/reference/dot-obj-files-as-linker-input.md)  
+-   [.obj (archivos)](../../build/reference/dot-obj-files-as-linker-input.md)  
   
 -   [archivos .netmodule](../../build/reference/netmodule-files-as-linker-input.md)  
   
--   [archivos .lib](../../build/reference/dot-lib-files-as-linker-input.md)  
+-   [.lib (archivos)](../../build/reference/dot-lib-files-as-linker-input.md)  
   
--   [archivos .exp](../../build/reference/dot-exp-files-as-linker-input.md)  
+-   [.exp (archivos)](../../build/reference/dot-exp-files-as-linker-input.md)  
   
--   [archivos .def](../../build/reference/dot-def-files-as-linker-input.md)  
+-   [.def (archivos)](../../build/reference/dot-def-files-as-linker-input.md)  
   
--   [archivos .pdb](../../build/reference/dot-pdb-files-as-linker-input.md)  
+-   [.pdb (archivos)](../../build/reference/dot-pdb-files-as-linker-input.md)  
   
 -   [archivos .res](../../build/reference/dot-res-files-as-linker-input.md)  
   
 -   [archivos .exe](../../build/reference/dot-exe-files-as-linker-input.md)  
   
--   [archivos .txt](../../build/reference/dot-txt-files-as-linker-input.md)  
+-   [.txt (archivos)](../../build/reference/dot-txt-files-as-linker-input.md)  
   
--   [archivos .ilk](../../build/reference/dot-ilk-files-as-linker-input.md)  
+-   [.ilk (archivos)](../../build/reference/dot-ilk-files-as-linker-input.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

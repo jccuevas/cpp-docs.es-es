@@ -46,11 +46,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 66e06a0a35980d28b03e3b0ba5b2e06ca6861e41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Determina si un entero representa un carácter de control.  
@@ -84,7 +85,7 @@ int _iswcntrl_l(
 ## <a name="return-value"></a>Valor devuelto  
  Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter de control. `iscntrl`Devuelve un valor distinto de cero si `c` es un carácter de control (0 x 00-0x1F o 0x7F). `iswcntrl` devuelve un valor distinto de cero si `c` es un carácter ancho de control. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
- Las versiones de estas funciones que tienen el sufijo `_l` usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ Las versiones de estas funciones que tienen el sufijo `_l` usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  El comportamiento de `iscntrl` e `_iscntrl_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
   
@@ -104,9 +105,9 @@ int _iswcntrl_l(
 |`_iscntrl_l`|\<ctype.h>|  
 |`_iswcntrl_l`|\<ctype.h> o \<wchar.h>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
  [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (Rutinas)](../../c-runtime-library/is-isw-routines.md)
+ [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)

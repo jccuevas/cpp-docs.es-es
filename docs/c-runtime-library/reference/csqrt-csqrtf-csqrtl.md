@@ -1,57 +1,59 @@
 ---
-title: "csqrt, csqrtf, csqrtl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "csqrt"
-  - "csqrtf"
-  - "csqrtl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "csqrt"
-  - "csqrtf"
-  - "csqrtl"
-  - "complex/csqrt"
-  - "complex/csqrtf"
-  - "complex/csqrtl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "csqrt (función)"
-  - "csqrtf (función)"
-  - "csqrtl (función)"
+title: csqrt, csqrtf, csqrtl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- csqrt
+- csqrtf
+- csqrtl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- csqrt
+- csqrtf
+- csqrtl
+- complex/csqrt
+- complex/csqrtf
+- complex/csqrtl
+dev_langs: C++
+helpviewer_keywords:
+- csqrt function
+- csqrtf function
+- csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c8f28a0979c5942765c5292fb56af6e4ba25aab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# csqrt, csqrtf, csqrtl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera la raíz cuadrada de un número complejo, con una bifurcación cortar el eje negativo real.  
+# <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
+Recupera la raíz cuadrada de un número complejo, con un corte de bifurcación en el eje negativo real.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _Dcomplex csqrt(   
@@ -71,30 +73,30 @@ _Lcomplex csqrtl(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `z`  
  Número complejo.  
   
-## Valor devuelto  
- Raíz cuadrada de `z`. El resultado es en el plano de mitad derecha.  
+## <a name="return-value"></a>Valor devuelto  
+ Raíz cuadrada de `z`. El resultado se encuentra en el semiplano derecho.  
   
 |Entrada|Excepción SEH|Excepción de `_matherr`|  
-|-------------|-------------------|-----------------------------|  
-|± QNAN, IND|ninguna|\_DOMAIN|  
-|\- ∞|ninguna|\_DOMAIN|  
+|-----------|-------------------|--------------------------|  
+|± QNAN, IND|ninguna|_DOMAIN|  
+|- ∞|ninguna|_DOMAIN|  
   
-## Comentarios  
- Puesto que C\+\+ permite las sobrecargas, es posible llamar a las sobrecargas de `csqrt` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `csqrt` siempre toma y devuelve un `_Dcomplex` valor.  
+## <a name="remarks"></a>Comentarios  
+ Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `csqrt` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `csqrt` siempre toma y devuelve un valor `_Dcomplex` .  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Rutina|Encabezado C|Encabezado C\+\+|  
-|------------|------------------|----------------------|  
-|`csqrt`, `csqrtf`, `csqrtl`|\<complex.h\>|\< ccomplex \>|  
+|Rutina|Encabezado C|Encabezado C++|  
+|-------------|--------------|------------------|  
+|`csqrt`,               `csqrtf`, `csqrtl`|\<complex.h>|\<ccomplex>|  
   
  Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
@@ -104,7 +106,7 @@ _Lcomplex csqrtl(
  [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [Ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
+ [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
  [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
  [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
  [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)

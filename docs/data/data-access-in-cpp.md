@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bae9c7d8e50ca12767e5baed436912f04daafd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-in-visual-c"></a>Acceso a datos en Visual C++
 
@@ -46,7 +49,7 @@ Desde 2011, Microsoft cuenta con ODBC como el estándar de conexión para las ap
 
 [ODBC Driver 13.1 for SQL Server: publicó Windows](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server) el último controlador ODBC proporciona acceso a datos sólido para Microsoft SQL Server 2016 Microsoft Azure SQL Database para las aplicaciones basadas en C o C++. Proporciona compatibilidad para las características incluidas que siempre se cifran, Azure Active Directory y grupos de disponibilidad AlwaysOn. También está disponible para MacOS y Linux.     
  
-[SQL Server Native Client](https://msdn.microsoft.com/library/ms130892.aspx) SQL Server Native Client es una datos independiente acceso aplicación interfaz de programación (API) utilizada para OLE DB y ODBC, que es compatible con SQL Server 2005 mediante SQL Server 2014. Las aplicaciones nuevas deben usar el controlador ODBC 13.1 para SQL Server.
+[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming) SQL Server Native Client es una datos independiente acceso aplicación interfaz de programación (API) utilizada para OLE DB y ODBC, que es compatible con SQL Server 2005 mediante SQL Server 2014. Las aplicaciones nuevas deben usar el controlador ODBC 13.1 para SQL Server.
 
 [Centro de desarrolladores de C++ y Microsoft Azure C](https://azure.microsoft.com/develop/cpp/) Azure facilita el proceso crear aplicaciones de C++ con una mayor flexibilidad, escalabilidad y confiabilidad mediante herramientas que le encanta.    
 

@@ -42,11 +42,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a75cc474d66a42f3faeb7444f3168c7cc3283514
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 Divide un valor de punto flotante en partes fraccionarias y enteras.  
@@ -89,7 +90,7 @@ long double modfl(
 ## <a name="remarks"></a>Comentarios  
  Las funciones `modf` desglosan el valor de punto flotante `x` en fracciones y partes de enteros, cada uno de los cuales tiene el mismo signo que `x`. Se devuelve la parte fraccionaria con signo de `x`. La parte entera se almacena como un valor de punto flotante en `intptr.`  
   
- `modf` tiene una implementación que usa las Extensiones SIMD de transmisión por secuencias 2 (SSE2). Vea [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.  
+ `modf` tiene una implementación que usa las Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.  
   
  Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `modf` que toman y devuelven los parámetros `float` o `long double`. En un programa de C, `modf` siempre toma dos valores double y devuelve uno.  
   
@@ -99,7 +100,7 @@ long double modfl(
 |-------------|---------------------|  
 |`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++: \<cmath> o \<math.h>|  
   
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

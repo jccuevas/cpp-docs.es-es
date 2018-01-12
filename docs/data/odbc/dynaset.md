@@ -1,83 +1,86 @@
 ---
-title: "Conjunto de registros din&#225;micos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "biblioteca de cursores [ODBC], disponibilidad de los conjuntos de registros dinámicos"
-  - "cursores [ODBC], cursores controlados mediante conjuntos de claves en conjuntos de registros dinámicos"
-  - "conjuntos de registros dinámicos"
-  - "cursores controlados mediante conjuntos de claves en conjuntos de registros dinámicos"
-  - "biblioteca de cursores ODBC [ODBC], conjuntos de registros dinámicos"
-  - "conjuntos de registros ODBC, conjuntos de registros dinámicos"
-  - "conjuntos de registros [C++], conjuntos de registros dinámicos"
+title: "Conjunto de registros dinámicos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, dynasets
+- ODBC cursor library [ODBC], dynasets
+- keyset-driven cursors in dynasets
+- cursors [ODBC], keyset-driven cursors in dynasets
+- cursor library [ODBC], dynaset availability
+- recordsets [C++], dynasets
+- dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Conjunto de registros din&#225;micos
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dynaset"></a>Conjunto de registros dinámicos
 Este tema describe los conjuntos de registros dinámicos y explica su [disponibilidad](#_core_availability_of_dynasets).  
   
 > [!NOTE]
->  Este tema es aplicable a las clases ODBC de MFC, incluida [CRecordset](../../mfc/reference/crecordset-class.md).  Para obtener más información sobre los conjuntos de registros dinámicos de las clases DAO, vea [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  Con DAO, se pueden abrir conjuntos de registros de tipo dinámico.  
+>  En este tema se aplica a las clases ODBC de MFC, incluidos los [CRecordset](../../mfc/reference/crecordset-class.md). Para obtener información acerca de conjuntos de registros dinámicos en las clases DAO, vea [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). Con DAO, puede abrir conjuntos de registros de tipo dinámico.  
   
- Un conjunto de registros dinámico es un conjunto de registros con propiedades dinámicas.  Durante su existencia, un objeto de conjunto de registros en modo dinámico \(denominado normalmente conjunto de registros dinámico\) permanece sincronizado con el origen de datos de la siguiente forma.  En un entorno multiusuario, otros usuarios podrían editar o eliminar los registros que están en el conjunto de registros dinámico o agregar registros a la tabla que representa.  Los registros que la aplicación agrega o elimina en el conjunto de registros quedan reflejados en el conjunto de registros dinámico.  Los registros que otros usuarios agregan a la tabla no se reflejarán en el conjunto de registros dinámico hasta que se recompile este llamando a la función miembro **Requery**.  Cuando otros usuarios eliminan registros, el código MFC pasa por alto las eliminaciones del conjunto de registros.  Los cambios de edición efectuados por otros usuarios en registros existentes quedan reflejados en el conjunto de registros dinámico al desplazarse al registro en cuestión.  
+ Un conjunto de registros dinámicos es un conjunto de registros con propiedades dinámicas. Durante su duración, un objeto de conjunto de registros en modo de conjunto de registros dinámicos (que normalmente se denominan conjuntos de registros dinámicos) permanece sincronizado con el origen de datos de la manera siguiente. En un entorno multiusuario, otros usuarios pueden editar o eliminar registros que están en el conjunto de registros dinámicos o agregar registros a la tabla que representa el conjunto de registros dinámicos. Registros de la aplicación agrega o quita el conjunto de registros se reflejan en el conjunto de registros dinámicos. Los registros que otros usuarios se agregan a la tabla no se reflejarán en el conjunto de registros dinámicos hasta que se vuelve a generar el conjunto de registros dinámicos mediante una llamada a su **Requery** función miembro. Cuando otros usuarios eliminan registros, código MFC omite las eliminaciones en el conjunto de registros. Cambios de edición de otros usuarios en los registros existentes se reflejan en el conjunto de registros dinámicos en cuanto se desplaza al registro afectado.  
   
- De forma similar, los cambios de edición personales en registros de un conjunto de registros dinámico quedan reflejados en los conjuntos de registros dinámicos que están utilizando otros usuarios.  Los registros que se agregan no quedan reflejados en los conjuntos de registros dinámicos de otros usuarios hasta que realicen una nueva consulta a los mismos.  Los registros que se eliminan se marcan como "eliminados" en los conjuntos de registros de otros usuarios.  Si se tienen varias conexiones a la misma base de datos \(varios objetos `CDatabase`\), los conjuntos de registros asociados a dichas conexiones tienen el mismo estado que los conjuntos de registros de otros usuarios.  
+ De forma similar, las modificaciones que se realice en los registros de un conjunto de registros dinámicos se reflejan en conjuntos de registros dinámicos en uso por otros usuarios. Registros que se agregan no se reflejan en conjuntos de registros dinámicos de otros usuarios hasta que realicen una nueva consulta sus conjuntos de registros dinámicos. Elimina los registros se marcan como "eliminados" en los conjuntos de registros de otros usuarios. Si tiene varias conexiones a la misma base de datos (varios `CDatabase` objetos), conjuntos de registros asociados a dichas conexiones tienen el mismo estado como los conjuntos de registros de otros usuarios.  
   
- Los conjuntos de registros dinámicos son muy útiles cuando los datos deben ser dinámicos; por ejemplo, en un sistema de reserva de vuelos.  
-  
-> [!NOTE]
->  Para usar conjuntos de registros dinámicos, se debe tener un controlador ODBC para el origen de datos que los admita y no debe estar cargada la biblioteca de cursores ODBC.  Para obtener más información, vea [Disponibilidad de los conjuntos de registros dinámicos](#_core_availability_of_dynasets).  
-  
- Para especificar que un conjunto de registros sea dinámico, hay que pasar **CRecordset::dynaset** como primer parámetro a la función miembro **Open** del objeto de conjunto de registros.  
+ Conjuntos de registros dinámicos son más útiles cuando los datos deben ser dinámicos, como (por ejemplo) en un sistema de reserva airline.  
   
 > [!NOTE]
->  En el caso de conjuntos de registros dinámicos actualizables, el controlador ODBC debe admitir instrucciones de actualización con ubicación o la función de la API de ODBC **::SQLSetPos**.  Si se admiten ambas, MFC utiliza **::SQLSetPos** porque es más eficaz.  
+>  Para usar conjuntos de registros dinámicos, debe tener un controlador ODBC para el origen de datos que es compatible con conjuntos de registros dinámicos y no se debe cargar la biblioteca de cursores ODBC. Para obtener más información, consulte [disponibilidad de conjuntos de registros dinámicos](#_core_availability_of_dynasets).  
   
-##  <a name="_core_availability_of_dynasets"></a> Disponibilidad de los conjuntos de registros dinámicos  
- Las clases de base de datos MFC admiten conjuntos de registros dinámicos si se satisfacen los siguientes requisitos:  
+ Para especificar que un conjunto de registros es un conjunto de registros dinámicos, pasar **CRecordset:: dynaset** como primer parámetro a la **abiertos** función miembro de su objeto de conjunto de registros.  
   
--   La biblioteca de cursores ODBC DLL no se debe estar utilizando para este origen de datos.  
+> [!NOTE]
+>  Para conjuntos de registros dinámicos actualizables, el controlador ODBC debe admitir instrucciones de actualización por posición o el **:: SQLSetPos** función de la API de ODBC. Si se admiten ambas, MFC utiliza **:: SQLSetPos** para mejorar la eficacia.  
   
-     Si se utiliza la biblioteca de cursores, enmascara parte de la funcionalidad del controlador ODCB subyacente que es necesario para la compatibilidad con los conjuntos de registros dinámicos.  Si desea utilizar conjuntos de registros dinámicos \(y el controlador ODBC posee la funcionalidad requerida para estos conjuntos, como se describe en el resto de esta sección\), se puede hacer que MFC no cargue la biblioteca de cursores al crear un objeto `CDatabase`.  Para obtener más información, vea [ODBC](../../data/odbc/odbc-basics.md) y la función miembro [OpenEx](../Topic/CDatabase::OpenEx.md) u [Open](../Topic/CDatabase::Open.md) de la clase `CDatabase`.  
+##  <a name="_core_availability_of_dynasets"></a>Disponibilidad de los conjuntos de registros dinámicos  
+ Las clases de base de datos MFC admiten conjuntos de registros dinámicos si se cumplen los requisitos siguientes:  
   
-     En terminología ODBC, los conjuntos de registros dinámicos y las instantáneas se denominan cursores.  Un cursor es un mecanismo utilizado para mantener el seguimiento de su posición en un conjunto de registros.  
+-   La biblioteca de cursores ODBC DLL no debe estar en uso para este origen de datos.  
   
--   El controlador ODBC para el origen de datos debe ser compatible con cursores dirigidos por conjuntos de claves.  
+     Si se utiliza la biblioteca de cursores, enmascara parte de la funcionalidad del controlador ODBC subyacente que es necesario para la compatibilidad de conjunto de registros dinámicos. Si desea utilizar conjuntos de registros dinámicos (y el controlador ODBC posee la funcionalidad necesaria para conjuntos de registros dinámicos, como se describe en el resto de esta sección), puede hacer que MFC no cargue la biblioteca de cursores al crear un `CDatabase` objeto. Para obtener más información, consulte [ODBC](../../data/odbc/odbc-basics.md) y [OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [abiertos](../../mfc/reference/cdatabase-class.md#open) función miembro de clase `CDatabase`.  
   
-     Los cursores dirigidos por conjuntos de claves administran los datos de una tabla mediante la obtención y almacenamiento de un conjunto de claves.  Las claves se usan para obtener datos actuales de la tabla cuando el usuario se desplaza a un registro concreto.  Para determinar si el controlador proporciona esta compatibilidad, llame a la función de la API de ODBC **::SQLGetInfo** con el parámetro **SQL\_SCROLL\_OPTIONS**.  
+     En la terminología ODBC, conjuntos de registros dinámicos y las instantáneas se denominan cursores. Un cursor es un mecanismo utilizado para realizar el seguimiento de su posición en un conjunto de registros.  
   
-     Si se intenta abrir un conjunto de registros dinámico que no es compatible con el conjunto de claves, se obtiene una excepción `CDBException` con el valor de código devuelto **AFX\_SQL\_ERROR\_DYNASET\_NOT\_SUPPORTED**.  
+-   El controlador ODBC para el origen de datos debe admitir cursores dinámicos.  
+  
+     Los cursores controlados por conjunto de claves administran datos de una tabla mediante la obtención y almacenar un conjunto de claves. Las claves se utilizan para obtener datos actuales de la tabla cuando el usuario se desplaza a un registro concreto. Para determinar si el controlador proporciona esta compatibilidad, llame a la **:: SQLGetInfo** función de la API de ODBC con el **SQL_SCROLL_OPTIONS** parámetro.  
+  
+     Si intenta abrir un conjunto de registros dinámicos sin compatibilidad con conjunto de claves, obtendrá un `CDBException` con el valor de código de retorno **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**.  
   
 -   El controlador ODBC para el origen de datos debe admitir obtención extendida.  
   
-     La obtención extendida es la posibilidad de desplazarse hacia atrás y hacia delante por los registros resultantes de la consulta SQL.  Para determinar si el controlador admite esta capacidad, llame a la función de la API de ODBC **::SQLGetFunctions** con el parámetro **SQL\_API\_SQLEXTENDEDFETCH**.  
+     Obtención extendida es la capacidad para desplazarse hacia atrás, así como reenviar a través de los registros resultantes de la consulta SQL. Para determinar si el controlador es compatible con esta capacidad, llame a la **:: SQLGetFunctions** función de la API de ODBC con el **SQL_API_SQLEXTENDEDFETCH** parámetro.  
   
- Si se desean conjuntos de registros dinámicos actualizables \(o instantáneas\), el controlador ODBC también debe admitir la función de la API de ODBC **::SQLSetPos** o actualizaciones con ubicación.  La función **::SQLSetPos** permite a MFC actualizar el origen de datos sin enviar instrucciones SQL.  Si esta compatibilidad está disponible, MFC prefiere utilizarla antes que hacer actualizaciones mediante SQL.  Para determinar si el controlador admite **::SQLSetPos**, hay que llamar a **::SQLGetInfo** con el parámetro **SQL\_POS\_OPERATIONS**.  
+ Si se desean conjuntos de registros dinámicos actualizables (o instantáneas, con este propósito), el controlador ODBC también debe admitir la **:: SQLSetPos** función de la API de ODBC o actualizaciones por posición. El **:: SQLSetPos** función permite a MFC actualizar el origen de datos sin enviar instrucciones SQL. Si esta compatibilidad está disponible, MFC prefiere utilizarla antes que hacer actualizaciones mediante SQL. Para determinar si el controlador admite **:: SQLSetPos**, llame a **:: SQLGetInfo** con el **SQL_POS_OPERATIONS** parámetro.  
   
- Sintaxis SQL de uso de actualizaciones con ubicación \(de cursorname de **WHERE CURRENT OF** \<del formulario\>\) para identificar una fila determinada en la tabla del origen de datos.  Para determinar si el controlador admite actualizaciones con ubicación, hay que llamar a **::SQLGetInfo** con el parámetro **SQL\_POSITIONED\_STATEMENTS**.  
+ Actualizaciones por posición utilizan la sintaxis SQL (de forma **WHERE CURRENT OF** \<cursorname >) para identificar una fila determinada en la tabla del origen de datos. Para determinar si el controlador admite actualizaciones por posición, llame a **:: SQLGetInfo** con el **SQL_POSITIONED_STATEMENTS** parámetro.  
   
- Generalmente, los conjuntos de registros dinámicos de MFC \(pero no los conjuntos de registros sólo hacia delante\) necesitan un controlador ODBC que sea compatible con la API de nivel 2.  Si el controlador del origen de datos es compatible con la API de nivel 1, se pueden seguir utilizando tanto instantáneas actualizables y de sólo lectura como conjuntos de registros sólo hacia delante, pero no conjuntos de registros dinámicos.  No obstante, un controlador de nivel 1 puede admitir conjuntos de registros dinámicos si admite obtención extendida y cursores dirigidos por conjuntos de claves.  Para obtener más información sobre los niveles de compatibilidad ODBC, vea [ODBC](../../data/odbc/odbc-basics.md).  
+ Por lo general, conjuntos de registros dinámicos MFC (pero no sea de sólo avance de conjuntos de registros) necesitan un controlador ODBC con el cumplimiento de la API de nivel 2. Si el controlador para el origen de datos es compatible con el conjunto de API de nivel 1, todavía puede usar tanto instantáneas actualizables y de sólo lectura y conjuntos de registros solo hacia delante, pero no los dynasets. Sin embargo, un controlador de nivel 1 puede admitir conjuntos de registros dinámicos si admite obtención extendida y cursores dinámicos. Para obtener más información sobre los niveles de compatibilidad ODBC, vea [ODBC](../../data/odbc/odbc-basics.md).  
   
 > [!NOTE]
->  Si se desea utilizar tanto instantáneas como conjuntos de registros dinámicos, se debe basar en dos objetos `CDatabase` distintos \(dos conexiones distintas\).  
+>  Si desea utilizar instantáneas y conjuntos de registros dinámicos, se debe basar en dos diferentes `CDatabase` objetos (dos conexiones distintas).  
   
- A diferencia de las instantáneas, que usan almacenamiento intermedio mantenido por la biblioteca de cursores ODBC, los conjuntos de registros dinámicos obtienen un registro directamente del origen de datos tan pronto como se realice el desplazamiento a dicho registro.  Esto hace que los registros seleccionados originalmente por el conjunto de registros dinámicos permanezcan sincronizados con el origen de datos.  
+ A diferencia de instantáneas, que usan almacenamiento intermedio mantenido por la biblioteca de cursores ODBC, conjuntos de registros dinámicos obtienen un registro directamente desde el origen de datos en cuanto se desplaza a él. Esto evita que los registros seleccionados originalmente por el conjunto de registros dinámicos sincronizado con el origen de datos.  
   
- Vea [Lista de controladores ODBC](../../data/odbc/odbc-driver-list.md) para obtener una lista de los controladores ODBC incluidos en esta versión de Visual C\+\+ e información sobre cómo obtener controladores adicionales.  
+ Para obtener una lista de controladores ODBC incluidos en esta versión de Visual C++ y para obtener información acerca de cómo obtener controladores adicionales, consulte [lista de controladores ODBC](../../data/odbc/odbc-driver-list.md).  
   
-## Vea también  
- [Conectividad abierta de bases de datos \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Vea también  
+ [Conectividad abierta de bases de datos (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDacl class
+dev_langs: C++
+helpviewer_keywords: CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>Clase CDacl
 Esta clase es un contenedor para una estructura DACL (lista de control de acceso discrecional).  
@@ -63,14 +46,14 @@ class CDacl : public CAcl
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|El constructor.|  
 |[CDacl:: ~ CDacl](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDacl::AddAllowedAce](#addallowedace)|Agrega una ACE permitido (entrada de control de acceso) para el `CDacl` objeto.|  
 |[CDacl::AddDeniedAce](#adddeniedace)|Agrega una ACE denegada para el `CDacl` objeto.|  
@@ -80,7 +63,7 @@ class CDacl : public CAcl
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDacl::operator =](#operator_eq)|Operador de asignación.|  
   
@@ -91,7 +74,7 @@ class CDacl : public CAcl
   
  Utilice los métodos de clase proporcionados para crear, agregar, quitar y eliminar las ACE de la `CDacl` objeto. Vea también [AtlGetDacl](security-global-functions.md#atlgetdacl) y [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Para obtener una introducción al modelo de control de acceso en Windows, consulte [el Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Para obtener una introducción al modelo de control de acceso en Windows, consulte [el Control de acceso](http://msdn.microsoft.com/library/windows/desktop/aa374860) en el SDK de Windows.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -164,7 +147,7 @@ bool AddDeniedAce(
   
 ### <a name="parameters"></a>Parámetros  
  `rSid`  
- Objeto `CSid`.  
+ Un objeto `CSid`.  
   
  `AccessMask`  
  Especifica la máscara de derechos de acceso denegado para el elemento especificado `CSid` objeto.  
@@ -272,4 +255,3 @@ void RemoveAllAces() throw();
  [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Información general de clases](../../atl/atl-class-overview.md)   
  [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)
-

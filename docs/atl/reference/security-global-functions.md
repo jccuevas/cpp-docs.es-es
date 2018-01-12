@@ -4,47 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::AtlGetDacl
+- atlsecurity/ATL::AtlSetDacl
+- atlsecurity/ATL::AtlGetGroupSid
+- atlsecurity/ATL::AtlSetGroupSid
+- atlsecurity/ATL::AtlGetOwnerSid
+- atlsecurity/ATL::AtlSetOwnerSid
+- atlsecurity/ATL::AtlGetSacl
+- atlsecurity/ATL::AtlSetSacl
+- atlsecurity/ATL::AtlGetSecurityDescriptor
+dev_langs: C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>Funciones globales de seguridad
 Estas funciones proporcionan compatibilidad para modificar objetos de SID y ACL.  
   
 > [!IMPORTANT]
->  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Las funciones se enumeran en la tabla siguiente no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 |||  
 |-|-|  
@@ -65,7 +59,7 @@ Estas funciones proporcionan compatibilidad para modificar objetos de SID y ACL.
  Llame a esta función para recuperar la información de la lista de control de acceso discrecional (DACL) de un objeto especificado.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlGetDacl(
@@ -94,7 +88,7 @@ inline bool AtlGetDacl(
  Llame a esta función para definir la información de la lista de control de acceso discrecional (DACL) de un objeto especificado.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlSetDacl(
@@ -129,7 +123,7 @@ inline bool AtlSetDacl(
  Llame a esta función para recuperar el identificador de seguridad (SID) de grupo de un objeto.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlGetGroupSid(
@@ -158,7 +152,7 @@ inline bool AtlGetGroupSid(
  Llame a esta función para definir el identificador de seguridad (SID) de grupo de un objeto.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlSetGroupSid(
@@ -187,7 +181,7 @@ inline bool AtlSetGroupSid(
  Llame a esta función para recuperar el identificador de seguridad (SID) del propietario de un objeto.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -216,7 +210,7 @@ inline bool AtlGetOwnerSid(
  Llame a esta función para definir el identificador de seguridad (SID) del propietario de un objeto.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -245,7 +239,7 @@ inline bool AtlSetOwnerSid(
  Llame a esta función para recuperar la información de la lista de control de acceso del sistema (SACL) de un objeto especificado.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlGetSacl(
@@ -281,7 +275,7 @@ inline bool AtlGetSacl(
  Llame a esta función para definir la información de la lista de control de acceso del sistema (SACL) de un objeto especificado.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlSetSacl(
@@ -323,7 +317,7 @@ inline bool AtlSetSacl(
  Llame a esta función para recuperar el descriptor de seguridad de un objeto especificado.  
   
 > [!IMPORTANT]
->  Esta función no se puede usar en aplicaciones que se ejecutan en el [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Esta función no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -363,4 +357,3 @@ inline bool AtlGetSecurityDescriptor(
    
 ## <a name="see-also"></a>Vea también  
  [Funciones](../../atl/reference/atl-functions.md)
-

@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportar excepciones entre subprocesos
 Visual C++ admite *transportar una excepción* desde un subproceso a otro. El transporte de excepciones permite detectar una excepción en un subproceso y hacer que parezca que la excepción se produce en un subproceso diferente. Por ejemplo, esta característica se puede utilizar para escribir una aplicación multiproceso en la que el subproceso principal controla todas las excepciones producidas por sus subprocesos secundarios. El transporte de excepciones es útil principalmente para los desarrolladores que crean bibliotecas de programación o sistemas paralelos. Para implementar el transporte de excepciones, Visual C++ proporciona el [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo y la [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), y [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funciones.  
@@ -255,4 +256,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>Vea también  
  [Control de excepciones](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (modelo de control de excepciones)](../build/reference/eh-exception-handling-model.md)   
- [/CLR (compilación de common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (Compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

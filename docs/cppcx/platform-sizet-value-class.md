@@ -1,49 +1,67 @@
 ---
-title: "Platform::SizeT (Clase de valor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::SizeT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::SizeT (struct)"
+title: 'Clase de valor Platform:: sizet | Documentos de Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/PlatformSizeT::SizeT constructor
+dev_langs: C++
+helpviewer_keywords: Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf47d911dc348b23e371175cf46fc6d677ce9f36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::SizeT (Clase de valor)
+# <a name="platformsizet-value-class"></a>Platform::SizeT (Clase de valor)
 Representa el tamaño de un objeto. SizeT es un tipo de datos sin signo.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
 public ref class SizeT sealed : ValueType  
 ```  
   
-## Miembros  
+### <a name="members"></a>Miembros  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|[SizeT::SizeT \(constructor\)](../cppcx/sizet-sizet-constructor.md)|Inicializa una nueva instancia de la clase con el valor especificado.|  
+|------------|-----------------|  
+|[SizeT::SizeT (Constructor)](#ctor)|Inicializa una nueva instancia de la clase con el valor especificado.|  
   
-## Requisitos  
- **Cliente mínimo admitido:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisitos  
+ **Cliente mínimo admitido:** Windows 8  
   
- **Servidor mínimo admitido:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Servidor mínimo admitido:** Windows Server 2012  
   
- **Espacio de nombres:** Platform  
+ **Espacio de nombres:** Plataforma  
   
  **Metadatos:** platform.winmd  
+
+ ## <a name="ctor"></a>Constructor de Sizet
+Inicializa una nueva instancia de SizeT con el valor especificado.  
   
-## Vea también  
+### <a name="syntax"></a>Sintaxis  
+  
+```cpp  
+SizeT( uint32 value1 );   SizeT( void* value2 );  
+```  
+  
+### <a name="parameters"></a>Parámetros  
+ value1  
+ Un valor sin signo de 32 bits.  
+  
+ value2  
+ Puntero a un valor sin signo de 32 bits.  
+  
+  
+## <a name="see-also"></a>Vea también  
  [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)

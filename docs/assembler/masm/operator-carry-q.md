@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 298d878f30067d374fc31ce4fd93ab8955b37956
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a69f5e314c0ee7bdd6fd5f5a96e63de5ae692bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-carry"></a>Operador CARRY?
 Estado del indicador de transporte. Utilizan solo en [. IF](../../assembler/masm/dot-if.md), [. MIENTRAS](../../assembler/masm/dot-while.md), o [. Repita](../../assembler/masm/dot-repeat.md) bloquea y se evalúa en tiempo de ejecución, no en tiempo de ensamblado.  

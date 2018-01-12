@@ -27,11 +27,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cabfa7dc4731c4ff3ca4fbf041bf89f2228eb8e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptrbase-class"></a>Clase CComPtrBase
 Esta clase proporciona una base para las clases de puntero inteligente con rutinas de memoria basada en COM.  
@@ -51,13 +52,13 @@ class CComPtrBase
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[¡CComPtrBase:: Advise](#advise)|Llamar a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.|  
 |[CComPtrBase::Attach](#attach)|Llamar a este método para tomar posesión de un puntero existente.|  
@@ -71,7 +72,7 @@ class CComPtrBase
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|El operador de conversión.|  
 |[¡CComPtrBase::operator!](#operator_not)|El operador NOT.|  
@@ -83,7 +84,7 @@ class CComPtrBase
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|La variable de miembro de datos de puntero.|  
   

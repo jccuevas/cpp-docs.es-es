@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f926b400e1cfa2b7b4649efcd0bac73de1faa062
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df7f97271a0173ea7844abc82978bf68aa9d90a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap (Clase)
 Representa un *mapa*no ordenado, que es una colección de pares clave-valor.  
@@ -64,13 +65,13 @@ ref class Map sealed;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Unorderedmap](#ctor)|Inicializa una nueva instancia de la clase Map.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Unorderedmap:: Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|  
 |[Unorderedmap:: First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Map.|  
@@ -85,7 +86,7 @@ ref class Map sealed;
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |[Mapchanged](#mapchanged)`event`|Se produce cuando cambia la asignación.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  

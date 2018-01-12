@@ -1,44 +1,46 @@
 ---
-title: "CDynamicAccessor::GetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetValue"
-  - "CDynamicAccessor::GetValue<ctype>"
-  - "ATL.CDynamicAccessor.GetValue<ctype>"
-  - "CDynamicAccessor.GetValue"
-  - "CDynamicAccessor::GetValue"
-  - "ATL.CDynamicAccessor.GetValue"
-  - "ATL::CDynamicAccessor::GetValue"
-  - "ATL::CDynamicAccessor::GetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetValue (método)"
+title: 'CDynamicAccessor:: GetValue | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetValue
+- CDynamicAccessor::GetValue<ctype>
+- ATL.CDynamicAccessor.GetValue<ctype>
+- CDynamicAccessor.GetValue
+- CDynamicAccessor::GetValue
+- ATL.CDynamicAccessor.GetValue
+- ATL::CDynamicAccessor::GetValue
+- ATL::CDynamicAccessor::GetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1599cd82347c4074863f2b649a2c67df894893e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera datos para una columna especificada.  
+# <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
+Recupera los datos de una columna especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-      void* GetValue(   
-   DBORDINAL nColumn    
+      void* GetValue(   
+   DBORDINAL nColumn    
 ) const throw( );  
 void* GetValue(  
    const CHAR* pColumnName   
@@ -63,31 +65,31 @@ bool GetValue(
 ) const throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `ctype`  
- \[in\] Un parámetro con plantillas que controla cualquier tipo de datos excepto los tipos string \(**CHAR\***, **WCHAR\***\), que requieren un control especial.  `GetValue` utiliza el tipo de datos adecuado en función de lo que se especifiquen aquí.  
+ [in] Un parámetro de plantilla que controla cualquier tipo de datos excepto los tipos de cadena (**CHAR\***, **WCHAR\***), que requieren un tratamiento especial. `GetValue`usa el tipo de datos adecuado en función de lo que especifique aquí.  
   
  `nColumn`  
- \[in\] El número de columnas.  Los números de columnas empiezan por 1.  Un valor de 0 hace referencia a la columna de marcador, si la hay.  
+ [in] El número de columna. Números de columna empiezan por 1. Un valor de 0 hace referencia a la columna de marcador, si lo hay.  
   
  `pColumnName`  
- \[in\] El nombre de columna.  
+ [in] El nombre de columna.  
   
  `pData`  
- \[out\] El puntero al contenido de la columna especificada.  
+ [out] Puntero al contenido de la columna especificada.  
   
-## Valor devuelto  
- Si desea pasar datos de cadena, utilice las versiones nontemplated de `GetValue`.  Las versiones nontemplated de este método devuelve **void\***, que apunta a la parte del búfer que contiene los datos de columna especificados.  Devuelve **nulo** si la columna no se encuentra.  
+## <a name="return-value"></a>Valor devuelto  
+ Si desea pasar datos de cadena, utilice las versiones sin plantilla de `GetValue`. Las versiones sin plantilla de este método devuelven **void\***, que señala a la parte del búfer que contiene los datos de la columna especificada. Devuelve **NULL** si no se encuentra la columna.  
   
- Para el resto de los tipos de datos, es más fácil usar las versiones con plantilla de `GetValue`.  Las versiones con plantilla devuelven **true** en correctamente o **false** en el error.  
+ Para los demás tipos de datos, resulta más sencillo de usar las versiones de plantillas de `GetValue`. Las versiones con plantilla devuelven **true** en caso de éxito o **false** en caso de error.  
   
-## Comentarios  
- Utilice las versiones nontemplated para devolver las columnas que contienen cadenas y las versiones con plantilla para las columnas que contienen otros tipos de datos.  
+## <a name="remarks"></a>Comentarios  
+ Utilice las versiones sin plantilla para devolver las columnas que contienen cadenas y las versiones con plantilla para las columnas que contienen otros tipos de datos.  
   
- En modo de depuración, obtendrá una aserción si el tamaño de `pData` es distinto al tamaño de la columna a la que señala.  
+ En modo de depuración, obtendrá una aserción si el tamaño de `pData` no es igual al tamaño de la columna a la que señala.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicAccessor \(Clase\)](../../data/oledb/cdynamicaccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)

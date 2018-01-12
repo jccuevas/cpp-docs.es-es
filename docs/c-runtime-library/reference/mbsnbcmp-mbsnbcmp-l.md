@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15546fc6c5eda56da53fd39581e6d101d014fa51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Compara los primeros `n` bytes de dos cadenas de caracteres multibyte.  
@@ -96,7 +97,7 @@ int _mbsnbcmp_l(
   
  `_mbsnbcmp` es similar a `_mbsncmp`, salvo que `_mbsncmp` compara las cadenas por caracteres y no por bytes.  
   
- El valor de salida se ve afectado por la categoría `LC_CTYPE` de la configuración regional, que especifica los bytes iniciales y finales bytes de los caracteres multibyte. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La función `_mbsnbcmp` usa la configuración regional actual para este comportamiento dependiente de dicha configuración. La función `_mbsnbcmp_l` es idéntica, salvo que usa el parámetro `locale`. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ El valor de salida se ve afectado por la categoría `LC_CTYPE` de la configuración regional, que especifica los bytes iniciales y finales bytes de los caracteres multibyte. Para obtener más información, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La función `_mbsnbcmp` usa la configuración regional actual para este comportamiento dependiente de dicha configuración. La función `_mbsnbcmp_l` es idéntica, salvo que usa el parámetro `locale`. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
  Si `string1` o `string2` son un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven `_NLSCMPERROR` y `errno` se establece en `EINVAL`.  
   

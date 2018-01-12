@@ -1,39 +1,41 @@
 ---
-title: "CRowset::Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::Delete"
-  - "CRowset.Delete"
-  - "CRowset::Delete"
-  - "ATL.CRowset.Delete"
-  - "ATL::CRowset<TAccessor>::Delete"
-  - "CRowset<TAccessor>.Delete"
-  - "CRowset<TAccessor>::Delete"
-  - "ATL.CRowset<TAccessor>.Delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Delete (método)"
+title: 'CRowset:: Delete | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::Delete
+- CRowset.Delete
+- CRowset::Delete
+- ATL.CRowset.Delete
+- ATL::CRowset<TAccessor>::Delete
+- CRowset<TAccessor>.Delete
+- CRowset<TAccessor>::Delete
+- ATL.CRowset<TAccessor>.Delete
+dev_langs: C++
+helpviewer_keywords: Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Delete
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Llama a [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) para eliminar la fila actual del conjunto de filas.  
+# <a name="crowsetdelete"></a>CRowset::Delete
+Llamadas [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) para eliminar la fila actual del conjunto de filas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -41,11 +43,11 @@ HRESULT Delete( ) const throw( );
   
 ```  
   
-## Valor devuelto  
- `HRESULT`estándar.  
+## <a name="return-value"></a>Valor devuelto  
+ Un `HRESULT` estándar.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CRowset \(Clase\)](../../data/oledb/crowset-class.md)
+## <a name="see-also"></a>Vea también  
+ [CRowset (Clase)](../../data/oledb/crowset-class.md)

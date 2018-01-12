@@ -1,81 +1,82 @@
 ---
-title: "/KEYFILE (Especificar una clave o par de claves para firmar un ensamblado) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/keyfile"
-  - "VC.Project.VCLinkerTool.KeyFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/KEYFILE (opción del vinculador)"
-  - "KEYFILE (opción del vinculador)"
-  - "-KEYFILE (opción del vinculador)"
+title: -KEYFILE (especificar clave o par de claves para firmar un ensamblado) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /keyfile
+- VC.Project.VCLinkerTool.KeyFile
+dev_langs: C++
+helpviewer_keywords:
+- /KEYFILE linker option
+- -KEYFILE linker option
+- KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 86457510eb017fe2d5060f2f37661a3397ec30d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /KEYFILE (Especificar una clave o par de claves para firmar un ensamblado)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Especificar una clave o par de claves para firmar un ensamblado)
 ```  
 /KEYFILE:filename  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  donde:  
   
  *filename*  
- Archivo que contiene la clave.  Si la cadena contiene algún espacio, hay que escribirla entre comillas dobles \(" "\).  
+ Archivo que contiene la clave. Escriba la cadena entre comillas dobles ("") si contiene un espacio.  
   
-## Comentarios  
- El vinculador inserta la clave pública en el manifiesto del ensamblado y firma el ensamblado final con la clave privada.  Para generar un archivo de claves, escriba [sn \-k](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) `file` en la línea de comandos.  Se dice que un ensamblado firmado tiene un nombre seguro.  
+## <a name="remarks"></a>Comentarios  
+ El vinculador inserta la clave pública en el manifiesto del ensamblado y firma después el ensamblado final con la clave privada. Para generar un archivo de clave, escriba [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* en la línea de comandos. Se dice que un ensamblado firmado tiene un nombre seguro.  
   
- Si compila con la opción [\/LN](../../build/reference/ln-create-msil-module.md), el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado creado al compilar un ensamblado que incluye una referencia explícita al módulo, por medio de [\#using](../../preprocessor/hash-using-directive-cpp.md), o al vincular con [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
+ Si se compila con [/LN](../../build/reference/ln-create-msil-module.md), el nombre del archivo de clave se mantiene en el módulo y se incorpora en el ensamblado que se crea cuando se compila un ensamblado que incluye una referencia explícita al módulo, por medio [#using](../../preprocessor/hash-using-directive-cpp.md), o cuando se vincula con [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
   
- También puede pasar la información de cifrado al vinculador mediante [\/KEYFILE](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md).  Utilice [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) para firmar un ensamblado de forma parcial.  Vea [Ensamblados de nombre seguro \(Firma de ensamblados\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obtener más información sobre cómo firmar un ensamblado.  
+ También puede pasar la información de cifrado al vinculador con [/keycontainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md). Use [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) si desea firmar parcialmente un ensamblado. Vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) para obtener más información sobre cómo firmar un ensamblado.  
   
- En caso de que se especifiquen **\/KEYFILE** y **\/KEYCONTAINER** \(ya sea mediante una opción de línea de comandos o mediante un atributo personalizado\), el vinculador intentará utilizar primero el contenedor de claves.  Si el intento tiene éxito, el ensamblado se firmará con la información del contenedor de claves.  Si el vinculador no encuentra el contenedor de claves, intentará utilizar el archivo especificado mediante \/KEYFILE.  Si el intento tiene éxito, el ensamblado se firmará con la información contenida en el archivo de claves y la información de claves se instalará en el contenedor de claves \(similar a sn \-i\) de modo que en la siguiente compilación, el contenedor de claves será válido.  
+ En caso de ambos **/keyfile** y **/keycontainer** se especifican (mediante una opción de línea de comandos o mediante un atributo personalizado), el vinculador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el vinculador no encuentra el contenedor de claves, probará el archivo especificado mediante/keyfile. Si lo consigue, el ensamblado se firma con la información del archivo de clave y la información de la clave se instalará en el contenedor de claves (similar a sn -i) de modo que, en la próxima compilación, el contenedor de claves será válido.  
   
- Tenga en cuenta que es posible que un archivo de claves contenga sólo la clave pública.  
+ Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
   
- Vea [Crear y utilizar ensamblados con nombre seguro](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md) para obtener más información sobre la firma de ensamblados.  
+ Vea [crear y utilizar ensamblados](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies) para obtener más información sobre cómo firmar un ensamblado.  
   
- Otras opciones del vinculador que afectan a la generación de ensamblado:  
+ Otras opciones del vinculador que afectan a la generación de ensamblado son:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Establecer las propiedades de un proyecto de Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Haga clic en la carpeta **Vinculador**.  
+2.  Haga clic en el **vinculador** carpeta.  
   
-3.  Haga clic en la página de propiedades **Línea de comandos**.  
+3.  Haga clic en la página de propiedades **Línea de comandos** .  
   
-4.  Escriba la opción en el cuadro **Opciones adicionales**.  
+4.  Escriba la opción en la **opciones adicionales** cuadro.  
   
-### Para establecer esta opción del vinculador mediante programación  
+### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación  
   
 -   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)   
  [Opciones del vinculador](../../build/reference/linker-options.md)

@@ -1,36 +1,37 @@
 ---
-title: "auto_handle::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: auto_handle::operator = | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d7f4e8ef0408f6358b8e7978d4327d6836cc722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator"></a>auto_handle::operator=
 Operador de asignación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -42,14 +43,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `_right`  
- `auto_handle` asignarlos a `auto_handle`actual.  
+ El `auto_handle` que se asignará a la actual `auto_handle`.  
   
-## Valor devuelto  
- `auto_handle`actual, ahora poseyendo `_right`.  
+## <a name="return-value"></a>Valor devuelto  
+ Actual `auto_handle`, ahora propietario `_right`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -99,18 +100,21 @@ int main()
 }  
 ```  
   
-  **en el constructor de ClassA: primero**  
-**¡Hola primero de A\!**  
-**en el constructor de ClassA: en segundo lugar**  
-**¡Hola a partir de la segunda b\!**  
-**en ClassA destructor: primero**  
-**¡Hola a partir de segunda A\!**  
-**done**  
-**en ClassA destructor: en segundo lugar**   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
   
- msclr de**Namespace**  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\auto_handle.h >  
   
-## Vea también  
- [auto\_handle \(Miembros\)](../dotnet/auto-handle-members.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vea también  
+ [auto_handle (Miembros)](../dotnet/auto-handle-members.md)

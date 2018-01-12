@@ -48,11 +48,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36a9fee91a98b224d31df6b9af58ce4caf27030a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99cf5168eba3ed03b4e91571cd50a3c6c4bf9afe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 Calcula la hipotenusa.  
@@ -93,7 +94,7 @@ long double _hypotl(
 ## <a name="return-value"></a>Valor devuelto  
  Si se realiza correctamente, `hypot` devuelve la longitud de la hipotenusa. Si se produce un desbordamiento, `hypot` devuelve INF (infinito) y la variable `errno` se establece en `ERANGE`. Puede utilizar `_matherr` para modificar el control de errores.  
   
- Para obtener más información sobre los códigos de retorno, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  Las funciones `hypot` calculan la longitud de la hipotenusa de un triángulo rectángulo, dada la longitud de los lados `x` e `y` (es decir, la raíz cuadrada de `x`<sup>2</sup> + `y`<sup>2</sup>).  

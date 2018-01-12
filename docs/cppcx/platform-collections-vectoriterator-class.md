@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 703035c7a5b2b32df95f83b42327b0965c98b4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4dc6ca358959f6842cc16dcd2372094d5d7425b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator (Clase)
 Proporciona un iterador de la biblioteca de plantillas estándar para los objetos que se deriva de la interfaz IVector de Windows en tiempo de ejecución.  
@@ -41,7 +42,7 @@ class VectorIterator;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`difference_type`|Una diferencia de puntero (ptrdiff_t).|  
 |`iterator_category`|La categoría de un iterador de acceso aleatorio (::std::random_access_iterator_tag).|  
@@ -51,13 +52,13 @@ class VectorIterator;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Vectoriterator](#ctor)|Inicializa una nueva instancia de la clase VectorIterator.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[VectorIterator::operator[] (Operador)](#operator-minus)|Resta un número especificado de elementos del iterador actual produciendo un nuevo iterador, o un iterador especificado del iterador actual produciendo el número de elementos entre los iteradores.|  
 |[VectorIterator::operator[] (Operador)](#operator-decrement)|Disminuye el objeto VectorIterator actual.|  

@@ -1,60 +1,61 @@
 ---
-title: "/arch (x64) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: -arch (x64) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 27a453601988c22ed03ae9cb267480d88d6a1cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# /arch (x64)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Especifica la arquitectura para la generación de código en x64.  Vea también [\/arch \(x86\)](../../build/reference/arch-x86.md) y [\/arch \(ARM\)](../../build/reference/arch-arm.md).  
+# <a name="arch-x64"></a>/arch (x64)
+Especifica la arquitectura para la generación de código en x64. Consulte también [/arch (x86)](../../build/reference/arch-x86.md) y [/arch (ARM)](../../build/reference/arch-arm.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /arch:[AVX|AVX2]  
 ```  
   
-## Argumentos  
- **\/arch:AVX**  
+## <a name="arguments"></a>Argumentos  
+ **/ arch: AVX**  
  Habilita el uso de instrucciones de Extensiones de vector avanzadas de Intel.  
   
- **\/arch:AVX2**  
- Habilita el uso de instrucciones de Extensiones de vector avanzadas 2 \(AVX2\) de Intel.  
+ **/arch:AVX2**  
+ Habilita el uso de instrucciones de Extensiones de vector avanzadas 2 (AVX2) de Intel.  
   
-## Comentarios  
- **\/arch** solo afecta a la generación de código de las funciones nativas.  Cuando se usa [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) para compilar, **\/arch** no tiene ningún efecto en la generación de código para las funciones administradas.  
+## <a name="remarks"></a>Comentarios  
+ **/ arch** solo afecta a la generación de código para las funciones nativas. Cuando usas [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) para compilar, **/arch** no tiene ningún efecto sobre la generación de código para las funciones administradas.  
   
- El símbolo de preprocesador `__AVX__` se define cuando se especifica opción del compilador **\/arch:AVX**.  El símbolo de preprocesador `__AVX2__` se define cuando se especifica opción del compilador **\/arch:AVX2**.  Para obtener más información, vea [Macros predefinidas](../../preprocessor/predefined-macros.md).  La opción **\/arch:AVX2** se introdujo en Visual Studio 2013 Update 2, versión 12.0.34567.1.  
+ El `__AVX__` se define el símbolo de preprocesador cuando la **/arch: AVX** se especifica la opción del compilador. El `__AVX2__` se define el símbolo de preprocesador cuando la **/arch:AVX2** se especifica la opción del compilador. Para obtener más información, consulta [Predefined Macros](../../preprocessor/predefined-macros.md). El **/arch:AVX2** opción se introdujo en Visual Studio 2013 Update 2, versión 12.0.34567.1.  
   
-### Para establecer la opción del compilador \/arch:AVX o \/arch:AVX2 en Visual Studio  
+### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>Para establecer la opción del compilador /arch:AVX o /arch:AVX2 en Visual Studio  
   
-1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  Para obtener más información, vea [Cómo: Abrir páginas de propiedades del proyecto](../../misc/how-to-open-project-property-pages.md).  
+1.  Abra la **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  Elija la carpeta **Propiedades de configuración**, **C\/C\+\+**.  
+2.  Seleccione el **propiedades de configuración**, **C/C++** carpeta.  
   
-3.  Seleccione la página de propiedades **Generación de código**.  
+3.  Seleccione el **generación de código** página de propiedades.  
   
-4.  En el cuadro desplegable **Habilitar conjunto de instrucciones mejorado**, elija **Extensiones de vector avanzadas \(\/arch:AVX\)** o **Extensiones de vector avanzadas 2 \(\/arch:AVX2\)**.  
+4.  En el **Habilitar conjunto de instrucciones mejorado** desplegable cuadro, elija **extensiones de Vector avanzadas (/ arch: AVX)** o **extensiones de Vector avanzadas 2 (/ arch: AVX2)**.  
   
-### Para establecer esta opción del compilador mediante programación  
+### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación  
   
--   Consulta <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.  
+-   Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.  
   
-## Vea también  
- [\/arch \(Arquitectura de CPU mínima\)](../../build/reference/arch-minimum-cpu-architecture.md)   
+## <a name="see-also"></a>Vea también  
+ [/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)   
  [Opciones del compilador](../../build/reference/compiler-options.md)   
  [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

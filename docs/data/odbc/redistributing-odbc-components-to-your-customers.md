@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 861eceef234b77b96179c51979cb7d1c0d09eeeb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: aad9f1dbd4542ad763e7303d9a750f1856208025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redistribuir componentes ODBC a los clientes
 Si se incorpora la funcionalidad de los programas de administrador de ODBC en la aplicación, también debe distribuir a los usuarios los archivos que se ejecutan estos programas. Estos archivos ODBC residen en el directorio \OS\System del CD-ROM Visual C++. El archivo Redistrb.wri y el contrato de licencia en el mismo directorio contienen una lista de los archivos ODBC que se pueden redistribuir.  

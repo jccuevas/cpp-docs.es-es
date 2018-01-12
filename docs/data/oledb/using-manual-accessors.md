@@ -1,58 +1,61 @@
 ---
-title: "Utilizar descriptores de acceso manuales | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "descriptores de acceso [C++], manuales"
-  - "control de comandos, plantillas OLE DB"
-  - "descriptores de acceso manuales"
+title: Utilizar descriptores de acceso manuales | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command handling, OLE DB Templates
+- manual accessors
+- accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dd628baa51ec790686f185c49ff33e7c6984150f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizar descriptores de acceso manuales
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cuando se controla un comando desconocido, deben efectuarse cuatro acciones:  
+# <a name="using-manual-accessors"></a>Utilizar descriptores de acceso manuales
+Hay cuatro tareas a realizar al controlar un comando desconocido:  
   
 -   Determinar los parámetros  
   
--   Ejecutar el comando  
+-   Ejecute el comando  
   
--   Determinar las columnas de resultados  
+-   Determinar las columnas de salida  
   
--   Comprobar si existen varios conjuntos de filas de resultados  
+-   Si hay varios conjuntos de filas devuelto  
   
- Para realizar estas tareas con las plantillas de consumidor OLE DB, use la clase `CManualAccessor` y siga estos pasos:  
+ Para hacer esto con las plantillas de consumidor OLE DB, use la `CManualAccessor` clase y siga estos pasos:  
   
-1.  Abra un objeto `CCommand` con `CManualAccessor` como parámetro de plantilla.  
+1.  Abra un `CCommand` objeto con `CManualAccessor` como un parámetro de plantilla.  
   
     ```  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  Vea la sesión de la interfaz **IDBSchemaRowset** y use el conjunto de filas de parámetros del procedimiento.  Si la interfaz **IDBSchemaRowset** no está disponible, haga una consulta acerca de la interfaz `ICommandWithParameters`.  Llame a `GetParameterInfo` para obtener información.  Si no hay interfaces disponibles, se puede suponer que no hay parámetros.  
+2.  Consultar la sesión para la **IDBSchemaRowset** interfaz y el conjunto de filas de parámetros de procedimiento. Si el **IDBSchemaRowset** interfaz no está disponible, consultar la `ICommandWithParameters` interfaz. Llame a `GetParameterInfo` para obtener información. Si ninguna de estas interfaces está disponible, puede asumir que hay ningún parámetro.  
   
-3.  Por cada parámetro, llame a `AddParameterEntry` para agregar los parámetros y establecerlos.  
+3.  Para cada parámetro, llame a `AddParameterEntry` para agregar los parámetros y establecerlos.  
   
-4.  Abra el conjunto de filas, estableciendo el parámetro de enlace en **false**.  
+4.  Abra el conjunto de filas, pero establece el parámetro de enlace en **false**.  
   
-5.  Llame a `GetColumnInfo` para recuperar las columnas de resultados.  Use `AddBindEntry` para agregar la columna de resultados al enlace.  
+5.  Llame a `GetColumnInfo` para recuperar las columnas de salida. Use `AddBindEntry` para agregar la columna de salida para el enlace.  
   
-6.  Llame a `GetNextResult` para determinar si hay más conjuntos de filas disponibles.  Repita los pasos 2 a 5.  
+6.  Llame a `GetNextResult` para determinar si hay más conjuntos de filas. Repita los pasos del 2 al 5.  
   
- Para obtener un ejemplo de un descriptor de acceso manual, vea **CDBListView::CallProcedure** en el ejemplo [DBVIEWER](http://msdn.microsoft.com/es-es/07620f99-c347-4d09-9ebc-2459e8049832).  
+ Para obtener un ejemplo de un descriptor de acceso manual, vea **CDBListView:: CallProcedure** en el [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) ejemplo.  
   
-## Vea también  
- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vea también  
+ [Usar descriptores de acceso](../../data/oledb/using-accessors.md)

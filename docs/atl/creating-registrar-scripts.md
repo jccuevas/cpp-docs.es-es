@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Una secuencia de comandos del registrador proporciona controladas por datos, en lugar de controlada por la API, acceso al registro del sistema. Acceso controlada por datos es normalmente más eficaz ya que toma solo una o dos líneas en una secuencia de comandos para agregar una clave al registro.  

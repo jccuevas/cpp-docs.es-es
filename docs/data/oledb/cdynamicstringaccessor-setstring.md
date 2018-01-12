@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::SetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor::SetString"
-  - "CDynamicStringAccessor.SetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetString (método)"
+title: 'CDynamicStringAccessor:: SetString | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
+dev_langs: C++
+helpviewer_keywords: SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::SetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Establece los datos de columna especificados como cadena.  
+# <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
+Establece los datos de la columna especificada como una cadena.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 HRESULT SetString(  
@@ -44,26 +46,26 @@ HRESULT SetString(
 ) throw( );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `nColumn`  
- \[in\] El número de columnas.  Los números de columnas empiezan por 1.  El valor especial de 0 hace referencia a la columna de marcador, si la hay.  
+ [in] El número de columna. Números de columna empiezan por 1. El valor especial 0 hace referencia a la columna de marcador, si lo hay.  
   
  `pColumnName`  
- \[in\] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
+ [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.  
   
  `data`  
- \[in\] Un puntero a los datos de cadena que se van a escribir en la columna especificada.  
+ [in] Un puntero a los datos de cadena se escriban en la columna especificada.  
   
-## Valor devuelto  
- Un puntero al valor de cadena para el que establecer la columna especificada.  El valor es de `BaseType`escrito, dependiendo de las que sea `CHAR` o `WCHAR` si `_UNICODE` está definido o no.  
+## <a name="return-value"></a>Valor devuelto  
+ Un puntero al valor de cadena que se va a establecer la columna especificada. El valor es de tipo `BaseType`, que será `CHAR` o `WCHAR` dependiendo de si `_UNICODE` está definido o no.  
   
-## Comentarios  
- El segundo formulario de reemplazo toma el nombre de columna como una cadena ANSI y el tercer formulario de reemplazo toma el nombre de columna como cadena Unicode.  
+## <a name="remarks"></a>Comentarios  
+ El segundo invalidar formulario toma el nombre de columna como una cadena ANSI y la tercera invalidar formulario toma el nombre de columna como una cadena Unicode.  
   
- Si `_SECURE_ATL` se define para tener un valor distinto de cero, se genera un error de aserción en tiempo de ejecución si la cadena de `data` de entrada es mayor que la longitud máxima permitida de la columna de datos a la que se hace referencia.  Si no, la cadena de entrada se truncada si es mayor que la longitud máxima permitida.  
+ Si `_SECURE_ATL` se define con un valor distinto de cero, se generará un error de aserción en tiempo de ejecución si la entrada `data` cadena es mayor que la longitud máxima permitida de la columna de datos que se hace referencia. En caso contrario, la cadena de entrada se truncará si supera la longitud máxima permitida.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  
   
-## Vea también  
- [CDynamicStringAccessor \(Clase\)](../../data/oledb/cdynamicstringaccessor-class.md)
+## <a name="see-also"></a>Vea también  
+ [CDynamicStringAccessor (Clase)](../../data/oledb/cdynamicstringaccessor-class.md)

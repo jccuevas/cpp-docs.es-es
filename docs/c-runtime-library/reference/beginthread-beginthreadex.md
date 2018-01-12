@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Crea un subproceso.  
@@ -149,7 +133,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 > [!NOTE]
 >  Para un archivo ejecutable vinculado con Libcmt.lib, no llame a la API `ExitThread` Win32 a fin de no impedir que el sistema en tiempo de ejecución reclame los recursos asignados. `_endthread` y `_endthreadex` recuperan los recursos de subprocesos asignados y después llaman a `ExitThread`.  
   
- El sistema operativo controla la asignación de la pila cuando se llama a `_beginthread` o `_beginthreadex` ; no tiene que pasar la dirección de la pila del subproceso a ninguna de estas funciones. Además, el argumento de `stack_size` puede ser 0, en cuyo caso el sistema operativo utiliza el mismo valor que la pila que se especifica para el subproceso principal.  
+ El sistema operativo controla la asignación de la pila cuando se llama a `_beginthread` o `_beginthreadex`; no tiene que pasar la dirección de la pila del subproceso a ninguna de estas funciones. Además, el argumento de `stack_size` puede ser 0, en cuyo caso el sistema operativo utiliza el mismo valor que la pila que se especifica para el subproceso principal.  
   
  `arglist` es un parámetro que se pasará al subproceso recién creado. Normalmente, es la dirección de un elemento de datos, como una cadena de caracteres. `arglist` puede ser NULL si no se necesita, pero se debe dar al menos un valor a `_beginthread` y `_beginthreadex` para pasar al nuevo subproceso. Se terminan todos los subprocesos si cualquier subproceso llama a `abort`, `exit`, `_exit`o `ExitProcess`.  
   
@@ -164,10 +148,10 @@ uintptr_t _beginthreadex( // MANAGED CODE
 |`_beginthread`|\<process.h>|  
 |`_beginthreadex`|\<process.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliotecas  
- Solo las versiones de multiproceso de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md) .  
+ Solo las versiones de multiproceso de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
   
  Para utilizar `_beginthread` o `_beginthreadex`, la aplicación debe vincularse a una de las bibliotecas en tiempo de ejecución multiproceso de C.  
   

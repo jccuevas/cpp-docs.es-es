@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Ejemplos de expresiones lambda
 En este artículo se muestra cómo usar expresiones lambda en programas. Para obtener información general sobre expresiones lambda, vea [expresiones Lambda](../cpp/lambda-expressions-in-cpp.md). Para obtener más información acerca de la estructura de una expresión lambda, vea [sintaxis de expresiones Lambda](../cpp/lambda-expression-syntax.md).  
@@ -53,7 +54,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 5  
@@ -96,7 +97,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 47  
@@ -125,7 +126,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 9  
@@ -169,7 +170,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 The first even number in the list is 42.  
@@ -206,7 +207,7 @@ int main()
   
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 13  
@@ -258,7 +259,7 @@ int main()
   
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 30  
@@ -346,7 +347,7 @@ int main()
   
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 3  
@@ -407,7 +408,7 @@ int main()
   
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 34  
@@ -468,7 +469,7 @@ int main()
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 Caught 'invalid vector<T> subscript'.  
@@ -504,7 +505,7 @@ int main()
   
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```Output  
 Hello!  

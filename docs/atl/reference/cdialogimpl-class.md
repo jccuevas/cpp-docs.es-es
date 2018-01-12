@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,21 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (clase)
 Esta clase proporciona métodos para crear un cuadro de diálogo modal o no modal.  
@@ -110,7 +94,7 @@ template <class T,
 > [!NOTE]
 >  La clase debe definir un **IDD** miembro que especifica el identificador de recurso de plantilla de cuadro de diálogo. Por ejemplo, el Asistente para proyectos ATL agrega automáticamente la siguiente línea a la clase:  
   
- [!code-cpp[NVC_ATL_Windowing #41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  donde `MyDlg` es el **nombre corto** especificadas en el asistente **nombres** página.  
   
@@ -119,7 +103,7 @@ template <class T,
 |Crear controles|[Tutorial ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Con cuadros de diálogo en ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|  
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Cuadros de diálogo|[Cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) y los temas siguientes en la[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Cuadros de diálogo|[Cuadros de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) y los temas siguientes en el SDK de Windows|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
@@ -142,7 +126,7 @@ HWND Create(
  `hWndParent`  
  [in] El identificador de la ventana propietaria.  
   
- **RECT SIGUIENTE**`rect`  
+ **RECT &**`rect`  
  [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estructura especificando el cuadro de diálogo tamaño y posición.  
   
  `dwInitParam`  

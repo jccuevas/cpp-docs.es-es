@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1ba2b12110e4c312b84b2a24831687e782cc339
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomallocator-class"></a>Clase CComAllocator
 Esta clase proporciona métodos para administrar la memoria que usa las rutinas de memoria COM.  
@@ -39,7 +40,7 @@ class CComAllocator
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|Llame a este método estático para asignar memoria.|  
 |[CComAllocator::Free](#free)|Llame a este método estático para liberar memoria asignada.|  

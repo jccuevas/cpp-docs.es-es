@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 013a5827af630e8190e622940c1fd3872a46a5d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries"></a>Entradas del Registro
 DCOM presentó el concepto de Id. de aplicación (AppID), que agrupa las opciones de configuración de uno o más objetos DCOM en una ubicación centralizada en el registro. Para especificar un AppID, indique su valor en el AppID denominado valor bajo el CLSID del objeto.  
@@ -34,5 +35,5 @@ DCOM presentó el concepto de Id. de aplicación (AppID), que agrupa las opcione
  Cualquier servicio DCOM también debe crear otra clave bajo `HKEY_CLASSES_ROOT\AppID`. Esta clave es igual que el nombre del archivo EXE y actúa como una referencia cruzada, ya que contiene un valor AppID que apunta a las entradas AppID.  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de](../atl/atl-services.md)
+ [Servicios](../atl/atl-services.md)
 

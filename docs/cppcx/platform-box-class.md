@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 101c3b3bc5572dbf8bf87ed3730abbbee3157404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac0940d9a7277b7b3f5b66e8d27750a593081471
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformbox-class"></a>Platform::Box (Clase)
 Habilita un tipo de valor como `Windows::Foundation::DateTime` o un tipo escalar como `int` para almacenarlo en un tipo `Platform::Object` . Normalmente no es necesario usar `Box` explícitamente porque la conversión boxing se produce de manera implícita cuando se convierte un tipo de valor a `Object^`.  
@@ -34,7 +35,7 @@ ref class Box abstract;
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** vccorlib.h  
   
- **Espacio de nombres:** Platform
+ **Espacio de nombres:** Plataforma
 |Miembro|Descripción|  
 |------------|-----------------|
 |[Box](#ctor)|Crea un `Box` que puede encapsular un valor del tipo especificado.|

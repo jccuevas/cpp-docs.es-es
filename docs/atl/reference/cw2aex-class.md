@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da63f817ab5e6b867d76d59248f5f887d0a7aea5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2aex-class"></a>Clase CW2AEX
 Esta clase se utiliza por las macros de conversión de cadena `CT2AEX`, `CW2TEX`, `CW2CTEX`, y `CT2CAEX`y la definición de tipo **CW2A**.  
@@ -47,20 +48,20 @@ class CW2AEX
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2AEX::CW2AEX](#cw2aex)|El constructor.|  
 |[CW2AEX:: ~ CW2AEX](#dtor)|Destructor.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2AEX::operator LPSTR](#operator_lpstr)|Operador de conversión.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CW2AEX::m_psz](#m_psz)|El miembro de datos que almacena la cadena de origen.|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|El búfer estático, usado para almacenar la cadena convertida.|  

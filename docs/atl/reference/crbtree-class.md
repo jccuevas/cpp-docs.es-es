@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9014233631eda9d1f3576382e71e377a3f7fcfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbtree-class"></a>Clase CRBTree
 Esta clase proporciona métodos para la creación y utilización de un árbol de color rojo y negro.  
@@ -73,7 +74,7 @@ class CRBTree
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRBTree::KINARGTYPE](#kinargtype)|Tipo que se usa cuando una clave se pasa como un argumento de entrada.|  
 |[CRBTree::KOUTARGTYPE](#koutargtype)|Tipo que se usa cuando una clave se devuelve como un argumento de salida.|  
@@ -88,13 +89,13 @@ class CRBTree
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRBTree:: ~ CRBTree](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Llame a este método para buscar la posición del elemento que se usa la siguiente clave disponible.|  
 |[CRBTree::GetAt](#getat)|Llame a este método para obtener el elemento en una posición determinada en el árbol.|  
@@ -183,7 +184,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
  `key`  
  La variable que recibe la clave.  
   
- *value*  
+ *valor*  
  La variable que recibe el valor.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -269,7 +270,7 @@ void GetNextAssoc(
  `key`  
  Parámetro de plantilla que especifica el tipo de clave del árbol.  
   
- *value*  
+ *valor*  
  Parámetro de plantilla que especifica el tipo de valor del árbol.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -415,7 +416,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
  `pos`  
  El contador de posición, devuelto por una llamada anterior a métodos como [CRBTree::GetHeadPosition](#getheadposition) o [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).  
   
- *value*  
+ *valor*  
  El valor para agregar a la `CRBTree` objeto.  
   
 ### <a name="remarks"></a>Comentarios  

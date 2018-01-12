@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d835b45d9f06b9b8ff59916e36b124f8b1ec848d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 Convierte un número `double` en una cadena. Se trata de una versión de [_ecvt](../../c-runtime-library/reference/ecvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -93,10 +94,10 @@ errno_t _ecvt_s(
   
 |`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Valor devuelto|Valor de `buffer`|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
-|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|No modificado.|  
-|No `NULL` (apunta a la memoria válida)|<=0|any|cualquiera|cualquiera|cualquiera|`EINVAL`|No se ha modificado.|  
-|any|cualquiera|cualquiera|cualquiera|`NULL`|cualquiera|`EINVAL`|No se ha modificado.|  
-|any|cualquiera|cualquiera|cualquiera|cualquiera|`NULL`|`EINVAL`|No se ha modificado.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|No modificado.|  
+|No `NULL` (apunta a la memoria válida)|<=0|any|any|any|any|`EINVAL`|No se ha modificado.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|No se ha modificado.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|No modificado.|  
   
  **Problemas de seguridad**  
   
@@ -111,7 +112,7 @@ errno_t _ecvt_s(
   
  La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `_Count`. `_ecvt_s` interpreta `_Count` como el número total de dígitos en la cadena de salida, mientras que `_fcvt_s` interpreta `_Count` como el número de dígitos después del separador decimal.  
   
- En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulte [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).  
+ En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  La versión de depuración de esta función rellena primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

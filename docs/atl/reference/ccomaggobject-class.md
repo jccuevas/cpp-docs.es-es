@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComAggObject::QueryInterface
 - ATLCOM/ATL::CComAggObject::Release
 - ATLCOM/ATL::CComAggObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2f580a33b5b92f44e40a3da2e1f7111cbb8ede88
-ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bd06518978b37705a98e4d8b7212b8dd03a2d7b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject (clase)
 Esta clase implementa la [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaz para un objeto agregado. Por definición, un objeto agregado está dentro de un objeto externo. El `CComAggObject` clase es similar a la [CComObject (clase)](../../atl/reference/ccomobject-class.md), excepto en que expone una interfaz que son directamente accesible para los clientes externos.  
@@ -70,17 +54,17 @@ class CComAggObject : public IUnknown,
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComAggObject::CComAggObject](#ccomaggobject)|El constructor.|  
 |[CComAggObject:: ~ CComAggObject](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Incrementa el recuento de referencias en el objeto agregado.|  
-|[CComAggObject::CreateInstance](#createinstance)|Esta función estática le permite crear un nuevo **CComAggObject** `contained` **>** objeto sin la sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Esta función estática le permite crear un nuevo **CComAggObject <** `contained`  **>**  objeto sin la sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Realiza la inicialización final de `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Realiza la destrucción de final de `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera un puntero a la interfaz solicitada.|  
@@ -88,7 +72,7 @@ class CComAggObject : public IUnknown,
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CComAggObject::m_contained](#m_contained)|Delegados `IUnknown` llamadas al desconocido externo.|  
   
@@ -146,7 +130,7 @@ CComAggObject(void* pv);
  Libera todos los recursos asignados, llamadas [FinalRelease](#finalrelease), y reduce el módulo recuento de bloqueos.  
   
 ##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- Esta función estática le permite crear un nuevo **CComAggObject** `contained` **>** objeto sin la sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Esta función estática le permite crear un nuevo **CComAggObject <** `contained`  **>**  objeto sin la sobrecarga de [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -156,7 +140,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parámetros  
  `pp`  
- [out] Un puntero a un **CComAggObject\<***contenidos* **>** puntero. Si `CreateInstance` es incorrecta, `pp` está establecido en **NULL**.  
+ [out] Un puntero a un **CComAggObject\<***contenidos*  **>**  puntero. Si `CreateInstance` es incorrecta, `pp` está establecido en **NULL**.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
@@ -239,4 +223,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Información general de clases](../../atl/atl-class-overview.md)
-

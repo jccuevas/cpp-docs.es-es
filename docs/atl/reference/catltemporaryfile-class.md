@@ -32,11 +32,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8404c8c638e31e8869b4ae6600e2fe0d209615ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5911de856d13d9d66e8c950d446083a36811f535
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catltemporaryfile-class"></a>Clase CAtlTemporaryFile
 Esta clase proporciona métodos para la creación y uso de un archivo temporal.  
@@ -54,14 +55,14 @@ class CAtlTemporaryFile
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|El constructor.|  
 |[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlTemporaryFile::Close](#close)|Llamar a este método para cerrar un archivo temporal y, elimine su contenido o almacenarlos en el nombre de archivo especificado.|  
 |[CAtlTemporaryFile::Create](#create)|Llame a este método para crear un archivo temporal.|  
@@ -80,7 +81,7 @@ class CAtlTemporaryFile
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAtlTemporaryFile::operator identificador](#operator_handle)|Devuelve un identificador en el archivo temporal.|  
   

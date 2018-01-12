@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 La palabra clave `constexpr` se introdujo en C++11 y se mejoró en C++14. Significa *expresión constante*. Al igual que `const`, se puede aplicar a variables para que se genere un error del compilador si cualquier código intenta modificar el valor. A diferencia de `const`, `constexpr` también se puede aplicar a los constructores de clase y funciones. `constexpr` indica que el valor, o el valor devuelto, es una constante y, si es posible, se calculará en tiempo de compilación.  Un valor entero `constexpr` se puede utilizar donde se requiera un entero const, como es el caso de las declaraciones de matrices y los argumentos de plantillas. Y cuando un valor se puede calcular en tiempo de compilación en lugar de tiempo de ejecución, puede ayudar a su programa ejecutarse con mayor rapidez y utilizan menos memoria.  

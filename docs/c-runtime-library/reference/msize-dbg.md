@@ -33,11 +33,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da756da1c9657af851a3b457a2c2b7e6ab83244c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 018fb7fdce1aeb2a69ac2e6381df1c0da24036a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msizedbg"></a>_msize_dbg
 Calcula el tamaño de un bloque de memoria del montón (solo versión de depuración).  
@@ -65,7 +66,7 @@ Calcula el tamaño de un bloque de memoria del montón (solo versión de depurac
 ## <a name="remarks"></a>Comentarios  
  `_msize_dbg` es una versión de depuración de la función [_msize](../../c-runtime-library/reference/msize.md). Si no se define [_DEBUG](../../c-runtime-library/debug.md), cada llamada a `_msize_dbg` se reduce a una llamada a `_msize`. `_msize` y `_msize_dbg` calculan el tamaño de un bloque de memoria del montón base, pero `_msize_dbg` agrega dos características de depuración: incluye los búferes situados a cada lado de la parte del usuario del bloque de memoria en el tamaño devuelto y permite calcular el tamaño de tipos de bloques concretos.  
   
- Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, vea [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
  Esta función valida su parámetro. Si `memblock` es un puntero nulo, `_msize` invoca a un controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece `errno` en `EINVAL` y devuelve -1.  
   
@@ -75,7 +76,7 @@ Calcula el tamaño de un bloque de memoria del montón (solo versión de depurac
 |-------------|---------------------|  
 |`_msize_dbg`|\<crtdbg.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
