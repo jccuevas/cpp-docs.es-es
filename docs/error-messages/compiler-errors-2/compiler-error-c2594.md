@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2594
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2594
+f1_keywords: C2594
+dev_langs: C++
+helpviewer_keywords: C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d4cca18672aad77e051ff4428dc115c53cd5ddad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2594"></a>Error del compilador C2594
 'operador': conversiones ambiguas de 'tipo1' a 'tipo2'  

@@ -1,50 +1,51 @@
 ---
-title: "not2 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not2 (función) [STL/CLR]"
+title: not2 (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not2
+dev_langs: C++
+helpviewer_keywords: not2 function [STL/CLR]
 ms.assetid: f8aedcca-e4d1-4430-93b4-83dd55579d04
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 183ddc8d55f6948901118ba47ee237127a632020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# not2 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera `binary_negate` para un functor.  
+# <a name="not2-stlclr"></a>not2 (STL/CLR)
+Genera un `binary_negate` para un functor.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
-## Parámetros de plantilla  
- Debería  
- El tipo de functor.  
+## <a name="template-parameters"></a>Parámetros de plantilla  
+ Fun  
+ El tipo del functor.  
   
-## Parámetros de función  
+## <a name="function-parameters"></a>Parámetros de función  
  functor  
- El functor a ajustar.  
+ El functor que va a contener.  
   
-## Comentarios  
- La función de la plantilla devuelve [binary\_negate](../dotnet/binary-negate-stl-clr.md)`<``Fun``>(functor)`.  Se utiliza como una manera cómoda de ajustar un functor de dos\- argumento en un functor que entregue la negación lógica.  
+## <a name="remarks"></a>Comentarios  
+ Devuelve la función de plantilla [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Utiliza como una manera cómoda de encapsular un functor de dos argumentos en un functor que ofrece el operador lógico NOT.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_not2.cpp   
@@ -94,14 +95,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [binary\_negate](../dotnet/binary-negate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)

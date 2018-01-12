@@ -1,39 +1,41 @@
 ---
-title: "C&#243;mo: Implementar una arquitectura de componentes complementarios mediante reflexi&#243;n (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "complementos [C++]"
-  - "reflexión [C++}, complementos"
+title: Implementar una arquitectura de complemento (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Implementar una arquitectura de componentes complementarios mediante reflexi&#243;n (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los ejemplos de código siguientes muestran el uso de reflexión para implementar una arquitectura de "complemento" simple.  La primera lista es la aplicación y la segunda es el complemento.  La aplicación es un formulario de documento múltiple que se rellena mediante cualquier clase basada en formulario que se encuentre en el archivo DLL de complemento suministrado como argumento de línea de comandos.  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Cómo: Implementar una arquitectura de componentes complementarios mediante reflexión (C++/CLI)
+Ejemplos de código siguientes muestran el uso de reflexión para implementar una arquitectura de "complemento" simple. La primera lista es la aplicación y el segundo es el complemento. La aplicación es un formulario de múltiples documentos que se rellena con las clases de basada en formularios que se encuentran en la DLL del complemento proporcionada como un argumento de línea de comandos.  
   
- La aplicación intenta cargar el ensamblado proporcionado mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  Si lo logra, los tipos incluidos en el ensamblado se enumeran utilizando el método <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>.  A continuación, se comprueba la compatibilidad de cada tipo mediante el método <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>.  En este ejemplo, las clases incluidas en el ensamblado proporcionado se deben derivar de la clase <xref:System.Windows.Forms.Form> para poderse considerar complementos.  
+ La aplicación intenta cargar el ensamblado proporcionado mediante el <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> método. Si tiene éxito, los tipos dentro del ensamblado se enumeran utilizando el <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> método. A continuación, se comprueba cada tipo de compatibilidad a través del <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> método. En este ejemplo, las clases que se encuentran en el ensamblado proporcionado se deben derivar de la <xref:System.Windows.Forms.Form> clase para calificar como un complemento.  
   
- Después, se crean instancias de las clases compatibles con el método <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>, que acepta <xref:System.Type> como argumento y devuelve un puntero a una nueva instancia.  Cada nueva instancia se asocia a continuación al formulario y se muestra.  
+ A continuación, se crean instancias de las clases compatibles con el <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> método, que acepta un <xref:System.Type> como argumento y devuelve un puntero a una nueva instancia. Cada nueva instancia, a continuación, se adjunta al formulario y se muestra.  
   
- Observe que el método <xref:System.Reflection.Assembly.Load%2A> no acepta nombres de ensamblado que incluyan la extensión de archivo.  La función principal en la aplicación recorta cualquier extensión proporcionada, por lo que el ejemplo de código siguiente funciona en cualquier caso.  
+ Tenga en cuenta que el <xref:System.Reflection.Assembly.Load%2A> método no acepta nombres de ensamblado que incluyen la extensión de archivo. La función principal en la aplicación recorta cualquier extensión proporcionada, por lo que el ejemplo de código siguiente funciona en ambos casos.  
   
-## Ejemplo  
- El código siguiente define la aplicación que acepta complementos.  Como primer argumento, se debe proporcionar un nombre de ensamblado.  Este ensamblado debería contener por lo menos un tipo derivado <xref:System.Windows.Forms.Form> público.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente define la aplicación que acepta complementos. Un nombre de ensamblado se debe proporcionar como el primer argumento. Este ensamblado debe contener al menos un público <xref:System.Windows.Forms.Form> tipo derivado.  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +79,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El código siguiente define tres clases derivadas de <xref:System.Windows.Forms.Form>.  Cuando el nombre del ensamblado resultante se pasa al ejecutable de la lista anterior, se detecta cada una de estas tres clases y se crean instancias para ellas, a pesar del hecho de que fuesen todas desconocidas para la aplicación de hospedaje en tiempo de compilación.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente define tres clases derivadas de <xref:System.Windows.Forms.Form>. Cuando el nombre del ensamblado resultante se pasa al archivo ejecutable en la lista anterior, cada una de estas tres clases se detectará y se crea una instancia, a pesar de que fuesen todas desconocidas para la aplicación de hospedaje en tiempo de compilación.  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +130,5 @@ protected:
 };  
 ```  
   
-## Vea también  
- [Reflexión](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [Reflexión (C++-CLI)](../dotnet/reflection-cpp-cli.md)

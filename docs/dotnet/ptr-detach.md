@@ -1,53 +1,55 @@
 ---
-title: "ptr::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Detach"
-  - "msclr.com.ptr.Detach"
-  - "ptr::Detach"
-  - "msclr::com::ptr::Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::Detach"
+title: PTR::Detach | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Detach
+- msclr.com.ptr.Detach
+- ptr::Detach
+- msclr::com::ptr::Detach
+dev_langs: C++
+helpviewer_keywords: ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Detach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Abandona la propiedad del objeto COM, devolviendo un puntero al objeto.  
+# <a name="ptrdetach"></a>ptr::Detach
+Proporciona una propiedad del objeto COM, devuelve un puntero al objeto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 _interface_type * Detach();  
 ```  
   
-## Valor devuelto  
- El puntero al objeto COM.  
+## <a name="return-value"></a>Valor devuelto  
+ Puntero al objeto COM.  
   
- Si no se posee ningún objeto, se devuelve NULL.  
+ Si no es propiedad de ningún objeto, se devuelve NULL.  
   
-## Excepciones  
- Internamente, `QueryInterface` se llama en el objeto COM en propiedad y los errores `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Excepciones  
+ Internamente, `QueryInterface` se llama en el propio objeto COM y cualquier error `HRESULT` se convierte en una excepción por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Comentarios  
- `Detach` primero agrega una referencia al objeto COM en nombre del llamador y luego las versiones que todas las referencias poseyeron por `com::ptr`.  El llamador debe liberar finalmente el objeto devuelto para destruirlo.  
+## <a name="remarks"></a>Comentarios  
+ `Detach`primero se agrega una referencia al objeto COM en nombre del llamador y, a continuación, libera todas las referencias que pertenecen a la `com::ptr`.  El llamador debe liberar en última instancia el objeto devuelto para destruirla.  
   
-## Ejemplo  
- Este ejemplo implementa una clase CLR que utilice `com::ptr` para ajustar su objeto de `IXMLDOMDocument` miembro privado.  Las llamadas de función `Detach` miembro de `DetachDocument` para abandonar la propiedad del objeto COM y devolver un puntero al llamador.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo implementa una clase CLR que utiliza un `com::ptr` para ajustar su miembro privado `IXMLDOMDocument` objeto.  El `DetachDocument` llamadas a funciones miembro `Detach` para abandonar la propiedad del objeto COM y devolver un puntero al llamador.  
   
 ```  
 // comptr_detach.cpp  
@@ -128,12 +130,12 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- **Archivo de encabezado** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisitos  
+ **Archivo de encabezado** \<msclr\com\ptr.h >  
   
- msclr::com de**Namespace**  
+ **Namespace** msclr::com  
   
-## Vea también  
- [ptr \(Miembros\)](../dotnet/ptr-members.md)   
- [ptr::Release](../dotnet/ptr-release.md)   
+## <a name="see-also"></a>Vea también  
+ [PTR (miembros)](../dotnet/ptr-members.md)   
+ [PTR::Release](../dotnet/ptr-release.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)

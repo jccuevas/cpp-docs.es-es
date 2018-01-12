@@ -1,46 +1,47 @@
 ---
-title: "Palabras clave del lenguaje (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "palabras clave [C++]"
+title: Palabras clave del lenguaje (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: keywords [C++]
 ms.assetid: 021013b2-70ac-4df9-aa77-4af1c67a1a67
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1107ad45feaae470ed2a7481f80bb17c389042d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Palabras clave del lenguaje (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Han cambiado varias palabras clave del lenguaje de Extensiones administradas para C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="language-keywords-ccli"></a>Palabras clave del lenguaje (C++/CLI)
+Varias palabras clave del lenguaje ha cambiado de extensiones administradas para C++ a Visual C++.  
   
- En la nueva sintaxis de [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], se ha quitado el subrayado doble como prefijo de todas las palabras clave \(con una excepción: `__identifier` se conserva\).  Por ejemplo, una propiedad se declara ahora como `property` y no `__property`.  
+ En la nueva sintaxis de Visual C++, se quita el subrayado doble como prefijo de todas las palabras clave (con una excepción: `__identifier` se conserva). Por ejemplo, ahora se declara una propiedad como `property`, no `__property`.  
   
- Había dos razones principales para utilizar el prefijo de subrayado doble en Extensiones administradas:  
+ Hay dos razones principales para utilizar el prefijo de subrayado doble en extensiones administradas:  
   
--   Es el método compatible de proporcionar extensiones locales al estándar ISO C\+\+.  Un objetivo principal del diseño de Extensiones administradas era el de no introducir incompatibilidades con el lenguaje estándar, como palabras clave y símbolos \(token\) nuevos.  Fue esta razón, principalmente, la que motivó la elección de una sintaxis de puntero para la declaración de objetos de tipos de referencia administrados.  
+-   Es el método compatible de proporcionar extensiones locales a la norma ISO C++. Un objetivo principal del diseño de extensiones administradas era no introducir incompatibilidades con el lenguaje estándar, como nuevas palabras clave y símbolos (tokens). Fue esta razón, en gran medida, lo que motivó la elección de la sintaxis de puntero para la declaración de objetos de tipos de referencia administrada.  
   
--   El uso del subrayado doble, al margen de su aspecto compatible, supone igualmente una garantía razonable de no ser invasivo con la base de código existente de los usuarios del lenguaje.  Éste fue el segundo objetivo principal del diseño de Extensiones administradas.  
+-   El uso del subrayado doble, aparte de su aspecto compatible, también es una garantía razonable de no ser invasivo con la base de código existente de los usuarios del lenguaje. Esto era un segundo objetivo principal del diseño de extensiones administradas.  
   
- A pesar de haber quitado los subrayado dobles, Microsoft mantiene su compromiso de compatibilidad.  Sin embargo, la compatibilidad con el modelo de objeto dinámico de CLR representa un nuevo y eficaz paradigma de programación.  La compatibilidad con este nuevo paradigma requiere sus propias palabras clave y símbolos \(token\) de alto nivel.  Hemos intentado proporcionar una expresión de primera clase de este nuevo paradigma mientras lo integramos y admitimos el lenguaje estándar.  El nuevo diseño de la sintaxis proporciona una experiencia de programación de gran calidad de estos dos modelos de objetos dispares.  
+ A pesar de quitar los caracteres de subrayado dobles, Microsoft mantiene su compromiso por ser compatibles. Sin embargo, compatibles con el modelo de objeto dinámico de CLR representa un paradigma de programación de nuevo y eficaz. Compatibilidad con este nuevo paradigma requiere sus propias palabras clave de alto nivel y símbolos (tokens). Hemos intentado proporcionar una expresión de primera clase de este nuevo paradigma mientras lo integramos y admitimos el lenguaje estándar. El nuevo diseño de sintaxis proporciona una experiencia de programación de primera clase de estos dos modelos de objetos dispares.  
   
- De igual forma, estamos interesados en maximizar la naturaleza no invasiva de estas nuevas palabras claves del lenguaje.  Esto se ha logrado con el uso de palabras clave contextuales y espaciadas.  Antes de examinar la nueva sintaxis del lenguaje real, vamos a intentar dar sentido a estos dos tipos de palabra clave especiales.  
+ De igual forma, estamos interesados en maximizar la naturaleza no invasiva de estas nuevas palabras clave del lenguaje. Esto se ha logrado con el uso de palabras clave contextuales y espaciadas. Antes de adentrarnos en la nueva sintaxis del lenguaje real, vamos a intentar dar sentido a estos dos tipos de palabra clave especial.  
   
- Una palabra clave contextual tiene un significado especial dentro de los contextos de programas concretos.  Dentro del programa general, por ejemplo, `sealed` es tratado como un identificador ordinario.  No obstante, cuando ocurre dentro de la parte de la declaración de un tipo de clase de referencia administrada, se trata como una palabra clave dentro del contexto de esta declaración de clase.  Esto minimiza el posible impacto invasivo de la introducción de una nueva palabra clave en el lenguaje, algo que creemos que es muy importante para los usuarios con una base de código existente.  Al mismo tiempo, permite a los usuarios de la nueva funcionalidad tener una experiencia de gran calidad de la característica de lenguaje adicional, algo que no era posible con Extensiones administradas.  Para obtener un ejemplo de la forma de utilizar `sealed`, vea [Declaración de un tipo de clase administrada](../dotnet/declaration-of-a-managed-class-type.md).  
+ Una palabra clave contextual tiene un significado especial dentro de los contextos de programa específico. Dentro del programa general, por ejemplo, `sealed` se trata como un identificador normal. Sin embargo, cuando se produce dentro de la parte de la declaración de un tipo de clase de referencia administrada, se trata como una palabra clave en el contexto de esa declaración de clase. Esto reduce el posible impacto invasivo de introducir una nueva palabra clave en el lenguaje, algo que creemos que es muy importante para los usuarios con una base de código existente. Al mismo tiempo, permite que los usuarios de la nueva funcionalidad tener una experiencia de primera clase de la característica de idioma adicional - algo que no era posible con extensiones administradas. Para obtener un ejemplo de cómo `sealed` se utiliza vea [declaración de un tipo de clase administrada](../dotnet/declaration-of-a-managed-class-type.md).  
   
- Una palabra clave espaciada, como `value class`, es un caso especial de una palabra clave contextual.  Empareja una palabra clave existente con un modificador de contexto, con un espacio de separación entre ambos.  El par se considera como una única unidad en lugar de como dos palabras clave independientes.  
+ Una palabra clave espaciada, como `value class`, es un caso especial de una palabra clave contextual. Empareja una palabra clave existente con un modificador contextual separado por un espacio. El par se trata como una sola unidad, en lugar de como dos palabras clave independientes.  
   
-## Vea también  
- [Manual de migraciones C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
+## <a name="see-also"></a>Vea también  
+ [C++ / CLI manual de migraciones](../dotnet/cpp-cli-migration-primer.md)   
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

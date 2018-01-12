@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 56f73aec78af0fe34d8c3881911a6ae1d7f26501
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Cómo: Recuperar el tiempo transcurrido desde el inicio (C++/CLI)
 En el ejemplo de código siguiente se muestra cómo determinar el recuento de pasos, o se haya iniciado el número de milisegundos que han transcurrido desde Windows. Este valor se almacena en la <xref:System.Environment.TickCount%2A?displayProperty=fullName> miembro y, dado que es un valor de 32 bits, se restablece a cero cada 24,9 días aproximadamente.  

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21023cf79a2ec25f94dc68cd3a55f722fa8316d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf0c5777cecf89bb0723b30c87dc4c856de0a016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4005"></a>Compilador advertencia (nivel 1) C4005
 'identificador': nueva definición de macro  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  Macros importadas de archivos de inclusión.  
   
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corregir mediante las siguientes posibles soluciones  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Use las soluciones posibles siguientes para corregirlo  
   
 1.  Quite una de las definiciones.  
   

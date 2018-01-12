@@ -1,32 +1,34 @@
 ---
-title: "C&#243;mo: Definir e instalar un controlador de excepciones global | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controladores, globales"
+title: "Cómo: definir e instalar un controlador de excepciones Global | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Definir e instalar un controlador de excepciones global
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo de código siguiente muestra cómo las excepciones no controladas pueden ser capturadas.  El formulario de ejemplo contiene un botón que, cuando está presionado, realice una referencia nula, produciendo una excepción.  Esta funcionalidad representa un error típico del código.  La excepción resultante es detectada por el controlador de excepciones aplicación\- ancho instalado por la función principal.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Cómo: Definir e instalar un controlador de excepciones global
+En el ejemplo de código siguiente se muestra cómo las excepciones no controladas de cómo se pueden capturar. El formulario de ejemplo contiene un botón que, cuando se presionan, realiza una referencia nula, provocando que se produzca una excepción. Esta funcionalidad representa un error de código típico. Se detectó la excepción resultante mediante el controlador de excepciones de toda la aplicación instalado por la función principal.  
   
- Esto se lleva a cabo enlazando un delegado al evento de <xref:System.Windows.Forms.Application.ThreadException> .  En este caso, las excepciones subsiguientes se envían al método de `App::OnUnhandled` .  
+ Esto se logra mediante el enlace de un delegado para que la <xref:System.Windows.Forms.Application.ThreadException> eventos. En este caso, excepciones posteriores se envían a la `App::OnUnhandled` método.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +82,5 @@ int main()
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Control de excepciones](../windows/exception-handling-cpp-component-extensions.md)

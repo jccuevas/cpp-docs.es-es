@@ -18,14 +18,17 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 829f7302cf1086162c81be78acb05abcdb0fdf1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1c18ea36a4ebced809ea32e74dca9dcb00e3968
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programación de .NET con C++/CLI (Visual C++)
-En los temas siguientes se describen cómo Visual C++ puede tener como destino la plataforma .NET.  
+En los temas siguientes se describen cómo Visual C++ puede tener como destino la plataforma .NET.  
   
  De forma predeterminada, los proyectos de CLR creados con Visual Studio 2015 están destinados a .NET Framework 4.5.2. Para tener como destino .NET Framework 4.6 al crear un nuevo proyecto, vaya al cuadro de diálogo **Nuevo proyecto** y cambie el marco de destino en la lista desplegable situada en la parte superior central del cuadro de diálogo. Para cambiar el marco de destino de un proyecto existente, cierre el proyecto, edite el archivo de proyecto (.vcxproj) y modifique el valor de la versión de Framework de destino a 4.6. La configuración tendrá efecto la próxima vez que abra el proyecto.  
   

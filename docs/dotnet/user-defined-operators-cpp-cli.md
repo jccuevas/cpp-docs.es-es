@@ -1,81 +1,82 @@
 ---
-title: "Operadores definidos por el usuario (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operadores definidos por el usuario bajo /clr"
+title: Operadores definidos por el usuario (C++ / CLI) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Operadores definidos por el usuario (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se permite operadores definidos por el usuario para los tipos administrados como miembros estáticos o miembros de instancia, o en el ámbito global.  Sin embargo, solo los operadores estáticos son accesibles a través de metadatos a los clientes que se escriben en un lenguaje distinto de Visual C\+\+.  
+# <a name="user-defined-operators-ccli"></a>Operadores definidos por el usuario (C++/CLI)
+Se permiten los operadores definidos por el usuario para los tipos administrados como miembros estáticos o miembros de instancia, o en el ámbito global. Sin embargo, solo los operadores estáticos son accesibles a través de metadatos a los clientes que se escriben en un lenguaje distinto de Visual C++.  
   
  En un tipo de referencia, uno de los parámetros de un operador definido por el usuario estático debe ser uno de los siguientes:  
   
--   Un identificador \(^ de`type` \) a una instancia del tipo envolvente.  
+-   Un identificador (`type` ^) a una instancia del tipo envolvente.  
   
--   Un direccionamiento indirecto de tipo de referencia \(^& o el type^% de`type`\) a un identificador a una instancia del tipo envolvente.  
+-   Un direccionamiento indirecto de tipo de referencia (`type`^ & o tipo ^ %) a un identificador a una instancia del tipo envolvente.  
   
  En un tipo de valor, uno de los parámetros de un operador definido por el usuario estático debe ser uno de los siguientes:  
   
--   Del mismo tipo que el tipo de valor que agrega.  
+-   Del mismo tipo que el tipo de valor envolvente.  
   
--   Un direccionamiento indirecto del tipo de puntero \(^ de`type`\) al tipo envolvente.  
+-   Un tipo direccionamiento indirecto de punteros (`type`^) para el tipo envolvente.  
   
--   Un direccionamiento indirecto de tipo de referencia \(`type`% o `type`&\) al tipo envolvente.  
+-   Un direccionamiento indirecto de tipo de referencia (`type`% o `type`&) para el tipo envolvente.  
   
--   Un direccionamiento indirecto de tipo de referencia \(`type`el ^% o ^&de `type`\) al identificador.  
+-   Un direccionamiento indirecto de tipo de referencia (`type`^ % o `type`^ &) para el identificador.  
   
  Puede definir los operadores siguientes:  
   
-|operador ??|¿Unario\/formatos binarios?|  
-|-----------------|---------------------------------|  
-|\!|Unario|  
-|\!\=|Binary|  
+|Operador|¿Unario/binario Forms?|  
+|--------------|--------------------------|  
+|!|Unario|  
+|!=|Binary|  
 |%|Binary|  
 |&|Unario y binario|  
 |&&|Binary|  
-|\*|Unario y binario|  
-|\+|Unario y binario|  
-|\+\+|Unario|  
+|*|Unario y binario|  
+|+|Unario y binario|  
+|++|Unario|  
 |,|Binary|  
-|\-|Unario y binario|  
-|\-\-|Unario|  
-|\-\>|Unario|  
-|\/|Binary|  
-|\<|Binary|  
-|\<\<|Binary|  
-|\<\=|Binary|  
-|\=|Binary|  
-|\=\=|Binary|  
-|\>|Binary|  
-|\>\=|Binary|  
-|\>\>|Binary|  
+|-|Unario y binario|  
+|--|Unario|  
+|->|Unario|  
+|/|Binary|  
+|<|Binary|  
+|<<|Binary|  
+|\<=|Binary|  
+|=|Binary|  
+|==|Binary|  
+|>|Binary|  
+|>=|Binary|  
+|>>|Binary|  
 |^|Binary|  
-|false|Unario|  
+|False|Unario|  
 |true|Unario|  
 |&#124;|Binary|  
 |&#124;&#124;|Binary|  
 |~|Unario|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +136,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## Ejemplo  
- El ejemplo siguiente se muestra la síntesis del operador, que solo está disponible cuando se usa **\/clr** para compilar.  La síntesis del operador crea el formulario de la asignación de un operador binario, si no se define, donde el lado izquierdo del operador de asignación tiene un tipo CLR.  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo muestra la síntesis del operador, que solo está disponible cuando se utiliza **/CLR** para compilar. Síntesis del operador crea el formulario de asignación de un operador binario, si uno no está definida, donde el lado izquierdo del operador de asignación tiene un tipo CLR.  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +169,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## Vea también  
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>Vea también  
  [Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)

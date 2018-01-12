@@ -1,39 +1,38 @@
 ---
-title: "Error del compilador C3533 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3533"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3533"
+title: Error del compilador C3533 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3533
+dev_langs: C++
+helpviewer_keywords: C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e7bcd9c710ac5cdd50b966a72291918459d984be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error del compilador C3533
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"tipo": un parámetro no puede tener un tipo que contiene "auto"  
+# <a name="compiler-error-c3533"></a>Error del compilador C3533
+'type': un parámetro no puede tener un tipo que contiene 'auto'  
   
- Un parámetro de método o plantilla no se puede declarar con la palabra clave `auto` si está activada la opción predeterminada del compilador [\/Zc:auto](../../build/reference/zc-auto-deduce-variable-type.md).  
+ No se puede declarar un parámetro de método o una plantilla con el `auto` palabra clave si el valor predeterminado [/Zc: Auto](../../build/reference/zc-auto-deduce-variable-type.md) opción del compilador está en vigor.  
   
-### Para corregir este error  
+### <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Quite la palabra clave `auto` de la declaración de parámetros.  
+1.  Quitar el `auto` palabra clave de la declaración de parámetro.  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3535 porque se declara un parámetro de función con la palabra clave `auto` y se compila con **\/Zc:auto**.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3535 porque se declara un parámetro de función con el `auto` palabra clave y se compila con **/Zc: Auto**.  
   
 ```  
 // C3533a.cpp  
@@ -41,8 +40,8 @@ caps.handback.revision: 6
 void f(auto j){} // C3533  
 ```  
   
-## Ejemplo  
- En el ejemplo siguiente se genera el error C3535 porque se declara un parámetro de plantilla con la palabra clave `auto` y se compila con **\/Zc:auto**.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se genera el error C3535 porque se declara un parámetro de plantilla con el `auto` palabra clave y se compila con **/Zc: Auto**.  
   
 ```  
 // C3533b.cpp  
@@ -50,6 +49,6 @@ void f(auto j){} // C3533
 template<auto T> class C{}; // C3533  
 ```  
   
-## Vea también  
- [auto \(Palabra clave\)](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(Deducir tipo de variable\)](../../build/reference/zc-auto-deduce-variable-type.md)
+## <a name="see-also"></a>Vea también  
+ [Auto (palabra clave)](../../cpp/auto-keyword.md)   
+ [/Zc:auto (Deducir tipo de variable)](../../build/reference/zc-auto-deduce-variable-type.md)

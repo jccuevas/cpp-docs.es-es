@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3206
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3206
+f1_keywords: C3206
+dev_langs: C++
+helpviewer_keywords: C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5f4318aabb2ecc616f08e98dfd08a2edd537d87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3206"></a>Error del compilador C3206
 'function': argumento de tipo no válido para 'param', falta la lista de argumentos de tipo en el tipo de clase 'typename'  
@@ -48,7 +44,7 @@ void f1() {
 }  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3206b.cpp  
@@ -80,7 +76,7 @@ int main() {
 }  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3206d.cpp  
@@ -96,11 +92,8 @@ int main() {
 }  
 ```  
   
- Este error también se puede generar como resultado del trabajo de conformidad del compilador de Visual C++ .NET 2003, donde no se permiten plantillas de clase como argumentos de tipo de plantilla.  
-  
- No se permite una plantilla de clase como argumento de tipo de plantilla. Esto funcionaba en Visual C++ .NET 2003, pero es válido en C++.  
-  
- El ejemplo siguiente se compila en Visual C++ .NET 2002, pero se producirá un error en Visual C++ .NET 2003:  
+ 
+ No se permite una plantilla de clase como argumento de tipo de plantilla. El ejemplo siguiente genera la advertencia C3206:  
   
 ```  
 // C3206e.cpp  
@@ -117,7 +110,7 @@ int main() {
 }  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3206f.cpp  
@@ -134,7 +127,7 @@ int main() {
 }  
 ```  
   
- Si es necesario un parámetro de plantilla, la resolución del error que es válida en las versiones de Visual C++ .NET 2002 y Visual C++ .NET 2003 requieren ajustar la función en una clase de plantilla que toma un parámetro de plantilla:  
+ Si es necesario un parámetro de plantilla, deberá ajustar la función en una clase de plantilla que toma un parámetro de plantilla:  
   
 ```  
 // C3206g.cpp  

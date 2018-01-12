@@ -1,32 +1,33 @@
 ---
-title: "pop_heap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pop_heap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_heap (función) [STL/CLR]"
+title: pop_heap (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pop_heap
+dev_langs: C++
+helpviewer_keywords: pop_heap function [STL/CLR]
 ms.assetid: d9bde0ed-2122-4d83-b4b3-f47f6fb3729a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a125eecf32808057f12c4e081e3f73cdde12f736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# pop_heap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quita el elemento mayor de delante de una pila el siguiente \- posición a\- pasada al intervalo y después forma una nueva pila de los elementos restantes.  
+# <a name="popheap-stlclr"></a>pop_heap (STL/CLR)
+Quita el elemento mayor del principio de un montón hasta la penúltima posición del intervalo y después forma un nuevo montón con los elementos restantes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _RanIt> inline  
@@ -35,13 +36,13 @@ template<class _RanIt, class _Pr> inline
     void pop_heap(_RanIt _First, _RanIt _Last, _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `pop_heap`STL.  Para obtener más información, vea [pop\_heap](../Topic/pop_heap.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `pop_heap`. Para obtener más información, consulte [pop_heap](../standard-library/algorithm-functions.md#pop_heap).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

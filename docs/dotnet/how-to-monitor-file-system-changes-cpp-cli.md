@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>Cómo: Supervisar los cambios realizados en el sistema de archivos (C++/CLI)
 El siguiente ejemplo de código usa <xref:System.IO.FileSystemWatcher> para registrar eventos correspondientes a archivos creados, modificados, eliminado o cuyo nombre ha cambiado. En lugar de sondear periódicamente un directorio para los cambios en los archivos, puede usar el <xref:System.IO.FileSystemWatcher> clase para desencadenar los eventos cuando se detecta un cambio.  

@@ -1,32 +1,33 @@
 ---
-title: "less_equal (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::less_equal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "less_equal (función) [STL/CLR]"
+title: less_equal (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::less_equal
+dev_langs: C++
+helpviewer_keywords: less_equal function [STL/CLR]
 ms.assetid: 87d5bebc-6e5a-4d70-b15c-7260d06d50f0
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f0ecc202e1a83f0f32b0febef488bb1979cccb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# less_equal (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La clase de plantilla describe un functor que, cuando se invoca, devuelve true solo si el primer argumento menor o igual que el segundo.  Se utiliza especifica un objeto de función en términos del tipo de argumento.  
+# <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
+La clase de plantilla describe un functor que, cuando se llama, devuelve true solo si el primer argumento es menor o igual que el segundo. Se usa especificar un objeto de función en cuanto a su tipo de argumento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### Parámetros  
- Argumento  
+#### <a name="parameters"></a>Parámetros  
+ Arg  
  El tipo de los argumentos.  
   
-## Funciones miembro  
+## <a name="member-functions"></a>Funciones miembro  
   
 |Definición de tipo|Descripción|  
-|------------------------|-----------------|  
-|delegate\_type|El tipo de delegado genérico.|  
-|first\_argument\_type|El tipo del primer argumento de functor.|  
-|result\_type|El tipo de resultado de functor.|  
-|second\_argument\_type|El tipo de argumento de functor segundo.|  
+|---------------------|-----------------|  
+|delegate_type|El tipo de delegado genérico.|  
+|first_argument_type|El tipo del primer argumento functor.|  
+|result_type|El tipo del resultado functor.|  
+|second_argument_type|El tipo del segundo argumento functor.|  
   
 |Miembro|Descripción|  
-|-------------|-----------------|  
-|less\_equal|Construye el functor.|  
+|------------|-----------------|  
+|less_equal|Construye el functor.|  
   
-|operador ??|Descripción|  
-|-----------------|-----------------|  
-|operator\(\)|Calcula la función deseada.|  
-|delegate\_type^ de operador|Convierte el functor un delegado.|  
+|Operador|Descripción|  
+|--------------|-----------------|  
+|operator()|Calcula la función deseada.|  
+|operador delegate_type ^|Convierte el functor a un delegado.|  
   
-## Comentarios  
- La clase de plantilla describe un functor de dos\- argumento.  Define el operador `operator()` de miembro para que, cuando el objeto se denomina como función, devuelve true solo si el primer argumento menor o igual que el segundo.  
+## <a name="remarks"></a>Comentarios  
+ La clase de plantilla describe un functor de dos argumentos. Define el operador de miembro `operator()` que, cuando se llama al objeto como una función, que devuelve true solo si el primer argumento es menor o igual que el segundo.  
   
- También puede pasar el objeto como argumento de la función cuyo tipo es `delegate_type^` y se convierte correctamente.  
+ También puede pasar el objeto como un argumento de función cuyo tipo es `delegate_type^` y se convertirán correctamente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_less_equal.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **3 3**  
- **0 1**   
-## Requisitos  
- cliext \<de**Encabezado:** \/funcional\>  
+```Output  
+4 3  
+3 3  
+0 1  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/funcional >  
   
-## Vea también  
- [greater](../dotnet/greater-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [greater (STL/CLR)](../dotnet/greater-stl-clr.md)

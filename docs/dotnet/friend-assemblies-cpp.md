@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C++)
 Para tiempos de ejecución es aplicable, el *friend (ensamblados)* característica de lenguaje, tipos que están en el ámbito de espacio de nombres o ámbito global en un componente de ensamblado puede tener acceso a uno o más ensamblados de cliente o elementos .netmodule.  

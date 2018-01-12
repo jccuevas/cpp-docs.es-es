@@ -1,32 +1,33 @@
 ---
-title: "replace (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace (función) [STL/CLR]"
+title: Reemplazar (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace
+dev_langs: C++
+helpviewer_keywords: replace function [STL/CLR]
 ms.assetid: 3792abca-8d73-476a-8540-c5f739aa48c2
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fe1f9cf94f39deb2a8db662a149a625b035b8567
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# replace (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Examina cada elemento en un intervalo y reemplácela si coincide con un valor especificado.  
+# <a name="replace-stlclr"></a>replace (STL/CLR)
+Examina cada elemento de un intervalo y lo reemplaza si coincide con un valor especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -34,13 +35,13 @@ template<class _FwdIt, class _Ty> inline
         const _Ty% _Oldval, const _Ty% _Newval);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `replace`STL.  Para obtener más información, vea [reemplazar](../Topic/replace.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `replace`. Para obtener más información, consulte [reemplazar](../standard-library/algorithm-functions.md#replace).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

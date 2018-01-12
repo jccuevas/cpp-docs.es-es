@@ -1,45 +1,46 @@
 ---
-title: "swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap (función) [STL/CLR]"
+title: swap (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::swap
+dev_langs: C++
+helpviewer_keywords: swap function [STL/CLR]
 ms.assetid: f21262fe-8be1-4993-b725-4687828183bb
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3c4e9062dd3710a30e2f9e0edc4255adf17498c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cambie los valores de los elementos entre dos tipos de objetos, asignando el contenido del primer objeto el segundo objeto y el contenido de segundos al primer.  
+# <a name="swap-stlclr"></a>swap (STL/CLR)
+Intercambia los valores de los elementos entre dos tipos de objetos, asignando el contenido del primer objeto al segundo objeto y el contenido del segundo al primero.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <class _Ty> inline  
     void swap(_Ty% _Left, _Ty% _Right);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `swap`STL.  Para obtener más información, vea [swap](../Topic/swap.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `swap`. Para obtener más información, consulte [intercambio](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,42 +1,44 @@
 ---
-title: "C&#243;mo: Calcular las referencias de cadenas ANSI mediante la interoperabilidad de C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI [C++], calcular las referencias de cadenas"
-  - "interoperabilidad de C++, cadenas"
-  - "cálculo de referencias de datos [C++], cadenas"
-  - "interoperabilidad [C++], cadenas"
-  - "calcular las referencias [C++], cadenas"
+title: "Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++ | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- ANSI [C++], marshaling strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e70d62fa7a94a7278080c31f6650b31b71ff35b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Calcular las referencias de cadenas ANSI mediante la interoperabilidad de C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este tema muestra cómo se pueden pasar cadenas ANSI mediante la interoperabilidad de C\+\+, pero <xref:System.String> de .NET Framework representa cadenas en formato Unicode, por lo que la conversión a ANSI requiere un paso adicional.  Para interoperar con otros tipos de cadenas, vea los temas siguientes:  
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++
+Este tema muestra cómo pueden ser cadenas ANSI pasado utilizando la interoperabilidad de C++, pero .NET Framework <xref:System.String> representa las cadenas en formato Unicode, por lo que la conversión a ANSI requiere un paso adicional. Para interoperar con otros tipos de cadena, vea los temas siguientes:  
   
--   [Cómo: Calcular las referencias de cadenas Unicode mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Cómo: Serializar cadenas Unicode mediante la interoperabilidad de C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Cómo: Calcular las referencias de cadenas COM mediante la interoperabilidad de C\+\+](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Cómo: Serializar cadenas COM mediante la interoperabilidad de C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
- En los siguientes ejemplos de código, se utilizan las directivas \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) para implementar funciones administradas y no administradas en el mismo archivo, pero sin que éstas dejen de interactuar como si se hubieran definido en archivos separados.  Dado que los archivos que contienen sólo funciones no administradas no necesitan ser compilados con [\/clr \(Compilación de Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md), pueden retener sus características de rendimiento.  
+ El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. Dado que no es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), pueden conservar sus características de rendimiento.  
   
-## Ejemplo  
- El ejemplo muestra el paso de una cadena ANSI de una función administrada a una no administrada utilizando <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>.  Este método asigna memoria en el montón no administrado y devuelve la dirección después de realizar la conversión.  Esto significa que no es necesario anclar \(ya que la memoria del montón GC no se pasa a la función no administrada\) y que el valor IntPtr devuelto de <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> se debe liberar explícitamente o se producirá una pérdida de memoria.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo se muestra cómo pasar una cadena ANSI de administrada a una función no administrada usando <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Este método asigna memoria en el montón no administrado y devuelve la dirección después de realizar la conversión. Esto significa que no es necesario fijar (debido a memoria en el montón del GC no se pasa a la función no administrada) y que el valor IntPtr devuelto desde <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> debe liberar de forma explícita o una memoria de la pérdida de resultados.  
   
 ```  
 // MarshalANSI1.cpp  
@@ -68,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente muestra el cálculo de referencias de datos necesario para tener acceso a una cadena ANSI en una función administrada a la que se llama mediante una función no administrada.  La función administrada, cuando recibe la cadena nativa, puede usarla directamente o convertirla en una cadena administrada utilizando el método <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>, como se muestra.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra el cálculo de referencias de datos necesarios para tener acceso a una cadena ANSI en una función administrada que llama a una función no administrada. La función administrada, al recibir la cadena nativa, puede usarla directamente o convertirla en una cadena administrada mediante el <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> método, tal como se muestra.  
   
 ```  
 // MarshalANSI2.cpp  
@@ -103,5 +105,5 @@ int main() {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

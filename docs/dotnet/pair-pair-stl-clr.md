@@ -1,32 +1,33 @@
 ---
-title: "pair::pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair (miembro) [STL/CLR]"
+title: Pair::Pair (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::pair
+dev_langs: C++
+helpviewer_keywords: pair member [STL/CLR]
 ms.assetid: 188035f3-bd37-4b46-96dd-5ceb9a16df79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b2382161ae1a4acf8cb79f017a39daf51826b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# pair::pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Construye un objeto de pares.  
+# <a name="pairpair-stlclr"></a>pair::pair (STL/CLR)
+Construye un objeto de par.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 pair();  
@@ -35,40 +36,40 @@ pair(pair<Coll>^ right);
 pair(Value1 val1, Value2 val2);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  right  
- Pares a almacenar.  
+ Par para almacenar.  
   
  val1  
- Primer valor a almacenar.  
+ Primer valor que se va a almacenar.  
   
  val2  
- Segundo valor a almacenar.  
+ Segundo valor que se va a almacenar.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El constructor:  
   
  `pair();`  
   
- inicializa el par almacenado con valores construidos predeterminado.  
+ Inicializa el par almacenado con los valores de construido de forma predeterminada.  
   
  El constructor:  
   
  `pair(pair<Value1, Value2>% right);`  
   
- inicializa el par almacenado con `right``.`[pair::first](../dotnet/pair-first-stl-clr.md) y `right``.`[pair::second](../dotnet/pair-second-stl-clr.md).  
+ Inicializa el par almacenado con `right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) y `right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- inicializa el par almacenado con `right``->`[pair::first](../dotnet/pair-first-stl-clr.md) y `right``>`[pair::second](../dotnet/pair-second-stl-clr.md).  
+ Inicializa el par almacenado con `right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) y `right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).  
   
  El constructor:  
   
  `pair(Value1 val1, Value2 val2);`  
   
- inicializa el par almacenado con `val1` y `val2`.  
+ Inicializa el par almacenado con `val1` y `val2`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_pair_construct.cpp   
@@ -99,14 +100,17 @@ int main()
   
 ```  
   
-  **\[\\0, 0\]**  
-**\[x, 3\]**  
-**\[x, 3\]**  
-**\[x, 3\]**   
-## Requisitos  
- cliext \<\/utilidad de**Encabezado:** \>  
+```Output  
+[\0, 0]  
+[x, 3]  
+[x, 3]  
+[x, 3]  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/utilidad >  
   
-## Vea también  
- [pair](../dotnet/pair-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [pair (STL/CLR)](../dotnet/pair-stl-clr.md)

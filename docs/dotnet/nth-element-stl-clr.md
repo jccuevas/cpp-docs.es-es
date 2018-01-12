@@ -1,32 +1,33 @@
 ---
-title: "nth_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::nth_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nth_element (función) [STL/CLR]"
+title: nth_element (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::nth_element
+dev_langs: C++
+helpviewer_keywords: nth_element function [STL/CLR]
 ms.assetid: 19fc1695-62a9-4f85-9920-d153c1c6481f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3bad46035c7d31250c6d4beddee70819f4a648e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# nth_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las particiones un intervalo de elementos, correctamente situando el elemento th de `n`de la secuencia en el intervalo de modo que todos los elementos delante de menor o igual que él y todos los elementos que lo siguen en la secuencia se mayor o igual que.  
+# <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
+Divide un intervalo de elementos correctamente situando el `n`elemento de la secuencia en el intervalo para que todos los elementos que hay delante sean menores o iguales que él y todos los elementos que siguen en la secuencia son mayores o iguales que él.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +37,13 @@ template<class _RanIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `nth_element`STL.  Para obtener más información, vea [nth\_element](../Topic/nth_element.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `nth_element`. Para obtener más información, consulte [nth_element](../standard-library/algorithm-functions.md#nth_element).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

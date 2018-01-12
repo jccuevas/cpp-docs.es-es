@@ -1,41 +1,42 @@
 ---
-title: "list::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase (miembro) [STL/CLR]"
+title: 'List:: Erase (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 78705058-1e83-441d-b267-d4fb56451c0b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 54595b61ddd21ccd81cf4f2846224789861cb480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# list::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quita los elementos en las posiciones especificadas.  
+# <a name="listerase-stlclr"></a>list::erase (STL/CLR)
+Quita los elementos de las posiciones especificadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  first  
- Inicio del intervalo que se va a borrar.  
+ Comienzo del intervalo que se va a borrar.  
   
  last  
  Final del intervalo que se va a borrar.  
@@ -43,16 +44,16 @@ iterator erase(iterator first, iterator last);
  donde  
  Elemento que se va a borrar.  
   
-## Comentarios  
- La primera función miembro quita el elemento de la secuencia controlada designada por a `where`.  Se utiliza para quitar un solo elemento.  
+## <a name="remarks"></a>Comentarios  
+ La primera función miembro quita el elemento de la secuencia controlada señalada por `where`. Usa para quitar un único elemento.  
   
- La segunda función miembro quita elementos de la secuencia controlada en el intervalo `[``first``,` `last``)`.  Se utiliza para quitar elementos cero o más contiguo.  
+ La segunda función miembro quita los elementos de la secuencia controlada en el intervalo [`first`, `last`). Usa para quitar cero o más elementos contiguos.  
   
- Las funciones miembro devuelven un iterador que señala el primer elemento que permanece más allá de cualquier elemento quitado, o [list::end](../dotnet/list-end-stl-clr.md)`()` si no existe ese elemento.  
+ Ambas funciones miembro devuelven un iterador que designa el primer elemento que permanece más allá de los elementos quitados, o [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` si no existe ese elemento.  
   
- Al borrar elementos, el número de copias del elemento es lineal del número de elementos entre el final de la borradura y el final más próximo de la secuencia. \(Al desactivar uno o más elementos en el final de la secuencia, ninguna copia del elemento aparece.\)  
+ Al borrar los elementos, el número de copias del elemento es lineal en el número de elementos entre el final de la eliminación y el final cuanto más cerca de la secuencia. (Al borrar uno o más elementos en cualquier extremo de la secuencia, se produce ninguna copia del elemento.)  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_list_erase.cpp   
@@ -92,16 +93,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **d e de la b c**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Requisitos  
- cliext \<de**Encabezado:** \/enumerado\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/list >  
   
-## Vea también  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [lista (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)

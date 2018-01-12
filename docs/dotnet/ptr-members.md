@@ -1,28 +1,31 @@
 ---
-title: "ptr (Miembros) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: PTR (miembros) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 84607ea2-149b-4c6d-b802-282f7f59d42d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b0057fc06d6a025dbc2a5537f0885271b3693ba3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ptr (Miembros)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Miembros de `com::ptr`.  
+# <a name="ptr-members"></a>ptr (Miembros)
+Los miembros de `com::ptr`.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [ptr::ptr](../dotnet/ptr-ptr.md)  
   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)  
@@ -39,13 +42,13 @@ Miembros de `com::ptr`.
   
  [ptr::Release](../dotnet/ptr-release.md)  
   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)  
+ [ptr::operator=](../dotnet/ptr-operator-assign.md)  
   
- [ptr::operator\-\>](../dotnet/ptr-operator-arrow.md)  
+ [ptr::operator->](../dotnet/ptr-operator-arrow.md)  
   
- [ptr::operator\!](../dotnet/ptr-operator-logical-not.md)  
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)  
   
  [ptr::operator bool](../dotnet/ptr-operator-bool.md)  
   
-## Vea también  
- [com::ptr \(Clase\)](../dotnet/com-ptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [com::ptr (Clase)](../dotnet/com-ptr-class.md)

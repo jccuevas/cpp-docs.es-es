@@ -1,32 +1,33 @@
 ---
-title: "replace_copy_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_copy_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace_copy_if (función) [STL/CLR]"
+title: replace_copy_if (STL/CLR) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_copy_if
+dev_langs: C++
+helpviewer_keywords: replace_copy_if function [STL/CLR]
 ms.assetid: 60edf9b8-34e6-4d94-a611-363ef7b7fb80
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ce24d602eb5ba24cee4d196c19e1e70cb38ae207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# replace_copy_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Examina cada elemento en un intervalo de origen y reemplácela si satisface un predicado especificado al copiar el resultado en un nuevo intervalo de destino.  
+# <a name="replacecopyif-stlclr"></a>replace_copy_if (STL/CLR)
+Examina cada elemento de un intervalo de origen y lo reemplaza si satisface un predicado especificado y copia el resultado a un nuevo intervalo de destino.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<class _InIt, class _OutIt, class _Pr, class _Ty> inline  
@@ -34,13 +35,13 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
         _Pr _Pred, const _Ty% _Val);  
 ```  
   
-## Comentarios  
- Esta función se comporta igual que la función `replace_copy_if`STL.  Para obtener más información, vea [replace\_copy\_if](../Topic/replace_copy_if.md).  
+## <a name="remarks"></a>Comentarios  
+ Esta función comporta igual que la función de la biblioteca estándar de C++ `replace_copy_if`. Para obtener más información, consulte [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).  
   
-## Requisitos  
- cliext \<\/algoritmo de**Encabezado:** \>  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/algoritmo >  
   
- cliext de**Espacio de nombres:**  
+ **Namespace:** cliext  
   
-## Vea también  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vea también  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

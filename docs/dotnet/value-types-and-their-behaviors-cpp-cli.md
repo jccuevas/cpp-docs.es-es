@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 683471e6449e1c1f190ecc7ef680d6108fdd644a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccb26e1f054e6914f24982b36f6655fa62fc9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Tipos de valor y su comportamiento (C++/CLI)
 Tipos de valor han cambiado de distintas maneras de extensiones administradas para C++ a Visual C++. En esta sección, veremos el tipo de enumeración CLR y el tipo de clase de valor, junto con la conversión boxing y obtener acceso a la instancia de conversión boxing en el montón CLR, así como de los punteros interiores y anclados. Ha habido muchos cambios de lenguaje en esta área.  

@@ -1,45 +1,46 @@
 ---
-title: "vector::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at (miembro) [STL/CLR]"
+title: 'Vector:: AT (STL/CLR) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af9f829-48b8-4906-ba4a-b43454acb2c7
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f8747242f757855b58a72a4604e84200df02a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# vector::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tiene acceso a un elemento en una posición especificada.  
+# <a name="vectorat-stlclr"></a>vector::at (STL/CLR)
+Obtiene acceso a un elemento en una posición especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  posición  
- Posición del elemento al que se va a tener acceso.  
+ Posición del elemento al que se accederá.  
   
-## Comentarios  
- La función miembro devuelve una referencia al elemento de la secuencia controlada en la posición `pos`.  Se utiliza para leer o escribir un elemento cuya posición sepa.  
+## <a name="remarks"></a>Comentarios  
+ La función miembro devuelve una referencia al elemento de la secuencia controlada en la posición `pos`. Se usa para leer o escribir un elemento cuya posición conoce.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // cliext_vector_at.cpp   
@@ -68,13 +69,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **una c de x**   
-## Requisitos  
- cliext \<\/vector de**Encabezado:** \>  
+```Output  
+a b c  
+a x c  
+```  
   
- cliext de**Espacio de nombres:**  
+## <a name="requirements"></a>Requisitos  
+ **Encabezado:** \<cliext/vector >  
   
-## Vea también  
- [vector](../dotnet/vector-stl-clr.md)   
- [vector::operator](../dotnet/vector-operator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vea también  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)

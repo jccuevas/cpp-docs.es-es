@@ -1,39 +1,39 @@
 ---
-title: "C&#243;mo: Consumir un indizador de C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, indizadores"
-  - "indizadores, utilizar en C#"
+title: "Cómo: consumir un indizador de C# (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Consumir un indizador de C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ no contiene indizadores; tiene propiedades indizadas.  Para consumir un indizador de C\#, obtenga acceso al indizador si se tratara de una propiedad indizada.  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>Cómo: Consumir un indizador de C# (C++/CLI)
+Visual C++ no contiene indizadores; tiene propiedades indizadas. Para consumir un indizador de C#, tener acceso al indizador como si fuera una propiedad indizada.  
   
- Para obtener más información sobre indizadores, vea:  
+ Para obtener más información acerca de indizadores, vea:  
   
--   [Indizadores](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [Indizadores](/dotnet/csharp/programming-guide/indexers/index)  
   
--   [Cómo: Usar las propiedades indizadas](../misc/how-to-use-indexed-properties.md)  
-  
-## Ejemplo  
- El siguiente programa de C\# define un indizador.  
+## <a name="example"></a>Ejemplo  
+ El programa de C# siguiente define un indizador.  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +71,8 @@ public class MainClass {
 */  
 ```  
   
-## Ejemplo  
- Este programa de Visual C\+\+ consume el indizador.  
+## <a name="example"></a>Ejemplo  
+ Este programa de Visual C++ consume el indizador.  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +88,19 @@ int main() {
 }  
 ```  
   
-  **Elemento \#0 \= 21**  
-**Elemento \#1 \= 0**  
-**Elemento \#2 \= 0**  
-**Elemento \#3 \= 0**  
-**Elemento \#4 \= 0**  
-**Elemento \#5 \= 0**  
-**Elemento \#6 \= 0**  
-**Elemento \#7 \= 0**  
-**Elemento \#8 \= 0**  
-**Elemento \#9 \= 0**  
-**Elemento \#10 \= 0**   
-## Vea también  
- [Interoperabilidad con otros lenguajes de .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Interoperabilidad con otros lenguajes de .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

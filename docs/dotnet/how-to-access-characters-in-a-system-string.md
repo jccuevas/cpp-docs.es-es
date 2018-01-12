@@ -1,37 +1,40 @@
 ---
-title: "C&#243;mo: Tener acceso a caracteres en un objeto System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caracteres [C++], obtener acceso en System::String"
-  - "ejemplos [C++], cadenas"
-  - "cadenas [C++], obtener acceso a caracteres"
+title: "Cómo: obtener acceso a caracteres en un System:: String | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Tener acceso a caracteres en un objeto System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se puede tener acceso a los caracteres de un objeto <xref:System.String> para las llamadas de alto rendimiento a funciones no administradas que toman cadenas `wchar_t*`.  El método produce un puntero interior al primer carácter del objeto <xref:System.String>.  Se puede manipular este puntero directamente o se puede anclar y pasar a una función que espera una cadena `wchar_t` normal.  
+# <a name="how-to-access-characters-in-a-systemstring"></a>Cómo: Tener acceso a caracteres en un objeto System::String
+Puede obtener acceso a caracteres de un <xref:System.String> objeto para las llamadas de alto rendimiento a no administrado, las funciones que toman `wchar_t*` cadenas. El método produce un puntero interior al primer carácter de la <xref:System.String> objeto. This (puntero) se puede manipular directamente o anclado y pasa a una función que espera un normal `wchar_t` cadena.  
   
-## Ejemplo  
- `PtrToStringChars` devuelve un valor <xref:System.Char>, que es un puntero interior \(también conocido como `byref`\).  Como tal, está sujeto a la recolección de elementos no utilizados.  No es necesario que ancle este puntero a menos que vaya a pasarlo a una función nativa.  
+## <a name="example"></a>Ejemplo  
+ `PtrToStringChars`Devuelve un <xref:System.Char>, que es un puntero interior (también conocido como un `byref`). Por lo tanto, resulta sujeta a la colección de elementos no utilizados. No tienes que anclar this (puntero), a menos que va a pasar a una función nativa.  
   
- Observe el código siguiente.  No hace falta anclarlo porque `ppchar` es un puntero interior y, si el recolector de elementos no utilizados mueve la cadena a la que señala, también actualizará `ppchar`.  Sin [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md), el código funcionará y no tendrá el rendimiento potencial debido al anclaje.  
+ Observe el código siguiente.  Fijar no es necesaria porque `ppchar` es un puntero interior y, si el recolector de elementos no utilizados mueve la cadena que señala, también actualizará `ppchar`. Sin un [pin_ptr (C++ / CLI)](../windows/pin-ptr-cpp-cli.md), el código funcionará y no tendrá el rendimiento potencial debido con anclados.  
   
- Si pasa `ppchar`  a una función nativa, entonces deberá ser un puntero anclado; el recolector de elementos no utilizados no podrá actualizar punteros en el marco no administrado de la pila.  
+ Si se pasa `ppchar` a una función nativa, a continuación, debe ser un puntero anclado; el recolector de elementos no utilizados no podrá actualizar punteros en el marco de pila no administrados.  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,8 +52,11 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## Ejemplo  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>Ejemplo  
  Este ejemplo muestra dónde es preciso anclar.  
   
 ```  
@@ -74,9 +80,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## Ejemplo  
- Un puntero interior tiene todas las propiedades de un puntero de C\+\+ nativo.  Por ejemplo, puede utilizarlo para recorrer una estructura de datos vinculada y hacer inserciones y eliminaciones sólo mediante un puntero:  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>Ejemplo  
+ Un puntero interior tiene todas las propiedades de un puntero de C++ nativo. Por ejemplo, puede utilizar para recorrer una estructura de datos vinculado y hacer inserciones y eliminaciones sólo mediante un puntero:  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +107,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## Vea también  
- [Utilizar la interoperabilidad de C\+\+ \(PInvoke implícito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vea también  
+ [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

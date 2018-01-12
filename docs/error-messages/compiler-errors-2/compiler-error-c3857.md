@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3857
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3857
+f1_keywords: C3857
+dev_langs: C++
+helpviewer_keywords: C3857
 ms.assetid: 9f746d1e-9708-4945-bc29-3150d5371d3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc73b9351053e1760246e5cd1491adb4c1dfa0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e9c553adf8eb9b326bcb2b3b35a381973c9c4a50
-ms.contentlocale: es-es
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3857"></a>Error del compilador C3857
 'type': no se permiten varias listas de parámetros de tipo  
@@ -40,7 +36,7 @@ template <class T2>    // C3857
 struct B {};  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3857b.cpp  
@@ -59,7 +55,7 @@ generic <typename U>
 ref class GC;   // C3857  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C3857d.cpp  
