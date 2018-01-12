@@ -15,18 +15,19 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c61ee3729a859d1ed2d9dd0ba9fe4ce253634bc0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52c296251e22adef2702aa9feba2b1fe2bc5122e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Advertencia del compilador (nivel 4) C4481
 ha utilizado una extensión no estándar: 'palabra clave' especificador de reemplazo  
   
  Se utiliza una palabra clave que no está en el estándar de C++, por ejemplo, uno de los especificadores de invalidación que también funciona bajo/CLR.  Para obtener más información, vea  
   
--   [/CLR (compilación de common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md)  
   

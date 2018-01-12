@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15a8a74fc4c15e507fc8a651e9849fc82e3b9c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 813c2ab18cc81c4477ae094e6c2aa771e3135b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Advertencia del compilador (nivel 1) C4727
 "PCH denominado archivo_pch con la misma marca de tiempo en archivo_obj_1 y archivo_obj_2.  Uso de primer PCH.  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
  Para obtener más información, consulte  
   
--   [/Yc (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md)  
+-   [/Yc (Crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md)  
   
--   [/Yu (utilizar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md)
+-   [/Yu (Usar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md)

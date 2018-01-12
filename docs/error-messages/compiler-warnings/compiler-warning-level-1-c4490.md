@@ -1,37 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4490"
+title: Compilador advertencia (nivel 1) C4490 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4490
+dev_langs: C++
+helpviewer_keywords: C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05ca17f42cee490073a5a2bab8793ac520be45c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'reemplazo' : uso incorrecto del especificador de reemplazo; 'función' no coincide con un método de clase ref  
+# <a name="compiler-warning-level-1-c4490"></a>Advertencia del compilador (nivel 1) C4490
+'override': uso incorrecto del especificador de reemplazo; 'function' no coincide con un método de clase ref base  
   
- Se ha especificado incorrectamente un reemplazo.  Por ejemplo, no se reemplaza una función de interfaz, sino que se implementa.  
+ Un especificador de reemplazo se usó incorrectamente. Por ejemplo, no se reemplaza una función de la interfaz, implementada.  
   
- Para obtener más información, vea [Especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Para obtener más información, consulte [especificadores de reemplazo](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4490.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4490.  
   
 ```  
 // C4490.cpp  

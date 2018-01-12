@@ -1,7 +1,7 @@
 ---
 title: 'Errores BSCMAKE: de BK1500 a BK4505 | Documentos de Microsoft'
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65e34d78a473cc49225456f132be520ea33b887e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4808ff1f1edbeb3cce9a6e1ffb5669f4e186817a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-errors-bk1500-through-bk4505"></a>Errores de BSCMAKE: de BK1500 a BK4505
-Esta sección hace referencia a los errores generados por las herramientas de compilación. Para obtener ayuda sobre un mensaje de error concreto, haga clic con el mouse en un número de error en la ventana de salida y presione F1 o escriba el número de error en la **buscar** cuadro en el índice.
+
+Esta sección es una referencia a los errores y herramienta de generación de advertencias generadas por la BSCMAKE.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

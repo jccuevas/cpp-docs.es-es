@@ -1,35 +1,34 @@
 ---
-title: "Error grave de NMAKE U1086 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1086"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1086"
+title: Error grave de NMAKE U1086 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1086
+dev_langs: C++
+helpviewer_keywords: U1086
 ms.assetid: 6d3cd68a-ead6-4a6d-a205-01324785de7e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4d4f77f5de7d89c68804458103de624f913ff26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error grave de NMAKE U1086
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**la regla de inferencia no puede tener dependientes**  
+# <a name="nmake-fatal-error-u1086"></a>Error grave de NMAKE U1086
+**regla de inferencia no puede tener elementos dependientes**  
   
- El signo de dos puntos \(**:**\) en una regla de inferencia debe ir seguido de uno de los siguientes caracteres:  
+ Los dos puntos (**:**) en una inferencia de regla debe ir seguida por uno de los siguientes:  
   
--   Carácter de nueva línea.  
+-   Carácter de nueva línea  
   
--   Signo de punto y coma \(**;**\), que puede ir seguido de un comando.  
+-   Punto y coma (**;**), que puede ir seguido de un comando  
   
--   Signo de número \(**\#**\), que puede ir seguido de un comentario.
+-   Signo de número (**#**), que puede ir seguido de un comentario

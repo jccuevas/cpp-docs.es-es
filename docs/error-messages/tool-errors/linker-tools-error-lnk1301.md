@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a01d56f0239160a059fb67774916d9d9aa792709
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfcdb90b967ce5f0e9eda8dded9b93db5bdcc268
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1301"></a>Error de las herramientas del vinculador LNK1301
 LTCG módulos clr encontrados, incompatibles con/LTCG: parámetro  
@@ -30,11 +31,11 @@ LTCG módulos clr encontrados, incompatibles con/LTCG: parámetro
   
  Para obtener más información, consulte:  
   
--   [/GL (optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md)  
+-   [/GL (Optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md)  
   
--   [/LTCG (generación de código en tiempo de vínculo)](../../build/reference/ltcg-link-time-code-generation.md)  
+-   [/LTCG (Generación de código en tiempo de enlace)](../../build/reference/ltcg-link-time-code-generation.md)  
   
--   [/CLR (compilación de common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)  
   

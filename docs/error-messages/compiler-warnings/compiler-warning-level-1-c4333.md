@@ -1,35 +1,34 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4333 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4333"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4333"
+title: Compilador advertencia (nivel 1) C4333 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4333
+dev_langs: C++
+helpviewer_keywords: C4333
 ms.assetid: d3763c52-6110-4da0-84db-5264e3f3f166
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22704292cae37b4c4395c49fb69fb2c59c1ccd48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4333
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operador': desplazamiento a la derecha muy grande; se perderán los datos.  
+# <a name="compiler-warning-level-1-c4333"></a>Advertencia del compilador (nivel 1) C4333
+'operador': desplazamiento a la derecha por cantidad demasiado grande, pérdida de datos  
   
- Una operación de desplazamiento a la derecha ha sido demasiado grande.  Todos los bits significativos son desplazados y el resultado siempre será cero.  
+ Una operación de desplazamiento a la derecha era demasiado grande.  Todos los bits significativos son desplazados y el resultado siempre será cero.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4333.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4333.  
   
 ```  
 // C4333.cpp  

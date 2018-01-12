@@ -1,32 +1,31 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4067"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4067"
+title: Compilador advertencia (nivel 1) C4067 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4067
+dev_langs: C++
+helpviewer_keywords: C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b335535cbe66d3891806244ecce5d774d27d382
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4067
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-símbolos \(token\) inesperados después de la directiva del preprocesador; se esperaba una nueva línea  
+# <a name="compiler-warning-level-1-c4067"></a>Compilador advertencia (nivel 1) C4067
+tokens inesperados directiva de preprocesador siguiente: se esperaba una nueva línea  
   
- El compilador encontró y omitió caracteres adicionales después de una directiva de preprocesador.  Esta advertencia sólo aparece cuando se habilita la compatibilidad con ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ El compilador encontró y omitió caracteres adicionales después de una directiva de preprocesador. Esta advertencia aparece solo en la compatibilidad con ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
 ```  
 // C4067a.cpp  
@@ -40,11 +39,11 @@ int main()
 }  
 ```  
   
-### Para solucionar esta advertencia, intente lo siguiente:  
+### <a name="to-resolve-this-warning-try-the-following"></a>Para resolver esta advertencia, intente lo siguiente:  
   
-1.  Compile con **\/Ze**.  
+1.  Compile con **/Ze**.  
   
-2.  Utilice delimitadores de comentario:  
+2.  Usar delimitadores de comentario:  
   
 ```  
 // C4067b.cpp  

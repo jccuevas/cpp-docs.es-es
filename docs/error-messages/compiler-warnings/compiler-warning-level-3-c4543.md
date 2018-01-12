@@ -1,31 +1,30 @@
 ---
-title: "Advertencia del compilador (nivel 3) C4543 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4543"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4543"
+title: Compilador advertencia (nivel 3) C4543 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4543
+dev_langs: C++
+helpviewer_keywords: C4543
 ms.assetid: a09b39a7-d3b8-435c-86a3-2233c512f24b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d262faa6b2baff299bc1005f78846d6fa07cc34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 3) C4543
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Texto insertado suprimido por el atributo 'no\_injected\_text'  
+# <a name="compiler-warning-level-3-c4543"></a>Advertencia del compilador (nivel 3) C4543
+Texto insertado suprimido por el atributo 'no_injected_text'  
   
- El atributo [no\_injected\_text](../../windows/no-injected-text.md) aparecía en el código fuente, lo que significa que el compilador impide que los atributos inserten código.  
+ El [no_injected_text](../../windows/no-injected-text.md) atributo aparecía en el código de origen, lo que significa que el compilador impide que los atributos de insertar código.  
   
- Esta advertencia sirve para recordar que los atributos no pueden insertar código.
+ Esta advertencia es para recordarle que los atributos no pueda insertar código.

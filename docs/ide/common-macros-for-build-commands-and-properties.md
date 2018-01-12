@@ -103,11 +103,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f83ed395860033aa35dfedc4713653976a1f2763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Común Macros para propiedades y comandos de compilación
 Dependiendo de las opciones de instalación, Visual Studio puede hacer cientos de macros disponibles para usted. Estos se corresponden con las propiedades de MSBuild que se establecen de forma predeterminada, o en los archivos .props o .targets o en la configuración del proyecto. Estas macros pueden usarse en cualquier parte del cuadro de diálogo **Páginas de propiedades** de un proyecto donde se aceptan cadenas. Estas macros no distinguen mayúsculas de minúsculas.  
@@ -121,7 +122,7 @@ Dependiendo de las opciones de instalación, Visual Studio puede hacer cientos d
 |Macro|Descripción|  
 |-----------|-----------------|  
 |**$ (RemoteMachine)**|Establece en el valor de la propiedad **Remote Machine** en la página de propiedades de depuración. Para obtener más información, vea [Cambiar la configuración del proyecto para una configuración de depuración de C/C++](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|  
-|**$(Configuration)**|El nombre de la configuración del proyecto actual, por ejemplo, "Debug".|  
+|**$(Configuration)**|El nombre de la configuración del proyecto actual (por ejemplo, "Depuración").|  
 |**$(Platform)**|El nombre de la plataforma del proyecto actual, por ejemplo, "Win32".|  
 |**$ (ParentName)**|(En desuso). Nombre del elemento que contiene este elemento de proyecto. Se trata del nombre de la carpeta principal o el nombre de proyecto.|  
 |**RootNamespace**|El espacio de nombres, si hubiera, que contiene la aplicación.|  

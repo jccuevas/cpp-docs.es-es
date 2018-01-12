@@ -1,29 +1,28 @@
 ---
-title: "Error del compilador de recursos RC2116 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2116"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2116"
+title: Error del compilador de recursos RC2116 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2116
+dev_langs: C++
+helpviewer_keywords: RC2116
 ms.assetid: d9203ddf-798d-490b-be41-0dd3f7d53653
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d4c23366b4e42f0a5b4c98c1766483d735a6359
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error del compilador de recursos RC2116
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se esperaba un número para el identificador  
+# <a name="resource-compiler-error-rc2116"></a>Error del compilador de recursos RC2116
+se espera un número para el Id.  
   
- Se esperaba un número para el campo `id` de una instrucción de control en la instrucción **DIALOG.** Asegúrese de que haya un número o una instrucción `#define` para el identificador de control.
+ Se esperaba un número para el `id` campo de una instrucción de control en el **diálogo** instrucción. Asegúrese de que tiene un número o `#define` instrucción para el identificador del control.

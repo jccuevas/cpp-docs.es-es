@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f9152384522725dc932d0ce5e1c4cc81827160b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5c128a2a2e32b5e4854725354ed484a335ab0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Derivar una clase de documento de CDocument
 Documentos contienen y administran los datos de aplicación. Para utilizar la clase de documento proporcionada por el Asistente para aplicaciones MFC, debe hacer lo siguiente:  

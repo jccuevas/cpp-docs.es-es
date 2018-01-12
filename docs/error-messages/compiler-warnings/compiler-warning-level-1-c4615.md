@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4615
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4615
+f1_keywords: C4615
+dev_langs: C++
+helpviewer_keywords: C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 41ddf5e421e5840fa5d17dfb6a619a0d4ee1099d
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b00f06ee1db41adcf642e1e4a84c3695b19b0720
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Advertencia del compilador (nivel 1) C4615
-\#advertencia pragma: tipo de advertencia de usuario desconocido  
+\#Advertencia de pragma: tipo de advertencia de usuario desconocido  
   
- Se utilizó un especificador de advertencia no válido con **pragma** [advertencia](../../preprocessor/warning.md). Para resolver el error, utilice un especificador de advertencia válido.  
+ Se usó un especificador de advertencia no válido con **pragma** [advertencia](../../preprocessor/warning.md). Para resolver el error, utilice un especificador de advertencia válido.  
   
  El ejemplo siguiente genera C4615:  
   

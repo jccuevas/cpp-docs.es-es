@@ -1,40 +1,40 @@
 ---
-title: "Archivos de encabezado y c&#243;digo fuente de controles o programas ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipos de archivo [C++], código fuente y encabezados de ATL"
+title: "Archivos de encabezado y código fuente de controles o programas ATL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3a13a4c6ddb74a6f63b5da1171a3d4360199b508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Archivos de encabezado y c&#243;digo fuente de controles o programas ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Al crear un proyecto ATL en Visual Studio se crearán los siguientes archivos, en función de las opciones que seleccione para el proyecto que va a crear.  
+# <a name="atl-program-or-control-source-and-header-files"></a>Archivos de encabezado y código fuente de controles o programas ATL
+Los siguientes archivos se crean al crear un proyecto ATL en Visual Studio, dependiendo de las opciones que seleccione para el proyecto que cree.  
   
- Todos estos archivos se encuentran en el directorio *Nombre\_proyecto* y en la carpeta Header Files \(archivos .h\) o en la carpeta Source Files \(archivos .cpp\) en el Explorador de soluciones.  
+ Todos estos archivos se encuentran en el *Nombre_proyecto* directorio y en la carpeta Header Files (archivos. h) o la carpeta Source Files (archivos .cpp) en el Explorador de soluciones.  
   
-|Nombre de archivo|Descripción|  
-|-----------------------|-----------------|  
-|*Nombre\_proyecto*.h|Archivo de inclusión principal que contiene las definiciones de interfaz y las declaraciones de GUID de C\+\+ de los elementos definidos en ATLSample.idl.  MIDL lo vuelve a generar durante la compilación.|  
-|*Nombre\_proyecto.*cpp|Archivo de código fuente del programa principal.  Contiene la implementación de las exportaciones del archivo DLL para un servidor en proceso y la implementación de `WinMain` para un servidor local.  Para un servicio, implementa además todas las funciones de administración de servicios.|  
-|Resource.h|Archivo de encabezado del archivo de recursos.|  
+|Nombre del archivo|Descripción|  
+|---------------|-----------------|  
+|*Nombre_proyecto*. h|El archivo de inclusión principal que contiene las definiciones de interfaz de C++ y declaraciones de GUID de los elementos definidos en ATLSample.idl. Se volverá a generar mediante MIDL durante la compilación.|  
+|*Nombre_proyecto*.cpp|El archivo de origen principal del programa. Contiene la implementación de las exportaciones de la DLL para un servidor en proceso y la implementación de `WinMain` para un servidor local. Para un servicio, implementa además todas las funciones de administración de servicio.|  
+|Resource.h|El archivo de encabezado para el archivo de recursos.|  
 |StdAfx.cpp|Incluye los archivos StdAfx.h y Atlimpl.cpp.|  
 |StdAfx.h|Incluye los archivos de encabezado ATL.|  
   
-## Vea también  
- [Tipos de archivos creados para proyectos de Visual C\+\+](../ide/file-types-created-for-visual-cpp-projects.md)   
+## <a name="see-also"></a>Vea también  
+ [Tipos de archivos creados para proyectos de Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
  [Archivos de encabezado y código fuente de controles o programas MFC](../ide/mfc-program-or-control-source-and-header-files.md)   
  [Proyectos de CLR](../ide/files-created-for-clr-projects.md)

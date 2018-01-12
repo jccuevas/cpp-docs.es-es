@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4162 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4162"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4162"
+title: Compilador advertencia (nivel 1) C4162 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4162
+dev_langs: C++
+helpviewer_keywords: C4162
 ms.assetid: 21ae3c92-501d-4689-ad7d-13753cb65eff
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 980c2229b06e5c7bef85901daaa788a6a2911ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4162
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificador' : no se ha encontrado ninguna función con vinculación C  
+# <a name="compiler-warning-level-1-c4162"></a>Compilador advertencia (nivel 1) C4162
+'identificador': ninguna función con vinculación C encuentra  
   
- Se ha declarado una función con vinculación C pero no se encuentra.  
+ Una función con vinculación C se ha declarado pero no se encuentra.  
   
- Para corregir esta advertencia, compile en un archivo .c \(invoque al compilador de C\).  Si tiene que invocar al compilador de C\+\+, coloque extern "C" antes de la declaración de la función.  
+ Para resolver esta advertencia, compile en un archivo .c (invocar el compilador de C).  Si se debe invocar el compilador de C++, coloque a extern "C" antes de la declaración de función.  
   
- El ejemplo siguiente genera C4162:  
+ El ejemplo siguiente genera C4162  
   
 ```  
 // C4162.cpp  
@@ -45,7 +44,7 @@ int main() {
 }  
 ```  
   
- Posible solución:  
+ Posible resolución:  
   
 ```  
 // C4162b.cpp  

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9e78f38f911feac117023fc46b9c15d43e9128
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6426a25746858ed5bd7c0d8ef70575e029453bae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebar-controls-and-bands"></a>Controles y bandas Rebar
 El propósito principal de un control rebar es actuar como un contenedor para ventanas secundarias, controles comunes de cuadro de diálogo, menús, barras de herramientas y así sucesivamente. Esta contención es compatible con el concepto de "banda". Cada banda rebar puede contener cualquier combinación de una barra de controles, un mapa de bits, una etiqueta de texto y una ventana secundaria.  

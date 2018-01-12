@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4667 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4667"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4667"
+title: Compilador advertencia (nivel 1) C4667 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4667
+dev_langs: C++
+helpviewer_keywords: C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d66b4e92eebecc746391add492222fd1779bf6ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4667
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'función': no hay ninguna plantilla de función definida que coincida con la creación de instancias forzada  
+# <a name="compiler-warning-level-1-c4667"></a>Advertencia del compilador (nivel 1) C4667
+'función': ninguna función definida por la plantilla que coincida con fuerza la creación de instancias  
   
- No se puede crear una instancia de una plantilla de función que no se haya declarado.  
+ No se puede crear una instancia de una plantilla de función que no se ha declarado.  
   
- El ejemplo siguiente genera el error C4667:  
+ El siguiente ejemplo C4667:  
   
 ```  
 // C4667a.cpp  
@@ -37,7 +36,7 @@ template
 void max(const int &, const int &); // C4667 expected  
 ```  
   
- Para evitar esta advertencia, declare antes la plantilla de función:  
+ Para evitar esta advertencia, declare primero la plantilla de función:  
   
 ```  
 // C4667b.cpp  

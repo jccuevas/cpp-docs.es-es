@@ -1,32 +1,31 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4210"
+title: Compilador advertencia (nivel 4) C4210 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4210
+dev_langs: C++
+helpviewer_keywords: C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4c75203bdd821612a7cd289e52702e606c41344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se ha utilizado una extensión no estándar: la función ha recibido ámbito de archivo  
+# <a name="compiler-warning-level-4-c4210"></a>Advertencia del compilador (nivel 4) C4210
+ha utilizado una extensión no estándar: función dado el ámbito de archivo  
   
- Con las extensiones de Microsoft habilitadas \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\), las declaraciones de función tienen ámbito de archivos.  
+ Con las extensiones de Microsoft predeterminadas ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), las declaraciones de función tienen ámbito de archivo.  
   
 ```  
 // C4210.c  
@@ -42,4 +41,4 @@ int main()
 }                //  /Za passes 4 as type int  
 ```  
   
- Esta extensión puede impedir la portabilidad del código a otros compiladores.
+ Esta extensión puede impedir que el código que se va a portable a otros compiladores.

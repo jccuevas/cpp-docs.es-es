@@ -1,47 +1,46 @@
 ---
-title: "Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos de archivo MAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.makefile.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para proyectos de archivos Make, configuración de la aplicación"
+title: "Configuración de la aplicación, Asistente para proyectos de archivo MAKE | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.makefile.appset
+dev_langs: C++
+helpviewer_keywords: Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Configuraci&#243;n de la aplicaci&#243;n, Asistente para proyectos de archivo MAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Proporcione la información que desee para el proyecto.  Las opciones que especifique se reflejarán en la [página de propiedades](../ide/working-with-project-properties.md) del proyecto.  Una vez creado el proyecto, podrá ver y editar cada una de las siguientes propiedades en la página **Nmake** de la página de propiedades del proyecto.  
+# <a name="application-settings-makefile-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos de archivo MAKE
+Proporcione la información para el proyecto. Las opciones que especifique se reflejan en el proyecto [página de propiedades](../ide/working-with-project-properties.md). Una vez creado el proyecto, también puede ver y modificar cada una de las siguientes opciones en el **Nmake** página de la página de propiedades del proyecto.  
   
- **Línea de comandos de compilación**  
- Especifica la línea de comandos que se debe ejecutar cuando el usuario seleccione **Compilar** en el menú **Compilar**.  Aparece en el campo **Línea de comandos de Compilar** de la página **Nmake** de la página de propiedades del proyecto.  
+ **Compilar la línea de comandos**  
+ Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **generar** desde el **generar** menú. Muestra en el **línea de comandos de compilación** campo el **Nmake** página de la página de propiedades del proyecto.  
   
- **Output**  
- Especifica el nombre del archivo que contendrá los resultados de la línea de comandos.  De forma predeterminada, esta opción se basa en el nombre del proyecto.  Aparece en el campo **Resultados** de la página **Nmake** de la página de propiedades del proyecto.  
+ **Salida**  
+ Especifica el nombre del archivo que contendrá la salida de la línea de comandos. De forma predeterminada, esta opción se basa en el nombre del proyecto. Muestra en el **salida** campo el **Nmake** página de la página de propiedades del proyecto.  
   
  **Comandos para limpiar**  
- Especifica la línea de comandos que se debe ejecutar cuando el usuario seleccione **Limpiar** en el menú **Compilar**.  Aparece en el campo **Línea de comandos de Limpiar** de la página **Nmake** de la página de propiedades del proyecto.  
+ Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **limpiar** desde el **generar** menú. Muestra en el **limpia línea de comandos** campo el **Nmake** página de la página de propiedades del proyecto.  
   
- **Línea de comandos de recompilación**  
- Especifica la línea de comandos que se debe ejecutar cuando el usuario seleccione **Recompilar** en el menú **Compilar**.  Aparece en el campo **Línea de comandos de Recompilar todo** de la página **Nmake** de la página de propiedades del proyecto.  
+ **Volver a generar la línea de comandos**  
+ Especifica la línea de comandos que se ejecuta cuando el usuario selecciona **volver a generar** desde el **generar** menú. Muestra en el **volver a generar todos los de línea de comandos** campo el **Nmake** página de la página de propiedades del proyecto.  
   
-## Vea también  
- [Asistente para proyectos de archivo MAKE](../ide/makefile-project-wizard.md)   
+## <a name="see-also"></a>Vea también  
+ [Asistente para proyecto de archivos MAKE](../ide/makefile-project-wizard.md)   
  [Crear un proyecto de archivos MAKE](../ide/creating-a-makefile-project.md)   
- [Tipos de proyecto de Visual C\+\+](../ide/visual-cpp-project-types.md)   
+ [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)   
  [Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Páginas de propiedades](../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/es-es/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Implementación de aplicaciones](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

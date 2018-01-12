@@ -1,31 +1,30 @@
 ---
-title: "Error PRJ0040 al compilar el proyecto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0040"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0040"
+title: Error PRJ0040 al compilar del proyecto | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0040
+dev_langs: C++
+helpviewer_keywords: PRJ0040
 ms.assetid: 6549ac62-c87b-4edf-b541-32221abe97ec
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ef630dad289b37a974fc75f142c8f351a512b421
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Error PRJ0040 al compilar el proyecto
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Error interno al compilar.No se puede continuar.Vuelva a cargar el proyecto e inténtelo de nuevo.  
+# <a name="project-build-error-prj0040"></a>Error PRJ0040 al compilar el proyecto
+Error interno en la compilación. No puede continuar. Volver a cargar el proyecto y vuelva a intentarlo.  
   
- El sistema del proyecto no puede procesar el proyecto.  
+ El sistema del proyecto no pudo procesar el proyecto.  
   
  Intente volver a cargar el proyecto.

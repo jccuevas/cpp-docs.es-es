@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4079
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4079
+f1_keywords: C4079
+dev_langs: C++
+helpviewer_keywords: C4079
 ms.assetid: 549759f0-e168-47e9-8c9a-de93ac843689
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7c9cbc47fb4093d737f6c02f213c168b444cfac1
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ead27a4a9cf2da2b97089cef207ccf518d268ff7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4079"></a>Compilador advertencia (nivel 1) C4079
 token inesperado 'token'  
   
- Se produce un token separador inesperado en una lista de argumentos de pragma. El resto de pragma se omite.  
+ Se produce un símbolo (token) de separador inesperado en una lista de argumentos de pragma. Se omitió el resto de la directiva pragma.  
   
  El ejemplo siguiente genera C4079:  
   

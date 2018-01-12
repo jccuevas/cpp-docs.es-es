@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>Trabajar con configuraciones de proyecto
 En el IDE, toda la información que se necesita para compilar un proyecto se expone como *propiedades*. Esta información incluye el nombre de la aplicación, extensión (por ejemplo, DLL, LIB, EXE), opciones del compilador, opciones del vinculador, configuración del depurador, pasos de compilación personalizada y muchas otras cosas. Normalmente, se utiliza *páginas de propiedades* ( **proyecto &#124; Propiedades**) para ver y modificar estas propiedades. 

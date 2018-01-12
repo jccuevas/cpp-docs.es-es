@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4516 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4516"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4516"
+title: Compilador advertencia (nivel 4) C4516 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4516
+dev_langs: C++
+helpviewer_keywords: C4516
 ms.assetid: 6677bb1f-d26e-4ab9-8644-6b5a2a8f4ff8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 137fe601e911b309d28281ecee7e67a88e1bb0a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4516
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'clase::símbolo' : las declaraciones de acceso han quedado obsoletas; las declaraciones using de miembros son una alternativa mejor  
+# <a name="compiler-warning-level-4-c4516"></a>Advertencia del compilador (nivel 4) C4516
+'clase:: símbolo': las declaraciones de acceso están en desuso; las declaraciones using de miembro son una alternativa mejor  
   
- El comité de ANSI C\+\+ ha declarado obsoletas las declaraciones de acceso \(que modifican el acceso de un miembro en una clase derivada sin la palabra clave [using](../../cpp/using-declaration.md).  Puede que las declaraciones de acceso dejen de ser compatibles con las futuras versiones de C\+\+.  
+ El Comité de ANSI C++ ha declarado las declaraciones de acceso (cambiar el acceso de un miembro en una clase derivada sin la [con](../../cpp/using-declaration.md) palabra clave) a estar obsoletas. Pueden que las futuras versiones de C++ no admite las declaraciones de acceso.  
   
- El código siguiente genera el error C4516:  
+ El ejemplo siguiente genera C4516:  
   
 ```  
 // C4516.cpp  

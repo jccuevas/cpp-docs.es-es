@@ -1942,11 +1942,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de33fd0baf8ffb5ccce5fc5a532413f27a2b42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
 El compilador de Visual C++ hace que los siguientes intrínsecos estén disponibles en la arquitectura ARM. Para obtener más información sobre ARM, vea el [manual de referencia de arquitectura de ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) y [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) en el sitio Web del centro de información de ARM.  
@@ -2408,7 +2409,7 @@ void _MoveFromCoprocessor64(
 |Y|Completo|Completo|Completo|Completo|Ninguna|  
 |CompareExchange|Completo|Completo|Completo|Completo|Completo|  
 |Decremento|Ninguna|Completo|Completo|Completo|Ninguna|  
-|Exchange|Partial|Parcial|Parcial|Parcial|Partial|  
+|Exchange|Partial|Partial|Partial|Partial|Partial|  
 |ExchangeAdd|Completo|Completo|Completo|Completo|Ninguna|  
 |Incremento|Ninguna|Completo|Completo|Completo|Ninguna|  
 |O bien|Completo|Completo|Completo|Completo|Ninguna|  

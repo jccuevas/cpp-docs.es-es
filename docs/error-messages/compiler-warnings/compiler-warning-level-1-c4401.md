@@ -1,34 +1,33 @@
 ---
-title: "Advertencia del compilador (nivel 1) C4401 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4401"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4401"
+title: Compilador advertencia (nivel 1) C4401 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4401
+dev_langs: C++
+helpviewer_keywords: C4401
 ms.assetid: 2e7ca136-f144-4b40-b847-82976e8643fc
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1042550b4ea176a314e174549ed560cd3ece025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 1) C4401
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'campodebits' : el miembro es un campo de bits  
+# <a name="compiler-warning-level-1-c4401"></a>Advertencia del compilador (nivel 1) C4401
+'campo de bits': miembro es el campo de bits  
   
- El código de ensamblado en línea intenta obtener acceso a un miembro de campo de bits.  El ensamblado en línea no puede obtener acceso a los miembros de campo de bits, por lo que se utiliza el último límite de empaquetado antes de usar el miembro de campo de bits.  
+ Código ensamblador en línea intenta obtener acceso a un miembro de campo de bits. Código ensamblador en línea no puede tener acceso a miembros de un campo de bits, por lo que se utiliza el último límite de empaquetado antes del miembro de campo de bits.  
   
- Para evitar esta advertencia, convierta el tipo del campo de bits en el tipo adecuado antes de crear la referencia en el código de ensamblado en línea.  El código siguiente genera el error C4401:  
+ Para evitar esta advertencia, convierta el campo de bits al tipo apropiado antes de crear la referencia en el código de ensamblado alineado. El ejemplo siguiente genera C4401:  
   
 ```  
 // C4401.cpp  

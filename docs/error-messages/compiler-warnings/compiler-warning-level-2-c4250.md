@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: Advertencia de compilador advertencia (nivel 2) C4250 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d92a337e3ded4b958bb9d1dbb7359d21f28d619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'clase1' : hereda 'clase2::miembro' mediante dominación  
+# <a name="compiler-warning-level-2-c4250"></a>Advertencia del compilador (nivel 2) C4250
+'clase1': hereda 'clase2:: miembro' mediante dominación  
   
- Dos o más miembros tienen el mismo nombre.  El miembro de `class2` es heredado, porque es una clase base para las demás clases que contiene.  
+ Dos o más miembros tienen el mismo nombre. El `class2` es heredado, porque es una clase base para las demás clases que contiene este miembro.  
   
- Para suprimir la advertencia C4250, utilice el pragma [warning](../../preprocessor/warning.md).  
+ Para suprimir la advertencia C4250, utilice el [advertencia](../../preprocessor/warning.md) pragma.  
   
- Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre de una clase derivada domina un nombre de una clase base.  Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::func\(\) mediante la clase débil, y la dominant::func\(\) mediante la clase dominante.  Una llamada incompleta de func\(\) a través de un objeto de clase de rombo siempre llama a la instancia dominate::func\(\).  Si la clase débil fuera a introducir una instancia de func\(\), ninguna definición dominaría y la llamada se marcaría como ambigua.  
+ Dado que una clase base virtual se comparte entre varias clases derivadas, un nombre en una clase derivada domina un nombre en una clase base. Por ejemplo, dada la siguiente jerarquía de clases, hay dos definiciones de funciones heredadas dentro del rombo: la instancia vbc::Func() mediante la clase débil y la dominante:: func() a través de la clase dominante. Una llamada incompleta de func() a través de un objeto de clase de rombo siempre llama a la instancia dominate:: func.  Si la clase débil fuera a introducir una instancia de func(), ninguna definición dominaría y la llamada se marcaría como ambigua.  
   
 ```  
 // C4250.cpp  
@@ -54,8 +53,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4250.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera la advertencia C4250.  
   
 ```  
 // C4250_b.cpp  
@@ -86,8 +85,8 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
- Este ejemplo muestra una situación más compleja.  El ejemplo siguiente genera el error C4250.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo muestra una situación más compleja. El ejemplo siguiente genera la advertencia C4250.  
   
 ```  
 // C4250_c.cpp  

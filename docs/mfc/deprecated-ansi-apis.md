@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 185ed8c530f6d18e22fddadaa668e37af66351b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ba520f133ff020b6a1a51e8be7ae75b6fcdb969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI en desuso
 La biblioteca (Microsoft Foundation Classes) está migrando hacia las clases y métodos que se basan en el juego de caracteres Unicode. Por lo tanto, las versiones ANSI de los diversos métodos MFC están en desuso. Utilice las versiones de Unicode de estos métodos en las aplicaciones futuras.  

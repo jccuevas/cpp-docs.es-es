@@ -1,48 +1,48 @@
 ---
-title: "&lt;remarks&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "remarks"
-  - "<remarks>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<remarks> (etiqueta XML) [C++]"
-  - "remarks (etiqueta XML) [C++]"
+title: '&lt;comentarios&gt; (Visual C++) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- remarks
+- <remarks>
+dev_langs: C++
+helpviewer_keywords:
+- <remarks> C++ XML tag
+- remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81703f5bf7b7980c3f1f032658a5d378f4ef5207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;remarks&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La etiqueta \<remarks\> se utiliza para agregar información sobre un tipo, de modo que completa la información especificada con [\<summary\>](../ide/summary-visual-cpp.md).  Esta información se muestra en [Examinador de objetos](http://msdn.microsoft.com/es-es/f89acfc5-1152-413d-9f56-3dc16e3f0470) y en el informe web de comentarios de código.  
+# <a name="ltremarksgt-visual-c"></a>&lt;comentarios&gt; (Visual C++)
+La etiqueta \<remarks> se usa para agregar información sobre un tipo y complementa la información especificada con [\<summary>](../ide/summary-visual-cpp.md). Esta información se muestra en el [Examinador de objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) y en el informe Web de comentario de código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <remarks>description</remarks>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `description`  
  Descripción del miembro.  
   
-## Comentarios  
- Compile con el parámetro [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+## <a name="remarks"></a>Comentarios  
+ Compile con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para procesar los comentarios de documentación a un archivo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // xml_remarks_tag.cpp  
@@ -60,5 +60,5 @@ using namespace System;
 public ref class MyClass {};  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentación de XML](../ide/xml-documentation-visual-cpp.md)

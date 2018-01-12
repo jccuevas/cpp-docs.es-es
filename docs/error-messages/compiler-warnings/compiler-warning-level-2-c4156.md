@@ -1,36 +1,35 @@
 ---
-title: "Advertencia del compilador (nivel 2) C4156 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4156"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4156"
+title: Compilador advertencia (nivel 2) C4156 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4156
+dev_langs: C++
+helpviewer_keywords: C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce2e30be92e555584fef0977674b03a550500e6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 2) C4156
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-eliminación de expresión de matriz sin utilizar el formato de matriz de 'delete'; formato de matriz sustituido  
+# <a name="compiler-warning-level-2-c4156"></a>Compilador C4156 de advertencia (nivel 2)
+eliminación de una expresión de matriz sin utilizar la forma de matriz de 'delete'; formato de matriz sustituido  
   
- El formato de **delete** que no es de matriz no puede eliminar una matriz.  El compilador convirtió **delete** a la forma de matriz.  
+ La forma de matriz no **eliminar** no se puede eliminar una matriz. El compilador traducía **eliminar** a la forma de matriz.  
   
- Esta advertencia se produce sólo con las extensiones de Microsoft \(\/Ze\).  
+ Esta advertencia se produce solo en las extensiones de Microsoft (/Ze).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // C4156.cpp  

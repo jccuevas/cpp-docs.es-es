@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4163
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4163
+f1_keywords: C4163
+dev_langs: C++
+helpviewer_keywords: C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2bfe06b1eb7c05389194d628330515b64e3f8eb7
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6eb19f9b848268835d7fbb42f8cf1548f08853c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4163"></a>Advertencia del compilador (nivel 1) C4163
 'identifier': no está disponible como función intrínseca.  
   
- No se puede usar la función especificada como un [intrínseco](../../preprocessor/intrinsic.md) (función). El compilador omite el nombre de función no válido.  
+ No se puede usar la función especificada como una función [intrínseca](../../preprocessor/intrinsic.md) . El compilador omite el nombre de función no válido.  
   
  El ejemplo siguiente genera la advertencia C4163:  
   

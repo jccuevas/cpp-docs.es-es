@@ -1,37 +1,36 @@
 ---
-title: "Advertencia del compilador (nivel 4) C4431 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4431"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4431"
+title: Compilador advertencia (nivel 4) C4431 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4431
+dev_langs: C++
+helpviewer_keywords: C4431
 ms.assetid: 58434ab6-dd8d-427b-953a-602fb7453ae6
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6594d50cf3688565bc2570ba536ddb908c482f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Advertencia del compilador (nivel 4) C4431
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-falta el especificador de tipo; se presupone int.Nota: C no admite default\-int  
+# <a name="compiler-warning-level-4-c4431"></a>Advertencia del compilador (nivel 4) C4431
+falta el especificador de tipo; se presupone int. Nota: C no admite default-int  
   
- Este error puede producirse como resultado del trabajo de conformidad del compilador realizado para Visual C\+\+ 2005: Visual C\+\+ ya no crea identificadores sin tipo como int de forma predeterminada.  El tipo de un identificador debe especificarse de forma explícita.  
+ Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: Visual C++ ya no crea identificadores sin tipo como int de forma predeterminada. El tipo de un identificador debe especificarse explícitamente.  
   
- De forma predeterminada, esta advertencia está desactivada.  Para obtener más información, vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
-## Ejemplo  
- El ejemplo siguiente genera el error C4431.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente genera C4431.  
   
 ```  
 // C4431.c  

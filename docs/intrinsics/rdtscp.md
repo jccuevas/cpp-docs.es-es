@@ -1,36 +1,36 @@
 ---
-title: "__rdtscp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtscp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdtscp (función intrínseca)"
-  - "__rdtscp (función intrínseca)"
-  - "rdtscp (función intrínseca)"
+title: __rdtscp | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtscp
+dev_langs: C++
+helpviewer_keywords:
+- rdtscp intrinsic
+- __rdtscp intrinsic
+- rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 972c789e17b2b42e0df7229b94b4f10aaa5ff470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtscp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdtscp"></a>__rdtscp
 **Específicos de Microsoft**  
   
- Genera la instrucción de `rdtscp` , escribe `TSC_AUX[31:0`\] en memoria, y devuelve el número de marca de tiempo 64 bits \(resultado de`TSC)` .  
+ Genera el `rdtscp` escribe instrucciones, `TSC_AUX[31:0`] a la memoria y devuelve el contador de marca de tiempo de 64 bits (`TSC)` resultado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 unsigned __int64 __rdtscp(  
@@ -38,32 +38,32 @@ unsigned __int64 __rdtscp(
 );  
 ```  
   
-#### Parámetros  
- \[out\] `Aux`  
- Puntero a una ubicación que contendrá el contenido del registro equipo\-específico `TSC_AUX[31:0]`.  
+#### <a name="parameters"></a>Parámetros  
+ [out] `Aux`  
+ Puntero a una ubicación que contiene el contenido del Registro específicas del equipo `TSC_AUX[31:0]`.  
   
-## Valor devuelto  
- Un número entero de 64 bits sin signo.  
+## <a name="return-value"></a>Valor devuelto  
+ Un contador de entero sin signo de 64 bits.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
-|`__rdtscp`|Familia 0Fh de AMD NPT o versiones posteriores|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
+|`__rdtscp`|Familia de AMD NPT 0Fh o versiones posteriores|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Este intrínseco genera la instrucción de `rdtscp` .  Para determinar la compatibilidad de hardware para esta instrucción, llame a intrínsecos de `__cpuid`con `InfoType=0x80000001` y compruebe el bit 27 de `CPUInfo[3] (EDX)`.  Este bit es 1 si se admite la instrucción, y 0 de otra manera.  Si ejecuta el código que utiliza este intrínseco en el hardware que no admite la instrucción de `rdtscp` , los resultados son imprevisibles.  
+## <a name="remarks"></a>Comentarios  
+ Esta función intrínseca genera el `rdtscp` instrucción. Para determinar la compatibilidad de hardware con esta instrucción, llame a la `__cpuid` intrínseco con `InfoType=0x80000001` y comprobar bit 27 de `CPUInfo[3] (EDX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario.  Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `rdtscp` instrucciones, los resultados son imprevisibles.  
   
 > [!CAUTION]
->  A diferencia de `rdtsc`, `rdtscp` es una instrucción de serializar; sin embargo, el compilador puede mover código alrededor de este intrínseco.  
+>  A diferencia de `rdtsc`, `rdtscp` es una instrucción de serialización; no obstante, el compilador puede mover código alrededor de esta función intrínseca.  
   
- La interpretación del valor de CAC en esta compilación de hardware diferencia de que en versiones anteriores de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Vea los manuales de hardware para obtener más información.  
+ La interpretación del valor TSC en esta generación de hardware difiere del comportamiento en las versiones anteriores de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Consulte los manuales de hardware para obtener más información.  
   
- El significado del valor en `TSC_AUX[31:0]` depende del sistema operativo.  
+ El significado del valor de `TSC_AUX[31:0]` depende del sistema operativo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 #include <intrin.h>   
@@ -78,10 +78,14 @@ int main()
 }  
 ```  
   
-  **3363423610155519 indica TSC\_AUX eran 0**   
-## Específico de Microsoft de FINAL  
- Copyright 2007 por Advanced Micro Devices, Inc reservados todos los derechos.  Optimizado con permiso de Advanced Micro Devices, Inc  
+```Output  
+3363423610155519 ticks  
+TSC_AUX was 0  
+```  
   
-## Vea también  
- [\_\_rdtsc](../intrinsics/rdtsc.md)   
+**FIN de Específicos de Microsoft**  
+ Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.  
+  
+## <a name="see-also"></a>Vea también  
+ [__rdtsc](../intrinsics/rdtsc.md)   
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

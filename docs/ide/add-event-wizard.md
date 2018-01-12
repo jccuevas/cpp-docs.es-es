@@ -1,64 +1,63 @@
 ---
-title: "Asistente para agregar eventos | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.event.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Asistente para agregar eventos [C++]"
+title: Asistente para agregar eventos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.event.overview
+dev_langs: C++
+helpviewer_keywords: Add Event Wizard [C++]
 ms.assetid: bdd2a7bb-13d5-44d7-abc9-e785ba4e05ce
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 62ecbe7dece323ce5e99fbe32b3b936fe3661362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Asistente para agregar eventos
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Este asistente agrega un evento a un proyecto de control ActiveX de MFC.  Puede especificar su propio evento, personalizar un evento estándar habitual o seleccionar eventos estándar en una lista.  
+# <a name="add-event-wizard"></a>Asistente para agregar eventos
+Este asistente agrega un evento a un proyecto de control ActiveX de MFC. Puede especificar su propio evento, puede personalizar un evento estándar habitual o puede seleccionar de una lista de eventos estándar.  
   
  **Nombre del evento**  
- Define el nombre que usan los clientes de automatización para solicitar un evento a la clase.  Escriba un nombre o selecciónelo en la lista.  
+ Establece el nombre utilizado por los clientes de automatización para solicitar un evento de la clase. Escriba un nombre o seleccione uno de la lista.  
   
  **Tipo de evento**  
- Indica el tipo de evento que se va a agregar.  Solo está disponible si lo selecciona en la lista **Nombre de evento**.  
+ Indica el tipo de evento para agregar. Disponible solo si se selecciona en el **nombre del evento** lista.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Estándar**|Especifica que se implementa para esta clase un evento estándar; por ejemplo, un clic en un botón.  Los eventos estándar están definidos en la biblioteca MFC \(Microsoft Foundation Class\).|  
-|**Personalizar**|Especifica que se suministra una implementación del evento definida por el usuario.|  
+|**Existencias**|Especifica que un evento estándar, como un clic del botón, se implementará para esta clase. Eventos estándar se definen en la biblioteca (Microsoft Foundation Classes).|  
+|**Custom**|Especifica que va a proporcionar su propia implementación del evento.|  
   
  **Nombre interno**  
- Define el nombre de la función miembro que envía el evento.  Sólo está disponible para eventos personalizados.  El nombre está basado en **Nombre del evento**.  Puede cambiar el nombre interno si desea suministrar un nombre diferente del especificado por **Nombre del evento**.  
+ Establece el nombre de la función miembro que envía el evento. Disponible solo para los eventos personalizados. El nombre se basa en **nombre del evento**. Puede cambiar el nombre interno si desea proporcionar un nombre distinto al **nombre del evento**.  
   
  **Tipo de parámetro**  
- Establece el tipo del **Nombre de parámetro**.  Selecciónelo en la lista.  
+ Establece el tipo para el **nombre de parámetro**. Seleccione el tipo de la lista.  
   
  **Nombre de parámetro**  
- Define el nombre de un parámetro que se pasa a través del evento.  Después de escribir el nombre, deberá hacer clic en **Agregar** para agregarlo a la lista de parámetros.  
+ Establece el nombre de un parámetro que se pasa a través del evento. Después de escribir el nombre, debe hacer clic en **agregar** para agregarlo a la lista de parámetros.  
   
- Después de hacer clic en **Agregar**, el nombre de parámetro aparece en la **Lista de parámetros**.  
+ Una vez que pulses **agregar**, el nombre del parámetro aparece en **lista de parámetros**.  
   
 > [!NOTE]
->  Si especifica un nombre de parámetro y hace clic en **Finalizar** antes de hacer clic en **Agregar**, el parámetro no se agrega al evento.  Debe buscar el método e insertar el parámetro de forma manual. **Lista de parámetros**  
+>  Si especifica un nombre de parámetro y, a continuación, haga clic en **finalizar** antes de hacer clic **agregar**, entonces, el parámetro no se agrega al evento. Debe buscar el método e insertar el parámetro manualmente. **Lista de parámetros**  
   
- **Agregar**  
- Agrega el parámetro especificado en **Nombre de parámetro**, así como su tipo, a la **Lista de parámetros**.  Debe hacer clic en **Agregar** para agregar un parámetro a la lista.  
+ **Add**  
+ Agrega el parámetro especificado en **nombre de parámetro**y su tipo, a **lista de parámetros**. Debe hacer clic en **agregar** para agregar un parámetro a la lista.  
   
  **Remove**  
- Quita de la lista el parámetro seleccionado en **Lista de parámetros**.  
+ Quita el parámetro seleccionado en **lista de parámetros** en la lista.  
   
  **Lista de parámetros**  
- Muestra todos los parámetros, junto con sus tipos, agregados para el método.  A medida que agregue parámetros, el asistente los irá actualizando en la **Lista de parámetros**, donde se muestran junto con su tipo.  
+ Muestra todos los parámetros y sus tipos agregados actualmente al método. A medida que agregue parámetros, el asistente actualiza **lista de parámetros** para mostrar cada parámetro con su tipo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Agregar un evento](../ide/adding-an-event-visual-cpp.md)

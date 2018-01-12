@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4928
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4928
+f1_keywords: C4928
+dev_langs: C++
+helpviewer_keywords: C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 019a54b9911bd749e067a3a6989a8f79513f7181
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5f096ada450818f8175a8807d074b407afd2d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4928"></a>Advertencia del compilador (nivel 1) C4928
 inicialización de copia no válida; se aplicó implícitamente más de una conversión definida por el usuario  
   
  Se encontró más de una rutina de conversión definida por el usuario. El compilador el código que ejecuta en todas las rutinas de ese tipo.  
   
- De forma predeterminada, esta advertencia está desactivada. Consulte [advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obtener más información.  
+ De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.  
   
  El ejemplo siguiente genera C4928:  
   

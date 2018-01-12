@@ -1,36 +1,37 @@
 ---
-title: "__inwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inwordstring"
-  - "__inwordstring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__inwordstring (función intrínseca)"
-  - "rep insw (instrucción)"
+title: __inwordstring | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inwordstring
+- __inwordstring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __inwordstring intrinsic
+- rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8e788020ddb88f2bd95674b723a44686ec8bd05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# __inwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inwordstring"></a>__inwordstring
 **Específicos de Microsoft**  
   
- Lee datos de puerto especificado mediante la instrucción de `rep insw` .  
+ Lee datos desde el puerto especificado con el `rep insw` instrucción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void __inwordstring(  
@@ -40,28 +41,28 @@ void __inwordstring(
 );  
 ```  
   
-#### Parámetros  
- \[in\] `Port`  
- El puerto de lectura.  
+#### <a name="parameters"></a>Parámetros  
+ [in] `Port`  
+ El puerto que leer.  
   
- \[out\] `Buffer`  
- Los datos leídos de puerto se escribe aquí.  
+ [out] `Buffer`  
+ Aquí se escriben los datos que se leen del puerto.  
   
- \[in\] `Count`  
- El número de palabras de datos a la lectura.  
+ [in] `Count`  
+ El número de palabras de datos que se va a leer.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Intrínseco|Arquitectura|  
-|----------------|------------------|  
+|Función intrínseca|Arquitectura|  
+|---------------|------------------|  
 |`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Archivo de encabezado** \<intrin.h\>  
+ **Archivo de encabezado** \<intrin.h >  
   
-## Comentarios  
- Esta rutina sólo está disponible como intrínseco.  
+## <a name="remarks"></a>Comentarios  
+ Esta rutina solo está disponible como función intrínseca.  
   
-## Específico de Microsoft de FINAL  
+**FIN de Específicos de Microsoft**  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

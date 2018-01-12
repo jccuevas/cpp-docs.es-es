@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03f9547197e2d5dca26fd17c9d4090eb20e795ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing-illustration"></a>Ilustración de enrutamiento de comandos
 Como ejemplo, considere un mensaje de comando de un elemento de menú Borrar todo en el menú de edición de una aplicación MDI. Suponga que la función de controlador para este comando resulta ser una función miembro de clase de documento de la aplicación. Le mostramos cómo ese comando llega a su controlador después de que el usuario elija el elemento de menú:  
