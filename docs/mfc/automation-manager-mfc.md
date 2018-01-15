@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df073aa0e831d6809b3fcd02fb651574ab47c7e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 338b619580ef7967d871ff3f960fc467555ab72a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-manager-mfc"></a>Administrador de Automation (MFC)
 AUTMGR32. EXE debe copiarse al directorio del sistema de Windows de cada máquina que se pretende proporcionar objetos de automatización remota. Para Windows 95 y Windows 98, este directorio suele ser C:\WINDOWS\SYSTEM. Para Windows NT y Windows 2000, suele ser C:\WINNT\SYSTEM32.  

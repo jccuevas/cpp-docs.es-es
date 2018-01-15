@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 Crear un archivo nuevo. `_creat` y `_wcreat` han quedado en desuso; use [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md) en su lugar.  
@@ -101,7 +84,7 @@ int _wcreat(
   
  Si `filename` es NULL, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven -1.  
   
- Para obtener más información sobre estos y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Comentarios  
  La función `_creat` crea otro archivo o abre y trunca uno existente. `_wcreat` es una versión con caracteres anchos de `_creat`; el argumento `filename` para `_wcreat` es una cadena de caracteres anchos. Por lo demás, `_wcreat` y `_creat` se comportan de forma idéntica.  
@@ -131,7 +114,7 @@ int _wcreat(
 |`_creat`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
 |`_wcreat`|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
   

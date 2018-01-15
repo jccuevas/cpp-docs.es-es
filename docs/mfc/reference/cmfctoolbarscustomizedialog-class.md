@@ -35,11 +35,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69002f6b0b326b9ad4eb9a5aaa2162558ff368af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 978303c9edaec2d9776d6e1c81b530df791ca5ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Clase CMFCToolBarsCustomizeDialog
 Un cuadro de diálogo no modal de tabulación ( [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .  
@@ -56,14 +57,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Construye un objeto `CMFCToolBarsCustomizeDialog`.|  
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Inserta un botón de barra de herramientas en la lista de comandos en el **comandos** página|  
 |`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Carga un menú de los recursos y las llamadas [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) a ese menú Agregar a la lista de comandos en el **comandos** página.|  
@@ -89,7 +90,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Lo llama el marco de trabajo para determinar si la lista de herramientas definidas por el usuario es válida.|  
 |`CMFCToolBarsCustomizeDialog::`[CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Lo llama el marco cuando cambian las propiedades de una herramienta definido por el usuario.|  

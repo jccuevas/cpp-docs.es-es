@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 633bd52b64ba6c4c507867320585b8bc513e80c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99493657313d480559d232bf9033dfb7a7a585c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-views"></a>Usar vistas
 Son las responsabilidades de la vista para mostrar gráficamente los datos del documento al usuario para que acepte e interpretar proporcionados por el usuario que las operaciones en el documento. Las tareas para escribir la clase de vista son:  

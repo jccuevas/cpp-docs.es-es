@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInvalidArgException
 - AFX/CInvalidArgException
 - AFX/CInvalidArgException::CInvalidArgException
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInvalidArgException class
+dev_langs: C++
+helpviewer_keywords: CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 4091c0e8a35320482eba193c89c90982c7e4fca9
-ms.contentlocale: es-es
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 03f9bea1c9e5e88856bbf5a5aa2e824a2c99963c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinvalidargexception-class"></a>Clase CInvalidArgException
 Esta clase representa una condición de excepción de argumento no válido.  
@@ -55,14 +38,14 @@ class CInvalidArgException : public CSimpleException
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|El constructor.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un `CInvalidArgException` objeto representa una condición de excepción de argumento no válido.  
   
- Para obtener más información sobre el control de excepciones, consulte la [clase CException](../../mfc/reference/cexception-class.md) tema y [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ Para obtener más información sobre el control de excepciones, consulte la [CException (clase)](../../mfc/reference/cexception-class.md) tema y [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -87,6 +70,5 @@ CInvalidArgException();
  No utilice este constructor directamente; Llame a la función global **AfxThrowInvalidArgException**.  
   
 ## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquía](../../mfc/hierarchy-chart.md)   
- [Clase CSimpleException](../../mfc/reference/csimpleexception-class.md)
-
+ [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+ [CSimpleException (clase)](../../mfc/reference/csimpleexception-class.md)

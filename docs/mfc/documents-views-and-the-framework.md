@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6034dc13c554769ab62b37bd1ca143527b5f82e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documents-views-and-the-framework"></a>Documentos, vistas y el marco
 En el núcleo del marco de trabajo MFC son los conceptos de documento y vista. Un documento es un objeto de datos con el que interactúa el usuario en una sesión de edición. Que se crea mediante la `New` o **abiertos** comando el **archivo** menú y normalmente se guarda en un archivo. (Los documentos estándar de MFC, derivados de la clase **CDocument**, son diferentes de los documentos activos y los documentos compuestos OLE.) Una vista es un objeto de ventana a través del cual el usuario interactúa con un documento.  

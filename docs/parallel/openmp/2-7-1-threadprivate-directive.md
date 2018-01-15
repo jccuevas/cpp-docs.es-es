@@ -1,59 +1,59 @@
 ---
-title: "2.7.1 threadprivate Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.1 threadprivate (directiva) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.1 threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La directiva de `threadprivate` crea el archivo\-ámbito denominado, el espacio de nombres\-ámbito, o las variables estáticas de bloque\-ámbito especificadas en private *de la variable\-lista* a un subproceso.  *la variable\-lista* es una lista separada por comas de variables que no tienen un tipo incompleto.  La sintaxis de la directiva de `threadprivate` es la siguiente:  
+# <a name="271-threadprivate-directive"></a>2.7.1 threadprivate (Directiva)
+El `threadprivate` directiva hace que el ámbito de archivo con nombre, ámbito de espacio de nombres o las variables de ámbito de bloque estáticas especificadas en el *lista de variables* privados de un subproceso. *lista de variables* es una lista separada por comas de variables que no tienen un tipo incompleto. La sintaxis de la `threadprivate` directiva es como sigue:  
   
 ```  
 #pragma omp threadprivate(variable-list) new-line  
 ```  
   
- Cada copia de una variable de `threadprivate` inicializa una vez, en un punto sin especificar en el programa antes de la primera referencia a esa copia, y en la forma habitual \(es decir, como la copia maestra se inicializa en una ejecución en serie del programa\).  Observe que si un objeto se hace referencia en un inicializador explícito de una variable de `threadprivate` , y el valor del objeto se modifica antes de la primera referencia a una copia de la variable, el comportamiento no está especificado.  
+ Cada copia de un `threadprivate` variable se inicializa una vez, en un punto especificado en el programa antes de la primera referencia a dicha copia y de la manera habitual (es decir, como la copia maestra se inicializaría en una ejecución en serie del programa). Tenga en cuenta que si se hace referencia a un objeto en un inicializador explícito de un `threadprivate` variable y el valor del objeto se modifica antes de la primera referencia a una copia de la variable, a continuación, el comportamiento no está especificado.  
   
- Como con ninguna variable privada, un subproceso no debe hacer referencia a la copia de otro subproceso de un objeto de `threadprivate` .  Durante las regiones en serie y áreas principales del programa, las referencias estarán a la copia del subproceso principal del objeto.  
+ Como con cualquier variable privada, un subproceso no debe hacer referencia a copia de otro subproceso de un `threadprivate` objeto. Durante la serie y regiones maestra del programa, referencias será copia del subproceso principal del objeto.  
   
- Después de la primera región paralela se ejecute, los datos de los objetos de `threadprivate` se garantiza para conservar sólo si se ha deshabilitado el mecanismo dinámico de subprocesos y si permanece el número de subprocesos sin cambiar para todas las regiones paralelas.  
+ Cuando se ejecuta la primera región paralela, los datos en el `threadprivate` se garantiza que los objetos para conservar solo si el mecanismo de subprocesos de dinámico se ha deshabilitado o si el número de subprocesos no se modifica para todas las regiones en paralelo.  
   
- Restricciones de la directiva de `threadprivate` son los siguientes:  
+ Las restricciones a la `threadprivate` directiva son los siguientes:  
   
--   Una directiva de `threadprivate` para variables de archivo\-ámbito o espacio de nombres\-ámbito debe aparecer fuera de cualquier definición o declaración, y debe preceder léxico todas las referencias a variables cualquiera de los en la lista.  
+-   A `threadprivate` directiva para las variables de ámbito de archivo o en el ámbito de espacio de nombres debe aparecer fuera de cualquier definición o declaración y debe preceder léxicamente a todas las referencias a cualquiera de las variables en su lista.  
   
--   Cada variable de *la variable\-lista* de una directiva de `threadprivate` en el ámbito de archivo o de espacio de nombres debe hacer referencia a una declaración de variable en el ámbito del archivo o el espacio de nombres que precede léxicamente a la directiva.  
+-   Cada variable en el *lista de variables* de un `threadprivate` directiva en el ámbito de archivo o espacio de nombres debe hacer referencia a una declaración de variable en el ámbito de archivo o espacio de nombres que precede léxicamente a la directiva.  
   
--   Una directiva de `threadprivate` para las variables estáticas de bloque\-ámbito debe aparecer en el ámbito de la variable y no en un ámbito anidado.  La directiva debe preceder léxico todas las referencias a variables cualquiera de los en la lista.  
+-   A `threadprivate` directiva para las variables de ámbito de bloque estáticos debe aparecer en el ámbito de la variable y no en un ámbito anidado. La directiva debe preceder léxicamente a todas las referencias a cualquiera de las variables en su lista.  
   
--   Cada variable de *la variable\-lista* de una directiva de `threadprivate` en ámbito de bloque debe hacer referencia a una declaración de variable en el mismo ámbito que precede léxicamente a la directiva.  La declaración de variable debe usar el especificador static de la clase de almacenamiento.  
+-   Cada variable en el *lista de variables* de un `threadprivate` (directiva) en el ámbito de bloque debe hacer referencia a una declaración de variable en el mismo ámbito que precede léxicamente a la directiva. La declaración de variable debe utilizar el especificador de clase de almacenamiento estática.  
   
--   Si una variable se especifica en una directiva de `threadprivate` en una unidad de traducción, debe especificarse en una directiva de `threadprivate` en cada unidad de traducción en la que se declara.  
+-   Si se especifica una variable en un `threadprivate` directivas en una unidad de traducción, se debe especificar en una `threadprivate` la directiva en cada unidad de traducción en el que se declara.  
   
--   una variable de `threadprivate` no debe aparecer en ninguna cláusula excepto `copyin`, `copyprivate`, `schedule`, `num_threads`, o la cláusula de **If \[SQL2008\]** .  
+-   A `threadprivate` variable no debe aparecer en cualquier cláusula excepto la `copyin`, `copyprivate`, `schedule`, `num_threads`, o la **si** cláusula.  
   
--   la dirección de una variable de `threadprivate` no es una constante de dirección.  
+-   La dirección de un `threadprivate` la variable no es una constante de dirección.  
   
--   una variable de `threadprivate` no debe tener un tipo incompleto o un tipo de referencia.  
+-   Un `threadprivate` variable no debe tener un tipo incompleto o un tipo de referencia.  
   
--   Una variable de `threadprivate` con el tipo de clase POD debe tener un constructor accesible, inequívoca de copia si se declara con un inicializador explícito.  
+-   Un `threadprivate` variable con tipo de clase POD no debe tener un constructor de copias sea accesible y no ambigua, si se declara con un inicializador explícito.  
   
- El ejemplo siguiente se muestra cómo la modificación de una variable que aparece en un inicializador puede producir un comportamiento no especificado, y también cómo evitar este problema mediante un objeto auxiliar y un constructor.  
+ En el ejemplo siguiente se muestra cómo modificar una variable que aparece en un inicializador puede provocar un comportamiento no especificado así como a evitar este problema mediante el uso de un objeto auxiliar y un constructor de copias.  
   
 ```  
 int x = 1;  
@@ -75,8 +75,8 @@ void f(int n) {
 }  
 ```  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   Los subprocesos dinámicos, vea [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en la página 39.  
+-   Subprocesos dinámicos, consulte [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en página 39.  
   
--   la variable de entorno`OMP_DYNAMIC` , vea [sección 4,3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49.
+-   `OMP_DYNAMIC`vea de variable de entorno [sección 4.3](../../parallel/openmp/4-3-omp-dynamic.md) en la página 49.

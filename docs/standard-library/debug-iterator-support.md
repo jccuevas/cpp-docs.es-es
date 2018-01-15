@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 La biblioteca en tiempo de ejecución de Visual C++ detecta un uso incorrecto del iterador, valida y muestra un cuadro de diálogo en tiempo de ejecución. Para habilitar la compatibilidad con el iterador de depuración, debe usar versiones de depuración de la biblioteca estándar de C++ y la biblioteca en tiempo de ejecución de C para compilar el programa. Para obtener más información, vea [Características de la biblioteca CRT](../c-runtime-library/crt-library-features.md). Para obtener información sobre cómo usar iteradores comprobados, vea [Iteradores comprobados](../standard-library/checked-iterators.md).  

@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilación de Common Language Runtime)
 Permite que las aplicaciones y los componentes usen las características de Common Language Runtime (CLR).  
@@ -75,7 +76,7 @@ Permite que las aplicaciones y los componentes usen las características de Comm
  Antes de Visual C++ 2005, **/clr:noAssembly** requería **/LD**. Ahora,**/LD** está implícita cuando especifica **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
- Permite que una aplicación de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] se ejecute en la versión 1 de CLR. Si usa **initialAppDomain**, puede ver algunos de los problemas que se describen en [BUG: AppDomainUnloaded exception when you use managed extensions for Visual C++ components (ERROR: excepción AppDomainUnloaded al usar extensiones administradas para los componentes de Visual C++)](http://go.microsoft.com/fwlink/?LinkID=169465) en el sitio web de soporte técnico de Microsoft.  
+ Permite que una aplicación de [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] se ejecute en la versión 1 de CLR. Si usa **initialAppDomain**, a continuación, puede ver algunos de los problemas que se describen en [error: excepción de AppDomainUnloaded al usar extensiones administradas para los componentes de Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) en Microsoft Sitio Web de soporte técnico.  
   
  Las aplicaciones que se compilan con **initialAppDomain** no se deben usar en otras que usan ASP.NET porque estas no son compatibles con la versión 1 de CLR.  
   

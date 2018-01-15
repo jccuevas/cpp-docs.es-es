@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 Obtiene la ruta de acceso completa del directorio de trabajo actual en la unidad especificada.  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` es una versión con caracteres anchos de `_getdcwd`, y su parámetro `buffer` y su valor devuelto son cadenas de caracteres anchos. De lo contrario, los objetos `_wgetdcwd` y `_getdcwd` se comportan de forma idéntica.  
   
- Esta función es segura para subprocesos a pesar de que depende de **GetFullPathName**, que sí misma no es segura para subprocesos. Sin embargo, la seguridad para subprocesos podría ponerse en riesgo si la aplicación multiproceso llama a esta función y a **GetFullPathName**. Para obtener más información, vaya a [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) y busque **GetFullPathName**.  
+ Esta función es segura para subprocesos a pesar de que depende de **GetFullPathName**, que sí misma no es segura para subprocesos. Sin embargo, la seguridad para subprocesos podría ponerse en riesgo si la aplicación multiproceso llama a esta función y a **GetFullPathName**. Para obtener más información, vaya a [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) y busque **GetFullPathName**.  
   
  La versión de esta función con el sufijo `_nolock` tiene un comportamiento idéntico al de esta función, salvo que no es segura para subprocesos y no está protegida contra interferencias de otros subprocesos. Para obtener más información, vea [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
   
@@ -113,7 +114,7 @@ wchar_t *_wgetdcwd(
 |`_getdcwd`|\<direct.h>|  
 |`_wgetdcwd`|\<direct.h> o \<wchar.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
  Consulte el ejemplo de [_getdrive](../../c-runtime-library/reference/getdrive.md).  

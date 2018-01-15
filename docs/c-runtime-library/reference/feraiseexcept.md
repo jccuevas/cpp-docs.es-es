@@ -1,48 +1,48 @@
 ---
-title: "feraiseexcept | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feraiseexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "feraiseexcept"
-  - "fenv/feraiseexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "feraiseexcept (función)"
+title: feraiseexcept | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feraiseexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- feraiseexcept
+- fenv/feraiseexcept
+dev_langs: C++
+helpviewer_keywords: feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ab77da8cee422bab618dc8737ad254b65301ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# feraiseexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="feraiseexcept"></a>feraiseexcept
 Genera las excepciones de punto flotante especificadas.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 int feraiseexcept(  
@@ -50,40 +50,40 @@ int feraiseexcept(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `excepts`  
- Excepciones de punto flotante que se va a generar.  
+ Excepciones de punto flotante que se generan.  
   
-## Valor devuelto  
- Si todas las excepciones especificadas se producen correctamente, devuelve 0.  
+## <a name="return-value"></a>Valor devuelto  
+ Si todas las excepciones especificadas se generan correctamente, devuelve 0.  
   
-## Comentarios  
- El `feraiseexcept` función intenta generar las excepciones de punto flotante especificadas por `excepts`.   El `feraiseexcept` función admite estas macros de excepción, definidas en \< fenv.h \>:  
+## <a name="remarks"></a>Comentarios  
+ La función `feraiseexcept` intenta generar las excepciones de punto flotante especificadas por `excepts`.   La función `feraiseexcept` admite estas macros de excepción, que se definen en \<fenv.h>:  
   
-|Macros de excepción|Descripción|  
-|-------------------------|-----------------|  
-|FE\_DIVBYZERO|Se produjo un error de singularidad o polo en una operación punto flotante anteriormente; se creó un valor infinito.|  
-|FE\_INEXACT|Se forzó la función redondear el resultado de una operación de punto flotante anteriormente almacenado.|  
-|FE\_INVALID|Se produjo un error de dominio en una operación de punto flotante anteriormente.|  
-|FE\_OVERFLOW|Se produjo un error de intervalo; un resultado de la operación de punto flotante anterior era demasiado grande para representarse.|  
-|FE\_UNDERFLOW|Un resultado de la operación de punto flotante anterior era demasiado pequeño para representarlo en precisión completa; se creó un valor desnormalizados.|  
-|FE\_ALLEXCEPT|La operación OR bit a bit de todos los admite excepciones de punto flotante.|  
+|Macro de excepción|Descripción|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Se ha producido un error de singularidad o de polo en una operación de punto flotante anterior; se ha creado un valor infinito.|  
+|FE_INEXACT|Se ha forzado la función a redondear el resultado almacenado de una operación de punto flotante anterior.|  
+|FE_INVALID|Se ha producido un error de dominio en una operación de punto flotante anterior.|  
+|FE_OVERFLOW|Se ha producido un error de intervalo; el resultado de una operación de punto flotante anterior era demasiado grande para representarse.|  
+|FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|  
+|FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|  
   
- El `excepts` argumento puede ser cero, uno de los valores de macros de excepción o bit a bit o de dos o más de las macros de excepción admitidas. Si una de las macros de excepción especificada es FE\_OVERFLOW o FE\_UNDERFLOW, se puede generar la excepción FE\_INEXACT como un efecto secundario.  
+ El argumento `excepts` puede ser cero, uno de los valores de macro de excepción o la operación OR bit a bit de dos o más de las macros de excepción admitidas. Si una de las macros de excepción es FE_OVERFLOW o FE_UNDERFLOW, es posible que se genere la excepción FE_INEXACT como efecto secundario.  
   
- Para utilizar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante el uso de la `#pragma fenv_access(on)` Directiva antes de la llamada. Para obtener más información, consulta [fenv\_access](../../preprocessor/fenv-access.md).  
+ Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).  
   
- **Specific de Microsoft:** las excepciones especificadas en `excepts` se generan en el orden FE\_INVALID, FE\_DIVBYZERO, FE\_OVERFLOW, FE\_UNDERFLOW, FE\_INEXACT. Sin embargo, FE\_INEXACT se puede generar cuando se genera FE\_OVERFLOW o FE\_UNDERFLOW, incluso si no se especifica en `excepts`.**Fin de Específicos de Microsoft**  
+ **Específicos de Microsoft:** las excepciones especificadas en `excepts` se generan por este orden, FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. En cambio, puede generarse FE_INEXACT cuando FE_OVERFLOW o FE_UNDERFLOW se generen, aunque no se especifique en `excepts`. **Fin de Específicos de Microsoft**  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-|Función|Encabezado C|Encabezado C\+\+|  
-|-------------|------------------|----------------------|  
-|`feraiseexcept`|\<fenv.h\>|\<cfenv\>|  
+|Función|Encabezado C|Encabezado C++|  
+|--------------|--------------|------------------|  
+|`feraiseexcept`|\<fenv.h>|\<cfenv>|  
   
- Para obtener información adicional sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   

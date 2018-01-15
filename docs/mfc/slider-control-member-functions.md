@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4be998f617323431e9f24560f1ad57ee89b8da4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bd6c1d05ce7b137e6153ad2ea3fc5df99565a52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slider-control-member-functions"></a>Funciones miembro de control deslizante
 Una aplicación puede llamar el control deslizante de funciones de miembro del control para recuperar información sobre el control deslizante ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) y cambiar sus características.  

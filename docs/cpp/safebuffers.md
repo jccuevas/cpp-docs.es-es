@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 201d4a6493b71a78f2a438ac43c003a8b7d36ce7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Específicos de Microsoft**  
@@ -35,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Los tipos de estructuras de datos que son aptas para la comprobación de seguridad se describen en [/GS (comprobación de seguridad de búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [compilador Security Checks In Depth](http://go.microsoft.com/fwlink/?linkid=7260) en el sitio Web de MSDN.  
+ El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Los tipos de estructuras de datos que son aptas para la comprobación de seguridad se describen en [/GS (comprobación de seguridad de búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [compilador Security Checks In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260) en el sitio Web de MSDN.  
   
  Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el `__declspec(safebuffers)` palabra clave para la declaración de función.  
   

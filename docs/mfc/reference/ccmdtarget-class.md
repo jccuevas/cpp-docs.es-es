@@ -57,11 +57,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaae01c2e63c152139694c9d723b6bde7febf9c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget (clase)
 La clase base para la arquitectura de mapa de mensajes de la biblioteca Microsoft Foundation Class.  
@@ -76,13 +77,13 @@ class CCmdTarget : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Construye un objeto `CCmdTarget`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Muestra el cursor como un cursor de reloj de arena.|  
 |[CCmdTarget::DoOleVerb](#dooleverb)|Hace que una acción especificada por un verbo OLE que se realice.|  

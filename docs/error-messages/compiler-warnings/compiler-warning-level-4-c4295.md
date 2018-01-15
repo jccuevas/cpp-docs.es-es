@@ -1,7 +1,7 @@
 ---
 title: Compilador advertencia (nivel 4) C4295 | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -15,27 +15,31 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5815aab6163c7dc6ffa8bf89bbf56259724d02b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56ffdce8c2790a3944a8f79753177bc80e249778
+ms.sourcegitcommit: bc086a7acbe2d9fd77d115f269cc2a0dbeeb5b88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Advertencia del compilador (nivel 4) C4295
   
 > '*matriz*': matriz es demasiado pequeña para incluir un carácter nulo de terminación  
   
- Se inicializó una matriz, pero el último carácter de la matriz no es null; obtener acceso a la matriz puede producir resultados inesperados.  
+Se inicializó una matriz, pero el último carácter de la matriz no es null; obtener acceso a la matriz como una cadena puede producir resultados inesperados.  
   
 ## <a name="example"></a>Ejemplo  
   
- El ejemplo siguiente genera C4295. Para corregir este problema, podría declarar el tamaño de la matriz más grande para contener una terminación null desde el inicializador.  
+El ejemplo siguiente genera C4295. Para corregir este problema, podría declarar el tamaño de la matriz más grande para contener un carácter nulo final de la cadena de inicializador o podría utilizar una lista de inicializadores de matriz para hacer la intención clear que se trata de una matriz de `char`, no una cadena terminada en null.  
   
 ```C  
-// C4295.c  
-// compile with: /W4  
-  
-int main() {  
-   char a[3] = "abc";   // C4295  
-}  
+// C4295.c
+// compile with: /W4
+
+
+int main() {
+   char a[3] = "abc";           // C4295
+   char b[3] = {'d', 'e', 'f'}; // No warning
+   a[0] = b[2];
+}
 ```

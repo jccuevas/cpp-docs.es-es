@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 019c295130de7edf14285da813bed79db5ee5404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45986af1a63f79e4466227f767fdf96fd1c2cb35
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Específicos de Microsoft**  
@@ -46,7 +47,7 @@ unsigned char __vmx_vmlaunch(
 ## <a name="remarks"></a>Comentarios  
  Una aplicación puede realizar una operación de entrada en máquina virtual utilizando la [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (función). El [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) función puede utilizarse solo con una VMCS cuyo estado de inicio es `Clear`y el [__vmx_vmresume](../intrinsics/vmx-vmresume.md) función puede utilizarse solo con una VMCS cuyo estado de inicio es `Launched`. Por consiguiente, utilice la [__vmx_vmclear](../intrinsics/vmx-vmclear.md) función para establecer el estado de inicio de una VMCS a `Clear`y, a continuación, use la [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) función para la primera operación de entrada en máquina virtual y el [__vmx_vmresume](../intrinsics/vmx-vmresume.md) función para las operaciones de entrada en máquina virtual posteriores.  
   
- El `__vmx_vmlaunch` función es equivalente a la `VMLAUNCH` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sitio.  
+ El `__vmx_vmlaunch` función es equivalente a la `VMLAUNCH` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   

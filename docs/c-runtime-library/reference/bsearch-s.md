@@ -31,11 +31,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a31ba82059748d49087546e2812d1f1fd32f4628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 Realiza una búsqueda binaria de una matriz ordenada. Versión de [bsearch](../../c-runtime-library/reference/bsearch.md) con mejoras de seguridad, como se explica en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -82,10 +83,10 @@ void *bsearch_s(
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
-|`NULL`|cualquiera|cualquiera|cualquiera|cualquiera|`EINVAL`|  
-|cualquiera|`NULL`|cualquiera|!= 0|cualquiera|`EINVAL`|  
-|cualquiera|cualquiera|cualquiera|cualquiera|= 0|`EINVAL`|  
-|cualquiera|cualquiera|`NULL`|an|cualquiera|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|= 0|`EINVAL`|  
+|any|any|`NULL`|an|cualquiera|`EINVAL`|  
   
 ## <a name="remarks"></a>Comentarios  
  La función `bsearch_s` realiza una búsqueda binaria de una matriz ordenada de elementos `num` , cada uno de ellos de `width` bytes de tamaño. El valor `base` es un puntero a la base de la matriz que se va a buscar y `key` es el valor buscado. El parámetro `compare` es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada con un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:  
@@ -104,7 +105,7 @@ void *bsearch_s(
 |-------------|---------------------|  
 |`bsearch_s`|\<stdlib.h> y \<search.h>|  
   
- Para obtener información adicional de compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
+ Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="example"></a>Ejemplo  
  Este programa ordena una matriz de cadenas con [qsort_s](../../c-runtime-library/reference/qsort-s.md)y, luego, usa bsearch_s para buscar la palabra "cat".  

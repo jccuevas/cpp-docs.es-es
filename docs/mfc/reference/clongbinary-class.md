@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 279786f307e0e6f25447141be8df9cb7fcb5d917
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clongbinary-class"></a>CLongBinary (clase)
 Simplifica el trabajo con objetos de datos binarios de gran tamaño (a menudo denominados BLOB, u "objetos binarios grandes") en una base de datos.  
@@ -39,13 +40,13 @@ class CLongBinary : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CLongBinary::CLongBinary](#clongbinary)|Construye un objeto `CLongBinary`.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|Contiene el tamaño real de bytes del objeto de datos cuyo identificador se almacena en `m_hData`.|  
 |[CLongBinary::m_hData](#m_hdata)|Contiene un Windows `HGLOBAL` identificador a un objeto de la imagen real.|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationSize [MFC], CAnimationSize
 - CAnimationSize [MFC], AddTransition
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 418bba617261ee11322a3d5a83ba07b197c83427
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationsize-class"></a>Clase CAnimationSize
 Implementa la funcionalidad de un objeto cuyas dimensiones se pueden animar.  
@@ -59,13 +57,13 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationSize::CAnimationSize](#canimationsize)|Sobrecargado. Construye un objeto de tamaño de la animación.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationSize::AddTransition](#addtransition)|Agrega las transiciones de ancho y alto.|  
 |[CAnimationSize::GetCX](#getcx)|Proporciona acceso a CAnimationVariable que representa el ancho.|  
@@ -76,20 +74,20 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Coloca las variables de animación encapsulado en una lista. (Invalida [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationSize::operator CSize](#operator_csize)|Convierte un CAnimationSize un CSize.|  
 |[CAnimationSize::operator =](#operator_eq)|Asigna szSrc a CAnimationSize.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|La variable de animación encapsulado que representa el ancho del tamaño de la animación.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|La variable de animación encapsulado que representa el alto del tamaño de la animación.|  
@@ -282,4 +280,3 @@ void SetDefaultValue(const CSize& szDefault);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

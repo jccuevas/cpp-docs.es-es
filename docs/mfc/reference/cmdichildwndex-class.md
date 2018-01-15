@@ -123,11 +123,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8259103f719fadb0543ae91ffc3334d38affdea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 La `CMDIChildWndEx` clase proporciona la funcionalidad de una ventana de ventana secundaria MDI (interfaz) de varios documentos. Extiende la funcionalidad de [CMDIChildWnd (clase)](../../mfc/reference/cmdichildwnd-class.md). El marco requiere esta clase cuando una aplicación MDI utiliza determinadas clases MFC.  
@@ -145,7 +146,7 @@ class CMDIChildWndEx : public CMDIChildWnd
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Se llama internamente por el marco de trabajo para activar el marco de nivel superior cuando se debe activar la aplicación de una pestaña de la barra de tareas.|  
 |`CMDIChildWndEx::AddDockSite`|Este método no se utiliza o se implementa.|  

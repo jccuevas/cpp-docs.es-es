@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 C++ AMP contiene varias API en el [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) espacio de nombres que puede utilizar para tener acceso a la compatibilidad de textura de GPU. Algunos escenarios comunes son los siguientes:  
@@ -32,7 +33,7 @@ C++ AMP contiene varias API en el [Concurrency:: Graphics](../../parallel/amp/re
  El `norm` y `unorm` tipos son tipos escalares que limitan el intervalo de `float` valores; Esto se conoce como *de sujeción*. Estos tipos se pueden construir explícitamente a partir de otros tipos escalares. En las conversiones, el valor se convierte primero a `float` y, a continuación, se fija en la región correspondiente permitida por norm [-1,0, 1.0] o unorm [0.0, 1.0]. La conversión de +/- infinito devuelve +/-1. La conversión de NaN es indefinida. Norm se puede construir implícitamente a partir de unorm sin pérdida de datos. La conversión implícita del operador a float se define en los siguientes tipos. Los operadores binarios se definen entre estos tipos y otros tipos escalares integrados como `float` y `int`: +, -, *, /, ==,! =, >, \<, > =, < =. También se admiten los operadores de asignación compuestos: +=, -=, \*=, / =. El operador unario de negación (-) se define para los tipos norm.  
   
 ## <a name="short-vector-library"></a>Biblioteca de vectores cortos  
- La biblioteca de vectores cortos proporciona algunas de las funciones de la [tipo de Vector](http://go.microsoft.com/fwlink/p/linkid=248500) que se define en HLSL y normalmente se utiliza para definir elementos de textura. Un vector corto es una estructura de datos que contiene de uno a cuatro valores del mismo tipo. Los tipos admitidos son `double`, `float`, `int`, `norm`, `uint` y `unorm`. Los nombres de tipo se muestran en la siguiente tabla. Para cada tipo, también hay una definición de tipo (`typedef`) correspondiente que no lleva un carácter de subrayado en el nombre. Los tipos que tienen los caracteres de subrayado están en el [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Los tipos que no tienen los caracteres de subrayado están en el [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que están claramente separados de los tipos fundamentales con nombres similares como `__int8` y `__int16`.  
+ La biblioteca de vectores cortos proporciona algunas de las funciones de la [tipo de Vector](http://go.microsoft.com/fwlink/p/?linkid=248500) que se define en HLSL y normalmente se utiliza para definir elementos de textura. Un vector corto es una estructura de datos que contiene de uno a cuatro valores del mismo tipo. Los tipos admitidos son `double`, `float`, `int`, `norm`, `uint` y `unorm`. Los nombres de tipo se muestran en la siguiente tabla. Para cada tipo, también hay una definición de tipo (`typedef`) correspondiente que no lleva un carácter de subrayado en el nombre. Los tipos que tienen los caracteres de subrayado están en el [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Los tipos que no tienen los caracteres de subrayado están en el [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que están claramente separados de los tipos fundamentales con nombres similares como `__int8` y `__int16`.  
   
 ||Longitud 2|Longitud de 3|Longitud de 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C++ AMP contiene varias API en el [Concurrency:: Graphics](../../parallel/amp/re
   
 -   Un vector corto que tiene dos o cuatro componentes. La única excepción es `double_4`, que no se permite.  
   
- El objeto `texture` puede tener un intervalo de 1, 2 o 3. El objeto `texture` se puede capturar solamente por referencia en la expresión lambda de una llamada a `parallel_for_each`. La textura se almacena en la GPU como objetos de textura Direct3D. Para obtener más información sobre las texturas y elementos de textura en Direct3D, vea [Introducción a las texturas en Direct3D 11](http://go.microsoft.com/fwlink/p/linkid=248502).  
+ El objeto `texture` puede tener un intervalo de 1, 2 o 3. El objeto `texture` se puede capturar solamente por referencia en la expresión lambda de una llamada a `parallel_for_each`. La textura se almacena en la GPU como objetos de textura Direct3D. Para obtener más información sobre las texturas y elementos de textura en Direct3D, vea [Introducción a las texturas en Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  El tipo de elemento de textura que se usa puede ser uno de los muchos formatos de textura utilizados en la programación de gráficos. Por ejemplo, un formato RGBA podría utilizar 32 bits, con 8 bits para cada uno de los elementos escalares R, G, B y A. El hardware de textura de una tarjeta gráfica puede tener acceso a los elementos individuales según el formato. Por ejemplo, si se utiliza el formato RGBA, el hardware de textura puede convertir cada elemento de 8 bits en un formato de 32 bits. En C++ AMP, se pueden establecer los bits por elemento escalar del elemento de textura para poder tener acceso automáticamente a los elementos escalares individuales en el código sin utilizar el desplazamiento de bit.  
   
@@ -429,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Interoperabilidad  
 
- El tiempo de ejecución de C++ AMP admite interoperabilidad entre `texture<T,1>` y [ID3D11Texture1D interfaz](http://go.microsoft.com/fwlink/p/LinkId=248503), entre `texture<T,2>` y [ID3D11Texture2D interfaz](http://go.microsoft.com/fwlink/p/LinkId=255317)y entre `texture<T,3>`y [ID3D11Texture3D interfaz](http://go.microsoft.com/fwlink/p/LinkId=255377). El [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) método toma un `texture` objeto y devuelve una `IUnknown` interfaz. El [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) método toma una `IUnknown` interfaz y un `accelerator_view` objeto y devuelve una `texture` objeto.  
+ El tiempo de ejecución de C++ AMP admite interoperabilidad entre `texture<T,1>` y [ID3D11Texture1D interfaz](http://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` y [ID3D11Texture2D interfaz](http://go.microsoft.com/fwlink/p/?linkId=255317)y entre `texture<T,3>`y [ID3D11Texture3D interfaz](http://go.microsoft.com/fwlink/p/?linkId=255377). El [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) método toma un `texture` objeto y devuelve una `IUnknown` interfaz. El [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) método toma una `IUnknown` interfaz y un `accelerator_view` objeto y devuelve una `texture` objeto.  
   
 ## <a name="see-also"></a>Vea también  
  [double_2 (clase)](../../parallel/amp/reference/double-2-class.md)   

@@ -39,11 +39,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 992dbb8150f8fc85ffb0bb56e58a855fa9144e52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c963d55bd87dc84d48f8aafedbd6ba8cfa54d3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float2-class"></a>float_2 (Clase)
 Representa un vector corto de dos números en coma flotante.  
@@ -58,19 +59,19 @@ class float_2;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor float_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |float_2:: get_X||  
 |float_2:: get_xy||  
@@ -87,7 +88,7 @@ class float_2;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |float_2:: operator-||  
 |float_2:: operator--||  
@@ -100,13 +101,13 @@ class float_2;
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[cambio de tamaño constante](#float_2__size)||  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |float_2:: g||  
 |float_2:: GR||  

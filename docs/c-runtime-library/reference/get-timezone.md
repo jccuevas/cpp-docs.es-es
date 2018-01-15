@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46181817aaf455ef777ba479a1bd2abe774ba792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c83765da12b7e29d3e90037508a3cba4aa6d1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettimezone"></a>_get_timezone
 Recupera la diferencia en segundos entre la hora universal coordinada (UTC) y la hora local.  
@@ -62,7 +63,7 @@ Recupera la diferencia en segundos entre la hora universal coordinada (UTC) y la
 ## <a name="remarks"></a>Comentarios  
  La función `_get_timezone` recupera la diferencia en segundos entre la hora UTC y la hora local en forma de entero. El valor predeterminado es 28.800 segundos, hora del Pacífico (ocho horas por detrás de la hora UTC).  
   
- Si `seconds` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
+ Si `seconds` es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -70,7 +71,7 @@ Recupera la diferencia en segundos entre la hora universal coordinada (UTC) y la
 |-------------|---------------------|  
 |`_get_timezone`|\<time.h>|  
   
- Para obtener más información, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Administración del tiempo](../../c-runtime-library/time-management.md)   

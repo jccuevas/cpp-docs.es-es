@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e912d5043c1b908d875dca50af12e38fd05f64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Usar C++ AMP en aplicaciones de la Tienda Windows
-Puede usar C++ AMP (C++ Accelerated Massive Parallelism) en la aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] para realizar cálculos en la GPU (unidad de procesamiento de gráficos) u otros aceleradores de cálculo. Sin embargo, C++ AMP no proporciona las API para trabajar directamente con los tipos de Windows en tiempo de ejecución y este no proporciona un contenedor para C++ AMP. Cuando use los tipos de Windows en tiempo de ejecución en el código, incluidos los que ha creado usted mismo, debe convertirlos en tipos compatibles con C++ AMP.  
+Puede usar C++ AMP (C++ Accelerated Massive Parallelism) en la aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] para realizar cálculos en la GPU (unidad de procesamiento de gráficos) u otros aceleradores de cálculo. Sin embargo, C++ AMP no proporciona las API para trabajar directamente con los tipos de Windows Runtime y este no proporciona un contenedor para C++ AMP. Cuando use los tipos de Windows Runtime en el código, incluidos los que ha creado usted mismo, debe convertirlos en tipos compatibles con C++ AMP.  
   
 ## <a name="performance-considerations"></a>Consideraciones sobre el rendimiento  
- Si usa [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para crear la aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], se recomienda utilizar tipos de los datos antiguos de nivel (POD) junto con almacenamiento contiguo, por ejemplo, `std::vector` o matrices del estilo de C para los datos que se usarán con C++ AMP. Esto puede ayudarle a conseguir un rendimiento mayor que el logrado mediante tipos o contenedores que no sean POD o Windows RT, ya que no se debe realizar ningún cálculo de referencias.  
+ Si usa [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para crear la aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], se recomienda utilizar tipos de los datos antiguos de nivel (POD) junto con almacenamiento contiguo, por ejemplo, `std::vector` o matrices del estilo de C para los datos que se usarán con C++ AMP. Esto puede ayudarle a conseguir un rendimiento mayor que el logrado mediante tipos o contenedores que no sean POD o Windows RT, ya que no se debe realizar ninguna serialización.  
   
  En un kernel de C++ AMP, para obtener acceso a los datos que se almacenan de esta manera, simplemente ajuste `std::vector` o el almacenamiento para la matriz en `concurrency::array_view` y use la vista de matriz en un bucle `concurrency::parallel_for_each`:  
   
@@ -119,8 +120,8 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear la primera aplicación de tienda Windows con C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
- [Crear componentes de Windows en tiempo de ejecución en C++](http://go.microsoft.com/fwlink/p/linkid=249076)
+ [Crear la primera aplicación de tienda Windows con C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
+ [Crear componentes de Windows en tiempo de ejecución en C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
 
 
 

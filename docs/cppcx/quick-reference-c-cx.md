@@ -12,14 +12,15 @@ caps.latest.revision: "31"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 7c6e36d00d27f5fcf32faec666871ced1d9d0ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="quick-reference-ccx"></a>Referencia rápida (C++/CX)
-El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows que solo se ejecutan en un entorno de sistema operativo de confianza, usan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de la [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener la documentación completa, vea [sistema de tipos](../cppcx/type-system-c-cx.md) y [extensiones de componentes para plataformas de tiempo de ejecución](http://go.microsoft.com/fwlink/?LinkId=228720).  
+El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows que solo se ejecutan en un entorno de sistema operativo de confianza, usan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de la [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener la documentación completa, vea [sistema de tipos](../cppcx/type-system-c-cx.md) y [extensiones de componentes para plataformas de tiempo de ejecución](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
  Al compilar en la línea de comandos, utilice la **/ZW** opción del compilador para compilar una aplicación de plataforma Universal de Windows o un componente de Windows en tiempo de ejecución. Para obtener acceso a las declaraciones de en tiempo de ejecución de Windows, que se definen en los archivos de metadatos (.winmd) en tiempo de ejecución de Windows, especifique la `#using` directiva o la **/FU** opción del compilador. Cuando se crea un proyecto para una aplicación de plataforma Universal de Windows, Visual Studio de forma predeterminada establece estas opciones y agrega las referencias a todas las bibliotecas en tiempo de ejecución de Windows.  
   

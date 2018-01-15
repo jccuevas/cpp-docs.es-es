@@ -41,11 +41,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c5627aba75f7eca9680d369c805dc910403b2647
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b64f1efd16a1ac372f6e8ce9ea9e0781046f1892
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspanetask-class"></a>Clase CMFCTasksPaneTask
 El `CMFCTasksPaneTask` clase es una clase auxiliar que representa las tareas para el control de panel de tareas ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). El objeto de tarea representa un elemento en el grupo de tareas ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarea puede tener un comando que el marco ejecuta cuando un usuario hace clic en la tarea y en un icono que aparece a la izquierda del nombre de tarea.  
@@ -60,20 +61,20 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Crea e inicializa un `CMFCTasksPaneTask` objeto.|  
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::SetACCData](#setaccdata)|Determina los datos de accesibilidad para la tarea actual.|  
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determina si la ventana de la tarea se destruye automáticamente.|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determina si el marco de trabajo dibuja una etiqueta de tarea en negrita.|  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cce7a5d24062d06ed1f12d49e4754627f28aa92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-documents-and-views"></a>Inicializar documentos y vistas
 Se crean documentos de dos maneras diferentes, por lo que la clase de documento debe ser compatible con ambos modos. En primer lugar, el usuario puede crear un nuevo documento vacío con el comando archivo nuevo. En ese caso, inicialice el documento en el reemplazo de la [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) función miembro de clase [CDocument](../mfc/reference/cdocument-class.md). En segundo lugar, el usuario puede utilizar el comando Abrir en el menú archivo para crear un nuevo documento cuyo contenido se lee desde un archivo. En ese caso, inicialice el documento en el reemplazo de la [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) función miembro de clase **CDocument**. Si ambos inicializaciones son iguales, puede llamar a una función miembro común desde ambos reemplazos, o `OnOpenDocument` puede llamar a `OnNewDocument` para inicializar un documento limpio y, a continuación, finalizar la operación de apertura.  

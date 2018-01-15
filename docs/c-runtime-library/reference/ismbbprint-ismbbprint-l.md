@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 451128fda38e5733cc9650e4783964d8c8aebfdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2af7888be70a95aed35190b942e55a8a8247abba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
 Determina si el carácter multibyte especificado es un carácter imprimible.  
@@ -74,7 +75,7 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- es distinto de cero para `c`o 0 si no lo es. `_ismbbprint` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbprint_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Configuración regional](../../c-runtime-library/locale.md).  
+ es distinto de cero para `c` o 0 si no lo es. `_ismbbprint` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_ismbbprint_l` es exactamente igual, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -87,4 +88,4 @@ isprint || _ismbbkprint
   
 ## <a name="see-also"></a>Vea también  
  [Clasificación de bytes](../../c-runtime-library/byte-classification.md)   
- [_ismbb (Rutinas)](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb (rutinas)](../../c-runtime-library/ismbb-routines.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 364b883e9106d8356c1f68bead6a9ba0d00dafe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 457866d54fe3f290c40ca70b07e19ec3f337de41
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxon"></a>__vmx_on
 **Específicos de Microsoft**  
@@ -49,7 +50,7 @@ unsigned char __vmx_on(
 |2|Error en la operación sin estado disponible.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `__vmx_on` función corresponde a la `VMXON` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sitio.  
+ El `__vmx_on` función corresponde a la `VMXON` instrucción máquina. Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "Intel Virtualization técnica especificación para la arquitectura IA-32 Intel," documento número C97063-002 en el [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sitio.  
   
 ## <a name="requirements"></a>Requisitos  
   

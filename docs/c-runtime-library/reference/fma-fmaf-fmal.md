@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec77e462b357708153f26b5289f35c2ee7b7a104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Multiplica dos valores juntos, agrega un tercer valor y luego redondea el resultado, sin perder ninguna precisión debido al redondeo intermedio.  
@@ -102,10 +103,10 @@ long double fmal(
   
  De lo contrario, es posible que devuelva uno de los siguientes valores:  
   
-|Problema|Valor devuelto|  
+|Problema|Volver|  
 |-----------|------------|  
 |`x` = INFINITY, `y` = 0 o<br /><br /> `x`= 0, `y` = INFINITO|NaN|  
-|`x` o `y` = exacto ±INFINITY, `z` = INFINITY con el signo opuesto|NaN|  
+|`x`o `y` = ± exacta infinito, `z` = infinito con el signo opuesto|NaN|  
 |`x` o `y` = NaN|NaN|  
 |no (`x` = 0, `y`= indefinido) y `z` = NaN<br /><br /> no (`x`= indefinido, `y`=0) y `z` = NaN|NaN|  
 |Error de intervalo de desbordamiento|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|  
@@ -124,7 +125,7 @@ long double fmal(
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

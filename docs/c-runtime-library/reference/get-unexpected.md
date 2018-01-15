@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_unexpected
+apiname: _get_unexpected
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3be0df8ddd56942986998d3eb8bbc613ba0236e5
-ms.contentlocale: es-es
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d40eab2cb632f7a29d88f0718388ea0582b147d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getunexpected"></a>_get_unexpected
 Devuelve la rutina de finalización a la que debe llamar `unexpected`.  

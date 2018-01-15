@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81cada5fdde3a510bdc26b10d46e48bf017a3a43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2715e1b64c1565d122f6eec012a8a33c2525ac9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Ejemplo: Mostrar un cuadro de diálogo a través de un comando de menú
 Este tema contiene procedimientos para:  
@@ -40,7 +41,7 @@ Este tema contiene procedimientos para:
   
 |Elemento|Nombre o valor|  
 |----------|-------------------|  
-|Aplicación|DisplayDialog|  
+|Application|DisplayDialog|  
 |Comando de menú|Comando de prueba en el menú Ver; Id. de comando = ID_VIEW_TEST|  
 |Cuadro de diálogo|Cuadro de diálogo de prueba; Clase = CTestDialog; Archivo de encabezado = TestDialog.h; Variable = testdlg, ptestdlg|  
 |Controlador de comandos.|OnViewTest|  

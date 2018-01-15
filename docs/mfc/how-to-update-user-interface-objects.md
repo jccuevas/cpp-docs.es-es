@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79a5b24c1e9d71f422748f4c6fb8cba97786462d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91e6d13e840c29d3ea9600183fafd9260966a2f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-update-user-interface-objects"></a>Cómo: Actualizar objetos de la interfaz de usuario
 Normalmente, los elementos de menú y botones de barra de herramientas tienen más de un estado. Por ejemplo, un elemento de menú está deshabilitado (atenuado) si no está disponible en este contexto. Elementos de menú también puede activar o desactivar. Un botón de barra de herramientas también puede deshabilitarse si no está disponible o se pueda proteger.  

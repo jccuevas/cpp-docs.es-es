@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -52,30 +50,16 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f4da11dcce5dfccb6002ef3c3d78c8ae958ad6a0
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69edd654eac52de75de9b928e19f50def894d5e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 Da formato e imprime en la consola. Estas versiones de [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -145,7 +129,7 @@ int _cwprintf_s_l(
 |`_cprintf_s`,`_cprintf_s_l`|\<conio.h>|  
 |`_cwprintf_s`, `_cwprintf_s_l`|\<conio.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Bibliotecas  
  Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
@@ -186,4 +170,4 @@ int main( void )
  [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
  [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
  [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)   
- [Sintaxis de especificación de formato: printf y wprintf (Funciones)](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)
+ [Sintaxis de especificación de formato: printf y wprintf (funciones)](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

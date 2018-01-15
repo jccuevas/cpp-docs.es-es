@@ -14,24 +14,24 @@ helpviewer_keywords:
 - enumerating collections [MFC]
 - collections [MFC], accessing
 - collection classes [MFC]
-- accessing members"
-- arrays [MFC], iterating
-- iteration [MFC], collections
-- member access [MFC], collections
-- list collection iteration [MFC]s
-- MFC collection classes [MFC], accessing members
-- collections [MFC], looping through
-- loop structures [MFC], looping through collections
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
+- ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b3f6e78bfd0beac1c3c5eb2b2248ddaa7b6f1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acceso a todos los miembros de una colección
 Las clases de colección de matriz MFC —tanto basadas en plantillas como no— usan índices para obtener acceso a sus elementos. Las clases de colección de listas y mapas MFC (tanto basadas en plantillas como no) usan un indicador de tipo **POSITION** para describir una posición dada dentro de la colección. Para obtener acceso a uno o más miembros de estas colecciones, primero se inicializa el indicador de posición, después se pasa esa posición repetidamente a la colección y luego se le pide que devuelva el elemento siguiente. La colección no es responsable de mantener la información de estado sobre el progreso de la iteración. Esta información se guarda en el indicador de posición. Pero, en una posición concreta, la colección es responsable de devolver el elemento siguiente.  

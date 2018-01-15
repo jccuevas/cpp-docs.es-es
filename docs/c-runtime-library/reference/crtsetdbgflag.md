@@ -60,11 +60,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a159deb22b903351c989ca3e8ec43ab7843dd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Recupera o modifica el estado de la marca **_crtDbgFlag** para controlar el comportamiento de asignación del administrador del montón de depuración (solo versión de depuración).  
@@ -177,7 +178,7 @@ _CrtSetDbgFlag( tmpFlag );
 |-------------|---------------------|  
 |`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
+ Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
   
 ## <a name="libraries"></a>Bibliotecas  
  Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  

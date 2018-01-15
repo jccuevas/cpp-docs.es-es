@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb8bd65277c5aa97996261fabc74dc668dc10e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecmdui-class"></a>Clase COleCmdUI
 Implementa un método para que MFC actualice el estado de los objetos relacionados con características de la aplicación orientadas a `IOleCommandTarget`.  
@@ -44,13 +45,13 @@ class COleCmdUI : public CCmdUI
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|Construye un objeto `COleCmdUI`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|Establece o borra la marca de comando enable.|  
 |[COleCmdUI::SetCheck](#setcheck)|Establece el estado de un comando alternante activado/desactivado comando.|  

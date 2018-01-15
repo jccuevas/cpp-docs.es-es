@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7624e80138e2c7feb77b9aa385a40a2b5fe0320
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e152b51a5c33bc6e33622af2a08cb40886af67b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 Define varios tipos y funciones relacionados con el control de excepciones. El control de excepciones se utiliza en aquellas situaciones en las que el sistema puede recuperarse de un error. Proporciona un medio para devolver el control de una función al programa. El objetivo de incorporar control de excepciones es aumentar la solidez del programa y proporcionar una manera de recuperarse de un error de forma ordenada.  
@@ -31,7 +32,7 @@ Define varios tipos y funciones relacionados con el control de excepciones. El c
   
 ```  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
