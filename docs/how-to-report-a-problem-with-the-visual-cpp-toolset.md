@@ -1,23 +1,22 @@
 ---
 title: "Cómo notificar un problema con el conjunto de herramientas de Visual C++ | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Cómo notificar un problema con el conjunto de herramientas de Visual C++
 
@@ -29,9 +28,9 @@ En este documento, podrá obtener información sobre lo siguiente:
 
 - [Cómo preparar un informe](#prepare) de calidad.
 
-- [Las maneras de enviar el informe](#send) y en qué se diferencian.
-
 - [Cómo generar una reproducción](#generate) y los distintos tipos de reproducciones.
+
+- [Las maneras de enviar el informe](#send) y en qué se diferencian.
 
 Sus informes son importantes para nosotros y para otros desarrolladores como usted. Gracias por ayudarnos a mejorar Visual C++.
 
@@ -47,7 +46,7 @@ Como mínimo, el informe debe contener lo siguiente:
 
 - Una descripción detallada del problema que se ha encontrado.
 
-- Una reproducción,es decir, código fuente que muestre el problema.
+- Una reproducción, es decir, código fuente que muestre el problema.
 
 Siga leyendo para conocer qué información específica necesitamos y dónde puede encontrarla.
 
@@ -94,7 +93,7 @@ El mejor lugar para encontrar esta información es el registro de compilación i
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Para informar sobre el contenido de la línea de comandos
 
-1. Busque el archivo **CL.command.1.tlog** y ábralo. De forma predeterminada, este archivo se encuentra en \\…\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.
+1. Busque el archivo **CL.command.1.tlog** y ábralo. De forma predeterminada, este archivo se encuentra en \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
 
    En este archivo, encontrará los nombres de los archivos de código fuente seguidos de los argumentos de la línea de comandos que se han usado para compilarlos, cada uno en líneas independientes.
 
@@ -213,7 +212,7 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-Si la vinculación incremental está habilitada y el bloqueo se ha producido únicamente después de la vinculación inicial (es decir, después de la primera vinculación completa en la que se basa la vinculación incremental posterior), proporcione también una copia de los archivos objeto (.obj) y de biblioteca (.lib) que se correspondan con los archivos de código fuente que se han modificado después de que se completase la vinculación inicial.
+Si la vinculación incremental está habilitada y el bloqueo se ha producido únicamente tras la vinculación inicial (es decir, después de la primera vinculación completa en la que se basa la vinculación incremental posterior), proporcione también una copia de los archivos objeto (.obj) y de biblioteca (.lib) que correspondan a los archivos de código fuente modificados tras completar la vinculación inicial.
 
 #### <a name="bad-code-generation"></a>Generación de código no válido
 
@@ -221,50 +220,13 @@ La generación de código no válido es poco frecuente, pero se produce cuando e
 
 Para este tipo de bloqueo, proporcione una [reproducción de vínculo](#link-repros) si usa la Generación de código en tiempo de vínculo (LTCG) o una [reproducción preprocesada](#preprocessed-repros) en caso de que no la use. LTGC se habilita mediante el argumento de línea de comandos `/GL` en cl.exe.
 
-## <a name="send"></a> Maneras de enviar el informe
-
-Puede enviarnos el informe de varias maneras. Puede usar la [herramienta Notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) integrada de Visual Studio o enviarnos un correo electrónico. La mejor opción para realizar la notificación depende del tipo de problema que haya encontrado, el grado de interacción que quiera tener con los ingenieros que investigan el informe y si quiere llevar un seguimiento del progreso o compartir el informe con la comunidad.
-
-> [!NOTE]
-> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de la familia de productos de Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
-
-### <a name="send-an-email"></a>Enviar un correo electrónico
-
-Otra manera de enviar un informe directamente al equipo de Visual C++ es mediante un correo electrónico. Puede ponerse en contacto con nosotros a través de [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com).
-
-Si decide enviar el informe por correo electrónico, puede usar la plantilla siguiente como cuerpo del mensaje. No olvide adjuntar código fuente u otros archivos si no incluye dicha información en el cuerpo del correo electrónico.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>Usar la herramienta Notificar un problema
-
-La herramienta Notificar un problema de Visual Studio permite a los usuarios de Visual Studio informar sobre diversos problemas con unos pocos clics. Proporciona un formulario sencillo que puede usar para especificar información detallada sobre el problema que ha encontrado y enviar el informe sin tener que salir del IDE.
-
-No es habitual informar sobre un problema a través de la herramienta Notificar un problema cuando se trata de los tipos de problemas relacionados con el conjunto de herramientas que se describen en este documento, pero es una alternativa si se adapta a sus preferencias.
-
-> [!TIP]
-> En el caso de otros tipos de problemas en Visual Studio que no estén relacionados con el conjunto de herramientas (por ejemplo, problemas de la interfaz de usuario, funciones del IDE interrumpidas o bloqueos generales), la herramienta Notificar un problema puede ser una opción especialmente buena debido a sus funciones de captura de pantalla y su capacidad de grabar las acciones de la interfaz de usuario que producen el problema en cuestión. Nunca debe notificar sobre estos otros tipos de errores mediante el envío de un correo electrónico a compilercrash@microsoft.com.
-
 ## <a name="generate"></a> Generar una reproducción
 
 Una reproducción es un ejemplo de código completo y autocontenido en el que se muestra el problema sobre el que está informando. Una reproducción **no** es un fragmento de código. Debe ser un ejemplo completo que se compila y se ejecuta (o que se compilaría y se ejecutaría de no ser por los errores que produce el problema sobre el que está informando). Debe contener todas las directivas #include necesarias, incluso para los encabezados estándar.
 
 Además, una buena reproducción se caracteriza por lo siguiente:
 
-- **Es mínima.** Las reproducciones deben ser lo más pequeñas posible, pero mostrar exactamente el problema detectado. No es necesario que sean complejas o realistas: las reproducciones simples y concisas son mejores. No necesitan incluir ejemplos que muestren el código que funciona, aunque pueden hacerlo si es ilustrativo. Solo es necesario incluir código de ejemplo que cause el problema.
+- **Es mínima.** Las reproducciones deben ser lo más pequeñas posible, pero mostrar exactamente el problema detectado. No es necesario que las reproducciones sean complejas o realistas: lo mejor es que sean simples y concisas. No necesitan incluir ejemplos que muestren el código que funciona, aunque pueden hacerlo si es ilustrativo. Solo es necesario incluir código de ejemplo que cause el problema.
 
 - **Es autocontenida.** Las reproducciones deben evitar las dependencias innecesarias. Si puede reproducir el problema sin bibliotecas de terceros, hágalo. Si puede reproducir el problema sin código de biblioteca (se aceptan `std::out` y `printf()`), hágalo. Nos resulta extremadamente útil que reduzca la cantidad de código que debemos tener en cuenta como posible causante del problema.
 
@@ -330,3 +292,51 @@ Por último, comprima todo el directorio en un archivo .zip o similar para empaq
 Si no es posible reducir el problema a un solo archivo de código fuente o reproducción preprocesada y el problema no requiere una reproducción de vínculo, podemos investigar un proyecto IDE. El código incluido en el proyecto también debe ser mínimo y se le aplican todas las instrucciones de este documento.
 
 Cree la reproducción como un proyecto IDE mínimo, comprima toda la estructura de directorios en un archivo .zip o similar para empaquetarlo y adjúntelo al informe.
+
+## <a name="send"></a> Maneras de enviar el informe
+
+Puede enviarnos el informe de varias maneras. Puede usar la [herramienta integrada Notificar un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) de Visual Studio o las páginas de la [comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/). También es posible enviar un correo electrónico con el informe, pero es preferible utilizar los dos primeros métodos. El hecho de elegir una opción u otra dependerá del grado de interacción que quiera tener con los ingenieros que se encargarán de investigar el informe y de si quiere llevar un seguimiento del progreso o compartir el informe con la comunidad.
+
+> [!NOTE]
+> Independientemente de cómo envíe el informe, Microsoft respeta su privacidad. Para obtener información sobre cómo tratamos los datos que nos envía, vea la [Declaración de privacidad de la familia de productos de Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+
+### <a name="use-the-report-a-problem-tool"></a>Usar la herramienta Notificar un problema
+
+La herramienta **Notificar un problema** de Visual Studio permite a los usuarios de Visual Studio informar sobre diversos problemas en pocos clics. Proporciona un formulario sencillo que puede usar para especificar información detallada sobre el problema que ha encontrado y enviar el informe sin tener que salir del IDE.
+
+Informar de un problema a través de la herramienta **Notificar un problema** del entorno de desarrollo integrado es fácil y útil. Para acceder a ella, elija el icono **Enviar comentarios** que encontrará junto al cuadro de búsqueda **Inicio rápido** de la barra de título. También la encontrará en la barra de menú, en **Ayuda** > **Enviar comentarios** > **Notificar un problema**.
+
+Si elige informar de un error, primero intente encontrar problemas similares en la comunidad de desarrolladores. Si hay alguien que ya ha informado del problema en cuestión, vote a favor del tema y agregue sus comentarios con más detalles al respecto. Si no encuentra ningún problema similar, haga clic en **Informar de un problema nuevo**, en la parte inferior del cuadro de diálogo de Comentarios de Visual Studio, y siga los pasos para notificar el problema.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Uso de las páginas de la comunidad de desarrolladores de Visual Studio
+
+Las páginas de la comunidad de desarrolladores de Visual Studio son otra forma muy útil de informar de problemas y encontrar soluciones para Visual Studio, el compilador de C++, las herramientas y las bibliotecas. En la página [Preguntas de Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html) puede informar de problemas con el entorno de desarrollo integrado o la instalación. En el caso de problemas relacionados con el compilador de C++, el enlazador y otras herramientas y bibliotecas, use la página [Preguntas de C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
+
+En el banner de la comunidad de desarrolladores que encontrará cerca de la parte superior de cada página verá un cuadro de búsqueda que puede utilizar para encontrar publicaciones o temas en los que se informa de problemas similares. Es posible que ya esté disponible una solución u otra información útil relacionada con su problema en un tema existente. Si alguien ya ha notificado el mismo problema, vote a favor del tema y escriba su comentario en él, en lugar de crear otro tema sobre lo mismo.
+
+Si todavía nadie ha informado del problema, haga clic en el botón **Notificar un problema** que encontrará junto al cuadro de búsqueda de la página de la comunidad de desarrolladores. Es posible que se le solicite que inicie sesión en su cuenta de Visual Studio y acepte ofrecer acceso a su perfil a la aplicación de la comunidad de desarrolladores. Una vez que haya iniciado sesión, vaya directamente a la página desde la que puede informar del problema. Puede incluir el código y la línea de comandos para reproducir el problema, capturas de pantalla, vínculos a debates relacionados y cualquier otra información que crea útil y oportuna.
+
+### <a name="send-an-email"></a>Enviar un correo electrónico
+
+Otra manera de enviar un informe directamente al equipo de Visual C++ es por correo electrónico. Puede ponerse en contacto nosotros en [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com). Use este método solo si los otros dos no están disponibles, ya que el correo electrónico no se supervisa con tanta atención como los problemas notificados en la comunidad de desarrolladores mediante la herramienta **Notificar un problema** o las páginas web. Además, el resto de usuarios de Visual Studio no podrán consultar los comentarios ni las soluciones.
+
+Si decide enviar el informe por correo electrónico, puede usar la plantilla siguiente como cuerpo del mensaje. No olvide adjuntar código fuente u otros archivos si no incluye dicha información en el cuerpo del correo electrónico.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> En el caso de otros tipos de problemas en Visual Studio que no estén relacionados con el conjunto de herramientas (por ejemplo, problemas de la interfaz de usuario, funciones del IDE interrumpidas o bloqueos generales), la herramienta Notificar un problema puede ser una opción especialmente buena debido a sus funciones de captura de pantalla y su capacidad de grabar las acciones de la interfaz de usuario que producen el problema en cuestión. Nunca debe notificar sobre estos otros tipos de errores mediante el envío de un correo electrónico a compilercrash@microsoft.com.
+

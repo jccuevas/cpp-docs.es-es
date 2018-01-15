@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>Almacenamiento local para el subproceso
 **Específicos de Microsoft**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  Deben tenerse en cuenta estas instrucciones cuando se declaran variables locales para el subproceso enlazadas estáticamente:  
   
--   El uso del atributo **__declspec(thread)** puede interferir con la [carga de retraso](../build/reference/linker-support-for-delay-loaded-dlls.md) de importaciones de DLL**.**  
+-   Las variables locales de subprocesos que dispongan de la inicialización dinámica solo se inicializan en el subproceso que provoque la carga del elemento DLL y los subprocesos que ya se estén ejecutando en el proceso. Para obtener más información, consulte el [subproceso](../cpp/thread.md).  
   
 -   Puede aplicar el atributo thread solamente a declaraciones y definiciones de datos. No se puede utilizar en declaraciones o definiciones de función. Por ejemplo, el código siguiente genera un error del compilador:  
   

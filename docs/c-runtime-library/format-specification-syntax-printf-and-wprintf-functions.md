@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -79,12 +80,12 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**F**|Punto flotante|Idéntico al formato **f** salvo que la salida infinito y nan se ponen en mayúsculas.|
 |**g**|Punto flotante|Los valores con signo se muestran en formato **f** o **e**, lo que sea más conciso para el valor y la precisión especificados. El formato **e** solo se usa cuando el exponente del valor es menor que -4 o mayor o igual que el argumento *precision*. Los ceros a la derecha se truncan y el separador decimal tan solo aparece si va seguido de uno o más dígitos.|
 |**G**|Punto flotante|Es idéntico al formato de **g**, salvo que el exponente se introduce mediante **E** en lugar de **e** (cuando corresponda).|
-|**a**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0x*h.hhhh*__p±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras minúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
-|**A**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0X*h.hhhh*__P±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras mayúsculas) de la mantisa y *dd* al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
+|**a**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0x*h.hhhh*__p±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras minúsculas) de la mantisa y *dd* corresponde al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
+|**A**|Punto flotante|Valor de punto flotante de precisión doble hexadecimal con signo que tiene el formato [-]0X*h.hhhh*__P±__*dd*, donde *h.hhhh* corresponde a los dígitos hexadecimales (con letras mayúsculas) de la mantisa y *dd* corresponde al exponente, con uno o varios dígitos. La precisión especifica el número de dígitos que se muestran después del punto.|
 |**n**|Puntero para entero|Número de caracteres que se han escrito correctamente en el flujo o búfer. Este valor se almacena en el entero cuya dirección se indica como argumento. El tamaño del entero apuntado se puede controlar mediante un prefijo de especificación del tamaño de argumento. El especificador **n** está deshabilitado de forma predeterminada; para información, consulte la nota de seguridad importante.|
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|
-|**s**|Cadena|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
-|**S**|Cadena|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
+|**s**|String|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
+|**S**|String|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
 |**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) o [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
@@ -100,7 +101,7 @@ Cualquiera de estos valores puede ir precedido por un signo. Si un carácter esp
 
 Antes de Visual Studio 2015, CRT utilizaba un formato diferente no estándar para la salida de los valores infinito, indefinido y NaN:
 
-|Valor|Resultado|
+|Valor|Salida|
 |-----------|------------|
 |+ infinito|`1.#INF` *dígitos aleatorios*|
 |- infinity|`-1.#INF` *dígitos aleatorios*|
