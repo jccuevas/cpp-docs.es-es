@@ -1,69 +1,73 @@
 ---
-title: "Drawing Lines or Closed Figures (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "closed figures, drawing"
-  - "lines [C++], painting"
-  - "lines [C++], drawing"
-  - "Image editor [C++], drawing lines"
-  - "shapes, drawing"
+title: "Dibujar líneas o figuras cerradas (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- closed figures, drawing
+- lines [C++], painting
+- lines [C++], drawing
+- Image editor [C++], drawing lines
+- shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c2f5169c6340b756c31e1986e46b52f48b4edd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Drawing Lines or Closed Figures (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Las herramientas de dibujo de líneas y de figuras cerradas del Editor de imágenes funcionan de la misma manera: se sitúa el punto de inserción en un punto y se arrastra hasta otro.  En las líneas, estos puntos son los extremos.  En las figuras cerradas, los puntos son los vértices opuestos de un rectángulo que las limita.  
+# <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Dibujar líneas o figuras cerradas (Editor de imágenes para iconos)
+El editor de imágenes de las herramientas de dibujo de líneas y figuras cerradas todas las funcionan de la misma manera: coloque el punto de inserción en un punto y arrastre a otro. Para las líneas, estos puntos son los puntos de conexión. Figuras cerradas, estos puntos son los vértices opuestos de un rectángulo delimitador en la ilustración.  
   
- Las líneas se dibujan con un ancho que viene determinado por la selección del pincel actual, y las figuras enmarcadas se dibujan con un ancho determinado por la selección de ancho actual.  Las líneas y las figuras, tanto las enmarcadas como las rellenas, se dibujan con el color de primer plano actual, si se presiona el botón primario del mouse, o con el color de fondo actual, si se presiona el botón secundario del mouse.  
+ Las líneas se dibujan con un ancho determinado por la selección de pincel actual, y las figuras enmarcadas se dibujan con un ancho determinado por la selección actual de ancho. Líneas y las figuras, tanto enmarcadas como las rellenas, se dibujan en el color de primer plano actual si presiona el botón primario del mouse, o en el color de fondo actual, si presiona el botón secundario del mouse.  
   
-### Para dibujar una línea  
+### <a name="to-draw-a-line"></a>Para dibujar una línea  
   
-1.  En la [barra de herramientas del Editor de imágenes](../mfc/toolbar-image-editor-for-icons.md) \(o en el menú **Imagen**, comando **Herramientas**\), haga clic en la herramienta **Línea**.  
+1.  En el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md) (o desde el **imagen** menú, **herramientas** comandos), haga clic en el **línea** herramienta.  
   
 2.  Si es necesario, seleccione los colores y un pincel:  
   
-    -   En la [paleta Colores](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md), haga clic con el botón primario del mouse para seleccionar un color de primer plano o con el botón secundario para seleccionar un color de fondo.  
+    -   En el [paleta de colores](../windows/colors-window-image-editor-for-icons.md), haga clic en el botón primario del mouse para seleccionar un color de primer plano o el botón secundario del mouse para seleccionar un color de fondo.  
   
-    -   En el [selector de Opciones](../mfc/toolbar-image-editor-for-icons.md), haga clic en la forma que represente el pincel que desea usar.  
+    -   En el [selector de opciones](../windows/toolbar-image-editor-for-icons.md), haga clic en una forma que representa el pincel que se va a utilizar.  
   
-3.  Coloque el puntero en el punto de inicio de la línea.  
+3.  Coloque el puntero en el punto de partida de la línea.  
   
 4.  Arrastre hasta el extremo de la línea.  
   
-### Para dibujar una figura cerrada  
+### <a name="to-draw-a-closed-figure"></a>Para dibujar una figura cerrada.  
   
-1.  En la barra de herramientas del **Editor de imágenes** \(o en el menú **Imagen**, comando **Herramientas**\), haga clic en la herramienta **Dibujo de figuras cerradas**.  
+1.  En el **Editor de imágenes** barra de herramientas (o desde el **imagen** menú, **herramientas** comandos), haga clic en un **dibujo de figuras cerradas** herramienta.  
   
-     Las herramientas **Dibujo de figuras cerradas** crean las figuras que se indican en sus respectivos botones.  
+     El **dibujo de figuras cerradas** herramientas crean figuras tal como se indica en sus respectivos botones.  
   
-2.  Si es necesario, seleccione los colores y el ancho de línea.  
+2.  Si es necesario, seleccione los colores y un ancho de línea.  
   
-3.  Desplace el puntero a un vértice del área rectangular donde desee dibujar la figura.  
+3.  Mueva el puntero a una de las esquinas del área rectangular en la que va a dibujar en la ilustración.  
   
-4.  Arrastre el puntero hasta el vértice opuesto en la diagonal.  
+4.  Arrastre el puntero hacia la esquina diagonalmente opuesta.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisitos  
   
- None  
+ Ninguna  
   
-## Vea también  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)   
+ [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)
+

@@ -177,11 +177,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9742093585283350ce2c40ae533cc9e530d94bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (clase)
 Representa un conjunto de registros seleccionados de un origen de datos.  
@@ -196,13 +197,13 @@ class CDaoRecordset : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Construye un objeto `CDaoRecordset`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoRecordset:: AddNew](#addnew)|Se prepara para agregar un nuevo registro. Llame a [actualización](#update) para completar la adición.|  
 |[CDaoRecordset::CanAppend](#canappend)|Devuelve un valor distinto de cero si se pueden agregar nuevos registros en el conjunto de registros a través de la [AddNew](#addnew) función miembro.|  
@@ -279,7 +280,7 @@ class CDaoRecordset : public CObject
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoRecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|Contiene una marca que indica si los campos se marcan automáticamente como modificada.|  
 |[CDaoRecordset::m_nFields](#m_nfields)|Contiene el número de miembros de datos de campo en la clase de conjunto de registros y el número de columnas seleccionadas por el conjunto de registros desde el origen de datos.|  
@@ -1909,7 +1910,7 @@ BOOL Seek(
  Una de las siguientes expresiones de cadena: "<","\<=", "=", "> =", o ">".  
   
  `pKey1`  
- Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Obligatorio.  
+ Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Requerido.  
   
  *pKey2*  
  Un puntero a un `COleVariant` cuyo valor se corresponde con el segundo campo en el índice, si existe. Valor predeterminado es **NULL**.  

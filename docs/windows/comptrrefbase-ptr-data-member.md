@@ -1,48 +1,49 @@
 ---
-title: "ComPtrRefBase::ptr_ (Miembro de datos) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase::ptr_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr_ (miembro de datos)"
+title: Miembro de datos Comptrrefbase | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
+dev_langs: C++
+helpviewer_keywords: ptr_ data member
 ms.assetid: 9b1c07f9-531f-41c2-9ac0-f7cf49f5f586
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b8e205ff7073482af2186427592bf5c9319a7935
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRefBase::ptr_ (Miembro de datos)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ (Miembro de datos)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 T* ptr_;  
 ```  
   
-## Comentarios  
- Puntero al tipo especificado por el parámetro actual de la plantilla.  
+## <a name="remarks"></a>Comentarios  
+ Puntero al tipo especificado por el parámetro de plantilla actual.  
   
-## Comentarios  
- `ptr_` es el miembro de datos protegido.  
+## <a name="remarks"></a>Comentarios  
+ `ptr_`es el miembro de datos protegidos.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
- **Espacio de nombres:** Microsoft::WRL::Details  
+ **Namespace:** wrl  
   
-## Vea también  
- [ComPtrRefBase \(Clase\)](../windows/comptrrefbase-class.md)   
- [Microsoft::WRL::Details \(Espacio de nombres\)](../windows/microsoft-wrl-details-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtrRefBase (clase)](../windows/comptrrefbase-class.md)   
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

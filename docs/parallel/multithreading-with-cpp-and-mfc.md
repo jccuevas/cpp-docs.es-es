@@ -1,54 +1,54 @@
 ---
-title: "Subprocesamiento m&#250;ltiple con C++ y MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWinThread (clase), finalidad"
-  - "MFC [C++], multithreading"
-  - "subprocesamiento múltiple [C++], MFC"
-  - "sincronización [C++], multithreading"
-  - "clases de sincronización [C++]"
-  - "subprocesamiento [C++], MFC"
-  - "subprocesamiento [MFC]"
-  - "subprocesamiento [MFC], acerca del subprocesamiento"
-  - "subprocesos de interfaz de usuario [C++]"
-  - "subprocesos de trabajo [C++]"
+title: "Subprocesamiento múltiple con C++ y MFC | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], multithreading
+- threading [C++], MFC
+- worker threads [C++]
+- synchronization classes [C++]
+- synchronization [C++], multithreading
+- threading [MFC], about threading
+- CWinThread class, purpose of
+- multithreading [C++], MFC
+- threading [MFC]
+- user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Subprocesamiento m&#250;ltiple con C++ y MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La biblioteca de MFC \(Microsoft Foundation Class\) es compatible con aplicaciones multiproceso.  En este tema se describen procesos y subprocesos, así como el enfoque de MFC sobre multithreading.  
+# <a name="multithreading-with-c-and-mfc"></a>Subprocesamiento múltiple con C++ y MFC
+La biblioteca (Microsoft Foundation Classes) ofrece compatibilidad con aplicaciones multiproceso. En este tema se describe procesos y subprocesos y el enfoque de MFC multithreading.  
   
- Un proceso es una instancia en ejecución de una aplicación.  Por ejemplo, al hacer doble clic en el icono del Bloc de notas, se inicia un proceso que ejecuta el Bloc de notas.  
+ Un proceso es una instancia de ejecución de una aplicación. Por ejemplo, al hacer doble clic en el icono de Bloc de notas, inicie un proceso que se ejecuta el Bloc de notas.  
   
- Un subproceso es una ruta de ejecución dentro de un proceso.  Cuando se inicia el Bloc de notas, el sistema operativo crea un proceso y comienza a ejecutar el subproceso principal de ese proceso.  Cuando este subproceso termina, también lo hace el proceso.  El código de inicio suministra el subproceso principal al sistema operativo en forma de una dirección de función.  Normalmente, es la dirección de la función **main** o `WinMain` la que se suministra.  
+ Un subproceso es una ruta de acceso de ejecución dentro de un proceso. Cuando se inicia el Bloc de notas, el sistema operativo crea un proceso y empieza a ejecutar el subproceso principal de ese proceso. Cuando este subproceso finaliza, por lo que hace el proceso. Este subproceso principal se proporciona para el sistema operativo por el código de inicio en forma de una dirección de función. Por lo general, es la dirección de la **principal** o `WinMain` función que se proporciona.  
   
- Si lo desea, puede crear subprocesos adicionales en la aplicación.  Es recomendable crear estos subprocesos con el fin de tratar tareas en segundo plano o de mantenimiento para las que el usuario no deba esperar a que se completen.  Todos los subprocesos de aplicaciones MFC se representan mediante objetos [CWinThread](../mfc/reference/cwinthread-class.md).  En la mayoría de los casos, ni siquiera es necesario crear explícitamente estos objetos; en su lugar, basta con llamar a la función auxiliar [AfxBeginThread](../Topic/AfxBeginThread.md) del marco de trabajo, que se encarga de crear el objeto `CWinThread`.  
+ Si desea que se puede crear subprocesos adicionales en la aplicación. Puede hacer esto para administrar las tareas de mantenimiento o segundo plano cuando no desea que el usuario espere a que se completen. Todos los subprocesos de aplicaciones MFC se representan mediante [CWinThread](../mfc/reference/cwinthread-class.md) objetos. En la mayoría de los casos, no incluso tiene que crear explícitamente estos objetos; en su lugar, llame a la función auxiliar de framework [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), que crea el `CWinThread` objeto automáticamente.  
   
- MFC distingue entre dos tipos de subprocesos: de interfaz de usuario y de trabajo.  Los subprocesos de interfaz de usuario se suelen utilizar para controlar los datos proporcionados por el usuario y para responder a eventos y mensajes generados por el usuario.  Los subprocesos de trabajo se utilizan normalmente para realizar tareas, tales como cálculos, que no requieren que el usuario proporcione datos.  La API Win32 no distingue entre tipos de subprocesos; simplemente, necesita conocer la dirección de inicio del subproceso para poder ejecutarlo.  MFC controla los subprocesos de interfaz de usuario de manera especial proporcionando una serie de mensajes para eventos de la interfaz.  `CWinApp` es un ejemplo de objeto de subproceso de interfaz de usuario, ya que se deriva de `CWinThread` y controla eventos y mensajes generados por el usuario.  
+ MFC distingue entre dos tipos de subprocesos: subprocesos de interfaz de usuario y subprocesos de trabajo. Subprocesos de interfaz de usuario se usan habitualmente para controlar los proporcionados por el usuario y responder a eventos y mensajes generados por el usuario. Subprocesos de trabajo se usan habitualmente para completar tareas, tales como cálculos, que no requieren la intervención del usuario. La API de Win32 no distingue entre tipos de subprocesos; solo necesita conocer la dirección inicial del subproceso para que pueda comenzar a ejecutar el subproceso. MFC controla los subprocesos de interfaz de usuario especialmente proporcionando una bomba de mensaje para los eventos de la interfaz de usuario. `CWinApp`es un ejemplo de un objeto de subproceso de interfaz de usuario, dado que deriva de `CWinThread` y controla los eventos y mensajes generados por el usuario.  
   
- Se debe prestar especial atención a los casos en los que varios subprocesos pueden requerir acceso al mismo objeto.  [Multithreading: Sugerencias de programación](../parallel/multithreading-programming-tips.md) describe las técnicas que se pueden utilizar para resolver los problemas que pueden surgir en estos casos.  [Multithreading: Uso de las clases de sincronización](../parallel/multithreading-how-to-use-the-synchronization-classes.md) describe cómo utilizar las clases disponibles para sincronizar el acceso de varios subprocesos a un único objeto.  
+ Debe prestarse especial atención a las situaciones donde más de un subproceso puede necesitar acceso al mismo objeto. [Subprocesamiento múltiple: Sugerencias de programación](../parallel/multithreading-programming-tips.md) describen las técnicas que puede usar para solucionar problemas que pueden surgir en estas situaciones. [Subprocesamiento múltiple: Cómo usar las clases de sincronización](../parallel/multithreading-how-to-use-the-synchronization-classes.md) describe cómo utilizar las clases que están disponibles para sincronizar el acceso desde varios subprocesos a un único objeto.  
   
- La escritura y la depuración de programas multiproceso es, en sí misma, una tarea complicada y difícil, ya que hay que asegurarse de que el acceso a los objetos está limitado a un solo proceso a la vez.  Los temas sobre multithreading no proporcionan la información esencial sobre programación multiproceso, sino sólo el uso de MFC en el programa multiproceso.  Los ejemplos de multiproceso con MFC incluidos en Visual C\+\+ ilustran algunos aspectos de funcionalidad adicional y de bibliotecas API Win32 no contemplados por MFC, sin embargo, sólo pretenden ser un punto de partida.  
+ Escribir y depurar la programación multiproceso son en sí una tarea compleja y difícil, ya que debe asegurarse de que los objetos no tienen acceso varios subprocesos a la vez. Los temas de multithreading no enseña los fundamentos de la programación multiproceso, sino sólo el uso de MFC en el programa de multithreading. Los ejemplos MFC multiproceso incluidos en Visual C++ ilustran algunos multiproceso de agregar funcionalidad y las API de Win32 no contemplados por MFC; Sin embargo, sólo están pensadas para ser un punto de partida.  
   
- Para obtener más información sobre cómo trata el sistema operativo los procesos y subprocesos, vea [Procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms684841) en [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  
+ Para obtener más información acerca de cómo el sistema operativo trata los procesos y subprocesos, vea [procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms684841) en el [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Para obtener más información sobre la compatibilidad de MFC con multithreading, vea los siguientes temas:  
+ Para obtener más información sobre la compatibilidad con subprocesamiento múltiple de MFC, vea los temas siguientes:  
   
 -   [Multithreading: Crear subprocesos de la interfaz de usuario](../parallel/multithreading-creating-user-interface-threads.md)  
   
@@ -60,7 +60,7 @@ La biblioteca de MFC \(Microsoft Foundation Class\) es compatible con aplicacion
   
 -   [Multithreading: Sugerencias de programación](../parallel/multithreading-programming-tips.md)  
   
--   [Multithreading: Cuándo utilizar las clases de sincronización](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
+-   [Multithreading: Cuándo usar las clases de sincronización](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
   
-## Vea también  
- [Compatibilidad del código antiguo con multithreading \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+## <a name="see-also"></a>Vea también  
+ [Compatibilidad del código antiguo con multithreading (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

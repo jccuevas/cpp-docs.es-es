@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Incluya el encabezado estándar \<chrono> para definir las clases y funciones que representan y manipulan las duraciones de tiempo e instantes de tiempo.  
@@ -40,14 +41,14 @@ Incluya el encabezado estándar \<chrono> para definir las clases y funciones qu
 
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[duration (Clase)](../standard-library/duration-class.md)|Describe un tipo que contenga un intervalo de tiempo.|  
 |[time_point (Clase)](../standard-library/time-point-class.md)|Describe un tipo que representa un punto en el tiempo.|  
   
-### <a name="structs"></a>Structs  
+### <a name="structs"></a>Estructuras  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[common_type (Estructura)](../standard-library/common-type-structure.md)|Describe especializaciones de la clase de plantilla [common_type](../standard-library/common-type-class.md) para las creaciones de instancias de `duration` y `time_point`.|  
 |[duration_values (Estructura)](../standard-library/duration-values-structure.md)|Proporciona valores concretos para el parámetro `Rep` de plantilla `duration`.|  

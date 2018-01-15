@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0c57e6b8ffb501ea4c6b75429bab88bbe5dc93eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5859f3ebfcb55427e239a0018d539e2f4df13800
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-basic-windows-runtime-component-using-wrl"></a>Tutorial: Crear un componente básico de Windows Runtime mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para crear un componente básico de Windows en tiempo de ejecución. El componente agrega dos números y genera un evento cuando el resultado es primo. Este documento también muestra cómo utilizar el componente de una aplicación de plataforma Universal de Windows que usa JavaScript.  

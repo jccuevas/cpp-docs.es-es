@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 952f27b0c6717d23395453e5159e125370a76804
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Compatibilidad con documentos compuestos, Asistente para aplicaciones MFC
 En esta página del Asistente para aplicaciones MFC, indicar a qué nivel de la aplicación proporciona compatibilidad con documentos compuestos y activa. La aplicación debe admitir la arquitectura documento/vista para admitir los documentos compuestos y plantillas de documento.  

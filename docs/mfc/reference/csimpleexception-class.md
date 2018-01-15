@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70ed8ecc43f8467ca4e0bdc0856b32f3510d85a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimpleexception-class"></a>Clase CSimpleException
 Esta clase es una clase base para excepciones MFC de recursos críticos.  
@@ -40,13 +41,13 @@ class AFX_NOVTABLE CSimpleException : public CException
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleException::CSimpleException](#csimpleexception)|El constructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSimpleException::GetErrorMessage](#geterrormessage)|Proporciona información sobre un error que se ha producido.|  
   

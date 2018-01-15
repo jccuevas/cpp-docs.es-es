@@ -1,47 +1,48 @@
 ---
-title: "SyncLockT::IsLocked (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsLocked (método)"
+title: "Synclockt:: IsLocked (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::IsLocked
+dev_langs: C++
+helpviewer_keywords: IsLocked method
 ms.assetid: a81fea43-f99a-4708-812a-7fd6af500d3d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 47dc99415fd995f144deddb6ca3bc7a4bb419ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# SyncLockT::IsLocked (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="synclocktislocked-method"></a>SyncLockT::IsLocked (Método)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 bool IsLocked() const;  
 ```  
   
-## Valor devuelto  
- **true** si el objeto de SyncLockT está bloqueado; si no, **false**.  
+## <a name="return-value"></a>Valor devuelto  
+ **True** si el objeto SyncLockT está bloqueado; en caso contrario, **false**.  
   
-## Comentarios  
- Indica si el objeto actual de SyncLockT posee un recurso; es decir, el objeto de SyncLockT *está bloqueado*.  
+## <a name="remarks"></a>Comentarios  
+ Indica si el objeto de SyncLockT actual es propietario de un recurso; es decir, el objeto SyncLockT *bloqueado*.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [SyncLockT \(Clase\)](../windows/synclockt-class.md)
+## <a name="see-also"></a>Vea también  
+ [SyncLockT (clase)](../windows/synclockt-class.md)

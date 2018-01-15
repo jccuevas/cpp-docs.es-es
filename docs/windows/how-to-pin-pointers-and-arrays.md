@@ -1,33 +1,36 @@
 ---
-title: "C&#243;mo: Anclar punteros y matrices | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrices [C++], anclaje"
-  - "punteros, anclaje"
+title: "Cómo: anclar punteros y matrices | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68824b9fcdf2f4de47900d5b0c4b03db9e28d9fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Anclar punteros y matrices
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anclar un sub\- objeto definido en un objeto administrado tiene el efecto de anclaje el objeto completo.  Por ejemplo, si algún elemento de una matriz se ancla, después la matriz entera también se ancla.  No hay extensiones al lenguaje para declarar una matriz anclar.  Anclar una matriz, declara un puntero anclado a su tipo de elemento, y anclar uno de sus elementos.  
+# <a name="how-to-pin-pointers-and-arrays"></a>Cómo: Anclar punteros y matrices
+Anclar un subobjeto definido en un objeto administrado tiene el efecto de todo el objeto de anclaje.  Por ejemplo, si se ancla un elemento de una matriz, también se ancla la matriz entera. No hay ninguna extensión del lenguaje para declarar una matriz anclada. Para anclar la matriz, declare un puntero anclado para su tipo de elemento y el pin uno de sus elementos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +52,11 @@ int main() {
 }  
 ```  
   
-### Resultados  
+### <a name="output"></a>Salida  
   
 ```  
 ++  
 ```  
   
-## Vea también  
- [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)
+## <a name="see-also"></a>Vea también  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

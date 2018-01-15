@@ -1,44 +1,45 @@
 ---
-title: "ComPtr::Get (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::Get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Get (método)"
+title: "Comptr:: Get (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::Get
+dev_langs: C++
+helpviewer_keywords: Get method
 ms.assetid: 078eee51-7bca-4924-a74b-cd4f6a05de31
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dc2146115da2b97228474e33234dc0ffe6124084
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::Get (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntero a la interfaz asociada a este ComPtr.  
+# <a name="comptrget-method"></a>ComPtr::Get (Método)
+Recupera un puntero a la interfaz que está asociada a esta ComPtr.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 T* Get() const;  
 ```  
   
-## Valor devuelto  
- Puntero a la interfaz asociada a este ComPtr.  
+## <a name="return-value"></a>Valor devuelto  
+ Puntero a la interfaz que está asociada a esta ComPtr.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ComPtr \(Clase\)](../windows/comptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtr (clase)](../windows/comptr-class.md)

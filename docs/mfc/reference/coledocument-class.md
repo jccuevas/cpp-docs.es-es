@@ -63,11 +63,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976f6845deb93dc8bf6a2e008de0d68fb62bfbb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147a3bca2f4ad91aeaa2c74ac7a356d9404943fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledocument-class"></a>COleDocument (clase)
 La clase base para los documentos de OLE que admiten la edición visual.  
@@ -82,13 +83,13 @@ class COleDocument : public CDocument
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleDocument::COleDocument](#coledocument)|Construye un objeto `COleDocument`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleDocument::AddItem](#additem)|Agrega un elemento a la lista de elementos que se mantiene el documento.|  
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Establece el dispositivo de destino de impresión para todos los elementos de cliente en el documento.|  
@@ -106,7 +107,7 @@ class COleDocument : public CDocument
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Controla los eventos en el comando de menú del icono de cambio.|  
 |[COleDocument::OnEditConvert](#oneditconvert)|Controla la conversión de un objeto incrustado o vinculado de un tipo a otro.|  

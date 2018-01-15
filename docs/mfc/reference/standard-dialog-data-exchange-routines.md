@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- standard dialog, data exchange routines
+dev_langs: C++
+helpviewer_keywords: standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 86491a06a81f5b0ddf0c91c9c5f2b5f23261b49b
-ms.contentlocale: es-es
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rutinas de intercambio de datos de cuadros de diálogo estándar
 Este tema enumeran las rutinas de intercambio (DDX) de datos de cuadros de diálogo estándar utilizadas para los controles de cuadro de diálogo comunes de MFC.  
@@ -110,7 +93,7 @@ void AFXAPI DDX_CBString(
  `nIDC`  
  El identificador de recurso del control de cuadro combinado asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -141,7 +124,7 @@ void AFXAPI DDX_CBStringExact(
  `nIDC`  
  El identificador de recurso del control de cuadro combinado asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -172,11 +155,11 @@ void AFXAPI DDX_Check(
  `nIDC`  
  El identificador de recurso del control de casilla de verificación asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando `DDX_Check` se llama, *valor* se establece en el estado actual del control de casilla de verificación. Para obtener una lista de los valores de estado posibles, consulte [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Cuando `DDX_Check` se llama, *valor* se establece en el estado actual del control de casilla de verificación. Para obtener una lista de los valores de estado posibles, consulte [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) en el SDK de Windows.  
   
  Para obtener más información sobre DDX, consulte [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -238,7 +221,7 @@ void AFXAPI DDX_DateTimeCtrl(
  `nIDC`  
  El identificador de recurso del control de selector de fecha y hora asociado a la variable miembro.  
   
- *value*  
+ *valor*  
  En las dos primeras versiones, una referencia a un `CTime` o `COleDateTime` variable miembro, cuadro de diálogo, vista de formulario o con el que se intercambian los datos de objeto de vista de control. En la tercera versión, una referencia a un `CString` objeto de vista de control de miembro de datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -306,7 +289,7 @@ void AFXAPI DDX_IPAddress(
  `nIDC`  
  El identificador de recurso del control de dirección IP asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a la `DWORD` que contiene el valor del campo de cuatro del control de dirección IP. Los campos se rellenan o quede como sigue.  
   
 |Campo|Que contiene el valor del campo de bits|  
@@ -316,7 +299,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 a 23|  
 |0|24 a 31|  
   
- Utilizar Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) para leer el valor o use [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) para rellenar el valor. Estos mensajes se describen en la [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Utilizar Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) para leer el valor o use [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) para rellenar el valor. Estos mensajes se describen en el SDK de Windows.  
   
 ### <a name="remarks"></a>Comentarios  
  Cuando `DDX_IPAddress` se llama, *valor* se lee desde el control de dirección IP, o *valor* se escribe en el control, dependiendo de la dirección del intercambio.  
@@ -371,7 +354,7 @@ void AFXAPI DDX_LBString(
  `nIDC`  
  El identificador de recurso del control de cuadro de lista asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -404,7 +387,7 @@ void AFXAPI DDX_LBStringExact(
  `nIDC`  
  El identificador de recurso del control de cuadro de lista asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -442,7 +425,7 @@ void AFXAPI DDX_MonthCalCtrl(
  `nIDC`  
  El identificador de recurso de control de calendario mensual asociado a la variable miembro.  
   
- *value*  
+ *valor*  
  Una referencia a un `CTime` o `COleDateTime` variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -474,7 +457,7 @@ void AFXAPI DDX_Radio(
  `nIDC`  
  El identificador de recurso del primer control de radio del grupo.  
   
- *value*  
+ *valor*  
  Una referencia a una variable de miembro del cuadro de diálogo, la vista de formulario o el objeto de vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -504,11 +487,11 @@ void AFXAPI DDX_Scroll(
  `nIDC`  
  El identificador de recurso del control de barra de desplazamiento asociado a la propiedad de control.  
   
- *value*  
+ *valor*  
  Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando `DDX_Scroll` se llama, *valor* se establece en la posición actual del control de posición del control. Para obtener más información sobre los valores asociados a la posición actual del control de posición del control, vea [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) en el [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Cuando `DDX_Scroll` se llama, *valor* se establece en la posición actual del control de posición del control. Para obtener más información sobre los valores asociados a la posición actual del control de posición del control, vea [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) en el SDK de Windows.  
   
  Para obtener más información sobre DDX, consulte [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -532,11 +515,11 @@ void AFXAPI DDX_Slider(
  `nIDC`  
  El identificador de recurso del control deslizante.  
   
- *value*  
+ *valor*  
  Una referencia al valor que se van a intercambiar. Este parámetro contiene o establece la posición actual del control deslizante.  
   
 ### <a name="remarks"></a>Comentarios  
- Cuando `DDX_Slider` se llama, *valor* se establece en la posición actual del control de posición del control, o el valor recibe la posición, dependiendo de la dirección del intercambio.  
+ Cuando `DDX_Slider` se llama, *valor* se establece en la posición actual del control de posición del control, o el valor recibe la posición, en función de la dirección del intercambio.  
   
  Para obtener más información sobre DDX, consulte [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md). Para obtener información acerca de los controles deslizantes, consulte [usar CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
@@ -544,7 +527,7 @@ void AFXAPI DDX_Slider(
   **Encabezado** afxdd_.h  
   
 ##  <a name="ddx_text"></a>DDX_Text  
- El `DDX_Text` función administra la transferencia de `int`, **UINT**, **largo**, `DWORD`, `CString`, **float**, o **doble** datos entre un control de edición en un cuadro de diálogo, vista de formulario o vista de control y un [CString](../../atl-mfc-shared/reference/cstringt-class.md) miembro de datos del cuadro de diálogo, la vista de formulario o el objeto de vista de control.  
+ El `DDX_Text` función administra la transferencia de `int`, **UINT**, **largo**, `DWORD`, `CString`, **float**, o  **doble** datos entre un control de edición en un cuadro de diálogo, vista de formulario o vista de control y un [CString](../../atl-mfc-shared/reference/cstringt-class.md) miembro de datos del cuadro de diálogo, la vista de formulario o el objeto de vista de control.  
   
 ```  
 void AFXAPI DDX_Text(
@@ -610,7 +593,7 @@ void AFXAPI DDX_Text(
  `nIDC`  
  El identificador de un control de edición en el cuadro de diálogo, la vista de formulario o el objeto de vista de control.  
   
- *value*  
+ *valor*  
  Una referencia a un miembro de datos en el cuadro de diálogo, la vista de formulario o el objeto de vista de control. Tipo de datos de *valor* depende de cuál de las versiones sobrecargadas de `DDX_Text` utiliza.  
   
 ### <a name="remarks"></a>Comentarios  
@@ -622,4 +605,3 @@ void AFXAPI DDX_Text(
 ## <a name="see-also"></a>Vea también  
  [Rutinas de validación de datos de cuadros de diálogo estándar](../../mfc/reference/standard-dialog-data-validation-routines.md)   
  [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
-

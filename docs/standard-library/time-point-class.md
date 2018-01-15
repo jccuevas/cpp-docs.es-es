@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,19 @@ f1_keywords:
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1c4d02cf83401e6a6dce3fa079d43dea0fce6270
-ms.contentlocale: es-es
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], time_point
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point (Clase)
 `time_point` describe un tipo que representa un punto en el tiempo. Contiene un objeto de tipo [duration](../standard-library/duration-class.md) que almacena el tiempo transcurrido desde la época representada por el argumento de plantilla `Clock`.  
@@ -57,7 +42,7 @@ class time_point;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`time_point::clock`|Sinónimo del parámetro de plantilla `Clock`.|  
 |`time_point::duration`|Sinónimo del parámetro de plantilla `Duration`.|  
@@ -66,13 +51,13 @@ class time_point;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[time_point](#time_point)|Construye un objeto `time_point`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[max](#max)|Especifica el límite superior de `time_point::ref`.|  
 |[min](#min)|Especifica el límite inferior de `time_point::ref`.|  
@@ -80,7 +65,7 @@ class time_point;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[time_point::operator+=](#op_add_eq)|Suma un valor especificado a la duración almacenada.|  
 |[time_point::operator-=](#operator-_eq)|Resta un valor especificado de la duración almacenada.|  
@@ -119,7 +104,7 @@ time_point& operator+=(const duration& Dur);
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `time_point` después del cual se realiza la suma.  
@@ -133,7 +118,7 @@ time_point& operator-=(const duration& Dur);
   
 ### <a name="parameters"></a>Parámetros  
  `Dur`  
- Objeto `duration`.  
+ Un objeto `duration`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Objeto `time_point` después del cual se realiza la resta.  
@@ -155,7 +140,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
  Un objeto [duration](../standard-library/duration-class.md).  
   
  `Tp`  
- Objeto `time_point`.  
+ Un objeto `time_point`.  
   
 ### <a name="remarks"></a>Comentarios  
  El primer constructor crea un objeto cuyo valor `duration` almacenado es igual a [duration::zero](../standard-library/duration-class.md#zero).  
@@ -174,5 +159,4 @@ constexpr duration time_since_epoch() const;
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
-
 

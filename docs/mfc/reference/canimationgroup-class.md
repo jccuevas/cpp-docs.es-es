@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationGroup [MFC], CAnimationGroup
 - CAnimationGroup [MFC], Animate
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c59bd895187d0d9a047c626426736a957a4d6b5
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationgroup-class"></a>Clase CAnimationGroup
 Implementa un grupo de animación, que combina un guión gráfico de animación, objetos de animación y transiciones para definir una animación.  
@@ -79,14 +77,14 @@ class CAnimationGroup;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Crea un grupo de animación.|  
 |[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Destructor. Se llama cuando se está destruyendo un grupo de animación.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationGroup::Animate](#animate)|Anima a un grupo.|  
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Se aplica a las transiciones a objetos de animación.|  
@@ -99,7 +97,7 @@ class CAnimationGroup;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationGroup::AddKeyframes](#addkeyframes)|Una aplicación auxiliar que agrega fotogramas clave a un guión gráfico.|  
 |[CAnimationGroup::AddTransitions](#addtransitions)|Una aplicación auxiliar que agrega transiciones a un guión gráfico.|  
@@ -107,7 +105,7 @@ class CAnimationGroup;
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Especifica cómo borrar realice la transición de los objetos de animación que pertenecen al grupo. Si este miembro es TRUE, las transiciones se eliminan automáticamente cuando se ha programado una animación. En caso contrario, debe quitar manualmente las transiciones.|  
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Especifica cómo se destruirán los objetos de animación. Si este parámetro es TRUE, los objetos de animación se destruirán automáticamente cuando se destruye el grupo. En caso contrario, los objetos de animación deben destruirse manualmente. El valor predeterminado es FALSE. Establezca este valor en TRUE solo si todos los objetos de animación que pertenecen al grupo se asignan dinámicamente con el operador new.|  
@@ -118,7 +116,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Un identificador único del grupo de animación.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Un puntero al controlador de animación que pertenece este grupo.|  
@@ -359,4 +357,3 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

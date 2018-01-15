@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::plus
-- plus
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::plus
+dev_langs: C++
 helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 65dd34958f89d80608cf21b360d76f0c26cda38a
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c5ada1bbac90f9ea190ffefbafe12916717411c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="plus-struct"></a>plus (Struct)
 Objeto de función predefinido que realiza la operación de suma (`operator+` binario) sobre sus argumentos.  
@@ -75,7 +57,7 @@ struct plus<void>
  Operando derecho de la operación de suma. La plantilla no especializada toma un argumento de referencia de valor L de tipo `Type`. La plantilla especializada realiza el reenvío directo de los argumentos de referencia de valor L y valor R del tipo deducido `U`.  
   
 ## <a name="return-value"></a>Valor devuelto  
- El resultado de `Left``+``Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por el `operator+` binario.  
+ El resultado de `Left + Right`. La plantilla especializada realiza el reenvío directo del resultado, que tiene el tipo devuelto por el `operator+` binario.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -135,7 +117,6 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 ## <a name="see-also"></a>Vea también  
  [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

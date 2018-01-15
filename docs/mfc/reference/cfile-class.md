@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db8a7ee97c414a7775df393d419c7d12d61cdbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cfile-class"></a>CFile (clase)
 La clase base para las clases de archivo de MFC (Microsoft Foundation Classes).  
@@ -90,13 +91,13 @@ class CFile : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFile::CFile](#cfile)|Construye un `CFile` objeto de un identificador de archivo o ruta de acceso.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFile::Abort](#abort)|Cierra un archivo se omitirá todos los errores y advertencias.|  
 |[CFile::Close](#close)|Cierra un archivo y elimina el objeto.|  
@@ -124,20 +125,20 @@ class CFile : public CObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFile::operator identificador](#operator_handle)|Un identificador de un `CFile` objeto.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFile::hFileNull](#hfilenull)|Determina si el `CFile` objeto tiene un identificador válido.|  
 |[CFile::m_hFile](#m_hfile)|Normalmente, contiene el identificador de archivo del sistema operativo.|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|Puntero a `CAtlTransactionManager` objeto.|  
   
@@ -183,7 +184,7 @@ virtual void Abort();
 ```  
 CFile();  
 CFile(CAtlTransactionManager* pTM);  
-  CFile(HANDLE hFile);
+CFile(HANDLE hFile);
 
  
 CFile(
@@ -557,9 +558,9 @@ virtual BOOL Open(
   
 |`pError`|Se encontró un error|Valor devuelto|CFileException contenido|  
 |--------------|------------------------|------------------|----------------------------|  
-|**NULL**|No|**ES TRUE**|no disponible|  
+|**NULL**|No|**ES TRUE**|N/D|  
 |puntero al`CFileException`|No|**ES TRUE**|sin cambios|  
-|**NULL**|Sí|**FALSE**|no disponible|  
+|**NULL**|Sí|**FALSE**|N/D|  
 |puntero al`CFileException`|Sí|**FALSE**|inicializar para describir el error|  
   
 ### <a name="example"></a>Ejemplo  

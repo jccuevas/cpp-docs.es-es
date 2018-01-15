@@ -43,11 +43,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01961cf610a50ff9f0c858eeb0269288120edbe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1709ebf0a831fa7c1bba79b338a2978d6c6dae86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourceblock-class"></a>source_block (Clase)
 La clase `source_block` es una clase base abstracta solo para bloques de origen. La clase proporciona funcionalidad de administración de vínculo básico, así como comprobaciones de errores frecuentes.  
@@ -70,20 +71,20 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`target_iterator`|El iterador para recorrer los destinos conectados.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[source_block)](#ctor)|Construye un objeto `source_block`.|  
 |[~ source_block (destructor)](#dtor)|Destruye el objeto `source_block`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Aceptar](#accept)|Acepta un mensaje que fue proporcionado por este `source_block` objeto, transferir la propiedad al llamador.|  
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en el objeto `source_block` objeto, para evitar la eliminación.|  
@@ -97,7 +98,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Cuando se invalida en una clase derivada, acepta un mensaje proporcionado por el origen. Los bloques de mensaje deberían invalidar este método para validar la `_MsgId` y devolver un mensaje.|  
 |[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de propagación, si esto no se ha hecho ya|  

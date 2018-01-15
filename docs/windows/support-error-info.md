@@ -1,53 +1,52 @@
 ---
-title: "support_error_info | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.support_error_info"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "support_error_info (atributo)"
+title: support_error_info | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.support_error_info
+dev_langs: C++
+helpviewer_keywords: support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b8fec0ff1f76485700199847615ac2d8fcf9e5eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# support_error_info
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="supporterrorinfo"></a>support_error_info
 Implementa compatibilidad para devolver errores detallados.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
-[ support_error_info(  
-   error_interface=  
-uuid  
+      [ support_error_info(  
+   error_interface=uuid  
 ) ]  
-  
 ```  
   
-#### Parámetros  
- **error\_interface**  
+#### <a name="parameters"></a>Parámetros  
+ **error_interface**  
  Identificador de la interfaz que implementa **IErrorInfo**.  
   
-## Comentarios  
- El atributo de C\+\+ **support\_error\_info** implementa compatibilidad para devolver al cliente errores detallados y contextuales detectados por el objeto de destino. Para que el objeto sea compatible con los errores, el objeto debe implementar los métodos de la interfaz **IErrorInfo**. Para obtener más información, consulte [Compatibilidad con IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
+## <a name="remarks"></a>Comentarios  
+ El atributo de C++ **support_error_info** implementa compatibilidad para devolver al cliente errores detallados y contextuales detectados por el objeto de destino. Para que el objeto sea compatible con los errores, el objeto debe implementar los métodos de la interfaz **IErrorInfo** . Para obtener más información, consulte [Compatibilidad con IDispatch e IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
   
  Este atributo agrega la clase [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) como una clase base al objeto de destino. El resultado es una implementación predeterminada de **ISupportErrorInfo** que se puede usar cuando una sola interfaz genera errores en un objeto.  
   
-## Ejemplo  
- El código siguiente agrega compatibilidad predeterminada con la interfaz **ISupportErrorInfo** al objeto `CMyClass`.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente agrega compatibilidad predeterminada con la interfaz **ISupportErrorInfo** al objeto `CMyClass` .  
   
 ```  
 // cpp_attr_ref_support_error_info.cpp  
@@ -69,9 +68,9 @@ class CMyClass
 };  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
@@ -82,7 +81,6 @@ class CMyClass
   
  Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos COM](../windows/com-attributes.md)   
+ [Atributos de clase](../windows/class-attributes.md)   

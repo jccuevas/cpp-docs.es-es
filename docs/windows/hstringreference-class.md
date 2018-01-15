@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d09ba7fff2426f58f72b26a2c7e7681cecde8b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringreference-class"></a>HStringReference (Clase)
 Representa un HSTRING que se crea a partir de una cadena existente.  
@@ -36,7 +39,7 @@ class HStringReference;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[HStringReference::HStringReference (constructor)](../windows/hstringreference-hstringreference-constructor.md)|Inicializa una nueva instancia de la clase HStringReference.|  
   
@@ -49,7 +52,7 @@ class HStringReference;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[HStringReference::Operator= (operador)](../windows/hstringreference-operator-assign-operator.md)|Mueve el valor de otro objeto de HStringReference al objeto HStringReference actual.|  
 |[HStringReference::Operator== (operador)](../windows/hstringreference-operator-equality-operator.md)|Indica si los dos parámetros son iguales.|  

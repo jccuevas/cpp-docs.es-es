@@ -1,78 +1,85 @@
 ---
-title: "C&#243;mo: Usar el control de excepciones para interrumpir un bucle Parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "algoritmo de búsqueda, escribir [Runtime de simultaneidad]"
-  - "escribir un algoritmo de búsqueda [Runtime de simultaneidad]"
+title: "Cómo: utilizar excepciones para interrumpir un bucle paralelo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search algorithm, writing [Concurrency Runtime]
+- writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 29140c339614e572733988bd7ca5e14561cee5dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Usar el control de excepciones para interrumpir un bucle Parallel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>Cómo: Usar el control de excepciones para interrumpir un bucle Parallel
+Este tema muestra cómo escribir un algoritmo de búsqueda para una estructura de árbol básica.  
+  
+ El tema [cancelación](cancellation-in-the-ppl.md) explica el rol de cancelación en la biblioteca de patrones de procesamiento paralelo. El uso del control de excepciones es una forma menos eficaz de cancelar el trabajo paralelo que el uso de la [concurrency::task_group::cancel](reference/task-group-class.md#cancel) y [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) métodos. Sin embargo, un escenario donde el uso del control de excepciones para cancelar el trabajo es adecuado es cuando se llama a una biblioteca de otro fabricante que usa tareas o algoritmos paralelos, pero no proporciona un `task_group` o `structured_task_group` objeto que se va a cancelar.  
 
-En este tema se muestra cómo escribir un algoritmo de búsqueda para una estructura de árbol básica.  
   
- [Cancelación](../../parallel/concrt/cancellation-in-the-ppl.md) explica el rol de cancelación en la Biblioteca de modelos de procesamiento paralelo \(PPL\).  El uso del control de excepciones es una manera menos eficaz de cancelar el trabajo paralelo que el uso de los métodos de [concurrency::task\_group::cancel](../Topic/task_group::cancel%20Method.md) y de [concurrency::structured\_task\_group::cancel](../Topic/structured_task_group::cancel%20Method.md) .  Sin embargo, un escenario donde es apropiado el uso del control de excepciones para cancelar trabajo es cuando se llama a una biblioteca de terceros que use tareas o algoritmos paralelos pero no proporcione un objeto `task_group` o `structured_task_group` para la cancelación.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra un basic `tree` tipo que contiene un elemento de datos y una lista de nodos secundarios. La siguiente sección muestra el cuerpo de la `for_all` método, que de forma recurrente realiza una función de trabajo en cada nodo secundario.  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra un tipo `tree` básico que contiene un elemento de datos y una lista de nodos secundarios.  En la siguiente sección se muestra el cuerpo del método `for_all`, que realiza una función de trabajo en cada nodo secundario de forma recursiva.  
+ [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]  
   
- [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/CPP/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo se muestra la `for_all` método. Usa el [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo para realizar una función de trabajo en cada nodo del árbol en paralelo.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra el método `for_all`.  Usa el algoritmo de [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) para realizar una función de trabajo en cada nodo del árbol en paralelo.  
+ [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]  
   
- [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/CPP/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente se muestra la función `search_for_value`, que busca un valor en el objeto `tree` proporcionado. Esta función se pasa a la `for_all` método es una función de trabajo que se produce cuando encuentra un nodo de árbol que contiene el valor proporcionado.  
   
-## Ejemplo  
- En el siguiente ejemplo se muestra la función `search_for_value`, que busca un valor en el objeto `tree` proporcionado.  Esta función pasa al método `for_all` una función de trabajo que se inicia cuando encuentra un nodo de árbol que contiene el valor proporcionado.  
+ Se asume que la `tree` clase se proporciona una biblioteca de terceros y que no es posible modificarla. En este caso, el uso del control de excepciones es adecuado porque la `for_all` método no proporciona un `task_group` o `structured_task_group` objeto al autor de llamada. Por lo tanto, la función de trabajo es no se puede cancelar directamente su grupo de tareas primario.  
   
- Suponga que la clase `tree` está proporcionada por una biblioteca de terceros y que no puede modificarla.  En este caso, el uso del control de excepciones es adecuado porque el método `for_all` no proporciona un objeto `task_group` o `structured_task_group` al llamador.  Por consiguiente, la función de trabajo no puede cancelar su grupo de tareas primario directamente.  
+ Cuando la función de trabajo que se proporciona a un grupo de tareas produce una excepción, el tiempo de ejecución detiene todas las tareas que se encuentran en el grupo de tareas (incluidos los grupos de tareas secundarios) y descarta cualquier tarea que no se ha iniciado todavía. El `search_for_value` función utiliza un `try` - `catch` bloque para capturar la excepción e imprimir el resultado en la consola.  
   
- Cuando la función de trabajo que se proporciona a un grupo de tareas produce una excepción, el runtime detiene todas las tareas incluidas en el grupo de tareas \(y cualquier grupo de tareas secundario\) y descarta cualquier tarea que no se haya iniciado todavía.  La función `search_for_value` usa un bloque `try`\-`catch` para capturar la excepción e imprimir el resultado en la consola.  
+ [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]  
   
- [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/CPP/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea un `tree` de objeto y busca varios valores en paralelo. El `build_tree` función se muestra más adelante en este tema.  
   
-## Ejemplo  
- En el siguiente ejemplo se crea un objeto `tree` y se buscan en él varios valores en paralelo.  La función `build_tree` se muestra más adelante en este tema.  
+ [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]  
   
- [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/CPP/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]  
+ Este ejemplo se utiliza la [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para buscar valores en paralelo. Para obtener más información acerca de este algoritmo, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).  
   
- Este ejemplo utiliza el algoritmo de [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) para buscar valores en paralelo.  Para obtener más información sobre este algoritmo, vea [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo completo usa control de excepciones para buscar valores en una estructura de árbol básica.  
   
-## Ejemplo  
- En el siguiente ejemplo completo se usa el control de excepciones para buscar valores en una estructura de árbol básica.  
-  
- [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/CPP/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]  
+ [!code-cpp[concrt-task-tree-search#5](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_5.cpp)]  
   
  Este ejemplo genera la siguiente salida de ejemplo.  
   
-  **Encontrar un nodo con el valor 32614.**  
-**Encontrar un nodo con el valor 86131.**  
-**No encontró nodo con el valor 17522.**   
-## Compilar el código  
- Copie el código de ejemplo y péguelo en un proyecto de Visual Studio, o péguelo en un archivo denominado `task-tree-search.cpp` y después se ejecute el siguiente comando en una ventana de símbolo del sistema de Visual Studio.  
+```Output  
+Found a node with value 32614.  
+Found a node with value 86131.  
+Did not find node with value 17522.  
+```  
   
- **cl.exe \/EHsc task\-tree\-search.cpp**  
+## <a name="compiling-the-code"></a>Compilar el código  
+ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `task-tree-search.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
   
-## Vea también  
- [Cancelación](../../parallel/concrt/cancellation-in-the-ppl.md)   
+ **cl.exe/EHsc tarea-tree-search.cpp**  
+  
+## <a name="see-also"></a>Vea también  
+ [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)   
  [Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)   
- [task\_group \(Clase\)](../Topic/task_group%20Class.md)   
- [structured\_task\_group \(Clase\)](../../parallel/concrt/reference/structured-task-group-class.md)   
- [parallel\_for\_each \(Función\)](../Topic/parallel_for_each%20Function.md)
+ [task_group (clase)](reference/task-group-class.md)   
+ [structured_task_group (clase)](../../parallel/concrt/reference/structured-task-group-class.md)   
+ [parallel_for_each (función)](reference/concurrency-namespace-functions.md#parallel_for_each)
+
+

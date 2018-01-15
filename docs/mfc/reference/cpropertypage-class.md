@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50250a1f8716ba4caac7f57b3ae7938286a2aec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (clase)
 Representa páginas individuales de una hoja de propiedades, también conocidas como cuadro de diálogo de pestaña.  
@@ -70,13 +71,13 @@ class CPropertyPage : public CDialog
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Construye un objeto `CPropertyPage`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|Cambia el botón Aceptar para cerrar de lectura y deshabilita el botón Cancelar, después de un cambio en la página de una hoja de propiedades modales irrecuperable.|  
 |[CPropertyPage::Construct](#construct)|Construye un objeto `CPropertyPage`. Use `Construct` si desea especificar los parámetros en tiempo de ejecución, o si está utilizando matrices.|  
@@ -96,7 +97,7 @@ class CPropertyPage : public CDialog
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPropertyPage::m_psp](#m_psp)|Las ventanas [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) estructura. Proporciona acceso a los parámetros de la página de propiedades básicas.|  
   

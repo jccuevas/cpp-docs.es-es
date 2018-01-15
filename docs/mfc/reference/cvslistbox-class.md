@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f0ddb2a69d49a7dc581d22ce59cefb448ade15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvslistbox-class"></a>Clase CVSListBox
 La `CVSListBox` clase es compatible con un control de lista modificable.  
@@ -58,14 +59,14 @@ class CVSListBox : public CVSListBoxBase
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CVSListBox::CVSListBox](#cvslistbox)|Construye un objeto `CVSListBox`.|  
 |`CVSListBox::~CVSListBox`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CVSListBox::AddItem](#additem)|Agrega una cadena a un control de lista. (Invalida `CVSListBoxBase::AddItem`).|  
 |[CVSListBox::EditItem](#edititem)|Inicia una operación de edición en el texto de un elemento de control de lista. (Invalida `CVSListBoxBase::EditItem`).|  
@@ -80,7 +81,7 @@ class CVSListBox : public CVSListBoxBase
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CVSListBox::GetListHwnd](#getlisthwnd)|Devuelve el identificador para el control de vista de lista incrustada actual.|  
   

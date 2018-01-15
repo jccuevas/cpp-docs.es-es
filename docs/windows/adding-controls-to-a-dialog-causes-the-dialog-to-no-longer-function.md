@@ -1,71 +1,75 @@
 ---
-title: "Adding Controls to a Dialog Causes the Dialog to No Longer Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], troubleshooting"
-  - "common controls, troubleshooting"
-  - "troubleshooting controls"
-  - "dialog boxes, troubleshooting"
-  - "dialog box controls, troubleshooting"
-  - "InitCommonControls"
+title: "Agregar controles a un cuadro de diálogo, el cuadro de diálogo ya No funcionar | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- common controls, troubleshooting
+- troubleshooting controls
+- dialog boxes, troubleshooting
+- dialog box controls, troubleshooting
+- InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Controls to a Dialog Causes the Dialog to No Longer Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tras agregar un control común o un control Rich Edit a un cuadro de diálogo, el control deja de aparecer cuando se comprueba el cuadro de diálogo o ni siquiera aparece el propio cuadro de diálogo.  
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Al agregar controles a un cuadro de diálogo, éste deja de funcionar
+Después de agregar un control común o un control rich edit a un cuadro de diálogo, no aparecerá cuando se prueba el cuadro de diálogo o el cuadro de diálogo no aparecerá.  
   
  **Ejemplo del problema**  
   
-1.  Cree un proyecto Win32 y modifique la configuración de la aplicación para crear una aplicación para Windows \(no de consola\).  
+1.  Cree un proyecto Win32, modifique la configuración de la aplicación para crear una aplicación de Windows (no una aplicación de consola).  
   
-2.  En la [Vista de recursos](../windows/resource-view-window.md), haga doble clic en el archivo .rc.  
+2.  En [vista de recursos](../windows/resource-view-window.md), haga doble clic en el archivo .rc.  
   
-3.  En la opción del cuadro de diálogo, haga doble clic en el cuadro **Acerca de**.  
+3.  En la opción de cuadro de diálogo, haga doble clic en el **sobre** cuadro.  
   
-4.  Agregue un **IP Address Control** al cuadro de diálogo.  
+4.  Agregar un **Control de dirección IP** al cuadro de diálogo.  
   
-5.  Guarde y **recompile todo**.  
+5.  Guardar y **volver a generar todo**.  
   
 6.  Ejecute el programa.  
   
-7.  En el menú **Ayuda** del cuadro de diálogo, haga clic en el comando **Acerca de**; no se abrirá ningún cuadro de diálogo.  
+7.  En el cuadro de diálogo **ayuda** menú, haga clic en el **sobre** comando; ningún cuadro de diálogo se muestra el cuadro.  
   
- **Causa**  
+ **La causa**  
   
- Actualmente, el Editor de cuadros de diálogo no agrega un código al proyecto de forma automática cuando se arrastran y colocan los siguientes controles comunes o controles Rich Edit en un cuadro de diálogo.  Visual Studio tampoco muestra un error o una advertencia cuando ocurre este problema.  Deberá agregar el código al control manualmente.  
+ Actualmente, el editor de cuadro de diálogo no agrega automáticamente código a su proyecto cuando arrastra y coloca los siguientes controles comunes o controles rich edit en un cuadro de diálogo. Ni Visual Studio ofrece un error o una advertencia cuando se produce este problema. Debe agregar manualmente el código para el control.  
   
 ||||  
 |-|-|-|  
-|Slider Control|Tree Control|Date Time Picker|  
-|Spin Control|Tab Control|Month Calendar|  
-|Progress Control|Animation Control|IP Address Control|  
-|Hot Key|Rich Edit Control|Extended Combo Box|  
-|List Control|Rich Edit 2.0 Control|Control personalizado|  
+|Control deslizante|Control de árbol|Date Time Picker|  
+|Control de número|Control de pestaña|Calendario mensual|  
+|Control de progreso|Control de animación|IP Address Control|  
+|Tecla de acceso rápido|Control Rich Edit|Cuadro combinado extendido|  
+|Control de lista|Control Rich Edit 2.0|Control personalizado|  
   
-## Corrección para los controles comunes  
- Para usar controles comunes en un cuadro de diálogo, llame a [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) o **AFXInitCommonControls** antes de crear el cuadro de diálogo.  
+## <a name="the-fix-for-common-controls"></a>La corrección para los controles comunes  
+ Para poder utilizar controles comunes en un cuadro de diálogo, debe llamar a [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) o **AFXInitCommonControls** antes de crear el cuadro de diálogo.  
   
-## Corrección para controles RichEdit  
- Llame a **LoadLibrary** para los controles Rich Edit.  Para obtener más información, vea [Utilizar el control RichEdit 1.0 con MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md), [Acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)], e [Información general sobre el control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).  
+## <a name="the-fix-for-richedit-controls"></a>La corrección para controles RichEdit  
+ Debe llamar a **LoadLibrary** para controles rich edit. Para obtener más información, consulte [con el Control RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [acerca de los controles Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) en el [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], y [información general sobre el Control Rich Edit](../mfc/overview-of-the-rich-edit-control.md).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Troubleshooting the Dialog Editor](../mfc/troubleshooting-the-dialog-editor.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Vea también  
+ [Solucionar problemas del Editor de cuadro de diálogo](../windows/troubleshooting-the-dialog-editor.md)   
+ [Editor de cuadros de diálogo](../windows/dialog-editor.md)
+

@@ -16,11 +16,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ea175a0f71c412583065eb2df4e04928ffe57ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generics-and-templates-visual-c"></a>Genéricos y plantillas (Visual C++)
 Genéricos y plantillas son las características del lenguaje que proporcionan compatibilidad para tipos parametrizados. Sin embargo, son diferentes y tienen diferentes usos. Este tema proporciona información general sobre las numerosas diferencias existentes.  
@@ -94,7 +97,7 @@ int main() {
 }  
 ```  
   
-### <a name="output"></a>Resultado  
+### <a name="output"></a>Salida  
   
 ```  
 F  

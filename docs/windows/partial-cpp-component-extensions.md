@@ -1,84 +1,85 @@
 ---
-title: "partial (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "partial_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "partial"
-  - "C++/CX, partial"
+title: Partial (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: partial_CPP
+dev_langs: C++
+helpviewer_keywords:
+- partial
+- C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# partial (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La palabra clave `partial` habilita diferentes partes de la misma clase de referencia que se creará de forma independiente y en archivos diferentes.  
+# <a name="partial--c-component-extensions"></a>partial (Extensiones de componentes de C++)
+El `partial` palabra clave permite que distintas partes de la misma clase ref a crearse independientemente y en archivos diferentes.  
   
-## Todos los runtimes  
- \(Esta característica de lenguaje solo se aplica a [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].\)  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ (Esta característica de lenguaje se aplica solo a Windows Runtime).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Para una clase de referencia que tiene dos definiciones parciales, la palabra clave `partial` se aplica a la primera aparición de la definición y esto se hace normalmente por código que se genera automáticamente, de modo que un codificador humano no utilice la palabra clave habitualmente.  Para todas las definiciones parciales subsiguientes de la clase, omita el modificador `partial` de la palabra clave *clase\-clave* y el identificador de clase.  Cuando el compilador encuentra una clase de referencia y un identificador de clase previamente definidos, pero ninguna palabra clave `partial`, combina internamente todas las partes de la definición de clase de referencia en una definición.  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ Para una clase ref que tiene dos definiciones parciales, la `partial` palabra clave se aplica a la primera aparición de la definición, y esto se suele realizar mediante el código generado automáticamente, por lo que un codificador humano no usa la palabra clave muy a menudo. Para todas las definiciones parciales posteriores de la clase, omita el `partial` modificador desde el *clase-clave* identificador de palabra clave y la clase. Cuando el compilador encuentra una clase ref definido anteriormente y el identificador de clase pero no `partial` palabra clave, internamente combina todas las partes de la definición de clase ref en una definición.  
   
-### Sintaxis  
+### <a name="syntax"></a>Sintaxis  
   
 ```cpp  
-  
 partial class-key identifier {  
-   /* The first part of the partial class definition. This is typically auto-generated*/  
+   /* The first part of the partial class definition. 
+      This is typically auto-generated */  
 }  
 // ...  
 class-key identifier {  
-   /* The subsequent part(s) of the class definition. The same identifier is specified, but the "partial" keyword is omitted. */  
+   /* The subsequent part(s) of the class definition. The same 
+      identifier is specified, but the "partial" keyword is omitted. */  
 }  
-  
 ```  
   
-### Parámetros  
- *class\-key*  
- Una palabra clave que declara una clase o estructura que admite [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  O bien `ref class`, `value class`, `ref struct` o `value struct`.  
+### <a name="parameters"></a>Parámetros  
+ *clave de la clase*  
+ Una palabra clave que declara una clase o struct que es compatible con el tiempo de ejecución de Windows. Cualquier `ref class`, `value class`, `ref struct`, o `value struct`.  
   
  *identifier*  
- Nombre de tipo definido.  
+ El nombre del tipo definido.  
   
-### Comentarios  
- Una clase parcial es compatible con los escenarios donde se modifica una parte de una definición de clase en un archivo y el software que genera código automático, por ejemplo, el diseñador XAML, modifica el código en la misma clase en otro archivo.  Mediante el uso de una clase parcial, puede evitar que el generador de código automático sobrescriba su código.  En un proyecto de Visual Studio, el modificador `partial` se aplica automáticamente al archivo generado.  
+### <a name="remarks"></a>Comentarios  
+ Una clase parcial es compatible con escenarios que se modifica una parte de una definición de clase en un archivo y el software que genera código automático, por ejemplo, el Diseñador XAML, modifica el código en la misma clase en otro archivo. Mediante el uso de una clase parcial, puede impedir que el generador de código automática sobrescriba tu código. En un proyecto de Visual Studio, el modificador `partial` se aplica automáticamente al archivo generado.  
   
- Contenido: con dos excepciones, una definición de clase parcial puede contener cualquier elemento que la definición de clase completa pueda contener si la palabra clave `partial` se ha omitido.  Sin embargo, no puede especificar la accesibilidad de la clase \(por ejemplo, `public partial class X {…};`\), o `declspec`.  
+ Contenido: Con dos excepciones, una definición de clase parcial puede contener todo lo que podría contener la definición de clase completa si el `partial` se omite la palabra clave. Sin embargo, no se puede especificar la accesibilidad de la clase (por ejemplo, `public partial class X { ... };`), o un `declspec`.  
   
- Los especificadores de Access utilizados en una definición de clase parcial para *identifier* no afectan a la accesibilidad predeterminada en una definición de clase parcial o completa subsiguiente para *identifier*.  Las definiciones alineadas de los miembros de datos estáticos están permitidas.  
+ Obtener acceso a los especificadores que se utilizan en una definición de clase parcial para *identificador* no afectan a la accesibilidad predeterminada en una definición de clase parcial o completo posteriores *identificador*. Se permiten definiciones en línea de miembros de datos estáticos.  
   
- Declaración: Una definición parcial de una clase *identifier* presenta únicamente el nombre *identifier*, pero *identifier* no se puede usar de forma que requiere una definición de clase.  El nombre *identifier* no se puede utilizar para conocer el tamaño de *identifier*, o utilizar una base o miembro de *identifier* hasta después del compilador encuentra la definición completa de *identifier*.  
+ Declaración: Una definición parcial de una clase *identificador* solo introduce el nombre *identificador*, pero *identificador* no se puede usar de forma que requiere una clase definición. El nombre *identificador* no se puede usar para conocer el tamaño de *identificador*, o usar una base o miembro de *identificador* hasta después de que el compilador encuentra la definición completa de *identificador*.  
   
- Número y el orden: Puede haber definiciones de clase cero o más parciales para *identifier*.  Cada definición de clase parcial de *identifier* debe preceder léxico la una definición completa de *identifier* \(si hay una definición completa; si no, no se puede utilizar a menos que como si delantero\- esté declarado\) pero no necesita incluir declaraciones adelantadas de *identifier*.  Todas las claves de clase deben coincidir.  
+ Número y el orden: puede haber cero o más definiciones de clase parcial para *identificador*. Cada definición de clase parcial de *identificador* debe preceder léxicamente a la definición completa de *identificador* (si no hay una definición completa; en caso contrario, la clase no se puede usar excepto como si declaradas por adelantado) pero no deben preceder a las declaraciones adelantadas de *identificador*. Deben coincidir con todas las claves de clase.  
   
- Definición completa: Actualmente la definición completa de la clase *identifier*, el comportamiento es el mismo que si la definición de *identifier* hubiera declarado todas las clases base, miembros, etc. en el orden en que se detectaron y se definieron en clases parciales.  
+ Completa la definición de: en el momento de la definición completa de la clase *identificador*, el comportamiento es el mismo como si la definición de *identificador* hubiera declarado todas las clases base, miembros, etc. en el orden en que se encontraron y se definen en las clases parciales.  
   
  Plantillas: Una clase parcial no puede ser una plantilla.  
   
- Genéricos: una clase parcial puede ser un genérico si la definición completa podría ser genérica.  Pero cada clase parcial y completa debe tener exactamente los mismos parámetros genéricos, como nombres de parámetros formales.  
+ Genéricos: Una clase parcial puede ser un tipo genérico si la definición completa podría ser genérica. Pero cada clase parcial y completa debe tener exactamente los mismos parámetros genéricos, incluidos los nombres de parámetros formales.  
   
- Para obtener más información sobre cómo utilizar la palabra clave de `partial` , vea [Clases parciales \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
+ Para obtener más información sobre cómo usar el `partial` palabra clave, consulte [clases parciales (C++ / CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- \(Esta característica de lenguaje no se aplica a Common Language Runtime\).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (Esta característica de lenguaje no se aplica a Common Language Runtime.)  
   
-## Vea también  
- [Clases parciales \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+## <a name="see-also"></a>Vea también  
+ [Clases parciales (C++ / CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

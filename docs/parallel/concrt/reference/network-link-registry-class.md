@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 348964eb2f9b17a00188dd3a2589ce0711767e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry (Clase)
 La clase base abstracta `network_link_registry` que administra los vínculos entre los bloques de origen y de destino.  
@@ -46,7 +47,7 @@ class network_link_registry;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`const_pointer`|Un tipo que proporciona un puntero a un `const` elemento en un `network_link_registry` objeto.|  
 |`const_reference`|Un tipo que proporciona una referencia a un `const` elemento almacenado en un `network_link_registry` objeto para leer y realizar operaciones const.|  
@@ -55,7 +56,7 @@ class network_link_registry;
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[add](#add)|Cuando se invalida en una clase derivada, agrega un vínculo a la `network_link_registry` objeto.|  
 |[begin](#begin)|Cuando se invalida en una clase derivada, devuelve un iterador al primer elemento en el `network_link_registry` objeto.|  

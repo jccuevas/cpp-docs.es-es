@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a97145953cdd5d11f2adc2109f11f3a45298a53c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4943554e67d43b6dc1652a984a0e758af9d6951b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (estructura)
 Almacena información acerca de un trabajo de impresión o de vista previa de impresión.  
@@ -34,7 +35,7 @@ struct CPrintInfo
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPrintInfo::GetFromPage](#getfrompage)|Devuelve el número de la primera página que se pueda imprimir.|  
 |[CPrintInfo::GetMaxPage](#getmaxpage)|Devuelve el número de la última página del documento.|  
@@ -46,7 +47,7 @@ struct CPrintInfo
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Contiene una marca que indica si el marco de trabajo debe continuar el bucle de impresión.|  
 |[CPrintInfo::m_bDirect](#m_bdirect)|Contiene una marca que indica si se imprime el documento directamente (sin mostrar el cuadro de diálogo de impresión).|  

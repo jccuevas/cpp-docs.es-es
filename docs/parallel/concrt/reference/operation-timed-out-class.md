@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 501a0d6d99c75792a97918cd933326c0916373be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4f211248fd46abb5276f4108268f1dc5a56acd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out (Clase)
 Esta clase describe una excepción que se produce cuando una operación ha agotado su tiempo de espera.  
@@ -37,7 +38,7 @@ class operation_timed_out : public std::exception;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operation_timed_out)](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
   

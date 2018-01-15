@@ -1,30 +1,31 @@
 ---
-title: "Desbordamiento de b&#250;fer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "desbordamientos de búfer [C++]"
-  - "búferes [C++], tamaños de caracteres"
-  - "MBCS [C++], desbordamiento de búfer"
+title: "Desbordamiento de búfer | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buffers [C++], character sizes
+- buffer overflows [C++]
+- MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Desbordamiento de b&#250;fer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La variación de los tamaños de caracteres puede ocasionar problemas al colocar caracteres en un búfer.  Observe el código siguiente, que copia caracteres de una cadena, `sz`, en un búfer, `rgch`:  
+# <a name="buffer-overflow"></a>Desbordamiento de búfer
+Varios tamaños de caracteres pueden causar problemas al colocar caracteres en un búfer. Considere el siguiente código, que copia caracteres de una cadena, `sz`, en un búfer, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +33,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- La cuestión es: ¿Se ha copiado el último byte en el byte inicial?  La siguiente estructura no soluciona el problema, porque puede desbordar el búfer potencialmente:  
+ ¿La pregunta es: es el último byte copia un byte inicial? A continuación no soluciona el problema porque puede provocar un desbordamiento del búfer:  
   
 ```  
 cb = 0;  
@@ -44,7 +45,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- La llamada a `_mbccpy` intenta realizar lo correcto: copia el carácter completo, ya sean 1 o 2 bytes.  Pero no tiene en cuenta que el último carácter copiado puede no ajustarse al tamaño del búfer si el carácter tiene un ancho de 2 bytes.  La solución correcta es la siguiente:  
+ El `_mbccpy` llamada intenta hacer lo correcto: copia el carácter completo, ya sea 1 o 2 bytes. Pero esto no tiene en cuenta que el último carácter copiado no podría ajustarse al búfer si el carácter tiene un ancho de 2 bytes. La solución correcta es:  
   
 ```  
 cb = 0;  
@@ -56,11 +57,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Este código prueba el posible desbordamiento del búfer en la prueba del bucle, y utiliza `_mbclen` para probar el tamaño del carácter actual al que apunta `sz`.  Mediante una llamada a la función `_mbsnbcpy`, se puede sustituir el código del bucle `while` con una sola línea de código.  Por ejemplo:  
+ Este código prueba el posible desbordamiento del búfer en el bucle de prueba, con `_mbclen` para probar el tamaño del carácter actual al que apunta `sz`. Mediante la realización de una llamada a la `_mbsnbcpy` función, puede reemplazar el código en el `while` bucle con una sola línea de código. Por ejemplo:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## Vea también  
- [Sugerencias de programación para MBCS](../Topic/MBCS%20Programming%20Tips.md)
+## <a name="see-also"></a>Vea también  
+ [Sugerencias de programación para MBCS](../text/mbcs-programming-tips.md)

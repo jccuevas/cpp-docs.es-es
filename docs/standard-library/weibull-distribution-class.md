@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator!=
-- random/std::weibull_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::weibull_distribution [C++]
 - std::weibull_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e08b64c18a44083f1af0fd899f71409c69473981
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 87677d884a80c2cc2038f759c31a725299e523f6
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution (Clase)
 Genera una distribución de Weibull.  
@@ -101,9 +98,9 @@ La función miembro `reset()` descarta cualquier valor almacenado en caché, de 
   
 Las funciones miembro `operator()` devuelven el siguiente valor generado basado en el motor URNG, desde el paquete de parámetros actual o desde el paquete de parámetros especificado.
   
-Para más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
+Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).  
   
-Para obtener más detalles sobre la distribución de Weibull, vea el artículo de Wolfram MathWorld sobre la [distribución de Weibull](http://go.microsoft.com/fwlink/LinkId=401115).  
+Para obtener más detalles sobre la distribución de Weibull, vea el artículo de Wolfram MathWorld sobre la [distribución de Weibull](http://go.microsoft.com/fwlink/p/?linkid=401115).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -275,7 +272,6 @@ Esta estructura se puede pasar al constructor de clases de la distribución en e
   
 ## <a name="see-also"></a>Vea también  
  [\<random>](../standard-library/random.md)
-
 
 
 

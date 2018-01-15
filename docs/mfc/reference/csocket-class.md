@@ -31,11 +31,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fa709c0f58becfa18b286ba9c84d01c4c853dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocket-class"></a>CSocket (clase)
 Se deriva de `CAsyncSocket`, hereda su encapsulación de la API de Windows Sockets y representa un mayor nivel de abstracción que el de un `CAsyncSocket` objeto.  
@@ -50,13 +51,13 @@ class CSocket : public CAsyncSocket
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSocket::CSocket](#csocket)|Construye un objeto `CSocket`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CSocket::Attach](#attach)|Asocia un **SOCKET** identificador de un `CSocket` objeto.|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancela una llamada de bloqueo que está actualmente en curso.|  
@@ -66,7 +67,7 @@ class CSocket : public CAsyncSocket
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Múltiple](#onmessagepending)|Se llama para procesar mensajes pendientes mientras se espera a que se complete una llamada de bloqueo.|  
   

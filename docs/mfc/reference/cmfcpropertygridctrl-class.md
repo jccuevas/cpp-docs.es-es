@@ -161,11 +161,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60913269bf0d3120ebdba60fea912d52d1467853
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07b8049f01d10556bded754ec2aae55581b7cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl (clase)
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -182,14 +183,14 @@ class CMFCPropertyGridCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Construye un objeto `CMFCPropertyGridCtrl`.|  
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCPropertyGridCtrl::accHitTest`|El marco llama a este método para recuperar el elemento u objeto secundario situado en un punto dado de la pantalla. (Invalida [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CMFCPropertyGridCtrl::accLocation`|El marco llama a este método para recuperar la ubicación actual del objeto especificado en la pantalla. (Invalida [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
@@ -262,7 +263,7 @@ class CMFCPropertyGridCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Vuelve a dibujarse el control de cuadrícula de propiedades y sus propiedades.|  
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Llamado por el control de cuadrícula de propiedad para ordenar las propiedades.|  

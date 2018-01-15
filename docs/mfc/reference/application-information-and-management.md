@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c76bf7708c3bbe11ee7336b4c87f195fa01297d1
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3007e2fbae5bb0cee4472b6488be8ceb614bc1f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 Cuando se escribe una aplicación, cree un único [CWinApp](../../mfc/reference/cwinapp-class.md)-objeto derivado. En ocasiones, puede que desee obtener información acerca de este objeto desde fuera de la `CWinApp`-objeto derivado. O bien, puede que tenga acceso a otros objetos globales "Manager".
@@ -378,7 +379,7 @@ BOOL AFXAPI AfxInitRichEdit();
   
  Para actualizar los controles de edición enriquecidas en las aplicaciones existentes de Visual C++ a la versión 2.0, abra el. Archivo RC como texto, cambie el nombre de clase de cada control rich edit de "RICHEDIT" a "RichEdit20a". A continuación, reemplace la llamada a `AfxInitRichEdit` con `AfxInitRichEdit2`.  
   
- Esta función también inicializa la biblioteca de controles comunes, si la biblioteca ya no se ha inicializado para el proceso. Si utiliza el control rich edit directamente desde la aplicación MFC, debe llamar a esta función para asegurarse de que MFC ha inicializado correctamente el tiempo de ejecución del control rich Edit.. Si llama al método Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), o [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), normalmente no es necesario llamar a esta función, pero en algunos casos es posible es necesario.  
+ Esta función también inicializa la biblioteca de controles comunes, si la biblioteca ya no se ha inicializado para el proceso. Si utiliza el control rich edit directamente desde la aplicación MFC, debe llamar a esta función para asegurarse de que MFC ha inicializado correctamente el tiempo de ejecución del control rich Edit. Si llama al método Create de [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md), o [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), normalmente no es necesario llamar a esta función, pero en algunos casos es posible es necesario.  
   
 ### <a name="requirements"></a>Requisitos  
   **Encabezado** afxwin.h  

@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c7b9e26013a505f5de137797964ed19376569a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colestreamfile-class"></a>Clase COleStreamFile
 Representa un flujo de datos ( `IStream`) en un archivo compuesto como parte de almacenamiento estructurado OLE.  
@@ -50,13 +51,13 @@ class COleStreamFile : public CFile
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleStreamFile::COleStreamFile](#colestreamfile)|Construye un objeto `COleStreamFile`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[COleStreamFile::Attach](#attach)|Asocia un flujo con el objeto.|  
 |[COleStreamFile::CreateMemoryStream](#creatememorystream)|Crea una secuencia de la memoria global y lo asocia con el objeto.|  

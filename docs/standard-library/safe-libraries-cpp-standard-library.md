@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8cc4b94534845901a900a8c0ecff1d89c6bb600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20b68338dd15eaea0d74af9299da5ce8657f65f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>Bibliotecas seguras: Biblioteca estándar de C++
 Se realizaron varias mejoras a las bibliotecas que se suministran con Visual C++, incluida la biblioteca estándar de C++, para que sean más seguras.  
@@ -48,7 +49,7 @@ Se realizaron varias mejoras a las bibliotecas que se suministran con Visual C++
   
  [Checked Iterators](../standard-library/checked-iterators.md)  
   
- [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md)  
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)

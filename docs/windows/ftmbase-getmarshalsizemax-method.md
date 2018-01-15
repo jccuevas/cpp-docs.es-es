@@ -1,32 +1,33 @@
 ---
-title: "FtmBase::GetMarshalSizeMax (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetMarshalSizeMax (método)"
+title: "Ftmbase:: GetMarshalSizeMax (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+dev_langs: C++
+helpviewer_keywords: GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::GetMarshalSizeMax (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Obtiene el límite superior en el número de bytes necesarios para formar el puntero de interfaz especificado en el objeto especificado.  
+# <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax (Método)
+Obtiene el límite superior en el número de bytes necesarios para serializar el puntero de interfaz especificado en el objeto especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 STDMETHODIMP GetMarshalSizeMax(  
@@ -39,36 +40,36 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- Referencia al identificador de interfaz que se formará.  
+ Referencia al identificador de la interfaz que se van a calcular.  
   
  `pv`  
- Puntero de interfaz que se formará; puede ser NULL.  
+ Puntero de interfaz que se van a calcular; puede ser NULL.  
   
  `dwDestContext`  
- Contexto de destino donde se unmarshaled la interfaz especificada.  
+ Contexto de destino donde se puede deserializar la interfaz especificada.  
   
- Especifique uno o más valores de enumeración de MSHCTX.  
+ Especifique uno o varios valores de enumeración de MSHCTX.  
   
- Actualmente, el unmarshaling puede aparecer en otro apartamento del proceso actual \(MSHCTX\_INPROC\) o en otro proceso en el mismo equipo que el proceso actual \(MSHCTX\_LOCAL\).  
+ Actualmente, la resolución de referencias puede producirse en otro contenedor del proceso actual (MSHCTX_INPROC) o en otro proceso en el mismo equipo que el proceso actual (MSHCTX_LOCAL).  
   
  `pvDestContext`  
  Reservado para uso futuro; debe ser NULL.  
   
  `mshlflags`  
- Marcador que indica si los datos calcularse debe ser transmitido al proceso de cliente — el caso típico — o escribir en una tabla global, donde puede ser recuperada por varios clientes.  Especifique uno o más valores de enumeración de MSHLFLAGS.  
+ Marca que indica si los datos que se van a calcular transmitirse hacia el proceso del cliente, el caso típico, o se escriben en una tabla global, donde se puede recuperar mediante varios clientes. Especifique uno o varios valores de enumeración de MSHLFLAGS.  
   
  `pSize`  
- Cuando esta operación finaliza, puntero al límite superior en la cantidad de datos que se van a escribir en la secuencia de cálculo de referencias.  
+ Cuando se completa esta operación, puntero para el límite superior de la cantidad de datos se escriban en la secuencia de serialización.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, E\_FAIL o E\_NOINTERFACE.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, E_FAIL o E_NOINTERFACE.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** ftm.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [FtmBase \(Clase\)](../windows/ftmbase-class.md)
+## <a name="see-also"></a>Vea también  
+ [FtmBase (clase)](../windows/ftmbase-class.md)

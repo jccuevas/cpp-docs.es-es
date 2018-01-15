@@ -1,29 +1,30 @@
 ---
-title: "TerminateMap (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::TerminateMap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TerminateMap (función)"
+title: "TerminateMap (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::TerminateMap
+dev_langs: C++
+helpviewer_keywords: TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 42f71f86dce35457d5efa81c28d2a58106ba5b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# TerminateMap (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="terminatemap-function"></a>TerminateMap (Función)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,16 +38,16 @@ inline bool TerminateMap(
   
 ## <a name="parameters"></a>Parámetros  
  `module`  
- Un [módulo](../windows/module-class.md).  
+ A [módulo](../windows/module-class.md).  
   
  `serverName`  
  El nombre de un subconjunto de los generadores de clases en el módulo especificado por el parámetro `module`.  
   
  `forceTerminate`  
- `true` para finalizar la clase generadores independientemente de estén activas; `false` no finalice los generadores de clases si cualquier fábrica está activo.  
+ `true`para finalizar la clase generadores independientemente de están activos; `false` no terminar los generadores de clases si cualquier generador está activo.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Si se han terminado todos los generadores de clases; de lo contrario, `false`.  
+ `true`Si se han terminado todos los generadores de clases; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
  Cierra los generadores de clases en el módulo especificado.  
@@ -54,7 +55,7 @@ inline bool TerminateMap(
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
- **Espacio de nombres:** wrl  
+ **Namespace:** wrl  
   
 ## <a name="see-also"></a>Vea también  
- [Espacio de nombres de wrl](../windows/microsoft-wrl-details-namespace.md)
+ [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

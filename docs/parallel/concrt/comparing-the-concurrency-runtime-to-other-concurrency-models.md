@@ -1,34 +1,34 @@
 ---
-title: "Comparar el runtime de simultaneidad con otros modelos de simultaneidad | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Runtime de simultaneidad, en comparación con otros modelos"
+title: Comparar el Runtime de simultaneidad con otros modelos de simultaneidad | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Comparar el runtime de simultaneidad con otros modelos de simultaneidad
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparar el runtime de simultaneidad con otros modelos de simultaneidad
 En este documento se describen las diferencias entre las características y los modelos de programación del Runtime de simultaneidad y otras tecnologías. Si compara las ventajas del Runtime de simultaneidad con las ventajas de otros modelos de programación, podrá seleccionar la tecnología que mejor satisfaga los requisitos de sus aplicaciones.  
   
  Si actualmente usa otro modelo de programación, como el grupo de subprocesos de Windows u OpenMP, hay casos en los que puede ser adecuado migrar al Runtime de simultaneidad. Por ejemplo, en el tema [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) se describe cuál podría ser el momento adecuado para migrar de OpenMP al Runtime de simultaneidad, aunque si está satisfecho con el rendimiento de la aplicación y con la compatibilidad de depuración actual, no es necesario llevar a cabo la migración.  
   
  Puede usar las características y las ventajas de productividad del Runtime de simultaneidad para complementar su aplicación que usa otro modelo de simultaneidad. El Runtime de simultaneidad no puede garantizar el equilibrio de carga si hay varios programadores de tareas que compiten por los mismos recursos informáticos, aunque este efecto es mínimo si las cargas de trabajo no se superponen.  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> Secciones  
+##  <a name="top"></a> Secciones  
   
 -   [Comparación de la programación preferente y la programación cooperativa](#models)  
   
@@ -36,7 +36,7 @@ En este documento se describen las diferencias entre las características y los 
   
 -   [Comparación del Runtime de simultaneidad y OpenMP](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Comparación de la programación preferente y la programación cooperativa  
+##  <a name="models"></a> Comparación de la programación preferente y la programación cooperativa  
  Los modelos de programación preferente y cooperativa son dos métodos comunes para que varias tareas compartan recursos informáticos (por ejemplo, procesadores o subprocesos de hardware).  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Programación preferente y cooperativa  
@@ -55,7 +55,7 @@ En este documento se describen las diferencias entre las características y los 
   
  [[Arriba](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Comparación del Runtime de simultaneidad y la API de Windows  
+##  <a name="winapi"></a> Comparación del Runtime de simultaneidad y la API de Windows  
  La interfaz de programación de aplicaciones de Microsoft Windows, más conocida como la API de Windows (y anteriormente denominada Win32), proporciona un modelo de programación que permite la simultaneidad en las aplicaciones. El Runtime de simultaneidad se basa en la API de Windows para proporcionar unos modelos de programación que no están disponibles en el sistema operativo subyacente.  
   
  El Runtime de simultaneidad se basa en el modelo de subprocesos de la API de Windows para llevar a cabo trabajos paralelos. También usa la administración de memoria de la API de Windows y los mecanismos de almacenamiento local de subprocesos. En Windows 7 y Windows Server 2008 R2, usa la compatibilidad de la API de Windows para los subprocesos programables por los usuarios y los equipos que tienen más de 64 subprocesos de hardware. El Runtime de simultaneidad amplía el modelo de la API de Windows proporcionando un programador de tareas cooperativo y un algoritmo de robo de trabajo para maximizar el uso de los recursos informáticos; también permite varias instancias simultáneas del programador.  
@@ -81,8 +81,8 @@ En este documento se describen las diferencias entre las características y los 
   
  [[Arriba](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Comparación del Runtime de simultaneidad y OpenMP  
- El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. En esta sección se compara el Runtime de simultaneidad con [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add).  
+##  <a name="openmp"></a> Comparación del Runtime de simultaneidad y OpenMP  
+ El Runtime de simultaneidad ofrece una variedad de modelos de programación. Estos modelos pueden superponerse o complementar los modelos de otras bibliotecas. En esta sección se compara el Runtime de simultaneidad con [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
  El modelo de programación de OpenMP se define con un estándar abierto y tiene enlaces bien definidos con los lenguajes de programación Fortran y C/C++. Las versiones 2.0 y 2.5 de OpenMP son apropiadas para los algoritmos paralelos que son iterativos; es decir, efectúan una iteración paralela en una matriz de datos. OpenMP es más eficaz cuando el grado de paralelismo se determina previamente y coincide con los recursos disponibles en el sistema. El modelo de OpenMP es una muy buena opción para la informática de alto rendimiento, en la que los problemas de cálculo considerables se distribuyen por los recursos de procesamiento de un único equipo. En este escenario, el entorno de hardware es conocido y el desarrollador puede suponer, con razón, que tendrá acceso exclusivo a los recursos informáticos en el momento en que se ejecute el algoritmo.  
   
@@ -99,4 +99,4 @@ En este documento se describen las diferencias entre las características y los 
  [Información general](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Biblioteca de modelos de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

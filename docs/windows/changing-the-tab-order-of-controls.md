@@ -1,85 +1,89 @@
 ---
-title: "Changing the Tab Order of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], tab order"
-  - "focus, tab order"
-  - "tab controls, tab order"
-  - "Tabstop property for controls"
-  - "controls [C++], focus"
-  - "dialog box controls, tab order"
+title: "Cambiar el orden de tabulación de controles | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], tab order
+- focus, tab order
+- tab controls, tab order
+- Tabstop property for controls
+- controls [C++], focus
+- dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dca6b1bb894aa2219a0352ba9c359e6f3c5a4677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Tab Order of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El orden de tabulación se refiere al orden en que la tecla TAB va desplazando el foco de entrada de un control al siguiente en un cuadro de diálogo.  Normalmente, el orden de tabulación en un cuadro de diálogo es de izquierda a derecha y de arriba a abajo.  Cada control tiene una propiedad **Tabstop** que determina si ha de recibir el foco de entrada.  
+# <a name="changing-the-tab-order-of-controls"></a>Cambiar el orden de tabulación de los controles
+El orden de tabulación es el orden en el que la tecla TAB mueve el foco de entrada de un control a la siguiente dentro de un cuadro de diálogo. Normalmente en el orden de tabulación se realiza de izquierda a derecha y de arriba a abajo, en un cuadro de diálogo. Cada control tiene un **Tabstop** propiedad que determina si un control recibe el foco de entrada.  
   
-### Para establecer el foco en un control  
+### <a name="to-set-input-focus-for-a-control"></a>Para establecer el foco de entrada para un control  
   
-1.  En la [ventana Propiedades](../Topic/Properties%20Window.md), seleccione **True** o **False** en la propiedad **Tabstop**.  
+1.  En el [ventana propiedades](/visualstudio/ide/reference/properties-window), seleccione **True** o **False** en el **Tabstop** propiedad.  
   
- Incluso los controles que no tengan la propiedad Tabstop establecida en True deberán formar parte del orden de tabulación.  Esto puede ser importante, por ejemplo, cuando se [definen las teclas de acceso](../mfc/defining-mnemonics-access-keys.md) de controles sin leyenda.  El texto estático con la tecla de acceso asociada a un control deberá preceder inmediatamente al control en cuestión en el orden de tabulación.  
+ Incluso los controles que no tienen la propiedad Tabstop establecida en True deberán formar parte del orden de tabulación. Esto puede ser importante, por ejemplo, cuando se [definir teclas de acceso (teclas de acceso)](../windows/defining-mnemonics-access-keys.md) para los controles que no tienen títulos. Texto estático que contiene una clave de acceso asociada a un control debe preceder inmediatamente el control relacionado en el orden de tabulación.  
   
 > [!NOTE]
->  Si un cuadro de diálogo contiene controles superpuestos, al cambiar el orden de tabulación puede que se altere el modo en que se muestren los controles.  Los últimos controles en el orden de tabulación se mostrarán siempre sobre cualquier control superpuesto que los preceda en el orden de tabulación.  
+>  Si el cuadro de diálogo contiene controles superpuestos, al cambiar el orden de tabulación puede cambiar la manera en que se muestran los controles. Controles que se incluyen más adelante en el orden de tabulación se muestran siempre encima de todos los controles superpuestos que preceden a ellos en el orden de tabulación.  
   
-#### Para ver el orden de tabulación actual de todos los controles de un cuadro de diálogo  
+#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Para ver el orden de tabulación actual para todos los controles en un cuadro de diálogo  
   
-1.  En el menú **Formato**, haga clic en **Orden de tabulación**.  
+1.  En el **formato** menú, haga clic en **orden de tabulación**.  
   
- \-O bien\-  
+ \- o -  
   
--   Presione CTRL \+ D.  
+-   Presione CTRL + D.  
   
-#### Para cambiar el orden de tabulación de todos los controles de un cuadro de diálogo  
+#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>Para cambiar el orden de tabulación para todos los controles en un cuadro de diálogo  
   
-1.  En el menú **Formato**, haga clic en **Orden de tabulación**.  
+1.  En el **formato** menú, haga clic en **orden de tabulación**.  
   
-     Aparecerá un número en la esquina superior izquierda de cada control con el que se indicará su lugar en el orden de tabulación.  
+     Un número en la esquina superior izquierda de cada control muestra su lugar en el orden de tabulación actual.  
   
-2.  Defina el orden de tabulación haciendo clic en cada control según el orden que desee que siga la tecla TAB.  
+2.  Establecer el orden de tabulación haciendo clic en cada control en el orden en que desea que la tecla TAB para seguir.  
   
-3.  Presione **ENTRAR** para salir del modo **Orden de tabulación**.  
+3.  Presione **ENTRAR** para salir **orden de tabulación** modo.  
   
     > [!TIP]
-    >  En el modo Orden de tabulación, si se presiona ESC o ENTRAR, se deshabilita la capacidad para cambiar el orden de tabulación.  
+    >  Una vez que entrar en el modo de orden de tabulación, también puede presionar ESC o ENTRAR se deshabilita la capacidad de cambiar el orden de tabulación.  
   
-#### Para cambiar el orden de tabulación de dos o más controles  
+#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>Para cambiar el orden de tabulación de dos o más controles  
   
-1.  En el menú **Formato**, elija **Orden de tabulación**.  
+1.  Desde el **formato** menú, elija **orden de tabulación**.  
   
-2.  Especifique en qué punto ha de empezar el cambio en el orden.  Para ello, mantenga presionada la tecla **CTRL** y haga clic en el control anterior a aquél en el que desea que empiece a cambiar el orden.  
+2.  Especifique que se iniciará el cambio en el orden. Para ello, mantenga presionada la **CTRL** clave y haga clic en el control anterior a aquél donde desea cambiar el orden para comenzar.  
   
-     Por ejemplo, si desea cambiar el orden de los controles 7 a 9, mantenga presionada CTRL y seleccione primero el control 6.  
+     Por ejemplo, si desea cambiar el orden de los controles 7 al 9, mantenga presionada la tecla CTRL, a continuación, seleccione primero el control 6.  
   
     > [!NOTE]
-    >  Para definir un control en particular con el número 1 \(el primero en el orden de tabulación\), haga doble clic sobre dicho control.  
+    >  Para establecer un control determinado en el número 1 (primero en el orden de tabulación), haga doble clic en el control.  
   
-3.  Suelte la tecla CTRL y vaya haciendo clic en los controles en el orden en que desee que siga la tecla TAB a partir de ese punto.  
+3.  Suelte la tecla CTRL y, a continuación, haga clic en los controles en el orden que desee que la tecla TAB para seguir desde ese punto.  
   
-4.  Presione **ENTRAR** para salir del modo **Orden de tabulación**.  
+4.  Presione **ENTRAR** para salir **orden de tabulación** modo.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Requisitos  
+### <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vea también  
+ [Organización de los controles de cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

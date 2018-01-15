@@ -143,11 +143,12 @@ caps.latest.revision: "47"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dead08eaeb525e626e9c1f02af346b0c3998260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611f26b07bc8ebd14fc394437ddda07cb65ab4e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 Encapsula el cuadro de diálogo común que se utiliza para abrir el archivo o para guardar las operaciones de archivos.  
@@ -162,13 +163,13 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileDialog::CFileDialog](#cfiledialog)|Construye un objeto `CFileDialog`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Agrega un botón de comprobación en el cuadro de diálogo.|  
 |[CFileDialog::AddComboBox](#addcombobox)|Agrega un cuadro combinado en el cuadro de diálogo.|  
@@ -223,7 +224,7 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Se llama cuando se hace clic en el botón.|  
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Se llama cuando la casilla de verificación está activada o desactivada.|  
@@ -239,7 +240,7 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CFileDialog::m_ofn](#m_ofn)|Las ventanas `OPENFILENAME` estructura. Proporciona acceso a los parámetros de cuadro de diálogo de archivo básico.|  
   

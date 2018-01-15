@@ -1,33 +1,33 @@
 ---
-title: "ComPtr::operator= (Operador) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (operador)"
+title: 'Comptr:: operator = (operador) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 1a0c2752-f7d8-4819-9443-07b88b69ef02
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 30f04bdfe7b508bf83e34992fefdcb10c58b4655
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::operator= (Operador)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Asigna un valor al ComPtr actual.  
+# <a name="comptroperator-operator"></a>ComPtr::operator= (Operador)
+Asigna un valor a la ComPtr actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW ComPtr& operator=(  
@@ -62,35 +62,35 @@ WRL_NOTHROW ComPtr& operator=(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `U`  
  Una clase.  
   
  `other`  
- Un puntero, una referencia, o una referencia rvalue a un tipo o a otro ComPtr.  
+ Una referencia de puntero, referencia o valor r a un tipo u otro ComPtr.  
   
-## Valor devuelto  
- Una referencia al ComPtr actual.  
+## <a name="return-value"></a>Valor devuelto  
+ Una referencia a la ComPtr actual.  
   
-## Comentarios  
- La primera versión de este operador asigna un valor vacío al ComPtr actual.  
+## <a name="remarks"></a>Comentarios  
+ La primera versión de este operador asigna un valor vacío a la ComPtr actual.  
   
- En la segunda versión, si el puntero de interfaz de asignación no es igual que el puntero actual de la interfaz de ComPtr, el segundo puntero de interfaz se asigna al ComPtr actual.  
+ En la segunda versión, si el puntero de interfaz de asignación no es el mismo que el puntero de interfaz de ComPtr actual, se asigna el segundo puntero de interfaz a la ComPtr actual.  
   
- En la tercera versión, el puntero de interfaz de asignación se asigna al ComPtr actual.  
+ En la tercera versión, el puntero de interfaz asignar se asigna a la ComPtr actual.  
   
- En la cuarta versión, si el puntero de interfaz de valor de asignación no es igual que el puntero actual de la interfaz de ComPtr, el segundo puntero de interfaz se asigna al ComPtr actual.  
+ En la cuarta versión, si el puntero de interfaz del valor de asignación no es el mismo que el puntero de interfaz de ComPtr actual, se asigna el segundo puntero de interfaz a la ComPtr actual.  
   
- La quinta versión es un operador de la copia; una referencia a un ComPtr se asigna al ComPtr actual.  
+ La versión del quinto es un operador de copia. una referencia a una ComPtr se asigna a la ComPtr actual.  
   
- La sexta versión es un operador de la copia que usa la semántica de transferencia de recursos; una referencia rvalue a un ComPtr si cualquier tipo es conversión estática y después asignado al ComPtr actual.  
+ La versión del sexto es mover de un operador de copia que usa la semántica; una referencia a valor r en una ComPtr si es estático cualquier tipo de conversión y, a continuación, se asigna a la ComPtr actual.  
   
- La séptima versión es un operador de la copia que usa la semántica de transferencia de recursos; una referencia rvalue a un ComPtr de `U` con tipo es conversión estática a continuación y asignado al ComPtr actual.  
+ La versión del séptima es mover de un operador de copia que usa la semántica; una referencia a valor r a una ComPtr de tipo `U` es estático, a continuación, convierte y asignada a la ComPtr actual.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ComPtr \(Clase\)](../windows/comptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtr (clase)](../windows/comptr-class.md)

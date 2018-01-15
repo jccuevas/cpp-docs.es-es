@@ -1,49 +1,48 @@
 ---
-title: "for (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for OpenMP directive"
+title: para (OpenMP) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# for (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Hace que el trabajo realizado en un bucle for dentro de una región paralela que se va a dividir entre los subprocesos.  
+# <a name="for-openmp"></a>for (OpenMP)
+Hace que el trabajo realizado un bucle dentro de una región paralela va a dividir entre subprocesos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma omp [parallel] for [clauses]  
    for_statement  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
- `clause` \(opcional\)  
- cero o más cláusula.  Vea la sección comentarios para obtener una lista de las cláusulas admitidas por el párrafo.  
+ `clause` (opcional)  
+ Cero o más cláusulas. Vea la sección Comentarios para obtener una lista de las cláusulas compatibles con **para**.  
   
  `for_statement`  
- Un bucle for.  El comportamiento indefinido se producirá si el código de usuario de para el bucle cambia la variable de índice.  
+ Un bucle for. Se producirá un comportamiento indefinido si el código de usuario en el de bucle cambia la variable de índice.  
   
-## Comentarios  
- La directiva de **Para** admite las siguientes cláusulas de OpenMP:  
+## <a name="remarks"></a>Comentarios  
+ El **para** directiva es compatible con las cláusulas de OpenMP siguientes:  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -51,19 +50,19 @@ Hace que el trabajo realizado en un bucle for dentro de una región paralela que
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [consultar](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [ordenada](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [informe detallado](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [programación](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- si **Paralelo** también se especifica, `clause` puede ser cualquier cláusula aceptada por las directivas de **Paralelo** o de **Para** , excepto **nowait**.  
+ Si **paralelo** también se especifica, `clause` cualquier cláusula puede ser aceptado por la **paralelo** o **para** directivas, excepto **nowait**.  
   
- Para obtener más información, vea [2.4.1 para la construcción](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Para obtener más información, consulte [2.4.1 for (construcción)](../../../parallel/openmp/2-4-1-for-construct.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_for.cpp  
@@ -122,6 +121,10 @@ int main() {
 }  
 ```  
   
-  **4 Subprocesos de OpenMP utilizados.  la suma de 1 a 10 es 55**    
-## Vea también  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+4 OpenMP threads were used.  
+The sum of 1 through 10 is 55  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Directivas](../../../parallel/openmp/reference/openmp-directives.md)

@@ -1,34 +1,35 @@
 ---
-title: "C&#243;mo: Declarar punteros internos con la palabra clave const (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "punteros, interior"
+title: "Cómo: declarar punteros internos con la palabra clave const (C++ / CLI) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aadd1573a5110960ba74eabe4fc6c696fad887ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Declarar punteros internos con la palabra clave const (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente se muestra cómo utilizar `const` en la declaración de un puntero interior.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)
+El ejemplo siguiente muestra cómo utilizar `const` en la declaración de un puntero interior.  
   
 > [!IMPORTANT]
->  Esta característica de lenguaje es compatible con la opción del compilador **\/clr** , pero no por la opción del compilador **\/ZW** .  
+>  Esta característica de lenguaje es compatible con la **/CLR** opción del compilador, pero no en el **/ZW** opción del compilador.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +88,5 @@ int main() {
 };  
 ```  
   
-## Vea también  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vea también  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

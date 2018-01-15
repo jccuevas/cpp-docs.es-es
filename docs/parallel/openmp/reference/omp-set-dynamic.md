@@ -1,32 +1,31 @@
 ---
-title: "omp_set_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_dynamic OpenMP function"
+title: omp_set_dynamic () | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Indica que el número de subprocesos disponibles en la región paralela subsiguiente se puede ajustar el motor en tiempo de ejecución.  
+# <a name="ompsetdynamic"></a>omp_set_dynamic
+Indica que el número de subprocesos disponibles en la región paralela posterior puede ser ajustado por el tiempo de ejecución.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 void omp_set_dynamic(  
@@ -34,22 +33,22 @@ void omp_set_dynamic(
 );  
 ```  
   
-## Comentarios  
- donde  
+## <a name="remarks"></a>Comentarios  
+ donde,  
   
  `val`  
- Un valor que indica si el número de subprocesos disponibles en la región paralela subsiguiente se puede ajustar el motor en tiempo de ejecución.  Si es distinto de cero, el runtime puede ajustar el número de subprocesos, si cero, el runtime no ajusta dinámicamente el número de subprocesos.  
+ Un valor que indica si el número de subprocesos disponibles en la región paralela posterior puede ser ajustado por el tiempo de ejecución.  Si es distinto de cero, que el tiempo de ejecución puede ajustar el número de subprocesos, si es cero, el tiempo de ejecución no ajustará dinámicamente el número de subprocesos.  
   
-## Comentarios  
- el número de subprocesos nunca superará el valor establecido por [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o por [OMP\_NUM\_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
+## <a name="remarks"></a>Comentarios  
+ El número de subprocesos nunca superará el valor establecido por [omp_set_num_threads ()](../../../parallel/openmp/reference/omp-set-num-threads.md) o [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- Utilice [omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) para mostrar la configuración actual de `omp_set_dynamic`.  
+ Use [omp_get_dynamic ()](../../../parallel/openmp/reference/omp-get-dynamic.md) para mostrar la configuración actual de `omp_set_dynamic`.  
   
- El valor de `omp_set_dynamic` reemplazará el valor de la variable de entorno [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) .  
+ La configuración de `omp_set_dynamic` sobrescribirá la configuración de la [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) variable de entorno.  
   
- Para obtener más información, vea [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
+ Para obtener más información, consulte [3.1.7 omp_set_dynamic (función)](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // omp_set_dynamic.cpp  
@@ -70,7 +69,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**1**   
-## Vea también  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Funciones](../../../parallel/openmp/reference/openmp-functions.md)

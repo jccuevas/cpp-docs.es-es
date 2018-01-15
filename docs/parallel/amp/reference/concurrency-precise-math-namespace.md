@@ -144,11 +144,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5250ab17fa6da4ed54d5bda84e32b409ca53869d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math (Espacio de nombres)
 Las funciones del espacio de nombres `precise_math` cumplen el estándar C99. Ambos precisión simple y doble precisión las versiones de cada función se incluyen. Por ejemplo, `acos` es la versión de precisión doble y `acosf` es la versión de precisión sencilla. Estas funciones, incluidas las funciones de precisión sencilla, requieren la compatibilidad de doble precisión extendida en el acelerador. Puede usar el [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) para determinar si puede ejecutar estas funciones en un acelerador específico. 

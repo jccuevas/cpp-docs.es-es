@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c4693951800056974fe51ad102e63f2662fa76e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c25a7b2c8240531e1d778d6a119f857032423db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Orden de bytes
 En este artículo y dos artículos complementarios explican varios aspectos de la programación de Windows Sockets. Este artículo trata el orden de bytes. Los otros temas se tratan en los artículos: [Windows Sockets: bloqueo](../mfc/windows-sockets-blocking.md) y [Windows Sockets: convertir cadenas](../mfc/windows-sockets-converting-strings.md).  

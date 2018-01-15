@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cc02ef4e65fc2762ab1c4eca0f0727d1e1258639
-ms.contentlocale: es-es
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor (clase)
 Representa una anidación de asignadores.  
@@ -76,7 +74,7 @@ class scoped_allocator_adaptor;
   
 ### <a name="constructors"></a>Constructores  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor)](#scoped_allocator_adaptor)|Construye un objeto `scoped_allocator_adaptor`.|  
   
@@ -97,15 +95,15 @@ class scoped_allocator_adaptor;
 |`value_type`|Este tipo es un sinónimo del `value_type` asociado con el asignador `Outer`.|  
 |`void_pointer`|Este tipo es un sinónimo del `void_pointer` asociado con el asignador `Outer`.|  
   
-### <a name="structs"></a>Structs  
+### <a name="structs"></a>Estructuras  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor::rebind (Struct)](#rebind_struct)|Define el tipo `Outer::rebind\<Other>::other` como sinónimo de `scoped_allocator_adaptor\<Other, Inner...>`.|  
   
 ### <a name="methods"></a>Métodos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[allocate](#allocate)|Asigna memoria usando el asignador `Outer`.|  
 |[construct](#construct)|Construye un objeto.|  
@@ -312,7 +310,6 @@ scoped_allocator_adaptor select_on_container_copy_construction();
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

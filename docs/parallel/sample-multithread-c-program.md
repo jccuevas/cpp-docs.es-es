@@ -1,30 +1,31 @@
 ---
-title: "Ejemplo de programa multiproceso en C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Ejemplo de programa multiproceso en C | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Ejemplo de programa multiproceso en C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que se escribe la letra **a** o **A**.  Cada subproceso produce una cara sonriente de diferente color que se mueve por la pantalla.  Pueden crearse hasta 32 subprocesos.  La terminación normal del programa se produce al presionar la tecla `q` o **Q**.  Para obtener información sobre la compilación y vinculación de Bounce.c, vea [Compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  
+# <a name="sample-multithread-c-program"></a>Ejemplo de programa multiproceso en C
+Bounce.c es un ejemplo de programa multiproceso que crea un nuevo subproceso cada vez que la letra **una** o **A** se escribe. Cada subproceso produce una cara sonriente de distinto color alrededor de la pantalla. Pueden crearse hasta 32 subprocesos. Terminación normal del programa se produce cuando `q` o **preguntas** se escribe. Para obtener información sobre la compilación y vinculación de Bounce.c, vea [compilar y vincular programas multiproceso](../parallel/compiling-and-linking-multithread-programs.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```  
 // sample_multithread_c_program.c  
@@ -211,12 +212,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### Entrada  
+### <a name="input"></a>Entrada  
   
 ```  
 a  
 q  
 ```  
   
-## Vea también  
- [Subprocesamiento múltiple con C y Win32](../parallel/multithreading-with-c-and-win32.md)
+## <a name="see-also"></a>Vea también  
+ [Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)

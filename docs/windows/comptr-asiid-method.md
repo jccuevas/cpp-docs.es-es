@@ -1,32 +1,33 @@
 ---
-title: "ComPtr::AsIID (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsIID (método)"
+title: "Comptr:: Asiid (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: d5a3cdb2-796d-4410-966a-847c0e8fb226
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e19a313da257d9aefce68a61d43278e22bf88bab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::AsIID (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Devuelve un objeto de ComPtr que representa la interfaz identificada por el identificador especificado de la interfaz  
+# <a name="comptrasiid-method"></a>ComPtr::AsIID (Método)
+Devuelve un objeto de ComPtr que representa la interfaz identificada por el identificador de plantilla especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW HRESULT AsIID(  
@@ -35,20 +36,20 @@ WRL_NOTHROW HRESULT AsIID(
 ) const;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `riid`  
- Un identificador de interfaz  
+ Id. de interfaz.  
   
  `p`  
- Si se admite, un puntero doble\- indirecto a la interfaz especificada por el parámetro de `riid` ; si no, un puntero a IUnknown.  
+ Si se admite, un puntero indirecto doble para la interfaz especificada por el `riid` parámetro; en caso contrario, un puntero a IUnknown.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que indica el error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ComPtr \(Clase\)](../windows/comptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtr (clase)](../windows/comptr-class.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817e710546a695addaa6cae0e266bd1ff1ddc701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c47be3ddb2302124b233c39aaf8bd829cd481d79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarinfo-class"></a>Clase CMFCToolBarInfo
 Contiene los identificadores de recursos de las imágenes de la barra de herramientas en diversos estados. `CMFCToolBarInfo`es una clase auxiliar que se utiliza como un parámetro de la [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) método.  
@@ -52,7 +53,7 @@ class CMFCToolBarInfo
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Id. de recurso del mapa de bits de barra de herramientas que contiene imágenes de barra de herramientas (inactiva) regular.|  
 |[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Id. de recurso del mapa de bits de barra de herramientas que contiene imágenes de barra de herramientas deshabilitada.|  

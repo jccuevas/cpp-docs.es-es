@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96b46fe15b2c101ed3ebc8bb58033074f409b41c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptr-class"></a>ComPtr (clase)
 Crea un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. ComPtr mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.  
@@ -54,20 +57,20 @@ friend class ComPtr;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`InterfaceType`|Un sinónimo del tipo especificado por el parámetro de plantilla `T` .|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ComPtr::ComPtr (constructor)](../windows/comptr-comptr-constructor.md)|Inicializa una nueva instancia de la clase ComPtr. Las sobrecargas proporcionan constructores predeterminados, así como de copia, movimiento y conversión.|  
 |[ComPtr::~ComPtr (destructor)](../windows/comptr-tilde-comptr-destructor.md)|Desinicializa una instancia de ComPtr.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ComPtr::As (método)](../windows/comptr-as-method.md)|Devuelve un objeto de ComPtr que representa la interfaz identificada por el parámetro de plantilla especificado.|  
 |[ComPtr::AsIID (método)](../windows/comptr-asiid-method.md)|Devuelve un objeto de ComPtr que representa la interfaz identificada por el identificador de plantilla especificado.|  
@@ -83,14 +86,14 @@ friend class ComPtr;
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ComPtr::InternalAddRef (método)](../windows/comptr-internaladdref-method.md)|Incrementa el recuento de referencias de la interfaz asociada a esta ComPtr.|  
 |[ComPtr::InternalRelease (método)](../windows/comptr-internalrelease-method.md)|Realiza una operación de liberación de COM en la interfaz asociada a esta ComPtr.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[ComPtr::operator Microsoft::WRL::Details::BoolType (operador)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Indica si una ComPtr administra o no la duración del objeto de una interfaz.|  
 |[ComPtr::operator& (operador)](../windows/comptr-operator-ampersand-operator.md)|Recupera la dirección de la ComPtr actual.|  
@@ -101,7 +104,7 @@ friend class ComPtr;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[ComPtr::ptr_ (miembro de datos)](../windows/comptr-ptr-data-member.md)|Contiene un puntero a la interfaz que está asociad y está administrado por esta ComPtr.|  
   

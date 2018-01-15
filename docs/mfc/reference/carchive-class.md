@@ -63,11 +63,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa6350a1195a0096160ab1c776009a3ac7a0e0d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cc94e78656c53156b8696b927780f46e939861a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carchive-class"></a>CArchive (clase)
 Permite guardar una red compleja de objetos en un formato binario permanente (normalmente almacenamiento en disco) que se conserva después de que se eliminen esos objetos.  
@@ -82,13 +83,13 @@ class CArchive
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArchive::CArchive](#carchive)|Crea un objeto `CArchive`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArchive::Abort](#abort)|Cierra un archivo sin producir una excepción.|  
 |[CArchive::Close](#close)|Vacía los datos no escritos y desconecta el `CFile`.|  
@@ -114,14 +115,14 @@ class CArchive
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArchive::operator&lt;&lt;](#operator_lt_lt)|Almacena los objetos y los tipos primitivos en el archivo de almacenamiento.|  
 |[CArchive::operator&gt;&gt;](#operator_gt_gt)|Carga los tipos primitivos y objetos desde el archivo.|  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArchive::m_pDocument](#m_pdocument)||  
   

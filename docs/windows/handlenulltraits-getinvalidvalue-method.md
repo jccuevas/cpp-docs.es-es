@@ -1,44 +1,45 @@
 ---
-title: "HANDLENullTraits::GetInvalidValue (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInvalidValue (método)"
+title: "Handlenulltraits:: Getinvalidvalue (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: 49df8980-9c92-4333-9f3b-687b7c10949e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 168213026851bf8a99b999d31cfa64568e13db92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# HANDLENullTraits::GetInvalidValue (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handlenulltraitsgetinvalidvalue-method"></a>HANDLENullTraits::GetInvalidValue (Método)
 Representa un identificador no válido.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 inline static Type GetInvalidValue();  
 ```  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Siempre devuelve `nullptr`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** handletraits  
   
-## Vea también  
- [HANDLENullTraits \(Estructura\)](../windows/handlenulltraits-structure.md)
+## <a name="see-also"></a>Vea también  
+ [HANDLENullTraits (estructura)](../windows/handlenulltraits-structure.md)

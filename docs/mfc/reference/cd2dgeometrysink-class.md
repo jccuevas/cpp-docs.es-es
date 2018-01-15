@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGeometrySink::SetFillMode
 - AFXRENDERTARGET/CD2DGeometrySink::SetSegmentFlags
 - AFXRENDERTARGET/CD2DGeometrySink::m_pSink
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGeometrySink [MFC], CD2DGeometrySink
 - CD2DGeometrySink [MFC], AddArc
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e48ad7304cb505526ab5eab0b9cd1bbba62895c
-ms.contentlocale: es-es
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometrysink-class"></a>Clase CD2DGeometrySink
 Un contenedor para ID2D1GeometrySink.  
@@ -71,14 +69,14 @@ class CD2DGeometrySink;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Construye un objeto CD2DGeometrySink del objeto CD2DPathGeometry.|  
 |[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destructor. Se llama cuando se destruye un objeto de receptor de geometría de D2D.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DGeometrySink::AddArc](#addarc)|Agrega un arco único a la geometría de trayecto|  
 |[CD2DGeometrySink::AddBezier](#addbezier)|Crea una curva Bézier cúbica entre el punto actual y el punto final especificado.|  
@@ -97,13 +95,13 @@ class CD2DGeometrySink;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Interfaz de ID2D1GeometrySink devuelve|  
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|Un puntero a un ID2D1GeometrySink.|  
   
@@ -312,4 +310,3 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
   
 ## <a name="see-also"></a>Vea también  
  [Clases](../../mfc/reference/mfc-classes.md)
-

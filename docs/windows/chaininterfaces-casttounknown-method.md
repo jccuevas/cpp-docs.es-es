@@ -1,44 +1,45 @@
 ---
-title: "ChainInterfaces::CastToUnknown (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown (método)"
+title: "Chaininterfaces:: Casttounknown (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: a6a58555-e5b0-4773-aba0-959d9d362c6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f49ca9eb6218e5dce42be5d951d134ad74745e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces::CastToUnknown (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Convierte el puntero de interfaz de tipo definido por el parámetro de plantilla de `I0` a un puntero a IUnknown.  
+# <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown (Método)
+Convierte el puntero de interfaz del tipo definido por el `I0` parámetro de plantilla a un puntero a IUnknown.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 __forceinline IUnknown* CastToUnknown();  
 ```  
   
-## Valor devuelto  
+## <a name="return-value"></a>Valor devuelto  
  Un puntero a IUnknown.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ChainInterfaces \(Estructura\)](../windows/chaininterfaces-structure.md)
+## <a name="see-also"></a>Vea también  
+ [ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)

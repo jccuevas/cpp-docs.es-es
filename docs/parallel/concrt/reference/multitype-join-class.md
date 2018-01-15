@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a53206c32b59ab5cac9f14d51bed42a4870b94fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multitypejoin-class"></a>multitype_join (Clase)
 Un bloque de mensajería `multitype_join` es un bloque de mensajería de destino único, de varios orígenes, que combina los mensajes de diferentes tipos de cada uno de sus orígenes y ofrece una tupla de los mensajes combinados con sus destinos.  
@@ -57,20 +58,20 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`type`|Un alias de tipo para `T`.|  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|Sobrecargado. Construye un bloque de mensajería `multitype_join` .|  
 |[~ multitype_join (destructor)](#dtor)|Destruye el `multitype_join` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Aceptar](#accept)|Acepta un mensaje que fue proporcionado por este `multitype_join` bloque, transferir la propiedad al llamador.|  
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en el objeto `multitype_join` bloque de mensajería, para evitar la eliminación.|  

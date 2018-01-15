@@ -43,11 +43,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 526b89d718f0e957972ed2902da4bef8edbf89d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c40cd99c03d4e6e3adcef9d709ae85163804c94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 ||||  
@@ -535,7 +536,7 @@ task_handle<_Function> make_task(const _Function& _Func);
  La función que se invocará para ejecutar el trabajo representado por la `task_handle` objeto. Esto puede ser un functor lambda, un puntero a una función, o cualquier otro objeto que admita una versión del operador de llamada de función con la firma `void operator()()`.  
   
 ### <a name="return-value"></a>Valor devuelto  
- Objeto `task_handle`.  
+ Un objeto `task_handle`.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función es útil cuando se necesita crear un `task_handle` objeto con una expresión lambda, porque permite crear el objeto sin conocer el tipo verdadero del functor lambda.  

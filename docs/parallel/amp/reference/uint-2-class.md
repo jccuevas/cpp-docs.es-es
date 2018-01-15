@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,34 +33,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: es-es
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>uint_2 (Clase)
 Representa un vector corto de dos enteros sin signo.  
@@ -76,19 +59,19 @@ class uint_2;
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`value_type`||  
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Constructor uint_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |uint_2:: get_X||  
 |uint_2:: get_xy||  
@@ -105,32 +88,32 @@ class uint_2;
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|operador uint_2::--||  
-|operador uint_2:: % =||  
-|operador uint_2:: aspecto =||  
-|operador uint_2:: * =||  
-|operador uint_2:: / =||  
-|operador uint_2:: ^ =||  
-|operador uint_2:: | =||  
+|uint_2:: operator--||  
+|uint_2:: operator % =||  
+|uint_2:: operator & =||  
+|uint_2:: operator * =||  
+|uint_2:: operator / =||  
+|uint_2:: operator ^ =||  
+|uint_2:: operator &#124; =||  
 |operador uint_2:: ~||  
-|operador uint_2:: ++||  
-|operador uint_2:: +=||  
-|operador uint_2::\<=||  
-|operador uint_2:: =||  
-|operador uint_2:: =||  
+|uint_2:: operator ++||  
+|uint_2:: operator +=||  
+|uint_2:: operator <\<=||  
+|uint_2:: operator =||  
+|uint_2:: operator =||  
 |operador uint_2:: >> =||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
-|[tamaño (constante)](#uint_2__size)||  
+|[cambio de tamaño constante](#uint_2__size)||  
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |uint_2:: g||  
 |uint_2:: GR||  
@@ -147,7 +130,7 @@ class uint_2;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp_short_vectors.h  
   
- **Namespace:** Graphics  
+ **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a>uint_2 
 
@@ -210,7 +193,7 @@ explicit inline uint_2(
  El valor de inicialización.  
   
  `_Other`  
- Objeto utilizado para inicializar.  
+ El objeto utilizado para inicializar.  
   
 ##  <a name="uint_2__size"></a>tamaño 
 
@@ -220,4 +203,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>Vea también  
  [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
-

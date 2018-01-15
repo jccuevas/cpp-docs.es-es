@@ -13,18 +13,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4748220f0115f9bd05d051ca5f1bb3f6fcc8ded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="key-wrl-apis-by-category"></a>API clave de WRL por categoría
 Las tablas siguientes enumeran principal clases, structs, funciones y macros de biblioteca de plantillas de C++ de Windows en tiempo de ejecución. Se omiten las construcciones en clases y espacios de nombres de aplicación auxiliar. Estas listas aumentan la documentación de API, que está organizada por espacio de nombres.  
   
 ### <a name="classes"></a>Clases  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[ActivationFactory (clase)](../windows/activationfactory-class.md)|Habilita una o más clases que activa Windows Runtime.|  
 |[AsyncBase (clase)](../windows/asyncbase-class.md)|Implementa la máquina de estados asincrónica de Windows Runtime.|  
@@ -48,7 +51,7 @@ Las tablas siguientes enumeran principal clases, structs, funciones y macros de 
   
 ### <a name="structures"></a>Estructuras  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)|Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.|  
 |[CloakedIid (estructura)](../windows/cloakediid-structure.md)|Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.|  
@@ -57,7 +60,7 @@ Las tablas siguientes enumeran principal clases, structs, funciones y macros de 
   
 ### <a name="functions"></a>Funciones  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[ActivateInstance (función)](../windows/activateinstance-function.md)|Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificada.|  
 |[AsWeak (función)](../windows/asweak-function.md)|Recupera una referencia débil a una instancia especificada.|  
@@ -69,7 +72,7 @@ Las tablas siguientes enumeran principal clases, structs, funciones y macros de 
   
 ### <a name="macros"></a>Macros  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[ActivatableClass (macros)](../windows/activatableclass-macros.md)|Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.|  
 |[InspectableClass (macro)](../windows/inspectableclass-macro.md)|Establece el nivel de confianza y de nombre de clase en tiempo de ejecución.|  

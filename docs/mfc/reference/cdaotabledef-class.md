@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -44,39 +43,52 @@ f1_keywords:
 - AFXDAO/CDaoTableDef::SetValidationText
 - AFXDAO/CDaoTableDef::m_pDAOTableDef
 - AFXDAO/CDaoTableDef::m_pDatabase
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- database classes [C++], DAO
-- tabledefs [C++]
-- CDaoTableDef class
-- database tables [C++], attached table definition
-- database tables [C++], base table definition
+- CDaoTableDef [MFC], CDaoTableDef
+- CDaoTableDef [MFC], Append
+- CDaoTableDef [MFC], CanUpdate
+- CDaoTableDef [MFC], Close
+- CDaoTableDef [MFC], Create
+- CDaoTableDef [MFC], CreateField
+- CDaoTableDef [MFC], CreateIndex
+- CDaoTableDef [MFC], DeleteField
+- CDaoTableDef [MFC], DeleteIndex
+- CDaoTableDef [MFC], GetAttributes
+- CDaoTableDef [MFC], GetConnect
+- CDaoTableDef [MFC], GetDateCreated
+- CDaoTableDef [MFC], GetDateLastUpdated
+- CDaoTableDef [MFC], GetFieldCount
+- CDaoTableDef [MFC], GetFieldInfo
+- CDaoTableDef [MFC], GetIndexCount
+- CDaoTableDef [MFC], GetIndexInfo
+- CDaoTableDef [MFC], GetName
+- CDaoTableDef [MFC], GetRecordCount
+- CDaoTableDef [MFC], GetSourceTableName
+- CDaoTableDef [MFC], GetValidationRule
+- CDaoTableDef [MFC], GetValidationText
+- CDaoTableDef [MFC], IsOpen
+- CDaoTableDef [MFC], Open
+- CDaoTableDef [MFC], RefreshLink
+- CDaoTableDef [MFC], SetAttributes
+- CDaoTableDef [MFC], SetConnect
+- CDaoTableDef [MFC], SetName
+- CDaoTableDef [MFC], SetSourceTableName
+- CDaoTableDef [MFC], SetValidationRule
+- CDaoTableDef [MFC], SetValidationText
+- CDaoTableDef [MFC], m_pDAOTableDef
+- CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 51a93f7facdebb748ec819b731456066dfeaf55d
-ms.contentlocale: es-es
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaotabledef-class"></a>Clase CDaoTableDef
 Representa la definición almacenada de una tabla base o una tabla asociada.  
@@ -91,13 +103,13 @@ class CDaoTableDef : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Construye un **CDaoTableDef** objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoTableDef:: Append](#append)|Agrega una nueva tabla a la base de datos.|  
 |[CDaoTableDef:: CanUpdate](#canupdate)|Devuelve un valor distinto de cero si se puede actualizar la tabla (puede modificar la definición de campos o propiedades de la tabla).|  
@@ -132,7 +144,7 @@ class CDaoTableDef : public CObject
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|Un puntero a la interfaz DAO tabledef objeto subyacente.|  
 |[CDaoTableDef::m_pDatabase](#m_pdatabase)|Base de datos de origen para esta tabla.|  
@@ -274,7 +286,7 @@ virtual void Create(
  Un puntero a una cadena que contiene la cadena de conexión predeterminada. De forma predeterminada, este valor se inicializa como **NULL**.  
   
 ### <a name="remarks"></a>Comentarios  
- Una vez con el nombre de la definición de tabla, puede, a continuación, llame a [anexado](#append) para guardar la definición de tabla en la colección de definiciones de tabla de la base de datos. Después de llamar a **anexión**, la definición de tabla está en un estado abierto y se puede usar para crear un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto.  
+ Una vez con el nombre de la definición de tabla, puede, a continuación, llame a [anexado](#append) para guardar la definición de tabla en la colección de definiciones de tabla de la base de datos. Después de llamar a **anexado**, la definición de tabla está en un estado abierto y se puede usar para crear un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objeto.  
   
  Para obtener información relacionada, vea el tema "Método CreateTableDef" en la Ayuda de DAO.  
   
@@ -305,7 +317,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbInteger**|2|int|  
 |**dbLong**|4|long|  
 |**dbCurrency**|8|Moneda ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
-|**dbSingle**|4|flotante|  
+|**dbSingle**|4|float|  
 |**dbDouble**|8|double|  
 |**dbDate**|8|Fecha y hora ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
 |**dbText**|1 - 255|Texto ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
@@ -754,9 +766,9 @@ void SetAttributes(long lAttributes);
 ### <a name="remarks"></a>Comentarios  
  Al establecer varios atributos, se pueden combinar sumando las constantes adecuadas mediante el operador OR bit a bit. Establecer **dbAttachExclusive** en una tabla no asociada, produce una excepción. La combinación de los siguientes valores también generan una excepción:  
   
-- **dbAttachExclusive | dbAttachedODBC**  
+- **dbAttachExclusive &#124; dbAttachedODBC**  
   
-- **dbAttachSavePWD | dbAttachedTable**  
+- **dbAttachSavePWD &#124; dbAttachedTable**  
   
  Para obtener información relacionada, vea el tema "Atributos de propiedad" en la Ayuda de DAO.  
   
@@ -781,22 +793,22 @@ void SetConnect(LPCTSTR lpszConnect);
   
 |Tipo de base de datos|Especificador|Ruta de acceso|  
 |-------------------|---------------|----------|  
-|Base de datos mediante el motor de base de datos de Jet|"[ `database`];"|" `drive`:\\\ *path*\\\ *filename*. MDB"|  
-|dBASE III|"dBASE III;"|" `drive`:\\\ *path*"|  
-|dBASE IV|"dBASE IV;"|" `drive`:\\\ *path*"|  
-|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *path*"|  
-|Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *path*"|  
-|Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *path*"|  
-|Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *path*"|  
-|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *path*\\\ *filename*. XLS"|  
-|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *path*\\\ *filename*. XLS"|  
-|Excel 5.0 o Excel 95|"Excel 5.0;"|" `drive`:\\\ *path*\\\ *filename*. XLS"|  
-|Excel 97|"Excel 8.0;"|" `drive`:\\\ *path*\ *filename*. XLS"|  
-|Importación de HTML|"Importar HTML;"|" `drive`:\\\ *path*\ *filename*"|  
-|Exportación de HTML|"Exportación HTML;"|" `drive`:\\\ *path*"|  
+|Base de datos mediante el motor de base de datos de Jet|"[ `database`];"|" `drive`:\\\ *ruta de acceso*\\\ *filename*. MDB"|  
+|dBASE III|"dBASE III;"|" `drive`:\\\ *ruta de acceso*"|  
+|dBASE IV|"dBASE IV;"|" `drive`:\\\ *ruta de acceso*"|  
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *ruta de acceso*"|  
+|Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *ruta de acceso*"|  
+|Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *ruta de acceso*"|  
+|Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *ruta de acceso*"|  
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *ruta de acceso*\\\ *filename*. XLS"|  
+|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *ruta de acceso*\\\ *filename*. XLS"|  
+|Excel 5.0 o Excel 95|"Excel 5.0;"|" `drive`:\\\ *ruta de acceso*\\\ *filename*. XLS"|  
+|Excel 97|"Excel 8.0;"|" `drive`:\\\ *ruta de acceso*\ *filename*. XLS"|  
+|Importación de HTML|"Importar HTML;"|" `drive`:\\\ *ruta de acceso*\ *filename*"|  
+|Exportación de HTML|"Exportación HTML;"|" `drive`:\\\ *ruta de acceso*"|  
 |Texto|"Texto";|"unidad:\\\path"|  
-|ODBC|"ODBC; Base de datos = `database`; UID= *user*; PWD = *contraseña*; DSN = *datasourcename;* LOGINTIMEOUT = *segundos;*" (Esto puede no ser una cadena de conexión completa para todos los servidores; es simplemente un ejemplo. Es muy importante no tiene espacios en blanco entre los parámetros.)|Ninguna|  
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 | 1};]<br /><br /> [Perfil = *perfil*;]<br /><br /> [PWD = *contraseña*;]<br /><br /> [BASE DE DATOS = `database`;] "|*"drive*:\\\ *path*\\\ *filename*. MDB"|  
+|ODBC|"ODBC; Base de datos = `database`; UID = *usuario*; PWD = *contraseña*; DSN = *datasourcename;* LOGINTIMEOUT = *segundos;*" (Esto puede no ser una cadena de conexión completa para todos los servidores; es simplemente un ejemplo. Es muy importante no tiene espacios en blanco entre los parámetros.)|Ninguna|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [Perfil = *perfil*;]<br /><br /> [PWD = *contraseña*;]<br /><br /> [BASE DE DATOS = `database`;] "|*"unidad*:\\\ *ruta de acceso*\\\ *filename*. MDB"|  
   
 > [!NOTE]
 >  Btrieve ya no se admite a partir de DAO 3.5.  
@@ -859,7 +871,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  Por ejemplo, para campos denominados `hire_date` y `termination_date`, una regla de validación puede ser:  
   
- [!code-cpp[NVC_MFCDatabase #34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   
  Para obtener información relacionada, vea el tema "Propiedad ValidationRule" en la Ayuda de DAO.  
   
@@ -884,4 +896,3 @@ void SetValidationText(LPCTSTR lpszValidationText);
  [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
  [CDaoDatabase (clase)](../../mfc/reference/cdaodatabase-class.md)   
  [CDaoRecordset (clase)](../../mfc/reference/cdaorecordset-class.md)
-

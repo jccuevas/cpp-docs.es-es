@@ -33,11 +33,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7a37fd636d376f379503d1dd1b95f05ac1828cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7753e2be6699bc789417d8afe9e9f49e55af7010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wstringconvert-class"></a>wstring_convert (Clase)
 La clase de plantilla `wstring_convert` realiza conversiones entre una cadena de caracteres anchos y una cadena de bytes.  
@@ -77,7 +78,7 @@ class wstring_convert
 |-|-|  
 |[wstring_convert](#wstring_convert)|Construye un objeto de tipo `wstring_convert`.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  

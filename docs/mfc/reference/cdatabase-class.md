@@ -61,11 +61,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase (clase)
 Representa una conexión a un origen de datos, a través de la que puede trabajar con el origen de datos.  
@@ -80,13 +81,13 @@ class CDatabase : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDatabase::CDatabase](#cdatabase)|Construye un objeto `CDatabase`. Debe inicializar el objeto mediante una llamada a `OpenEx` o **abiertos**.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDatabase::BeginTrans](#begintrans)|Inicia una transacción de"", una serie de llamadas reversibles para la `AddNew`, **editar**, **eliminar**, y **actualización** funciones miembro de clase `CRecordset` , en el origen de datos conectado. El origen de datos debe admitir transacciones para **BeginTrans** surta efecto.|  
 |[CDatabase::BindParameters](#bindparameters)|Le permite enlazar parámetros antes de llamar a `CDatabase::ExecuteSQL`.|  
@@ -111,7 +112,7 @@ class CDatabase : public CObject
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CDatabase:: M_hdbc](#m_hdbc)|Abrir el identificador de conexión de conectividad de base de datos (ODBC) a un origen de datos. Tipo de **HDBC**.|  
   

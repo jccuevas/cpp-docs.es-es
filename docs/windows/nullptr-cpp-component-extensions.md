@@ -1,66 +1,68 @@
 ---
-title: "nullptr (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nullptr (palabra clave) (C++)"
-  - "nullptr (palabra clave) [C++]"
+title: nullptr (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- __nullptr keyword (C++)
+- nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# nullptr (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La palabra clave de `nullptr` representa *un valor de puntero null*.  Utilice un valor de puntero null para indicar que un controlador de objeto, un puntero interior, o un tipo de puntero nativo no señala a un objeto.  
+# <a name="nullptr--c-component-extensions"></a>nullptr (Extensiones de componentes de C++)
+El `nullptr` palabra clave representa un *un valor de puntero nulo*. Use un valor de puntero nulo para indicar que un identificador de objeto, un puntero interior o un tipo de puntero nativo no señala a un objeto.  
   
- Utilice `nullptr` con código administrado o nativo.  El compilador emite instrucciones correspondientes pero diferentes valores administrados y nativos de puntero NULL.  Para obtener información sobre cómo utilizar la versión de C\+\+ del estándar ISO de esta palabra clave, vea [nullptr](../cpp/nullptr.md).  
+ Use `nullptr` con código administrado o nativo. El compilador emite instrucciones apropiadas pero diferentes valores de puntero nulo administrado y nativo. Para obtener información sobre el uso de la versión de C++ estándar ISO de esta palabra clave, consulte [nullptr](../cpp/nullptr.md).  
   
- La palabra clave de `__nullptr` es una palabra clave Microsoft\- específica que tiene el mismo significado que `nullptr`, pero solo se aplica al código nativo.  Si utiliza `nullptr` con código de C\/C\+\+ nativo y se compila con la opción del compilador [\/clr](../build/reference/clr-common-language-runtime-compilation.md) , el compilador no puede determinar si `nullptr` indica un nativo o un valor administrado del puntero NULL.  Para clarificar la intención al compilador, utilice `nullptr` para especificar un valor administrado o `__nullptr` para especificar un valor nativo.  
+ El `__nullptr` palabra clave es una palabra clave específicos de Microsoft que tenga el mismo significado que `nullptr`, pero se aplica a código nativo solamente. Si usa `nullptr` con C o C++ nativo de código y, a continuación, compile con el [/CLR](../build/reference/clr-common-language-runtime-compilation.md) opción del compilador, el compilador no puede determinar si `nullptr` indica un valor de puntero nulo nativo o administrado. Para convertir su intención clara al compilador, use `nullptr` para especificar un valor administrado o `__nullptr` para especificar un valor nativo.  
   
- La palabra clave de `nullptr` es equivalente a `Nothing` en Visual Basic y a `null` en C\#.  
+ El `nullptr` palabra clave es equivalente a `Nothing` en Visual Basic y `null` en C#.  
   
-## Uso  
- La palabra clave de `nullptr` se puede utilizar en cualquier lugar un identificador, puntero nativo, o el argumento de la función se puede utilizar.  
+## <a name="usage"></a>Uso  
+ El `nullptr` palabra clave puede utilizarse desde cualquier lugar puede utilizarse un identificador, un puntero nativo o un argumento de función.  
   
- La palabra clave de `nullptr` no es un tipo y no se admite para su uso con:  
+ El `nullptr` palabra clave no es un tipo y no se admite para su uso con:  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr` \(aunque funcionará `throw (Object^)nullptr;` \)  
+-   `throw nullptr`(aunque `throw (Object^)nullptr;` funcionará)  
   
- La palabra clave de `nullptr` se puede utilizar en la inicialización de tipos de puntero siguientes:  
+ El `nullptr` palabra clave puede utilizarse en la inicialización de los siguientes tipos de puntero:  
   
 -   Puntero nativo  
   
--   Identificador del runtime de Windows  
+-   Identificador de Windows Runtime  
   
 -   Identificador administrado  
   
 -   Puntero interior administrado  
   
- La palabra clave de `nullptr` se puede utilizar para probar si una referencia de puntero o ID es null antes de utilizar la referencia.  
+ El `nullptr` palabra clave puede utilizarse para probar si un puntero o identificador de referencia es null antes de que se usa la referencia.  
   
- Las llamadas de función entre los lenguajes que utilizan valores de puntero NULL para la comprobación de errores se deben interpretar correctamente.  
+ Llamadas de función entre los idiomas que utilizan los valores de puntero nulo para la comprobación de errores se deben interpretar correctamente.  
   
- No puede inicializar un identificador en cero; sólo `nullptr` puede utilizar.  La asignación de la constante 0 a un controlador de objeto genera `Int32` conversión boxing y una conversión a `Object^`.  
+ No se puede inicializar un identificador de cero; solo `nullptr` puede utilizarse. Asignación de la constante 0 para un identificador de objeto produce una conversión boxing `Int32` y una conversión a `Object^`.  
   
-## Ejemplo  
- El ejemplo de código siguiente se muestra que la palabra clave de `nullptr` se puede utilizar en cualquier parte que un identificador, puntero nativo, o argumento de la función se puede usar.  Y el ejemplo muestra que la palabra clave de `nullptr` se puede utilizar para comprobar una referencia antes de que se utilice.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se muestra que el `nullptr` palabra clave puede usarse siempre que un identificador, un puntero nativo, o puede utilizarse el argumento de función. Y en el ejemplo se muestra que el `nullptr` palabra clave puede utilizarse para comprobar una referencia antes de usarlo.  
   
 ```  
 // mcpp_nullptr.cpp  
@@ -87,10 +89,10 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente se muestra que `nullptr` y cero se puede utilizar también en punteros nativos.  
+ En el ejemplo de código siguiente se muestra que `nullptr` y cero se puede usar indistintamente en punteros nativos.  
   
 ```  
 // mcpp_nullptr_1.cpp  
@@ -117,16 +119,22 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **nullptr \=\= de los pMyClass**  
- **\=\= 0 de los pMyClass**  
- **nullptr \=\= de los pMyClass**  
- **\=\= 0 de los pMyClass**   
-## Ejemplo  
+```Output  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+```  
+  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente se muestra que `nullptr` se interpreta como un identificador a cualquier tipo o un puntero nativo ningún está escrito.  En caso de función que sobrecarga con identificadores a tipos diferentes, un error de ambigüedad se generará.  `nullptr` tendría que en se echado a un tipo.  
+ En el ejemplo de código siguiente se muestra que `nullptr` se interpreta como un identificador para cualquier tipo o un puntero nativo a cualquier tipo. En el caso de sobrecarga de funciones con identificadores a tipos diferentes, se generará un error de ambigüedad. El `nullptr` tendría que convertirse explícitamente a un tipo.  
   
 ```  
 // mcpp_nullptr_2.cpp  
@@ -142,10 +150,10 @@ void f_null() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente se muestra que el inicio de `nullptr` está permitido y devuelve un puntero o un identificador a la conversión que contiene el valor de `nullptr` .  
+ En el ejemplo de código siguiente se muestra esa conversión `nullptr` se permite y devuelve un puntero o identificador para el tipo de conversión que contiene el `nullptr` valor.  
   
 ```  
 // mcpp_nullptr_3.cpp  
@@ -164,10 +172,10 @@ int main() {
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente se muestra que `nullptr` se puede utilizar como un parámetro de la función.  
+ En el ejemplo de código siguiente se muestra que `nullptr` puede usarse como un parámetro de función.  
   
 ```  
 // mcpp_nullptr_4.cpp  
@@ -182,13 +190,16 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **prueba**   
-## Ejemplo  
+```Output  
+test  
+```  
+  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente muestra que cuando se declaran y no explícitamente se inicializan los identificadores, son default inicializados a `nullptr`.  
+ En el ejemplo de código siguiente se muestra que cuando se declaran y no se inicializaron explícitamente identificadores, son predeterminado que se inicializa en `nullptr`.  
   
 ```  
 // mcpp_nullptr_5.cpp  
@@ -209,13 +220,16 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **NULL**   
-## Ejemplo  
+```Output  
+NULL  
+```  
+  
+## <a name="example"></a>Ejemplo  
  **Ejemplo**  
   
- El ejemplo de código siguiente se muestra que `nullptr` se puede asignar a un puntero nativo cuando se compila con **\/clr**.  
+ En el ejemplo de código siguiente se muestra que `nullptr` puede asignarse a un puntero nativo cuando se compila con **/CLR**.  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -226,9 +240,9 @@ int main() {
 }  
 ```  
   
-## Requisitos  
- Opción del compilador: \(No necesario; admite todas las opciones de generación de código, incluidos **\/ZW** y **\/clr**\)  
+## <a name="requirements"></a>Requisitos  
+ Opción del compilador: (no requerido; compatible con todas las opciones de generación de código, incluidas **/ZW** y **/CLR**)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

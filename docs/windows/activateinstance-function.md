@@ -1,33 +1,35 @@
 ---
-title: "ActivateInstance (Funci&#243;n) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Windows::Foundation::ActivateInstance"
-  - "client/ABI::Windows::Foundation::ActivateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivateInstance (función)"
+title: "ActivateInstance (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- client/Windows::Foundation::ActivateInstance
+- client/ABI::Windows::Foundation::ActivateInstance
+dev_langs: C++
+helpviewer_keywords: ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 051eb51a4461d1b3f9ab180507022cdfa955f0ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ActivateInstance (Funci&#243;n)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Registros y recupera una instancia de un tipo especificado definido en un identificador especificado de la clase  
+# <a name="activateinstance-function"></a>ActivateInstance (función)
+Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificada.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 template<  
@@ -39,23 +41,23 @@ inline HRESULT ActivateInstance(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `T`  
  Un tipo a activar.  
   
  `activatableClassId`  
- El nombre del identificador de la clase que define el parámetro `T`.  
+ El nombre del identificador de clase que define el parámetro `T`.  
   
  `instance`  
- Cuando esta operación finaliza, una referencia a una instancia de `T`.  
+ Cuando se completa esta operación, una referencia a una instancia de `T`.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un error HRESULT que indica la causa del error.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, un error HRESULT que indica la causa del error.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
- **Espacio de nombres:** Windows::Foundation  
+ **Namespace:** Windows::Foundation  
   
-## Vea también  
- [Windows::Foundation \(Espacio de nombres\)](../Topic/Windows::Foundation%20Namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Windows::Foundation (espacio de nombres)](../windows/windows-foundation-namespace.md)

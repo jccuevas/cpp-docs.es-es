@@ -35,11 +35,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b75a3782d1e20ccd20cd4f9271d91e2ac391d388
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbutton-class"></a>Clase CMFCCaptionButton
 La `CMFCCaptionButton` clase implementa un botón que se muestra en la barra de título de un panel acoplable o una ventana de marco reducido. Normalmente, el marco de trabajo crea botones de título automáticamente.  
@@ -54,13 +55,13 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>Constructores  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Construye un objeto CMFCCaptionButton.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCCaptionButton::GetHit](#gethit)|Devuelve el comando representado por el botón.|  
 |[CMFCCaptionButton::GetIconID](#geticonid)|Devuelve el Id. de imagen asociado con el botón.|  

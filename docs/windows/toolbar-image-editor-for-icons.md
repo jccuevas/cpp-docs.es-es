@@ -1,58 +1,62 @@
 ---
-title: "Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Graphics toolbar"
-  - "Image editor [C++], toolbar"
-  - "Image editor [C++], Option selector"
-  - "Properties window"
-  - "Option selector, Image editor"
+title: "Barra de herramientas (Editor de imágenes para iconos) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- Graphics toolbar
+- Image editor [C++], toolbar
+- Image editor [C++], Option selector
+- Properties window
+- Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 800fb1007076902703abd3d3185c398dbf40fdb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La barra de herramientas del **Editor de imágenes** contiene herramientas de dibujo, pintura, escritura de texto, borrado y manipulación de vistas.  También contiene un selector de opciones, que permite seleccionar opciones para cada herramienta.  Por ejemplo, se pueden elegir diversos anchos de pincel, factores de ampliación y estilos de línea.  
+# <a name="toolbar-image-editor-for-icons"></a>Barra de herramientas (Editor de imágenes para iconos)
+El **Editor de imágenes** barra de herramientas contiene herramientas de dibujo, pintura, escritura de texto, borrar y manipulación de vistas. También contiene un selector de opciones, con el que puede seleccionar opciones para usar cada herramienta. Por ejemplo, puede elegir de diversos anchos de pincel, factores de ampliación y estilos de línea.  
   
 > [!NOTE]
->  Todas las herramientas disponibles en la barra de herramientas del **Editor de imágenes** también están disponibles en el menú **Imagen** \(en el comando **Herramientas**\).  
+>  Todas las herramientas disponibles en la **Editor de imágenes** también están disponibles en la barra de herramientas el **imagen** menú (bajo la **herramientas** comando).  
   
- ![Barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbar.png "vcImageEditorToolbar")  
+ ![Barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
 Barra de herramientas del Editor de imágenes  
   
- Para usar la barra de herramientas del **Editor de imágenes** y el selector de **Opciones**, haga clic en la herramienta o en la opción que desee.  
+ Para usar el **Editor de imágenes** barra de herramientas y **opción** selector, haga clic en la herramienta o la opción que desee.  
   
 > [!TIP]
->  Aparece información sobre herramientas cuando se desplaza el cursor sobre un botón de la barra de herramientas.  Estas sugerencias ayudan a identificar la función de cada botón.  
+>  Información sobre herramientas aparece cuando se detiene el cursor sobre un botón de barra de herramientas. Estas sugerencias pueden ayudarle a identificar la función de cada botón.  
   
- Mediante el selector de **Opciones** se puede especificar el ancho de una línea, el trazo de un pincel, etc.  El icono del botón del selector de **Opciones** cambia en función de la herramienta seleccionada.  
+ Con el **opción** selector puede especificar el ancho de línea, trazo del pincel, etcetera. El icono en el **opción** cambios de selector botón dependiendo de la herramienta que ha seleccionado.  
   
- ![Selector con forma de dibujo de la barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbaroptionselector.png "vcImageEditorToolbarOptionSelector")  
-Selector de opciones de la barra de herramientas del Editor de imágenes  
+ ![Dibujo de &#45; selector de la forma en la barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
+Selector de opciones en la barra de herramientas del Editor de imágenes  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisitos  
- None  
+## <a name="requirements"></a>Requisitos  
+ Ninguna  
   
-## Vea también  
- [Displaying or Hiding the Toolbar](../mfc/displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vea también  
+ [Mostrar u ocultar la barra de herramientas](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
+ [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)
+

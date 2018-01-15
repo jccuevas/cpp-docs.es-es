@@ -243,11 +243,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9337c6dd384213d086bad2138ba7d426b0b305f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Clase CMFCRibbonBaseElement
 El `CMFCRibbonBaseElement` clase es la clase base para todos los elementos que se pueden agregar a un [barra de cinta](../../mfc/reference/cmfcribbonbar-class.md). Los botones, las casillas y los cuadros combinados de la cinta son ejemplos de elementos de la cinta.  
@@ -262,13 +263,13 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCRibbonBaseElement`|Construye un objeto `CMFCRibbonBaseElement`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Agrega la keytip para el elemento de la cinta de opciones en una matriz de sugerencias de teclas.|  
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Agrega un elemento de la cinta de opciones en el cuadro de lista de comandos de la cinta de opciones especificados.|  
@@ -384,7 +385,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Lo llama el marco cuando el usuario presiona una tecla de método abreviado.|  
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Lo llama el marco cuando un elemento de la cinta recibe o pierde el foco de entrada.|  

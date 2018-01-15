@@ -1,34 +1,34 @@
 ---
-title: "3.1.3 omp_get_max_threads Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.3 omp_get_max_threads (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5548897c-546e-4d19-b37b-a76f6b30a0a9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13aee27dc04afb8414a89bb8f30a98c8e73fb694
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.3 omp_get_max_threads Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de **omp\_get\_max\_threads** devuelve un entero que se garantice para ser por lo menos tan grande como el número de subprocesos que se utilizan para formar un equipo si se encontró una región paralela sin una cláusula de **num\_threads** en ese momento en el código.  El formato es como se detalla a continuación:  
+# <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads (Función)
+El **omp_get_max_threads ()** función devuelve un entero que se garantiza que sea al menos tan grande como el número de subprocesos que se utilizarían para formar un equipo si una región paralela sin un **num_threads** cláusula tuviera que se encuentra en ese momento en el código. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
 int omp_get_max_threads(void);  
 ```  
   
- A continuación expresar un límite inferior en el valor de **omp\_get\_max\_threads**:  
+ El siguiente expresa un límite inferior en el valor de **omp_get_max_threads ()**:  
   
 ```  
   
@@ -37,16 +37,16 @@ threads-used-for-next-team
   
 ```  
   
- Tenga en cuenta que si una región paralela subsiguiente utiliza la cláusula de **num\_threads** para solicitar un número concreto de subprocesos, la garantía en el límite inferior del resultado de **omp\_get\_max\_threads** que ningún largo mantiene.  
+ Tenga en cuenta que si usa una región paralela posterior el **num_threads** cláusula para solicitar un número específico de subprocesos, la garantía en el límite inferior del resultado de **omp_get_max_threads ()** no contiene largo.  
   
- El valor devuelto de la función de **omp\_get\_max\_threads** se puede utilizar para asignar dinámicamente el suficiente almacenamiento para todos los subprocesos del equipo formado en la región paralela subsiguiente.  
+ El **omp_get_max_threads ()** valor devuelto de la función puede utilizarse para asignar dinámicamente suficiente espacio de almacenamiento para todos los subprocesos en el equipo de forma en la región paralela posterior.  
   
-## referencias cruzadas:  
+## <a name="cross-references"></a>Referencias cruzadas:  
   
--   la función de**omp\_get\_num\_threads** , vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en la página 37.  
+-   **omp_get_num_threads ()** función, vea [sección 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) en página 37.  
   
--   la función de**omp\_set\_num\_threads** , vea [sección 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) en la página 36.  
+-   **omp_set_num_threads ()** función, vea [punto 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) en la página 36.  
   
--   la función de**omp\_set\_dynamic** , vea [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en la página 39.  
+-   **omp_set_dynamic ()** función, vea [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en página 39.  
   
--   la cláusula de**num\_threads** , vea [sección 2,3](../../parallel/openmp/2-3-parallel-construct.md) en la página 8.
+-   **num_threads** cláusula, vea [sección 2.3](../../parallel/openmp/2-3-parallel-construct.md) en página 8.

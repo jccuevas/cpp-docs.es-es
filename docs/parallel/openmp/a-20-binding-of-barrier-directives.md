@@ -1,29 +1,29 @@
 ---
-title: "A.20   Binding of barrier Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Enlace A.20 de barrera directivas | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fdcc26-6873-429b-998e-de451401483b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b8cc2799f0aea9e75b3aad44d3cfa9e3f5e7de4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# A.20   Binding of barrier Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La llamada directiva de las reglas de enlace para que una directiva de **barrera** enlace a `parallel` la directiva que agrega más próxima.  Para obtener más información sobre el enlace de directivas, vea [sección 2,8](../../parallel/openmp/2-8-directive-binding.md) en la página 32.  
+# <a name="a20---binding-of-barrier-directives"></a>A.20 Enlace de directivas barrier
+El enlace de directivas de reglas de llamada para una **barrera** directiva para enlazar a los más próximo incluye `parallel` directiva. Para obtener más información sobre el enlace de directivas, consulte [sección 2.8](../../parallel/openmp/2-8-directive-binding.md) en la página 32.  
   
- En el ejemplo siguiente, la llamada *de main* *en sub2* es bajo porque **barrera** \(en *sub3*\) enlazado a la región paralela en *sub2*.  La llamada *de main* *en sub1* es bajo porque **barrera** enlazado a la región paralela en la subrutina *sub2*.  La llamada *de main* *a sub3* es bajo porque **barrera** no enlaza a ninguna región paralela y se omite.  Observe también que **barrera** sólo sincroniza el equipo de subprocesos de la región paralela que agrega y no todos los subprocesos creados en *sub1*.  
+ En el ejemplo siguiente, la llamada de *principal* a *sub2* es compatible porque la **barrera** (en *sub3*) se enlaza a la región paralela en *sub2*. La llamada de *principal* a *sub1* es compatible porque la **barrera** se enlaza a la región paralela en la subrutina *sub2*.  La llamada de *principal* a *sub3* es compatible porque la **barrera** no enlazar a cualquier región paralela y se omite. Tenga en cuenta también que la **barrera** sólo sincroniza el equipo de subprocesos en la región paralela envolvente y no todos los subprocesos creados en *sub1*.  
   
 ```  
 int main()  

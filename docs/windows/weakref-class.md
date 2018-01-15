@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 148c39f1ef38b6b20de6d50cc75352a4f30a9090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8263595bdd564c313a8783a3a9baf0c6d562494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakref-class"></a>WeakRef (Clase)
 Representa una *referencia débil* que solo puede usar Windows en tiempo de ejecución, no COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.  
@@ -69,14 +72,14 @@ if (strongRef == nullptr)
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[WeakRef::WeakRef (constructor)](../windows/weakref-weakref-constructor.md)|Inicializa una nueva instancia de la clase WeakRef.|  
 |[WeakRef::~WeakRef (destructor)](../windows/weakref-tilde-weakref-destructor.md)|Desinicializa la instancia actual de la clase WeakRef.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[WeakRef::As (método)](../windows/weakref-as-method.md)|Establece el parámetro de puntero ComPtr especificado para representar la interfaz especificada.|  
 |[WeakRef::AsIID (método)](../windows/weakref-asiid-method.md)|Establece el parámetro de puntero ComPtr especificado para representar el id. de interfaz especificado.|  
@@ -84,7 +87,7 @@ if (strongRef == nullptr)
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[WeakRef::operator& (operador)](../windows/weakref-operator-ampersand-operator.md)|Devuelve un objeto ComPtrRef que representa al objeto WeakRef actual.|  
   

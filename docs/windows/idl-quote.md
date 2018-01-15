@@ -1,32 +1,33 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: idl_quote | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Permite utilizar las construcciones IDL que no se admiten en la versión actual de Visual C\+\+ y haga que pasan por el archivo generado .idl.  
+# <a name="idlquote"></a>idl_quote
+Le permite usar las construcciones de IDL no se admiten en la versión actual de Visual C++ y pídale que pasen al archivo .idl generado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -35,15 +36,15 @@ Permite utilizar las construcciones IDL que no se admiten en la versión actual 
 ) ]  
 ```  
   
-#### Parámetros  
- *text*  
- El nombre de atributo que piensa utilizar el compilador de Visual C\+\+ para recorrer el archivo generado .idl sin devolver un error del compilador.  
+#### <a name="parameters"></a>Parámetros  
+ *texto*  
+ Nombre del atributo que desea que el compilador de Visual C++ que pasen al archivo .idl generado sin devolver un error del compilador.  
   
-## Comentarios  
- Si el atributo de **idl\_quote** C\+\+ se utiliza como atributo independiente \(con un punto y coma después del corchete de cierre\), *el texto* se coloca en el archivo combinado .idl como está.  Si **idl\_quote** se utiliza en uno, *el texto* se coloca dentro del bloque de atributos para ese símbolo.  
+## <a name="remarks"></a>Comentarios  
+ Si el **idl_quote** atributo de C++ se utiliza como un atributo independiente (con un punto y coma después del corchete de cierre), a continuación, *texto* se coloca en el archivo .idl combinada tal cual. Si **idl_quote** se utiliza en un símbolo, *texto* se coloca en el bloque de atributos de ese símbolo.  
   
-## Ejemplo  
- El código siguiente muestra cómo podría especificar un atributo no admitido \(mediante **en**, se admite que\) y cómo definir y utilizar una construcción undefined .idl:  
+## <a name="example"></a>Ejemplo  
+ El código siguiente muestra cómo puede especificar un atributo no admitido (mediante **en**, que se admite) y cómo definir y utilizar una construcción .idl sin definir:  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -78,22 +79,21 @@ __interface IStatic{
 };  
 ```  
   
- Este código produce MYFLOT y MYDUB y la entrada *de texto* que se va a colocar en el archivo generado .idl.  El parámetro name fuerza *el texto* que se va a colocar antes de que todo lo que hace referencia al *nombre* del archivo generado .idl.  El parámetro *de las dependencias* fuerza las definiciones de lista de dependencias se coloquen antes *de texto* en el archivo generado .idl.  
+ Este código hace MYFLOT y MYDUB y *texto* entrada que se colocarán en el archivo .idl generado. El *nombre* parámetro fuerza *texto* para situarse antes de todo lo que hace referencia a *nombre* en el archivo .idl generado. El *dependencias* parámetro fuerza las definiciones de lista de dependencia deben colocarse antes de *texto* en el archivo .idl generado.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|Cualquier parte|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|En cualquier lugar|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
  Para obtener más información, vea [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos independientes](../windows/stand-alone-attributes.md)   

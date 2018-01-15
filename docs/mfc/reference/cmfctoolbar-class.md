@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>Clase CMFCToolBar
 El `CMFCToolBar` es similar a [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md), pero proporciona compatibilidad adicional para características de la interfaz de usuario. Se incluyen las barras de herramientas planas, las barras de herramientas con imágenes activas, los iconos grandes, los botones de buscapersonas, las barras de herramientas bloqueadas, los controles rebar, el texto en imágenes, las imágenes de fondo y las barras de herramientas con pestañas. La clase `CMFCToolBar` también contiene compatibilidad integrada para la personalización de usuario de barras de herramientas y menús, arrastrar y colocar entre las barras de herramientas y menús, botones del cuadro combinado, botones del cuadro de edición, selectores de colores y botones acumulados.
@@ -343,14 +344,14 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCToolBar::CMFCToolBar`|Constructor predeterminado.|  
 |`CMFCToolBar::~CMFCToolBar`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Agrega un comando de menú a la lista de comandos que siempre se muestran cuando un usuario abre un menú.|  
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Se incrementa en uno el contador que está asociado con el comando determinado.|  
@@ -502,7 +503,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Determina si la barra de herramientas se muestra en la lista en la **las barras de herramientas** panel de la **personalizar** cuadro de diálogo.|  
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Calcula el alto máximo de un botón de la barra de herramientas.|  
@@ -513,7 +514,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Especifica si se debe escalar o no las imágenes de barra de herramientas en el modo de PPP alta.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Especifica la proporción entre la dimensión (alto o ancho) de imágenes de gran tamaño y la dimensión de las imágenes normales.|  

@@ -1,54 +1,58 @@
 ---
-title: "Arrangement of Controls on Dialog Boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], positioning"
-  - "dialog box controls, placement"
-  - "Dialog editor, arranging controls"
+title: "Organización de los controles de cuadros de diálogo | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], positioning
+- dialog box controls, placement
+- Dialog editor, arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Arrangement of Controls on Dialog Boxes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El Editor de cuadros de diálogo proporciona herramientas de diseño que alinean y establecen el tamaño de los controles de forma automática.  Para la mayoría de las tareas puede utilizarse la [barra de herramientas del Editor de cuadros de diálogo](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md).  Todos los comandos de la barra de herramientas del Editor de cuadros de diálogo también están disponibles en el menú Formato, y la mayoría tienen asociadas [teclas de método abreviado](../mfc/accelerator-keys-for-the-dialog-editor.md).  
+# <a name="arrangement-of-controls-on-dialog-boxes"></a>Distribución de los controles en los cuadros de diálogo
+El editor de cuadro de diálogo proporciona herramientas de diseño que alinearán y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los comandos de barra de herramientas del Editor de cuadro de diálogo también están disponibles en el menú Formato, y la mayoría tienen [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Numerosos comandos de diseño de los cuadros de diálogo estarán disponibles únicamente si hay más de un control seleccionado.  Es posible seleccionar tanto un solo control como varios; en el segundo caso, el primero en ser seleccionado será de forma predeterminada el control "dominante".  Para obtener información sobre la selección de controles y el control dominante, vea [Seleccionar controles](../mfc/selecting-controls.md).  
+ Muchos comandos de diseño de cuadros de diálogo están disponibles únicamente cuando se selecciona más de un control. Puede seleccionar un control único o varios controles y, cuando se selecciona más de un control, selecciona la primera de ellas es de forma predeterminada el control "principal". Para obtener información sobre la selección de controles y el control dominante, vea [seleccionar controles](../windows/selecting-controls.md).  
   
- La ubicación, el alto y el ancho del control actual se muestran en la esquina inferior derecha de la barra de estado.  Si está seleccionado todo el cuadro de diálogo, la barra de estado mostrará la posición del cuadro completo, así como su ancho y su alto.  
+ La ubicación, el alto y el ancho del control actual se muestran en la esquina inferior derecha de la barra de estado. Cuando se selecciona el cuadro de diálogo completa, la barra de estado muestra la posición del cuadro de diálogo como un todo y su alto y ancho.  
   
--   [Estados del Editor de cuadros de diálogo \(Guías y cuadrículas\)](../mfc/dialog-editor-states-guides-and-grids.md)  
+-   [Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
   
--   [Agrupar botones de radio en un cuadro de diálogo](../mfc/grouping-radio-buttons-on-a-dialog-box.md)  
+-   [Agrupación de botones de opción en un cuadro de diálogo](../windows/grouping-radio-buttons-on-a-dialog-box.md)  
   
--   [Alinear grupos de controles](../mfc/aligning-groups-of-controls.md)  
+-   [Alineación de grupos de controles](../windows/aligning-groups-of-controls.md)  
   
--   [Igualar el espaciado entre controles](../mfc/evening-the-spacing-between-controls.md)  
+-   [Idéntico espaciado entre controles](../windows/evening-the-spacing-between-controls.md)  
   
--   [Centrar controles en un cuadro de diálogo](../mfc/centering-controls-in-a-dialog-box.md)  
+-   [Centrado de controles en un cuadro de diálogo](../windows/centering-controls-in-a-dialog-box.md)  
   
--   [Colocar botones de comando a la derecha o en la parte inferior de un cuadro de diálogo](../mfc/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
+-   [Colocación de botones de comando a la derecha o en la parte inferior de un cuadro de diálogo](../windows/arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box.md)  
   
--   [Cambiar el orden de tabulación de los controles](../mfc/changing-the-tab-order-of-controls.md)  
+-   [Cambio del orden de tabulación de los controles](../windows/changing-the-tab-order-of-controls.md)  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  Win32  
   
-## Vea también  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vea también  
+ [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)   
  [Controles](../mfc/controls-mfc.md)
+

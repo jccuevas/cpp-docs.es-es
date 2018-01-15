@@ -1,44 +1,47 @@
 ---
-title: "How to: Specify Include Directories for Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "directories [C++], specifying include paths for resources"
-  - "include files, specifying for resources"
-  - "resources [Visual Studio], including in projects"
+title: "Cómo: especificar directorios de inclusión para recursos | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- directories [C++], specifying include paths for resources
+- include files, specifying for resources
+- resources [Visual Studio], including in projects
 ms.assetid: d6a7c0f6-4810-4bb0-b4b7-7d2476a20ca2
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ddaa4bf15894b1afe4edec952b5c707a1dcfac0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Specify Include Directories for Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Para especificar directorios de inclusión para un archivo .rc determinado  
+# <a name="how-to-specify-include-directories-for-resources"></a>Cómo: Especificar directorios de inclusión para los recursos
+### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Para especificar directorios de inclusión para un archivo .rc determinado  
   
-1.  Haga clic con el botón secundario en el archivo .rc en el Explorador de soluciones y seleccione **Propiedades** en el menú contextual.  
+1.  Haga clic en el archivo .rc en el Explorador de soluciones y seleccione **propiedades** en el menú contextual.  
   
-2.  En el cuadro de diálogo **Páginas de propiedades**, haga clic en el nodo **Recursos** en el panel izquierdo y, a continuación, especifique los directorios de inclusión adicionales en la propiedad **Directorios de inclusión adicionales**.  
+2.  En el **páginas de propiedades** cuadro de diálogo, haga clic en el **recursos** en el panel izquierdo, a continuación, especifique la inclusión adicional directorios en el **directorios de inclusión adicionales** propiedad.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la Guía para desarrolladores de .NET Framework.  Para más información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea este [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en la Guía del desarrollador de .NET Framework. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: uso de recursos para la localización con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [Archivos de inclusión de recursos \(Cuadro de diálogo\)](../windows/resource-includes-dialog-box.md)   
- [TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C\+\+](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Vea también  
+ [Cuadro de diálogo de inclusión de recursos](../windows/resource-includes-dialog-box.md)   
+ [TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)   
+ [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)   
+ [Archivos de recursos](../windows/resource-files-visual-studio.md)   
+ [Editores de recursos](../windows/resource-editors.md)

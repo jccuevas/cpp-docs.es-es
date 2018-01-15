@@ -1,34 +1,34 @@
 ---
-title: "3.3.1 omp_get_wtime Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.3.1 omp_get_wtime (función) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 90188bd2-c53e-4398-8946-d3ecc92fa0f6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f89a71d1b91a27dfdd0abf13be4a5f0e30b3fd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 3.3.1 omp_get_wtime Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La función de `omp_get_wtime` devuelve un valor de doble precisión de punto flotante es igual al tiempo de reloj transcurrido de muro en segundos desde que algo “sincroniza en el último”.  “Tiempo real en el último” es arbitrario, pero se garantiza que no cambiar durante la ejecución del programa de aplicación.  El formato es como se detalla a continuación:  
+# <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime (Función)
+El `omp_get_wtime` función devuelve un valor de punto flotante de precisión doble igual que el tiempo de reloj transcurrido en segundos desde alguna "hora del pasado".  El "tiempo en el pasado" real es arbitrario, pero se garantiza que no cambia durante la ejecución del programa de aplicación. El formato es como se detalla a continuación:  
   
 ```  
 #include <omp.h>  
 double omp_get_wtime(void);  
 ```  
   
- Se espera que la función se utilizará para medir el tiempo transcurrido tal y como se muestra en el ejemplo siguiente:  
+ Se prevé que se utilizará la función para medir los tiempos transcurridos tal como se muestra en el ejemplo siguiente:  
   
 ```  
 double start;  
@@ -39,4 +39,4 @@ end = omp_get_wtime();
 printf_s("Work took %f sec. time.\n", end-start);  
 ```  
   
- Los tiempos devueltos son “storage medir el tiempo” por se significa lo que no se requiere ser global coherente en todos los subprocesos que participan en una aplicación.
+ Los tiempos de devueltos son "veces por subproceso" por la que está destinada a que no tienen que ser globalmente coherente en todos los subprocesos que participan en una aplicación.

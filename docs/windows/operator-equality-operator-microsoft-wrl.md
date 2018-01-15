@@ -1,31 +1,32 @@
 ---
-title: "Operador operator== (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator=="
-dev_langs: 
-  - "C++"
+title: 'operador == (Microsoft:: wrl) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator==
+dev_langs: C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 92f87671b5efa9d4013ffd1d5d622ec225d65940
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Operador operator== (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operador de igualdad para [ComPtr](../windows/comptr-class.md) y los objetos de [ComPtrRef](../Topic/ComPtrRef%20Class.md) .  
+# <a name="operator-operator-microsoftwrl"></a>Operador operator== (Microsoft::WRL)
+Operador de igualdad para [ComPtr](../windows/comptr-class.md) y [ComPtrRef](../windows/comptrref-class.md) objetos.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 WRL_NOTHROW bool operator==(  
@@ -62,20 +63,20 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `a`  
- El objeto izquierdo.  
+ Objeto izquierdo.  
   
  `b`  
- El objeto correcto.  
+ Objeto derecho.  
   
-## Valor devuelto  
- Es `true` si los objetos son iguales; de lo contrario, es `false`.  
+## <a name="return-value"></a>Valor devuelto  
+ `true` si los objetos son iguales; en caso contrario, `false`.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

@@ -1,70 +1,74 @@
 ---
-title: "Previewing Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resvw.resource.previewing"
-  - "vs.resvw.resource.previewing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], viewing"
-  - "resource previews"
-  - "code, viewing"
+title: Vista previa de recursos | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resvw.resource.previewing
+- vs.resvw.resource.previewing
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], viewing
+- resource previews
+- code, viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0eca56e607c916e28afc7bf513d853bcf6d94b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Previewing Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La vista previa de los recursos permite ver recursos gráficos sin tener que abrirlos.  Como los identificadores de recursos cambian a números, la vista previa también resulta muy útil para archivos ejecutables ya compilados.  Estos identificadores numéricos no suelen suministrar suficiente información, por lo que la vista previa de los recursos ayuda a identificarlos con rapidez.  
+# <a name="previewing-resources"></a>Vista previa de recursos
+Vista previa de los recursos permite ver recursos gráficos sin abrirlos. Obtener una vista previa también es útil para los archivos ejecutables después de que ha compilado porque los identificadores de recursos cambian a números. Puesto que estos identificadores numéricos a menudo no proporcionan suficiente información, obtener una vista previa de los recursos ayuda a identificarlos con rapidez.  
   
- Es posible obtener una vista previa del diseño visual de los siguientes tipos de recursos:  
+ Puede obtener una vista previa del aspecto visual de los siguientes tipos de recursos:  
   
--   Mapa de bits  
+-   Bitmap  
   
 -   Cuadro de diálogo  
   
--   Icono  
+-   Iconos  
   
--   Menu  
+-   Menú  
   
 -   Cursor  
   
 -   Barra de herramientas  
   
- La función de vista previa no es aplicable a los recursos de aceleradores, del manifiesto, de tabla de cadenas y de información de versión.  
+ La función de vista previa no se aplica a los recursos de acelerador, manifiesto, tabla de cadenas e información de versión.  
   
-### Para obtener una vista previa de recursos  
+### <a name="to-preview-resources"></a>Para obtener una vista previa de recursos  
   
-1.  En la [Vista de recursos](../windows/resource-view-window.md) o en una ventana de documento, seleccione el recurso en cuestión \(por ejemplo, IDD\_ABOUTBOX\).  
+1.  En [vista de recursos](../windows/resource-view-window.md) o una ventana de documento, seleccione el recurso en cuestión (por ejemplo, IDD_ABOUTBOX).  
   
      **Nota** Si el proyecto no contiene un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  En la [ventana Propiedades](../Topic/Properties%20Window.md), haga clic en el botón **Páginas de propiedades**.  
+2.  En el [ventana propiedades](/visualstudio/ide/reference/properties-window), haga clic en el **páginas de propiedades** botón.  
   
-     \-O bien\-  
+     \- o -  
   
-3.  En el menú **Ver**, haga clic en **Páginas de propiedades**.  
+3.  En el **vista** menú, haga clic en **páginas de propiedades**.  
   
-     Se abrirá entonces la página de propiedades del recurso mostrando una vista previa de él.  Utilice las teclas de dirección  arriba y abajo para navegar por el control de árbol de la vista de recursos o de la ventana de documento.  La Página de propiedades permanecerá abierta y mostrará todos los recursos que tengan el foco y puedan mostrarse en vista preliminar.  
+     La página de propiedades para el recurso se abrirá una vista previa de ese recurso. Puede, a continuación, utilice el arriba y abajo teclas de dirección para navegar por el control de árbol en la vista de recursos o la ventana de documento. La página de propiedades permanecerá abierta y mostrará todos los recursos que tiene el foco y es capaz de realizar una vista previa.  
   
- Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Recursos de aplicaciones](../Topic/Resources%20in%20Desktop%20Apps.md) en la *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, cómo obtener acceso a recursos, cómo mostrar recursos estáticos y cómo asignar cadenas de recursos a propiedades, vea [Tutorial: Adaptar formularios Windows Forms](http://msdn.microsoft.com/es-es/9a96220d-a19b-4de0-9f48-01e5d82679e5) y [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [recursos en aplicaciones de escritorio](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework.* Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Requisitos**  
   
  Win32  
   
-## Vea también  
- [How to: Open a Resource Script File Outside of a Project \(Standalone\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Vea también  
+ [Cómo: abrir un archivo de Script de recursos fuera de un proyecto (independiente)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Editores de recursos](../windows/resource-editors.md)
+

@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e741324e6871846aba8912d53ca9aad5ce1cb739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Incluya el encabezado estándar \<future> para definir clases de plantilla y plantillas auxiliares que simplifican la ejecución de una función, posiblemente en un subproceso diferente, y la recuperación de su resultado. El resultado es el valor devuelto por la función o una excepción que la función emite pero que no se detecta en la función.  
@@ -54,7 +55,7 @@ Incluya el encabezado estándar \<future> para definir clases de plantilla y pla
   
 ### <a name="classes"></a>Clases  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[future (Clase)](../standard-library/future-class.md)|Describe un objeto de devolución asincrónico.|  
 |[future_error (Clase)](../standard-library/future-error-class.md)|Describe un objeto de excepción que pueden producir los métodos de tipos que administran objetos `future`.|  
@@ -81,7 +82,7 @@ Incluya el encabezado estándar \<future> para definir clases de plantilla y pla
   
 ### <a name="enumerations"></a>Enumeraciones  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|Proporciona nombres simbólicos para los errores notificados por la clase `future_error`.|  
 |[future_status](../standard-library/future-enums.md#future_status)|Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.|  

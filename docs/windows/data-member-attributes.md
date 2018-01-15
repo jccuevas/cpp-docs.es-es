@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 167b6f8e522c7f1c64143da6305f1e275dae334a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 954a0448f160ba6d19eb4f48d44b0b7e0a718f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-member-attributes"></a>Atributos de miembros de datos
 Los siguientes atributos se aplican a los miembros de datos en una clase, coclase o interfaz.  
@@ -36,7 +39,7 @@ Los siguientes atributos se aplican a los miembros de datos en una clase, coclas
 |[db_table](../windows/db-table.md)|Se abre una tabla de OLE DB.|  
 |[defaultbind](../windows/defaultbind.md)|Indica la única propiedad enlazable que mejor representa el objeto.|  
 |[displaybind](../windows/displaybind.md)|Indica una propiedad que se debe mostrar al usuario como enlazable.|  
-|[id](../windows/id.md)|Especifica un identificador DISPID de una función miembro (una propiedad o un método en una interfaz o dispinterface).|  
+|[identificador](../windows/id.md)|Especifica un identificador DISPID de una función miembro (una propiedad o un método en una interfaz o dispinterface).|  
 |[intervalo](../windows/range-cpp.md)|Especifica un intervalo de valores permitidos para argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|  
 |[rdx](../windows/rdx.md)|Crea una clave del registro o modifica una clave del registro existente.|  
 |[readonly](../windows/readonly-cpp.md)|Prohíbe la asignación a un miembro de datos.|  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a411c27bda093e1abba915fc23cbd5d0619675a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containers"></a>Contenedores de documentos activos
 Un contenedor de documentos activos, como cuaderno de Microsoft Office o Internet Explorer, permite trabajar con varios documentos de diferentes tipos de aplicaciones en un solo marco (en lugar de obligarle a crear y usar varios marcos de aplicación para cada uno tipo de documento).  
@@ -37,7 +38,7 @@ Un contenedor de documentos activos, como cuaderno de Microsoft Office o Interne
   
 -   [Objetos de vista de sitio](#view_site_objects)  
   
--   [Objeto de marco](#frame_object)  
+-   [Objeto marco](#frame_object)  
   
 -   [Combinación del menú Ayuda](../mfc/help-menu-merging.md)  
   

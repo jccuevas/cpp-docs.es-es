@@ -1,32 +1,33 @@
 ---
-title: "Module (Clase) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Module (clase)"
+title: Module (clase) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module
+dev_langs: C++
+helpviewer_keywords: Module class
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Module (Clase)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="module-class"></a>Module (clase)
 Representa una colección de objetos relacionados.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -42,83 +43,83 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `moduleType`  
- Una combinación de uno o más valores de enumeración de [ModuleType](../Topic/ModuleType%20Enumeration.md) .  
+ Una combinación de uno o varios [ModuleType](../windows/moduletype-enumeration.md) valores de enumeración.  
   
-## Miembros  
+## <a name="members"></a>Miembros  
   
-### Clases protegidas  
+### <a name="protected-classes"></a>Clases protegidas  
+  
+|nombre|Descripción|  
+|----------|-----------------|  
+|[Module::GenericReleaseNotifier (clase)](../windows/module-genericreleasenotifier-class.md)|Invoca un controlador de eventos cuando se libera el último objeto en el módulo actual. El controlador de eventos se especifica por en una expresión lambda, functor o puntero a función.|  
+|[Module::MethodReleaseNotifier (clase)](../windows/module-methodreleasenotifier-class.md)|Invoca un controlador de eventos cuando se libera el último objeto en el módulo actual. El controlador de eventos se especifica mediante un objeto y su miembro de puntero a un método.|  
+|[Module::ReleaseNotifier (clase)](../windows/module-releasenotifier-class.md)|Invoca un controlador de eventos cuando se libera el último objeto en un módulo.|  
+  
+### <a name="public-constructors"></a>Constructores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::GenericReleaseNotifier \(Clase\)](../windows/module-genericreleasenotifier-class.md)|Invoca un controlador de eventos cuando el objeto pasado en el módulo actual se libera.  Especifique el controlador de eventos mediante en una expresión lambda, un functor, o una puntero\-a\- función.|  
-|[Module::MethodReleaseNotifier \(Clase\)](../Topic/Module::MethodReleaseNotifier%20Class.md)|Invoca un controlador de eventos cuando el objeto pasado en el módulo actual se libera.  Al miembro del puntero\-a\-uno\- método especifica el controlador de eventos recibe un objeto y.|  
-|[Module::ReleaseNotifier \(Clase\)](../Topic/Module::ReleaseNotifier%20Class.md)|Invoca un controlador de eventos cuando el objeto pasado en un módulo se libera.|  
+|[Module::~Module (destructor)](../windows/module-tilde-module-destructor.md)|Desinicializa la instancia actual de la clase de módulo.|  
   
-### Constructores públicos  
+### <a name="protected-constructors"></a>Constructores protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::~Module \(Destructor\)](../windows/module-tilde-module-destructor.md)|Desinicializa la instancia actual de la clase de módulo.|  
+|[Module::Module (constructor)](../windows/module-module-constructor.md)|Inicializa una nueva instancia de la clase de módulo.|  
   
-### Constructores protegidos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Module::Module \(Constructor\)](../windows/module-module-constructor.md)|Inicializa una nueva instancia de la clase de módulo.|  
-  
-### Métodos públicos  
+### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::Create \(Método\)](../windows/module-create-method.md)|Crea una instancia de un módulo.|  
-|[Module::DecrementObjectCount \(Método\)](../windows/module-decrementobjectcount-method.md)|Reduzca el número de objetos seguidos del módulo.|  
-|[Module::GetActivationFactory \(Método\)](../windows/module-getactivationfactory-method.md)|Obtiene un generador de activación del módulo.|  
-|[Module::GetClassObject \(Método\)](../windows/module-getclassobject-method.md)|Retreives caché de generadores de clases.|  
-|[Module::GetModule \(Método\)](../Topic/Module::GetModule%20Method.md)|Crea una instancia de un módulo.|  
-|[Module::GetObjectCount \(Método\)](../windows/module-getobjectcount-method.md)|Recupera el número de objetos administrados por este módulo.|  
-|[Module::IncrementObjectCount \(Método\)](../windows/module-incrementobjectcount-method.md)|Aumenta el número de objetos seguidos del módulo.|  
-|[Module::RegisterCOMObject \(Método\)](../windows/module-registercomobject-method.md)|Registra uno o más objetos COM de modo que otras aplicaciones pueden conectarse a ellos.|  
-|[Module::RegisterObjects \(Método\)](../windows/module-registerobjects-method.md)|Los registros COM o los objetos de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] así que otras aplicaciones pueden conectarse a ellas.|  
-|[Module::RegisterWinRTObject \(Método\)](../windows/module-registerwinrtobject-method.md)|Registra uno o más objetos de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] así que otras aplicaciones pueden conectarse a ellos.|  
-|[Module::Terminate \(Método\)](../windows/module-terminate-method.md)|Hace que todas las generadores cuya instancia por módulo para cerrar.|  
-|[Module::UnregisterCOMObject \(Método\)](../Topic/Module::UnregisterCOMObject%20Method.md)|Anula uno o más objetos COM, lo que evita que otras aplicaciones se conecten con ellos.|  
-|[Module::UnregisterObjects \(Método\)](../windows/module-unregisterobjects-method.md)|Anula los objetos en el módulo especificado para que otras aplicaciones no pueden conectarse a ellos.|  
-|[Module::UnregisterWinRTObject \(Método\)](../windows/module-unregisterwinrtobject-method.md)|Anula uno o más objetos de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] de modo que otras aplicaciones no pueden conectarse a ellos.|  
+|[Module::Create (método)](../windows/module-create-method.md)|Crea una instancia de un módulo.|  
+|[Module::DecrementObjectCount (método)](../windows/module-decrementobjectcount-method.md)|Disminuye el número de objetos cuyo seguimiento realiza el módulo.|  
+|[Module::GetActivationFactory (método)](../windows/module-getactivationfactory-method.md)|Obtiene un generador de activación para el módulo.|  
+|[Module::GetClassObject (método)](../windows/module-getclassobject-method.md)|Recupera una memoria caché de generadores de clases.|  
+|[Module::GetModule (método)](../windows/module-getmodule-method.md)|Crea una instancia de un módulo.|  
+|[Module::GetObjectCount (método)](../windows/module-getobjectcount-method.md)|Recupera el número de objetos administrados por este módulo.|  
+|[Module::IncrementObjectCount (método)](../windows/module-incrementobjectcount-method.md)|Incrementa el número de objetos que se hace un seguimiento mediante el módulo.|  
+|[Module::RegisterCOMObject (método)](../windows/module-registercomobject-method.md)|Registra uno o varios objetos COM para que otras aplicaciones puedan conectarse a ellos.|  
+|[Module::RegisterObjects (método)](../windows/module-registerobjects-method.md)|Registra objetos COM o en tiempo de ejecución de Windows para que otras aplicaciones puedan conectarse a ellos.|  
+|[Module::RegisterWinRTObject (método)](../windows/module-registerwinrtobject-method.md)|Registra uno o varios objetos en tiempo de ejecución de Windows para que otras aplicaciones puedan conectarse a ellos.|  
+|[Module::Terminate (método)](../windows/module-terminate-method.md)|Hace que todos los generadores que crea una instancia del módulo se apague.|  
+|[Module::UnregisterCOMObject (método)](../windows/module-unregistercomobject-method.md)|Anula el registro de uno o varios objetos COM, lo que impide que otras aplicaciones conectarse a ellos.|  
+|[Module::UnregisterObjects (método)](../windows/module-unregisterobjects-method.md)|Anula el registro de los objetos en el módulo especificado para que otras aplicaciones no se pueden conectar a ellos.|  
+|[Module::UnregisterWinRTObject (método)](../windows/module-unregisterwinrtobject-method.md)|Anula el registro de uno o varios objetos en tiempo de ejecución de Windows para que otras aplicaciones no se pueden conectar a ellos.|  
   
-### Métodos protegidos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Module::Create \(Método\)](../windows/module-create-method.md)|Crea una instancia de un módulo.|  
-  
-### Miembros de datos protegidos  
+### <a name="protected-methods"></a>Métodos protegidos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Module::objectCount\_ \(Miembro de datos\)](../windows/module-objectcount-data-member.md)|Seguimiento de cuántas clases se han creado con la función de [Cree](../windows/make-function.md) .|  
-|[Module::releaseNotifier\_ \(Miembro de datos\)](../windows/module-releasenotifier-data-member.md)|Contiene un puntero a un objeto de ReleaseNotifier.|  
+|[Module::Create (método)](../windows/module-create-method.md)|Crea una instancia de un módulo.|  
   
-### Macros  
+### <a name="protected-data-members"></a>Miembros de datos protegidos  
+  
+|nombre|Descripción|  
+|----------|-----------------|  
+|[Module::objectCount_ (miembro de datos)](../windows/module-objectcount-data-member.md)|Realiza un seguimiento de cuántas clases se hayan creado con la [realizar](../windows/make-function.md) función.|  
+|[Module::releaseNotifier_ (miembro de datos)](../windows/module-releasenotifier-data-member.md)|Contiene un puntero a un objeto ReleaseNotifier.|  
+  
+### <a name="macros"></a>Macros  
   
 |||  
 |-|-|  
-|[ActivatableClass](../Topic/ActivatableClass%20Macros.md)|Rellena la caché interna que contiene un generador que pueda crear una instancia de la clase especificada.  Esta macro especifica parámetros predeterminados de generador y el identificador del grupo.|  
-|[ActivatableClassWithFactory](../Topic/ActivatableClass%20Macros.md)|Rellena la caché interna que contiene un generador que pueda crear una instancia de la clase especificada.  Esta macro permite especificar un parámetro determinado de generador.|  
-|[ActivatableClassWithFactoryEx](../Topic/ActivatableClass%20Macros.md)|Rellena la caché interna que contiene un generador que pueda crear una instancia de la clase especificada.  Esta macro permite especificar parámetros específicos del generador y el identificador del grupo.|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada. Esta macro especifica parámetros de identificador de generador y el grupo predeterminado.|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada. Esta macro le permite especificar un parámetro de generador determinada.|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Rellena una caché interna que contiene una fábrica que puede crear una instancia de la clase especificada. Esta macro permite especificar generador determinado y parámetros de identificador de grupo.|  
   
-## Jerarquía de herencia  
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `ModuleBase`  
   
  `Module`  
   
  `Module`  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** module.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [Microsoft::WRL \(Espacio de nombres\)](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>Vea también  
+ [Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)

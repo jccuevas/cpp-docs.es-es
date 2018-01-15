@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0e4b0699f17e4bf00106b3d4a22938569a2254
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctoolbar-class"></a>CToolBar (clase)
 Barras de control que tienen una fila de botones de mapas de bits y separadores opcionales.  
@@ -74,13 +75,13 @@ class CToolBar : public CControlBar
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CToolBar::CToolBar](#ctoolbar)|Construye un objeto `CToolBar`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CToolBar::CommandToIndex](#commandtoindex)|Devuelve el índice de un botón con el identificador de comando especificado.|  
 |[CToolBar:: Create](#create)|Crea la barra de herramientas de Windows y lo adjunta a la `CToolBar` objeto.|  

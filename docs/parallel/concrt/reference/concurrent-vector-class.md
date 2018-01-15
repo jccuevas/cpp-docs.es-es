@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dc17ee63caf62ddeea4a134d61f8fbd47e0061c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentvector-class"></a>Clase concurrent_vector
 La clase `concurrent_vector` es una clase de contenedor de secuencia que permite el acceso aleatorio a cualquier elemento. Habilita las operaciones de anexión segura para simultaneidad, acceso de elemento, acceso de iterador e iterador transversal.  
@@ -72,7 +73,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`allocator_type`|Tipo que representa la clase de asignador para el vector simultáneo.|  
 |`const_iterator`|Un tipo que proporciona un iterador de acceso aleatorio que puede leer un `const` elemento en un vector simultáneo.|  
@@ -89,14 +90,14 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[concurrent_vector](#ctor)|Sobrecargado. Construye un vector simultáneo.|  
 |[~ concurrent_vector (destructor)](#dtor)|Borra todos los elementos y destruye este vector simultáneo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[assign](#assign)|Sobrecargado. Borra los elementos del vector simultáneo y asigna a él o bien `_N` copias de `_Item`, o los valores especificados por el intervalo de iterador [ `_Begin`, `_End`). Este método no es seguro para la simultaneidad.|  
 |[at](#at)|Sobrecargado. Proporciona acceso al elemento en el índice especificado en el vector simultáneo. Este método es seguro para simultaneidad para las operaciones de lectura y también durante el aumento del vector, como se ha asegurado de que el valor `_Index` es menor que el tamaño del vector simultáneo.|  
@@ -126,7 +127,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator]](#operator_at)|Sobrecargado. Proporciona acceso al elemento en el índice especificado en el vector simultáneo. Este método es seguro para simultaneidad para las operaciones de lectura y también durante el aumento del vector, siempre que se haya asegurado de que el valor `_Index` es menor que el tamaño del vector simultáneo.|  
 |[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_vector` a este. Este método no es seguro para la simultaneidad.|  

@@ -1,47 +1,47 @@
 ---
-title: "SyncLockT::~SyncLockT (Destructor) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~SyncLockT, destructor"
+title: 'SyncLockT:: ~ SyncLockT (destructor) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT
+dev_langs: C++
+helpviewer_keywords: ~SyncLockT, destructor
 ms.assetid: 9e14870d-017d-45fe-a3dc-cd86b6fa1c3a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e5fa42339ea5490ff9c97938cfe55d6256bc123
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# SyncLockT::~SyncLockT (Destructor)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Admite la infraestructura de WRL y no está diseñado para usarse directamente desde el código.  
+# <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT (Destructor)
+Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 ~SyncLockT();  
 ```  
   
-## Comentarios  
- Desinicializa una instancia de la clase de SyncLockT.  
+## <a name="remarks"></a>Comentarios  
+ Desinicializa una instancia de la clase SyncLockT.  
   
- Este destructor también se desbloquea la instancia actual de SyncLockT.  
+ Este destructor también desbloquea la instancia actual de SyncLockT.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** corewrappers.h  
   
- **Espacio de nombres:** Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Wrappers  
   
-## Vea también  
- [SyncLockT \(Clase\)](../windows/synclockt-class.md)
+## <a name="see-also"></a>Vea también  
+ [SyncLockT (clase)](../windows/synclockt-class.md)

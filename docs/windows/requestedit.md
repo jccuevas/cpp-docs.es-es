@@ -1,32 +1,33 @@
 ---
-title: "requestedit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requestedit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requestedit attribute"
+title: requestedit | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requestedit
+dev_langs: C++
+helpviewer_keywords: requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1e31881fbfc7f1da21fa7bad86fc138bc39cdf7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# requestedit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-indica que la propiedad admite la notificación de **OnRequestEdit** .  
+# <a name="requestedit"></a>requestedit
+Indica que la propiedad admite la **OnRequestEdit** notificación.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -34,30 +35,29 @@ indica que la propiedad admite la notificación de **OnRequestEdit** .
   
 ```  
   
-## Comentarios  
- el atributo de **requestedit** C\+\+ tiene la misma funcionalidad que el atributo de [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) MIDL.  
+## <a name="remarks"></a>Comentarios  
+ El **requestedit** atributo C++ tiene la misma funcionalidad que la [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) atributo MIDL.  
   
-## Ejemplo  
- Vea el ejemplo para [enlazable](../windows/bindable.md) para un ejemplo de uso de **requestedit**.  
+## <a name="example"></a>Ejemplo  
+ Vea el ejemplo de [enlazables](../windows/bindable.md) para un ejemplo de uso de **requestedit**.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
-### Contexto de atributo  
+### <a name="attribute-context"></a>Contexto de atributo  
   
 |||  
 |-|-|  
-|**Se aplica a**|método de interfaz|  
-|**repetible**|No|  
-|**Atributos necesarios**|None|  
-|**Atributos no válidos**|None|  
+|**Se aplica a**|Método de interfaz|  
+|**Reiterativo**|No|  
+|**Atributos requeridos**|Ninguna|  
+|**Atributos no válidos**|Ninguna|  
   
- Para obtener más información sobre los contextos de atributos, vea [Contextos de atributo](../windows/attribute-contexts.md).  
+ Para obtener más información acerca de los contextos de atributo, consulte [Contextos de atributo](../windows/attribute-contexts.md).  
   
-## Vea también  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
+## <a name="see-also"></a>Vea también  
+ [Atributos IDL](../windows/idl-attributes.md)   
+ [Atributos de método](../windows/method-attributes.md)   
+ [Atributos de miembro de datos](../windows/data-member-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
- [Attributes Samples](http://msdn.microsoft.com/es-es/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

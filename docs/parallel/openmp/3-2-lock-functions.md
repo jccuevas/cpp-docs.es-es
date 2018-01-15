@@ -1,50 +1,50 @@
 ---
-title: "3.2 Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2 funciones de bloqueo | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0ec855c6-55a9-49d7-bee4-5edae6e86a1b
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 151c809a7bd28a2e4384371f5cec3bd192eed9d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# 3.2 Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Las funciones descritas en esta sección manipulan bloqueos utilizado para la sincronización.  
+# <a name="32-lock-functions"></a>3.2 Funciones de bloqueo
+Las funciones descritas en esta sección manipulan los bloqueos utilizados para la sincronización.  
   
- Para las funciones siguientes, la variable de bloqueo debe ser de tipo **omp\_lock\_t**.  Esta variable debe realizarse únicamente con estas funciones.  Todas las funciones de bloqueo requieren un argumento con un puntero al tipo de **omp\_lock\_t** .  
+ Las siguientes funciones, la variable de bloqueo debe tener tipo **omp_lock_t**. Esta variable solo debe ser accesible a través de estas funciones. Todas las funciones de bloqueo requieren un argumento que tiene un puntero a **omp_lock_t** tipo.  
   
--   La función de `omp_init_lock` inicializa un bloqueo simple.  
+-   El `omp_init_lock` función inicializa un bloqueo simple.  
   
--   la función de `omp_destroy_lock` quita un bloqueo simple.  
+-   El `omp_destroy_lock` función quita un bloqueo simple.  
   
--   La función de `omp_set_lock` espera hasta que un bloqueo simple esté disponible.  
+-   El `omp_set_lock` función espera hasta que un bloqueo simple está disponible.  
   
--   Las versiones de la función de `omp_unset_lock` un bloqueo simple.  
+-   El `omp_unset_lock` función libera un bloqueo simple.  
   
--   las pruebas de función de `omp_test_lock` un bloqueo simple.  
+-   El `omp_test_lock` función comprueba un bloqueo simple.  
   
- Para las funciones siguientes, la variable de bloqueo debe ser de tipo **omp\_nest\_lock\_t**.  Esta variable debe realizarse únicamente con estas funciones.  Todas las funciones de bloqueo encajables requieren un argumento con un puntero al tipo de **omp\_nest\_lock\_t** .  
+ Las siguientes funciones, la variable de bloqueo debe tener tipo **omp_nest_lock_t**.  Esta variable solo debe ser accesible a través de estas funciones. Todas las funciones de bloqueo anidable requieren un argumento que tiene un puntero a **omp_nest_lock_t** tipo.  
   
--   La función de `omp_init_nest_lock` inicializa un bloqueo encajable.  
+-   El `omp_init_nest_lock` función inicializa un bloqueo anidable.  
   
--   la función de `omp_destroy_nest_lock` quita un bloqueo encajable.  
+-   El `omp_destroy_nest_lock` función quita un bloqueo anidable.  
   
--   La función de `omp_set_nest_lock` espera hasta que un bloqueo encajable esté disponible.  
+-   El `omp_set_nest_lock` función espera hasta que un bloqueo anidable está disponible.  
   
--   Las versiones de la función de `omp_unset_nest_lock` un bloqueo encajable.  
+-   El `omp_unset_nest_lock` función libera un bloqueo anidable.  
   
--   las pruebas de función de `omp_test_nest_lock` un bloqueo encajable.  
+-   El `omp_test_nest_lock` función comprueba un bloqueo anidable.  
   
- Las funciones de bloqueo de OpenMP tienen acceso a la variable de bloqueo de modo que lean y actualizar siempre el valor más actual de la variable de bloqueo.  Por consiguiente, no es necesario que un programa de OpenMP incluya las directivas explícitas de **vaciado** para asegurarse de que el valor de variable de bloqueo es coherente entre subprocesos diferentes.  \(Puede haber una necesidad de las directivas de **vaciado** de crear los valores de otras variables coherentes.\)
+ Las funciones de bloqueo de OpenMP tener acceso a la variable de bloqueo de manera que siempre lea y actualice el valor más reciente de la variable de bloqueo. Por lo tanto, no es necesario para un programa de OpenMP debe incluir explícita **vaciar** directivas para garantizar que el valor de la variable de bloqueo es coherente entre subprocesos diferentes. (Puede haber una necesidad de **vaciar** directivas para que los valores de otras variables sean coherentes.)

@@ -1,32 +1,33 @@
 ---
-title: "ComPtr::CopyTo (M&#233;todo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::CopyTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CopyTo (método)"
+title: "Comptr:: CopyTo (método) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::CopyTo
+dev_langs: C++
+helpviewer_keywords: CopyTo method
 ms.assetid: 8801bc49-6db4-4393-a55f-a701ae3b8718
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1f47df584fb456c721c92823a87ca525beb052d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::CopyTo (M&#233;todo)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la actual o la interfaz especificada asociada a este ComPtr el puntero especificado.  
+# <a name="comptrcopyto-method"></a>ComPtr::CopyTo (Método)
+Copias de la interfaz actual o especificada asociada a esta ComPtr al puntero especificado.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 HRESULT CopyTo(  
@@ -46,30 +47,30 @@ HRESULT CopyTo(
 ) const;  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `U`  
  Nombre de tipo.  
   
  `ptr`  
- Cuando esta operación finaliza, un puntero a la interfaz solicitada.  
+ Cuando se completa esta operación, un puntero a la interfaz solicitada.  
   
  `riid`  
- Un identificador de interfaz  
+ Id. de interfaz.  
   
-## Valor devuelto  
- S\_OK si correctamente; si no, un HRESULT que indica el error de la operación implícita de QueryInterface.  
+## <a name="return-value"></a>Valor devuelto  
+ S_OK si se realiza correctamente; en caso contrario, un valor HRESULT que indica el motivo del error de la operación de QueryInterface implícita.  
   
-## Comentarios  
- La primera función devuelve una copia de un puntero a la interfaz asociada a este ComPtr.  Esta función siempre devuelve S\_OK.  
+## <a name="remarks"></a>Comentarios  
+ La primera función devuelve una copia de un puntero a la interfaz asociada a esta ComPtr. Esta función siempre devuelve S_OK.  
   
- La segunda función realiza una operación de QueryInterface en la interfaz asociada a este ComPtr para la interfaz especificada por el parámetro de `riid` .  
+ La segunda función realiza una operación de QueryInterface en la interfaz asociada a esta ComPtr de la interfaz especificada por el `riid` parámetro.  
   
- La tercera función realiza una operación de QueryInterface en la interfaz asociada a este ComPtr para la interfaz subyacente del parámetro de `U` .  
+ La tercera función realiza una operación de QueryInterface en la interfaz asociada a esta ComPtr de la interfaz subyacente de la `U` parámetro.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** client.h  
   
  **Espacio de nombres:** Microsoft::WRL  
   
-## Vea también  
- [ComPtr \(Clase\)](../windows/comptr-class.md)
+## <a name="see-also"></a>Vea también  
+ [ComPtr (clase)](../windows/comptr-class.md)

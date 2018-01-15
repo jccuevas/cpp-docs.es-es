@@ -28,7 +28,7 @@ f1_keywords:
 - AFXTEMPL/CArray::SetAt
 - AFXTEMPL/CArray::SetAtGrow
 - AFXTEMPL/CArray::SetSize
-dev_langs: C++
+dev_langs: CPP
 helpviewer_keywords:
 - CArray [MFC], CArray
 - CArray [MFC], Add
@@ -53,11 +53,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4087cfb584059923e4e05620c1f33d3cc11c3bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carray-class"></a>CArray (clase)
 Admite matrices que son como las matrices de C, pero pueden reducir y crecer según sea necesario dinámicamente.  
@@ -80,13 +81,13 @@ class CArray : public CObject
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArray::CArray](#carray)|Construye una matriz vacía.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CArray::Add](#add)|Agrega un elemento al final de la matriz; aumenta el tamaño de la matriz si es necesario.|  
 |[CArray::Append](#append)|Anexa otra matriz a la matriz; aumenta la matriz si es necesario|  
@@ -108,7 +109,7 @@ class CArray : public CObject
   
 ### <a name="public-operators"></a>Operadores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[operator&#91;&#93;](#operator_at)|Establece u obtiene el elemento en el índice especificado.|  
   

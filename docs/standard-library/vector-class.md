@@ -97,11 +97,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 57cc809cad0ef81d59e58a4fa0d582f2964fdbb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-class"></a>vector (Clase)
 La clase vector de la biblioteca estándar de C++ es una clase de plantilla de contenedores de secuencias que organiza los elementos de un tipo determinado en una organización lineal y permite el acceso aleatorio rápido a cualquier elemento. Deberían ser el contenedor más apropiado para una secuencia cuando el rendimiento de acceso aleatorio sea importante.  
@@ -114,7 +115,7 @@ class vector
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ype*  
+ *Type*  
  Tipo de datos de elementos que se almacenará en el vector.  
   
  `Allocator`  
@@ -137,7 +138,7 @@ class vector
 |-|-|  
 |[vector](#vector)|Construye un vector de un tamaño determinado o con elementos de un valor determinado, o con un `allocator` específico, o como una copia de algún otro vector.|  
   
-### <a name="typedefs"></a>Definiciones de tipo  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
@@ -353,7 +354,7 @@ const_reference back() const;
 ### <a name="remarks"></a>Comentarios  
  Si el valor devuelto de **back** se asigna a una `const_reference`, el objeto de vector no se puede modificar. Si el valor devuelto de **back** se asigna a una **referencia**, el objeto de vector puede modificarse.  
   
- Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).  
+ Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -494,7 +495,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>Comentarios  
  Con el valor devuelto de `cbegin`, los elementos del intervalo no se pueden modificar.  
   
- Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.  
+ Se puede usar esta función miembro en lugar de la función miembro `begin()` para garantizar que el valor devuelto es `const_iterator`. Normalmente, se usa junto con la palabra clave de deducción de tipos [auto](../cpp/auto-cpp.md), como se muestra en el ejemplo siguiente. En el ejemplo, se considera que `Container` es un contenedor modificable (distinto de `const`) de cualquier naturaleza que admite `begin()` y `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1103,7 +1104,7 @@ const_reference front() const;
 ### <a name="remarks"></a>Comentarios  
  Si el valor devuelto de `front` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `front` se asigna a una **referencia**, el objeto de vector se puede modificar.  
   
- Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).  
+ Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1336,7 +1337,7 @@ const_reference operator[](size_type Pos) const;
 ### <a name="remarks"></a>Comentarios  
  Si el valor devuelto de `operator[]` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `operator[]` se asigna a una referencia, el objeto vector se puede modificar.  
   
- Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).  
+ Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.  
   
 ### <a name="example"></a>Ejemplo  
   

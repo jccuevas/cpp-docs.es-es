@@ -1,129 +1,132 @@
 ---
-title: "C&#243;mo: Completar operaciones asincr&#243;nicas mediante WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Cómo: completar operaciones asincrónicas mediante WRL | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# C&#243;mo: Completar operaciones asincr&#243;nicas mediante WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-En este documento se muestra cómo utilizar [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) para iniciar operaciones asincrónicas y para realizar el trabajo cuando las operaciones completan.  
+# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Cómo: Completar operaciones asincrónicas mediante WRL
+Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.  
   
- En este documento se muestran dos ejemplos.  El primer ejemplo inicia un temporizador asincrónico y espera el temporizador expire.  En este ejemplo, se especifica la acción asincrónico cuando se crea el objeto de temporizador.  El segundo ejemplo ejecuta un subproceso de trabajo en segundo plano.  En este ejemplo se muestra cómo ejecutar un método de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] que devuelve una interfaz de `IAsyncInfo` .  La función de [Devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md) es una parte importante de ambos ejemplos porque les permite especificar un controlador de eventos para procesar los resultados de las operaciones asincrónicas.  
+ En este documento se muestran dos ejemplos. El primer ejemplo inicia un temporizador asincrónico y espera a que caduque el temporizador. En este ejemplo, puede especificar la acción asincrónica cuando se crea el objeto de temporizador. El segundo ejemplo ejecuta un subproceso de trabajo de segundo plano. Este ejemplo muestra cómo trabajar con un método en tiempo de ejecución de Windows que devuelve un `IAsyncInfo` interfaz. El [devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md) función es una parte importante de los dos ejemplos porque permite especificar un controlador de eventos para procesar los resultados de las operaciones asincrónicas.  
   
- Para obtener un ejemplo básico que crea una instancia de ese componente y recuperar un valor de propiedad, vea [Cómo: Activar y usar un componente de Windows en tiempo de ejecución](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Para obtener un ejemplo más básico que crea una instancia de un componente y recupera un valor de propiedad, vea [Cómo: activar y usar un componente de Windows en tiempo de ejecución](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
 > [!TIP]
->  Estos ejemplos usan expresiones lambda para definir las devoluciones de llamada.  También puede utilizar los objetos de función \(functors\), punteros a función, o los objetos de [std::function](../standard-library/function-class.md) .  Para obtener más información sobre las expresiones lambda de C\+\+, vea [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md).  
+>  Estos ejemplos utilizan expresiones lambda para definir las devoluciones de llamada. También puede utilizar objetos de función (funciones), punteros a función, o [std:: Function](../standard-library/function-class.md) objetos. Para obtener más información acerca de las expresiones lambda de C++, vea [expresiones Lambda](../cpp/lambda-expressions-in-cpp.md).  
   
-## Ejemplo: Trabajar con un temporizador  
- Los pasos siguientes inician un temporizador asincrónico y esperan el temporizador expire.  A continuación se muestra el ejemplo completo.  
+## <a name="example-working-with-a-timer"></a>Ejemplo: Trabajar con un temporizador  
+ Los pasos siguientes inicia un temporizador asincrónico y esperan a que caduque el temporizador. A continuación se muestra el ejemplo completo.  
   
 > [!WARNING]
->  Aunque use normalmente [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] en una aplicación de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] , este ejemplo utiliza una aplicación de consola a la ilustración.  Las funciones como `wprintf_s` no están disponibles de una aplicación de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] .  Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] , vea [Funciones CRT no compatibles con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) y [Win32 y COM para las aplicaciones del almacén de Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows, en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de la plataforma Universal de Windows. Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de plataforma Universal de Windows, vea [funciones de CRT no admitidas por/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) y [aplicaciones Win32 y COM para la tienda Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-1.  Incluya \(`#include`\) cualquier encabezado de biblioteca de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] o estándar de C\+\+ necesario.  
+1.  Incluir (`#include`) los necesarios en tiempo de ejecución de Windows, biblioteca de plantillas de C++ de Windows en tiempo de ejecución o encabezados de la biblioteca estándar de C++.  
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h declara los tipos necesarios para usar un temporizador asincrónico.  
+     Windows.System.Threading.h declara los tipos que son necesarios para usar un temporizador asincrónico.  
   
      Se recomienda que use la directiva `using namespace` en el archivo .cpp para que el código sea más legible.  
   
-2.  Inicializa [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+2.  Inicializar el Runtime de Windows.  
   
      [!code-cpp[wrl-consume-async#3](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_2.cpp)]  
   
-3.  Cree un generador de activación para la interfaz de `ABI::Windows::System::Threading::IThreadPoolTimer` .  
+3.  Cree un generador de activación para el `ABI::Windows::System::Threading::IThreadPoolTimer` interfaz.  
   
      [!code-cpp[wrl-consume-async#4](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_3.cpp)]  
   
-     [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] utiliza nombres completos para identificar tipos.  El parámetro de `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` es una cadena proporcionada por [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] y contiene el nombre de clase necesario en tiempo de ejecución.  
+     El tiempo de ejecución de Windows utiliza nombres completos para identificar tipos. El `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` parámetro es una cadena que se proporciona en tiempo de ejecución de Windows y contiene el nombre de clase en tiempo de ejecución.  
   
-4.  Cree un objeto de [Evento](../windows/event-class-windows-runtime-cpp-template-library.md) que sincronice la devolución de temporizador a la aplicación principal.  
+4.  Crear un [eventos](../windows/event-class-windows-runtime-cpp-template-library.md) objeto que se sincroniza la devolución de llamada de temporizador para la aplicación principal.  
   
      [!code-cpp[wrl-consume-async#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Este evento es para la demostración solo como parte de una aplicación de consola.  Este ejemplo utiliza el evento para asegurarse de que una operación async completa antes de salir de la aplicación.  En la mayoría de las aplicaciones, no suele esperar operaciones async para completar.  
+    >  Este evento es de demostración únicamente como parte de una aplicación de consola. Este ejemplo utiliza el evento para asegurar que una operación asincrónica se complete antes de la aplicación se cierra. En la mayoría de las aplicaciones, normalmente no esperar operaciones asincrónicas que se complete.  
   
-5.  Cree un objeto de `IThreadPoolTimer` que expire después de dos segundos.  Utilice la función de `Callback` para crear el controlador de eventos \(un objeto de `ABI::Windows::System::Threading::ITimerElapsedHandler` \).  
+5.  Crear un `IThreadPoolTimer` objeto que expire después de dos segundos. Use la `Callback` función para crear el controlador de eventos (una `ABI::Windows::System::Threading::ITimerElapsedHandler` objeto).  
   
      [!code-cpp[wrl-consume-async#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_5.cpp)]  
   
-6.  Imprimir un mensaje en la consola y esperan la devolución del temporizador para completar.  Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.  
+6.  Imprimir un mensaje en la consola y espere a que la devolución de llamada de temporizador que se complete. Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.  
   
      [!code-cpp[wrl-consume-async#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_6.cpp)]  
   
- A continuación se muestra el ejemplo completo:  
+ Aquí se muestra el ejemplo completo:  
   
  [!code-cpp[wrl-consume-async#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_7.cpp)]  
   
-### Compilar el código  
- Para compilar el código, cópielo y péguelo en un proyecto de Visual Studio, o péguelo en un archivo denominado `wrl-consume-async.cpp` y después se ejecute el siguiente comando en una ventana de símbolo del sistema de Visual Studio.  
+### <a name="compiling-the-code"></a>Compilar el código  
+ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo que se denomina `wrl-consume-async.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
   
- **cl.exe wrl\-consume\-async.cpp runtimeobject.lib**  
+ **cl.exe async.cpp consumir wrl runtimeobject.lib**  
   
-## Ejemplo: Trabajar con un subproceso de fondo  
- Los pasos siguientes se inicia un subproceso de trabajo y definen la acción que realiza ese subproceso.  A continuación se muestra el ejemplo completo.  
+## <a name="example-working-with-a-background-thread"></a>Ejemplo: Trabajar con un subproceso en segundo plano  
+ Los siguientes pasos iniciar un subproceso de trabajo y definen la acción realizada por ese subproceso. A continuación se muestra el ejemplo completo.  
   
 > [!TIP]
->  En este ejemplo se muestra cómo ejecutar la interfaz de `ABI::Windows::Foundation::IAsyncAction` .  Puede aplicar este modelo a las interfaces que implementa `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`, y `IAsyncOperationWithProgress`.  
+>  Este ejemplo muestra cómo trabajar con el `ABI::Windows::Foundation::IAsyncAction` interfaz. Puede aplicar este patrón para cualquier interfaz que implemente `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`, y `IAsyncOperationWithProgress`.  
   
-1.  Incluya \(`#include`\) cualquier encabezado de biblioteca de [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] o estándar de C\+\+ necesario.  
+1.  Incluir (`#include`) los necesarios en tiempo de ejecución de Windows, biblioteca de plantillas de C++ de Windows en tiempo de ejecución o encabezados de la biblioteca estándar de C++.  
   
      [!code-cpp[wrl-consume-asyncOp#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]  
   
-     Windows.System.Threading.h declara los tipos necesarios para utilizar un subproceso de trabajo.  
+     Windows.System.Threading.h declara los tipos que son necesarios para usar un subproceso de trabajo.  
   
-     Recomendamos utilizar la directiva de `using namespace` en el archivo .cpp para hacer el código más legible.  
+     Se recomienda que realice la `using namespace` la directiva en el archivo .cpp para que el código sea más legible.  
   
-2.  Inicializa [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+2.  Inicializar el Runtime de Windows.  
   
      [!code-cpp[wrl-consume-asyncOp#3](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_9.cpp)]  
   
-3.  Cree un generador de activación para la interfaz de `ABI::Windows::System::Threading::IThreadPoolStatics` .  
+3.  Cree un generador de activación para el `ABI::Windows::System::Threading::IThreadPoolStatics` interfaz.  
   
      [!code-cpp[wrl-consume-asyncOp#4](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_10.cpp)]  
   
-4.  Cree un objeto de [Evento](../windows/event-class-windows-runtime-cpp-template-library.md) que sincronice el subproceso de trabajo a la aplicación principal.  
+4.  Crear un [eventos](../windows/event-class-windows-runtime-cpp-template-library.md) objeto que se sincroniza la finalización del subproceso de trabajo en la aplicación principal.  
   
      [!code-cpp[wrl-consume-asyncOp#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_11.cpp)]  
   
     > [!NOTE]
-    >  Este evento es para la demostración solo como parte de una aplicación de consola.  Este ejemplo utiliza el evento para asegurarse de que una operación async completa antes de salir de la aplicación.  En la mayoría de las aplicaciones, no suele esperar operaciones async para completar.  
+    >  Este evento es de demostración únicamente como parte de una aplicación de consola. Este ejemplo utiliza el evento para asegurar que una operación asincrónica se complete antes de la aplicación se cierra. En la mayoría de las aplicaciones, normalmente no esperar operaciones asincrónicas que se complete.  
   
-5.  Llame al método de `IThreadPoolStatics::RunAsync` para crear un subproceso de trabajo.  Utilice la función de `Callback` para definir la acción.  
+5.  Llame a la `IThreadPoolStatics::RunAsync` método para crear un subproceso de trabajo. Use la `Callback` función para definir la acción.  
   
      [!code-cpp[wrl-consume-asyncOp#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_12.cpp)]  
   
-     La función de `IsPrime` se define en el ejemplo completo que sigue.  
+     El `IsPrime` función se define en el ejemplo completo que sigue.  
   
-6.  Imprime un mensaje en la consola y espere el subproceso para completar.  Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.  
+6.  Imprimir un mensaje en la consola y espere a que el subproceso que se complete. Todos los objetos `ComPtr` y RAII salen del ámbito y se liberan automáticamente.  
   
      [!code-cpp[wrl-consume-asyncOp#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_13.cpp)]  
   
- A continuación se muestra el ejemplo completo:  
+ Aquí se muestra el ejemplo completo:  
   
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
-### Compilar el código  
- Para compilar el código, cópielo y péguelo en un proyecto de Visual Studio, o péguelo en un archivo denominado `wrl-consume-asyncOp.cpp` y después se ejecute el siguiente comando en una ventana de símbolo del sistema de Visual Studio.  
+### <a name="compiling-the-code"></a>Compilar el código  
+ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo que se denomina `wrl-consume-asyncOp.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.  
   
- **cl.exe wrl\-consume\-asyncOp.cpp runtimeobject.lib**  
+ **cl.exe asyncOp.cpp consumir wrl runtimeobject.lib**  
   
-## Vea también  
- [Biblioteca de plantillas de Windows Runtime C\+\+ \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)
+## <a name="see-also"></a>Vea también  
+ [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

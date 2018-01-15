@@ -1,94 +1,96 @@
 ---
-title: "Compatibilidad de compilador para type traits (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class (palabra clave) [C++]"
-  - "__is_pod (palabra clave) [C++]"
-  - "__is_delegate (palabra clave) [C++]"
-  - "__is_value_class (palabras clave) [C++]"
-  - "__has_copy (palabra clave) [C++]"
-  - "__has_nothrow_copy (palabra clave) [C++]"
-  - "__is_interface_class (palabras clave) [C++]"
-  - "__is_sealed (palabra clave) [C++]"
-  - "__is_convertible_to (palabra clave) [C++]"
-  - "__is_ref_class (palabra clave) [C++]"
-  - "__has_trivial_copy (palabra clave) [C++]"
-  - "__has_user_destructor (palabra clave) [C++]"
-  - "__is_abstract (palabra clave) [C++]"
-  - "__is_empty (palabra clave) [C++]"
-  - "__has_trivial_assign (palabra clave) [C++]"
-  - "__has_nothrow_constructor (palabra clave) [C++]"
-  - "__is_ref_array (palabra clave) [C++]"
-  - "__is_base_of (palabra clave) [C++]"
-  - "__has_nothrow_assign (palabra clave) [C++]"
-  - "__has_virtual_destructor (palabra clave) [C++]"
-  - "__has_finalizer (palabra clave) [C++]"
-  - "__is_union (palabra clave) [C++]"
-  - "__has_assign (palabra clave) [C++]"
-  - "__has_trivial_destructor (palabra clave) [C++]"
-  - "__is_polymorphic (palabra clave) [C++]"
-  - "__is_enum (palabra clave) [C++]"
-  - "__is_simple_value_class (palabra clave) [C++]"
-  - "__has_trivial_constructor (palabra clave) [C++]"
+title: Compatibilidad de compilador para Type Traits (extensiones de componentes de C++) | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Compatibilidad de compilador para type traits (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-El compilador admite *Escriba rasgos*, que indican diversas características de un tipo en tiempo de compilación.  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Compatibilidad de compilador para type traits (Extensiones de componentes de C++)
+El compilador admite *escriba rasgos*, que indican diversas características de un tipo en tiempo de compilación.  
   
 ## <a name="all-runtimes"></a>Todos los runtimes  
  **Comentarios**  
   
  Los rasgos de tipo son especialmente útiles para los programadores que escriben las bibliotecas.  
   
- La lista siguiente contiene los rasgos de tipo que son compatibles con el compilador. Todos los rasgos de tipo devuelven `false` si la condición especificada con el nombre de rasgo de tipo no se cumple.  
+ En la lista siguiente contiene los rasgos de tipo que son compatibles con el compilador. Todos los rasgos de tipo devuelven `false` si la condición especificada con el nombre de rasgo de tipo no se cumple.  
   
- (En la lista siguiente, ejemplos de código están escritos en [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]. pero el rasgo de tipo correspondiente también se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] a menos que se indique lo contrario. El término "tipo de plataforma" hace referencia a tipos [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] o tipos CLR).  
+ (En la lista siguiente, se escriben los ejemplos de código solo en C++ / CLI. pero el rasgo de tipo correspondiente también se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] a menos que se indique lo contrario. El término "tipo de plataforma" hace referencia a tipos de Windows Runtime o tipos common language runtime.)  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ El compilador admite *Escriba rasgos*, que indican diversas características de 
   
 -   `__has_finalizer(` `type` `)`  
   
-     (No se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]). Devuelve true si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores de Visual C++](../misc/destructors-and-finalizers-in-visual-cpp.md) para obtener más información.  
+     (No se admite en [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)]). Devuelve true si el tipo CLR tiene un finalizador. Vea [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.  
   
     ```  
   
@@ -304,7 +306,7 @@ El compilador admite *Escriba rasgos*, que indican diversas características de 
   
      Devuelve true si el tipo es un tipo abstracto. Para obtener más información sobre los tipos abstractos nativos, vea [abstracta](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract` también funciona en los tipos de plataforma. Una interfaz con al menos un miembro es un tipo abstracto, como también lo es un tipo de referencia con al menos un miembro abstracto. Para obtener más información sobre los tipos abstractos de plataforma, consulte [clases abstractas](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` también funciona en los tipos de plataforma. Una interfaz con al menos un miembro es un tipo abstracto, como también lo es un tipo de referencia con al menos un miembro abstracto. Para obtener más información sobre tipos abstractos de plataforma, consulte [clases abstractas](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -382,7 +384,7 @@ El compilador admite *Escriba rasgos*, que indican diversas características de 
   
 -   `__is_delegate(` `type` `)`  
   
-     Devuelve true si `type` es un delegado. Para obtener más información, consulte [delegado (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
+     Devuelve true si `type` es un delegado. Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
   
@@ -582,15 +584,15 @@ El compilador admite *Escriba rasgos*, que indican diversas características de 
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
  **Comentarios**  
   
- El `__has_finalizer(`*tipo*`)` rasgo de tipo no se admite porque esta plataforma no admite los finalizadores.  
+ El `__has_finalizer(` *tipo* `)` rasgo de tipo no se admite porque esta plataforma no admite los finalizadores.  
   
 ### <a name="requirements"></a>Requisitos  
  Opción del compilador: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentarios**  
   
  (No hay ninguna observación específica de la plataforma para esta característica).  
@@ -601,7 +603,7 @@ El compilador admite *Escriba rasgos*, que indican diversas características de 
 ### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- En el ejemplo de código siguiente se muestra cómo utilizar una plantilla de clase para exponer un rasgo de tipo para una **/CLR** compilación. Para obtener más información, consulte [en tiempo de ejecución de Windows y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ En el ejemplo de código siguiente se muestra cómo usar una plantilla de clase para exponer un rasgo de tipo para una **/CLR** compilación. Para obtener más información, consulte [Windows Runtime y plantillas administradas](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```  
 // compiler_type_traits.cpp  

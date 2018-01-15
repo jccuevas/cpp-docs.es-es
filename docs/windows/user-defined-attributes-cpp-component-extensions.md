@@ -1,67 +1,69 @@
 ---
-title: "Atributos definidos por el usuario (Extensiones de componentes de C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atributos personalizados, extender metadatos"
-  - "metadatos, extender"
+title: Atributos (extensiones de componentes de C++) definido por el usuario | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- metadata, extending
+- custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Atributos definidos por el usuario (Extensiones de componentes de C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los atributos personalizados permiten ampliar los metadatos de una interfaz, clase o estructura, un método, un parámetro, o una enumeración.  
+# <a name="user-defined-attributes--c-component-extensions"></a>Atributos definidos por el usuario (Extensiones de componentes de C++)
+Atributos personalizados permiten ampliar los metadatos de una interfaz, clase o estructura, método, parámetro o enumeración.  
   
-## Todos los runtimes  
- Todos los atributos personalizados admiten runtimes.  
+## <a name="all-runtimes"></a>Todos los runtimes  
+ Todos los Runtimes admite atributos personalizados.  
   
-## Windows en tiempo de ejecución  
- Los atributos de C\+\+\/CX sólo admiten propiedades, pero no constructores de atributos o métodos.  
+## <a name="windows-runtime"></a>Windows en tiempo de ejecución  
+ C++ / atributos CX admite solo las propiedades, pero no atributo métodos o constructores.  
   
-### Comentarios  
+### <a name="remarks"></a>Comentarios  
   
-### Requisitos  
- Opción del compilador: **\/ZW**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/ZW**  
   
-## Common Language Runtime  
- Los atributos personalizados permiten extender los metadatos de un elemento administrado.  Para obtener más información, vea [Atributos](../Topic/Extending%20Metadata%20Using%20Attributes.md).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Atributos personalizados le permiten ampliar los metadatos de un elemento administrado. Para obtener más información, consulte [Attributes](/dotnet/standard/attributes/index) (Atributos).  
   
-### Comentarios  
- La información y la sintaxis presentadas en este tema se ha diseñado para reemplazar la información mostrada en [attribute](../windows/attribute.md).  
+### <a name="remarks"></a>Comentarios  
+ La información y la sintaxis que aparecen en este tema está pensado para sustituir la información presentada en [atributo](../windows/attribute.md).  
   
- Puede definir un atributo personalizado definiendo un tipo y crear <xref:System.Attribute> una clase base para el tipo y opcionalmente aplicando el atributo de <xref:System.AttributeUsageAttribute> .  
+ Puede definir un atributo personalizado mediante la definición de un tipo y realice <xref:System.Attribute> una clase base para el tipo y, opcionalmente, aplicar el <xref:System.AttributeUsageAttribute> atributo.  
   
- Por ejemplo, en Microsoft Transaction Server \(MTS\) 1,0, comportamiento con respecto a las transacciones, sincronización, equilibrio de carga, etc. se especificado mediante GUID personalizado incrustado en la biblioteca de tipos mediante el atributo personalizado ODL.  Por consiguiente, un cliente de un servidor de MTS podría determinar sus características leyendo la biblioteca de tipos.  En .NET Framework, el analógico de la biblioteca de tipos es metadatos, y el analógico de atributo personalizado ODL es atributos personalizados.  También, leer la biblioteca de tipos es análogo a utilizar la reflexión en tipos.  
+ Por ejemplo, en Microsoft Transaction Server (MTS) 1.0, comportamiento con respecto a las transacciones, sincronización, el equilibrio de carga, y así sucesivamente se especificó mediante GUID personalizados insertados en la biblioteca de tipos mediante el atributo personalizado ODL. Por lo tanto, un cliente de un servidor MTS podía determinar sus características leyendo la biblioteca de tipos. En .NET Framework, el equivalente de la biblioteca de tipos es los metadatos y del atributo personalizado ODL son atributos personalizados. Además, la lectura de la biblioteca de tipos es análogo a utilizando la reflexión en los tipos.  
   
  Para obtener más información, vea  
   
 -   [Destinos de atributo](../windows/attribute-targets-cpp-component-extensions.md)  
   
--   [Tipos de parámetros de atributo](../windows/attribute-parameter-types-cpp-component-extensions.md)  
+-   [Tipos de parámetro de atributo](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- Para obtener información sobre la firma de ensamblados en Visual C\+\+, vea [Ensamblados de nombre seguro \(Firma de ensamblados\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Para obtener información sobre cómo firmar ensamblados en Visual C++, vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
-### Requisitos  
- Opción del compilador: **\/clr**  
+### <a name="requirements"></a>Requisitos  
+ Opción del compilador: **/clr**  
   
-### Ejemplos  
+### <a name="examples"></a>Ejemplos  
  **Ejemplo**  
   
- El ejemplo siguiente se muestra cómo definir un atributo personalizado.  
+ El ejemplo siguiente muestra cómo definir un atributo personalizado.  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -80,7 +82,7 @@ ref class MyClass {};
   
  **Ejemplo**  
   
- El ejemplo siguiente muestra algunas características importantes de atributos personalizados.  Por ejemplo, este ejemplo muestra un uso común de los atributos personalizados: crear instancias de un servidor que puede describirse totalmente a los clientes.  
+ El ejemplo siguiente muestra algunas características importantes de atributos personalizados. Por ejemplo, este ejemplo muestra un uso común de los atributos personalizados: crear instancias de un servidor que se puede describir completamente a los clientes.  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -155,20 +157,29 @@ int main() {
 }  
 ```  
   
- **Resultados**  
+ **Salida**  
   
-  **Mantenga presionada la prioridad \= 0**  
- **Mantenga Access \= la escritura**  
- **Mantenga presionada la prioridad \= 3**  
- **Mantenga Access \= la escritura**  
- **Mantenga presionada la prioridad \= 1**  
- **Mantenga Access \= leído** **Ejemplo**  
+```Output  
+Service Priority = 0  
   
- El tipo de Object^ reemplaza el tipo de datos variant.  El ejemplo siguiente define un atributo personalizado que toma una matriz de Object^ como parámetros.  
+Service Access = Write  
   
- Los argumentos de atributo deben ser constantes en tiempo de compilación; en la mayoría de los casos, deben ser literales constantes.  
+Service Priority = 3  
   
- Vea [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) para obtener información sobre cómo devolver un valor de System::Type de un bloque de atributos personalizados.  
+Service Access = Write  
+  
+Service Priority = 1  
+  
+Service Access = Read  
+```  
+  
+ **Ejemplo**  
+  
+ El objeto ^ tipo reemplaza al tipo de datos variant. En el ejemplo siguiente se define un atributo personalizado que toma una matriz de objetos ^ como parámetros.  
+  
+ Argumentos de atributo deben ser constantes de tiempo de compilación; en la mayoría de los casos, deben ser literales constantes.  
+  
+ Vea [typeid](../windows/typeid-cpp-component-extensions.md) para obtener información sobre cómo devolver un valor de System:: Type de un bloque de atributos personalizados.  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -188,7 +199,7 @@ public ref class SomeClass {};
   
  **Ejemplo**  
   
- El tiempo de ejecución requiere que la parte pública de la clase de atributos personalizada debe ser serializable.  Al crear atributos personalizados, los argumentos con nombre del atributo personalizado se limitan a constantes en tiempo de compilación.  \(Piense en él como una secuencia de bits anexado al diseño de la clase de metadatos\).  
+ El tiempo de ejecución requiere que la parte pública de la clase de atributo personalizado debe ser serializable.  Al crear atributos personalizados, los argumentos con nombre del atributo personalizado se limitan a constantes en tiempo de compilación.  (Considerar como una secuencia de bits anexada al diseño de clase en los metadatos.)  
   
 ```cpp  
 // extending_metadata_f.cpp  
@@ -207,5 +218,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)

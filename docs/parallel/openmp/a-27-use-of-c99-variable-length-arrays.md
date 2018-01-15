@@ -1,30 +1,30 @@
 ---
-title: "A.27   Use of C99 Variable Length Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uso A.27 de matrices de longitud Variable de C99 | Documentos de Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8e542701-39f9-4f28-ab3a-840e8e669723
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bf3136c4fb4c5c14b728acbc61f3fbf66ce08bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# A.27   Use of C99 Variable Length Arrays
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-El ejemplo siguiente muestra cómo utilizar las matrices de longitud variable C99 \(VLAs\) en una directiva de `firstprivate` \([sección 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) en la página 26\).  
+# <a name="a27---use-of-c99-variable-length-arrays"></a>A.27 Uso de matrices de longitud variable C99
+En el ejemplo siguiente se muestra cómo utilizar matrices de longitud Variable de C99 (VLAs) en un `firstprivate` directiva ([sección 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) en página 26).  
   
 > [!NOTE]
->  Las matrices de longitud variable no se admiten en Visual C\+\+.  
+>  Actualmente no se admiten matrices de longitud variable en Visual C++.  
   
 ```  
 void f(int m, int C[m][m])  

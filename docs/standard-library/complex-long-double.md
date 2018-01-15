@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7b66655a00f6898639157951d9cacc8c128269b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83a8ed2aa2bfe77a791d33961abde7f1df3f7fbe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 Describe un objeto que almacena un par ordenado de objetos, ambos de tipo `long double`, donde el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.  

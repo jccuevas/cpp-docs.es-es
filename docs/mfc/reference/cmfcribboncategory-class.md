@@ -141,11 +141,12 @@ caps.latest.revision: "38"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b6f6af6d99b27e760e48c62cdcdde5ac3936506
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c4e78017946ef335e04c8190b6ec4cd20e74ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncategory-class"></a>Clase de CMFCRibbonCategory
 El `CMFCRibbonCategory` clase implementa una pestaña de cinta que contiene un grupo de [paneles de la cinta de opciones](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -166,7 +167,7 @@ class CMFCRibbonCategory : public CObject
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Agrega un elemento oculto a la categoría de cinta de opciones.|  
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Agrega un nuevo panel a la categoría de cinta de opciones.|  

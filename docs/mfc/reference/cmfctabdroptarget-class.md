@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df98908522fd57b0b5cfd4af2e8bb0582028b122
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ff17f7312f5e04b6ae900e792523155705a3b4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabdroptarget-class"></a>Clase CMFCTabDropTarget
 Proporciona el mecanismo de comunicación entre un control de pestaña y las bibliotecas OLE.  
@@ -48,14 +49,14 @@ class CMFCTabDropTarget : public COleDropTarget
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Constructor predeterminado.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |||  
 |-|-|  
-|Nombre|Descripción|  
+|Name|Descripción|  
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Lo llama el marco cuando el usuario arrastra un objeto en una ventana de la ficha. (Invalida [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|  
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Lo llama el marco cuando el usuario arrastra un objeto fuera de la ventana de pestaña que tiene el foco. (Invalida [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|  
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Llamado por el marco de trabajo cuando el usuario arrastra un objeto a la ventana de la ficha que tiene el foco. (Invalida [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|  

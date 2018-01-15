@@ -75,11 +75,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b839096e87feee970491e393998eb4049df820af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 Proporciona la funcionalidad del control común de encabezado de Windows.  
@@ -94,13 +95,13 @@ class CHeaderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Construye un objeto `CHeaderCtrl`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Borra todos los filtros de un control de encabezado.|  
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Borra el filtro para un control de encabezado.|  

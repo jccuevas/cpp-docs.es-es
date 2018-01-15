@@ -35,11 +35,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7fdfea22949bf75f43d7181a89fe892812bdbf01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustomtransition-class"></a>Clase CCustomTransition
 Implementa una transición personalizada.  
@@ -54,13 +55,13 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Construye un objeto de transición personalizada.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CCustomTransition::Create](#create)|Llama a la biblioteca de transición para crear el objeto COM de transición encapsulado. (Invalida [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Establece un valor inicial, que se aplicarán a una variable de animación asociada a esta transición.|  
@@ -68,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>Miembros de datos protegidos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Especifica si se ha especificado el valor inicial con SetInitialValue.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Especifica si se ha especificado el progreso inicial con SetInitialVelocity.|  

@@ -1,65 +1,68 @@
 ---
-title: "Method Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "method attributes"
-  - "attributes [C++], reference topics"
+title: "Atributos de método | Documentos de Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- method attributes
+- attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 12/21/2017
 ---
-# Method Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Los atributos siguientes se aplican a los métodos de una clase, una coclase, o interfaz.  
+# <a name="method-attributes"></a>Atributos de método
+Los siguientes atributos se aplican a los métodos en una clase, coclase o interfaz.  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
+|---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Indica que la propiedad admite enlace de datos.|  
-|[call\_as](../windows/call-as.md)|Permite a una función de uso no remoto que se va a asignar a una función remota.|  
-|[custom](../windows/custom-cpp.md)|Permite definir dispone de atributo.|  
-|[db\_column](../windows/db-column.md)|Enlaza una columna especificada al conjunto de filas.|  
-|[db\_command](../windows/db-command.md)|Crea un comando OLE DB.|  
-|[db\_param](../windows/db-param.md)|Asociado a la variable miembro especificada a una entrada o parámetro de salida y delimita la variable.|  
-|[db\_source](../windows/db-source.md)|crea una conexión a un origen de datos.|  
-|[db\_table](../windows/db-table.md)|Abra una tabla de OLE DB.|  
-|[defaultbind](../windows/defaultbind.md)|Indica la propiedad única, enlazable que mejor representa el objeto.|  
-|[defaultcollelem](../windows/defaultcollelem.md)|Se utiliza para la optimización del código de Visual Basic.|  
+|[call_as](../windows/call-as.md)|Permite que una función utilizables que debe asignarse a una función remota.|  
+|[personalizado](../windows/custom-cpp.md)|Le permite definir su propio atributo.|  
+|[db_column](../windows/db-column.md)|Enlaza una columna especificada en el conjunto de filas.|  
+|[db_command](../windows/db-command.md)|Crea un comando OLE DB.|  
+|[db_param](../windows/db-param.md)|La variable de miembro especificado se asocia con un parámetro de entrada o de salida y delimita la variable.|  
+|[db_source](../windows/db-source.md)|Crea una conexión a un origen de datos.|  
+|[db_table](../windows/db-table.md)|Se abre una tabla de OLE DB.|  
+|[defaultbind](../windows/defaultbind.md)|Indica la única propiedad enlazable que mejor representa el objeto.|  
+|[defaultcollelem](../windows/defaultcollelem.md)|Se usa para la optimización de código de Visual Basic.|  
 |[displaybind](../windows/displaybind.md)|Indica una propiedad que se debe mostrar al usuario como enlazable.|  
-|[helpcontext](../windows/helpcontext.md)|Especifica un Id. de contexto que deje la información de la vista de usuario sobre este elemento en el archivo de Ayuda.|  
-|[helpfile](../Topic/helpfile.md)|Establece el nombre del archivo de Ayuda para una biblioteca de tipos.|  
-|[helpstring](../windows/helpstring.md)|Especifica una cadena de caracteres que se usa para describir el elemento al que se aplica.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Especifica el identificador de un tema de Ayuda en un archivo de .hlp o .chm.|  
-|[helpstringdll](../windows/helpstringdll.md)|Especifica el nombre de DLL para utilizar para realizar la búsqueda de la cadena del documento \(localización\).|  
-|[hidden](../Topic/hidden.md)|Indica que el elemento existe pero no se debe mostrar en un explorador del usuario.|  
-|[id](../windows/id.md)|Especifica un DISPID para una función miembro \(una propiedad o método, en una interfaz o dispinterface\).|  
-|[immediatebind](../windows/immediatebind.md)|Indica que la base de datos se notifique inmediatamente de todos los cambios de una propiedad de un objeto enlazado a datos.|  
-|[in](../Topic/in%20\(C++\).md)|Indica que un parámetro debe ser el último procedimiento de llamada al procedimiento.|  
-|[local](../windows/local-cpp.md)|Permite utilizar el compilador MIDL como generador de encabezado cuando se usa en el encabezado de la interfaz.  Cuando se utiliza en una función individual, elija un procedimiento local para el que no se genera ningún códigos auxiliares.|  
-|[nonbrowsable](../Topic/nonbrowsable.md)|Indica que un miembro de interfaz no debería mostrarse en un explorador de propiedades.|  
-|[propget](../windows/propget.md)|Especifica una función de descriptor de acceso de la propiedad.|  
-|[propput](../windows/propput.md)|Especifica una función de la configuración de propiedades.|  
-|[propputref](../windows/propputref.md)|Especifica una función de la configuración de propiedades que utilice una referencia en lugar de un valor.|  
-|[PTR](../windows/ptr.md)|Elija un puntero como puntero completo.|  
-|[intervalo](../Topic/range%20\(C++\).md)|Especifica un intervalo de valores permitidos para los argumentos o campos cuyos valores se establecen en tiempo de ejecución.|  
-|[requestedit](../windows/requestedit.md)|indica que la propiedad admite la notificación de **OnRequestEdit** .|  
-|[restricted](../windows/restricted.md)|Especifica que un miembro de módulo, interfaz, o de dispinterface no puede ser llamado arbitrariamente.|  
-|[satype](../windows/satype.md)|especifica el tipo de datos de la estructura de **SAFEARRAY** .|  
-|[source](../Topic/source%20\(C++\).md)|Especifica las interfaces del origen del control para los puntos de conexión en una clase.  En una propiedad o método, el atributo de **origen** indica que el miembro devuelve un objeto o un VARIANT que son un origen de eventos.|  
-|[sincronizar](../windows/synchronize.md)|Sincronizar el acceso al método de destino.|  
-|[vararg](../windows/vararg.md)|especifica que la función toma un número variable de argumentos.|  
+|[helpcontext](../windows/helpcontext.md)|Especifica un identificador de contexto que permite al usuario ver información acerca de este elemento en el archivo de ayuda.|  
+|[helpfile](../windows/helpfile.md)|Establece el nombre del archivo de ayuda para una biblioteca de tipos.|  
+|[helpstring](../windows/helpstring.md)|Especifica una cadena de caracteres que se utiliza para describir el elemento al que se aplica.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Especifica el identificador de un tema de ayuda en un archivo .hlp o .chm.|  
+|[helpstringdll](../windows/helpstringdll.md)|Especifica el nombre de la DLL a utilizar para realizar la búsqueda de cadena de documento (localización).|  
+|[hidden](../windows/hidden.md)|Indica que el elemento existe pero no se debe mostrar en un explorador orientado al usuario.|  
+|[identificador](../windows/id.md)|Especifica un identificador DISPID de una función miembro (una propiedad o un método en una interfaz o dispinterface).|  
+|[immediatebind](../windows/immediatebind.md)|Indica que se notificará inmediatamente a la base de datos de todos los cambios a una propiedad de un objeto enlazado a datos.|  
+|[in](../windows/in-cpp.md)|Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada a procedimiento llamado.|  
+|[local](../windows/local-cpp.md)|Permite usar el compilador MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|  
+|[nonbrowsable](../windows/nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|  
+|[propget](../windows/propget.md)|Especifica una función de descriptor de acceso de propiedad.|  
+|[propput](../windows/propput.md)|Especifica una función de la configuración de la propiedad.|  
+|[propputref](../windows/propputref.md)|Especifica una función de la configuración de la propiedad que utiliza una referencia en lugar de un valor.|  
+|[ptr](../windows/ptr.md)|Designa un puntero como un puntero completo.|  
+|[intervalo](../windows/range-cpp.md)|Especifica un intervalo de valores permitidos para argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|  
+|[requestedit](../windows/requestedit.md)|Indica que la propiedad admite la **OnRequestEdit** notificación.|  
+|[restricted](../windows/restricted.md)|Especifica que no se puede llamar a un miembro de un módulo, interfaz o dispinterface arbitrariamente.|  
+|[satype](../windows/satype.md)|Especifica el tipo de datos de la **SAFEARRAY** estructura.|  
+|[origen](../windows/source-cpp.md)|Especifica las interfaces de código fuente del control de puntos de conexión en una clase. En una propiedad o método, el **origen** atributo indica que el miembro devuelve un objeto o una variante que consiste en un origen de eventos.|  
+|[synchronize](../windows/synchronize.md)|Sincroniza el acceso al método de destino.|  
+|[vararg](../windows/vararg.md)|Especifica que la función toma un número variable de argumentos.|  
   
-## Vea también  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Vea también  
+ [Atributos por uso](../windows/attributes-by-usage.md)

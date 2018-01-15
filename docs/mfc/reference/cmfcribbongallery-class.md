@@ -89,11 +89,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d5de8001f328a4f4b75b94c26974d02768fd85c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6cb4772f685a38db39c946a5e6f4e77df87998a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery (clase)
 Implementa galerías de cinta de estilo de Office 2007.  
@@ -109,13 +110,13 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Construye e inicializa un objeto `CMFCRibbonGallery`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Agrega un nuevo grupo a la galería.|  
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Agrega un nuevo elemento de menú al menú desplegable.|  
@@ -154,7 +155,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Llamado por el marco de trabajo cuando se dibuja un icono de la galería.|  
   

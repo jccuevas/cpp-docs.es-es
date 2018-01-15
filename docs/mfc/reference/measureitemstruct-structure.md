@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee54b10c4eddb272653615caa7ef7ba62f707622
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5221943ba1591a01ddebe2c261e4197fa18501
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT (Estructura)
 El `MEASUREITEMSTRUCT` estructura informa a las ventanas de las dimensiones de un elemento de menú o control dibujado por el propietario.  
