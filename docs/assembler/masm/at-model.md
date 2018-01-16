@@ -15,14 +15,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d169c83878b19b7d5c011948705a5438b97787c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5c207a806b9f0fa194afb4deced9d791c25e587
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model"></a>@Model
-1 para **MINÚSCULO** de modelo, 2 para **pequeño** de modelo, 3 para **COMPACT** modelar, 4 para **medio** de modelo, 5 para **grande**modelo 6 para **ENORME** modelo y 7 para **FLAT** modelo (equivaler numérico).  
+1 para **MINÚSCULO** de modelo, 2 para **pequeño** de modelo, 3 para **COMPACT** modelar, 4 para **medio** de modelo, 5 para **grande**modelo 6 para **ENORME** modelo y 7 para **PLANO** modelo (equivaler numérico).  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -91,11 +91,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f27516bc2cd878bb0886133e7c27099c03ff5026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbutton-class"></a>Clase CMFCButton
 El `CMFCButton` clase agrega funcionalidad a la [CButton](../../mfc/reference/cbutton-class.md) clase como alinear el texto del botón, combinar el texto del botón y una imagen, seleccionar un cursor y especificar una información sobre herramientas.  
@@ -110,14 +111,14 @@ class CMFCButton : public CButton
   
 ### <a name="public-constructors"></a>Constructores públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |`CMFCButton::CMFCButton`|Constructor predeterminado.|  
 |`CMFCButton::~CMFCButton`|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCButton::CleanUp](#cleanup)|Restablece las variables internas y libera los recursos asignados, como imágenes, mapas de bits e iconos.|  
 |`CMFCButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
@@ -152,7 +153,7 @@ class CMFCButton : public CButton
   
 ### <a name="protected-methods"></a>Métodos protegidos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CMFCButton::OnDraw](#ondraw)|Lo llama el marco de trabajo para dibujar un botón.|  
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Lo llama el marco de trabajo para dibujar el borde de un botón.|  
@@ -163,7 +164,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>Miembros de datos  
   
-|Nombre|Descripción|  
+|nombre|Descripción|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Indica si se debe dibujar un rectángulo de foco alrededor de un botón.|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Indica si se deben resaltar un botón de estilo BS_CHECKBOX cuando el cursor se desplaza sobre él.|  

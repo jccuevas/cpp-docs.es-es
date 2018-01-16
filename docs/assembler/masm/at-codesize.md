@@ -15,14 +15,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a83c59a049445f076be3919746f840c096285da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8da82a6389d95727ad4d18753b12ac5ae7976158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codesize"></a>@CodeSize
-0 para **MINÚSCULO**, **pequeño**, **COMPACT**, y **Plano** modelos y 1 para **medio**,  **GRANDES**, y **ENORME** modelos (equivaler numérico).  
+0 para **MINÚSCULO**, **pequeño**, **COMPACT**, y **PLANO** modelos y 1 para **medio**,  **GRANDES**, y **ENORME** modelos (equivaler numérico).  
   
 ## <a name="syntax"></a>Sintaxis  
   

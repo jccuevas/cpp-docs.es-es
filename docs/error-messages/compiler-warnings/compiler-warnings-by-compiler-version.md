@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Advertencias del compilador por versión del compilador  
   
@@ -362,7 +363,7 @@ C4678|clase base*declaración*'es menos accesible que'*nombre*'
 C4679|'*descripción*': no se pudo importar el miembro
 ADVERTENCIA C4687|'*tipo*': una clase abstracta sealed no puede implementar una interfaz '*tipo*'
 C4688|'*nombre*': lista de restricciones contiene un tipo privado de ensamblado '*declaración*'
-C4690|[emitidl (pop)]: más elementos POP que Push
+C4690|[ emitidl( pop ) ]: más elementos POP que Push
 C4691|'*tipo*': se esperaba el tipo al que hace referencia en sin referencia *módulo* '*descripción*', tipo definido en la unidad de traducción actual utilizado en su lugar
 C4692|'*nombre*': firma de un miembro no privado contiene el tipo nativo privado de ensamblado '*declaración*'
 C4693|'*tipo*': una clase abstracta sealed no puede tener los miembros de cualquier instancia*nombre*'
