@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permisivo-(cumplimiento de los estándares)
 
@@ -30,7 +30,7 @@ Especifique el modo de cumplimiento de normas para el compilador. Utilice esta o
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ permisivo-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Comentarios
 
@@ -42,7 +42,7 @@ El **/ permisivo-** opción es compatible con casi todos los archivos de encabez
 
 El **/ permisivo-** opción establece la [/Zc: strictstrings](../../build/reference/zc-conformance.md) y [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opciones para el comportamiento conforme. El valor predeterminado al comportamiento de no conformes. Puede pasar específico **/Zc** opciones después **/ permisivo-** en la línea de comandos para invalidar este comportamiento.
 
-En las versiones del principio de compilador en Visual Studio 2017 versión 15.3, el **/ permisivo-** opción establece la **/Zc:ternary** opción. El compilador también implementa más de los requisitos para la búsqueda de nombre en dos fases. Cuando el **/ permisivo-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, identificar dependientes y no dependientes de los nombres utilizados en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
+En las versiones del principio de compilador en Visual Studio 2017 versión 15.3, el **/ permisivo-** opción establece la [/Zc:ternary](../../build/reference/zc-ternary.md) opción. El compilador también implementa más de los requisitos para la búsqueda de nombre en dos fases. Cuando el **/ permisivo-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, identificar dependientes y no dependientes de los nombres utilizados en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
 
 Extensiones específicas del entorno y las áreas de idioma que el estándar deja hasta la implementación no se ven afectadas por **/ permisivo-**. Por ejemplo, específico de Microsoft `__declspec`, convención de llamada y estructurado de excepciones de palabras clave y directivas específicas del compilador pragma o atributos no estén marcados por el compilador en **/ permisivo-** modo.
 
