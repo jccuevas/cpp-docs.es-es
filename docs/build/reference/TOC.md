@@ -142,6 +142,7 @@
 ##### [/Zc:rvalueCast (Exigir reglas de conversión de tipos)](zc-rvaluecast-enforce-type-conversion-rules.md)
 ##### [/Zc:sizedDealloc (Habilitar funciones de desasignación de tamaño global)](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)
 ##### [/Zc:strictStrings (Deshabilitar conversión de tipo de literal de cadena)](zc-strictstrings-disable-string-literal-type-conversion.md)
+##### [/Zc:ternary (Exigir reglas de operador condicionales)](zc-ternary.md)
 ##### [/Zc:threadSafeInit (Habilitar la inicialización estática local segura para subprocesos)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (Asumir que se inicia el operador new)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc (Sustitución de trígrafos)](zc-trigraphs-trigraphs-substitution.md)
