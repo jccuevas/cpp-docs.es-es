@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 C++ es uno de los lenguajes de programación más utilizados en el mundo. Los programas bien escritos de C++ son rápidos y eficaces. El lenguaje es más flexible que otros lenguajes, ya que se puede utilizar para crear una amplia gama de aplicaciones, desde divertidos y emocionantes juegos, para software científico de alto rendimiento, hasta controladores de dispositivos, programas incrustados y aplicaciones cliente de Windows. Durante más de 20 años, C++ se ha utilizado para resolver problemas como estos y muchos otros. Lo que es posible que no sepa es que un creciente número de programadores de C++ han doblado la programación estilo C poco elegante de ayer y han puesto C++ moderno en su lugar.  
@@ -50,40 +50,60 @@ C++ es uno de los lenguajes de programación más utilizados en el mundo. Los pr
  El propio lenguaje C++ también ha evolucionado. Compare los fragmentos de código siguientes. Este muestra cómo eran las cosas en C++:  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  Aquí se explica cómo se logra lo mismo en C++ moderno:  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el `auto` deducción de tipos y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Además, `for_each` es más limpio, más fácil de usar y menos propenso a errores imprevistos que un bucle `for`. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ En C++ moderno, no tiene que utilizar control de excepciones nuevo/eliminar o explícito porque puede utilizar los punteros inteligentes en su lugar. Cuando se usa el `auto` deducción de tipos y [función lambda](../cpp/lambda-expressions-in-cpp.md), puede escribir código más rápido, endurecer y entender mejor. Y basada en intervalo `for` bucle es más limpio, fáciles de usar y menos propenso a errores imprevistos que un estilo de C `for` bucle. Puede utilizar código reutilizable con las mínimas líneas de código para escribir la aplicación. También puede hacer que ese código sea seguro para excepciones y seguro para memoria, y que no tenga ninguna asignación/desasignación ni códigos de error que tratar.  
   
  C++ moderno incorpora dos clases de polimorfismo: tiempo de compilación, con plantillas y tiempo de ejecución, con herencia y virtualización. Puede mezclar las dos clases de polimorfismo para aumentar el efecto. La plantilla de la biblioteca estándar de C++ `shared_ptr` utiliza métodos virtuales internos para lograr su borrado de tipos aparentemente sin esfuerzo. No obstante, no utilice demasiado la virtualización para el polimorfismo cuando una plantilla sea la mejor opción. Las plantillas pueden ser muy eficaces.  
   
