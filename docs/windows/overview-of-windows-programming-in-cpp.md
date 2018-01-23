@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -40,7 +40,7 @@ Existen varias categorías de aplicaciones de Windows que se pueden desarrollar 
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 
-Con Windows 10, las aplicaciones pueden ejecutarse en todos los dispositivos que incluyen Windows 10, ya sean tabletas, teléfonos móviles o equipos de escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  El modelo de programación para los dos tipos de aplicaciones es diferente de las aplicaciones de escritorio de Win32. Estas aplicaciones de Windows se ejecutan en Windows en tiempo de ejecución, que proporciona los elementos de la interfaz de usuario, los servicios esenciales para estas aplicaciones y una interfaz para los diversos dispositivos de hardware compatibles. Estas aplicaciones se compilan en código nativo y tienen una interfaz de usuario XAML o usan DirectX. También puede escribir componentes de Windows en tiempo de ejecución en código nativo que otras aplicaciones de Windows pueden consumir; Esto incluye aplicaciones escritas en C#, Visual Basic o JavaScript. Para obtener más información, consulte [crear una aplicación de plataforma Universal de Windows en C++](http://go.microsoft.com/fwlink/p/?linkid=534976), [crear su primer juego UWP con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), y [componentes de creación en tiempo de ejecución de Windows en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Con Windows 10, las aplicaciones pueden ejecutarse en todos los dispositivos que incluyen Windows 10, ya sean tabletas, teléfonos móviles o equipos de escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  El modelo de programación para los dos tipos de aplicaciones es diferente de las aplicaciones de escritorio de Win32. Estas aplicaciones de Windows se ejecutan en Windows en tiempo de ejecución, que proporciona los elementos de la interfaz de usuario, los servicios esenciales para estas aplicaciones y una interfaz para los diversos dispositivos de hardware compatibles. Estas aplicaciones se compilan en código nativo y tienen una interfaz de usuario XAML o usan DirectX. También puede escribir componentes de Windows en tiempo de ejecución en código nativo que otras aplicaciones de Windows pueden consumir; Esto incluye aplicaciones escritas en C#, Visual Basic o JavaScript. Para obtener más información, consulte [crear una aplicación "Hello world" para UWP en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [crear un juego UWP simple con DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), y [componentes de creación en tiempo de ejecución de Windows en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
 > Para Windows 10, puede utilizar el convertidor de la aplicación de escritorio para empaquetar la aplicación de escritorio existente para la implementación a través de la tienda de Windows. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).

@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView (Clase)
 Representa una vista de solo lectura de una colección secuencial de objetos a los que se puede obtener acceso individualmente por índice. El parámetro de plantilla especifica el tipo de cada objeto de la colección.  
@@ -54,17 +54,17 @@ template <typename T, typename E>
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Vectorview](#ctor)|Inicializa una nueva instancia de la clase VectorView.|  
+|[VectorView::VectorView](#ctor)|Inicializa una nueva instancia de la clase VectorView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Vectorview:: First](#first)|Devuelve un iterador que especifica el primer elemento del objeto VectorView.|  
-|[Vectorview:: GetAt](#getat)|Recupera el elemento del objeto VectorView actual indicado por el índice especificado.|  
-|[Vectorview:: Getmany](#getmany)|Recupera una secuencia de elementos del objeto VectorView actual, empezando en el índice especificado.|  
-|[Vectorview:: IndexOf](#indexof)|Busca el elemento especificado en el objeto VectorView actual y, si lo encuentra, devuelve el índice del elemento.|  
-|[Vectorview:: Size](#size)|Devuelve el número de elementos del objeto VectorView actual.|  
+|[VectorView::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto VectorView.|  
+|[VectorView::GetAt](#getat)|Recupera el elemento del objeto VectorView actual indicado por el índice especificado.|  
+|[VectorView::GetMany](#getmany)|Recupera una secuencia de elementos del objeto VectorView actual, empezando en el índice especificado.|  
+|[VectorView::IndexOf](#indexof)|Busca el elemento especificado en el objeto VectorView actual y, si lo encuentra, devuelve el índice del elemento.|  
+|[VectorView::Size](#size)|Devuelve el número de elementos del objeto VectorView actual.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `VectorView`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>Vea también  
  [Namespace de plataforma](platform-namespace-c-cx.md)   
- [Crear componentes de Windows en tiempo de ejecución en C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [Crear componentes de Windows en tiempo de ejecución en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
