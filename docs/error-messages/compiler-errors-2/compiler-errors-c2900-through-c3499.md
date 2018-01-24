@@ -116,7 +116,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2913](compiler-error-c2913.md)|especialización explícita; '*declaración*' no es una especialización de una plantilla de clase|
 |[Error del compilador C2914](compiler-error-c2914.md)|'*identificador*': no se puede deducir el argumento de plantilla o genérico como argumento de función es ambiguo|
 |C2915 de Error del compilador|'*identificador*': '*tipo*' no se puede usar directamente en la superficie publicada de un tipo WinRT. Use ' Platform:: Object ^' en su lugar para pasar este tipo|
-|C2916 de Error del compilador|'*identificador*': [FlagsAttribute] (sólo) debe especificarse en una enumeración pública con 'unsigned int' tipo subyacente|
+|C2916 de Error del compilador|'*identificador*': [FlagsAttribute] \(sólo) debe especificarse en una enumeración pública con 'unsigned int' tipo subyacente|
 |[Error del compilador C2917](compiler-error-c2917.md)|'*identificador*': parámetro de plantilla no válido|
 |[Error del compilador C2918](compiler-error-c2918.md)|'*identificador*': no se puede usar propiedades indizadas en la superficie publicada de un tipo WinRT|
 |[Error del compilador C2919](compiler-error-c2919.md)|'*tipo*': no se puede usar operadores en la superficie publicada de un tipo WinRT|

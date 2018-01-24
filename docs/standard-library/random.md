@@ -291,8 +291,8 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 |||  
 |-|-|  
 |[uniform_int_distribution (Clase)](../standard-library/uniform-int-distribution-class.md)|Genera una distribución uniforme de valores enteros por un rango en el intervalo cerrado \[a, b] (inclusivo-inclusivo).|  
-|[uniform_real_distribution (Clase)](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) (inclusivo-exclusivo).|  
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Genera una distribución uniforme de valores reales (punto flotante) de una determinada precisión a lo largo de [0, 1] (inclusivo-exclusivo).|  
+|[uniform_real_distribution (Clase)](../standard-library/uniform-real-distribution-class.md)|Genera una distribución uniforme de valores reales (punto flotante) por un rango en el intervalo semiabierto [a, b) \(inclusivo-exclusivo).|  
+|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Genera una distribución uniforme de valores reales (punto flotante) de una determinada precisión a lo largo de [0, 1] \(inclusivo-exclusivo).|  
   
  [[Distribuciones de números aleatorios](#distributions)]  
   
