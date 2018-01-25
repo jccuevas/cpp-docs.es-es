@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 
@@ -32,7 +32,7 @@ El lenguaje de programación y las herramientas de desarrollo de Visual Studio 2
 
 Este contenido es para desarrolladores de C++ que escriben programas.
 
-- Si busca un paquete redistribuible de C++ y los componentes de tiempo de ejecución que le permitan ejecutar un programa, vaya al [Centro de descarga de Microsoft](http://www.microsoft.com/en-us/download/) y escriba **Visual C++** en el cuadro de búsqueda.
+- Si está buscando un determinado paquete redistribuible de C++ y los componentes de tiempo de ejecución que le permitan ejecutar un programa, vaya al sitio web de [Microsoft](http://www.microsoft.com/) y escriba **Visual C++ Redistributable** en el cuadro de búsqueda. Descargue e instale el paquete redistribuible para la arquitectura de su equipo (por ejemplo, x64 si está ejecutando Windows de 64 bits) y la versión de Visual C++ que necesite. 
 
 - Si busca conceptos introductorios de programación de C++, visite uno de los muchos sitios web que ofrecen este contenido o adquiera el libro [Programming -- Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) , escrito por el creador de C++, Bjarne Stroustup. El contenido de Visual C++ supone que ya tiene un conocimiento básico de C++.
 
