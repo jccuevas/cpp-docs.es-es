@@ -25,11 +25,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-software-exceptions"></a>Generar excepciones de software
 El sistema no marca como excepciones algunos de los orígenes de errores de programa más comunes. Por ejemplo, si intenta asignar un bloque de memoria pero no hay memoria insuficiente, el tiempo de ejecución o la función de API no provoca una excepción, sino que devuelve un código de error.  
@@ -44,7 +44,7 @@ El sistema no marca como excepciones algunos de los orígenes de errores de prog
   
 -   Use filtros de control de excepciones para probar el código de excepción definido.  
   
- El archivo WINERROR.H muestra el formato de los códigos de excepción. Para asegurarse de que no define un código en conflicto con un código de excepción existente, establezca el tercer bit más significativo en 1. Los cuatro bits más significativos se deben establecer como se muestra en la tabla siguiente.  
+ El \<winerror.h > archivo muestra el formato de códigos de excepción. Para asegurarse de que no define un código en conflicto con un código de excepción existente, establezca el tercer bit más significativo en 1. Los cuatro bits más significativos se deben establecer como se muestra en la tabla siguiente.  
   
 |Bits|Valor binario recomendado|Descripción|  
 |----------|--------------------------------|-----------------|  

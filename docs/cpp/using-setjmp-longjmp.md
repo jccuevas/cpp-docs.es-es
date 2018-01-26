@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs: C++
 helpviewer_keywords:
 - C++ exception handling, setjmp/longjmp functions
-- SETJMPEX.H
+- setjmpex.h
 - longjmp function in C++ programs
-- SETJMP.H
+- setjmp.h
 - setjmp function
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 80b134942cf5670527d75b94f2af4847e421c3b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fede2e7865ab002d77a174a28928df491b29981
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-setjmplongjmp"></a>Usar setjmp/longjmp
 Cuando [setjmp](../c-runtime-library/reference/setjmp.md) y [longjmp](../c-runtime-library/reference/longjmp.md) son usan juntos, proporcionan una manera de ejecutar un no locales `goto`. Se utilizan normalmente para pasar el control de la ejecución al control de errores o al código de recuperación en una rutina invocada anteriormente sin utilizar convenciones estándar de llamada o devolución.  
@@ -36,7 +36,7 @@ Cuando [setjmp](../c-runtime-library/reference/setjmp.md) y [longjmp](../c-runti
 > [!CAUTION]
 >  Sin embargo, como `setjmp` y `longjmp` no admiten la semántica de objeto de C++, y como además pueden degradar el rendimiento evitando la optimización en variables locales, se recomienda que no se utilicen en los programas de C++. Se recomienda que use `try` / `catch` construye en su lugar.  
   
- Si decide usar `setjmp` / `longjmp` en un programa de C++, también puede incluir SETJMP. H o SETJMPEX. H para garantizar la interacción correcta entre las funciones y el control de excepciones de C++. Si usa [/EH](../build/reference/eh-exception-handling-model.md) para compilar, se llaman a destructores para los objetos locales durante el desenredo de la pila. Si usa **/EHs** para compilar y uno de sus funciones llama a una función que utiliza [nothrow](../cpp/nothrow-cpp.md) y la función que usa `nothrow` llamadas `longjmp`, a continuación, no puede producir el desenredo del destructor, Dependiendo del optimizador.  
+ Si decide usar `setjmp` / `longjmp` en un programa de C++, también incluyen \<setjmp.h > o \<setjmpex.h > para garantizar la interacción correcta entre las funciones y el control de excepciones de C++. Si usa [/EH](../build/reference/eh-exception-handling-model.md) para compilar, se llaman a destructores para los objetos locales durante el desenredo de la pila. Si usa **/EHs** para compilar y uno de sus funciones llama a una función que utiliza [nothrow](../cpp/nothrow-cpp.md) y la función que usa `nothrow` llamadas `longjmp`, a continuación, no puede producir el desenredo del destructor, Dependiendo del optimizador.  
   
  En código portable, cuando se ejecuta una instrucción `goto` no local que llama a `longjmp`, la destrucción correcta de objetos basados en marcos podría no ser confiable.  
   

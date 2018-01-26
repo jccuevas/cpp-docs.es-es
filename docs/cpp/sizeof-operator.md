@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sizeof-operator"></a>sizeof (Operador)
 Genera el tamaño de su operando con respecto al tamaño de tipo `char`.  
@@ -36,7 +36,7 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El resultado del operador `sizeof` es de tipo `size_t`, un tipo entero definido en el archivo de inclusión STDDEF.H. Este operador permite no tener que especificar tamaños de datos dependientes del equipo en los programas.  
+ El resultado de la `sizeof` operador es de tipo `size_t`, un tipo entero definido en el archivo de inclusión \<stddef.h >. Este operador permite no tener que especificar tamaños de datos dependientes del equipo en los programas.  
   
  El operando para `sizeof` puede ser uno de los siguientes:  
   

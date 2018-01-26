@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t (clase) | Documentos de Microsoft
+title: _com_ptr_t Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t (Clase)
 **Específicos de Microsoft**  
@@ -67,7 +67,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** comip.h  
+ **Encabezado:** \<comip.h >  
   
  **Lib:** omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   

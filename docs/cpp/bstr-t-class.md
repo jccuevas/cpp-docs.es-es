@@ -1,5 +1,5 @@
 ---
-title: _bstr_t (clase) | Documentos de Microsoft
+title: _bstr_t Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t (Clase)
 **Específicos de Microsoft**  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Asignar](../cpp/bstr-t-assign.md)|Copia un valor `BSTR` en el valor `BSTR` contenido en `_bstr_t`.|  
+|[Assign](../cpp/bstr-t-assign.md)|Copia un valor `BSTR` en el valor `BSTR` contenido en `_bstr_t`.|  
 |[Asociar](../cpp/bstr-t-attach.md)|Vincula un contenedor `_bstr_t` a un `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Crea una copia del objeto `BSTR` encapsulado.|  
 |[Desasociar](../cpp/bstr-t-detach.md)|Devuelve el `BSTR` contenido en `_bstr_t` y desasocia `BSTR` de `_bstr_t`.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** comutil.h  
+ **Header:** \<comutil.h>  
   
  **Lib:** omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   

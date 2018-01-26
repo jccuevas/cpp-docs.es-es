@@ -15,14 +15,14 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 496bbd686b0baaacda42de29c825c9539fb50371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e531de79621eb3a010a41c7e5059dd5b76b2c2fc
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="numerical-limits-c"></a>Límites numéricos (C++)
-Los dos archivos include estándar, LIMITS.H y FLOAT.H, definen los límites numéricos, o los valores mínimo y máximo que puede contener una variable de un tipo determinado. Se garantiza que estos mínimos y máximos que sean portables a cualquier compilador de C++ que utiliza la misma representación de datos como ANSI C. Los límites. Archivo de inclusión de H define la [límites numéricos para los tipos enteros](../cpp/integer-limits.md)y FLOAT. H define la [límites numéricos para el tipo de punto flotante](../cpp/floating-limits.md).  
+El estándar de dos archivos de inclusión, \<limits.h > y \<float.h >, definir los límites numéricos o valores mínimo y máximo que puede contener una variable de un tipo determinado. Se garantiza que estos mínimos y máximos que sean portables a cualquier compilador de C++ que utiliza la misma representación de datos como ANSI C. El \<limits.h > Incluir archivo define la [límites numéricos para los tipos enteros](../cpp/integer-limits.md), y \<float.h > define el [límites numéricos para el tipo de punto flotante](../cpp/floating-limits.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos](../cpp/basic-concepts-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: _com_raise_error | Documentos de Microsoft
+title: _com_raise_error | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71a4be4ebf6029d0573aee71d74bf9faa241319f
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Específicos de Microsoft**  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **IErrorInfo** objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- `_com_raise_error`, que se define en comdef.h, se puede reemplazar por una versión escrita por el usuario con el mismo nombre y prototipo. Esto se podría hacer si se desea utilizar `#import` pero no se desea utilizar el control de excepciones de C++. En ese caso, una versión de usuario de **_com_raise_error** podría resultar útil un `longjmp` o mostrar un cuadro de mensaje y detener. La versión de usuario no debe volver, sin embargo, porque el código de compatibilidad con COM del compilador no espera que vuelva.  
+ `_com_raise_error`, que se define en \<comdef.h >, se pueden reemplazar por una versión del mismo nombre y prototipo escritos por el usuario. Esto se podría hacer si se desea utilizar `#import` pero no se desea utilizar el control de excepciones de C++. En ese caso, una versión de usuario de **_com_raise_error** podría resultar útil un `longjmp` o mostrar un cuadro de mensaje y detener. La versión de usuario no debe volver, sin embargo, porque el código de compatibilidad con COM del compilador no espera que vuelva.  
   
  También puede usar [_set_com_error_handler](../cpp/set-com-error-handler.md) para reemplazar la función de control de errores predeterminado.  
   
@@ -60,7 +60,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** comdef.h  
+ **Header:** \<comdef.h>  
   
  **Lib:** si la **wchar_t es tipo nativo** opción del compilador está activada, use omsuppw.lib o comsuppwd.lib. Si **wchar_t es tipo nativo** está desactivada, use comsupp.lib. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   

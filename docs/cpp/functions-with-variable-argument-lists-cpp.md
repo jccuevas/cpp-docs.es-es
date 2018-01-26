@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Listas de funciones con argumentos de Variable (C++)
 Las declaraciones de función en las que el último miembro son los puntos suspensivos (...) pueden tomar un número variable de argumentos. En estos casos, C++ proporciona comprobación de tipos solo para los argumentos declarados explícitamente. Puede utilizar listas de argumentos variables cuando necesite crear una función tan general que incluso el número y los tipos de argumentos puedan variar. La familia de funciones es un ejemplo de las funciones que usan listas de argumentos variables. `printf` *argument-declaration-list*  
   
 ## <a name="functions-with-variable-arguments"></a>Funciones con argumentos variables  
- Para tener acceso a los argumentos declarados en esas funciones, use las macros incluidas en el archivo de inclusión estándar STDARG.H, tal como se describe a continuación.  
+ Para obtener acceso a los argumentos declarados en esas, use las macros incluidas en el archivo de inclusión estándar \<stdarg.h > tal y como se describe a continuación.  
   
  **Específicos de Microsoft**  
   
@@ -43,9 +43,9 @@ Las declaraciones de función en las que el último miembro son los puntos suspe
   
  Cuando los argumentos de tipo `char` se pasan como argumentos variables, se convierten al tipo `int`. De forma similar, cuando los argumentos de tipo **float** se pasan como argumentos variables, se convierten al tipo **doble**. Los argumentos de otros tipos están sujetos a las promociones habituales de entero y de punto flotante. Vea [conversiones estándar](standard-conversions.md) para obtener más información.  
   
- Las funciones que requieren listas de variables se declaran con puntos suspensivos (...) en la lista de argumentos. Utilice los tipos y macros que se describen en el archivo de inclusión STDARG.H para obtener acceso a los argumentos que pasa una lista de variables. Para obtener más información acerca de estas macros, vea [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). en la documentación de la biblioteca en tiempo de ejecución de C.  
+ Las funciones que requieren listas de variables se declaran con puntos suspensivos (...) en la lista de argumentos. Usar los tipos y macros que se describen en la \<stdarg.h > archivo de inclusión para el acceso a los argumentos que se pasan por una lista de variables. Para obtener más información acerca de estas macros, vea [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). en la documentación de la biblioteca en tiempo de ejecución de C.  
   
- En el ejemplo siguiente se muestra cómo funcionan las macros con el tipo (declarado en STDARG. (H): 
+ En el ejemplo siguiente se muestra cómo funcionan las macros con el tipo (declarado en \<stdarg.h >): 
   
 ```  
 // variable_argument_lists.cpp  

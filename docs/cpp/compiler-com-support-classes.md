@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>Clases de compatibilidad con COM del compilador
 **Específicos de Microsoft**  
   
- Las clases estándar se utilizan para proporcionar compatibilidad con algunos de los tipos COM. Las clases se definen en los archivos comdef.h y de encabezado generados desde la biblioteca de tipos.  
+ Las clases estándar se utilizan para proporcionar compatibilidad con algunos de los tipos COM. Las clases se definen en \<comdef.h > y los archivos de encabezado generados a partir de la biblioteca de tipos.  
   
 |Clase|Propósito|  
 |-----------|-------------|  

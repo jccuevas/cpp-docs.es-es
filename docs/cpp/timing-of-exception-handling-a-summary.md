@@ -12,9 +12,9 @@ helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
 - exception handling [C++], timing
-- SETJMPEX.H
+- setjmpex.h
 - termination handlers [C++], timing
-- SETJMP.H
+- setjmp.h
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e14f89bba02a53af5956ec2a2dcb52bfb1a38c
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervalos de control de excepciones: resumen
 Los controladores de terminación se ejecutan independientemente de cómo finalice el bloque de instrucciones `__try`. La terminación se puede producir cuando se sale del bloque `__try`, cuando una instrucción `longjmp` transfiere el control fuera del bloque y cuando se desenreda la pila debido al control de excepciones.  
   
 > [!NOTE]
->  Visual C++ admite dos versiones de las instrucciones `setjmp` y `longjmp`. La versión rápida omite el control de terminación pero es más eficaz. Para usar esta versión, incluya el archivo SETJMP.H. La otra versión admite el control de terminación como se describe en el párrafo anterior. Para usar esta versión, incluya el archivo SETJMPEX.H. El aumento del rendimiento de la versión rápida depende de la configuración de hardware.  
+>  Visual C++ admite dos versiones de las instrucciones `setjmp` y `longjmp`. La versión rápida omite el control de terminación pero es más eficaz. Para usar esta versión, incluya el archivo \<setjmp.h >. La otra versión admite el control de terminación como se describe en el párrafo anterior. Para usar esta versión, incluya el archivo \<setjmpex.h >. El aumento del rendimiento de la versión rápida depende de la configuración de hardware.  
   
  El sistema operativo ejecuta todos los controladores de terminación en el orden adecuado antes de que cualquier otro código pueda ejecutarlos, incluido el cuerpo de un controlador de excepciones.  
   

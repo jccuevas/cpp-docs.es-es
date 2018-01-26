@@ -1,5 +1,5 @@
 ---
-title: _com_error (clase) | Documentos de Microsoft
+title: _com_error Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error (Clase)
 **Específicos de Microsoft**  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** comdef.h  
+ **Header:** \<comdef.h>  
   
  `Lib:`omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   

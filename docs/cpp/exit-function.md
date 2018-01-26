@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: b9e0d6a7f903d4af39698b2d98c005cbf64515eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee6a34a70465904e6725f42e68eb4a00c03a1661
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exit-function"></a>exit (Función)
-El **salir** función, declarada en el archivo de inclusión estándar STDLIB. H, se finaliza un programa de C++.  
+El **salir** función, declarada en el archivo de inclusión estándar \<stdlib.h >, finaliza un programa de C++.  
   
  El valor proporcionado como argumento pasado a **salir** se devuelve al sistema operativo como código de salida o de código de retorno del programa. Por convención, un código de retorno de cero significa que el programa se completó correctamente.  
   
 > [!NOTE]
->  Puede utilizar las constantes `EXIT_FAILURE` y `EXIT_SUCCESS`, definidas en STDLIB.H, para indicar si el programa se ha completado correctamente o ha generado errores.  
+>  Puede usar las constantes `EXIT_FAILURE` y `EXIT_SUCCESS`, definida en \<stdlib.h >, para indicar el éxito o fracaso del programa.  
   
  Emitir un `return` instrucción desde la **principal** función es equivalente a llamar a la **salir** función con el valor devuelto como argumento.  
   

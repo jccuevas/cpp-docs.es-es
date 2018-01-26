@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new (Operador) (C++)
 Asigna memoria para un objeto o una matriz de objetos de *nombre-tipo* del almacén disponible y devuelve un puntero con tipo adecuado distinto de cero para el objeto.  
@@ -69,10 +69,10 @@ delete *p;
   
  En la lista siguiente se describe los elementos de la gramática de **nueva**:  
   
- *selección de ubicación*  
+ *placement*  
  Proporciona una manera de pasar argumentos adicionales si se sobrecarga **nueva**.  
   
- *nombre de tipo*  
+ *type-name*  
  Especifica el tipo que se va a asignar; puede ser un tipo integrado o un tipo definido por el usuario. Si la especificación de tipo es compleja, puede ir entre paréntesis para forzar el orden de enlace.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Cuando el compilador encuentra la **nueva** operador que se va a asignar un objeto de tipo `type`, emite una llamada a `type` **:: operador new (sizeof (** `type` **))**  o, si no definido por el usuario `operator new` se define, **:: operador new (sizeof (** `type` **))**. Por lo tanto, la **nueva** operador puede asignar la cantidad correcta de memoria para el objeto.  
   
 > [!NOTE]
->  El argumento `operator new` es de tipo **size_t**. Este tipo se define en DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, y TIME.H.  
+>  El argumento `operator new` es de tipo **size_t**. Este tipo se define en \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, y \<time.h >.  
   
  Una opción en la gramática permite la especificación de *colocación* (vea la gramática de [operador new](../cpp/new-operator-cpp.md)). El *colocación* parámetro se puede utilizar solo para implementaciones definidas por el usuario de `operator new`; permite que la información adicional que se pasan a `operator new`. Una expresión con un *colocación* campo como `T *TObject = new ( 0x0040 ) T;` se traduce a `T *TObject = T::operator new( sizeof( T ), 0x0040 );` si la clase T tiene el operador de miembro nueva, en caso contrario para `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

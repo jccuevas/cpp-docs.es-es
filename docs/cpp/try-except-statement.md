@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Los tipos de puntero `PEXCEPTION_RECORD` y `PCONTEXT` se definen en el archivo de inclusión WINNT. H, y `_EXCEPTION_RECORD` y `_CONTEXT` se definen en el archivo de inclusión EXCPT. H
+Los tipos de puntero `PEXCEPTION_RECORD` y `PCONTEXT` se definen en el archivo de inclusión \<winnt.h >, y `_EXCEPTION_RECORD` y `_CONTEXT` se definen en el archivo de inclusión \<excpt.h >
 
 Puede usar `GetExceptionCode` en el controlador de excepciones. Sin embargo, puede usar `GetExceptionInformation` solo dentro de la expresión de filtro de excepción. La información a la que señala está normalmente en la pila y ya no está disponible cuando el control se transfiere al controlador de excepciones.
 
 La función intrínseca `AbnormalTermination` está disponible dentro de un controlador de terminación. Devuelve 0 si el cuerpo de la **try-finally** instrucción finaliza secuencialmente. En todos los demás casos, devuelve 1.
 
-EXCPT.H define algunos nombres alternativos para estos intrínsecos:
+excpt.h define algunos nombres alternativos para estos intrínsecos:
 
 `GetExceptionCode`es equivalente a`_exception_code`
 

@@ -1,5 +1,5 @@
 ---
-title: _variant_t (clase) | Documentos de Microsoft
+title: _variant_t Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t (Clase)
 **Específicos de Microsoft**  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** comutil.h  
+ **Header:** \<comutil.h>  
   
  **Lib:** omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   
