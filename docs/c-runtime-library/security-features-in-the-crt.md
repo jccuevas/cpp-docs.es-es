@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -31,16 +33,17 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
 Muchas funciones anteriores de CRT tienen versiones nuevas y más seguras. Si existe una función segura, la versión anterior y menos segura está marcada como desusada y la nueva versión presenta el sufijo `_s` ("segura").  
@@ -65,7 +68,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
  En el caso de estas funciones en desuso sin sobrecargas de plantillas seguras, debe considerar en última instancia actualizar manualmente el código para usar las versiones seguras.  
   
- Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, son las funciones POSIX. Reemplace los nombres de funciones POSIX por sus equivalentes estándar (por ejemplo, cambie [access](../c-runtime-library/reference/access-crt.md) por [_access](../c-runtime-library/reference/access-waccess.md)), o bien deshabilite las advertencias sobre desuso relacionadas con POSIX mediante la definición de `_CRT_NONSTDC_NO_WARNINGS`. Para más información, vea [Deprecated CRT Functions](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5) (Funciones de CRT en desuso).  
+ Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, son las funciones POSIX. Reemplace los nombres de funciones POSIX por sus equivalentes estándar (por ejemplo, cambie [access](../c-runtime-library/reference/access-crt.md) por [_access](../c-runtime-library/reference/access-waccess.md)), o bien deshabilite las advertencias sobre desuso relacionadas con POSIX mediante la definición de `_CRT_NONSTDC_NO_WARNINGS`. Para obtener más información, consulte [Compatibilidad](compatibility.md).  
   
 ## <a name="additional-security-features"></a>Características de seguridad adicionales  
  Entre las características de seguridad, se incluyen las siguientes:  

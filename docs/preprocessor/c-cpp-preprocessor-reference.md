@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cc-preprocessor-reference"></a>Referencia del preprocesador de C/C++
 El *referencia del preprocesador de C/C ++* explica el preprocesador tal y como se implementa en Microsoft C/C ++. El preprocesador realiza operaciones preliminares en archivos de C y C++ antes de pasarlos al compilador. Puede usar el preprocesador para realizar las siguientes acciones de manera condicional: compilar código, insertar archivos, especificar mensajes de error en tiempo de compilación y aplicar reglas específicas del equipo a secciones del código.  
@@ -48,9 +51,6 @@ El *referencia del preprocesador de C/C ++* explica el preprocesador tal y como 
   
  [Compilar un programa de C o C++](../build/reference/c-cpp-building-reference.md)  
  Proporciona vínculos a temas que describen las opciones del compilador y el vinculador.  
-  
- [Bibliotecas de Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Proporciona vínculos a las diversas bibliotecas suministradas con Visual C++, incluidas ATL, MFC, OLE DB, la biblioteca de tiempo de ejecución de C y la biblioteca estándar de C++.  
   
  [Creación y administración de proyectos de Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)  
  Describe la interfaz de usuario de Visual Studio que permite especificar los directorios en los que el sistema de proyectos buscará los archivos para el proyecto de C++.

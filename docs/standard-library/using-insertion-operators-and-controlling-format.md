@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usar operadores de inserción y controlar el formato
 En este tema se muestra cómo controlar el formato y cómo crear operadores de inserción para las clases propias. El operador de inserción (**<<**), que está preprogramado para todos los tipos de datos estándar de C++, envía bytes a un objeto de flujo de salida. Los operadores de inserción trabajan con "manipuladores" predefinidos, que son elementos que cambian el formato predeterminado de argumentos de entero.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Este comportamiento se puede solucionar manualmente, pero hacer que el recorrido de ida y vuelta de la cadena sea más fácil, C ++ 14 agrega el manipulador de flujo `std::quoted` en `<iomanip>`. Tras la inserción, `quoted()` rodea la cadena con un delimitador (comilla doble ' " ' de forma predeterminada) y tras la extracción manipula el flujo para extraer todos los caracteres hasta que se encuentra el delimitador final. Las comillas incrustadas se escapan con un carácter de escape ("\\\\" de forma predeterminada).  
   
- Los delimitadores están presentes solo en el objeto de flujo, no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Los delimitadores están presentes en el objeto de secuencia; no están presentes en la cadena extraída, pero están presentes en la cadena devuelta por [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).  
   
  El comportamiento del espacio en blanco de las operaciones de inserción y extracción es independiente de cómo se representa una cadena en el código, de forma que el operador entrecomillado será útil al margen de si la cadena de entrada es un literal de cadena sin formato o una cadena normal. La cadena de entrada, con independencia de su formato, puede tener comillas, saltos de línea, tabulaciones , etc., insertados y todos ellos se conservarán con el manipulador quoted().  
   
- Para más información y ejemplos de código completo, vea [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Para obtener más información y ejemplos de código completos, vea [entre comillas](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Vea también  
  [Flujos de salida](../standard-library/output-streams.md)   

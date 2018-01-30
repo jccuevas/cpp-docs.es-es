@@ -1,33 +1,38 @@
 ---
 title: Sobrecarga de funciones | Documentos de Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
-C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Estas funciones reciben el nombre de funciones sobrecargadas y se describen detalladamente en el tema Sobrecarga. Las funciones sobrecargadas permiten a los programadores proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos.  
+C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Se denominan *sobrecargados* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos. 
   
- Por ejemplo, un **imprimir** función que toma una cadena (o **char \*** ) argumento realizará tareas muy diferentes que una que toma un argumento de tipo **doble** . La sobrecarga permite usar una nomenclatura uniforme y evita que los programadores tengan que inventarse nombres como `print_sz` o `print_d`. En la tabla siguiente se muestran las partes de una declaración de función que usa C++ para distinguir entre grupos de funciones con el mismo nombre en el mismo ámbito.  
+ Por ejemplo, un **imprimir** función que toma un **std:: String** argumento podría realizar tareas muy diferentes que una que toma un argumento de tipo **doble**. Sobrecarga le evita tener que usar como nombres de `print_string` o `print_double`. En tiempo de compilación, el compilador elige qué sobrecarga de usar según el tipo de argumentos pasados por el llamador.  Si se llama a **print(42.0)** la **void impresión (doble d)** se invocará la función. Si se llama a **imprimir ("Hola a todos")** la **void print(std::string)** se invocará la sobrecarga.
+
+Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguiente se muestran las partes de una declaración de función que usa C++ para distinguir entre grupos de funciones con el mismo nombre en el mismo ámbito.  
   
 ### <a name="overloading-considerations"></a>Consideraciones sobre la sobrecarga  
   
@@ -39,9 +44,8 @@ C++ permite especificar más de una función del mismo nombre en el mismo ámbit
 |Presencia o ausencia de puntos suspensivos|Sí|  
 |Uso de nombres `typedef`|No|  
 |Límites de matriz sin especificar|No|  
-|**Const** o `volatile` (ver abajo)|Sí|  
-  
- Aunque las funciones se pueden distinguir en función del tipo de valor devuelto, no se pueden sobrecargar según esto.  `Const`o `volatile` sólo se utilizan como base para la sobrecarga si se utilizan en una clase para aplicar a la **esto** puntero para la clase, no tipo de valor devuelto de la función.  En otras palabras, la sobrecarga se aplica solo si la **const** o `volatile` palabra clave sigue la lista de argumentos de la función en la declaración.  
+|**Const** o`volatile`|Sí, cuando se aplica a toda función|
+|[ref-qualifier](#ref-qualifier)|Sí|  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo se puede usar la sobrecarga.  
@@ -51,68 +55,71 @@ C++ permite especificar más de una función del mismo nombre en el mismo ámbit
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,12 +261,12 @@ volatile Over&
   
 |Conversión del tipo|Conversión al tipo|  
 |-----------------------|---------------------|  
-|*nombre de tipo*|*nombre de tipo***&**|  
-|*nombre de tipo***&**|*nombre de tipo*|  
+|*type-name*|*nombre de tipo***&**|  
+|*nombre de tipo***&**|*type-name*|  
 |*nombre de tipo* **]**|*nombre de tipo\**|  
 |*nombre de tipo* **(** *lista de argumentos* **)**|**(**  *\*nombre-tipo* **) (** *lista de argumentos* **)**|  
-|*nombre de tipo*|**Const** *nombre de tipo*|  
-|*nombre de tipo*|`volatile`*nombre de tipo*|  
+|*type-name*|**Const** *nombre de tipo*|  
+|*type-name*|`volatile`*nombre de tipo*|  
 |*nombre de tipo\**|**Const** *nombre de tipo\**|  
 |*nombre de tipo\**|`volatile`*nombre de tipo\**|  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  El operando izquierdo de los operadores `->*` y `.*` (puntero a miembro) se trata del mismo modo que los operadores `.` y `->` (selección de miembro) en cuanto a la coincidencia de argumentos.  
+
+## <a name="ref-qualifiers"></a>Calificadores de referencia en funciones miembro  
+Calificadores de referencia le permite sobrecargar en función de si el objeto que señala a una función miembro `this` es un valor r o un valor l.  Esta característica puede usarse para evitar las operaciones de copia innecesarias en escenarios donde se elija no proporcionar acceso de puntero a los datos. Por ejemplo, suponga que clase **C** inicializa algunos datos en su constructor y devuelve una copia de los datos en función de miembro **get_data()**. Si un objeto de tipo **C** es un valor r que está a punto de ser destruidos, a continuación, el compilador elige la **get_data() & &** sobrecarga, que mueve los datos en lugar de copiarlo. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Restricciones  
+## <a name="restrictions-on-overloading"></a>Restricciones de la sobrecarga  
  Varias restricciones rigen un conjunto aceptable de funciones sobrecargadas:  
   
 -   Dos funciones cualesquiera de un conjunto de funciones sobrecargadas deben tener distintas listas de argumentos.  
@@ -443,12 +489,15 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Coincidencia de declaraciones  
+## <a name="overloading-overriding-and-hiding"></a>Sobrecarga, reemplazar y ocultar
+  
  Dos declaraciones de función cualquiera con el mismo nombre en el mismo ámbito pueden hacer referencia a la misma función o a dos funciones discretas sobrecargadas. Si las listas de argumentos de las declaraciones contienen argumentos de tipos equivalentes (como se describe en la sección anterior), las declaraciones de función hacen referencia a la misma función. Si no, hacen referencia a dos funciones diferentes que se seleccionan mediante la sobrecarga.  
   
- El ámbito de clase se respeta estrictamente; por consiguiente, una función declarada en una clase base no está en el mismo ámbito que una función declarada en una clase derivada. Si una función de una clase derivada se declara con el mismo nombre que una función de la clase base, la función de la clase derivada oculta la función de la clase base en lugar de producir una sobrecarga.  
+ El ámbito de clase se respeta estrictamente; por consiguiente, una función declarada en una clase base no está en el mismo ámbito que una función declarada en una clase derivada. Si una función en una clase derivada se declara con el mismo nombre que una función virtual de la clase base, la función de clase derivada *invalida* la función de clase base. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).
+
+Si la función de clase base no se ha declarado como 'virtual', se dice que la función de clase derivada *ocultar* lo. Tanto reemplazar y ocultar son diferentes de sobrecarga.  
   
- El ámbito del bloque se respeta estrictamente; por consiguiente, una función declarada en el ámbito del archivo no está en el mismo ámbito que una función declarada localmente. Si una función declarada localmente tiene el mismo nombre que una función declarada en el ámbito del archivo, la función declarada localmente oculta la función del ámbito del archivo, en lugar de producir una sobrecarga. Por ejemplo:  
+ El ámbito de bloque se respeta estrictamente; por consiguiente, una función declarada en el ámbito del archivo no está en el mismo ámbito que una función declarada localmente. Si una función declarada localmente tiene el mismo nombre que una función declarada en el ámbito del archivo, la función declarada localmente oculta la función del ámbito del archivo, en lugar de producir una sobrecarga. Por ejemplo:  
   
 ```  
 // declaration_matching1.cpp  
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Vea también  
  [Funciones (C++)](../cpp/functions-cpp.md)

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: CMFCDragFrameImpl
-dev_langs: C++
-helpviewer_keywords: CMFCDragFrameImpl class [MFC]
+f1_keywords:
+- CMFCDragFrameImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55cac28633b87ab8c103904f70b0d88269ffe02f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2fe293a8fa64cb323771db4f0f2929204790d210
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmfcdragframeimpl-class"></a>Clase CMFCDragFrameImpl
 La `CMFCDragFrameImpl` clase dibuja el rectángulo de arrastre que aparece cuando el usuario arrastra un panel en el modo de acoplamiento estándar.  
@@ -35,7 +40,7 @@ class CMFCDragFrameImpl
 ## <a name="remarks"></a>Comentarios  
  Un objeto de esta clase está incrustado en cada uno de ellos [clase CPane](../../mfc/reference/cpane-class.md) objeto. Por lo tanto, cada panel que usa el `CanFloat` método muestra un rectángulo de arrastre cuando el usuario arrastra.  
   
- Puede controlar el grosor del rectángulo de arrastre mediante [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat]--brokenlink--(afx-global-data-structure.md#m_ndragframethicknessfloat) y [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock ](afx-global-data-structure.md#m_ndragframethicknessdock).  
+ Puede controlar el grosor del rectángulo de arrastre mediante [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) y [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
@@ -43,7 +48,7 @@ class CMFCDragFrameImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdragframeimpl.h  
   
-##  <a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame  
+##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame  
 
   
 ```  
@@ -55,7 +60,7 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="init"></a>CMFCDragFrameImpl::Init  
+##  <a name="init"></a>  CMFCDragFrameImpl::Init  
 
   
 ```  
@@ -67,7 +72,7 @@ void Init(CWnd* pDraggedWnd);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame  
+##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame  
 
   
 ```  
@@ -79,7 +84,7 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking  
+##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking  
 
   
 ```  
@@ -97,7 +102,7 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking  
+##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking  
 
   
 ```  
@@ -109,7 +114,7 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="resetstate"></a>CMFCDragFrameImpl::ResetState  
+##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState  
 
   
 ```  

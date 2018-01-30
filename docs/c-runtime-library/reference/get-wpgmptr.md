@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _get_wpgmptr
+apiname:
+- _get_wpgmptr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8ad1d467c6cd99d911e27d32f71a75470a19ca0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d80fddf79be3c94eda07958919a886735666dc0d
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 Obtiene el valor actual de la variable global `_wpgmptr`.  
@@ -61,7 +65,7 @@ errno_t _get_wpgmptr(
  Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si `pValue` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
   
 ## <a name="remarks"></a>Comentarios  
- La variable global `_wpgmptr` contiene la ruta de acceso completa al ejecutable asociado con el proceso como una cadena de caracteres anchos. Para obtener más información, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
+ Solo llame a `_get_wpgmptr` si el programa tiene un punto de entrada extensa, como `wmain()` o `wWinMain()`. La variable global `_wpgmptr` contiene la ruta de acceso completa al ejecutable asociado con el proceso como una cadena de caracteres anchos. Para obtener más información, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).  
   
 ## <a name="requirements"></a>Requisitos  
   

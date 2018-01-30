@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: Finalizar subprocesos
 Dos situaciones normales que un subproceso terminar: la función controladora finaliza o el subproceso no puede ejecutarse hasta su finalización. Si un procesador de textos, se utiliza un subproceso para impresión en segundo plano, la función controladora terminaría normalmente si la impresión se completa correctamente. Si el usuario desea cancelar la impresión, sin embargo, el subproceso en segundo plano impresión tiene finalizó de forma prematura. Este tema explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.  
@@ -58,7 +62,7 @@ Dos situaciones normales que un subproceso terminar: la función controladora fi
   
 -   Establecer el `m_bAutoDelete` miembro de datos **FALSE**. Esto permite la `CWinThread` objeto sobreviva después de que el subproceso ha terminado. A continuación, puede tener acceso a la `m_hThread` miembro de datos después de que el subproceso ha terminado. Si utiliza esta técnica, sin embargo, usted es responsable de destruir la `CWinThread` objeto porque el marco de trabajo no lo eliminará automáticamente. Este es el método preferido.  
   
--   Almacenar el identificador del subproceso de forma independiente. Después de crea el subproceso, copie su `m_hThread` miembro de datos (mediante **:: DuplicateHandle**) a otra variable y tener acceso a él a través de esa variable. Esta forma, el objeto se elimina automáticamente cuando se produce la finalización y aún puede averiguar por qué el subproceso ha terminado. Asegúrese de que el subproceso no termina antes de poder duplicar el identificador. La forma más segura de hacerlo consiste en pasar **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), almacenar el identificador y, a continuación, reanudar el subproceso mediante una llamada a [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Almacenar el identificador del subproceso de forma independiente. Después de crea el subproceso, copie su `m_hThread` miembro de datos (mediante **:: DuplicateHandle**) a otra variable y tener acceso a él a través de esa variable. Esta forma, el objeto se elimina automáticamente cuando se produce la finalización y aún puede averiguar por qué el subproceso ha terminado. Asegúrese de que el subproceso no termina antes de poder duplicar el identificador. La forma más segura de hacerlo consiste en pasar **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), almacenar el identificador y, a continuación, reanudar el subproceso mediante una llamada a [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Cualquiera de los métodos permite determinar por qué un `CWinThread` objeto terminada.  
   
