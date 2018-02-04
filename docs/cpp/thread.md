@@ -1,41 +1,44 @@
 ---
-title: subproceso | Documentos de Microsoft
+title: thread | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: thread_cpp
-dev_langs: C++
+f1_keywords:
+- thread_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="thread"></a>subproceso
 
-**Específicos de Microsoft**  
+**Específicos de Microsoft**
+
 El **subproceso** modificador de clase de almacenamiento extendida se utiliza para declarar una variable local de subproceso. Para la función portable equivalente en C ++ 11 y versiones posterior, use la [thread_local](../cpp/storage-classes-cpp.md#thread_local) especificador de clase de almacenamiento para el código portable. En Windows **thread_local** se implementa con **__declspec (Thread)**.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-__declspec( thread ) declarator
-```
+> **__declspec (thread)** *declarador*  
 
 ## <a name="remarks"></a>Comentarios
 
@@ -44,17 +47,16 @@ El almacenamiento local para el subproceso (TLS) es el mecanismo por el que cada
 Las declaraciones de variables locales de subproceso deben utilizar [extendidos la sintaxis de atributo](../cpp/declspec.md) y `__declspec` palabra clave con el **subproceso** (palabra clave). Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
 
 ```cpp
-__declspec( thread ) int tls_i = 1;  
+__declspec( thread ) int tls_i = 1;
 ```
 
 Cuando use variables locales de subproceso en las bibliotecas que se cargan dinámicamente, debe tener en cuenta los factores que pueden causar una variable local de subproceso no se inicialice correctamente:
 
-1) Si la variable se inicializa con una llamada de función (incluidos constructores), solo se llamará a esta función para el subproceso que produjo el binario o la DLL cargar en el proceso y para esos subprocesos que se inició después de que se cargó el archivo binario o la DLL. No se llaman a las funciones de inicialización para ningún otro subproceso que ya se estaba ejecutando cuando se cargó la DLL. Inicialización dinámica produce en la llamada de DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca obtiene que si el archivo DLL no se encuentra en el proceso cuando se inicia el subproceso del mensaje. 
+1. Si la variable se inicializa con una llamada de función (incluidos constructores), solo se llamará a esta función para el subproceso que produjo el binario o la DLL cargar en el proceso y para esos subprocesos que se inició después de que se cargó el archivo binario o la DLL. No se llaman a las funciones de inicialización para ningún otro subproceso que ya se estaba ejecutando cuando se cargó la DLL. Inicialización dinámica produce en la llamada de DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca obtiene que si el archivo DLL no se encuentra en el proceso cuando se inicia el subproceso del mensaje.
 
-2) Por lo general, las variables locales de subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad en el compilador de Microsoft C++ mediante el cual variables constexpr recepción dinámica en lugar de inicialización estática.  
-  
+1. Por lo general, las variables locales de subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad en el compilador de Microsoft Visual C++ mediante el cual variables constexpr recepción dinámica en lugar de inicialización estática.
+
    Nota: Estos dos problemas se esperan que se solucione en futuras actualizaciones del compilador.
-
 
 Además, debe seguir estas instrucciones cuando declare variables y objetos locales de subproceso:
 
@@ -85,15 +87,15 @@ Además, debe seguir estas instrucciones cuando declare variables y objetos loca
 
 - El estándar de C permite la inicialización de un objeto o de una variable con una expresión que contenga una referencia a sí misma, pero solo para objetos cuyo tamaño no sea estático. Aunque, generalmente, C++ permite esa inicialización dinámica de objetos con una expresión que contenga una referencia a sí misma, este tipo de inicialización no se permite con objetos locales de un subproceso. Por ejemplo:
 
-    ```cpp
-    // declspec_thread_3.cpp
-    // compile with: /LD
-    #define Thread __declspec( thread )
-    int j = j;   // Okay in C++; C error
-    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
-    ```
+   ```cpp
+   // declspec_thread_3.cpp
+   // compile with: /LD
+   #define Thread __declspec( thread )
+   int j = j;   // Okay in C++; C error
+   Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+   ```
 
-     Tenga en cuenta que un **sizeof** expresión que incluye el objeto que se está inicializando no constituye una referencia a sí misma y se permite en C y C++.
+   Tenga en cuenta que un **sizeof** expresión que incluye el objeto que se está inicializando no constituye una referencia a sí misma y se permite en C y C++.
 
 **FIN de Específicos de Microsoft**
 
@@ -101,4 +103,4 @@ Además, debe seguir estas instrucciones cuando declare variables y objetos loca
 
 [__declspec](../cpp/declspec.md)  
 [Palabras clave](../cpp/keywords-cpp.md)  
-[Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)
+[Almacenamiento local de subprocesos (TLS)](../parallel/thread-local-storage-tls.md)  

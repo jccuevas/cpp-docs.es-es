@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.member.variable
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.member.variable
+dev_langs:
+- C++
 helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Agregar una variable miembro (Visual C++)
 Puede agregar una variable miembro a una clase mediante la vista de clases. Variables de miembro pueden ser para [intercambio y validación de datos](../mfc/dialog-data-exchange-and-validation.md), o pueden ser genéricos. El Asistente para variables de miembro de datos está diseñado específicamente para tomar la información correspondiente y usarla para insertar elementos en los archivos de origen en las ubicaciones adecuadas. Puede agregar una variable miembro de la [editor de cuadro de diálogo](../windows/dialog-editor.md) en [vista de recursos](../windows/resource-view-window.md), o de [vista de clases](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
