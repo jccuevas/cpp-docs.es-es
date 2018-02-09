@@ -531,7 +531,6 @@
 ##### [Objetos gráficos](graphic-objects.md)
 ###### [Construcción de objetos en una fase y en dos fases](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Selección de un objeto gráfico en un contexto de dispositivo](selecting-a-graphic-object-into-a-device-context.md)
-###### [Limitaciones de CImage con sistemas operativos anteriores](cimage-limitations-with-earlier-operating-systems.md)
 #### [Ventanas de marco](frame-windows.md)
 ##### [Clases de ventana de marco](frame-window-classes.md)
 ###### [Clases de ventana de marco creadas por el Asistente para aplicaciones](frame-window-classes-created-by-the-application-wizard.md)
