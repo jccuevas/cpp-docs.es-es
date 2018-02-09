@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 Este es el primero de varios temas que presentan el procedimiento de actualización a Visual Studio 2017 de proyectos de Visual C++ que se crearon en versiones anteriores de Visual Studio. Estos temas muestran el proceso de actualización mediante ejemplos, empezando por un proyecto muy simple y pasando a proyectos un poco más complejos. En este tema mostramos todo el proceso de actualización de un proyecto específico, Scribble de MFC. Es una apropiada introducción básica al proceso de actualización de proyectos de C++.  
@@ -85,7 +88,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
  No hay ningún conjunto de pruebas, por lo que simplemente iniciamos la aplicación y probamos sus funciones manualmente mediante la interfaz de usuario. No se observó ningún problema.  
   
 ### <a name="step-4-improve-the-code"></a>Paso 4. Mejorar el código  
- Ahora que ha migrado a Visual Studio 2017, puede que quiera realizar algunos cambios para aprovechar las nuevas características de C++. La versión actual del compilador de Visual C++ es mucho más compatible con el estándar de C++ que las versiones anteriores, por lo que si tiene pensado realizar cambios en el código para hacerlo más seguro y más portátil con respecto a otros compiladores y sistemas operativos, debería pensar en realizar algunas mejoras.  
+ Ahora que ha migrado a Visual Studio 2017, puede que quiera realizar algunos cambios para aprovechar las nuevas características de C++. La versión actual del Compilador de Microsoft Visual C++ presenta mayor compatibilidad con el estándar de C++ que las anteriores, así que si tiene previsto hacer cambios en el código para que sea más seguro y portátil con respecto a otros compiladores y sistemas operativos, debería pensar en efectuar algunas mejoras.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Scribble era una aplicación de escritorio pequeña y simple de Windows, y no fue difícil de convertir. Muchas aplicaciones pequeñas y sencillas son fáciles de convertir a la nueva versión.  Sin embargo, será necesario más tiempo para actualizar aplicaciones más complejas, con muchas más líneas de código, antiguo código heredado que podría no estar a la altura de los estándares de ingeniería modernos, varios proyectos y bibliotecas, o pasos de compilación personalizados, así como para actualizar aplicaciones con compilaciones complejas automatizadas mediante script. Vaya al [siguiente ejemplo](../porting/porting-guide-com-spy.md), una aplicación ATL/COM llamada COM Spy.  

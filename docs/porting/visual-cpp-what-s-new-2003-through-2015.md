@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -1485,7 +1487,7 @@ En Visual Studio 2015 y versiones posteriores, las mejoras continuas en la confo
 
 #### <a name="compiler"></a>Compilador
 
-El compilador de Microsoft C++ admite estas características del lenguaje ISO C++11:
+El Compilador de Microsoft Visual C++ admite estas características del lenguaje ISO C++11:
 
 - Argumentos predeterminados para plantillas de funciones.
 - Constructores de delegación
@@ -1502,8 +1504,8 @@ El compilador de Microsoft C++ admite estas características del lenguaje ISO C+
 - Literales compuestos.
 - Inicializadores designados.
 - Mezcla de declaraciones con código.
-- La conversión de literales de cadena a valores modificables puede anularse mediante la nueva opción del compilador /Zc:strictStrings. En C++98, la conversión de literales de cadena a char\* (y de literales de cadena de tipo ancho a wchar_t\*) cayó en desuso. En C++11, la conversión se quitó completamente. Aunque el compilador podría cumplir estrictamente la norma, en su lugar se proporciona la opción /Zc:strictStrings para poder controlar la conversión. De forma predeterminada, esta opción está desactivada. Observe que cuando utilice esta opción en modo de depuración, STL no se compilará.
-- Conversiones de referencia de rvalue/lvalue. Con las referencias rvalue, C++11 puede diferenciar claramente entre lvalues y rvalues. Anteriormente, el compilador de Visual C++ no proporcionaba esta funcionalidad en escenarios concretos del marco. Se ha agregado una nueva opción del compilador, /Zc:rvalueCast, para hacer que el compilador sea compatible con el documento de trabajo del lenguaje C++ (vea la sección 5.4, [expr.cast]/1). El comportamiento predeterminado cuando no se especifica esta opción es el mismo que en Visual Studio 2012.
+- La conversión de literales de cadena a valores modificables puede anularse mediante la nueva opción **/Zc:strictStrings** del compilador. En C++98, la conversión de literales de cadena a char\* (y de literales de cadena de tipo ancho a wchar_t\*) cayó en desuso. En C++11, la conversión se quitó completamente. Aunque el compilador podría cumplir estrictamente la norma, en su lugar se proporciona la opción **/Zc:strictStrings** para poder controlar la conversión. De forma predeterminada, esta opción está desactivada. Observe que cuando utilice esta opción en modo de depuración, STL no se compilará.
+- Conversiones de referencia de rvalue/lvalue. Con las referencias rvalue, C++11 puede diferenciar claramente entre lvalues y rvalues. Anteriormente, el compilador no proporcionaba esta funcionalidad en escenarios de conversión concretos. Se ha agregado una nueva opción del compilador, **/Zc:rvalueCast**, para hacer que este sea compatible con el documento de trabajo del lenguaje C++. Consulte la sección 5.4, [expr.cast]/1. El comportamiento predeterminado cuando no se especifica esta opción es el mismo que en Visual Studio 2012.
   - Nota: En el caso de las funciones establecidas como valores predeterminados, no se admite el uso de =default para solicitar constructores de movimiento miembro a miembro y operadores de asignación de movimiento.
 
 ### <a name="c99-libraries"></a>Bibliotecas C99

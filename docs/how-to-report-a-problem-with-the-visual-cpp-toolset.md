@@ -12,15 +12,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Cómo notificar un problema con el conjunto de herramientas de Visual C++
 
-Si tiene problemas con el compilador, el enlazador u otras herramientas y bibliotecas de Visual C++, nos gustaría que nos informara de ello.
+Si tiene problemas con el Compilador de Microsoft Visual C++, el enlazador u otras herramientas y bibliotecas de Visual C++, nos gustaría que nos informara de ello.
 
 La mejor manera de comunicarnos un problema consiste en enviarnos un informe que incluya una descripción del problema que ha encontrado, detalles sobre cómo está compilando el programa y una *reproducción*, un caso de prueba completo que podamos usar para reproducir el problema en nuestras máquinas. Esta información nos permite comprobar rápidamente que el problema está en nuestro código y que no es local de su entorno para determinar si afecta a otras versiones del compilador y diagnosticar la causa.
 
@@ -96,7 +96,7 @@ Proporcione los mensajes de error exactos devueltos por el conjunto de herramien
 
 Si el problema es que el compilador acepta código no válido y no genera ningún diagnóstico, anótelo en el informe.
 
-Para informar de un problema en tiempo de ejecución, incluya una copia exacta de lo que el programa imprime y de lo que espera ver. Idealmente, se inserta en la instrucción de salida, por ejemplo,  `printf("This should be 5: %d\n", actual_result);`. Si el programa se bloquea o deja de responder, también debe mencionarlo.
+Para informar de un problema en tiempo de ejecución, incluya una copia exacta de lo que el programa imprime y de lo que espera ver. Idealmente, se inserta en la propia instrucción de salida, por ejemplo, `printf("This should be 5: %d\n", actual_result);`. Si el programa se bloquea o deja de responder, menciónelo también.
 
 Agregue cualquier otra información que nos pueda ayudar a diagnosticar el problema que ha experimentado, por ejemplo, una solución alternativa que haya encontrado. Evite repetir la información que se encuentra en otro lugar del informe.
 
