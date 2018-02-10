@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Compatibilidad con MBCS en Visual C++
-Cuando se ejecuta en una versión habilitada para MBCS del sistema operativo Windows 2000 o Windows XP, el sistema de desarrollo de Visual C++ (incluidos el editor de código fuente integrado, depurador y las herramientas de línea de comandos) está habilitado para MBCS, con la excepción de la ventana de memoria.  
+Cuando se ejecuta en una versión habilitada para MBCS de Windows, el sistema de desarrollo de Visual C++ (incluidas las herramientas de línea de comandos, el depurador y el editor de código fuente integrado) está habilitado para MBCS, con la excepción de la ventana de memoria.  
   
  La ventana memoria no interpreta los bytes de datos como caracteres MBCS, aunque pueda interpretarlos como caracteres ANSI o Unicode. Caracteres ANSI siempre tienen 1 byte de tamaño y los caracteres Unicode son 2 bytes de tamaño. Con MBCS, los caracteres pueden ser 1 o 2 bytes de tamaño y su interpretación depende de la página de códigos que está en uso. Por este motivo, resulta difícil para la ventana de memoria para mostrar de forma confiable caracteres MBCS. La ventana memoria no puede saber qué bytes es el inicio de un carácter. El desarrollador puede ver los valores de byte en la ventana de memoria y buscar el valor en tablas para determinar la representación de caracteres. Esto es posible porque el desarrollador conoce la dirección inicial de una cadena basándose en el código fuente.  
   

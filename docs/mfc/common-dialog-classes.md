@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Clases de cuadros de diálogo comunes
 Además de la clase [CDialog](../mfc/reference/cdialog-class.md), MFC proporciona varias clases derivadas de `CDialog` que encapsulan cuadros de diálogo de uso frecuente, como se muestra en la tabla siguiente. Los cuadros de diálogo encapsulados se denominan el "cuadros de diálogo comunes" y forman parte de la biblioteca de cuadro de diálogo comunes de Windows (COMMDLG. (DLL). Los recursos de plantilla de cuadro de diálogo y el código para estas clases se proporcionan en las ventanas de cuadros de diálogo comunes que forman parte de las versiones 3.1 y posteriores de Windows.  
@@ -41,7 +44,7 @@ Además de la clase [CDialog](../mfc/reference/cdialog-class.md), MFC proporcion
 |[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Permite el usuario inicie una operación de búsqueda o la operación en un archivo de texto de reemplazo.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Permite al usuario especificar una fuente.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Permite el usuario especifique información para un trabajo de impresión.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Hoja de propiedades de impresión de Windows 2000.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Hoja de propiedades de impresión de Windows.|  
   
  Para obtener más información acerca de las clases de cuadro de diálogo comunes, vea los nombres de clase individuales en el *referencia de MFC*. MFC también proporciona una serie de clases de cuadros de diálogo estándar utilizadas por OLE. Para obtener información sobre estas clases, vea la clase base, [COleDialog](../mfc/reference/coledialog-class.md), en la *referencia de MFC*.  
   

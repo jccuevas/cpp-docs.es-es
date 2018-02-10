@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, creating programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Crear programas que usan la automatización remota
 Cualquier objeto de automatización y cualquier controlador de automatización, es capaz de utilizar la automatización remota sin ningún cambio en el código fuente, sin necesidad de volver a compilar y sin necesidad de volver a vincular. Una vez que tenga una instalación que funciona localmente (es decir, en el mismo equipo), tendrá que realizar solo unos pocos pasos para ejecutar de forma remota.  
@@ -46,7 +50,7 @@ Cualquier objeto de automatización y cualquier controlador de automatización, 
   
  Paso 3 implica instala y registra la aplicación de servidor en el equipo de servidor seleccionado o máquinas correctamente. Una vez más, si la aplicación se registran automáticamente, ejecute por primera vez lo también registrará.  
   
- Paso 4 implica configurar el servidor para permitir la ejecución remota. Ejecutar el Administrador de RAC en el equipo del servidor y asegúrese de que el **acceso de cliente** ficha tiene el foco. Elija el modelo de activación que desee (normalmente **permitir remoto crea clave**. Si elige esta opción, también debe hacer clic en el **permitir activación remota** casilla de verificación para establecer el valor de la entrada del registro en 'Y'). Si está ejecutando Windows NT o Windows 2000 y se elige la opción Permitir creaciones remotas (ACL), también tiene la opción para editar la ACL insertando el **editar ACL** botón.  
+ Paso 4 implica configurar el servidor para permitir la ejecución remota. Ejecutar el Administrador de RAC en el equipo del servidor y asegúrese de que el **acceso de cliente** ficha tiene el foco. Elija el modelo de activación que desee (normalmente **permitir remoto crea clave**. Si elige esta opción, también debe hacer clic en el **permitir activación remota** casilla de verificación para establecer el valor de la entrada del registro en 'Y'). Si elige la opción Permitir creaciones remotas (ACL), también tiene la opción para editar la ACL insertando el **editar ACL** botón.  
   
  Para permitir la automatización remota para que funcione, debe para asegurarse de que el Administrador de automatización está instalado y ejecutándose en el equipo de servidor o equipos. Si no está instalado, copie el archivo AUTMGR32. EXE en el directorio de sistema de Windows. Para obtener información sobre cómo hacerlo, consulte [instalación de automatización remota](../mfc/remote-automation-installation.md). Para iniciar la automatización remota, ejecute el Administrador de automatización. Se mostrará una pequeña ventana de estado en el que se mostrará un número de mensajes. Una vez que se ha iniciado, se minimizará. Si desea continuar ver información de estado, haga clic en el **Administrador de automatización** ficha en la barra de tareas para restaurar la ventana.  
   

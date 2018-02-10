@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Configuraciones regionales y páginas de códigos
 Un identificador de configuración regional refleja el idioma y las convenciones locales de una determinada zona geográfica. Un idioma determinado se puede hablar en varios países o regiones; por ejemplo, el portugués se habla en Portugal y Brasil. A la inversa, una región o un país pueden tener más de un idioma oficial. Por ejemplo, Canadá tiene dos idiomas, el inglés y el francés. Es decir, Canadá tiene dos configuraciones regionales distintas, el inglés canadiense y el francés canadiense. Entre las categorías dependientes de la configuración regional se encuentran el formato de fechas y el formato de presentación de valores de moneda.  
@@ -44,7 +47,7 @@ Un identificador de configuración regional refleja el idioma y las convenciones
   
  Para obtener más información sobre las páginas de códigos, vea [Code Pages](../c-runtime-library/code-pages.md).  
   
- La biblioteca en tiempo de ejecución de C tiene dos tipos de páginas de códigos internas: regionales y multibyte. Puede cambiar la página de códigos actual durante la ejecución del programa (consulte la documentación de la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md) funciones). Además, la biblioteca en tiempo de ejecución puede obtener y utilizar el valor de la página de códigos del sistema operativo. En Windows 2000, la página de códigos del sistema operativo es la página de códigos "ANSI predeterminada del sistema". Esta página de códigos es constante a lo largo de la ejecución del programa.  
+ La biblioteca en tiempo de ejecución de C tiene dos tipos de páginas de códigos internas: regionales y multibyte. Puede cambiar la página de códigos actual durante la ejecución del programa (consulte la documentación de la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) y [_setmbcp](../c-runtime-library/reference/setmbcp.md) funciones). Además, la biblioteca en tiempo de ejecución puede obtener y utilizar el valor de la página de códigos del sistema operativo, que es la constante para la duración de la ejecución del programa.  
   
  Cuando la página de códigos regional cambia, el comportamiento del conjunto de funciones dependiente de la configuración regional cambia a lo que indica la página de códigos elegida. De forma predeterminada, todas las funciones dependientes de la configuración regional empiezan a ejecutarse con una página de códigos regional única de la configuración regional "C". Se puede cambiar la página de códigos regional interna (así como otras propiedades específicas de la configuración regional) llamando a la función `setlocale`. Una llamada a la función `setlocale`(LC_ALL, "") establece la configuración regional en lo que indica la configuración regional de usuario del sistema operativo.  
   

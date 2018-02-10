@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Clases de cuadro de diálogo
 Clase `CDialog` y sus clases derivadas encapsulan la funcionalidad de cuadro de diálogo. Puesto que un cuadro de diálogo es un tipo especial de ventana, `CDialog` se deriva de `CWnd`. Derivar las clases de cuadro de diálogo de `CDialog` o use una de las clases de cuadro de diálogo comunes para los cuadros de diálogo estándar, como abrir o guardar un archivo, impresión, seleccionando una fuente o un color, iniciar una operación de búsqueda y reemplazo, o bien realizar diversas relacionadas con OLE operaciones.  
@@ -58,7 +62,7 @@ Clase `CDialog` y sus clases derivadas encapsulan la funcionalidad de cuadro de 
  Proporciona un cuadro de diálogo estándar para imprimir un archivo.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Proporciona una hoja de propiedades de impresión de Windows 2000.  
+ Proporciona una hoja de propiedades de impresión de Windows.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Encapsula los servicios proporcionados por el cuadro de diálogo Configurar página común de Windows con compatibilidad adicional para configurar y modificar los márgenes de impresión.  
@@ -69,19 +73,19 @@ Clase `CDialog` y sus clases derivadas encapsulan la funcionalidad de cuadro de 
  [COleDialog](../mfc/reference/coledialog-class.md)  
  Utiliza el marco de trabajo para contener las implementaciones comunes para todos los cuadros de diálogo OLE. Todas las clases de cuadro de diálogo de la categoría de la interfaz de usuario se derivan de esta clase base. `COleDialog`no se puede usar directamente.  
   
- [Clase COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
+ [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Muestra el cuadro de diálogo Insertar objeto, la interfaz de usuario estándar para insertar nuevo OLE elementos vinculados o incrustados.  
   
- [Clase COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
+ [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
  Muestra el cuadro de diálogo Pegado especial, la interfaz de usuario estándar para implementar el comando Editar Pegado especial.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
  Muestra el cuadro de diálogo Editar vínculos, la interfaz de usuario estándar para modificar información sobre los elementos vinculados.  
   
- [Clase COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
+ [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
  Muestra el cuadro de diálogo Cambiar icono, la interfaz de usuario estándar para cambiar el icono asociado a un OLE incrustado o el elemento vinculado.  
   
- [Clase COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
+ [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
  Muestra el cuadro de diálogo de Convert, la interfaz de usuario estándar para convertir los elementos OLE de un tipo a otro.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
@@ -93,7 +97,7 @@ Clase `CDialog` y sus clases derivadas encapsulan la funcionalidad de cuadro de 
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
  Muestra el cuadro de diálogo Cambiar origen, la interfaz de usuario estándar para cambiar el destino o el origen de un vínculo.  
   
- [Clase COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
+ [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
  Muestra los cuadros de diálogo servidor ocupado y el servidor no responde, la interfaz de usuario estándar para controlar las llamadas a las aplicaciones ocupadas. Habitualmente se muestra automáticamente el [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementación.  
   
 ## <a name="property-sheet-classes"></a>Clases de hoja de propiedades  

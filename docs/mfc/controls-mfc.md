@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>Controles (MFC)
 Los controles de formularios son objetos con los que pueden interactuar los usuarios para escribir o manipular datos. Aparecen normalmente en los cuadros de diálogo o en las barras de herramientas. En esta familia de temas se abordan tres clases principales de controles:  
@@ -36,15 +39,7 @@ Los controles de formularios son objetos con los que pueden interactuar los usua
 ## <a name="windows-common-controls"></a>Controles comunes de Windows  
  El sistema operativo Windows siempre ha proporcionado varios controles comunes de Windows. Estos objetos de control se pueden programar y el editor de cuadros de diálogo de Visual C++ admite agregarlos a los cuadros de diálogo. Las biblioteca MFC (Microsoft Foundation Class) proporciona clases que encapsulan cada uno de estos controles, como se muestra en la tabla [Controles comunes y clases MFC de Windows](#_core_windows_common_controls_and_mfc_classes). (Para algunos elementos de la tabla hay temas relacionados que los describen más detalladamente. Para los controles que no tienen temas relacionados, vea la documentación de la clase MFC).  
   
- La clase [CWnd](../mfc/reference/cwnd-class.md) es la clase base de todas las clases de ventana, incluidas todas las clases de control. Los controles comunes de Windows se admiten en los entornos siguientes:  
-  
--   Windows 95, Windows 98 y Windows 2000  
-  
--   Windows NT versión 3.51 y versiones posteriores  
-  
--   Win32s versión 1.3 (Visual C++ versión 4.2 y versiones posteriores no admite Win32s)  
-  
- Los controles comunes más antiguos (casillas, cuadros combinados, cuadros de edición, cuadros de lista, botones de opción, botones de comando, controles de barra de desplazamiento y controles estáticos) también estaban disponibles en las versiones anteriores de Windows.  
+ La clase [CWnd](../mfc/reference/cwnd-class.md) es la clase base de todas las clases de ventana, incluidas todas las clases de control. 
   
 ## <a name="activex-controls"></a>Controles ActiveX  
  Los controles ActiveX, antes conocidos como controles OLE, se pueden utilizar en cuadros de diálogo en las aplicaciones para Windows o en páginas HTML en World Wide Web. Para obtener más información, vea [Controles ActiveX MFC](../mfc/mfc-activex-controls.md).  

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-programming-summary"></a>Resumen de la programación con Unicode
 Para disfrutar de las ventajas de la compatibilidad en tiempo de ejecución de C y MFC con Unicode, es necesario:  
@@ -91,7 +94,7 @@ Para disfrutar de las ventajas de la compatibilidad en tiempo de ejecución de C
   
 -   Use [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) para abrir los archivos Unicode.  
   
- En resumen, MFC y la biblioteca en tiempo de ejecución proporcionan la siguiente compatibilidad para Unicode la programación en Windows 2000:  
+ En resumen, MFC y la biblioteca en tiempo de ejecución proporcionan la siguiente compatibilidad para la programación de Unicode:  
   
 -   Excepto para las funciones miembro de clase de base de datos, todas las funciones MFC están habilitadas para Unicode, incluso `CString`. `CString` también proporciona funciones de conversión Unicode/ANSI.  
   

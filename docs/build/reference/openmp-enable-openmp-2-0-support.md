@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Habilitar la compatibilidad con OpenMP 2.0)
 Hace que el compilador pueda procesarlo `#pragma` [omp](../../preprocessor/omp.md).  
@@ -37,8 +40,6 @@ Hace que el compilador pueda procesarlo `#pragma` [omp](../../preprocessor/omp.m
   
 ## <a name="remarks"></a>Comentarios  
  `#pragma omp`se utiliza para especificar [directivas](../../parallel/openmp/reference/openmp-directives.md) y [cláusulas](../../parallel/openmp/reference/openmp-clauses.md). Si **/OpenMP** no se especifica en una compilación, el compilador omite cláusulas de OpenMP y directivas. [Función de OpenMP](../../parallel/openmp/reference/openmp-functions.md) llamadas son procesadas por el incluso si compilador **/OpenMP** no se ha especificado.  
-  
- Una aplicación compilada con **/OpenMP** y el uso de la [bibliotecas](../../parallel/openmp/reference/openmp-libraries.md) sólo se puede ejecutar en Windows 2000 o sistemas operativos posteriores.  
   
  Las aplicaciones compiladas con **/OpenMP** y **/CLR** sólo se puede ejecutar en un proceso de dominio de aplicación único; no se admiten varios dominios de aplicación. Es decir, cuando se ejecuta el constructor del módulo (.cctor), se detectarán el proceso se compila con **/OpenMP** y si la aplicación se está cargando en un tiempo de ejecución no predeterminado. Para obtener más información, consulte [appdomain](../../cpp/appdomain.md), [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md), y [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).  
   

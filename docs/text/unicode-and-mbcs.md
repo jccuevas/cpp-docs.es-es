@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Unicode y MBCS
 La biblioteca MFC (Microsoft Foundation Classes), la biblioteca en tiempo de ejecución de C para Visual C++ y el entorno de desarrollo de Visual C++ están habilitados para ayudar al usuario en la programación internacional. Proporcionan lo siguiente:  
   
--   Compatibilidad con el estándar Unicode en Windows 2000 (anteriormente Windows NT). Unicode es el estándar actual y debe utilizarse siempre que sea posible.  
+-   Compatibilidad con el estándar Unicode en Windows. Unicode es el estándar actual y debe utilizarse siempre que sea posible.  
   
      Unicode es una codificación de caracteres de 16 bits que proporciona suficientes codificaciones para todos los idiomas. Todos los caracteres ASCII están incluidos en Unicode como caracteres ampliados.  
-  
-    > [!NOTE]
-    >  No se admite el estándar Unicode en Windows 95, Windows 98 o Windows Millennium Edition.  
   
 -   Compatibilidad con un tipo de juego de caracteres multibyte (MBCS) denominado juego de caracteres de doble byte (DBCS) en todas las plataformas.  
   

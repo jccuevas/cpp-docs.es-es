@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>CSid (clase)
 Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).  
@@ -63,7 +67,7 @@ class CSid
 |Name|Descripción|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|El constructor.|  
-|[CSid:: ~ CSid](#dtor)|Destructor.|  
+|[CSid::~CSid](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -110,7 +114,7 @@ class CSid
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  Devuelve el nombre de la cuenta asociada con el `CSid` objeto.  
   
 ```
@@ -125,7 +129,7 @@ LPCTSTR AccountName() const throw(...);
   
  Si ningún nombre de cuenta para la `SID` puede encontrarse, `AccountName` devuelve una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  El constructor.  
   
 ```
@@ -171,7 +175,7 @@ explicit CSid(
   
  Si se produce un error en la inicialización, el constructor produce una [CAtlException clase](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  Destructor.  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  Si ningún nombre de cuenta para la `SID` puede encontrarse, **dominio** devuelve el dominio como una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Pruebas `SID` prefijos (identificador de seguridad) para la igualdad.  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  En compilaciones de depuración, la función hará que aparezca una aserción si el `CSid` objeto no es válido.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  Devuelve un puntero a un `SID` estructura (identificador de seguridad).  
   
 ```
@@ -263,7 +267,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  En compilaciones de depuración, la función hará que aparezca una aserción si el `CSid` objeto no es válido.  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  Devuelve un subautoridad especificado en un `SID` estructura (identificador de seguridad).  
   
 ```
@@ -283,7 +287,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  En compilaciones de depuración, la función hará que aparezca una aserción si el `CSid` objeto no es válido.  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  Devuelve el recuento de subautoridad.  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  En compilaciones de depuración, la función hará que aparezca una aserción si el `CSid` objeto no es válido.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  Pruebas de la `CSid` objeto validez.  
   
 ```
@@ -311,7 +315,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>Comentarios  
  El `IsValid` método valida la `CSid` objeto comprobando que el número de revisión está dentro del intervalo conocido y que el número de campos subauthorities es menor que el máximo.  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  Las actualizaciones de la `CSid` objeto según el nombre de cuenta y el dominio o una estructura de SID (identificador de seguridad) existente.  
   
 ```
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>Comentarios  
  Devuelve la dirección de la `SID` estructura.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  Devuelve el `SID` estructura (identificador de seguridad) como una cadena.  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve el `SID` estructura como una cadena en un formato adecuado para mostrar, el almacenamiento o la transmisión. Equivalente a [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), aunque esta función sólo está disponible en Windows 2000 o posterior y por lo que se emula para sistemas operativos anteriores.  
+ Devuelve el `SID` estructura como una cadena en un formato adecuado para mostrar, el almacenamiento o la transmisión. Equivalente a [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Devuelve una descripción del estado de la `CSid` objeto.  
   
 ```

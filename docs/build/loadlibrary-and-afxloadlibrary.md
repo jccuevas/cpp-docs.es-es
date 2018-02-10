@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary y AfxLoadLibrary
 Procesa llamada [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) para vincularse explícitamente a un archivo DLL. Si la función se realiza correctamente, se asigna el archivo DLL especificado en el espacio de direcciones del proceso que realiza la llamada y devuelve un identificador al archivo DLL que puede utilizarse con otras funciones en la vinculación explícita, por ejemplo, `GetProcAddress` y `FreeLibrary`.  
@@ -39,7 +43,7 @@ Procesa llamada [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (
  Si Windows no puede cargar el archivo DLL, el proceso puede intentar recuperarse del error. Por ejemplo, el proceso podría notificar al usuario del error y pedir al usuario que especifique otra ruta de acceso al archivo DLL.  
   
 > [!IMPORTANT]
->  Si el código es que se ejecute en Windows NT 4, Windows 2000 o Windows XP (anterior a SP1), asegúrese de especificar la ruta de acceso completa de los archivos DLL. En estos sistemas operativos, el directorio actual se busca en primer lugar cuando se cargan los archivos. Si no cumple la ruta de acceso del archivo, puede cargar un archivo que no es el previsto.  
+>  Asegúrese de especificar la ruta de acceso completa de los archivos DLL. Se busca primero en el directorio actual cuando se cargan los archivos. Si no cumple la ruta de acceso del archivo, puede cargar un archivo que no es el previsto.  
   
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Clase CPrivateObjectSecurityDesc
 Esta clase representa un objeto de descriptor de seguridad de objeto privado.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Name|Descripción|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|El constructor.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Destructor.|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Llamar a este método para convertir un descriptor de seguridad y las listas de control de acceso (ACL) en un formato que admite la propagación automática de entradas de control de acceso heredables (ACE).  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Comentarios  
  Este método intenta determinar si las ACE en el control de acceso discrecional (DACL) de lista y la lista de control de acceso de sistema (SACL) del descriptor de seguridad actual se heredan del descriptor de seguridad de elemento primario. Lo llama el [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) (función).  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  El constructor.  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el `CPrivateObjectSecurityDesc` objeto.  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  Destructor.  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Comentarios  
  El destructor libera todos los recursos asignados y elimina el descriptor de seguridad del objeto privado.  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  Llamar a este método para asignar e inicializar un descriptor de seguridad autorelativo para el objeto privado creado por el Administrador de recursos que realiza la llamada.  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>Comentarios  
  Este método llama a [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) o [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- El segundo método, que permite especificar el tipo de objeto GUID del nuevo objeto o controlar cómo se heredan las ACE, solo está disponible en sistemas que ejecutan Windows 2000 y versiones posteriores.  
+ El segundo método permite especificar el tipo de objeto GUID del nuevo objeto o controlar cómo se heredan las ACE.  
   
 > [!NOTE]
 >  Un descriptor de seguridad autorelativo es un descriptor de seguridad que se almacena toda la información de seguridad en un bloque de memoria contiguo.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Llame a este método para recuperar información del descriptor de seguridad de un objeto privado.  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>Comentarios  
  El descriptor de seguridad es una estructura y los datos asociados que contiene la información de seguridad para un objeto protegible.  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  Operador de asignación.  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CPrivateObjectSecurityDesc` objeto.  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  Llamar a este método para modificar el descriptor de seguridad de un objeto privado.  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  Devuelve true si la operación se realiza correctamente; de lo contrario, devuelve false.  
   
 ### <a name="remarks"></a>Comentarios  
- El segundo método, que permite especificar el GUID del tipo de objeto del objeto o controlar cómo se heredan las ACE, solo está disponible en sistemas que ejecutan Windows 2000 y versiones posteriores.  
+ El segundo método permite especificar el GUID del tipo de objeto del objeto o controlar cómo se heredan las ACE.  
   
 ## <a name="see-also"></a>Vea también  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

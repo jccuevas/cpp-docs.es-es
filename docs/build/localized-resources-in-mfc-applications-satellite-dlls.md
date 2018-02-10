@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - multiple language support [C++]
 - localization [C++], MFC resources
@@ -19,16 +21,17 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Recursos localizados en aplicaciones MFC: archivos DLL satélite
 La versión MFC 7.0 y posterior proporciona compatibilidad mejorada con archivos DLL satélite, una característica que le ayuda a crear aplicaciones en varios idiomas. Una licencia de satélite DLL es un [archivo DLL de recursos](../build/creating-a-resource-only-dll.md) que contiene los recursos de una aplicación localizados para un idioma determinado. Cuando la aplicación empieza a ejecutarse, MFC carga automáticamente el recurso localizado más adecuado para el entorno. Por ejemplo, podría tener una aplicación con recursos del idioma inglés con dos archivos DLL satélite, uno que contiene una traducción al francés de los recursos y otra que contiene una traducción de alemán. Cuando la aplicación se ejecuta en un sistema de idioma inglés, utiliza los recursos en inglés. Si se ejecuta en un sistema francés, utiliza los recursos en francés; Si se ejecutan en un sistema en alemán, utiliza los recursos de alemán.  
@@ -37,11 +40,11 @@ La versión MFC 7.0 y posterior proporciona compatibilidad mejorada con archivos
   
  MFC intenta cargar la DLL de recursos para cada uno de los siguientes idiomas en orden, deteniéndose cuando encuentra uno:  
   
-1.  (Windows 2000 o versiones posteriores únicamente) El idioma del usuario actual predeterminado interfaz de usuario, tal como lo devuelve a través de la API de Win32 GetUserDefaultUILanguage().  
+1. El idioma del usuario actual predeterminado interfaz de usuario, tal como lo devuelve a través de la API de Win32 GetUserDefaultUILanguage().  
   
-2.  (Windows 2000 o versiones posteriores únicamente) Idioma de interfaz de usuario predeterminado del usuario actual, sin ningún sublenguaje específico (es decir, ENC [inglés canadiense] se convierte en ESN [EE. UU. Inglés]).  
+2.  Idioma de interfaz de usuario predeterminado del usuario actual, sin ningún sublenguaje específico (es decir, ENC [inglés canadiense] se convierte en ESN [EE. UU. Inglés]).  
   
-3.  Idioma de interfaz de usuario de predeterminado del sistema. En Windows 2000 o posterior, se devuelve la API GetSystemDefaultUILanguage(). En otras plataformas, es el idioma del sistema operativo propio.  
+3.  El idioma predeterminado del sistema interfaz de usuario, tal como lo devuelve la API GetSystemDefaultUILanguage(). En otras plataformas, es el idioma del sistema operativo propio.  
   
 4.  El idioma predeterminado del sistema interfaz de usuario, sin ningún sublenguaje específico.  
   
@@ -49,7 +52,7 @@ La versión MFC 7.0 y posterior proporciona compatibilidad mejorada con archivos
   
  Si MFC no encuentra ningún archivo DLL satélite, utiliza los recursos están contenidos en la propia aplicación.  
   
- Por ejemplo, suponga que una aplicación LangExample.exe utiliza MFC y se está ejecutando en Windows 2000 varios de interfaz de usuario de sistema; el idioma de interfaz de usuario del sistema es ENU [EE. UU. Inglés] y el idioma de interfaz de usuario del usuario actual se establece en FRC [francés canadiense]. MFC busca los siguientes archivos DLL en el siguiente orden:  
+ Por ejemplo, suponga que una aplicación LangExample.exe utiliza MFC y se está ejecutando en un sistema de interfaz de usuario múltiple; el idioma de interfaz de usuario del sistema es ENU [EE. UU. Inglés] y el idioma de interfaz de usuario del usuario actual se establece en FRC [francés canadiense]. MFC busca los siguientes archivos DLL en el siguiente orden:  
   
 1.  LangExampleFRC.dll (idioma de interfaz de usuario del usuario).  
   

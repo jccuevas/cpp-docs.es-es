@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - language-portable code [C++]
@@ -18,21 +20,22 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b7ab27bb7a6458efde84451febaeb6f3ef37115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ead6470bbbeacd43326f4373877eb991e5899116
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internationalization-strategies"></a>Estrategias de internacionalización
 Según los sistemas operativos de destino y los mercados, tiene varias estrategias de internacionalización:  
   
--   La aplicación utiliza Unicode y, por tanto, se ejecuta en Windows 2000 y Windows NT, pero no en Windows 95 o Windows 98.  
+-   La aplicación usa Unicode.  
   
      Puede utilizar la funcionalidad específica de Unicode y todos los caracteres tienen un ancho de 16 bits (aunque se pueden utilizar caracteres ANSI en algunas partes del programa para fines especiales). La biblioteca de tiempo de ejecución de C proporciona funciones, macros y tipos de datos para programar solamente en Unicode. MFC está totalmente habilitado para Unicode.  
   
@@ -41,8 +44,6 @@ Según los sistemas operativos de destino y los mercados, tiene varias estrategi
      Se utiliza la funcionalidad específica de MBCS. Las cadenas pueden contener caracteres de un solo byte, caracteres de doble byte o ambos. La biblioteca de tiempo de ejecución de C proporciona funciones, macros y tipos de datos para programar solamente en MBCS. MFC está totalmente habilitado para MBCS.  
   
 -   Se escribe el código fuente de la aplicación para la portabilidad completa, al volver a compilar con el símbolo **_UNICODE** o el símbolo **_MBCS** definido, puede generar versiones que usan alguno. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
-  
--   La aplicación utiliza una biblioteca de contenedor para los que faltan las funciones Unicode en Windows 95, Windows 98 y Windows Millennium Edition como el descrito en [diseñar una sola App Unicode que se ejecuta en Windows 98 y Windows 2000](http://go.microsoft.com/fwlink/p/?LinkId=250770). Las bibliotecas de contenedor también están disponibles comercialmente.  
   
      Utilice totalmente portables tipos C de datos, macros y funciones de tiempo de ejecución. La flexibilidad de MFC es compatible con cualquiera de estas estrategias.  
   
