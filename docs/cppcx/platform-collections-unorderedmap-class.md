@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap (Clase)
 
@@ -102,7 +104,7 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 **Espacio de nombres:** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap:: Clear (método)
+## <a name="clear"></a>  Unorderedmap:: Clear (método)
 
 Quita todos los pares clave-valor del objeto UnorderedMap actual.
 
@@ -112,7 +114,7 @@ Quita todos los pares clave-valor del objeto UnorderedMap actual.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap:: First (método)
+## <a name="first"></a>  Unorderedmap:: First (método)
 
 Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento del mapa no ordenado.
 
@@ -132,7 +134,7 @@ Un iterador que especifica el primer elemento del mapa.
 
 Una manera cómoda de contener el iterador devuelto por First() es asignar el valor devuelto a una variable que se declara con el **automática** palabra clave de deducción de tipos. Por ejemplo: `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Método unorderedmap:: GetView
+## <a name="getview"></a>  Método unorderedmap:: GetView
 
 Devuelve una vista de solo lectura de UnorderedMap actual; es decir, un [unorderedmapview (clase)](../cppcx/platform-collections-unorderedmapview-class.md) que implementa el [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfaz.
 
@@ -190,9 +192,9 @@ La parte de valor del par clave-valor. El tipo de *valor* es typename *V*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true`Si la clave de un elemento del mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. `false`Si ningún elemento existente del mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par clave-valor y, a continuación, se agregan al objeto UnorderedMap actual.
+`true` Si la clave de un elemento del mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. `false` Si ningún elemento existente del mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par clave-valor y, a continuación, se agregan al objeto UnorderedMap actual.
 
-## <a name="lookup"></a>Unorderedmap:: Lookup (método)
+## <a name="lookup"></a>  Unorderedmap:: Lookup (método)
 
 Recupera el valor de tipo V asociado a la clave especificada de tipo K.
 
@@ -229,9 +231,9 @@ A [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/app
 
 ## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework
 
-Aplicaciones de la tienda de Windows que nos C# o Visual Basic proyecto IMap\<K, V > como IDictionary\<K, V >.
+En tiempo de ejecución de Windows aplicaciones que nos C# o Visual Basic IMap\<K, V > como IDictionary\<K, V >.
 
-## <a name="remove"></a>Unorderedmap:: Remove (método)
+## <a name="remove"></a>  Unorderedmap:: Remove (método)
 
 Elimina el par clave-valor especificado del objeto UnorderedMap.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
-## <a name="size"></a>Unorderedmap:: Size (método)
+## <a name="size"></a>  Unorderedmap:: Size (método)
 
 Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos de UnorderedMap.
 

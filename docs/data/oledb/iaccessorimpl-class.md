@@ -4,40 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IAccessorImpl
-dev_langs: C++
-helpviewer_keywords: IAccessorImpl class
+f1_keywords:
+- IAccessorImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb76054313946df5b085081a3a619ae3fb3de2ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cfc33432d12ac00c834d16f83cc26404e92c63e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl (Clase)
 Proporciona una implementación de la [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interfaz.  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template <  
-   class T,   
-   class BindType = ATLBINDINGS,   
-   class BindingVector = CAtlMap <   
-      HACCESSOR hAccessor,   
-      BindType* pBindingsStructure   
-   >   
->  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template <class T, 
+          class BindType = ATLBINDINGS,
+          class BindingVector = CAtlMap <HACCESSOR hAccessor, BindType* pBindingsStructure>>  
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
@@ -69,7 +68,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Libera un descriptor de acceso.|  
   
 ## <a name="remarks"></a>Comentarios  
- Esto es obligatorio en conjuntos de filas y comandos. OLE DB requiere que los proveedores implementar un **HACCESSOR**, que es una etiqueta a una matriz de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) estructuras. **HACCESSOR**s proporcionado por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un **ATLBINDINGS** en `IAccessorImpl`de definición de plantilla. `BindType`Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su **DBBINDING** de matriz, así como una marcas de recuento y el descriptor de acceso de referencia.  
+ Esto es obligatorio en conjuntos de filas y comandos. OLE DB requiere que los proveedores implementar un **HACCESSOR**, que es una etiqueta a una matriz de [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) estructuras. **HACCESSOR**s proporcionado por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un **ATLBINDINGS** en `IAccessorImpl`de definición de plantilla. `BindType` Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su **DBBINDING** de matriz, así como una marcas de recuento y el descriptor de acceso de referencia.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldb.h  

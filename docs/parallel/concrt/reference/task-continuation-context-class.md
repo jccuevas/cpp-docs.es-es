@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,25 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs: C++
-helpviewer_keywords: task_continuation_context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b78688493bbb8d8bdad0696a7c8fcf467519000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context (Clase)
-La clase `task_continuation_context` permite especificar dónde se desea que se ejecute una continuación. Solo es de utilidad utilizar esta clase desde una aplicación de la Tienda Windows. Para las aplicaciones que no sean de la Tienda Windows, el contexto de ejecución de la continuación de la tarea determina el runtime y no se puede configurar.  
+La clase `task_continuation_context` permite especificar dónde se desea que se ejecute una continuación. Sólo es útil utilizar esta clase desde una aplicación de Windows en tiempo de ejecución. Para las aplicaciones en tiempo de ejecución que no sean de Windows, el contexto de ejecución de la continuación de la tarea es determinado por el tiempo de ejecución y no es configurable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +64,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Espacio de nombres:** simultaneidad  
 
-## <a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a> get_current_winrt_context
  Devuelve un objeto de contexto de continuación de tarea que representa el contexto del subproceso actual WinRT.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -80,7 +84,7 @@ static task_continuation_context get_current_winrt_context();
  Este método es similar a la `use_current` (método), pero también está disponible en código C++ nativo sin C++ / compatibilidad con extensiones CX. Está destinado a usuarios avanzados usando escribir C + / código de biblioteca independiente CX nativo y los llamadores en tiempo de ejecución de Windows. A menos que se necesita esta funcionalidad, se recomienda la `use_current` método, que solo está disponible para C + / clientes CX.  
   
   
-##  <a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a> use_arbitrary 
 
  Crea un contexto de continuación de la tarea que permite elegir el contexto de ejecución para una continuación en el runtime.  
   
@@ -94,11 +98,11 @@ static task_continuation_context use_arbitrary();
 ### <a name="remarks"></a>Comentarios  
  Cuando se utiliza en este contexto de continuación de la continuación se ejecutará en un contexto que el runtime elige incluso si la tarea antecedente es un contenedor que tenga en cuenta.  
   
- `use_arbitrary`puede utilizarse para desactivar el comportamiento predeterminado para una continuación de una tarea consciente de apartamento creada en STA.  
+ `use_arbitrary` puede utilizarse para desactivar el comportamiento predeterminado para una continuación de una tarea consciente de apartamento creada en STA.  
   
- Este método solo está disponible para aplicaciones de la tienda de Windows.  
+ Este método solo está disponible para las aplicaciones de Windows en tiempo de ejecución.  
   
-##  <a name="use_current"></a>use_current 
+##  <a name="use_current"></a> use_current 
 
  Devuelve un objeto de contexto de continuación de tarea que representa el contexto de ejecución actual.  
   
@@ -114,9 +118,9 @@ static task_continuation_context use_current();
   
  El valor devuelto por `use_current` puede utilizarse para indicar al tiempo de ejecución que debe ejecutarse la continuación en el contexto capturado (STA vs MTA) independientemente de si está o no la tarea antecedente reconoce el apartamento. Un contenedor compatible con la tarea es una tarea que desencapsula un tiempo de ejecución de Windows `IAsyncInfo` interfaz o una tarea que desciende de dicha tarea.  
   
- Este método solo está disponible para aplicaciones de la tienda de Windows.  
+ Este método solo está disponible para las aplicaciones de Windows en tiempo de ejecución.  
   
-##  <a name="use_default"></a>use_default 
+##  <a name="use_default"></a> use_default 
 
  Crea el contexto de continuación de tarea predeterminado.  
   
@@ -128,13 +132,13 @@ static task_continuation_context use_default();
  El contexto de continuación de forma predeterminada.  
   
 ### <a name="remarks"></a>Comentarios  
- Se utiliza el contexto predeterminado si no especifica un contexto de continuación cuando se llama a la `then` método. En las aplicaciones de Windows para Windows 7 y, a continuación, así como aplicaciones de escritorio en Windows 8 y versiones posteriores, el tiempo de ejecución determina dónde se ejecutarán las continuaciones de tareas. Sin embargo, en una aplicación de la tienda de Windows, el contexto de continuación de forma predeterminada para una continuación en una tarea consciente de apartamento es el contenedor donde `then` se invoca.  
+ Se utiliza el contexto predeterminado si no especifica un contexto de continuación cuando se llama a la `then` método. En las aplicaciones de Windows para Windows 7 y, a continuación, así como aplicaciones de escritorio en Windows 8 y versiones posteriores, el tiempo de ejecución determina dónde se ejecutarán las continuaciones de tareas. Sin embargo, en una aplicación de Windows en tiempo de ejecución, el contexto de continuación de forma predeterminada para una continuación en una tarea consciente de apartamento es el contenedor donde `then` se invoca.  
   
  Un contenedor compatible con la tarea es una tarea que desencapsula un tiempo de ejecución de Windows `IAsyncInfo` interfaz o una tarea que desciende de dicha tarea. Por lo tanto, si programa una continuación de una tarea de apartamento tenga en cuenta en un STA de Windows en tiempo de ejecución, la continuación se ejecutará en ese STA.  
   
  Una continuación de una tarea consciente de apartamento no se ejecutará en un contexto que se elige el tiempo de ejecución.  
 
-## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution  
 Devuelve un objeto de contexto de continuación de tarea que representa el contexto de ejecución sincrónica.  
   
 ## <a name="syntax"></a>Sintaxis  
