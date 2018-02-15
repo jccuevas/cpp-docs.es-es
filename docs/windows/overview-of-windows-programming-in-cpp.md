@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -28,7 +30,7 @@ Se puede utilizar Visual C++ para escribir una gran variedad de programas que se
 
 Existen varias categorías de aplicaciones de Windows que se pueden desarrollar con Visual C++. Estas categorías tienen distintos modelos de programación o de aplicación, lo que significa que usan diferentes bibliotecas y API que proporcionan acceso a la plataforma y proveen la interfaz de usuario.
 
-- [Aplicaciones universales de Windows](#BK_WindowsUniversal). La tercera categoría de aplicaciones de Windows se introdujo con Windows 8 y continúa siendo compatible con Windows 10. Estas aplicaciones suelen denominarse “aplicaciones de Windows” e incluyen tanto aplicaciones de escritorio como móviles destinadas a diversos dispositivos. Pueden escribirse en C++/CX, que es un dialecto de C++ compatible con el desarrollo de Windows en tiempo de ejecución, o también en C++ estándar con COM mediante la biblioteca de Windows en tiempo de ejecución (WRL). Estas aplicaciones se diseñaron originalmente para ejecutarse a pantalla completa, aunque en Windows 10 los usuarios tienen la opción de ejecutarlas en una ventana del escritorio. Estas aplicaciones están pensadas para dispositivos táctiles, pero pueden usarse fácilmente con el mouse si así lo prefieren los usuarios o si no se dispone de pantalla táctil. Se distribuyen desde la Tienda Windows, hecho que llevó a llamarlas “Aplicaciones de la Tienda Windows”.
+- [Aplicaciones universales de Windows](#BK_WindowsUniversal). La tercera categoría de aplicaciones de Windows se introdujo con Windows 8 y continúa siendo compatible con Windows 10. Estas aplicaciones suelen denominarse “aplicaciones de Windows” e incluyen tanto aplicaciones de escritorio como móviles destinadas a diversos dispositivos. Pueden escribirse en C++/CX, que es un dialecto de C++ compatible con el desarrollo de Windows en tiempo de ejecución, o también en C++ estándar con COM mediante la biblioteca de Windows en tiempo de ejecución (WRL). Estas aplicaciones se diseñaron originalmente para ejecutarse a pantalla completa, aunque en Windows 10 los usuarios tienen la opción de ejecutarlas en una ventana del escritorio. Estas aplicaciones están pensadas para dispositivos táctiles, pero pueden usarse fácilmente con el mouse si así lo prefieren los usuarios o si no se dispone de pantalla táctil. Estas aplicaciones se distribuyen desde Microsoft Store, hecho que llevó a llamarlas "Almacén" aplicaciones.
 
 - [Aplicaciones y juegos de escritorio, servidor y nube](#BK_Native). Esta categoría incluye aplicaciones de escritorio de Windows, a veces denominadas aplicaciones Win32 debido a que usaban la API Win32. Antes de Windows 8, todas las aplicaciones de Windows pertenecían a esta categoría. Las aplicaciones de esta categoría pueden usar MFC para la interfaz de usuario y ATL para interactuar con los componentes de Windows, que normalmente son objetos COM.
 
@@ -43,7 +45,7 @@ Existen varias categorías de aplicaciones de Windows que se pueden desarrollar 
 Con Windows 10, las aplicaciones pueden ejecutarse en todos los dispositivos que incluyen Windows 10, ya sean tabletas, teléfonos móviles o equipos de escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  El modelo de programación para los dos tipos de aplicaciones es diferente de las aplicaciones de escritorio de Win32. Estas aplicaciones de Windows se ejecutan en Windows en tiempo de ejecución, que proporciona los elementos de la interfaz de usuario, los servicios esenciales para estas aplicaciones y una interfaz para los diversos dispositivos de hardware compatibles. Estas aplicaciones se compilan en código nativo y tienen una interfaz de usuario XAML o usan DirectX. También puede escribir componentes de Windows en tiempo de ejecución en código nativo que otras aplicaciones de Windows pueden consumir; Esto incluye aplicaciones escritas en C#, Visual Basic o JavaScript. Para obtener más información, consulte [crear una aplicación "Hello world" para UWP en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp), [crear un juego UWP simple con DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game), y [componentes de creación en tiempo de ejecución de Windows en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 > [!TIP]
-> Para Windows 10, puede utilizar el convertidor de la aplicación de escritorio para empaquetar la aplicación de escritorio existente para la implementación a través de la tienda de Windows. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Para Windows 10, puede utilizar el convertidor de la aplicación de escritorio para empaquetar la aplicación de escritorio existente para la implementación a través de Microsoft Store. Para obtener más información, vea [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (Usar el tiempo de ejecución de Visual C++ en el proyecto Centennial) y [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
 
 Para obtener ejemplos de la Plataforma universal de Windows, consulte [Windows Universal Samples](https://github.com/Microsoft/Windows-universal-samples)(Ejemplos de Windows Universal) en GitHub.
 

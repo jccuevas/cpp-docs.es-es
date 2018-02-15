@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -68,7 +71,7 @@ FILE *_wfdopen(
 
 ### <a name="parameters"></a>Parámetros
 
-*FD*  
+*fd*  
 Descriptor del archivo abierto.
 
 *mode*  
@@ -82,7 +85,7 @@ Para obtener más información sobre estos y otros códigos error, consulte [_do
 
 ## <a name="remarks"></a>Comentarios
 
-El `_fdopen` función asocia un flujo de E/S con el archivo que se identifica mediante *fd*, lo que permite un archivo que está abierto para que E/S de bajo nivel se almacenan en búfer y da formato. `_wfdopen`es una versión con caracteres anchos de `_fdopen`; el *modo* argumento pasado a `_wfdopen` es una cadena de caracteres anchos. De lo contrario, `_wfdopen` y `_fdopen` se comportan de forma idéntica.
+El `_fdopen` función asocia un flujo de E/S con el archivo que se identifica mediante *fd*, lo que permite un archivo que está abierto para que E/S de bajo nivel se almacenan en búfer y da formato. `_wfdopen` es una versión con caracteres anchos de `_fdopen`; el *modo* argumento pasado a `_wfdopen` es una cadena de caracteres anchos. De lo contrario, `_wfdopen` y `_fdopen` se comportan de forma idéntica.
 
 Pasado de descriptores de archivo `_fdopen` pertenecen por el valor devuelto `FILE *` secuencia. Si `_fdopen` es correcta, no llame a [ \_cerrar](../../c-runtime-library/reference/close.md) en el descriptor de archivo. Al llamar a [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) en el valor devuelto `FILE *` también se cierra el descriptor de archivo.
 
@@ -134,7 +137,7 @@ Si `t` o `b` no se proporciona en *modo*, el modo de traducción predeterminado 
 
 Los caracteres válidos para el *modo* cadena que se usa en `fopen` y `_fdopen` corresponden a *oflag* argumentos que se usan en [ \_abrir](../../c-runtime-library/reference/open-wopen.md) y [ \_sopen](../../c-runtime-library/reference/sopen-wsopen.md), tal y como se muestra en esta tabla:
 
-|Caracteres de *modo* cadena|Equivalente *oflag* valor `_open` y`_sopen`|
+|Caracteres de *modo* cadena|Equivalente *oflag* valor `_open` y `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124; \_O\_ANEXADO** (normalmente  **\_O\_WRONLY &#124; \_O\_crear &#124; \_O\_ANEXADO**)|
 |`a+`|**\_O\_RDWR &#124; \_O\_ANEXADO** (normalmente  **\_O\_RDWR &#124; \_O\_ANEXADO &#124; \_O\_CREAT** )|
@@ -143,7 +146,7 @@ Los caracteres válidos para el *modo* cadena que se usa en `fopen` y `_fdopen` 
 |`w`|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY &#124; \_O\_crear &#124; \_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (normalmente  **\_O\_RDWR &#124; \_O\_crear &#124; \_O\_TRUNC**)|
 |`b`|**\_O\_BINARIO**|
-|`t`|**\_O\_TEXTO**|
+|`t`|**\_O\_TEXT**|
 |`c`|Ninguna|
 |`n`|Ninguna|
 
