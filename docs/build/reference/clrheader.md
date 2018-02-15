@@ -1,29 +1,33 @@
 ---
-title: -CLRHEADER | Documentos de Microsoft
+title: -CLRHEADER | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /CLRHEADER
-dev_langs: C++
+f1_keywords:
+- /CLRHEADER
+dev_langs:
+- C++
 helpviewer_keywords:
 - -CLRHEADER dumpbin option
 - /CLRHEADER dumpbin option
 - CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8ab1617cffd7560ab47d69f7304df0c76b661eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 73f68c4f73d132254ea64d4b3b3b9f787f3a4b82
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clrheader"></a>/CLRHEADER
 ```  
@@ -45,13 +49,9 @@ ms.lasthandoff: 12/21/2017
   
 -   0--/clr (la imagen puede contener código nativo).  
   
--   1--/ CLR: safe (la imagen es MSIL solo puede ejecutarse en cualquier plataforma CLR y, posiblemente comprobable).  
-  
--   3--/ CLR: pure (imagen es sólo MSIL, pero solo puede ejecutarse en x86 plataformas).  
-  
  Puede comprobar mediante programación si una imagen se generó para common language runtime.  Para obtener más información, consulte [Cómo: determinar si una imagen es nativa o CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
   
- Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
+ El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y se quitará en una versión futura del compilador. El código que debe ser "pura" o "segura" se debe pasar a C#. 
   
 ## <a name="see-also"></a>Vea también  
  [Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)

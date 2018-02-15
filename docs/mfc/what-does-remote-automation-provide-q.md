@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-does-remote-automation-provide"></a>¿Qué proporciona la automatización remota?
 Automatización remota permite a los programas invocar `IDispatch` las implementaciones en un equipo desde otro equipo. También admite otras interfaces requeridas por la automatización, específicamente **IEnumVARIANT** compatibilidad con las colecciones. No proporciona la capacidad de distribuir otras interfaces COM (excepto **IUnknown**, evidentemente) y, al igual que la automatización regular, contiene compatibilidad con cálculo de referencias solo para esos tipos de datos compatibles con la automatización.  

@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>.Archivos netmodule como entrada del vinculador
 Link.exe ahora acepta archivos MSIL .obj y .netmodule como entrada. El archivo de salida generado por el vinculador será un ensamblado o un archivo .netmodule sin ninguna dependencia de tiempo de ejecución de cualquiera de los archivos .obj o .netmodule que se utilizaron como entrada al vinculador.  
   
  archivos .netmodule creados por el compilador de Visual C++ con [/LN (crear un módulo MSIL)](../../build/reference/ln-create-msil-module.md) o el vinculador con [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md). archivos .obj siempre se crean en una compilación de Visual C++. Para otros compiladores de Visual Studio, use la **/target: module** opción del compilador.  
   
- En la mayoría de los casos, debe pasar al vinculador el archivo .obj desde la compilación de Visual C++ que creó el archivo .netmodule, a menos que el archivo .netmodule se creó con [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Archivos MSIL .netmodule utilizados como entrada al vinculador deben ser MSIL puro, que se puede generar mediante el compilador de Visual C++ utilizando **/CLR: safe**. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015. Los compiladores de .NET de Visual Studio generan módulos MSIL puros de forma predeterminada.  
+  Debe pasar al vinculador el archivo .obj desde la compilación de Visual C++ que creó el archivo .netmodule. Pasar en un archivo .netmodule ya no se admite porque el **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y se quitará en una versión futura del compilador.   
   
  Para obtener información sobre cómo invocar al vinculador desde la línea de comandos, consulte [sintaxis de línea de comandos del vinculador](../../build/reference/linker-command-line-syntax.md), [de compilación de C/C ++ en la línea de comandos](../../build/building-on-the-command-line.md), y [establecer la ruta de acceso y las Variables de entorno Compilaciones de línea de comandos](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Pasa un archivo .netmodule o .dll al vinculador que se compiló mediante el compilador de Visual C++ con **/CLR** o con **/CLR: pure** puede dar lugar a un error del vinculador. Para obtener más información, consulte [elegir el formato de archivos de entrada .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Pasa un archivo .netmodule o .dll al vinculador que se compiló mediante el compilador de Visual C++ con **/CLR** puede dar lugar a un error del vinculador. Para obtener más información, consulte [elegir el formato de archivos de entrada .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- El vinculador acepta archivos .obj nativos así como archivos .obj MSIL compilados con **/CLR**, **/CLR: pure**, o **/CLR: safe**. Cuando se pasan archivos .obj mixtos en la misma compilación, la capacidad del archivo de salida resultante, de forma predeterminada, será igual al nivel más bajo de la capacidad de los módulos de entrada. Por ejemplo, si se pasa un .obj seguro y uno puro al vinculador, el archivo de salida será puro. [/CLRIMAGETYPE (Especificar tipo de imagen de CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) permite especificar un nivel inferior de capacidad, si eso es lo necesita.  
+ El vinculador acepta archivos .obj nativos así como archivos .obj MSIL compilados con **/CLR**. Cuando se pasan archivos .obj mixtos en la misma compilación, la capacidad del archivo de salida resultante, de forma predeterminada, será igual al nivel más bajo de la capacidad de los módulos de entrada. 
   
  Si actualmente tiene una aplicación que se compone de dos o más ensamblados y desea que la aplicación para poder estar contenidos en un ensamblado, debe volver a compilar los ensamblados y, a continuación, vincular los archivos .obj y .netmodule para producir un único ensamblado.  
   

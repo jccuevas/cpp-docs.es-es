@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>Administrador de conexiones de automatización remota
 Para configurar equipos cliente y servidor, debe realizar cambios en el registro. En lugar de hacerlo manualmente, es mucho más fácil de usar la herramienta Administrador de conexiones de automatización remota (RAC). Esta herramienta, RACMGR32. EXE, junto con el archivo RACREG32. DLL, debe copiarse en cualquier directorio que elija. Si lo pone en la ruta de acceso, se puede ejecutar desde la barra de tareas mediante la ejecución. Como alternativa, puede crear un acceso directo o colocar una referencia a él en el menú Inicio.  

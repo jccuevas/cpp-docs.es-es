@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: editbin
-dev_langs: C++
-helpviewer_keywords: EDITBIN program, options
+f1_keywords:
+- editbin
+dev_langs:
+- C++
+helpviewer_keywords:
+- EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="editbin-options"></a>Opciones de EDITBIN
 Puede utilizar EDITBIN para modificar archivos objeto, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL). Opciones especifican los cambios que realiza EDITBIN.  
@@ -31,26 +36,26 @@ Puede utilizar EDITBIN para modificar archivos objeto, archivos ejecutables y bi
   
 |Opción|Propósito|  
 |------------|-------------|  
-|[/ ALLOWBIND](../../build/reference/allowbind.md)|Especifica si se puede enlazar un archivo DLL.|  
-|[/ ALLOWISOLATION](../../build/reference/allowisolation.md)|Especifica el archivo DLL o el comportamiento de búsqueda de manifiesto del archivo ejecutable.|  
-|[/ APPCONTAINER](../../build/reference/appcontainer.md)|Especifica si la aplicación se debe ejecutar dentro de un AppContainer: por ejemplo, un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicación.|  
-|[/ BIND](../../build/reference/bind.md)|Establece las direcciones de los puntos de entrada en los objetos especificados para acelerar el tiempo de carga.|  
-|[/ DYNAMICBASE](../../build/reference/dynamicbase.md)|Especifica si el archivo DLL o una imagen ejecutable puede ser reorganizar aleatoriamente en tiempo de carga mediante el uso de selección aleatoria de diseño de espacio de direcciones (ASLR).|  
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Informes de errores internos a Microsoft.|  
-|[O MONTÓN](../../build/reference/heap.md)|Establece el tamaño del montón de la imagen ejecutable en bytes.|  
-|[/ HIGHENTROPYVA](../../build/reference/highentropyva.md)|Especifica si el archivo DLL o una imagen ejecutable admite selección aleatoria de alta entropía direcciones (64 bits) espacio diseño (ASLR).|  
-|[/ INTEGRITYCHECK](../../build/reference/integritycheck.md)|Especifica si se debe comprobar la firma digital en tiempo de carga.|  
-|[/ LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Especifica si el objeto admite direcciones que sean más de dos gigabytes.|  
-|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Suprime la pancarta de inicio EDITBIN.|  
+|[/ALLOWBIND](../../build/reference/allowbind.md)|Especifica si se puede enlazar un archivo DLL.|  
+|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Especifica el archivo DLL o el comportamiento de búsqueda de manifiesto del archivo ejecutable.|  
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|Especifica si la aplicación se debe ejecutar dentro de un AppContainer: por ejemplo, una aplicación de UWP.|  
+|[/BIND](../../build/reference/bind.md)|Establece las direcciones de los puntos de entrada en los objetos especificados para acelerar el tiempo de carga.|  
+|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Especifica si el archivo DLL o una imagen ejecutable puede ser reorganizar aleatoriamente en tiempo de carga mediante el uso de selección aleatoria de diseño de espacio de direcciones (ASLR).|  
+|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Informes de errores internos a Microsoft.|  
+|[/HEAP](../../build/reference/heap.md)|Establece el tamaño del montón de la imagen ejecutable en bytes.|  
+|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Especifica si el archivo DLL o una imagen ejecutable admite selección aleatoria de alta entropía direcciones (64 bits) espacio diseño (ASLR).|  
+|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Especifica si se debe comprobar la firma digital en tiempo de carga.|  
+|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Especifica si el objeto admite direcciones que sean más de dos gigabytes.|  
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Suprime la pancarta de inicio EDITBIN.|  
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Especifica si la imagen ejecutable es compatible con la prevención de ejecución de datos de Windows.|  
 |[/REBASE](../../build/reference/rebase.md)|Establece las direcciones base para los objetos especificados.|  
-|[Y LANZAMIENTO](../../build/reference/release.md)|Establece la suma de comprobación en el encabezado.|  
+|[/RELEASE](../../build/reference/release.md)|Establece la suma de comprobación en el encabezado.|  
 |[/ SECCIÓN](../../build/reference/section-editbin.md)|Invalida los atributos de una sección.|  
-|[/ PILA](../../build/reference/stack.md)|Establece el tamaño de pila de la imagen ejecutable en bytes.|  
-|[/ SUBSISTEMA](../../build/reference/subsystem.md)|Especifica el entorno de ejecución.|  
+|[/STACK](../../build/reference/stack.md)|Establece el tamaño de pila de la imagen ejecutable en bytes.|  
+|[/SUBSYSTEM](../../build/reference/subsystem.md)|Especifica el entorno de ejecución.|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|Especifica que la imagen ejecutable debe copiar en el archivo de intercambio y, a continuación, ejecute desde ahí.|  
 |[/TSAWARE](../../build/reference/tsaware.md)|Especifica que la aplicación está diseñada para ejecutarse en un entorno multiusuario.|  
-|[/ VERSIÓN](../../build/reference/version.md)|Establece el número de versión en el encabezado.|  
+|[/VERSION](../../build/reference/version.md)|Establece el número de versión en el encabezado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de compilación de C/c ++](../../build/reference/c-cpp-build-tools.md)   

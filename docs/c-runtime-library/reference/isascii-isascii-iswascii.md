@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -32,7 +33,8 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3858955a1409842d80439401d6c689c06f6c86f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e76d91aef22c3a01d4ee9321baf1165f3ae97412
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -76,7 +79,7 @@ Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter ASCII. `__isascii`Devuelve un valor distinto de cero si `c` es un carácter ASCII (en el intervalo 0 x 00 - 0x7F). `iswascii` devuelve un valor distinto de cero si `c` es una representación de caracteres anchos de un carácter ASCII. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.
+Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter ASCII. `__isascii` Devuelve un valor distinto de cero si `c` es un carácter ASCII (en el intervalo 0 x 00 - 0x7F). `iswascii` devuelve un valor distinto de cero si `c` es una representación de caracteres anchos de un carácter ASCII. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.
 
 ## <a name="remarks"></a>Comentarios
 

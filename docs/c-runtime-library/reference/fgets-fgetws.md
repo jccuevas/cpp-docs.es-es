@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Obtiene una cadena de una secuencia.  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `fgets` lee una cadena en el argumento `stream` de entrada y la almacena en `str`. `fgets`lee los caracteres desde la posición de la secuencia actual e incluyendo el primer carácter de nueva línea al final de la secuencia, o hasta que el número de caracteres leídos es igual a `n` - 1, lo que ocurra primero. Se anexa un carácter nulo al resultado que se almacena en `str`. El carácter de nueva línea, cuando se lee, se incluye en la cadena.  
+ La función `fgets` lee una cadena en el argumento `stream` de entrada y la almacena en `str`. `fgets` lee los caracteres desde la posición de la secuencia actual e incluyendo el primer carácter de nueva línea al final de la secuencia, o hasta que el número de caracteres leídos es igual a `n` - 1, lo que ocurra primero. Se anexa un carácter nulo al resultado que se almacena en `str`. El carácter de nueva línea, cuando se lee, se incluye en la cadena.  
   
  `fgetws` es una versión con caracteres anchos de `fgets`.  
   

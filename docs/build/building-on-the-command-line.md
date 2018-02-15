@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar el código de C o C++ en la línea de comandos
 
@@ -82,7 +85,7 @@ Archivos de comandos adicionales están disponibles para configurar las arquitec
 >   
 > El archivo vcvarsall.bat también puede variar de una versión a otra. Si la versión actual de Visual C++ se instala en un equipo que también tiene una versión anterior de Visual C++, no ejecute vcvarsall.bat u otro archivo de comandos de versiones diferentes en la misma ventana del símbolo del sistema.  
  
-Es la manera más sencilla para especificar una arquitectura de compilación determinada en una ventana de comandos existentes usar el archivo vcvarsall.bat. Puede utilizar vcvarsall.bat para establecer variables de entorno para configurar la línea de comandos para la compilación nativa de 32 bits o 64 bits, o para la compilación cruzada para x86, x64 o procesadores ARM; Tienda de Windows de destino, la plataforma Universal de Windows o plataformas de escritorio de Windows; para especificar qué SDK de Windows a utilizar; y para especificar la versión del conjunto de herramientas de plataforma. Si no se proporcionan argumentos, vcvarsall.bat configura las variables de entorno para usar el compilador nativo de 32 bits actual para x86 destinos de escritorio de Windows. Sin embargo, puede utilizarlo para configurar cualquiera de nativo o entre herramientas del compilador. Si se especifica una configuración de compilador que no está instalada o no está disponible en la arquitectura del equipo de compilación, se muestra un mensaje de error. Esta tabla muestra los argumentos de la arquitectura admitida:  
+Es la manera más sencilla para especificar una arquitectura de compilación determinada en una ventana de comandos existentes usar el archivo vcvarsall.bat. Puede utilizar vcvarsall.bat para establecer variables de entorno para configurar la línea de comandos para la compilación nativa de 32 bits o 64 bits, o para la compilación cruzada para x86, x64 o procesadores ARM; para tener como destino Microsoft Store, plataforma Universal de Windows o plataformas de escritorio de Windows; para especificar qué SDK de Windows a utilizar; y para especificar la versión del conjunto de herramientas de plataforma. Si no se proporcionan argumentos, vcvarsall.bat configura las variables de entorno para usar el compilador nativo de 32 bits actual para x86 destinos de escritorio de Windows. Sin embargo, puede utilizarlo para configurar cualquiera de nativo o entre herramientas del compilador. Si se especifica una configuración de compilador que no está instalada o no está disponible en la arquitectura del equipo de compilación, se muestra un mensaje de error. Esta tabla muestra los argumentos de la arquitectura admitida:  
   
 |Argumento de vcvarsall.bat arquitectura|Compilador|Arquitectura del equipo host|Arquitectura de salida de compilación|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
@@ -135,7 +138,7 @@ Para compilar un proyecto de C o C++ en la línea de comandos, puede usar estas 
 [CL](../build/reference/compiling-a-c-cpp-program.md)  
 Utilice el compilador (cl.exe) para compilar y vincular archivos de código fuente en aplicaciones, bibliotecas y DLL.  
   
-[Vínculo](../build/reference/linking.md)  
+[Link](../build/reference/linking.md)  
 Utilice el enlazador (link.exe) para vincular bibliotecas y archivos de objeto compilados en aplicaciones y DLL.  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -176,7 +179,7 @@ Proporciona vínculos a artículos en los que se explica cómo utilizar MSBuild.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
 
-[/ MD, / MT, /LD (utilizar la biblioteca en tiempo de ejecución)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD (Usar la biblioteca en tiempo de ejecución)](../build/reference/md-mt-ld-use-run-time-library.md)  
 Describe cómo utilizar estas opciones del compilador para usar una biblioteca en tiempo de ejecución Debug o Release.  
   
 [Opciones del compilador de C o C++](../build/reference/compiler-options.md)  

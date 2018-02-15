@@ -1,13 +1,15 @@
 ---
-title: _alloca | Documentos de Microsoft
+title: _alloca | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 Asigna memoria en la pila. Esta función está desusada porque hay una versión más segura; vea [_malloca](../../c-runtime-library/reference/malloca.md).  
@@ -61,7 +65,7 @@ void *_alloca(
  Si no se puede asignar el espacio, se genera una excepción de desbordamiento de pila. La excepción de desbordamiento de pila no es una excepción de C++, sino que es una excepción estructurada. En lugar de usar el control de excepciones de C++, debe usar el [control de excepciones estructuradas](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Comentarios  
- `_alloca`asigna `size` bytes a partir de la pila del programa. El espacio asignado se libera automáticamente cuando finaliza la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por `_alloca` como argumento a [libre](../../c-runtime-library/reference/free.md).  
+ `_alloca` asigna `size` bytes a partir de la pila del programa. El espacio asignado se libera automáticamente cuando finaliza la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por `_alloca` como argumento a [libre](../../c-runtime-library/reference/free.md).  
   
  Existen restricciones para llamar explícitamente a `_alloca` en un controlador de excepciones. Las rutinas del controlador de excepciones que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: llevan a cabo sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por consiguiente, si se llama explícitamente a `_alloca` en cualquiera de los siguientes escenarios, se produce un error del programa durante la devolución de la rutina del controlador de excepciones a la que se llama:  
   

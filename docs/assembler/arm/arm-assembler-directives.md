@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-directives"></a>Directiva del ensamblador de ARM
 En su mayor parte, el ensamblador de ARM de Microsoft usa el lenguaje de ensamblador ARM, que se describe en el capítulo 7 de la [Guía de herramientas de ensamblador de ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Sin embargo, las implementaciones de Microsoft de algunas directivas de ensamblado diferencian de las directivas de ensamblado ARM. En este artículo se explica las diferencias.  
@@ -57,7 +60,7 @@ En su mayor parte, el ensamblador de ARM de Microsoft usa el lenguaje de ensambl
 EXPORTsym {[type]}  
 ```  
   
- `sym`es el símbolo que se exportarán.  `[type]`, si se especifica, puede ser `[DATA]` para indicar que el símbolo apunta a los datos o `[FUNC]` para indicar que el símbolo hace referencia al código.  
+ `sym` es el símbolo que se exportarán.  `[type]`, si se especifica, puede ser `[DATA]` para indicar que el símbolo apunta a los datos o `[FUNC]` para indicar que el símbolo hace referencia al código.  
   
  GLOBAL es un sinónimo para la exportación.  
   
@@ -75,13 +78,13 @@ EXPORTsym {[type]}
 IMPORT sym{, WEAK alias{, TYPE t}}  
 ```  
   
- `sym`es el nombre del símbolo que desea importar.  
+ `sym` es el nombre del símbolo que desea importar.  
   
  Si DÉBIL `alias` se especifica, indica que `sym` es un external débil. Si se encuentra ninguna definición para ella en tiempo de vinculación, todas las referencias a ella en su lugar, enlazar a `alias`.  
   
  Si tipo `t` no se especifica, `t` indica cómo el vinculador debería intentar resolver `sym`.  Estos valores para `t` son posibles:   
-1: no se realice una búsqueda de la biblioteca de`sym`  
-2: realizar una búsqueda de la biblioteca de`sym`  
+1: no se realice una búsqueda de la biblioteca de `sym`  
+2: realizar una búsqueda de la biblioteca de `sym`  
 3:`sym` es un alias para `alias` (valor predeterminado)  
   
  EXTERN es un sinónimo para la importación, salvo que `sym` se importan solo si hay referencias a él en el ensamblado actual.  
@@ -99,7 +102,7 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  No se admite.  
   
  REUBIQUE  
- `RELOC n`solo se puede seguir una instrucción o una directiva de definición de datos. No hay ninguna "anónimo"symbol"que se puede reasignar.  
+ `RELOC n` solo se puede seguir una instrucción o una directiva de definición de datos. No hay ninguna "anónimo"symbol"que se puede reasignar.  
   
  REQUERIR  
  No se admite.  

@@ -1,29 +1,33 @@
 ---
-title: -SUBSYSTEM | Documentos de Microsoft
+title: -SUBSYSTEM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /subsystem
-dev_langs: C++
+f1_keywords:
+- /subsystem
+dev_langs:
+- C++
 helpviewer_keywords:
 - /SUBSYSTEM editbin option
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Especifica el entorno de ejecución que la imagen ejecutable requiere.  
@@ -40,7 +44,7 @@ Especifica el entorno de ejecución que la imagen ejecutable requiere.
  Puede especificar uno de los siguientes subsistemas:  
   
  BOOT_APPLICATION  
- Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte[sobre el proveedor WMI de BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Aplicación que se ejecuta en el entorno de arranque de Windows. Para obtener más información acerca de las aplicaciones de arranque, consulte [sobre el proveedor WMI de BCD](http://msdn.microsoft.com/library/aa362639.aspx).  
   
  CONSOLE  
  Una aplicación de modo de carácter de Windows. El sistema operativo proporciona una consola para las aplicaciones de consola.  
@@ -55,7 +59,7 @@ Especifica el entorno de ejecución que la imagen ejecutable requiere.
  Aplicación que se ejecuta en el subsistema POSIX en Windows.  
   
  WINDOWS  
- Aplicación que se ejecuta en el entorno gráfico de Windows. Esto incluye tanto las aplicaciones de escritorio como las aplicaciones de la Tienda Windows.  
+ Aplicación que se ejecuta en el entorno gráfico de Windows. Esto incluye aplicaciones de escritorio y aplicaciones de la plataforma Universal de Windows (UWP).  
   
  WINDOWSCE  
  El subsistema WINDOWSCE indica que la aplicación está diseñada para ejecutarse en un dispositivo que tiene una versión del kernel de Windows CE. Las versiones del kernel son PocketPC, Windows Mobile, Windows Phone 7, Windows CE V1.0-6.0R3 y Windows Embedded Compact 7.  

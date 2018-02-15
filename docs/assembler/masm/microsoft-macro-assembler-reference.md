@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
 - MASM (Microsoft Macro Assembler), overview
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Referencia de Microsoft Macro Assembler
 Microsoft Macro Assembler (MASM) proporciona varias ventajas con código ensamblador en línea. MASM contiene un lenguaje de macros que tiene características como el procesamiento de cadena de bucle, aritméticos y de texto. MASM también ofrece un mayor control sobre el hardware porque admite los conjuntos de instrucciones de la 386, 486 y procesadores Pentium. Mediante el uso de MASM, también puede reducir la sobrecarga de tiempo y memoria.  

@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de utilidad de HTTP de ATL
 
@@ -35,7 +36,7 @@ Estas funciones admiten la manipulación de direcciones URL.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Llame a esta función para canonizar una dirección URL, que incluye la conversión de espacios y caracteres no seguros en secuencias de escape.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  Indicadores ATL_URL que controlan el comportamiento de esta función. 
 
-- `ATL_URL_BROWSER_MODE`No se codifican o descodifican caracteres después de "#" o "?" y no quita los espacios en blanco finales después de "?". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.
-- `ATL_URL_DECODE`Convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de que se analiza la dirección URL.
-- `ATL_URL_ENCODE_PERCENT`Codifica los signos de porcentaje encontrados. De forma predeterminada, no se codifican los signos de porcentaje.
-- `ATL_URL_ENCODE_SPACES_ONLY`Codifica solo espacios.
-- `ATL_URL_ESCAPE`Convierte todas las secuencias de escape (% XX) en sus caracteres correspondientes.
-- `ATL_URL_NO_ENCODE`No convierte los caracteres no seguros en secuencias de escape.
-- `ATL_URL_NO_META`No se quitan las secuencias de metadatos (como "."y"..") de la dirección URL. 
+- `ATL_URL_BROWSER_MODE` No se codifican o descodifican caracteres después de "#" o "?" y no quita los espacios en blanco finales después de "?". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.
+- `ATL_URL_DECODE` Convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de que se analiza la dirección URL.
+- `ATL_URL_ENCODE_PERCENT` Codifica los signos de porcentaje encontrados. De forma predeterminada, no se codifican los signos de porcentaje.
+- `ATL_URL_ENCODE_SPACES_ONLY` Codifica solo espacios.
+- `ATL_URL_ESCAPE` Convierte todas las secuencias de escape (% XX) en sus caracteres correspondientes.
+- `ATL_URL_NO_ENCODE` No convierte los caracteres no seguros en secuencias de escape.
+- `ATL_URL_NO_META` No se quitan las secuencias de metadatos (como "."y"..") de la dirección URL. 
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>Vea también  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Llame a esta función para combinar una dirección URL base y una dirección URL relativa en una única dirección URL canónica.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Comentarios  
  Se comporta como la versión actual de [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , pero no requiere WinInet o Internet Explorer para instalarse.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Llame a esta función para convertir todos los caracteres no seguros en secuencias de escape.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Valor devuelto  
  El [ATL_URL_PORT](atl-typedefs.md#atl_url_port) asociado con el esquema especificado o ATL_URL_INVALID_PORT_NUMBER si no se reconoce el esquema.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Llame a esta función para comprobar si un carácter es seguro para usarlo en una dirección URL.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Comentarios  
  Caracteres que no deben usarse en las direcciones URL se pueda comprobar mediante esta función y para convertir mediante [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Llame a esta función para convertir de nuevo los caracteres de escape en sus valores originales.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Comentarios  
  Invierte el proceso de conversión aplicado [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Convierte un [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor para el texto HTLM correspondiente a ese valor de color.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Comentarios  
  Un valor de color HTML es un signo de almohadilla seguido por un valor de 6 dígitos hexadecimal con 2 dígitos para cada uno de los componentes rojos, verde y azules del color (por ejemplo, es blanco #FFFFFF).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Llame a esta función para convertir una hora del sistema en una cadena con un formato adecuado para usarla en encabezados HTTP.  
   
 ```  
