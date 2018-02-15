@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fgetchar
 - _fgetwchar
@@ -29,7 +30,8 @@ f1_keywords:
 - _fgetchar
 - _fgetwchar
 - fgettchar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgetwchar function
 - _fgetchar function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b82613d11d2002c0236a720072826e66cb87d7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
 Lee un carácter de una cadena `stdin`.  
@@ -83,7 +86,7 @@ wint_t _fgetwchar( void );
 |`_fgetchar`|\<stdio.h>|  
 |`_fgetwchar`|\<stdio.h> o \<wchar.h>|  
   
- La consola no se admite en las aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Se deben redirigir los identificadores estándar de flujo que están asociados a la consola, `stdin`, `stdout` y `stderr`, antes de que las funciones en tiempo de ejecución de C puedan usarlos en aplicaciones de [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+ La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:`stdin`, `stdout`, y `stderr`, se deben redirigir antes de que las funciones de tiempo de ejecución de C puedan usarlos en [! Aplicaciones INCLUDEUWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Ejemplo  
   

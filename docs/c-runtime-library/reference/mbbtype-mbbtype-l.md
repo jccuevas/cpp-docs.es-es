@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbbtype
 - _mbbtype_l
@@ -28,29 +29,31 @@ f1_keywords:
 - mbbtype
 - mbbtype_l
 - _mbbtype
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbbtype function
 - _mbbtype_l function
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: beaa8e11b8593205dd192547097e6f7228625410
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 Devuelve el tipo de bytes, según el byte anterior.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,33 +1,36 @@
 ---
-title: Estructura de _AtlCreateWndData | Documentos de Microsoft
+title: _AtlCreateWndData Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::_AtlCreateWndData
 - ATL._AtlCreateWndData
 - _AtlCreateWndData
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 99fc06e44f24b176482a6ff0b08ceed45b0f4f17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bfc663429cc7cc1fe8ff6fc917f3150d621f9f75
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="atlcreatewnddata-structure"></a>Estructura de _AtlCreateWndData
+# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData Structure
 Esta estructura contiene datos de la instancia de clase en código basado en ventanas en ATL.  
   
 ## <a name="syntax"></a>Sintaxis  

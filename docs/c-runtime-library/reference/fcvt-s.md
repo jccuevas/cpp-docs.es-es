@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt_s
+ms.topic: reference
+apiname:
+- _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
 Convierte un número de punto flotante en una cadena. Se trata de una versión de [_fcvt](../../c-runtime-library/reference/fcvt.md) con mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -110,7 +114,7 @@ errno_t _fcvt_s(
   
  Un búfer de longitud `_CVTBUFSIZE` es suficiente para cualquier valor de punto flotante.  
   
- La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `count`. `_ecvt_s`interpreta `count` como el número total de dígitos en la cadena de salida, y `_fcvt_s` interpreta `count` como el número de dígitos después del separador decimal.  
+ La diferencia entre `_ecvt_s` y `_fcvt_s` radica en la interpretación del parámetro `count`. `_ecvt_s` interpreta `count` como el número total de dígitos en la cadena de salida, y `_fcvt_s` interpreta `count` como el número de dígitos después del separador decimal.  
   
  En C++, el uso de esta función se simplifica con una sobrecarga de plantilla. La sobrecarga puede deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   

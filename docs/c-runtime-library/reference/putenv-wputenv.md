@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 Crea, modifica o quita variables de entorno. Hay disponibles versiones más seguras de estas funciones; vea [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -91,7 +94,7 @@ int _wputenv(
   
  No cambie una entrada de entorno directamente: en lugar de ello, use `_putenv` o `_wputenv` para cambiarla. Especialmente, la liberación directa de elementos de la matriz global `_environ[]` podría dar lugar a que se obtenga acceso a memoria no válida.  
   
- `getenv` y `_putenv` usan la variable global `_environ` para obtener acceso a la tabla de entorno. `_wgetenv` y `_wputenv` usan `_wenviron`. `_putenv`y `_wputenv` podrían cambiar el valor de `_environ` y `_wenviron`, e invalidar así el `_envp` argumento pasado a `main` y `_wenvp` argumento pasado a `wmain`. Por ello, es más seguro usar `_environ` o `_wenviron` para obtener acceso a la información del entorno. Para obtener más información sobre la relación de `_putenv` y `_wputenv` con las variables globales, vea [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` y `_putenv` usan la variable global `_environ` para obtener acceso a la tabla de entorno. `_wgetenv` y `_wputenv` usan `_wenviron`. `_putenv` y `_wputenv` podrían cambiar el valor de `_environ` y `_wenviron`, e invalidar así el `_envp` argumento pasado a `main` y `_wenvp` argumento pasado a `wmain`. Por ello, es más seguro usar `_environ` o `_wenviron` para obtener acceso a la información del entorno. Para obtener más información sobre la relación de `_putenv` y `_wputenv` con las variables globales, vea [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  Los grupos de funciones de `_putenv` y `_getenv` no son seguros para subprocesos. `_getenv` podría devolver un puntero de cadena mientras `_putenv` modifica la cadena, y se generarían errores aleatorios. Asegúrese de que las llamadas a estas funciones están sincronizadas.  

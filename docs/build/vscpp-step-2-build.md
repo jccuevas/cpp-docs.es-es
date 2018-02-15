@@ -4,19 +4,22 @@ description: Instalar la compatibilidad de Visual Studio para Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar y ejecutar un proyecto de aplicación de consola de C++
 
@@ -83,6 +86,8 @@ Si aparece un subrayado ondulado rojo en nada en el editor de código fuente, la
 ### <a name="run-your-code-in-a-command-window-issues"></a>Ejecutar el código en una ventana de comandos de problemas
 
 También puede navegar hasta la carpeta de depuración de la solución en la línea de comandos para ejecutar la aplicación. No se puede ejecutar la aplicación de otros directorios sin especificar la ruta de acceso a la aplicación. Sin embargo, puede copiar la aplicación a otro directorio y ejecútelo desde allí.
+
+Si no ve **copiar como ruta de acceso** en el menú contextual, descarte el menú y, a continuación, mantenga presionada la tecla MAYÚS mientras vuelva a abrirlo. Esto es solo para su comodidad. También puede copiar la ruta de acceso a la carpeta de la barra de búsqueda del explorador de archivos y péguelo en el **ejecutar** cuadro de diálogo y, a continuación, escriba el nombre de su archivo ejecutable al final. Es un poco más escritura, pero tiene el mismo resultado.
 
 [Volver.](#run-your-code-in-a-command-window)
 

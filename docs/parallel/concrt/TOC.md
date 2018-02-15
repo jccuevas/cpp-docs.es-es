@@ -2,7 +2,7 @@
 # [Información general sobre el Runtime de simultaneidad](overview-of-the-concurrency-runtime.md)
 # [Control de excepciones en el runtime de simultaneidad](exception-handling-in-the-concurrency-runtime.md)
 # [Herramientas de diagnóstico paralelo (Runtime de simultaneidad)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Creación de operaciones asincrónicas en C++ para aplicaciones UWP](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Comparación del Runtime de simultaneidad con otros modelos de simultaneidad](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Migración de OpenMP al Runtime de simultaneidad](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Procedimiento para convertir un bucle OpenMP paralelo para usar el Runtime de simultaneidad](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)

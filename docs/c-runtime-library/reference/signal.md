@@ -1,13 +1,15 @@
 ---
 title: signal | Microsoft Docs
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>signal
 
@@ -44,21 +50,19 @@ Determina el control de señales de interrupción.
 ## <a name="syntax"></a>Sintaxis
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Parámetros
 _sig_  
 Valor de la señal.
 
-_Func_  
-Función que se va a ejecutar. El primer parámetro es un valor de señal y el segundo es un subcódigo que se puede usar cuando el primer parámetro es SIGFPE.
+_func_  
+El segundo parámetro es un puntero a la función que se ejecuta. El primer parámetro es un valor de señal y el segundo es un subcódigo que se puede usar cuando el primer parámetro es SIGFPE.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`signal`Devuelve el valor anterior de _func_ que está asociada la señal determinada. Por ejemplo, si el valor anterior de _func_ era `SIG_IGN`, el valor devuelto también es `SIG_IGN`. Un valor devuelto de `SIG_ERR` indica un error; en ese caso, `errno` se establece en `EINVAL`.
+`signal` Devuelve el valor anterior de func que esté asociada con la señal determinada. Por ejemplo, si el valor anterior de _func_ era `SIG_IGN`, el valor devuelto también es `SIG_IGN`. Un valor devuelto de `SIG_ERR` indica un error; en ese caso, `errno` se establece en `EINVAL`.
 
 Vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre los códigos de retorno.
 

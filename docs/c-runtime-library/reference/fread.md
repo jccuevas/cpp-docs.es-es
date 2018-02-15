@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: fread
+ms.topic: reference
+apiname:
+- fread
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,24 +23,27 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: fread
-dev_langs: C++
+f1_keywords:
+- fread
+dev_langs:
+- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e1230c3a309fc4fbbf382df4bb07ca2bebf0d5a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d01c3362c94b0c644cb53aec6e45ce83b98dbf07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fread"></a>fread
 Lee datos desde una secuencia.  
@@ -68,7 +73,7 @@ size_t fread(
  Puntero a la estructura `FILE` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `fread`Devuelve el número de elementos completos leído realmente, que puede ser menor que `count` si se produce un error o si se encuentra el final del archivo antes de llegar a `count`. Use la función `feof` o `ferror` para distinguir un error de lectura de una condición de final de archivo. Si `size` o `count` es 0, `fread` devuelve 0 y el contenido del búfer queda sin cambios. Si `stream` o `buffer` es un puntero nulo, `fread` invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  
+ `fread` Devuelve el número de elementos completos leído realmente, que puede ser menor que `count` si se produce un error o si se encuentra el final del archivo antes de llegar a `count`. Use la función `feof` o `ferror` para distinguir un error de lectura de una condición de final de archivo. Si `size` o `count` es 0, `fread` devuelve 0 y el contenido del búfer queda sin cambios. Si `stream` o `buffer` es un puntero nulo, `fread` invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece `errno` en `EINVAL` y devuelve 0.  
   
  Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.  
   

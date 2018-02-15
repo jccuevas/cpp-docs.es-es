@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Tutorial: Compilar un programa de C++/CX en la línea de comandos
-Puede crear programas de Visual C++ destinados a Windows Runtime y compilarlos en la línea de comandos. Visual C++ admite las extensiones de componentes de Visual C++ (C++/CX), con tipos y operadores adicionales para tener como destino el modelo de programación de Windows en tiempo de ejecución. Con C++/CX, puede crear aplicaciones para Windows Phone 8.1, la Tienda Windows y escritorio de Windows. Para obtener más información, consulte [un paseo de c++ / CX](http://msdn.microsoft.com/magazine/dn166929.aspx) y [extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md).  
+Puede crear programas de Visual C++ destinados a Windows Runtime y compilarlos en la línea de comandos. Visual C++ admite las extensiones de componentes de Visual C++ (C++/CX), con tipos y operadores adicionales para tener como destino el modelo de programación de Windows Runtime. Puede utilizar C++ / CX para crear aplicaciones de escritorio de la plataforma Universal de Windows (UWP), Windows Phone 8.1 y Windows. Para obtener más información, consulte [un paseo de c++ / CX](http://msdn.microsoft.com/magazine/dn166929.aspx) y [extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md).  
   
  En este tutorial, utilizará un editor de texto para crear un programa básico de C++/CX y, a continuación, lo compilará en la línea de comandos. (Puede usar su propio programa de C++/CX en lugar de escribir el que se muestra o usar un código de ejemplo de C++/CX de otro artículo de ayuda. Esta técnica es útil para compilar y probar módulos pequeños que no contienen ningún elemento de IU).  
   
 > [!NOTE]
->  También puede usar el IDE de Visual Studio para compilar programas de C++/CX. Dado que el IDE incluye una compatibilidad con el diseño, la depuración, la emulación y la implementación que no está disponible en la línea de comandos, se recomienda utilizar el IDE para crear aplicaciones de la Tienda Windows. Para obtener más información, consulte [crear una aplicación básica de la tienda de C++](http://msdn.microsoft.com/library/windows/apps/dn263168).  
+>  También puede usar el IDE de Visual Studio para compilar programas de C++/CX. Dado que el IDE incluye el diseño, la depuración, la emulación y la compatibilidad con la implementación que no está disponible en la línea de comandos, se recomienda usar el IDE para compilar aplicaciones de plataforma Universal de Windows (UWP). Para obtener más información, consulte [crear una aplicación de UWP en C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Debe entender los principios del lenguaje C++.  

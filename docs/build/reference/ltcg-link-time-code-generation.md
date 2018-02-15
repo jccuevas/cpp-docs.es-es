@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generación de código en tiempo de enlace)
 ```  
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>Módulos /LTCG y MSIL  
  Los módulos que se compilan con [/GL](../../build/reference/gl-whole-program-optimization.md) y [/clr](../../build/reference/clr-common-language-runtime-compilation.md) pueden utilizarse como entradas del vinculador cuando se especifica **/LTCG** .  
   
--   **/ LTCG** puede aceptar archivos objeto nativos, combinado varios archivos de objeto nativo/administrado (compilado mediante **/CLR**), archivos objeto puros (compilados mediante **/CLR: pure**), y archivos de objeto seguros ( compilado mediante **/CLR: safe**). Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
+-   **/ LTCG** puede aceptar archivos objeto nativos y archivos de objeto nativo y administrado mixto (compilado mediante **/CLR**). Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
--   **/ LTCG** puede aceptar elementos .netmodule seguros, que se pueden crear mediante el uso de **/CLR: safe /LN** en Visual C++ y **/target: module** en cualquier compilador de .NET de Visual Studio. **/LTCG** no acepta los elementos .netmodule generados mediante **/clr** o **/clr:pure**.  
-  
--   /LTCG:PGI no acepta módulos nativos compilados mediante **/GL** y **/clr**ni módulos puros (creados con **/clr:pure**)  
+-   / LTCG: PGI no acepta módulos nativos compilados mediante el uso de **/GL** y   **/CLR**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   

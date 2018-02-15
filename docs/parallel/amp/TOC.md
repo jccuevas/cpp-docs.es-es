@@ -1,7 +1,7 @@
 # [C++ AMP (C++ Accelerated Massive Parallelism)](cpp-amp-cpp-accelerated-massive-parallelism.md)
 # [Información general sobre C++ AMP](cpp-amp-overview.md)
 # [Uso de mosaicos](using-tiles.md)
-# [Uso de C++ AMP en aplicaciones de la Tienda Windows](using-cpp-amp-in-windows-store-apps.md)
+# [Uso de C++ AMP en aplicaciones de UWP](using-cpp-amp-in-windows-store-apps.md)
 # [Tutorial: Multiplicación de matrices](walkthrough-matrix-multiplication.md)
 # [Tutorial: Depurar una aplicación de C++ AMP](walkthrough-debugging-a-cpp-amp-application.md)
 # [Uso de expresiones lambda, objetos de función y funciones restringidas](using-lambdas-function-objects-and-restricted-functions.md)

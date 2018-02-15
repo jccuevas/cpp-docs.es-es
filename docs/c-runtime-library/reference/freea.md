@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _freea
+ms.topic: reference
+apiname:
+- _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freea"></a>_freea
 Desasigna o libera un bloque de memoria.  
@@ -61,7 +65,7 @@ void _freea(
 ## <a name="remarks"></a>Comentarios  
  La función `_freea` desasigna un bloque de memoria (`memblock`) que se había asignado previamente mediante una llamada a [_malloca](../../c-runtime-library/reference/malloca.md). `_freea` comprueba si la memoria se ha asignado en el montón o en la pila. Si se ha asignado en la pila, `_freea` no hace nada. Si se ha asignado en el montón, el número de bytes liberados es equivalente al número de bytes solicitado al asignar el bloque. Si `memblock` es `NULL`, el puntero se omite y `_freea` se devuelve inmediatamente. Puede que el intento de liberación de un puntero no válido (un puntero a un bloque de memoria que no se ha asignado con `_malloca`) afecte a las solicitudes de asignación posteriores y provoque errores.  
   
- `_freea`llamadas `free` internamente si detecta que la memoria está asignada en el montón. Si la memoria está en el montón o en la pila lo determina un marcador que se coloca en la memoria en la dirección inmediatamente anterior a la memoria asignada.  
+ `_freea` llamadas `free` internamente si detecta que la memoria está asignada en el montón. Si la memoria está en el montón o en la pila lo determina un marcador que se coloca en la memoria en la dirección inmediatamente anterior a la memoria asignada.  
   
  Si se produce un error al liberar memoria, en `errno` se muestra información sobre la naturaleza del error proporcionada por el sistema operativo. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

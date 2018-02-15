@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Determina si un entero representa un carácter en minúscula.  
@@ -89,7 +92,7 @@ int _iswlower_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter en minúscula. `islower`Devuelve un valor distinto de cero si `c` es un carácter en minúscula (a - z). `iswlower` devuelve un valor distinto de cero si `c` es un carácter ancho que corresponde a una letra minúscula, o si `c` pertenece a un juego de caracteres anchos definido por la implementación para el que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` es distinto de cero. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
+ Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter en minúscula. `islower` Devuelve un valor distinto de cero si `c` es un carácter en minúscula (a - z). `iswlower` devuelve un valor distinto de cero si `c` es un carácter ancho que corresponde a una letra minúscula, o si `c` pertenece a un juego de caracteres anchos definido por la implementación para el que ni `iswcntrl`, ni `iswdigit`, ni `iswpunct`, ni `iswspace` es distinto de cero. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
   
  Las versiones de estas funciones con el sufijo `_l` usan la configuración regional que se pasa en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
   

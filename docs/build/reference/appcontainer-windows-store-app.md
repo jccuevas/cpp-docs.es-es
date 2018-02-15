@@ -1,26 +1,29 @@
 ---
-title: "-APPCONTAINER (aplicación de la tienda de Windows) | Documentos de Microsoft"
+title: "/APPCONTAINER (aplicación de la tienda UWP/Microsoft) | Documentos de Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="appcontainer-windows-store-app"></a>/APPCONTAINER (aplicación de la Tienda Windows)
+# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (aplicación de la tienda de Microsoft)
 Especifica si el vinculador crea una imagen ejecutable que se debe ejecutar en un contenedor de la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,7 +35,7 @@ Especifica si el vinculador crea una imagen ejecutable que se debe ejecutar en u
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, /APPCONTAINER está desactivada.  
   
- Esta opción modifica un archivo ejecutable para indicar si se debe ejecutar la aplicación en el entorno de aislamiento de proceso appcontainer. Especificar /APPCONTAINER para una aplicación que se debe ejecutar en el entorno de appcontainer: por ejemplo, un [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] aplicación. (La opción se establece automáticamente en Visual Studio cuando se crea un [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)] aplicación desde una plantilla.) Para una aplicación de escritorio, especifique /APPCONTAINER:NO o simplemente omite la opción.  
+ Esta opción modifica un archivo ejecutable para indicar si se debe ejecutar la aplicación en el entorno de aislamiento de proceso appcontainer. Especificar /APPCONTAINER para una aplicación que se debe ejecutar en el entorno de appcontainer: por ejemplo, una aplicación de 8.x plataforma Universal de Windows (UWP) o Windows Phone. (La opción se establece automáticamente en Visual Studio cuando se crea una aplicación Universal de Windows desde una plantilla.) Para una aplicación de escritorio, especifique /APPCONTAINER:NO o simplemente omite la opción.  
   
  La opción /APPCONTAINER se introdujo en [!INCLUDE[win8](../../build/reference/includes/win8_md.md)].  
   

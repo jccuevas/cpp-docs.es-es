@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: execvp
+ms.topic: reference
+apiname:
+- execvp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: execvp
-dev_langs: C++
-helpviewer_keywords: execvp function
+f1_keywords:
+- execvp
+dev_langs:
+- C++
+helpviewer_keywords:
+- execvp function
 ms.assetid: a0d0e898-9f06-4aa9-94ce-3ad317318c3a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b34f05932a843ab0e9d659e890a921d176a7770b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 41d1976050f9f027d8e59f518d7300ca8d5fa293
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="execvp"></a>execvp
 Esta función POSIX está en desuso. En su lugar, use [_execvp](../../c-runtime-library/reference/execvp-wexecvp.md), compatible con ISO C++.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
