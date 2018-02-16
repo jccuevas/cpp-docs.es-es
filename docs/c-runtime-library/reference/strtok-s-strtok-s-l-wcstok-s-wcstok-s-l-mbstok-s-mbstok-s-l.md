@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -37,7 +38,8 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -54,23 +56,24 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 868d9d3fc206931b20858ee360c2380cc5f03d61
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Busca el siguiente token en una cadena, con la configuración regional actual o con la configuración regional que se pase. Estas versiones de [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
   
 > [!IMPORTANT]
->  `_mbstok_s` y `_mbstok_s_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbstok_s` y `_mbstok_s_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -120,10 +123,10 @@ unsigned char* _mbstok_s(
 *str*  
 Una cadena que contiene el símbolo (token) o los tokens para buscar.  
   
-*delimitadores*  
+*delimiters*  
 El conjunto de caracteres de delimitador que se va a usar.  
   
-*contexto*  
+*context*  
 Se utiliza para almacenar información de posición entre llamadas a la función.  
   
 *locale*  
@@ -135,7 +138,7 @@ Devuelve un puntero al siguiente token que se encuentra en *str*. Devuelve `NULL
   
 ### <a name="error-conditions"></a>Condiciones de error  
   
-|*str*|*delimitadores*|*contexto*|Valor devuelto|`errno`|  
+|*str*|*delimiters*|*context*|Valor devuelto|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
 |`NULL`|any|puntero a un puntero nulo|`NULL`|`EINVAL`|  
 |any|`NULL`|any|`NULL`|`EINVAL`|  

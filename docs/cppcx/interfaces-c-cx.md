@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d858a940205ab47f1ee07f720a0f8aa1bcaaf42f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 Aunque una clase ref solo puede heredar de a lo sumo una clase base concreta, puede implementar cualquier número de clases de interfaz. Una clase de interfaz (o struct de interfaz) en sí misma puede heredar (o requerir) varias clases de interfaz, puede sobrecargar sus funciones miembro y puede tener parámetros de tipo.  

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
-Proporciona un comportamiento común para clases ref y structs ref en aplicaciones de la Tienda Windows. Todas las instancias de clase ref y struct ref se pueden convertir implícitamente a Platform::Object^ y pueden invalidar su método ToString virtual.  
+Proporciona un comportamiento común para clases ref y structs ref en aplicaciones de Windows en tiempo de ejecución. Todas las instancias de clase ref y struct ref se pueden convertir implícitamente a Platform::Object^ y pueden invalidar su método ToString virtual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,15 +46,15 @@ public ref class Object : Object
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Object](#ctor)|Inicializa una nueva instancia de la clase Object.|  
+|[Object::Object](#ctor)|Inicializa una nueva instancia de la clase Object.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[Object:: Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|  
-|[Object:: GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
-|[Object:: ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|  
+|[Object::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
+|[Object::ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|  
 |[ToString](#tostring)|Devuelve una cadena que representa el objeto actual. Puede invalidarse.|  
 |[GetType](#gettype)|Obtiene un [Platform::Type](../cppcx/platform-type-class.md) que describe la instancia actual.|  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Espacio de nombres:** Plataforma  
 
   
-## <a name="equals"></a>Object:: Equals (método)
+## <a name="equals"></a> Object:: Equals (método)
 Determina si el objeto especificado es igual al objeto actual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object:: GetHashCode (método)
+## <a name="gethashcode"></a>  Object::GetHashCode Method
 Devuelve el valor de identidad `IUnknown`* para esta instancia si es un objeto COM o un valor hash calculado si no es un objeto COM.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object:: GetType (método)
+## <a name="gettype"></a>  Object:: GetType (método)
 Devuelve un [Platform](../cppcx/platform-type-class.md) objeto que describe el tipo en tiempo de ejecución de un objeto.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -131,9 +134,9 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>Vea también  
  [Clase Platform:: Type](../cppcx/platform-type-class.md)   
  [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)   
- [Sistema de tipos] (.. /cppcx/Type-System-c-CX.MD
+ [Type System](../cppcx/type-system-c-cx.md
   
-## <a name="ctor"></a>Constructor de Object
+## <a name="ctor"></a>  Constructor de Object
 Inicializa una nueva instancia de la clase Object.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -142,7 +145,7 @@ Inicializa una nueva instancia de la clase Object.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object:: ReferenceEquals (método)
+## <a name="referenceequals"></a>  Object:: ReferenceEquals (método)
 Determina si las instancias de Object especificadas son la misma instancia.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Valor devuelto  
  `true` si los dos objetos son iguales; de lo contrario, `false`.  
  
-## <a name="tostring"></a>Object:: ToString (método) (C++ / CX)
+## <a name="tostring"></a>  Object:: ToString (método) (C++ / CX)
 Devuelve una cadena que representa el objeto actual.  
   
 ### <a name="syntax"></a>Sintaxis  

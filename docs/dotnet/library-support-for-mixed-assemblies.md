@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - msvcm90[d].dll
 - mixed assemblies [C++], library support
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b3bc50416eceac64c134a31a4d7384e33db69b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f999a75a8f818fccabada840a2a6e9fc70447cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="library-support-for-mixed-assemblies"></a>Compatibilidad con bibliotecas para ensamblados mixtos
 Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca de Common RunTime (CRT), ATL y MFC para aplicaciones compiladas con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md). Esto permite a las aplicaciones existentes que utilizan estas bibliotecas para utilizar características de .NET Framework también.  
@@ -33,8 +35,6 @@ Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca de Com
  Esta compatibilidad incluye las siguientes nuevas bibliotecas de importación y el archivo DLL:  
   
 -   Msvcmrt [d] .lib si se compila con/CLR. Vínculos de ensamblados mixtos a esta biblioteca de importación.  
-  
--   Msvcm90 [d] .dll y Msvcurt [d] .lib si se compila con/CLR: pure. El archivo DLL es un ensamblado mixto que proporciona compatibilidad de tiempo de ejecución de C (CRT) administrada y forma parte de un ensamblado administrado instalado en la caché de ensamblados global (GAC). Los ensamblados puros se vinculan a esta biblioteca de importación y terminan enlazados a Msvcm90.dll.  
   
  Esta compatibilidad proporciona que algunas ventajas relacionadas:  
   
@@ -50,9 +50,7 @@ Visual C++ admite el uso de la biblioteca estándar de C++, la biblioteca de Com
   
  Además, esta compatibilidad presenta las siguientes limitaciones:  
   
--   Solo el modelo del archivo DLL de CRT es compatible (tanto para código compilado con /clr o/CLR: pure).  
-  
--   No se pueden mezclar objetos puros y mixtos en una sola imagen si los objetos usan las bibliotecas de Visual C++ (ya que todos los objetos deben ser puros en una imagen pura). Si lo hace, recibirá errores en tiempo de vínculo.  
+-   Solo el modelo del archivo DLL de CRT es compatible para el código compilado con/CLR.  
   
  Debe actualizar common language runtime (CLR) a la versión actual que no se garantiza que funcionan con versiones anteriores. No se ejecutará el código generado con estos cambios en la versión CLR 1.x.  
   

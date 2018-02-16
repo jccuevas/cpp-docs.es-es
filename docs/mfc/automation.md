@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>automatización
 La automatización (antes conocida como automatización OLE) permite que una aplicación manipule objetos implementados en otra aplicación o exponga objetos para que se puedan manipular.  
@@ -47,7 +50,7 @@ La automatización (antes conocida como automatización OLE) permite que una apl
   
 -   Automatización (local).  
   
--   [Automatización remota](../mfc/remote-automation.md) (a través de una red, mediante COM distribuido, o DCOM).  
+-   Automatización remota (a través de una red, mediante COM distribuido o DCOM).  
   
  La exposición de objetos es beneficiosa si las aplicaciones proporcionan funcionalidad útil para otras aplicaciones. Por ejemplo, un control ActiveX es un tipo de servidor de automatización; la aplicación que hospeda el control ActiveX es el cliente de automatización de ese control.  
   
@@ -81,8 +84,6 @@ La automatización (antes conocida como automatización OLE) permite que una apl
 -   [Clientes de automatización](../mfc/automation-clients.md)  
   
 -   [Servidores de automatización](../mfc/automation-servers.md)  
-  
--   [Automatización remota](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

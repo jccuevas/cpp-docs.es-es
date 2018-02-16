@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Cómo: Controlar eventos mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para suscribirse a y controlar los eventos de un objeto en tiempo de ejecución de Windows.  
@@ -31,7 +33,7 @@ Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows 
  Los siguientes pasos inicio un `ABI::Windows::System::Threading::IDeviceWatcher` de objetos y usar controladores de eventos para supervisar el progreso. El `IDeviceWatcher` interfaz permite enumerar los dispositivos de forma asincrónica o en segundo plano y recibir una notificación cuando se agregan, quitan o cambiar dispositivos. El [devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md) función es una parte importante de este ejemplo, porque le permite especificar los controladores de eventos que procesan los resultados de la operación en segundo plano. A continuación se muestra el ejemplo completo.  
   
 > [!WARNING]
->  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows, en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de la plataforma Universal de Windows. Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de plataforma Universal de Windows, vea [funciones de CRT no admitidas con/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) y [aplicaciones Win32 y COM para la tienda Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows, en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de la plataforma Universal de Windows. Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de plataforma Universal de Windows, vea [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) y [Win32 y COM para aplicaciones UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Incluir (`#include`) los necesarios en tiempo de ejecución de Windows, biblioteca de plantillas de C++ de Windows en tiempo de ejecución o encabezados de la biblioteca estándar de C++.  
   

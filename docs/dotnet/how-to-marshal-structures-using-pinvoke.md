@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Cómo: serializar estructuras mediante PInvoke
 Este documento explica cómo a funciones nativas que aceptan cadenas de estilo C pueden llamarse desde las funciones administradas que proporcionan una instancia de <xref:System.String> mediante el uso de P/Invoke. Aunque recomendamos que use las características de interoperabilidad de C++ en lugar de P/Invoke porque P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa de implementar, si la API no administrada se empaqueta como un archivo DLL y el código fuente no es está disponible, P/Invoke es la única opción. En caso contrario, consulte los siguientes documentos:  
@@ -48,8 +50,6 @@ Este documento explica cómo a funciones nativas que aceptan cadenas de estilo C
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una estructura llamada Location y una función llamada GetDistance, que acepta dos instancias de la estructura de ubicación. El segundo módulo es una aplicación de línea de comandos administrada que importa la función GetDistance, pero la define en cuanto a un equivalente administrado de la estructura Location: MLocation. En la práctica probablemente se podría utilizar el mismo nombre en ambas versiones de la estructura; Sin embargo, un nombre diferente se usa aquí para mostrar que el prototipo DllImport se define en términos de la versión administrada.  
-  
- El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
  Tenga en cuenta que ninguna parte del archivo DLL se expone al código administrado utilizando tradicional #include (directiva). De hecho, se tiene acceso a la DLL en tiempo de ejecución, por lo que no se detectarán problemas con funciones importadas con DllImport en tiempo de compilación.  
   

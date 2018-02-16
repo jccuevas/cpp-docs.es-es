@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`strtod`Devuelve el valor del número de punto flotante, excepto cuando la representación produciría desbordamiento, en cuyo caso la función devuelve +/-`HUGE_VAL`. El signo de `HUGE_VAL` coincide con el signo del valor que no se puede representar. `strtod` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.
+`strtod` Devuelve el valor del número de punto flotante, excepto cuando la representación produciría desbordamiento, en cuyo caso la función devuelve +/-`HUGE_VAL`. El signo de `HUGE_VAL` coincide con el signo del valor que no se puede representar. `strtod` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.
 
 `wcstod` devuelve valores de manera parecida a `strtod`. Para ambas funciones, `errno` se establece en `ERANGE` si se produce un desbordamiento o un subdesbordamiento y se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada función convierte la cadena de entrada *nptr* a una `double`. El `strtod` función convierte *nptr* en un valor de precisión doble. `strtod`deja de leer la cadena *nptr* en el primer carácter que no se reconoce como parte de un número. Este puede ser el carácter nulo de terminación. `wcstod`es una versión con caracteres anchos de `strtod`; su *nptr* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+Cada función convierte la cadena de entrada *nptr* a una `double`. El `strtod` función convierte *nptr* en un valor de precisión doble. `strtod` deja de leer la cadena *nptr* en el primer carácter que no se reconoce como parte de un número. Este puede ser el carácter nulo de terminación. `wcstod` es una versión con caracteres anchos de `strtod`; su *nptr* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -119,12 +122,12 @@ El `LC_NUMERIC` valor de la categoría de la configuración regional actual dete
 
 Si *endptr* no `NULL`, un puntero al carácter que detuvo el análisis se almacena en la ubicación señalada por *endptr*. Si no se puede realizar ninguna conversión (no válidos se encontraron dígitos o se especificó una base no válida), el valor de *nptr* se almacena en la ubicación señalada por *endptr*.
 
-`strtod`espera *nptr* para que apunte a una cadena de uno de los formatos siguientes:
+`strtod` espera *nptr* para que apunte a una cadena de uno de los formatos siguientes:
 
-[*espacio en blanco*] [*inicio de sesión*] {*dígitos* [*base* *dígitos*] &#124; *base* *dígitos*} [{**e** &#124; **E**} [*inicio de sesión*] *dígitos*]  
+[*whitespace*] [*sign*] {*digits* [*radix* *digits*] &#124; *radix* *digits*} [{**e** &#124; **E**} [*sign*] *digits*]  
 [*espacio en blanco*] [*inicio de sesión*] {**0 x** &#124; **0 X**} {*dígitos hexadecimales* [*base* *dígitos hexadecimales*] &#124; *base* *dígitos hexadecimales*} [{**p** &#124; **P**} [*inicio de sesión*] *dígitos hexadecimales*]  
-[*espacio en blanco*] [*inicio de sesión*] {**INF** &#124; **Infinito**}  
-[*espacio en blanco*] [*inicio de sesión*] **NAN** [*secuencia*]
+[*whitespace*] [*sign*] {**INF** &#124; **INFINITY**}  
+[*whitespace*] [*sign*] **NAN** [*sequence*]
 
 El interlineado opcional *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); *dígitos* son uno o más dígitos decimales; *dígitos hexadecimales* es uno o más dígitos hexadecimales; *base* es el carácter de punto de base, ya sea un punto (.) en la configuración regional "C" de forma predeterminada, o valor de la configuración regional específica si la configuración regional actual es diferente o cuando *configuración regional* se especifica; un *secuencia* es una secuencia de alfanuméricos o los caracteres de subrayado. En los formatos de número decimales y hexadecimales, si ningún dígito aparece delante del carácter de punto de base, al menos uno debe aparecer después del carácter de punto de base. En el formato decimal, los dígitos decimales pueden ir seguidos de un exponente que consta de una carta de presentación (**e** o **E**) y un entero con signo opcional. En el formato hexadecimal, los dígitos hexadecimales pueden ir seguidos de un exponente que consta de una carta de presentación (**p** o **P**) y un entero, opcionalmente, con signo hexadecimal que representa el exponente como una potencia de 2. En ambos casos, si aparece una parte exponente ni un carácter de punto de base, un carácter de punto de base se supone que siga el último dígito en la cadena. Mayúsculas y minúsculas se ignoran tanto en el **INF** y **NAN** formularios. El primer carácter que no se ajusta a una de estas formas detiene el análisis.
 

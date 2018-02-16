@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 Además el estándar C++ tipos integrados, C++ / CX admite el sistema de tipos que se define mediante la arquitectura de Windows Runtime ofreciendo typedefs para los tipos de Windows Runtime fundamentales que se asignan a los tipos de C++ estándar... C++ / CX implementa tipos fundamentales numéricos, caracteres y un valor booleano. Estas typedefs se definen en el el espacio de nombres `default` , que nunca debe especificarse de manera explícita. Además, C++ / CX ofrece contenedores e implementaciones concretas para determinados tipos de Windows Runtime y las interfaces.  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Paralelismo de tareas (Runtime de simultaneidad)
 En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza un trabajo específico y normalmente se ejecuta en paralelo con otras tareas. Una tarea se puede descomponer en tareas adicionales más específicas que se organizan en una *grupo de tareas*.  
@@ -81,7 +84,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
 - [Programación sólida](#robust)  
   
-##  <a name="lambdas"></a>Usar expresiones Lambda  
+##  <a name="lambdas">Usar expresiones Lambda</a>  
  Dada su sintaxis concisa, las expresiones lambda son una forma habitual de definir el trabajo que las tareas y los grupos de tareas llevan a cabo. Estas son algunas sugerencias de uso:  
   
 -   Como las tareas normalmente se ejecutan en subprocesos en segundo plano, tenga en cuenta la duración del objeto cuando capture variables en expresiones lambda. Cuando se captura una variable por valor, se hace una copia de esa variable en el cuerpo de la lambda. Esta copia no se realiza cuando se captura por referencia. Por lo tanto, asegúrese de que la duración de la variable que capture por referencia es mayor que la tarea que la usa.  
@@ -98,7 +101,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
  Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md).  
   
-##  <a name="task-class"></a>La clase de tarea  
+##  <a name="task-class">La clase de tarea</a>  
  Puede usar el [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) clase para crear tareas dentro de un conjunto de operaciones dependientes. Este modelo de composición es compatible con la noción de *continuaciones*. Una continuación permite el código que se ejecute cuando el anterior, o *antecedente*, complete la tarea. El resultado de la tarea antecedente se pasa como entrada para una o varias tareas de continuación. Cuando una tarea antecedente se completa, las tareas de continuación en espera están programadas para ejecutarse. Cada tarea de continuación recibe una copia del resultado de la tarea anterior. Las tareas de continuación también pueden ser, a su vez, tareas antecedentes de otras continuaciones, lo que hace que se vaya creando una cadena de tareas. Las continuaciones sirven para crear cadenas de tareas de longitud arbitraria que tienen dependencias específicas entre ellas. Asimismo, una tarea puede participar en la cancelación antes de que una tarea se inicie o bien de manera cooperativa, mientras se está ejecutando. Para obtener más información acerca de este modelo de cancelación, vea [cancelación en la biblioteca PPL](cancellation-in-the-ppl.md).  
   
  `task` es una clase de plantilla. El parámetro de tipo `T` es el tipo del resultado generado por la tarea. Este tipo puede ser `void` si la tarea no devuelve un valor. `T` no puede usar el modificador `const`.  
@@ -124,9 +127,9 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
  Para obtener un ejemplo que usa `task`, [task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), cancelación, consulte [Tutorial: conectar usando tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (La clase `task_completion_event` se describe más adelante en este documento).  
   
 > [!TIP]
->  Para obtener información detallada que son específico de las tareas en [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicaciones, consulte [programación asincrónica en C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) y [crear operaciones asincrónicas en C++ para aplicaciones de la tienda Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Para obtener detalles concretos a tareas en las aplicaciones UWP, vea [programación asincrónica en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) y [crear operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
-##  <a name="continuations"></a>Tareas de continuación  
+##  <a name="continuations">Tareas de continuación</a>  
  En la programación asincrónica, es muy común que una operación asincrónica, al finalizar, invoque una segunda operación y le pase los datos. Tradicionalmente, esto se realiza mediante métodos de devolución de llamada. En el Runtime de simultaneidad, se proporciona la misma funcionalidad mediante *tareas de continuación*. Una tarea de continuación (también conocida simplemente como una continuación) es una tarea asincrónica invocada por otra tarea, que se conoce como el *antecedente*, cuando el antecedente se completa. El uso de continuaciones permite hacer lo siguiente:  
   
 -   Pasar datos del antecedente a la continuación.  
@@ -135,7 +138,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
 -   Cancelar una continuación antes de que se inicie o de forma cooperativa mientras se ejecuta.  
   
--   Proporcionar sugerencias sobre cómo debería programarse la continuación. (Esto solo es válido en aplicaciones de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Para obtener más información, consulte [crear operaciones asincrónicas en C++ para aplicaciones de la tienda Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
+-   Proporcionar sugerencias sobre cómo debería programarse la continuación. (Esto se aplica a las aplicaciones de la plataforma Universal de Windows (UWP) únicamente. Para obtener más información, consulte [crear operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
   
 -   Invocar varias continuaciones desde el mismo antecedente.  
   
@@ -159,21 +162,21 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- Una continuación también puede devolver otra tarea. Si no hay ninguna cancelación, esta tarea se ejecuta antes de la continuación siguiente. Esta técnica se conoce como *desencapsulación asincrónica*. La desencapsulación asincrónica resulta útil cuando se quiere realizar un trabajo adicional en segundo plano sin que la tarea actual bloquee el subproceso actual. (Esto es habitual en aplicaciones de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], donde las continuaciones se pueden ejecutar en el subproceso de interfaz de usuario). En el siguiente ejemplo se muestran tres tareas. La primera tarea devuelve otra tarea que se ejecuta antes de una tarea de continuación.  
+ Una continuación también puede devolver otra tarea. Si no hay ninguna cancelación, esta tarea se ejecuta antes de la continuación siguiente. Esta técnica se conoce como *desencapsulación asincrónica*. La desencapsulación asincrónica resulta útil cuando se quiere realizar un trabajo adicional en segundo plano sin que la tarea actual bloquee el subproceso actual. (Esto es habitual en aplicaciones UWP, donde las continuaciones pueden ejecutarse en el subproceso de interfaz de usuario). En el siguiente ejemplo se muestran tres tareas. La primera tarea devuelve otra tarea que se ejecuta antes de una tarea de continuación.  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  Cuando una continuación de una tarea devuelve una tarea anidada de tipo `N`, la tarea resultante tiene el tipo `N` (no `task<N>`) y se completa cuando lo haga la tarea anidada. En otras palabras, la continuación realiza la desencapsulación de la tarea anidada.  
   
-##  <a name="value-versus-task"></a>Basada en valores frente a continuaciones basadas en tareas  
+##  <a name="value-versus-task">Basada en valores frente a continuaciones basadas en tareas</a>  
  Si tenemos un objeto `task` cuyo tipo de valor devuelto es `T`, se puede proporcionar un valor de tipo `T` o `task<T>` a las tareas de continuación. Una continuación que toma el tipo `T` se conoce como un *continuación basada en el valor*. Una continuación basada en valores está programada para ejecutarse cuando la tarea antecedente se completa sin errores y no se ha cancelado. Una continuación que toma el tipo `task<T>` como su parámetro se conoce como un *basado en tareas de continuación*. Una continuación basada en tareas está programada siempre para ejecutarse cuando finaliza la tarea antecedente, aun cuando esta se cancele o genere una excepción. Tras ello, puede llamar a `task::get` para obtener el resultado de la tarea antecedente. Si la tarea antecedente se cancela, `task::get` produce [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Si la tarea antecedente produjo una excepción, `task::get` vuelve a producir esta excepción. Una continuación basada en tareas no se marca como cancelada cuando su tarea antecedente se cancela.  
   
-##  <a name="composing-tasks"></a>Componer tareas  
+##  <a name="composing-tasks">Componer tareas</a>  
  Esta sección se describe la [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) y [when_any](reference/concurrency-namespace-functions.md#when_all) funciones, lo que pueden ayudarle a crear varias tareas para implementar patrones comunes.  
 
   
-###  <a name="when-all"></a>La función when_all  
+###  <a name="when-all">La función when_all</a>  
  La función `when_all` genera una tarea que finaliza después de que se complete un conjunto de tareas. Esta función devuelve un std::[vector](../../standard-library/vector-class.md) objeto que contiene el resultado de cada tarea del conjunto. En el siguiente ejemplo básico se usa `when_all` para crear una tarea que representa la finalización de otras tres tareas.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- Imaginemos una aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] que usa C++ y XAML y escribe un conjunto de archivos en el disco. En el siguiente ejemplo se muestra cómo usar `when_all` y `observe_all_exceptions` para asegurarse de que el programa tiene presentes todas las excepciones.  
+ Considere la posibilidad de una aplicación para UWP que usa C++ y XAML y escribe un conjunto de archivos en el disco. En el siguiente ejemplo se muestra cómo usar `when_all` y `observe_all_exceptions` para asegurarse de que el programa tiene presentes todas las excepciones.  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
 > [!TIP]
 
-> `when_all` es una función sin bloqueo que genera `task` como resultado. A diferencia de [Task:: wait](reference/task-class.md#wait), resulta seguro llamar a esta función en un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] aplicación en el subproceso ASTA (STA de aplicación).  
+> `when_all` es una función sin bloqueo que genera `task` como resultado. A diferencia de [Task:: wait](reference/task-class.md#wait), resulta seguro llamar a esta función en una aplicación UWP en el subproceso ASTA (STA de aplicación).  
 
   
-###  <a name="when-any"></a>La función when_any  
+###  <a name="when-any">La función when_any</a>  
  La función `when_any` genera una tarea que finaliza después de que lo haga la primera tarea de un conjunto de tareas. Esta función devuelve un [std:: Pair](../../standard-library/pair-structure.md) objeto que contiene el resultado de la tarea completada y el índice de la tarea en el conjunto.  
   
  La función `when_any` es especialmente útil en los siguientes escenarios:  
@@ -249,9 +252,9 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  Al igual que `when_all`, `when_any` no aplica bloqueos y se puede llamar de forma segura en una aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] en el subproceso ASTA.  
+>  Al igual que con `when_all`, `when_any` no aplica bloqueos y es seguro llamar a en una aplicación UWP en el subproceso ASTA.  
   
-##  <a name="delayed-tasks"></a>Ejecución retrasada de una tarea  
+##  <a name="delayed-tasks">Ejecución retrasada de una tarea</a>  
  Hay veces que es necesario retrasar la ejecución de una tarea hasta que se satisfaga una condición, o iniciar una tarea en respuesta a un evento externo. Por ejemplo, en una programación asincrónica, puede que tenga que iniciar una tarea en respuesta a un evento de finalización de E/S.  
   
  Dos formas de lograrlo son usar una continuación o bien iniciar una tarea y esperar un evento dentro de la función de trabajo de la tarea. Sin embargo, hay casos en los que no es posible recurrir a una de estas técnicas. Por ejemplo, para crear una continuación, hay que tener la tarea antecedente. Sin embargo, si no tiene la tarea anterior, puede crear un *evento de finalización de tarea* y más adelante, encadenar ese evento de finalización a la tarea antecedente cuando esta esté disponible. Además, como una tarea en espera también bloquea un subproceso, puede usar eventos de finalización de tarea para realizar el trabajo cuando una operación asincrónica se complete y, de este modo, liberar un subproceso.  
@@ -260,7 +263,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
  Para obtener un ejemplo que usa `task_completion_event` para implementar una tarea que finaliza después de un retraso, vea [Cómo: crear una tarea que finaliza después de un retraso](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).  
   
-##  <a name="task-groups"></a>Grupos de tareas  
+##  <a name="task-groups">Grupos de tareas</a>  
  A *grupo de tareas* organiza una colección de tareas. Los grupos de tareas envían tareas a una cola de robo de trabajo. El programador quita las tareas de esta cola y las ejecuta en los recursos informáticos disponibles. Después de agregar tareas a un grupo de tareas, puede esperar a que todas las tareas finalicen o cancelar las tareas que aún no se han iniciado.  
   
  La biblioteca PPL usa la [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases para representar grupos de tareas y la [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) (clase) para representar las tareas que se ejecutan en estos grupos. La clase `task_handle` encapsula el código que realiza el trabajo. Al igual que la clase `task`, la función de trabajo tiene la forma de una función lambda, un puntero de función o un objeto de función. Normalmente no es necesario trabajar con objetos `task_handle` directamente. En su lugar, se pasan funciones de trabajo a un grupo de tareas y el grupo de tareas crea y administra los objetos `task_handle`.  
@@ -277,7 +280,7 @@ En el Runtime de simultaneidad, un *tarea* es una unidad de trabajo que realiza 
   
  El Runtime también proporciona un modelo de control de excepciones que permite generar una excepción desde una tarea y controlar esa excepción mientras espera a que el grupo de tareas asociado finalice. Para obtener más información acerca de este modelo de control de excepciones, vea [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-##  <a name="comparing-groups"></a>Comparación de task_group y structured_task_group  
+##  <a name="comparing-groups">Comparación de task_group y structured_task_group</a>  
  Aunque recomendamos usar `task_group` o `parallel_invoke` en lugar de la clase `structured_task_group`, hay casos donde probablemente prefiera usar `structured_task_group`, por ejemplo, al escribir un algoritmo paralelo que realiza un número variable de tareas o que requiere compatibilidad con la cancelación. En esta sección se explican las diferencias entre las clases `task_group` y `structured_task_group`.  
   
  La clase `task_group` es segura para la ejecución de subprocesos. Por lo tanto, puede agregar tareas a un objeto `task_group` desde varios subprocesos y esperar o cancelar un objeto `task_group` desde varios subprocesos. Es necesario que la construcción y destrucción de un objeto `structured_task_group` ocurran en el mismo ámbito léxico. Además, todas las operaciones en un objeto `structured_task_group` tienen que producirse en el mismo subproceso. La excepción a esta regla es la [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) y [concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling) métodos. Una tarea secundaria puede llamar a estos métodos para cancelar el grupo de tareas primario y buscar la cancelación en cualquier momento.  
@@ -313,7 +316,7 @@ Message from task: 42
   
  Para obtener ejemplos completos que muestran cómo usar el `parallel_invoke` algoritmo, vea [Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) y [Cómo: usar Parallel.Invoke para ejecutar operaciones paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Para obtener un ejemplo completo que usa el `task_group` clase para implementar futuros asincrónicos, vea [Tutorial: implementar futuros](../../parallel/concrt/walkthrough-implementing-futures.md).  
   
-##  <a name="robust"></a>Programación sólida  
+##  <a name="robust">Programación sólida</a>  
  Asegúrese de que comprende el rol de cancelación y control de excepciones cuando use tareas, grupos de tareas y algoritmos paralelos. Por ejemplo, en un árbol de trabajo paralelo, una tarea que se cancela impide que se ejecuten las tareas secundarias. Esto puede causar problemas si una de las tareas secundarias realiza una operación que tiene importancia para la aplicación, como liberar un recurso. Además, si una tarea secundaria genera una excepción, esta podría propagarse a través de un destructor de objetos y provocar un comportamiento no definido en la aplicación. Para obtener un ejemplo que ilustre estos aspectos, vea la [entender cómo cancelación y excepción control afecta a la destrucción de objetos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) sección de procedimientos recomendados en el documento Parallel Patterns Library. Para obtener más información acerca de la cancelación y los modelos de control de excepciones en la biblioteca PPL, vea [cancelación](../../parallel/concrt/cancellation-in-the-ppl.md) y [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  

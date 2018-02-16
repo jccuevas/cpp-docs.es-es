@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attribute-injected classes and methods
 - wizard-generated classes and methods
@@ -17,18 +19,18 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Clases generadas por el Asistente para consumidores
 Cuando utiliza el Asistente para consumidores OLE DB ATL para generar un consumidor, tiene la opción de utilizar plantillas OLE DB o atributos OLE DB. En ambos casos, el asistente genera una clase de comando y una clase de registro de usuario. La clase de comando contiene código para abrir el origen de datos y el conjunto de filas especificado en el asistente. La clase de registro de usuario contiene un mapa de columnas para la tabla de base de datos seleccionada. Sin embargo, el código generado es distinto en cada caso:  
@@ -149,7 +151,7 @@ SELECT \
  Por último, el asistente genera una declaración de clase de comando como la siguiente:  
   
 ```  
-class CProducts : public CCommand<CAccessor<CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Clases de registro de usuario con atributos  
@@ -182,7 +184,7 @@ public:
  La declaración de clase de comando insertada presenta el siguiente aspecto:  
   
 ```  
-class CProducts : public CCommand<CAccessor<_CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
  La mayoría del código insertado es igual o similar a la versión de la plantilla. Las diferencias principales están en los métodos insertados, que se describen en [Métodos generados por el Asistente para consumidores](../../data/oledb/consumer-wizard-generated-methods.md).  

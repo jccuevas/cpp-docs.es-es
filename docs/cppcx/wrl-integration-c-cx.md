@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>Integración de WRL (C++/CX)
 
@@ -31,7 +32,7 @@ Para obtener más información acerca de la creación y el consumo [!INCLUDE[cpp
 
 El fragmento de código siguiente se muestra el uso de WRL y [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] para consumir [!INCLUDE[wrt](includes/wrt-md.md)] clases y examinar un archivo de metadatos.
 
-El ejemplo está tomado de un fragmento de código en el [foro de aplicaciones de la tienda de Windows de compilación](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). El autor de este fragmento de código proporciona los avisos de declinación de responsabilidades y las estipulaciones siguientes:
+El ejemplo está tomado de un fragmento de código en el foro de aplicaciones de almacén de Microsoft de creación. El autor de este fragmento de código proporciona los avisos de declinación de responsabilidades y las estipulaciones siguientes:
 
 1. C++ no proporciona API específicas para aplicar reflexión en tipos de [!INCLUDE[wrt](includes/wrt-md.md)] , pero los archivos de metadatos de Windows (.winmd) para un tipo son totalmente conformes a los archivos de metadatos CLR. Windows proporciona las nuevas API de detección de metadatos (RoGetMetaDataFile) para obtener el archivo .winmd para un tipo determinado. Sin embargo, estas API son de uso limitado para los programadores de C++ porque no puedes crear instancias de una clase.
 

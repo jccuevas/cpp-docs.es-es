@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
-La biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel para crear y utilizar los componentes en tiempo de ejecución de Windows.  
+La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel de crear y usar componentes de Windows Runtime.  
   
 ## <a name="benefits"></a>Ventajas  
  La biblioteca de plantillas de C++ de Windows en tiempo de ejecución permite más fácil implementar y consumir los componentes de modelo de objetos componentes (COM). Proporciona técnicas de mantenimiento como el recuento de referencias para administrar la duración de los objetos y probar los valores `HRESULT` para determinar si una operación se realizó correctamente o no. Para usar correctamente la biblioteca de plantillas de C++ de Windows en tiempo de ejecución, debe seguir detenidamente estas reglas y técnicas.  
@@ -45,7 +47,7 @@ La biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) es u
  Aquí tiene algunos recursos que pueden ayudarle a trabajar con la biblioteca de plantillas de C++ de Windows en tiempo de ejecución inmediatamente.  
   
  [La biblioteca de Windows en tiempo de ejecución (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- En este vídeo de Channel 9, obtener más información acerca de cómo la biblioteca de plantillas de C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de la plataforma Universal de Windows y cómo crear y utilizar componentes en tiempo de ejecución de Windows.  
+ En este vídeo de Channel 9, obtener más información acerca de cómo la biblioteca de plantillas de C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de la plataforma Universal de Windows (UWP) y cómo crear y utilizar componentes en tiempo de ejecución de Windows.  
   
  [Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para inicializar el Runtime de Windows y activar y usar un componente en tiempo de ejecución de Windows.  
@@ -57,10 +59,10 @@ La biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) es u
  Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para suscribirse al y controlar los eventos de un objeto en tiempo de ejecución de Windows.  
   
  [Tutorial: Crear un componente de tiempo de ejecución básico de Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente básico de Windows Runtime que suma dos números. También muestra cómo generar eventos y utilizar el componente de una aplicación de plataforma Universal de Windows que usa JavaScript.  
+ Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente básico de Windows Runtime que suma dos números. También muestra cómo generar eventos y utilizar el componente de una aplicación UWP que usa JavaScript.  
   
- [Tutorial: Crear una aplicación de la Tienda Windows mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Obtenga información acerca de cómo crear una aplicación de plataforma Universal de Windows que use [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Obtenga información acerca de cómo crear una aplicación UWP que use [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente COM básico y cómo registrar y utilizar el componente COM de una aplicación de escritorio.  
@@ -72,10 +74,10 @@ La biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) es u
  Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.  
   
  [Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Muestra cómo utilizar el [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) y [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto con otras tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de la plataforma Universal de Windows.  
+ Muestra cómo utilizar el [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) y [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfaces junto con otras tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de UWP.  
   
  [Ejemplo de optimizador de recorridos de mapas de Bing](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación completa de la plataforma Universal de Windows.  
+ Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.  
   
  [Ejemplo de creación un componente DLL en tiempo de ejecución de Windows con C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente DLL en proceso y usarlo desde C++ / CX, JavaScript y C#.  
@@ -89,7 +91,7 @@ La biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) es u
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de plantillas C++ de Windows en tiempo de ejecución en comparación con ATL  
  Biblioteca de plantillas de C++ de Windows en tiempo de ejecución se parece a Active Template Library (ATL) porque se puede usar para crear rápidos objetos COM pequeños. Biblioteca de plantillas de C++ de Windows en tiempo de ejecución y ATL también comparten conceptos tales como definición de objetos en los módulos, registro explícito de interfaces y abra la creación de objetos mediante generadores. Es posible que se encuentra cómodo con la biblioteca de plantillas de C++ de Windows en tiempo de ejecución si está familiarizado con ATL.  
   
- Biblioteca de plantillas de C++ de Windows en tiempo de ejecución es compatible con las funcionalidades COM que se requiere para las aplicaciones de la plataforma Universal de Windows. Por consiguiente, y a diferencia de ATL, omite la compatibilidad directa para características COM como:  
+ Biblioteca de plantillas de C++ de Windows en tiempo de ejecución es compatible con las funcionalidades COM que es necesaria para aplicaciones UWP. Por consiguiente, y a diferencia de ATL, omite la compatibilidad directa para características COM como:  
   
 -   agregación  
   

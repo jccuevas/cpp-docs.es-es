@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Runtime de simultaneidad
 El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sólidas, escalables y receptivas. Eleva el nivel de abstracción para que, de esta forma, no sea necesario administrar los detalles de infraestructura relacionados con la simultaneidad. También se puede usar para especificar directivas de programación que cumplan las demandas de calidad de servicio de las aplicaciones. Use estos recursos como ayuda para empezar a trabajar con el runtime de simultaneidad.  
@@ -67,13 +70,13 @@ El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sóli
 |[Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)|Describe el rol de cancelación en PPL, incluyendo cómo iniciar y responder a las solicitudes de cancelación.|  
 |[Procedimiento para usar la cancelación para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Procedimiento para usar el control de excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Muestra dos mecanismos para cancelar el trabajo de datos en paralelo.|  
   
-## <a name="windows-store-apps"></a>Aplicaciones de la Tienda Windows  
+## <a name="universal-windows-platform-apps"></a>Aplicaciones de la Plataforma universal de Windows  
   
 |||  
 |-|-|  
-|[Creación de operaciones asincrónicas en C++ para aplicaciones de la Tienda Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Describe algunos de los puntos clave para tener en cuenta cuando se usa el runtime de simultaneidad para generar operaciones asincrónicas en una aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Muestra cómo combinar tareas PPL con interfaces `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Ejemplos de aplicación de la Tienda Windows](http://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y aplicaciones de demostración para [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|  
+|[Creación de operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Describe algunos de los puntos clave a tener en cuenta al usar el Runtime de simultaneidad para generar operaciones asincrónicas en una aplicación de UWP.|  
+|[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Muestra cómo combinar tareas PPL con el `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` interfaces para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación de UWP.|  
+|[Ejemplos de aplicaciones de Windows en tiempo de ejecución](http://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y demostración de aplicaciones de Windows 8.x. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programación del flujo de datos en la Biblioteca de agentes asincrónicos  
   
@@ -108,7 +111,7 @@ El runtime de simultaneidad de C++ ayuda a escribir aplicaciones paralelas sóli
   
 |||  
 |-|-|  
-|[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre el uso del runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación de la [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] que usa C++ y XAML.|  
+|[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información acerca de cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|  
 |[Ejemplos de código para el Runtime de simultaneidad y la biblioteca de patrones paralelos en Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Proporciona aplicaciones de ejemplo y utilidades que muestran el uso del runtime de simultaneidad.|  
 |[Programación paralela en código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|  
 |[Computación paralela en el foro de C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|  

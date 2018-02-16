@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Admitir conjuntos de filas de esquema
 Conjuntos de filas de esquema que los consumidores puedan obtener información acerca de un almacén de datos sin conocer su estructura subyacente, o esquema. Por ejemplo, un almacén de datos podría tener tablas organizadas en una jerarquía definida por el usuario, por lo que no habría ninguna manera de asegurarse de conocimiento del esquema sin leerlo. (Como otro ejemplo, observe que los asistentes de Visual C++ utilizan conjuntos de filas de esquema para generar descriptores de acceso para el consumidor). Para permitir que el consumidor hacer esto, objeto de sesión del proveedor expone los métodos en el [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaz. En las aplicaciones de Visual C++, usas la [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) clase para implementar **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`admite los siguientes métodos:  
+ `IDBSchemaRowsetImpl` admite los siguientes métodos:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) comprueba la validez de las restricciones en un conjunto de filas de esquema.  
   
@@ -57,11 +59,11 @@ Conjuntos de filas de esquema que los consumidores puedan obtener información a
   
 -   **C** *ShortName* **SessionColSchemaRowset** administra las solicitudes de información de columna (la **DBSCHEMA_COLUMNS** de filas de esquema). El asistente proporciona implementaciones de ejemplo para estas clases, que devuelven información de esquema para un proveedor de DOS.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** administra las solicitudes de información de esquema sobre el tipo de proveedor (el **DBSCHEMA_PROVIDER_TYPES** conjunto de filas de esquema). La implementación predeterminada proporcionada por el asistente devuelve `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** administra las solicitudes de información de esquema sobre el tipo de proveedor (el **DBSCHEMA_PROVIDER_TYPES** esquema conjunto de filas). La implementación predeterminada proporcionada por el asistente devuelve `S_OK`.  
   
  Puede personalizar estas clases para controlar la información de esquema apropiada para el proveedor:  
   
--   En **C***ShortName***SessionTRSchemaRowset**, debe rellenar los campos de catálogo, tabla y descripción (**trData.m_szType**, **trData.m_szTable**, y **trData.m_szDesc**). El ejemplo generados por el asistente utiliza una sola fila (tabla). Otros proveedores pueden devolver más de una tabla.  
+-   En **C***ShortName***SessionTRSchemaRowset**, debe rellenar los campos de catálogo, tabla y descripción (**trData.m_szType**, **trData.m_szTable** , y **trData.m_szDesc**). El ejemplo generados por el asistente utiliza una sola fila (tabla). Otros proveedores pueden devolver más de una tabla.  
   
 -   En **C***ShortName***SessionColSchemaRowset**, pase el nombre de la tabla como un **DBID**.  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

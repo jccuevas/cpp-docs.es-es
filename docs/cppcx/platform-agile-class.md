@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile (Clase)
 Representa un objeto que tiene MashalingBehavior=Standard como objeto ágil, lo que reduce en gran medida las posibilidades de excepciones de subprocesamiento en tiempo de ejecución. `Agile<T>` permite que el objeto que no es Agile llame al mismo subproceso o a otro diferente, o que le llame a él. Para obtener más información, consulte [subprocesamiento y serialización](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -53,7 +56,7 @@ class Agile;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Agile](#ctor)|Inicializa una nueva instancia de la clase Agile.|  
+|[Agile::Agile](#ctor)|Inicializa una nueva instancia de la clase Agile.|  
 |[Agile::~Agile (Destructor)](#dtor)|Destruye la instancia actual de la clase Agile.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -86,7 +89,7 @@ class Agile;
   
  **Encabezado:** agile.h  
 
-## <a name="ctor"></a>Constructor de Agile
+## <a name="ctor"></a>  Constructor de Agile
 Inicializa una nueva instancia de la clase Agile.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Comentarios  
  La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia de Agile del objeto especificado por el parámetro `object`. La tercera versión es el constructor de copias. La cuarta versión es el constructor de movimiento. Este constructor no puede producir excepciones.  
 
-## <a name="dtor"></a>Agile:: ~ Agile (destructor)
+## <a name="dtor"></a>  Agile::~Agile Destructor
 Destruye la instancia actual de la clase Agile.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -126,7 +129,7 @@ Destruye la instancia actual de la clase Agile.
 ### <a name="remarks"></a>Comentarios  
  Este destructor también libera el objeto representado por el objeto Agile actual.  
   
-## <a name="get"></a>Agile:: Get (método)
+## <a name="get"></a>   Agile:: Get (método)
 Devuelve un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -142,7 +145,7 @@ Devuelve un identificador al objeto representado por el objeto Agile actual.
   
  El tipo del valor devuelto es realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con el **automática** palabra clave de deducción de tipos. Por ejemplo: `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Agile:: getaddressof (método)
+## <a name="getaddressof"></a>  Agile:: getaddressof (método)
 Reinicializa el objeto Agile actual y luego devuelve la dirección de un identificador a un objeto de tipo `T`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Comentarios  
  Esta operación libera la representación actual de un objeto de tipo `T`, si lo hay; reinicializa los miembros de datos del objeto Agile; adquiere el contexto del subproceso actual; y, a continuación, devuelve la dirección de una variable de objeto de identificador que puede representar un objeto no ágil. Para hacer que una instancia de clase ágil representar un objeto, utilice el operador de asignación ([Agile:: operator =](#operator-assign)) para asignar el objeto a la instancia de la clase Agile.  
 
-## <a name="getaddressofforinout"></a>Agile:: getaddressofforinout (método)
+## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout (método)
 Devuelve la dirección de un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Comentarios  
  Esta operación adquiere el contexto de subprocesos actual y devuelve después la dirección de un identificador al objeto subyacente.  
 
-## <a name="release"></a>Agile:: Release (método)
+## <a name="release"></a>  Agile:: Release (método)
 Descarta el objeto y el contexto subyacentes del objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Comentarios  
  Si existen, el objeto y el contexto subyacentes del objeto Agile actual se descartan y, a continuación, el valor del objeto Agile se establece en null.  
 
-## <a name="operator-arrow"></a>Agile:: operator -&gt; (operador)
+## <a name="operator-arrow"></a>  Agile:: operator -&gt; (operador)
 Recupera un identificador al objeto representado por el objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -214,7 +217,7 @@ const throw();
   
  Este operador devuelve realmente un tipo interno no revelado. Una manera cómoda de contener el valor devuelto es asignarlo a una variable que se declara con el **automática** palabra clave de deducción de tipos.  
 
-## <a name="operator-assign"></a>Agile:: operator = (operador)
+## <a name="operator-assign"></a>  Agile::operator= Operator
 Asigna el objeto especificado al objeto Agile actual.  
   
 ## <a name="syntax"></a>Sintaxis  

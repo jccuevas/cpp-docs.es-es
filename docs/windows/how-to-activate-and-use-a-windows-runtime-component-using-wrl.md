@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Cómo: Activar y usar un componente de Windows Runtime mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para inicializar el Runtime de Windows y cómo activar y usar un componente en tiempo de ejecución de Windows.  
@@ -39,7 +41,7 @@ Este documento muestra cómo usar la biblioteca de plantillas de C++ (WRL) de Wi
  Los siguientes pasos se usa el `Windows::Foundation::IUriRuntimeClass` interfaz para mostrar cómo crear un generador de activación de un componente en tiempo de ejecución de Windows, cree una instancia de dicho componente y recuperar un valor de propiedad. También se muestra cómo inicializar el tiempo de ejecución de Windows. A continuación se muestra el ejemplo completo.  
   
 > [!IMPORTANT]
->  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows, en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de la plataforma Universal de Windows. Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de plataforma Universal de Windows, vea [funciones de CRT no admitidas con/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) y [aplicaciones Win32 y COM para la tienda Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows (UWP), en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de UWP. Para obtener más información sobre los tipos y funciones que pueden usar en una aplicación UWP, vea [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) y [Win32 y COM para aplicaciones UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Para activar y usar un componente en tiempo de ejecución de Windows  
   

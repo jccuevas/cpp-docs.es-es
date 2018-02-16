@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref (Clases y structs) (C++/CX)
 C++ / admite CX definido por el usuario *las clases ref* y *structs ref*, definidos por el usuario *clases de valor* y *valor structs*. Estas estructuras de datos son los contenedores primarios por qué C++ / CX admite el sistema de tipos en tiempo de ejecución de Windows. Su contenido se emite en metadatos de acuerdo con determinadas reglas concretas, y esto permite que se pase entre los componentes de tiempo de ejecución de Windows y aplicaciones de la plataforma Universal de Windows que se escriben en C++ u otros lenguajes.  
@@ -100,7 +101,7 @@ C++ / admite CX definido por el usuario *las clases ref* y *structs ref*, defini
   
  El comportamiento no está definido (undefined) si intentas tener acceso a los miembros de una clase en que ya se haya ejecutado su destructor; lo más probable es que el programa se bloquee. La llamada a `delete t` en un tipo que no tenga un destructor público no tiene ningún efecto. La llamada a `delete this` en un tipo o una clase base que tenga un destructor `private` o `protected private` conocido desde su jerarquía de tipos tampoco tiene ningún efecto.  
   
- Al declarar un destructor público, el compilador genera el código para que la clase ref implemente `Platform::IDisposable` y el destructor implemente el método `Dispose` . `Platform::IDisposable`es C++ / proyección CX de `Windows::Foundation::IClosable`. Nunca debes implementar explícitamente estas interfaces.  
+ Al declarar un destructor público, el compilador genera el código para que la clase ref implemente `Platform::IDisposable` y el destructor implemente el método `Dispose` . `Platform::IDisposable` es C++ / proyección CX de `Windows::Foundation::IClosable`. Nunca debes implementar explícitamente estas interfaces.  
   
 ## <a name="inheritance"></a>Herencia  
  Platform::Object es la clase base universal para todas las clases ref. Todas las clases ref se pueden convertir implícitamente en Platform::Object y pueden invalidar [Object::ToString](../cppcx/platform-object-class.md#tostring). Sin embargo, el modelo de herencia de Windows Runtime no pretende ser general de un modelo de herencia; en C++ / CX Esto significa que una clase ref pública definida por el usuario no puede actuar como clase base.  

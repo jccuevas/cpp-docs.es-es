@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 72f8aec06388c0d548da1de903bf47225c05c734
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d9e5dfa8b8afb67e0ea69f87199a11b33bfe801
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperar con otros lenguajes (C++/CX)
 Esta parte de la documentación describe cómo utilizar C++ / CX para crear componentes de Windows en tiempo de ejecución que puedan usarse por otras bibliotecas y lenguajes de programación. También puede crear componentes que no pueden usarse por todos los idiomas. En esta sección describe diferentes aspectos que tener en cuenta cuando su C + / aplicación CX interactúe con componentes que se escriben con JavaScript, un lenguaje de .NET Framework administrado o la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.  

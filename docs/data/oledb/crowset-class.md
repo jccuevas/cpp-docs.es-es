@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL::CRowset
 - ATL::CRowset<TAccessor>
 - ATL.CRowset
-dev_langs: C++
-helpviewer_keywords: CRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef4ec2851365d9fbabab6819a0883b6a9b660f28
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowset-class"></a>CRowset (Clase)
 Encapsula un objeto de conjunto de filas de OLE DB y varios relacionados con interfaces y proporciona métodos de manipulación de datos de conjunto de filas.  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CRowset  
 ```  
@@ -70,7 +73,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Captura de filas a partir de una posición fracciones del conjunto de filas.|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Llamadas [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) para liberar el identificador de fila actual.|  
 |[SetData](../../data/oledb/crowset-setdata.md)|Establece los valores de datos en una o más columnas de una fila mediante [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
-|[Deshacer](../../data/oledb/crowset-undo.md)|Deshace los cambios realizados en una fila desde la última recuperación o [actualización](../../data/oledb/crowset-update.md).|  
+|[Undo](../../data/oledb/crowset-undo.md)|Deshace los cambios realizados en una fila desde la última recuperación o [actualización](../../data/oledb/crowset-update.md).|  
 |[Actualizar](../../data/oledb/crowset-update.md)|Los cambios realizados en la fila actual desde la última captura o de actualizaciones pendientes transmite.|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|Los cambios pendientes realizados en todas las filas desde la última captura o de actualización transmite.|  
   

@@ -1,41 +1,40 @@
 ---
-title: COLUMN_NAME | Documentos de Microsoft
+title: COLUMN_NAME | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME macro
+f1_keywords:
+- COLUMN_NAME
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME macro
 ms.assetid: a213b9a0-2148-4a08-9111-d9fa8fdec462
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 83b65a0439591d9783595bd2e0868e2d63568143
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5550a70e43d9965b98f95bd002aefe08a3c2c0bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Representa un enlace en el conjunto de filas a la columna específica en el conjunto de filas. Similar a [COLUMN_ENTRY](../../data/oledb/column-entry.md), salvo que esta macro toma el nombre de columna en lugar del número de columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-COLUMN_NAME(  
-pszName  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME(pszName, data)  
   
 ```  
   

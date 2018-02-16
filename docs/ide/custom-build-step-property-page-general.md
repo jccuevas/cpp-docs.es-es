@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +15,23 @@ f1_keywords:
 - VC.Project.VCCustomBuildStep.Outputs
 - VC.Project.VCCustomBuildStep.Message
 - VC.Project.VCCustomBuildStep.Command
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Paso de compilación personalizada (Página de propiedades): General
 Para cada combinación de configuración y plataforma de destino del proyecto, puede especificar un paso personalizado que se realizará cuando se compile el proyecto.  
@@ -42,7 +45,7 @@ Para la versión de Linux de esta página, vea [propiedades de paso de compilaci
  **Descripción**  
  Mensaje que se muestra cuando se ejecuta el paso de compilación personalizada.  
   
- **Salidas**  
+ **Outputs**  
  Archivo de salida que genera el paso de compilación personalizada. Este valor es necesario para que las compilaciones incrementales funcionen correctamente.  
   
  **Dependencias adicionales**  
@@ -52,7 +55,7 @@ Para la versión de Linux de esta página, vea [propiedades de paso de compilaci
  Estas opciones definen cuándo se ejecuta el paso de compilación personalizada en el proceso de compilación, en relación con los destinos enumerados. Los destinos más frecuentes son BuildGenerateSources, BuildCompile y BuildLink, ya que representan los pasos principales del proceso de compilación. Otros destinos frecuentes son Midl, CLCompile y Link.  
   
  Tratar salida como contenido  
- Esta opción solo es significativa para las aplicaciones de la Tienda Windows o de Windows Phone, que incluyen todos los archivos de contenido en el paquete .appx.  
+ Esta opción solo es significativa para las aplicaciones de plataforma Universal de Windows o Windows Phone, que incluyen todos los archivos de contenido en el paquete-AppX.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Para especificar un paso de compilación personalizada  
   

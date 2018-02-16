@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Escriba datos con formato en una cadena con la capacidad de especificar el orden en el que se usan los parámetros en la cadena de formato.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` es una versión con caracteres anchos de `_sprintf_p`; los argumentos de puntero a `_swprintf_p` son cadenas de carácter ancho. La detección de errores de codificación en `_swprintf_p` puede diferir de la de `_sprintf_p`. `_swprintf_p` y `fwprintf_p` se comportan exactamente igual, salvo por el hecho de que `_swprintf_p` escribe la salida en una cadena y no en un destino de tipo `FILE`, y `_swprintf_p` requiere el parámetro `count` para especificar el número máximo de caracteres que se escribirán. Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   
- `_sprintf_p` devuelve el número de bytes almacenados en `buffer`, sin contar el carácter `NULL` de terminación. `_swprintf_p`Devuelve el número de caracteres anchos almacenados en `buffer`, sin contar el carácter final `NULL` carácter ancho. Si `buffer` o `format` es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen `errno` en `EINVAL`.  
+ `_sprintf_p` devuelve el número de bytes almacenados en `buffer`, sin contar el carácter `NULL` de terminación. `_swprintf_p` Devuelve el número de caracteres anchos almacenados en `buffer`, sin contar el carácter final `NULL` carácter ancho. Si `buffer` o `format` es un puntero nulo, o si la cadena de formato contiene caracteres de formato no válidos, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen `errno` en `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
   

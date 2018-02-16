@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl (Clase)
 Proporciona una implementación de conjunto de filas de OLE DB estándar sin necesidad de herencia múltiple de las interfaces de implementación.  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Contiene el índice inicial del conjunto de filas.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CRowsetImpl`Proporciona reemplazos realizados en el formulario de convierte estático. Los métodos controlan la manera en que un conjunto de filas determinado validará el texto del comando. Puede crear sus propias `CRowsetImpl`-clase de estilo mediante la realización de las interfaces de la implementación heredada de varios. El único método para el que debe proporcionar la implementación es **Execute**. Dependiendo de qué tipo de conjunto de filas se crea, los métodos de creador esperará firmas diferentes para **Execute**. Por ejemplo, si usas un `CRowsetImpl`-clase derivada para implementar un conjunto de filas de esquema, el **Execute** método tendrá la siguiente firma:  
+ `CRowsetImpl` Proporciona reemplazos realizados en el formulario de convierte estático. Los métodos controlan la manera en que un conjunto de filas determinado validará el texto del comando. Puede crear sus propias `CRowsetImpl`-clase de estilo mediante la realización de las interfaces de la implementación heredada de varios. El único método para el que debe proporcionar la implementación es **Execute**. Dependiendo de qué tipo de conjunto de filas se crea, los métodos de creador esperará firmas diferentes para **Execute**. Por ejemplo, si usas un `CRowsetImpl`-clase derivada para implementar un conjunto de filas de esquema, el **Execute** método tendrá la siguiente firma:  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

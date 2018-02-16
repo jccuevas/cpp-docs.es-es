@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - notifications [C++], OLE DB consumers
 - events [C++], notifications in OLE DB
@@ -16,24 +18,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9a859a9f3b2061d1cb18c93cd9f46d30600ada28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbdb3b7faaec99f9893df29e8d368fd05c8fd111
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-notifications"></a>Admitir notificaciones
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementar Interfaces de punto de conexión en el proveedor y el consumidor  
  Para implementar notificaciones, una clase de proveedor debe heredar de [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) y [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).  
   
- `IRowsetNotifyCP`implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx). `IRowsetNotifyCP`implementa las funciones para indicar que los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas.  
+ `IRowsetNotifyCP` implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx). `IRowsetNotifyCP` implementa las funciones para indicar que los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas.  
   
  Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como el receptor) mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor pueda controlar las notificaciones. Para obtener información sobre cómo implementar la interfaz de punto de conexión en el consumidor, consulte [recibir notificaciones](../../data/oledb/receiving-notifications.md).  
   
@@ -53,14 +55,14 @@ END_CONNECTION_POINT_MAP
 > [!NOTE]
 >  El código de ejemplo puede diferir de lo que se muestre aquí; el ejemplo de código se debe considerar como la versión más actualizada.  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
   
 class RUpdateRowset :   
 public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,   
-         CAtlArray< CAgentMan, CAtlArray<CAgentMan> >, CSimpleRow,   
-         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll > >,  
+         CAtlArray< CAgentMan, CAtlArray<CAgentMan>>, CSimpleRow,   
+         IRowsetScrollImpl< RUpdateRowset, IRowsetScroll >>,  
       public IRowsetUpdateImpl< RUpdateRowset, CAgentMan >,  
       public IConnectionPointContainerImpl<RUpdateRowset>,  
       public IRowsetNotifyCP<RUpdateRowset>  

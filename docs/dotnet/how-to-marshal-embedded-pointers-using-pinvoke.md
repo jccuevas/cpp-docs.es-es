@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - embedded pointers [C++]
 - interop [C++], embedded pointers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c8ae331bb6bb6b35fc4353ad08240fd3d23136a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd2717e5ffc5dc25f7a98f679a23d6f97fd335a5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Cómo: serializar punteros incrustados mediante PInvoke
 Puede llamar a funciones que se implementan en archivos DLL no administradas desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: Marshal Embedded Pointers Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
@@ -35,8 +37,6 @@ Puede llamar a funciones que se implementan en archivos DLL no administradas des
  Pasar estructuras a código nativo, es necesario que se crea una estructura administrada que es equivalente en términos de diseño de datos a la estructura nativa. Sin embargo, las estructuras que contienen punteros requieren un tratamiento especial. Para cada puntero incrustado en la estructura nativa, la versión administrada de la estructura debe contener una instancia de la <xref:System.IntPtr> tipo. Además, memoria para estas instancias se deben asignar explícitamente, inicializar y liberar utilizando la <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, y <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> métodos.  
   
  El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una función que acepta una estructura llamada ListString que contiene un puntero y una función llamada TakesListStruct. El módulo administrado es una aplicación de línea de comandos que importa la función TakesListStruct y define una estructura llamada MListStruct que es equivalente a la ListStruct nativa excepto en que double * se representa con un <xref:System.IntPtr> instancia. Antes de llamar a TakesListStruct, la función principal asigna e inicializa la memoria que hace referencia a este campo.  
-  
- El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
 ```cpp  
 // TraditionalDll6.cpp  

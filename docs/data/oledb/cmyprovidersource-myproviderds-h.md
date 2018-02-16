@@ -1,37 +1,39 @@
 ---
-title: CMyProviderSource (MyProviderDS.H) | Documentos de Microsoft
+title: CMyProviderSource (MyProviderDS.H) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 Las clases de proveedor utilizan herencia múltiple. El código siguiente muestra la cadena de herencia para el objeto de origen de datos:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx`proporciona toda la implementación para la **IUnknown** interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass`controla cualquier soporte de error que se requiere. Si desea enviar transmite información de error al cliente, se pueden utilizar algunas de las API para errores de `CComCoClass`.  
+ Todos los componentes COM que se derivan de `CComObjectRootEx` y `CComCoClass`. `CComObjectRootEx` proporciona toda la implementación para la **IUnknown** interfaz. Puede controlar cualquier modelo de subprocesos. `CComCoClass` controla cualquier soporte de error que se requiere. Si desea enviar transmite información de error al cliente, se pueden utilizar algunas de las API para errores de `CComCoClass`.  
   
  El objeto de origen de datos también hereda de varias clases 'Impl'. Cada clase proporciona la implementación de una interfaz. Los datos del origen de objeto implementa la `IPersist`, `IDBProperties`, **IDBInitialize**, y **IDBCreateSession** interfaces. OLE DB requiere cada interfaz para implementar el objeto de origen de datos. Puede elegir admitir o no una funcionalidad concreta heredando o no heredando de una de estas clases 'Impl'. Si desea admitir la **IDBDataSourceAdmin** interfaz se hereda de la **IDBDataSourceAdminImpl** clase para obtener la funcionalidad necesaria.  
   

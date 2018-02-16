@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: spawnlpe
+ms.topic: reference
+apiname:
+- spawnlpe
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,27 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: spawnlpe
-dev_langs: C++
-helpviewer_keywords: spawnlpe function
+f1_keywords:
+- spawnlpe
+dev_langs:
+- C++
+helpviewer_keywords:
+- spawnlpe function
 ms.assetid: 379143a7-f3d0-41de-83cc-2b4321146390
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a0bddbcc5b281c009468c97d2c5e26e032ac3fd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f5bd3f5f3901ee36d6bb71145b3d1cde5a9b19fd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="spawnlpe"></a>spawnlpe
 Esta función POSIX está en desuso. En su lugar, use la función [_spawnlpe](../../c-runtime-library/reference/spawnlpe-wspawnlpe.md), compatible con ISO C++.  
   
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para más información, vea [Funciones de CRT no admitidas con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).
+>  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

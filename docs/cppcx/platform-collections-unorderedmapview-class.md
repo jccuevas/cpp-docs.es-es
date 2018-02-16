@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 Representa una vista de solo lectura en un *mapa*, que es una colección de pares clave-valor.  
@@ -41,7 +43,7 @@ ref class UnorderedMapView sealed;
  Tipo del valor del par clave-valor.  
   
  `C`  
- Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. De forma predeterminada, [std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
+ Un tipo que proporciona un objeto de función que puede comparar dos valores de clave para determinar si son iguales. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Comentarios  
  UnorderedMapView es una implementación concreta de C++ de la [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) interfaz que se pasa a través de la interfaz binaria de aplicaciones (ABI). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Unorderedmapview](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|  
-|[Unorderedmapview:: Haskey](#haskey)|Determina si el objeto UnorderedMapView actual contiene la clave especificada.|  
-|[Unorderedmapview:: Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto UnorderedMapView actual.|  
-|[Unorderedmapview:: Size](#size)|Devuelve el número de elementos del objeto UnorderedMapView actual.|  
-|[Unorderedmapview:: Split](#split)|Divide un objeto UnorderedMapView original en dos objetos UnorderedMapView.|  
+|[UnorderedMapView::First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|  
+|[UnorderedMapView::HasKey](#haskey)|Determina si el objeto UnorderedMapView actual contiene la clave especificada.|  
+|[UnorderedMapView::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto UnorderedMapView actual.|  
+|[UnorderedMapView::Size](#size)|Devuelve el número de elementos del objeto UnorderedMapView actual.|  
+|[UnorderedMapView::Split](#split)|Divide un objeto UnorderedMapView original en dos objetos UnorderedMapView.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `UnorderedMapView`  

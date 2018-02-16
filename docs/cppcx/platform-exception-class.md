@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception (Clase)
 Representa los errores que se producen durante la ejecución de una aplicación. Las clases de excepción personalizadas no se pueden derivar de `Platform::Exception`. Si necesitas una excepción personalizada, puedes utilizar `Platform::COMException` y especificar un HRESULT específico de la aplicación.  
@@ -51,15 +54,15 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[Exception:: CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|  
+|[Exception::CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|  
   
 ### <a name="properties"></a>Propiedades  
  La clase Exception también tiene las propiedades siguientes.  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|[Exception](#hresult)|HRESULT correspondiente a la excepción.|  
-|[Exception](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|  
+|[Exception::HResult](#hresult)|HRESULT correspondiente a la excepción.|  
+|[Exception::Message](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|  
   
 ### <a name="requirements"></a>Requisitos  
  **Cliente mínimo admitido:** Windows 8  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadatos:** platform.winmd  
 
-## <a name="createexception"></a>Exception:: CreateException (método)
+## <a name="createexception"></a> Exception:: CreateException (método)
 Crea una excepción Platform::Exception^ a partir de un valor HRESULT especificado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Constructor Exception
+## <a name="ctor"></a>  Constructor Exception
 Inicializa una nueva instancia de la clase Exception.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Propiedad Exception
+## <a name="hresult"></a>  Propiedad Exception
 HRESULT correspondiente a la excepción.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Propiedad Exception
+## <a name="message"></a> Propiedad Exception
 Mensaje que describe el error.  
   
 ### <a name="syntax"></a>Sintaxis  

@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows
-Muchas funciones de runtime de C (CRT) no están disponibles al compilar las aplicaciones de Plataforma universal de Windows (UWP). En algunos casos, existen soluciones alternativas:-por ejemplo, puede usar en tiempo de ejecución de Windows o las API de Win32. Sin embargo, en otros casos, se han prohibido las funciones de CRT porque las características que les corresponden o las API auxiliares no son aplicables a las aplicaciones UWP.  
+Muchas funciones de runtime de C (CRT) no están disponibles al compilar las aplicaciones de Plataforma universal de Windows (UWP). En algunos casos, existen soluciones alternativas:-por ejemplo, puede usar en tiempo de ejecución de Windows o las API de Win32. Sin embargo, en otros casos, se han prohibido las funciones de CRT porque las características que les corresponden o las API auxiliares no son aplicables a las aplicaciones UWP. Para buscar un método alternativo que es compatible con el tiempo de ejecución de Windows, vea [alternativas a las API de Windows en las aplicaciones UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- En la tabla siguiente se muestran las funciones de CRT que no están disponibles al compilar aplicaciones UWP y se indican las soluciones alternativas que se aplican.  
+En la tabla siguiente se muestran las funciones de CRT que no están disponibles al compilar aplicaciones UWP y se indican las soluciones alternativas que se aplican.  
   
 ## <a name="unsupported-crt-functions"></a>Funciones CRT no admitidas  
   
@@ -42,7 +43,7 @@ Muchas funciones de runtime de C (CRT) no están disponibles al compilar las apl
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Las variables de entorno no están disponibles para aplicaciones UWP.|Ninguna solución alternativa. Para establecer la zona horaria, use _tzset.|  
 |_loaddll _getdllprocaddr _unloaddll|Se trataba de funciones obsoletas en versiones anteriores de CRT. Además, el usuario no puede cargar DLL que no se encuentren en el mismo paquete de aplicación.|Utilice las API de Win32 `LoadPackagedLibrary`, `GetProcAddress`y `FreeLibrary` para cargar y usar DLL empaquetadas.|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|La funcionalidad no está disponible en aplicaciones UWP. Una aplicación UWP no puede invocar otra aplicación UWP o una aplicación de escritorio.|Ninguna solución alternativa.|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|Estas funciones se suelen usar para trabajar con el montón. Sin embargo, no se admiten las API de Win32 correspondientes en aplicaciones de UWP. Además, las aplicaciones ya no pueden crear o usar montones privados.|Ninguna solución alternativa. Sin embargo, `_heapwalk` está disponible en el CRT de depuración, solo para fines de depuración. No se pueden usar en aplicaciones que se cargan en la Tienda Windows.|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|Estas funciones se suelen usar para trabajar con el montón. Sin embargo, no se admiten las API de Win32 correspondientes en aplicaciones de UWP. Además, las aplicaciones ya no pueden crear o usar montones privados.|Ninguna solución alternativa. Sin embargo, `_heapwalk` está disponible en el CRT de depuración, solo para fines de depuración. No pueden utilizarse en aplicaciones que se cargan a Microsoft Store.|  
   
  Las funciones siguientes están disponibles en el CRT para aplicaciones UWP, pero debe utilizarse únicamente cuando no se puede usar el Win32 correspondientes o Windows Runtime APIs: por ejemplo, al portar grandes bases de códigos  
   

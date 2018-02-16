@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - marshaling [C++], arrays
 - platform invoke [C++], arrays
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>Cómo: serializar matrices mediante PInvoke
 Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante el tipo de cadena CLR <xref:System.String> utilizando el soporte de invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) debido a que P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción (en caso contrario, vea [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
@@ -37,7 +39,7 @@ Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se p
   
  El código siguiente consta de un módulo administrado y no administrado. El módulo no administrado es un archivo DLL que define una función que acepta una matriz de enteros. El segundo módulo es una aplicación de línea de comandos administrada que importa esta función, pero lo define en términos de una matriz administrada y usa el <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo para especificar que la matriz debe convertirse en una matriz nativa cuando se le llama.  
   
- El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
+ El módulo administrado se compila con/CLR.  
   
 ```cpp  
 // TraditionalDll4.cpp  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,33 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs: C++
-helpviewer_keywords: UpdateAll method
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7dc38544641043f95d24cf9a8f9cf40ccca1dbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 Los cambios pendientes realizados en todas las filas desde la última recuperación transmite o **actualización** llamar en ella.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
    HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
-) throw( );  
+   DBROWSTATUS** ppStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -58,7 +58,7 @@ Los cambios pendientes realizados en todas las filas desde la última recuperaci
  [out] Un puntero a la ubicación donde **actualización** devuelve el valor de estado de fila. Si no se devuelve ningún estado `ppStatus` es null.  
   
 ## <a name="remarks"></a>Comentarios  
- Los cambios pendientes realizados en todas las filas, ya que las filas se capturó en último lugar o actualizan utilizando transmite [actualización](../../data/oledb/crowset-update.md) o `UpdateAll`. `UpdateAll`se actualizarán todas las filas que se ha modificado, independientemente de si todavía tiene el identificador para ellos (vea `pphRow`) o no.  
+ Los cambios pendientes realizados en todas las filas, ya que las filas se capturó en último lugar o actualizan utilizando transmite [actualización](../../data/oledb/crowset-update.md) o `UpdateAll`. `UpdateAll` se actualizarán todas las filas que se ha modificado, independientemente de si todavía tiene el identificador para ellos (vea `pphRow`) o no.  
   
  Por ejemplo, si ha usado **insertar** para insertar cinco filas en un conjunto de filas, se puede llamar a **actualizar** cinco veces o llame `UpdateAll` una vez para actualizar todos ellos.  
   
@@ -72,6 +72,6 @@ Los cambios pendientes realizados en todas las filas desde la última recuperaci
   
 ## <a name="see-also"></a>Vea también  
  [CRowset (clase)](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset:: SetData](../../data/oledb/crowset-setdata.md)   
+ [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset::SetData](../../data/oledb/crowset-setdata.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

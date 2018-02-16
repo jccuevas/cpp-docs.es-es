@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Cómo: Completar operaciones asincrónicas mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.  
@@ -36,7 +38,7 @@ Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows 
  Los pasos siguientes inicia un temporizador asincrónico y esperan a que caduque el temporizador. A continuación se muestra el ejemplo completo.  
   
 > [!WARNING]
->  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows, en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de la plataforma Universal de Windows. Para obtener más información sobre los tipos y funciones que puede utilizar en una aplicación de plataforma Universal de Windows, vea [funciones de CRT no admitidas por/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) y [aplicaciones Win32 y COM para la tienda Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Aunque normalmente se utiliza la biblioteca de plantillas de C++ de Windows en tiempo de ejecución en una aplicación de plataforma Universal de Windows (UWP), en este ejemplo se utiliza una aplicación de consola a modo de ilustración. Las funciones como `wprintf_s` no están disponibles en una aplicación de UWP. Para obtener más información sobre los tipos y funciones que pueden usar en una aplicación UWP, vea [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) y [Win32 y COM para aplicaciones UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Incluir (`#include`) los necesarios en tiempo de ejecución de Windows, biblioteca de plantillas de C++ de Windows en tiempo de ejecución o encabezados de la biblioteca estándar de C++.  
   

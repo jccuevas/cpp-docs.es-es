@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 Convierte las cadenas en un valor largo de punto flotante de precisión doble.  
@@ -82,7 +85,7 @@ long double wcstold_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `strtold`Devuelve el valor del número de punto flotante como un `long double`, excepto cuando la representación produciría desbordamiento, en ese caso, la función devuelve`HUGE_VALL`. El signo de `HUGE_VALL` coincide con el signo del valor que no se puede representar. `strtold` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.  
+ `strtold` Devuelve el valor del número de punto flotante como un `long double`, excepto cuando la representación produciría desbordamiento, en ese caso, la función devuelve`HUGE_VALL`. El signo de `HUGE_VALL` coincide con el signo del valor que no se puede representar. `strtold` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.  
   
  `wcstold` devuelve valores de manera parecida a `strtold`. Para ambas funciones, `errno` se establece en `ERANGE` si se produce un desbordamiento o un subdesbordamiento y se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -36,7 +37,8 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 Convierte las cadenas en un valor de punto flotante de precisión sencilla.  
@@ -93,7 +96,7 @@ float wcstof_l(
  Configuración regional que se va a usar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `strtof`Devuelve el valor del número de punto flotante, excepto cuando la representación produciría desbordamiento, en cuyo caso la función devuelve +/-`HUGE_VALF`. El signo de `HUGE_VALF` coincide con el signo del valor que no se puede representar. `strtof` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.  
+ `strtof` Devuelve el valor del número de punto flotante, excepto cuando la representación produciría desbordamiento, en cuyo caso la función devuelve +/-`HUGE_VALF`. El signo de `HUGE_VALF` coincide con el signo del valor que no se puede representar. `strtof` devuelve 0 si no se puede efectuar ninguna conversión o si se produce un subdesbordamiento.  
   
  `wcstof` devuelve valores de manera parecida a `strtof`. Para ambas funciones, `errno` se establece en `ERANGE` si se produce un desbordamiento o un subdesbordamiento y se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).  
   

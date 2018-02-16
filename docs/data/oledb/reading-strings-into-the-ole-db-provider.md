@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB providers, reading strings into
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b57c9e9a71e8a0b603207a095e2bede333ed6ed6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Leer cadenas desde el proveedor OLE DB
-El `RMyProviderRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo para el proveedor mediante una llamada a [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_szCommandText`. `Execute`lee el nombre del archivo de `m_szCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abren el archivo y llama `fgets` para recuperar las cadenas. Para cada conjunto de cadenas lee, `Execute` crea una instancia del registro de usuario (`CAgentMan`) y lo coloca en una matriz.  
+El `RMyProviderRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo para el proveedor mediante una llamada a [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_szCommandText`. `Execute` lee el nombre del archivo de `m_szCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abren el archivo y llama `fgets` para recuperar las cadenas. Para cada conjunto de cadenas lee, `Execute` crea una instancia del registro de usuario (`CAgentMan`) y lo coloca en una matriz.  
   
  Si no se puede abrir el archivo, `Execute` debe devolver **DB_E_NOTABLE**. Si devuelve **E_FAIL** en su lugar, el proveedor no funcionará con muchos consumidores y no pasará OLE DB [las pruebas de conformidad](../../data/oledb/testing-your-provider.md).  
   
@@ -35,7 +38,7 @@ El `RMyProviderRowset::Execute` función abre un archivo y lee las cadenas. El c
   
 ### <a name="code"></a>Código  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
 class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  

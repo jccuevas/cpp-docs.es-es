@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-reference-ccx"></a>Referencia rápida (C++/CX)
-El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows que solo se ejecutan en un entorno de sistema operativo de confianza, usan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de la [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener la documentación completa, vea [sistema de tipos](../cppcx/type-system-c-cx.md) y [extensiones de componentes para plataformas de tiempo de ejecución](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma Universal de Windows (UWP) que solo se ejecutan en un entorno de sistema operativo de confianza, usan funciones, tipos de datos y dispositivos autorizados y se distribuyen a través de Microsoft Store. C++ / CX simplifican la escritura de aplicaciones de Windows en tiempo de ejecución. En este artículo es una referencia rápida; Para obtener la documentación completa, vea [sistema de tipos](../cppcx/type-system-c-cx.md) y [extensiones de componentes para plataformas de tiempo de ejecución](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
- Al compilar en la línea de comandos, utilice la **/ZW** opción del compilador para compilar una aplicación de plataforma Universal de Windows o un componente de Windows en tiempo de ejecución. Para obtener acceso a las declaraciones de en tiempo de ejecución de Windows, que se definen en los archivos de metadatos (.winmd) en tiempo de ejecución de Windows, especifique la `#using` directiva o la **/FU** opción del compilador. Cuando se crea un proyecto para una aplicación de plataforma Universal de Windows, Visual Studio de forma predeterminada establece estas opciones y agrega las referencias a todas las bibliotecas en tiempo de ejecución de Windows.  
+ Al compilar en la línea de comandos, utilice la **/ZW** opción del compilador para compilar una aplicación de UWP o un componente de Windows en tiempo de ejecución. Para obtener acceso a las declaraciones de en tiempo de ejecución de Windows, que se definen en los archivos de metadatos (.winmd) en tiempo de ejecución de Windows, especifique la `#using` directiva o la **/FU** opción del compilador. Cuando se crea un proyecto para una aplicación UWP, Visual Studio de forma predeterminada establece estas opciones y agrega las referencias a todas las bibliotecas en tiempo de ejecución de Windows.  
   
 ## <a name="quick-reference"></a>Referencia rápida  
   
@@ -50,10 +51,10 @@ El tiempo de ejecución de Windows es compatible con aplicaciones de plataforma 
 |declaración de estructura|`struct` *identifier* `{}`<br /><br /> (es decir, una estructura Plain Old Data (POD))|`value class` *identifier* `{}`<br /><br /> `value struct` *identifier* `{}`|Declara un struct de POD que tiene accesibilidad privada predeterminada.<br /><br /> Una clase de valor se puede representar en metadatos de Windows, pero una clase de C++ estándar no se puede.<br /><br /> Declara un struct de POD que tiene accesibilidad pública predeterminada.<br /><br /> Un struct de valor se puede representar en metadatos de Windows, pero un struct de C++ estándar no se puede.|  
 |declaración de interfaz|clase abstracta que solo contiene funciones virtuales puras.|`interface class` *identifier* `{}`<br /><br /> `interface struct` *identifier* `{}`|Declara una interfaz que tiene accesibilidad privada predeterminada.<br /><br /> Declara una interfaz que tiene accesibilidad pública predeterminada.|  
 |delegado|`std::function`|`public delegate` *tipo de valor devuelto* *delegate-type-identifier* `(` *[parámetros]* `);`|Declara un objeto que se puede invocar como una llamada de función.|  
-|evento|(No procede)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parámetros]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> O bien<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> O bien<br /><br /> `auto`*identificador de token de* = *obj*. *identificador de evento*`::add(`*identificador del delegado*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> O bien<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Declare un objeto de evento, que almacena una colección de controladores de eventos (delegados) a los que se llama cuando se produce un evento.<br /><br /> Crear un controlador de eventos.<br /><br /> Agrega un controlador de eventos.<br /><br /> Cuando se agrega un controlador de eventos, se devuelve un token de evento (*token-identifier*). Si vas a quitar explícitamente el controlador de eventos, debes guardar el token de evento para uso posterior.<br /><br /> Quita un controlador de eventos.<br /><br /> Para quitar un controlador de eventos, debes especificar el token de evento que guardaste al agregar el controlador de eventos.|  
+|evento|(No procede)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parámetros]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> O bien<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> O bien<br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> O bien<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Declare un objeto de evento, que almacena una colección de controladores de eventos (delegados) a los que se llama cuando se produce un evento.<br /><br /> Crear un controlador de eventos.<br /><br /> Agrega un controlador de eventos.<br /><br /> Cuando se agrega un controlador de eventos, se devuelve un token de evento (*token-identifier*). Si vas a quitar explícitamente el controlador de eventos, debes guardar el token de evento para uso posterior.<br /><br /> Quita un controlador de eventos.<br /><br /> Para quitar un controlador de eventos, debes especificar el token de evento que guardaste al agregar el controlador de eventos.|  
 |propiedad|(No procede)|`property` *T* *identifier*;<br /><br /> `property` *T* *identifier* `[` *índice* `];`<br /><br /> `property` *T* `default[` *índice* `];`|Declara que se tiene acceso a una función miembro de clase o de objeto mediante la misma sintaxis que se utiliza para tener acceso a un miembro de datos o a un elemento de matriz indizado.<br /><br /> Declara una propiedad en una función miembro de clase o de objeto.<br /><br /> Declara una propiedad indizada en una función miembro de objeto.<br /><br /> Declara una propiedad indizada en una función miembro de clase.|  
 |Tipos parametrizados|plantillas|`generic <typename` *T* `> interface class` *identifier* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Declara una clase de interfaz parametrizada.<br /><br /> Declara un delegado parametrizado.|  
-|Tipos de valor que aceptan valores NULL|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|Permite a variables de tipos escalares y structs de valor obtener un valor de `nullptr`.|  
+|Tipos de valor que aceptan valores NULL|`boost::optional<T>`|[Platform::IBox \<T>](../cppcx/platform-ibox-interface.md)|Permite a variables de tipos escalares y structs de valor obtener un valor de `nullptr`.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

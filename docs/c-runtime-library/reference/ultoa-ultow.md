@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Convierte un entero largo sin signo en una cadena. Hay disponibles versiones más seguras de estas funciones; vea [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  Cada una de estas funciones devuelve un puntero a `str`. No se devuelve ningún error.  
   
 ## <a name="remarks"></a>Comentarios  
- La función `_ultoa` convierte `value` en una cadena de caracteres terminada en null y almacena el resultado (hasta 33 bytes) en `str`. No se realiza ninguna comprobación de desbordamiento. `radix`Especifica la base de `value`; `radix` debe estar comprendido entre 2 y 36. `_ultow` es una versión con caracteres anchos de `_ultoa`.  
+ La función `_ultoa` convierte `value` en una cadena de caracteres terminada en null y almacena el resultado (hasta 33 bytes) en `str`. No se realiza ninguna comprobación de desbordamiento. `radix` Especifica la base de `value`; `radix` debe estar comprendido entre 2 y 36. `_ultow` es una versión con caracteres anchos de `_ultoa`.  
   
 > [!IMPORTANT]
 >  Para evitar los desbordamientos del búfer, asegúrese de que el búfer de `str` tenga el tamaño suficiente para contener los dígitos convertidos más el carácter nulo final.  

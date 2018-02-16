@@ -7,23 +7,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: C4451
+ms.topic: language-reference
+f1_keywords:
+- C4451
 helpviewer_keywords:
 - threading issues, C++/CX
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74a00ece1e1853346b88c0340b32911618a9ff24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Subprocesamiento y cálculo de referencias (C++/CX)
 En la mayoría de los casos, instancias de clases en tiempo de ejecución de Windows, como los objetos de C++ estándares, pueden tener acceso desde cualquier subproceso. Dichas clases reciben el nombre de "ágiles". Sin embargo, un pequeño número de clases en tiempo de ejecución de Windows que se incluyen con Windows es no ágiles y debe utilizarse más como objetos COM objetos de C++ estándar. No es necesario ser un experto en COM para usar clases no ágiles, pero sí lo es tomar en consideración el modelo de subprocesos de la clase y su comportamiento del cálculo de referencias. En este artículo se proporcionan información y orientación sobre estos escenarios raros en que es necesario usar una instancia de una clase no ágil.  

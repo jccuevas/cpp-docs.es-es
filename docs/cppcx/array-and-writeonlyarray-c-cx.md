@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array y WriteOnlyArray (C++/CX)
 También puede utilizar libremente matrices normales de estilo C o [std:: Array](../standard-library/array-class-stl.md) en C++ / programa CX (aunque [std:: vector](../standard-library/vector-class.md) a menudo es mejor usar), pero en cualquier API que está publicado en metadatos, debe convertir una matriz de estilo C o de vector en una [Platform:: Array](../cppcx/platform-array-class.md) o [writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo dependiendo de cómo se usa. El tipo [Platform::Array](../cppcx/platform-array-class.md) no es tan eficaz como [std::vector](../standard-library/vector-class.md), por lo que, como regla general, no debes utilizarlo en código interno que realice gran cantidad de operaciones en los elementos de la matriz.  

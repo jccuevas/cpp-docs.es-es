@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Cómo: serializar punteros a función mediante PInvoke
 Este tema explica cómo administrados delegados puede usarse en lugar de punteros a función al interoperar con funciones no administradas mediante características de .NET Framework P/Invoke. Sin embargo, los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) debido a que P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción. En caso contrario, vea los temas siguientes:  
@@ -42,8 +44,6 @@ Este tema explica cómo administrados delegados puede usarse en lugar de puntero
  El módulo administrado define un delegado que se calculan las referencias al código nativo como un puntero a función y utiliza el <xref:System.Runtime.InteropServices.DllImportAttribute> atributo para exponer la función TakesCallback nativa del código administrado. En la función principal, una instancia del delegado se crea y pasa a la función TakesCallback. El resultado del programa muestra que esta función se ejecute por la función TakesCallback nativa.  
   
  La función administrada suprime la recolección de elementos para el delegado administrado evitar la recolección de elementos no utilizados de .NET Framework de reubicar al delegado mientras se ejecuta la función nativa.  
-  
- El módulo administrado se compila con/CLR, pero/CLR: pure también funciona. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso en Visual Studio 2015.  
   
 ```cpp  
 // TraditionalDll5.cpp  

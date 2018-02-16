@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetNotifyCP
-dev_langs: C++
-helpviewer_keywords: IRowsetNotifyCP class
+f1_keywords:
+- IRowsetNotifyCP
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bae872c90a6df76e3efc1fce1aab6e77bc8fd313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d20a4eb011b67a743e91f1f8340c80ea146bb7c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP (Clase)
 Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx).  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template <  
-   class T,   
-   class ReentrantEventSync = CComSharedMutex   
->  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template <class T, class ReentrantEventSync = CComSharedMutex>  
 class IRowsetNotifyCP :   
    public IConnectionPointImpl<  
       T,   
       piid = &__uuidof(IRowsetNotify),   
-      CComDynamicUnkArray DynamicUnkArray  
-   >,  
+      CComDynamicUnkArray DynamicUnkArray>,  
    public ReentrantEventSync  
 ```  
   
@@ -67,7 +67,7 @@ class IRowsetNotifyCP :
 |[Fire_OnRowsetChange](../../data/oledb/irowsetnotifycp-fire-onrowsetchange.md)|Notifica al consumidor de un cambio que afecta a todo el conjunto de filas.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IRowsetNotifyCP`implementa las funciones para indicar que los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas.  
+ `IRowsetNotifyCP` implementa las funciones para indicar que los agentes de escucha en el punto de conexión de difusión **IID_IRowsetNotify** de los cambios en el contenido del conjunto de filas.  
   
  Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como el "receptor") mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor pueda controlar las notificaciones. Vea [recibir notificaciones](../../data/oledb/receiving-notifications.md) acerca de cómo implementar la interfaz de punto de conexión en el consumidor.  
   

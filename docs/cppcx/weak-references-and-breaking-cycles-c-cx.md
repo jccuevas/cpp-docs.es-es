@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5adb4f2376213d2c297b40f82382261fcf961349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Referencias parciales y ruptura de ciclos (C++/CX)
 En cualquier sistema de tipos basado en el recuento de referencias, las referencias a tipos pueden formar *ciclos*(es decir, un objeto hace referencia a un segundo objeto, el segundo objeto hace referencia a un tercer objeto, etc.), hasta que un objeto final vuelve a hacer referencia al primer objeto. En un ciclo, los objetos no se pueden eliminar correctamente cuando el recuento de referencias de un objeto se convierte en cero. Para resolver este problema, C++ / CX proporciona el [WeakReference (clase)](../cppcx/platform-weakreference-class.md) clase. Un objeto `WeakReference` admite el método [Resolve](../cppcx/platform-weakreference-class.md#resolve) , que devuelve null si el objeto ya no existe o produce una excepción [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) si el objeto está activo pero no es de tipo `T`.  

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: R6019
-dev_langs: C++
-helpviewer_keywords: R6019
+f1_keywords:
+- R6019
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0e027907476eeacf10515556544160e402cd0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-runtime-error-r6019"></a>R6019 de Error de tiempo de ejecución de C
 no se puede abrir el dispositivo de consola  
@@ -37,4 +42,4 @@ no se puede abrir el dispositivo de consola
   
  **Información para programadores**  
   
- Este error se produce porque la aplicación llamó a una función de la consola, pero el sistema operativo no haya concedido acceso a la consola. Excepto en el modo de depuración, consola generalmente no se permiten funciones de aplicaciones de la tienda de Windows. Si su aplicación requiere privilegios de administrador para que se ejecute, asegúrese de que está instalado para ejecutarse como administrador de forma predeterminada.
+ Este error se produce porque la aplicación llamó a una función de la consola, pero el sistema operativo no haya concedido acceso a la consola. Excepto en el modo de depuración, consola generalmente no se permiten funciones en las aplicaciones de Microsoft Store. Si su aplicación requiere privilegios de administrador para que se ejecute, asegúrese de que está instalado para ejecutarse como administrador de forma predeterminada.

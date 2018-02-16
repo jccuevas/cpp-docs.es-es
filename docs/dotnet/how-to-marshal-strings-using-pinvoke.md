@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Cómo: serializar cadenas mediante PInvoke
 Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante la cadena CLR escriba System:: String utilizando el soporte de invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) debido a que P/Invoke proporciona pocos errores en tiempo de compilación reporting, no tiene seguridad de tipos y puede resultar tediosa implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción, pero en caso contrario, consulte [uso de la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -36,8 +38,6 @@ Este tema explica cómo a funciones nativas que aceptan cadenas de estilo C se p
   
 ## <a name="example"></a>Ejemplo  
  El código siguiente consta de un no administrado y un módulo administrado. El módulo no administrado es un archivo DLL que define una función llamada TakesAString, que acepta una cadena de estilo C ANSI en forma de char *. El módulo administrado es una aplicación de línea de comandos que importa la función TakesAString, pero define que toma una System.String administrado en lugar de un valor char\*. El <xref:System.Runtime.InteropServices.MarshalAsAttribute> atributo se utiliza para indicar cómo se debería serializar la cadena administrada cuando se llama a TakesAString.  
-  
- El módulo administrado se compila con/CLR, pero/CLR: pure también funciona.  
   
 ```  
 // TraditionalDll2.cpp  

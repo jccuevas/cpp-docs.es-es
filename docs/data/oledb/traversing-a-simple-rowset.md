@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], rowsets
 - rowsets [C++], accessing
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9f792e7a65a55cb63fb275d4d606a743e00a0e2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2dc0c58414587316a9a63d08bf2116d4159fca20
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Recorrer un conjunto de filas simple
 En el ejemplo siguiente se muestra un acceso rápido y sencillo de base de datos que implican comandos. El siguiente código de consumidor, en un proyecto ATL, recupera los registros de una tabla denominada *intérpretes* un Microsoft Access la base de datos mediante el proveedor Microsoft OLE DB para ODBC. El código crea un [CTable](../../data/oledb/ctable-class.md) objeto de tabla con un descriptor de acceso basado en la clase de registro de usuario `CArtists`. Abre una conexión, se abre una sesión en la conexión y abre la tabla en la sesión.  
@@ -36,14 +38,15 @@ En el ejemplo siguiente se muestra un acceso rápido y sencillo de base de datos
   
 CDataSource connection;  
 CSession session;  
-CTable<CAccessor<CArtists> > artists;  
+CTable<CAccessor<CArtists>> artists;  
   
 // Open the connection, session, and table, specifying authentication   
 // using Windows NT integrated security. Hard-coding a password is a major  
 // security weakness.  
-connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL,   
-DBPROP_AUTH_INTEGRATED);  
+connection.Open(CLSID_MSDASQL, "NWind", NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+
 session.Open(connection);  
+
 artists.Open(session, "Artists");  
   
 // Get data from the rowset  

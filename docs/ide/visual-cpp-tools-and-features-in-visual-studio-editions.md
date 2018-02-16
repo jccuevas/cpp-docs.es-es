@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versions [C++]
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2656b7e1901104b29300f5adb6647e7f3ac1db57
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Herramientas de Visual C++ y características en ediciones de Visual Studio
 En las siguientes tablas se muestran las características de Visual C++ que están disponibles en Visual Studio. Una X en la celda indica que la característica está disponible y una celda vacía, que la característica no está disponible. Las notas entre paréntesis indican que una característica está disponible, pero con restricciones.  
@@ -34,7 +37,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Plataforma|Visual Studio Express para Windows 10|Visual Studio Express para escritorio de Windows|Visual Studio Community/Professional|Visual Studio Enterprise|  
 |Escritorio de Windows||X|X|X|  
 |Plataforma universal de Windows (teléfono, tableta, PC, Xbox, IoT y HoloLens)|X||X|X|  
-|Windows Store 8.1|||X|X|  
+|Almacén de Microsoft 8.1|||X|X|  
 |Windows Phone 8.0|||X|X|  
 |Android|||X|X|  
 |iOS|||X|X|  
@@ -66,10 +69,10 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
 |Plantillas XAML para UWP, Windows 8.1, Windows Phone 8.0|X||X|X|  
 |Aplicación Direct3D|X||X|X|  
-|DLL (aplicaciones de la Tienda Windows)|X||X|X|  
-|Biblioteca estática (aplicaciones de la Tienda Windows)|X||X|X|  
+|DLL (Universal de Windows)|X||X|X|  
+|Biblioteca estática (Universal de Windows)|X||X|X|  
 |Componente de Windows Runtime|X||X|X|  
-|Biblioteca de pruebas unitarias (aplicaciones de la Tienda Windows)|X||X|X|  
+|Aplicación de prueba de unidad (Universal de Windows)|X||X|X|  
 |Proyecto ATL|||X|X|  
 |Biblioteca de clases (CLR)||X|X|X|  
 |Aplicación de consola CLR||X|X|X|  

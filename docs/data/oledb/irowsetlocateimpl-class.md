@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetLocateImpl
-dev_langs: C++
+f1_keywords:
+- IRowsetLocateImpl
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, bookmarks
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a43df3d8732734ed79aae4c56a891bd20bbebe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl (Clase)
 Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz, que captura filas arbitrarias desde un conjunto de filas.  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,   
@@ -40,14 +43,12 @@ template <
    class MapClass = CAtlMap < RowClass::KeyType, RowClass* >,   
    class BookmarkKeyType = LONG,   
    class BookmarkType = LONG,   
-   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >  
->  
+   class BookmarkMapClass = CAtlMap < RowClass::KeyType, RowClass* >>  
 class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<  
-   T,   
-   RowsetInterface,   
-   RowClass,   
-   MapClass  
->  
+       T,   
+       RowsetInterface,   
+       RowClass,   
+       MapClass>  
 ```  
   
 #### <a name="parameters"></a>Parámetros  
@@ -90,9 +91,9 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Una matriz de marcadores.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IRowsetLocateImpl`es la implementación de plantillas OLE DB de la [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz. `IRowsetLocate`se utiliza para capturar filas arbitrarias de un conjunto de filas. Un conjunto de filas que implementan esta interfaz es un `sequential` conjunto de filas. Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador de las filas; leer esta columna, se obtendrá un valor de marcador que puede usarse para cambiar la posición en la misma fila.  
+ `IRowsetLocateImpl` es la implementación de plantillas OLE DB de la [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaz. `IRowsetLocate` se utiliza para capturar filas arbitrarias de un conjunto de filas. Un conjunto de filas que implementan esta interfaz es un `sequential` conjunto de filas. Cuando `IRowsetLocate` está presente en un conjunto de filas, la columna 0 es el marcador de las filas; leer esta columna, se obtendrá un valor de marcador que puede usarse para cambiar la posición en la misma fila.  
   
- `IRowsetLocateImpl`se utiliza para implementar la compatibilidad con marcadores en proveedores. Los marcadores son marcadores de posición (índices en un conjunto de filas) que permiten al consumidor volver rápidamente a una fila, lo que permite acceso a los datos de alta velocidad. El proveedor determina qué marcadores forma única pueden identificar una fila. Usar `IRowsetLocateImpl` métodos, puede comparar los marcadores, fetch filas por offset, fetch filas por marcador y devuelven valores de hash de marcadores.  
+ `IRowsetLocateImpl` se utiliza para implementar la compatibilidad con marcadores en proveedores. Los marcadores son marcadores de posición (índices en un conjunto de filas) que permiten al consumidor volver rápidamente a una fila, lo que permite acceso a los datos de alta velocidad. El proveedor determina qué marcadores forma única pueden identificar una fila. Usar `IRowsetLocateImpl` métodos, puede comparar los marcadores, fetch filas por offset, fetch filas por marcador y devuelven valores de hash de marcadores.  
   
  Para admitir marcadores de OLE DB en un conjunto de filas, haga que el conjunto de filas herede de esta clase.  
   
