@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurar programas para Windows XP
 
 Dado que Visual Studio admite varios conjuntos de herramientas de plataforma, puede tener como destino los sistemas operativos y las bibliotecas en tiempo de ejecución que no son compatibles con el conjunto de herramientas de forma predeterminada. Por ejemplo, al cambiar el conjunto de herramientas de plataforma, puede usar la C ++ 11, C ++ 14 y mejoras de lenguaje C ++ 17 admitidas por el compilador de Visual C++ en Visual Studio para crear aplicaciones que tienen como destino [!INCLUDE[winxp](../build/includes/winxp_md.md)] y [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Puede usar conjuntos de herramientas de plataforma anteriores para mantener la compatibilidad binaria del código heredado y seguir aprovechando las características más recientes del IDE de Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalar el conjunto de herramientas de la plataforma Windows XP
-
 Para obtener el conjunto de herramientas de plataforma y los componentes de destino [!INCLUDE[winxp](../build/includes/winxp_md.md)] y [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] en Visual Studio de 2017, ejecute el instalador de Visual Studio. Cuando se instala inicialmente Visual Studio o cuando se elige **modificar** para modificar una instalación existente, asegúrese de que el **el desarrollo de escritorio con C++** carga de trabajo está seleccionado. En la lista de componentes opcionales para esta carga de trabajo, elija **compatibilidad con Windows XP de C++**y, a continuación, elija **instalar** o **modificar**.
 
 ## <a name="windows-xp-targeting-experience"></a>Experiencia con Windows XP como destino
@@ -65,7 +64,7 @@ Debido a diferencias en la compatibilidad de plataformas y bibliotecas, la exper
 
 - **Características del lenguaje C++**
 
-   Solo características del lenguaje C++ implementadas en Visual Studio 2012 se admiten en aplicaciones que utilizan el v110\_xp conjunto de herramientas de plataforma. Solo características del lenguaje C++ implementadas en Visual Studio 2013 se admiten en aplicaciones que utilizan el v120\_xp conjunto de herramientas de plataforma. Solo características del lenguaje C++ implementadas en Visual Studio 2012 se admiten en aplicaciones que utilizan el v140\_xp conjunto de herramientas de plataforma. Visual Studio usa el compilador correspondiente al compilar con los conjuntos de herramientas de plataforma anteriores. Use el conjunto de herramientas de plataforma de Windows XP más reciente para aprovechar las características adicionales de lenguaje C++ implementadas en esa versión del compilador.
+   Solo características del lenguaje C++ implementadas en Visual Studio 2012 se admiten en aplicaciones que utilizan el v110\_xp conjunto de herramientas de plataforma. Solo características del lenguaje C++ implementadas en Visual Studio 2013 se admiten en aplicaciones que utilizan el v120\_xp conjunto de herramientas de plataforma. Solo características del lenguaje C++ implementadas en Visual Studio 2015 se admiten en aplicaciones que utilizan el v140\_xp conjunto de herramientas de plataforma. Visual Studio usa el compilador correspondiente al compilar con los conjuntos de herramientas de plataforma anteriores. Use el conjunto de herramientas de plataforma de Windows XP más reciente para aprovechar las características adicionales de lenguaje C++ implementadas en esa versión del compilador.
 
 - **Depuración remota**
 
