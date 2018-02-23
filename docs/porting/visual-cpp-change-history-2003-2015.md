@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -97,7 +97,7 @@ Al actualizar a una nueva versión de Visual Studio, se pueden producir errores 
   
 -   **new y delete** In previous versions of the library, the implementation-defined operator new y delete functions were exported from the runtime library DLL (for example, msvcr120.dll). Ahora, estas funciones de operador siempre se vinculan estáticamente en los archivos binarios, incluso cuando se usan las DLL de la biblioteca en tiempo de ejecución.  
   
-     Esto no supone un cambio importante del código nativo o mixto (/clr); en cambio, para código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), puede provocar que este no se compile. Si compila código como /clr:pure, quizá deba agregar #include \<new> o #include \<new.h> para evitar los errores de compilación debidos a este cambio. Tenga en cuenta que /clr:pure ha quedado en desuso en Visual Studio 2015 y es posible que desaparezca en futuras versiones.  
+     Esto no supone un cambio importante del código nativo o mixto (/clr); en cambio, para código compilado como [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), puede provocar que este no se compile. Si compila código como /clr:pure, quizá deba agregar #include \<new> o #include \<new.h> para evitar los errores de compilación debidos a este cambio. Tenga en cuenta que /clr:pure ha quedado en desuso en Visual Studio 2015 y es posible que desaparezca en futuras versiones. El código que tenga que ser puro se debe portar a C#.  
   
 #### <a name="processh"></a>\<process.h>  
   

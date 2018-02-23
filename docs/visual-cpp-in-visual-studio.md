@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 
@@ -75,7 +75,7 @@ Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual
 ## <a name="writing-applications-in-c"></a>Escritura de aplicaciones en C++
 
 [Aplicaciones Windows universales](windows/universal-windows-apps-cpp.md)  
-Encuentre guías y contenido de referencia en el Centro de desarrollo de Windows. Para obtener información sobre el desarrollo de aplicaciones de la Tienda Windows, vea [Desarrollar aplicaciones de la Tienda Windows con Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) y [Guía básica para crear aplicaciones de la Tienda Windows con C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Encuentre guías y contenido de referencia en el Centro de desarrollo de Windows. Para obtener información sobre cómo desarrollar aplicaciones para la Plataforma universal de Windows, vea [Introducción a la plataforma Universal de Windows](/windows/uwp/get-started/universal-application-platform-guide) y [Create your first UWP app using C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp) (Creación de la primera aplicación para la Plataforma universal de Windows con C++).
 
 [Aplicaciones de escritorio (C++)](windows/desktop-applications-visual-cpp.md)  
 Obtenga información sobre cómo crear aplicaciones de escritorio que tienen un bucle de mensajes y devoluciones de llamada.
@@ -131,7 +131,7 @@ Algoritmos asincrónicos y paralelos que se ejecutan en la CPU.
 Algoritmos con gran paralelismo que se ejecutan en la GPU.
 
 [Biblioteca de plantillas de Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] .
+Aplicaciones y componentes de la Plataforma universal de Windows (UWP).
 
 [Programación de .NET con C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programación para Common Language Runtime (CLR).

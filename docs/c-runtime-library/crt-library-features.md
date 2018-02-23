@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -24,22 +27,23 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104119afba696f51598af202c8eb7f1afe79aa93
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
 En este tema se describen los distintos archivos .lib que forman las bibliotecas en tiempo de ejecución de C, así como las opciones de compilador y las directivas de preprocesador asociadas.  
   
 ## <a name="c-run-time-libraries-crt"></a>Bibliotecas en tiempo de ejecución de C (CRT)  
- La biblioteca de tiempo de ejecución de C (CRT) es la parte de la biblioteca estándar de C++ que incorpora la biblioteca del estándar ISO C99. Las bibliotecas de Visual C++ que implementan el CRT admiten el desarrollo de código nativo, así como código mixto (nativo y administrado) y código administrado puro para el desarrollo de .NET. Todas las versiones de CRT admiten el desarrollo multiproceso. La mayoría de las bibliotecas admite la vinculación estática, para vincular la biblioteca directamente en el código, o la vinculación dinámica para permitir que el código use archivos DLL comunes.  
+ La biblioteca de tiempo de ejecución de C (CRT) es la parte de la biblioteca estándar de C++ que incorpora la biblioteca del estándar ISO C99. Las bibliotecas de Visual C++ que implementan CRT admiten el desarrollo de código nativo, así como código mixto (nativo y administrado) y código administrado. Todas las versiones de CRT admiten el desarrollo multiproceso. La mayoría de las bibliotecas admite la vinculación estática, para vincular la biblioteca directamente en el código, o la vinculación dinámica para permitir que el código use archivos DLL comunes.  
   
  A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
@@ -86,9 +90,7 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
   
  Si usa el modificador de compilador **/clr** , el código se vinculará a una biblioteca estática, msvcmrt.lib. La biblioteca estática proporciona un proxy entre el código administrado y CRT nativo. CRT vinculado estáticamente (opciones **/MT** o **/MTd** ) no se puede usar con **/clr**. En su lugar, use las bibliotecas vinculadas dinámicamente (**/MD** o **/MDd**).  
   
- Si usa el modificador de compilador **/clr:pure** , el código se vinculará a la biblioteca estática msvcurt.lib. Lo mismo que con **/clr**, no se puede vincular a la biblioteca estática vinculada. Las opciones del compilador **/clr:pure** y **/clr:safe** están en desuso a partir de Visual Studio 2015.  
-  
- Para obtener más información sobre cómo usar CRT con **/clr**, consulte [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md); para **/clr:pure**, consulte [Código puro y comprobable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Para obtener más información sobre cómo usar CRT con **/clr**, vea [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md).  
   
  Para compilar una versión de depuración de la aplicación, debe estar definida la marca [_DEBUG](../c-runtime-library/debug.md) y la aplicación se debe vincular a una versión de depuración de una de estas bibliotecas. Para obtener más información sobre cómo usar las versiones de depuración de los archivos de biblioteca, vea [Técnicas de depuración de CRT](/visualstudio/debugger/crt-debugging-techniques).  
   

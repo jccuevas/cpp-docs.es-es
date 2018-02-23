@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows
 Quizás la forma más sencilla de conseguir que un programa de escritorio se ejecute en el entorno de UWP es usar las tecnologías de Puente de dispositivo de escritorio. Entre estas se incluye Desktop App Converter, que empaquetará la aplicación existente como una aplicación para UWP sin necesidad de realizar cambios en el código. Para obtener más información, vea [Convertir la aplicación de escritorio en una aplicación para Plataforma universal de Windows (UWP) con el puente de escritorio](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
@@ -27,9 +30,9 @@ El resto de este tema trata sobre cómo migrar bibliotecas de C++ (archivos DLL 
   
  Las aplicaciones de UWP se ejecutan en un entorno protegido y, como resultado, no se permiten muchas llamadas de Win32, COM y API de CRT que podrían poner en peligro la seguridad de la plataforma. El compilador puede detectar este tipo de llamadas y generar un error si se utiliza la opción/ZW. Puede usar el Kit de certificación de aplicaciones en la aplicación para detectar código que llama a las API prohibidas. Vea [Uso del kit para la certificación de aplicaciones](https://msdn.microsoft.com/library/windows/apps/hh694081.aspx).  
   
- Si el código fuente está disponible para la biblioteca, puede eliminar las llamadas a API prohibidas. Para obtener más información, incluida una lista de las API permitidas o prohibidas, vea [Win32 y COM para aplicaciones de Windows Runtime y aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) y [Funciones de CRT no admitidas con /ZW](https://msdn.microsoft.com/library/windows/apps/jj606124.aspx). Encontrará algunas alternativas en [Alternativas a las API de Windows en aplicaciones de Windows Runtime y aplicaciones de la Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx).  
+ Si el código fuente está disponible para la biblioteca, puede eliminar las llamadas a API prohibidas. Para obtener más información, incluida una lista de las API permitidas o prohibidas, vea [Win32 and COM for Windows Runtime Apps and Universal Windows platform (UWP) Apps](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) (Win32 y COM para aplicaciones de Windows Runtime y la Plataforma universal de Windows) y [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (Funciones no admitidas en aplicaciones de la Plataforma universal de Windows). Pueden encontrarse algunas alternativas en [Alternatives to Windows APIs in UWP apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp) (Alternativas a las API de Windows en aplicaciones de la Plataforma universal de Windows).  
   
- Si intenta agregar una referencia de un proyecto universal de Windows a una biblioteca de escritorio clásica, obtendrá un mensaje de error que indica que la biblioteca no es compatible. En el caso de una biblioteca estática, puede incluir un vínculo a la biblioteca agregando la biblioteca (archivo .lib) a la entrada del enlazador, tal como lo haría en una aplicación clásica de Win32. Para las bibliotecas que solo están disponibles en un archivo binario, esta es la única opción. Hay biblioteca estática vinculada al archivo ejecutable de la aplicación, pero se debe empaquetar en la aplicación el archivo DLL de Win32 que utilizará en la aplicación de UWP incluyéndolo en el proyecto y marcándolo como contenido. Para cargar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows, también tiene que llamar a [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx) en lugar de a LoadLibrary o a LoadLibraryEx.  
+ Si intenta agregar una referencia de un proyecto universal de Windows a una biblioteca de escritorio clásica, obtendrá un mensaje de error que indica que la biblioteca no es compatible. En el caso de una biblioteca estática, puede incluir un vínculo a la biblioteca agregando la biblioteca (archivo .lib) a la entrada del enlazador, tal como lo haría en una aplicación clásica de Win32. Para las bibliotecas que solo están disponibles en un archivo binario, esta es la única opción. Hay biblioteca estática vinculada al archivo ejecutable de la aplicación, pero se debe empaquetar en la aplicación el archivo DLL de Win32 que utilizará en la aplicación de UWP incluyéndolo en el proyecto y marcándolo como contenido. Para cargar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows, también tiene que llamar a [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx) en lugar de a LoadLibrary o LoadLibraryEx.  
   
  Si tiene código fuente para el archivo DLL o para una biblioteca estática, puede volver a compilar con/ZW como un proyecto UWP. Si lo hace, puede agregar una referencia mediante el Explorador de soluciones y utilizarla en aplicaciones de C++ de UWP. En el caso de un archivo DLL, se vincula con la biblioteca de exportación.  
   
@@ -39,9 +42,9 @@ El resto de este tema trata sobre cómo migrar bibliotecas de C++ (archivos DLL 
   
  Si ya tiene una biblioteca COM y quiere migrarla a la Plataforma universal de Windows, puede convertirla en un componente de Windows Runtime mediante la [Biblioteca de plantillas C++ de Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). La WRL no admite todas las características de ATL y OLE, por lo que la viabilidad de esta migración dependerá del grado de dependencia del código COM de las características de COM, ATL y OLE que requiera el componente.  
   
- Estas son las distintas formas en que puede utilizar el código C++ existente en proyectos de la plataforma universal de Windows. Algunas formas no requieren que se vuelva a compilar el código con las extensiones del componente (C++ / CX) habilitadas (es decir, con la opción /ZW) y algunas sí; si necesita mantener código en C++ estándar o mantener el entorno de compilación clásico de Win32 para algún código, puede hacerlo, con las opciones de arquitectura adecuadas. Por ejemplo, todo el código que contenga la interfaz de usuario de la plataforma universal de Windows y los tipos que se expondrán a los llamadores de C#, Visual Basic y JavaScript deben estar en los proyectos de aplicaciones de Windows y en los proyectos de componentes de Windows en tiempo de ejecución. El código que debe utilizarse únicamente en C++ (incluido C++/CX) puede encontrarse tanto en un proyecto que se compila con la opción /WX como en un proyecto de C++ estándar. El código exclusivamente binario se puede utilizar vinculándolo como biblioteca estática o empaquetándolo con la aplicación como contenido y cargándolo en un archivo DLL solo si no usa las API prohibidas.  
+ Hay diferentes usos para código C++ existente en proyectos de la Plataforma universal de Windows. Algunas formas no requieren que se vuelva a compilar el código con las extensiones del componente (C++ / CX) habilitadas (es decir, con la opción /ZW) y algunas sí; si necesita mantener código en C++ estándar o mantener el entorno de compilación clásico de Win32 para algún código, puede hacerlo, con las opciones de arquitectura adecuadas. Por ejemplo, todo el código que contenga la interfaz de usuario de la Plataforma universal de Windows y los tipos que se expondrán a los llamadores de C#, Visual Basic y JavaScript deben estar en los proyectos de aplicaciones de Windows y en los proyectos de componentes de Windows Runtime. El código que debe utilizarse únicamente en C++ (incluido C++/CX) puede encontrarse tanto en un proyecto que se compila con la opción /WX como en un proyecto de C++ estándar. El código exclusivamente binario se puede utilizar vinculándolo como biblioteca estática o empaquetándolo con la aplicación como contenido y cargándolo en un archivo DLL solo si no usa las API prohibidas.  
   
- Independientemente de cuál de estos escenarios de desarrollo elija, debe tener en cuenta el número de definiciones de macro que puede utilizar en el código para que se pueda compilar potencialmente tanto en la plataforma de escritorio clásico de Win32 como en la plataforma universal de Windows.  
+ Independientemente de cuál de estos escenarios de desarrollo elija, debe tener en cuenta el número de definiciones de macro que puede usar en el código para que se pueda compilar potencialmente tanto en la plataforma de escritorio clásico de Win32 como en la Plataforma universal de Windows.  
   
 ```cpp  
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)  
@@ -50,17 +53,17 @@ El resto de este tema trata sobre cómo migrar bibliotecas de C++ (archivos DLL 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
 ```  
   
- Estas instrucciones se aplican respectivamente a las aplicaciones de la tienda de Windows, de la tienda de Windows Phone, a ambas o a ninguna (solo a las de escritorio clásico de Win32). Estas macros solo están disponibles en el SDK de Windows 8.1 y posterior, por lo que si necesita  compilar el código con las versiones anteriores del SDK de Windows o para otras plataformas, también debería considerar el caso de que ninguna de ellas estén definidas.  
+ Estas instrucciones se aplican respectivamente a las aplicaciones de la Plataforma universal Windows, la tienda de Windows Phone, ambas o ninguna (solo a las de escritorio clásico de Win32). Estas macros solo están disponibles en Windows SDK 8.1 y posterior, por lo que si necesita compilar el código con las versiones anteriores de Windows SDK o para otras plataformas, también debería considerar el caso de que ninguna de ellas esté definida.  
   
  Este tema contiene los siguientes procedimientos.  
   
-1.  [Usar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows](#BK_Win32DLL)  
+1.  [Mediante un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows](#BK_Win32DLL)  
   
 2.  [Usar una biblioteca estática nativa de C++ en una aplicación para UWP](#BK_StaticLib)  
   
 3.  [Convertir una biblioteca de C++ en un componente de Windows Runtime](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL"></a> Usar un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows  
+##  <a name="BK_Win32DLL"></a> Mediante un archivo DLL de Win32 en una aplicación de la Plataforma universal de Windows  
  Para mayor seguridad y confiabilidad, las aplicaciones universales de Windows se ejecutan en un entorno en tiempo de ejecución restringido, de modo que no puede usar cualquier archivo DLL nativo tal como lo haría en una aplicación de escritorio clásico de Windows. Si tiene código fuente para un archivo DLL, puede migrar el código para que se ejecute en la plataforma universal de Windows. Empiece por cambiar algunos metadatos del archivo de proyecto y la configuración del proyecto para identificar el proyecto como un proyecto de UWP. Debe compilar el código de la biblioteca con la opción/ZW, lo que habilita C++/CX. No se permiten ciertas llamadas a API en las aplicaciones de UWP debido a los controles más estrictos de ese entorno. Vea [Win32 y COM para aplicaciones de Windows Runtime y aplicaciones para Plataforma universal de Windows (UWP)](https://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
  El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que expone funciones mediante __declspec (dllexport).  

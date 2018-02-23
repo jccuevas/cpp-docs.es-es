@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Migrar a la Plataforma universal de Windows (C++)
 En este tema encontrará información sobre cómo migrar código de C++ existente a la plataforma de aplicación de Windows 10, la Plataforma universal de Windows. Por *universal* se entiende que el código puede iniciarse en cualquier dispositivo que ejecute Windows 10, incluidos equipos de escritorio, teléfonos, tabletas y futuros dispositivos que ejecuten Windows 10. Puede crear un solo proyecto y una sola interfaz de usuario basada en XAML que funcione bien en cualquier dispositivo que ejecute Windows 10. Puede usar características de diseño dinámico XAML para que la interfaz de la aplicación se adapte a distintos tamaños de pantalla.  
@@ -73,7 +76,7 @@ En este tema encontrará información sobre cómo migrar código de C++ existent
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     Estas instrucciones se aplican respectivamente a las aplicaciones de la tienda de Windows, de la tienda de Windows Phone, a ambas o a ninguna (solo a las de escritorio clásico de Win32). Estas macros solo están disponibles en Windows SDK 8.1 y posterior, por lo que si necesita compilar el código con las versiones anteriores de Windows SDK o para otras plataformas, también debería considerar el caso de que ninguna de ellas esté definida.  
+     Estas instrucciones se aplican respectivamente a las aplicaciones de la Plataforma universal Windows, la tienda de Windows Phone, ambas o ninguna (solo a las de escritorio clásico de Win32). Estas macros solo están disponibles en Windows SDK 8.1 y posterior, por lo que si necesita compilar el código con las versiones anteriores de Windows SDK o para otras plataformas, también debería considerar el caso de que ninguna de ellas esté definida.  
   
 11. Ejecute y depure la aplicación en un emulador o un dispositivo físico para cada tipo de dispositivo admitido por la aplicación. Para ejecutar un emulador, debe ejecutar Visual Studio en un equipo físico, no en una máquina virtual.  
   
@@ -91,7 +94,7 @@ En este tema encontrará información sobre cómo migrar código de C++ existent
 4.  Compile y corrija los errores provocados por cambios bruscos entre las distintas versiones del SDK de Windows.  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
- Puede encontrar varios errores durante el proceso de exportar código a la Plataforma universal de Windows. Estos son algunos de los problemas que podrían surgir.  
+ Puede encontrar varios errores durante el proceso de exportación de código a la Plataforma universal de Windows. Estos son algunos de los problemas que podrían surgir.  
   
  **Problemas de configuración del proyecto**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- No debería ver este error si ha creado un proyecto nuevo de la Plataforma universal de Windows con Visual Studio.  
+ Si ha creado un proyecto nuevo de la Plataforma universal de Windows con Visual Studio, no debería ver este error.  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de migración de Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
