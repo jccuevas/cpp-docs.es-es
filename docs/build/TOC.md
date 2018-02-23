@@ -96,7 +96,6 @@
 ### [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 ## [Tecnología activa y archivos DLL](active-technology-and-dlls.md)
 ## [Automatización en un archivo DLL](automation-in-a-dll.md)
-## [Convenciones de nomenclatura para archivos DLL de MFC](naming-conventions-for-mfc-dlls.md)
 ## [Llamada a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
 # [Intrínsecos del compilador y lenguaje ensamblador](../intrinsics/TOC.md)
 # [Compilación de código de C o C++ en la línea de comandos](building-on-the-command-line.md)
