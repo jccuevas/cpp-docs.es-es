@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -416,7 +417,8 @@ f1_keywords:
 - AFXWIN/CWnd::ResizeDynamicLayout
 - AFXWIN/CWnd::WindowProc
 - AFXWIN/CWnd::m_hWnd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CWnd [MFC], CWnd
 - CWnd [MFC], accDoDefaultAction
@@ -825,16 +827,17 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0f1d622c2b10b9483a1c40a99bd4956ad24fa07f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 Proporciona la funcionalidad básica de todas las clases de ventana en la biblioteca MFC (Microsoft Foundation Class).  
@@ -866,9 +869,9 @@ class CWnd : public CCmdTarget
 |[CWnd::ArrangeIconicWindows](#arrangeiconicwindows)|Organiza todas las ventanas secundarias (iconos) minimizadas.|  
 |[CWnd::Attach](#attach)|Asocia un identificador de Windows a un objeto `CWnd`.|  
 |[CWnd::BeginModalState](#beginmodalstate)|Llame a esta función miembro para convertir una ventana marco en modal.|  
-|[CWnd:: BeginPaint](#beginpaint)|Prepara `CWnd` para pintar.|  
+|[CWnd::BeginPaint](#beginpaint)|Prepara `CWnd` para pintar.|  
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|Enlaza la propiedad enlazada simple predeterminada del objeto que llama, tal y como se indica en la biblioteca de tipos, a un cursor asociado con un control de origen de datos.|  
-|[CWnd:: BindProperty](#bindproperty)|Enlaza una propiedad enlazada del cursor en un control enlazado a datos a un control de origen de datos, y registra dicha relación con el administrador de enlaces de MFC.|  
+|[CWnd::BindProperty](#bindproperty)|Enlaza una propiedad enlazada del cursor en un control enlazado a datos a un control de origen de datos, y registra dicha relación con el administrador de enlaces de MFC.|  
 |[CWnd::BringWindowToTop](#bringwindowtotop)|Lleva `CWnd` al principio de una pila de ventanas superpuestas.|  
 |[CWnd::CalcWindowRect](#calcwindowrect)|Se llama para calcular el rectángulo de la ventana a partir del rectángulo de cliente.|  
 |[CWnd::CancelToolTips](#canceltooltips)|Deshabilita el control de información sobre herramientas.|  
@@ -880,15 +883,15 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|Convierte a las coordenadas de cliente de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.|  
 |[CWnd::CloseWindow](#closewindow)|Minimiza la ventana.|  
 |[CWnd::ContinueModal](#continuemodal)|Continúa el estado modal de una ventana.|  
-|[CWnd:: Create](#create)|Crea e inicializa la ventana secundaria asociada con el objeto `CWnd`.|  
+|[CWnd::Create](#create)|Crea e inicializa la ventana secundaria asociada con el objeto `CWnd`.|  
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|Crea a un proxy de Active Accessibility para el objeto especificado.|  
 |[CWnd::CreateCaret](#createcaret)|Crea una nueva forma para el símbolo de inserción y se hace con la propiedad de ese símbolo de inserción.|  
-|[CWnd:: CreateControl](#createcontrol)|Crea un control ActiveX que se va a representar en un programa MFC con un objeto `CWnd`.|  
+|[CWnd::CreateControl](#createcontrol)|Crea un control ActiveX que se va a representar en un programa MFC con un objeto `CWnd`.|  
 |[CWnd::CreateEx](#createex)|Crea una ventana de Windows superpuesta, emergente o secundaria y la asocia con un objeto `CWnd`.|  
 |[CWnd::CreateGrayCaret](#creategraycaret)|Crea un bloque de color gris para el símbolo de inserción y se hace con la propiedad de ese símbolo de inserción.|  
 |[CWnd::CreateSolidCaret](#createsolidcaret)|Crea un bloque sólido para el símbolo de inserción y se hace con la propiedad de ese símbolo de inserción.|  
 |[CWnd::DeleteTempMap](#deletetempmap)|Clase llamada automáticamente por el controlador de tiempo de inactividad `CWinApp` que elimina los objetos `CWnd` temporales creados por `FromHandle`.|  
-|[CWnd:: DestroyWindow](#destroywindow)|Destruye la ventana de Windows asociada.|  
+|[CWnd::DestroyWindow](#destroywindow)|Destruye la ventana de Windows asociada.|  
 |[CWnd::Detach](#detach)|Desasocia un identificador de Windows de un objeto `CWnd` y devuelve el identificador.|  
 |[CWnd::DlgDirList](#dlgdirlist)|Rellena un cuadro de lista con una lista de archivos o directorios.|  
 |[CWnd::DlgDirListComboBox](#dlgdirlistcombobox)|Rellena el cuadro de lista de un cuadro combinado con una lista de archivos o directorios.|  
@@ -900,23 +903,23 @@ class CWnd : public CCmdTarget
 |[CWnd::DrawCaption](#drawcaption)|Dibuja una leyenda.|  
 |[CWnd::DrawMenuBar](#drawmenubar)|Vuelve a dibujar la barra de menús.|  
 |[CWnd::EnableActiveAccessibility](#enableactiveaccessibility)|Habilita las funciones de `Active Accessibility` definidas por el usuario.|  
-|[CWnd:: Enabledynamiclayout](#enabledynamiclayout)|Permite que la posición y el tamaño de las ventanas secundarias se ajusten dinámicamente cuando el usuario cambie el tamaño de la ventana.|  
+|[CWnd::EnableDynamicLayout](#enabledynamiclayout)|Permite que la posición y el tamaño de las ventanas secundarias se ajusten dinámicamente cuando el usuario cambie el tamaño de la ventana.|  
 |[CWnd::EnableD2DSupport](#enabled2dsupport)|Habilita o deshabilita la compatibilidad de `D2D` de ventana. Llame a este método antes de que se inicialice la ventana principal.|  
 |[CWnd::EnableScrollBar](#enablescrollbar)|Habilita o deshabilita una o ambas flechas de una barra de desplazamiento.|  
 |[CWnd::EnableScrollBarCtrl](#enablescrollbarctrl)|Habilita o deshabilita un control de barra de desplazamiento del mismo nivel.|  
-|[CWnd:: EnableToolTips](#enabletooltips)|Habilita el control de información sobre herramientas.|  
+|[CWnd::EnableToolTips](#enabletooltips)|Habilita el control de información sobre herramientas.|  
 |[CWnd::EnableTrackingToolTips](#enabletrackingtooltips)|Habilita el control de información sobre herramientas en el modo de seguimiento.|  
 |[CWnd::EnableWindow](#enablewindow)|Habilita o deshabilita la entrada de mouse y de teclado.|  
 |[CWnd::EndModalLoop](#endmodalloop)|Finaliza el estado modal de una ventana.|  
 |[CWnd::EndModalState](#endmodalstate)|Llame a esta función miembro para cambiar una ventana marco de modal a no modal.|  
 |[CWnd::EndPaint](#endpaint)|Marca el final de la pintura.|  
 |[CWnd::ExecuteDlgInit](#executedlginit)|Inicia un recurso de cuadro de diálogo.|  
-|[CWnd:: FilterToolTipMessage](#filtertooltipmessage)|Recupera el título o el texto asociado a un control en un cuadro de diálogo.|  
+|[CWnd::FilterToolTipMessage](#filtertooltipmessage)|Recupera el título o el texto asociado a un control en un cuadro de diálogo.|  
 |[CWnd::FindWindow](#findwindow)|Devuelve el identificador de la ventana, que se reconoce por su nombre de ventana y su clase de ventana.|  
 |[CWnd::FindWindowEx](#findwindowex)|Devuelve el identificador de la ventana, que se reconoce por su nombre de ventana y su clase de ventana.|  
 |[CWnd::FlashWindow](#flashwindow)|Hace que la ventana parpadee una vez.|  
 |[CWnd::FlashWindowEx](#flashwindowex)|Hace que la ventana parpadee con una funcionalidad adicional.|  
-|[CWnd:: FromHandle](#fromhandle)|Devuelve un puntero a un objeto `CWnd` cuando se especifica un identificador a una ventana. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal.|  
+|[CWnd::FromHandle](#fromhandle)|Devuelve un puntero a un objeto `CWnd` cuando se especifica un identificador a una ventana. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal.|  
 |[CWnd::FromHandlePermanent](#fromhandlepermanent)|Devuelve un puntero a un objeto `CWnd` cuando se especifica un identificador a una ventana. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal.|  
 |[CWnd::get_accChild](#get_accchild)|El marco llama a este método para recuperar la dirección de una interfaz `IDispatch` del elemento secundario especificado.|  
 |[CWnd::get_accChildCount](#get_accchildcount)|El marco llama a este método para recuperar el número de elementos secundarios que pertenecen a este objeto.|  
@@ -937,21 +940,21 @@ class CWnd : public CCmdTarget
 |[CWnd::GetCapture](#getcapture)|Recupera el objeto `CWnd` que tiene la captura del mouse.|  
 |[CWnd::GetCaretPos](#getcaretpos)|Recupera las coordenadas de cliente de la posición actual del cursor de inserción.|  
 |[CWnd::GetCheckedRadioButton](#getcheckedradiobutton)|Devuelve el identificador del botón de radio actualmente activado en un grupo de botones.|  
-|[CWnd:: getClientRect](#getclientrect)|Obtiene las dimensiones del área cliente `CWnd`.|  
+|[CWnd::GetClientRect](#getclientrect)|Obtiene las dimensiones del área cliente `CWnd`.|  
 |[CWnd::GetClipboardOwner](#getclipboardowner)|Recupera un puntero al propietario actual del Portapapeles.|  
 |[CWnd::GetClipboardViewer](#getclipboardviewer)|Recupera un puntero a la primera ventana de la cadena de visores del Portapapeles.|  
 |[CWnd::GetControlUnknown](#getcontrolunknown)|Recupera un puntero a un control ActiveX desconocido.|  
-|[CWnd:: GetDC](#getdc)|Recupera un contexto de presentación del área cliente.|  
+|[CWnd::GetDC](#getdc)|Recupera un contexto de presentación del área cliente.|  
 |[CWnd::GetDCEx](#getdcex)|Recupera un contexto de presentación del área cliente y permite recortar mientras se dibuja.|  
 |[CWnd::GetDCRenderTarget](#getdcrendertarget)|Recupera el destino de representación (DC) del contexto de dispositivo de la ventana `CWnd`.|  
 |[CWnd::GetDescendantWindow](#getdescendantwindow)|Encuentra todas las ventanas descendientes y devuelve aquella con el identificador especificado.|  
 |[CWnd::GetDesktopWindow](#getdesktopwindow)|Recupera la ventana de escritorio de Windows.|  
 |[CWnd::GetDlgCtrlID](#getdlgctrlid)|Si el objeto `CWnd` es una ventana secundaria, la llamada a esta función devuelve su valor de identificador correspondiente.|  
-|[CWnd:: GetDlgItem](#getdlgitem)|Recupera el control con el identificador especificado del cuadro de diálogo especificado.|  
+|[CWnd::GetDlgItem](#getdlgitem)|Recupera el control con el identificador especificado del cuadro de diálogo especificado.|  
 |[CWnd::GetDlgItemInt](#getdlgitemint)|Convierte el texto de un control en el cuadro de diálogo determinado en un valor entero.|  
 |[CWnd::GetDlgItemText](#getdlgitemtext)|Recupera la leyenda o el texto asociado a un control.|  
 |[CWnd::GetDSCCursor](#getdsccursor)|Recupera un puntero al cursor subyacente que se define mediante las propiedades DataSource, UserName, Password y SQL de un control de origen de datos.|  
-|[CWnd:: Getdynamiclayout](#getdynamiclayout)|Recupera un puntero al objeto del administrador de diseño dinámico.|  
+|[CWnd::GetDynamicLayout](#getdynamiclayout)|Recupera un puntero al objeto del administrador de diseño dinámico.|  
 |[CWnd::GetExStyle](#getexstyle)|Devuelve el estilo extendido de ventana.|  
 |[CWnd::GetFocus](#getfocus)|Recupera el objeto `CWnd` que tiene el foco de entrada actualmente.|  
 |[CWnd::GetFont](#getfont)|Recupera la fuente actual.|  
@@ -961,7 +964,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetLayeredWindowAttributes](#getlayeredwindowattributes)|Recupera la clave de color de transparencia y opacidad de una ventana superpuesta.|  
 |[CWnd::GetMenu](#getmenu)|Recupera un puntero al menú especificado.|  
 |[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)|Busca el control siguiente (o anterior) dentro de un grupo de controles.|  
-|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|Recupera el primer control con el [WS_TABSTOP](window-styles.md) estilo que sigue (o precede) al control especificado.|  
+|[CWnd::GetNextDlgTabItem](#getnextdlgtabitem)|Recupera el primer control con el [WS_TABSTOP](styles-used-by-mfc.md#window-styles) estilo que sigue (o precede) al control especificado.|  
 |[CWnd::GetNextWindow](#getnextwindow)|Devuelve la ventana siguiente (o anterior) en la lista del Administrador de ventanas.|  
 |[CWnd::GetOleControlSite](#getolecontrolsite)|Recupera el sitio personalizado del control ActiveX especificado.|  
 |[CWnd::GetOpenClipboardWindow](#getopenclipboardwindow)|Recupera un puntero a la ventana que tiene actualmente el Portapapeles abierto.|  
@@ -973,7 +976,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetRenderTarget](#getrendertarget)|Obtiene un destino de presentación asociado a esta ventana.|  
 |[CWnd::GetSafeHwnd](#getsafehwnd)|Devuelve `m_hWnd` o bien `NULL` si el puntero `this` es `NULL`.|  
 |[CWnd::GetSafeOwner](#getsafeowner)|Recupera el propietario seguro de la ventana especificada.|  
-|[CWnd:: Getscrollbarctrl](#getscrollbarctrl)|Devuelve un control de barra de desplazamiento del mismo nivel.|  
+|[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|Devuelve un control de barra de desplazamiento del mismo nivel.|  
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|Recupera información sobre la barra de desplazamiento especificada.|  
 |[CWnd::GetScrollInfo](#getscrollinfo)|Recupera la información que la estructura `SCROLLINFO` mantiene sobre una barra de desplazamiento.|  
 |[CWnd::GetScrollLimit](#getscrolllimit)|Recupera el límite de la barra de desplazamiento.|  
@@ -990,7 +993,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetUpdateRgn](#getupdatergn)|Recupera la región de actualización de `CWnd`.|  
 |[CWnd::GetWindow](#getwindow)|Devuelve la ventana con la relación especificada con esta ventana.|  
 |[CWnd::GetWindowContextHelpId](#getwindowcontexthelpid)|Recupera el identificador de contexto de Ayuda.|  
-|[CWnd:: GetWindowDC](#getwindowdc)|Recupera el contexto de presentación de toda la ventana, como la barra de título, los menús y las barras de desplazamiento.|  
+|[CWnd::GetWindowDC](#getwindowdc)|Recupera el contexto de presentación de toda la ventana, como la barra de título, los menús y las barras de desplazamiento.|  
 |[CWnd::GetWindowedChildCount](#getwindowedchildcount)|Devuelve al número de ventanas secundarias asociadas.|  
 |[CWnd::GetWindowInfo](#getwindowinfo)|Devuelve información sobre la ventana.|  
 |[CWnd::GetWindowlessChildCount](#getwindowlesschildcount)|Devuelve el número de ventanas secundarias asociadas sin ventanas.|  
@@ -1010,7 +1013,7 @@ class CWnd : public CCmdTarget
 |[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|Determina si la compatibilidad con `D2D` está habilitada.|  
 |[CWnd::IsDialogMessage](#isdialogmessage)|Determina si el mensaje en cuestión está pensado para el cuadro de diálogo no modal y, si es así, lo procesa.|  
 |[CWnd::IsDlgButtonChecked](#isdlgbuttonchecked)|Determina si un control de botón está seleccionado.|  
-|[CWnd:: Isdynamiclayoutenabled](#isdynamiclayoutenabled)|Determina si el diseño dinámico está habilitado en esta ventana. Si el diseño dinámico está habilitado, la posición y el tamaño de las ventanas secundarias pueden cambiar cuando el usuario cambie el tamaño de la ventana primaria.|  
+|[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|Determina si el diseño dinámico está habilitado en esta ventana. Si el diseño dinámico está habilitado, la posición y el tamaño de las ventanas secundarias pueden cambiar cuando el usuario cambie el tamaño de la ventana primaria.|  
 |[CWnd::IsIconic](#isiconic)|Determina si `CWnd` está minimizado (icono).|  
 |[CWnd::IsTouchWindow](#istouchwindow)|Especifica si `CWnd` es compatible con la entrada táctil.|  
 |[CWnd::IsWindowEnabled](#iswindowenabled)|Determina si la ventana está habilitada para la entrada de mouse y de teclado.|  
@@ -1036,13 +1039,13 @@ class CWnd : public CCmdTarget
 |[CWnd::PostMessage](#postmessage)|Pone un mensaje en la cola de la aplicación y vuelve sin esperar a que la ventana procese el mensaje.|  
 |[CWnd::PreCreateWindow](#precreatewindow)|Se llama antes de crear la ventana de Windows asociada a este objeto `CWnd`.|  
 |[CWnd::PreSubclassWindow](#presubclasswindow)|Permite que otras subclases necesarias para que se produzca antes de [SubclassWindow](#subclasswindow) se llama.|  
-|[CWnd:: PreTranslateMessage](#pretranslatemessage)|Utilizado por `CWinApp` para filtrar los mensajes de ventana antes de enviarlos a las funciones de Windows `TranslateMessage` y `DispatchMessage`.|  
+|[CWnd::PreTranslateMessage](#pretranslatemessage)|Utilizado por `CWinApp` para filtrar los mensajes de ventana antes de enviarlos a las funciones de Windows `TranslateMessage` y `DispatchMessage`.|  
 |[CWnd::Print](#print)|Dibuja la ventana actual en el contexto de dispositivo especificado.|  
 |[CWnd::PrintClient](#printclient)|Dibuja cualquier ventana en el contexto de dispositivo especificado (normalmente, un contexto de dispositivo de impresora).|  
 |[CWnd::PrintWindow](#printwindow)|Copia una ventana visual en el contexto de dispositivo especificado (normalmente, un DC de impresora).|  
 |[CWnd::RedrawWindow](#redrawwindow)|Actualiza el rectángulo o la región especificados en el área cliente.|  
 |[CWnd::RegisterTouchWindow](#registertouchwindow)|Registre la compatibilidad con entrada táctil de Windows de la ventana o anule ese registro.|  
-|[CWnd:: ReleaseDC](#releasedc)|Libera los contextos de dispositivo de cliente y de ventana, de forma que están disponibles para que los usen otras aplicaciones.|  
+|[CWnd::ReleaseDC](#releasedc)|Libera los contextos de dispositivo de cliente y de ventana, de forma que están disponibles para que los usen otras aplicaciones.|  
 |[CWnd::RepositionBars](#repositionbars)|Vuelve a colocar las barras de control en el área cliente.|  
 |[CWnd::RunModalLoop](#runmodalloop)|Recupera, convierte o envía mensajes relativos a una ventana que está en estado modal.|  
 |[CWnd::ScreenToClient](#screentoclient)|Convierte las coordenadas de pantalla de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.|  
@@ -1050,8 +1053,8 @@ class CWnd : public CCmdTarget
 |[CWnd::ScrollWindowEx](#scrollwindowex)|Desplaza el contenido del área cliente. Similar a `ScrollWindow`, con más características.|  
 |[CWnd::SendChildNotifyLastMsg](#sendchildnotifylastmsg)|Proporciona un mensaje de notificación a una ventana secundaria, desde la ventana primaria, de forma que la ventana secundaria pueda controlar una tarea.|  
 |[CWnd::SendDlgItemMessage](#senddlgitemmessage)|Envía un mensaje al control especificado.|  
-|[CWnd:: SendMessage](#sendmessage)|Envía un mensaje al objeto `CWnd` y no vuelve hasta que el mensaje se ha procesado.|  
-|[CWnd:: SendMessageToDescendants](#sendmessagetodescendants)|Envía un mensaje a todas las ventanas descendientes de la ventana.|  
+|[CWnd::SendMessage](#sendmessage)|Envía un mensaje al objeto `CWnd` y no vuelve hasta que el mensaje se ha procesado.|  
+|[CWnd::SendMessageToDescendants](#sendmessagetodescendants)|Envía un mensaje a todas las ventanas descendientes de la ventana.|  
 |[CWnd::SendNotifyMessage](#sendnotifymessage)|Envía el mensaje especificado a la ventana y vuelve tan pronto como sea posible, dependiendo de si el subproceso de llamada creó la ventana.|  
 |[CWnd::SetActiveWindow](#setactivewindow)|Activa la ventana.|  
 |[CWnd::SetCapture](#setcapture)|Hace que todas las entradas de mouse siguientes se envíen a `CWnd`.|  
@@ -1076,15 +1079,15 @@ class CWnd : public CCmdTarget
 |[CWnd::SetTimer](#settimer)|Instala un cronómetro del sistema que envía un [WM_TIMER](#ontimer) de mensajes cuando se desencadena.|  
 |[CWnd::SetWindowContextHelpId](#setwindowcontexthelpid)|Establece el identificador de contexto de Ayuda.|  
 |[CWnd::SetWindowPlacement](#setwindowplacement)|Establece el estado de visualización y las posiciones normal (restaurada), minimizada y maximizada de una ventana.|  
-|[CWnd:: SetWindowPos](#setwindowpos)|Cambia el tamaño, la posición y el orden de las ventanas secundarias, emergentes y de nivel superior.|  
+|[CWnd::SetWindowPos](#setwindowpos)|Cambia el tamaño, la posición y el orden de las ventanas secundarias, emergentes y de nivel superior.|  
 |[CWnd::SetWindowRgn](#setwindowrgn)|Establece la región de una ventana.|  
 |[CWnd::SetWindowText](#setwindowtext)|Establece el título de texto o de leyenda de la ventana (si lo hay) en el texto especificado.|  
 |[CWnd::ShowCaret](#showcaret)|Muestra el cursor de intersección en pantalla en la posición del cursor de intersección. Ya en pantalla, el cursor de intersección comienza a parpadear automáticamente.|  
 |[CWnd::ShowOwnedPopups](#showownedpopups)|Muestra u oculta todas las ventanas emergentes propiedad de la ventana.|  
 |[CWnd::ShowScrollBar](#showscrollbar)|Muestra u oculta una barra de desplazamiento.|  
-|[CWnd:: ShowWindow](#showwindow)|Muestra u oculta la ventana.|  
-|[CWnd:: SubclassDlgItem](#subclassdlgitem)|Asocia un control de Windows a un objeto `CWnd` y le hace enrutar mensajes a través del mapa de mensajes de `CWnd`.|  
-|[CWnd:: SubclassWindow](#subclasswindow)|Asocia una ventana a un objeto `CWnd` y le hace enrutar mensajes a través del mapa de mensajes de `CWnd`.|  
+|[CWnd::ShowWindow](#showwindow)|Muestra u oculta la ventana.|  
+|[CWnd::SubclassDlgItem](#subclassdlgitem)|Asocia un control de Windows a un objeto `CWnd` y le hace enrutar mensajes a través del mapa de mensajes de `CWnd`.|  
+|[CWnd::SubclassWindow](#subclasswindow)|Asocia una ventana a un objeto `CWnd` y le hace enrutar mensajes a través del mapa de mensajes de `CWnd`.|  
 |[CWnd::UnlockWindowUpdate](#unlockwindowupdate)|Desbloquea una ventana que se bloqueó con `CWnd::LockWindowUpdate`.|  
 |[CWnd::UnsubclassWindow](#unsubclasswindow)|Desasocia una ventana de un `CWnd` objeto|  
 |[CWnd::UpdateData](#updatedata)|Inicializa o recupera datos de un cuadro de diálogo.|  
@@ -1102,12 +1105,12 @@ class CWnd : public CCmdTarget
 |----------|-----------------|  
 |[CWnd::Default](#default)|Llama al procedimiento de ventana predeterminado, que proporciona procesamiento predeterminado de los mensajes de ventana que una aplicación no procesa.|  
 |[CWnd::DefWindowProc](#defwindowproc)|Llama al procedimiento de ventana predeterminado, que proporciona procesamiento predeterminado de los mensajes de ventana que una aplicación no procesa.|  
-|[CWnd:: DoDataExchange](#dodataexchange)|Sirve para intercambiar y validar datos de cuadros de diálogo. Es llamado por el método `UpdateData`.|  
-|[CWnd:: GetCurrentMessage](#getcurrentmessage)|Devuelve un puntero al mensaje que esta ventana está procesando actualmente. Solo se debe llamar cuando una `On` *mensaje* función de miembro de controlador de mensajes.|  
+|[CWnd::DoDataExchange](#dodataexchange)|Sirve para intercambiar y validar datos de cuadros de diálogo. Es llamado por el método `UpdateData`.|  
+|[CWnd::GetCurrentMessage](#getcurrentmessage)|Devuelve un puntero al mensaje que esta ventana está procesando actualmente. Solo se debe llamar cuando una `On` *mensaje* función de miembro de controlador de mensajes.|  
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|El marco llama a este método para inicializar el diseño dinámico de una ventana.|  
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|Carga información de diseño dinámico desde el archivo de recursos.|  
 |[CWnd::OnActivate](#onactivate)|Se llama cuando `CWnd` se está activando o desactivando.|  
-|[CWnd:: Onactivateapp](#onactivateapp)|Se llama cuando la aplicación está a punto de activarse o desactivarse.|  
+|[CWnd::OnActivateApp](#onactivateapp)|Se llama cuando la aplicación está a punto de activarse o desactivarse.|  
 |[CWnd::OnAppCommand](#onappcommand)|Se llama cuando el usuario genera un evento de comando de la aplicación.|  
 |[CWnd::OnAskCbFormatName](#onaskcbformatname)|Una aplicación de visor del Portapapeles llama a este método cuando un propietario del Portapapeles va a mostrar el contenido del Portapapeles.|  
 |[CWnd::OnCancelMode](#oncancelmode)|Se llama para permitir que `CWnd` cancele cualquier modo interno, como la captura del mouse.|  
@@ -1121,7 +1124,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Se llama cuando el contenido del Portapapeles cambia.|  
 |[CWnd::OnClose](#onclose)|Se llama como una señal de que `CWnd` debe cerrarse.|  
 |[CWnd::OnColorizationColorChanged](#oncolorizationcolorchanged)|Se llama cuando cambia la directiva de representación en el área no cliente.|  
-|[CWnd:: OnCommand](#oncommand)|Se llama cuando el usuario selecciona un comando.|  
+|[CWnd::OnCommand](#oncommand)|Se llama cuando el usuario selecciona un comando.|  
 |[CWnd::OnCompacting](#oncompacting)|Se llama cuando Windows detecta que la memoria del sistema es baja.|  
 |[CWnd::OnCompareItem](#oncompareitem)|Se llama para averiguar la posición relativa de un nuevo elemento en un cuadro de lista o un cuadro combinado secundario ordenado dibujado por el propietario.|  
 |[CWnd::OnCompositionChanged](#oncompositionchanged)|Se llama en relación con todas las ventanas de nivel superior cuando se habilita o deshabilita la composición del Administrador de ventanas de escritorio (DWM).|  
@@ -1212,7 +1215,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Se llama cuando es necesario volver a pintar el área cliente del visor del Portapapeles.|  
 |[CWnd::OnPaletteChanged](#onpalettechanged)|Se llama para permitir que las ventanas que usan una paleta de colores realicen sus paletas lógicas y actualicen sus áreas cliente.|  
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informa a otras aplicaciones cuando una aplicación va a realizar su paleta lógica.|  
-|[CWnd:: OnParentNotify](#onparentnotify)|Se llama cuando se crea o se destruye una ventana secundaria, o cuando el usuario hace clic en un botón del mouse mientras el cursor está sobre la ventana secundaria.|  
+|[CWnd::OnParentNotify](#onparentnotify)|Se llama cuando se crea o se destruye una ventana secundaria, o cuando el usuario hace clic en un botón del mouse mientras el cursor está sobre la ventana secundaria.|  
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Se llama cuando se ocurre un evento de administración de energía.|  
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|Se llama cuando un objeto `CWnd` minimizado (icono) está a punto de ser arrastrado por el usuario.|  
 |[CWnd::OnQueryEndSession](#onqueryendsession)|Se llama cuando el usuario decide finalizar la sesión de Windows.|  
@@ -1284,7 +1287,7 @@ class CWnd : public CCmdTarget
 ## <a name="remarks"></a>Comentarios  
  Un objeto `CWnd` es distinto de una ventana de Windows, pero los dos están estrechamente vinculados. El constructor y destructor `CWnd` crea o destruye un objeto `CWnd`. La ventana de Windows, por otro lado, es una estructura de datos interna de Windows creado por un **crear** función miembro y se destruye con el `CWnd` destructor virtual. El [DestroyWindow](#destroywindow) función destruye la ventana de Windows sin destruir el objeto.  
   
- El `CWnd` clase y el mecanismo de mapa de mensajes ocultar la **/ / WndProc** función. Los mensajes de notificación de Windows entrantes automáticamente se enrutan a través de la asignación de mensajes para el propio **en***mensaje* `CWnd` funciones miembro. Invalida una **en***mensaje* función de miembro para administrar de mensaje determinado de un miembro en sus clases derivadas.  
+ El `CWnd` clase y el mecanismo de mapa de mensajes ocultar la **/ / WndProc** función. Los mensajes de notificación de Windows entrantes automáticamente se enrutan a través de la asignación de mensajes para el propio **en *** mensaje* `CWnd` funciones miembro. Invalida una **en *** mensaje* función de miembro para administrar de mensaje determinado de un miembro en sus clases derivadas.  
   
  Con la clase `CWnd` también se puede crear una ventana secundaria de Windows para la aplicación. Derive una clase de `CWnd` y, luego, agregue variables miembro a esa clase derivada para almacenar datos específicos de la aplicación. Implemente funciones miembro de controlador de mensajes y un mapa de mensajes en la clase derivada para especificar qué ocurre cuando los mensajes se dirigen a la ventana.  
   
@@ -1306,7 +1309,7 @@ class CWnd : public CCmdTarget
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
   
-##  <a name="accdodefaultaction"></a>CWnd::accDoDefaultAction  
+##  <a name="accdodefaultaction"></a>  CWnd::accDoDefaultAction  
  El marco llama a este método para realizar la acción predeterminada del objeto.  
   
 ```  
@@ -1325,7 +1328,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
   
  Anular esta función en su `CWnd`-clase derivada para realizar la acción predeterminada de objeto. Para obtener más información, consulte [:: accDoDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318470) del SDK de Windows.  
   
-##  <a name="acchittest"></a>CWnd::accHitTest  
+##  <a name="acchittest"></a>  CWnd::accHitTest  
  El marco llama a este método para recuperar el elemento u objeto secundario situado en un punto dado de la pantalla.  
   
 ```  
@@ -1355,7 +1358,7 @@ virtual HRESULT accHitTest(
   
  Para obtener más información, consulte [:: accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471) del SDK de Windows.  
   
-##  <a name="acclocation"></a>CWnd::accLocation  
+##  <a name="acclocation"></a>  CWnd::accLocation  
  El marco llama a este método para recuperar la ubicación actual del objeto especificado en la pantalla.  
   
 ```  
@@ -1391,7 +1394,7 @@ virtual HRESULT accLocation(
   
  Para obtener más información, consulte **:: accLocation** del SDK de Windows.  
   
-##  <a name="accnavigate"></a>CWnd::accNavigate  
+##  <a name="accnavigate"></a>  CWnd::accNavigate  
  El marco llama a este método para ir a otro elemento de la interfaz de usuario dentro de un contenedor y, si es posible, recuperar el objeto.  
   
 ```  
@@ -1421,7 +1424,7 @@ virtual HRESULT accNavigate(
   
  Para obtener más información, consulte [:: accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473) del SDK de Windows.  
   
-##  <a name="accselect"></a>CWnd::accSelect  
+##  <a name="accselect"></a>  CWnd::accSelect  
  El marco llama a este método para modificar la selección o desplazar el foco de teclado del objeto especificado.  
   
 ```  
@@ -1447,7 +1450,7 @@ virtual HRESULT accSelect(
   
  Para obtener más información, consulte [:: accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474) del SDK de Windows.  
   
-##  <a name="animatewindow"></a>CWnd::AnimateWindow  
+##  <a name="animatewindow"></a>  CWnd::AnimateWindow  
  Genera los efectos especiales al mostrar u ocultar ventanas.  
   
 ```  
@@ -1469,7 +1472,7 @@ BOOL AnimateWindow(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669), tal y como se describe en el SDK de Windows.  
   
-##  <a name="arrangeiconicwindows"></a>CWnd::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>  CWnd::ArrangeIconicWindows  
  Organiza todas las ventanas secundarias (iconos) minimizadas.  
   
 ```  
@@ -1487,7 +1490,7 @@ UINT ArrangeIconicWindows();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#66](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
   
-##  <a name="attach"></a>CWnd::Attach  
+##  <a name="attach"></a>  CWnd::Attach  
  Asocia una ventana de Windows a un `CWnd` objeto.  
   
 ```  
@@ -1510,14 +1513,14 @@ BOOL Attach(HWND hWndNew);
   
  [!code-cpp[NVC_MFCWindowing#69](../../mfc/reference/codesnippet/cpp/cwnd-class_4.cpp)]  
   
-##  <a name="beginmodalstate"></a>CWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>  CWnd::BeginModalState  
  Llame a esta función miembro para convertir una ventana marco en modal.  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="beginpaint"></a>CWnd:: BeginPaint  
+##  <a name="beginpaint"></a>  CWnd::BeginPaint  
  Prepara `CWnd` para dibujar y rellena una `PAINTSTRUCT` estructura de datos con información sobre las operaciones de dibujo.  
   
 ```  
@@ -1541,7 +1544,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
   
-##  <a name="binddefaultproperty"></a>CWnd::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>  CWnd::BindDefaultProperty  
  Propiedad enlazada simple predeterminada del objeto que realiza la llamada (por ejemplo, un control de edición), como se marca en la biblioteca de tipos, se enlaza al cursor subyacente que se define mediante las propiedades DataSource, UserName, Password y SQL del control de origen de datos.  
   
 ```  
@@ -1569,13 +1572,13 @@ void BindDefaultProperty(
  La `CWnd` objeto en el que se llame a esta función debe ser un control enlazado a datos.  
   
 ### <a name="example"></a>Ejemplo  
- `BindDefaultProperty`podría utilizarse en el contexto siguiente:  
+ `BindDefaultProperty` podría utilizarse en el contexto siguiente:  
   
  [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="bindproperty"></a>CWnd:: BindProperty  
+##  <a name="bindproperty"></a>  CWnd::BindProperty  
  Enlaza una propiedad enlazada del cursor en un control enlazado a datos (por ejemplo, un control de cuadrícula) a un control de origen de datos y registra dicha relación con el Administrador de enlaces de MFC.  
   
 ```  
@@ -1595,13 +1598,13 @@ void BindProperty(
  La `CWnd` objeto en el que se llame a esta función debe ser un control enlazado a datos.  
   
 ### <a name="example"></a>Ejemplo  
- `BindProperty`podría utilizarse en el contexto siguiente:  
+ `BindProperty` podría utilizarse en el contexto siguiente:  
   
  [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="bringwindowtotop"></a>CWnd::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop  
  Lleva `CWnd` al principio de una pila de ventanas superpuestas.  
   
 ```  
@@ -1616,7 +1619,7 @@ void BringWindowToTop();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#71](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
   
-##  <a name="calcwindowrect"></a>CWnd::CalcWindowRect  
+##  <a name="calcwindowrect"></a>  CWnd::CalcWindowRect  
  Calcula el rectángulo de ventana que puede contener el rectángulo de cliente especificado.  
   
 ```  
@@ -1640,7 +1643,7 @@ virtual void CalcWindowRect(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#72](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
   
-##  <a name="canceltooltips"></a>CWnd::CancelToolTips  
+##  <a name="canceltooltips"></a>  CWnd::CancelToolTips  
  Llame a esta función miembro para quitar una información sobre herramientas de la pantalla si se muestra una información sobre herramientas.  
   
 ```  
@@ -1659,7 +1662,7 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#73](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
   
-##  <a name="centerwindow"></a>CWnd::CenterWindow  
+##  <a name="centerwindow"></a>  CWnd::CenterWindow  
  Centra una ventana con respecto a su elemento primario.  
   
 ```  
@@ -1676,7 +1679,7 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#74](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
   
-##  <a name="changeclipboardchain"></a>CWnd::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>  CWnd::ChangeClipboardChain  
  Quita `CWnd` de la cadena de visores del Portapapeles y ponen a la ventana especificada por `hWndNext` el descendiente de la `CWnd` antecesor en la cadena.  
   
 ```  
@@ -1690,7 +1693,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 ### <a name="return-value"></a>Valor devuelto  
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
-##  <a name="checkdlgbutton"></a>CWnd::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>  CWnd::CheckDlgButton  
  Activa (coloca una marca de verificación junto a) o desactiva (quita una marca de verificación de) un botón o se cambia el estado de un botón de tres estados.  
   
 ```  
@@ -1712,7 +1715,7 @@ void CheckDlgButton(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#75](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
   
-##  <a name="checkradiobutton"></a>CWnd::CheckRadioButton  
+##  <a name="checkradiobutton"></a>  CWnd::CheckRadioButton  
  Selecciona (agrega una marca de verificación a) un botón de opción especificado en un grupo y borra (quita una marca de verificación de) todos los demás botones del grupo.  
   
 ```  
@@ -1738,7 +1741,7 @@ void CheckRadioButton(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
   
-##  <a name="childwindowfrompoint"></a>CWnd::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>  CWnd::ChildWindowFromPoint  
  Determina que, si cualquiera de las ventanas secundarias que pertenecen a `CWnd` contiene el punto especificado.  
   
 ```  
@@ -1753,7 +1756,7 @@ CWnd* ChildWindowFromPoint(
  `point`  
  Especifica las coordenadas de cliente del punto de va a probar.  
   
- *nFlags*  
+ *nflags*  
  Especifica qué ventanas secundarias que se omiten. Este parámetro puede ser una combinación de los siguientes valores:  
   
 |Valor|Significado|  
@@ -1775,7 +1778,7 @@ CWnd* ChildWindowFromPoint(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#77](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
   
-##  <a name="clienttoscreen"></a>CWnd::ClientToScreen  
+##  <a name="clienttoscreen"></a>  CWnd::ClientToScreen  
  Convierte a las coordenadas de cliente de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.  
   
 ```  
@@ -1797,7 +1800,7 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]  
   
-##  <a name="closewindow"></a>CWnd::CloseWindow  
+##  <a name="closewindow"></a>  CWnd::CloseWindow  
  Minimiza la ventana.  
   
 ```  
@@ -1807,7 +1810,7 @@ void CloseWindow();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [CloseWindow](http://msdn.microsoft.com/library/windows/desktop/ms632678), tal y como se describe en el SDK de Windows.  
   
-##  <a name="continuemodal"></a>CWnd::ContinueModal  
+##  <a name="continuemodal"></a>  CWnd::ContinueModal  
  Llama a esta función miembro [parte de RunModalLoop](#runmodalloop) para determinar cuándo se debe salir del estado modal.  
   
 ```  
@@ -1820,7 +1823,7 @@ virtual BOOL ContinueModal();
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, devuelve es distinto de cero hasta que `EndModalLoop` se llama.  
   
-##  <a name="create"></a>CWnd:: Create  
+##  <a name="create"></a>  CWnd:: Create  
  Crea la ventana secundaria especificado y lo adjunta a la [CWnd](../../mfc/reference/cwnd-class.md) objeto.  
   
 ```  
@@ -1842,7 +1845,7 @@ virtual BOOL Create(
  Puntero a una cadena terminada en null que contiene la ventana nombre para mostrar. en caso contrario, `NULL` para ningún nombre para mostrar ventana.  
   
  [in] `dwStyle`  
- Combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). El `WS_POPUP` opción no es un estilo válido.  
+ Combinación bit a bit (OR) de [estilos de ventana](styles-used-by-mfc.md#window-styles). El `WS_POPUP` opción no es un estilo válido.  
   
  [in] `rect`  
  El tamaño y la ubicación de la ventana con respecto a la esquina superior izquierda de la ventana primaria.  
@@ -1857,12 +1860,12 @@ virtual BOOL Create(
  Puntero a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estructura que se utiliza para personalizar la arquitectura de vista de documento para la aplicación.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow`Ahora se asigna al miembro hMenu de su `CREATESTRUCT` parámetro a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
+> `CWnd::PreCreateWindow` Ahora se asigna al miembro hMenu de su `CREATESTRUCT` parámetro a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
 >   
 >  Este cambio corrige un bloqueo en escenarios de interoperabilidad administrado y nativo. A `TRACE` instrucción `CWnd::Create` alertas el desarrollador del problema.  
   
@@ -1873,7 +1876,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]  
   
-##  <a name="createaccessibleproxy"></a>CWnd::CreateAccessibleProxy  
+##  <a name="createaccessibleproxy"></a>  CWnd::CreateAccessibleProxy  
  Crea a un proxy de Active Accessibility para el objeto especificado.  
   
 ```  
@@ -1900,7 +1903,7 @@ virtual HRESULT CreateAccessibleProxy(
 ### <a name="remarks"></a>Comentarios  
  Crea a un proxy de Active Accessibility para el objeto especificado.  
   
-##  <a name="createcaret"></a>CWnd::CreateCaret  
+##  <a name="createcaret"></a>  CWnd::CreateCaret  
  Crea una nueva forma para el símbolo de inserción y reclama la propiedad del símbolo de intercalación.  
   
 ```  
@@ -1914,14 +1917,14 @@ void CreateCaret(CBitmap* pBitmap);
 ### <a name="remarks"></a>Comentarios  
  El mapa de bits debe se han creado previamente por el [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap) función miembro, el [CreateDIBitmap](http://msdn.microsoft.com/library/windows/desktop/dd183491) la función de Windows, o la [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap) función miembro.  
   
- `CreateCaret`destruye automáticamente la forma de símbolo de intercalación anterior, si procede, independientemente de la ventana que posee el símbolo de intercalación. Una vez creado, el símbolo de intercalación está oculto inicialmente. Para mostrar el símbolo de intercalación, el [ShowCaret](#showcaret) función miembro debe llamarse.  
+ `CreateCaret` destruye automáticamente la forma de símbolo de intercalación anterior, si procede, independientemente de la ventana que posee el símbolo de intercalación. Una vez creado, el símbolo de intercalación está oculto inicialmente. Para mostrar el símbolo de intercalación, el [ShowCaret](#showcaret) función miembro debe llamarse.  
   
- El símbolo de inserción es un recurso compartido. `CWnd`debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
+ El símbolo de inserción es un recurso compartido. `CWnd` debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]  
   
-##  <a name="createcontrol"></a>CWnd:: CreateControl  
+##  <a name="createcontrol"></a>  CWnd::CreateControl  
  Utilice esta función miembro para crear un control ActiveX que se representará en el programa MFC con una `CWnd` objeto.  
   
 ```  
@@ -2003,7 +2006,7 @@ BOOL CreateControl(
  Si es correcta, su valor es distinto de cero. En caso contrario, es cero.  
   
 ### <a name="remarks"></a>Comentarios  
- `CreateControl`es un equivalente directo de la [CWnd:: Create](#create) function, que crea la ventana de un `CWnd`. `CreateControl`crea un control ActiveX en lugar de una ventana normal.  
+ `CreateControl` es un equivalente directo de la [CWnd:: Create](#create) function, que crea la ventana de un `CWnd`. `CreateControl` crea un control ActiveX en lugar de una ventana normal.  
   
  Solo un subconjunto de las ventanas `dwStyle` admite las marcas de `CreateControl`:  
   
@@ -2011,7 +2014,7 @@ BOOL CreateControl(
   
 - **WS_DISABLED** crea una ventana que está inicialmente deshabilitada. Una ventana deshabilitada no puede recibir la entrada del usuario. Puede establecerse si el control tiene una propiedad Enabled.  
   
-- `WS_BORDER`Crea una ventana con un borde de línea fino. Puede establecerse si el control tiene una propiedad de estilo de borde.  
+- `WS_BORDER` Crea una ventana con un borde de línea fino. Puede establecerse si el control tiene una propiedad de estilo de borde.  
   
 - **WS_GROUP** especifica el primer control de un grupo de controles. El usuario puede cambiar el foco del teclado de un control en el grupo a otro utilizando las teclas de dirección. Todos los controles definidos con el **WS_GROUP** después de que el primer control pertenecen al mismo grupo de estilo. El siguiente control con el **WS_GROUP** estilo finaliza el grupo e inicia el grupo siguiente.  
   
@@ -2020,7 +2023,7 @@ BOOL CreateControl(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]  
   
-##  <a name="createex"></a>CWnd::CreateEx  
+##  <a name="createex"></a>  CWnd::CreateEx  
  Crea la ventana especificada y lo adjunta a la `CWnd` objeto.  
   
 ```  
@@ -2060,7 +2063,7 @@ virtual BOOL CreateEx(
  Puntero a una cadena terminada en null que contiene la ventana nombre para mostrar. en caso contrario, `NULL` para ningún nombre para mostrar ventana.  
   
  `dwStyle`  
- Combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles); en caso contrario `NULL` para el estilo de ventana predeterminado.  
+ Combinación bit a bit (OR) de [estilos de ventana](styles-used-by-mfc.md#window-styles); en caso contrario `NULL` para el estilo de ventana predeterminado.  
   
  `x`  
  La distancia horizontal inicial de la ventana del lado izquierdo de la pantalla o la ventana primaria.  
@@ -2093,12 +2096,12 @@ virtual BOOL CreateEx(
  Para una ventana secundaria, el identificador de ventana; en caso contrario, el identificador de un menú de la ventana.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el método se realizó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el método se realizó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow`Ahora se asigna al miembro hMenu de su `CREATESTRUCT` parámetro a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
+> `CWnd::PreCreateWindow` Ahora se asigna al miembro hMenu de su `CREATESTRUCT` parámetro a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
 >   
 >  Este cambio corrige un bloqueo en escenarios de interoperabilidad administrado y nativo. A `TRACE` instrucción `CWnd::Create` alertas el desarrollador del problema.  
   
@@ -2113,7 +2116,7 @@ virtual BOOL CreateEx(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]  
   
-##  <a name="creategraycaret"></a>CWnd::CreateGrayCaret  
+##  <a name="creategraycaret"></a>  CWnd::CreateGrayCaret  
  Crea un rectángulo gris para el símbolo de inserción y reclama la propiedad del símbolo de intercalación.  
   
 ```  
@@ -2138,12 +2141,12 @@ void CreateGrayCaret(
   
  El `CreateGrayCaret` función miembro destruye automáticamente la forma de símbolo de intercalación anterior, si procede, independientemente de la ventana que posee el símbolo de intercalación. Una vez creado, el símbolo de intercalación está oculto inicialmente. Para mostrar el símbolo de intercalación, el [ShowCaret](#showcaret) función miembro debe llamarse.  
   
- El símbolo de inserción es un recurso compartido. `CWnd`debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
+ El símbolo de inserción es un recurso compartido. `CWnd` debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]  
   
-##  <a name="createsolidcaret"></a>CWnd::CreateSolidCaret  
+##  <a name="createsolidcaret"></a>  CWnd::CreateSolidCaret  
  Crea un rectángulo sólido para el símbolo de inserción y reclama la propiedad del símbolo de intercalación.  
   
 ```  
@@ -2168,12 +2171,12 @@ void CreateSolidCaret(
   
  El `CreateSolidCaret` función miembro destruye automáticamente la forma de símbolo de intercalación anterior, si procede, independientemente de la ventana que posee el símbolo de intercalación. Una vez creado, el símbolo de intercalación está oculto inicialmente. Para mostrar el símbolo de intercalación, el [ShowCaret](#showcaret) función miembro debe llamarse.  
   
- El símbolo de inserción es un recurso compartido. `CWnd`debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
+ El símbolo de inserción es un recurso compartido. `CWnd` debe crear un símbolo de intercalación cuando ya tiene el foco de entrada o que está activo. El símbolo de intercalación debe destruir antes de que pierde el foco de entrada o pasa a estar inactiva.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]  
   
-##  <a name="cwnd"></a>CWnd::CWnd  
+##  <a name="cwnd"></a>  CWnd::CWnd  
  Construye un objeto `CWnd`.  
   
 ```  
@@ -2183,7 +2186,7 @@ CWnd();
 ### <a name="remarks"></a>Comentarios  
  La ventana de Windows no se crea y asocia hasta que el [CreateEx](#createex) o [crear](#create) se llama la función miembro.  
   
-##  <a name="default"></a>CWnd::Default  
+##  <a name="default"></a>  CWnd::Default  
  Llama al procedimiento de ventana predeterminado.  
   
 ```  
@@ -2199,7 +2202,7 @@ LRESULT Default();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]  
   
-##  <a name="defwindowproc"></a>CWnd::DefWindowProc  
+##  <a name="defwindowproc"></a>  CWnd::DefWindowProc  
  Llama al procedimiento de ventana predeterminado, que proporciona procesamiento predeterminado para cualquier mensaje de ventana que una aplicación no procesa.  
   
 ```  
@@ -2225,7 +2228,7 @@ virtual LRESULT DefWindowProc(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro garantiza que todos los mensajes se procesen. Se debe llamar con los mismos parámetros como los recibidos por el procedimiento de ventana.  
   
-##  <a name="deletetempmap"></a>CWnd::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CWnd::DeleteTempMap  
  Llama automáticamente por el controlador de tiempo de inactividad de la `CWinApp` objeto.  
   
 ```  
@@ -2238,7 +2241,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]  
   
-##  <a name="destroywindow"></a>CWnd:: DestroyWindow  
+##  <a name="destroywindow"></a>  CWnd::DestroyWindow  
  Destruye la ventana de Windows asociada a la `CWnd` objeto.  
   
 ```  
@@ -2251,7 +2254,7 @@ virtual BOOL DestroyWindow();
 ### <a name="remarks"></a>Comentarios  
  El `DestroyWindow` función miembro envía los mensajes adecuados a la ventana para desactivarlo y quitar el foco de entrada. También destruye el menú de la ventana, vacía la cola de aplicación, destruye los temporizadores pendientes, quita la propiedad del Portapapeles y si se interrumpe la cadena del Visor del Portapapeles `CWnd` está en la parte superior de la cadena del Visor. Envía [WM_DESTROY](#ondestroy) y [WM_NCDESTROY](#onncdestroy) mensajes en la ventana. No destruir la `CWnd` objeto.  
   
- `DestroyWindow`es un marcador de posición para realizar la limpieza. Dado que `DestroyWindow` es una función virtual, se muestra en cualquier `CWnd`-clase en la vista de la clase derivada. Sin embargo, incluso si invalidan esta función en su `CWnd`-clase derivada, `DestroyWindow` no se llama necesariamente. Si `DestroyWindow` no se llama en el código MFC, tiene que llamar explícitamente a en su propio código si desea que se pueda llamar.  
+ `DestroyWindow` es un marcador de posición para realizar la limpieza. Dado que `DestroyWindow` es una función virtual, se muestra en cualquier `CWnd`-clase en la vista de la clase derivada. Sin embargo, incluso si invalidan esta función en su `CWnd`-clase derivada, `DestroyWindow` no se llama necesariamente. Si `DestroyWindow` no se llama en el código MFC, tiene que llamar explícitamente a en su propio código si desea que se pueda llamar.  
   
  Suponga, por ejemplo, se ha reemplazado `DestroyWindow` en un `CView`-clase derivada. Puesto que no llama código fuente MFC `DestroyWindow` en cualquiera de sus `CFrameWnd`-las clases derivadas, su invalidadas `DestroyWindow` no se llamará a menos que se llama explícitamente.  
   
@@ -2264,7 +2267,7 @@ virtual BOOL DestroyWindow();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
   
-##  <a name="detach"></a>CWnd::Detach  
+##  <a name="detach"></a>  CWnd::Detach  
  Desasocia un identificador de Windows de un objeto `CWnd` y devuelve el identificador.  
   
 ```  
@@ -2277,7 +2280,7 @@ HWND Detach();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::Attach](#attach).  
   
-##  <a name="dlgdirlist"></a>CWnd::DlgDirList  
+##  <a name="dlgdirlist"></a>  CWnd::DlgDirList  
  Rellena un cuadro de lista con una lista de archivos o directorios.  
   
 ```  
@@ -2290,7 +2293,7 @@ int DlgDirList(
   
 ### <a name="parameters"></a>Parámetros  
  `lpPathSpec`  
- Apunta a una cadena terminada en null que contiene la ruta de acceso o nombre de archivo. `DlgDirList`modifica esta cadena, que debe ser suficientemente largos para contener las modificaciones. Para obtener más información, vea la sección "Comentarios".  
+ Apunta a una cadena terminada en null que contiene la ruta de acceso o nombre de archivo. `DlgDirList` modifica esta cadena, que debe ser suficientemente largos para contener las modificaciones. Para obtener más información, vea la sección "Comentarios".  
   
  `nIDListBox`  
  Especifica el identificador de un cuadro de lista. Si `nIDListBox` es 0, `DlgDirList` se da por supuesto que ningún cuadro de lista existe y no intenta rellenar uno.  
@@ -2313,7 +2316,7 @@ int DlgDirList(
   
 - **DDL_ARCHIVE** archivos.  
   
-- **DDL_POSTMSGS LB_DIR** marca. Si el **LB_DIR** marca está establecida, Windows coloca los mensajes generados por `DlgDirList` en cola de la aplicación; en caso contrario, se envían directamente al procedimiento de cuadro de diálogo.  
+- **DDL_POSTMSGS LB_DIR** flag. Si el **LB_DIR** marca está establecida, Windows coloca los mensajes generados por `DlgDirList` en cola de la aplicación; en caso contrario, se envían directamente al procedimiento de cuadro de diálogo.  
   
 - **DDL_DRIVES** unidades. Si el **DDL_DRIVES** marca está establecida, el **DDL_EXCLUSIVE** marca se establece automáticamente. Por lo tanto, para crear una lista de directorios que incluye las unidades y los archivos, debe llamar a `DlgDirList` dos veces: una vez con la **DDL_DRIVES** marca conjunto y otra con las marcas para el resto de la lista.  
   
@@ -2323,7 +2326,7 @@ int DlgDirList(
  Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- `DlgDirList`envía [LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325) y [LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185) mensajes al cuadro de lista. Se llena el cuadro de lista especificado por `nIDListBox` con los nombres de todos los archivos que coinciden con la ruta de acceso proporcionado por `lpPathSpec`.  
+ `DlgDirList` envía [LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325) y [LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185) mensajes al cuadro de lista. Se llena el cuadro de lista especificado por `nIDListBox` con los nombres de todos los archivos que coinciden con la ruta de acceso proporcionado por `lpPathSpec`.  
   
  El `lpPathSpec` parámetro tiene el formato siguiente:  
   
@@ -2340,7 +2343,7 @@ int DlgDirList(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]  
   
-##  <a name="dlgdirlistcombobox"></a>CWnd::DlgDirListComboBox  
+##  <a name="dlgdirlistcombobox"></a>  CWnd::DlgDirListComboBox  
  Rellena el cuadro de lista de un cuadro combinado con una lista de archivos o directorios.  
   
 ```  
@@ -2353,7 +2356,7 @@ int DlgDirListComboBox(
   
 ### <a name="parameters"></a>Parámetros  
  `lpPathSpec`  
- Apunta a una cadena terminada en null que contiene la ruta de acceso o nombre de archivo. `DlgDirListComboBox`modifica esta cadena, por lo que estos datos no deben tener el formato de un literal de cadena. Consulte la sección "Comentarios".  
+ Apunta a una cadena terminada en null que contiene la ruta de acceso o nombre de archivo. `DlgDirListComboBox` modifica esta cadena, por lo que estos datos no deben tener el formato de un literal de cadena. Consulte la sección "Comentarios".  
   
  `nIDComboBox`  
  Especifica el identificador de un cuadro combinado en un cuadro de diálogo. Si `nIDComboBox` es 0, `DlgDirListComboBox` se da por supuesto que ningún cuadro combinado existe y no intenta rellenar uno.  
@@ -2376,7 +2379,7 @@ int DlgDirListComboBox(
   
 - **DDL_ARCHIVE** archivos.  
   
-- **DDL_POSTMSGS CB_DIR** marca. Si el **CB_DIR** marca está establecida, Windows coloca los mensajes generados por `DlgDirListComboBox` en cola de la aplicación; en caso contrario, se envían directamente al procedimiento de cuadro de diálogo.  
+- **DDL_POSTMSGS CB_DIR** flag. Si el **CB_DIR** marca está establecida, Windows coloca los mensajes generados por `DlgDirListComboBox` en cola de la aplicación; en caso contrario, se envían directamente al procedimiento de cuadro de diálogo.  
   
 - **DDL_DRIVES** unidades. Si el **DDL_DRIVES** marca está establecida, el **DDL_EXCLUSIVE** marca se establece automáticamente. Por lo tanto, para crear una lista de directorios que incluye las unidades y los archivos, debe llamar a `DlgDirListComboBox` dos veces: una vez con la **DDL_DRIVES** marca conjunto y otra con las marcas para el resto de la lista.  
   
@@ -2386,7 +2389,7 @@ int DlgDirListComboBox(
  Especifica el resultado de la función. Es distinto de cero si se realizó una lista, incluso una lista vacía. Un valor devuelto 0 implica que la cadena de entrada no contenía una ruta de acceso de búsqueda válido.  
   
 ### <a name="remarks"></a>Comentarios  
- `DlgDirListComboBox`envía [CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878) y [CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832) mensajes al cuadro combinado. Se llena el cuadro de lista del cuadro combinado especificado por `nIDComboBox` con los nombres de todos los archivos que coinciden con la ruta de acceso proporcionado por `lpPathSpec`.  
+ `DlgDirListComboBox` envía [CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878) y [CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832) mensajes al cuadro combinado. Se llena el cuadro de lista del cuadro combinado especificado por `nIDComboBox` con los nombres de todos los archivos que coinciden con la ruta de acceso proporcionado por `lpPathSpec`.  
   
  El `lpPathSpec` parámetro tiene el formato siguiente:  
   
@@ -2403,7 +2406,7 @@ int DlgDirListComboBox(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]  
   
-##  <a name="dlgdirselect"></a>CWnd::DlgDirSelect  
+##  <a name="dlgdirselect"></a>  CWnd::DlgDirSelect  
  Recupera la selección actual de un cuadro de lista.  
   
 ```  
@@ -2427,11 +2430,11 @@ BOOL DlgDirSelect(
   
  El `DlgDirSelect` función miembro copia la selección en el búfer proporcionado por `lpString`. Si no hay ninguna selección, `lpString` no cambia.  
   
- `DlgDirSelect`envía [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) y [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) mensajes al cuadro de lista.  
+ `DlgDirSelect` envía [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) y [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) mensajes al cuadro de lista.  
   
  No se permite más de un nombre de archivo que se devuelvan en un cuadro de lista. El cuadro de lista no debe ser un cuadro de lista de selección múltiple.  
   
-##  <a name="dlgdirselectcombobox"></a>CWnd::DlgDirSelectComboBox  
+##  <a name="dlgdirselectcombobox"></a>  CWnd::DlgDirSelectComboBox  
  Recupera la selección actual del cuadro de lista de un cuadro combinado.  
   
 ```  
@@ -2455,11 +2458,11 @@ BOOL DlgDirSelectComboBox(
   
  El `DlgDirSelectComboBox` función miembro copia la selección en el búfer especificado. Si no hay ninguna selección, no cambian el contenido del búfer.  
   
- `DlgDirSelectComboBox`envía [CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845) y [CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862) mensajes al cuadro combinado.  
+ `DlgDirSelectComboBox` envía [CB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775845) y [CB_GETLBTEXT](http://msdn.microsoft.com/library/windows/desktop/bb775862) mensajes al cuadro combinado.  
   
  No se permite más de un nombre de archivo que se devuelvan en un cuadro combinado.  
   
-##  <a name="dodataexchange"></a>CWnd:: DoDataExchange  
+##  <a name="dodataexchange"></a>  CWnd::DoDataExchange  
  Lo llama el marco para intercambiar y validar datos de cuadro de diálogo.  
   
 ```  
@@ -2483,7 +2486,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
   
  Para obtener más información sobre el intercambio de datos de cuadros de diálogo y la validación, consulte [mostrar y manipular datos en un formulario](../../data/odbc/displaying-and-manipulating-data-in-a-form.md) y [intercambio de datos de cuadros de diálogo y validación](../../mfc/dialog-data-exchange-and-validation.md). Para obtener una descripción de las macros DDX_ y DDV_ generados por el Asistente para agregar variables, consulte [Nota técnica 26](../../mfc/tn026-ddx-and-ddv-routines.md).  
   
-##  <a name="dragacceptfiles"></a>CWnd::DragAcceptFiles  
+##  <a name="dragacceptfiles"></a>  CWnd::DragAcceptFiles  
  Llame a esta función miembro dentro de una ventana, con un `CWnd` puntero en la aplicación [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) quita de función para indicar que la ventana acepta archivos desde el Administrador de archivos de Windows o el Explorador de archivos .  
   
 ```  
@@ -2499,7 +2502,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
   
  Para dejar de recibir archivos arrastrados, llame a la función miembro con `bAccept` establecido en **FALSE**.  
   
-##  <a name="dragdetect"></a>CWnd::DragDetect  
+##  <a name="dragdetect"></a>  CWnd::DragDetect  
  Captura el mouse y realiza un seguimiento de su movimiento hasta que el usuario suelta el botón primario, presiona la tecla ESC o mueve el mouse fuera del rectángulo de arrastre alrededor del punto especificado.  
   
 ```  
@@ -2518,7 +2521,7 @@ BOOL DragDetect(POINT pt) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [DragDetect](http://msdn.microsoft.com/library/windows/desktop/ms646256), tal y como se describe en el SDK de Windows.  
   
-##  <a name="drawanimatedrects"></a>CWnd::DrawAnimatedRects  
+##  <a name="drawanimatedrects"></a>  CWnd::DrawAnimatedRects  
  Dibuja un rectángulo de trama de alambres y lo anima para señalar un icono abierto o una ventana minimizada o maximizada.  
   
 ```  
@@ -2544,7 +2547,7 @@ BOOL DrawAnimatedRects(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [DrawAnimatedRects](http://msdn.microsoft.com/library/windows/desktop/dd162475), tal y como se describe en el SDK de Windows.  
   
-##  <a name="drawcaption"></a>CWnd::DrawCaption  
+##  <a name="drawcaption"></a>  CWnd::DrawCaption  
  Dibuja un título de ventana.  
   
 ```  
@@ -2570,7 +2573,7 @@ BOOL DrawCaption(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476), tal y como se describe en el SDK de Windows.  
   
-##  <a name="drawmenubar"></a>CWnd::DrawMenuBar  
+##  <a name="drawmenubar"></a>  CWnd::DrawMenuBar  
  Vuelve a dibujar la barra de menús.  
   
 ```  
@@ -2583,7 +2586,7 @@ void DrawMenuBar();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::GetMenu](#getmenu).  
   
-##  <a name="enableactiveaccessibility"></a>CWnd::EnableActiveAccessibility  
+##  <a name="enableactiveaccessibility"></a>  CWnd::EnableActiveAccessibility  
  Funciones definidas por el usuario del Active Accessibility permite.  
   
 ```  
@@ -2593,7 +2596,7 @@ void EnableActiveAccessibility();
 ### <a name="remarks"></a>Comentarios  
  Compatibilidad de Active Accessibility de MFC predeterminada es suficiente para el estándar de windows y los controles, incluidos los controles ActiveX; Sin embargo, si su `CWnd`-clase derivada contiene elementos de interfaz de usuario de nonwindowed, MFC no tiene ninguna manera de saber acerca de ellos. En ese caso, debe invalidar la correspondiente [funciones de miembro de Active Accessibility](http://msdn.microsoft.com/en-us/68af04ac-4eb9-4b7d-b33f-c45512097a74) en su clase, y se debe llamar a **EnableActiveAccessibility** en el constructor de clase.  
   
-##  <a name="enabledynamiclayout"></a>CWnd:: Enabledynamiclayout  
+##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout  
  Habilita o deshabilita al administrador de diseño dinámico. Si el diseño dinámico está habilitado, la posición y el tamaño de las ventanas secundarias se pueden ajustar dinámicamente cuando el usuario cambie el tamaño de la ventana.  
   
 ```  
@@ -2607,7 +2610,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Si desea habilitar el diseño dinámico, no puede limitarse a llamar a este método: también debe proporcionar información de diseño dinámico que especifique cómo responden los controles de la ventana a los cambios de tamaño. Puede especificar esta información en el editor de recursos o mediante programación para cada control. Vea [diseño dinámico](../../mfc/dynamic-layout.md).  
   
-##  <a name="enabled2dsupport"></a>CWnd::EnableD2DSupport  
+##  <a name="enabled2dsupport"></a>  CWnd::EnableD2DSupport  
  Habilita o deshabilita la compatibilidad D2D de ventana. Llame a este método antes de que se inicialice la ventana principal.  
   
 ```  
@@ -2623,7 +2626,7 @@ void EnableD2DSupport(
  `bUseDCRenderTarget`  
  Especifica si se utiliza el destino de presentación Contexto de dispositivo (DC), CDCRenderTarget. Si es FALSE, se utiliza CHwndRenderTarget.  
   
-##  <a name="enablescrollbar"></a>CWnd::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CWnd::EnableScrollBar  
  Habilita o deshabilita una o ambas flechas de una barra de desplazamiento.  
   
 ```  
@@ -2656,7 +2659,7 @@ BOOL EnableScrollBar(
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si las flechas se habilitan o deshabilitan según lo especificado. En caso contrario, es 0, lo que indica que las flechas ya están en el estado solicitado o que se produjo un error.  
   
-##  <a name="enablescrollbarctrl"></a>CWnd::EnableScrollBarCtrl  
+##  <a name="enablescrollbarctrl"></a>  CWnd::EnableScrollBarCtrl  
  Habilita o deshabilita la barra de desplazamiento para esta ventana.  
   
 ```  
@@ -2675,7 +2678,7 @@ void EnableScrollBarCtrl(
 ### <a name="remarks"></a>Comentarios  
  Si la ventana tiene un control de barra de desplazamiento del mismo nivel, se usa esa barra de desplazamiento; en caso contrario, se utiliza la barra de desplazamiento de la ventana.  
   
-##  <a name="enabletooltips"></a>CWnd:: EnableToolTips  
+##  <a name="enabletooltips"></a>  CWnd::EnableToolTips  
  Habilita la información sobre herramientas de la ventana especificada.  
   
 ```  
@@ -2706,7 +2709,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
   
  [!code-cpp[NVC_MFCWindowing#92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]  
   
-##  <a name="enabletrackingtooltips"></a>CWnd::EnableTrackingToolTips  
+##  <a name="enabletrackingtooltips"></a>  CWnd::EnableTrackingToolTips  
  Habilita o deshabilita el seguimiento de información sobre herramientas.  
   
 ```  
@@ -2723,7 +2726,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Comentarios  
  Seguimiento de información sobre herramientas es ventanas de información sobre herramientas que puede colocar dinámicamente en la pantalla. Al actualizar rápidamente la posición, aparece la ventana de información sobre herramientas mover sin problemas, o "seguimiento". Esta funcionalidad puede ser útil si tiene texto de sugerencia para seguir a la posición del puntero cuando se mueven.  
   
-##  <a name="enablewindow"></a>CWnd::EnableWindow  
+##  <a name="enablewindow"></a>  CWnd::EnableWindow  
  Habilita o deshabilita la entrada de mouse y de teclado.  
   
 ```  
@@ -2753,7 +2756,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]  
   
-##  <a name="endmodalloop"></a>CWnd::EndModalLoop  
+##  <a name="endmodalloop"></a>  CWnd::EndModalLoop  
  Finaliza una llamada a `RunModalLoop`.  
   
 ```  
@@ -2767,14 +2770,14 @@ virtual void EndModalLoop(int nResult);
 ### <a name="remarks"></a>Comentarios  
  El `nResult` parámetro se propaga al valor devuelto de `RunModalLoop`.  
   
-##  <a name="endmodalstate"></a>CWnd::EndModalState  
+##  <a name="endmodalstate"></a>  CWnd::EndModalState  
  Llame a esta función miembro para cambiar una ventana marco de modal a no modal.  
   
 ```  
 virtual void EndModalState();
 ```  
   
-##  <a name="endpaint"></a>CWnd::EndPaint  
+##  <a name="endpaint"></a>  CWnd::EndPaint  
  Marca el final de la pintura en la ventana especificada.  
   
 ```  
@@ -2793,7 +2796,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd:: BeginPaint](#beginpaint).  
   
-##  <a name="executedlginit"></a>CWnd::ExecuteDlgInit  
+##  <a name="executedlginit"></a>  CWnd::ExecuteDlgInit  
  Inicia un recurso de cuadro de diálogo.  
   
 ```  
@@ -2812,9 +2815,9 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
  **TRUE** si un recurso de cuadro de diálogo es ejecutar; de lo contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
- `ExecuteDlgInit`va a usar recursos enlazados al módulo de ejecución o recursos de otros orígenes. Para lograr esto, `ExecuteDlgInit` encuentra un identificador de recurso mediante una llamada a `AfxFindResourceHandle`. Si la aplicación MFC no utiliza el archivo DLL compartido (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** llamadas [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), que devuelve el identificador de recursos actual para el archivo ejecutable. Si la aplicación MFC que utiliza MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` recorre el **CDynLinkLibrary** compartida de la lista de objetos y controlen los archivos DLL que se busca el recurso correcto de extensión de MFC.  
+ `ExecuteDlgInit` va a usar recursos enlazados al módulo de ejecución o recursos de otros orígenes. Para lograr esto, `ExecuteDlgInit` encuentra un identificador de recurso mediante una llamada a `AfxFindResourceHandle`. Si la aplicación MFC no utiliza el archivo DLL compartido (MFCx0 [U] [D]. DLL), **AfxFindResourceHandle** llamadas [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), que devuelve el identificador de recursos actual para el archivo ejecutable. Si la aplicación MFC que utiliza MFCx0 [U] [D]. DLL, `AfxFindResourceHandle` recorre el **CDynLinkLibrary** compartida de la lista de objetos y controlen los archivos DLL que se busca el recurso correcto de extensión de MFC.  
   
-##  <a name="filtertooltipmessage"></a>CWnd:: FilterToolTipMessage  
+##  <a name="filtertooltipmessage"></a>  CWnd::FilterToolTipMessage  
  Lo llama el marco de trabajo para mostrar mensajes de información sobre herramientas.  
   
 ```  
@@ -2830,7 +2833,7 @@ void FilterToolTipMessage(MSG* pMsg);
   
  Sin embargo, en ciertas aplicaciones, por ejemplo, algunos controles de ActiveX, estos métodos no se pueden invocar el marco de trabajo y se deberá llamar a FilterToolTipMessage usted mismo. Para obtener más información, consulte [métodos de creación de información sobre herramientas](../../mfc/methods-of-creating-tool-tips.md).  
   
-##  <a name="findwindow"></a>CWnd::FindWindow  
+##  <a name="findwindow"></a>  CWnd::FindWindow  
  Devuelve el nivel superior `CWnd` cuya clase de ventana viene dado por `lpszClassName` y cuyo nombre de la ventana o el título, viene dado por `lpszWindowName`.  
   
 ```  
@@ -2857,7 +2860,7 @@ static CWnd* PASCAL FindWindow(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]  
   
-##  <a name="findwindowex"></a>CWnd::FindWindowEx  
+##  <a name="findwindowex"></a>  CWnd::FindWindowEx  
  Recupera el objeto de ventana cuyo nombre de clase y el nombre de la ventana coinciden con las cadenas especificadas.  
   
 ```  
@@ -2887,7 +2890,7 @@ static CWnd* FindWindowEx(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [FindWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms633500), tal y como se describe en el SDK de Windows.  
   
-##  <a name="flashwindow"></a>CWnd::FlashWindow  
+##  <a name="flashwindow"></a>  CWnd::FlashWindow  
  Hace que parpadee una vez la ventana especificada.  
   
 ```  
@@ -2913,7 +2916,7 @@ BOOL FlashWindow(BOOL bInvert);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]  
   
-##  <a name="flashwindowex"></a>CWnd::FlashWindowEx  
+##  <a name="flashwindowex"></a>  CWnd::FlashWindowEx  
  Hace que parpadee la ventana especificada.  
   
 ```  
@@ -2939,7 +2942,7 @@ BOOL FlashWindowEx(
 ### <a name="remarks"></a>Comentarios  
  Este método emula la funcionalidad de la función [FlashWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms679347), tal y como se describe en el SDK de Windows.  
   
-##  <a name="fromhandle"></a>CWnd:: FromHandle  
+##  <a name="fromhandle"></a>  CWnd::FromHandle  
  Devuelve un puntero a un objeto `CWnd` cuando se especifica un identificador a una ventana. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal.  
   
 ```  
@@ -2955,7 +2958,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
   
  El puntero puede ser temporal y no se debe almacenar para su uso posterior.  
   
-##  <a name="fromhandlepermanent"></a>CWnd::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>  CWnd::FromHandlePermanent  
  Devuelve un puntero a un objeto `CWnd` cuando se especifica un identificador a una ventana.  
   
 ```  
@@ -2974,7 +2977,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
   
  Esta función, al contrario que [FromHandle](#fromhandle), no crea objetos temporales.  
   
-##  <a name="get_accchild"></a>CWnd::get_accChild  
+##  <a name="get_accchild"></a>  CWnd::get_accChild  
  El marco llama a este método para recuperar la dirección de una interfaz `IDispatch` del elemento secundario especificado.  
   
 ```  
@@ -3000,7 +3003,7 @@ virtual HRESULT get_accChild(
   
  Para obtener más información, consulte [:: Get_accchild](http://msdn.microsoft.com/library/windows/desktop/dd318475) del SDK de Windows.  
   
-##  <a name="get_accchildcount"></a>CWnd::get_accChildCount  
+##  <a name="get_accchildcount"></a>  CWnd::get_accChildCount  
  El marco llama a este método para recuperar el número de elementos secundarios que pertenecen a este objeto.  
   
 ```  
@@ -3021,7 +3024,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
  Para obtener más información, consulte [:: Get_accchildcount](http://msdn.microsoft.com/library/windows/desktop/dd318476) del SDK de Windows.  
   
-##  <a name="get_accdefaultaction"></a>CWnd::get_accDefaultAction  
+##  <a name="get_accdefaultaction"></a>  CWnd::get_accDefaultAction  
  El marco llama a este método para recuperar una cadena que describe la acción predeterminada del objeto.  
   
 ```  
@@ -3047,7 +3050,7 @@ virtual HRESULT get_accDefaultAction(
   
  Para obtener más información, consulte [IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477) en el SDK de Windows.  
   
-##  <a name="get_accdescription"></a>CWnd::get_accDescription  
+##  <a name="get_accdescription"></a>  CWnd::get_accDescription  
  El marco llama a este método para recuperar una cadena que describe la apariencia visual del objeto especificado.  
   
 ```  
@@ -3073,7 +3076,7 @@ virtual HRESULT get_accDescription(
   
  Para obtener más información, consulte [:: Get_accdescription](http://msdn.microsoft.com/library/windows/desktop/dd318478) del SDK de Windows.  
   
-##  <a name="get_accfocus"></a>CWnd::get_accFocus  
+##  <a name="get_accfocus"></a>  CWnd::get_accFocus  
  El marco llama a este método para recuperar el objeto que tiene el foco de teclado.  
   
 ```  
@@ -3094,7 +3097,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
  Para obtener más información, consulte [:: Get_accfocus](http://msdn.microsoft.com/library/windows/desktop/dd318479) del SDK de Windows.  
   
-##  <a name="get_acchelp"></a>CWnd::get_accHelp  
+##  <a name="get_acchelp"></a>  CWnd::get_accHelp  
  Lo llama el marco para recuperar un objeto **ayuda** cadena de propiedad.  
   
 ```  
@@ -3120,7 +3123,7 @@ virtual HRESULT get_accHelp(
   
  Para obtener más información, consulte [IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480) en el SDK de Windows.  
   
-##  <a name="get_acchelptopic"></a>CWnd::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CWnd::get_accHelpTopic  
  Lo llama el marco para recuperar la ruta de acceso completa de la **WinHelp** archivo asociado con el objeto especificado y el identificador del tema correspondiente dentro de ese archivo.  
   
 ```  
@@ -3150,7 +3153,7 @@ virtual HRESULT get_accHelpTopic(
   
  Para obtener más información, consulte [IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481) en el SDK de Windows.  
   
-##  <a name="get_acckeyboardshortcut"></a>CWnd::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>  CWnd::get_accKeyboardShortcut  
  El marco llama a este método para recuperar la tecla de método abreviado o la tecla de acceso del objeto especificado.  
   
 ```  
@@ -3176,7 +3179,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
  Para obtener más información, consulte [:: Get_acckeyboardshortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482) del SDK de Windows.  
   
-##  <a name="get_accname"></a>CWnd::get_accName  
+##  <a name="get_accname"></a>  CWnd::get_accName  
  El marco llama a este método para recuperar el nombre del objeto especificado.  
   
 ```  
@@ -3202,7 +3205,7 @@ virtual HRESULT get_accName(
   
  Para obtener más información, consulte [:: Get_accname](http://msdn.microsoft.com/library/windows/desktop/dd318483) del SDK de Windows.  
   
-##  <a name="get_accparent"></a>CWnd::get_accParent  
+##  <a name="get_accparent"></a>  CWnd::get_accParent  
  El marco llama a este método para recuperar la interfaz `IDispatch` del elemento principal del objeto.  
   
 ```  
@@ -3223,7 +3226,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
   
  Para obtener más información, consulte [IAccessible::get_accParent](http://msdn.microsoft.com/library/windows/desktop/dd318484) en el SDK de Windows.  
   
-##  <a name="get_accrole"></a>CWnd::get_accRole  
+##  <a name="get_accrole"></a>  CWnd::get_accRole  
  El marco llama a este método para recuperar información que describe el rol del objeto especificado.  
   
 ```  
@@ -3249,7 +3252,7 @@ virtual HRESULT get_accRole(
   
  Para obtener más información, consulte [:: Get_accrole](http://msdn.microsoft.com/library/windows/desktop/dd318485) del SDK de Windows.  
   
-##  <a name="get_accselection"></a>CWnd::get_accSelection  
+##  <a name="get_accselection"></a>  CWnd::get_accSelection  
  El marco llama a este método para recuperar el elemento secundario seleccionado de este objeto.  
   
 ```  
@@ -3270,7 +3273,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
  Para obtener más información, consulte [:: Get_accselection](http://msdn.microsoft.com/library/windows/desktop/dd318486) del SDK de Windows.  
   
-##  <a name="get_accstate"></a>CWnd::get_accState  
+##  <a name="get_accstate"></a>  CWnd::get_accState  
  El marco llama a este método para recuperar el estado actual del objeto especificado.  
   
 ```  
@@ -3296,7 +3299,7 @@ virtual HRESULT get_accState(
   
  Para obtener más información, consulte [:: Get_accstate](http://msdn.microsoft.com/library/windows/desktop/dd318487) del SDK de Windows.  
   
-##  <a name="get_accvalue"></a>CWnd::get_accValue  
+##  <a name="get_accvalue"></a>  CWnd::get_accValue  
  El marco llama a este método para recuperar el valor del objeto especificado.  
   
 ```  
@@ -3322,7 +3325,7 @@ virtual HRESULT get_accValue(
   
  Para obtener más información, consulte [:: Get_accvalue](http://msdn.microsoft.com/library/windows/desktop/dd318488) del SDK de Windows.  
   
-##  <a name="getactivewindow"></a>CWnd::GetActiveWindow  
+##  <a name="getactivewindow"></a>  CWnd::GetActiveWindow  
  Recupera un puntero a la ventana activa.  
   
 ```  
@@ -3335,7 +3338,7 @@ static CWnd* PASCAL GetActiveWindow();
 ### <a name="remarks"></a>Comentarios  
  La ventana activa es la ventana que tiene el foco de entrada actual o en la ventana puesto explícitamente a activa si la [SetActiveWindow](#setactivewindow) función miembro.  
   
-##  <a name="getancestor"></a>CWnd::GetAncestor  
+##  <a name="getancestor"></a>  CWnd::GetAncestor  
  Recupera el objeto de ventana antecesor de la ventana especificada.  
   
 ```  
@@ -3352,7 +3355,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getcapture"></a>CWnd::GetCapture  
+##  <a name="getcapture"></a>  CWnd::GetCapture  
  Recupera la ventana que tiene la captura del mouse.  
   
 ```  
@@ -3367,7 +3370,7 @@ static CWnd* PASCAL GetCapture();
 ### <a name="remarks"></a>Comentarios  
  Sólo una ventana tiene la captura en un momento dado del mouse. Una ventana recibe el mouse capturar cuando el [SetCapture](#setcapture) se llama la función miembro. Esta ventana recibe la entrada de mouse si el cursor o no dentro de sus bordes.  
   
-##  <a name="getcaretpos"></a>CWnd::GetCaretPos  
+##  <a name="getcaretpos"></a>  CWnd::GetCaretPos  
  Recupera las coordenadas de cliente de la posición actual del símbolo de intercalación y los devuelve como un `CPoint`.  
   
 ```  
@@ -3380,7 +3383,7 @@ static CPoint PASCAL GetCaretPos();
 ### <a name="remarks"></a>Comentarios  
  La posición del símbolo de intercalación se proporciona en las coordenadas de cliente de la `CWnd` ventana.  
   
-##  <a name="getcheckedradiobutton"></a>CWnd::GetCheckedRadioButton  
+##  <a name="getcheckedradiobutton"></a>  CWnd::GetCheckedRadioButton  
  Recupera el identificador del botón de radio actualmente activado en el grupo especificado.  
   
 ```  
@@ -3399,7 +3402,7 @@ int GetCheckedRadioButton(
 ### <a name="return-value"></a>Valor devuelto  
  Id. de este botón de opción activado o 0 si no hay ninguno seleccionado.  
   
-##  <a name="getclientrect"></a>CWnd:: getClientRect  
+##  <a name="getclientrect"></a>  CWnd::GetClientRect  
  Copia las coordenadas de cliente de la `CWnd` área de cliente en la estructura que señala `lpRect`.  
   
 ```  
@@ -3416,7 +3419,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::IsIconic](#isiconic).  
   
-##  <a name="getclipboardowner"></a>CWnd::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  CWnd::GetClipboardOwner  
  Recupera el propietario actual del Portapapeles.  
   
 ```  
@@ -3431,7 +3434,7 @@ static CWnd* PASCAL GetClipboardOwner();
 ### <a name="remarks"></a>Comentarios  
  El Portapapeles puede contener datos incluso si no pertenece actualmente.  
   
-##  <a name="getclipboardviewer"></a>CWnd::GetClipboardViewer  
+##  <a name="getclipboardviewer"></a>  CWnd::GetClipboardViewer  
  Recupera la primera ventana de la cadena del Visor del Portapapeles.  
   
 ```  
@@ -3443,7 +3446,7 @@ static CWnd* PASCAL GetClipboardViewer();
   
  El puntero devuelto puede ser temporal y no debe almacenarse para su uso posterior.  
   
-##  <a name="getcontrolunknown"></a>CWnd::GetControlUnknown  
+##  <a name="getcontrolunknown"></a>  CWnd::GetControlUnknown  
  Llame a esta función miembro para recuperar un puntero a un control OLE desconocido.  
   
 ```  
@@ -3461,20 +3464,20 @@ LPUNKNOWN GetControlUnknown();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]  
   
-##  <a name="getcurrentmessage"></a>CWnd:: GetCurrentMessage  
- Devuelve un puntero al mensaje que esta ventana está procesando actualmente. Solo se debe llamar cuando una **en***mensaje* función de miembro de controlador de mensajes.  
+##  <a name="getcurrentmessage"></a>  CWnd::GetCurrentMessage  
+ Devuelve un puntero al mensaje que esta ventana está procesando actualmente. Solo se debe llamar cuando un **en *** mensaje* función de miembro de controlador de mensajes.  
   
 ```  
 static const MSG* PASCAL GetCurrentMessage();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero a la [MSG](../../mfc/reference/msg-structure1.md) estructura que contiene el mensaje de la ventana se está procesando actualmente. Solo se debe llamar cuando una **en***mensaje* controlador.  
+ Devuelve un puntero a la [MSG](../../mfc/reference/msg-structure1.md) estructura que contiene el mensaje de la ventana se está procesando actualmente. Solo se debe llamar cuando un **en *** mensaje* controlador.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade).  
   
-##  <a name="getdc"></a>CWnd:: GetDC  
+##  <a name="getdc"></a>  CWnd::GetDC  
  Recupera un puntero a un común, una clase o un contexto de dispositivo privada para el área de cliente en función del estilo de clase especificado para el `CWnd`.  
   
 ```  
@@ -3491,7 +3494,7 @@ CDC* GetDC();
   
  Un contexto de dispositivo que pertenecen a la `CWnd` clase es devuelta por la `GetDC` función miembro si **CS_CLASSDC**, **CS_OWNDC**, o **CS_PARENTDC** era especifica como un estilo en el **WNDCLASS** estructura cuando se registró la clase.  
   
-##  <a name="getdcex"></a>CWnd::GetDCEx  
+##  <a name="getdcex"></a>  CWnd::GetDCEx  
  Recupera el identificador de un contexto de dispositivo para el `CWnd` ventana.  
   
 ```  
@@ -3539,7 +3542,7 @@ CDC* GetDCEx(
   
  Para obtener más información acerca de estas características, vea la descripción de la **WNDCLASS** estructura en el SDK de Windows.  
   
-##  <a name="getdcrendertarget"></a>CWnd::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>  CWnd::GetDCRenderTarget  
  Recupera el destino de representación (DC) del contexto de dispositivo de la ventana `CWnd`.  
   
 ```  
@@ -3551,7 +3554,7 @@ CDCRenderTarget* GetDCRenderTarget();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getdescendantwindow"></a>CWnd::GetDescendantWindow  
+##  <a name="getdescendantwindow"></a>  CWnd::GetDescendantWindow  
  Llame a esta función miembro para encontrar la ventana descendiente especificada por el identificador especificado.  
   
 ```  
@@ -3573,7 +3576,7 @@ CWnd* GetDescendantWindow(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro busca en todo el árbol de las ventanas secundarias, no sólo las ventanas que son elementos secundarios inmediatos.  
   
-##  <a name="getdesktopwindow"></a>CWnd::GetDesktopWindow  
+##  <a name="getdesktopwindow"></a>  CWnd::GetDesktopWindow  
  Devuelve la ventana de escritorio de Windows.  
   
 ```  
@@ -3586,7 +3589,7 @@ static CWnd* PASCAL GetDesktopWindow();
 ### <a name="remarks"></a>Comentarios  
  La ventana del escritorio cubre toda la pantalla y es el área en la parte superior que se pintan todos los iconos y otras ventanas.  
   
-##  <a name="getdlgctrlid"></a>CWnd::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>  CWnd::GetDlgCtrlID  
  Devuelve el valor de identificador de ventana o un control para cualquier ventana secundaria, no solo que el de un control en un cuadro de diálogo.  
   
 ```  
@@ -3602,7 +3605,7 @@ int GetDlgCtrlID() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::OnCtlColor](#onctlcolor).  
   
-##  <a name="getdlgitem"></a>CWnd:: GetDlgItem  
+##  <a name="getdlgitem"></a>  CWnd::GetDlgItem  
  Recupera un puntero a la ventana de control o elemento secundario especificada en un cuadro de diálogo u otra ventana.  
   
 ```  
@@ -3631,7 +3634,7 @@ void GetDlgItem(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]  
   
-##  <a name="getdlgitemint"></a>CWnd::GetDlgItemInt  
+##  <a name="getdlgitemint"></a>  CWnd::GetDlgItemInt  
  Recupera el texto del control identificado por `nID`.  
   
 ```  
@@ -3665,7 +3668,7 @@ UINT GetDlgItemInt(
   
  Envía una [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627) mensaje en el control.  
   
-##  <a name="getdlgitemtext"></a>CWnd::GetDlgItemText  
+##  <a name="getdlgitemtext"></a>  CWnd::GetDlgItemText  
  Llame a esta función miembro para recuperar el título o el texto asociado a un control en un cuadro de diálogo.  
   
 ```  
@@ -3698,7 +3701,7 @@ int GetDlgItemText(
 ### <a name="remarks"></a>Comentarios  
  El `GetDlgItemText` función miembro copia el texto en la ubicación señalada por `lpStr` y devuelve un recuento del número de bytes que copia.  
   
-##  <a name="getdsccursor"></a>CWnd::GetDSCCursor  
+##  <a name="getdsccursor"></a>  CWnd::GetDSCCursor  
  Llame a esta función miembro para recuperar un puntero al cursor subyacente que se define mediante las propiedades DataSource, UserName, Password y SQL del control de origen de datos.  
   
 ```  
@@ -3716,7 +3719,7 @@ IUnknown* GetDSCCursor();
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
   
-##  <a name="getdynamiclayout"></a>CWnd:: Getdynamiclayout  
+##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout  
  Recupera un puntero al objeto del administrador de diseño dinámico.  
   
 ```  
@@ -3729,7 +3732,7 @@ CMFCDynamicLayout* GetDynamicLayout();
 ### <a name="remarks"></a>Comentarios  
  El objeto de ventana posee y administra la duración del puntero devuelto, por lo que solo es aconsejable usarlo para tener acceso al objeto. No elimine el puntero ni lo almacene de manera permanente.  
   
-##  <a name="getexstyle"></a>CWnd::GetExStyle  
+##  <a name="getexstyle"></a>  CWnd::GetExStyle  
  Devuelve el estilo extendido de ventana.  
   
 ```  
@@ -3739,7 +3742,7 @@ DWORD GetExStyle() const;
 ### <a name="return-value"></a>Valor devuelto  
  La ventana del estilo extendido. Para obtener más información acerca de los estilos de ventana extendidos utilizados en MFC, vea [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-##  <a name="getfocus"></a>CWnd::GetFocus  
+##  <a name="getfocus"></a>  CWnd::GetFocus  
  Recupera un puntero a la `CWnd` que tiene actualmente el foco de entrada.  
   
 ```  
@@ -3751,7 +3754,7 @@ static CWnd* PASCAL GetFocus();
   
  El puntero puede ser temporal y no se debe almacenar para su uso posterior.  
   
-##  <a name="getfont"></a>CWnd::GetFont  
+##  <a name="getfont"></a>  CWnd::GetFont  
  Envía el `WM_GETFONT` mensaje en la ventana para recuperar la fuente actual.  
   
 ```  
@@ -3764,7 +3767,7 @@ CFont* GetFont() const;
 ### <a name="remarks"></a>Comentarios  
  Este método no tiene ningún efecto a menos que la ventana procesa el `WM_GETFONT` mensaje. Muchas clases MFC que derivan de `CWnd` procesar este mensaje porque están asociados a una clase de ventana predefinido que incluye un controlador de mensajes para el `WM_GETFONT` mensaje. Para utilizar este método, las clases que derivan de `CWnd` debe definir un controlador de método para el `WM_GETFONT` mensaje.  
   
-##  <a name="getforegroundwindow"></a>CWnd::GetForegroundWindow  
+##  <a name="getforegroundwindow"></a>  CWnd::GetForegroundWindow  
  Devuelve un puntero a la ventana a primer plano (la ventana con el que el usuario está trabajando actualmente).  
   
 ```  
@@ -3777,7 +3780,7 @@ static CWnd* PASCAL GetForegroundWindow();
 ### <a name="remarks"></a>Comentarios  
  La ventana a primer plano se aplica sólo a las ventanas de nivel superior (ventanas de marco o cuadros de diálogo).  
   
-##  <a name="geticon"></a>CWnd::GetIcon  
+##  <a name="geticon"></a>  CWnd::GetIcon  
  Llame a esta función miembro para obtener el identificador ya sea una grande (32 x 32) o el identificador de un icono pequeño (16 x 16), como se indica por `bBigIcon`.  
   
 ```  
@@ -3791,7 +3794,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 ### <a name="return-value"></a>Valor devuelto  
  Identificador de un icono. Si se realiza correctamente, devuelve **NULL**.  
   
-##  <a name="getlastactivepopup"></a>CWnd::GetLastActivePopup  
+##  <a name="getlastactivepopup"></a>  CWnd::GetLastActivePopup  
  Determina cuál fue la ventana emergente propiedad de `CWnd` activa más recientemente.  
   
 ```  
@@ -3812,7 +3815,7 @@ CWnd* GetLastActivePopup() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::FindWindow](#findwindow).  
   
-##  <a name="getlayeredwindowattributes"></a>CWnd::GetLayeredWindowAttributes  
+##  <a name="getlayeredwindowattributes"></a>  CWnd::GetLayeredWindowAttributes  
  Recupera la clave de color de transparencia y opacidad de una ventana superpuesta.  
   
 ```  
@@ -3838,7 +3841,7 @@ BOOL GetLayeredWindowAttributes(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getmenu"></a>CWnd::GetMenu  
+##  <a name="getmenu"></a>  CWnd::GetMenu  
  Recupera un puntero al menú para esta ventana.  
   
 ```  
@@ -3856,7 +3859,7 @@ CMenu* GetMenu() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]  
   
-##  <a name="getmenubarinfo"></a>CWnd::GetMenuBarInfo  
+##  <a name="getmenubarinfo"></a>  CWnd::GetMenuBarInfo  
  Recupera información sobre la barra de menús especificado.  
   
 ```  
@@ -3882,7 +3885,7 @@ BOOL GetMenuBarInfo(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getnextdlggroupitem"></a>CWnd::GetNextDlgGroupItem  
+##  <a name="getnextdlggroupitem"></a>  CWnd::GetNextDlgGroupItem  
  Busca el control anterior o siguiente dentro de un grupo de controles en un cuadro de diálogo.  
   
 ```  
@@ -3910,7 +3913,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
  El puntero devuelto puede ser temporal y no debe almacenarse para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- Un grupo de controles comienza con un control que se creó con la [WS_GROUP](../../mfc/reference/styles-used-by-mfc.md#window-styles) estilo y finaliza con el último control que no se creó con la **WS_GROUP** estilo.  
+ Un grupo de controles comienza con un control que se creó con la [WS_GROUP](styles-used-by-mfc.md#window-styles) estilo y finaliza con el último control que no se creó con la **WS_GROUP** estilo.  
   
  De forma predeterminada, la `GetNextDlgGroupItem` función miembro devuelve un puntero al siguiente control en el grupo. Si `pWndCtl` identifica el primer control en el grupo y `bPrevious` es **TRUE**, `GetNextDlgGroupItem` devuelve un puntero al último control en el grupo.  
   
@@ -3923,8 +3926,8 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 |Control ActiveX sin ventana|Contiene el valor no `HWND`. El **m_pSite** miembro de `COleControlSiteOrWnd` señala el control `COleControlSite`y el **m_hWnd** miembro es **NULL**.|  
 |Ventana estándar|Contiene solo un `HWND`. El `m_hWnd` miembro de `COleControlSiteOrWnd` está establecido en el `HWND` de la ventana y el **m_pSite** miembro es **NULL**.|  
   
-##  <a name="getnextdlgtabitem"></a>CWnd::GetNextDlgTabItem  
- Recupera un puntero al primer control que se creó con la [WS_TABSTOP](window-styles.md) estilo y que precede o sigue al control especificado.  
+##  <a name="getnextdlgtabitem"></a>  CWnd::GetNextDlgTabItem  
+ Recupera un puntero al primer control que se creó con la [WS_TABSTOP](styles-used-by-mfc.md#window-styles) estilo y que precede o sigue al control especificado.  
   
 ```  
 CWnd* GetNextDlgTabItem(
@@ -3953,7 +3956,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
   
  Para obtener más información acerca de `COleControlSiteOrWnd`, consulte [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem).  
   
-##  <a name="getnextwindow"></a>CWnd::GetNextWindow  
+##  <a name="getnextwindow"></a>  CWnd::GetNextWindow  
  Busca la ventana siguiente (o anterior) en la ventana lista del administrador.  
   
 ```  
@@ -3974,7 +3977,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
   
  Si `CWnd` es una ventana de nivel superior, la función busca la ventana de nivel superior siguiente (o anterior); si `CWnd` es una ventana secundaria, la ventana secundaria que función busca el siguiente (o anterior).  
   
-##  <a name="getolecontrolsite"></a>CWnd::GetOleControlSite  
+##  <a name="getolecontrolsite"></a>  CWnd::GetOleControlSite  
  Recupera el sitio personalizado del control ActiveX especificado.  
   
 ```  
@@ -3985,7 +3988,7 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
  `idControl`  
  El identificador del control ActiveX.  
   
-##  <a name="getopenclipboardwindow"></a>CWnd::GetOpenClipboardWindow  
+##  <a name="getopenclipboardwindow"></a>  CWnd::GetOpenClipboardWindow  
  Recupera el identificador de la ventana que tiene actualmente el Portapapeles abierto.  
   
 ```  
@@ -3995,7 +3998,7 @@ static CWnd* PASCAL GetOpenClipboardWindow();
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de la ventana que tiene actualmente el Portapapeles abierto si la función se realiza correctamente; en caso contrario, **NULL**.  
   
-##  <a name="getowner"></a>CWnd::GetOwner  
+##  <a name="getowner"></a>  CWnd::GetOwner  
  Recupera un puntero al propietario de la ventana.  
   
 ```  
@@ -4010,7 +4013,7 @@ CWnd* GetOwner() const;
   
  El concepto de propiedad de esta función es diferente del concepto de propiedad de [GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515).  
   
-##  <a name="getparent"></a>CWnd::GetParent  
+##  <a name="getparent"></a>  CWnd::GetParent  
  Llame a esta función para obtener un puntero a la ventana primaria de una ventana secundaria (si existe).  
   
 ```  
@@ -4023,7 +4026,7 @@ CWnd* GetParent() const;
 ### <a name="remarks"></a>Comentarios  
  El `GetParent` función devuelve un puntero para el elemento primario inmediato (si existe). En cambio, el [GetParentOwner](#getparentowner) función devuelve un puntero a la ventana primaria o propietaria más inmediato que no es una ventana secundaria (no tiene la **WS_CHILD** estilo). Si tiene una ventana secundaria dentro de una ventana secundaria `GetParent` y `GetParentOwner` devuelven resultados diferentes.  
   
-##  <a name="getparentframe"></a>CWnd::GetParentFrame  
+##  <a name="getparentframe"></a>  CWnd::GetParentFrame  
  Llame a esta función miembro para recuperar la ventana de marco principal.  
   
 ```  
@@ -4036,7 +4039,7 @@ CFrameWnd* GetParentFrame() const;
 ### <a name="remarks"></a>Comentarios  
  Busca en la función miembro a la cadena primaria hasta un [CFrameWnd](../../mfc/reference/cframewnd-class.md) (o clase derivada) se encuentra el objeto.  
   
-##  <a name="getparentowner"></a>CWnd::GetParentOwner  
+##  <a name="getparentowner"></a>  CWnd::GetParentOwner  
  Llame a esta función miembro para obtener un puntero a la ventana primaria de una ventana secundaria o ventana propietaria.  
   
 ```  
@@ -4047,11 +4050,11 @@ CWnd* GetParentOwner() const;
  Un puntero a un `CWnd` objeto. Si no hay un objeto `CWnd` asociado al identificador, se crea y asocia un objeto `CWnd` temporal. El puntero puede ser temporal y no se debe almacenar para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `GetParentOwner`Devuelve un puntero a la ventana primaria o propietaria más inmediato que no es una ventana secundaria (no tiene la **WS_CHILD** estilo). La ventana de propietario actual puede establecerse con [SetOwner](#setowner). De forma predeterminada, el elemento primario de una ventana es su propietario.  
+ `GetParentOwner` Devuelve un puntero a la ventana primaria o propietaria más inmediato que no es una ventana secundaria (no tiene la **WS_CHILD** estilo). La ventana de propietario actual puede establecerse con [SetOwner](#setowner). De forma predeterminada, el elemento primario de una ventana es su propietario.  
   
  En cambio, el [GetParent](#getparent) función devuelve un puntero al elemento primario inmediato, si es una ventana secundaria o no. Si tiene una ventana secundaria dentro de una ventana secundaria `GetParent` y `GetParentOwner` devuelven resultados diferentes.  
   
-##  <a name="getproperty"></a>CWnd::GetProperty  
+##  <a name="getproperty"></a>  CWnd::GetProperty  
  Llame a esta función miembro para obtener la propiedad del control ActiveX especificada por `dwDispID`.  
   
 ```  
@@ -4079,7 +4082,7 @@ void GetProperty(
   
  Para obtener más información sobre el uso de esta función miembro con contenedores de controles ActiveX, vea el artículo [contenedores de controles ActiveX: programar controles ActiveX en un contenedor de controles ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
   
-##  <a name="getrendertarget"></a>CWnd::GetRenderTarget  
+##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget  
  Obtiene un destino de presentación asociado a esta ventana.  
   
 ```  
@@ -4089,7 +4092,7 @@ CHwndRenderTarget* GetRenderTarget();
 ### <a name="return-value"></a>Valor devuelto  
  Puntero al destino de representación o NULL.  
   
-##  <a name="getsafehwnd"></a>CWnd::GetSafeHwnd  
+##  <a name="getsafehwnd"></a>  CWnd::GetSafeHwnd  
  Devuelve `m_hWnd`, o **NULL** si la **esto** puntero es **NULL**.  
   
 ```  
@@ -4102,7 +4105,7 @@ HWND GetSafeHwnd() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd:: SubclassWindow](#subclasswindow).  
   
-##  <a name="getsafeowner"></a>CWnd::GetSafeOwner  
+##  <a name="getsafeowner"></a>  CWnd::GetSafeOwner  
  Llame a esta función miembro para recuperar la ventana propietaria que debe utilizarse para cuadros de diálogo u otras ventanas modales.  
   
 ```  
@@ -4127,7 +4130,7 @@ static CWnd* GetSafeOwner(
 > [!NOTE]
 >  El marco de trabajo usa esta función para determinar la ventana de propietario correcto para cuadros de diálogo y hojas de propiedades donde no se especifica el propietario.  
   
-##  <a name="getscrollbarctrl"></a>CWnd:: Getscrollbarctrl  
+##  <a name="getscrollbarctrl"></a>  CWnd::GetScrollBarCtrl  
  Llame a esta función miembro para obtener un puntero a la barra de desplazamiento del mismo nivel especificado o divisor ventana.  
   
 ```  
@@ -4148,7 +4151,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro no funciona en las barras de desplazamiento cuando creadas la **WS_HSCROLL** o **WS_VSCROLL** bits se establecen durante la creación de una ventana. El `CWnd` simplemente devuelve la implementación de esta función **NULL**. Las clases derivadas, como `CView`, implementar la funcionalidad descrita.  
   
-##  <a name="getscrollbarinfo"></a>CWnd::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CWnd::GetScrollBarInfo  
  Recupera información sobre la barra de desplazamiento especificada.  
   
 ```  
@@ -4170,7 +4173,7 @@ BOOL GetScrollBarInfo(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getscrollinfo"></a>CWnd::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CWnd::GetScrollInfo  
  Llame a esta función miembro para recuperar la información que la `SCROLLINFO` estructura se mantiene sobre una barra de desplazamiento.  
   
 ```  
@@ -4200,13 +4203,13 @@ BOOL GetScrollInfo(
  Si el mensaje recupera todos los valores, el valor devuelto es **TRUE**. En caso contrario, es **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
- `GetScrollInfo`permite a las aplicaciones utilizar posiciones de desplazamiento de 32 bits.  
+ `GetScrollInfo` permite a las aplicaciones utilizar posiciones de desplazamiento de 32 bits.  
   
  El [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) estructura contiene información sobre una barra de desplazamiento, incluidos los valores mínimo y máximo de desplazamiento posiciones, el tamaño de página y la posición del cuadro de desplazamiento (control). Vea el `SCROLLINFO` tema de estructura en el SDK de Windows para obtener más información acerca de cómo cambiar los valores predeterminados de la estructura.  
   
- Controladores que indican la posición de la barra de desplazamiento, de mensaje de las ventanas de MFC [CWnd::OnHScroll](#onhscroll) y [CWnd::OnVScroll](#onvscroll), proporcionar solo 16 bits de datos de posición. `GetScrollInfo`y `SetScrollInfo` proporcionar 32 bits de datos de posición de la barra de desplazamiento. Por lo tanto, una aplicación puede llamar a `GetScrollInfo` al procesar cualquiera `CWnd::OnHScroll` o `CWnd::OnVScroll` para obtener datos de posición de la barra de desplazamiento de 32 bits.  
+ Controladores que indican la posición de la barra de desplazamiento, de mensaje de las ventanas de MFC [CWnd::OnHScroll](#onhscroll) y [CWnd::OnVScroll](#onvscroll), proporcionar solo 16 bits de datos de posición. `GetScrollInfo` y `SetScrollInfo` proporcionar 32 bits de datos de posición de la barra de desplazamiento. Por lo tanto, una aplicación puede llamar a `GetScrollInfo` al procesar cualquiera `CWnd::OnHScroll` o `CWnd::OnVScroll` para obtener datos de posición de la barra de desplazamiento de 32 bits.  
   
-##  <a name="getscrolllimit"></a>CWnd::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CWnd::GetScrollLimit  
  Llame a esta función miembro para recuperar la posición de desplazamiento máxima de la barra de desplazamiento.  
   
 ```  
@@ -4224,7 +4227,7 @@ int GetScrollLimit(int nBar);
 ### <a name="return-value"></a>Valor devuelto  
  Especifica la posición máxima de una barra de desplazamiento si se realiza correctamente; en caso contrario es 0.  
   
-##  <a name="getscrollpos"></a>CWnd::GetScrollPos  
+##  <a name="getscrollpos"></a>  CWnd::GetScrollPos  
  Recupera la posición actual del cuadro de desplazamiento de una barra de desplazamiento.  
   
 ```  
@@ -4245,7 +4248,7 @@ int GetScrollPos(int nBar) const;
 ### <a name="remarks"></a>Comentarios  
  La posición actual es un valor relativo que depende del intervalo de desplazamiento actual. Por ejemplo, si el intervalo de desplazamiento es de 50 a 100 y el cuadro de desplazamiento está en medio de la barra, la posición actual es 75.  
   
-##  <a name="getscrollrange"></a>CWnd::GetScrollRange  
+##  <a name="getscrollrange"></a>  CWnd::GetScrollRange  
  Copia las posiciones actuales de la barra de desplazamiento mínimo y máximo de la barra de desplazamiento especificada en las ubicaciones especificadas por `lpMinPos` y `lpMaxPos`.  
   
 ```  
@@ -4274,7 +4277,7 @@ void GetScrollRange(
   
  El intervalo predeterminado para una barra de desplazamiento estándar es de 0 a 100. El intervalo predeterminado para un control de barra de desplazamiento está vacío (ambos valores son 0).  
   
-##  <a name="getstyle"></a>CWnd::GetStyle  
+##  <a name="getstyle"></a>  CWnd::GetStyle  
  Devuelve el estilo de ventana actual.  
   
 ```  
@@ -4282,9 +4285,9 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- El estilo de ventana. Para obtener más información acerca de los estilos de ventana utilizados en MFC, vea [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ El estilo de ventana. Para obtener más información acerca de los estilos de ventana utilizados en MFC, vea [estilos de ventana](styles-used-by-mfc.md#window-styles).  
   
-##  <a name="getsystemmenu"></a>CWnd::GetSystemMenu  
+##  <a name="getsystemmenu"></a>  CWnd::GetSystemMenu  
  Permite a la aplicación tener acceso al menú de sistema para hacer copias y modificaciones.  
   
 ```  
@@ -4307,12 +4310,12 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
   
  El menú de Control inicialmente contiene elementos identificados con distintos valores de identificador como **SC_CLOSE**, **SC_MOVE**, y **SC_SIZE**. Generan elementos del menú de Control [WM_SYSCOMMAND](#onsyscommand) mensajes. Todos los elementos de menú de Control predefinidos tienen números de identificación mayores 0xF000. Si una aplicación agrega elementos al menú de Control, debe usar números de identificación de menor que oculta F000.  
   
- Windows puede realizan automáticamente elementos disponibles en el menú de Control estándar. `CWnd`puede llevar a cabo su propia selección o falta de disponibilidad responde a la [WM_INITMENU](#oninitmenu) mensajes que se envían antes de que se muestra un menú.  
+ Windows puede realizan automáticamente elementos disponibles en el menú de Control estándar. `CWnd` puede llevar a cabo su propia selección o falta de disponibilidad responde a la [WM_INITMENU](#oninitmenu) mensajes que se envían antes de que se muestra un menú.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]  
   
-##  <a name="gettitlebarinfo"></a>CWnd::GetTitleBarInfo  
+##  <a name="gettitlebarinfo"></a>  CWnd::GetTitleBarInfo  
  Recupera información sobre la barra de título especificada.  
   
 ```  
@@ -4320,13 +4323,13 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *pTI*  
+ *pti*  
  Puntero a un [TITLEBARINFO](http://msdn.microsoft.com/library/windows/desktop/ms632608) estructura que recibe la información.  
   
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetTitleBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms633513), tal y como se describe en el SDK de Windows.  
   
-##  <a name="gettoplevelframe"></a>CWnd::GetTopLevelFrame  
+##  <a name="gettoplevelframe"></a>  CWnd::GetTopLevelFrame  
  Llame a esta función miembro para recuperar la ventana de marco de nivel superior de la ventana, si lo hay.  
   
 ```  
@@ -4341,7 +4344,7 @@ CFrameWnd* GetTopLevelFrame() const;
 ### <a name="remarks"></a>Comentarios  
  Si `CWnd` no tiene ninguna ventana adjuntada o su primario de nivel superior no es un [CFrameWnd](../../mfc/reference/cframewnd-class.md)-derivadas objeto, esta función devuelve **NULL**.  
   
-##  <a name="gettoplevelowner"></a>CWnd::GetTopLevelOwner  
+##  <a name="gettoplevelowner"></a>  CWnd::GetTopLevelOwner  
  Llame a esta función miembro para recuperar la ventana de nivel superior.  
   
 ```  
@@ -4354,7 +4357,7 @@ CWnd* GetTopLevelOwner() const;
 ### <a name="remarks"></a>Comentarios  
  La ventana de nivel superior es la ventana que es un elemento secundario del escritorio. Si `CWnd` no tiene ninguna ventana asociada, esta función devuelve **NULL**.  
   
-##  <a name="gettoplevelparent"></a>CWnd::GetTopLevelParent  
+##  <a name="gettoplevelparent"></a>  CWnd::GetTopLevelParent  
  Llame a esta función miembro para recuperar el elemento primario de nivel superior de la ventana.  
   
 ```  
@@ -4367,9 +4370,9 @@ CWnd* GetTopLevelParent() const;
  El puntero devuelto puede ser temporal y no debe almacenarse para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `GetTopLevelParent`es similar a [GetTopLevelFrame](#gettoplevelframe) y [GetTopLevelOwner](#gettoplevelowner); sin embargo, omite el valor establecido como la ventana de propietario actual.  
+ `GetTopLevelParent` es similar a [GetTopLevelFrame](#gettoplevelframe) y [GetTopLevelOwner](#gettoplevelowner); sin embargo, omite el valor establecido como la ventana de propietario actual.  
   
-##  <a name="gettopwindow"></a>CWnd::GetTopWindow  
+##  <a name="gettopwindow"></a>  CWnd::GetTopWindow  
  Busca la ventana secundaria de nivel superior que pertenece a `CWnd`.  
   
 ```  
@@ -4384,7 +4387,7 @@ CWnd* GetTopWindow() const;
 ### <a name="remarks"></a>Comentarios  
  Si `CWnd` no tiene elementos secundarios, esta función devuelve **NULL**.  
   
-##  <a name="getupdaterect"></a>CWnd::GetUpdateRect  
+##  <a name="getupdaterect"></a>  CWnd::GetUpdateRect  
  Recupera las coordenadas del rectángulo más pequeño que contiene toda la región de actualización.  
   
 ```  
@@ -4416,7 +4419,7 @@ BOOL GetUpdateRect(
   
  El `BeginPaint` función miembro valida automáticamente la región de actualización, por lo que todas las llamadas a `GetUpdateRect` realizar inmediatamente después de una llamada a `BeginPaint` recupera una región de actualización vacía.  
   
-##  <a name="getupdatergn"></a>CWnd::GetUpdateRgn  
+##  <a name="getupdatergn"></a>  CWnd::GetUpdateRgn  
  Recupera la región de actualización en una región identificada por `pRgn`.  
   
 ```  
@@ -4448,7 +4451,7 @@ int GetUpdateRgn(
   
  El [BeginPaint](#beginpaint) función miembro valida automáticamente la región de actualización, por lo que todas las llamadas a `GetUpdateRgn` realizar inmediatamente después de una llamada a `BeginPaint` recupera una región de actualización vacía.  
   
-##  <a name="getwindow"></a>CWnd::GetWindow  
+##  <a name="getwindow"></a>  CWnd::GetWindow  
  Devuelve un puntero a la ventana solicitada, o **NULL** si no hay ninguno.  
   
 ```  
@@ -4474,7 +4477,7 @@ CWnd* GetWindow(UINT nCmd) const;
 ### <a name="return-value"></a>Valor devuelto  
  El puntero devuelto puede ser temporal y no debe almacenarse para su uso posterior.  
   
-##  <a name="getwindowcontexthelpid"></a>CWnd::GetWindowContextHelpId  
+##  <a name="getwindowcontexthelpid"></a>  CWnd::GetWindowContextHelpId  
  Llame a esta función miembro para recuperar el identificador de contexto de ayuda, si las hubiera, asociadas con la ventana.  
   
 ```  
@@ -4484,7 +4487,7 @@ DWORD GetWindowContextHelpId() const;
 ### <a name="return-value"></a>Valor devuelto  
  El identificador de contexto de ayuda. Devuelve 0 si la ventana no tiene ninguno.  
   
-##  <a name="getwindowedchildcount"></a>CWnd::GetWindowedChildCount  
+##  <a name="getwindowedchildcount"></a>  CWnd::GetWindowedChildCount  
  Llame a esta función miembro para recuperar el número de ventanas secundarias asociadas.  
   
 ```  
@@ -4494,7 +4497,7 @@ long GetWindowedChildCount();
 ### <a name="return-value"></a>Valor devuelto  
  El número de ventanas secundarias asociadas con la `CWnd` objeto.  
   
-##  <a name="getwindowdc"></a>CWnd:: GetWindowDC  
+##  <a name="getwindowdc"></a>  CWnd::GetWindowDC  
  Recupera el contexto de presentación de la ventana completa, incluida la barra de título, los menús y barras de desplazamiento.  
   
 ```  
@@ -4511,13 +4514,13 @@ CDC* GetWindowDC();
   
  Los atributos predeterminados se asignan en el contexto de presentación cada vez que se recupera el contexto. Atributos anteriores se pierden.  
   
- `GetWindowDC`está pensado para usarse para los efectos de dibujo especiales dentro de la `CWnd` del área no cliente. No se recomienda el dibujo en áreas no cliente de las ventanas.  
+ `GetWindowDC` está pensado para usarse para los efectos de dibujo especiales dentro de la `CWnd` del área no cliente. No se recomienda el dibujo en áreas no cliente de las ventanas.  
   
  El [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) función de Windows puede utilizarse para recuperar las dimensiones de diversas partes del área no cliente, como la barra de título, menús y barras de desplazamiento.  
   
  Una vez completada, la pintura el [ReleaseDC](#releasedc) función miembro debe llamarse para liberar el contexto de presentación. Error al liberar el contexto de presentación afectará gravemente al dibujo solicitada por aplicaciones debido a las limitaciones en el número de contextos de dispositivo que pueden estar abiertos al mismo tiempo.  
   
-##  <a name="getwindowinfo"></a>CWnd::GetWindowInfo  
+##  <a name="getwindowinfo"></a>  CWnd::GetWindowInfo  
  Recupera información sobre la ventana.  
   
 ```  
@@ -4531,7 +4534,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [GetWindowInfo](http://msdn.microsoft.com/library/windows/desktop/ms633516), tal y como se describe en el SDK de Windows.  
   
-##  <a name="getwindowlesschildcount"></a>CWnd::GetWindowlessChildCount  
+##  <a name="getwindowlesschildcount"></a>  CWnd::GetWindowlessChildCount  
  Recupera el número de ventanas de ventanas secundarias asociadas.  
   
 ```  
@@ -4541,7 +4544,7 @@ long GetWindowlessChildCount();
 ### <a name="return-value"></a>Valor devuelto  
  El número de ventanas de ventanas secundarias asociadas con la `CWnd` objeto.  
   
-##  <a name="getwindowplacement"></a>CWnd::GetWindowPlacement  
+##  <a name="getwindowplacement"></a>  CWnd::GetWindowPlacement  
  Recupera el estado de visualización y las posiciones normal (restaurada), minimizada y maximizada de una ventana.  
   
 ```  
@@ -4558,7 +4561,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 ### <a name="remarks"></a>Comentarios  
  El **marcas** miembro de la [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) estructura recuperado por esta función es siempre 0. Si `CWnd` está maximizada, el **showCmd** miembro de `WINDOWPLACEMENT` es **SW_SHOWMAXIMIZED**. Si se minimiza la ventana, es **SW_SHOWMINIMIZED.** Es **SW_SHOWNORMAL** en caso contrario.  
   
-##  <a name="getwindowrect"></a>CWnd::GetWindowRect  
+##  <a name="getwindowrect"></a>  CWnd::GetWindowRect  
  Copia las dimensiones del rectángulo delimitador de la `CWnd` objeto a la estructura que señala `lpRect`.  
   
 ```  
@@ -4572,7 +4575,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="remarks"></a>Comentarios  
  Las dimensiones se indican en coordenadas de pantalla con respecto a la esquina superior izquierda de la pantalla de presentación. Las dimensiones de la leyenda, borde y barras de desplazamiento, si está presente, se incluyen.  
   
-##  <a name="getwindowrgn"></a>CWnd::GetWindowRgn  
+##  <a name="getwindowrgn"></a>  CWnd::GetWindowRgn  
  Llame a esta función miembro para obtener la región de ventana de una ventana.  
   
 ```  
@@ -4601,7 +4604,7 @@ int GetWindowRgn(HRGN hRgn)const;
   
  Para establecer la región de ventana de una ventana, llame a [CWnd::SetWindowRgn](#setwindowrgn).  
   
-##  <a name="getwindowtext"></a>CWnd::GetWindowText  
+##  <a name="getwindowtext"></a>  CWnd::GetWindowText  
  Copia la `CWnd` título título (si lo hay) en el búfer señalado por `lpszStringBuf` o en la cadena de destino `rString`.  
   
 ```  
@@ -4634,7 +4637,7 @@ void GetWindowText(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::SetWindowText](#setwindowtext).  
   
-##  <a name="getwindowtextlength"></a>CWnd::GetWindowTextLength  
+##  <a name="getwindowtextlength"></a>  CWnd::GetWindowTextLength  
  Devuelve la longitud de la `CWnd` título del título del objeto.  
   
 ```  
@@ -4652,7 +4655,7 @@ int GetWindowTextLength() const;
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::SetWindowText](#setwindowtext).  
   
-##  <a name="hidecaret"></a>CWnd::HideCaret  
+##  <a name="hidecaret"></a>  CWnd::HideCaret  
  Quita el cursor de inserción de la presentación en pantalla para ocultarlo.  
   
 ```  
@@ -4664,7 +4667,7 @@ void HideCaret();
   
  Ocultar es acumulativo. Si `HideCaret` se ha llamado a cinco veces en una fila, el `ShowCaret` función miembro debe llamarse cinco veces antes de que se mostrará el símbolo de intercalación.  
   
-##  <a name="hilitemenuitem"></a>CWnd::HiliteMenuItem  
+##  <a name="hilitemenuitem"></a>  CWnd::HiliteMenuItem  
  Resalta o quita el resaltado de un elemento de menú de nivel superior (barra de menús).  
   
 ```  
@@ -4698,7 +4701,7 @@ BOOL HiliteMenuItem(
 ### <a name="remarks"></a>Comentarios  
  El **MF_HILITE** y **MF_UNHILITE** marcas pueden usarse sólo con esta función miembro; no se pueden utilizar con la [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) función miembro.  
   
-##  <a name="htmlhelp"></a>CWnd::HtmlHelp  
+##  <a name="htmlhelp"></a>  CWnd::HtmlHelp  
  Llame a esta función miembro para invocar la aplicación HTMLHelp.  
   
 ```  
@@ -4717,7 +4720,7 @@ virtual void HtmlHelp(
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) para obtener más información.  
   
-##  <a name="initdynamiclayout"></a>CWnd::InitDynamicLayout  
+##  <a name="initdynamiclayout"></a>  CWnd::InitDynamicLayout  
  Llamado por el marco de trabajo para inicializar la presentación dinámica de una ventana.  
   
 ```  
@@ -4727,7 +4730,7 @@ void InitDynamicLayout();
 ### <a name="remarks"></a>Comentarios  
  No llame a este método directamente.  
   
-##  <a name="invalidate"></a>CWnd::Invalidate  
+##  <a name="invalidate"></a>  CWnd::Invalidate  
  Invalida toda el área cliente de `CWnd`.  
   
 ```  
@@ -4748,7 +4751,7 @@ void Invalidate(BOOL bErase = TRUE);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::UpdateWindow](#updatewindow).  
   
-##  <a name="invalidaterect"></a>CWnd::InvalidateRect  
+##  <a name="invalidaterect"></a>  CWnd::InvalidateRect  
  Invalida el área cliente dentro del rectángulo especificado agregando dicho rectángulo a la `CWnd` región de actualización.  
   
 ```  
@@ -4771,7 +4774,7 @@ void InvalidateRect(
   
  Windows envía una [WM_PAINT](#onpaint) mensaje cada vez que la `CWnd` región de actualización no está vacía y no hay ningún otro mensaje en la cola de aplicación correspondiente a esa ventana.  
   
-##  <a name="invalidatergn"></a>CWnd::InvalidateRgn  
+##  <a name="invalidatergn"></a>  CWnd::InvalidateRgn  
  Invalida el área cliente dentro de la región especificada, éste se agrega a la región de actualización actual de `CWnd`.  
   
 ```  
@@ -4796,7 +4799,7 @@ void InvalidateRgn(
   
  La región especificada debe haber creado previamente por una de las funciones de región.  
   
-##  <a name="invokehelper"></a>CWnd::InvokeHelper  
+##  <a name="invokehelper"></a>  CWnd::InvokeHelper  
  Llame a esta función miembro para invocar el método de ActiveX Control o la propiedad especificada por `dwDispID`, en el contexto especificado por `wFlags`.  
   
 ```  
@@ -4838,7 +4841,7 @@ void AFX_CDECL InvokeHelper(
   
  Para obtener más información sobre el uso de esta función miembro con contenedores de controles ActiveX, vea el artículo [contenedores de controles ActiveX: programar controles ActiveX en un contenedor de controles ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
   
-##  <a name="ischild"></a>CWnd::IsChild  
+##  <a name="ischild"></a>  CWnd::IsChild  
  Indica si la ventana especificada por `pWnd` es una ventana secundaria u otro descendiente directo de `CWnd`.  
   
 ```  
@@ -4855,7 +4858,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 ### <a name="remarks"></a>Comentarios  
  Una ventana secundaria es el descendiente directo de `CWnd` si la `CWnd` objeto se encuentra en la cadena de ventanas principales que va desde la ventana emergente del original a la ventana secundaria.  
   
-##  <a name="isd2dsupportenabled"></a>CWnd::IsD2DSupportEnabled  
+##  <a name="isd2dsupportenabled"></a>  CWnd::IsD2DSupportEnabled  
  Determina si está habilitada la compatibilidad D2D.  
   
 ```  
@@ -4865,7 +4868,7 @@ BOOL IsD2DSupportEnabled();
 ### <a name="return-value"></a>Valor devuelto  
  TRUE si la característica está habilitada; en caso contrario, FALSE.  
   
-##  <a name="isdialogmessage"></a>CWnd::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CWnd::IsDialogMessage  
  Llame a esta función miembro para determinar si el mensaje determinado está diseñado para un cuadro de diálogo no modales; Si es así, esta función procesa el mensaje.  
   
 ```  
@@ -4886,7 +4889,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
   
  No se debe pasar un mensaje procesado por `IsDialogMessage` a la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) o [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funciones de Windows, porque ya se ha procesado.  
   
-##  <a name="isdlgbuttonchecked"></a>CWnd::IsDlgButtonChecked  
+##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked  
  Determina si un control de botón tiene una marca de verificación junto a él.  
   
 ```  
@@ -4903,7 +4906,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 ### <a name="remarks"></a>Comentarios  
  Si el botón es un control de tres estados, la función miembro determina si se está atenuado, activa, o ninguno.  
   
-##  <a name="isdynamiclayoutenabled"></a>CWnd:: Isdynamiclayoutenabled  
+##  <a name="isdynamiclayoutenabled"></a>  CWnd::IsDynamicLayoutEnabled  
  Determina si el diseño dinámico está habilitado en esta ventana. Si el diseño dinámico está habilitado, la posición y el tamaño de las ventanas secundarias pueden cambiar cuando el usuario cambie el tamaño de la ventana primaria.  
   
 ```  
@@ -4915,7 +4918,7 @@ BOOL IsDynamicLayoutEnabled() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="isiconic"></a>CWnd::IsIconic  
+##  <a name="isiconic"></a>  CWnd::IsIconic  
  Especifica si `CWnd` está minimizado (icono).  
   
 ```  
@@ -4928,7 +4931,7 @@ BOOL IsIconic() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="istouchwindow"></a>CWnd::IsTouchWindow  
+##  <a name="istouchwindow"></a>  CWnd::IsTouchWindow  
  Especifica si `CWnd` es compatible con la entrada táctil.  
   
 ```  
@@ -4936,11 +4939,11 @@ BOOL IsTouchWindow() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si `CWnd` es táctil compatible con; en caso contrario, `FALSE`.  
+ `TRUE` Si `CWnd` es táctil compatible con; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="iswindowenabled"></a>CWnd::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>  CWnd::IsWindowEnabled  
  Especifica si `CWnd` está habilitada para la entrada del teclado y de mouse (ratón).  
   
 ```  
@@ -4953,7 +4956,7 @@ BOOL IsWindowEnabled() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]  
   
-##  <a name="iswindowvisible"></a>CWnd::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CWnd::IsWindowVisible  
  Determina el estado de visibilidad de la ventana especificada.  
   
 ```  
@@ -4961,7 +4964,7 @@ BOOL IsWindowVisible() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si `CWnd` está visible (tiene el [WS_VISIBLE](../../mfc/reference/styles-used-by-mfc.md#window-styles) establecido bit de estilo, y la ventana primaria está visible). Dado que el valor devuelto refleja el estado de la **WS_VISIBLE** bit de estilo, el valor devuelto puede ser distinto de cero, aunque `CWnd` totalmente está oculto por otras ventanas.  
+ Distinto de cero si `CWnd` está visible (tiene el [WS_VISIBLE](styles-used-by-mfc.md#window-styles) establecido bit de estilo, y la ventana primaria está visible). Dado que el valor devuelto refleja el estado de la **WS_VISIBLE** bit de estilo, el valor devuelto puede ser distinto de cero, aunque `CWnd` totalmente está oculto por otras ventanas.  
   
 ### <a name="remarks"></a>Comentarios  
  Una ventana posee un estado de visibilidad indicado por la **WS_VISIBLE** bit de estilo. Cuando este bit de estilo se establece mediante una llamada a la [ShowWindow](#showwindow) función miembro, se muestra la ventana y dibujo posterior a la ventana se muestra como la ventana tiene el conjunto de bit de estilo.  
@@ -4971,7 +4974,7 @@ BOOL IsWindowVisible() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]  
   
-##  <a name="iszoomed"></a>CWnd::IsZoomed  
+##  <a name="iszoomed"></a>  CWnd::IsZoomed  
  Determina si `CWnd` ha sido maximizada.  
   
 ```  
@@ -4981,7 +4984,7 @@ BOOL IsZoomed() const;
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si `CWnd` está maximizada; en caso contrario, 0.  
   
-##  <a name="killtimer"></a>CWnd::KillTimer  
+##  <a name="killtimer"></a>  CWnd::KillTimer  
  Elimina el evento del temporizador identificado por `nIDEvent` desde la llamada anterior a `SetTimer`.  
   
 ```  
@@ -5001,7 +5004,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::SetTimer](#settimer).  
   
-##  <a name="loaddynamiclayoutresource"></a>CWnd::LoadDynamicLayoutResource  
+##  <a name="loaddynamiclayoutresource"></a>  CWnd::LoadDynamicLayoutResource  
  Lo llama el marco para que cargue la información de diseño dinámico desde el archivo de recursos.  
   
 ```  
@@ -5018,7 +5021,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 ### <a name="remarks"></a>Comentarios  
  No llame a este método directamente.  
   
-##  <a name="lockwindowupdate"></a>CWnd::LockWindowUpdate  
+##  <a name="lockwindowupdate"></a>  CWnd::LockWindowUpdate  
  Deshabilita el dibujo en la ventana especificada.  
   
 ```  
@@ -5035,9 +5038,9 @@ BOOL LockWindowUpdate();
   
  Mientras se bloquean las actualizaciones de la ventana, el sistema realiza un seguimiento de rectángulo que las operaciones de dibujo en contextos de dispositivo asociados a una ventana bloqueada. Cuando se vuelve a habilitar dibujo, se invalida este rectángulo delimitador en la ventana bloqueada y sus ventanas secundarias para forzar una eventual [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensaje para actualizar la pantalla. Si no se produjo ningún dibujo mientras la ventana se actualiza estaban bloqueada, no se invalida ningún área.  
   
- El `LockWindowUpdate` función miembro no hacer que la ventana especificada sea invisible y no desactive el [WS_VISIBLE](../../mfc/reference/styles-used-by-mfc.md#window-styles) bit de estilo.  
+ El `LockWindowUpdate` función miembro no hacer que la ventana especificada sea invisible y no desactive el [WS_VISIBLE](styles-used-by-mfc.md#window-styles) bit de estilo.  
   
-##  <a name="m_hwnd"></a>CWnd::m_hWnd  
+##  <a name="m_hwnd"></a>  CWnd::m_hWnd  
  El identificador de la ventana de Windows asociada a este `CWnd`.  
   
 ```  
@@ -5047,7 +5050,7 @@ HWND m_hWnd;
 ### <a name="remarks"></a>Comentarios  
  El `m_hWnd` miembro de datos es una variable pública de tipo `HWND`.  
   
-##  <a name="mapwindowpoints"></a>CWnd::MapWindowPoints  
+##  <a name="mapwindowpoints"></a>  CWnd::MapWindowPoints  
  Convierte (asigna) un conjunto de puntos del espacio de coordenadas de `CWnd` al espacio de coordenadas de otra ventana.  
   
 ```  
@@ -5074,7 +5077,7 @@ void MapWindowPoints(
  `nCount`  
  Especifica el número de **punto** estructuras en la matriz señalada por `lpPoint`.  
   
-##  <a name="messagebox"></a>CWnd::MessageBox  
+##  <a name="messagebox"></a>  CWnd::MessageBox  
  Crea y muestra una ventana que contiene un mensaje proporcionada por la aplicación y título, además de una combinación de los iconos predefinidos y botones de comando que se describe en el [estilos de cuadro de mensaje](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) lista.  
   
 ```  
@@ -5112,7 +5115,7 @@ int MessageBox(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
   
-##  <a name="modifystyle"></a>CWnd::ModifyStyle  
+##  <a name="modifystyle"></a>  CWnd::ModifyStyle  
  Llame a esta función miembro para modificar el estilo de ventana.  
   
 ```  
@@ -5140,13 +5143,13 @@ BOOL ModifyStyle(
   
  Si `nFlags` es distinto de cero, `ModifyStyle` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas cuatro siguientes:  
   
-- `SWP_NOSIZE`Conserva el tamaño actual.  
+- `SWP_NOSIZE` Conserva el tamaño actual.  
   
-- `SWP_NOMOVE`Conserva la posición actual.  
+- `SWP_NOMOVE` Conserva la posición actual.  
   
-- `SWP_NOZORDER`Conserva el orden Z actual.  
+- `SWP_NOZORDER` Conserva el orden Z actual.  
   
-- `SWP_NOACTIVATE`No se activa la ventana.  
+- `SWP_NOACTIVATE` No se activa la ventana.  
   
  Para modificar una ventana de estilos extendidos, vea [ModifyStyleEx](#modifystyleex).  
   
@@ -5156,7 +5159,7 @@ BOOL ModifyStyle(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]  
   
-##  <a name="modifystyleex"></a>CWnd::ModifyStyleEx  
+##  <a name="modifystyleex"></a>  CWnd::ModifyStyleEx  
  Llame a esta función miembro para modificar el estilo extendido de ventana.  
   
 ```  
@@ -5184,20 +5187,20 @@ BOOL ModifyStyleEx(
   
  Si `nFlags` es distinto de cero, `ModifyStyleEx` llama a la función de API de Windows [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) y vuelve a dibujar la ventana mediante la combinación `nFlags` con las marcas de valores preestablecidas cuatro siguientes:  
   
-- `SWP_NOSIZE`Conserva el tamaño actual.  
+- `SWP_NOSIZE` Conserva el tamaño actual.  
   
-- `SWP_NOMOVE`Conserva la posición actual.  
+- `SWP_NOMOVE` Conserva la posición actual.  
   
-- `SWP_NOZORDER`Conserva el orden Z actual.  
+- `SWP_NOZORDER` Conserva el orden Z actual.  
   
-- `SWP_NOACTIVATE`No se activa la ventana.  
+- `SWP_NOACTIVATE` No se activa la ventana.  
   
  Para modificar con estilos de ventana normal de windows, consulte [ModifyStyle](#modifystyle).  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]  
   
-##  <a name="movewindow"></a>CWnd::MoveWindow  
+##  <a name="movewindow"></a>  CWnd::MoveWindow  
  Cambia la posición y las dimensiones.  
   
 ```  
@@ -5241,7 +5244,7 @@ void MoveWindow(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::ClientToScreen](#clienttoscreen).  
   
-##  <a name="notifywinevent"></a>CWnd::NotifyWinEvent  
+##  <a name="notifywinevent"></a>  CWnd::NotifyWinEvent  
  Indica al sistema que se ha producido un evento predefinido. Si alguna aplicación cliente ha registrado una función de enlace para el evento, el sistema llama a función de enlace del cliente.  
   
 ```  
@@ -5264,7 +5267,7 @@ void NotifyWinEvent(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [NotifyWinEvent](http://msdn.microsoft.com/library/windows/desktop/dd373603), tal y como se describe en el SDK de Windows.  
   
-##  <a name="onactivate"></a>CWnd::OnActivate  
+##  <a name="onactivate"></a>  CWnd::OnActivate  
  El marco de trabajo llama a esta función miembro cuando un `CWnd` objeto se está activado o desactivado.  
   
 ```  
@@ -5298,7 +5301,7 @@ afx_msg void OnActivate(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onactivateapp"></a>CWnd:: Onactivateapp  
+##  <a name="onactivateapp"></a>  CWnd::OnActivateApp  
  El marco de trabajo llama a esta función miembro para todas las ventanas de nivel superior de la tarea que se va a activar y para todas las ventanas de nivel superior de la tarea que se está desactivando.  
   
 ```  
@@ -5319,7 +5322,7 @@ afx_msg void OnActivateApp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onambientproperty"></a>CWnd::OnAmbientProperty  
+##  <a name="onambientproperty"></a>  CWnd::OnAmbientProperty  
  El marco de trabajo llama a esta función miembro para obtener los valores de propiedad de ambiente desde una ventana que contiene controles OLE.  
   
 ```  
@@ -5345,7 +5348,7 @@ virtual BOOL OnAmbientProperty(
 ### <a name="remarks"></a>Comentarios  
  Reemplace esta función para cambiar el valor predeterminado, los valores de propiedad de ambiente devueltos por un contenedor de controles OLE a sus controles. Las solicitudes de propiedad de ambiente no controladas por una función de reemplazo se deberían reenviar a la implementación de la clase base.  
   
-##  <a name="onappcommand"></a>CWnd::OnAppCommand  
+##  <a name="onappcommand"></a>  CWnd::OnAppCommand  
  El marco de trabajo llama a esta función miembro cuando el usuario genera un evento de comando de la aplicación. Este evento se produce cuando el usuario hace clic en un botón de comando de la aplicación o tipos de una tecla de comando de la aplicación.  
   
 ```  
@@ -5371,7 +5374,7 @@ afx_msg void OnAppCommand(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onaskcbformatname"></a>CWnd::OnAskCbFormatName  
+##  <a name="onaskcbformatname"></a>  CWnd::OnAskCbFormatName  
  El marco de trabajo llama a esta función miembro cuando el Portapapeles contiene un identificador de datos para el `CF_OWNERDISPLAY` formato (es decir, cuando el propietario del Portapapeles mostrará el contenido del Portapapeles).  
   
 ```  
@@ -5395,7 +5398,7 @@ afx_msg void OnAskCbFormatName(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncancelmode"></a>CWnd::OnCancelMode  
+##  <a name="oncancelmode"></a>  CWnd::OnCancelMode  
  El marco de trabajo llama a esta función miembro para informar a `CWnd` para cancelar cualquier modo interno.  
   
 ```  
@@ -5407,7 +5410,7 @@ afx_msg void OnCancelMode();
   
  La implementación predeterminada responde mediante una llamada a la [ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261) la función de Windows. Reemplace esta función miembro en una clase derivada para controlar otros modos.  
   
-##  <a name="oncapturechanged"></a>CWnd::OnCaptureChanged  
+##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged  
  El marco de trabajo llama a esta función miembro para notificar a la ventana que está perdiendo la captura del mouse.  
   
 ```  
@@ -5426,7 +5429,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onchangecbchain"></a>CWnd::OnChangeCbChain  
+##  <a name="onchangecbchain"></a>  CWnd::OnChangeCbChain  
  El marco de trabajo llama a esta función miembro para cada ventana de la cadena del Visor del Portapapeles que le notifique que se ha quitado una ventana de la cadena.  
   
 ```  
@@ -5448,7 +5451,7 @@ afx_msg void OnChangeCbChain(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onchangeuistate"></a>CWnd::OnChangeUIState  
+##  <a name="onchangeuistate"></a>  CWnd::OnChangeUIState  
  Se llama cuando es necesario cambiar el estado de la interfaz de usuario.  
   
 ```  
@@ -5479,7 +5482,7 @@ afx_msg void OnChangeUIState(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342) de mensajes, como se describe en el SDK de Windows.  
   
-##  <a name="onchar"></a>CWnd::OnChar  
+##  <a name="onchar"></a>  CWnd::OnChar  
  El marco de trabajo llama a esta función miembro cuando una pulsación de tecla se convierte en un carácter no perteneciente al sistema.  
   
 ```  
@@ -5510,7 +5513,7 @@ afx_msg void OnChar(
 |31|Especifica el estado de transición. El valor es 1 si se ha publicado la clave o es 0 si se presiona la tecla.|  
   
 ### <a name="remarks"></a>Comentarios  
- Esta función se invoca antes de la [OnKeyUp](#onkeyup) función miembro y después la [OnKeyDown](#onkeydown) se llama la función miembro. `OnChar`contiene el valor del que se presione o suelte la tecla del teclado.  
+ Esta función se invoca antes de la [OnKeyUp](#onkeyup) función miembro y después la [OnKeyDown](#onkeydown) se llama la función miembro. `OnChar` contiene el valor del que se presione o suelte la tecla del teclado.  
   
  Porque no hay necesariamente una correspondencia uno a uno entre las claves que se presionó y `OnChar` generen de llamadas, la información de `nFlags` no suele ser útil para las aplicaciones. La información de `nFlags` sólo se aplica a la llamada más reciente a la `OnKeyUp` función miembro o `OnKeyDown` función miembro que precede a la llamada a `OnChar`.  
   
@@ -5519,7 +5522,7 @@ afx_msg void OnChar(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onchartoitem"></a>CWnd::OnCharToItem  
+##  <a name="onchartoitem"></a>  CWnd::OnCharToItem  
  Se llama cuando un cuadro de lista con el [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo envía su propietario un [WM_CHARTOITEM](http://msdn.microsoft.com/library/windows/desktop/bb761358) mensaje en respuesta a un [WM_CHAR](#onchar) mensaje.  
   
 ```  
@@ -5547,14 +5550,14 @@ afx_msg int OnCharToItem(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onchildactivate"></a>CWnd::OnChildActivate  
+##  <a name="onchildactivate"></a>  CWnd::OnChildActivate  
  Si el `CWnd` objeto es una ventana secundaria MDI (interfaz) de varios documentos, `OnChildActivate` es llamado por el marco cuando el usuario hace clic en la barra de título de la ventana o cuando se activa la ventana, mover o tamaño.  
   
 ```  
 afx_msg void OnChildActivate();
 ```  
   
-##  <a name="onchildnotify"></a>CWnd::OnChildNotify  
+##  <a name="onchildnotify"></a>  CWnd::OnChildNotify  
  Esta ventana primaria llama a esta función miembro cuando recibe un mensaje de notificación que se aplica a esta ventana.  
   
 ```  
@@ -5588,14 +5591,14 @@ virtual BOOL OnChildNotify(
   
  Reemplace esta función miembro para ampliar la manera en que un control se responde a mensajes de notificación.  
   
-##  <a name="onclipboardupdate"></a>CWnd::OnClipboardUpdate  
+##  <a name="onclipboardupdate"></a>  CWnd::OnClipboardUpdate  
  El marco de trabajo llama a esta función miembro cuando ha cambiado el contenido del Portapapeles.  
   
 ```  
 afx_msg void OnClipboardUpdate();
 ```  
   
-##  <a name="onclose"></a>CWnd::OnClose  
+##  <a name="onclose"></a>  CWnd::OnClose  
  El marco de trabajo llama a esta función miembro como una señal de que el `CWnd` o una aplicación que se va a terminar.  
   
 ```  
@@ -5605,7 +5608,7 @@ afx_msg void OnClose();
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada llama `DestroyWindow`.  
   
-##  <a name="oncolorizationcolorchanged"></a>CWnd::OnColorizationColorChanged  
+##  <a name="oncolorizationcolorchanged"></a>  CWnd::OnColorizationColorChanged  
  El marco de trabajo llama a este miembro cuando ha cambiado la directiva de representación para el área no cliente.  
   
 ```  
@@ -5619,7 +5622,7 @@ afx_msg void OnColorizationColorChanged(
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |[in] `dwColorizationColor`|Especifica el nuevo color de colores.<br /><br /> El formato de color es un número hexadecimal de 0xAARRGGBB de formulario, donde cada uno de los cuatro componentes comprendido entre 0 x 00 a 0xFF. El componente AA es el valor alfa, RR es el color rojo, GG es verde y BB es azul.|  
-|[in] `bOpacity`|`true`Si el nuevo color se mezcla con opacidad; `false` si no lo está.|  
+|[in] `bOpacity`|`true` Si el nuevo color se mezcla con opacidad; `false` si no lo está.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método recibe el [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198) mensaje de notificación, que se describe en el SDK de Windows.  
@@ -5627,7 +5630,7 @@ afx_msg void OnColorizationColorChanged(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncommand"></a>CWnd:: OnCommand  
+##  <a name="oncommand"></a>  CWnd::OnCommand  
  El marco de trabajo llama a esta función miembro cuando el usuario selecciona un elemento en un menú, cuando un control secundario envía un mensaje de notificación, o cuando se traduce una pulsación de tecla de aceleración.  
   
 ```  
@@ -5647,14 +5650,14 @@ virtual BOOL OnCommand(
  Una aplicación devuelve distinto de cero si procesa este mensaje; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnCommand`procesa el mapa de mensajes de notificación de control y `ON_COMMAND` entradas y llama a la función miembro adecuado.  
+ `OnCommand` procesa el mapa de mensajes de notificación de control y `ON_COMMAND` entradas y llama a la función miembro adecuado.  
   
  Reemplace esta función miembro en una clase derivada para controlar la [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje. Una invalidación no procesará el mapa de mensajes, a menos que la clase base `OnCommand` se llama.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncompacting"></a>CWnd::OnCompacting  
+##  <a name="oncompacting"></a>  CWnd::OnCompacting  
  El marco de trabajo llama a esta función miembro para todas las ventanas de nivel superior cuando Windows detecta que se invierte más del 12,5 por ciento de la hora del sistema en un intervalo de 30 a 60 segundos compactar la memoria.  
   
 ```  
@@ -5673,7 +5676,7 @@ afx_msg void OnCompacting(UINT nCpuTime);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncompareitem"></a>CWnd::OnCompareItem  
+##  <a name="oncompareitem"></a>  CWnd::OnCompareItem  
  El marco de trabajo llama a esta función miembro para especificar la posición relativa de un nuevo elemento en un cuadro combinado o lista del dibujado por el propietario de secundarios ordenados.  
   
 ```  
@@ -5701,14 +5704,14 @@ afx_msg int OnCompareItem(
 ### <a name="remarks"></a>Comentarios  
  Si se crea un cuadro combinado o lista con el [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) o [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) estilo, el propietario del cuadro de lista o cuadro combinado de Windows envía una `WM_COMPAREITEM` mensaje cada vez que la aplicación agrega un nuevo elemento.  
   
- Dos elementos en el cuadro combinado o lista se reformada en un `COMPAREITEMSTRUCT` estructura que señala `lpCompareItemStruct`. `OnCompareItem`debe devolver un valor que indica cuál de los elementos debe aparecer antes que el otro. Normalmente, Windows realiza esta llamada varias veces hasta que determine la posición exacta para el nuevo elemento.  
+ Dos elementos en el cuadro combinado o lista se reformada en un `COMPAREITEMSTRUCT` estructura que señala `lpCompareItemStruct`. `OnCompareItem` debe devolver un valor que indica cuál de los elementos debe aparecer antes que el otro. Normalmente, Windows realiza esta llamada varias veces hasta que determine la posición exacta para el nuevo elemento.  
   
  Si el **hwndItem** miembro de la `COMPAREITEMSTRUCT` estructura pertenece a un [CListBox](../../mfc/reference/clistbox-class.md) o [CComboBox](../../mfc/reference/ccombobox-class.md) objeto, la `CompareItem` función virtual de la se llama la clase adecuada. Invalidar `CComboBox::CompareItem` o `CListBox::CompareItem` en su derivada `CListBox` o `CComboBox` clase para realizar la comparación de elemento.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncompositionchanged"></a>CWnd::OnCompositionChanged  
+##  <a name="oncompositionchanged"></a>  CWnd::OnCompositionChanged  
  El marco de trabajo llama a esta función miembro para todas las ventanas de nivel superior cuando se habilita o deshabilita la composición del Administrador de ventanas de escritorio (DWM).  
   
 ```  
@@ -5721,7 +5724,7 @@ afx_msg void OnCompositionChanged();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncontextmenu"></a>CWnd::OnContextMenu  
+##  <a name="oncontextmenu"></a>  CWnd::OnContextMenu  
  Llamado por el marco de trabajo cuando el usuario ha hecho clic en el botón secundario del mouse (haga clic en) en la ventana.  
   
 ```  
@@ -5742,7 +5745,7 @@ afx_msg void OnContextMenu(
   
  Si no se muestra un menú contextual debe pasar este mensaje en el [DefWindowProc](#defwindowproc) (función). Si la ventana es una ventana secundaria, `DefWindowProc` envía el mensaje al elemento primario. En caso contrario, `DefWindowProc` muestra un menú contextual de forma predeterminada, si la posición especificada está en el título de la ventana.  
   
-##  <a name="oncopydata"></a>CWnd::OnCopyData  
+##  <a name="oncopydata"></a>  CWnd::OnCopyData  
  Esta función miembro se llama el marco de trabajo para copiar los datos de una aplicación a otra.  
   
 ```  
@@ -5773,7 +5776,7 @@ afx_msg BOOL OnCopyData(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oncreate"></a>CWnd::OnCreate  
+##  <a name="oncreate"></a>  CWnd::OnCreate  
  El marco de trabajo llama a esta función miembro cuando una aplicación solicita que se creó la ventana de Windows mediante una llamada a la [crear](#create) o [CreateEx](#createex) función miembro.  
   
 ```  
@@ -5785,10 +5788,10 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
  Apunta a un [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura que contiene información sobre la `CWnd` del objeto que se está creando.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `OnCreate`debe devolver 0 para continuar con la creación de la `CWnd` objeto. Si la aplicación devuelve -1, se destruirá la ventana.  
+ `OnCreate` debe devolver 0 para continuar con la creación de la `CWnd` objeto. Si la aplicación devuelve -1, se destruirá la ventana.  
   
 ### <a name="remarks"></a>Comentarios  
- La `CWnd` objeto recibe esta llamada después de crea la ventana, pero antes de que sea visible. `OnCreate`se llama antes de la **crear** o `CreateEx` función miembro devuelve.  
+ La `CWnd` objeto recibe esta llamada después de crea la ventana, pero antes de que sea visible. `OnCreate` se llama antes de la **crear** o `CreateEx` función miembro devuelve.  
   
  Reemplace esta función miembro para llevar a cabo cualquier inicialización necesaria de una clase derivada.  
   
@@ -5797,7 +5800,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onctlcolor"></a>CWnd::OnCtlColor  
+##  <a name="onctlcolor"></a>  CWnd::OnCtlColor  
  El marco de trabajo llama a esta función miembro cuando un control secundario que se va a dibujar.  
   
 ```  
@@ -5832,7 +5835,7 @@ afx_msg HBRUSH OnCtlColor(
 - **CTLCOLOR_STATIC** control estático  
   
 ### <a name="return-value"></a>Valor devuelto  
- `OnCtlColor`debe devolver un identificador para el pincel que se utiliza para pintar el fondo del control.  
+ `OnCtlColor` debe devolver un identificador para el pincel que se utiliza para pintar el fondo del control.  
   
 ### <a name="remarks"></a>Comentarios  
  Mayoría de los controles enviar este mensaje a su elemento primario (normalmente un cuadro de diálogo) para preparar el `pDC` para dibujar el control mediante los colores correctos.  
@@ -5841,7 +5844,7 @@ afx_msg HBRUSH OnCtlColor(
   
  Para cambiar el color de fondo de un control de edición multilínea, establecer el identificador de pincel tanto en el **CTLCOLOR_EDIT** y **CTLCOLOR_MSGBOX** códigos de mensaje y llame a la [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) función en respuesta a la **CTLCOLOR_EDIT** código.  
   
- `OnCtlColor`no se llamará para el cuadro de lista de un cuadro combinado desplegable porque el cuadro de lista desplegable es realmente un elemento secundario del cuadro combinado y un elemento secundario de la ventana. Para cambiar el color del cuadro de lista desplegable, cree un `CComboBox` con una invalidación de `OnCtlColor` que busca **CTLCOLOR_LISTBOX** en el `nCtlColor` parámetro. En este controlador, el `SetBkColor` función miembro debe usarse para establecer el color de fondo para el texto.  
+ `OnCtlColor` no se llamará para el cuadro de lista de un cuadro combinado desplegable porque el cuadro de lista desplegable es realmente un elemento secundario del cuadro combinado y un elemento secundario de la ventana. Para cambiar el color del cuadro de lista desplegable, cree un `CComboBox` con una invalidación de `OnCtlColor` que busca **CTLCOLOR_LISTBOX** en el `nCtlColor` parámetro. En este controlador, el `SetBkColor` función miembro debe usarse para establecer el color de fondo para el texto.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función. Para agregar el método siguiente a la clase de cuadro de diálogo, utilice el panel de propiedades de Visual Studio para agregar un controlador de mensajes para WM_CTLCOLOR. Como alternativa, puede agregar manualmente una entrada ON_WM_CTLCOLOR() al mapa de mensajes.  
@@ -5849,7 +5852,7 @@ afx_msg HBRUSH OnCtlColor(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]  
   
-##  <a name="ondeadchar"></a>CWnd::OnDeadChar  
+##  <a name="ondeadchar"></a>  CWnd::OnDeadChar  
  El marco de trabajo llama a esta función miembro cuando el [OnKeyUp](#onkeyup) función miembro y [OnKeyDown](#onkeydown) se denominan funciones miembro.  
   
 ```  
@@ -5891,7 +5894,7 @@ afx_msg void OnDeadChar(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ondeleteitem"></a>CWnd::OnDeleteItem  
+##  <a name="ondeleteitem"></a>  CWnd::OnDeleteItem  
  El marco de trabajo llama a esta función miembro para informar al propietario de un cuadro de lista dibujado por el propietario o un cuadro combinado que se destruye el cuadro de lista o cuadro combinado o que se quitaron elementos por [CComboBox::DeleteString](../../mfc/reference/ccombobox-class.md#deletestring), [CListBox::D eleteString](../../mfc/reference/clistbox-class.md#deletestring), [CComboBox::ResetContent](../../mfc/reference/ccombobox-class.md#resetcontent), o [CListBox::ResetContent](../../mfc/reference/clistbox-class.md#resetcontent).  
   
 ```  
@@ -5913,7 +5916,7 @@ afx_msg void OnDeleteItem(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ondestroy"></a>CWnd::OnDestroy  
+##  <a name="ondestroy"></a>  CWnd::OnDestroy  
  El marco de trabajo llama a esta función miembro para informar a los `CWnd` del objeto que se va a destruir.  
   
 ```  
@@ -5921,20 +5924,20 @@ afx_msg void OnDestroy();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `OnDestroy`se llama después de la `CWnd` objeto se quita de la pantalla.  
+ `OnDestroy` se llama después de la `CWnd` objeto se quita de la pantalla.  
   
- `OnDestroy`se llama primero para la `CWnd` está destruyendo, a continuación, para las ventanas secundarias de `CWnd` tal y como se destruyen. Se puede suponer que todas las ventanas secundarias siguen existan mientras `OnDestroy` se ejecuta.  
+ `OnDestroy` se llama primero para la `CWnd` está destruyendo, a continuación, para las ventanas secundarias de `CWnd` tal y como se destruyen. Se puede suponer que todas las ventanas secundarias siguen existan mientras `OnDestroy` se ejecuta.  
   
  Si el `CWnd` objeto que se está destruyendo forma parte de la cadena del Visor del Portapapeles (establecido mediante una llamada a la [SetClipboardViewer](#setclipboardviewer) función miembro), el `CWnd` debe quitarse de la cadena del Visor del Portapapeles mediante una llamada a la [ChangeClipboardChain](#changeclipboardchain) función miembro antes de abandonar la `OnDestroy` función.  
   
-##  <a name="ondestroyclipboard"></a>CWnd::OnDestroyClipboard  
+##  <a name="ondestroyclipboard"></a>  CWnd::OnDestroyClipboard  
  El marco de trabajo llama a esta función miembro para el propietario del Portapapeles al vaciar el Portapapeles mediante una llamada a la [EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037) la función de Windows.  
   
 ```  
 afx_msg void OnDestroyClipboard();
 ```  
   
-##  <a name="ondevicechange"></a>CWnd::OnDeviceChange  
+##  <a name="ondevicechange"></a>  CWnd::OnDeviceChange  
  El marco de trabajo llama a esta función miembro para notificar a una aplicación o un controlador de dispositivo de un cambio en la configuración de hardware de un dispositivo o el equipo.  
   
 ```  
@@ -5976,7 +5979,7 @@ afx_msg BOOL OnDeviceChange(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ondevmodechange"></a>CWnd::OnDevModeChange  
+##  <a name="ondevmodechange"></a>  CWnd::OnDevModeChange  
  El marco de trabajo llama a esta función miembro de nivel superior de todos los `CWnd` objetos cuando el usuario cambia la configuración del modo de dispositivo.  
   
 ```  
@@ -5995,7 +5998,7 @@ afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ondrawclipboard"></a>CWnd::OnDrawClipboard  
+##  <a name="ondrawclipboard"></a>  CWnd::OnDrawClipboard  
  El marco de trabajo llama a esta función miembro para cada ventana de la cadena del Visor del Portapapeles cuando cambia el contenido del Portapapeles.  
   
 ```  
@@ -6007,7 +6010,7 @@ afx_msg void OnDrawClipboard();
   
  Cada ventana que reciba un `OnDrawClipboard` llamada debe llamar a la [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) la función de Windows para pasar un [WM_DRAWCLIPBOARD](http://msdn.microsoft.com/library/windows/desktop/ms649025) mensaje en la siguiente ventana de la cadena del Visor del Portapapeles. Devuelve el identificador de la siguiente ventana del [SetClipboardViewer](#setclipboardviewer) función miembro; puede modificarse en respuesta a una [OnChangeCbChain](#onchangecbchain) llamada a función miembro.  
   
-##  <a name="ondrawiconicthumbnailorlivepreview"></a>CWnd::OnDrawIconicThumbnailOrLivePreview  
+##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview  
  El marco llama a este método cuando necesita obtener un mapa de bits para mostrarlo en la miniatura de pestañas de Windows 7 o en el cliente para ojear la aplicación.  
   
 ```  
@@ -6038,7 +6041,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada y dibujar en el contexto de dispositivo especificado con el fin de personalizar la vista en miniatura y peek. Si `bThumbnail` es `TRUE`, `szRequiredThumbnailSize` puede hacer caso omiso. En este caso debe ser consciente de que se dibuja el mapa de bits de tamaño completo (es decir, un mapa de bits que cubre el área de cliente completa). El contexto de dispositivo ( `dc`) viene con el mapa de bits de 32 bits seleccionada. La implementación predeterminada envía WM_PRINT a esta ventana con marcas PRF_CLIENT, PRF_CHILDREN y PRF_NONCLIENT.  
   
-##  <a name="ondrawitem"></a>CWnd::OnDrawItem  
+##  <a name="ondrawitem"></a>  CWnd::OnDrawItem  
  El marco de trabajo llama a esta función miembro para el propietario de un control de botón dibujado por el propietario, control de cuadro combinado, control de cuadro de lista o cuando un aspecto visual del control de menú o menú ha cambiado.  
   
 ```  
@@ -6064,7 +6067,7 @@ afx_msg void OnDrawItem(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ondropfiles"></a>CWnd::OnDropFiles  
+##  <a name="ondropfiles"></a>  CWnd::OnDropFiles  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón primario del mouse en una ventana que se ha registrado como destinataria de los archivos colocados.  
   
 ```  
@@ -6081,7 +6084,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onenable"></a>CWnd::OnEnable  
+##  <a name="onenable"></a>  CWnd::OnEnable  
  El marco de trabajo llama a esta función miembro cuando una aplicación cambia el estado habilitado de la `CWnd` objeto.  
   
 ```  
@@ -6093,12 +6096,12 @@ afx_msg void OnEnable(BOOL bEnable);
  Especifica si la `CWnd` objeto se ha habilitado o deshabilitado. Este parámetro es **TRUE** si la `CWnd` se ha habilitado; es **FALSE** si el `CWnd` se ha deshabilitado.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnEnable`se llama antes de la [EnableWindow](#enablewindow) devuelve la función miembro, pero después el estado de ventana habilitada ( [WS_DISABLED](../../mfc/reference/styles-used-by-mfc.md#window-styles) bit de estilo) ha cambiado.  
+ `OnEnable` se llama antes de la [EnableWindow](#enablewindow) devuelve la función miembro, pero después el estado de ventana habilitada ( [WS_DISABLED](styles-used-by-mfc.md#window-styles) bit de estilo) ha cambiado.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onendsession"></a>CWnd::OnEndSession  
+##  <a name="onendsession"></a>  CWnd::OnEndSession  
  El marco de trabajo llama a esta función miembro después de la `CWnd` objeto ha devuelto un valor distinto de cero de un [OnQueryEndSession](#onqueryendsession) llamada a función miembro.  
   
 ```  
@@ -6119,7 +6122,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onenteridle"></a>CWnd::OnEnterIdle  
+##  <a name="onenteridle"></a>  CWnd::OnEnterIdle  
  El marco de trabajo llama a esta función miembro para informar al procedimiento de ventana principal de una aplicación que un menú o un cuadro de diálogo modal está entrando en un estado de inactividad.  
   
 ```  
@@ -6145,7 +6148,7 @@ afx_msg void OnEnterIdle(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onentermenuloop"></a>CWnd::OnEnterMenuLoop  
+##  <a name="onentermenuloop"></a>  CWnd::OnEnterMenuLoop  
  El marco de trabajo llama a esta función miembro cuando se ha especificado un bucle modal de menú.  
   
 ```  
@@ -6161,7 +6164,7 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onentersizemove"></a>CWnd::OnEnterSizeMove  
+##  <a name="onentersizemove"></a>  CWnd::OnEnterSizeMove  
  El marco de trabajo llama a esta función miembro una vez después de la ventana afectada entra en un bucle modal de movimiento o de tamaño.  
   
 ```  
@@ -6176,7 +6179,7 @@ afx_msg void OnEnterSizeMove();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onerasebkgnd"></a>CWnd::OnEraseBkgnd  
+##  <a name="onerasebkgnd"></a>  CWnd::OnEraseBkgnd  
  El marco de trabajo llama a esta función miembro cuando el `CWnd` objeto necesario borrar el fondo (por ejemplo, cuando cambia de tamaño).  
   
 ```  
@@ -6204,7 +6207,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onexitmenuloop"></a>CWnd::OnExitMenuLoop  
+##  <a name="onexitmenuloop"></a>  CWnd::OnExitMenuLoop  
  El marco de trabajo llama a esta función miembro cuando se ha salido de un bucle modal de menú.  
   
 ```  
@@ -6220,7 +6223,7 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onexitsizemove"></a>CWnd::OnExitSizeMove  
+##  <a name="onexitsizemove"></a>  CWnd::OnExitSizeMove  
  El marco de trabajo llama a esta función miembro una vez después de que la ventana afectada salga un móvil o un bucle modal de tamaño.  
   
 ```  
@@ -6235,7 +6238,7 @@ afx_msg void OnExitSizeMove();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onfontchange"></a>CWnd::OnFontChange  
+##  <a name="onfontchange"></a>  CWnd::OnFontChange  
  Reciban todas las ventanas de nivel superior en el sistema un `OnFontChange` llamar desde el marco de trabajo después de que la aplicación cambie el grupo de recursos de fuente.  
   
 ```  
@@ -6247,7 +6250,7 @@ afx_msg void OnFontChange();
   
  Para enviar este mensaje, utilice el [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows funcionan con la `hWnd` parámetro establecido en **HWND_BROADCAST**.  
   
-##  <a name="ongetdlgcode"></a>CWnd::OnGetDlgCode  
+##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode  
  Se llama en relación con un control para que el control pueda procesar por sí mismo las entradas de tecla de dirección y de tecla TAB.  
   
 ```  
@@ -6284,7 +6287,7 @@ afx_msg UINT OnGetDlgCode();
   
  El valor predeterminado `OnGetDlgCode` funciona para las clases de controles predefinidos devuelven un código apropiado para cada clase.  
   
-##  <a name="ongetminmaxinfo"></a>CWnd::OnGetMinMaxInfo  
+##  <a name="ongetminmaxinfo"></a>  CWnd::OnGetMinMaxInfo  
  El marco de trabajo llama a esta función miembro siempre que Windows necesita conocer la posición maximizada o dimensiones, o bien el mínimo o máximo tamaño de seguimiento.  
   
 ```  
@@ -6303,7 +6306,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onhelp"></a>CWnd::OnHelp  
+##  <a name="onhelp"></a>  CWnd::OnHelp  
  Controla la Ayuda de F1 de la aplicación (usando el contexto actual).  
   
 ```  
@@ -6313,7 +6316,7 @@ afx_msg void OnHelp();
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp::OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) para obtener más información.  
   
-##  <a name="onhelpfinder"></a>CWnd::OnHelpFinder  
+##  <a name="onhelpfinder"></a>  CWnd::OnHelpFinder  
  Controla la **ID_HELP_FINDER** y **ID_DEFAULT_HELP** comandos.  
   
 ```  
@@ -6323,7 +6326,7 @@ afx_msg void OnHelpFinder();
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp::OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder) para obtener más información.  
   
-##  <a name="onhelpindex"></a>CWnd::OnHelpIndex  
+##  <a name="onhelpindex"></a>  CWnd::OnHelpIndex  
  Controla la **ID_HELP_INDEX** comando y proporciona un tema de Ayuda predeterminado.  
   
 ```  
@@ -6333,7 +6336,7 @@ afx_msg void OnHelpIndex();
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp::OnHelpIndex](../../mfc/reference/cwinapp-class.md#onhelpindex) para obtener más información.  
   
-##  <a name="onhelpinfo"></a>CWnd::OnHelpInfo  
+##  <a name="onhelpinfo"></a>  CWnd::OnHelpInfo  
  El marco llama a este método cuando el usuario presiona la tecla F1.  
   
 ```  
@@ -6350,7 +6353,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ### <a name="remarks"></a>Comentarios  
  Si un menú está activo cuando se presiona F1, **WM_HELP** se envían a la ventana asociada con el menú; en caso contrario, **WM_HELP** se envía a la ventana que tiene el foco del teclado. Si no hay ninguna ventana tiene el foco del teclado, **WM_HELP** se envía a la ventana actualmente activa.  
   
-##  <a name="onhelpusing"></a>CWnd::OnHelpUsing  
+##  <a name="onhelpusing"></a>  CWnd::OnHelpUsing  
  Controla la **ID_HELP_USING** comando.  
   
 ```  
@@ -6360,7 +6363,7 @@ afx_msg void OnHelpUsing();
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp::OnHelpUsing](../../mfc/reference/cwinapp-class.md#onhelpusing) para obtener más información.  
   
-##  <a name="onhotkey"></a>CWnd::OnHotKey  
+##  <a name="onhotkey"></a>  CWnd::OnHotKey  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona una tecla de acceso rápido de todo el sistema.  
   
 ```  
@@ -6374,8 +6377,8 @@ afx_msg void OnHotKey(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `nHotKeyId`|Identificador de la tecla de acceso rápido que generó el mensaje. Si el mensaje fue generado por una tecla de acceso rápido definido por el sistema, este parámetro puede ser alguno de los siguientes valores:<br /><br /> - `IDHOT_SNAPDESKTOP`-La tecla de acceso rápido de escritorio de complemento se presionó.<br />- `IDHOT_SNAPWINDOW`-La tecla de acceso rápido de ventana de complemento se presionó.|  
-|[in] `nKey1`|Una combinación bit a bit (OR) de marcas que indican las claves que se presionaron en combinación con la clave especificada por el `nKey2` parámetro. Los valores posibles son:<br /><br /> - `MOD_ALT`-Cualquier tecla ALT se presionaba.<br />- `MOD_CONTROL`-Cualquier tecla CTRL presionada.<br />- `MOD_SHIFT`-Cualquier tecla MAYÚS se presionaba.<br />- `MOD_WIN`-WINDOWS la clave se presionaba. Estas claves se etiquetan con el logotipo de Microsoft Windows.|  
+|[in] `nHotKeyId`|Identificador de la tecla de acceso rápido que generó el mensaje. Si el mensaje fue generado por una tecla de acceso rápido definido por el sistema, este parámetro puede ser alguno de los siguientes valores:<br /><br /> - `IDHOT_SNAPDESKTOP` -La tecla de acceso rápido de escritorio de complemento se presionó.<br />- `IDHOT_SNAPWINDOW` -La tecla de acceso rápido de ventana de complemento se presionó.|  
+|[in] `nKey1`|Una combinación bit a bit (OR) de marcas que indican las claves que se presionaron en combinación con la clave especificada por el `nKey2` parámetro. Los valores posibles son:<br /><br /> - `MOD_ALT` -Cualquier tecla ALT se presionaba.<br />- `MOD_CONTROL` -Cualquier tecla CTRL presionada.<br />- `MOD_SHIFT` -Cualquier tecla MAYÚS se presionaba.<br />- `MOD_WIN` -WINDOWS la clave se presionaba. Estas claves se etiquetan con el logotipo de Microsoft Windows.|  
 |[in] `nKey2`|El código de tecla virtual de la tecla de acceso rápido.|  
   
 ### <a name="remarks"></a>Comentarios  
@@ -6384,7 +6387,7 @@ afx_msg void OnHotKey(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onhscroll"></a>CWnd::OnHScroll  
+##  <a name="onhscroll"></a>  CWnd::OnHScroll  
  El marco de trabajo llama a esta función miembro cuando el usuario hace clic en la barra de desplazamiento horizontal de una ventana.  
   
 ```  
@@ -6433,7 +6436,7 @@ afx_msg void OnHScroll(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]  
   
-##  <a name="onhscrollclipboard"></a>CWnd::OnHScrollClipboard  
+##  <a name="onhscrollclipboard"></a>  CWnd::OnHScrollClipboard  
  El propietario de Portapapeles `OnHScrollClipboard` el Visor del Portapapeles llama a función miembro cuando los datos del Portapapeles tienen la `CF_OWNERDISPLAY` dar formato y se produce un evento en la barra de desplazamiento horizontal del Visor del Portapapeles.  
   
 ```  
@@ -6475,7 +6478,7 @@ afx_msg void OnHScrollClipboard(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oniconerasebkgnd"></a>CWnd::OnIconEraseBkgnd  
+##  <a name="oniconerasebkgnd"></a>  CWnd::OnIconEraseBkgnd  
  El marco de trabajo llama a esta función miembro para estado minimizado (icono) `CWnd` cuando el fondo del icono debe rellenarse antes de pintar el icono del objeto.  
   
 ```  
@@ -6487,14 +6490,14 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
  Especifica el objeto de contexto de dispositivo del icono. Puede ser temporal y no debe almacenarse para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `CWnd`recibe esta llamada solo si un icono de clase se define para la implementación predeterminada de ventana; en caso contrario, [OnEraseBkgnd](#onerasebkgnd) se llama.  
+ `CWnd` recibe esta llamada solo si un icono de clase se define para la implementación predeterminada de ventana; en caso contrario, [OnEraseBkgnd](#onerasebkgnd) se llama.  
   
  El [DefWindowProc](#defwindowproc) función miembro rellena el fondo de icono con el pincel del fondo de la ventana primaria.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oninitmenu"></a>CWnd::OnInitMenu  
+##  <a name="oninitmenu"></a>  CWnd::OnInitMenu  
  El marco de trabajo llama a esta función miembro cuando un menú está a punto de activarse.  
   
 ```  
@@ -6506,14 +6509,14 @@ afx_msg void OnInitMenu(CMenu* pMenu);
  Especifica el menú se inicialice. Puede ser temporal y no debe almacenarse para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnInitMenu`se llama cuando el usuario hace clic en un elemento en la barra de menús o presiona una tecla de menú. Reemplace esta función miembro para modificar el menú antes de que se muestre.  
+ `OnInitMenu` se llama cuando el usuario hace clic en un elemento en la barra de menús o presiona una tecla de menú. Reemplace esta función miembro para modificar el menú antes de que se muestre.  
   
- `OnInitMenu`solo se llama una vez, cuando se tiene en primer lugar el acceso de un menú (por ejemplo, cuando un usuario hace clic en un elemento en la barra de menús). Este método no proporciona información acerca de los elementos de menú. Cuando el usuario se desplace a los elementos en el menú (por ejemplo, al mover el mouse a través de varios elementos de menú) la función no se llama de nuevo. Una vez que el usuario se cierra en el menú (por ejemplo, haciendo clic en el área de cliente de la aplicación) y posteriormente haga clic en un elemento en la barra de menús, la función se llamará de nuevo.  
+ `OnInitMenu` solo se llama una vez, cuando se tiene en primer lugar el acceso de un menú (por ejemplo, cuando un usuario hace clic en un elemento en la barra de menús). Este método no proporciona información acerca de los elementos de menú. Cuando el usuario se desplace a los elementos en el menú (por ejemplo, al mover el mouse a través de varios elementos de menú) la función no se llama de nuevo. Una vez que el usuario se cierra en el menú (por ejemplo, haciendo clic en el área de cliente de la aplicación) y posteriormente haga clic en un elemento en la barra de menús, la función se llamará de nuevo.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oninitmenupopup"></a>CWnd::OnInitMenuPopup  
+##  <a name="oninitmenupopup"></a>  CWnd::OnInitMenuPopup  
  El marco de trabajo llama a esta función miembro cuando un menú emergente está a punto de activarse.  
   
 ```  
@@ -6539,7 +6542,7 @@ afx_msg void OnInitMenuPopup(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oninputdevicechange"></a>CWnd::OnInputDeviceChange  
+##  <a name="oninputdevicechange"></a>  CWnd::OnInputDeviceChange  
  El marco de trabajo llama a esta función miembro cuando se agrega o se quita del sistema de un dispositivo de E/S.  
   
 ```  
@@ -6550,7 +6553,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `uFlag`|Este indicador puede contener los siguientes valores:<br /><br /> - `GIDC_ARRIVAL`-Un dispositivo nuevo se agregó en el sistema.<br />- `GIDC_REMOVAL`-Un dispositivo se quitó del sistema.|  
+|[in] `uFlag`|Este indicador puede contener los siguientes valores:<br /><br /> - `GIDC_ARRIVAL` -Un dispositivo nuevo se agregó en el sistema.<br />- `GIDC_REMOVAL` -Un dispositivo se quitó del sistema.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método recibe el [WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591) notificación, que se describe en el SDK de Windows. El es un mensaje genérico de dispositivo de entrada.  
@@ -6558,7 +6561,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oninputlangchange"></a>CWnd::OnInputLangChange  
+##  <a name="oninputlangchange"></a>  CWnd::OnInputLangChange  
  El marco de trabajo llama a este miembro para la ventana afectada superior después de que se ha cambiado el idioma de entrada de la aplicación.  
   
 ```  
@@ -6580,7 +6583,7 @@ afx_msg void OnInputLangChange(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="oninputlangchangerequest"></a>CWnd::OnInputLangChangeRequest  
+##  <a name="oninputlangchangerequest"></a>  CWnd::OnInputLangChangeRequest  
  El marco de trabajo llama a este miembro para la ventana con el foco cuando el usuario elige un nuevo idioma de entrada.  
   
 ```  
@@ -6602,7 +6605,7 @@ afx_msg void OnInputLangChangeRequest(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onkeydown"></a>CWnd::OnKeyDown  
+##  <a name="onkeydown"></a>  CWnd::OnKeyDown  
  El marco de trabajo llama a esta función miembro cuando se presiona una tecla ajenos al sistema.  
   
 ```  
@@ -6644,7 +6647,7 @@ afx_msg void OnKeyDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onkeyup"></a>CWnd::OnKeyUp  
+##  <a name="onkeyup"></a>  CWnd::OnKeyUp  
  El marco de trabajo llama a esta función miembro cuando se suelta una tecla no perteneciente al sistema.  
   
 ```  
@@ -6684,7 +6687,7 @@ afx_msg void OnKeyUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onkillfocus"></a>CWnd::OnKillFocus  
+##  <a name="onkillfocus"></a>  CWnd::OnKillFocus  
  El marco de trabajo llama a esta función miembro inmediatamente antes de perder el foco de entrada.  
   
 ```  
@@ -6701,7 +6704,7 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onlbuttondblclk"></a>CWnd::OnLButtonDblClk  
+##  <a name="onlbuttondblclk"></a>  CWnd::OnLButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón primario del mouse.  
   
 ```  
@@ -6733,7 +6736,7 @@ afx_msg void OnLButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onlbuttondown"></a>CWnd::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CWnd::OnLButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón primario del mouse.  
   
 ```  
@@ -6764,7 +6767,7 @@ afx_msg void OnLButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onlbuttonup"></a>CWnd::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CWnd::OnLButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón primario del mouse.  
   
 ```  
@@ -6793,7 +6796,7 @@ afx_msg void OnLButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmbuttondblclk"></a>CWnd::OnMButtonDblClk  
+##  <a name="onmbuttondblclk"></a>  CWnd::OnMButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón central del mouse.  
   
 ```  
@@ -6825,7 +6828,7 @@ afx_msg void OnMButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmbuttondown"></a>CWnd::OnMButtonDown  
+##  <a name="onmbuttondown"></a>  CWnd::OnMButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón central del mouse.  
   
 ```  
@@ -6856,7 +6859,7 @@ afx_msg void OnMButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmbuttonup"></a>CWnd::OnMButtonUp  
+##  <a name="onmbuttonup"></a>  CWnd::OnMButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón central del mouse.  
   
 ```  
@@ -6885,7 +6888,7 @@ afx_msg void OnMButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmdiactivate"></a>CWnd::OnMDIActivate  
+##  <a name="onmdiactivate"></a>  CWnd::OnMDIActivate  
  El marco de trabajo llama a esta función miembro para la ventana secundaria que se está desactivando la y la ventana secundaria que se va a activar.  
   
 ```  
@@ -6911,7 +6914,7 @@ afx_msg void OnMDIActivate(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmeasureitem"></a>CWnd::OnMeasureItem  
+##  <a name="onmeasureitem"></a>  CWnd::OnMeasureItem  
  El marco de trabajo llama a esta función miembro por el marco de trabajo para el propietario de un botón dibujado por el propietario, un cuadro combinado, un cuadro de lista o un elemento de menú cuando se crea el control.  
   
 ```  
@@ -6935,12 +6938,12 @@ afx_msg void OnMeasureItem(
   
  Si el elemento que se va a medir es un `CMenu`, `CListBox` o `CComboBox` objeto, la `MeasureItem` llama a una función virtual de la clase apropiada. Invalidar el `MeasureItem` función miembro de clase del control adecuado para calcular y establecer el tamaño de cada elemento.  
   
- `OnMeasureItem`se llamará solo si la clase del control se crea en tiempo de ejecución o se crea con el **LBS_OWNERDRAWVARIABLE** o **CBS_OWNERDRAWVARIABLE** estilo. Si el control se crea mediante el editor de cuadro de diálogo, `OnMeasureItem` no se llamará. Esto es porque el [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) se envía el mensaje al principio del proceso de creación del control. Si deriva una subclase usando `DDX_Control`, `SubclassDlgItem`, o `SubclassWindow`, la creación de subclases normalmente se produce después del proceso de creación. Por lo tanto, no hay ninguna manera de controlar la [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) mensaje del control de `OnChildNotify` función, que es el mecanismo de MFC utiliza para implementar **ON_WM_MEASUREITEM_REFLECT**.  
+ `OnMeasureItem` se llamará solo si la clase del control se crea en tiempo de ejecución o se crea con el **LBS_OWNERDRAWVARIABLE** o **CBS_OWNERDRAWVARIABLE** estilo. Si el control se crea mediante el editor de cuadro de diálogo, `OnMeasureItem` no se llamará. Esto es porque el [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) se envía el mensaje al principio del proceso de creación del control. Si deriva una subclase usando `DDX_Control`, `SubclassDlgItem`, o `SubclassWindow`, la creación de subclases normalmente se produce después del proceso de creación. Por lo tanto, no hay ninguna manera de controlar la [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) mensaje del control de `OnChildNotify` función, que es el mecanismo de MFC utiliza para implementar **ON_WM_MEASUREITEM_REFLECT**.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmenuchar"></a>CWnd::OnMenuChar  
+##  <a name="onmenuchar"></a>  CWnd::OnMenuChar  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona un carácter de tecla de acceso de menú que no coincide con ninguna de las teclas de acceso predefinidas en el menú actual.  
   
 ```  
@@ -6972,12 +6975,12 @@ afx_msg LRESULT OnMenuChar(
  La palabra de orden inferior se omite si la palabra de orden superior que contiene 0 ó 1. Las aplicaciones deben procesar este mensaje cuando se usan las teclas de aceleración (método abreviado) para seleccionar los mapas de bits que se coloca en un menú.  
   
 ### <a name="remarks"></a>Comentarios  
- Se envía a la `CWnd` que posee el menú. `OnMenuChar`es el acrónimo cuando el usuario presiona ALT y cualquier otra clave, incluso si la clave no se corresponde con un carácter de tecla de acceso. En este caso, `pMenu` apunta al menú pertenecen a la `CWnd`, y `nFlags` es 0.  
+ Se envía a la `CWnd` que posee el menú. `OnMenuChar` es el acrónimo cuando el usuario presiona ALT y cualquier otra clave, incluso si la clave no se corresponde con un carácter de tecla de acceso. En este caso, `pMenu` apunta al menú pertenecen a la `CWnd`, y `nFlags` es 0.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmenudrag"></a>CWnd::OnMenuDrag  
+##  <a name="onmenudrag"></a>  CWnd::OnMenuDrag  
  El marco de trabajo llama a esta función miembro del menú de arrastrar y colocar actual cuando el usuario empieza a arrastrar un elemento de menú.  
   
 ```  
@@ -7006,7 +7009,7 @@ afx_msg UINT OnMenuDrag(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmenugetobject"></a>CWnd::OnMenuGetObject  
+##  <a name="onmenugetobject"></a>  CWnd::OnMenuGetObject  
  El marco de trabajo llama a esta función miembro del menú de arrastrar y colocar actual cuando el cursor del mouse entra en un elemento de menú o se mueve desde el centro del elemento a la parte superior o inferior del elemento.  
   
 ```  
@@ -7032,7 +7035,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmenurbuttonup"></a>CWnd::OnMenuRButtonUp  
+##  <a name="onmenurbuttonup"></a>  CWnd::OnMenuRButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón secundario del mouse mientras el cursor se encuentra en un elemento de menú.  
   
 ```  
@@ -7054,7 +7057,7 @@ afx_msg void OnMenuRButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmenuselect"></a>CWnd::OnMenuSelect  
+##  <a name="onmenuselect"></a>  CWnd::OnMenuSelect  
  Si el `CWnd` objeto está asociado a un menú, `OnMenuSelect` llama el marco de trabajo cuando el usuario selecciona un elemento de menú.  
   
 ```  
@@ -7081,7 +7084,7 @@ afx_msg void OnMenuSelect(
   
 - **MF_MOUSESELECT** se selecciona el elemento con el mouse.  
   
-- `MF_OWNERDRAW`Elemento es un elemento dibujado por el propietario.  
+- `MF_OWNERDRAW` Elemento es un elemento dibujado por el propietario.  
   
 - **MF_POPUP** elemento contiene un menú emergente.  
   
@@ -7098,7 +7101,7 @@ afx_msg void OnMenuSelect(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmouseactivate"></a>CWnd::OnMouseActivate  
+##  <a name="onmouseactivate"></a>  CWnd::OnMouseActivate  
  El marco de trabajo llama a esta función miembro cuando el cursor está en una ventana inactiva y el usuario presiona un botón del mouse.  
   
 ```  
@@ -7140,7 +7143,7 @@ afx_msg int OnMouseActivate(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]  
   
-##  <a name="onmousehover"></a>CWnd::OnMouseHover  
+##  <a name="onmousehover"></a>  CWnd::OnMouseHover  
  El marco de trabajo llama a esta función miembro cuando el cursor se sitúa sobre el área de cliente de la ventana durante el período de tiempo especificado en una llamada anterior a [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
   
 ```  
@@ -7174,7 +7177,7 @@ afx_msg void OnMouseHover(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmousehwheel"></a>CWnd::OnMouseHWheel  
+##  <a name="onmousehwheel"></a>  CWnd::OnMouseHWheel  
  El marco de trabajo llama a este miembro cuando la ventana actual está compuesto por el Administrador de ventanas de escritorio (DWM), y esa ventana está maximizada.  
   
 ```  
@@ -7198,7 +7201,7 @@ afx_msg void OnMouseHWheel(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmouseleave"></a>CWnd::OnMouseLeave  
+##  <a name="onmouseleave"></a>  CWnd::OnMouseLeave  
  El marco de trabajo llama a esta función miembro cuando el cursor abandona el área cliente de la ventana especificada en una llamada anterior a [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
   
 ```  
@@ -7211,7 +7214,7 @@ afx_msg void OnMouseLeave();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmousemove"></a>CWnd::OnMouseMove  
+##  <a name="onmousemove"></a>  CWnd::OnMouseMove  
  El marco de trabajo llama a esta función miembro cuando se mueve el cursor del mouse.  
   
 ```  
@@ -7243,7 +7246,7 @@ afx_msg void OnMouseMove(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmousewheel"></a>CWnd::OnMouseWheel  
+##  <a name="onmousewheel"></a>  CWnd::OnMouseWheel  
  El marco de trabajo llama a esta función miembro como un usuario gira la rueda del mouse y encuentra notch siguiente de la rueda.  
   
 ```  
@@ -7286,9 +7289,9 @@ afx_msg BOOL OnMouseWheel(
  Reemplace esta función miembro para proporcionar su propio comportamiento de desplazamiento de la rueda del mouse.  
   
 > [!NOTE]
-> `OnMouseWheel`controla los mensajes de Windows NT 4.0 y versiones posteriores. Para el control de mensajes de Windows 95 ó 98 o Windows NT 3.51, use [OnRegisteredMouseWheel](#onregisteredmousewheel).  
+> `OnMouseWheel` controla los mensajes de Windows NT 4.0 y versiones posteriores. Para el control de mensajes de Windows 95 ó 98 o Windows NT 3.51, use [OnRegisteredMouseWheel](#onregisteredmousewheel).  
   
-##  <a name="onmove"></a>CWnd::OnMove  
+##  <a name="onmove"></a>  CWnd::OnMove  
  El marco de trabajo llama a esta función miembro después de la `CWnd` objeto se ha movido.  
   
 ```  
@@ -7309,7 +7312,7 @@ afx_msg void OnMove(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onmoving"></a>CWnd::OnMoving  
+##  <a name="onmoving"></a>  CWnd::OnMoving  
  El marco de trabajo llama a esta función miembro mientras un usuario está moviendo un `CWnd` objeto.  
   
 ```  
@@ -7330,7 +7333,7 @@ afx_msg void OnMoving(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncactivate"></a>CWnd::OnNcActivate  
+##  <a name="onncactivate"></a>  CWnd::OnNcActivate  
  El marco de trabajo llama a esta función miembro cuando el área no cliente debe modificarse para indicar un estado activo o inactivo.  
   
 ```  
@@ -7350,7 +7353,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnccalcsize"></a>CWnd::OnNcCalcSize  
+##  <a name="onnccalcsize"></a>  CWnd::OnNcCalcSize  
  El marco de trabajo llama a esta función miembro cuando el tamaño y la posición del área de cliente necesario calcularlo.  
   
 ```  
@@ -7378,7 +7381,7 @@ afx_msg void OnNcCalcSize(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnccreate"></a>CWnd::OnNcCreate  
+##  <a name="onnccreate"></a>  CWnd::OnNcCreate  
  El marco de trabajo llama a esta función miembro anteriores a la [WM_CREATE](#oncreate) mensaje cuando el `CWnd` en primer lugar se crea el objeto.  
   
 ```  
@@ -7397,7 +7400,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncdestroy"></a>CWnd::OnNcDestroy  
+##  <a name="onncdestroy"></a>  CWnd::OnNcDestroy  
  Lo llama el marco de trabajo cuando se está destruyendo el área no cliente, y la última función miembro se llama cuando se destruye la ventana de Windows.  
   
 ```  
@@ -7409,7 +7412,7 @@ afx_msg void OnNcDestroy();
   
  Invalidar `PostNcDestroy` si desea realizar su propia limpieza, como un **eliminar este** operación. Si invalida `OnNcDestroy`, debe llamar a `OnNcDestroy` en la clase base para asegurarse de que toda la memoria asignada internamente para la ventana se libera.  
   
-##  <a name="onnchittest"></a>CWnd::OnNcHitTest  
+##  <a name="onnchittest"></a>  CWnd::OnNcHitTest  
  El marco de trabajo llama a esta función miembro para el `CWnd` objeto que contiene el cursor (o el `CWnd` objeto que usa el [SetCapture](#setcapture) función de miembro para capturar el mouse de entrada) cada vez que se mueve el mouse.  
   
 ```  
@@ -7428,7 +7431,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnclbuttondblclk"></a>CWnd::OnNcLButtonDblClk  
+##  <a name="onnclbuttondblclk"></a>  CWnd::OnNcLButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón primario del mouse mientras el cursor se encuentra dentro de un área no cliente de `CWnd`.  
   
 ```  
@@ -7450,7 +7453,7 @@ afx_msg void OnNcLButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnclbuttondown"></a>CWnd::OnNcLButtonDown  
+##  <a name="onnclbuttondown"></a>  CWnd::OnNcLButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón primario del mouse mientras el cursor se encuentra dentro de un área no cliente de la `CWnd` objeto.  
   
 ```  
@@ -7472,7 +7475,7 @@ afx_msg void OnNcLButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros pasados a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si se llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnclbuttonup"></a>CWnd::OnNcLButtonUp  
+##  <a name="onnclbuttonup"></a>  CWnd::OnNcLButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón primario del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7494,7 +7497,7 @@ afx_msg void OnNcLButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmbuttondblclk"></a>CWnd::OnNcMButtonDblClk  
+##  <a name="onncmbuttondblclk"></a>  CWnd::OnNcMButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón central del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7515,7 +7518,7 @@ afx_msg void OnNcMButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmbuttondown"></a>CWnd::OnNcMButtonDown  
+##  <a name="onncmbuttondown"></a>  CWnd::OnNcMButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón central del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7536,7 +7539,7 @@ afx_msg void OnNcMButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmbuttonup"></a>CWnd::OnNcMButtonUp  
+##  <a name="onncmbuttonup"></a>  CWnd::OnNcMButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón central del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7557,7 +7560,7 @@ afx_msg void OnNcMButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmousehover"></a>CWnd::OnNcMouseHover  
+##  <a name="onncmousehover"></a>  CWnd::OnNcMouseHover  
  El marco de trabajo llama a esta función miembro cuando el cursor se sitúa sobre el área no cliente de la ventana durante el período de tiempo especificado en una llamada anterior a [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
   
 ```  
@@ -7579,7 +7582,7 @@ afx_msg void OnNcMouseHover(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmouseleave"></a>CWnd::OnNcMouseLeave  
+##  <a name="onncmouseleave"></a>  CWnd::OnNcMouseLeave  
  El marco de trabajo llama a esta función miembro cuando el cursor abandona el área no cliente de la ventana especificada en una llamada anterior a [TrackMouseEvent](http://msdn.microsoft.com/library/windows/desktop/ms646265).  
   
 ```  
@@ -7592,7 +7595,7 @@ afx_msg void OnNcMouseLeave();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncmousemove"></a>CWnd::OnNcMouseMove  
+##  <a name="onncmousemove"></a>  CWnd::OnNcMouseMove  
  El marco de trabajo llama a esta función miembro cuando el cursor se mueve dentro de un área no cliente.  
   
 ```  
@@ -7614,7 +7617,7 @@ afx_msg void OnNcMouseMove(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncpaint"></a>CWnd::OnNcPaint  
+##  <a name="onncpaint"></a>  CWnd::OnNcPaint  
  El marco de trabajo llama a esta función miembro cuando es necesario pintar el área no cliente.  
   
 ```  
@@ -7626,7 +7629,7 @@ afx_msg void OnNcPaint();
   
  Una aplicación puede invalidar esta llamada y pintar su propio marco de ventana personalizados. La región de recorte siempre es rectangular, incluso si se modifica la forma del marco.  
   
-##  <a name="onncrbuttondblclk"></a>CWnd::OnNcRButtonDblClk  
+##  <a name="onncrbuttondblclk"></a>  CWnd::OnNcRButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón secundario del mouse mientras el cursor se encuentra dentro de un área no cliente de `CWnd`.  
   
 ```  
@@ -7647,7 +7650,7 @@ afx_msg void OnNcRButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncrbuttondown"></a>CWnd::OnNcRButtonDown  
+##  <a name="onncrbuttondown"></a>  CWnd::OnNcRButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón secundario del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7668,7 +7671,7 @@ afx_msg void OnNcRButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncrbuttonup"></a>CWnd::OnNcRButtonUp  
+##  <a name="onncrbuttonup"></a>  CWnd::OnNcRButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón secundario del mouse mientras el cursor se encuentra dentro de un área no cliente.  
   
 ```  
@@ -7689,7 +7692,7 @@ afx_msg void OnNcRButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncrenderingchanged"></a>CWnd::OnNcRenderingChanged  
+##  <a name="onncrenderingchanged"></a>  CWnd::OnNcRenderingChanged  
  El marco de trabajo llama a este miembro cuando ha cambiado la directiva de representación para el área no cliente.  
   
 ```  
@@ -7700,7 +7703,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `bIsRendering`|`true`Si la representación del Administrador de ventanas de escritorio (DWM) está habilitada para el área no cliente de la ventana; `false` si se deshabilita la representación.|  
+|[in] `bIsRendering`|`true` Si la representación del Administrador de ventanas de escritorio (DWM) está habilitada para el área no cliente de la ventana; `false` si se deshabilita la representación.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método recibe el [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200) notificación, que se describe en el SDK de Windows.  
@@ -7708,7 +7711,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncxbuttondblclk"></a>CWnd::OnNcXButtonDblClk  
+##  <a name="onncxbuttondblclk"></a>  CWnd::OnNcXButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en XBUTTON1 o XBUTTON2 mientras el cursor se encuentra en el área no cliente de una ventana.  
   
 ```  
@@ -7732,7 +7735,7 @@ void OnNcXButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncxbuttondown"></a>CWnd::OnNcXButtonDown  
+##  <a name="onncxbuttondown"></a>  CWnd::OnNcXButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona XBUTTON1 o XBUTTON2 del mouse mientras el cursor se encuentra en el área no cliente de una ventana.  
   
 ```  
@@ -7756,7 +7759,7 @@ afx_msg void OnNcXButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onncxbuttonup"></a>CWnd::OnNcXButtonUp  
+##  <a name="onncxbuttonup"></a>  CWnd::OnNcXButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta XBUTTON1 o XBUTTON2 del mouse mientras el cursor se encuentra en el área no cliente de una ventana.  
   
 ```  
@@ -7780,7 +7783,7 @@ afx_msg void OnNcXButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnextmenu"></a>CWnd::OnNextMenu  
+##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
  El marco de trabajo llama a esta función miembro cuando se usa cuando la tecla de flecha derecha o izquierda para cambiar entre la barra de menús y el menú del sistema.  
   
 ```  
@@ -7802,7 +7805,7 @@ afx_msg void OnNextMenu(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onnotify"></a>CWnd::OnNotify  
+##  <a name="onnotify"></a>  CWnd::OnNotify  
  El marco de trabajo llama a esta función miembro para informar a la ventana primaria de un control que se ha producido un evento en el control o que el control requiere algún tipo de información.  
   
 ```  
@@ -7826,13 +7829,13 @@ virtual BOOL OnNotify(
  Una aplicación devuelve distinto de cero si procesa este mensaje; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnNotify`procesa el mapa de mensajes de notificación del control.  
+ `OnNotify` procesa el mapa de mensajes de notificación del control.  
   
  Reemplace esta función miembro en una clase derivada para controlar la **WM_NOTIFY** mensaje. Una invalidación no procesará el mapa de mensajes, a menos que la clase base `OnNotify` se llama.  
   
  Para obtener más información sobre WM_NOTIFY (mensaje), vea la nota técnica 61 (TN061), [mensajes ON_NOTIFY y WM_NOTIFY](../../mfc/tn061-on-notify-and-wm-notify-messages.md). Puede que también esté interesado los temas relacionados que se describen en [temas de Control](../../mfc/controls-mfc.md)y TN062, [reflexión de mensajes para controles de Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-##  <a name="onnotifyformat"></a>CWnd::OnNotifyFormat  
+##  <a name="onnotifyformat"></a>  CWnd::OnNotifyFormat  
  El marco de trabajo llama a esta función miembro para determinar si la ventana actual acepta estructuras ANSI o Unicode en el mensaje de notificación WM_NOTIFY.  
   
 ```  
@@ -7862,7 +7865,7 @@ afx_msg UINT OnNotifyFormat(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onpaint"></a>CWnd::OnPaint  
+##  <a name="onpaint"></a>  CWnd::OnPaint  
  El marco de trabajo llama a esta función miembro cuando Windows o una aplicación realiza una solicitud para volver a dibujar una parte de una ventana de aplicación.  
   
 ```  
@@ -7886,7 +7889,7 @@ afx_msg void OnPaint();
   
 - [Con el mensaje WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145193)  
   
-##  <a name="onpaintclipboard"></a>CWnd::OnPaintClipboard  
+##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard  
  Un visor del Portapapeles llama a la función miembro `OnPaintClipboard` de un propietario del Portapapeles cuando este ha colocado datos en el Portapapeles con el formato `CF_OWNERDISPLAY` y el área de cliente del visor del Portapapeles necesita volver a dibujarse.  
   
 ```  
@@ -7905,12 +7908,12 @@ afx_msg void OnPaintClipboard(
 ### <a name="remarks"></a>Comentarios  
  Para determinar si el área de clientes en su totalidad o solo una parte de ella debe volver a pintar, el propietario del Portapapeles debe comparar las dimensiones del área de dibujo en el **rcpaint** miembro de la `PAINTSTRUCT` estructura a las dimensiones en la última [OnSizeClipboard](#onsizeclipboard) llamada a función miembro.  
   
- `OnPaintClipboard`debe utilizar el [GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) la función de Windows para bloquear la memoria que contiene el `PAINTSTRUCT` datos de la estructura y desbloquear la memoria con el [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) función de Windows antes de salir.  
+ `OnPaintClipboard` debe utilizar el [GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) la función de Windows para bloquear la memoria que contiene el `PAINTSTRUCT` datos de la estructura y desbloquear la memoria con el [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) función de Windows antes de salir.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onpalettechanged"></a>CWnd::OnPaletteChanged  
+##  <a name="onpalettechanged"></a>  CWnd::OnPaletteChanged  
  El marco de trabajo llama a esta función miembro para todas las ventanas de nivel superior después de la ventana con el foco de entrada ha realizado su paleta lógica, con lo que cambiar la paleta del sistema.  
   
 ```  
@@ -7931,7 +7934,7 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onpaletteischanging"></a>CWnd::OnPaletteIsChanging  
+##  <a name="onpaletteischanging"></a>  CWnd::OnPaletteIsChanging  
  El marco de trabajo llama a esta función miembro para informar a las aplicaciones que una aplicación se va a realizar su paleta lógica.  
   
 ```  
@@ -7945,7 +7948,7 @@ afx_msg void OnPaletteIsChanging(CWnd* pRealizeWnd);
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onparentnotify"></a>CWnd:: OnParentNotify  
+##  <a name="onparentnotify"></a>  CWnd::OnParentNotify  
  De tus padres `OnParentNotify` función miembro se llama el marco de trabajo cuando se crea o se destruye la ventana secundaria, o cuando el usuario hace clic en un botón del mouse mientras el cursor está sobre la ventana secundaria.  
   
 ```  
@@ -7958,15 +7961,15 @@ afx_msg void OnParentNotify(
  `message`  
  Especifica el evento que se notifica el elemento primario y el identificador de la ventana secundaria. El evento es la palabra de orden inferior de `message`. Si el evento es `WM_CREATE` o `WM_DESTROY`, la palabra de orden superior de `message` es el identificador de la ventana secundaria; en caso contrario, la palabra de orden superior es indefinida. El evento (palabra de orden inferior de `message`) puede ser cualquiera de estos valores:  
   
-- `WM_CREATE`La ventana secundaria se está creando.  
+- `WM_CREATE` La ventana secundaria se está creando.  
   
-- `WM_DESTROY`Se está destruyendo la ventana secundaria.  
+- `WM_DESTROY` Se está destruyendo la ventana secundaria.  
   
-- `WM_LBUTTONDOWN`El usuario ha colocado el cursor del mouse sobre la ventana secundaria y hacer clic en el botón primario del mouse.  
+- `WM_LBUTTONDOWN` El usuario ha colocado el cursor del mouse sobre la ventana secundaria y hacer clic en el botón primario del mouse.  
   
-- `WM_MBUTTONDOWN`El usuario ha colocado el cursor del mouse sobre la ventana secundaria y hacer clic en el botón central del mouse.  
+- `WM_MBUTTONDOWN` El usuario ha colocado el cursor del mouse sobre la ventana secundaria y hacer clic en el botón central del mouse.  
   
-- `WM_RBUTTONDOWN`El usuario ha colocado el cursor del mouse sobre la ventana secundaria y clic con el botón secundario del mouse.  
+- `WM_RBUTTONDOWN` El usuario ha colocado el cursor del mouse sobre la ventana secundaria y clic con el botón secundario del mouse.  
   
  `lParam`  
  Si el evento (palabra de orden inferior) de `message` es `WM_CREATE` o `WM_DESTROY`, `lParam` especifica el identificador de ventana de la ventana secundaria; en caso contrario `lParam` contiene x e y coordenadas del cursor. La coordenada x está en la palabra de orden inferior y es la coordenada y de la palabra de orden superior.  
@@ -7974,14 +7977,14 @@ afx_msg void OnParentNotify(
 ### <a name="remarks"></a>Comentarios  
  Cuando se crea la ventana secundaria, el sistema llama a `OnParentNotify` justo antes del [crear](#create) devuelve la función miembro que crea la ventana. Cuando se destruye la ventana secundaria, las llamadas del sistema `OnParentNotify` antes de cualquier procesamiento tiene lugar para destruir la ventana.  
   
- `OnParentNotify`se llama para todas las ventanas de antecesor de la ventana secundaria, incluida la ventana de nivel superior.  
+ `OnParentNotify` se llama para todas las ventanas de antecesor de la ventana secundaria, incluida la ventana de nivel superior.  
   
  Todas las ventanas secundarias, excepto aquellos que tengan la [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) estilo enviar este mensaje a sus ventanas primarias. De forma predeterminada, tienen ventanas secundarias en un cuadro de diálogo la **WS_EX_NOPARENTNOTIFY** aplicar estilo a menos que la ventana secundaria se creó sin este estilo mediante una llamada a la [CreateEx](#createex) función miembro.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onpowerbroadcast"></a>CWnd::OnPowerBroadcast  
+##  <a name="onpowerbroadcast"></a>  CWnd::OnPowerBroadcast  
  El marco de trabajo llama a esta función miembro cuando se produce un evento de administración de energía.  
   
 ```  
@@ -8008,7 +8011,7 @@ afx_msg UINT OnPowerBroadcast(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onquerydragicon"></a>CWnd::OnQueryDragIcon  
+##  <a name="onquerydragicon"></a>  CWnd::OnQueryDragIcon  
  El marco de trabajo llama a esta función miembro mediante una ventana minimizada (icono) que no tiene un icono definido para su clase.  
   
 ```  
@@ -8021,7 +8024,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 ### <a name="remarks"></a>Comentarios  
  El sistema realiza esta llamada para obtener el cursor que se muestra mientras el usuario arrastra la ventana minimizada. Si una aplicación devuelve el identificador de un icono o cursor, el sistema lo convierte en blanco y negro. Si una aplicación devuelve un identificador, el identificador debe identificar un cursor monocromático o icono compatible con la resolución del controlador de pantalla. La aplicación puede llamar a la [CWinApp::LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor) o [CWinApp::LoadIcon](../../mfc/reference/cwinapp-class.md#loadicon) funciones de miembro que se va a cargar un icono o cursor de los recursos en su archivo ejecutable como obtener este identificador.  
   
-##  <a name="onqueryendsession"></a>CWnd::OnQueryEndSession  
+##  <a name="onqueryendsession"></a>  CWnd::OnQueryEndSession  
  El marco de trabajo llama a esta función miembro cuando el usuario decide finalizar la sesión de Windows o cuando una aplicación llama el [ExitWindows](http://msdn.microsoft.com/library/windows/desktop/aa376867) la función de Windows.  
   
 ```  
@@ -8034,7 +8037,7 @@ afx_msg BOOL OnQueryEndSession();
 ### <a name="remarks"></a>Comentarios  
  Si alguna aplicación devuelve 0, no se finaliza la sesión de Windows. Windows deja de llamar a `OnQueryEndSession` tan pronto como una aplicación devuelve 0 y envía el [WM_ENDSESSION](#onendsession) mensaje con un valor de parámetro de **FALSE** para cualquier aplicación que ya ha devuelto es distinto de cero.  
   
-##  <a name="onquerynewpalette"></a>CWnd::OnQueryNewPalette  
+##  <a name="onquerynewpalette"></a>  CWnd::OnQueryNewPalette  
  El marco de trabajo llama a esta función miembro cuando el `CWnd` objeto está a punto de recibir el foco de entrada, lo que proporciona el `CWnd` una oportunidad de realizar su paleta lógica cuando recibe el foco.  
   
 ```  
@@ -8044,7 +8047,7 @@ afx_msg BOOL OnQueryNewPalette();
 ### <a name="return-value"></a>Valor devuelto  
  Distinto de cero si la `CWnd` se da cuenta de su lógica paleta; de lo contrario devuelve 0.  
   
-##  <a name="onqueryopen"></a>CWnd::OnQueryOpen  
+##  <a name="onqueryopen"></a>  CWnd::OnQueryOpen  
  El marco de trabajo llama a esta función miembro cuando el `CWnd` es minimizar el objeto y el usuario que solicita la `CWnd` restaurarse preminimized tamaño y posición.  
   
 ```  
@@ -8057,7 +8060,7 @@ afx_msg BOOL OnQueryOpen();
 ### <a name="remarks"></a>Comentarios  
  Mientras se encuentre en `OnQueryOpen`, `CWnd` no debería realizar cualquier acción que produciría un cambio de foco o activación (por ejemplo, crear un cuadro de diálogo).  
   
-##  <a name="onqueryuistate"></a>CWnd::OnQueryUIState  
+##  <a name="onqueryuistate"></a>  CWnd::OnQueryUIState  
  Se llama para recuperar el estado de la interfaz de usuario de una ventana.  
   
 ```  
@@ -8076,7 +8079,7 @@ afx_msg UINT OnQueryUIState();
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la [WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355) de mensajes, como se describe en el SDK de Windows.  
   
-##  <a name="onrawinput"></a>CWnd::OnRawInput  
+##  <a name="onrawinput"></a>  CWnd::OnRawInput  
  El marco de trabajo llama a esta función miembro cuando la ventana actual obtiene una entrada sin formato.  
   
 ```  
@@ -8089,7 +8092,7 @@ afx_msg void OnRawInput(
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `nInputCode`|Entrada de código que indica si la entrada se produjo mientras la aplicación estaba en primer plano o no. En cualquier caso, la aplicación debe llamar a [CWnd::DefWindowProc](#defwindowproc) para que el sistema pueda realizar la limpieza.<br /><br /> Este parámetro puede ser uno de los siguientes valores:<br /><br /> - `RIM_INPUT`-Entrada se produjo mientras la aplicación estaba en primer plano.<br />- `RIM_INPUTSINK`-Entrada se produjo mientras la aplicación no estaba en primer plano.|  
+|[in] `nInputCode`|Entrada de código que indica si la entrada se produjo mientras la aplicación estaba en primer plano o no. En cualquier caso, la aplicación debe llamar a [CWnd::DefWindowProc](#defwindowproc) para que el sistema pueda realizar la limpieza.<br /><br /> Este parámetro puede ser uno de los siguientes valores:<br /><br /> - `RIM_INPUT` -Entrada se produjo mientras la aplicación estaba en primer plano.<br />- `RIM_INPUTSINK` -Entrada se produjo mientras la aplicación no estaba en primer plano.|  
 |[in] `hRawInput`|Identificador de un [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) estructura que contiene la entrada sin formato desde el dispositivo.|  
   
 ### <a name="remarks"></a>Comentarios  
@@ -8098,7 +8101,7 @@ afx_msg void OnRawInput(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onrbuttondblclk"></a>CWnd::OnRButtonDblClk  
+##  <a name="onrbuttondblclk"></a>  CWnd::OnRButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en el botón secundario del mouse.  
   
 ```  
@@ -8130,7 +8133,7 @@ afx_msg void OnRButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onrbuttondown"></a>CWnd::OnRButtonDown  
+##  <a name="onrbuttondown"></a>  CWnd::OnRButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona el botón secundario del mouse.  
   
 ```  
@@ -8159,7 +8162,7 @@ afx_msg void OnRButtonDown(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onrbuttonup"></a>CWnd::OnRButtonUp  
+##  <a name="onrbuttonup"></a>  CWnd::OnRButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta el botón secundario del mouse.  
   
 ```  
@@ -8186,7 +8189,7 @@ afx_msg void OnRButtonUp(
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onregisteredmousewheel"></a>CWnd::OnRegisteredMouseWheel  
+##  <a name="onregisteredmousewheel"></a>  CWnd::OnRegisteredMouseWheel  
  El marco de trabajo llama a esta función miembro como un usuario gira la rueda del mouse y encuentra notch siguiente de la rueda.  
   
 ```  
@@ -8211,9 +8214,9 @@ afx_msg LRESULT OnRegisteredMouseWheel(
  Reemplace esta función miembro para proporcionar su propio enrutamiento de mensajes o para modificar el comportamiento de desplazamiento de la rueda del mouse.  
   
 > [!NOTE]
-> `OnRegisteredMouseWheel`controla los mensajes de Windows 95 o Windows 98 y Windows NT 3.51. Para el control de mensajes de Windows NT 4.0, utilice [OnMouseWheel](#onmousewheel).  
+> `OnRegisteredMouseWheel` controla los mensajes de Windows 95 o Windows 98 y Windows NT 3.51. Para el control de mensajes de Windows NT 4.0, utilice [OnMouseWheel](#onmousewheel).  
   
-##  <a name="onrenderallformats"></a>CWnd::OnRenderAllFormats  
+##  <a name="onrenderallformats"></a>  CWnd::OnRenderAllFormats  
  El propietario de Portapapeles `OnRenderAllFormats` función miembro llama el marco de trabajo cuando se está destruyendo la aplicación del propietario.  
   
 ```  
@@ -8223,7 +8226,7 @@ afx_msg void OnRenderAllFormats();
 ### <a name="remarks"></a>Comentarios  
  El propietario del Portapapeles debe representar los datos en todos los formatos es capaz de generar y pasar un identificador de datos para cada formato en el Portapapeles mediante una llamada a la [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) la función de Windows. Esto garantiza que el Portapapeles contiene datos válidos, aun cuando se destruye la aplicación que procesa los datos. La aplicación debe llamar a la [llamar a OpenClipboard](#openclipboard) función miembro antes de llamar a la [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) la función de Windows y llame al método el [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Windows función posteriormente.  
   
-##  <a name="onrenderformat"></a>CWnd::OnRenderFormat  
+##  <a name="onrenderformat"></a>  CWnd::OnRenderFormat  
  El propietario de Portapapeles `OnRenderFormat` función miembro llama el marco de trabajo cuando es necesario representar un formato determinado con representación aplazada.  
   
 ```  
@@ -8242,7 +8245,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsessionchange"></a>CWnd::OnSessionChange  
+##  <a name="onsessionchange"></a>  CWnd::OnSessionChange  
  El marco de trabajo llama a esta función miembro para notificar a una aplicación de un cambio de estado de sesión.  
   
 ```  
@@ -8266,7 +8269,7 @@ afx_msg void OnSessionChange(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsetcursor"></a>CWnd::OnSetCursor  
+##  <a name="onsetcursor"></a>  CWnd::OnSetCursor  
  El marco de trabajo llama a esta función miembro si no se captura la entrada del mouse y el mouse provoca un movimiento de cursor dentro de la `CWnd` objeto.  
   
 ```  
@@ -8301,7 +8304,7 @@ afx_msg BOOL OnSetCursor(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsetfocus"></a>CWnd::OnSetFocus  
+##  <a name="onsetfocus"></a>  CWnd::OnSetFocus  
  El marco de trabajo llama a esta función miembro después de obtener el foco de entrada.  
   
 ```  
@@ -8318,7 +8321,7 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsettingchange"></a>CWnd::OnSettingChange  
+##  <a name="onsettingchange"></a>  CWnd::OnSettingChange  
  Las llamadas de framework `OnSettingChange` para todas las ventanas de nivel superior cuando la función de Win32 SystemParametersInfo cambia un valor de todo el sistema.  
   
 ```  
@@ -8345,7 +8348,7 @@ afx_msg void OnSettingChange(
   
  Debe tener solo una de estas macros en el mapa de mensajes. Para escribir un programa que funciona con Windows 95 o Windows 98 y Windows NT 4.0, escribir un controlador para **ON_WM_SETTINGCHANGE**. En Windows NT 3.51, el controlador llamará a `OnSettingChange` y `uFlags` y siempre será cero.  
   
-##  <a name="onshowwindow"></a>CWnd::OnShowWindow  
+##  <a name="onshowwindow"></a>  CWnd::OnShowWindow  
  El marco de trabajo llama a esta función miembro cuando el `CWnd` objeto está a punto se oculta o se muestra.  
   
 ```  
@@ -8371,7 +8374,7 @@ afx_msg void OnShowWindow(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsize"></a>CWnd::OnSize  
+##  <a name="onsize"></a>  CWnd::OnSize  
  El marco de trabajo llama a esta función miembro después de que ha cambiado el tamaño de la ventana.  
   
 ```  
@@ -8410,7 +8413,7 @@ afx_msg void OnSize(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]  
   
-##  <a name="onsizeclipboard"></a>CWnd::OnSizeClipboard  
+##  <a name="onsizeclipboard"></a>  CWnd::OnSizeClipboard  
  El propietario de Portapapeles `OnSizeClipboard` el Visor del Portapapeles llama a función miembro cuando el Portapapeles contiene datos con el `CF_OWNERDISPLAY` ha cambiado el atributo y el tamaño del área cliente de la ventana del Visor del Portapapeles.  
   
 ```  
@@ -8434,7 +8437,7 @@ afx_msg void OnSizeClipboard(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsizing"></a>CWnd::OnSizing  
+##  <a name="onsizing"></a>  CWnd::OnSizing  
  El marco de trabajo llama a esta función miembro para indicar que el usuario está cambiando el tamaño del rectángulo.  
   
 ```  
@@ -8459,7 +8462,7 @@ afx_msg void OnSizing(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]  
   
-##  <a name="onspoolerstatus"></a>CWnd::OnSpoolerStatus  
+##  <a name="onspoolerstatus"></a>  CWnd::OnSpoolerStatus  
  El marco de trabajo llama a esta función miembro desde el Administrador de impresión cada vez que un trabajo se agrega o se quita de la cola del Administrador de impresión.  
   
 ```  
@@ -8481,7 +8484,7 @@ afx_msg void OnSpoolerStatus(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onstylechanged"></a>CWnd::OnStyleChanged  
+##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged  
  El marco de trabajo llama a esta función miembro después de la [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) función ha cambiado uno o varios de los estilos de ventana.  
   
 ```  
@@ -8506,7 +8509,7 @@ afx_msg void OnStyleChanged(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onstylechanging"></a>CWnd::OnStyleChanging  
+##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging  
  El marco de trabajo llama a esta función miembro cuando el [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) función va a cambiar uno o varios de los estilos de ventana.  
   
 ```  
@@ -8531,7 +8534,7 @@ afx_msg void OnStyleChanging(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsyschar"></a>CWnd::OnSysChar  
+##  <a name="onsyschar"></a>  CWnd::OnSysChar  
  El marco de trabajo llama a esta función miembro si `CWnd` tiene el foco de entrada y la [WM_SYSKEYUP](#onsyskeyup) y [WM_SYSKEYDOWN](#onsyskeydown) se traducen los mensajes.  
   
 ```  
@@ -8571,7 +8574,7 @@ afx_msg void OnSysChar(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsyscolorchange"></a>CWnd::OnSysColorChange  
+##  <a name="onsyscolorchange"></a>  CWnd::OnSysColorChange  
  El marco de trabajo llama a esta función miembro para todas las ventanas de nivel superior cuando se realiza un cambio en la configuración de color del sistema.  
   
 ```  
@@ -8583,7 +8586,7 @@ afx_msg void OnSysColorChange();
   
  Las aplicaciones que tienen los pinceles que usan los colores del sistema existente deben eliminar los pinceles y volver a crearlos con los nuevos colores del sistema.  
   
-##  <a name="onsyscommand"></a>CWnd::OnSysCommand  
+##  <a name="onsyscommand"></a>  CWnd::OnSysCommand  
  El marco de trabajo llama a esta función miembro cuando el usuario selecciona un comando en el menú de Control, o cuando el usuario selecciona el maximizar o el botón Minimizar.  
   
 ```  
@@ -8647,7 +8650,7 @@ afx_msg void OnSysCommand(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsysdeadchar"></a>CWnd::OnSysDeadChar  
+##  <a name="onsysdeadchar"></a>  CWnd::OnSysDeadChar  
  El marco de trabajo llama a esta función miembro si la `CWnd` objeto tiene la entrada centrarse cuando la [OnSysKeyUp](#onsyskeyup) o [OnSysKeyDown](#onsyskeydown) se llama la función miembro.  
   
 ```  
@@ -8683,7 +8686,7 @@ afx_msg void OnSysDeadChar(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsyskeydown"></a>CWnd::OnSysKeyDown  
+##  <a name="onsyskeydown"></a>  CWnd::OnSysKeyDown  
  Si el `CWnd` objeto tiene el foco de entrada, el `OnSysKeyDown` función miembro llama el marco de trabajo cuando el usuario mantiene presionada la tecla ALT y, a continuación, presiona otra tecla.  
   
 ```  
@@ -8727,7 +8730,7 @@ afx_msg void OnSysKeyDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onsyskeyup"></a>CWnd::OnSysKeyUp  
+##  <a name="onsyskeyup"></a>  CWnd::OnSysKeyUp  
  Si el `CWnd` objeto tiene el foco, el `OnSysKeyUp` función miembro llama el marco de trabajo cuando el usuario suelta una tecla que se presionó mientras se presionaba la tecla ALT.  
   
 ```  
@@ -8778,7 +8781,7 @@ afx_msg void OnSysKeyUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="ontcard"></a>CWnd::OnTCard  
+##  <a name="ontcard"></a>  CWnd::OnTCard  
  El marco de trabajo llama a esta función miembro cuando el usuario hace clic en un botón que se puede modificar.  
   
 ```  
@@ -8821,7 +8824,7 @@ afx_msg void OnTCard(
 ### <a name="remarks"></a>Comentarios  
  Esta función se invoca cuando una aplicación ha iniciado una tarjeta de entrenamiento con ayuda de Windows. Una aplicación inicia una tarjeta de entrenamiento especificando el **HELP_TCARD** comando en una llamada a la [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) función.  
   
-##  <a name="ontimechange"></a>CWnd::OnTimeChange  
+##  <a name="ontimechange"></a>  CWnd::OnTimeChange  
  El marco de trabajo llama a esta función miembro después de cambia la hora del sistema.  
   
 ```  
@@ -8831,7 +8834,7 @@ afx_msg void OnTimeChange();
 ### <a name="remarks"></a>Comentarios  
  Tener cualquier aplicación que cambios de la hora del sistema envían este mensaje a todas las ventanas de nivel superior. Para enviar el `WM_TIMECHANGE` mensaje a todas las ventanas de nivel superior, una aplicación pueden utilizar el [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows funcionan con su *hwnd* parámetro establecido en **HWND_BROADCAST**.  
   
-##  <a name="ontimer"></a>CWnd::OnTimer  
+##  <a name="ontimer"></a>  CWnd::OnTimer  
  El marco de trabajo llama a esta función miembro después de cada intervalo especificado en el [SetTimer](#settimer) función de miembro que se usa para instalar un temporizador.  
   
 ```  
@@ -8851,7 +8854,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::SetTimer](#settimer).  
   
-##  <a name="ontoolhittest"></a>CWnd::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CWnd::OnToolHitTest  
  El marco de trabajo llama a esta función miembro para determinar si un punto está en el rectángulo delimitador de la herramienta especificada.  
   
 ```  
@@ -8871,7 +8874,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **HWndChild (UINT)** identificador de una ventana secundaria  
   
-- `uFlags`&#124; = **TTF_IDISHWND** identificador de la herramienta  
+- `uFlags` &#124; = **TTF_IDISHWND** identificador de la herramienta  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK** puntero a la cadena que se muestra en la ventana especificada  
   
@@ -8887,7 +8890,7 @@ virtual INT_PTR OnToolHitTest(
   
  Vea [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256), en el SDK de Windows para obtener más información acerca de la estructura.  
   
-##  <a name="ontouchinput"></a>CWnd::OnTouchInput  
+##  <a name="ontouchinput"></a>  CWnd::OnTouchInput  
  Procese una única entrada de tecnología táctil de Windows.  
   
 ```  
@@ -8912,11 +8915,11 @@ virtual BOOL OnTouchInput(
  Puntero a estructura TOUCHINPUT.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si la aplicación procesa táctil de Windows de entrada; en caso contrario, `FALSE`.  
+ `TRUE` Si la aplicación procesa táctil de Windows de entrada; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="ontouchinputs"></a>CWnd::OnTouchInputs  
+##  <a name="ontouchinputs"></a>  CWnd::OnTouchInputs  
  Procesa las entradas tecnología táctil de Windows.  
   
 ```  
@@ -8933,11 +8936,11 @@ virtual BOOL OnTouchInputs(
  Matriz de TOUCHINPUT.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si los procesos de aplicación Windows touch entradas; en caso contrario, `FALSE`.  
+ `TRUE` Si los procesos de aplicación Windows touch entradas; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onunichar"></a>CWnd::OnUniChar  
+##  <a name="onunichar"></a>  CWnd::OnUniChar  
  El marco de trabajo llama a esta función miembro cuando se presiona una tecla. Es decir, la ventana actual tiene el foco del teclado y un [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) mensaje se convierte con la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) función.  
   
 ```  
@@ -8961,7 +8964,7 @@ afx_msg void OnUniChar(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onuninitmenupopup"></a>CWnd::OnUnInitMenuPopup  
+##  <a name="onuninitmenupopup"></a>  CWnd::OnUnInitMenuPopup  
  El marco de trabajo llama a esta función miembro cuando un menú desplegable o submenú se ha destruido.  
   
 ```  
@@ -8983,7 +8986,7 @@ afx_msg void OnUnInitMenuPopup(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onupdateuistate"></a>CWnd::OnUpdateUIState  
+##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
  Se llama para cambiar el estado de la interfaz de usuario de la ventana especificada y todas sus ventanas secundarias.  
   
 ```  
@@ -9014,7 +9017,7 @@ afx_msg void OnUpdateUIState(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la [WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361) de mensajes, como se describe en el SDK de Windows.  
   
-##  <a name="onuserchanged"></a>CWnd::OnUserChanged  
+##  <a name="onuserchanged"></a>  CWnd::OnUserChanged  
  El marco de trabajo llama a este miembro para todas las ventanas después de que el usuario ha iniciado sesión o desactivar.  
   
 ```  
@@ -9027,7 +9030,7 @@ afx_msg void OnUserChanged();
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onvkeytoitem"></a>CWnd::OnVKeyToItem  
+##  <a name="onvkeytoitem"></a>  CWnd::OnVKeyToItem  
  Si el `CWnd` objeto posee un cuadro de lista con el [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) de estilo, el cuadro de lista enviará el `WM_VKEYTOITEM` mensaje en respuesta a un `WM_KEYDOWN` mensaje.  
   
 ```  
@@ -9056,7 +9059,7 @@ afx_msg int OnVKeyToItem(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onvscroll"></a>CWnd::OnVScroll  
+##  <a name="onvscroll"></a>  CWnd::OnVScroll  
  El marco de trabajo llama a esta función miembro cuando el usuario hace clic en la barra de desplazamiento vertical de la ventana.  
   
 ```  
@@ -9095,14 +9098,14 @@ afx_msg void OnVScroll(
  Si el mensaje de desplazamiento proviene de un control de barra de desplazamiento, contiene un puntero al control. Si el usuario hace clic en la barra de desplazamiento de una ventana, este parámetro es **NULL**. El puntero puede ser temporal y no se debe almacenar para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnVScroll`Normalmente se utiliza en aplicaciones que proporcionan algunos comentarios mientras se arrastra el cuadro de desplazamiento.  
+ `OnVScroll` Normalmente se utiliza en aplicaciones que proporcionan algunos comentarios mientras se arrastra el cuadro de desplazamiento.  
   
  Si `OnVScroll` desplaza el contenido de la `CWnd` objeto, también debe restablecer la posición del cuadro de desplazamiento con la [SetScrollPos](#setscrollpos) función miembro.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onvscrollclipboard"></a>CWnd::OnVScrollClipboard  
+##  <a name="onvscrollclipboard"></a>  CWnd::OnVScrollClipboard  
  El propietario de Portapapeles `OnVScrollClipboard` el Visor del Portapapeles llama a función miembro cuando los datos del Portapapeles tienen la `CF_OWNERDISPLAY` dar formato y se produce un evento en la barra de desplazamiento vertical del Visor del Portapapeles.  
   
 ```  
@@ -9144,7 +9147,7 @@ afx_msg void OnVScrollClipboard(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onwindowmaximizedchanged"></a>CWnd::OnWindowMaximizedChanged  
+##  <a name="onwindowmaximizedchanged"></a>  CWnd::OnWindowMaximizedChanged  
  El marco de trabajo llama a este miembro cuando se maximiza la ventana actual, y la ventana está compuesta por el Administrador de ventanas de escritorio (DWM).  
   
 ```  
@@ -9155,7 +9158,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|[in] `bIsMaximized`|`true`Si se maximiza la ventana actual, y `false` si no lo está.|  
+|[in] `bIsMaximized`|`true` Si se maximiza la ventana actual, y `false` si no lo está.|  
   
 ### <a name="remarks"></a>Comentarios  
  Este método recibe el [WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201) mensaje de notificación, que se describe en el SDK de Windows.  
@@ -9163,7 +9166,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onwindowposchanged"></a>CWnd::OnWindowPosChanged  
+##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged  
  El marco de trabajo llama a esta función miembro cuando el tamaño, la posición o el orden Z ha cambiado como resultado de una llamada a la [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) función miembro o a otra función de administración de ventanas.  
   
 ```  
@@ -9180,7 +9183,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onwindowposchanging"></a>CWnd::OnWindowPosChanging  
+##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging  
  El marco de trabajo llama a esta función miembro cuando el tamaño, la posición o el orden Z se va a cambiar como resultado de una llamada a la [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) función miembro o a otra función de administración de ventanas.  
   
 ```  
@@ -9194,12 +9197,12 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ### <a name="remarks"></a>Comentarios  
  Una aplicación puede evitar cambios en la ventana activando o desactivando los bits correspondientes en el **marcas** miembro de la [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estructura.  
   
- Para una ventana con el [WS_OVERLAPPED](../../mfc/reference/styles-used-by-mfc.md#window-styles) o [WS_THICKFRAME](../../mfc/reference/styles-used-by-mfc.md#window-styles) de estilo, la implementación predeterminada envía un [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) mensaje en la ventana. Esto se hace para validar el nuevo tamaño y la posición de la ventana y aplicar el **CS_BYTEALIGNCLIENT** y **CS_BYTEALIGN** estilos de cliente. Una aplicación puede invalidar esta funcionalidad no llamando a su clase base.  
+ Para una ventana con el [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) o [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) de estilo, la implementación predeterminada envía un [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) mensaje en la ventana. Esto se hace para validar el nuevo tamaño y la posición de la ventana y aplicar el **CS_BYTEALIGNCLIENT** y **CS_BYTEALIGN** estilos de cliente. Una aplicación puede invalidar esta funcionalidad no llamando a su clase base.  
   
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onwininichange"></a>CWnd::OnWinIniChange  
+##  <a name="onwininichange"></a>  CWnd::OnWinIniChange  
  El marco de trabajo llama a esta función miembro después de que se ha realizado un cambio en el archivo de inicialización de Windows, WIN. INI.  
   
 ```  
@@ -9222,7 +9225,7 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onwndmsg"></a>CWnd::OnWndMsg  
+##  <a name="onwndmsg"></a>  CWnd::OnWndMsg  
  Llama a esta función miembro `WindowProc`, o se llama durante la reflexión de mensajes.  
   
 ```  
@@ -9250,11 +9253,11 @@ virtual BOOL OnWndMsg(
  **TRUE** si el mensaje controlado; en caso contrario **FALSE**.  
   
 ### <a name="remarks"></a>Comentarios  
- `OnWndMsg`Determina el tipo de mensaje y cualquier llamadas a la función de marco adecuado (por ejemplo, [OnCommand](#oncommand) para **WM_COMMAND**) o busca el mensaje apropiado en el mapa de mensajes.  
+ `OnWndMsg` Determina el tipo de mensaje y cualquier llamadas a la función de marco adecuado (por ejemplo, [OnCommand](#oncommand) para **WM_COMMAND**) o busca el mensaje apropiado en el mapa de mensajes.  
   
  Para obtener más información acerca de la reflexión de mensajes, vea [controlar mensajes reflejados](../../mfc/handling-reflected-messages.md).  
   
-##  <a name="onxbuttondblclk"></a>CWnd::OnXButtonDblClk  
+##  <a name="onxbuttondblclk"></a>  CWnd::OnXButtonDblClk  
  El marco de trabajo llama a esta función miembro cuando el usuario hace doble clic en XBUTTON1 o XBUTTON2 mientras el cursor se encuentra en el área de cliente de una ventana.  
   
 ```  
@@ -9290,7 +9293,7 @@ afx_msg void OnXButtonDblClk(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onxbuttondown"></a>CWnd::OnXButtonDown  
+##  <a name="onxbuttondown"></a>  CWnd::OnXButtonDown  
  El marco de trabajo llama a esta función miembro cuando el usuario presiona XBUTTON1 o XBUTTON2 mientras el cursor se encuentra en el área de cliente de una ventana.  
   
 ```  
@@ -9326,7 +9329,7 @@ afx_msg void OnXButtonDown(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="onxbuttonup"></a>CWnd::OnXButtonUp  
+##  <a name="onxbuttonup"></a>  CWnd::OnXButtonUp  
  El marco de trabajo llama a esta función miembro cuando el usuario suelta XBUTTON1 o XBUTTON2 mientras el cursor se encuentra en el área de cliente de una ventana.  
   
 ```  
@@ -9362,7 +9365,7 @@ afx_msg void OnXButtonUp(
 > [!NOTE]
 >  El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.  
   
-##  <a name="openclipboard"></a>CWnd::OpenClipboard  
+##  <a name="openclipboard"></a>  CWnd::OpenClipboard  
  Abre el Portapapeles.  
   
 ```  
@@ -9380,14 +9383,14 @@ BOOL OpenClipboard();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]  
   
-##  <a name="operator_hwnd"></a>CWnd::operator HWND  
+##  <a name="operator_hwnd"></a>  CWnd::operator HWND  
  Utilice este operador para obtener el identificador de la `CWnd` objeto.  
   
 ```  
 operator HWND() const;  
 ```  
   
-##  <a name="operator_neq"></a>CWnd::operator! =  
+##  <a name="operator_neq"></a>  CWnd::operator! =  
  Compara dos `CWnd` objetos para determinar si no tienen el mismo [m_hWnd](#m_hwnd).  
   
 ```  
@@ -9401,7 +9404,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si son iguales; en caso contrario es 0.  
   
-##  <a name="operator_eq_eq"></a>CWnd::operator ==  
+##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
  Compara dos `CWnd` objetos para determinar si tienen el mismo [m_hWnd](#m_hwnd).  
   
 ```  
@@ -9415,7 +9418,7 @@ BOOL operator==(const CWnd& wnd) const;
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si son iguales; en caso contrario es 0.  
   
-##  <a name="paintwindowlesscontrols"></a>CWnd::PaintWindowlessControls  
+##  <a name="paintwindowlesscontrols"></a>  CWnd::PaintWindowlessControls  
  Dibuja controles sin ventanas en el contenedor del control.  
   
 ```  
@@ -9429,7 +9432,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si hay un contenedor de control y los controles sin ventana son dibujado correctamente, de lo contrario, FALSE.  
   
-##  <a name="postmessage"></a>CWnd::PostMessage  
+##  <a name="postmessage"></a>  CWnd::PostMessage  
  Coloca un mensaje en la cola de mensajes de la ventana y, a continuación, se devuelve sin esperar a la ventana correspondiente procesar el mensaje.  
   
 ```  
@@ -9460,7 +9463,7 @@ BOOL PostMessage(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd).  
   
-##  <a name="postncdestroy"></a>CWnd::PostNcDestroy  
+##  <a name="postncdestroy"></a>  CWnd::PostNcDestroy  
  Llamado por el valor predeterminado [OnNcDestroy](#onncdestroy) función de miembro una vez se haya destruido la ventana.  
   
 ```  
@@ -9470,7 +9473,7 @@ virtual void PostNcDestroy();
 ### <a name="remarks"></a>Comentarios  
  Las clases derivadas pueden utilizar esta función para la limpieza personalizada como la eliminación de la **esto** puntero.  
   
-##  <a name="precreatewindow"></a>CWnd::PreCreateWindow  
+##  <a name="precreatewindow"></a>  CWnd::PreCreateWindow  
  Lo llama el marco antes de la creación de la ventana de Windows asociada a este `CWnd` objeto.  
   
 ```  
@@ -9478,7 +9481,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *CS*  
+ *cs*  
  A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -9487,7 +9490,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>Comentarios  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow`Ahora se asigna al miembro hMenu de `cs` a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
+> `CWnd::PreCreateWindow` Ahora se asigna al miembro hMenu de `cs` a la `this` puntero si es el menú `NULL` y contiene el estilo `WS_CHILD`. Para que funcione correctamente, asegúrese de que el control de cuadro de diálogo tiene un identificador que no es `NULL`.  
 >   
 >  Este cambio corrige un bloqueo en escenarios de interoperabilidad administrado y nativo. A `TRACE` instrucción `CWnd::Create` alertas el desarrollador del problema.  
   
@@ -9502,7 +9505,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]  
   
-##  <a name="presubclasswindow"></a>CWnd::PreSubclassWindow  
+##  <a name="presubclasswindow"></a>  CWnd::PreSubclassWindow  
  Esta función miembro se llama el marco de trabajo para permitir que otras subclases necesarias producir antes de que la ventana es una subclase.  
   
 ```  
@@ -9512,7 +9515,7 @@ virtual void PreSubclassWindow();
 ### <a name="remarks"></a>Comentarios  
  Reemplazar esta función miembro permite crear subclases de una dinámica de controles. Es una avanzada reemplazable.  
   
-##  <a name="pretranslatemessage"></a>CWnd:: PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage  
  La clase [CWinApp](../../mfc/reference/cwinapp-class.md) lo usa para traducir los mensajes de ventana antes de que se envíen a las funciones de Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) y [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) .  
   
 ```  
@@ -9526,7 +9529,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si el mensaje ha sido traducido y no se debería enviar; 0 si el mensaje no se convierte y se debería enviar.  
   
-##  <a name="print"></a>CWnd::Print  
+##  <a name="print"></a>  CWnd::Print  
  Llame a esta función miembro para dibujar la ventana actual en el contexto de dispositivo especificado, que se encuentra normalmente en un contexto de dispositivo de impresora.  
   
 ```  
@@ -9542,17 +9545,17 @@ void Print(
  `dwFlags`  
  Especifica las opciones de dibujo. Este parámetro puede ser una o varias de estas marcas:  
   
-- `PRF_CHECKVISIBLE`Dibuje la ventana solo si está visible.  
+- `PRF_CHECKVISIBLE` Dibuje la ventana solo si está visible.  
   
-- `PRF_CHILDREN`Dibujar todas las ventanas de elementos secundarios visibles.  
+- `PRF_CHILDREN` Dibujar todas las ventanas de elementos secundarios visibles.  
   
-- `PRF_CLIENT`Dibuje el área de cliente de la ventana.  
+- `PRF_CLIENT` Dibuje el área de cliente de la ventana.  
   
-- `PRF_ERASEBKGND`Borrar el fondo antes de la ventana de dibujo.  
+- `PRF_ERASEBKGND` Borrar el fondo antes de la ventana de dibujo.  
   
-- `PRF_NONCLIENT`Dibuje el área no cliente de la ventana.  
+- `PRF_NONCLIENT` Dibuje el área no cliente de la ventana.  
   
-- `PRF_OWNED`Dibujar todas las propias windows.  
+- `PRF_OWNED` Dibujar todas las propias windows.  
   
 ### <a name="remarks"></a>Comentarios  
  [CWnd::DefWindowProc](#defwindowproc) función procesa este mensaje en función de qué opción de dibujo se especifica:  
@@ -9569,7 +9572,7 @@ void Print(
   
 -   Si `PRF_OWNED` está establecido, enviar cada ventana de propiedad visible un `WM_PRINT` mensaje.  
   
-##  <a name="printclient"></a>CWnd::PrintClient  
+##  <a name="printclient"></a>  CWnd::PrintClient  
  Llame a esta función miembro para dibujar cualquier ventana en el contexto de dispositivo especificado (normalmente un contexto de dispositivo de impresora).  
   
 ```  
@@ -9585,19 +9588,19 @@ void PrintClient(
  `dwFlags`  
  Especifica las opciones de dibujo. Este parámetro puede ser una o varias de estas marcas:  
   
-- `PRF_CHECKVISIBLE`Dibuje la ventana solo si está visible.  
+- `PRF_CHECKVISIBLE` Dibuje la ventana solo si está visible.  
   
-- `PRF_CHILDREN`Dibujar todas las ventanas de elementos secundarios visibles.  
+- `PRF_CHILDREN` Dibujar todas las ventanas de elementos secundarios visibles.  
   
-- `PRF_CLIENT`Dibuje el área de cliente de la ventana.  
+- `PRF_CLIENT` Dibuje el área de cliente de la ventana.  
   
-- `PRF_ERASEBKGND`Borrar el fondo antes de la ventana de dibujo.  
+- `PRF_ERASEBKGND` Borrar el fondo antes de la ventana de dibujo.  
   
-- `PRF_NONCLIENT`Dibuje el área no cliente de la ventana.  
+- `PRF_NONCLIENT` Dibuje el área no cliente de la ventana.  
   
-- `PRF_OWNED`Dibujar todas las propias windows.  
+- `PRF_OWNED` Dibujar todas las propias windows.  
   
-##  <a name="printwindow"></a>CWnd::PrintWindow  
+##  <a name="printwindow"></a>  CWnd::PrintWindow  
  Copia una ventana visual en el contexto de dispositivo especificado (normalmente, un DC de impresora).  
   
 ```  
@@ -9619,7 +9622,7 @@ BOOL PrintWindow(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869), tal y como se describe en el SDK de Windows.  
   
-##  <a name="redrawwindow"></a>CWnd::RedrawWindow  
+##  <a name="redrawwindow"></a>  CWnd::RedrawWindow  
  Actualiza el rectángulo especificado o la región en el área de cliente de la ventana especificada.  
   
 ```  
@@ -9659,7 +9662,7 @@ BOOL RedrawWindow(
   
  Se produce el siguiente control de marcas al volver a pintar. Operaciones de pintura no se realizan mediante el `RedrawWindow` función a menos que se especifica uno de estos bits.  
   
-- **RDW_ERASENOW** hace que las ventanas afectadas (según lo especificado por el **RDW_ALLCHILDREN** y **RDW_NOCHILDREN** marcas) para recibir `WM_NCPAINT` y `WM_ERASEBKGND` mensajes, si es necesario, antes de que la función devuelve. `WM_PAINT`los mensajes diferidos.  
+- **RDW_ERASENOW** hace que las ventanas afectadas (según lo especificado por el **RDW_ALLCHILDREN** y **RDW_NOCHILDREN** marcas) para recibir `WM_NCPAINT` y `WM_ERASEBKGND` mensajes, si es necesario, antes de que la función devuelve. `WM_PAINT` los mensajes diferidos.  
   
 - **RDW_UPDATENOW** hace que las ventanas afectadas (según lo especificado por el **RDW_ALLCHILDREN** y **RDW_NOCHILDREN** marcas) para recibir `WM_NCPAINT`, `WM_ERASEBKGND`y `WM_PAINT`mensajes, si es necesario, antes de que la función devuelve.  
   
@@ -9675,7 +9678,7 @@ BOOL RedrawWindow(
 ### <a name="remarks"></a>Comentarios  
  Cuando el `RedrawWindow` función miembro se usa para invalidar la parte de la ventana del escritorio, esa ventana no recibe un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensaje. Para volver a dibujar el escritorio, una aplicación debe utilizar [CWnd::ValidateRgn](#validatergn), [CWnd::InvalidateRgn](#invalidatergn), [CWnd::UpdateWindow](#updatewindow), o [RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)  
   
-##  <a name="reflectchildnotify"></a>CWnd::ReflectChildNotify  
+##  <a name="reflectchildnotify"></a>  CWnd::ReflectChildNotify  
  Esta función de mensaje se lo llama el marco de [OnChildNotify](#onchildnotify).  
   
 ```  
@@ -9709,7 +9712,7 @@ BOOL ReflectChildNotify(
   
  Para obtener más información acerca de la reflexión de mensajes, vea [controlar mensajes reflejados](../../mfc/handling-reflected-messages.md).  
   
-##  <a name="reflectlastmsg"></a>CWnd::ReflectLastMsg  
+##  <a name="reflectlastmsg"></a>  CWnd::ReflectLastMsg  
  El marco de trabajo para reflejar el último mensaje de la ventana secundaria llama a esta función miembro.  
   
 ```  
@@ -9733,7 +9736,7 @@ static BOOL PASCAL ReflectLastMsg(
   
  Para obtener más información acerca de la reflexión de mensajes, vea [controlar mensajes reflejados](../../mfc/handling-reflected-messages.md).  
   
-##  <a name="releasedc"></a>CWnd:: ReleaseDC  
+##  <a name="releasedc"></a>  CWnd::ReleaseDC  
  Libera un contexto de dispositivo, liberando para su uso por otras aplicaciones.  
   
 ```  
@@ -9752,7 +9755,7 @@ int ReleaseDC(CDC* pDC);
   
  La aplicación debe llamar a la `ReleaseDC` función de miembro para cada llamada a la [GetWindowDC](#getwindowdc) función miembro y para cada llamada a la [GetDC](#getdc) función miembro.  
   
-##  <a name="repositionbars"></a>CWnd::RepositionBars  
+##  <a name="repositionbars"></a>  CWnd::RepositionBars  
  Se llama para volver a colocar y cambiar el tamaño de las barras de control en el área de cliente de una ventana.  
   
 ```  
@@ -9778,7 +9781,7 @@ void RepositionBars(UINT nIDFirst,
  `nFlag`  
  Puede tener uno de los siguientes valores:  
   
-- **CWnd::reposDefault** realiza el diseño de las barras de control. `lpRectParam`no se utiliza y puede ser **NULL**.  
+- **CWnd::reposDefault** realiza el diseño de las barras de control. `lpRectParam` no se utiliza y puede ser **NULL**.  
   
 - **CWnd::reposQuery** no se realiza el diseño de las barras de control; en su lugar `lpRectParam` se inicializa con el tamaño del área de cliente, como si realmente ha tenido realiza el diseño.  
   
@@ -9796,7 +9799,7 @@ void RepositionBars(UINT nIDFirst,
 ### <a name="remarks"></a>Comentarios  
  El `nIDFirst` y `nIDLast` parámetros definen un intervalo de identificadores de la barra de controles que volverá a colocar en el área de cliente. El `nIDLeftOver` parámetro especifica el identificador de la ventana secundaria (normalmente la vista) que se cambia de posición y cambiar su tamaño para rellenar el resto del área de cliente no se rellena con barras de control.  
   
-##  <a name="runmodalloop"></a>CWnd::RunModalLoop  
+##  <a name="runmodalloop"></a>  CWnd::RunModalLoop  
  Llame a esta función miembro para recuperar, traducir o enviar mensajes hasta que [ContinueModal](#continuemodal) devuelve **FALSE**.  
   
 ```  
@@ -9819,7 +9822,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `ContinueModal` devuelve **FALSE** después `EndModalLoop` se llama. Devuelve el valor proporcionado como `nResult` a `EndModalLoop`.  
   
-##  <a name="screentoclient"></a>CWnd::ScreenToClient  
+##  <a name="screentoclient"></a>  CWnd::ScreenToClient  
  Convierte las coordenadas de pantalla de un punto o rectángulo determinado en pantalla en las coordenadas de pantalla.  
   
 ```  
@@ -9839,7 +9842,7 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect).  
   
-##  <a name="scrollwindow"></a>CWnd::ScrollWindow  
+##  <a name="scrollwindow"></a>  CWnd::ScrollWindow  
  Desplaza el contenido del área cliente del elemento actual `CWnd` objeto.  
   
 ```  
@@ -9868,11 +9871,11 @@ void ScrollWindow(
   
  El área detectados por el `ScrollWindow` función miembro no se vuelve a dibujar pero se combinan en actual `CWnd` región de actualización del objeto. La aplicación recibirá finalmente un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensaje que informa de que la región debe volver a pintar. Para volver a dibujar el área cubierto al mismo tiempo que el desplazamiento se realiza, llame a la [UpdateWindow](#updatewindow) función de miembro inmediatamente después de llamar a `ScrollWindow`.  
   
- Si `lpRect` es **NULL**, se calcula el desplazamiento de las posiciones de las ventanas secundarias en la ventana de la cantidad especificada por `xAmount` y `yAmount`y las áreas (sin revestir) no válidas en el `CWnd` también se calcula el desplazamiento. `ScrollWindow`es más rápido cuando `lpRect` es **NULL**.  
+ Si `lpRect` es **NULL**, se calcula el desplazamiento de las posiciones de las ventanas secundarias en la ventana de la cantidad especificada por `xAmount` y `yAmount`y las áreas (sin revestir) no válidas en el `CWnd` también se calcula el desplazamiento. `ScrollWindow` es más rápido cuando `lpRect` es **NULL**.  
   
  Si `lpRect` no **NULL**, las posiciones de las ventanas secundarias no son áreas modificadas y no válidas de `CWnd` no se calcula el desplazamiento. Para evitar problemas de actualización cuando `lpRect` no es **NULL**, llame a la `UpdateWindow` función de miembro para volver a pintar `CWnd` antes de llamar a `ScrollWindow`.  
   
-##  <a name="scrollwindowex"></a>CWnd::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>  CWnd::ScrollWindowEx  
  Desplaza el contenido del área de cliente de una ventana.  
   
 ```  
@@ -9928,7 +9931,7 @@ int ScrollWindowEx(
   
  Todas las coordenadas de entrada y salidas (para `lpRectScroll`, `lpRectClip`, `lpRectUpdate`, y *prgnUpdate*) se supone que están en coordenadas de cliente, independientemente de si la ventana tiene la **CS_OWNDC**o **CS_CLASSDC** estilo de clase. Use la [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) y [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) funciones de Windows para convertir a y desde las coordenadas lógicas, si es necesario.  
   
-##  <a name="sendchildnotifylastmsg"></a>CWnd::SendChildNotifyLastMsg  
+##  <a name="sendchildnotifylastmsg"></a>  CWnd::SendChildNotifyLastMsg  
  El marco de trabajo para proporcionar un mensaje de notificación a una ventana secundaria, desde la ventana primaria, por lo que la ventana secundaria pueda controlar una tarea llama a esta función miembro.  
   
 ```  
@@ -9943,11 +9946,11 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
  Es distinto de cero si la ventana secundaria ha controlado el mensaje enviado a su elemento primario; en caso contrario es 0.  
   
 ### <a name="remarks"></a>Comentarios  
- `SendChildNotifyLastMsg`envíe el mensaje actual para el origen si es un mensaje que se refleja.  
+ `SendChildNotifyLastMsg` envíe el mensaje actual para el origen si es un mensaje que se refleja.  
   
  Para obtener más información acerca de la reflexión de mensajes, vea [controlar mensajes reflejados](../../mfc/handling-reflected-messages.md).  
   
-##  <a name="senddlgitemmessage"></a>CWnd::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>  CWnd::SendDlgItemMessage  
  Envía un mensaje a un control.  
   
 ```  
@@ -9982,7 +9985,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#113](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
   
-##  <a name="sendmessage"></a>CWnd:: SendMessage  
+##  <a name="sendmessage"></a>  CWnd::SendMessage  
  Envía el mensaje especificado a esta ventana.  
   
 ```  
@@ -10011,7 +10014,7 @@ LRESULT SendMessage(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="sendmessagetodescendants"></a>CWnd:: SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>  CWnd::SendMessageToDescendants  
  Llame a esta función miembro para enviar el mensaje de Windows especificado a todas las ventanas descendientes.  
   
 ```  
@@ -10047,7 +10050,7 @@ void SendMessageToDescendants(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#114](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
   
-##  <a name="sendnotifymessage"></a>CWnd::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>  CWnd::SendNotifyMessage  
  Envía el mensaje especificado a la ventana.  
   
 ```  
@@ -10073,7 +10076,7 @@ BOOL SendNotifyMessage(
 ### <a name="remarks"></a>Comentarios  
  Si la ventana creada por el subproceso que realiza la llamada, `SendNotifyMessage` llama al procedimiento de ventana de la ventana y no vuelve hasta que el procedimiento de ventana ha procesado el mensaje. Si la ventana se creó en un subproceso diferente, `SendNotifyMessage` pasa el mensaje al procedimiento de ventana y devuelve inmediatamente; no espera a que el procedimiento de ventana finalizar el procesamiento del mensaje.  
   
-##  <a name="setactivewindow"></a>CWnd::SetActiveWindow  
+##  <a name="setactivewindow"></a>  CWnd::SetActiveWindow  
  Hace que `CWnd` la ventana activa.  
   
 ```  
@@ -10088,7 +10091,7 @@ CWnd* SetActiveWindow();
 ### <a name="remarks"></a>Comentarios  
  El `SetActiveWindow` función miembro debe utilizarse con cuidado, ya que permite que una aplicación para arbitrariamente ocuparse de la ventana activa y el foco de entrada. Normalmente, Windows se encarga de todas las de activación.  
   
-##  <a name="setcapture"></a>CWnd::SetCapture  
+##  <a name="setcapture"></a>  CWnd::SetCapture  
  Hace que todas las posterior mouse de entrada que se enviarán al actual `CWnd` objeto independientemente de la posición del cursor.  
   
 ```  
@@ -10103,7 +10106,7 @@ CWnd* SetCapture();
   
  Mientras se captura la entrada del mouse, no `WM_NCHITTEST` o `WM_SETCURSOR` mensajes se envían a la ventana activa.  
   
-##  <a name="setcaretpos"></a>CWnd::SetCaretPos  
+##  <a name="setcaretpos"></a>  CWnd::SetCaretPos  
  Establece la posición del símbolo de intercalación.  
   
 ```  
@@ -10115,14 +10118,14 @@ static void PASCAL SetCaretPos(POINT point);
  Especifica el nuevo x y coordenadas (en coordenadas de cliente) del símbolo de intercalación.  
   
 ### <a name="remarks"></a>Comentarios  
- El `SetCaretPos` función miembro mueve el símbolo de intercalación solo si es propiedad de una ventana en la tarea actual. `SetCaretPos`Mueve el símbolo de intercalación si o no el símbolo de intercalación está oculto.  
+ El `SetCaretPos` función miembro mueve el símbolo de intercalación solo si es propiedad de una ventana en la tarea actual. `SetCaretPos` Mueve el símbolo de intercalación si o no el símbolo de intercalación está oculto.  
   
  El símbolo de intercalación es un recurso compartido. Una ventana no debe mover el carácter de intercalación si no posee el símbolo de intercalación.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#115](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
   
-##  <a name="setclipboardviewer"></a>CWnd::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>  CWnd::SetClipboardViewer  
  Esta ventana se agrega a la cadena de windows que se notifica (por medio de la `WM_DRAWCLIPBOARD` mensaje) cada vez que se cambia el contenido del Portapapeles.  
   
 ```  
@@ -10139,7 +10142,7 @@ HWND SetClipboardViewer();
   
  Para quitarse de la cadena del Visor del Portapapeles, una aplicación debe llamar a la [ChangeClipboardChain](#changeclipboardchain) función miembro.  
   
-##  <a name="setdlgctrlid"></a>CWnd::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>  CWnd::SetDlgCtrlID  
  Establece el identificador de ventana o el identificador del control de la ventana a un nuevo valor.  
   
 ```  
@@ -10156,7 +10159,7 @@ int SetDlgCtrlID(int nID);
 ### <a name="remarks"></a>Comentarios  
  La ventana puede ser cualquier ventana secundaria, no solo un control en un cuadro de diálogo. La ventana no puede ser una ventana de nivel superior.  
   
-##  <a name="setdlgitemint"></a>CWnd::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>  CWnd::SetDlgItemInt  
  Establece el texto de un control determinado en un cuadro de diálogo para la representación de cadena de un valor entero especificado.  
   
 ```  
@@ -10177,12 +10180,12 @@ void SetDlgItemInt(
  Especifica si el valor entero es con o sin signo. Si este parámetro es **TRUE**, `nValue` está firmado. Si este parámetro es **TRUE** y `nValue` es menor que 0, un signo menos inicio de sesión se coloca antes del primer dígito en la cadena. Si este parámetro es **FALSE**, `nValue` es sin signo.  
   
 ### <a name="remarks"></a>Comentarios  
- `SetDlgItemInt`envía una [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) mensaje al control especificado.  
+ `SetDlgItemInt` envía una [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) mensaje al control especificado.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::SetDlgItemText](#setdlgitemtext).  
   
-##  <a name="setdlgitemtext"></a>CWnd::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>  CWnd::SetDlgItemText  
  Establece el título o el texto de un control de propiedad de un cuadro de diálogo o ventana.  
   
 ```  
@@ -10199,12 +10202,12 @@ void SetDlgItemText(
  Apunta a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto o cadena terminada en null que contiene el texto que se va a copiarse en el control.  
   
 ### <a name="remarks"></a>Comentarios  
- `SetDlgItemText`envía una [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) mensaje al control especificado.  
+ `SetDlgItemText` envía una [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) mensaje al control especificado.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
   
-##  <a name="setforegroundwindow"></a>CWnd::SetForegroundWindow  
+##  <a name="setforegroundwindow"></a>  CWnd::SetForegroundWindow  
  Pone en primer plano el subproceso que creó la ventana y activa la ventana.  
   
 ```  
@@ -10220,7 +10223,7 @@ BOOL SetForegroundWindow();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::FindWindow](#findwindow).  
   
-##  <a name="setfocus"></a>CWnd::SetFocus  
+##  <a name="setfocus"></a>  CWnd::SetFocus  
  Reclama el foco de entrada.  
   
 ```  
@@ -10237,7 +10240,7 @@ CWnd* SetFocus();
   
  Si la ventana actual está activa pero no tiene el foco (es decir, no hay ninguna ventana tiene el foco), cualquier tecla presionada generará los mensajes [WM_SYSCHAR](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown), o [WM_SYSKEYUP](#onsyskeyup).  
   
-##  <a name="setfont"></a>CWnd::SetFont  
+##  <a name="setfont"></a>  CWnd::SetFont  
  Envía el `WM_SETFONT` mensaje a la ventana que se utilizará la fuente especificada.  
   
 ```  
@@ -10251,12 +10254,12 @@ void SetFont(
  Puntero a un `CFont` objeto.  
   
  `bRedraw`  
- `TRUE`para que la ventana para volver a dibujar inmediatamente después de procesa el `WM_SETFONT` mensaje; en caso contrario, `FALSE`.  
+ `TRUE` para que la ventana para volver a dibujar inmediatamente después de procesa el `WM_SETFONT` mensaje; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método no tiene ningún efecto a menos que la ventana procesa el `WM_SETFONT` mensaje. Muchas clases MFC que derivan de `CWnd` procesar este mensaje porque están asociados a una clase de ventana predefinido que incluye un controlador de mensajes para el `WM_SETFONT` mensaje. Para utilizar este método, las clases que derivan de `CWnd` debe definir un controlador de método para el `WM_SETFONT` mensaje.  
   
-##  <a name="seticon"></a>CWnd::SetIcon  
+##  <a name="seticon"></a>  CWnd::SetIcon  
  Llame a esta función miembro para establecer el identificador como un icono específico, según se identifica por `hIcon`.  
   
 ```  
@@ -10281,7 +10284,7 @@ HICON SetIcon(
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::GetSystemMenu](#getsystemmenu).  
   
-##  <a name="setlayeredwindowattributes"></a>CWnd::SetLayeredWindowAttributes  
+##  <a name="setlayeredwindowattributes"></a>  CWnd::SetLayeredWindowAttributes  
  Establece la clave de color de transparencia y opacidad de una ventana superpuesta.  
   
 ```  
@@ -10307,7 +10310,7 @@ BOOL SetLayeredWindowAttributes(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540), tal y como se describe en el SDK de Windows.  
   
-##  <a name="setmenu"></a>CWnd::SetMenu  
+##  <a name="setmenu"></a>  CWnd::SetMenu  
  Establece el menú actual en el menú especificado.  
   
 ```  
@@ -10324,12 +10327,12 @@ BOOL SetMenu(CMenu* pMenu);
 ### <a name="remarks"></a>Comentarios  
  Hace que la ventana para volver a dibujar para reflejar el cambio de menú.  
   
- `SetMenu`se destruirán un menú anterior. Una aplicación debe llamar a la [CMenu::DestroyMenu](../../mfc/reference/cmenu-class.md#destroymenu) función de miembro para realizar esta tarea.  
+ `SetMenu` se destruirán un menú anterior. Una aplicación debe llamar a la [CMenu::DestroyMenu](../../mfc/reference/cmenu-class.md#destroymenu) función de miembro para realizar esta tarea.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CMenu::LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu).  
   
-##  <a name="setowner"></a>CWnd::SetOwner  
+##  <a name="setowner"></a>  CWnd::SetOwner  
  Establece el propietario de la ventana actual en el objeto de ventana especificado.  
   
 ```  
@@ -10347,7 +10350,7 @@ void SetOwner(CWnd* pOwnerWnd);
   
  El concepto de propiedad de esta función es diferente del concepto de propiedad de [GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms633515).  
   
-##  <a name="setparent"></a>CWnd::SetParent  
+##  <a name="setparent"></a>  CWnd::SetParent  
  Cambia la ventana primaria de una ventana secundaria.  
   
 ```  
@@ -10364,7 +10367,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 ### <a name="remarks"></a>Comentarios  
  Si está visible la ventana secundaria, Windows lleva a cabo la actualización en pantalla correspondiente y volver a pintar.  
   
-##  <a name="setproperty"></a>CWnd::SetProperty  
+##  <a name="setproperty"></a>  CWnd::SetProperty  
  Llame a esta función miembro para establecer la propiedad de control OLE especificada por `dwDispID`.  
   
 ```  
@@ -10390,7 +10393,7 @@ void AFX_CDECL SetProperty(
   
  Para obtener más información sobre el uso de esta función miembro con contenedores de controles ActiveX, vea el artículo [contenedores de controles ActiveX: programar controles ActiveX en un contenedor de controles ActiveX](../../mfc/programming-activex-controls-in-a-activex-control-container.md).  
   
-##  <a name="setredraw"></a>CWnd::SetRedraw  
+##  <a name="setredraw"></a>  CWnd::SetRedraw  
  Una aplicación llama `SetRedraw` para permitir que los cambios se vuelva a dibujar o para evitar que los cambios que se va a dibujar.  
   
 ```  
@@ -10407,7 +10410,7 @@ void SetRedraw(BOOL bRedraw = TRUE);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
   
-##  <a name="setscrollinfo"></a>CWnd::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CWnd::SetScrollInfo  
  Llame a esta función miembro para establecer la información que la `SCROLLINFO` estructura se mantiene sobre una barra de desplazamiento.  
   
 ```  
@@ -10444,7 +10447,7 @@ BOOL SetScrollInfo(
 > [!NOTE]
 > [CWnd::GetScrollInfo](#getscrollinfo) permite a las aplicaciones utilizar posiciones de la barra de desplazamiento de 32 bits.  
   
-##  <a name="setscrollpos"></a>CWnd::SetScrollPos  
+##  <a name="setscrollpos"></a>  CWnd::SetScrollPos  
  Establece la posición actual de un cuadro de desplazamiento y, si se solicita, vuelve a dibujar la barra de desplazamiento para reflejar la nueva posición del cuadro de desplazamiento.  
   
 ```  
@@ -10474,7 +10477,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>Comentarios  
  Establecer `bRedraw` a **FALSE** es útil cuando se volverá a dibujar la barra de desplazamiento por una llamada posterior a otra función.  
   
-##  <a name="setscrollrange"></a>CWnd::SetScrollRange  
+##  <a name="setscrollrange"></a>  CWnd::SetScrollRange  
  Establece los valores de posición mínimo y máximo de la barra de desplazamiento especificada.  
   
 ```  
@@ -10511,7 +10514,7 @@ void SetScrollRange(
   
  El intervalo predeterminado para una barra de desplazamiento estándar es de 0 a 100. El intervalo predeterminado para un control de barra de desplazamiento está vacío (tanto el `nMinPos` y `nMaxPos` los valores son 0). La diferencia entre los valores especificados por `nMinPos` y `nMaxPos` no debe ser mayor que **INT_MAX**.  
   
-##  <a name="settimer"></a>CWnd::SetTimer  
+##  <a name="settimer"></a>  CWnd::SetTimer  
  Instala a un cronómetro del sistema.  
   
 ```  
@@ -10551,11 +10554,11 @@ void CALLBACK TimerProc(
 ```  
   
 ### <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza `CWnd::SetTimer`, `CWnd::OnTimer`, y `CWnd::KillTimer` para controlar `WM_TIMER` mensajes. El primer temporizador está configurado para enviar un `WM_TIMER` mensaje en la ventana de marco principal cada 2 segundos en `OnStartTimer`. El `OnTimer` controlador de eventos controla `WM_TIMER` mensajes de la ventana de marco principal. Este método provoca el altavoz PC emita un sonido cada 2 segundos. El segundo temporizador envía un mensaje a la función de devolución de llamada cada 3,75 segundos. `OnStopTimer`se detendrá ambos temporizadores mediante una llamada a `CWnd::KillTimer` para cada identificador de temporizador.  
+ Este ejemplo se utiliza `CWnd::SetTimer`, `CWnd::OnTimer`, y `CWnd::KillTimer` para controlar `WM_TIMER` mensajes. El primer temporizador está configurado para enviar un `WM_TIMER` mensaje en la ventana de marco principal cada 2 segundos en `OnStartTimer`. El `OnTimer` controlador de eventos controla `WM_TIMER` mensajes de la ventana de marco principal. Este método provoca el altavoz PC emita un sonido cada 2 segundos. El segundo temporizador envía un mensaje a la función de devolución de llamada cada 3,75 segundos. `OnStopTimer` se detendrá ambos temporizadores mediante una llamada a `CWnd::KillTimer` para cada identificador de temporizador.  
   
  [!code-cpp[NVC_MFCWindowing#118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
   
-##  <a name="setwindowcontexthelpid"></a>CWnd::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>  CWnd::SetWindowContextHelpId  
  Llame a esta función miembro para asociar un identificador de contexto de Ayuda de la ventana especificada.  
   
 ```  
@@ -10575,7 +10578,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#119](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
   
-##  <a name="setwindowplacement"></a>CWnd::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>  CWnd::SetWindowPlacement  
  Establece el estado de visualización y las posiciones normal (restaurada), minimizada y maximizada de una ventana.  
   
 ```  
@@ -10589,7 +10592,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="return-value"></a>Valor devuelto  
  Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.  
   
-##  <a name="setwindowpos"></a>CWnd:: SetWindowPos  
+##  <a name="setwindowpos"></a>  CWnd::SetWindowPos  
  Cambia el tamaño, la posición y el orden Z de ventanas secundarias, de emergentes y de nivel superior.  
   
 ```  
@@ -10637,11 +10640,11 @@ BOOL SetWindowPos(
   
 - **SWP_HIDEWINDOW** oculta la ventana.  
   
-- `SWP_NOACTIVATE`No se activa la ventana. Si no se establece esta marca, la ventana se activa y se mueve a la parte superior de la superior o el grupo no es de nivel superior (según la configuración de la `pWndInsertAfter` parámetro).  
+- `SWP_NOACTIVATE` No se activa la ventana. Si no se establece esta marca, la ventana se activa y se mueve a la parte superior de la superior o el grupo no es de nivel superior (según la configuración de la `pWndInsertAfter` parámetro).  
   
 - **SWP_NOCOPYBITS** descarta todo el contenido del área de cliente. Si no se especifica este marcador, el contenido del área de cliente válido se guarda y se copian en el área de cliente después de la ventana es de tamaño o mover.  
   
-- `SWP_NOMOVE`Conserva la posición actual (pasa por alto el *x* y *y* parámetros).  
+- `SWP_NOMOVE` Conserva la posición actual (pasa por alto el *x* y *y* parámetros).  
   
 - **SWP_NOOWNERZORDER** no cambia la posición de la ventana propietaria del orden Z.  
   
@@ -10651,9 +10654,9 @@ BOOL SetWindowPos(
   
 - **SWP_NOSENDCHANGING** impide que la ventana de recepción el `WM_WINDOWPOSCHANGING` mensaje.  
   
-- `SWP_NOSIZE`Conserva el tamaño actual (pasa por alto el `cx` y `cy` parámetros).  
+- `SWP_NOSIZE` Conserva el tamaño actual (pasa por alto el `cx` y `cy` parámetros).  
   
-- `SWP_NOZORDER`Conserva la ordenación actual (omite `pWndInsertAfter`).  
+- `SWP_NOZORDER` Conserva la ordenación actual (omite `pWndInsertAfter`).  
   
 - **SWP_SHOWWINDOW** muestra la ventana.  
   
@@ -10690,7 +10693,7 @@ BOOL SetWindowPos(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
   
-##  <a name="setwindowrgn"></a>CWnd::SetWindowRgn  
+##  <a name="setwindowrgn"></a>  CWnd::SetWindowRgn  
  Llame a esta función miembro para establecer la región de una ventana.  
   
 ```  
@@ -10714,7 +10717,7 @@ int SetWindowRgn(
   
  Después de una llamada correcta a `SetWindowRgn`, el sistema operativo posee la región especificada por el identificador de la región `hRgn`. El sistema operativo no hacer una copia de la región, por lo que no realizan ninguna llamada de función con este identificador de región y no cierre este identificador de región.  
   
-##  <a name="setwindowtext"></a>CWnd::SetWindowText  
+##  <a name="setwindowtext"></a>  CWnd::SetWindowText  
  Establece el título de la ventana para el texto especificado.  
   
 ```  
@@ -10733,7 +10736,7 @@ void SetWindowText(LPCTSTR lpszString);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#121](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
   
-##  <a name="showcaret"></a>CWnd::ShowCaret  
+##  <a name="showcaret"></a>  CWnd::ShowCaret  
  Muestra el símbolo de intercalación en la pantalla en la posición actual del símbolo de intercalación.  
   
 ```  
@@ -10752,7 +10755,7 @@ void ShowCaret();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::CreateCaret](#createcaret).  
   
-##  <a name="showownedpopups"></a>CWnd::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>  CWnd::ShowOwnedPopups  
  Muestra u oculta todas las ventanas emergentes que pertenecen a esta ventana.  
   
 ```  
@@ -10766,7 +10769,7 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd:: SetWindowPos](#setwindowpos).  
   
-##  <a name="showscrollbar"></a>CWnd::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CWnd::ShowScrollBar  
  Muestra u oculta una barra de desplazamiento.  
   
 ```  
@@ -10791,7 +10794,7 @@ void ShowScrollBar(
 ### <a name="remarks"></a>Comentarios  
  Una aplicación no debe llamar a `ShowScrollBar` para ocultar una barra de desplazamiento al procesar un mensaje de notificación de la barra de desplazamiento.  
   
-##  <a name="showwindow"></a>CWnd:: ShowWindow  
+##  <a name="showwindow"></a>  CWnd::ShowWindow  
  Establece el estado de visibilidad de la ventana.  
   
 ```  
@@ -10826,12 +10829,12 @@ BOOL ShowWindow(int nCmdShow);
  Es distinto de cero si la ventana era visible previamente; 0 si el `CWnd` se ocultó anteriormente.  
   
 ### <a name="remarks"></a>Comentarios  
- `ShowWindow`debe llamarse una sola vez por cada aplicación para la ventana principal con [CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Las llamadas subsiguientes a `ShowWindow` debe usar uno de los valores enumerados anteriormente en lugar del especificado por `CWinApp::m_nCmdShow`.  
+ `ShowWindow` debe llamarse una sola vez por cada aplicación para la ventana principal con [CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow). Las llamadas subsiguientes a `ShowWindow` debe usar uno de los valores enumerados anteriormente en lugar del especificado por `CWinApp::m_nCmdShow`.  
   
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd::CalcWindowRect](#calcwindowrect).  
   
-##  <a name="subclassdlgitem"></a>CWnd:: SubclassDlgItem  
+##  <a name="subclassdlgitem"></a>  CWnd::SubclassDlgItem  
  Llamar a esta función miembro para "dinámicamente subclase" un control creado a partir de una plantilla de cuadro de diálogo y adjuntar a este `CWnd` objeto.  
   
 ```  
@@ -10858,7 +10861,7 @@ BOOL SubclassDlgItem(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
   
-##  <a name="subclasswindow"></a>CWnd:: SubclassWindow  
+##  <a name="subclasswindow"></a>  CWnd::SubclassWindow  
  Llame a esta función miembro para "dinámicamente subclase" una ventana y adjuntar a este `CWnd` objeto.  
   
 ```  
@@ -10883,7 +10886,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
-##  <a name="unlockwindowupdate"></a>CWnd::UnlockWindowUpdate  
+##  <a name="unlockwindowupdate"></a>  CWnd::UnlockWindowUpdate  
  Llame a esta función miembro para desbloquear una ventana que se bloqueó con `CWnd::LockWindowUpdate`.  
   
 ```  
@@ -10893,7 +10896,7 @@ void UnlockWindowUpdate();
 ### <a name="remarks"></a>Comentarios  
  Sólo una ventana a la vez se puede bloquear con `LockWindowUpdate`. Vea [CWnd::LockWindowUpdate](#lockwindowupdate) o la función de Win32 [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) para obtener más información sobre el bloqueo de windows.  
   
-##  <a name="unsubclasswindow"></a>CWnd::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CWnd::UnsubclassWindow  
  Llame a esta función miembro para establecer **/ / WndProc** de nuevo a su valor original y separar la ventana identificada por `HWND` desde el **CWnd** objeto.  
   
 ```  
@@ -10906,7 +10909,7 @@ HWND UnsubclassWindow();
 ### <a name="example"></a>Ejemplo  
   Vea el ejemplo de [CWnd:: SubclassWindow](#subclasswindow).  
   
-##  <a name="updatedata"></a>CWnd::UpdateData  
+##  <a name="updatedata"></a>  CWnd::UpdateData  
  Llame a esta función miembro para inicializar los datos en un cuadro de diálogo, o para recuperar y validar los datos de cuadro de diálogo.  
   
 ```  
@@ -10923,7 +10926,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ### <a name="remarks"></a>Comentarios  
  El marco de trabajo llama automáticamente a `UpdateData` con `bSaveAndValidate` establecido en **FALSE** cuando se crea un cuadro de diálogo modal en la implementación predeterminada de [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog). La llamada se produce antes de que el cuadro de diálogo está visible. La implementación predeterminada de [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) llama a esta función miembro con `bSaveAndValidate` establecido en **TRUE** para recuperar los datos y si se realiza correctamente, se cerrará el cuadro de diálogo. (Si se hace clic en el botón Cancelar en el cuadro de diálogo, el cuadro de diálogo se cierra sin los datos recuperados).  
   
-##  <a name="updatedialogcontrols"></a>CWnd::UpdateDialogControls  
+##  <a name="updatedialogcontrols"></a>  CWnd::UpdateDialogControls  
  Llame a esta función miembro para actualizar el estado del cuadro de diálogo botones y otros controles en un cuadro de diálogo o ventana que usa el [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) mecanismo de devolución de llamada.  
   
 ```  
@@ -10944,7 +10947,7 @@ void UpdateDialogControls(
   
  El marco de trabajo llama a esta función miembro para los controles en barras de cuadro de diálogo o las barras de herramientas como parte de la aplicación de procesamiento en inactividad.  
   
-##  <a name="updatelayeredwindow"></a>CWnd::UpdateLayeredWindow  
+##  <a name="updatelayeredwindow"></a>  CWnd::UpdateLayeredWindow  
  Actualiza la posición, el tamaño, la forma, el contenido y la transparencia de una ventana superpuesta.  
   
 ```  
@@ -10996,7 +10999,7 @@ BOOL UpdateLayeredWindow(
 ### <a name="remarks"></a>Comentarios  
  Esta función miembro emula la funcionalidad de la función [UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556), tal y como se describe en el SDK de Windows.  
   
-##  <a name="updatewindow"></a>CWnd::UpdateWindow  
+##  <a name="updatewindow"></a>  CWnd::UpdateWindow  
  Actualiza el área de cliente mediante el envío de un [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensaje si la región de actualización no está vacía.  
   
 ```  
@@ -11009,7 +11012,7 @@ void UpdateWindow();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCWindowing#124](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
   
-##  <a name="validaterect"></a>CWnd::ValidateRect  
+##  <a name="validaterect"></a>  CWnd::ValidateRect  
  Valida el área cliente dentro del rectángulo especificado quitando el rectángulo de la región de actualización de la ventana.  
   
 ```  
@@ -11025,7 +11028,7 @@ void ValidateRect(LPCRECT lpRect);
   
  Windows continúa generando `WM_PAINT` mensajes hasta que se valide la región de actualización actual.  
   
-##  <a name="validatergn"></a>CWnd::ValidateRgn  
+##  <a name="validatergn"></a>  CWnd::ValidateRgn  
  Valida el área cliente dentro de la región especificada mediante la eliminación de la región de la región de actualización actual de la ventana.  
   
 ```  
@@ -11041,7 +11044,7 @@ void ValidateRgn(CRgn* pRgn);
   
  El [BeginPaint](#beginpaint) función miembro valida automáticamente toda el área cliente. Ni el [función ValidateRect](#validaterect) ni `ValidateRgn` si una parte de la región de actualización debe validarse antes de la siguiente función de miembro que se debe llamar [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) se genera el mensaje.  
   
-##  <a name="windowfrompoint"></a>CWnd::WindowFromPoint  
+##  <a name="windowfrompoint"></a>  CWnd::WindowFromPoint  
  Recupera la ventana que contiene el punto especificado; `point` debe especificar las coordenadas de pantalla de un punto en la pantalla.  
   
 ```  
@@ -11056,9 +11059,9 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
  Un puntero al objeto de ventana en la que se encuentra el punto. Es **NULL** si no existe ninguna ventana en el momento determinado. El puntero devuelto puede ser temporal y no debe almacenarse para su uso posterior.  
   
 ### <a name="remarks"></a>Comentarios  
- `WindowFromPoint`no recupera una ventana oculta o deshabilitada, incluso si el punto está dentro de la ventana. Una aplicación debe utilizar el [ChildWindowFromPoint](#childwindowfrompoint) función miembro de una búsqueda no restrictiva.  
+ `WindowFromPoint` no recupera una ventana oculta o deshabilitada, incluso si el punto está dentro de la ventana. Una aplicación debe utilizar el [ChildWindowFromPoint](#childwindowfrompoint) función miembro de una búsqueda no restrictiva.  
   
-##  <a name="windowproc"></a>CWnd::WindowProc  
+##  <a name="windowproc"></a>  CWnd::WindowProc  
  Proporciona un procedimiento de Windows ( `WindowProc`) para un `CWnd` objeto.  
   
 ```  
@@ -11084,7 +11087,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>Comentarios  
  Envía los mensajes a través del mapa de mensajes de la ventana.  
   
-##  <a name="winhelp"></a>CWnd::WinHelp  
+##  <a name="winhelp"></a>  CWnd::WinHelp  
  Se llama para iniciar la aplicación WinHelp.  
   
 ```  
@@ -11103,7 +11106,7 @@ virtual void WinHelp(
 ### <a name="remarks"></a>Comentarios  
  Vea [CWinApp:: WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) para obtener más información.  
   
-##  <a name="registertouchwindow"></a>CWnd::RegisterTouchWindow  
+##  <a name="registertouchwindow"></a>  CWnd::RegisterTouchWindow  
  Registra o anula el registro de compatibilidad táctil de Windows.  
   
 ```  
@@ -11114,7 +11117,7 @@ BOOL RegisterTouchWindow(
   
 ### <a name="parameters"></a>Parámetros  
  `bRegister`  
- `TRUE`indica el registro de compatibilidad; táctil de Windows `FALSE` en caso contrario.  
+ `TRUE` indica el registro de compatibilidad; táctil de Windows `FALSE` en caso contrario.  
   
  `ulFlags`  
  Un conjunto de marcadores de bits que especifican modificaciones opcionales. Este campo puede contener 0 o uno de los siguientes valores: TWF_FINETOUCH, TWF_WANTPALM.  
@@ -11124,7 +11127,7 @@ BOOL RegisterTouchWindow(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="resizedynamiclayout"></a>CWnd::ResizeDynamicLayout  
+##  <a name="resizedynamiclayout"></a>  CWnd::ResizeDynamicLayout  
  El marco llama a este método cuando el tamaño de la ventana cambia para ajustar el diseño de las ventanas secundarias, si el diseño dinámico está habilitado en esa ventana.  
   
 ```  

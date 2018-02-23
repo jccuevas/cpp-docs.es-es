@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6a10201edd55c378d1df3a244b0732d64ecd08f
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrínsecos del compilador y del lenguaje ensamblador
 Esta sección de la documentación contiene información sobre las funciones intrínsecas del compilador y el lenguaje ensamblador.  
@@ -31,4 +34,4 @@ Esta sección de la documentación contiene información sobre las funciones int
 |[Ensamblador insertado](../assembler/inline/inline-assembler.md)|Explica cómo usar el ensamblador alineado de Visual C/C++ con procesadores x86.|  
 |[Referencia del ensamblador de ARM](../assembler/arm/arm-assembler-reference.md)|Proporciona material de referencia para el ensamblador de ARM de Microsoft (armasm) y las herramientas relacionadas.|  
 |[Referencia de Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)|Proporciona material de referencia de Microsoft Macro Assembler (masm).|  
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|Artículo de nivel superior sobre la documentación de Visual C++.|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|Artículo de nivel superior sobre la documentación de Visual C++.|

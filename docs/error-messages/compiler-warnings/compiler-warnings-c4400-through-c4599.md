@@ -1,7 +1,8 @@
 ---
 title: "C4400 de advertencias del compilador a través de C4599 | Documentos de Microsoft"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 de advertencias del compilador a través de C4599
 
@@ -165,7 +184,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*función*': función firma contiene el tipo '*tipo*'; Los objetos de C++ son no es seguro pasar entre código puro y mixto o nativo.|
 |C4413 de advertencia del compilador|'classname::member': miembro de referencia se inicializa en un archivo temporal que no se conserva después de que salga el constructor|
 |[Advertencia del compilador (nivel 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*función*': salto short a la función ha convertido en near|
-|Advertencia del compilador (nivel 1) C4415|duplicados __declspec (code_seg ('*nombre*'))|
+|Advertencia del compilador (nivel 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Advertencia del compilador (nivel 1) C4416|__declspec(code_seg(...)) contiene una cadena vacía: omite|
 |Advertencia del compilador (nivel 1) C4417|una instancia de plantilla explícita no puede tener __declspec(code_seg(...)): omite|
 |Advertencia del compilador (nivel 1) C4418|__declspec(code_seg(...)) omitido en una enumeración|
@@ -214,7 +233,13 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|pragma (directivas) de control de punto flotante omitidas en /clr|
 |[Advertencia del compilador (nivel 4) C4471](compiler-warning-level-4-c4471.md)|'*enumeración*': una declaración adelantada de una enumeración sin ámbito debe tener un tipo subyacente (se presupone int)|
 |Advertencia del compilador (nivel 1) C4472|'*identificador*' es una enumeración nativa: agregue un especificador de acceso (público/privado) para declarar un ' WinRT &#124; administrada ' enum|
-|Advertencia C4480 de advertencia del compilador|ha utilizado una extensión no estándar: especificar el tipo subyacente de enum '*enumeración*'|
+|[Advertencia del compilador (nivel 1) C4473](c4473.md)|'*función*': no hay suficientes argumentos pasan para la cadena de formato|
+|Advertencia del compilador (nivel 3) C4474|'*función*': pasado demasiados argumentos para la cadena de formato|
+|Advertencia del compilador (nivel 3) C4475|'*función*': modificador de longitud de '*modificador*'no se puede usar con el carácter del campo de tipo'*caracteres*' en el especificador de formato|
+|Advertencia del compilador (nivel 3) C4476|'*función*': carácter del campo de tipo desconocido '*caracteres*' en el especificador de formato|
+|[Advertencia del compilador (nivel 1) C4477](c4477.md)|'*función*': cadena de formato '*cadena*'requiere un argumento de tipo'*tipo*', pero el argumento de variádicas *número* tiene el tipo '*tipo*'|
+|Advertencia del compilador (nivel 1) C4478|'*función*': no se pueden mezclar los marcadores de posición de posición y no sean de posición en la misma cadena de formato|
+|Advertencia C4480 (Error) de advertencia del compilador|ha utilizado una extensión no estándar: especificar el tipo subyacente de enum '*enumeración*'|
 |[Advertencia del compilador (nivel 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|ha utilizado una extensión no estándar: especificador de reemplazo '*palabra clave*'|
 |C4482 de advertencia del compilador|ha utilizado una extensión no estándar: enumeración '*enumeración*' utilizado en el nombre completo|
 |Advertencia del compilador (nivel 1, Error) C4483|error de sintaxis: se esperaba la palabra clave de C++|
@@ -229,6 +254,10 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1, Error) C4492|'*function1*': coincide con el método de clase ref de base '*function2*', pero no está marcada como 'override'|
 |Advertencia del compilador (nivel 3, Error) C4493|Expresión DELETE no tiene ningún efecto porque el destructor de '*tipo*' no tiene accesibilidad 'public'|
 |Advertencia del compilador (nivel 1) C4494|'*función*': se omitió __declspec(allocator) porque la función de tipo de valor devuelto no es un puntero o referencia|
+|C4495 de advertencia del compilador|'__super' utilizado una extensión no estándar: reemplazar con el nombre de la clase base explícita|
+|C4496 de advertencia del compilador|utiliza una extensión no estándar 'for each': reemplace por instrucción bucles for.|
+|C4497 de advertencia del compilador|'sealed' usa una extensión no estándar: reemplazar con 'final'|
+|C4498 de advertencia del compilador|ha utilizado una extensión no estándar: '*extensión*'|
 |Advertencia del compilador (nivel 4) C4499|"*función*': una especialización explícita no puede tener una clase de almacenamiento (omitir)"|
 |[Advertencia del compilador (nivel 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*especificación de vinculación*' requiere el uso de la palabra clave 'extern' y debe preceder al resto de los especificadores|
 |[Advertencia del compilador (nivel 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*identificador*': superada, la longitud del nombre representativo nombre se ha truncado|

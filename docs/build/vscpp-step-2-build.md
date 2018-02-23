@@ -1,6 +1,6 @@
 ---
 title: "Compilar y ejecutar un proyecto de aplicación de consola de C++ | Documentos de Microsoft"
-description: Instalar la compatibilidad de Visual Studio para Visual C++
+description: "Compilar y ejecutar una aplicación de consola de Hello World en Visual C++"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 119d39c6aac479c8e08cd017b4d5f8da794c836d
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar y ejecutar un proyecto de aplicación de consola de C++
 

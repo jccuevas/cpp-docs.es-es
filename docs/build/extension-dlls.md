@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>Archivos DLL de extensión MFC
 Un archivo DLL de extensión de MFC es un archivo DLL que implementa clases reutilizables derivadas de las clases existentes de la biblioteca MFC (Microsoft Foundation Class).  
@@ -61,7 +65,7 @@ Un archivo DLL de extensión de MFC es un archivo DLL que implementa clases reut
   
  Antes de la versión 4.0 de MFC, este tipo de DLL se denominaba AFXDLL. AFXDLL hace referencia a la `_AFXDLL` símbolo de preprocesador que se define al generar el archivo DLL.  
   
- Las bibliotecas de importación para la versión compartida de MFC siguen la convención descrita en [convenciones de nomenclatura para archivos DLL de MFC](../build/naming-conventions-for-mfc-dlls.md). Visual C++ proporciona versiones pregeneradas de los archivos DLL de MFC, junto con una serie de archivos DLL que no están basados en MFC y que puede utilizar y distribuir con las aplicaciones. Éstos aparecen documentados en Redist.txt, el cual se instala en la carpeta Archivos de programa\Microsoft Visual Studio.  
+ Las bibliotecas de importación para la versión compartida de MFC siguen la convención descrita en [convenciones de nomenclatura para archivos DLL de MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ proporciona versiones pregeneradas de los archivos DLL de MFC, junto con una serie de archivos DLL que no están basados en MFC y que puede utilizar y distribuir con las aplicaciones. Éstos aparecen documentados en Redist.txt, el cual se instala en la carpeta Archivos de programa\Microsoft Visual Studio.  
   
  Si va a utilizar un archivo .def para exportar, coloque el código siguiente al principio y al final del archivo de encabezado:  
   

@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador desactivadas de forma predeterminada
+# <a name="compiler-warnings-that-are-off-by-default"></a>Advertencias del compilador que están desactivadas de forma predeterminada
 
-El compilador incluye advertencias que están desactivadas de forma predeterminada porque la mayoría de los desarrolladores no desea verlos. Sin embargo, puede habilitar estas advertencias mediante una de las opciones siguientes.
+El compilador incluye advertencias que están desactivadas de forma predeterminada, porque la mayoría de los desarrolladores no desea verlos. En algunos casos, representa una opción de estilo, son expresiones comunes en código antiguo o aprovechar las ventajas de una extensión de Microsoft del lenguaje. En otros casos, indican un área donde los programadores a menudo no hacen suposiciones válidas, lo que pueden provocar un comportamiento inesperado o no definido. Algunas de estas advertencias pueden ser con mucho ruido en los encabezados de la biblioteca.
 
-**#pragma warning (valor predeterminado:** *warning_number* **)**  
-La advertencia especificada (*warning_number*) está habilitada en su nivel predeterminado. La documentación de la advertencia contiene el nivel predeterminado de la advertencia.
+Puede habilitar estas advertencias mediante una de las siguientes opciones:
 
-**#pragma warning (** *nivel_advertencia* **:** *warning_number* **)**  
-La advertencia especificada (*warning_number*) está habilitada en el nivel especificado (*nivel_advertencia*).
+- **#pragma warning (valor predeterminado:** *warning_number* **)**  
+   La advertencia especificada (*warning_number*) está habilitada en su nivel predeterminado. La documentación de la advertencia contiene el nivel predeterminado de la advertencia.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Pared** habilita todas las advertencias que están desactivadas de forma predeterminada.
+- **#pragma warning (** *nivel_advertencia* **:** *warning_number* **)**  
+   La advertencia especificada (*warning_number*) está habilitada en el nivel especificado (*nivel_advertencia*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Pared** habilita todas las advertencias que están desactivadas de forma predeterminada. Si utiliza esta opción, puede desactivar las advertencias individuales mediante la [/wd](../build/reference/compiler-option-warning-level.md) opción.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   Esto habilita la advertencia  *nnnn*  en nivel *l*.
 
 Las siguientes advertencias están deshabilitadas de forma predeterminada.
 
@@ -131,6 +136,7 @@ Las siguientes advertencias están deshabilitadas de forma predeterminada.
 |C5032 (nivel 4)|detectado #pragma warning (Push) con ningún Warning (POP) #pragma correspondiente|
 |C5035|el uso de la característica '*característica*' hace función *función* se compile como código de invitado|
 |C5036 (nivel 1)|varargs función de conversión de puntero cuando se compila con /hybrid:x86arm64 '*type1*'to'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|miembro de datos '*member1*'se inicializará después del miembro de datos'*member2*'|
 
 Estas advertencias están desactivadas, a menos que la [/ permisivo-](../build/reference/permissive-standards-conformance.md) se establece la opción del compilador:
 

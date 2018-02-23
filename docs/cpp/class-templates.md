@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>Plantillas de clase
 Este tema describe las reglas que son específicas de las plantillas de clase de C++.  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  No se permite que las clases locales tengan plantillas de miembro.  
   
 ## <a name="template-friends"></a>Friends de plantilla  
- Pueden tener plantillas de clase [amigos](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.  
+ Pueden tener plantillas de clase [amigos](friend-cpp.md). Una clase o plantilla de clase y una función o plantilla de función pueden ser elementos friend de una clase de plantilla. Los elementos friend también pueden ser especializaciones de una plantilla de clase o de función, pero no especializaciones parciales.  
   
  En el ejemplo siguiente, una función friend se define como una plantilla de función dentro de la plantilla de clase. Este código genera una versión de la función friend para cada instancia de la plantilla. Esta construcción es útil si la función friend depende de los mismos parámetros de plantilla que la clase.  
   

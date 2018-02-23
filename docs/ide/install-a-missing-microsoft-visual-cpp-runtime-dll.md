@@ -3,16 +3,16 @@ title: "Instalar una DLL que falta de Visual C++ en tiempo de ejecución de Micr
 description: "Cómo buscar e instalar los archivos DLL en tiempo de ejecución de Visual C++ que faltan."
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: visual-cpp
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b9037a50740c55d7dd997fd86744459b6fb96125
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: d40e1594b2190d4bbfd2fe52fddaad04af527573
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="install-a-missing-microsoft-visual-c-runtime-dll"></a>Instalar una DLL que falta de Visual C++ en tiempo de ejecución de Microsoft
 

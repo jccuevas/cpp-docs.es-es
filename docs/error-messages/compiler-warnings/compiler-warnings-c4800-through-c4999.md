@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -245,6 +243,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |C5035 de advertencia del compilador|el uso de la característica '*característica*' hace función *función* se compile como código de invitado|
 |Advertencia del compilador (nivel 1) C5036|varargs función de conversión de puntero cuando se compila con /hybrid:x86arm64 '*type1*'to'*type2*'|
 |Advertencia del compilador C5037 (error)|'*una función miembro*': una definición fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados|
+|[C5038 de advertencia del compilador](c5038.md)|miembro de datos '*member1*'se inicializará después del miembro de datos'*member2*'|
 |C5039 de advertencia del compilador|'*función*': puntero o referencia a producir potencialmente función pasado a la función extern C bajo - /EHc. Puede producirse un comportamiento indefinido si esta función produce una excepción.|
 |C5040 de advertencia del compilador|especificaciones de excepciones dinámicos son válidas solo en C ++ 14 y versiones anteriores; tratar como noexcept (false)|
 |C5041 de advertencia del compilador|'*definición*': definición fuera de línea para el miembro de datos estáticos de constexpr no es necesaria y está en desuso en C ++ 17|
