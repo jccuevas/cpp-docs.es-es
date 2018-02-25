@@ -1,34 +1,37 @@
 ---
-title: init_seg | Documentos de Microsoft
+title: init_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
-**Específicos de C++**  
+**C++ Specific**  
   
  Especifica una palabra clave o una sección de código que afecta al orden en que se ejecuta el código de inicio.  
   
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  Las opciones para la **init_seg** pragma son:  
   
- **compilador**  
+ **compiler**  
  Reservada para la inicialización de la biblioteca en tiempo de ejecución de C de Microsoft. Los objetos de este grupo se construyen en primer lugar.  
   
  **lib**  
  Disponible para las inicializaciones de los proveedores de bibliotecas de clases de terceros. Objetos de este grupo se construyen después de los marcados como **compilador** pero antes de los demás.  
   
- **usuario**  
+ **Usuario**  
  Disponible para cualquier usuario. Los objetos de este grupo se construyen en último lugar.  
   
- *nombre de sección*  
+ *section-name*  
  Permite la especificación explícita de la sección de inicialización. Objetos en una especificada por el usuario *nombre de sección* no se construyen implícitamente; sin embargo, sus direcciones se colocan en la sección designada por *nombre de sección*.  
   
  El nombre de sección que asigne contendrá punteros a funciones auxiliares que construirán los objetos globales declarados en ese módulo después de la instrucción pragma.  
   
  Para obtener una lista de nombres que no se debe utilizar cuando cree una sección, vea [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- *nombre de función*  
+ *func-name*  
  Especifica la función que se va a llamar en lugar de `atexit` cuando termine el programa. Esta función auxiliar también llama [atexit](../c-runtime-library/reference/atexit.md) con un puntero al destructor del objeto global. Si especifica un identificador de función en la instrucción pragma con el formato,  
   
 ```  

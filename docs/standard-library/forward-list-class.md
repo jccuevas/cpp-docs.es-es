@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>forward_list (Clase)
 Describe un objeto que controla una secuencia de elementos de longitud variable. La secuencia se almacena como una lista de nodos vinculada individualmente, cada uno de los cuales contiene un miembro de tipo `Type`.  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|El objeto de función de comparación que se usa para ordenar elementos.|  
   
 ### <a name="remarks"></a>Comentarios  
- `forward_list::merge`Quita los elementos de la `forward_list` `right`y los inserta en esto `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.  
+ `forward_list::merge` Quita los elementos de la `forward_list` `right`y los inserta en esto `forward_list`. Ambas secuencias deben estar ordenadas por el mismo predicado, que se describe a continuación. La secuencia combinada también está ordenada por ese objeto de función de comparación.  
   
  Para los iteradores `Pi` y `Pj` que designan elementos en posiciones `i` y `j`, la primera función miembro impone el orden `!(*Pj < *Pi)` siempre que `i < j`. (Los elementos se ordenan en orden `ascending`). La segunda función miembro impone el orden `! comp(*Pj, *Pi)` siempre que `i < j`.  
   

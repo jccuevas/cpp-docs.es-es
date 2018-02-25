@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - writeonly_texture_view
 - AMP_GRAPHICS/writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3ab115301a6d7063ba443cf528b382ae955360f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view (Clase)
 Proporciona acceso de writeonly a una textura.  
@@ -65,8 +68,8 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[writeonly_texture_view está Constructor](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
-|[~ writeonly_texture_view (destructor)](#ctor)|Destruye el objeto `writeonly_texture_view`.|  
+|[writeonly_texture_view Constructor](#ctor)|Inicializa una nueva instancia de la clase `writeonly_texture_view`.|  
+|[~writeonly_texture_view Destructor](#ctor)|Destruye el objeto `writeonly_texture_view`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -96,7 +99,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ writeonly_texture_view está 
+##  <a name="dtor"></a> ~writeonly_texture_view 
 
  Destruye el objeto `writeonly_texture_view`.  
   
@@ -104,7 +107,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Copia especificado `writeonly_texture_view` objeto a este.  
   
@@ -115,12 +118,12 @@ writeonly_texture_view<value_type, _Rank>& operator= (
   
 ### <a name="parameters"></a>Parámetros  
  `_Other`  
- `writeonly_texture_view`objeto que se va a copiar de.  
+ `writeonly_texture_view` objeto que se va a copiar de.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a este `writeonly_texture_view` objeto.  
   
-##  <a name="rank"></a>rango 
+##  <a name="rank"></a> Rango 
 
  Obtiene el rango de la `writeonly_texture_view` objeto.  
   
@@ -128,7 +131,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="set"></a>conjunto 
+##  <a name="set"></a> Conjunto 
 
  Establece el valor del elemento en el índice especificado.  
   
@@ -145,7 +148,7 @@ void set(
  `value`  
  Nuevo valor del elemento.  
   
-##  <a name="ctor"></a>writeonly_texture_view está 
+##  <a name="ctor"></a> writeonly_texture_view está 
 
  Inicializa una nueva instancia de la clase `writeonly_texture_view`.  
   

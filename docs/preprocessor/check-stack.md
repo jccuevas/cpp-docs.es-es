@@ -1,31 +1,34 @@
 ---
-title: check_stack | Documentos de Microsoft
+title: check_stack | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - check_stack pragma
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70f88d1eabb58f384d754803674b35f0bd9dbeda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checkstack"></a>check_stack
 Indica al compilador que desactive la opción comprobaciones de la pila si **desactivar** (o  **-** ) se especifica, o para activar comprobaciones de la pila si **en** (o  **+** ) se especifica.  
@@ -49,8 +52,8 @@ Indica al compilador que desactive la opción comprobaciones de la pila si **des
 |------------|------------------------------------|------------|  
 |**#pragma check_stack ()** o<br /><br /> **#pragma check_stack**|Sí|Desactiva la comprobación de la pila para las funciones que la siguen|  
 |**#pragma check_stack ()** o<br /><br /> **#pragma check_stack**|No|Activa la comprobación de la pila para las funciones que la siguen|  
-|**#pragma check_stack(on)**<br /><br /> o **#pragma check_stack +**|Sí o no|Activa la comprobación de la pila para las funciones que la siguen|  
-|**#pragma check_stack(off)**<br /><br /> o **#pragma check_stack -**|Sí o no|Desactiva la comprobación de la pila para las funciones que la siguen|  
+|**#pragma check_stack(on)**<br /><br /> or **#pragma check_stack +**|Sí o no|Activa la comprobación de la pila para las funciones que la siguen|  
+|**#pragma check_stack(off)**<br /><br /> or **#pragma check_stack -**|Sí o no|Desactiva la comprobación de la pila para las funciones que la siguen|  
   
 ## <a name="see-also"></a>Vea también  
  [Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::defaultfloat
 - xiosbase/std::boolalpha
@@ -31,7 +31,7 @@ f1_keywords:
 - ios/std::unitbuf
 - ios/std::uppercase
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::defaultfloat [C++]
@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 621f659ec0a3896013d8b81526f9ec83561d76a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 60bb8bac5ca2f961d6d2977dc84d0844dfd54b8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt-functions"></a>Funciones de &lt;ios&gt;
 ||||  
@@ -92,7 +92,7 @@ ios_base& boolalpha(ios_base& str);
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, las variables de tipo `bool` se muestran como 1 o 0.  
   
- `boolalpha`llama eficazmente a `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`) y, a continuación, devuelve `str`.  
+ `boolalpha` llama eficazmente a `str`.[ SETF](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`) y, a continuación, devuelve `str`.  
   
  [noboolalpha](../standard-library/ios-functions.md#noboolalpha) invierte el efecto de `boolalpha`.  
   
@@ -350,7 +350,7 @@ ios_base& noboolalpha(ios_base& str);
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `noboolalpha` está en vigor.  
   
- `noboolalpha`llama eficazmente a `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`) y, a continuación, devuelve `str`.  
+ `noboolalpha` llama eficazmente a `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`) y, a continuación, devuelve `str`.  
   
  [boolalpha](../standard-library/ios-functions.md#boolalpha) invierte el efecto de `noboolalpha`.  
   

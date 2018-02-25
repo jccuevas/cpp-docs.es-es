@@ -1,29 +1,32 @@
 ---
-title: short_vector_traits (estructura) | Documentos de Microsoft
+title: short_vector_traits Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - short_vector_traits
 - AMP_SHORT_VECTORS/short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21f249a464cd9f55d8cbb4aea79bcb705104306b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits (Estructura)
 short_vector_traits permite recuperar la longitud del vector subyacente y tipo escalar de un tipo de vector corto o un tipo escalar  
@@ -106,7 +109,7 @@ struct short_vector_traits<double_4>;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[short_vector_traits::Size (constante)](#size)||  
+|[short_vector_traits::size Constant](#size)||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `short_vector_traits`  
@@ -116,13 +119,13 @@ struct short_vector_traits<double_4>;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>short_vector_traits::short_vector_traits Constructor  
+##  <a name="ctor"></a>  short_vector_traits::short_vector_traits Constructor  
   
 ```  
 short_vector_traits();
 ```  
   
-##  <a name="size"></a>short_vector_traits::Size (constante)  
+##  <a name="size"></a>  short_vector_traits::size Constant  
   
 ```  
 static int const size = 1;  

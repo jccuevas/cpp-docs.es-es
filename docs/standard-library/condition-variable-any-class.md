@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition_variable_any
 - condition_variable/std::condition_variable_any::condition_variable_any
@@ -15,9 +16,10 @@ f1_keywords:
 - condition_variable/std::condition_variable_any::wait
 - condition_variable/std::condition_variable_any::wait_for
 - condition_variable/std::condition_variable_any::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c3acad50f9dec8e3384d0b811045f95843f40b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 26572eed562150baff68f124fea7255283d0c133
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any (Clase)
 Utilice la clase `condition_variable_any` para esperar un evento que tenga cualquier tipo  `mutex`.  
@@ -59,12 +62,12 @@ class condition_variable_any;
 |----------|-----------------|  
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable_any`.|  
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable_any`.|  
-|[espera](#wait)|Bloquea un subproceso.|  
+|[wait](#wait)|Bloquea un subproceso.|  
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|  
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<condition_variable >  
+ **Header:** \<condition_variable>  
   
  **Espacio de nombres:** std  
   

@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6919f1e3670251b952ce797df5ad10b786b1bbd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="macros-cc"></a>Macros (C/C++)
 Preprocesamiento expande las macros en todas las líneas que no son directivas de preprocesador (líneas que no tienen un  **#**  como el primer carácter no sea un espacio en blanco) y en partes de algunas directivas que no se omiten como parte de una compilación condicional. Las directivas de "compilación condicional" permiten suprimir la compilación de partes de un archivo de código fuente mediante la prueba de un identificador o una expresión de constante para determinar qué bloques de texto se pasan al compilador y qué bloques de texto se quitan del archivo de código fuente durante el preprocesamiento.  

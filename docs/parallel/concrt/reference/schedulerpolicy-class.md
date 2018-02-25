@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
@@ -14,19 +15,22 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs: C++
-helpviewer_keywords: SchedulerPolicy class
+dev_langs:
+- C++
+helpviewer_keywords:
+- SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy (Clase)
 La clase `SchedulerPolicy` contiene un conjunto de pares clave-valor, uno para cada elemento de directiva, que controla el comportamiento de una instancia del programador.  
@@ -71,7 +75,7 @@ class SchedulerPolicy;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a> GetPolicyValue 
 
  Recupera el valor de la clave de directiva proporcionado como el parámetro `key`.  
   
@@ -89,7 +93,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Comentarios  
  El método producirá [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) para una clave de directiva no válida.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Asigna la directiva de programador a partir de otra directiva de programador.  
   
@@ -107,7 +111,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Comentarios  
  A menudo, la manera más conveniente de definir una nueva directiva del programador es copiar una directiva existente y modificarla mediante los métodos `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a> SchedulerPolicy 
 
  Construye una nueva directiva del programador y lo rellena con valores de [claves de directiva](concurrency-namespace-enums.md) admitidas por programadores del Runtime de simultaneidad y el Administrador de recursos.  
   
@@ -136,7 +140,7 @@ SchedulerPolicy(
   
  El tercer constructor es un constructor de copias. A menudo, la manera más conveniente de definir una nueva directiva del programador es copiar una directiva existente y modificarla mediante los métodos `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a> ~ SchedulerPolicy 
 
  Destruye una directiva de programador.  
   
@@ -144,7 +148,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits">SetConcurrencyLimits</a> 
 
  Simultáneamente establece las directivas `MinConcurrency` y `MaxConcurrency` en el objeto `SchedulerPolicy`.  
   
@@ -166,7 +170,7 @@ void SetConcurrencyLimits(
   
  El método puede producir también [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) para otros valores no válidos.  
   
-##  <a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a> SetPolicyValue 
 
  Establece el valor de la clave de directiva proporcionado como el parámetro `key` y devuelve el valor anterior.  
   

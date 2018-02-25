@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token
@@ -16,19 +17,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs: C++
-helpviewer_keywords: cancellation_token class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token (Clase)
 La clase `cancellation_token` representa la capacidad para determinar si se ha solicitado la cancelación de alguna operación. Se puede asociar un determinado símbolo con un objeto `task_group`, `structured_task_group` o `task` para proporcionar una cancelación implícita. Este token también puede sondearse para la cancelación o puede hacer que se registre una devolución únicamente si se cancela el objeto `cancellation_token_source` asociado.  
@@ -45,8 +49,8 @@ class cancellation_token;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[cancellation_token)](#ctor)||  
-|[~ cancellation_token (destructor)](#dtor)||  
+|[cancellation_token](#ctor)||  
+|[~cancellation_token Destructor](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -70,17 +74,17 @@ class cancellation_token;
  `cancellation_token`  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** pplcancellation_token.h  
+ **Header:** pplcancellation_token.h  
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a> ~cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>cancellation_token) 
+##  <a name="ctor"></a> cancellation_token) 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -91,7 +95,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Parámetros  
  `_Src`  
   
-##  <a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a> deregister_callback 
 
  Quita una devolución de llamada registrada anteriormente mediante el método `register` basándose en el objeto `cancellation_token_registration` devuelto en el momento del registro.  
   
@@ -103,7 +107,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  Objeto `cancellation_token_registration` que se corresponde con la devolución de llamada cuyo registro se va a cancelar. Este símbolo se debe haber devuelto anteriormente desde una llamada al método `register`.  
   
-##  <a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a> is_cancelable 
 
  Devuelve una indicación de si este token se puede cancelar o no.  
   
@@ -114,7 +118,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>Valor devuelto  
  Indicación de si este token se puede cancelar o no.  
   
-##  <a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a> is_canceled 
 
  Devuelve `true` si el token se ha cancelado.  
   
@@ -125,7 +129,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Valor devuelto  
  El valor `true` si el token se ha cancelado; de lo contrario, el valor `false`.  
   
-##  <a name="none"></a>Ninguno 
+##  <a name="none"></a> Ninguno 
 
  Devuelve un token de cancelación que nunca puede estar sujeto a la cancelación.  
   
@@ -136,7 +140,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>Valor devuelto  
  Token de cancelación que no puede cancelarse.  
   
-##  <a name="operator_neq"></a>operador! = 
+##  <a name="operator_neq"></a> operador! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -160,7 +164,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="operator_eq_eq"></a>operador == 
+##  <a name="operator_eq_eq"></a> operador == 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -171,7 +175,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a> register_callback 
 
  Registra una función de devolución de llamada con el token. La devolución de llamada se realizará únicamente si se cancela el token. Observe que si el token ya se canceló en el punto en el que se llama a este método, la devolución de llamada se realizará inmediatamente y de forma sincrónica.  
   

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>Modelo de objetos OLE DB
 El modelo de objetos OLE DB consta de los siguientes objetos o componentes. Los primeros cuatro objetos o componentes (orígenes de datos, sesiones, comandos y conjuntos de filas) permiten conectarse a un origen de datos y verlo. El resto, a partir de los descriptores de acceso, se refieren a trabajar con los datos cuando se muestre.  
@@ -55,7 +57,7 @@ El modelo de objetos OLE DB consta de los siguientes objetos o componentes. Los 
 ## <a name="accessors"></a>Descriptores de acceso  
  Sólo OLE DB usa el concepto de descriptores de acceso. Un descriptor de acceso describe cómo se almacenan los datos en un consumidor. Contiene un conjunto de enlaces (denominado un mapa de columnas) entre campos de conjunto de filas (columnas) y los miembros de datos que se declaran en el consumidor.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transacciones  
+##  <a name="vcconoledbcomponents_transactions"></a> Transacciones  
  Objetos de transacción se utilizan al confirmar o anular transacciones anidadas en que no sea el nivel más bajo. Una transacción es una unidad de trabajo indivisible definida por la prueba ACID. El acrónimo ACID:  
   
 -   Atomicidad: no se puede dividir en unidades más pequeñas de trabajo.  

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>Reemplazar los valores predeterminados de servicio de un proveedor
 El valor del proveedor del registro para **OLEDB_SERVICES** se devuelve como el valor predeterminado para la [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) propiedad de inicialización en el objeto de origen de datos.  
@@ -33,9 +35,9 @@ El valor del proveedor del registro para **OLEDB_SERVICES** se devuelve como el 
 |Servicios predeterminados habilitados|Valor de la propiedad DBPROP_INIT_OLEDBSERVICES|Valor de cadena de conexión|  
 |------------------------------|------------------------------------------------|--------------------------------|  
 |Todos los servicios (valor predeterminado)|**DBPROPVAL_OS_ENABLEALL**|"Servicios OLE DB = -1;"|  
-|Todas excepto Pooling y AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|"Servicios OLE DB = de -4;"|  
-|Todos los servicios excepto Client Cursor|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_RESOURCEPOOLING**|"Servicios OLE DB = -5;"|  
-|Todos excepto Pooling, AutoEnlistment y Cursor de cliente|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING**|"Servicios OLE DB = -7;"|  
+|Todas excepto Pooling y AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"Servicios OLE DB = de -4;"|  
+|Todos los servicios excepto Client Cursor|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"Servicios OLE DB = -5;"|  
+|Todos excepto Pooling, AutoEnlistment y Cursor de cliente|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"Servicios OLE DB = -7;"|  
 |No hay servicios|~**DBPROPVAL_OS_ENABLEALL**|"Servicios OLE DB = 0;"|  
   
  Si la entrada del registro no existe para el proveedor, los administradores de componentes, no se agregan los objetos del proveedor y no se invocará ningún servicio, incluso si se solicita explícitamente por el usuario.  

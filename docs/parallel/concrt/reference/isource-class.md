@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ISource
 - AGENTS/concurrency::ISource
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::ISource::reserve
 - AGENTS/concurrency::ISource::unlink_target
 - AGENTS/concurrency::ISource::unlink_targets
-dev_langs: C++
-helpviewer_keywords: ISource class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6db1fe614de8a3f47bae989ccb26512c375cec50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="isource-class"></a>ISource (Clase)
 La clase `ISource` es la interfaz para todos los bloques de origen. Los bloques de origen propagan mensajes a los bloques `ITarget`.  
@@ -65,9 +69,9 @@ class ISource;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Aceptar](#accept)|Cuando se invalida en una clase derivada, acepta un mensaje que fue proporcionado por este `ISource` bloque, transferir la propiedad al llamador.|  
+|[accept](#accept)|Cuando se invalida en una clase derivada, acepta un mensaje que fue proporcionado por este `ISource` bloque, transferir la propiedad al llamador.|  
 |[acquire_ref](#acquire_ref)|Cuando se invalida en una clase derivada, adquiere un recuento de referencias en el objeto `ISource` bloque, para evitar la eliminación.|  
-|[consumir](#consume)|Cuando se invalida en una clase derivada, consume un mensaje ofrecido previamente por este `ISource` bloquear y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
+|[consume](#consume)|Cuando se invalida en una clase derivada, consume un mensaje ofrecido previamente por este `ISource` bloquear y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|  
 |[link_target](#link_target)|Cuando se invalida en una clase derivada, vincula un bloque de destino a esta `ISource` bloque.|  
 |[release](#release)|Cuando se invalida en una clase derivada, libera una reserva de mensaje correcto anterior.|  
 |[release_ref](#release_ref)|Cuando se reemplaza en una clase derivada, libera un recuento de referencias en el objeto `ISource` bloque.|  
@@ -86,7 +90,7 @@ class ISource;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="accept"></a>Aceptar 
+##  <a name="accept"></a> Aceptar 
 
  Cuando se invalida en una clase derivada, acepta un mensaje que fue proporcionado por este `ISource` bloque, transferir la propiedad al llamador.  
   
@@ -109,7 +113,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>Comentarios  
  El `accept` método se llama mediante un destino mientras se ofrece un mensaje por este `ISource` bloque. El puntero de mensaje devuelto puede ser diferente de la que se pasa a la `propagate` método de la `ITarget` bloquear, si este origen decide realizar una copia del mensaje.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  Cuando se invalida en una clase derivada, adquiere un recuento de referencias en el objeto `ISource` bloque, para evitar la eliminación.  
   
@@ -124,7 +128,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Comentarios  
  Este método es invocado por un `ITarget` objeto que se está vinculando a este origen durante el `link_target` método.  
   
-##  <a name="consume"></a>consumir 
+##  <a name="consume"></a> Consumir 
 
  Cuando se invalida en una clase derivada, consume un mensaje ofrecido previamente por este `ISource` bloquear y correctamente reservado por el destino, transfiriendo la propiedad al llamador.  
   
@@ -147,7 +151,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Comentarios  
  El `consume` método es similar a `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve `true`.  
   
-##  <a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  Destruye el objeto `ISource`.  
   
@@ -155,7 +159,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  Cuando se invalida en una clase derivada, vincula un bloque de destino a esta `ISource` bloque.  
   
@@ -167,7 +171,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Un puntero al bloque de destino que se vinculan a esta `ISource` bloque.  
   
-##  <a name="release"></a>la versión 
+##  <a name="release"></a> la versión 
 
  Cuando se invalida en una clase derivada, libera una reserva de mensaje correcto anterior.  
   
@@ -184,7 +188,7 @@ virtual void release(
  `_PTarget`  
  Un puntero al bloque de destino que llama a la `release` método.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  Cuando se reemplaza en una clase derivada, libera un recuento de referencias en el objeto `ISource` bloque.  
   
@@ -199,7 +203,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Comentarios  
  Este método es invocado por un `ITarget` objeto que se desvincula de este origen. El bloque de origen puede liberar cualquier recurso reservado para el bloque de destino.  
   
-##  <a name="reserve"></a>reservar 
+##  <a name="reserve"></a> reservar 
 
  Cuando se invalida en una clase derivada, reserva un mensaje ofrecido previamente por este `ISource` bloque.  
   
@@ -217,12 +221,12 @@ virtual bool reserve(
  Un puntero al bloque de destino que llama a la `reserve` método.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se reservó correctamente, `false` en caso contrario. Las reservas pueden tener errores por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas y así sucesivamente.  
+ `true` Si el mensaje se reservó correctamente, `false` en caso contrario. Las reservas pueden tener errores por diversos motivos, incluidos: el mensaje ya se ha reservado o aceptó por otro destino, el origen podría denegar reservas y así sucesivamente.  
   
 ### <a name="remarks"></a>Comentarios  
  Después de llamar a `reserve`, si se realiza correctamente, debe llamar a `consume` o `release` para aceptar o ceder la posesión del mensaje, respectivamente.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  Cuando se invalida en una clase derivada, desvincula un bloque de destino de este `ISource` bloquear, si se encuentra vinculado previamente.  
   
@@ -234,7 +238,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Un puntero al bloque de destino que se está desvinculando de este `ISource` bloque.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  Cuando se invalida en una clase derivada, desvincula todos los bloques de destino desde este `ISource` bloque.  
   

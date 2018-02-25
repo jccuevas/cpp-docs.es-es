@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITarget
 - AGENTS/concurrency::ITarget
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::ITarget::link_source
 - AGENTS/concurrency::ITarget::unlink_source
 - AGENTS/concurrency::ITarget::unlink_sources
-dev_langs: C++
-helpviewer_keywords: ITarget class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itarget-class"></a>ITarget (Clase)
 La clase `ITarget` es la interfaz para todos los bloques de destino. Los bloques de destinos consumen mensajes ofrecidos por los bloques `ISource`.  
@@ -63,7 +67,7 @@ class ITarget;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[propagar](#propagate)|Cuando se invalida en una clase derivada, forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
+|[propagate](#propagate)|Cuando se invalida en una clase derivada, forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.|  
 |[send](#send)|Cuando se invalida en una clase derivada, forma sincrónica, pasa un mensaje al bloque de destino.|  
 |[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, como el origen para identificarse en su registro de vínculo de sourse requiere que el consumo de un mensaje pospuesto en un momento posterior.|  
   
@@ -86,7 +90,7 @@ class ITarget;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="dtor"></a>~ ITarget 
+##  <a name="dtor"></a> ~ ITarget 
 
  Destruye el objeto `ITarget`.  
   
@@ -94,7 +98,7 @@ class ITarget;
 virtual ~ITarget();
 ```  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  Cuando se invalida en una clase derivada, vincula un bloque de origen especificado a este `ITarget` bloque.  
   
@@ -109,7 +113,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Comentarios  
  Esta función no debe llamarse directamente en un `ITarget` bloque. Bloques deberían estar conectados entre sí mediante el `link_target` método en `ISource` bloques, que invocarán el `link_source` método en el destino correspondiente.  
   
-##  <a name="propagate"></a>propagar 
+##  <a name="propagate"></a> propagar 
 
  Cuando se invalida en una clase derivada, forma asincrónica, pasa un mensaje desde un bloque de origen a este bloque de destino.  
   
@@ -132,7 +136,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>Comentarios  
  El método produce una [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el `_PMessage` o `_PSource` parámetro es `NULL`.  
   
-##  <a name="send"></a>Enviar 
+##  <a name="send"></a> Enviar 
 
  Cuando se invalida en una clase derivada, forma sincrónica, pasa un mensaje al bloque de destino.  
   
@@ -159,7 +163,7 @@ virtual message_status send(
   
  Cuando `send` devuelve el mensaje ya se ha aceptado y transferido en el bloque de destino, o ha sido rechazada por el destino.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Cuando se invalida en una clase derivada, devuelve true o false, según si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si el método invalidado devuelve `true`, el destino no puede posponer un mensaje proporcionado, como el origen para identificarse en su registro de vínculo de sourse requiere que el consumo de un mensaje pospuesto en un momento posterior.  
   
@@ -168,9 +172,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el bloque puede aceptar el mensaje de un origen que no está vinculado a él `false` en caso contrario.  
+ `true` Si el bloque puede aceptar el mensaje de un origen que no está vinculado a él `false` en caso contrario.  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  Cuando se invalida en una clase derivada, desvincula un bloque de origen especificado desde este `ITarget` bloque.  
   
@@ -185,7 +189,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Comentarios  
  Esta función no debe llamarse directamente en un `ITarget` bloque. Los bloques deberían estar desconectados usando la `unlink_target` o `unlink_targets` métodos en `ISource` bloques, que se va a invocar la `unlink_source` método en el destino correspondiente.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  Cuando se invalida en una clase derivada, desvincula todos los bloques de origen desde este `ITarget` bloque.  
   

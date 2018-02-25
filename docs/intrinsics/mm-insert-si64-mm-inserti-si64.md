@@ -1,31 +1,34 @@
 ---
-title: _mm_insert_si64, _mm_inserti_si64 | Documentos de Microsoft
+title: _mm_insert_si64, _mm_inserti_si64 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - insertq instruction
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc85f56660702afe1c05f3626b3b28b0b566dbd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Específicos de Microsoft**  
@@ -51,13 +54,13 @@ __m128i _mm_inserti_si64(
  [in] `Source1`  
  Un campo de 128 bits con datos de entrada en sus en la que se insertará un campo de 64 bits inferiores.  
   
- [in]`Source2`  
+ [in]  `Source2`  
  Un campo de 128 bits con los datos que se va a insertar en sus bits inferiores.  Para `_mm_insert_si64`, también contiene un descriptor de campo en sus bits superiores.  
   
- [in]`Length`  
+ [in]  `Length`  
  Una constante entera que especifica la longitud del campo que desea insertar.  
   
- [in]`Index`  
+ [in]  `Index`  
  Una constante entera que especifica el índice del bit menos significativo del campo en el que se van a insertar datos.  
   
 ## <a name="return-value"></a>Valor devuelto  

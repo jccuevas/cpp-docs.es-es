@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
 - filesystem/std::experimental::filesystem::recursive_directory_iterator
@@ -14,18 +15,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 33bd15fd39f6087ddd30df23a983e5e00d403b49
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 Incluya el encabezado &lt;filesystem> para tener acceso a las clases y funciones con las que se manipula y recupera información sobre las rutas de acceso, los archivos y los directorios.  
@@ -127,7 +130,7 @@ using namespace std::experimental::filesystem::v1;
 |nombre|Descripción|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se usa con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) y determina el comportamiento si ya existe un archivo de destino.|  
-|[directory_options)](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|  
 |[en permisos](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|  
   

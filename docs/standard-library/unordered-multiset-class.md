@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::unordered_multiset
 - unordered_set/std::unordered_multiset::operator=
 - unordered_set/std::unordered_multiset::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_multiset
 - std::unordered_multiset::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a958bf441809da24b317b777fd2f79946f3dc727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ca20b6f1e0c9fe44d234c7622d780e34142f6b6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset (Clase)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `const Key`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento actúa como clave de ordenación y como valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.  
@@ -200,7 +203,7 @@ class unordered_multiset;
 |-|-|  
 |Función miembro|Descripción|  
 |[begin](#begin)|Designa el principio de la secuencia controlada.|  
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|  
+|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|  
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|  
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|  
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|  
@@ -222,7 +225,7 @@ class unordered_multiset;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|  
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|  
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|  
-|[rehash)](#rehash)|Recompila la tabla hash.|  
+|[rehash](#rehash)|Recompila la tabla hash.|  
 |[size](#size)|Cuenta el número de elementos.|  
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|  
 |[unordered_multiset](#unordered_multiset)|Construye un objeto contenedor.|  

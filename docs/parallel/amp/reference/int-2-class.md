@@ -1,12 +1,13 @@
 ---
-title: int_2 (clase) | Documentos de Microsoft
+title: int_2 Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
 - amp_short_vectors/Concurrency::graphics::int_2::set_x
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::set_xy
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 57b6903568f635ec2f92512c922fc7c8460e7d07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5abe11c29263817c8530d01fb3e190ba5866326
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="int2-class"></a>int_2 (Clase)
 Representa un vector corto de dos enteros.  
@@ -67,44 +70,44 @@ class int_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Constructor int_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[int_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|int_2:: get_X||  
-|int_2:: get_xy||  
-|int_2:: get_Y||  
-|int_2:: get_yx||  
-|int_2:: ref_g||  
-|int_2:: ref_r||  
-|int_2:: ref_x||  
-|int_2:: ref_y||  
-|int_2:: set_X||  
-|int_2:: set_xy||  
-|int_2:: set_y||  
-|int_2:: set_yx||  
+|int_2::get_x||  
+|int_2::get_xy||  
+|int_2::get_y||  
+|int_2::get_yx||  
+|int_2::ref_g||  
+|int_2::ref_r||  
+|int_2::ref_x||  
+|int_2::ref_y||  
+|int_2::set_x||  
+|int_2::set_xy||  
+|int_2::set_y||  
+|int_2::set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|int_2:: operator-||  
-|int_2:: operator--||  
-|int_2:: operator % =||  
-|int_2:: operator & =||  
-|int_2:: operator * =||  
-|int_2:: operator / =||  
-|int_2:: operator ^ =||  
-|int_2:: operator &#124; =||  
-|operador int_2:: ~||  
-|int_2:: operator ++||  
-|int_2:: operator +=||  
-|int_2:: operator <\<=||  
-|int_2:: operator =||  
-|int_2:: operator =||  
-|operador int_2:: >> =||  
+|int_2::operator-||  
+|int_2::operator--||  
+|int_2::operator%=||  
+|int_2::operator&=||  
+|int_2::operator*=||  
+|int_2::operator/=||  
+|int_2::operator^=||  
+|int_2::operator&#124;=||  
+|int_2::operator~||  
+|int_2::operator++||  
+|int_2::operator+=||  
+|int_2::operator<\<=||  
+|int_2::operator=||  
+|int_2::operator-=||  
+|int_2::operator>>=||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -116,14 +119,14 @@ class int_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|int_2:: g||  
-|int_2:: GR||  
-|int_2:: r||  
-|int_2:: RG||  
-|int_2:: x||  
-|int_2:: XY||  
-|int_2:: y||  
-|int_2:: YX||  
+|int_2::g||  
+|int_2::gr||  
+|int_2::r||  
+|int_2::rg||  
+|int_2::x||  
+|int_2::xy||  
+|int_2::y||  
+|int_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `int_2`  
@@ -133,7 +136,7 @@ class int_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>int_2 
+##  <a name="ctor"></a> int_2 
 
  El constructor predeterminado, inicializa todos los elementos con 0.  
   
@@ -196,7 +199,7 @@ explicit inline int_2(
  `_Other`  
  El objeto utilizado para inicializar.  
   
-##  <a name="int_2__size"></a>tamaño 
+##  <a name="int_2__size"></a> Tamaño 
 
 ```  
 static const int size = 2;  

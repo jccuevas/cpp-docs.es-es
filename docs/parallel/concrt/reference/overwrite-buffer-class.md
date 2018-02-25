@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - overwrite_buffer
 - AGENTS/concurrency::overwrite_buffer
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::overwrite_buffer::resume_propagation
 - AGENTS/concurrency::overwrite_buffer::send_message
 - AGENTS/concurrency::overwrite_buffer::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: overwrite_buffer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overwritebuffer-class"></a>Clase overwrite_buffer
 Un bloque de mensajería `overwrite_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado que es capaz de almacenar un único mensaje cada vez. Los nuevos mensajes sobrescriben a los retenidos previamente.  
@@ -58,7 +62,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Name|Descripción|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Sobrecargado. Construye un `overwrite_buffer` bloque de mensajería.|  
-|[~ overwrite_buffer (destructor)](#dtor)|Destruye el `overwrite_buffer` bloque de mensajería.|  
+|[~overwrite_buffer Destructor](#dtor)|Destruye el `overwrite_buffer` bloque de mensajería.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -80,7 +84,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |[reserve_message](#reserve_message)|Reserva un mensaje ofrecido previamente por este `overwrite_buffer` bloque de mensajería. (Invalida [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reanuda la propagación después de que se ha liberado una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
 |[send_message](#send_message)|Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `overwrite_buffer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Invalida [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Overrides [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Comentarios  
  Un `overwrite_buffer` bloque de mensajería propaga las copias de su mensaje almacenado a cada uno de sus destinos.  
@@ -92,9 +96,9 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  [ITarget](itarget-class.md)  
   
- [source_block)](source-block-class.md)  
+ [source_block](source-block-class.md)  
   
- [propagator_block)](propagator-block-class.md)  
+ [propagator_block](propagator-block-class.md)  
   
  `overwrite_buffer`  
   
@@ -103,7 +107,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Acepta un mensaje que fue proporcionado por este `overwrite_buffer` bloque de mensajería, devolviendo una copia del mensaje al llamador.  
   
@@ -121,7 +125,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Comentarios  
  El `overwrite_buffer` mensajería bloque devuelve copias del mensaje con sus destinos, en lugar de transferir la propiedad del mensaje actualmente retenido.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Consume un mensaje proporcionado anteriormente por el `overwrite_buffer` bloque de mensajería y reservado por el destino, devolviendo una copia del mensaje al llamador.  
   
@@ -139,7 +143,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Comentarios  
  Similar a `accept`, pero siempre va precedido por una llamada a `reserve`.  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  Comprueba si este `overwrite_buffer` bloque de mensajería aún tiene un valor.  
   
@@ -148,9 +152,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el bloque ha recibido un valor `false` en caso contrario.  
+ `true` Si el bloque ha recibido un valor `false` en caso contrario.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Una devolución de llamada que notifica que se ha vinculado un nuevo destino a este `overwrite_buffer` bloque de mensajería.  
   
@@ -162,7 +166,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Un puntero al destino recién vinculado.  
   
-##  <a name="dtor"></a>~ overwrite_buffer 
+##  <a name="dtor"></a> ~overwrite_buffer 
 
  Destruye el `overwrite_buffer` bloque de mensajería.  
   
@@ -170,7 +174,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ~overwrite_buffer();
 ```  
   
-##  <a name="ctor"></a>overwrite_buffer 
+##  <a name="ctor"></a> overwrite_buffer 
 
  Construye un `overwrite_buffer` bloque de mensajería.  
   
@@ -210,7 +214,7 @@ overwrite_buffer(
   
  El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `overwrite_buffer` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `overwrite_buffer` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.  
   
@@ -230,7 +234,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valor devuelto  
  A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Coloca el `message _PMessage` en este `overwrite_buffer` bloque de mensajería y ofrece a todos los destinos vinculados.  
   
@@ -245,7 +249,7 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ### <a name="remarks"></a>Comentarios  
  Este método sobrescribe el mensaje actual de la `overwrite_buffer` con el mensaje recién aceptado `_PMessage`.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `overwrite_buffer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.  
   
@@ -265,7 +269,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valor devuelto  
  A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado.  
   
@@ -274,9 +278,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Dado que el bloque no posponer mensajes que se ofrecen.  
+ `true` Dado que el bloque no posponer mensajes que se ofrecen.  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Libera una reserva de mensaje anterior.  
   
@@ -288,7 +292,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  El `runtime_object_identity` de la `message` del objeto que se libera.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Reserva un mensaje ofrecido previamente por este `overwrite_buffer` bloque de mensajería.  
   
@@ -301,12 +305,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  El `runtime_object_identity` de la `message` objeto va a reservar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se reservó correctamente, `false` en caso contrario.  
+ `true` Si el mensaje se reservó correctamente, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Reanuda la propagación después de que se ha liberado una reserva.  
   
@@ -314,7 +318,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="value"></a>valor 
+##  <a name="value"></a> Valor 
 
  Obtiene una referencia a la carga actual del mensaje que se almacena en la `overwrite_buffer` bloque de mensajería.  
   

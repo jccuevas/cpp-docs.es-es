@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::promise
 - future/std::promise::promise
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6673483beb2552ba1b3a11b76d65e9be484c2a39
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="promise-class"></a>promise (Clase)
 Describe un *proveedor asincrónico*.  
@@ -54,7 +57,7 @@ class promise;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Promise](#promise)|Construye un objeto `promise`.|  
+|[promise](#promise)|Construye un objeto `promise`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -63,7 +66,7 @@ class promise;
 |[get_future](#get_future)|Devuelve un objeto [future](../standard-library/future-class.md) asociado a este compromiso.|  
 |[set_exception](#set_exception)|Establece de forma atómica el resultado de este compromiso para indicar una excepción.|  
 |[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Establece de forma atómica el resultado de este compromiso para indicar una excepción y entrega la notificación solo después de que se hayan destruido todos los objetos del subproceso local del subproceso actual (normalmente al salir del subproceso).|  
-|[set_Value](#set_value)|Establece de forma atómica el resultado de este compromiso para indicar un valor.|  
+|[set_value](#set_value)|Establece de forma atómica el resultado de este compromiso para indicar un valor.|  
 |[set_value_at_thread_exit](#set_value_at_thread_exit)|Establece de forma atómica el resultado de este compromiso para indicar un valor y entrega la notificación solo después de que se hayan destruido todos los objetos del subproceso local del subproceso actual (normalmente al salir del subproceso).|  
 |[swap](#swap)|Intercambia el *estado asincrónico asociado* de este compromiso con el de un objeto promise especificado.|  
   

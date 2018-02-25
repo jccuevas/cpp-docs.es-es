@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock (Clase)
 Contenedor RAII para un bloqueo de acceso de D3D en un objeto accelerator_view.  
@@ -39,8 +42,8 @@ class scoped_d3d_access_lock;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Constructor scoped_d3d_access_lock](#ctor)|Sobrecargado. Construye un objeto `scoped_d3d_access_lock`. El bloqueo se libera cuando este objeto se sale del ámbito.|  
-|[~ scoped_d3d_access_lock (destructor)](#dtor)|Libera el bloqueo de acceso de D3D en asociado `accelerator_view` objeto.|  
+|[scoped_d3d_access_lock Constructor](#ctor)|Sobrecargado. Construye un objeto `scoped_d3d_access_lock`. El bloqueo se libera cuando este objeto se sale del ámbito.|  
+|[~scoped_d3d_access_lock Destructor](#dtor)|Libera el bloqueo de acceso de D3D en asociado `accelerator_view` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** concurrency::direct3d  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  Construye un objeto `scoped_d3d_access_lock`. El bloqueo se libera cuando este objeto se sale del ámbito.  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  Toma un bloqueo de acceso de D3D existente desde otro `scoped_d3d_access_lock` objeto. No impide la construcción.  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  Libera el bloqueo de acceso de D3D en asociado `accelerator_view` objeto.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>operador = 
+## <a name="operator_eq"></a> operador = 
 
 Toma posesión de un bloqueo de acceso de D3D desde otro `scoped_d3d_access_lock` objeto, lo que libera el bloqueo anterior.  
  

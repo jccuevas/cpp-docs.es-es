@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 Antes de abrir el conjunto de filas, se debe indicar al proveedor que desea usar marcadores. Para ello, establezca la **DBPROP_BOOKMARKS** propiedad **true** en conjunto de sus propiedades. El proveedor recupera los marcadores como columna cero, por lo que debe usar la macro especial `BOOKMARK_ENTRY` y `CBookmark` clase si está utilizando un descriptor de acceso estático. `CBookmark` es una clase de plantilla donde el argumento es la longitud en bytes del búfer del marcador. La longitud del búfer necesario para un marcador depende del proveedor. Si está utilizando el proveedor OLE DB de ODBC, como se muestra en el ejemplo siguiente, el búfer debe ser de 4 bytes.  

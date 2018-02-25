@@ -1,12 +1,13 @@
 ---
-title: norm_2 (clase) | Documentos de Microsoft
+title: norm_2 Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
 - amp_short_vectors/Concurrency::graphics::norm_2::set_xy
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm2-class"></a>norm_2 (Clase)
 Representa un vector corto de dos números normales.  
@@ -67,37 +70,37 @@ class norm_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Constructor norm_2](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
+|[norm_2 Constructor](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|norm_2:: get_X||  
-|norm_2:: get_xy||  
-|norm_2:: get_Y||  
-|norm_2:: get_yx||  
-|norm_2:: ref_g||  
-|norm_2:: ref_r||  
-|norm_2:: ref_x||  
-|norm_2:: ref_y||  
-|norm_2:: set_X||  
-|norm_2:: set_xy||  
-|norm_2:: set_y||  
-|norm_2:: set_yx||  
+|norm_2::get_x||  
+|norm_2::get_xy||  
+|norm_2::get_y||  
+|norm_2::get_yx||  
+|norm_2::ref_g||  
+|norm_2::ref_r||  
+|norm_2::ref_x||  
+|norm_2::ref_y||  
+|norm_2::set_x||  
+|norm_2::set_xy||  
+|norm_2::set_y||  
+|norm_2::set_yx||  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|norm_2:: operator-||  
-|norm_2:: operator--||  
-|norm_2:: operator * =||  
-|norm_2:: operator / =||  
-|norm_2:: operator ++||  
-|norm_2:: operator +=||  
-|norm_2:: operator =||  
-|norm_2:: operator =||  
+|norm_2::operator-||  
+|norm_2::operator--||  
+|norm_2::operator*=||  
+|norm_2::operator/=||  
+|norm_2::operator++||  
+|norm_2::operator+=||  
+|norm_2::operator=||  
+|norm_2::operator-=||  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -109,14 +112,14 @@ class norm_2;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|norm_2:: g||  
-|norm_2:: GR||  
-|norm_2:: r||  
-|norm_2:: RG||  
-|norm_2:: x||  
-|norm_2:: XY||  
-|norm_2:: y||  
-|norm_2:: YX||  
+|norm_2::g||  
+|norm_2::gr||  
+|norm_2::r||  
+|norm_2::rg||  
+|norm_2::x||  
+|norm_2::xy||  
+|norm_2::y||  
+|norm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `norm_2`  
@@ -126,7 +129,7 @@ class norm_2;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>norm_2 
+##  <a name="ctor"></a> norm_2 
 
  El constructor predeterminado, inicializa todos los elementos con 0.  
   
@@ -206,7 +209,7 @@ explicit inline norm_2(
  `_Other`  
  El objeto utilizado para inicializar.  
   
-##  <a name="norm_2__size"></a>tamaño 
+##  <a name="norm_2__size"></a> Tamaño 
 
 ```  
 static const int size = 2;  

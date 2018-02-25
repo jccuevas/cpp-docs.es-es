@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6049d92ab2ca1f7f724f3e27037c5df5c4304ea6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usar operadores de inserción y controlar el formato
 En este tema se muestra cómo controlar el formato y cómo crear operadores de inserción para las clases propias. El operador de inserción (**<<**), que está preprogramado para todos los tipos de datos estándar de C++, envía bytes a un objeto de flujo de salida. Los operadores de inserción trabajan con "manipuladores" predefinidos, que son elementos que cambian el formato predeterminado de argumentos de entero.  

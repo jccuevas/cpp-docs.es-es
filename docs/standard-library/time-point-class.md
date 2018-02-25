@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], time_point
-ms.workload: cplusplus
-ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], time_point
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d81f49fd94dcedacfe33de75e307a441f74a94e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timepoint-class"></a>time_point (Clase)
 `time_point` describe un tipo que representa un punto en el tiempo. Contiene un objeto de tipo [duration](../standard-library/duration-class.md) que almacena el tiempo transcurrido desde la época representada por el argumento de plantilla `Clock`.  
@@ -75,7 +79,7 @@ class time_point;
   
  **Espacio de nombres:** std::chrono  
   
-##  <a name="max"></a>time_point:: max
+##  <a name="max"></a>  time_point::max
  Método estático que devuelve el límite superior para los valores de tipo `time_point::ref`.  
   
 ```  
@@ -85,7 +89,7 @@ static constexpr time_point max();
 ### <a name="return-value"></a>Valor devuelto  
  En efecto, devuelve `time_point(duration::max())`.  
   
-##  <a name="min"></a>time_point:: min
+##  <a name="min"></a>  time_point::min
  Método estático que devuelve el límite inferior para valores de tipo `time_point::ref`.  
   
 ```  
@@ -149,7 +153,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
   
  El tercer constructor inicializa su valor `duration` mediante `Tp.time_since_epoch()`.  
   
-##  <a name="time_since_epoch"></a>time_point:: time_since_epoch
+##  <a name="time_since_epoch"></a>  time_point::time_since_epoch
  Recupera el valor [duration](../standard-library/duration-class.md) almacenado.  
   
 ```  

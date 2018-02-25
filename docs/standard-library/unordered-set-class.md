@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -53,7 +54,8 @@ f1_keywords:
 - unordered_set/std::unordered_set::unordered_set
 - unordered_set/std::unordered_set::operator=
 - unordered_set/std::unordered_set::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_set
 - std::unordered_set::allocator_type
@@ -141,16 +143,17 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70b9f8541601cc2d91cf2e43fbb66110302488be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedset-class"></a>unordered_set (Clase)
 La clase de plantilla describe un objeto que controla una secuencia de longitud variable de elementos de tipo `const Key`. La secuencia está ordenada débilmente por una función hash, que divide la secuencia en un conjunto ordenado subsecuencias denominadas depósitos. Dentro de cada depósito una función de comparación determina si algún par de elementos tiene una ordenación equivalente. Cada elemento actúa como clave de ordenación y como valor. La secuencia se representan de tal forma que permite la búsqueda, inserción y eliminación de un elemento arbitrario con una serie de operaciones que pueden ser independientes del número de elementos de la secuencia (tiempo constante), al menos cuando todos los depósitos tienen una longitud aproximadamente igual. En el peor de los casos, cuando todos los elementos están en un depósito, el número de operaciones es proporcional al número de elementos de la secuencia (tiempo lineal). Además, la inserción de un elemento no invalida ningún iterador y al quitar un elemento solo se invalidan los iteradores que apuntan al elemento quitado.  
@@ -201,7 +204,7 @@ class unordered_set;
 |-|-|  
 |Función miembro|Descripción|  
 |[begin](#begin)|Designa el principio de la secuencia controlada.|  
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|  
+|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|  
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|  
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|  
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|  
@@ -223,7 +226,7 @@ class unordered_set;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|  
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|  
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|  
-|[rehash)](#rehash)|Recompila la tabla hash.|  
+|[rehash](#rehash)|Recompila la tabla hash.|  
 |[size](#size)|Cuenta el número de elementos.|  
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|  
 |[unordered_set](#unordered_set)|Construye un objeto contenedor.|  

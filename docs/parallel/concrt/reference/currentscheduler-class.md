@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -20,19 +21,22 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: CurrentScheduler class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler (Clase)
 Representa una abstracción para el programador actual asociado al contexto de la llamada.  
@@ -55,7 +59,7 @@ class CurrentScheduler;
 |[Get](#get)|Devuelve un puntero al programador asociado con el contexto de la llamada, que también se denomina el programador actual.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Devuelve el número actual de procesadores virtuales para el programador asociado con el contexto de llamada.|  
 |[GetPolicy](#getpolicy)|Devuelve una copia de la directiva que se creó el programador actual con.|  
-|[Id.](#id)|Devuelve un identificador único para el programador actual.|  
+|[Id](#id)|Devuelve un identificador único para el programador actual.|  
 |[IsAvailableLocation](#isavailablelocation)|Determina si una ubicación especificada está disponible en el programador actual.|  
 |[RegisterShutdownEvent](#registershutdownevent)|Hace que el controlador de eventos de Windows pasa el `_ShutdownEvent` parámetro hasta que se señaliza cuando el programador asociado al contexto actual se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Se pueden registrar varios eventos de apagado a través de este método.|  
 |[ScheduleTask](#scheduletask)|Sobrecargado. Programa una tarea ligera dentro del programador asociado al contexto llamado. La tarea ligera se colocarán en un grupo de programación determinado por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina a ejecutar en la ubicación especificada.|  
@@ -71,7 +75,7 @@ class CurrentScheduler;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="create"></a>Crear 
+##  <a name="create">Crear</a> 
 
  Crea un nuevo programador cuyo comportamiento se describe en el `_Policy` parámetro y lo adjunta al contexto de la llamada. El programador creado recientemente se convertirá en el programador actual para el contexto de llamada.  
   
@@ -92,7 +96,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  Este método puede producir una variedad de excepciones, incluida la [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) y [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
-##  <a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a> CreateScheduleGroup 
 
  Crea un nuevo grupo de programación dentro del programador asociado al contexto llamado. La versión que toma el parámetro `_Placement` hace que las tareas dentro del grupo de programación recién creado para ser inclinación hacia la ejecución en la ubicación especificada por ese parámetro.  
   
@@ -116,7 +120,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  Tenga en cuenta que si creó a este programador explícitamente, debe liberar todas las referencias para programar grupos dentro de él, antes de liberar su referencia en el programador, separando el contexto actual de ella.  
   
-##  <a name="detach"></a>Desconectar 
+##  <a name="detach"></a> Desconectar 
 
  Desasocia al programador actual desde el contexto de llamada y restaura al programador asociado anteriormente como programador actual, si existe alguno. Después de que devuelve este método, el contexto de llamada es administrado por el programador que se ha adjuntado previamente en el contexto utilizando la `CurrentScheduler::Create` o `Scheduler::Attach` método.  
   
@@ -131,7 +135,7 @@ static void __cdecl Detach();
   
  Llamar a este método desde un contexto que es interno y administrados por un programador, o en un contexto que estaba conectado con un método distinto de la [Scheduler:: Attach](scheduler-class.md#attach) o [CurrentScheduler:: Create](#create) métodos, dará como resultado un [improper_scheduler_detach](improper-scheduler-detach-class.md) excepción producida.  
   
-##  <a name="get"></a>Obtener 
+##  <a name="get"></a> Obtener 
 
  Devuelve un puntero al programador asociado con el contexto de la llamada, que también se denomina el programador actual.  
   
@@ -145,7 +149,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada. Ninguna referencia adicional se coloca en el `Scheduler` objeto devuelto por este método.  
   
-##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
 
  Devuelve el número actual de procesadores virtuales para el programador asociado con el contexto de llamada.  
   
@@ -161,7 +165,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  El valor devuelto de este método es un muestreo instantáneo del número de procesadores virtuales para el programador asociado con el contexto de llamada. Este valor puede ser obsoleto en el momento en que se devuelve.  
   
-##  <a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a> GetPolicy 
 
  Devuelve una copia de la directiva que se creó el programador actual con.  
   
@@ -175,7 +179,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada.  
   
-##  <a name="id"></a>Id. 
+##  <a name="id"></a> Id 
 
  Devuelve un identificador único para el programador actual.  
   
@@ -189,7 +193,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>Comentarios  
  Este método no producirá datos adjuntos de programador si el contexto de llamada ya no está asociado a un programador.  
   
-##  <a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a> IsAvailableLocation 
 
  Determina si una ubicación especificada está disponible en el programador actual.  
   
@@ -209,7 +213,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  Tenga en cuenta que el valor devuelto es un muestreo instantáneo de si está disponible la ubicación dada. En presencia de varios programadores, administración dinámica de recursos puede agregar o quitar recursos de programadores en cualquier momento. Esto sucederá, la ubicación dada puede cambiar la disponibilidad.  
   
-##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a> RegisterShutdownEvent 
 
  Hace que el controlador de eventos de Windows pasa el `_ShutdownEvent` parámetro hasta que se señaliza cuando el programador asociado al contexto actual se cierra y se destruye. En el momento en que se señala el evento, todo el trabajo que está programado para el programador está completando. Se pueden registrar varios eventos de apagado a través de este método.  
   
@@ -224,7 +228,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Comentarios  
  Si no hay ningún programador adjuntado al contexto de la llamada, llamar a este método dará como resultado un [scheduler_not_attached](scheduler-not-attached-class.md) excepción producida.  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Programa una tarea ligera dentro del programador asociado al contexto llamado. La tarea ligera se colocarán en un grupo de programación determinado por el tiempo de ejecución. La versión que toma el parámetro `_Placement` hace que la tarea se inclina a ejecutar en la ubicación especificada.  
   

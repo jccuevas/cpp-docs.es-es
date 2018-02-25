@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Context
 - CONCRT/concurrency::Context
@@ -23,19 +24,22 @@ f1_keywords:
 - CONCRT/concurrency::Context::Unblock
 - CONCRT/concurrency::Context::VirtualProcessorId
 - CONCRT/concurrency::Context::Yield
-dev_langs: C++
-helpviewer_keywords: Context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a15b041f638312081417daae8c800647fbfb7d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="context-class"></a>Context (Clase)
 Representa una abstracción para un contexto de ejecución.  
@@ -63,12 +67,12 @@ class Context;
 |[GetId](#getid)|Devuelve un identificador para el contexto que es único dentro del programador al que pertenece el contexto.|  
 |[GetScheduleGroupId](#getschedulegroupid)|Devuelve un identificador para el grupo de programación en el que el contexto está trabajando actualmente.|  
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Devuelve un identificador para el procesador virtual en el que el contexto se está ejecutando actualmente.|  
-|[Id.](#id)|Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.|  
+|[Id](#id)|Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Devuelve una indicación de si la colección de tareas que actualmente se ejecuta alineada en el contexto actual, está en medio de una cancelación activa (o lo estará pronto).|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina si el contexto está o no bloqueado de forma sincrónica. Se considera que un contexto está bloqueado de forma sincrónica si realizó una acción que condujo al bloqueo explícitamente.|  
 |[Suscribir en exceso](#oversubscribe)|Inserta un procesador virtual adicional en un programador para la duración de un bloque de código cuando se invoca en un contexto que se ejecuta en uno de los procesadores virtuales de ese programador.|  
 |[ScheduleGroupId](#schedulegroupid)|Devuelve un identificador para el grupo de programación en el que el contexto actual está trabajando.|  
-|[Desbloquear](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|  
+|[Unblock](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|  
 |[VirtualProcessorId](#virtualprocessorid)|Devuelve un identificador para el procesador virtual en el que el contexto actual se está ejecutando.|  
 |[Yield](#yield)|Genera la ejecución para que otro contexto se pueda ejecutar. Si no hay ningún otro contexto disponible para dar prioridad, el programador puede dar prioridad a otro subproceso del sistema operativo.|  
   
@@ -87,7 +91,7 @@ class Context;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="block"></a>Bloque 
+##  <a name="block"></a> Bloque 
 
  Bloquea el contexto actual.  
   
@@ -104,13 +108,13 @@ static void __cdecl Block();
   
  Este método puede producir una variedad de excepciones, incluida la [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="dtor"></a>~ Contexto 
+##  <a name="dtor"></a> ~ Contexto 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a> CurrentContext 
 
  Devuelve un puntero al contexto actual.  
   
@@ -124,7 +128,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada.  
   
-##  <a name="getid"></a>GetId 
+##  <a name="getid"></a> GetId 
 
  Devuelve un identificador para el contexto que es único dentro del programador al que pertenece el contexto.  
   
@@ -135,7 +139,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador para el contexto que es único dentro del programador al que pertenece el contexto.  
   
-##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a> GetScheduleGroupId 
 
  Devuelve un identificador para el grupo de programación en el que el contexto está trabajando actualmente.  
   
@@ -149,7 +153,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>Comentarios  
  El valor devuelto de este método es un muestreo instantáneo del grupo de programación que se está ejecutando el contexto. Si se llama a este método en un contexto distinto del contexto actual, el valor puede ser obsoleto el momento en que se devuelve y no se puede confiar en ellos. Normalmente, este método se utiliza para depurar o solo con fines de seguimiento.  
   
-##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId 
 
  Devuelve un identificador para el procesador virtual en el que el contexto se está ejecutando actualmente.  
   
@@ -163,7 +167,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>Comentarios  
  El valor devuelto de este método es un muestreo instantáneo del procesador virtual que se está ejecutando el contexto. Este valor puede ser obsoleto en el momento en que se devuelve y no se puede confiar en ellos. Normalmente, este método se utiliza para depurar o solo con fines de seguimiento.  
   
-##  <a name="id"></a>Id. 
+##  <a name="id"></a> Id 
 
  Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.  
   
@@ -174,7 +178,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>Valor devuelto  
  Si el contexto actual se adjunta a un programador, un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual; en caso contrario, el valor `-1`.  
   
-##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling 
 
  Devuelve una indicación de si la colección de tareas que actualmente se ejecuta alineada en el contexto actual, está en medio de una cancelación activa (o lo estará pronto).  
   
@@ -185,7 +189,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>Valor devuelto  
  Si un programador se adjunta al contexto de la llamada y un grupo de tareas se está ejecutando una tarea insertada en ese contexto, una indicación de si ese grupo de tareas está en medio de una cancelación activa (o estará pronto); en caso contrario, el valor `false`.  
   
-##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked 
 
  Determina si el contexto está o no bloqueado de forma sincrónica. Se considera que un contexto está bloqueado de forma sincrónica si realizó una acción que condujo al bloqueo explícitamente.  
   
@@ -201,7 +205,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  El valor devuelto de este método es un muestreo instantáneo de si el contexto está bloqueado de forma sincrónica. Este valor puede estar obsoleto en el momento en que se devuelve y solo puede utilizarse en circunstancias muy específicas.  
   
-##  <a name="operator_delete"></a>operador delete 
+##  <a name="operator_delete"></a> operador delete 
 
  Un `Context` objeto sea destruido internamente por el tiempo de ejecución. Se puede no eliminarse explícitamente.  
   
@@ -213,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Un puntero al objeto que se va a eliminar.  
   
-##  <a name="oversubscribe"></a>Suscribir en exceso 
+##  <a name="oversubscribe">Suscribir en exceso</a> 
 
  Inserta un procesador virtual adicional en un programador para la duración de un bloque de código cuando se invoca en un contexto que se ejecuta en uno de los procesadores virtuales de ese programador.  
   
@@ -225,7 +229,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  Si `true`, un valor que indica que se debe agregar un procesador virtual extra para la duración de la suscripción excesiva. Si `false`, una indicación de que debe finalizar la suscripción excesiva y se debe quitar el procesador virtual previamente agregado.  
   
-##  <a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a> ScheduleGroupId 
 
  Devuelve un identificador para el grupo de programación en el que el contexto actual está trabajando.  
   
@@ -236,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Valor devuelto  
  Si el contexto actual se adjunta a un programador trabajando en un grupo de programación, un identificador para el programador de grupos y que el contexto actual está trabajando; en caso contrario, el valor `-1`.  
   
-##  <a name="unblock"></a>Desbloquear 
+##  <a name="unblock"></a> Desbloquear 
 
  Desbloquea el contexto y hace que se convierta en ejecutable.  
   
@@ -251,7 +255,7 @@ virtual void Unblock() = 0;
   
  Tenga en cuenta que hay un período crítico entre el punto donde su código publica su contexto para que otro subproceso pueda llamar a la `Unblock` método y el punto donde el método real al `Block` se realiza. Durante este período, no debe llamar a cualquier método que a su vez puede bloquear y desbloquear por sus propias razones (por ejemplo, si se adquiere un bloqueo). Llamadas a la `Block` y `Unblock` método no realiza el seguimiento de la razón para el bloqueo y desbloqueo. Sólo un objeto debe tener la propiedad de un `Block` y `Unblock` par.  
   
-##  <a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a> VirtualProcessorId 
 
  Devuelve un identificador para el procesador virtual en el que el contexto actual se está ejecutando.  
   
@@ -265,7 +269,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>Comentarios  
  El valor devuelto de este método es un muestreo instantáneo del procesador virtual que se está ejecutando el contexto actual. Este valor puede ser obsoleto en el momento en que se devuelve y no se puede confiar en ellos. Normalmente, este método se utiliza para depurar o solo con fines de seguimiento.  
   
-##  <a name="yield"></a>Yield 
+##  <a name="yield"></a> Yield 
 
  Genera la ejecución para que otro contexto se pueda ejecutar. Si no hay ningún otro contexto disponible para dar prioridad, el programador puede dar prioridad a otro subproceso del sistema operativo.  
   
@@ -276,7 +280,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>Comentarios  
  Este método hará que se cree el programador predeterminado del proceso y se adjunte al contexto de la llamada si no hay ningún programador asociado actualmente con el contexto de la llamada.  
   
-##  <a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a> YieldExecution 
 
  Genera la ejecución para que otro contexto se pueda ejecutar. Si no hay ningún otro contexto disponible para dar prioridad, el programador puede dar prioridad a otro subproceso del sistema operativo.  
   

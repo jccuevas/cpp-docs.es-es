@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Registros de usuario
 Para usar un descriptor de acceso estática (es decir, un descriptor de acceso se deriva de **CAccessor)**, el consumidor debe poseer un registro de usuario. El registro de usuario es una clase de C++ que contiene elementos de datos que controlan la entrada o salida. El Asistente para consumidores OLE DB ATL genera un registro de usuario para el consumidor. Puede agregar métodos para el registro de usuario para realizar tareas opcionales como control de comandos.  
   
- El código siguiente muestra un registro de ejemplo que controla los comandos. En el registro de usuario, `BEGIN_COLUMN_MAP` representa un conjunto de filas de datos pasado al consumidor desde un proveedor. `BEGIN_PARAM_MAP`Representa un conjunto de parámetros del comando. Este ejemplo se utiliza un [CCommand](../../data/oledb/ccommand-class.md) clase para administrar los parámetros del comando. Los miembros de datos en las entradas del mapa representan desplazamientos en un bloque contiguo de memoria para cada instancia de la clase. El `COLUMN_ENTRY` macros corresponden a la `PROVIDER_COLUMN_ENTRY` macros en el lado del proveedor.  
+ El código siguiente muestra un registro de ejemplo que controla los comandos. En el registro de usuario, `BEGIN_COLUMN_MAP` representa un conjunto de filas de datos pasado al consumidor desde un proveedor. `BEGIN_PARAM_MAP` Representa un conjunto de parámetros del comando. Este ejemplo se utiliza un [CCommand](../../data/oledb/ccommand-class.md) clase para administrar los parámetros del comando. Los miembros de datos en las entradas del mapa representan desplazamientos en un bloque contiguo de memoria para cada instancia de la clase. El `COLUMN_ENTRY` macros corresponden a la `PROVIDER_COLUMN_ENTRY` macros en el lado del proveedor.  
   
  Para obtener más información sobre la **COLUMN_MAP** y **PARAM_MAP** macros, consulte [Macros para plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9c844ba0da7dfef9457b896bb3c7150671cecd43
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 12363baa4fed5326a4c5c8a84b80eef6e4158d40
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="issuing-a-parameterized-query"></a>Realizar consultas parametrizadas
 En el ejemplo siguiente, se emite una consulta simple parametrizada que recupera registros con un campo de edad (es decir, mayor que 30) de una tabla en una base de datos de Microsoft Access. Para admitir el parámetro, el registro de usuario debe tener un mapa adicional. El código siguiente, en un proyecto ATL, usa el `CCommand` clase en lugar de la `CTable` clase usada en el ejemplo anterior, [recorrer un conjunto de filas Simple](../../data/oledb/traversing-a-simple-rowset.md).  

@@ -1,29 +1,33 @@
 ---
-title: "&lt;configuración regional&gt; | Documentos de Microsoft"
+title: '&lt;locale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Define funciones y clases de plantilla que los programas de C++ pueden utilizar para encapsular y manipular distintas convenciones culturales relativas a la representación y el formato de datos numéricos, de moneda y de calendario, incluida la compatibilidad de internacionalización para la clasificación de caracteres y la intercalación de cadenas.  
@@ -60,12 +64,12 @@ Define funciones y clases de plantilla que los programas de C++ pueden utilizar 
 |||  
 |-|-|  
 |[codecvt](../standard-library/codecvt-class.md)|Clase de plantilla que proporciona una faceta utilizada para convertir entre las codificaciones de caracteres internas y externas.|  
-|[codecvt_base)](../standard-library/codecvt-base-class.md)|Una clase base de la clase codecvt que se usa para definir un tipo de enumeración al que se hace referencia como **result**, que se usa como el tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.|  
-|[codecvt_byname)](../standard-library/codecvt-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.|  
+|[codecvt_base](../standard-library/codecvt-base-class.md)|Una clase base de la clase codecvt que se usa para definir un tipo de enumeración al que se hace referencia como **result**, que se usa como el tipo de valor devuelto para las funciones miembro de la faceta para indicar el resultado de una conversión.|  
+|[codecvt_byname](../standard-library/codecvt-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las conversiones.|  
 |[collate](../standard-library/collate-class.md)|Una clase de plantilla de intercalación que proporciona una faceta que controla las convenciones para la ordenación de cadenas.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como una faceta de intercalación de una configuración regional concreta, lo que permite la recuperación de información específica de un área cultural relativa a las convenciones de ordenación de cadenas.|  
 |[ctype](../standard-library/ctype-class.md)|Una clase de plantilla que proporciona una faceta que se utiliza para ordenar caracteres, convertir entre mayúsculas y minúsculas, y entre el conjunto de caracteres nativo y el que usa la configuración regional.|  
-|[CType\<char >](../standard-library/ctype-char-class.md)|Una clase que es una especialización explícita de la clase de plantilla **ctype\<CharType**> escriba `char`, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar distintas propiedades de un carácter de tipo `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Una clase que es una especialización explícita de la clase de plantilla **ctype\<CharType**> escriba `char`, que describe un objeto que puede actuar como una faceta de configuración regional para caracterizar distintas propiedades de un carácter de tipo `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Una clase base para la clase ctype que se utiliza para definir los tipos de enumeración usados para clasificar o comprobar caracteres individualmente o dentro de intervalos completos.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Una clase de plantilla derivada que describe un objeto que puede actuar como faceta ctype de una configuración regional concreta, habilitando la clasificación y conversión de caracteres entre mayúsculas y minúsculas y entre los conjuntos de caracteres especificados en la configuración regional y nativa.|  
 |[locale](../standard-library/locale-class.md)|Una clase que describe un objeto de configuración regional que encapsula la información específica de la configuración regional como un conjunto de facetas que definen colectivamente un entorno adaptado concreto.|  

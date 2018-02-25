@@ -4,29 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
 - myproviderrs.h
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe0852b619dc89df4ab9a04f2e7dcbac5d308fce
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 La `CMyProviderCommand` clase es la implementación para el objeto de comando de proveedor. Proporciona la implementación para la `IAccessor`, `ICommandText`, y **ICommandProperties** interfaces. La `IAccessor` interfaz es la misma que del conjunto de filas. El objeto de comando utiliza el descriptor de acceso para especificar enlaces de parámetros. El objeto de conjunto de filas los utiliza para especificar enlaces para las columnas de salida. La `ICommandText` interfaz es una forma útil de especificar un comando textualmente. Este ejemplo se utiliza la `ICommandText` interfaz más adelante cuando agrega código personalizado; también invalida la `ICommand::Execute` método. El **ICommandProperties** interfaz controla todas las propiedades de los objetos de comando y el conjunto de filas.  

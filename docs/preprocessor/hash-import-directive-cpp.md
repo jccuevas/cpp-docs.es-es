@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,19 +21,20 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import (Directiva) (C++)
-**Específicos de C++**  
+**C++ Specific**  
   
  Se utiliza para incorporar información de una biblioteca de tipos. El contenido de la biblioteca de tipos se convierte en clases de C++, que describen fundamentalmente las interfaces COM.  
   
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Comentarios  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Orden de búsqueda de nombre de archivo  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Orden de búsqueda de nombre de archivo  
  *nombre de archivo* va precedido opcionalmente por una especificación de directorio. El nombre de archivo debe designar un archivo existente. La diferencia entre las dos formas de sintaxis es el orden en que el preprocesador busca los archivos de biblioteca de tipos cuando no se especifica completamente la ruta de acceso.  
   
 |Forma de sintaxis|Acción|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Formato con comillas|Indica al preprocesador que busque archivos de biblioteca de tipos primero en el directorio del archivo que contiene la instrucción `#import` y, después, en los directorios de los archivos que incluyen (`#include`) ese archivo. A continuación, el preprocesador busca en las rutas de acceso que se muestran a continuación.|  
 |Formato con corchetes angulares|Indica al preprocesador que busque archivos de biblioteca de tipos en las siguientes rutas de acceso:<br /><br /> 1.  El **ruta de acceso** lista de ruta de la variable de entorno<br />2.  El **LIB** lista de ruta de la variable de entorno<br />3.  La ruta de acceso especificada por el /I (adicionales directorios de inclusión) opción del compilador, salvo que el compilador está buscando una biblioteca de tipos que se hace referencia desde otra biblioteca de tipos con el [no_registry](../preprocessor/no-registry.md) atributo.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Especifica el identificador de localización y el número de versión  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Especifica el identificador de localización y el número de versión  
  Cuando especifica un identificador de programa, también puede especificar el identificador y el número de versión de localización del identificador de programa. Por ejemplo:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Si no especifica un número de versión, se utiliza la versión más reciente.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Archivos de encabezado creados mediante una importación  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Archivos de encabezado creados mediante una importación  
  `#import` crea dos archivos de encabezado que reconstruyen el contenido de la biblioteca de tipos en código fuente de C++. El archivo de encabezado principal es similar al generado por el compilador de Lenguaje de definición de interfaz de Microsoft (MIDL), pero con código y datos adicionales generados por el compilador. El [archivo de encabezado principal](#_predir_the_primary_type_library_header_file) tiene el mismo nombre base que la biblioteca de tipos, más una. Extensión TLH. El archivo de encabezado secundario tiene el mismo nombre base que la biblioteca de tipos, con una extensión .TLI. Contiene implementaciones para funciones miembro generadas por el compilador y se incluye (`#include`) en el archivo de encabezado principal.  
   
  Si importa una propiedad dispinterface que utilice parámetros byref, #import no generará __declspec ([propiedad](../cpp/property-cpp.md)) instrucción para la función.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  La directiva `#import` también participa en la recompilación mínima y puede colocarse en un archivo de encabezado precompilado. Vea [crear archivos de encabezado precompilados](../build/reference/creating-precompiled-header-files.md) para obtener más información.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Archivo de encabezado de biblioteca de tipos primaria  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Archivo de encabezado de biblioteca de tipos primaria  
  El archivo de encabezado principal de la biblioteca de tipos se compone de siete secciones:  
   
 -   Encabezado reutilizable: consta de los comentarios, la instrucción `#include` para COMDEF.H (que define algunas macros estándar utilizadas en el encabezado) y otro tipo de información de instalación.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Para obtener más información, vea el artículo referente a la posibilidad de que los métodos contenedores #import provoquen una infracción de acceso (Q242527) o el referente a los errores del compilador al usar #import con XML (Q269194) de Knowledge Base. Encontrará artículos de Knowledge Base en el medio de MSDN Library o en [Microsoft Support](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>atributos #import  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atributos #import  
  `#import` puede incluir opcionalmente uno o varios atributos. Estos atributos indican al compilador que modifique el contenido de los encabezados de la biblioteca de tipos. Una barra diagonal inversa (**\\**) símbolo puede utilizarse para incluir líneas adicionales en un único equipo `#import` instrucción. Por ejemplo:  
   
 ```  

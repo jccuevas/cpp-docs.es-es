@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode (Estructura)
 Una interfaz a un nodo de topología definido por el Administrador de recursos. Un nodo contiene uno o varios recursos de ejecución.  
@@ -44,11 +48,11 @@ struct ITopologyNode;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|Devuelve el número de recursos de ejecución que se agrupan bajo este nodo.|  
-|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.|  
-|[Itopologynode:: GetId](#getid)|Devuelve el Administrador de recursos del identificador único para este nodo.|  
-|[Itopologynode:: GetNext](#getnext)|Devuelve una interfaz en el siguiente nodo de topología en orden de enumeración.|  
-|[Itopologynode:: Getnumanode](#getnumanode)|Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.|  
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Devuelve el número de recursos de ejecución que se agrupan bajo este nodo.|  
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.|  
+|[ITopologyNode::GetId](#getid)|Devuelve el Administrador de recursos del identificador único para este nodo.|  
+|[ITopologyNode::GetNext](#getnext)|Devuelve una interfaz en el siguiente nodo de topología en orden de enumeración.|  
+|[ITopologyNode::GetNumaNode](#getnumanode)|Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta interfaz se utiliza normalmente para recorrer la topología del sistema tal y como se observa el Administrador de recursos.  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="getexecutionresourcecount"></a>Itopologynode:: Getexecutionresourcecount (método)  
+##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method  
  Devuelve el número de recursos de ejecución que se agrupan bajo este nodo.  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El número de recursos de ejecución que se agrupan bajo este nodo.  
   
-##  <a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource (método)  
+##  <a name="getfirstexecutionresource"></a>  ITopologyNode::GetFirstExecutionResource Method  
  Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.  
   
-##  <a name="getid"></a>Itopologynode:: GetId (método)  
+##  <a name="getid"></a>  Itopologynode:: GetId (método)  
  Devuelve el Administrador de recursos del identificador único para este nodo.  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  Se puede obtener el recuento de nodos de la función [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="getnext"></a>Itopologynode:: GetNext (método)  
+##  <a name="getnext"></a>  Itopologynode:: GetNext (método)  
  Devuelve una interfaz en el siguiente nodo de topología en orden de enumeración.  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Una interfaz en el siguiente nodo en orden de enumeración. Si no hay ningún nodo más en orden de enumeración de la topología del sistema, este método devolverá el valor `NULL`.  
   
-##  <a name="getnumanode"></a>Itopologynode:: Getnumanode (método)  
+##  <a name="getnumanode"></a>  Itopologynode:: Getnumanode (método)  
  Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.  
   
 ```

@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: atomic/std::atomic
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- atomic/std::atomic
+dev_langs:
+- C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5525953e5f4ba68fdf1b84b02046d9ab4679abe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e5e7de7a5098aec10618c961444eb73b4597d0fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="atomic-structure"></a>atomic (Estructura)
 Describe un objeto que realiza operaciones atómicas sobre un valor almacenado de tipo `Ty`.  
@@ -43,8 +47,8 @@ struct atomic;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[atomic::operator Ty (Operador)](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Lee y devuelve el valor almacenado. ([atomic:: Load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[atomic::operator= (Operador)](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Utiliza un valor especificado para reemplazar el valor almacenado. ([atomic:: Store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
+|[atomic::operator Ty (Operador)](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Lee y devuelve el valor almacenado. ([atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
+|[atomic::operator= (Operador)](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Utiliza un valor especificado para reemplazar el valor almacenado. ([atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
 |[atomic::operator++ (Operador)](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Incrementa el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|  
 |[atomic::operator+= (Operador)](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Suma un valor especificado al valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|  
 |[atomic::operator-- (Operador)](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Disminuye el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|  
@@ -65,7 +69,7 @@ struct atomic;
 |[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Resta un valor especificado del valor almacenado.|  
 |[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Realiza una operación `exclusive or` bit a bit sobre un valor especificado y el valor almacenado.|  
 |[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Especifica si las operaciones atómicas sobre `this` *no tienen bloqueos*. Un tipo atómico *no tiene bloqueos* si ninguna operación atómica sobre ese tipo emplea bloqueos.|  
-|[carga](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Lee y devuelve el valor almacenado.|  
+|[load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Lee y devuelve el valor almacenado.|  
 |[store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Utiliza un valor especificado para reemplazar el valor almacenado.|  
   
 ## <a name="remarks"></a>Comentarios  

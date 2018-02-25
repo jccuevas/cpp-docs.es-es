@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: threadprivate
-dev_langs: C++
-helpviewer_keywords: threadprivate OpenMP directive
+ms.topic: reference
+f1_keywords:
+- threadprivate
+dev_langs:
+- C++
+helpviewer_keywords:
+- threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 25685991222b02f4c622f344b06e9faaea4caf02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 55a50d2387662fe42c04d61a8e98153aad95c835
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="threadprivate"></a>threadprivate
 Especifica que una variable privada a un subproceso.  
@@ -35,7 +40,7 @@ Especifica que una variable privada a un subproceso.
  donde,  
   
  `var`  
- Una lista separada por comas de variables que desea convertir en privado a un subproceso. `var`debe ser una variable global o espacio de nombres de ámbito o una variable local estática.  
+ Una lista separada por comas de variables que desea convertir en privado a un subproceso. `var` debe ser una variable global o espacio de nombres de ámbito o una variable local estática.  
   
 ## <a name="remarks"></a>Comentarios  
  El `threadprivate` directiva es compatible con ningún cláusulas de OpenMP.  

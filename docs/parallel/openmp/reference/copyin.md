@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: copyin
-dev_langs: C++
-helpviewer_keywords: copyin OpenMP clause
+ms.topic: reference
+f1_keywords:
+- copyin
+dev_langs:
+- C++
+helpviewer_keywords:
+- copyin OpenMP clause
 ms.assetid: 369efa88-613c-4cb1-9e11-7b9ee08a4b25
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3190c1f6914ae8ea24b968a8cf286de1867938cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ae680b2af468b9b11a7d2de44966ad554eec0150
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="copyin"></a>copyin
 Permite que los subprocesos tener acceso a valor del subproceso principal, para un [threadprivate](../../../parallel/openmp/reference/threadprivate.md) variable.  
@@ -38,13 +43,13 @@ copyin(var)
  El `threadprivate` variable que se inicializará con el valor de la variable en el subproceso principal, tal como estaban antes de la construcción paralela.  
   
 ## <a name="remarks"></a>Comentarios  
- `copyin`se aplica a las siguientes directivas:  
+ `copyin` se aplica a las siguientes directivas:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [secciones](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Secciones](../../../parallel/openmp/reference/sections-openmp.md)  
   
  Para obtener más información, consulte [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).  
   

@@ -1,29 +1,33 @@
 ---
-title: operation_timed_out (clase) | Documentos de Microsoft
+title: operation_timed_out Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - operation_timed_out
 - CONCRT/concurrency::operation_timed_out
 - CONCRT/concurrency::operation_timed_out::operation_timed_out
-dev_langs: C++
-helpviewer_keywords: operation_timed_out class
+dev_langs:
+- C++
+helpviewer_keywords:
+- operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3c4f211248fd46abb5276f4108268f1dc5a56acd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1376b04edbd2200c312f7b44b133306dff71486
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out (Clase)
 Esta clase describe una excepción que se produce cuando una operación ha agotado su tiempo de espera.  
@@ -40,7 +44,7 @@ class operation_timed_out : public std::exception;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[operation_timed_out)](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
+|[operation_timed_out](#ctor)|Sobrecargado. Construye un objeto `operation_timed_out`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -52,7 +56,7 @@ class operation_timed_out : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>operation_timed_out) 
+##  <a name="ctor"></a> operation_timed_out 
 
  Construye un objeto `operation_timed_out`.  
   

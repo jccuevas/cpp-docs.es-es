@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - transformer
 - AGENTS/concurrency::transformer
@@ -21,19 +22,22 @@ f1_keywords:
 - AGENTS/concurrency::transformer::resume_propagation
 - AGENTS/concurrency::transformer::send_message
 - AGENTS/concurrency::transformer::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: transformer class
+dev_langs:
+- C++
+helpviewer_keywords:
+- transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87f4dd90328a647502c50f973d402f7964eaf5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transformer-class"></a>Clase transformer
 Un bloque de mensajería `transformer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes de un tipo diferente.  
@@ -59,7 +63,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[clase transformer](#ctor)|Sobrecargado. Construye un `transformer` bloque de mensajería.|  
+|[transformer](#ctor)|Sobrecargado. Construye un `transformer` bloque de mensajería.|  
 |[~ transformer (destructor)](#dtor)|Destruye el `transformer` bloque de mensajería.|  
   
 ### <a name="protected-methods"></a>Métodos protegidos  
@@ -75,7 +79,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 |[reserve_message](#reserve_message)|Reserva un mensaje ofrecido previamente por este `transformer` bloque de mensajería. (Invalida [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Reanuda la propagación después de que se ha liberado una reserva. (Invalida [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
 |[send_message](#send_message)|Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `transformer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.|  
-|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Invalida [ITarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
+|[supports_anonymous_source](#supports_anonymous_source)|Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado. (Overrides [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [los bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -85,9 +89,9 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  [ITarget](itarget-class.md)  
   
- [source_block)](source-block-class.md)  
+ [source_block](source-block-class.md)  
   
- [propagator_block)](propagator-block-class.md)  
+ [propagator_block](propagator-block-class.md)  
   
  `transformer`  
   
@@ -96,7 +100,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Acepta un mensaje que fue proporcionado por este `transformer` bloque de mensajería, transferir la propiedad al llamador.  
   
@@ -111,7 +115,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a la `message` que el llamador tiene ahora la propiedad del objeto.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Consume un mensaje proporcionado anteriormente por el `transformer` y reservado por el destino, transfiriendo la propiedad al llamador.  
   
@@ -129,7 +133,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Comentarios  
  Similar a `accept`, pero siempre va precedido por una llamada a `reserve`.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Una devolución de llamada que notifica que se ha vinculado un nuevo destino a este `transformer` bloque de mensajería.  
   
@@ -137,7 +141,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Un mensaje de forma asincrónica, pasa un `ISource` bloque a este `transformer` bloque de mensajería. Se invoca con el `propagate` método, cuando se llama a un bloque de origen.  
   
@@ -157,7 +161,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valor devuelto  
  A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Ejecuta la función de la clase transformer en los mensajes de entrada.  
   
@@ -165,7 +169,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Libera una reserva de mensaje anterior.  
   
@@ -177,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  El `runtime_object_identity` de la `message` del objeto que se libera.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Reserva un mensaje ofrecido previamente por este `transformer` bloque de mensajería.  
   
@@ -190,12 +194,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  El `runtime_object_identity` de la `message` objeto va a reservar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el mensaje se reservó correctamente, `false` en caso contrario.  
+ `true` Si el mensaje se reservó correctamente, `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Después de `reserve` se llama, si devuelve `true`, ya sea `consume` o `release` debe llamarse para aceptar o liberar la propiedad del mensaje.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Reanuda la propagación después de que se ha liberado una reserva.  
   
@@ -203,7 +207,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Un mensaje de forma sincrónica, pasa un `ISource` bloque a este `transformer` bloque de mensajería. Se invoca con el `send` método, cuando se llama a un bloque de origen.  
   
@@ -223,7 +227,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valor devuelto  
  A [message_status](concurrency-namespace-enums.md) indicación de lo que el destino decidió hacer con el mensaje.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Invalida el `supports_anonymous_source` método para indicar que este bloque puede aceptar mensajes ofrecidos por un origen que no está vinculado.  
   
@@ -232,9 +236,9 @@ virtual bool supports_anonymous_source();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Dado que el bloque no posponer mensajes que se ofrecen.  
+ `true` Dado que el bloque no posponer mensajes que se ofrecen.  
   
-##  <a name="ctor"></a>clase transformer 
+##  <a name="ctor"></a> clase transformer 
 
  Construye un `transformer` bloque de mensajería.  
   
@@ -294,7 +298,7 @@ transformer(
   
  El tipo `filter_method` es un functor con firma `bool (_Input const &)` que es invocado por este `transformer` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.  
   
-##  <a name="dtor"></a>~ transformer 
+##  <a name="dtor"></a> ~ transformer 
 
  Destruye el `transformer` bloque de mensajería.  
   

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: AMP/Concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+ms.topic: reference
+f1_keywords:
+- AMP/Concurrency
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c4dd1773e74334f342ebb7e3cd64b68e6bab2b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Espacio de nombres de simultaneidad (C++ AMP)
 Proporciona clases y funciones que aceleran la ejecución de código C++ en el hardware de datos en paralelo. Para obtener más información, vea [Introducción a C++ AMP](../cpp-amp-overview.md)  
@@ -67,8 +72,8 @@ namespace Concurrency;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[access_type (enumeración)](concurrency-namespace-enums-amp.md#access_type)|Especifica el tipo de acceso de los datos.|  
-|[queuing_mode (enumeración)](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica los modos de la puesta en cola que se admiten en el acelerador.|  
+|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|Especifica el tipo de acceso de los datos.|  
+|[queuing_mode Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica los modos de la puesta en cola que se admiten en el acelerador.|  
   
 ### <a name="operators"></a>Operadores  
   
@@ -100,7 +105,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en la diferencia entre ese valor y un valor especificado como una operación atómica.|  
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en el operador `xor` bit a bit de ese valor y un valor especificado como una operación atómica.|  
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copia un objeto C++ AMP. Se cumplen todos los requisitos sincrónicos de transferencia de datos. Los datos no se pueden copiar cuando el código está ejecutando código en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
-|[copy_async)](concurrency-namespace-functions-amp.md#copy_async)|Copia un objeto C++ AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia un objeto C++ AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|  
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula la ejecución de una función con la cláusula de restricción `restrict(amp)`.|  
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime una cadena con formato en Visual Studio **salida** ventana y genera un [runtime_exception](runtime-exception-class.md) excepción que tiene el mismo formato de cadena.|  
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime una cadena con formato en Visual Studio **salida** ventana. Se le llama desde una función con la cláusula de restricción `restrict(amp)`.|  
@@ -112,8 +117,8 @@ namespace Concurrency;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[HLSL_MAX_NUM_BUFFERS (constante)](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|El número máximo de búferes permitido por DirectX.|  
-|[MODULENAME_MAX_LENGTH (constante)](concurrency-namespace-constants-amp.md#modulename_max_length)|Almacena la longitud máxima del nombre del módulo. Este valor debe ser el mismo en el compilador y en el runtime.|  
+|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|El número máximo de búferes permitido por DirectX.|  
+|[MODULENAME_MAX_LENGTH Constant](concurrency-namespace-constants-amp.md#modulename_max_length)|Almacena la longitud máxima del nombre del módulo. Este valor debe ser el mismo en el compilador y en el runtime.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** amp.h  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>deque (Clase)
 Organiza los elementos de un tipo determinado en una organización lineal y, como un vector, permite un acceso aleatorio rápido a cualquier elemento y, una inserción y eliminación eficaces al final del contenedor. Sin embargo, a diferencia de un vector, la clase `deque` también admite la inserción y la eliminación eficaces al principio del contenedor.  
@@ -121,7 +124,7 @@ class deque
  Tipo de datos de elementos que se va a almacenar en deque.  
   
  `Allocator`  
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **allocator\<Type>***.*  
+ Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo > ***.*  
   
 ## <a name="remarks"></a>Comentarios  
  En general, la elección del tipo de contenedor se debe tomar según el tipo de búsqueda y de inserción que necesite la aplicación. [Vectores](../standard-library/vector-class.md) debe ser el contenedor preferido para administrar una secuencia cuando el acceso aleatorio a cualquier elemento sea importante y las inserciones o eliminaciones de elementos solo sean necesarias al final de una secuencia. El rendimiento del contenedor de lista es superior cuando las inserciones y eliminaciones eficaces (en tiempo constante) en cualquier ubicación dentro de la secuencia son importantes. Esas operaciones en medio de la secuencia requieren copias y asignaciones de elementos proporcionales al número de elementos de la secuencia (tiempo lineal).  

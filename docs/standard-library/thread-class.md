@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::thread
 - thread/std::thread::id Class
@@ -18,9 +19,10 @@ f1_keywords:
 - thread/std::thread::joinable
 - thread/std::thread::native_handle
 - thread/std::thread::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,12 +36,13 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 2e2d9d1bd19b34cd4b542d0325b06ad57e1a7c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a681e61888653c0abada81c5b35ff3b96b75200
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-class"></a>thread (Clase)
 Define un objeto que se utiliza para observar y administrar un subproceso de ejecución dentro de una aplicación.  
@@ -73,11 +76,11 @@ class thread;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[desconectar](#detach)|Desasocia el subproceso asociado del objeto `thread`.|  
+|[detach](#detach)|Desasocia el subproceso asociado del objeto `thread`.|  
 |[get_id](#get_id)|Devuelve el identificador único del subproceso asociado.|  
 |[hardware_concurrency](#hardware_concurrency)|Estático. Devuelve una estimación del número de contextos de subprocesos de hardware.|  
 |[join](#join)|Se bloquea hasta que el subproceso asociado se completa.|  
-|[puede unir](#joinable)|Especifica si se puede unir el subproceso asociado.|  
+|[joinable](#joinable)|Especifica si se puede unir el subproceso asociado.|  
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de subproceso.|  
 |[swap](#swap)|Intercambia el estado de objeto con un objeto `thread` especificado.|  
   
@@ -92,7 +95,7 @@ class thread;
   
  **Espacio de nombres:** std  
   
-##  <a name="detach"></a>Thread:: Detach
+##  <a name="detach"></a>  thread::detach
  Desasocia el subproceso asociado. El sistema operativo pasa a ser responsable de liberar los recursos de subproceso al finalizar.  
   
 ```
@@ -106,7 +109,7 @@ void detach();
   
  Si el subproceso que está asociado con el objeto de llamada no es válido, la función produce un `system_error` que tiene un código de error de `no_such_process`.  
   
-##  <a name="get_id"></a>Thread:: get_id
+##  <a name="get_id"></a>  thread::get_id
  Devuelve un identificador único para el subproceso asociado.  
   
 ```
@@ -116,7 +119,7 @@ id get_id() const noexcept;
 ### <a name="return-value"></a>Valor devuelto  
  Un objeto [thread::id](#id_class) que identifica de forma única el subproceso asociado, o `thread::id()` si ningún subproceso está asociado con el objeto.  
   
-##  <a name="hardware_concurrency"></a>Thread:: hardware_concurrency
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
  Un método estático que devuelve una estimación del número de contextos de subprocesos de hardware.  
   
 ```
@@ -140,7 +143,7 @@ class thread::id {
   
  Todos los objetos `thread::id` construidos de forma predeterminada son iguales.  
   
-##  <a name="join"></a>Thread:: Join
+##  <a name="join"></a>  Thread:: Join
  Se bloquea hasta que finaliza el subproceso de ejecución que está asociado con el objeto de llamada.  
   
 ```
@@ -150,7 +153,7 @@ void join();
 ### <a name="remarks"></a>Comentarios  
  Si la llamada se realiza correctamente, las llamadas siguientes a [get_id](#get_id) para el objeto que realiza la llamada devuelven un [thread::id](#id_class) predeterminado que no es igual que el `thread::id` de cualquier subproceso existente. Si la llamada no se realiza correctamente, el valor devuelto por `get_id` no cambia.  
   
-##  <a name="joinable"></a>Thread:: joinable
+##  <a name="joinable"></a>  thread::joinable
  Especifica si se puede *unir* el subproceso asociado.  
   
 ```
@@ -163,7 +166,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>Comentarios  
  Un objeto de subproceso se puede *unir* si `get_id() != id()`.  
   
-##  <a name="native_handle"></a>Thread:: native_handle
+##  <a name="native_handle"></a>  Thread:: native_handle
  Devuelve el tipo específico de la implementación que representa el identificador de subproceso. El identificador de subproceso puede usarse en aspectos específicos de la implementación.  
   
 ```
@@ -192,7 +195,7 @@ thread& operator=(thread&& Other) noexcept;
   
  Una vez realizada la asociación, `Other` se establece en un estado construido de forma predeterminada.  
   
-##  <a name="swap"></a>Thread:: swap
+##  <a name="swap"></a>  Thread:: swap
  Intercambia el estado de objeto con el de un objeto `thread` especificado.  
   
 ```

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - context_self_unblock
 - CONCRT/concurrency::context_self_unblock
 - CONCRT/concurrency::context_self_unblock::context_self_unblock
-dev_langs: C++
-helpviewer_keywords: context_self_unblock class
+dev_langs:
+- C++
+helpviewer_keywords:
+- context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0478e018aadd0e8e73da3691d2b9bf6974569f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5110ca71f1d5bde29e24fb94a448aaaaf28182aa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="contextselfunblock-class"></a>context_self_unblock (Clase)
 Esta clase describe una excepción que se produce cuando se llama al método `Unblock` de un objeto `Context` desde el mismo contexto. Esto indicaría que un contexto especificado ha intentado desbloquearse a sí mismo.  
@@ -40,7 +44,7 @@ class context_self_unblock : public std::exception;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[context_self_unblock)](#ctor)|Sobrecargado. Construye un objeto `context_self_unblock`.|  
+|[context_self_unblock](#ctor)|Sobrecargado. Construye un objeto `context_self_unblock`.|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `exception`  
@@ -52,7 +56,7 @@ class context_self_unblock : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>context_self_unblock) 
+##  <a name="ctor"></a> context_self_unblock 
 
  Construye un objeto `context_self_unblock`.  
   

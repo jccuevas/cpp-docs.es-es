@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future (Clase)
 Describe un *objeto de devolución asincrónico*. Al contrario que un objeto [future](../standard-library/future-class.md), un *proveedor asincrónico* se puede asociar a cualquier número de objetos `shared_future`.  
@@ -64,8 +67,8 @@ class shared_future;
 |Name|Descripción|  
 |----------|-----------------|  
 |[get](#get)|Recupera el resultado almacenado en el *estado asincrónico asociado*.|  
-|[válido](#valid)|Especifica si el objeto no está vacío.|  
-|[espera](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
+|[valid](#valid)|Especifica si el objeto no está vacío.|  
+|[wait](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|  
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **Espacio de nombres:** std  
   
-##  <a name="get"></a>shared_future:: Get
+##  <a name="get"></a>  shared_future::get
  Recupera el resultado almacenado en el *estado asincrónico asociado*.  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  El cuarto constructor crea un objeto `shared_future` que tiene el mismo estado asincrónico asociado que `Right`.  
   
-##  <a name="valid"></a>shared_future:: Valid
+##  <a name="valid"></a>  shared_future::valid
  Especifica si el objeto tiene un *estado asincrónico asociado*.  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valor devuelto  
  Es `true` si el objeto tiene un estado asincrónico asociado; de lo contrario, es `false`.  
   
-##  <a name="wait"></a>shared_future:: wait
+##  <a name="wait"></a>  shared_future::wait
  Bloquea el subproceso actual hasta que el *estado asincrónico asociado* esté *listo*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Comentarios  
  Un estado asincrónico asociado está listo solo si su proveedor asincrónico ha almacenado un valor devuelto o ha almacenado una excepción.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  Bloquea el subproceso actual hasta que el estado asincrónico asociado esté *listo* o hasta que haya transcurrido un tiempo especificado.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Comentarios  
  Un estado asincrónico asociado está *listo* únicamente si su proveedor asincrónico ha almacenado un valor devuelto o una excepción.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  Bloquea el subproceso actual hasta que el estado asincrónico asociado esté *listo* o hasta después de un punto de tiempo especificado.  
   
 ```

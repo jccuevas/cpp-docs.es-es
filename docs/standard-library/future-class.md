@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>future (Clase)
 Describe un *objeto de devolución asincrónico*.  
@@ -64,9 +67,9 @@ class future;
 |Name|Descripción|  
 |----------|-----------------|  
 |[get](#get)|Recupera el resultado almacenado en el estado asincrónico asociado.|  
-|[Compartir](#share)|Convierte el objeto en un `shared_future`.|  
-|[válido](#valid)|Especifica si el objeto no está vacío.|  
-|[espera](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
+|[share](#share)|Convierte el objeto en un `shared_future`.|  
+|[valid](#valid)|Especifica si el objeto no está vacío.|  
+|[wait](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|  
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|  
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|  
   

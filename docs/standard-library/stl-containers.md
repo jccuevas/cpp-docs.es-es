@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a69230b190671fe768cdf4473b24d0c942743943
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-containers"></a>Contenedores de la biblioteca estándar de C++
 La biblioteca estándar proporciona contenedores con seguridad de tipos para almacenar colecciones de objetos relacionados. Los contenedores son plantillas de clase; al declarar una variable de contenedor, debe especificar el tipo de los elementos que se incluirán en el contenedor. Los contenedores se pueden construir con las listas de inicializadores. Tienen funciones miembro para agregar y quitar elementos, así como para realizar otras operaciones.  
