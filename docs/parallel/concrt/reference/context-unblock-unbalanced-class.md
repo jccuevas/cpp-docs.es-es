@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - context_unblock_unbalanced
 - CONCRT/concurrency::context_unblock_unbalanced
 - CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
-dev_langs: C++
-helpviewer_keywords: context_unblock_unbalanced class
+dev_langs:
+- C++
+helpviewer_keywords:
+- context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44130ba1991a9e14340e44427e0bb80c5bac0a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5f99f46e37da6c7fe1ed12b9206925d30cfd656
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced (Clase)
 Esta clase describe una excepción que se produce cuando se llama a los métodos `Block` y `Unblock` de un objeto `Context` que no están emparejados correctamente.  
@@ -40,7 +44,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[context_unblock_unbalanced)](#ctor)|Sobrecargado. Construye un objeto `context_unblock_unbalanced`.|  
+|[context_unblock_unbalanced](#ctor)|Sobrecargado. Construye un objeto `context_unblock_unbalanced`.|  
   
 ## <a name="remarks"></a>Comentarios  
  Llamadas a la `Block` y `Unblock` métodos de un `Context` objeto siempre se debe emparejar correctamente. El Runtime de simultaneidad permite que las operaciones que se produzca en cualquier orden. Por ejemplo, una llamada a `Block` puede ir seguida de una llamada a `Unblock`, o viceversa. Esta excepción se produce si, por ejemplo, dos llamadas a la `Unblock` método se realizaron en una fila, en un `Context` objetos que no se ha bloqueado.  
@@ -55,7 +59,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>context_unblock_unbalanced) 
+##  <a name="ctor"></a> context_unblock_unbalanced) 
 
  Construye un objeto `context_unblock_unbalanced`.  
   

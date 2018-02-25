@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr (estructura)
 Representa un puntero a un programador. Esta clase existe para permitir la especificación de una duración compartida mediante shared_ptr o simplemente permitir una referencia sin formato mediante un puntero sin formato.  
@@ -47,14 +50,14 @@ struct scheduler_ptr;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[scheduler_ptr:: Get](#get)|Devuelve el puntero sin formato al programador|  
+|[scheduler_ptr::get](#get)|Devuelve el puntero sin formato al programador|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[scheduler_ptr:: operator bool](#operator_bool)|Prueba si el puntero del programador no es null|  
-|[scheduler_ptr:: operator-&gt;](#operator_ptr)|Se comporta como un puntero|  
+|[scheduler_ptr::operator bool](#operator_bool)|Prueba si el puntero del programador no es null|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|Se comporta como un puntero|  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `scheduler_ptr`  
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="get"></a>scheduler_ptr:: Get (método)  
+##  <a name="get"></a>  scheduler_ptr:: Get (método)  
  Devuelve el puntero sin formato al programador  
   
 ```
@@ -73,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="operator_bool"></a>scheduler_ptr:: operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  Prueba si el puntero del programador no es null  
   
 ''' operador bool() const;
@@ -92,7 +95,7 @@ operador de scheduler_interface () -> () const;
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-scheduler_ptr (de) explícita (programador std:: shared_ptr < scheduler_interface () >);
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
 scheduler_ptr (de) explícita (_In_opt_ scheduler_interface () * pScheduler);
 ```  

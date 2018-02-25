@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event (Clase)
 La clase `task_completion_event` permite retrasar la ejecución de una tarea hasta que se satisfaga una condición, o iniciar una tarea en respuesta a un evento externo.  
@@ -52,7 +56,7 @@ class task_completion_event<void>;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[task_completion_event)](#ctor)|Construye un objeto `task_completion_event`.|  
+|[task_completion_event](#ctor)|Construye un objeto `task_completion_event`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -76,7 +80,7 @@ class task_completion_event<void>;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="set"></a>conjunto 
+##  <a name="set"></a> Conjunto 
 
  Establece el evento de finalización de la tarea.  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>Comentarios  
  En presencia de varios o de llamadas simultáneas a `set`, solo la primera llamada se realizará correctamente y su resultado (si existe) se almacenará en el evento de finalización de tarea. Los conjuntos restantes se omiten y el método devolverá false. Cuando se establece un evento de finalización de tarea, todas las tareas se crean desde que eventos finalizará inmediatamente y sus continuaciones, si los hay, se programará. Tareas de objetos de finalización que tienen un `_ResultType` distinto de `void` pasará el valor de sus continuaciones.  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a> set_exception 
 
  Propaga una excepción a todas las tareas asociadas con este evento.  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>Valor devuelto  
   
-##  <a name="ctor"></a>task_completion_event) 
+##  <a name="ctor"></a> task_completion_event) 
 
  Construye un objeto `task_completion_event`.  
   

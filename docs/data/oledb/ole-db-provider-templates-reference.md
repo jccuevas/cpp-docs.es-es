@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referencia de plantillas de proveedores OLE DB
 Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse en las siguientes categorías. El material de referencia también incluye información sobre la [macros para plantillas de proveedores OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse
  Proporciona una implementación de conjunto de filas de OLE DB estándar sin necesidad de herencia múltiple de las interfaces de implementación. El único método para el que debe proporcionar la implementación es **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en la `IRowsetImpl` clase. Un identificador de fila es, lógicamente, una etiqueta única para una fila de resultados. `IRowsetImpl`crea un nuevo `CSimpleRow` para todas las filas solicitaron en `IRowsetImpl::GetNextRows`.  
+ Proporciona una implementación predeterminada para el identificador de fila, que se utiliza en la `IRowsetImpl` clase. Un identificador de fila es, lógicamente, una etiqueta única para una fila de resultados. `IRowsetImpl` crea un nuevo `CSimpleRow` para todas las filas solicitaron en `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB requiere que los proveedores implementar un **HACCESSOR**, que es una etiqueta a una matriz de **DBBINDING** estructuras. Proporciona **HACCESSOR**s que son direcciones de la **BindType** estructuras. Obligatoria en los conjuntos de filas y comandos.  
@@ -63,7 +67,7 @@ Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse
  Implementa OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfaz, lo que permite la actualización de los valores de columnas en las filas existentes, eliminar filas e insertar nuevas filas.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Esta clase hereda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) e invalida [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`realiza las mismas funciones que `IObjectWithSite` , pero también permite que las propiedades de OLE DB **DBPROPCANSCROLLBACKWARDS** y **DBPROPCANFETCHBACKWARDS**.  
+ Esta clase hereda de [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) e invalida [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` realiza las mismas funciones que `IObjectWithSite` , pero también permite que las propiedades de OLE DB **DBPROPCANSCROLLBACKWARDS** y **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementa el **IRowsetIdentity** interfaz, que le permite comparar si dos filas de datos son idénticos o no.  
@@ -103,7 +107,7 @@ Las clases e interfaces para las plantillas de proveedor OLE DB pueden agruparse
  Crea y elimina la conexión con el consumidor. Interfaz obligatoria en los objetos de origen de datos y la interfaz opcional sobre los enumeradores.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador **IDBInitialize**, debe exponer `IDBProperties` (propiedades del origen de datos).  
+ `IDBProperties` es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador **IDBInitialize**, debe exponer `IDBProperties` (propiedades del origen de datos).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Obtiene un puntero de interfaz al objeto de origen de datos. Interfaz obligatoria en la sesión.  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>Descriptores de acceso y conjuntos de filas
 Para establecer y recuperar datos, plantillas OLE DB usan un descriptor de acceso y un conjunto de filas a través de la [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) clase. Esta clase puede controlar varios descriptores de acceso de tipos diferentes.  
   
 ## <a name="accessor-types"></a>Tipos de descriptor de acceso  
- Todos los descriptores de acceso se derivan de [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`proporciona el parámetro y el enlace de columna.  
+ Todos los descriptores de acceso se derivan de [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` proporciona el parámetro y el enlace de columna.  
   
  En la siguiente ilustración muestra los tipos de descriptor de acceso.  
   
  ![Tipos de descriptor de acceso](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Clases de descriptor de acceso  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) Use este descriptor de acceso cuando conozca la estructura del origen de base de datos en tiempo de diseño. `CAccessor`enlaza estáticamente un registro de base de datos, que contiene el búfer, al origen de datos.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) Use este descriptor de acceso cuando conozca la estructura del origen de base de datos en tiempo de diseño. `CAccessor` enlaza estáticamente un registro de base de datos, que contiene el búfer, al origen de datos.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Use este descriptor de acceso cuando no conozca la estructura de la base de datos en tiempo de diseño. `CDynamicAccessor`llamadas `IColumnsInfo::GetColumnInfo` para obtener la información de columna de base de datos. Crea y administra un descriptor de acceso y el búfer.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Use este descriptor de acceso cuando no conozca la estructura de la base de datos en tiempo de diseño. `CDynamicAccessor` llamadas `IColumnsInfo::GetColumnInfo` para obtener la información de columna de base de datos. Crea y administra un descriptor de acceso y el búfer.  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Use este descriptor de acceso para controlar tipos de comando desconocido. Al preparar los comandos, `CDynamicParameterAccessor` puede obtener la información de parámetros del `ICommandWithParameters` de la interfaz, si el proveedor admite `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), y [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) usa estas clases cuando no tiene ningún conocimiento del esquema de base de datos. `CDynamicStringAccessorA`Recupera los datos como cadenas ANSI; `CDynamicStringAccessorW` recupera los datos como cadenas Unicode.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), y [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) usa estas clases cuando no tiene ningún conocimiento del esquema de base de datos. `CDynamicStringAccessorA` Recupera los datos como cadenas ANSI; `CDynamicStringAccessorW` recupera los datos como cadenas Unicode.  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) con esta clase, puede usar los tipos de datos que desee si el proveedor puede convertir el tipo. Controla las columnas de resultados y parámetros del comando.  
   
