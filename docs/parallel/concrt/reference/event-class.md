@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - event
 - CONCRT/concurrency::event
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="event-class"></a>event (Clase)
 Un evento de reinicio manual que es explícitamente consciente del runtime de simultaneidad.  
@@ -52,7 +56,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|Restablece el evento a un estado no señalado.|  
 |[set](#set)|Señala el evento.|  
-|[espera](#wait)|Espera a que se señale el evento.|  
+|[wait](#wait)|Espera a que se señale el evento.|  
 |[wait_for_multiple](#wait_for_multiple)|Espera a que se señalen varios eventos.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
@@ -72,7 +76,7 @@ class event;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="ctor"></a>evento 
+##  <a name="ctor"></a> Evento 
 
  Construye un nuevo evento.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="dtor"></a>~ eventos 
+##  <a name="dtor"></a> ~ eventos 
 
  Destruye un evento.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Comentarios  
  Se espera que no haya ningún subproceso esperando en el evento cuando el destructor se ejecuta. Permitir que el evento se destruya con subprocesos que todavía esperan da como resultado un comportamiento no definido.  
   
-##  <a name="reset"></a>Restablecer 
+##  <a name="reset"></a> Restablecer 
 
  Restablece el evento a un estado no señalado.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>conjunto 
+##  <a name="set"></a> Conjunto 
 
  Señala el evento.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Comentarios  
  Señalar el evento puede producir un número arbitrario de contextos que esperan en el evento para que se convierta en ejecutable.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Valor que indica que una espera nunca debe agotar el tiempo de espera.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>espera 
+##  <a name="wait"></a> espera 
 
  Espera a que se señale el evento.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Si se satisfizo la espera, se devuelve el valor `0`; de lo contrario, se devuelve el valor `COOPERATIVE_WAIT_TIMEOUT` para indicar que el tiempo de la espera se agota sin haber señalado el evento.  
   
 > [!IMPORTANT]
->  En una aplicación de la [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], no llame a `wait` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede producir que la aplicación deje de responder.  
+>  En una aplicación de plataforma Universal de Windows (UWP), no llame a `wait` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  Espera a que se señalen varios eventos.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Si el parámetro `_FWaitAll` está establecido en el valor `true` para indicar que todos los eventos se deben señalar para satisfacer la espera, el índice que devuelve la función no tiene ninguna importancia especial aparte del hecho de que no es el valor `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  En una aplicación de la [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], no llame a `wait_for_multiple` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede producir que la aplicación deje de responder.  
+>  En una aplicación de plataforma Universal de Windows (UWP), no llame a `wait_for_multiple` en el subproceso ASTA puesto que esta llamada puede bloquear el subproceso actual y puede provocar que la aplicación deje de responder.  
   
 ## <a name="see-also"></a>Vea también  
  [concurrency (espacio de nombres)](concurrency-namespace.md)
