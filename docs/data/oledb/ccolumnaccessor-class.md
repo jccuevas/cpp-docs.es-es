@@ -4,58 +4,61 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CColumnAccessor
 - ATL::CColumnAccessor
 - ATL.CColumnAccessor
-dev_langs: C++
-helpviewer_keywords: CColumnAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55c77a53cb6e6c4a103c509aa3d527803d91af3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa03f7ee652ee176c7333ac5ef4e264b7f4d5cf8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor (Clase)
 Genera el código de consumidor insertado.  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 class CColumnAccessor : public CAccessorBase  
 ```  
   
 ## <a name="remarks"></a>Comentarios  
  En el código insertado, todas las columnas se enlaza como un descriptor de acceso independiente. Debe tener en cuenta que esta clase se utiliza en el código insertado (por ejemplo, pueden surgir, al depurar), pero normalmente nunca es necesario utilizar directamente, ni a sus métodos.  
   
- `CColumnAccessor`implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponden en la funcionalidad de otros métodos de la clase de descriptor de acceso:  
+ `CColumnAccessor` implementa los siguientes métodos de código auxiliar, cada uno de los cuales corresponden en la funcionalidad de otros métodos de la clase de descriptor de acceso:  
   
--   `CColumnAccessor`El constructor; crea e inicializa la `CColumnAccessor` objeto.  
+-   `CColumnAccessor` El constructor; crea e inicializa la `CColumnAccessor` objeto.  
   
--   `CreateAccessor`Asigna memoria a estructuras de enlace de la columna e inicializa a los miembros de datos de columna.  
+-   `CreateAccessor` Asigna memoria a estructuras de enlace de la columna e inicializa a los miembros de datos de columna.  
   
 -   **BindColumns** enlaza las columnas a los descriptores de acceso.  
   
 -   **SetParameterBuffer** asigna búferes de parámetros.  
   
--   `AddParameter`Agrega una entrada de parámetro a las estructuras de entrada de parámetro.  
+-   `AddParameter` Agrega una entrada de parámetro a las estructuras de entrada de parámetro.  
   
 -   **HasOutputColumns** determina si el descriptor de acceso tiene columnas de salida  
   
 -   **HasParameters** determina si el descriptor de acceso tiene parámetros.  
   
--   `BindParameters`Enlaza los parámetros creados a las columnas.  
+-   `BindParameters` Enlaza los parámetros creados a las columnas.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldbcli.h  

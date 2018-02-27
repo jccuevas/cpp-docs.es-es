@@ -1,12 +1,13 @@
 ---
-title: concurrent_unordered_set (clase) | Documentos de Microsoft
+title: concurrent_unordered_set Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_unordered_set
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::key_eq
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::swap
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::unsafe_erase
-dev_langs: C++
-helpviewer_keywords: concurrent_unordered_set class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dfbdcac3bd4d16b96b2ce961b102dfa8c2deea6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 223a34c3cbc651f933b4ee7421030077ba8f878c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set (Clase)
 La `concurrent_unordered_set` clase es un contenedor seguro para simultaneidad que controla una secuencia de longitud variable de elementos de tipo K. La secuencia se representa de una manera que habilita seguro para simultaneidad anexar, acceso de elemento, acceso de iterador y las operaciones de recorrido de iterador.  
@@ -89,7 +93,7 @@ template <typename K,
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[concurrent_unordered_set)](#ctor)|Sobrecargado. Construye un conjunto desordenado simultáneo.|  
+|[concurrent_unordered_set](#ctor)|Sobrecargado. Construye un conjunto desordenado simultáneo.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -118,11 +122,11 @@ template <typename K,
  `concurrent_unordered_set`  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** concurrent_unordered_set.h  
+ **Header:** concurrent_unordered_set.h  
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="begin"></a>comenzar 
+##  <a name="begin"></a> BEGIN 
 
  Devuelve un iterador que apunta al primer elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -135,7 +139,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador al primer elemento en el contenedor simultáneo.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  Devuelve un iterador constante que apunta al primer elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -146,7 +150,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador constante al primer elemento en el contenedor simultáneo.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  Devuelve un iterador constante que apunta a la ubicación siguiente al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -157,7 +161,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador const en la ubicación siguiente al último elemento en el contenedor simultáneo.  
   
-##  <a name="clear"></a>Borrar 
+##  <a name="clear"></a> Borrar 
 
  Borra todos los elementos en el contenedor simultáneo. Esta función no es seguro para simultaneidad.  
   
@@ -165,7 +169,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_unordered_set) 
+##  <a name="ctor"></a> concurrent_unordered_set 
 
  Construye un conjunto desordenado simultáneo.  
   
@@ -232,7 +236,7 @@ concurrent_unordered_set(
   
  El último constructor especifica una operación de traslado de lo conjunto desordenado simultáneo `_Uset`.  
   
-##  <a name="count"></a>recuento 
+##  <a name="count"></a> Recuento 
 
  Cuenta el número de elementos que coinciden con una clave especificada. Esta función es seguro para simultaneidad.  
   
@@ -247,7 +251,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Valor devuelto  
  El número de veces el número de veces que la clave aparece en el contenedor.  
   
-##  <a name="empty"></a>vacía 
+##  <a name="empty"></a> vacía 
 
  Comprueba si no hay ningún elemento presente. Este método es seguro para simultaneidad.  
   
@@ -256,12 +260,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si está vacío, el contenedor simultáneo `false` en caso contrario.  
+ `true` Si está vacío, el contenedor simultáneo `false` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  En presencia de las inserciones simultáneas, o no está vacío el contenedor simultáneo puede cambiar inmediatamente después de llamar a esta función, antes de que el valor devuelto es de lectura incluso.  
   
-##  <a name="end"></a>final 
+##  <a name="end"></a> Final 
 
  Devuelve un iterador que apunta a la ubicación siguiente al último elemento en el contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -274,7 +278,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador a la ubicación siguiente al último elemento en el contenedor simultáneo.  
   
-##  <a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a> equal_range 
 
  Busca un intervalo que coincide con una clave especificada. Esta función es seguro para simultaneidad.  
   
@@ -298,7 +302,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Comentarios  
  Es posible para las inserciones simultáneas hacer que se inserten después el iterador begin y antes el iterador de fin claves adicionales.  
   
-##  <a name="find"></a>Buscar 
+##  <a name="find"></a> Buscar 
 
  Busca un elemento que coincide con una clave especificada. Esta función es seguro para simultaneidad.  
   
@@ -315,7 +319,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Valor devuelto  
  Un iterador que apunta a la ubicación del primer elemento que coincide con la clave proporcionada, o bien, el iterador `end()` si no existe ese elemento.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Devuelve el objeto de asignador almacenado para este contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -326,7 +330,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valor devuelto  
  El objeto de asignador almacenado para este contenedor simultáneo.  
   
-##  <a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a> hash_function 
 
  Devuelve el objeto almacenado de la función hash.  
   
@@ -337,7 +341,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Valor devuelto  
  El objeto de función hash almacenado.  
   
-##  <a name="insert"></a>Insertar 
+##  <a name="insert"></a> Insertar 
 
  Agrega elementos al objeto `concurrent_unordered_set`.  
   
@@ -398,7 +402,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Las dos últimas funciones miembro comportan igual que las dos primeras, salvo que `value` se utiliza para construir el valor insertado.  
   
-##  <a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a> key_eq 
 
  Devuelve el objeto de función de comparación de igualdad almacenado.  
   
@@ -409,7 +413,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Valor devuelto  
  El objeto de función de comparación de igualdad almacenado.  
   
-##  <a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a> load_factor 
 
  Calcula y devuelve el factor de carga actual del contenedor. El factor de carga es el número de elementos del contenedor dividido por el número de depósitos.  
   
@@ -420,7 +424,7 @@ float load_factor() const;
 ### <a name="return-value"></a>Valor devuelto  
  El factor de carga para el contenedor.  
   
-##  <a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a> max_load_factor 
 
  Obtiene o establece el factor de carga máxima del contenedor. El factor de carga máxima es el número máximo de elementos que pueden estar en un cubo antes de que el contenedor crece su tabla interna.  
   
@@ -436,7 +440,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Valor devuelto  
  La primera función miembro devuelve el factor de carga máxima almacenado. La segunda función miembro no devuelve un valor, pero produce un [out_of_range](../../../standard-library/out-of-range-class.md) excepción si el factor de carga especificado no es válido..  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  Devuelve el tamaño máximo del contenedor simultáneo, determinado por el asignador. Este método es seguro para simultaneidad.  
   
@@ -450,7 +454,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Comentarios  
  Este valor de límite superior realmente puede ser mayor que lo que realmente puede contener el contenedor.  
   
-##  <a name="operator_eq"></a>operador = 
+##  <a name="operator_eq"></a> operador = 
 
  Asigna el contenido de otro objeto `concurrent_unordered_set` a este. Este método no es seguro para la simultaneidad.  
   
@@ -470,7 +474,7 @@ concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
 ### <a name="remarks"></a>Comentarios  
  Después de borrar todos los elementos existentes en un conjunto desordenado simultáneo, `operator=` copia o mueve el contenido de `_Uset` en simultáneos desordenados conjunto.  
   
-##  <a name="rehash"></a>rehash) 
+##  <a name="rehash"></a> rehash) 
 
  Recompila la tabla hash.  
   
@@ -487,7 +491,7 @@ void rehash(size_type _Buckets);
   
  Produce un [out_of_range](../../../standard-library/out-of-range-class.md) excepción si el número de depósitos no es válido (0 o mayor que el número máximo de depósitos).  
   
-##  <a name="size"></a>tamaño 
+##  <a name="size"></a> Tamaño 
 
  Devuelve el número de elementos de este contenedor simultáneo. Este método es seguro para simultaneidad.  
   
@@ -501,7 +505,7 @@ size_type size() const;
 ### <a name="remarks"></a>Comentarios  
  En presencia de las inserciones simultáneas, puede cambiar el número de elementos en el contenedor simultáneo inmediatamente después de llamar a esta función, antes de que el valor devuelto es de lectura incluso.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> Intercambiar 
 
  Intercambia el contenido de dos objetos `concurrent_unordered_set`. Este método no es seguro para la simultaneidad.  
   
@@ -513,7 +517,7 @@ void swap(concurrent_unordered_set& _Uset);
  `_Uset`  
  La `concurrent_unordered_set` objeto que se intercambia con.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Devuelve un iterador al primer elemento en este contenedor para un depósito concreto.  
   
@@ -530,7 +534,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valor devuelto  
  Iterador que apunta al principio del depósito.  
   
-##  <a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
  Devuelve el índice de depósitos que se asigna una clave específica para este contenedor.  
   
@@ -545,7 +549,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Valor devuelto  
  El índice de depósito para la clave en este contenedor.  
   
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count 
 
  Devuelve el número actual de depósitos de este contenedor.  
   
@@ -556,7 +560,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Valor devuelto  
  El número actual de depósitos de este contenedor.  
   
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
  Devuelve el número de elementos de un depósito concreto de este contenedor.  
   
@@ -571,7 +575,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Valor devuelto  
  El número actual de depósitos de este contenedor.  
   
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
  Devuelve un iterador al primer elemento en este contenedor para un depósito concreto.  
   
@@ -586,7 +590,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valor devuelto  
  Iterador que apunta al principio del depósito.  
   
-##  <a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a> unsafe_cend 
 
  Devuelve un iterador a la ubicación siguiente al último elemento de un depósito concreto.  
   
@@ -601,7 +605,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Valor devuelto  
  Iterador que apunta al principio del depósito.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Devuelve un iterador hasta el último elemento en este contenedor para un depósito concreto.  
   
@@ -618,7 +622,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Valor devuelto  
  Iterador que apunta al final del depósito.  
   
-##  <a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a> unsafe_erase 
 
  Quita los elementos de `concurrent_unordered_set` en las posiciones especificadas. Este método no es seguro para la simultaneidad.  
   
@@ -652,7 +656,7 @@ iterator unsafe_erase(
   
  La tercera función miembro quita los elementos del intervalo delimitado por [equal_range](#equal_range)(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
  Devuelve el número máximo de depósitos de este contenedor.  
   

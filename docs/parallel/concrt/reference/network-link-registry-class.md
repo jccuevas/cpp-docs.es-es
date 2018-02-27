@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry (Clase)
 La clase base abstracta `network_link_registry` que administra los vínculos entre los bloques de origen y de destino.  
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="add"></a>Agregar 
+##  <a name="add"></a> Agregar 
 
  Cuando se invalida en una clase derivada, agrega un vínculo a la `network_link_registry` objeto.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Un puntero a un bloque que se va a agregar.  
   
-##  <a name="begin"></a>comenzar 
+##  <a name="begin"></a> BEGIN 
 
  Cuando se invalida en una clase derivada, devuelve un iterador al primer elemento en el `network_link_registry` objeto.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Comentarios  
  El estado final del iterador se indica mediante un `NULL` vínculo.  
   
-##  <a name="contains"></a>contiene 
+##  <a name="contains"></a> contiene 
 
  Cuando se invalida en una clase derivada, busca la `network_link_registry` objeto para un bloque especificado.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Un puntero a un bloque que se va a buscar en la `network_link_registry` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si se encontró el bloque, `false` en caso contrario.  
+ `true` Si se encontró el bloque, `false` en caso contrario.  
   
-##  <a name="count"></a>recuento 
+##  <a name="count"></a> Recuento 
 
  Cuando se invalida en una clase derivada, devuelve el número de elementos de la `network_link_registry` objeto.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Valor devuelto  
  El número de elementos de la `network_link_registry` objeto.  
   
-##  <a name="remove"></a>quitar 
+##  <a name="remove"></a> Quitar 
 
  Cuando se invalida en una clase derivada, quita un bloque especificado desde el `network_link_registry` objeto.  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  Un puntero a un bloque que se va a quitar, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
+ `true` Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
   
 ## <a name="see-also"></a>Vea también  
  [simultaneidad Namespace](concurrency-namespace.md)   

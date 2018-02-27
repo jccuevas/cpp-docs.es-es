@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>Clases ATL
 Active Template Library (ATL) incluye las siguientes clases. Para buscar una clase determinada por categoría, vea la [general sobre la clase ATL](../../atl/atl-class-overview.md).  
@@ -91,7 +94,7 @@ Active Template Library (ATL) incluye las siguientes clases. Para buscar una cla
 |[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|Esta clase proporciona los mismos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) pero no proporciona una sección crítica.|atlcore.h|  
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|Esta clase proporciona métodos para trabajar con punteros de interfaz y la tabla de interfaz global (GIT).|atlbase.h|  
 |[CComHeap](../../atl/reference/ccomheap-class.md)|Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.|ATLComMem.h|  
-|[Plantilla CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Una clase de puntero inteligente para administrar los punteros del montón.|atlbase.h|  
+|[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Una clase de puntero inteligente para administrar los punteros del montón.|atlbase.h|  
 |[CComModule](../../atl/reference/ccommodule-class.md)|A partir de ATL 7.0, `CComModule` está obsoleta: vea [módulos de ATL](../../atl/atl-module-classes.md) para obtener más detalles.|atlbase.h|  
 |[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|Esta clase proporciona métodos de subprocesos para aumentar y disminuir el valor de una variable.|atlbase.h|  
 |[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|Esta clase proporciona métodos de subprocesos para aumentar y disminuir el valor de una variable, sin bloqueo de sección crítica o funcionalidad desbloquear.|atlbase.h|  
@@ -183,7 +186,7 @@ Active Template Library (ATL) incluye las siguientes clases. Para buscar una cla
 |[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)|Esta clase representa la interfaz para un administrador de memoria.|atlmem.h|  
 |[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)|Esta interfaz proporciona métodos para especificar las características del control hospedado o contenedor.|atlbase.h, ATLIFace.h|  
 |[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)|Esta interfaz implementa las propiedades de ambiente complementarios para un control hospedado.|atlbase.h, ATLIFace.h|  
-|[Interfaz IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Esta interfaz proporciona métodos para manipular un control y su objeto de host.|atlbase.h, ATLIFace.h|  
+|[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)|Esta interfaz proporciona métodos para manipular un control y su objeto de host.|atlbase.h, ATLIFace.h|  
 |[IAxWinHostWindowLic](../../atl/reference/iaxwinhostwindowlic-interface.md)|Esta interfaz proporciona métodos para manipular un control con licencia y su objeto de host.|atlbase.h, ATLIFace.h|  
 |[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)|Esta clase proporciona métodos usados por una clase de colección.|atlcom.h|  
 |[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)|Esta clase implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos.|atlcom.h|  
@@ -216,7 +219,7 @@ Active Template Library (ATL) incluye las siguientes clases. Para buscar una cla
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Esta clase proporciona una implementación predeterminada de la `ISupportErrorInfo Interface` interfaz y se puede usar cuando solo una única interfaz genera errores en un objeto.|atlcom.h|  
 |[IThreadPoolConfig (interfaz)](../../atl/reference/ithreadpoolconfig-interface.md)|Esta interfaz proporciona métodos para configurar un grupo de subprocesos.|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Esta clase implementa **IUnknown** y proporciona implementaciones predeterminadas de la [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), y [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfaces.|atlctl.h|  
-|[IWorkerThreadClient (interfaz)](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`es la interfaz implementada por los clientes de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) clase.|atlutil.h|  
+|[IWorkerThreadClient (interfaz)](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` es la interfaz implementada por los clientes de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) clase.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Esta clase proporciona contenedores para **CreateWindow** y **CreateWindowEx**.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Esta clase de adaptador de argumento permite `RECT` punteros o referencias a pasarse a una función que se implementa en cuanto a punteros.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Esta clase de adaptador de argumento permite a ambos nombres de recursos (`LPCTSTR`s) o identificadores de recursos (**UINT**s) que se pasan a una función sin necesidad de autor de la llamada convertir el identificador en una cadena mediante el **MAKEINTRESOURCE** macro.|atlwin.h|  

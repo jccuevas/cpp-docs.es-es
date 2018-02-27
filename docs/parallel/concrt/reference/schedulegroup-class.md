@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup (Clase)
 Representa una abstracción para un grupo de programación. Los grupos de programación organizan un conjunto de trabajos relacionados que se benefician de programarse juntos ya sea temporalmente, mediante la ejecución de otra tarea en el mismo grupo antes de trasladarse a otro grupo, o espacialmente, mediante la ejecución de varios elementos del mismo grupo en el mismo nodo NUMA o socket físico.  
@@ -49,7 +53,7 @@ class ScheduleGroup;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Id.](#id)|Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.|  
+|[Id](#id)|Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.|  
 |[Referencia](#reference)|Incrementa el contador de referencias del grupo de programación.|  
 |[Release](#release)|Disminuye el contador de referencias del grupo de programación.|  
 |[ScheduleTask](#scheduletask)|Programa una tarea ligera dentro del grupo de programación.|  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="id"></a>Id. 
+##  <a name="id"></a> Id 
 
  Devuelve un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valor devuelto  
  Un identificador para el grupo de programación que es único dentro del programador al que pertenece el grupo.  
   
-##  <a name="operator_delete"></a>operador delete 
+##  <a name="operator_delete"></a> operador delete 
 
  Un `ScheduleGroup` objeto sea destruido internamente por el tiempo de ejecución cuando se liberan todas las referencias externas a él. No se puede eliminar explícitamente.  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  Un puntero al objeto que se va a eliminar.  
   
-##  <a name="reference"></a>Referencia 
+##  <a name="reference"></a> Referencia 
 
  Incrementa el contador de referencias del grupo de programación.  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Comentarios  
  Esto se utiliza normalmente para administrar la duración del grupo de programación para la creación. Cuando el recuento de referencias de un grupo de programación cae a cero, se elimina el grupo de programación en tiempo de ejecución. Un grupo de programación creado mediante el [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) método, o la [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) método empieza con un recuento de referencias de uno.  
   
-##  <a name="release"></a>Versión 
+##  <a name="release"></a> la versión 
 
  Disminuye el contador de referencias del grupo de programación.  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  Un grupo de programación está asociado a una instancia del programador determinada. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, porque pueden provocar en el que se destruya el programador. Hace lo contrario da como resultado un comportamiento indefinido.  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Programa una tarea ligera dentro del grupo de programación.  
   

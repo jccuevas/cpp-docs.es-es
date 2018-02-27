@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager (Clase)
 El objeto `source_link_manager` administra los vínculos de red del bloque de mensajería para los bloques `ISource`.  
@@ -63,8 +67,8 @@ class source_link_manager;
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[source_link_manager)](#ctor)|Construye un objeto `source_link_manager`.|  
-|[~ source_link_manager (destructor)](#dtor)|Destruye el objeto `source_link_manager`.|  
+|[source_link_manager](#ctor)|Construye un objeto `source_link_manager`.|  
+|[~source_link_manager Destructor](#dtor)|Destruye el objeto `source_link_manager`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -91,7 +95,7 @@ class source_link_manager;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="add"></a>Agregar 
+##  <a name="add"></a> Agregar 
 
  Agrega un vínculo de origen a la `source_link_manager` objeto.  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  Un puntero a un bloque que se va a agregar.  
   
-##  <a name="begin"></a>comenzar 
+##  <a name="begin"></a> BEGIN 
 
  Devuelve un iterador al primer elemento en el `source_link_manager` objeto.  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>Comentarios  
  El estado final del iterador se indica mediante un `NULL` vínculo.  
   
-##  <a name="contains"></a>contiene 
+##  <a name="contains"></a> contiene 
 
  Busca el `network_link_registry` dentro de este `source_link_manager` objeto para un bloque especificado.  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  Un puntero a un bloque que se va a buscar en la `source_link_manager` objeto.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si se encontró el bloque especificado, `false` en caso contrario.  
+ `true` Si se encontró el bloque especificado, `false` en caso contrario.  
   
-##  <a name="count"></a>recuento 
+##  <a name="count"></a> Recuento 
 
  Cuenta el número de bloques vinculados en el `source_link_manager` objeto.  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>Valor devuelto  
  El número de bloques vinculados del `source_link_manager` objeto.  
   
-##  <a name="reference"></a>referencia 
+##  <a name="reference"></a> Referencia 
 
  Adquiere una referencia en la `source_link_manager` objeto.  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  Registra el bloque de destino que contiene este `source_link_manager` objeto.  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  El bloque de destino que contiene este `source_link_manager` objeto.  
   
-##  <a name="release"></a>la versión 
+##  <a name="release"></a> la versión 
 
  Libera la referencia en la `source_link_manager` objeto.  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>quitar 
+##  <a name="remove"></a> Quitar 
 
  Quita un vínculo desde el `source_link_manager` objeto.  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  Un puntero a un bloque que se va a quitar, si se encuentra.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `true`Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
+ `true` Si el vínculo se ha encontrado y eliminado, `false` en caso contrario.  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  Establece el número máximo de vínculos de origen que se pueden agregar a este `source_link_manager` objeto.  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  El número máximo de vínculos.  
   
-##  <a name="ctor"></a>source_link_manager) 
+##  <a name="ctor"></a> source_link_manager 
 
  Construye un objeto `source_link_manager`.  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager) 
+##  <a name="dtor"></a> ~source_link_manager 
 
  Destruye el objeto `source_link_manager`.  
   

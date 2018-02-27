@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Un subconjunto de MFC está diseñado para ofrecer compatibilidad con COM, mientras que la mayoría de Active Template Library (ATL) está diseñado para la programación COM. Temas de esta sección describe la compatibilidad con de MFC COM.  
@@ -53,7 +57,7 @@ Un subconjunto de MFC está diseñado para ofrecer compatibilidad con COM, mient
   
 -   [Automatización](../mfc/automation.md) (anteriormente conocida como automatización OLE) permite a una aplicación para manipular objetos implementados en otra aplicación o "exponer" objetos de forma que se puedan manipular.  
   
-     El objeto automatizado puede ser local o [remoto](../mfc/remote-automation.md) (en otra máquina accesible a través de una red). La automatización está disponible para objetos COM y OLE.  
+     El objeto automatizado puede ser local o remoto (en otro equipo accesible a través de una red). La automatización está disponible para objetos COM y OLE.  
   
 -   En esta sección también proporciona información sobre cómo escribir componentes COM mediante MFC, por ejemplo, en [puntos de conexión](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ Un subconjunto de MFC está diseñado para ofrecer compatibilidad con COM, mient
  [Contención de documentos activos](../mfc/active-document-containment.md)  
   
  [Automatización](../mfc/automation.md)  
-  
- [Automatización remota](../mfc/remote-automation.md)  
   
  [Puntos de conexión](../mfc/connection-points.md)  
   
