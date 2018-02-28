@@ -1,13 +1,15 @@
 ---
 title: Operadores de direccionamiento indirecto y address-of | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/16/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - address-of operator (&)
 - '* operator'
@@ -22,77 +24,80 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="indirection-and-address-of-operators"></a>Operadores de direccionamiento indirecto y address-of
-El operador de direccionamiento indirecto (**\***) accede a un valor indirectamente, mediante un puntero. El operando debe ser un valor de puntero. El resultado de la operación es el valor al que hace referencia el operando; es decir, el valor de la dirección a la que señala el operando. El tipo del resultado es el tipo al que apunta el operando.  
-  
- Si el operando señala a una función, el resultado es un designador de función. Si señala a una ubicación de almacenamiento, el resultado es un valor L que designa la ubicación de almacenamiento.  
-  
- Si el valor de puntero no es válido, el resultado es indefinido. La lista siguiente incluye algunas de las condiciones más comunes que invalidan un valor de puntero.  
-  
--   El puntero es un puntero null.  
-  
--   El puntero especifica la dirección de un elemento local que no está visible en el momento de la referencia.  
-  
--   El puntero especifica una dirección que está alineada de una forma no adecuada para el tipo de objeto al que se señala.  
-  
--   El puntero especifica una dirección no utilizada por el programa que se ejecuta.  
-  
- El operador address-of (**&**) proporciona la dirección de su operando. El operando del operador address-of puede ser un designador de función o un valor L que designe un objeto que no es un campo de bits y no se declara con el especificador de clase de almacenamiento **register**.  
-  
- El resultado de la operación de dirección es un puntero al operando. El tipo al que señala el puntero es el tipo del operando.  
-  
- El operador address-of solo se puede aplicar a variables con tipos fundamentales, de estructura o de unión que se declaren en el nivel de ámbito de archivo o para referencias de matriz de subíndice. En estas expresiones, se puede agregar o quitar de la expresión de dirección una expresión constante que no incluya el operador address-of.  
-  
-## <a name="examples"></a>Ejemplos  
- En los ejemplos siguientes se usan estas declaraciones:  
-  
+
+El operador unario de direccionamiento indirecto (__&#42;__) accede a un valor indirectamente, mediante un puntero. El operando debe ser un tipo de puntero. El resultado de la operación es el valor al que hace referencia el operando; es decir, el valor de la dirección a la que señala el operando. El tipo del resultado es el tipo al que apunta el operando.
+
+El resultado del operador de direccionamiento indirecto es *type* si el operando es del tipo *pointer to type*. Si el operando señala a una función, el resultado es un designador de función. Si señala a un objeto, el resultado es un valor L que designa el objeto.
+
+Si el valor del puntero no es válido, el resultado del operador de direccionamiento indirecto es indefinido. Estas son algunas de las condiciones más comunes que invalidan un valor de puntero:
+
+- El puntero es un puntero null.
+
+- El puntero especifica una dirección de un objeto una vez que su duración ha finalizado (por ejemplo, un objeto que ha salido del ámbito o que se ha desasignado) en el momento de la referencia.
+
+- El puntero especifica una dirección que está alineada de una forma no adecuada para el tipo de objeto al que se señala.
+
+- El puntero especifica una dirección no utilizada por el programa que se ejecuta.
+
+El operador unario address-of (**&**) proporciona la dirección de su operando. El operando debe ser un valor L que designe un objeto que no esté declarado como __registro__ y no sea un campo de bits, o bien el resultado de un operador unario __&#42;__ de un operador de desreferencia de matriz (__&#91;&#93;__) o, por último, un designador de función. El resultado es del tipo *pointer to type* para un operando de tipo *type*.
+
+Si el operando es el resultado de un operador unario __&#42;__, no se evaluará ningún operador y el resultado será el mismo que si se hubiesen omitido ambos. El resultado no es un valor L, y se siguen aplicando las restricciones de los operadores. Si el operando es el resultado de un operador __&#91;&#93;__, no se evaluarán ni el operador __&__ ni el unario __&#42;__ implicados por el operador __&#91;&#93;__. El resultado tiene el mismo efecto que si se eliminase el operador __&__ y se cambiase el operador __&#91;&#93;__ por un operador __+__. De lo contrario, el resultado es un puntero que señala al objeto o a la función designados por el operando.
+
+
+## <a name="examples"></a>Ejemplos
+
+En los ejemplos siguientes se usan estas declaraciones comunes:
+
+```C
+int *pa, x;
+int a[20];
+double d;
+```
+
+Esta instrucción utiliza el operador address-of (**&**) para tomar la dirección del sexto elemento de la matriz `a`. El resultado se almacena en la variable de puntero `pa`:
+
+```C  
+pa = &a[5];
+```
+
+En este ejemplo se utiliza el operador de direccionamiento indirecto (__&#42;__) para acceder al valor `int` de la dirección almacenada en `pa`. El valor se asigna a la variable de entero `x`:
+
+```C
+x = *pa;
+```
+
+En este ejemplo se muestra que el resultado de aplicar el operador de direccionamiento indirecto a la dirección de `x` es igual que `x`:
+
+```C
+assert( x == *&x );
+```
+
+En este ejemplo se muestran otras maneras de declarar un puntero a una función:
+
+```C
+int roundup( void );     /* Function declaration */
+
+int  *proundup  = roundup;
+int  *pround  = &roundup;
+assert( pround == proundup );
 ```  
-int *pa, x;  
-int a[20];  
-double d;  
-```  
-  
- Esta instrucción utiliza el operador address-of:  
-  
-```  
-pa = &a[5];  
-```  
-  
- El operador address-of (**&**) toma la dirección del sexto elemento de la matriz `a`. El resultado se almacena en la variable de puntero `pa`.  
-  
-```  
-x = *pa;  
-```  
-  
- En este ejemplo se utiliza el operador de direccionamiento indirecto (**\***) para acceder al valor `int` en la dirección almacenada en `pa`. El valor se asigna a la variable de entero `x`.  
-  
-```  
-if( x == *&x )  
-    printf( "True\n" );  
-```  
-  
- Este ejemplo imprime la palabra `True`, que demuestra que el resultado de aplicar el operador de direccionamiento indirecto a la dirección de `x` es igual que `x`.  
-  
-```  
-int roundup( void );     /* Function declaration */  
-  
-int  *proundup  = roundup;  
-int  *pround  = &roundup;  
-```  
-  
- Una vez declarada la función `roundup`, se declaran y se inicializan dos punteros a `roundup`. El primer puntero, `proundup`, se inicializa solo con el nombre de la función, mientras que el segundo, `pround`, utiliza el operador address-of en la inicialización. Las inicializaciones son equivalentes.  
-  
-## <a name="see-also"></a>Vea también  
- [Operador de direccionamiento indirecto: *](../cpp/indirection-operator-star.md)   
- [address-of (Operador): &](../cpp/address-of-operator-amp.md)
+
+Una vez declarada la función `roundup`, se declaran y se inicializan dos punteros a `roundup`. El primer puntero, `proundup`, se inicializa solo con el nombre de la función, mientras que el segundo, `pround`, utiliza el operador address-of en la inicialización. Las inicializaciones son equivalentes.
+
+## <a name="see-also"></a>Vea también
+
+[Operador de direccionamiento indirecto: &#42;](../cpp/indirection-operator-star.md)  
+[address-of (Operador): &](../cpp/address-of-operator-amp.md)  
