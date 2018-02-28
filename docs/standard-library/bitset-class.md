@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 Describe un tipo de objeto que almacena una secuencia que consta de un número fijo de bits que proporcionan una manera compacta de mantener indicadores para un conjunto de elementos o condiciones. La clase bitset admite operaciones en objetos de tipo bitset que contienen una colección de bits y proporcionan acceso de tiempo constante a cada bit.  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  Una copia del conjunto de bits modificado para el que se ha invocado la función miembro.  
   
 ### <a name="remarks"></a>Comentarios  
- La segunda función miembro produce una excepción [out_of_range](../standard-library/out-of-range-class.md) si la posición especificada como parámetro es mayor que el tamaño *N* del **conjunto de bits\<***N***>** al que se ha invertido el bit.  
+ La segunda función miembro produce un [out_of_range](../standard-library/out-of-range-class.md) excepción si la posición especificada como un parámetro es mayor que el tamaño *N* de la **bitset\<***N***  >**  cuyos bits se ha invertido.  
   
 ### <a name="example"></a>Ejemplo  
   
@@ -1173,9 +1176,9 @@ public:
  Una referencia al bit en el conjunto de bits especificado por la posición del argumento para la primera, segunda y quinta función miembro de referencia de clase, y **True** o **False**, para reflejar el valor del bit modificado en el conjunto de bits para la tercera y cuarta función miembro de referencia de clase.  
   
 ### <a name="remarks"></a>Comentarios  
- La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permita que *b* sea un objeto de tipo `bool`, *x* e *y* objetos de tipo **bitset\<***N***>**, e *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:  
+ La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo `bool`, *x* y *y* objetos de tipo **bitset\<***N*** >** , y *i* y *j* posiciones válidas dentro de dicho objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:  
   
-|Operación|Definición|  
+|Operación|de esquema JSON|  
 |---------------|----------------|  
 |*x*[*i*] = *b*|Almacena el valor `bool` *b* en la posición de bit *i* en el conjunto de bits *x*.|  
 |*x*[*i*] = *y*[*j*]|Almacena el valor del bit *y*[ *j*] en la posición de bit *i* en el conjunto de bits *x*.|  
