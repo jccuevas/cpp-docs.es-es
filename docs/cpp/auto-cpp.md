@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 dev_langs:
 - C++
+f1_keywords:
+- auto_CPP
+- auto
+helpviewer_keywords:
+- auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 caps.latest.revision: 
 author: mikeblome
@@ -17,11 +22,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6721aa5860f23025b8b6c762cc7e5f4d6178228d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="auto-c"></a>Auto (C++)
 Deduce el tipo de una variable declarada a partir de su expresión de inicialización.  
@@ -129,14 +134,14 @@ int main()
 |Número de error|Descripción|  
 |------------------|-----------------|  
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|La palabra clave `auto` no se puede combinar con ningún otro especificador de tipo.|  
-|[ERROR C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un símbolo que se declara con la palabra clave `auto` debe tener un inicializador.|  
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Un símbolo que se declara con la palabra clave `auto` debe tener un inicializador.|  
 |[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Utilizó incorrectamente la palabra clave `auto` para declarar un tipo. Por ejemplo, declaró un tipo de valor devuelto de método o una matriz.|  
 |[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Un argumento de parámetro o plantilla no se puede declarar con la palabra clave `auto`.|  
-|[ERROR C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Un parámetro de método o plantilla no se puede declarar con la palabra clave `auto`.|  
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Un parámetro de método o plantilla no se puede declarar con la palabra clave `auto`.|  
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|No se puede usar un símbolo antes de inicializarlo. En la práctica, esto significa que una variable no se puede usar para inicializarse a sí misma.|  
-|[ERROR C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|No se puede convertir en un tipo que se declara con la palabra clave `auto`.|  
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|No se puede convertir en un tipo que se declara con la palabra clave `auto`.|  
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos los símbolos de una lista de declaradores que se declara con la palabra clave `auto` deben resolverse en el mismo tipo. Para obtener más información, consulte [declaraciones y definiciones](declarations-and-definitions-cpp.md).|  
-|[EL ERROR C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|El [sizeof](../cpp/sizeof-operator.md) y [typeid](../windows/typeid-cpp-component-extensions.md) operadores no se pueden aplicar a un símbolo que se declara con el `auto` palabra clave.|  
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|El [sizeof](../cpp/sizeof-operator.md) y [typeid](../windows/typeid-cpp-component-extensions.md) operadores no se pueden aplicar a un símbolo que se declara con el `auto` palabra clave.|  
   
 ## <a name="examples"></a>Ejemplos  
  Estos fragmentos de código muestran algunas de las formas de las que se puede usar la palabra clave `auto`.  
@@ -222,7 +227,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Auto (palabra clave)](../cpp/auto-keyword.md)   
+ [auto Keyword](../cpp/auto-keyword.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
  [/ Zc: Auto (deducir tipo de Variable)](../build/reference/zc-auto-deduce-variable-type.md)   
  [sizeof (operador)](../cpp/sizeof-operator.md)   

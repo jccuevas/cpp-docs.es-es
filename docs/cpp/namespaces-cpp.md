@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>Espacios de nombres (C++)
 Un espacio de nombres es una región declarativa que proporciona un ámbito a los identificadores (nombres de tipos, funciones, variables, etc.) de su interior. Los espacios de nombres se utilizan para organizar el código en grupos lógicos y para evitar conflictos de nombres que pueden producirse, especialmente cuando la base de código incluye varias bibliotecas. Todos los identificadores del ámbito del espacio de nombres son visibles entre sí sin calificación. Identificadores fuera del espacio de nombres pueden tener acceso a los miembros con el nombre completo para cada identificador, por ejemplo `std::vector<std::string> vec;`, o bien mediante un [mediante declaración](../cpp/using-declaration.md) para un identificador único (`using std::string`), o un [using (directiva)](../cpp/namespaces-cpp.md#using_directives) para todos los identificadores del espacio de nombres (`using namespace std;`). El código de los archivos de encabezado debe utilizar siempre el nombre completo del espacio de nombres.  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>las directivas using  
+## <a id="using_directives"></a> las directivas using  
  El `using` directiva permite que todos los nombres en un **espacio de nombres** sin usar la *espacio de nombres* como calificador explícito. Usando una directiva en un archivo de implementación (es decir, (*.cpp) si está utilizando varios identificadores diferentes en un espacio de nombres; Si simplemente está utilizando uno o dos identificadores, a continuación, considere el uso de una declaración para poner solo esos identificadores en el ámbito y no todos los identificadores del espacio de nombres. Si una variable local tiene el mismo nombre que una variable de espacio de nombres, se oculta la variable de espacio de nombres. Es un error tener una variable de espacio de nombres con el mismo nombre que una variable global.  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>Alias de Namespace  
+## <a id="namespace_aliases"></a> Alias de Namespace  
  Los nombres de los espacios de nombres deben ser únicos, lo que significa que a menudo no pueden ser demasiado cortos. Si la longitud de un nombre hace que el código sea difícil de leer, o resulta tedioso escribirlo en un archivo de encabezado donde no se pueden utilizar directivas using, puede hacer un alias del espacio de nombres que actúe como una abreviatura del nombre real. Por ejemplo:  
   
 ```cpp  
