@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
   
 > [!IMPORTANT]
->  Al utilizar `vsprintf`, no hay forma de limitar el número de caracteres escritos, lo que significa que el código que utilice esta función es susceptible de saturaciones del búfer. En su lugar, use [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que `format` no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
+>  Usar `vsprintf`, hay es ninguna forma de limitar el número de caracteres escritos, lo que significa que el código mediante esta función es susceptible a saturaciones del búfer. En su lugar, use [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que `format` no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
   
  `vswprintf` se ajusta a ISO C estándar, que requiere el segundo parámetro, `count`, de tipo `size_t`. Para imponer el comportamiento no estándar anterior, defina `_CRT_NON_CONFORMING_SWPRINTFS.` El comportamiento anterior no puede estar en una versión posterior, por lo que el código se debe cambiar de forma que use el nuevo comportamiento estándar.  
   

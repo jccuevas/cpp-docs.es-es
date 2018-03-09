@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: "Documentación de Visual C++ | Microsoft Docs"
 description: "Obtenga información sobre cómo usar C++ para desarrollar aplicaciones, servicios y herramientas para sus plataformas y dispositivos."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -182,7 +183,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Python</h3>
+                                                    <h3>Plantillas de</h3>
                                                     <p>Use Python Tools para Visual Studio para crear aplicaciones de Python que interactúen con programas de C++.</p>
                                                 </div>
                                             </div>

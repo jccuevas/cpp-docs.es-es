@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/ZF (generación PDB más rápido)
 
@@ -32,7 +32,7 @@ Habilitar la generación de PDB más rápido en compilaciones en paralelo, pues 
 
 El **/Zf** opción habilita la compatibilidad de compilador para la generación más rápida de archivos PDB cuando se usa el [/MP (compilar con varios procesos)](mp-build-with-multiple-processes.md) opción, o cuando el sistema de compilación (por ejemplo, [MSBuild ](/visualstudio/msbuild/msbuild-reference) o [CMake](../../ide/cmake-tools-for-visual-cpp.md)) puede ejecutar cl.exe varios procesos de compilador al mismo tiempo. Esta opción hace que el front-end de compilador retrasar la generación de índices de tipo para cada registro de tipo en el archivo PDB hasta el final de la compilación, a continuación, las solicita todo en una única llamada RPC para mspdbsrv.exe, en lugar de realizar una solicitud RPC para cada registro. Esencialmente, esto puede mejorar el rendimiento de la compilación al reducir la carga RPC sobre el proceso de mspdbsrv.exe en un entorno donde varios procesos de compilador cl.exe ejecutan simultáneamente.
 
-Dado que la **/Zf** opción solo se aplica a la generación de PDF, requiere el [/Zi](z7-zi-zi-debug-information-format.md) o [/Zi](z7-zi-zi-debug-information-format.md) opción.
+Dado que la **/Zf** opción solo se aplica a la generación de PDB, requiere la [/Zi](z7-zi-zi-debug-information-format.md) o [/Zi](z7-zi-zi-debug-information-format.md) opción.
 
 El **/Zf** opción está disponible a partir de Visual Studio 2017 versión 15,1 y está desactivada de forma predeterminada.
 
