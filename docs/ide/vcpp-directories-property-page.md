@@ -1,7 +1,7 @@
 ---
 title: "Página de propiedades de directorios de VC ++ | Documentos de Microsoft"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>Página de propiedades de directorios de VC ++ (Windows)
 
@@ -42,23 +42,25 @@ Para la versión de Linux de esta página, vea [directorios de VC ++ (C++ Linux)
 
 Para tener acceso a la **directorios de VC ++** página de propiedades:
 
-1. en el menú principal seleccione **vista | Explorador de soluciones**
-1. Haga doble clic en el nodo del proyecto (no la solución de nivel superior) y elija **propiedades**
-1. en el panel izquierdo de la **páginas de propiedades** cuadro de diálogo, expanda **propiedades de configuración** y seleccione **directorios de VC ++**.  
+1. Si el **el Explorador de soluciones** ventana no está visible, a continuación, en el menú principal, elija **vista** > **el Explorador de soluciones**.
+1. Haga doble clic en un nodo de proyecto (no la solución de nivel superior) y elija **propiedades**.
+1. En el panel izquierdo de la **páginas de propiedades** cuadro de diálogo, seleccione **propiedades de configuración** > **directorios de VC ++**.  
 
-Propiedades de directorios de VC ++ se aplican a un proyecto, no el nodo de solución de nivel superior:
+Propiedades de directorios de VC ++ se aplican a un proyecto, no el nodo de solución de nivel superior. Si no ve **directorios de VC ++** en **propiedades de configuración**, seleccione un nodo de proyecto de C++ en el **el Explorador de soluciones** ventana: 
 
 ![Seleccione el nodo del proyecto](media/vcppdir.png "seleccione el nodo de proyecto para ver las propiedades de directorios de VC ++")
 
-Si no ve la página de propiedades, asegúrese de que tiene el nodo del proyecto seleccionado en **el Explorador de soluciones**. Tenga en cuenta que un **directorios de VC ++** página de propiedades de los proyectos multiplataforma, parece diferente. Para los proyectos de distinta de Windows, vea [directorios de VC ++ (C++ Linux)](../linux/prop-pages/directories-linux.md) o. 
+Tenga en cuenta que la **directorios de VC ++** página de propiedades de los proyectos multiplataforma, parece diferente. Para obtener información específica de proyectos de C++ de Linux, consulte [directorios de VC ++ (C++ Linux)](../linux/prop-pages/directories-linux.md). 
  
 Si no está familiarizado con *propiedades del proyecto* en Visual Studio, le resultará útil para la primera lectura [trabajar con configuraciones de proyecto](working-with-project-properties.md). 
  
-La configuración predeterminada para los directorios de VC ++ depende del tipo de proyecto. Para proyectos de escritorio incluyen las ubicaciones de herramientas de VC ++ para un determinado conjunto de herramientas de plataforma y la ubicación del SDK de Windows. Puede cambiar la **conjunto de herramientas de plataforma** y **versión del SDK de Windows** en el **propiedades de configuración: General** página. Para ver los valores de cualquiera de los directorios:
+La configuración predeterminada de **directorios de VC ++** propiedades dependen del tipo de proyecto. Para proyectos de escritorio incluyen las ubicaciones de herramientas de C++ para un determinado conjunto de herramientas de plataforma y la ubicación del SDK de Windows. Puede cambiar la **conjunto de herramientas de plataforma** y **versión del SDK de Windows** en el **propiedades de configuración** > **General** página. 
 
-1. en el panel derecho de la **directorios de VC ++** , seleccione una fila. Por ejemplo, **directorios de bibliotecas**
-1. Elija el botón de flecha abajo a la derecha
-1. Elija **editar**.
+Para ver los valores de cualquiera de los directorios:
+
+1. Seleccione una de las propiedades de la **directorios de VC ++** página. Por ejemplo, elegir **directorios de bibliotecas**.
+1. Elija el botón de flecha hacia abajo al final del campo de valor de propiedad.
+1. En el menú desplegable, elija **editar**.
 
 ![Editar directorios de bibliotecas](media/vcppdir_libdir_edit.png "cuadro de diálogo para editar las rutas de acceso de la biblioteca")
 
@@ -74,7 +76,7 @@ Puede buscar una coincidencia parcial o completa en el cuadro de edición. La il
 
 ![Vea los valores de la macro](media/vcppdir_libdir_macros.png "cuadro de diálogo para editar las macros")
 
-Nota: La lista se rellena a medida que escribe. No presione **ENTRAR**.
+Nota: Esta lista se rellena a medida que escribe. No presione **ENTRAR**.
 
 Para obtener más información acerca de las macros y por qué se debe usar en lugar de rutas codificadas de forma rígida siempre que sea posible, consulte [trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
@@ -90,22 +92,25 @@ Para obtener más información, vea estas entradas de blog: [directorios de VC +
 
 También puede especificar otros directorios, de la manera siguiente.  
   
-**Directorios de archivos ejecutables**  
+**Directorios de archivos ejecutables**<br/>
 Directorios donde buscar archivos ejecutables. Corresponde a la **ruta de acceso** variable de entorno.
 
-**Directorios de archivos de inclusión**  
+**Directorios de archivos de inclusión**<br/>
 Directorios donde buscar archivos de inclusión a los que se hace referencia en el código fuente. Corresponde a la **INCLUDE** variable de entorno.
 
-**Directorios de referencia**  
+**Directorios de referencia**<br/>
  Directorios donde buscar archivos de módulo (metadatos) que se hace referencia en el código fuente de ensamblado y la [#using](../preprocessor/hash-using-directive-cpp.md) directiva. Corresponde a la **LIBPATH** variable de entorno.
 
-**Directorios de archivos de bibliotecas**  
-Directorios donde buscar archivos de bibliotecas (.lib); esto incluye las bibliotecas en tiempo de ejecución. Corresponde a la **LIB** variable de entorno. Esta configuración no se aplica a los archivos .obj; Para vincular a un archivo .obj, en la [vinculador](../ide/linker-property-pages.md)**General** página de propiedades, seleccione **dependencias de biblioteca adicionales** y, a continuación, especifique la ruta de acceso relativa del archivo.
+**Directorios de archivos de bibliotecas**<br/>
+Directorios donde buscar archivos de bibliotecas (.lib); esto incluye las bibliotecas en tiempo de ejecución. Corresponde a la **LIB** variable de entorno. Esta configuración no se aplica a los archivos .obj; Para vincular a un archivo .obj, en la **propiedades de configuración** > **vinculador** > **General** página de propiedades, seleccione  **Dependencias de biblioteca adicionales** y, a continuación, especifique la ruta de acceso relativa del archivo. Para obtener más información, consulte [páginas de propiedades vinculador](../ide/linker-property-pages.md).
 
-**Directorios de origen**  
+**Directorios de bibliotecas WinRT**<br/>
+Directorios donde buscar archivos de biblioteca de WinRT para usar en aplicaciones de la plataforma Universal de Windows (UWP). 
+
+**Directorios de origen**<br/>
 Directorios donde buscar archivos de código fuente para utilizar con IntelliSense.
 
-**Excluir directorios**  
+**Excluir directorios**<br/>
 Directorios en los que no se va a buscar cuando se comprueban las dependencias de compilación.
 
 ## <a name="sharing-the-settings"></a>Compartir la configuración
