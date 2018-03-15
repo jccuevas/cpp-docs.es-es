@@ -1,12 +1,9 @@
 ---
-title: -Zc (ajuste) | Documentos de Microsoft
+title: /Zc (ajuste) | Documentos de Microsoft
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Ajuste)
 
@@ -36,11 +32,11 @@ Puede usar el **/Zc** opciones del compilador para especificar el comportamiento
 
 ## <a name="syntax"></a>Sintaxis
 
-> / Zc:_opción_{,_opción_}
+> **/ Zc:**_opción_{,_opción_}
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando Visual Studio haya implementado una extensión de C o C++ que no es compatible con el estándar, puede usar un `/Zc` opción de conformidad para especificar el comportamiento que cumplen el estándar o específico de Microsoft. Para algunas opciones, el comportamiento específico de Microsoft es el predeterminado, para evitar cambios importantes a gran escala en el código existente. En otros casos, el valor predeterminado es el comportamiento estándar, donde las mejoras de seguridad, rendimiento o compatibilidad compensan los costos de los principales cambios. El valor predeterminado de cada opción de cumplimiento puede cambiar en versiones más recientes de Visual Studio. Para obtener más información acerca de cada opción de conformidad, vea el tema de cada opción específica.
+Cuando Visual Studio haya implementado una extensión de C o C++ que no es compatible con el estándar, puede usar un `/Zc` opción de conformidad para especificar el comportamiento que cumplen el estándar o específico de Microsoft. Para algunas opciones, el comportamiento específico de Microsoft es el predeterminado, para evitar cambios importantes a gran escala en el código existente. En otros casos, el valor predeterminado es el comportamiento estándar, donde las mejoras de seguridad, rendimiento o compatibilidad compensan los costos de los principales cambios. El valor predeterminado de cada opción de cumplimiento puede cambiar en versiones más recientes de Visual Studio. Para obtener más información acerca de cada opción de conformidad, vea el tema de cada opción específica. El [/ permisivo-](permissive-standards-conformance.md) opción del compilador implícitamente establece las opciones de conformidad que no se establecen de forma predeterminada a su configuración compatible.
 
 Estos son los `/Zc` opciones del compilador:
 
@@ -51,7 +47,7 @@ Estos son los `/Zc` opciones del compilador:
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vinculación externa para `constexpr` variables (desactivado de forma predeterminada).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Exigir Standard C++ `for` las reglas de ámbito (de forma predeterminada).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` en las funciones necesarias (de forma predeterminada).|
-|[en línea\[-\]](zc-inline-remove-unreferenced-comdat.md)|Quitar función sin referencia o los datos si se COMDAT o tiene vinculación interna solo (desactivado de forma predeterminada).|
+|[En línea\[-\]](zc-inline-remove-unreferenced-comdat.md)|Quitar función sin referencia o los datos si se COMDAT o tiene vinculación interna solo (desactivado de forma predeterminada).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Aplicar C ++ 17 noexcept reglas (de forma predeterminada en C ++ 17 o posterior).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Un archivo temporal UDT no se enlazará a una referencia lvalue no es const (desactivado de forma predeterminada).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Aplicar reglas de conversión de tipos explícita de estándar de C++ (desactivado de forma predeterminada).|
@@ -61,7 +57,8 @@ Estos son los `/Zc` opciones del compilador:
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Habilitar la inicialización local estática de subprocesos (de forma predeterminada).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Suponga `operator new` produce en caso de error (desactivado de forma predeterminada).|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilitar trígrafos (obsoletas, desactivado de forma predeterminada).|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`es un tipo nativo, no en una definición de tipo (de forma predeterminada).|
+|[twoPhase-](zc-twophase.md)|Usar análisis de comportamiento (que cumple las especificaciones de forma predeterminada) de las plantillas no conformes.|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` es un tipo nativo, no en una definición de tipo (de forma predeterminada).|
 
 Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 

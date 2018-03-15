@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c ++ 17 noexcept reglas)
 
@@ -34,7 +34,7 @@ Hace que el estándar C ++ 17 `throw()` como un alias para `noexcept`, quita `th
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando el **/Zc:noexceptTypes** se especifica la opción, el compilador cumple el estándar C ++ 17 y trata [throw()](../../cpp/exception-specifications-throw-cpp.md) como un alias para [noexcept](../../cpp/noexcept-cpp.md), quita `throw(<type list>)`y `throw(...)`y permite determinados tipos debe incluir `noexcept`. El **/Zc:noexceptTypes** opción sólo está disponible cuando [/std:c ++ 17](std-specify-language-standard-version.md) o [/std:latest](std-specify-language-standard-version.md) está habilitado. **/Zc:noexceptTypes** está habilitada de forma predeterminada para que se ajuste a la norma ISO C ++ 17 estándar. Desactivar esta opción mediante la especificación de **/Zc:noexceptTypes-** para revertir al comportamiento 14 C ++ de `noexcept` cuando **/std::C ++ 17** o **/std::latest** se especifica.
+Cuando el **/Zc:noexceptTypes** se especifica la opción, el compilador cumple el estándar C ++ 17 y trata [throw()](../../cpp/exception-specifications-throw-cpp.md) como un alias para [noexcept](../../cpp/noexcept-cpp.md), quita `throw(<type list>)`y `throw(...)`y permite determinados tipos debe incluir `noexcept`. El **/Zc:noexceptTypes** opción sólo está disponible cuando [/std:c ++ 17](std-specify-language-standard-version.md) o [/std:latest](std-specify-language-standard-version.md) está habilitado. **/Zc:noexceptTypes** está habilitada de forma predeterminada para que se ajuste a la norma ISO C ++ 17 estándar. El [/ permisivo-](permissive-standards-conformance.md) no afecta la opción **/Zc:noexceptTypes**. Desactivar esta opción mediante la especificación de **/Zc:noexceptTypes-** para revertir al comportamiento 14 C ++ de `noexcept` cuando **/std::C ++ 17** o **/std::latest** se especifica.
 
 A partir de Visual Studio 2017 versión 15,5, el compilador de C++ diagnostica más especificaciones de excepciones que no coincidan en declaraciones de C ++ 17 modo o cuando la [/ permisivo-](permissive-standards-conformance.md) se especifica la opción.
 
@@ -84,12 +84,12 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **línea de comandos** página de propiedades de la **C/C++** carpeta.
+1. Seleccione el **propiedades de configuración** > **C/C++** > **línea de comandos** página de propiedades.
 
 1. Modificar el **opciones adicionales** propiedad para incluir **/Zc:noexceptTypes** o **/Zc:noexceptTypes-** y, a continuación, elija **Aceptar**.
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (ajuste)](../../build/reference/zc-conformance.md)  
+[/Zc (Ajuste)](../../build/reference/zc-conformance.md)  
 [noexcept](../../cpp/noexcept-cpp.md)  
 [Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)  
