@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bd3c4f790681b1b044f435c03d185585b565eb62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="29-directive-nesting"></a>2.9 Anidamiento de directivas
 El anidamiento dinámico de directivas debe cumplir las reglas siguientes:  
@@ -34,7 +34,7 @@ El anidamiento dinámico de directivas debe cumplir las reglas siguientes:
   
 -   **para**, **secciones**, y **único** directivas no están permitidas en la extensión dinámica de **crítico**, **ordenados**, y **maestro** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
   
--   **barrera** directivas no están permitidas en la extensión dinámica de **para**, **ordenados**, **secciones**, **único**, **maestro**, y **crítico** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
+-   **barrera** directivas no están permitidas en la extensión dinámica de **para**, **ordenados**, **secciones**, **único**, **principal**, y **crítico** regiones si las directivas se enlazan a la misma **paralelo** como las regiones.  
   
 -   **maestro** directivas no están permitidas en la extensión dinámica de **para**, **secciones**, y **único** directivas si la **master** directivas enlazar al mismo **paralelo** como las directivas de uso compartido.  
   

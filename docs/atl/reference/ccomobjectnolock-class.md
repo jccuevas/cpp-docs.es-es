@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobjectnolock-class"></a>Clase CComObjectNoLock
 Esta clase implementa **IUnknown** para un objeto no agregado, pero no no incremento el módulo recuento de bloqueos en el constructor.  
@@ -53,7 +53,7 @@ class CComObjectNoLock : public Base
 |Name|Descripción|  
 |----------|-----------------|  
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Constructor.|  
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|Destructor.|  
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -64,7 +64,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Disminuye el recuento de referencias en el objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObjectNoLock`es similar a [CComObject](../../atl/reference/ccomobject-class.md) en que implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto; sin embargo, `CComObjectNoLock` tiene cuenta no incremento el bloqueo de módulo en el constructor.  
+ `CComObjectNoLock` es similar a [CComObject](../../atl/reference/ccomobject-class.md) en que implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para un objeto; sin embargo, `CComObjectNoLock` tiene cuenta no incremento el bloqueo de módulo en el constructor.  
   
  ATL usa `CComObjectNoLock` internamente para los generadores de clases. En general, no utilizará esta clase directamente.  
   
@@ -76,7 +76,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>  CComObjectNoLock::AddRef  
  Incrementa el recuento de referencias en el objeto.  
   
 ```
@@ -86,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que puede ser útil para el diagnóstico o pruebas.  
   
-##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
  El constructor. A diferencia de [CComObject](../../atl/reference/ccomobject-class.md), no incrementa el recuento de bloqueos del módulo.  
   
 ```
@@ -95,9 +95,9 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Parámetros  
  **void\***  
- [in] No se utiliza este parámetro sin nombre. Existe por simetría con otros **CCom***XXX*`Object`*XXX* constructores.  
+ [in] No se utiliza este parámetro sin nombre. Existe por simetría con otros **CCom *** XXX*`Object`*XXX* constructores.  
   
-##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Destructor.  
   
 ```
@@ -108,7 +108,7 @@ CComObjectNoLock(void* = NULL);
  Libera todos los recursos asignados y llamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
-##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -125,7 +125,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>  CComObjectNoLock::Release  
  Disminuye el recuento de referencias en el objeto.  
   
 ```

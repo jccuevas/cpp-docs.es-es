@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las macros de excepción en la versión 3.0
 Se trata de un tema avanzado.  
@@ -39,7 +39,7 @@ Se trata de un tema avanzado.
   
 -   [Volver a producir excepciones](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Tipos de excepción y la Macro CATCH  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Tipos de excepción y la Macro CATCH  
  En versiones anteriores de MFC, la **CATCH** macro usa información de tipo en tiempo de ejecución MFC para determinar el tipo de una excepción; se determina el tipo de la excepción, en otras palabras, en el bloque catch. Con las excepciones de C++, sin embargo, el tipo de la excepción siempre viene determinado en el sitio de producción por el tipo del objeto de excepción que se produce. Esto causará incompatibilidades en el caso excepcional, donde el tipo del puntero al objeto iniciado difiere del tipo del objeto iniciado.  
   
  En el ejemplo siguiente se muestra el resultado de las diferencias entre la versión 3.0 de MFC y las versiones anteriores:  
@@ -60,7 +60,7 @@ Se trata de un tema avanzado.
   
  Para solucionar este problema, mueva la expresión throw desde la función al código de llamada y producirá una excepción del tipo real conocida por el compilador en el momento en que se generó la excepción.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Volver a producir excepciones  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Volver a producir excepciones  
  Un bloque catch no puede producir el mismo puntero de excepción que detectó.  
   
  Por ejemplo, este código era válido en versiones anteriores, pero tendrá resultados inesperados con la versión 3.0:  

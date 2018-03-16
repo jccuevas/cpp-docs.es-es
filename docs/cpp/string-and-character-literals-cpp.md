@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Literales de carácter  
  Un *literal de carácter* está compuesto por un carácter de constante. Se representa mediante el carácter delimitado por comillas simples. Hay cinco tipos de literales de carácter:  
   
--   Literales de carácter ordinario de tipo `char`, por ejemplo`'a'`  
+-   Literales de carácter ordinario de tipo `char`, por ejemplo `'a'`  
   
--   Literales de caracteres UTF-8 de tipo `char`, por ejemplo`u8'a'`  
+-   Literales de caracteres UTF-8 de tipo `char`, por ejemplo `u8'a'`  
   
 -   Literales de caracteres anchos de tipo `wchar_t`(por ejemplo, `L'a'`)  
   
--   Literales de carácter UTF-16 de tipo `char16_t`, por ejemplo`u'a'`  
+-   Literales de carácter UTF-16 de tipo `char16_t`, por ejemplo `u'a'`  
   
--   Literales de carácter UTF-32 de tipo `char32_t`, por ejemplo`U'a'`  
+-   Literales de carácter UTF-32 de tipo `char32_t`, por ejemplo `U'a'`  
   
  El carácter utilizado para un literal de carácter puede ser cualquier carácter, excepto la caracteres reservados, barra diagonal inversa ('\\'), comilla simple (') o nueva línea. Los caracteres reservados se pueden especificar mediante una secuencia de escape. Los caracteres se pueden especificar mediante nombres de carácter universal, siempre que el tipo sea lo suficientemente grande como para contener al carácter.  
   

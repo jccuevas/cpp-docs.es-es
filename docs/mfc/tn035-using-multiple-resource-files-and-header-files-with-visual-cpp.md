@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++
 > [!NOTE]
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H define símbolos estándar, tales como `ID_FILE_NEW`, usados por .NET Framework y, específicamente, en AFXRES.RC. AFXRES.H también especifica mediante #include WINRES.H, que contiene un subconjunto de WINDOWS.H necesario para los archivos .RC generados por Visual C++, así como AFXRES.RC. Los símbolos definidos en AFXRES.H están disponibles cuando se edita el archivo de recursos de la aplicación (MYAPP.RC). Por ejemplo, `ID_FILE_NEW` se utiliza para el elemento de menú de Archivo Nuevo en recursos de menús de MYAPP.RC. No se puede cambiar ni eliminar estos símbolos definidos por .NET framework.  
   
-## <a name="_mfcnotes_tn035_including"></a>Incluir archivos de encabezado adicionales  
+## <a name="_mfcnotes_tn035_including"></a> Incluir archivos de encabezado adicionales  
   
  La aplicación creada mediante AppWizard incluye solo dos archivos de encabezado: RESOURCE.H y AFXRES.H. Solo RESOURCE.H es específico de la aplicación. Puede ser necesario incluir archivos de encabezado de solo lectura adicionales en los casos siguientes:  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ agrega siempre la línea de comentario //{{NO_DEPENDENCIES}} a un archivo .RC cuando guarda el archivo. En algunos casos, evitar la dependencia de compilación de RESOURCE.H puede provocar errores en tiempo de ejecución que no se detectan en tiempo de vinculación. Por ejemplo, si utiliza el explorador de símbolos para cambiar el valor numérico asignado a un símbolo para un recurso, el recurso no se encontrará correctamente y no se cargará en tiempo de ejecución de la aplicación si no se vuelve a compilar el archivo .CPP que hace referencia al recurso. En tales casos, debe compilar explícitamente cualquiera. Los archivos CPP que sepa que se ven afectados por los cambios de símbolos de recursos. H o seleccione **volver a generar todo**. Si tiene la necesidad de cambiar con frecuencia valores de símbolos para un determinado grupo de recursos, probablemente resultará más cómodo y seguro dividir estos símbolos en un archivo de encabezado independiente de solo lectura, tal como se describe en la sección anterior [incluidos Archivos de encabezado adicionales](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Cómo administra Visual C++ incluye el conjunto de información **  
+## <a name="_mfcnotes_tn035_set_includes"></a> Cómo administra Visual C++ incluye el conjunto de información **  
   
  Tal y como se describió anteriormente, el comando de inclusión del menú Archivo permite especificar tres tipos de información:  
   

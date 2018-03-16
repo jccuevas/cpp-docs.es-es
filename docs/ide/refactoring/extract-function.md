@@ -4,36 +4,38 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: dbcd323292e301857c65d908047ab14948b86573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="extract-function"></a>Función extraer
 **¿Qué:** le permite convertir un fragmento de código en su propia función.
 
 **Cuándo:** tiene un fragmento de código existente en alguna función que debe llamarse desde otra función.  
 
-**Por este motivo:** se puede copiar y pegar ese código, pero esto conduciría a la duplicación.  Una solución mejor es refactorizar ese fragmento a su propia función que se puede llamar libremente por cualquier otra función.
+**Por qué:** Podría copiar y pegar ese código, pero esto provocaría una duplicación.  Una solución mejor es refactorizar ese fragmento a su propia función que se puede llamar libremente por cualquier otra función.
 
-**Cómo:**
+**Cómo**:
 
 1. Resalte el código que se va a extraer:
 
-   ![Código que aparece resaltado](images/extractfunction_highlight.png)
+   ![Código resaltado](images/extractfunction_highlight.png)
 
-1. A continuación, realice una de las siguientes acciones:
+1. A continuación, realice alguno de los siguientes procedimientos:
    * **Teclado**
-     * Presione **Ctrl + R**, a continuación, **Ctrl + M**.  (Tenga en cuenta que su método abreviado de teclado puede ser diferente en función del perfil que haya seleccionado).
+     * Presione **CTRL+R** y, a continuación, **CTRL+M**.  (Tenga en cuenta que su método abreviado de teclado puede ser diferente en función del perfil que haya seleccionado).
      * Presione **Ctrl +.** Para activar el **acciones rápidas y refactorizaciones** menú y seleccione **función extraer (Experimental)** en el menú contextual.
    * **Mouse**
      * Seleccione **Editar > refactorizar > Extraer función (Experimental)**.

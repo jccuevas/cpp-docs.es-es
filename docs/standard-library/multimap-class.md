@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 La clase multimap de la Biblioteca estándar de C++ se usa para el almacenamiento y la recuperación de datos de una colección en la que cada elemento es un par que tiene un valor de datos y una clave de ordenación. El valor de la clave no necesita ser único y se utiliza para ordenar los datos automáticamente. El valor de un elemento de una clase multimap se puede cambiar directamente, pero no su valor de clave asociado. En su lugar, se deben eliminar los valores de clave asociados a los antiguos elementos e insertar los nuevos valores de clave asociados a los elementos nuevos.  

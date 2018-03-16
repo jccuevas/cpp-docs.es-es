@@ -22,15 +22,15 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores y declaraciones de variables
 En el resto de esta sección se describe el formato y el significado de las declaraciones de tipos de variable resumidos en esta lista. En concreto, en las secciones restantes se explica cómo declarar los siguientes elementos:  
   
-|Tipo de variable|Description|  
+|Tipo de variable|Descripción|  
 |----------------------|-----------------|  
 |[Variables simples](../c-language/simple-variable-declarations.md)|Variables de valor único con tipo entero o de punto flotante|  
 |[Matrices](../c-language/array-declarations.md)|Variables compuestas por una colección de elementos con el mismo tipo|  

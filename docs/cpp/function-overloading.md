@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Se denominan *sobrecargados* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos. 
@@ -44,7 +44,7 @@ Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguient
 |Presencia o ausencia de puntos suspensivos|Sí|  
 |Uso de nombres `typedef`|No|  
 |Límites de matriz sin especificar|No|  
-|**Const** o`volatile`|Sí, cuando se aplica a toda función|
+|**Const** o `volatile`|Sí, cuando se aplica a toda función|
 |[ref-qualifier](#ref-qualifier)|Sí|  
   
 ## <a name="example"></a>Ejemplo  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Observe que la intersección entre estos dos conjuntos está vacía. Por lo tanto, el compilador genera un mensaje de error.  
   
- Para la coincidencia de argumentos, una función con  *n*  argumentos predeterminados se trata como  *n* funciones de + 1 separadas, cada uno con un número diferente de argumentos.  
+ Para la coincidencia de argumentos, una función con *n* argumentos predeterminados se trata como *n*funciones de + 1 separadas, cada uno con un número diferente de argumentos.  
   
  Los puntos suspensivos (...) actúan como comodín; coinciden con cualquier argumento real. Esto puede conducir a muchos conjuntos ambiguos, si no se diseñan los conjuntos de funciones sobrecargadas con extremo cuidado.  
   
@@ -261,14 +261,14 @@ volatile Over&
   
 |Conversión del tipo|Conversión al tipo|  
 |-----------------------|---------------------|  
-|*type-name*|*nombre de tipo***&**|  
-|*nombre de tipo***&**|*type-name*|  
+|*type-name*|*nombre de tipo* **&**|  
+|*nombre de tipo* **&**|*type-name*|  
 |*nombre de tipo* **]**|*nombre de tipo\**|  
 |*nombre de tipo* **(** *lista de argumentos* **)**|**(**  *\*nombre-tipo* **) (** *lista de argumentos* **)**|  
 |*type-name*|**Const** *nombre de tipo*|  
-|*type-name*|`volatile`*nombre de tipo*|  
+|*type-name*|`volatile` *nombre de tipo*|  
 |*nombre de tipo\**|**Const** *nombre de tipo\**|  
-|*nombre de tipo\**|`volatile`*nombre de tipo\**|  
+|*nombre de tipo\**|`volatile` *nombre de tipo\**|  
   
  Las conversiones se intentan en la siguiente secuencia:  
   
@@ -301,7 +301,7 @@ Gráfico que muestra conversiones preferidas
   
  La regla anterior solo se aplica a lo largo de una ruta de derivación determinada. Considere el gráfico que se muestra en la ilustración siguiente.  
   
- ![Múltiples &#45; herencia que muestra conversiones preferidas](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Múltiples&#45;herencia que muestra conversiones preferidas](../cpp/media/vc391t2.gif "vc391T2")  
 Gráfico de herencia múltiple que muestra conversiones preferidas  
   
  La conversión del tipo `C*` al tipo `B*` es preferible a la conversión del tipo `C*` al tipo `A*`. La razón es que están en la misma ruta y `B*` está más cerca. Sin embargo, la conversión del tipo `C*` al tipo `D*` no es preferible a la conversión al tipo `A*`; no hay ninguna preferencia, porque las conversiones siguen diferentes rutas.  
@@ -407,7 +407,7 @@ obj.name
   
  El operando izquierdo de los operadores `->*` y `.*` (puntero a miembro) se trata del mismo modo que los operadores `.` y `->` (selección de miembro) en cuanto a la coincidencia de argumentos.  
 
-## <a name="ref-qualifiers"></a>Calificadores de referencia en funciones miembro  
+## <a name="ref-qualifiers"></a> Calificadores de referencia en funciones miembro  
 Calificadores de referencia le permite sobrecargar en función de si el objeto que señala a una función miembro `this` es un valor r o un valor l.  Esta característica puede usarse para evitar las operaciones de copia innecesarias en escenarios donde se elija no proporcionar acceso de puntero a los datos. Por ejemplo, suponga que clase **C** inicializa algunos datos en su constructor y devuelve una copia de los datos en función de miembro **get_data()**. Si un objeto de tipo **C** es un valor r que está a punto de ser destruidos, a continuación, el compilador elige la **get_data() & &** sobrecarga, que mueve los datos en lugar de copiarlo. 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR`es un sinónimo de tipo **char \*** . En el ámbito del miembro, este código genera un error.  
+     Las dos funciones anteriores tienen listas de argumentos idénticas. `PSTR` es un sinónimo de tipo **char \*** . En el ámbito del miembro, este código genera un error.  
   
 -   Los tipos enumerados son tipos distintos y se pueden utilizar para diferenciar funciones sobrecargadas.  
   

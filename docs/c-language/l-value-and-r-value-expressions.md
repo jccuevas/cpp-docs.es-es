@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expresiones de valor L y valor R
 Las expresiones que hacen referencia a ubicaciones de memoria se denominan expresiones de “valor L”. Un valor L representa un valor de "localizador" de la región de almacenamiento o un valor "izquierdo", lo que implica que puede aparecer a la izquierda del signo igual (**=**). Los valores L suelen ser identificadores.  

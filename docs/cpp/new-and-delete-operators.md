@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
@@ -38,7 +38,7 @@ C++ admite la asignación dinámica de asignación y desasignación de objetos m
   
  Para obtener una lista de los archivos de biblioteca que componen la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++, vea [características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> El operador new  
+##  <a id="new_operator"> </a> El operador new  
  Cuando una instrucción como la siguiente se encuentra en un programa, se convierte a una llamada a la función `operator new`:  
   
 ```cpp  
@@ -144,7 +144,7 @@ int main() {
   
  Hay otras maneras de controlar las solicitudes de asignación de memoria con errores: escribir una rutina de recuperación personalizada para controlar el error, a continuación, registre la función mediante una llamada a la [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) función en tiempo de ejecución.  
   
-##  <a id="delete_operator"></a> El operador delete  
+##  <a id="delete_operator"> </a> El operador delete  
  Memoria que se asigna dinámicamente mediante la **nueva** operador se puede liberar con la **eliminar** operador. El operador delete llama el **operador delete** función, lo que libera memoria para el grupo disponible. Mediante el **eliminar** operador también hace que el destructor de clase (si hay alguno) que se llame a.  
   
  Hay globales y de ámbito de clase **operador delete** funciones. Solo un **operador delete** función se puede definir para una clase dada; si se define, oculta la información global de **operador delete** función. Global **operador delete** siempre se llama la función de las matrices de cualquier tipo.  

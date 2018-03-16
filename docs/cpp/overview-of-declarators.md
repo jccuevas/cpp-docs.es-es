@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
 Los declaradores son los componentes de una declaración que especifican nombres de objetos o funciones. Los declaradores también especifican si el objeto con nombre es o no un objeto, puntero, referencia o matriz.  Aunque los declaradores no especifican el tipo base, modifican la información de tipo del tipo básico para especificar tipos derivados, como punteros, referencias y matrices.  Cuando se aplica a las funciones, el declarador funciona con el especificador de tipo para especificar completamente que el tipo de valor devuelto de una función es un objeto, puntero o referencia. (Especificadores, que se describen en [declaraciones y definiciones](declarations-and-definitions-cpp.md), transmiten propiedades tales como la clase de tipo y el almacenamiento. Modificadores, se describen en esta sección y en [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md), modifican los declaradores.) En la ilustración siguiente se muestra una declaración completa de `MyFunction` y se llama a los componentes de la declaración.  

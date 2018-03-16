@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan "conversiones estándar". (Para obtener más información sobre los tipos, los tipos estándar y los tipos derivados, vea [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Las promociones que poseen la cualidad de conservación de valores y las promociones que conservan el tipo signed/unsigned generan normalmente los mismos resultados. Sin embargo, pueden generar resultados diferentes si el objeto que se promueve es uno de los siguientes:  
   
--   Un operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o**>=**  
+-   Un operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o **>=**  
   
      Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.  
   
--   El operando izquierdo de  **>>**  o**>>=**  
+-   El operando izquierdo de  **>>**  o **>>=**  
   
      Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.  
   
@@ -199,7 +199,7 @@ int main() {
   
  Si una clase base es accesible depende del tipo de herencia utilizada en la derivación. Considere la herencia que se muestra en la siguiente ilustración.  
   
- ![Base de herencia gráfico que muestra &#45; accesibilidad a la clase](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Gráfico de herencia que muestra base&#45;clase accesibilidad](../cpp/media/vc38xa1.gif "vc38XA1")  
 Gráfico de herencia para ilustrar la accesibilidad de clase base  
   
  En la tabla siguiente se muestra la accesibilidad de la clase base para la situación que se muestra en la ilustración.  

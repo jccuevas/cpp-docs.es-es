@@ -56,10 +56,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf (Clase)
 Describe un búfer de secuencia que controla la transmisión de elementos de tipo `Elem`, cuyos rasgos de caracteres están determinados por la clase `Tr`, a y desde una secuencia de elementos almacenados en un archivo externo.  

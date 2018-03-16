@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 572ef5ca7199fab5b9ffda686425cdd53547a60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="template-specialization-c"></a>Especialización de plantilla (C++)
 
@@ -84,7 +84,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Ejemplo
 
- Si tiene una clase de colección de plantilla que toma cualquier tipo **T**, puede crear una especialización parcial que toma cualquier tipo de puntero **T***. En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz. A continuación, la colección almacena los valores a los que se señala. Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación. En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
+ Si tiene una clase de colección de plantilla que toma cualquier tipo **T**, puede crear una especialización parcial que toma cualquier tipo de puntero ** T ***. En el código siguiente se muestra una plantilla de clase de colección `Bag` y una especialización parcial para los tipos de puntero en los que la colección desreferencia los tipos de puntero antes de copiarlos en la matriz. A continuación, la colección almacena los valores a los que se señala. Con la plantilla original, solo los propios punteros se hubieran almacenado en la colección y los datos serían vulnerables a la eliminación o la modificación. En esta versión de puntero especial de la colección, se agrega código para comprobar si hay un puntero NULL en el método `add`.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  

@@ -44,10 +44,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="valarray-class"></a>valarray (Clase)
 La clase de plantilla describe un objeto que controla una secuencia de elementos de tipo **Type** que se almacenan como una matriz, que se diseñan para realizar operaciones matemáticas de alta velocidad y que se optimizan para ofrecer un alto rendimiento a la hora de realizar cálculos.  

@@ -105,10 +105,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 de advertencias del compilador a través de C4199
 
@@ -232,7 +232,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4155|eliminación de expresión de matriz sin utilizar el formato de matriz de 'delete'|
 |[Advertencia del compilador (nivel 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|eliminación de una expresión de matriz sin utilizar la forma de matriz de 'delete'; formato de matriz sustituido|
 |[Advertencia del compilador (nivel 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|se omite el pragma por el compilador de C|
-|Advertencia del compilador (nivel 1) C4158|Suponiendo que utiliza #pragma pointers_to_members (full_generality, 'inheritance_type')|
+|Advertencia del compilador (nivel 1) C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
 |[Advertencia del compilador (nivel 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...): ha sacado de identificador push 'identificador'|
 |Advertencia del compilador (nivel 1) C4160|#pragma ' pragma'(pop,...): no se ha encontrado el identificador push 'identificador'|
 |Advertencia del compilador (nivel 3) C4161|#pragma ' pragma'(pop...): más elementos POP que Push|

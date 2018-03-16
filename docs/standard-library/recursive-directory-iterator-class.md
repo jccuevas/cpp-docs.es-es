@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c432cde8a4c565e6195658ab27ce5f2cb1838f6a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator (Clase)
 Describe un iterador de entrada que secuencia a través de los nombres de archivo de un directorio, posiblemente descendiendo a los subdirectorios de forma repetitiva. En el caso de un iterador X, la expresión *X se evalúa como un objeto de la clase directory_entry que contiene el nombre de archivo y cualquier elemento conocido sobre su estado.  

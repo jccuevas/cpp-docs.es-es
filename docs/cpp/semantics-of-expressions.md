@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
 Las expresiones se evalúan según la prioridad y agrupación de sus operadores. ([Prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md) en [convenciones léxicas](../cpp/lexical-conventions.md), muestra las relaciones de C++ imponen operadores en expresiones.)  
@@ -80,10 +80,10 @@ Orden de expresión-evaluación con paréntesis
   
 |Tipo esperado|Tipos permitidos|  
 |-------------------|-------------------|  
-|*type*|`const`*tipo*<br /> `volatile`*tipo*<br /> *tipo de*&<br /> `const`*tipo*&<br /> `volatile`*tipo*&<br /> `volatile const`*tipo*<br /> `volatile const`*tipo*&|  
-|*tipo de*\*|*tipo de*\*<br /> `const`*tipo*\*<br /> `volatile`*tipo*\*<br /> `volatile const`*tipo*\*|  
-|`const`*tipo*|*type*<br /> `const`*tipo*<br />`const`*tipo*&|  
-|`volatile`*tipo*|*type*<br /> `volatile`*tipo*<br /> `volatile`*tipo*&|  
+|*type*|`const` *tipo de*<br /> `volatile` *tipo de*<br /> *tipo de*&<br /> `const` *tipo de*&<br /> `volatile` *tipo de*&<br /> `volatile const` *tipo de*<br /> `volatile const` *tipo de*&|  
+|*tipo de*\*|*tipo de*\*<br /> `const` *tipo de*\*<br /> `volatile` *tipo de*\*<br /> `volatile const` *tipo de*\*|  
+|`const` *tipo de*|*type*<br /> `const` *tipo de*<br />`const` *tipo de*&|  
+|`volatile` *tipo de*|*type*<br /> `volatile` *tipo de*<br /> `volatile` *tipo de*&|  
   
  Dado que las reglas anteriores se pueden utilizar combinadas, se puede proporcionar un puntero const a un objeto volatile cuando se espera un puntero.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   Operando izquierdo del operador AND lógico (&&). El operando izquierdo del operador AND lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador AND lógico.  
   
--   Operando izquierdo del operador OR lógico (&#124; &#124;). El operando izquierdo del operador OR lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador OR lógico.  
+-   Operando izquierdo del operador OR lógico (&#124;&#124;). El operando izquierdo del operador OR lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador OR lógico.  
   
 -   Operando izquierdo del operador de coma. El operando izquierdo del operador de coma se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. Los dos operandos del operador de coma se evalúan siempre.  
   

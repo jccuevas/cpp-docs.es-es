@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-function-definitions"></a>Definiciones de funciones de C
 Una definición de función especifica el nombre de la función, los tipos y el número de parámetros que espera recibir, y su tipo de valor devuelto. Una definición de función también incluye un cuerpo de la función con las declaraciones de las variables locales y las instrucciones que determinan lo que hace la función.  

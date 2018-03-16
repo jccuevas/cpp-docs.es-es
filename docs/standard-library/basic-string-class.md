@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 Las secuencias controladas por un objeto de clase de plantilla `basic_string` son la clase de cadena de C++ estándar y se suelen conocer como cadenas, pero no se deben confundir con las cadenas de estilo C terminadas en null que se usan en la biblioteca estándar de C++. La cadena de C++ estándar es un contenedor que permite usar cadenas como tipos normales, por ejemplo, operaciones de comparación y concatenación, iteradores, algoritmos de la biblioteca estándar de C++, y copiar y asignar con la memoria administrada del asignador de clases. Si necesita convertir una cadena de C++ estándar en una cadena de estilo C terminada en null, use el miembro [basic_string::c_str](#c_str).  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  Referencia al carácter de la cadena en la posición especificada por el índice de parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer elemento de la cadena tiene un índice de cero y los siguientes elementos se indizan de forma consecutiva por los enteros positivos, para que una cadena de longitud  *n*  tiene un  *n* th elemento indizado por el número *n -* 1.  
+ El primer elemento de la cadena tiene un índice de cero y los siguientes elementos se indizan de forma consecutiva por los enteros positivos, para que una cadena de longitud *n* tiene un *n*elemento indizado por el número *n -* 1.  
   
  El miembro [operator&#91;&#93;](#op_at) es más rápido que la función miembro **at** a la hora de proporcionar acceso de lectura y escritura a los elementos de una cadena.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Referencia al carácter de la cadena en la posición especificada por el índice de parámetro.  
   
 ### <a name="remarks"></a>Comentarios  
- El primer elemento de la cadena tiene un índice de cero y los siguientes elementos se indizan de forma consecutiva por los enteros positivos, para que una cadena de longitud  *n*  tiene un  *n*  elemento indizado por el número  *n*  - 1.  
+ El primer elemento de la cadena tiene un índice de cero y los enteros positivos indizan de forma consecutiva los siguientes elementos para que una cadena de longitud *n* tenga un elemento *enésimo* indizado por el número *n* - 1.  
   
  `operator[]` es más rápido que la función miembro [at](#at) a la hora de proporcionar acceso de lectura y escritura a los elementos de una cadena.  
   

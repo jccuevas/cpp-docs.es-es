@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>Documentos activos en Internet
 Documentos activos proporcionan una extensión para los objetos incrustados tradicionales. Los documentos activos pueden ser varias páginas y se muestran en el área de clientes en su totalidad. No tradicional negociación de menús y se pueden editar en contexto, así como en una ventana abierta en la aplicación de servidor. En lugar de mostrar como un pequeño rectángulo rodeado por un borde sombreado, documentos activos son un marco completo y siempre en el contexto activo.  
@@ -59,7 +59,7 @@ Documentos activos proporcionan una extensión para los objetos incrustados trad
 |-------------------------|---------------------------------|  
 |Utiliza archivos compuestos como mecanismo de almacenamiento.|`IPersistStorage`.|  
 |Es compatible con las características básicas de incrustación de documentos activos, incluida la creación de archivo.|`IPersistFile`, `IOleObject` y `IDataObject`.|  
-|Admite la activación en contexto.|`IOleInPlaceObject`y `IOleInPlaceActiveObject` (usando el contenedor `IOleInPlaceSite` y **IOleInPlaceFrame** interfaces).|  
+|Admite la activación en contexto.|`IOleInPlaceObject` y `IOleInPlaceActiveObject` (usando el contenedor `IOleInPlaceSite` y **IOleInPlaceFrame** interfaces).|  
 |Es compatible con las extensiones de documentos activos que comprenden estas nuevas interfaces. Algunas interfaces son opcionales.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` y `IPrint`.|  
   
  MFC proporciona compatibilidad para ampliar la compatibilidad de servidor incrustado existentes para documentos activos.  
@@ -67,7 +67,7 @@ Documentos activos proporcionan una extensión para los objetos incrustados trad
 ## <a name="add-active-document-support-to-a-new-application"></a>Agregar compatibilidad con documentos activos a una nueva aplicación  
  Para crear una nueva aplicación con compatibilidad con documentos activos: en el Asistente para aplicaciones MFC, en la **compatibilidad con documentos compuestos** página, en "compatibilidad con documentos compuestos seleccione" elija **servidor completo** o  **Contenedor o servidor completo**y en "Seleccionar opciones adicionales", active la casilla de verificación para **servidor de documentos activos**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>Convertir a un servidor en proceso MFC existente en un servidor de documentos activos  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Convertir a un servidor en proceso MFC existente en un servidor de documentos activos  
  Si la aplicación se creó con una versión de Visual C++ anteriores a la versión 4.2 y ya es un servidor en proceso, puede agregar compatibilidad con documentos activos realizando cambios en las siguientes clases:  
   
 |Tipo de clase|Anteriormente se deriva de|Cambio de derivar de|  

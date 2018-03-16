@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
@@ -44,17 +44,17 @@ donde:
 *x*  
 Una de las variables de reducción especificadas en el `list`.
 
-*lista de variables*  
+*variable-list*  
 Una lista separada por comas de variables de reducción escalar.
 
 *expr*  
 Una expresión con un tipo escalar que no hace referencia a *x*.
 
-*OP*  
-No es un operador sobrecargado, pero uno de +, &#42; -, &amp;, ^, &#124; &amp; &amp;, o &#124; &#124;.
+*op*  
+No es un operador sobrecargado, pero uno de +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, o &#124; &#124;.
 
 *binop*  
-No es un operador sobrecargado, pero uno de +, &#42; -, &amp;, ^, o &#124;.
+No es un operador sobrecargado, pero uno de +, &#42;, -, &amp;, ^, o &#124;.
 
 El siguiente es un ejemplo de la `reduction` cláusula:  
   

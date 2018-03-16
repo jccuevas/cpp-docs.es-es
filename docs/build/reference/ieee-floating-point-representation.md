@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>Representación IEE de punto flotante
 Microsoft Visual C++ es coherente con los estándares numéricos de IEEE. Existen tres variedades internas de números reales. Real\*4 y real\*8 se utilizan en Visual C++. Real\*4 se declara con la palabra **float**. Real\*8 se declara con la palabra **doble**. En la programación de Windows de 32 bits, el `long double` se asigna al tipo de datos **doble**. Sin embargo, hay compatibilidad de lenguaje de ensamblado para cálculos que utilicen real * tipo de datos de 10.  
@@ -40,8 +40,8 @@ Microsoft Visual C++ es coherente con los estándares numéricos de IEEE. Existe
 |Valor|Almacenados como|  
 |-----------|---------------|  
 |real * 4|iniciar sesión bit, exponente de 8 bits, mantisa de 23 bits|  
-|real * 8|iniciar sesión bit, exponentes de 11 bits, mantisa de 52 bits|  
-|real * 10|iniciar sesión bit, exponente de 15 bits, mantisa de 64 bits|  
+|real*8|iniciar sesión bit, exponentes de 11 bits, mantisa de 52 bits|  
+|real*10|iniciar sesión bit, exponente de 15 bits, mantisa de 64 bits|  
   
  Real * 4 y real\*8 formatos, hay un 1 inicial asumido en la mantisa que no se almacena en memoria, por lo que las mantisas son realmente 24 o 53 bits, aunque se almacenan solo 23 ó 52 bits. Real\*formato 10 almacena este bit.  
   
@@ -64,10 +64,10 @@ Microsoft Visual C++ es coherente con los estándares numéricos de IEEE. Existe
 |Formato|BYTES 1|BYTES 2|BYTES 3|BYTES 4|...|N bytes|  
 |------------|------------|------------|------------|------------|---------|------------|  
 |real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
-|real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`representa el bit de signo, el `X`de los bits de exponente y el `M`de los bits de mantisa. Tenga en cuenta que se supone que el bit situado real * 4 y real\*8 da formato, pero está presente como "1" en BYTE 3 del número real\*formato 10.  
+ `S` representa el bit de signo, el `X`de los bits de exponente y el `M`de los bits de mantisa. Tenga en cuenta que se supone que el bit situado real * 4 y real\*8 da formato, pero está presente como "1" en BYTE 3 del número real\*formato 10.  
   
  Para cambiar correctamente el punto binario, primero debe eliminar el sesgo del exponente y, a continuación, mover el punto binario a la derecha o izquierda el número apropiado de bits.  
   

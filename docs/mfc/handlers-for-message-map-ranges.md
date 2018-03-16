@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 En este artículo se explica cómo asignar un intervalo de mensajes a una función de controlador único mensaje (en lugar de asignar un mensaje a solo una función).  
@@ -66,7 +66,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
 -   [Ejemplo para un intervalo de identificadores de control](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>Escribir la entrada de mapa de mensajes  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Escribir la entrada de mapa de mensajes  
  En. CPP Archivo, agregue la entrada de mapa de mensajes, como se muestra en el ejemplo siguiente:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
      La tercera macro, `ON_CONTROL_RANGE`, toma un parámetro primera adicional: mensaje de notificación de controles, como **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Declarar la función de controlador  
+##  <a name="_core_declaring_the_handler_function"></a> Declarar la función de controlador  
  Agregue la declaración de función de controlador en el. H del proyecto. El código siguiente muestra cómo podría quedar esto, tal y como se muestra a continuación:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
  Para obtener más información acerca de los requisitos de parámetro para la actualización de las funciones de controlador, consulte [ejemplo para un intervalo de identificadores de comando](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Ejemplo de un intervalo de identificadores de comandos  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Ejemplo de un intervalo de identificadores de comandos  
  Cuándo se podrían utilizar intervalos de un ejemplo de control de comandos, como el comando Zoom en el ejemplo MFC [HIERSVR](../visual-cpp-samples.md). Este comando permite acercar la vista, ajuste de escala entre 25% y un 300% de su tamaño normal. Clase de vista de HIERSVR utiliza un intervalo para controlar los comandos de Zoom con una entrada de mapa de mensajes parecida a ésta:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ En este artículo se explica cómo asignar un intervalo de mensajes a una funci�
   
  Actualizar funciones del controlador de comandos únicas normalmente toman un único parámetro, `pCmdUI`, del tipo **CCmdUI\***. A diferencia de las funciones de controlador, las funciones del controlador de actualización para intervalos de mapa de mensajes no requieren un parámetro adicional, `nID`, del tipo **UINT**. El identificador de comando, que es necesario para especificar qué comando seleccionó realmente el usuario, se encuentra en la `CCmdUI` objeto.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Ejemplo de un intervalo de identificadores de controles  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Ejemplo de un intervalo de identificadores de controles  
  Otro caso interesante consiste en asignar mensajes de notificación de controles para un intervalo de identificadores de control a un único controlador. Suponga que el usuario puede hacer clic en cualquiera de los botones de 10. Para asignar los 10 botones a un controlador, la entrada de mapa de mensajes sería similar al siguiente:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

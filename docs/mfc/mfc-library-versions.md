@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -98,7 +98,7 @@ Proyectos MFC utilizan el símbolo de preprocesador  **\_UNICODE** para indicar 
 
 Bibliotecas estáticas de MFC utilizan las siguientes convenciones de nomenclaturas. Los nombres de biblioteca tienen el formato
 
-> *u*AFX*c ** d.*. LIB
+> *u*AFX*c**d*.LIB
 
 donde las letras en cursiva en minúsculas son marcadores de posición para los especificadores, cuyos significados se muestran en la tabla siguiente:
 
@@ -116,8 +116,8 @@ Todas las bibliotecas de aparecen en la tabla siguiente se incluyen creada previ
 |NAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC, versión de depuración|
 |UAFXCW.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de lanzamiento|
 |UAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de depuración|
-|AFXNMCD. LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
-|AFXNMCDD. LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo MFC, versión de depuración|
+|AFXNMCD.LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
+|AFXNMCDD.LIB|Biblioteca de vínculos estáticos de MFC sin controles de cuadro de diálogo MFC, versión de depuración|
 
 Archivos de depurador que tienen el mismo nombre base y una extensión de archivo .pdb también están disponibles para cada una de las bibliotecas estáticas.
 
@@ -129,13 +129,13 @@ Los archivos DLL de MFC tienen *versión* números que indican la compatibilidad
 
 |Archivo DLL|Descripción|
 |---------|-----------------|
-|MFC*versión*. ARCHIVO DLL|Versión de DLL de MFC, ANSI o versión MBCS|
+|MFC*version*.DLL|Versión de DLL de MFC, ANSI o versión MBCS|
 |MFC*versión*U.DLL|DLL de MFC, versión de lanzamiento de Unicode|
-|MFC*versión*D.DLL|Versión de DLL de MFC, ANSI o MBCS de depuración|
+|MFC*version*D.DLL|Versión de DLL de MFC, ANSI o MBCS de depuración|
 |MFC*versión*UD. ARCHIVO DLL|DLL de MFC, versión de depuración Unicode|
-|MFCM*versión*. ARCHIVO DLL|DLL de MFC con controles de formularios Windows Forms, versión ANSI o versión MBCS|
+|MFCM*version*.DLL|DLL de MFC con controles de formularios Windows Forms, versión ANSI o versión MBCS|
 |MFCM*versión*U.DLL|DLL de MFC con controles de formularios Windows Forms, versión de lanzamiento de Unicode|
-|MFCM*versión*D.DLL|DLL de MFC con controles de formularios Windows Forms, versión ANSI o MBCS de depuración|
+|MFCM*version*D.DLL|DLL de MFC con controles de formularios Windows Forms, versión ANSI o MBCS de depuración|
 |MFCM*versión*UD. ARCHIVO DLL|DLL de MFC con controles de formularios Windows Forms, versión de depuración Unicode|
 
 Las bibliotecas de importación necesarias para generar aplicaciones o archivos DLL que utilicen estos archivos DLL compartidas de extensión de MFC tienen el mismo nombre base que el archivo DLL, pero tienen una extensión de nombre de archivo .lib. Cuando usa los archivos DLL compartidos, una biblioteca estática pequeña todavía debe estar vinculada al código; Esta biblioteca se denomina MFCS*versión*.lib {U} {D}.

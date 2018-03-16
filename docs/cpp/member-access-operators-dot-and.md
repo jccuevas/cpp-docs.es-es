@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4dc08bce80d27493a8a13ac24bce7011282d7cd3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="member-access-operators--and--gt"></a>Operadores de acceso a miembro:. y -&gt;
 ## <a name="syntax"></a>Sintaxis  
@@ -50,7 +50,7 @@ postfix-expression -> name
   
 1.  En la primera forma, *postfix-expression* representa un valor de la estructura, clase o tipo de unión, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor de la operación es de *nombre* y es un valor l si *postfix-expression* es un valor l.  
   
-2.  En la segunda forma, *postfix-expression* representa un puntero a una estructura, unión o clase, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor es el de *nombre* y es un valor l. El  **->**  operador de desreferencia el puntero. Por lo tanto, las expresiones *e*  **->**  `member` y **(\****e***)**.`member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores  **->**  o  **\***  están sobrecargados).  
+2.  En la segunda forma, *postfix-expression* representa un puntero a una estructura, unión o clase, y *nombre* nombra un miembro de la estructura especificada, unión o clase. El valor es el de *nombre* y es un valor l. El  **->**  operador de desreferencia el puntero. Por lo tanto, las expresiones * e * **->**  `member` y **(\****e***)**.`member` (donde *e* representa un puntero) producen resultados idénticos (excepto cuando los operadores  **->**  o  **\***  están sobrecargados).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran dos formas del operador de acceso a miembros.  

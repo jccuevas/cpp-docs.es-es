@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multidimensional-arrays-c"></a>Matrices multidimensionales (C)
 Una expresión de subíndice también puede tener varios subíndices, como se indica a continuación:  
@@ -40,7 +40,7 @@ expression3
 ]...  
 ```  
   
- Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice del extremo izquierdo, *expression1***[***expression2***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
+ Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, * expression1***[***expression2 ***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de que se evalúe la última expresión de subíndice, a menos que el valor del puntero final apunte a un tipo de matriz (véanse los ejemplos a continuación).  
   
  Las expresiones con varios subíndices hacen referencia a elementos de “matrices multidimensionales”. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones.  
   

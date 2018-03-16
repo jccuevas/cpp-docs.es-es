@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 Define un segmento de programa llamado *nombre* con atributos de segmento  
@@ -50,7 +50,7 @@ name ENDS
 |**DWORD**|Dirección del próximo disponible palabra doble (4 bytes por palabra doble).|  
 |**PARA**|Siguiente dirección de párrafo disponibles (16 bytes por párrafo).|  
 |**PAGE**|Siguiente dirección de página disponible (256 bytes por página).|  
-|**ALIGN**(*n*)|Siguiente disponible  *n* direcciones de n bytes. Para obtener más información, vea la sección Comentarios.|  
+|**ALINEAR**(*n*)|Siguiente disponible *n*direcciones de n bytes. Para obtener más información, vea la sección Comentarios.|  
   
  Si no se especifica este parámetro, **PARA** se utiliza de forma predeterminada.  
   
