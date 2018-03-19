@@ -28,7 +28,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
-Describe un objeto que almacena un par ordenado de objetos de tipo **doble **** el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.  
+Describe un objeto que almacena un par ordenado de objetos de tipo **doble***,* el primero representa la parte real de un número complejo y el segundo representa la parte imaginaria.  
   
 ## <a name="syntax"></a>Sintaxis  
   

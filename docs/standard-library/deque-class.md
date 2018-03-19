@@ -124,7 +124,7 @@ class deque
  Tipo de datos de elementos que se va a almacenar en deque.  
   
  `Allocator`  
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo > ***.*  
+ Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo>***.*  
   
 ## <a name="remarks"></a>Comentarios  
  En general, la elección del tipo de contenedor se debe tomar según el tipo de búsqueda y de inserción que necesite la aplicación. [Vectores](../standard-library/vector-class.md) debe ser el contenedor preferido para administrar una secuencia cuando el acceso aleatorio a cualquier elemento sea importante y las inserciones o eliminaciones de elementos solo sean necesarias al final de una secuencia. El rendimiento del contenedor de lista es superior cuando las inserciones y eliminaciones eficaces (en tiempo constante) en cualquier ubicación dentro de la secuencia son importantes. Esas operaciones en medio de la secuencia requieren copias y asignaciones de elementos proporcionales al número de elementos de la secuencia (tiempo lineal).  

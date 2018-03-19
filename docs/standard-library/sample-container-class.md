@@ -37,7 +37,7 @@ ms.lasthandoff: 03/16/2018
   
 -   Si la expresión **~ Ty** inicia una excepción, el estado resultante del objeto contenedor no está definido.  
   
--   Si el contenedor almacena un objeto de asignador *al*, y *al* produce una excepción distinto de como resultado de una llamada a * al ***.allocate**, el estado resultante del contenedor objeto no está definido.  
+-   Si el contenedor almacena un objeto de asignador *al*, y *al* produce una excepción distinto de como resultado de una llamada a *al***.allocate**, el estado resultante del contenedor objeto no está definido.  
   
 -   Si el contenedor almacena un objeto de función *comp*, para determinar cómo ordenar la secuencia controlada, y *comp* inicia una excepción de cualquier tipo, el estado resultante del objeto contenedor no está definido.  
   
@@ -80,11 +80,11 @@ ms.lasthandoff: 03/16/2018
   
 -   Todos los objetos de la clase `Alloc` se comparan igual.  
   
--   El tipo **Alloc::const_pointer** es igual que **const Ty \***.  
+-   El tipo **Alloc::const_pointer** es igual que **const Ty \****.  
   
 -   El tipo **Alloc::const_reference** es igual que **const Ty&**.  
   
--   El tipo **Alloc::pointer** es igual que **Ty \***.  
+-   El tipo **Alloc::pointer** es igual que **Ty \****.  
   
 -   El tipo **Alloc::reference** es igual que **Ty&**.  
   
@@ -92,9 +92,9 @@ ms.lasthandoff: 03/16/2018
   
 -   No es necesario que todos los objetos de la clase `Alloc` se comparen igual. (Puede mantener varios grupos de almacenamiento).  
   
--   El tipo **Alloc::const_pointer** no es necesario que sea igual que **const Ty \***. (Un puntero const puede ser una clase).  
+-   El tipo **Alloc::const_pointer** no es necesario que sea igual que **const Ty \****. (Un puntero const puede ser una clase).  
   
--   El tipo **Alloc::pointer** no es necesario que sea igual que **Ty \***. (Un puntero puede ser una clase).  
+-   El tipo **Alloc::pointer** no es necesario que sea igual que **Ty \****. (Un puntero puede ser una clase).  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado**: \<contenedor de ejemplo>  

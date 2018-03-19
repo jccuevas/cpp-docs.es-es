@@ -115,7 +115,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```  
   
- Devuelve &**this.  
+ Devuelve &\*\*this.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++  
   

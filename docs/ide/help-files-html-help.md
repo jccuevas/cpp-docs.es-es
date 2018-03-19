@@ -36,7 +36,7 @@ Los siguientes archivos se crean al agregar el tipo de Ayuda HTML de ayuda y sop
 |Makehtmlhelp.bat|*Projname*|Archivos de origen|Utilizada por el sistema para compilar el proyecto de ayuda cuando se compila el proyecto.|  
 |Afxcore.htm|*Projname*\hlp|Temas de Ayuda HTML|Contiene los temas de ayuda estándares para comandos MFC estándar y objetos de la pantalla. Agregue sus propios temas de ayuda para este archivo.|  
 |Afxprint.htm|*Projname*\hlp|Temas de Ayuda HTML|Contiene los temas de ayuda para los comandos de impresión.|  
-|*.jpg; \*.gif|*Nombre_proyecto*\hlp\Images|Archivos de recursos|Contienen imágenes de los temas de ayuda generados diferentes.|  
+|\*.jpg; \*.gif|*Nombre_proyecto*\hlp\Images|Archivos de recursos|Contienen imágenes de los temas de ayuda generados diferentes.|  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de archivos creados para proyectos de Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

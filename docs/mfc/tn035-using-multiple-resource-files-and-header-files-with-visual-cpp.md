@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ agrega siempre la línea de comentario //{{NO_DEPENDENCIES}} a un archivo .RC cuando guarda el archivo. En algunos casos, evitar la dependencia de compilación de RESOURCE.H puede provocar errores en tiempo de ejecución que no se detectan en tiempo de vinculación. Por ejemplo, si utiliza el explorador de símbolos para cambiar el valor numérico asignado a un símbolo para un recurso, el recurso no se encontrará correctamente y no se cargará en tiempo de ejecución de la aplicación si no se vuelve a compilar el archivo .CPP que hace referencia al recurso. En tales casos, debe compilar explícitamente cualquiera. Los archivos CPP que sepa que se ven afectados por los cambios de símbolos de recursos. H o seleccione **volver a generar todo**. Si tiene la necesidad de cambiar con frecuencia valores de símbolos para un determinado grupo de recursos, probablemente resultará más cómodo y seguro dividir estos símbolos en un archivo de encabezado independiente de solo lectura, tal como se describe en la sección anterior [incluidos Archivos de encabezado adicionales](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a> Cómo administra Visual C++ incluye el conjunto de información **  
+## <a name="_mfcnotes_tn035_set_includes"></a> Cómo administra Visual C++ incluye el conjunto de información**  
   
  Tal y como se describió anteriormente, el comando de inclusión del menú Archivo permite especificar tres tipos de información:  
   

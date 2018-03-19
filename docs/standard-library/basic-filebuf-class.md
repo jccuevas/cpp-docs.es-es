@@ -466,7 +466,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  Si la función no se puede ejecutar correctamente, devuelve **traits_type::eof**. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Comentarios  
- Si _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la función miembro virtual protegida intenta insertar el elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) en el búfer de salida. Puede hacerlo de varias maneras:  
+ Si _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la función miembro virtual protegida intenta insertar el elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) en el búfer de salida. Puede hacerlo de varias maneras:  
   
 -   Si está disponible una posición de escritura, puede almacenar el elemento en la posición de escritura e incrementar el puntero siguiente para el búfer de salida.  
   

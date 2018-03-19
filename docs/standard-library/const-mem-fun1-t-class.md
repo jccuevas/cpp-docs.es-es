@@ -56,7 +56,7 @@ class const_mem_fun1_t
  Una función binaria adaptable.  
   
 ## <a name="remarks"></a>Comentarios  
- La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **_Pleft** -> \* * Pm) (***derecha**) **const**.  
+ La clase de plantilla almacena una copia de `_Pm`, que debe ser un puntero a una función miembro de clase **Type**, en un objeto miembro privado. Define la función miembro `operator()` devuelvan ( **_Pleft**->\* *Pm)(***derecha**) **const**.  
   
 ## <a name="example"></a>Ejemplo  
  Normalmente, no se usa el constructor de `const_mem_fun1_t` directamente; la función auxiliar `mem_fun` se usa para adaptar funciones miembro. Vea [mem_fun](../standard-library/functional-functions.md#mem_fun) para obtener un ejemplo de cómo usar adaptadores de funciones miembro.  

@@ -521,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Comentarios  
  Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elemento.  
   
- El `const_iterator` definido por los puntos de hash_map a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`  *\< ***clave const, escriba*** >* , cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
+ El `const_iterator` definido por los puntos de hash_map a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***clave const, escriba***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
   
  A fin de desreferenciar una `const_iterator` `cIter` apunta a un elemento de un objeto hash_map, use la  **->**  operador.  
   
@@ -2714,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `value_type` se declara como `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * y no `pair`  **\<key_type, mapped_type >** porque las claves de un contenedor asociativo no pueden cambiarse mediante un iterador no constante o una referencia.  
+ `value_type` se declara como `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* y no `pair`**\<key_type, mapped_type>** porque las claves de un contenedor asociativo no pueden cambiarse mediante un iterador no constante o una referencia.  
   
   
 ### <a name="example"></a>Ejemplo  

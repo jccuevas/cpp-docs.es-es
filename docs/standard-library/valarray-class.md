@@ -1192,7 +1192,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
  Una referencia a un elemento o su valor en el índice especificado o un subconjunto especificado.  
   
 ### <a name="remarks"></a>Comentarios  
- El operador de miembro se sobrecarga para proporcionar varias maneras de seleccionar secuencias de elementos entre las controla *\****esto**. El primer grupo de cinco operadores miembro funcionan en conjunción con varias sobrecargas de [operador=](#op_eq) (y otros operadores de asignación) para permitir el reemplazo selectivo (segmentación) de la secuencia controlada. Los elementos seleccionados deben existir.  
+ El operador de miembro se sobrecarga para proporcionar varias maneras de seleccionar secuencias de elementos entre las controla **\****esto**. El primer grupo de cinco operadores miembro funcionan en conjunción con varias sobrecargas de [operador=](#op_eq) (y otros operadores de asignación) para permitir el reemplazo selectivo (segmentación) de la secuencia controlada. Los elementos seleccionados deben existir.  
   
  Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites de la valarray.  Para más información, vea [Iteradores activados](../standard-library/checked-iterators.md).  
   
