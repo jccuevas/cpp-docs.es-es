@@ -219,7 +219,7 @@ CGopherFile* OpenFile(
  Una referencia a un [objeto CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto.  
   
  `dwFlags`  
- Cualquier combinación de marcas de INTERNET_FLAG_. Vea [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) para obtener más información sobre INTERNET_FLAG_\* marcas.  
+ Cualquier combinación de marcas de INTERNET_FLAG_* . Vea [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) para obtener más información sobre INTERNET_FLAG_\* marcas.  
   
  `pstrView`  
  Un puntero a una cadena de la vista de archivos. Si existen varias vistas del archivo en el servidor, este parámetro especifica qué vista de archivo que desea abrir. Si `pstrView` es **NULL**, se utiliza la vista de archivo predeterminada.  

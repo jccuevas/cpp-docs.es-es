@@ -205,7 +205,7 @@ virtual BOOL FindFile(
   
 ### <a name="parameters"></a>Parámetros  
  `pstrName`  
- Un puntero a una cadena que contiene el nombre del archivo que desea buscar. Si se pasa **NULL** para `pstrName`, **FindFile** un carácter comodín (*.\*) búsqueda.  
+ Un puntero a una cadena que contiene el nombre del archivo que desea buscar. Si se pasa **NULL** para `pstrName`, **FindFile** un carácter comodín (\*.\*) búsqueda.  
   
  *dwUnused*  
  Reservado para realizar **FindFile** polimórfico con las clases derivadas. Debe ser 0.  

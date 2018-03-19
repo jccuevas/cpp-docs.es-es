@@ -114,7 +114,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```  
   
- devuelve `Istr` >> ( `char`**\***) `str`.  
+ devuelve `Istr` >> ( `char`***\***) `str`.  
   
  La función de plantilla:  
   

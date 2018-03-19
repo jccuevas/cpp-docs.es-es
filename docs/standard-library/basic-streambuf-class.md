@@ -617,7 +617,7 @@ int_type sbumpc();
  Elemento actual.  
   
 ### <a name="remarks"></a>Comentarios  
- Si hay una posición de lectura disponible, la función miembro devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**\***[gptr](#gptr)) e incrementa el puntero siguiente para el búfer de entrada. De lo contrario, devuelve [uflow](#uflow).  
+ Si hay una posición de lectura disponible, la función miembro devuelve **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\****[gptr](#gptr)) e incrementa el puntero siguiente para el búfer de entrada. De lo contrario, devuelve [uflow](#uflow).  
   
 ### <a name="example"></a>Ejemplo  
   
