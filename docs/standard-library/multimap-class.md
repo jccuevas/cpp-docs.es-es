@@ -394,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Comentarios  
  Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elemento.  
   
- El `const_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair` * \< * **clave const**, **Tipo *** >*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
+ El `const_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
   
  A fin de desreferenciar una `const_iterator` `cIter` apunta a un elemento de una asignación múltiple, utilice la  **->**  operador.  
   
@@ -474,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>Comentarios  
  Un tipo `const_reverse_iterator` no puede modificar el valor de un elemento y se usa para iterar en el mapa múltiple en orden inverso.  
   
- El `const_reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair` * \< * **clave const**, **Tipo *** >*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
+ El `const_reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
   
  A fin de desreferenciar una `const_reverse_iterator` `crIter` apunta a un elemento de una asignación múltiple, utilice la  **->**  operador.  
   
@@ -1301,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El **iterador** definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair` * \< * **clave const**, **Tipo *** >*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
+ El **iterador** definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
   
  Para desreferenciar un elemento **iterator**`Iter` que señala a un elemento de un mapa múltiple, use el operador **->**.  
   
@@ -2020,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Comentarios  
  Un tipo `reverse_iterator` se usa para iterar en el mapa múltiple en orden inverso.  
   
- El `reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair` * \< * **clave const**, **Tipo *** >*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
+ El `reverse_iterator` definido por puntos multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***clave const**, **Tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
   
  A fin de desreferenciar una `reverse_iterator` `rIter` apunta a un elemento de una asignación múltiple, use el operador ->.  
   

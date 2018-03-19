@@ -36,7 +36,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
 Cuando la constante de manifiesto **_MBCS** está definido, se asigna una rutina de texto genérico determinada a uno de los siguientes tipos de rutinas:  
   
--   Una rutina de SBCS que controla cadenas, caracteres y bytes multibyte de forma adecuada. En este caso, se espera que los argumentos de cadena del tipo **char\***. Por ejemplo, `_tprintf` se asigna a `printf`; los argumentos de cadena para `printf` son de tipo **char\***. Si usas el **_TCHAR** tipo de datos de texto genérico para la cadena de tipos, los tipos de parámetros formales y reales para `printf` coinciden porque **_TCHAR** \* se asigna a **char \***.  
+-   Una rutina de SBCS que controla cadenas, caracteres y bytes multibyte de forma adecuada. En este caso, se espera que los argumentos de cadena del tipo **char\***. Por ejemplo, `_tprintf` se asigna a `printf`; los argumentos de cadena para `printf` son de tipo **char\***. Si usas el **_TCHAR** tipo de datos de texto genérico para la cadena de tipos, los tipos de parámetros formales y reales para `printf` coinciden porque **_TCHAR**\* se asigna a **char\***.  
   
 -   Una rutina específica de MBCS. En este caso, se espera que los argumentos de cadena del tipo `unsigned` **char\***. Por ejemplo, `_tcsrev` se asigna a `_mbsrev`, que espera y devuelve una cadena de tipo `unsigned` **char\***. Si usas el **_TCHAR** tipo de datos de texto genérico para los tipos de cadena, hay un conflicto de tipos porque **_TCHAR** se asigna al tipo `char`.  
   

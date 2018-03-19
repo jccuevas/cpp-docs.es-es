@@ -1507,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- El **iterador** definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair` * \< * **constKey** , **Tipo *** >*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
+ El **iterador** definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***constKey**, **Tipo***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
   
  Para desreferenciar un elemento **iterator**`Iter` que apunta a un elemento de un mapa, use el operador **->**.  
   
@@ -2313,7 +2313,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Comentarios  
  Un tipo `reverse_iterator` no puede modificar el valor de un elemento. Se usa para iterar en la asignación en orden inverso.  
   
- El `reverse_iterator` definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair` * \< * **constKey**, * *Tipo *** >*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
+ El `reverse_iterator` definido por los puntos de mapa a los elementos que son objetos de [value_type](#value_type), que es de tipo `pair`*\<***constKey**, **Tipo***>*, cuyo primer miembro es la clave para el elemento y cuyo segundo miembro es el dato de referencia asignada mantenido por el elemento.  
   
  A fin de desreferenciar una `reverse_iterator` `rIter` apunta a un elemento en un mapa, utilice la  **->**  operador.  
   

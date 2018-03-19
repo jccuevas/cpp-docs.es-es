@@ -293,7 +293,7 @@ explicit money_get(size_t _Refs = 0);
   
  No es posible mostrar ejemplos directos, porque el destructor está protegido.  
   
- El constructor inicializa su objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).  
+ El constructor inicializa su objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
   
 ##  <a name="string_type"></a> money_get::string_type  
  Un tipo que describe una cadena que contiene caracteres de tipo **CharType**.  

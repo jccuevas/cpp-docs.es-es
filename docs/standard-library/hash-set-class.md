@@ -127,10 +127,10 @@ class hash_set
  Tipo de datos de elemento que se almacenará en hash_set.  
   
  `Traits`  
- Tipo que incluye dos objetos de función: uno de clase compare que es un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo **size_t**. Este argumento es opcional y el `hash_compare` *< clave,* **menos ***\<clave >>* es el valor predeterminado.  
+ Tipo que incluye dos objetos de función: uno de clase compare que es un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo **size_t**. Este argumento es opcional y el `hash_compare`*<clave,* **menos***\<clave> >* es el valor predeterminado.  
   
  `Allocator`  
- Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria de hash_set. Este argumento es opcional y el valor predeterminado es **asignador ***\<clave >.*  
+ Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria de hash_set. Este argumento es opcional y el valor predeterminado es **asignador***\<clave>.*  
   
 ## <a name="remarks"></a>Comentarios  
  El hash_set es:  

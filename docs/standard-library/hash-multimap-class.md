@@ -478,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Comentarios  
  Un tipo `const_iterator` no se puede utilizar para modificar el valor de un elemento.  
   
- El `const_iterator` definido por los puntos de hash_multimap a objetos de [value_type](#value_type), que son de tipo `pair`  *\< ***constKey, tipo*** >* . El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
+ El `const_iterator` definido por los puntos de hash_multimap a objetos de [value_type](#value_type), que son de tipo `pair`*\<***constKey, tipo***>*. El valor de la clave está disponible mediante el primer miembro del par y el valor del elemento asignado está disponible mediante el segundo miembro del par.  
   
  A fin de desreferenciar una `const_iterator` `cIter` apunta a un elemento en un hash_multimap, use la  **->**  operador.  
   

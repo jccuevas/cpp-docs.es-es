@@ -59,7 +59,7 @@ class priority_queue
  El tipo del contenedor subyacente que se usa para implementar priority_queue.  
   
  *Compare*  
- El tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en priority_queue. Este argumento es opcional y el predicado binario **menos***\<***typename** *contenedor***:: value_type*** >* es el valor predeterminado.  
+ El tipo que proporciona un objeto de función que puede comparar dos valores de elementos como claves de ordenación para determinar su orden relativo en priority_queue. Este argumento es opcional y el predicado binario **menos***\<***typename** *contenedor***::value_type***>* es el valor predeterminado.  
   
 ## <a name="remarks"></a>Comentarios  
  Los elementos de la clase **Type** estipulada en el primer parámetro de plantilla de un objeto de cola son sinónimos de [value_type](#value_type) y deben coincidir con el tipo de elemento de la clase de contenedor subyacente **Container** estipulada por el segundo parámetro de plantilla. El **tipo** debe ser asignable, para que sea posible copiar objetos de ese tipo y asignar valores a variables de ese tipo.  

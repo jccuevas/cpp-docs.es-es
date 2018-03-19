@@ -122,7 +122,7 @@ class vector
  Tipo de datos de elementos que se almacenará en el vector.  
   
  `Allocator`  
- Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es **asignador ***\<tipo >.*  
+ Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es **asignador***\<tipo>.*  
   
 ## <a name="remarks"></a>Comentarios  
  Los vectores permiten inserciones y eliminaciones de tiempo constante al final de la secuencia. Insertar o eliminar elementos en medio de un vector requiere tiempo lineal. El rendimiento del contenedor [deque (Clase)](../standard-library/deque-class.md) es superior respecto a las inserciones y eliminaciones al principio y al final de una secuencia. El contenedor [list (Clase)](../standard-library/list-class.md) es superior respecto a las inserciones y eliminaciones en cualquier ubicación dentro de una secuencia.  

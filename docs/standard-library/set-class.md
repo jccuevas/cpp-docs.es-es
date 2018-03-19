@@ -129,7 +129,7 @@ class set
  En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).  
   
  `Allocator`  
- Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es **asignador ***\<clave >.*  
+ Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es **asignador***\<clave>.*  
   
 ## <a name="remarks"></a>Comentarios  
  Un conjunto de la biblioteca estándar de C++ es:  
