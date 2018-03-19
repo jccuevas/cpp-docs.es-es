@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit (Habilitar la inicialización estática local segura para subprocesos)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (Asumir que se inicia el operador new)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc (Sustitución de trígrafos)](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase- (deshabilitar la búsqueda de nombres en dos fases)](zc-twophase.md)
 ##### [/Zc:wchar_t (wchar_t es un tipo nativo)](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf (generación de PDB más rápida)](zf.md)
 #### [/Zg (Generar prototipos de función)](zg-generate-function-prototypes.md)
