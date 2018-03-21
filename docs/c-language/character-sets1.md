@@ -1,5 +1,5 @@
 ---
-title: Juego de caracteres1 | Microsoft Docs
+title: Juegos de caracteres | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,31 +17,33 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fca697d5a3d8d825bdac7637e87ef78aed134b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac2abf233908c438c778dc6ac720d58483ec9bdf
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="character-sets"></a>Juegos de caracteres
-**ANSI 3.1.3.4** Miembros de asignación del juego de caracteres de código fuente  
-  
- El juego de caracteres de código fuente y el juego de caracteres de ejecución incluyen los caracteres ASCII enumerados en la tabla siguiente. Las secuencias de escape también se muestran en la tabla.  
-  
-### <a name="escape-sequences"></a>Secuencias de escape  
-  
-|Secuencia de escape|Carácter|Valor ASCII|  
-|---------------------|---------------|-----------------|  
-|\a|Alerta/campana|7|  
-|\b|Retroceso|8|  
-|\f|Avance de página|12|  
-|\n|Nueva línea|10|  
-|\r|Retorno de carro|13|  
-|\t|Tabulación horizontal|9|  
-|\v|Tabulación vertical|11|  
-|\\"|Comillas dobles|34|  
-|\\'|Comilla simple|39|  
-|\\\|Barra diagonal inversa|92|  
-  
-## <a name="see-also"></a>Vea también  
- [Caracteres](../c-language/characters.md)
+
+**ANSI 3.1.3.4** Miembros de asignación del juego de caracteres de código fuente
+
+El juego de caracteres de código fuente y el juego de caracteres de ejecución incluyen los caracteres ASCII enumerados en la tabla siguiente. Las secuencias de escape también se muestran en la tabla.
+
+## <a name="escape-sequences"></a>Secuencias de escape
+
+|Secuencia de escape|Carácter|Valor ASCII|
+|---------------------|---------------|-----------------|
+|&#92;a|Alerta/campana|7|
+|&#92;b|Retroceso|8|
+|&#92;f|Avance de página|12|
+|&#92;n|Nueva línea|10|
+|&#92;r|Retorno de carro|13|
+|&#92;t|Tabulación horizontal|9|
+|&#92;v|Tabulación vertical|11|
+|&#92;"|Comillas dobles|34|
+|&#92;'|Comilla simple|39|
+|&#92;&#92;|Barra diagonal inversa|92|
+
+## <a name="see-also"></a>Vea también
+
+[Caracteres](../c-language/characters.md)<br/>

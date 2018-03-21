@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Información general sobre posibles problemas de actualización (Visual C++)
 
@@ -37,9 +37,11 @@ Los formatos de archivo .obj y .lib están bien definidos y no cambian casi nunc
 
 C++ no tiene una interfaz binaria de aplicaciones (ABI) estable. Visual Studio mantiene una ABI de C++ estable para todas las versiones secundarias de una versión. Por ejemplo, Visual Studio 2017 y todas sus actualizaciones son compatibles a nivel binario. Pero la ABI no es necesariamente compatible con las versiones principales de Visual Studio (excepto 2015 y 2017, que _son_ compatibles con los binarios). Es decir, podemos hacer cambios importantes en el diseño de tipo de C++, la decoración de nombres, el control de excepciones y otros elementos de la ABI de C++. Por lo tanto, si dispone de un archivo objeto con símbolos externos y vinculación de C++, dicho archivo objeto podría no estar vinculado correctamente a los archivos objeto generados mediante otra versión principal del conjunto de herramientas. Tenga en cuenta que, en este caso, cuando decimos que podría no funcionar, contemplamos muchas posibilidades: el vínculo puede producir un error (por ejemplo, si la decoración de nombres ha cambiado), el vínculo podría ser correcto, pero las cosas podrían no funcionar en el entorno de ejecución (por ejemplo, si el diseño de tipo ha cambiado) o, en muchos casos, es posible que todo funcione bien. Además, tenga en cuenta que, aunque la ABI de C++ no es estable, la ABI de C y el subconjunto de la ABI de C++ requeridos para COM son estables.
 
+Si establece un vínculo con una biblioteca de importación, las versiones posteriores de las bibliotecas redistribuibles de Visual Studio que conserven la compatibilidad con ABI se podrán usar en el entorno de ejecución. Por ejemplo, si la aplicación se compila y vincula con el conjunto de herramientas de Visual Studio 2015 Update 3, podrá utilizar cualquier biblioteca redistribuible de Visual Studio 2017, puesto que las bibliotecas de las versiones 2015 y 2017 conservan la compatibilidad binaria con versiones anteriores. El caso contrario no es aplicable, ya que no puede usar una biblioteca redistribuible para una versión anterior del conjunto de herramientas a la que haya utilizado para compilar el código, incluso en el caso de que ABI sea compatible.
+
 ### <a name="libraries"></a>Bibliotecas
 
-Si compila un archivo de código fuente con una versión determinada de los archivos de encabezado de las bibliotecas de Visual Studio C++ (mediante la inclusión de los encabezados), el archivo objeto resultante debe vincularse con la misma versión de las bibliotecas. Por ejemplo, si compila el archivo de código fuente con \<immintrin.h> de Visual Studio 2017, debe vincular con la biblioteca vcruntime de Visual Studio 2017. Del mismo modo, si compila el archivo de código fuente con \<iostream> de Visual Studio 2017, debe vincular con msvcprt, la biblioteca estándar de C++ de Visual Studio 2017. No se permite mezclar y combinar.
+Si compila un archivo de código fuente con una versión determinada de los archivos de encabezado de las bibliotecas de Visual Studio C++ (mediante la inclusión de los encabezados), el archivo objeto resultante debe vincularse con la misma versión de las bibliotecas. Por ejemplo, si el archivo de origen se compila con \<immintrin.h> de Visual Studio 2015 Update 3, debe vincularlo con la biblioteca vcruntime de Visual Studio 2015 Update 3. Del mismo modo, si el archivo de origen se compila con \<iostream> de la versión 15.5 de Visual Studio 2017, debe vincularlo con msvcprt, la biblioteca estándar de C++ de la versión 15.5 de Visual Studio 2017. No se permite mezclar y combinar.
 
 En el caso de la biblioteca estándar de C++, se ha deshabilitado explícitamente la opción de mezclar y combinar mediante el uso de `#pragma detect_mismatch` en los encabezados estándar a partir de Visual Studio 2010. Si intenta vincular archivos objeto incompatibles, o si intenta vincular con una biblioteca estándar incorrecta, se producirá un error en el vínculo.
 
