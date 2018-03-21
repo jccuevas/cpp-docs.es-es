@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretar declaradores más complejos
 Puede incluir cualquier declarador entre paréntesis para especificar una interpretación determinada de un “declarador complejo”. Un declarador complejo es un identificador calificado por más de un modificador de función, puntero o matriz. Puede aplicar varias combinaciones de modificadores de función, puntero y matriz a un único identificador. En general, `typedef` puede utilizarse para simplificar declaraciones. Vea [Declaraciones typedef](../c-language/typedef-declarations.md).  
@@ -47,7 +47,7 @@ Puede incluir cualquier declarador entre paréntesis para especificar una interp
      7   6  4 2 1   3    5  
     ```  
   
- En este ejemplo, los pasos se numeran en orden y pueden interpretarse de la manera siguiente:  
+En este ejemplo, los pasos se numeran en orden y pueden interpretarse de la manera siguiente:  
   
 1.  El identificador `var` se declara como  
   
