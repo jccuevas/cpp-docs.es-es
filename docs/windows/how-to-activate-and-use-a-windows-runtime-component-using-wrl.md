@@ -1,34 +1,31 @@
 ---
-title: "Cómo: activar y usar un componente de tiempo de ejecución de Windows mediante WRL | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: activar y usar un componente de tiempo de ejecución de Windows mediante WRL | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Cómo: Activar y usar un componente de Windows Runtime mediante WRL
 Este documento muestra cómo usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para inicializar el Runtime de Windows y cómo activar y usar un componente en tiempo de ejecución de Windows.  
-  
-> [!NOTE]
->  En este ejemplo se activa un componente en tiempo de ejecución de Windows integrado. Para obtener información sobre cómo crear su propio componente que puede activar de forma similar, consulte [Tutorial: crear un componente básico de Windows en tiempo de ejecución](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Para usar un componente, debe adquirir un puntero de interfaz para el tipo que se implementa en el componente. Y dado que la tecnología subyacente de Windows Runtime es el modelo de objetos componentes (COM), debe seguir las reglas de COM para mantener una instancia del tipo. Por ejemplo, debe mantener la *recuento de referencias* que determina cuándo se elimina el tipo de la memoria.  
   

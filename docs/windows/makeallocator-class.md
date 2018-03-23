@@ -1,12 +1,12 @@
 ---
 title: MakeAllocator (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33ba172099fd2554709cc539eeee8999c0e42cef
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="makeallocator-class"></a>MakeAllocator (clase)
 Admite la infraestructura WRL y no está diseñada para utilizarse directamente desde el código.  
@@ -38,17 +38,13 @@ Admite la infraestructura WRL y no está diseñada para utilizarse directamente 
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
-         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>,   
-   T)> , T)> class MakeAllocator;  
+         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
+ class MakeAllocator;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, false>;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, true>;  
 ```  
   
@@ -57,7 +53,7 @@ class MakeAllocator<T, true>;
  Nombre de tipo.  
   
  `hasWeakReferenceSupport`  
- `true`asignar memoria para un objeto que admite referencias débiles; `false` asignar memoria para un objeto que no es compatible con referencias débiles.  
+ `true` asignar memoria para un objeto que admite referencias débiles; `false` asignar memoria para un objeto que no es compatible con referencias débiles.  
   
 ## <a name="remarks"></a>Comentarios  
  Asigna memoria para una clase activable, con o sin compatibilidad con la referencia débil.  
@@ -88,7 +84,7 @@ class MakeAllocator<T, true>;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** implements.h  
   
- **Namespace:** wrl  
+ **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vea también  
  [Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)

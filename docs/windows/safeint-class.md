@@ -1,12 +1,12 @@
 ---
 title: SafeInt (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt (Clase)
 Extiende las primitivas de entero para ayudar a evitar el desbordamiento de enteros y le permite comparar los diferentes tipos de enteros.  
@@ -178,9 +178,9 @@ class SafeInt;
   
  La tabla de operadores en este tema enumeran los operadores matemáticos y de comparación admitidos por la `SafeInt` clase. Operadores matemáticos más devuelven un `SafeInt` objeto del tipo `T`.  
   
- Las operaciones de comparación entre un `SafeInt` y un tipo entero se puede realizar en cualquier dirección. Por ejemplo, `SafeInt<int>(x) < y` y `y > SafeInt<int>(x)` son válidos y se devolverá el mismo resultado.  
+ Las operaciones de comparación entre un `SafeInt` y un tipo entero se puede realizar en cualquier dirección. Por ejemplo, `SafeInt<int>(x) < y` y `y> SafeInt<int>(x)` son válidos y se devolverá el mismo resultado.  
   
- Muchos operadores binarios no admiten el uso de diferentes `SafeInt` tipos. Un ejemplo de esto es el `&` operador. `SafeInt<T, E> & int`se admite, pero `SafeInt<T, E> & SafeInt<U, E>` no es. En el último ejemplo, el compilador no sabe qué tipo de parámetro para devolver. Una solución a este problema consiste en convertir el segundo parámetro al tipo base. Mediante el uso de los mismos parámetros, esto puede hacerse con `SafeInt<T, E> & (U)SafeInt<U, E>`.  
+ Muchos operadores binarios no admiten el uso de diferentes `SafeInt` tipos. Un ejemplo de esto es el `&` operador. `SafeInt<T, E> & int` se admite, pero `SafeInt<T, E> & SafeInt<U, E>` no es. En el último ejemplo, el compilador no sabe qué tipo de parámetro para devolver. Una solución a este problema consiste en convertir el segundo parámetro al tipo base. Mediante el uso de los mismos parámetros, esto puede hacerse con `SafeInt<T, E> & (U)SafeInt<U, E>`.  
   
 > [!NOTE]
 >  Para las operaciones bit a bit, los dos parámetros diferentes deben tener el mismo tamaño. Si los tamaños son diferentes, el compilador producirá un [ASSERT](../mfc/reference/diagnostic-services.md#assert) excepción. No se puede garantizar que los resultados de esta operación sea exacto. Para resolver este problema, convierta el parámetro más pequeño hasta que es el mismo tamaño que el parámetro mayor.  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`y `U` puede asignarse a un tipo booleano, tipo de caracteres o tipo de entero. El entero tipos pueden ser con o sin signo y cualquier tamaño de 8 bits a 64 bits.  
+ `T` y `U` puede asignarse a un tipo booleano, tipo de caracteres o tipo de entero. El entero tipos pueden ser con o sin signo y cualquier tamaño de 8 bits a 64 bits.  
   
 > [!NOTE]
 >  Aunque la `SafeInt` clase acepta cualquier tipo de entero, lleva a cabo más eficazmente con tipos sin signo.  
   
- `E`es el mecanismo de control de errores que `SafeInt` utiliza. Se proporcionan dos mecanismos de control de errores con la Biblioteca SafeInt. La directiva predeterminada es `SafeIntErrorPolicy_SafeIntException`, que produce una [SafeIntException (clase)](../windows/safeintexception-class.md) excepción cuando se produce un error. La otra directiva es `SafeIntErrorPolicy_InvalidParameter`, que detiene el programa si se produce un error.  
+ `E` es el mecanismo de control de errores que `SafeInt` utiliza. Se proporcionan dos mecanismos de control de errores con la Biblioteca SafeInt. La directiva predeterminada es `SafeIntErrorPolicy_SafeIntException`, que produce una [SafeIntException (clase)](../windows/safeintexception-class.md) excepción cuando se produce un error. La otra directiva es `SafeIntErrorPolicy_InvalidParameter`, que detiene el programa si se produce un error.  
   
  Hay dos opciones para personalizar la directiva de error. La primera opción es establecer el parámetro `E` cuando se crea un `SafeInt`. Use esta opción si desea cambiar el control de errores directiva para una sola `SafeInt`. La otra opción consiste en definir `_SAFEINT_DEFAULT_ERROR_POLICY` como la clase de control de errores personalizada antes de incluir el `SafeInt` biblioteca. Use esta opción si desea cambiar la directiva para todas las instancias de control de errores de forma predeterminada la `SafeInt` clase en el código.  
   

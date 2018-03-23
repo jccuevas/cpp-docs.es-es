@@ -1,12 +1,12 @@
 ---
-title: "Cómo: mejorar el rendimiento con genéricos (Visual C++) | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: mejorar el rendimiento con genéricos (Visual C++) | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Visual C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d8aad77236e5c1b2cdc8fe5958d87d8c53b8f05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c16dccd78abfc4a90dc0faea534c999a52b7b79
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Cómo: Mejorar el rendimiento con genéricos (Visual C++)
 Con los genéricos, puede crear código reutilizable, basado en un parámetro de tipo. El tipo real del parámetro de tipo se aplaza hasta que se llama a un código de cliente. Para obtener más información sobre genéricos, vea [genéricos](../windows/generics-cpp-component-extensions.md).  
@@ -66,7 +66,7 @@ int main()
     // Pop the items off the Stack.  
     // The item is returned as an Object, so a cast is  
     // necessary to convert it to its proper type.  
-    while (s->Count > 0)  
+    while (s->Count> 0)  
     {  
         Object ^o = s->Pop();  
         if (o->GetType() == Type::GetType("System.String"))  

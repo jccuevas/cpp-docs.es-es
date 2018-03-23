@@ -1,31 +1,36 @@
 ---
-title: "Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL) | Documentos de Microsoft"
-ms.custom: 
+title: Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
-La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel de crear y usar componentes de Windows Runtime.  
+La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel de crear y usar componentes de Windows Runtime.
+
+> [!NOTE]
+> WRL ahora ha sido reemplazada por C + / WinRT, una proyección de 17 del lenguaje C++ estándar para Windows Runtime APIs. C++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / WinRT se implementa por completo en archivos de encabezado y diseñado para proporcionarle acceso de primera clase a la API de Windows modernas.
+
+> Con C++ / WinRT, se puede utilizar y crear mediante cualquier compilador de 17 C ++ compatible con los estándares de Windows en tiempo de ejecución APIs. C++ / WinRT normalmente se comporta mejor y genera archivos binarios más pequeños que cualquier otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá siendo compatible con C++ / CX y WRL, pero se recomienda encarecidamente que las nuevas aplicaciones utilizar C++ / WinRT. Para obtener más información, consulte [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Ventajas  
  La biblioteca de plantillas de C++ de Windows en tiempo de ejecución permite más fácil implementar y consumir los componentes de modelo de objetos componentes (COM). Proporciona técnicas de mantenimiento como el recuento de referencias para administrar la duración de los objetos y probar los valores `HRESULT` para determinar si una operación se realizó correctamente o no. Para usar correctamente la biblioteca de plantillas de C++ de Windows en tiempo de ejecución, debe seguir detenidamente estas reglas y técnicas.  
@@ -57,9 +62,6 @@ La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de
   
  [Cómo: controlar eventos](../windows/how-to-handle-events-using-wrl.md)  
  Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para suscribirse al y controlar los eventos de un objeto en tiempo de ejecución de Windows.  
-  
- [Tutorial: Crear un componente de tiempo de ejecución básico de Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Muestra cómo utilizar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para crear un componente básico de Windows Runtime que suma dos números. También muestra cómo generar eventos y utilizar el componente de una aplicación UWP que usa JavaScript.  
   
  [Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Obtenga información acerca de cómo crear una aplicación UWP que use [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -144,7 +146,6 @@ La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de
   
 |||  
 |-|-|  
-|[Plantilla de proyecto de biblioteca de clases](../windows/wrl-class-library-project-template.md)|Describe cómo tener acceso a la plantilla de proyecto de la biblioteca de clases de WRL. Esta plantilla permite simplificar el uso de Visual Studio para crear componentes de Windows en tiempo de ejecución.|  
 |[API clave por categoría](../windows/key-wrl-apis-by-category.md)|Destaca los tipos, funciones y macros de biblioteca de plantillas de C++ de Windows en tiempo de ejecución principal.|  
 |[Referencia](../windows/wrl-reference.md)|Contiene información de referencia de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución.|  
 |[Referencia rápida (en tiempo de ejecución de Windows y Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Describe brevemente C++ / características CX que admiten el tiempo de ejecución de Windows.|  
