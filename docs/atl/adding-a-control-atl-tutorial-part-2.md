@@ -1,27 +1,27 @@
 ---
 title: Agregar un Control (ATL Tutorial, parte 2) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Agregar un control (Tutorial de ATL, Parte 2)
 En este paso, agregará un control al proyecto, lo compilará y lo probará en una página web.  
@@ -32,9 +32,9 @@ En este paso, agregará un control al proyecto, lo compilará y lo probará en u
   
 1.  En la Vista de clases, haga clic con el botón secundario en el proyecto Polygon.  
   
-2.  Seleccione **agregar** en el menú contextual y haga clic en **clase** en el submenú.  
+2.  Seleccione **agregar** en el menú contextual y haga clic en **nuevo elemento** en el submenú.  
   
-     El **Agregar clase** aparece el cuadro de diálogo. Las distintas categorías de objetos se enumeran en la estructura de árbol a la izquierda.  
+     Aparecerá el cuadro de diálogo **Agregar nuevo elemento**. Las distintas categorías de objetos se enumeran en la estructura de árbol a la izquierda.  
   
 3.  Haga clic en el **ATL** carpeta.  
   
@@ -50,10 +50,10 @@ En este paso, agregará un control al proyecto, lo compilará y lo probará en u
 |**Clase**|El nombre de la clase de C++ creada para implementar el control.|  
 |**archivo .h**|El archivo creado para contener la definición de la clase de C++.|  
 |**archivo .cpp**|El archivo creado para contener la implementación de la clase de C++.|  
-|**(Coclase)**|Nombre de la clase de componente para este control.|  
+|**CoClass**|Nombre de la clase de componente para este control.|  
 |**Interface**|El nombre de la interfaz donde el control implementará sus métodos y propiedades personalizados.|  
 |**Type**|Una descripción del control.|  
-|**Id. de programa**|El nombre legible que se puede utilizar para buscar el CLSID del control.|  
+|**ProgID**|El nombre legible que se puede utilizar para buscar el CLSID del control.|  
   
  Debe configurar varias opciones adicionales en el Asistente para controles ATL.  
   
@@ -113,7 +113,7 @@ En este paso, agregará un control al proyecto, lo compilará y lo probará en u
   
  A continuación, agregará una propiedad personalizada al control.  
   
- [Vuelva al paso 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Al paso 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [Vuelva al paso 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [al paso 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

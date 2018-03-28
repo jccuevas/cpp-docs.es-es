@@ -1,12 +1,9 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/22/2086
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - wcscpy_s
@@ -42,147 +39,187 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb37fe985340d2126cfc6f8db90cc236a2d5870
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8820dbda16d95a201d666a0f25b4e06a6b79c941
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
-Copia una cadena. Estas versiones de [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Copia una cadena. Estas versiones de [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  `_mbscpy_s` no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-errno_t strcpy_s(  
-   char *strDestination,  
-   size_t numberOfElements,  
-   const char *strSource   
-);  
-errno_t wcscpy_s(  
-   wchar_t *strDestination,  
-   size_t numberOfElements,  
-   const wchar_t *strSource   
-);  
-errno_t _mbscpy_s(  
-   unsigned char *strDestination,  
-   size_t numberOfElements,  
-   const unsigned char *strSource   
-);  
-template <size_t size>  
-errno_t strcpy_s(  
-   char (&strDestination)[size],  
-   const char *strSource   
-); // C++ only  
-template <size_t size>  
-errno_t wcscpy_s(  
-   wchar_t (&strDestination)[size],  
-   const wchar_t *strSource   
-); // C++ only  
-template <size_t size>  
-errno_t _mbscpy_s(  
-   unsigned char (&strDestination)[size],  
-   const unsigned char *strSource   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `strDestination`  
- Ubicación del búfer de cadena de destino.  
-  
- `numberOfElements`  
- Tamaño del búfer de cadena de destino en unidades `char` para las funciones estrechas y multibyte, y unidades `wchar_t` para las funciones anchas.  
-  
- `strSource`  
- Búfer de cadena de origen terminada en NULL.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cero si es correcto; en caso contrario, error.  
-  
-### <a name="error-conditions"></a>Condiciones de error  
-  
-|`strDestination`|`numberOfElements`|`strSource`|Valor devuelto|Contenido de `strDestination`|  
-|----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|any|`EINVAL`|no modificado|  
-|any|any|`NULL`|`EINVAL`|`strDestination`[0] se establece en 0|  
-|any|0, o demasiado pequeño|any|`ERANGE`|`strDestination`[0] se establece en 0|  
-  
-## <a name="remarks"></a>Comentarios  
- La función `strcpy_s` copia el contenido de la dirección de `strSource`, incluido el carácter nulo de terminación, en la ubicación especificada por `strDestination`. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de `strcpy_s` no se define si las cadenas de origen y de destino se superponen.  
-  
- `wcscpy_s` es la versión con caracteres anchos de `strcpy_s` y `_mbscpy_s` es la versión de caracteres multibyte. Los argumentos y el valor devuelto de `wcscpy_s` son cadenas de caracteres anchos; los de `_mbscpy_s` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
-  
- Si `strDestination` o `strSource` es un puntero nulo, o si la cadena de destino es demasiado pequeña, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `EINVAL` y establecen `errno` en `EINVAL` cuando `strDestination` o `strSource` es un puntero nulo, y devuelven `ERANGE` y establecen `errno` en `ERANGE` cuando la cadena de destino es demasiado pequeña.  
-  
- Si la ejecución finaliza correctamente, la cadena de destino siempre termina en null.  
-  
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla —que pueden realizar automáticamente una inferencia de la longitud de búfer para eliminar la necesidad de especificar un argumento de tamaño— y pueden reemplazar automáticamente funciones anteriores no seguras por sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Las versiones de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`strcpy_s`|\<string.h>|  
-|`wcscpy_s`|\<string.h> o \<wchar.h>|  
-|`_mbscpy_s`|\<mbstring.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_strcpy_s.cpp  
-// This program uses strcpy_s and strcat_s  
-// to build a phrase.  
-//  
-  
-#include <string.h>  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( void )  
-{  
-   char string[80];  
-   // using template versions of strcpy_s and strcat_s:  
-   strcpy_s( string, "Hello world from " );  
-   strcat_s( string, "strcpy_s " );  
-   strcat_s( string, "and " );  
-   // of course we can supply the size explicitly if we want to:  
-   strcat_s( string, _countof(string), "strcat_s!" );  
-  
-   printf( "String = %s\n", string );  
-}  
-```  
-  
-```Output  
-String = Hello world from strcpy_s and strcat_s!  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> `_mbscpy_s` no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+errno_t strcpy_s(
+   char *dest,
+   rsize_t dest_size,
+   const char *src
+);
+errno_t wcscpy_s(
+   wchar_t *dest,
+   rsize_t dest_size,
+   const wchar_t *src
+);
+errno_t _mbscpy_s(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src
+);
+```
+
+```cpp
+// Template functions are C++ only:
+template <size_t size>
+errno_t strcpy_s(
+   char (&dest)[size],
+   const char *src
+); // C++ only
+template <size_t size>
+errno_t wcscpy_s(
+   wchar_t (&dest)[size],
+   const wchar_t *src
+); // C++ only
+template <size_t size>
+errno_t _mbscpy_s(
+   unsigned char (&dest)[size],
+   const unsigned char *src
+); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*dest*<br/>
+Ubicación del búfer de cadena de destino.
+
+*dest_size*<br/>
+Tamaño del búfer de cadena de destino en **char** unidades para las funciones estrechas y multibyte, y **wchar_t** unidades para las funciones anchas. Este valor debe ser mayor que cero y no mayor que **RSIZE_MAX**.
+
+*src*<br/>
+Búfer de cadena de origen terminada en NULL.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cero si es correcto; en caso contrario, error.
+
+### <a name="error-conditions"></a>Condiciones de error
+
+|*dest*|*dest_size*|*src*|Valor devuelto|Contenido de *dest*|
+|----------------------|------------------------|-----------------|------------------|----------------------------------|
+|**NULL**|any|any|**EINVAL**|no modificado|
+|any|any|**NULL**|**EINVAL**|*dest*[0] se establece en 0|
+|any|0, o demasiado pequeño|any|**ERANGE**|*dest*[0] se establece en 0|
+
+## <a name="remarks"></a>Comentarios
+
+El `strcpy_s` función copia el contenido de la dirección de *src*, incluido el carácter nulo final, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de `strcpy_s` no se define si las cadenas de origen y de destino se superponen.
+
+`wcscpy_s` es la versión con caracteres anchos de `strcpy_s` y `_mbscpy_s` es la versión de caracteres multibyte. Los argumentos de `wcscpy_s` son cadenas de caracteres anchos; los de `_mbscpy_s` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+
+Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL** cuando *dest* o  *src* es un puntero nulo, y devuelven **ERANGE** y establecer **errno** a **ERANGE** cuando la cadena de destino es demasiado pequeña.
+
+Si la ejecución finaliza correctamente, la cadena de destino siempre termina en null.
+
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla —que pueden realizar automáticamente una inferencia de la longitud de búfer para eliminar la necesidad de especificar un argumento de tamaño— y pueden reemplazar automáticamente funciones anteriores no seguras por sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFE. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|`strcpy_s`|\<string.h>|
+|`wcscpy_s`|\<string.h> o \<wchar.h>|
+|`_mbscpy_s`|\<mbstring.h>|
+
+Estas funciones son específicos de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+A diferencia del código de calidad de producción, este ejemplo llama a las funciones de cadena segura sin comprobación de errores:
+
+```C
+// crt_strcpy_s.c
+// Compile by using: cl /W4 crt_strcpy_s.c
+// This program uses strcpy_s and strcat_s
+// to build a phrase.
+
+#include <string.h>     // for strcpy_s, strcat_s
+#include <stdlib.h>     // for _countof
+#include <stdio.h>      // for printf
+#include <errno.h>      // for return values
+
+int main(void)
+{
+    char string[80];
+
+    strcpy_s(string, _countof(string), "Hello world from ");
+    strcat_s(string, _countof(string), "strcpy_s ");
+    strcat_s(string, _countof(string), "and ");
+    strcat_s(string, _countof(string), "strcat_s!");
+
+    printf("String = %s\n", string);
+}
+```
+
+```Output
+String = Hello world from strcpy_s and strcat_s!
+```
+
+Al compilar el código de C++, las versiones de plantilla pueden ser más fáciles de usar.
+
+```cpp
+// crt_wcscpy_s.cpp
+// Compile by using: cl /EHsc /W4 crt_wcscpy_s.cpp
+// This program uses wcscpy_s and wcscat_s
+// to build a phrase.
+
+#include <cstring>  // for wcscpy_s, wcscat_s
+#include <cstdlib>  // for _countof
+#include <iostream> // for cout, includes <cstdlib>, <cstring>
+#include <errno.h>  // for return values
+
+int main(void)
+{
+    wchar_t string[80];
+    // using template versions of wcscpy_s and wcscat_s:
+    wcscpy_s(string, L"Hello world from ");
+    wcscat_s(string, L"wcscpy_s ");
+    wcscat_s(string, L"and ");
+    // of course we can supply the size explicitly if we want to:
+    wcscat_s(string, _countof(string), L"wcscat_s!");
+
+    std::wcout << L"String = " << string << std::endl;
+}
+```
+
+```Output
+String = Hello world from wcscpy_s and wcscat_s!
+```
+
+## <a name="see-also"></a>Vea también
+
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) <br/>
+[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md) <br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md) <br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
