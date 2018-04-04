@@ -1,33 +1,33 @@
 ---
 title: Aplicaciones de escritorio (Visual C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 A *aplicación de escritorio* en C++ es una aplicación nativa que se puede acceder al conjunto completo de API de Windows y ambos se ejecuta en una ventana o en la consola del sistema. Aplicaciones de escritorio de C++ pueden ejecutar en Windows XP y Windows 10 (Aunque oficialmente no se admite Windows XP y hay muchas de las API de Windows que se han introducido desde ese momento).   Una aplicación de escritorio es distinta de una aplicación de plataforma Universal de Windows (UWP), que se puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de vs de escritorio. Las aplicaciones de UWP, vea [elegir la tecnología](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
   
- **Terminología**  
+ **Terminology**  
   
 -   A *Win32* aplicación es una aplicación de escritorio de C++ que pueden hacer uso de nativo de Windows [las API de C de Windows o COM APIs](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT y las API de biblioteca estándar y 3rd bibliotecas de entidad. Una aplicación de Win32 que se ejecuta en una ventana exige al programador que funciona de forma explícita con los mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación de Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.  
   
@@ -54,7 +54,7 @@ A *aplicación de escritorio* en C++ es una aplicación nativa que se puede acce
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Desarrollo de Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contiene información sobre la API de Windows y COM. (Algunas API de Windows y archivos DLL de terceros se implementan como objetos COM).|  
-|[Hilo: desarrollo de aplicaciones en C++ para Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Describe cómo crear una aplicación de escritorio de Windows de cliente que use animaciones de Windows y Direct2D para crear una interfaz de usuario basada en carrusel.  Este tutorial no se ha actualizado desde Windows 7, pero sigue ofreciendo una introducción de throough a la programación de Win32.|  
+|[Hilo: desarrollo de aplicaciones en C++ para Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Describe cómo crear una aplicación de escritorio de Windows de cliente que use animaciones de Windows y Direct2D para crear una interfaz de usuario basada en carrusel.  Este tutorial no se ha actualizado desde Windows 7, pero sigue ofreciendo una introducción completa a la programación de Win32.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Describe las principales características de Visual C++ en Visual Studio y vínculos al resto de la documentación sobre Visual C++.|  
   
 ## <a name="see-also"></a>Vea también  
