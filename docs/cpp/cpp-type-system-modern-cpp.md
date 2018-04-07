@@ -1,27 +1,27 @@
 ---
 title: Sistema de tipos de C++ (C++ moderno) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 El concepto de *tipo* es muy importante en C++. Cada variable, argumento de función y valor devuelto por una función debe tener un tipo para compilarse. Asimismo, antes de evaluar cada una de las expresiones (incluidos los valores literales), el compilador da implícitamente un tipo a estas expresiones. Algunos ejemplos de tipos `int` que almacena valores integrales, `double` para almacenar valores de punto flotante (también conocido como *escalares* tipos de datos), o la clase de biblioteca estándar [std:: basic_string](../standard-library/basic-string-class.md) para almacenar el texto. Puede crear su propio tipo definiendo un objeto `class` o `struct`. El tipo especifica la cantidad de memoria que se asignará para la variable (o el resultado de la expresión), las clases de valores que se pueden almacenar en esa variable, cómo se interpretan estos valores (como patrones de bits) y las operaciones que se pueden realizar en ella. Este artículo contiene información general sobre las principales características del sistema de tipos de C++.  
@@ -44,7 +44,7 @@ El concepto de *tipo* es muy importante en C++. Cada variable, argumento de func
   
  En el ejemplo siguiente se muestran algunas sencillas declaraciones de variable con descripciones de cada una de ellas. En el ejemplo se muestra también cómo el compilador utiliza la información de tipo para permitir o no permitir que posteriormente se realicen ciertas operaciones en la variable.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  En la ilustración siguiente se muestran los tamaños relativos de los tipos integrados:  
   
- ![Compila el tamaño en bytes de &#45; en tipos](../cpp/media/built-intypesizes.png "inTYpeSizes integrados")  
+ ![Compila el tamaño en bytes de&#45;en tipos](../cpp/media/built-intypesizes.png "inTYpeSizes integrados")  
   
  En la tabla siguiente se muestran los tipos fundamentales que se usan con más frecuencia:  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>Calificador de tipo const  
  Cualquier tipo integrado o definido por el usuario se puede calificar con la palabra clave const. Además, las funciones miembro pueden calificarse con `const` e incluso sobrecargarse con `const`. El valor de un tipo `const` no puede modificarse una vez inicializado.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  Lo primero que debe saber es que, al declarar una variable de puntero sin formato, se asignará solo la memoria necesaria para almacenar una dirección de la ubicación de memoria a la que el puntero hará referencia cuando esté desreferenciado. Asignación de memoria para el propio valor de datos (también denominada *memoria auxiliar*) todavía no está asignada. Es decir, al declarar una variable de puntero sin formato, se crea una variable de la dirección de memoria, no una variable real de los datos. Si se desreferencia una variable de puntero antes de tener la seguridad de que contiene una dirección válida en una memoria auxiliar, se producirá un comportamiento no definido (normalmente un error irrecuperable) en el programa. En el siguiente ejemplo se muestra este tipo de error:  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  En el ejemplo se desreferencia un tipo de puntero que no tiene ninguna memoria asignada para almacenar los datos enteros reales ni una dirección de memoria válida asignada. El código siguiente corrige esto errores:  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -151,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Sin embargo, es fácil olvidarse de eliminar una asignada dinámicamente objetos, especialmente cuando el código es complejo, lo que produce un error de recurso denominado un *fuga de memoria*. Por esta razón, el uso de punteros sin formato no es recomendable en el lenguaje C++ actual. Casi siempre es mejor incluir un puntero sin formato en una [puntero inteligente](../cpp/smart-pointers-modern-cpp.md), que liberará automáticamente la memoria cuando se invoque su destructor (cuando el código sale del ámbito del puntero inteligente); mediante el uso de punteros inteligentes, prácticamente elimina toda una clase de errores en los programas de C++. En el ejemplo siguiente, suponga que `MyClass` es un tipo definido por el usuario que tiene un método público `DoSomeWork();`  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  

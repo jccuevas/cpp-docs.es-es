@@ -1,33 +1,33 @@
 ---
 title: Inteligentes punteros (C++ moderno) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 En la programación de C++ moderno, incluye la biblioteca estándar de *inteligentes punteros*, que se usan para ayudar a garantizar que los programas que están libres de memoria y pérdidas de recursos y son seguro ante excepciones.  
   
 ## <a name="uses-for-smart-pointers"></a>Usos de los punteros inteligentes  
- Punteros inteligentes se definen en el `std` espacio de nombres en el [ \<memoria >](../standard-library/memory.md) archivo de encabezado. Son cruciales para la [RAII](../cpp/objects-own-resources-raii.md) o *Resource Acquisition Is Initialialization* expresión de programación. El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código. En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.  
+ Punteros inteligentes se definen en el `std` espacio de nombres en el [ \<memoria >](../standard-library/memory.md) archivo de encabezado. Son cruciales para la [RAII](../cpp/objects-own-resources-raii.md) o *Resource Acquisition Is Initialization* expresión de programación. El objetivo principal de esta expresión es asegurarse de que la adquisición de recursos ocurre al mismo tiempo que se inicializa el objeto, de manera que todos los recursos del objeto se creen y se dispongan en una sola línea de código. En la práctica, el principio básico RAII consiste en proporcionar la propiedad de cualquier recurso asignado por montón (por ejemplo, memoria asignada dinámicamente o identificadores de objetos del sistema) a un objeto asignado a la pila cuyo destructor contiene código para eliminar o liberar el recurso, además de cualquier código asociado de limpieza.  
   
  En la mayoría de los casos, cuando se inicializa un puntero o un identificador de recursos sin formato para apuntar a un recurso real, el puntero se pasa inmediatamente a un puntero inteligente. En el lenguaje C++ actual, los punteros sin formato se utilizan únicamente en pequeños bloques de código de ámbito limitado, bucles o funciones auxiliares donde el rendimiento es crucial y no hay ninguna posibilidad de confusión sobre la propiedad.  
   
@@ -77,7 +77,7 @@ En la programación de C++ moderno, incluye la biblioteca estándar de *intelige
  Utilice estos punteros inteligentes como primera opción para encapsular punteros a los objetos estándar de C++ (POCO).  
   
 -   `unique_ptr`   
-     Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr`es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue de inserción y extracción de colecciones de la biblioteca estándar de C++ rápidas. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y utilizar instancias de unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr (clase)](../standard-library/unique-ptr-class.md).  
+     Permite exactamente un único propietario del puntero subyacente. Utilice esta opción como predeterminada para los objetos POCO, a menos que sepa con certeza que necesita un objeto `shared_ptr`. Puede moverse a un nuevo propietario, pero no se puede copiar ni compartir. Sustituye a `auto_ptr`, que está desusado. Comparado con `boost::scoped_ptr`, `unique_ptr` es pequeño y eficaz; el tamaño es un puntero y admite referencias rvalue de inserción y extracción de colecciones de la biblioteca estándar de C++ rápidas. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y utilizar instancias de unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md) y [unique_ptr (clase)](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Puntero inteligente con recuento de referencias. Utilícelo cuando desee asignar un puntero sin formato a varios propietarios, por ejemplo, cuando devuelve una copia de un puntero desde un contenedor pero desea conservar el original. El puntero sin formato no se elimina hasta que todos los propietarios de `shared_ptr` han salido del ámbito o, de lo contrario, han renunciado a la propiedad. El tamaño es dos punteros: uno para el objeto y otro para el bloque de control compartido que contiene el recuento de referencias. Archivo de encabezado: `<memory>`. Para obtener más información, consulte [Cómo: crear y utilizar instancias de shared_ptr](../cpp/how-to-create-and-use-shared-ptr-instances.md) y [shared_ptr (clase)](../standard-library/shared-ptr-class.md).  

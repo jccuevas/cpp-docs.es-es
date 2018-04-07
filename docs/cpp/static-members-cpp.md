@@ -1,12 +1,12 @@
 ---
-title: "Miembros estáticos (C++) | Documentos de Microsoft"
-ms.custom: 
+title: Miembros estáticos (C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>Miembros estáticos (C++)
 Las clases pueden contener datos de miembro y funciones miembro estáticos. Cuando se declara un miembro de datos como **estático**, solo una copia de los datos se mantiene para todos los objetos de la clase.
   
  Los miembros de datos estáticos no forman parte de los objetos de un tipo de clase determinado. Por tanto, la declaración de un miembro de datos estático no se considera una definición. El miembro de datos se declara en el ámbito de la clase, pero la definición se realiza en el ámbito de archivo. Estos miembros estáticos tienen vinculación externa. Esto se ilustra en el siguiente ejemplo:  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  Se puede hacer referencia a miembros de datos estáticos sin hacer referencia a un objeto de tipo de clase. El número de bytes escritos mediante objetos de `BufferedOutput` puede obtenerse de la manera siguiente:  
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Para que el miembro estático exista, no es necesario que exista ningún objeto del tipo de clase. También pueden tener acceso los miembros estáticos mediante la selección de miembro (**.** y  **->** ) operadores. Por ejemplo:  
+ Para que el miembro estático exista, no es necesario que exista ningún objeto del tipo de clase. También pueden tener acceso los miembros estáticos mediante la selección de miembro (**.** y **->**) operadores. Por ejemplo:  
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  
