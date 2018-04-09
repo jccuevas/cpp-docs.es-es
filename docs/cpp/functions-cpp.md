@@ -23,11 +23,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a78f3bf043c08586916a1776806b0a759beb827
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="functions-c"></a>Funciones (C++)
 
@@ -310,6 +310,35 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
+<<<<<<< HEAD
+4. Además de utilizar el propio valor devuelto, "volver" valores mediante la definición de cualquier número de parámetros que se usarán pasada por referencia para que la función puede modificar o inicializar los valores de los objetos proporcionados por el llamador. Para obtener más información, consulte [argumentos de función de tipo de referencia](reference-type-function-arguments.md).  
+  
+## <a name="function-pointers"></a>Punteros de función  
+ C++ admite punteros de función de la misma manera que el lenguaje C. Sin embargo, una alternativa con mayor seguridad de tipos suele ser usar un objeto de función.  
+  
+ Se recomienda usar `typedef` para declarar un alias para el tipo de puntero a función si se declara una función que devuelve un tipo de puntero a función.  Por ejemplo  
+  
+```  
+typedef int (*fp)(int);  
+fp myFunction(char* s); // function returning function pointer  
+```  
+  
+ Si no es así, la sintaxis correcta para la declaración de la función se puede deducir de la sintaxis de declarador del puntero a función, mediante la sustitución del identificador (`fp` en el ejemplo anterior) por el nombre y la lista de argumentos de las funciones, como sigue:  
+  
+```  
+int (*myFunction(char* s))(int);  
+```  
+  
+ La declaración anterior es equivalente a la otra declaración con typedef.  
+  
+## <a name="see-also"></a>Vea también  
+ [Sobrecarga de funciones](../cpp/function-overloading.md)   
+ [Funciones con listas de argumentos variables](../cpp/functions-with-variable-argument-lists-cpp.md)   
+ [Funciones establecidas como valor predeterminadas y eliminadas explícitamente](../cpp/explicitly-defaulted-and-deleted-functions.md)   
+ [Búsqueda de nombres dependiente de argumentos (Koenig) en las funciones](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
+ [Argumentos predeterminados](../cpp/default-arguments.md)   
+ [Inline (funciones)](../cpp/inline-functions-cpp.md)
+=======
 ## <a name="returning-multiple-values-from-a-function"></a>Devolver varios valores de una función
 
 Hay varias maneras de devolver más de un valor de una función:
@@ -446,3 +475,4 @@ La declaración anterior es equivalente a la otra declaración con typedef.
 - [Búsqueda de nombres dependientes de argumentos (Koenig) en las funciones](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Argumentos predeterminados](../cpp/default-arguments.md)
 - [Funciones insertadas](../cpp/inline-functions-cpp.md)
+>>>>>>> master
