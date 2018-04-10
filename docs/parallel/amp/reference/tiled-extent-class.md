@@ -1,12 +1,12 @@
 ---
 title: tiled_extent (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent (Clase)
 A `tiled_extent` objeto es un `extent` objeto de uno a tres dimensiones que divide el espacio de la extensión en uno, dos o iconos tridimensionales.  
@@ -97,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|Almacena la longitud de la dimensión más significativa.|  
-|[tile_dim1 Constant](#tile_dim1)|Almacena la longitud de la dimensión importante siguiente a la mayoría.|  
-|[tile_dim2 Constant](#tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
+|[tile_dim0 (constante)](#tile_dim0)|Almacena la longitud de la dimensión más significativa.|  
+|[tile_dim1 (constante)](#tile_dim1)|Almacena la longitud de la dimensión importante siguiente a la mayoría.|  
+|[tile_dim2 (constante)](#tile_dim2)|Almacena la longitud de la dimensión menos significativa.|  
 
   
 ### <a name="public-data-members"></a>Miembros de datos públicos  
@@ -164,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valor devuelto  
  El nuevo `tiled_extent` objeto por valor. 
-## <a name="truncate"> </a>  truncar   
+## <a name="truncate"> </a>  truncate   
 Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -176,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas hacia abajo para ser divisible por las dimensiones del mosaico.  
 
-## <a name="operator_eq"> </a>  operador =   
+## <a name="operator_eq"> </a>  operator=   
 Copia el contenido del elemento especificado `tiled_index` objeto en éste.  
   
 ### <a name="syntax"></a>Sintaxis  

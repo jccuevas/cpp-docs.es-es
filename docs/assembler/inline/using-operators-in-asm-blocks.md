@@ -1,12 +1,12 @@
 ---
 title: Usar operadores en bloques __asm | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ca8ac739793c81ef18f8657cbf53c9cb018b3e38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-operators-in-asm-blocks"></a>Uso de operadores en bloques __asm
 ## <a name="microsoft-specific"></a>Específicos de Microsoft  
- Un `__asm` bloque no puede utilizar operadores específicos de C o C++, como la  **<<**  operador. Sin embargo, operadores compartidos por C y MASM, como el \* (operador), se interpretan como operadores de lenguaje de ensamblado. Por ejemplo, fuera de un `__asm` bloquear, corchetes (**[]**) se interpretan como envolvente subíndices de matriz, que C ajusta automáticamente el tamaño de un elemento de la matriz. Dentro de un bloque `__asm`, se ven como el operador índice de MASM, que produce un desplazamiento de bytes sin ajuste de escala desde cualquier objeto de datos o etiqueta (no solo una matriz). El código siguiente ilustra la diferencia:  
+ Un `__asm` bloque no puede utilizar operadores específicos de C o C++, como la **<<** operador. Sin embargo, operadores compartidos por C y MASM, como el \* (operador), se interpretan como operadores de lenguaje de ensamblado. Por ejemplo, fuera de un `__asm` bloquear, corchetes (**[]**) se interpretan como envolvente subíndices de matriz, que C ajusta automáticamente el tamaño de un elemento de la matriz. Dentro de un bloque `__asm`, se ven como el operador índice de MASM, que produce un desplazamiento de bytes sin ajuste de escala desde cualquier objeto de datos o etiqueta (no solo una matriz). El código siguiente ilustra la diferencia:  
   
 ```  
 int array[10];  

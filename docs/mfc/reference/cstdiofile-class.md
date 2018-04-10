@@ -1,12 +1,12 @@
 ---
 title: Clase CStdioFile | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Clase CStdioFile
 Representa un archivo de secuencia de tiempo de ejecución de C tal como lo abre la función en tiempo de ejecución [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Construye e inicializa un objeto `CStdioFile`.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  El `m_pStream` miembro de datos es el puntero a un archivo abierto, tal como lo devuelve la función de tiempo de ejecución de C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Comentarios  
  Es **NULL** si el archivo no se ha abierto nunca o se ha cerrado.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Sobrecargado. Abrir está diseñado para su uso con el valor predeterminado `CStdioFile` constructor.  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  Una cadena que es la ruta de acceso al archivo deseado. La ruta de acceso puede ser absoluta o relativa.  
   
  `nOpenFlags`  
- Modo de acceso y uso compartido. Especifica la acción que se realizará al abrir el archivo. Puede combinar opciones con la operación bit a bit OR (&#124;) como operador. Permiso de acceso uno a y opción de un recurso compartido son necesarios; los modos modeCreate y modeNoInherit son opcionales.  
+ Modo de acceso y uso compartido. Especifica la acción que se realizará al abrir el archivo. Puede combinar opciones mediante el uso de la operación bit a bit OR (&#124;) operador. Permiso de acceso uno a y opción de un recurso compartido son necesarios; los modos modeCreate y modeNoInherit son opcionales.  
   
  `pError`  
  Un puntero a un objeto de excepción de archivo existente que va a recibir el estado de una operación con errores.  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Lee datos de texto en un búfer, hasta un límite de `nMax`-1 caracteres, desde el archivo asociado a la `CStdioFile` objeto.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Cambia de posición el puntero en un archivo abierto anteriormente.  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Escribe datos de un búfer en el archivo asociado a la `CStdioFile` objeto.  
   
 ```  

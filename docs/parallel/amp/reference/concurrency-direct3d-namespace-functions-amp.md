@@ -34,10 +34,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones de espacio de nombres Concurrency::Direct3D (AMP)
 ||||  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits)](#reversebits)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
@@ -69,7 +69,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor absoluto del argumento.  
   
-##  <a name="clamp"></a>  Clamp  
+##  <a name="clamp"></a>  clamp  
  Calcula el valor del primer argumento especificado que se fija en un intervalo definido por el segundo y tercer argumento especificado.  
   
 ```  
@@ -98,7 +98,7 @@ inline int clamp(
 ### <a name="return-value"></a>Valor devuelto  
  El valor fijado de `_X`.  
   
-##  <a name="countbits"></a>  countbits)  
+##  <a name="countbits"></a>  countbits  
  Cuenta el número de bits de conjunto de _X  
   
 ```  
@@ -241,7 +241,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Valor devuelto  
  El puntero de interfaz IUnknown correspondiente en el búfer de Direct3D subyacente de la matriz.  
   
-##  <a name="imax"></a>  iMax  
+##  <a name="imax"></a>  imax  
  Determinar el valor numérico máximo de los argumentos  
   
 ```  
@@ -260,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>Valor devuelto  
  Devolver el valor numérico máximo de los argumentos  
   
-##  <a name="imin"></a>  Imín  
+##  <a name="imin"></a>  imin  
  Determinar el valor numérico mínimo de los argumentos  
   
 ```  
@@ -367,7 +367,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Valor devuelto  
  Una matriz que se crea utilizando el búfer proporcionado de Direct3D.  
   
-##  <a name="noise"></a>  ruido  
+##  <a name="noise"></a>  noise  
  Genera un valor aleatorio mediante el algoritmo de ruido de Perlin  
   
 ```  
@@ -381,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor de ruido de Perlin el dentro de un intervalo comprendido entre -1 y 1  
   
-##  <a name="radians"></a>  radianes  
+##  <a name="radians"></a>  radians  
  Convierte _X de grados en radianes  
   
 ```  
@@ -412,7 +412,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El inverso del argumento especificado.  
   
-##  <a name="reversebits">reversebits)</a>  
+##  <a name="reversebits"></a>  reversebits  
  Invierte el orden de los bits de _X  
   
 ```  
@@ -426,7 +426,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el valor con el orden de bit invertido en _X  
   
-##  <a name="saturate"></a>  saturar  
+##  <a name="saturate"></a>  saturate  
  Fija _X dentro del intervalo de 0 a 1  
   
 ```  
@@ -440,7 +440,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve _X fijada dentro del intervalo de 0 a 1  
   
-##  <a name="sign"></a>  Inicio de sesión  
+##  <a name="sign"></a>  sign  
  Determina el signo del argumento especificado.  
   
 ```  
@@ -454,7 +454,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>Valor devuelto  
  El signo del argumento.  
   
-##  <a name="smoothstep"></a>  smoothstep)  
+##  <a name="smoothstep"></a>  smoothstep  
  Devuelve una interpolación Hermite suave entre 0 y 1, si _X está en el intervalo [_Min, _Max].  
   
 ```  
@@ -477,7 +477,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve 0 si _X es menor que _Min; Devuelve 1 si _X es mayor que _Max; en caso contrario, un valor entre 0 y 1 si _X está en el intervalo [_Min, _Max]  
   
-##  <a name="step"></a>  Paso  
+##  <a name="step"></a>  step  
  Compara dos valores y devuelve 0 o 1 según cuyo valor es mayor  
   
 ```  
@@ -496,7 +496,7 @@ inline float step(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve 1 si el _X es mayor o igual que _Y; en caso contrario, 0  
   
-##  <a name="umax"></a>  UMAX  
+##  <a name="umax"></a>  umax  
  Determinar el valor numérico máximo de los argumentos  
   
 ```  

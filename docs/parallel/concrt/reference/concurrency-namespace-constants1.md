@@ -1,10 +1,10 @@
 ---
 title: constantes de espacio de nombres de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::AgentEventGuid
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 83c9629feed07cee5bd13138f3def89251c081cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-constants"></a>constantes de espacio de nombres de simultaneidad
 ||||  
@@ -88,14 +88,14 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ### <a name="remarks"></a>Comentarios  
  Esta categoría de eventos no está actualmente desencadenada por el Runtime de simultaneidad.  
   
-##  <a name="cooperative_timeout_infinite">COOPERATIVE_TIMEOUT_INFINITE</a>  
+##  <a name="cooperative_timeout_infinite"></a>  COOPERATIVE_TIMEOUT_INFINITE  
  Valor que indica que una espera nunca debe agotar el tiempo de espera.  
   
 ```
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```  
   
-##  <a name="cooperative_wait_timeout">COOPERATIVE_WAIT_TIMEOUT</a>  
+##  <a name="cooperative_wait_timeout"></a>  COOPERATIVE_WAIT_TIMEOUT  
  Valor que indica que se ha agotado el tiempo de espera.  
   
 ```

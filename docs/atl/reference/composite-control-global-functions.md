@@ -1,12 +1,12 @@
 ---
 title: Funciones globales de Control compuesto | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de controles compuestos
 Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y para crear, hospedar y otorgar licencias a controles ActiveX.  
@@ -47,14 +47,14 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
   
 |||  
 |-|-|  
-|[AtlAxCreateDialog](#atlaxdialogbox)|Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario. El cuadro de diálogo resultante puede contener controles ActiveX.|  
+|[AtlAxDialogBox](#atlaxdialogbox)|Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario. El cuadro de diálogo resultante puede contener controles ActiveX.|  
 |[AtlAxCreateDialog](#atlaxcreatedialog)|Crea un cuadro de diálogo no modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario. El cuadro de diálogo resultante puede contener controles ActiveX.|  
 |[AtlAxCreateControl](#atlaxcreatecontrol)|Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada.|  
 |[AtlAxCreateControlEx](#atlaxcreatecontrolex)|Crea un control ActiveX, lo inicializa, lo hospeda en la ventana especificada y recupera un puntero de interfaz (o punteros) del control.|  
 |[AtlAxCreateControlLic](#atlaxcreatecontrollic)|Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.|  
 |[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)|Crea un control ActiveX con licencia, lo inicializa, lo hospeda en la ventana especificada y recupera un puntero de interfaz (o punteros) del control.|  
 |[AtlAxAttachControl](#atlaxattachcontrol)|Asocia un control creado previamente con la ventana especificada.|  
-|[AtlAxGetControl](#atlaxgethost)|Utilizado para obtener un puntero de interfaz directo al contenedor de una ventana especificada (si existe), función de su identificador.|  
+|[AtlAxGetHost](#atlaxgethost)|Utilizado para obtener un puntero de interfaz directo al contenedor de una ventana especificada (si existe), función de su identificador.|  
 |[AtlAxGetControl](#atlaxgetcontrol)|Usar para obtener un puntero de interfaz directo al control que se encuentra dentro de una ventana especificada (si existe), función de su identificador.|  
 |[AtlSetChildSite](#atlsetchildsite)|Inicializa el **IUnknown** del sitio secundario.|  
 |[AtlAxWinInit](#atlaxwininit)|Inicializa el código de hospedaje para los objetos de AxWin.|  
@@ -64,7 +64,7 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxCreateDialog  
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
  Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario.  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  Para obtener más información sobre los cuadros de diálogo en general, consulte [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) y [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) en el SDK de Windows.  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Crea un cuadro de diálogo no modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario.  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  Vea [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) y [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) en el SDK de Windows.  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada.  
   
 
@@ -159,9 +159,9 @@ ATLAPI AtlAxCreateControl(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   Un identificador de programa, como "MSCAL. Calendar.7 "  
+-   A ProgID such as "MSCAL.Calendar.7"  
   
--   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  Para crear un control ActiveX con licencia, consulte [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada. También se puede crear un puntero de interfaz y un receptor de eventos para el nuevo control.  
   
 ```
@@ -207,9 +207,9 @@ ATLAPI AtlAxCreateControlEx(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   Un identificador de programa, como "MSCAL. Calendar.7 "  
+-   A ProgID such as "MSCAL.Calendar.7"  
   
--   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlAxCreateControlEx`es similar a [AtlAxCreateControl](#atlaxcreatecontrol) , pero también permite recibir un puntero de interfaz al control recién creado y configurado un receptor de eventos para recibir eventos desencadenados por el control.  
+ `AtlAxCreateControlEx` es similar a [AtlAxCreateControl](#atlaxcreatecontrol) , pero también permite recibir un puntero de interfaz al control recién creado y configurado un receptor de eventos para recibir eventos desencadenados por el control.  
   
  Para crear un control ActiveX con licencia, consulte [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.  
 
 ```
@@ -262,9 +262,9 @@ ATLAPI AtlAxCreateControlLic(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   Un identificador de programa, como "MSCAL. Calendar.7 "  
+-   A ProgID such as "MSCAL.Calendar.7"  
   
--   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -293,7 +293,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Ejemplo  
  Vea [hospedaje de controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo de cómo usar `AtlAxCreateControlLic`.  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada. También se puede crear un puntero de interfaz y un receptor de eventos para el nuevo control.  
   
 ```
@@ -312,9 +312,9 @@ ATLAPI AtlAxCreateControlLicEx(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   Un identificador de programa, como "MSCAL. Calendar.7 "  
+-   A ProgID such as "MSCAL.Calendar.7"  
   
--   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  Uno de los valores HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlAxCreateControlLicEx`es similar a [AtlAxCreateControlLic](#atlaxcreatecontrollic) , pero también permite recibir un puntero de interfaz al control recién creado y configurado un receptor de eventos para recibir eventos desencadenados por el control.  
+ `AtlAxCreateControlLicEx` es similar a [AtlAxCreateControlLic](#atlaxcreatecontrollic) , pero también permite recibir un puntero de interfaz al control recién creado y configurado un receptor de eventos para recibir eventos desencadenados por el control.  
   
 ### <a name="example"></a>Ejemplo  
  Vea [hospedaje de controles de ActiveX mediante AXHost de ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) para obtener un ejemplo de cómo usar `AtlAxCreateControlLicEx`.  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  Asocia un control creado previamente con la ventana especificada.  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  El objeto de control que se va a adjuntar debe inicializarse correctamente antes de llamar a `AtlAxAttachControl`.  
   
-##  <a name="atlaxgethost"></a>AtlAxGetControl  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  Obtiene un puntero de interfaz directo al contenedor de una ventana especificada (si existe) en función de su identificador.  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los valores HRESULT estándar.  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  Obtiene un puntero de interfaz directo al control que se encuentra dentro de una ventana especificada en función de su identificador.  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los valores HRESULT estándar.  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  Llame a esta función para establecer el sitio del objeto secundario en el **IUnknown** del objeto primario.  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor HRESULT estándar.  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  Esta función inicializa el código que hospeda al registrar los controles de ATL la **"AtlAxWin80"** y **"AtlAxWinLic80"** clases de ventana junto con un par de mensajes de ventana personalizados.  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Comentarios  
  Esta función debe llamarse antes de usar la API de hospedaje los controles de ATL. Después de una llamada a esta función, el **"AtlAxWin"** clase de ventana se puede utilizar en las llamadas a [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) o [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), tal y como se describe en el SDK de Windows.  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Esta función anula la inicialización controles de ATL anulando el registro código que hospeda el **"AtlAxWin80"** y **"AtlAxWinLic80"** clases de ventana.  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  Llame a esta función para realizar una limpieza después de que se hayan destruido todas las ventanas de host existente si llama a [AtlAxWinInit](#atlaxwininit) y ya no necesita crear ventanas de host. Si no llama a esta función, la clase de ventana será anular el registro automáticamente cuando finaliza el proceso.  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  Llame a esta función para recuperar información sobre la interfaz de origen predeterminada de un objeto.  
   
 ```
@@ -495,13 +495,13 @@ ATLAPI AtlGetObjectSourceInterface(
  Un valor HRESULT estándar.  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlGetObjectSourceInterface`puede proporcionar, con el identificador de interfaz de la interfaz de origen predeterminada, junto con LIBID y principales y los números de versión secundaria de la biblioteca de tipos que describen esa interfaz.  
+ `AtlGetObjectSourceInterface` puede proporcionar, con el identificador de interfaz de la interfaz de origen predeterminada, junto con LIBID y principales y los números de versión secundaria de la biblioteca de tipos que describen esa interfaz.  
   
 > [!NOTE]
 >  Para que esta función recuperar correctamente la información solicitada, el objeto representado por `punkObj` debe implementar `IDispatch` (y devolver información de tipo a través de **IDispatch:: GetTypeInfo**) y también debe implementan `IProvideClassInfo2` o `IPersist`. La información de tipo de la interfaz de origen debe estar en la misma biblioteca de tipos como la información de tipo para `IDispatch`.  
   
 ### <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo se puede definir una clase de receptor de eventos, `CEasySink`, que reduce el número de argumentos de plantilla que puede pasar a `IDispEventImpl` a las funciones esenciales. `EasyAdvise`y `EasyUnadvise` usar `AtlGetObjectSourceInterface` para inicializar el [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) miembros antes de llamar a [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) o [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
+ El ejemplo siguiente muestra cómo se puede definir una clase de receptor de eventos, `CEasySink`, que reduce el número de argumentos de plantilla que puede pasar a `IDispEventImpl` a las funciones esenciales. `EasyAdvise` y `EasyUnadvise` usar `AtlGetObjectSourceInterface` para inicializar el [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) miembros antes de llamar a [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) o [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   

@@ -1,12 +1,12 @@
 ---
 title: tarea (clase) (Runtime de simultaneidad) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +23,17 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>tarea (Clase) (Motor Runtime de simultaneidad)
 La clase `task` de la biblioteca de patrones de procesamiento paralelo (PPL). Un objeto `task` representa el trabajo que se puede ejecutar de forma asincrónica y de forma simultánea con otras tareas y trabajos paralelos generados por los algoritmos paralelos en el runtime de simultaneidad. Genera un resultado de tipo `_ResultType` al finalizar correctamente. Las tareas de tipo `task<void>` no producen ningún resultado. Es posible esperar y cancelar una tarea de forma independiente al resto de tareas. También pueden combinarse con otras tareas mediante continuaciones ( `then`) y la combinación ( `when_all`) y elección ( `when_any`) patrones.  
@@ -79,7 +79,7 @@ class task;
 |[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.|  
 |[is_done](#is_done)|Determina si se completa la tarea.|  
 |[scheduler](#scheduler)|Devuelve el programador para esta tarea|  
-|[a continuación](#then)|Sobrecargado. Agrega una tarea de continuación a esta tarea.|  
+|[then](#then)|Sobrecargado. Agrega una tarea de continuación a esta tarea.|  
 |[wait](#wait)|Espera que esta tarea alcance un estado terminal. Es posible que `wait` ejecute la tarea alineada, si se cumplen todas las dependencias de tareas, y todavía no se ha detectado para la ejecución de un trabajador en segundo plano.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
@@ -101,7 +101,7 @@ class task;
   
  **Espacio de nombres:** simultaneidad  
   
-##  <a name="get"></a> Obtener 
+##  <a name="get"></a> get 
 
  Devuelve el resultado que esta tarea generó. Si la tarea no está en un estado terminal, una llamada a `get` esperará a que finalice la tarea. Este método no devuelve un valor cuando se llama en una tarea con un `result_type` de `void`.  
   
@@ -144,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Comentarios  
  La función devuelve true si la tarea se completó o canceló (con o sin la excepción de usuario).  
   
-##  <a name="operator_neq"></a> operador! = 
+##  <a name="operator_neq"></a> operator!= 
 
  Determina si dos objetos `task` representan diferentes tareas internas.  
   
@@ -160,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valor devuelto  
  `true` si los objetos hacen referencia a distintas tareas subyacentes; en caso contrario, `false`.  
   
-##  <a name="operator_eq"></a> operador = 
+##  <a name="operator_eq"></a> operator= 
 
  Reemplaza el contenido de un objeto `task` con otro.  
   
@@ -179,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Comentarios  
  Dado que `task` se comporta como un puntero inteligente, después de una asignación de copia, este objeto `task` representa la misma tarea real que `_Other`.  
   
-##  <a name="operator_eq_eq"></a> operador == 
+##  <a name="operator_eq_eq"></a> operator== 
 
  Determina si dos objetos `task` representan la misma tarea interna.  
   
@@ -255,7 +255,7 @@ task(
   
  Para obtener más información, consulte [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="then">a continuación</a> 
+##  <a name="then"></a> a continuación 
 
  Agrega una tarea de continuación a esta tarea.  
   

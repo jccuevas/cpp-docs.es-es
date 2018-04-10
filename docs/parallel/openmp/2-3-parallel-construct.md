@@ -1,27 +1,27 @@
 ---
-title: "2.3 parallel (construcción) | Documentos de Microsoft"
-ms.custom: 
+title: 2.3 parallel (construcción) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel (Construcción)
 La directiva siguiente define una región paralela, que es una región del programa que va a ser ejecutado por varios subprocesos en paralelo. Ésta es la construcción fundamental que se inicia la ejecución en paralelo.  
@@ -32,21 +32,21 @@ La directiva siguiente define una región paralela, que es una región del progr
   
  El *cláusula* es uno de los siguientes:  
   
- **Si (** *expresión escalar* **)**  
+ **if(** *scalar-expression* **)**  
   
- **privada (** *lista de variables* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *lista de variables* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **predeterminado (compartido &#124; ninguno)**  
+ **default(shared &#124; none)**  
   
- **compartido (** *lista de variables* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *lista de variables* **)**  
+ **copyin(** *variable-list* **)**  
   
- **reducción (** *operador* **:***lista de variables* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *expresión de tipo entero* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Cuando un subproceso encuentra una construcción paralela, se crea un grupo de subprocesos si se cumple alguna de los casos siguientes:  
   

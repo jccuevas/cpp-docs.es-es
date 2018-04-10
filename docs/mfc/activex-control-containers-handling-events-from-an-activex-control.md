@@ -1,12 +1,12 @@
 ---
 title: 'Contenedores de controles ActiveX: Controlar eventos desde un Control ActiveX | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenedores de controles ActiveX: Controlar eventos desde un control ActiveX
 Este artículo describe mediante la ventana Propiedades para instalar a controladores de eventos para controles ActiveX en un contenedor de controles ActiveX. Los controladores de eventos se utilizan para recibir notificaciones (desde el control) de ciertos eventos y realizar alguna acción en respuesta. Esta notificación se denomina "activar" el evento.  
@@ -42,7 +42,7 @@ Este artículo describe mediante la ventana Propiedades para instalar a controla
   
  Para obtener más información sobre los mapas de receptor de eventos, vea [mapas de receptor de eventos](../mfc/reference/event-sink-maps.md) en el *Class Library Reference*.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>Modificaciones del controlador de eventos en el proyecto  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> Modificaciones del controlador de eventos en el proyecto  
  Cuando utiliza la ventana Propiedades para agregar controladores de eventos, un mapa de receptores de eventos se declaran y se definen en el proyecto. Las instrucciones siguientes se agregan al control. Archivo CPP la primera vez que se agrega un controlador de eventos. Este código declara un mapa de receptores de eventos para la clase de cuadro de diálogo (en este caso, `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  

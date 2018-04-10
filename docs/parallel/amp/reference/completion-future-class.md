@@ -1,12 +1,12 @@
 ---
 title: completion_future (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>completion_future (Clase)
 Representa un futuro que corresponde a una operación asincrónica de C++ AMP.  
@@ -50,14 +50,14 @@ class completion_future;
 |Name|Descripción|  
 |----------|-----------------|  
 |[completion_future Constructor](#ctor)|Inicializa una nueva instancia de la clase `completion_future`.|  
-|[~completion_future Destructor](#dtor)|Destruye el objeto `completion_future`.|  
+|[~ completion_future (destructor)](#dtor)|Destruye el objeto `completion_future`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
 |[get](#get)|Espera hasta que se complete la operación asincrónica asociada.|  
-|[a continuación](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.|  
+|[then](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.|  
 |[to_task](#to_task)|Devuelve un `task` objeto corresponde a la operación asincrónica asociada.|  
 |[valid](#valid)|Obtiene un valor booleano que indica si el objeto está asociado a una operación asincrónica.|  
 |[wait](#wait)|Se bloquea hasta que se complete la operación asincrónica asociada.|  
@@ -108,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Inicializa una nueva instancia de la `completion_future` clase copiando un constructor.|  
 |`completion_future(completion_future&& _Other);`|Inicializa una nueva instancia de la `completion_future` clase moviendo un constructor.|  
   
-## <a name="get"></a> Obtener 
+## <a name="get"></a> get 
 
 Espera hasta que se complete la operación asincrónica asociada. Produce la excepción almacenada si se encontró uno durante la operación asincrónica.  
   
@@ -118,7 +118,7 @@ Espera hasta que se complete la operación asincrónica asociada. Produce la exc
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a> operador std::shared_future<void> 
+## <a name="operator_shared_future"></a> operator std::shared_future<void> 
 
 Convierte implícitamente el `completion_future` el objeto a un `std::shared_future` objeto.  
   
@@ -131,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valor devuelto  
  Un objeto `std::shared_future`.  
   
-## <a name="operator_eq"></a> operador = 
+## <a name="operator_eq"></a> operator= 
 
 Copia el contenido del elemento especificado `completion_future` objeto en éste.  
   
@@ -156,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una copia en profundidad.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copia el contenido del elemento especificado `completion_future` objeto en este caso, mediante una asignación de movimiento.|  
   
-## <a name="then">a continuación</a> 
+## <a name="then"></a> a continuación 
 
 Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecuta cuando finaliza la ejecución de la operación asincrónica asociada.  
   

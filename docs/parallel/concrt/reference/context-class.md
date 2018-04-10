@@ -1,12 +1,12 @@
 ---
 title: Context (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context (Clase)
 Representa una abstracción para un contexto de ejecución.  
@@ -108,7 +108,7 @@ static void __cdecl Block();
   
  Este método puede producir una variedad de excepciones, incluida la [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md).  
   
-##  <a name="dtor"></a> ~ Contexto 
+##  <a name="dtor"></a> ~Context 
 
 ```
 virtual ~Context();
@@ -167,7 +167,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>Comentarios  
  El valor devuelto de este método es un muestreo instantáneo del procesador virtual que se está ejecutando el contexto. Este valor puede ser obsoleto en el momento en que se devuelve y no se puede confiar en ellos. Normalmente, este método se utiliza para depurar o solo con fines de seguimiento.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Id. 
 
  Devuelve un identificador para el contexto actual que es único dentro del programador al que pertenece el contexto actual.  
   
@@ -217,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Un puntero al objeto que se va a eliminar.  
   
-##  <a name="oversubscribe">Suscribir en exceso</a> 
+##  <a name="oversubscribe"></a> Suscribir en exceso 
 
  Inserta un procesador virtual adicional en un programador para la duración de un bloque de código cuando se invoca en un contexto que se ejecuta en uno de los procesadores virtuales de ese programador.  
   

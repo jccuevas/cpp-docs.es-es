@@ -1,12 +1,12 @@
 ---
 title: tile_barrier (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tile_barrier
@@ -21,17 +21,17 @@ dev_langs:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tilebarrier-class"></a>tile_barrier (Clase)
 Sincroniza la ejecución de subprocesos que se ejecutan en el grupo de subprocesos (el mosaico) mediante el uso de `wait` métodos. Solo el tiempo de ejecución puede crear instancias de esta clase.  
@@ -67,7 +67,7 @@ class tile_barrier;
   
  **Espacio de nombres:** Concurrency  
 
-## <a name="tile_barrier__ctor">tile_barrier Constructor</a>  
+## <a name="tile_barrier__ctor"></a>  tile_barrier Constructor  
  Inicializa una nueva instancia de la clase copiando uno ya existente.  
   
 ### <a name="syntax"></a>Sintaxis 
@@ -81,7 +81,7 @@ tile_barrier(
  `_Other`  
  La `tile_barrier` objeto que se va a copiar.  
 
-## <a name="wait"></a>  espera 
+## <a name="wait"></a>  wait 
 Indica a todos los subprocesos en el grupo de subprocesos (mosaico) para detener la ejecución hasta que todos los subprocesos del mosaico finaliza la espera.  
   
 ### <a name="syntax"></a>Sintaxis 

@@ -1,10 +1,10 @@
 ---
 title: las funciones del espacio de nombres de simultaneidad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,17 +40,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 ||||  
@@ -128,7 +128,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="clear"></a>  Borrar  
+##  <a name="clear"></a>  clear  
  Borra la cola simultánea, los destruyendo actualmente los elementos en cola. Este método no es seguro para la simultaneidad.  
   
 ```
@@ -232,7 +232,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>Valor devuelto  
  Si se deshabilitó correctamente el seguimiento, `S_OK` se devuelve. Si el seguimiento no se inició previamente, `E_NOT_STARTED` se devuelve  
   
-##  <a name="enabletracing">EnableTracing</a>  
+##  <a name="enabletracing"></a>  EnableTracing  
  Habilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW ahora está registrada de forma predeterminada.  
   
 ```
@@ -242,7 +242,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>Valor devuelto  
  Si se inició correctamente el seguimiento, `S_OK` devuelto; de lo contrario, `E_NOT_STARTED` se devuelve.  
   
-##  <a name="free">Libre</a>  
+##  <a name="free"></a>  Libre  
  Libera un bloque de memoria asignado previamente mediante el método `Alloc` al subasignador de almacenamiento en caché del runtime de simultaneidad.  
   
 ```
@@ -1259,7 +1259,7 @@ _Output_iterator parallel_transform(
   
  Para obtener más información, consulte [algoritmos paralelos](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="receive"></a>  Recepción  
+##  <a name="receive"></a>  receive  
  Una implementación receive general, que permite a un contexto esperar datos exactamente de un origen y filtrar los valores que se aceptan.  
   
 ```
@@ -1330,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Comentarios  
  Los puntos de interrupción en el objeto de función estará activa cuando la `cancellation_token` se cancela. El token explícito `_Ct` aislará esto `_Func` de cancelación de primario si el elemento primario tiene un token distinto o ningún token.  
   
-##  <a name="send"></a>  Enviar  
+##  <a name="send"></a>  send  
  Una operación de envío sincrónica, que espera hasta que el destino acepte o rechace el mensaje.  
   
 ```
@@ -1485,7 +1485,7 @@ void Trace_agents_register_name(
  `_Name`  
  El nombre para el objeto especificado.  
   
-##  <a name="try_receive"></a>  try_receive)  
+##  <a name="try_receive"></a>  try_receive  
  Una implementación try-receive general, que permite a un contexto buscar datos exactamente de un origen y filtrar los valores que se aceptan. Si los datos no están listos, este método devolverá false.  
   
 ``` 
@@ -1527,7 +1527,7 @@ bool try_receive(
 ### <a name="remarks"></a>Comentarios  
  Para obtener más información, consulte [Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="wait"></a>  espera  
+##  <a name="wait"></a>  wait  
  Hace una pausa en el contexto actual para un periodo de tiempo indicado.  
   
 ```
@@ -1541,7 +1541,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="remarks"></a>Comentarios  
  Si se llama a este método en un contexto de programador del Runtime de simultaneidad, el programador encontrará un contexto diferente para ejecutarse en el recurso subyacente. Dado que el programador es cooperativo por su naturaleza, este contexto no se puede reanudar exactamente después del número de milisegundos especificado. Si el programador está ocupado ejecutando otras tareas que no realiza de forma cooperativa en el programador, el período de espera podría ser indefinido.  
   
-##  <a name="when_all"></a>  when_all)  
+##  <a name="when_all"></a>  when_all  
  Crea una tarea que se completará correctamente cuando todas las tareas proporcionadas como argumentos se completen correctamente.  
   
 ```
@@ -1576,7 +1576,7 @@ auto when_all(
   
  Para obtener más información, consulte [paralelismo de tareas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="when_any"></a>  when_any)  
+##  <a name="when_any"></a>  when_any  
  Crea una tarea que se completará correctamente cuando cualquiera de las tareas proporcionadas como argumentos se complete correctamente.  
   
 ```

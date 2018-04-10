@@ -1,12 +1,12 @@
 ---
 title: Con Visual C++ plantillas Agregar nuevo elemento | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizar las plantillas Agregar nuevo elemento de Visual C++
 Puede agregar fácilmente elementos que son comunes a los proyectos de Visual C++ mediante el uso de la **Agregar nuevo elemento** comando. Cuando se usa el **Agregar nuevo elemento** comando, la `Add New Item` aparece el cuadro de diálogo con una lista de plantillas de elementos, que agregar los archivos apropiados al proyecto.  
@@ -62,7 +62,7 @@ Puede agregar fácilmente elementos que son comunes a los proyectos de Visual C+
 |Hoja de estilos (.css)|Agrega una hoja de estilos en cascada utilizada para definiciones de estilo HTML enriquecido.|  
 |Archivo de texto (.txt)|Agrega un archivo de texto en blanco.|  
 |Control de usuario|Agrega un Control de usuario mediante las funciones CLR.|  
-|Formulario Windows Forms|Agrega un formulario Windows Forms mediante las funciones CLR.|  
+|Windows Form|Agrega un formulario Windows Forms mediante las funciones CLR.|  
 |Archivo XML (.xml)|Agrega un archivo XML en blanco.|  
 |Archivo de esquema XML (.xsd)|Crea un archivo que se utiliza para definir un esquema para documentos XML.|  
 |Archivo XSLT (.xslt)|Crea un archivo utilizado para transformar documentos XML.|  
