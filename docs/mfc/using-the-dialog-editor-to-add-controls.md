@@ -1,12 +1,12 @@
 ---
-title: "Usar el Editor de cuadro de diálogo para agregar controles | Documentos de Microsoft"
-ms.custom: 
+title: Usar el Editor de cuadro de diálogo para agregar controles | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - common controls [MFC], adding
 ms.assetid: d3f9f994-7e54-4656-a545-42c204557c36
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

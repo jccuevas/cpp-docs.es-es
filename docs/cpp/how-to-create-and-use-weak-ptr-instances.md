@@ -1,17 +1,17 @@
 ---
-title: "Cómo: crear y utilizar instancias de weak_ptr | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: crear y utilizar instancias de weak_ptr | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
