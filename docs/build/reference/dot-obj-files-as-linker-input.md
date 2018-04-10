@@ -1,12 +1,12 @@
 ---
 title: . Archivos obj como entrada del vinculador | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
