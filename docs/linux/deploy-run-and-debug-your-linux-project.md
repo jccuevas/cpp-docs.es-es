@@ -1,12 +1,12 @@
 ---
 title: Implementar, ejecutar y depurar el proyecto de Linux | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implementar, ejecutar y depurar el proyecto de Linux
 
@@ -29,9 +29,6 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 
 * Depure con las características tradicionales de Visual Studio, como son los puntos de interrupción, las ventanas Inspección y mantener el mouse sobre una variable. Con estos métodos, puede depurar como lo haría normalmente para otros tipos de proyecto.
 * Vea la salida desde el equipo de destino en una ventana especial de la consola de Linux. También puede usar la consola para enviar la entrada al equipo de destino.
-
-> [!NOTE]
-> En el caso de la depuración de ARM en Linux, consulte la entrada de blog [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depuración de un dispositivo ARM incrustado en Visual Studio).
 
 ## <a name="debug-your-linux-project"></a>Depurar el proyecto de Linux
 
@@ -89,6 +86,12 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 * Se pueden pasar opciones concretas del depurador a GDB mediante la entrada **Comandos adicionales del depurador**.  Por ejemplo, es posible que quiera pasar por alto las señales SIGILL (instrucciones no válidas).  Puede usar el comando **handle** para lograrlo.  al agregar lo siguiente a la entrada **Comandos adicionales del depurador** como se muestra arriba:
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>Pasos siguientes
+
+* Para depurar dispositivos ARM en Linux, consulte la entrada de blog [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depuración de un dispositivo ARM incrustado en Visual Studio).
+
+* Para efectuar la depuración con el comando **Asociar al proceso**, consulte la entrada de blog [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (Mejoras de la carga de trabajo de C++ en Linux para el sistema de proyectos, la ventana de la consola de Linux, rsync y el comando Asociar al proceso).
 
 ## <a name="see-also"></a>Vea también
 [Propiedades de depuración de C++ (C++ para Linux)](../linux/prop-pages/debugging-linux.md).
