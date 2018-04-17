@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ce15db75d4d08ef128e561fa9671b643946c71c3
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) y [15.7](#improvements_157) de Visual Studio 2017
 
@@ -72,7 +72,7 @@ Atributos nuevos para silenciar las advertencias cuando no se usa una entidad o 
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>Uso de espacios de nombres de atributo sin repetición
 
-Nueva sintaxis para habilitar solo un identificador de espacio de nombres único en una lista de atributos. Para más información, consulte [Atributos en C++](cpp/attributes2.md).
+Nueva sintaxis para habilitar solo un identificador de espacio de nombres único en una lista de atributos. Para más información, consulte [Atributos en C++](cpp/attributes.md).
 
 ### <a name="structured-bindings"></a>Enlaces estructurados
 

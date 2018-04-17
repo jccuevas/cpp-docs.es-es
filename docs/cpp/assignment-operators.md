@@ -1,37 +1,35 @@
 ---
-title: "Operadores de asignación | Documentos de Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Operadores de asignación | Documentos de Microsoft
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Operadores de asignación
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Los operadores de asignación almacenan un valor en el objeto designado por el operando izquierdo. Hay dos clases de operaciones de asignación: asignación simple, en la que el valor del segundo operando se almacena en el objeto especificado por el primer operando, y asignación compuesta, en la que se realiza una operación aritmética, de desplazamiento o bit a bit antes de almacenar el resultado. Todos los operadores de asignación de la tabla siguiente, salvo el operador =, son operadores de asignación compuesta.  
+ Los operadores de asignación almacenan un valor en el objeto designado por el operando izquierdo. Hay tres tipos de operaciones de asignación: 
+
+1. asignación simple, en el que el valor del segundo operando se almacena en el objeto especificado por el primer operando. 1. asignación compuesta, en el que se realiza una aritmética, MAYÚS u operación bit a bit antes de almacenar el resultado.
+1. mover la asignación (para tipos de clases) en los recursos que se transfieren sin necesidad de copiar.
+
+
+Todos los operadores de asignación en la tabla siguiente excepción la = y & & = operadores son operadores de asignación compuesta.  
   
 ### <a name="assignment-operators"></a>Operadores de asignación  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Desplaza a la derecha el valor del primer operando el número de bits especificado por el valor del segundo operando; almacena el resultado en el objeto especificado por el primer operando.|  
 |**&=**|Obtiene el AND bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
 |`^=`|Obtiene el OR exclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
-|`&#124;=`|Obtiene el OR inclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|  
+|`&#124;=`|Obtiene el OR inclusivo bit a bit del primer y el segundo operandos; almacena el resultado en el objeto especificado por el primer operando.|
+|**&&=**| Operador de asignación de movimiento (para tipos de clase). Si el segundo operando es un valor r, mueva sus recursos al primer operando (sin copiarlos). Vea [constructores de movimiento y operadores de asignación de movimiento](move-constructors-and-move-assignment-operators-cpp.md) para obtener más información.|
   
  **Palabras clave de operador**  
   

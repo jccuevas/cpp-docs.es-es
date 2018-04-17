@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Uno o varios parámetros que deben ser un tipo literal y sí deben ser una expre
 
 ## <a name="return-value"></a>Valor devuelto
 
+
  Una función o variable constexpr debe devolver un [tipo literal](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>Variables constexpr
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>Funciones constexpr
+## <a name="constexpr_functions"></a> funciones constexpr
 
 A **constexpr** función es aquella cuyo valor devuelto se puede calcular durante la compilación cuando el código usado lo requiere.  Cuando sus argumentos son **constexpr** valores y el código usado requiere el valor devuelto en tiempo de compilación, por ejemplo para inicializar un **constexpr** variable o proporcionar un argumento de plantilla sin tipo, se produce una constante en tiempo de compilación. Cuando se llama con no -**constexpr** argumentos, o cuando su valor no se requiere en tiempo de compilación, genera un valor en tiempo de ejecución como una función normal.  (Este doble comportamiento le evita tener que escribir **constexpr** y no-**constexpr** versiones de la misma función.)
 

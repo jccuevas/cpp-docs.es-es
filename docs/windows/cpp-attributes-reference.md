@@ -1,35 +1,35 @@
 ---
 title: Referencia de atributos de C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1da85da1c7e56f16ec98dd78bb0af58c242a99d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-attributes-reference"></a>Referencia de atributos de C++
 Microsoft define un conjunto de atributos que simplifican la programación COM y el desarrollo de .NET Framework common language runtime. Al incluir atributos en los archivos de origen, el compilador funciona con archivos DLL para insertar código o modificar el código en los archivos objeto generados del proveedor.  
   
- **Nota:** si desea obtener atributos estándar de C++, vea [atributos](../cpp/attributes2.md).  
+ **Nota:** si desea obtener atributos estándar de C++, vea [atributos](../cpp/attributes.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Conceptos](../windows/attributed-programming-concepts.md)  

@@ -1,30 +1,54 @@
 ---
-title: "Programa y vinculación (C++) | Documentos de Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Programa y vinculación (C++) | Documentos de Microsoft
+ms.custom: ''
+ms.date: 04/09/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3af4ac1b15192762f9e420ed17a70b819116dba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab24c552a150e5a14037d727c8d3428eb6bbf809
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="program-and-linkage--c"></a>Programa y vinculación (C++)
-Un programa consta de una o más unidades de traducción vinculadas entre sí. Ejecución (conceptualmente) comienza en la unidad de traducción que contiene la función **principal**. (Para obtener más información sobre unidades de traducción, consulte [fases de traducción](../preprocessor/phases-of-translation.md), en la *referencia del preprocesador*.) Para obtener más información sobre la **principal** función, vea [inicio del programa: la función main](../cpp/main-program-startup.md).)  
-  
-## <a name="see-also"></a>Vea también  
+
+En un programa de C++, cada símbolo global puede definirse una sola vez, incluso si el programa está formada por varias unidades de traducción. Una unidad de traducción está formada por un archivo de implementación (.cpp, .hpp, .cxx, etcetera) y todos los encabezados que incluye directa o indirectamente. Un programa consta de una o más unidades de traducción vinculadas entre sí. 
+
+## <a name="linkage-vs-scope"></a>Vinculación frente a ámbito
+
+El concepto de *vinculación* hace referencia a la visibilidad de símbolos globales (por ejemplo, las variables, los nombres de tipo y los nombres de función) dentro del programa como un todo a través de unidades de traducción. El concepto de *ámbito* hace referencia a los símbolos que se declaran dentro de un bloque, como un espacio de nombres, la clase o el cuerpo de la función. Estos símbolos solo son visibles dentro del ámbito en el que se definen; el concepto de vinculación no se aplica a ellos.
+
+## <a name="external-vs-internal-linkage"></a>Externa frente a la vinculación interna
+
+Variables globales no son constantes y funciones libres de forma predeterminada tienen vinculación externa; son visibles desde cualquier unidad de traducción en el programa. Puede invalidar este comportamiento al declararlas como de forma explícita **estático** lo que limita su visibilidad en la misma unidad de traducción en el que se declaran. Este significado del **estático** es diferente de su significado cuando se aplica a las variables locales. Las variables declaradas como **const** tienen vinculación interna de forma predeterminada.
+
+## <a name="extern-constexpr-linkage"></a>Vinculación de extern constexpr
+
+En versiones anteriores de Visual Studio, el compilador siempre le asignó una vinculación interna de constexpr variable aunque la variable se ha marcado como extern. En la versión 15.5 de Visual Studio 2017, un nuevo conmutador de compilador (/Zc:externConstexpr) permite un comportamiento correcto que cumple con los estándares. Este acabará convirtiéndose en el conmutador predeterminado.
+
+```cpp
+extern constexpr int x = 10; //error LNK2005: "int const x" already defined
+```
+
+Si un archivo de encabezado contiene un constexpr variable extern declarado, deba marcarse **__declspec (selectany)** para tener correctamente sus declaraciones duplicadas combinadas:
+
+```cpp
+extern constexpr __declspec(selectany) int x = 10;
+```
+
+## <a name="see-also"></a>Vea también
+
  [Conceptos básicos](../cpp/basic-concepts-cpp.md)

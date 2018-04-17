@@ -1,12 +1,12 @@
 ---
 title: Expresiones regulares (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
 La biblioteca estándar de C++ admite varios gramáticas de expresiones regulares. Este tema tratan las variaciones de gramática disponibles mediante expresiones regulares.  
@@ -93,7 +93,7 @@ Cero o más indicadores se pueden combinar con la gramática para especificar el
   
  En `ECMAScript`, un elemento también puede ser una de las siguientes cosas:  
   
--   Un *grupo de no-captura* con la forma "(: *subexpresión* )". Coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.  
+-   A *grupo de no-captura* del formulario "(?: *subexpresión* )". Coincide con la secuencia de caracteres de la secuencia de destino que coincide con el patrón entre los delimitadores.  
   
 -   Una *secuencia de escape de caracteres* limitada con la forma "\f", "\n", "\r", "\t" o "\v". Estos coinciden con un avance de página, una nueva línea, un retorno de carro, una tabulación horizontal y una tabulación vertical, respectivamente, en la secuencia de destino.  
   
@@ -115,7 +115,7 @@ Cero o más indicadores se pueden combinar con la gramática para especificar el
   
  Ejemplos:  
   
--   "(:a)" coincide con la secuencia de destino "(:a)" pero "(:a)\1" no es válida porque no hay ningún grupo de capturas 1.  
+-   “(?:a)” coincide con la secuencia de destino “a”, pero “(?:a) \1” no es válida porque no hay ningún grupo de captura 1.  
   
 -   "(=a)a" coincide con la secuencia de destino "a". La aserción positiva coincide con la secuencia inicial “a” en la secuencia de destino y la “a” final de la expresión regular coincide con la secuencia inicial “a” de la secuencia de destino.  
   
@@ -162,7 +162,7 @@ Cero o más indicadores se pueden combinar con la gramática para especificar el
   
 -   "a+" coincide con las secuencias de destino “a” y "aa", etcétera, pero no con la secuencia de destino "".  
   
- En `ECMAScript`, todas las formas de recuento de repetición pueden ir seguidas del carácter ", que designa una *repetición no expansiva*.  
+ En `ECMAScript`, todos los formularios de recuento de repetición pueden ir seguidos del carácter '?', que designa un *repetición no expansiva*.  
   
 ### <a name="concatenation"></a>Concatenación  
  Los elementos de expresión regular, con o sin *recuentos de repetición*, se pueden concatenar para formar expresiones regulares más largas. La expresión resultante coincide con una secuencia de destino que es una concatenación de las secuencias que coinciden con los elementos individuales. Por ejemplo, "a{2,3}b" coincide con las secuencias de destino “aab” y “aaab”, pero no coincide con las secuencias de destino “ab” ni “aaaab”.  
@@ -365,7 +365,7 @@ Cero o más indicadores se pueden combinar con la gramática para especificar el
  Una aserción de límite de palabra negativa coincide si la posición actual en la cadena de destino no está inmediatamente después de un *límite de palabra*.  
   
 ### <a name="non-capture-group"></a>Grupo de no-captura  
- Un grupo de no-captura marca su contenido como una sola unidad en la gramática de expresiones regulares, pero no etiqueta el texto de destino. Por ejemplo, "(a)(:b)\*(c)" coincide con el texto de destino "abbc" y asocia el grupo de captura 1 con la subsecuencia "un"y grupo de captura 2 con la subsecuencia "c".  
+ Un grupo de no-captura marca su contenido como una sola unidad en la gramática de expresiones regulares, pero no etiqueta el texto de destino. Por ejemplo, "(a)(?:b)\*(c)" coincide con el texto de destino "abbc" y asocia el grupo de captura 1 con la subsecuencia "un"y grupo de captura 2 con la subsecuencia "c".  
   
 ### <a name="non-greedy-repetition"></a>Repetición no expansiva  
  Una repetición no expansiva usa la subsecuencia más corta de la secuencia de destino que coincida con el patrón. Una repetición expansiva usa la más larga. Por ejemplo, "(a+) (un\*b)" coincide con la secuencia de destino "aaab". Cuando se utiliza una repetición no expansiva, esta asocia el grupo de captura 1 con la subsecuencia “a” al principio de la secuencia de destino y el grupo de destino 2 con la subsecuencia “aab” al final de la secuencia de destino. Cuando se utiliza una coincidencia expansiva, esta asocia el grupo de captura 1 con la subsecuencia “aaa” y el grupo de captura 2 con la subsecuencia “b”.  

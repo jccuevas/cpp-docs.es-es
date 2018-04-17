@@ -1,12 +1,12 @@
 ---
 title: Compilador (nivel 3) de la advertencia C4996 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilador (nivel 3) de la advertencia C4996
 
@@ -43,7 +43,7 @@ Estos son algunos mensajes de advertencia C4996 comunes generados por la bibliot
 
 ## <a name="cause"></a>Motivo
 
-Advertencia C4996 se produce cuando el compilador encuentra una función o variable que esté marcada como [en desuso](../../cpp/deprecated-cpp.md) mediante el uso de un `__declspec(deprecated)` modificador, o al intentar obtener acceso a una función, miembro de clase o definición de tipo que tiene C ++ 14 [ \[ \[en desuso\] \] ](../../cpp/attributes2.md) atributo. Puede usar el `__declspec(deprecated)` modificador o `[[deprecated]]` usted mismo atributo de sus bibliotecas o archivos de encabezado para advertir a los clientes sobre funciones en desuso, variables, los miembros o definiciones de tipo.
+Advertencia C4996 se produce cuando el compilador encuentra una función o variable que esté marcada como [en desuso](../../cpp/deprecated-cpp.md) mediante el uso de un `__declspec(deprecated)` modificador, o al intentar obtener acceso a una función, miembro de clase o definición de tipo que tiene C ++ 14 [ \[ \[en desuso\] \] ](../../cpp/attributes.md) atributo. Puede usar el `__declspec(deprecated)` modificador o `[[deprecated]]` usted mismo atributo de sus bibliotecas o archivos de encabezado para advertir a los clientes sobre funciones en desuso, variables, los miembros o definiciones de tipo.
 
 ## <a name="remarks"></a>Comentarios
 

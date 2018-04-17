@@ -1,13 +1,13 @@
 ---
 title: -validar-charset (validar caracteres compatibles) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /validate-charset
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694eb94fe1b50d1892dab399b523a5b0e6deef7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e82b9fd42b636cffd318f6327cc064687334329
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/Validate-CharSet (validar caracteres compatibles)
 Valida que el texto del archivo de origen contiene solo caracteres representables como UTF-8.  
@@ -41,7 +41,7 @@ Valida que el texto del archivo de origen contiene solo caracteres representable
 ## <a name="remarks"></a>Comentarios  
  Puede usar el **/validate-charset** opción para validar que el código fuente contiene solo el configuran de caracteres que se pueden representar en el carácter de origen y conjunto de caracteres de la ejecución. Esta comprobación se habilita automáticamente cuando se especifica **/source-charset**, **/execution-charset**, o **/utf-8** opciones del compilador. También puede deshabilitar explícitamente esta comprobación especificando el **/ validate-charset -** opción.  
   
- De forma predeterminada, Visual Studio detecta una marca de orden de bytes para determinar si el archivo de origen está en un formato codificado de Unicode, por ejemplo, UTF-16 o UTF-8. Si no se encuentra ninguna marca de orden de bytes, se supone que el archivo de origen se codifica utilizando la página de códigos del usuario actual, a menos que haya especificado una página de códigos mediante **/utf-8** o **/source-charset** opción. Visual Studio permite guardar el código fuente de C++ mediante cualquiera de varias codificaciones de caracteres. Para obtener información acerca de los conjuntos de caracteres de origen y de ejecución, consulte [juegos de caracteres](../../cpp/character-sets2.md) en la documentación del lenguaje. Para obtener una lista de admite identificadores de página de código y los nombres del juego de caracteres, vea [identificadores de página de código](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
+ De forma predeterminada, Visual Studio detecta una marca de orden de bytes para determinar si el archivo de origen está en un formato codificado de Unicode, por ejemplo, UTF-16 o UTF-8. Si no se encuentra ninguna marca de orden de bytes, se supone que el archivo de origen se codifica utilizando la página de códigos del usuario actual, a menos que haya especificado una página de códigos mediante **/utf-8** o **/source-charset** opción. Visual Studio permite guardar el código fuente de C++ mediante cualquiera de varias codificaciones de caracteres. Para obtener información acerca de los conjuntos de caracteres de origen y de ejecución, consulte [juegos de caracteres](../../cpp/character-sets.md) en la documentación del lenguaje. Para obtener una lista de admite identificadores de página de código y los nombres del juego de caracteres, vea [identificadores de página de código](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
   
  Visual Studio usa UTF-8 como la codificación de caracteres interno durante la conversión entre el juego de caracteres de origen y el juego de caracteres de ejecución. Si no se puede representar un carácter en el archivo de origen en el juego de caracteres de ejecución, la conversión de UTF-8 se sustituye por un signo de interrogación '?' caracteres. El **/validate-charset** opción hace que la compilación notificar una advertencia en este caso.  
   

@@ -1,12 +1,12 @@
 ---
 title: en desuso (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>en desuso (C++)
-Este tema trata sobre la específicos de Microsoft modificador declspec declaración en desuso. Para obtener información sobre C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente al modificador declspec específicos de Microsoft o la directiva pragma, consulte [atributos estándar de C++](attributes2.md).
+Este tema trata sobre la específicos de Microsoft modificador declspec declaración en desuso. Para obtener información sobre C ++ 14 `[[deprecated]]` atributo y orientación sobre cuándo usar ese atributo frente al modificador declspec específicos de Microsoft o la directiva pragma, consulte [atributos estándar de C++](attributes.md).
 
  Con las excepciones que se indican a continuación, el **en desuso** declaración ofrece la misma funcionalidad que la [en desuso](../preprocessor/deprecated-c-cpp.md) pragma:  
   
@@ -39,7 +39,7 @@ Este tema trata sobre la específicos de Microsoft modificador declspec declarac
   
 -   Macros solo se pueden marcar como desusadas con la **en desuso** pragma.  
   
- Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[deprecated]]` ](attributes2.md) atributo, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) se produce la advertencia.  
+ Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[deprecated]]` ](attributes.md) atributo, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) se produce la advertencia.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo marcar funciones como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función en desuso.  
