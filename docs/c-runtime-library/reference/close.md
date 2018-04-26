@@ -1,12 +1,12 @@
 ---
 title: _close | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-Cierra un archivo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `fd`  
- Descriptor de archivo que hace referencia al archivo abierto.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_close` devuelve 0 si la secuencia se ha cerrado correctamente. Un valor devuelto de -1 indica un error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_close` cierra el archivo asociado a `fd`.  
-  
- El descriptor de archivo y el identificador de archivos del sistema operativo subyacente se cierran. Por lo tanto, no es necesario llamar a `CloseHandle` si el archivo se ha abierto originalmente mediante la función `CreateFile` de Win32 y se ha convertido en un descriptor de archivo mediante `_open_osfhandle`.  
-  
- Esta función valida sus parámetros. Si `fd` es un descriptor de archivo incorrecto, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y `errno` se establece en `EBADF`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezado opcional|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- Para obtener más información sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md) en la introducción.  
-  
-## <a name="example"></a>Ejemplo  
- Consulte el ejemplo de [_open](../../c-runtime-library/reference/open-wopen.md).  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Cierra un archivo.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*FD*<br/>
+Descriptor de archivo que hace referencia al archivo abierto.
+
+## <a name="return-value"></a>Valor devuelto
+
+**_Close** devuelve 0 si el archivo se cerró correctamente. Un valor devuelto de -1 indica un error.
+
+## <a name="remarks"></a>Comentarios
+
+El **_close** función cierra el archivo asociado con *fd*.
+
+El descriptor de archivo y el identificador de archivos del sistema operativo subyacente se cierran. Por lo tanto, no es necesario llamar a **CloseHandle** si el archivo se abrió originalmente mediante la función de Win32 **CreateFile** y convierte en un descriptor de archivo mediante **_open_osfhandle**.
+
+Esta función valida sus parámetros. Si *fd* es un descriptor de archivo incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones devuelven -1 y **errno** está establecido en **EBADF**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezado opcional|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+Consulte el ejemplo de [_open](open-wopen.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: offsetof Macro | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>offsetof (Macro)
-Recupera el desplazamiento de un miembro desde el principio de su estructura primaria.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *structName*  
- Nombre de la estructura de datos primaria.  
-  
- `memberName`  
- Nombre del miembro de la estructura de datos primaria cuyo desplazamiento se determina.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `offsetof` devuelve el desplazamiento en bytes del miembro especificado desde el principio de su estructura de datos primaria. No se define para campos de bits.  
-  
-## <a name="remarks"></a>Comentarios  
- La `offsetof` macro devuelve el desplazamiento en bytes de `memberName` desde el principio de la estructura especificada por *structName* como valor de tipo `size_t`. Puede especificar tipos con la palabra clave `struct`.  
-  
+
+Recupera el desplazamiento de un miembro desde el principio de su estructura primaria.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*structName*<br/>
+Nombre de la estructura de datos primaria.
+
+*Nombre de usuario registrado*<br/>
+Nombre del miembro de la estructura de datos primaria cuyo desplazamiento se determina.
+
+## <a name="return-value"></a>Valor devuelto
+
+**offsetof** devuelve el desplazamiento en bytes del miembro especificado desde el principio de su estructura de datos primaria. No se define para campos de bits.
+
+## <a name="remarks"></a>Comentarios
+
+El **offsetof** macro devuelve el desplazamiento en bytes de *memberName* desde el principio de la estructura especificada por *structName* como un valor de tipo **size_ t**. Puede especificar tipos con el **struct** palabra clave.
+
 > [!NOTE]
->  `offsetof` no es una función y no se puede describir mediante un prototipo de C.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Asignación de memoria](../../c-runtime-library/memory-allocation.md)
+> **offsetof** no es una función y no se puede describir mediante un prototipo de C.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vea también
+
+[Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _searchenv_s, _wsearchenv_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wsearchenv_s
@@ -45,145 +45,150 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a92a7b0d76f2f6d3fd1cb4027e17ecbf014baec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a626ff2fbae86c7e1a1daf7f8fcdb2f5245c929d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
-Busca un archivo mediante rutas de acceso del entorno. Estas versiones de [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Busca un archivo mediante rutas de acceso del entorno. Estas versiones de [_searchenv, _wsearchenv](searchenv-wsearchenv.md) incluyen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-errno_t _searchenv_s(  
-   const char *filename,  
-   const char *varname,  
-   char *pathname,  
-   size_t numberOfElements  
-);  
-errno_t _wsearchenv_s(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t *pathname,  
-   size_t numberOfElements  
-);  
-template <size_t size>  
-errno_t _searchenv_s(  
-   const char *filename,  
-   const char *varname,  
-   char (&pathname)[size]  
-); // C++ only  
-template <size_t size>  
-errno_t _wsearchenv_s(  
-   const wchar_t *filename,  
-   const wchar_t *varname,  
-   wchar_t (&pathname)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- [in] `filename`  
- Nombre del archivo que se va a buscar.  
-  
- [in] `varname`  
- Entorno en el que se va a buscar.  
-  
- [out] `pathname`  
- Búfer en el que se va a almacenar la ruta de acceso completa.  
-  
- [in] `numberOfElements`  
- Tamaño de la `pathname` búfer.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.  
-  
- Si `filename` es una cadena vacía, el valor devuelto es `ENOENT`.  
-  
-### <a name="error-conditions"></a>Condiciones de error  
-  
-|`filename`|`varname`|`pathname`|`numberOfElements`|Valor devuelto|Contenido de `pathname`|  
-|----------------|---------------|----------------|------------------------|------------------|----------------------------|  
-|any|any|`NULL`|any|`EINVAL`|N/D|  
-|`NULL`|any|any|any|`EINVAL`|no cambia|  
-|any|any|any|<= 0|`EINVAL`|no cambia|  
-  
- Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
-  
-## <a name="remarks"></a>Comentarios  
- Las rutina `_searchenv_s` busca el archivo de destino en el dominio especificado. La variable `varname` puede ser cualquier variable de entorno o definida por el usuario que especifique una lista de rutas de acceso de directorio, por ejemplo `PATH`, `LIB` y `INCLUDE`. Dado que `_searchenv_s` distingue entre mayúsculas y minúsculas, `varname` debe coincidir con las mayúsculas y minúsculas de la variable de entorno. Si `varname` no coincide con el nombre de una variable de entorno definida en el entorno del proceso, la función devuelve cero y la variable `pathname` no cambia.  
-  
- La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso creada recientemente se copia en `pathname`. Si el archivo `filename` no se encuentra, `pathname` contiene una cadena vacía terminada en un valor nulo.  
-  
- El búfer de `pathname` debe tener `_MAX_PATH` caracteres como mínimo, para dar cabida a todo el nombre de ruta de acceso creada. Si no es así, `_searchenv_s` puede saturar el búfer de `pathname` y generar un comportamiento inesperado.  
-  
- `_wsearchenv_s` es una versión con caracteres anchos de `_searchenv_s`; los argumentos a `_wsearchenv_s` son cadenas de caracteres anchos. Por lo demás, `_wsearchenv_s` y `_searchenv_s` se comportan de forma idéntica.  
-  
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tsearchenv_s`|`_searchenv_s`|`_searchenv_s`|`_wsearchenv_s`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_searchenv_s`|\<stdlib.h>|  
-|`_wsearchenv_s`|\<stdlib.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_searchenv_s.c  
-/* This program searches for a file in  
- * a directory specified by an environment variable.  
- */  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char pathbuffer[_MAX_PATH];  
-   char searchfile[] = "CL.EXE";  
-   char envvar[] = "PATH";  
-   errno_t err;  
-  
-   /* Search for file in PATH environment variable: */  
-   err = _searchenv_s( searchfile, envvar, pathbuffer, _MAX_PATH );  
-   if (err != 0)  
-   {  
-      printf("Error searching the path. Error code: %d\n", err);  
-   }  
-   if( *pathbuffer != '\0' )  
-      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );  
-   else  
-      printf( "%s not found\n", searchfile );  
-}  
-```  
-  
-```Output  
-Path for CL.EXE:  
-C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Control de directorio](../../c-runtime-library/directory-control.md)   
- [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
- [getenv, _wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
- [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+errno_t _searchenv_s(
+   const char *filename,
+   const char *varname,
+   char *pathname,
+   size_t numberOfElements
+);
+errno_t _wsearchenv_s(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t *pathname,
+   size_t numberOfElements
+);
+template <size_t size>
+errno_t _searchenv_s(
+   const char *filename,
+   const char *varname,
+   char (&pathname)[size]
+); // C++ only
+template <size_t size>
+errno_t _wsearchenv_s(
+   const wchar_t *filename,
+   const wchar_t *varname,
+   wchar_t (&pathname)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*filename*<br/>
+Nombre del archivo que se va a buscar.
+
+*VarName*<br/>
+Entorno en el que se va a buscar.
+
+*ruta de acceso*<br/>
+Búfer en el que se va a almacenar la ruta de acceso completa.
+
+*numberOfElements*<br/>
+Tamaño de la *pathname* búfer.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.
+
+Si *filename* es una cadena vacía, el valor devuelto es **ENOENT**.
+
+### <a name="error-conditions"></a>Condiciones de error
+
+|*filename*|*VarName*|*ruta de acceso*|*numberOfElements*|Valor devuelto|Contenido de *ruta de acceso*|
+|----------------|---------------|----------------|------------------------|------------------|----------------------------|
+|any|any|**NULL**|any|**EINVAL**|N/D|
+|**NULL**|any|any|any|**EINVAL**|no cambia|
+|any|any|any|<= 0|**EINVAL**|no cambia|
+
+Si se da alguna de estas condiciones de error, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+
+## <a name="remarks"></a>Comentarios
+
+El **_searchenv_s** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier entorno o una variable definida por el usuario que especifica una lista de rutas de acceso de directorios, como **ruta de acceso**, **LIB**, y **INCLUDE** . Dado que **_searchenv_s** distingue mayúsculas de minúsculas, *varname* debe coincidir con el caso de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno se define en el entorno del proceso, la función devuelve cero y la *pathname* variable se ha modificado.
+
+La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso creada recientemente se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
+
+El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud total del nombre de ruta de acceso construido. En caso contrario, **_searchenv_s** puede saturar el *pathname* búfer produciendo un comportamiento inesperado.
+
+**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos a **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan exactamente igual.
+
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tsearchenv_s**|**_searchenv_s**|**_searchenv_s**|**_wsearchenv_s**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_searchenv_s**|\<stdlib.h>|
+|**_wsearchenv_s**|\<stdlib.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_searchenv_s.c
+/* This program searches for a file in
+* a directory specified by an environment variable.
+*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char pathbuffer[_MAX_PATH];
+   char searchfile[] = "CL.EXE";
+   char envvar[] = "PATH";
+   errno_t err;
+
+   /* Search for file in PATH environment variable: */
+   err = _searchenv_s( searchfile, envvar, pathbuffer, _MAX_PATH );
+   if (err != 0)
+   {
+      printf("Error searching the path. Error code: %d\n", err);
+   }
+   if( *pathbuffer != '\0' )
+      printf( "Path for %s:\n%s\n", searchfile, pathbuffer );
+   else
+      printf( "%s not found\n", searchfile );
+}
+```
+
+```Output
+Path for CL.EXE:
+C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
+```
+
+## <a name="see-also"></a>Vea también
+
+[Control de directorio](../../c-runtime-library/directory-control.md)<br/>
+[_searchenv, _wsearchenv](searchenv-wsearchenv.md)<br/>
+[getenv, _wgetenv](getenv-wgetenv.md)<br/>
+[_putenv, _wputenv](putenv-wputenv.md)<br/>

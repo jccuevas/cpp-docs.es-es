@@ -1,15 +1,18 @@
 ---
-title: ldexp | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: ldexp, ldexpf, ldexpl | Documentos de Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ldexp
+- ldexpf
+- ldexpl
+- _ldexpl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,6 +28,8 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ldexp
+- ldexpf
+- ldexpl
 - _ldexpl
 dev_langs:
 - C++
@@ -33,97 +38,104 @@ helpviewer_keywords:
 - computing real numbers
 - mantissas, floating-point variables
 - ldexp function
+- ldexpf function
+- ldexpl function
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6098b6755267551dff86d063dccb6213ca4a74
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c0149832285013d9572c785ce109e0bb87974747
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="ldexp"></a>ldexp
-Multiplica un número de punto flotante por una potencia integral de dos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double ldexp(  
-   double x,  
-   int exp   
-);  
-float ldexp(  
-   float x,  
-   int exp  
-);  // C++ only  
-long double ldexp(  
-   long double x,  
-   int exp  
-);  // C++ only   
-float ldexpf(  
-   float x,  
-   int exp  
-);   
-long double ldexpl(  
-   long double x,  
-   int exp  
-);   
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- Valor de punto flotante.  
-  
- `exp`  
- Exponente de entero.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si es correcta, la función `ldexp` devuelve el valor de `x` * 2<sup>exp</sup>. Si se produce desbordamiento y según cuál sea el signo de `x`, `ldexp` devuelve `HUGE_VAL`; el `errno` valor se establece en `ERANGE`.  
-  
- Para obtener más información sobre `errno` y los posibles valores de error devueltos, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Como C++ permite las sobrecargas, puede llamar a las sobrecargas de `ldexp` que toman los tipos `float` y `long double`. En un programa C, `ldexp` siempre toma un `double` y un `int`, y devuelve un `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado C|Encabezado C++|  
-|-------------|--------------|------------------|  
-|`ldexp`, `ldexpf`, `ldexpl`|\<math.h>|\<cmath>|  
-  
- Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_ldexp.c  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 4.0, y;  
-   int p = 3;  
-  
-   y = ldexp( x, p );  
-   printf( "%2.1f times two to the power of %d is %2.1f\n", x, p, y );  
-}  
-```  
-  
-## <a name="output"></a>Salida  
-  
-```  
-4.0 times two to the power of 3 is 32.0  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [frexp](../../c-runtime-library/reference/frexp.md)   
- [modf, modff, modfl](../../c-runtime-library/reference/modf-modff-modfl.md)
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
+
+Multiplica un número de punto flotante por una potencia integral de dos.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double ldexp(
+   double x,
+   int exp
+);
+float ldexp(
+   float x,
+   int exp
+);  // C++ only
+long double ldexp(
+   long double x,
+   int exp
+);  // C++ only
+float ldexpf(
+   float x,
+   int exp
+);
+long double ldexpl(
+   long double x,
+   int exp
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+Valor de punto flotante.
+
+*exp*<br/>
+Exponente de entero.
+
+## <a name="return-value"></a>Valor devuelto
+
+El **ldexp** funciones devuelven el valor de *x* * 2<sup>*exp* </sup> si se realiza correctamente. Si se produce desbordamiento y según cuál sea el signo de *x*, **ldexp** devuelve **HUGE_VAL**; el **errno** valor se establece en **ERANGE** .
+
+Para obtener más información acerca de **errno** y error posibles valores devueltos, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ldexp** que toman **float** o **largo** **doble** tipos. En un programa C, **ldexp** siempre tiene un **doble** y **int** y devuelve un **doble**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado C|Encabezado C++|
+|-------------|--------------|------------------|
+|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+
+Para obtener información sobre la compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_ldexp.c
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 4.0, y;
+   int p = 3;
+
+   y = ldexp( x, p );
+   printf( "%2.1f times two to the power of %d is %2.1f\n", x, p, y );
+}
+```
+
+## <a name="output"></a>Salida
+
+```Output
+4.0 times two to the power of 3 is 32.0
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[frexp](frexp.md)<br/>
+[modf, modff, modfl](modf-modff-modfl.md)<br/>

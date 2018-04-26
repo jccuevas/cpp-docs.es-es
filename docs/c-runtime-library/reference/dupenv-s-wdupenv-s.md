@@ -1,12 +1,12 @@
 ---
 title: _dupenv_s, _wdupenv_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _dupenv_s
@@ -42,118 +42,121 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec5e7b80d7d3ff2c7f67ec66e4e3e454ea3f5aa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e2a89679c8ca564236e1c9d1eccfee274eb4116
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
-Obtiene un valor del entorno actual.  
-  
+
+Obtiene un valor del entorno actual.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-errno_t _dupenv_s(  
-   char **buffer,  
-   size_t *numberOfElements,  
-   const char *varname  
-);  
-errno_t _wdupenv_s(  
-   wchar_t **buffer,  
-   size_t *numberOfElements,  
-   const wchar_t *varname  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `buffer`  
- Búfer en el que se va a almacenar el valor de la variable.  
-  
- `numberOfElements`  
- Tamaño de `buffer`.  
-  
- `varname`  
- Nombre de la variable de entorno.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.  
-  
- Estas funciones validan sus parámetros; si `buffer` o `varname` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen `errno` en `EINVAL` y devuelven `EINVAL`.  
-  
- Si estas funciones no pueden asignar suficiente memoria, establecen `buffer` en `NULL` y `numberOfElements` en 0, y devuelven `ENOMEM`.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_dupenv_s` busca `varname` en la lista de variables de entorno. Si se encuentra la variable, `_dupenv_s` asigna un búfer y copia el valor de la variable en el búfer. La dirección y la longitud del búfer se devuelven en `buffer` y `numberOfElements`. Mediante la asignación del búfer en sí, `_dupenv_s` proporciona una alternativa más fácil de usar para [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
-  
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+errno_t _dupenv_s(
+   char **buffer,
+   size_t *numberOfElements,
+   const char *varname
+);
+errno_t _wdupenv_s(
+   wchar_t **buffer,
+   size_t *numberOfElements,
+   const wchar_t *varname
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*buffer*<br/>
+Búfer en el que se va a almacenar el valor de la variable.
+
+*numberOfElements*<br/>
+Tamaño de *búfer*.
+
+*VarName*<br/>
+Nombre de la variable de entorno.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.
+
+Estas funciones validan sus parámetros; Si *búfer* o *varname* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+
+Si estas funciones no pueden asignar suficiente memoria, establecen *búfer* a **NULL** y *numberOfElements* en 0 y devuelven **ENOMEM**.
+
+## <a name="remarks"></a>Comentarios
+
+El **_dupenv_s** función busca en la lista de variables de entorno para *varname*. Si se encuentra la variable, **_dupenv_s** asigna un búfer y copia el valor de la variable en el búfer. Dirección y la longitud del búfer se devuelven en *búfer* y *numberOfElements*. Al asignar el búfer, **_dupenv_s** constituye una alternativa más conveniente para [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+
 > [!NOTE]
->  Es responsabilidad del programa de llamada liberar memoria llamando a [free](../../c-runtime-library/reference/free.md).  
-  
- Si no se encuentra la variable, `buffer` se establece en `NULL`, `numberOfElements` se establece en 0 y el valor devuelto es 0, porque esta situación no se considera una condición de error.  
-  
- Si el tamaño de búfer no le interesa, puede pasar `NULL` para `numberOfElements`.  
-  
- `_dupenv_s` no distingue entre mayúsculas y minúsculas en el sistema operativo Windows. `_dupenv_s` usa la copia del entorno indicado por la variable global `_environ` para tener acceso al entorno. Vea los comentarios de [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) para obtener una explicación de `_environ`.  
-  
- El valor de `buffer` es una copia del valor de la variable de entorno; su modificación no afecta al entorno. Use la función [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md) para modificar el valor de una variable de entorno.  
-  
- `_wdupenv_s` es una versión con caracteres anchos de `_dupenv_s`; los argumentos de `_wdupenv_s` son cadenas de caracteres anchos. La variable global `_wenviron` es una versión con caracteres anchos de `_environ`. Vea los comentarios de [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md) para saber más sobre `_wenviron`.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tdupenv_s`|`_dupenv_s`|`_dupenv_s`|`_wdupenv_s`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_dupenv_s`|\<stdlib.h>|  
-|`_wdupenv_s`|\<stdlib.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_dupenv_s.c  
-#include  <stdlib.h>  
-  
-int main( void )  
-{  
-   char *pValue;  
-   size_t len;  
-   errno_t err = _dupenv_s( &pValue, &len, "pathext" );  
-   if ( err ) return -1;  
-   printf( "pathext = %s\n", pValue );  
-   free( pValue );  
-   err = _dupenv_s( &pValue, &len, "nonexistentvariable" );  
-   if ( err ) return -1;  
-   printf( "nonexistentvariable = %s\n", pValue );  
-   free( pValue ); // It's OK to call free with NULL  
-}  
-```  
-  
-## <a name="sample-output"></a>Resultados del ejemplo  
-  
-```  
-pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
-nonexistentvariable = (null)  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
- [Constantes de entorno](../../c-runtime-library/environmental-constants.md)   
- [_dupenv_s_dbg, _wdupenv_s_dbg](../../c-runtime-library/reference/dupenv-s-dbg-wdupenv-s-dbg.md)   
- [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+> Es responsabilidad del programa de llamada liberar memoria llamando a [free](free.md).
+
+Si la variable no se encuentra, a continuación, *búfer* está establecido en **NULL**, *numberOfElements* se establece en 0, y el valor devuelto es 0 porque esta situación no se considera un error condición.
+
+Si no está interesado en el tamaño del búfer puede pasar **NULL** para *numberOfElements*.
+
+**_dupenv_s** no distingue mayúsculas de minúsculas en el sistema operativo Windows. **_dupenv_s** usa la copia del entorno indicado por la variable global **_environ** para tener acceso al entorno. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener una explicación de **_environ**.
+
+El valor de *búfer* es una copia del valor de la variable de entorno; modificarlo no tiene ningún efecto en el entorno. Use la función [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) para modificar el valor de una variable de entorno.
+
+**_wdupenv_s** es una versión con caracteres anchos de **_dupenv_s**; los argumentos de **_wdupenv_s** son cadenas de caracteres anchos. El **_wenviron** (variable global) es una versión con caracteres anchos de **_environ**. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener más información sobre **_wenviron**.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tdupenv_s**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_dupenv_s**|\<stdlib.h>|
+|**_wdupenv_s**|\<stdlib.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_dupenv_s.c
+#include  <stdlib.h>
+
+int main( void )
+{
+   char *pValue;
+   size_t len;
+   errno_t err = _dupenv_s( &pValue, &len, "pathext" );
+   if ( err ) return -1;
+   printf( "pathext = %s\n", pValue );
+   free( pValue );
+   err = _dupenv_s( &pValue, &len, "nonexistentvariable" );
+   if ( err ) return -1;
+   printf( "nonexistentvariable = %s\n", pValue );
+   free( pValue ); // It's OK to call free with NULL
+}
+```
+
+```Output
+pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
+nonexistentvariable = (null)
+```
+
+## <a name="see-also"></a>Vea también
+
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Constantes de entorno](../../c-runtime-library/environmental-constants.md)<br/>
+[_dupenv_s_dbg, _wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
+[getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
+[_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>

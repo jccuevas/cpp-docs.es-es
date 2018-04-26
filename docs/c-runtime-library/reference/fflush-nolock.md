@@ -1,12 +1,12 @@
 ---
 title: _fflush_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fflush_nolock
@@ -34,49 +34,54 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091a32f7e5c16876378a147084a9ecdd06354243
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 125c20a53b605089a9b8b5eb83816b82bbf69f2c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
-Vacía una secuencia sin bloquear el subproceso.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _fflush_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `stream`  
- Puntero a la estructura de `FILE`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Consulte [fflush](../../c-runtime-library/reference/fflush.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Esta función es una versión que no es de bloqueo de `fflush`. Es idéntica a `fflush`, salvo que no está protegida contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`_fflush_nolock`|\<stdio.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+
+Vacía una secuencia sin bloquear el subproceso.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _fflush_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Consulte [fflush](fflush.md).
+
+## <a name="remarks"></a>Comentarios
+
+Esta función es una versión no realiza el bloqueo de **fflush**. Es idéntico a **fflush** salvo que no está protegida contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**_fflush_nolock**|\<stdio.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_flushall](flushall.md)<br/>
+[setvbuf](setvbuf.md)<br/>

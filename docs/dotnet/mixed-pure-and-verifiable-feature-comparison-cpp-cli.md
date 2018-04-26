@@ -1,12 +1,12 @@
 ---
-title: "Comparación de características mixta, pura y comprobable (C++ / CLI) | Documentos de Microsoft"
-ms.custom: 
+title: Comparación de características mixta, pura y comprobable (C++ / CLI) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ac5e094dd252ec908f352bcc1b19c923513debfb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d4ac2356fbe12af53890e8159484b89150b60945
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Comparación de características mixta, pura y comprobable (C++/CLI)
 Este tema comparan las características entre los distintos **/CLR** modos de compilación. Para obtener más información, consulte [/clr (Compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -48,8 +48,8 @@ Este tema comparan las características entre los distintos **/CLR** modos de co
   
 |Característica|Mixta (/clr)|Pura (/clr:pure)|Seguro (/ CLR: safe)|Información relacionada|  
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|Biblioteca de CRT|Admite|en desuso||[Rutinas en tiempo de ejecución por categoría](../c-runtime-library/run-time-routines-by-category.md)|  
-|MFC/ATL|Admite|||[Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md) &#124; [Información general de clases](../atl/atl-class-overview.md)|  
+|Biblioteca de CRT|Admite|en desuso||[Rutinas en tiempo de ejecución de C universales por categoría](../c-runtime-library/run-time-routines-by-category.md)|  
+|MFC/ATL|Admite|||[Aplicaciones de escritorio de MFC](../mfc/mfc-desktop-applications.md) &#124; [información general de clases](../atl/atl-class-overview.md)|  
 |Funciones no administradas|Admite|||[Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md)|  
 |Datos no administrados|Admite|en desuso||[Código puro y comprobable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
 |Puede llamar desde funciones no administradas|Admite||||  

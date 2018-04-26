@@ -1,12 +1,12 @@
 ---
 title: _ungetc_nolock, _ungetwc_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ungetwc_nolock
@@ -41,65 +41,70 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6da50ab5588941fa0518b74b46ef6ea4b7353ccf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec610a30d0cbf6dbdb11f02c2be3867d4a541155
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
-Vuelve a insertar un carácter en el flujo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _ungetc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _ungetwc_nolock(  
-   wint_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `c`  
- Carácter que se va a devolver.  
-  
- `stream`  
- Puntero a la estructura `FILE` .  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si es correcto, cada una de estas funciones devuelve el argumento de carácter `c`. Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `_ungetc_nolock` devuelve `EOF`; `_ungetwc_nolock` devuelve `WEOF`. Si `stream` es `NULL`, se devuelve `EOF` o `WEOF` y `errno` se estable en `EINVAL`.  
-  
- Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones son versiones que no son de bloqueo de `ungetc` y `ungetwc`. Las versiones con el sufijo `_nolock` son idénticas, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ungettc_nolock`|`_ungetc_nolock`|`_ungetc_nolock`|`_ungetwc_nolock`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_ungetc_nolock`|\<stdio.h>|  
-|`_ungetwc_nolock`|\<stdio.h> o \<wchar.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Vuelve a insertar un carácter en el flujo.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _ungetc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _ungetwc_nolock(
+   wint_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*<br/>
+Carácter que se va a devolver.
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **_ungetc_nolock** devuelve ** EOF`; **_ungetwc_nolock` devuelve **WEOF**. Si *flujo* es **NULL**, **EOF** o **WEOF** se devuelve y **errno** está establecido en  **EINVAL**.
+
+Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones son no realiza el bloqueo versiones de **ungetc** y **ungetwc**. Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos. Pueden ser más rápidas, porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ungettc_nolock**|**_ungetc_nolock**|**_ungetc_nolock**|**_ungetwc_nolock**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_ungetc_nolock**|\<stdio.h>|
+|**_ungetwc_nolock**|\<stdio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

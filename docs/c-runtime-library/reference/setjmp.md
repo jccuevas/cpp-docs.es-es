@@ -1,12 +1,12 @@
 ---
 title: setjmp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - setjmp
@@ -31,59 +31,65 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef5c4b0e026090718fc02dd109a1fccb91152010
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dc01f80aa4521ff3588cca14ceabbf5447338cca
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setjmp"></a>setjmp
-Guarda el estado actual del programa.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int setjmp(  
-   jmp_buf env   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `env`  
- Variable donde se almacena el entorno.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve 0 después de guardar el entorno de pila. Si se devuelve `setjmp` como resultado de una llamada a `longjmp`, devuelve el argumento `value` de `longjmp`; si el argumento `value` de `longjmp` es 0, `setjmp` devuelve 1. No se devuelve ningún error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `setjmp` guarda un entorno de pila, que se puede restaurar posteriormente usando `longjmp`. Cuando se usan conjuntamente, `setjmp` y `longjmp` proporcionan una forma de ejecutar un `goto` no local. Se utilizan normalmente para pasar el control de la ejecución al control de errores o al código de recuperación en una rutina invocada anteriormente sin utilizar convenciones habituales de llamada o devolución.  
-  
- Una llamada a `setjmp` guarda el entorno de pila actual en `env`. Una llamada subsiguiente a `longjmp` restaura el entorno guardado y devuelve el control al punto inmediatamente posterior a la llamada `setjmp` correspondiente. Todas las variables (excepto las variables de registro) a las que se puede obtener acceso en la rutina que recibe el control contienen los valores que tenían cuando se llamó a `longjmp`.  
-  
- No se puede usar `setjmp` para pasar del código nativo al código administrado.  
-  
- **Nota** `setjmp` y `longjmp` no admiten la semántica de objetos de C++. En los programas de C++, use el mecanismo de control de excepciones de C++.  
-  
- Para obtener más información, vea [Usar setjmp/longjmp](../../cpp/using-setjmp-longjmp.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`setjmp`|\<setjmp.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [_pfreset](../../c-runtime-library/reference/fpreset.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)   
- [longjmp](../../c-runtime-library/reference/longjmp.md)   
- [_setjmp3](../../c-runtime-library/setjmp3.md)
+
+Guarda el estado actual del programa.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int setjmp(
+   jmp_buf env
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*env*<br/>
+Variable donde se almacena el entorno.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve 0 después de guardar el entorno de pila. Si **setjmp** devuelve como resultado de un **longjmp** llamar a, devuelve el **valor** argumento de **longjmp**, o si la **valor**  argumento de **longjmp** es 0, **setjmp** devuelve 1. No se devuelve ningún error.
+
+## <a name="remarks"></a>Comentarios
+
+El **setjmp** función guarda un entorno de pila, que posteriormente pueda restaurar, con **longjmp**. Cuando se usan juntos, **setjmp** y **longjmp** proporcionan una manera de ejecutar un no locales **goto**. Se utilizan normalmente para pasar el control de la ejecución al control de errores o al código de recuperación en una rutina invocada anteriormente sin utilizar convenciones habituales de llamada o devolución.
+
+Una llamada a **setjmp** guarda el entorno de pila actual en *env*. Una llamada subsiguiente a **longjmp** restaura el entorno guardado y devuelve el control al punto justo después de la correspondiente **setjmp** llamar. Todas las variables (excepto las variables de register) puede tener acceso a la rutina de recibir el control contienen los valores que tenían cuando **longjmp** se llamó.
+
+No es posible utilizar **setjmp** para saltar de código nativo a código administrado.
+
+**Tenga en cuenta** **setjmp** y **longjmp** no admitan la semántica de objetos de C++. En los programas de C++, use el mecanismo de control de excepciones de C++.
+
+Para obtener más información, vea [Usar setjmp/longjmp](../../cpp/using-setjmp-longjmp.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**setjmp**|\<setjmp.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [_pfreset](fpreset.md).
+
+## <a name="see-also"></a>Vea también
+
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[longjmp](longjmp.md)<br/>
+[_setjmp3](../../c-runtime-library/setjmp3.md)<br/>

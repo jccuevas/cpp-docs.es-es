@@ -1,12 +1,12 @@
 ---
 title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsupr_l
@@ -69,117 +69,123 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 904f897a36c3db24ce78983e3c02cc0f019bf16e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1b9300abfc68e1d6044e1eec290bdb0625c1b80
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
-Cambia la cadena a mayúsculas. Hay disponibles versiones más seguras de estas funciones; vea [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).  
-  
+
+Cambia la cadena a mayúsculas. Hay disponibles versiones más seguras de estas funciones; vea [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
+
 > [!IMPORTANT]
->  `_mbsupr` y `_mbsupr_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-char *_strupr(  
-   char *str   
-);  
-wchar_t *_wcsupr(  
-   wchar_t *str   
-);  
-unsigned char *_mbsupr(  
-   unsigned char *str   
-);  
-char *_strupr_l(  
-   char *str,  
-   _locale_t locale  
-);  
-wchar_t *_wcsupr_l(  
-   wchar_t *str,  
-   _locale_t locale  
-);  
-unsigned char *_mbsupr_l(  
-   unsigned char *str,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *_strupr(  
-   char (&str)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsupr(  
-   wchar_t (&str)[size]  
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsupr(  
-   unsigned char (&str)[size]  
-); // C++ only  
-template <size_t size>  
-char *_strupr_l(  
-   char (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsupr_l(  
-   wchar_t (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsupr_l(  
-   unsigned char (&str)[size],  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Cadena que se va a poner en mayúsculas.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero a la cadena modificada. Dado que la modificación se hace en contexto, el puntero devuelto es el mismo que el puntero que se pasa como argumento de entrada. No se reserva ningún valor devuelto para indicar un error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_strupr` convierte, en su sitio, cada minúscula de `str` en mayúscula. El valor de la categoría `LC_CTYPE` de la configuración regional determina la conversión. Otros caracteres no resultan afectados. Para obtener más información sobre `LC_CTYPE`, vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- `_wcsupr` y `_mbsupr` son versiones de caracteres anchos y multibyte de `_strupr`. El argumento y el valor devuelto de `_wcsupr` son cadenas de caracteres anchos; los de `_mbsupr` son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.  
-  
- Si `str` es un puntero nulo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen `errno` en `EINVAL`.  
-  
- En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsupr`|`_strupr`|`_mbsupr`|`_wcsupr`|  
-|`_tcsupr_l`|`_strupr_l`|`_mbsupr_l`|`_wcsupr_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_strupr`, `_strupr_l`|\<string.h>|  
-|`_wcsupr`, `_wcsupr_l`|\<string.h> o \<wchar.h>|  
-|`_mbsupr`, `_mbsupr_l`|\<mbstring.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [_strlwr](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Configuración regional](../../c-runtime-library/locale.md)   
- [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
- [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
+> **_mbsupr** y **_mbsupr_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char *_strupr(
+   char *str
+);
+wchar_t *_wcsupr(
+   wchar_t *str
+);
+unsigned char *_mbsupr(
+   unsigned char *str
+);
+char *_strupr_l(
+   char *str,
+   _locale_t locale
+);
+wchar_t *_wcsupr_l(
+   wchar_t *str,
+   _locale_t locale
+);
+unsigned char *_mbsupr_l(
+   unsigned char *str,
+   _locale_t locale
+);
+template <size_t size>
+char *_strupr(
+   char (&str)[size]
+); // C++ only
+template <size_t size>
+wchar_t *_wcsupr(
+   wchar_t (&str)[size]
+); // C++ only
+template <size_t size>
+unsigned char *_mbsupr(
+   unsigned char (&str)[size]
+); // C++ only
+template <size_t size>
+char *_strupr_l(
+   char (&str)[size],
+   _locale_t locale
+); // C++ only
+template <size_t size>
+wchar_t *_wcsupr_l(
+   wchar_t (&str)[size],
+   _locale_t locale
+); // C++ only
+template <size_t size>
+unsigned char *_mbsupr_l(
+   unsigned char (&str)[size],
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Cadena que se va a poner en mayúsculas.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero a la cadena modificada. Dado que la modificación se hace en contexto, el puntero devuelto es el mismo que el puntero que se pasa como argumento de entrada. No se reserva ningún valor devuelto para indicar un error.
+
+## <a name="remarks"></a>Comentarios
+
+El **_strupr** función convierte, en su lugar, cada minúscula de *str* a mayúsculas. La conversión viene determinada por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo use la configuración regional actual; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+**_wcsupr** y **_mbsupr** son versiones de caracteres multibyte y anchos de **_strupr**. El argumento y el valor devuelto de **_wcsupr** son caracteres anchos cadenas; los de **_mbsupr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+
+Si *str* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen **errno** a **EINVAL**.
+
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
+|**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_strupr**, **_strupr_l**|\<string.h>|
+|**_wcsupr**, **_wcsupr_l**|\<string.h> o \<wchar.h>|
+|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md).
+
+## <a name="see-also"></a>Vea también
+
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

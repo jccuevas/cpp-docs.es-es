@@ -1,12 +1,12 @@
 ---
 title: _mbccpy, _mbccpy_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbccpy
@@ -43,74 +43,75 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad2ff9b8d9b1369b009898ae9b78c34c3643f85
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 583f241d85c3c94a2f276e39c187baf175c5a1f4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
-Copia un carácter multibyte de una cadena en otra. Hay disponibles versiones más seguras de estas funciones; vea [_mbccpy_s, _mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
-  
+
+Copia un carácter multibyte de una cadena en otra. Hay disponibles versiones más seguras de estas funciones; vea [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void _mbccpy(  
-   unsigned char *dest,  
-   const unsigned char *src   
-);  
-void _mbccpy_l(  
-   unsigned char *dest,  
-   const unsigned char *src,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `dest`  
- Destino de la copia.  
-  
- `src`  
- Carácter multibyte que se va a copiar.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_mbccpy` copia un carácter multibyte de `src` en `dest`.  
-  
- Esta función valida sus parámetros. Si se pasa un puntero nulo a `_mbccpy` para `dest` o `src`, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL`.  
-  
- `_mbccpy` usa la configuración regional actual para cualquier comportamiento que dependa de la configuración regional. `_mbccpy_l` y `_mbccpy` son exactamente iguales, salvo que `_mbccpy_l` usa la configuración regional que se pasa para todo comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- **Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tccpy`|Se asigna a una macro o una función insertada|`_mbccpy`|Se asigna a una macro o una función insertada|  
-|`_tccpy_l`|N/D|`_mbccpy_l`|N/D|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_mbccpy`|\<mbctype.h>|  
-|`_mbccpy_l`|\<mbctype.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Configuración regional](../../c-runtime-library/locale.md)   
- [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void _mbccpy(
+   unsigned char *dest,
+   const unsigned char *src
+);
+void _mbccpy_l(
+   unsigned char *dest,
+   const unsigned char *src,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*dest* destino de copia.
+
+*src* carácter Multibyte que se va a copiar.
+
+*configuración regional* configuración regional que se use.
+
+## <a name="remarks"></a>Comentarios
+
+El **_mbccpy** función copia un carácter multibyte de *src* a *dest*.
+
+Esta función valida sus parámetros. Si **_mbccpy** se pasa un puntero nulo para *dest* o *src*, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL**.
+
+**_mbccpy** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_mbccpy_l** es idéntico a **_mbccpy** salvo que **_mbccpy_l** usa la configuración regional que se pasa para todo comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+**Nota de seguridad** Use una cadena terminada en nulo. El tamaño de la cadena terminada en un valor nulo no debe ser mayor que el del búfer de destino. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tccpy**|Se asigna a una macro o una función insertada|**_mbccpy**|Se asigna a una macro o una función insertada|
+|**_tccpy_l**|N/D|**_mbccpy_l**|N/D|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_mbccpy**|\<mbctype.h>|
+|**_mbccpy_l**|\<mbctype.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

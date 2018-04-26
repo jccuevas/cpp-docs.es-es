@@ -1,12 +1,12 @@
 ---
-title: '&lt;stack&gt; | Microsoft Docs'
-ms.custom: 
+title: '&lt;pila&gt; | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <stack>
@@ -16,47 +16,48 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9e26a3f2a5eaf3e1175a6f1b58ae7e9b5f4efd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4db3881ff6babad8686c1d004c0c8a47a78f214b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-Define la pila de la clase de plantilla y dos plantillas auxiliares.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-#include <stack>  
-  
-```  
-  
-### <a name="operators"></a>Operadores  
-  
-|||  
-|-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|  
-  
-### <a name="classes"></a>Clases  
-  
-|||  
-|-|-|  
-|[stack (Clase)](../standard-library/stack-class.md)|Clase de adaptador de contenedor de plantilla que proporciona una restricción de la funcionalidad que limita el acceso al elemento agregado más recientemente a algún tipo de contenedor subyacente.|  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
 
+Define la pila de la clase de plantilla y dos plantillas auxiliares.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+#include <stack>
+
+```
+
+### <a name="operators"></a>Operadores
+
+|Operador|Descripción|
+|-|-|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Comprueba si el objeto de pila del lado izquierdo del operador no es igual que el objeto de pila del lado derecho.|
+|[operator<](../standard-library/stack-operators.md#op_lt)|Comprueba si el objeto de pila del lado izquierdo del operador es menor que el objeto de pila del lado derecho.|
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es menor o igual que el objeto de pila del lado derecho.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es igual que el objeto de pila del lado derecho.|
+|[operator>](../standard-library/stack-operators.md#op_gt)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor que el objeto de pila del lado derecho.|
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Comprueba si el objeto de pila del lado izquierdo del operador es mayor o igual que el objeto de pila del lado derecho.|
+
+### <a name="classes"></a>Clases
+
+|Clase|Descripción|
+|-|-|
+|[stack (Clase)](../standard-library/stack-class.md)|Clase de adaptador de contenedor de plantilla que proporciona una restricción de la funcionalidad que limita el acceso al elemento agregado más recientemente a algún tipo de contenedor subyacente.|
+
+## <a name="see-also"></a>Vea también
+
+[Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: putch | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - putch
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - putch function
 ms.assetid: 81e733e5-770e-4c7a-b7e4-8e66da109f92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e8e1b338100644124e4480eaf955e52fe12dbe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1d4cba0d9e5a8c38ab4b1a4cd4911356a80f3e85
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putch"></a>putch
-Esta función POSIX está en desuso. En su lugar, use la función [_putch](../../c-runtime-library/reference/putch-putwch.md) compatible con ISO C++.  
-  
+
+Esta función POSIX está en desuso. En su lugar, use la función [_putch](putch-putwch.md) compatible con ISO C++.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

@@ -40,103 +40,111 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: efd4e458fa71fd6dcd93d47350c998a4a410cc65
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
-Obtiene una línea del flujo `stdin` . Estas versiones de [gets, _getws](../../c-runtime-library/gets-getws.md) tienen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-char *gets_s(   
-   char *buffer,  
-   size_t sizeInCharacters  
-);  
-wchar_t *_getws_s(   
-   wchar_t *buffer,  
-   size_t sizeInCharacters  
-);  
-template <size_t size>  
-char *gets_s(   
-   char (&buffer)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_getws_s(   
-   wchar_t (&buffer)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- [out] `buffer`  
- Ubicación de almacenamiento de la cadena de entrada.  
-  
- [in] `sizeInCharacters`  
- Tamaño del búfer.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, devuelve `buffer`. Un puntero `NULL` indica un error o una condición de fin de archivo. Use [ferror](../../c-runtime-library/reference/ferror.md) o [feof](../../c-runtime-library/reference/feof.md) para determinar qué resultado se ha producido.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `gets_s` lee una línea del flujo de entrada estándar `stdin` y la almacena en `buffer`. La línea consta de todos los caracteres hasta el primer carácter de línea nueva ('\n'), este último incluido. A continuación, `gets_s` reemplaza el carácter de línea nueva con un carácter nulo ('\0') antes de devolver la línea. Por su parte, la función `fgets_s` conserva el carácter de línea nueva.  
-  
- Si el primer carácter que se lee es el carácter de final de archivo, se almacena un carácter nulo al principio de `buffer` y se devuelve `NULL`.  
-  
- `_getws_s` es una versión con caracteres anchos de `gets_s`; el argumento y el valor devuelto son cadenas de caracteres anchos.  
-  
- Si `buffer` es `NULL` o `sizeInCharacters` es menor o igual que cero, o si el búfer es demasiado pequeño para contener la línea de entrada y el terminador nulo, estas funciones invocan el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `NULL` y establecen errno en `ERANGE`.  
-  
- En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`gets_s`|\<stdio.h>|  
-|`_getws_s`|\<stdio.h> o \<wchar.h>|  
-  
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, `stdin`, `stdout`, y `stderr`, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_gets_s.c  
-// This program retrieves a string from the stdin and   
-// prints the same string to the console.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char line[21]; // room for 20 chars + '\0'  
-   gets_s( line, 20 );  
-   printf( "The line entered was: %s\n", line );  
-}  
-```  
-  
-```Output  
-  
-Hello there!The line entered was: Hello there!  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   
- [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+Obtiene una línea desde el **stdin** secuencia. Estas versiones de [gets, _getws](../../c-runtime-library/gets-getws.md) tienen mejoras de seguridad, como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char *gets_s(
+   char *buffer,
+   size_t sizeInCharacters
+);
+wchar_t *_getws_s(
+   wchar_t *buffer,
+   size_t sizeInCharacters
+);
+```
+
+```cpp
+template <size_t size>
+char *gets_s( char (&buffer)[size] ); // C++ only
+
+template <size_t size>
+wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*buffer*<br/>
+Ubicación de almacenamiento de la cadena de entrada.
+
+*sizeInCharacters*<br/>
+Tamaño del búfer.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve *búfer* si se realiza correctamente. A **NULL** puntero indica una condición de error o el final del archivo. Use [ferror](ferror.md) o [feof](feof.md) para determinar qué resultado se ha producido.
+
+## <a name="remarks"></a>Comentarios
+
+El **gets_s** función lee una línea del flujo de entrada estándar **stdin** y lo almacena en *búfer*. La línea consta de todos los caracteres hasta el primer carácter de línea nueva ('\n'), este último incluido. **gets_s** , a continuación, reemplaza el carácter de nueva línea con un carácter nulo ('\0') antes de devolver la línea. En cambio, el **fgets_s** función conserva el carácter de nueva línea.
+
+Si el primer carácter leído es el carácter de final de archivo, se almacena un carácter nulo al principio de *búfer* y **NULL** se devuelve.
+
+**_getws_s** es una versión con caracteres anchos de **gets_s**; el argumento y el valor devuelto son cadenas de caracteres anchos.
+
+Si *búfer* es **NULL** o *sizeInCharacters* es menor o igual que cero, o si el búfer es demasiado pequeño para contener la línea de entrada y el terminador nulo, estas funciones invocan un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **NULL** y establecen errno en **ERANGE**.
+
+En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**gets_s**|\<stdio.h>|
+|**_getws_s**|\<stdio.h> o \<wchar.h>|
+
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_gets_s.c
+// This program retrieves a string from the stdin and
+// prints the same string to the console.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char line[21]; // room for 20 chars + '\0'
+   gets_s( line, 20 );
+   printf( "The line entered was: %s\n", line );
+}
+```
+
+```Input
+Hello there!
+```
+
+```Output
+The line entered was: Hello there!
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[fgets, fgetws](fgets-fgetws.md)<br/>
+[fputs, fputws](fputs-fputws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

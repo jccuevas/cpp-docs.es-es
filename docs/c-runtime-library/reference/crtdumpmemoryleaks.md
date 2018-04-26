@@ -1,12 +1,12 @@
 ---
 title: _CrtDumpMemoryLeaks | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
@@ -39,55 +39,61 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f71e37da509d4e8dd05c5a41afa9fe539294347
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fb0ebfe1017f6315d60528c5f6196131704c5d0f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
-Vuelca todos los bloques de memoria del montón de depuración cuando se ha producido una fuga de memoria (solo versión de depuración).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-int _CrtDumpMemoryLeaks( void );  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_CrtDumpMemoryLeaks` devuelve TRUE si se encuentra una pérdida de memoria. De lo contrario, la función devuelve el FALSE.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_CrtDumpMemoryLeaks` determina si se ha producido una pérdida de memoria desde que se inició la ejecución del programa. Cuando se encuentra una pérdida, la información de encabezado de depuración de todos los objetos del montón se vuelca en un formato legible para usuario. Cuando no se define [_DEBUG](../../c-runtime-library/debug.md), las llamadas a `_CrtDumpMemoryLeaks` se quitan durante el preprocesamiento.  
-  
- A menudo, se llama a `_CrtDumpMemoryLeaks` al final de la ejecución del programa para comprobar que se ha liberado toda la memoria asignada por la aplicación. Se puede llamar a la función automáticamente cuando finaliza el programa activando el campo de bits `_CRTDBG_LEAK_CHECK_DF` de la marca [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) mediante la función [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md).  
-  
- `_CrtDumpMemoryLeaks` llama a [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) para obtener el estado actual del montón y luego examina el estado para detectar bloques que no se hayan liberado. Cuando se encuentra un bloque no liberado, `_CrtDumpMemoryLeaks` llama a [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) para volcar la información de todos los objetos asignados en el montón desde que se inició la ejecución del programa.  
-  
- De forma predeterminada, los bloques internos en tiempo de ejecución de C (`_CRT_BLOCK`) no se incluyen en las operaciones de volcado de la memoria. Se puede usar la función [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) para activar el bit `_CRTDBG_CHECK_CRT_DF` de `_crtDbgFlag` de forma que incluya estos bloques en el proceso de detección de pérdidas.  
-  
- Para más información sobre las funciones de estado del montón y la estructura `_CrtMemState` , vea [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_CrtDumpMemoryLeaks`|\<crtdbg.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Ejemplo  
- Para obtener un ejemplo de cómo usar `_CrtDumpMemoryLeaks`, consulte [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).  
-  
-## <a name="see-also"></a>Vea también  
- [Rutinas de depuración](../../c-runtime-library/debug-routines.md)
+
+Vuelca todos los bloques de memoria del montón de depuración cuando se ha producido una fuga de memoria (solo versión de depuración).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+
+int _CrtDumpMemoryLeaks( void );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+**_CrtDumpMemoryLeaks** devuelve TRUE si se encuentra una pérdida de memoria. De lo contrario, la función devuelve el FALSE.
+
+## <a name="remarks"></a>Comentarios
+
+El **_CrtDumpMemoryLeaks** función determina si se ha producido una pérdida de memoria desde el inicio de la ejecución del programa. Cuando se encuentra una pérdida, la información de encabezado de depuración de todos los objetos del montón se vuelca en un formato legible para usuario. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtDumpMemoryLeaks** se quitan durante el preprocesamiento.
+
+**_CrtDumpMemoryLeaks** se suele denominar al final de la ejecución del programa para comprobar que se ha liberado toda la memoria asignada por la aplicación. Puede llamar a la función automáticamente cuando finaliza el programa activando el **_CRTDBG_LEAK_CHECK_DF** campo de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca mediante el [_CrtSetDbgFlag](crtsetdbgflag.md)(función).
+
+**_CrtDumpMemoryLeaks** llamadas [_CrtMemCheckpoint](crtmemcheckpoint.md) para obtener el estado actual del montón y, a continuación, examina el estado de bloques que no se han liberado. Cuando se encuentra un bloque no liberado, **_CrtDumpMemoryLeaks** llamadas [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) para volcar la información de todos los objetos asignados en el montón desde el principio de la ejecución del programa.
+
+De forma predeterminada, los bloques de tiempo de ejecución de C internos (**_CRT_BLOCK**) no se incluyen en las operaciones de volcado de memoria. El [_CrtSetDbgFlag](crtsetdbgflag.md) función puede utilizarse para activar el **_CRTDBG_CHECK_CRT_DF** de bits de **_crtDbgFlag** para incluir estos bloques en el proceso de detección de pérdidas.
+
+Para obtener más información sobre las funciones de estado del montón y la **_CrtMemState** estructura, vea [funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details). Para más información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_CrtDumpMemoryLeaks**|\<crtdbg.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Ejemplo
+
+Para obtener un ejemplo de cómo usar **_CrtDumpMemoryLeaks**, consulte [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+
+## <a name="see-also"></a>Vea también
+
+[Rutinas de depuración](../../c-runtime-library/debug-routines.md)<br/>

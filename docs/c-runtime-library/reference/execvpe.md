@@ -1,12 +1,12 @@
 ---
 title: execvpe | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - execvpe
@@ -29,20 +29,21 @@ dev_langs:
 helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d24bd2721aff6f21436b7c68d9020d4f40021d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 57071b1556a89025f9aa227fdec3e23286174a72
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="execvpe"></a>execvpe
-Esta función POSIX está en desuso. En su lugar, use [_execvpe](../../c-runtime-library/reference/execvpe-wexecvpe.md), compatible con ISO C++.  
-  
+
+Esta función POSIX está en desuso. En su lugar, use [_execvpe](execvpe-wexecvpe.md), compatible con ISO C++.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

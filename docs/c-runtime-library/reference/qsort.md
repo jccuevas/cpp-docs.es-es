@@ -1,12 +1,12 @@
 ---
 title: qsort | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - qsort
@@ -34,119 +34,119 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a39f6edf9dfdf2130bfe9d00cc2a9453f48ad9f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8d6aea0d0857d26237716464ea4eda778d1e0f85
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="qsort"></a>qsort
-Realiza una ordenación rápida. Hay disponible una versión más segura de esta función; vea [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void qsort(  
-   void *base,  
-   size_t num,  
-   size_t width,  
-   int (__cdecl *compare )(const void *, const void *)   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `base`  
- Inicio de la matriz de destino.  
-  
- `num`  
- Tamaño de la matriz en elementos.  
-  
- `width`  
- Tamaño del elemento en bytes.  
-  
- `compare`  
- Puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica su relación.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `qsort` implementa un algoritmo de ordenación rápida para ordenar una matriz de `num` elementos, cada uno de `width` bytes. El argumento `base` es un puntero a la base de la matriz que se va a ordenar. `qsort` sobrescribe esta matriz usando los elementos ordenados.  
-  
- `qsort` llama a la rutina `compare` una o varias veces durante la ordenación y pasa los punteros a dos elementos de la matriz en cada llamada.  
-  
-```  
-compare( (void *) & elem1, (void *) & elem2 );  
-```  
-  
- La rutina compara los elementos y devuelve uno de los siguientes valores.  
-  
-|Valor devuelto por la función de comparación|Descripción|  
-|-----------------------------------|-----------------|  
-|< 0|`elem1` es menor que `elem2`|  
-|0|`elem1` equivalente a `elem2`|  
-|> 0|`elem1` es mayor que `elem2`|  
-  
- La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.  
-  
- Esta función valida sus parámetros. Si `compare` o `num` es `NULL`, o si `base` es `NULL` y *`num` es distinto de cero, o bien si `width` es menor que cero, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve la función y `errno` se establece en `EINVAL`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`qsort`|\<stdlib.h> y \<search.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_qsort.c  
-// arguments: every good boy deserves favor  
-  
-/* This program reads the command-line  
- * parameters and uses qsort to sort them. It  
- * then displays the sorted arguments.  
- */  
-  
-#include <stdlib.h>  
-#include <string.h>  
-#include <stdio.h>  
-  
-int compare( const void *arg1, const void *arg2 );  
-  
-int main( int argc, char **argv )  
-{  
-   int i;  
-   /* Eliminate argv[0] from sort: */  
-   argv++;  
-   argc--;  
-  
-   /* Sort remaining args using Quicksort algorithm: */  
-   qsort( (void *)argv, (size_t)argc, sizeof( char * ), compare );  
-  
-   /* Output sorted list: */  
-   for( i = 0; i < argc; ++i )  
-      printf( " %s", argv[i] );  
-   printf( "\n" );  
-}  
-  
-int compare( const void *arg1, const void *arg2 )  
-{  
-   /* Compare all of both strings: */  
-   return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );  
-}  
-```  
-  
-```Output  
-boy deserves every favor good  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)
+
+Realiza una ordenación rápida. Hay disponible una versión más segura de esta función; vea [qsort_s](qsort-s.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void qsort(
+   void *base,
+   size_t num,
+   size_t width,
+   int (__cdecl *compare )(const void *, const void *)
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*base* inicio de la matriz de destino.
+
+*número* tamaño en elementos de matriz.
+
+*ancho* tamaño del elemento en bytes.
+
+*comparar* puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica la relación.
+
+## <a name="remarks"></a>Comentarios
+
+El **qsort** función implementa un algoritmo de ordenación rápida para ordenar una matriz de *número* elementos, cada uno de los *ancho* bytes. El argumento *base* es un puntero a la base de la matriz se ordenen. **qsort** sobrescribe esta matriz mediante el uso de los elementos ordenados.
+
+**qsort** llamadas el *comparar* rutina uno o más el tiempo de espera durante la ordenación y pasa punteros a dos elementos de la matriz en cada llamada.
+
+```C
+compare( (void *) & elem1, (void *) & elem2 );
+```
+
+La rutina compara los elementos y devuelve uno de los siguientes valores.
+
+|Valor devuelto por la función de comparación|Descripción|
+|-----------------------------------|-----------------|
+|< 0|**elem1** inferior a **elem2**|
+|0|**elem1** equivalente a **elem2**|
+|> 0|**elem1** mayor **elem2**|
+
+La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.
+
+Esta función valida sus parámetros. Si *comparar* o *número* es **NULL**, o si *base* es **NULL** y **número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** está establecido en **EINVAL**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**qsort**|\<stdlib.h> y \<search.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_qsort.c
+// arguments: every good boy deserves favor
+
+/* This program reads the command-line
+* parameters and uses qsort to sort them. It
+* then displays the sorted arguments.
+*/
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+int compare( const void *arg1, const void *arg2 );
+
+int main( int argc, char **argv )
+{
+   int i;
+   /* Eliminate argv[0] from sort: */
+   argv++;
+   argc--;
+
+   /* Sort remaining args using Quicksort algorithm: */
+   qsort( (void *)argv, (size_t)argc, sizeof( char * ), compare );
+
+   /* Output sorted list: */
+   for( i = 0; i < argc; ++i )
+      printf( " %s", argv[i] );
+   printf( "\n" );
+}
+
+int compare( const void *arg1, const void *arg2 )
+{
+   /* Compare all of both strings: */
+   return _stricmp( * ( char** ) arg1, * ( char** ) arg2 );
+}
+```
+
+```Output
+boy deserves every favor good
+```
+
+## <a name="see-also"></a>Vea también
+
+[Buscar y ordenar](../../c-runtime-library/searching-and-sorting.md)<br/>
+[bsearch](bsearch.md)<br/>
+[_lsearch](lsearch.md)<br/>

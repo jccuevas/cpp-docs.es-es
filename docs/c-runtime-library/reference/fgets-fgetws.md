@@ -1,12 +1,12 @@
 ---
 title: fgets, fgetws | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fgets
@@ -38,114 +38,119 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7cf12971f920bb955a48de894e6699bec2cabd99
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
-Obtiene una cadena de una secuencia.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-char *fgets(   
-   char *str,  
-   int n,  
-   FILE *stream   
-);  
-wchar_t *fgetws(   
-   wchar_t *str,  
-   int n,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Ubicación de almacenamiento de los datos.  
-  
- `n`  
- Número máximo de caracteres que se van a leer.  
-  
- `stream`  
- Puntero a la estructura `FILE` .  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas funciones devuelve `str`. Se devuelve `NULL` para indicar una condición de error o de final de archivo. Use `feof` o `ferror` para determinar si se ha producido un error. Si `str` o `stream` es un puntero nulo o `n` es menor o igual que cero, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `NULL`.  
-  
- Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `fgets` lee una cadena en el argumento `stream` de entrada y la almacena en `str`. `fgets` lee los caracteres desde la posición de la secuencia actual e incluyendo el primer carácter de nueva línea al final de la secuencia, o hasta que el número de caracteres leídos es igual a `n` - 1, lo que ocurra primero. Se anexa un carácter nulo al resultado que se almacena en `str`. El carácter de nueva línea, cuando se lee, se incluye en la cadena.  
-  
- `fgetws` es una versión con caracteres anchos de `fgets`.  
-  
- `fgetws` lee el argumento `str` de caracteres anchos como cadena de caracteres multibyte o cadena de caracteres anchos en función de que `stream` se haya abierto en modo de texto o modo binario, respectivamente. Para obtener más información sobre el uso de los modos de texto y binario en E/S de secuencias Unicode y multibyte, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fgetts`|`fgets`|`fgets`|`fgetws`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`fgets`|\<stdio.h>|  
-|`fgetws`|\<stdio.h> o \<wchar.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_fgets.c  
-// This program uses fgets to display  
-// a line from a file on the screen.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char line[100];  
-  
-   if( fopen_s( &stream, "crt_fgets.txt", "r" ) == 0 )  
-   {  
-      if( fgets( line, 100, stream ) == NULL)  
-         printf( "fgets error\n" );  
-      else  
-         printf( "%s", line);  
-      fclose( stream );  
-   }  
-}  
-```  
-  
-## <a name="input-crtfgetstxt"></a>Entrada: crt_fgets.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Salida  
-  
-```  
-Line one.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+Obtiene una cadena de una secuencia.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char *fgets(
+   char *str,
+   int numChars,
+   FILE *stream
+);
+wchar_t *fgetws(
+   wchar_t *str,
+   int numChars,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Ubicación de almacenamiento de los datos.
+
+*NumChars*<br/>
+Número máximo de caracteres que se van a leer.
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas funciones devuelve *str*. **NULL** se devuelve para indicar un error o una condición de final de archivo. Use **feof** o **ferror** para determinar si se produjo un error. Si *str* o *flujo* es un puntero nulo, o *numChars* es menor o igual a cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+
+Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
+
+## <a name="remarks"></a>Comentarios
+
+El **fgets** función lee una cadena de la entrada *flujo* argumento y lo almacena en *str*. **fgets** lee los caracteres de la posición de la secuencia actual a e incluyendo el primer carácter de nueva línea al final de la secuencia, o hasta que el número de caracteres leídos es igual a *numChars* - 1, lo que ocurra primero. El resultado se almacena en *str* se anexa con un carácter nulo. El carácter de nueva línea, cuando se lee, se incluye en la cadena.
+
+**fgetws** es una versión con caracteres anchos de **fgets**.
+
+**fgetws** lee el argumento de caracteres anchos *str* como una cadena de caracteres multibyte o una cadena de caracteres anchos según si *flujo* se abre en modo de texto o binario, respectivamente. Para obtener más información sobre el uso de los modos de texto y binario en E/S de secuencias Unicode y multibyte, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fgetts**|**fgets**|**fgets**|**fgetws**|
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**fgets**|\<stdio.h>|
+|**fgetws**|\<stdio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_fgets.c
+// This program uses fgets to display
+// a line from a file on the screen.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char line[100];
+
+   if( fopen_s( &stream, "crt_fgets.txt", "r" ) == 0 )
+   {
+      if( fgets( line, 100, stream ) == NULL)
+         printf( "fgets error\numChars" );
+      else
+         printf( "%s", line);
+      fclose( stream );
+   }
+}
+```
+
+### <a name="input-crtfgetstxt"></a>Entrada: crt_fgets.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Salida
+
+```Output
+Line one.
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fputs, fputws](fputs-fputws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

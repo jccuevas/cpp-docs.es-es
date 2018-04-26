@@ -1,12 +1,12 @@
 ---
 title: rename, _wrename | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rename
@@ -43,110 +43,112 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34da3f704f3350a9fbd8750c940cdc4e847cfb40
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 27d8a8ba0b0063eccf4a32e15d1e0bb105e03a04
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rename-wrename"></a>rename, _wrename
-Cambia el nombre de un archivo o de un directorio.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      int rename(  
-   const char *oldname,  
-   const char *newname   
-);  
-int _wrename(  
-   const wchar_t *oldname,  
-   const wchar_t *newname   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *oldname*  
- Puntero al nombre anterior.  
-  
- *newname*  
- Puntero al nombre nuevo.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas funciones devuelve 0 si se realiza correctamente. Si se produce un error, la función devuelve un valor distinto de cero y establece `errno` en uno de los siguientes valores:  
-  
- `EACCES`  
- El archivo o directorio especificado por *newname* ya existe o no se pudo crear (ruta de acceso no válida), o bien *oldname* es un directorio y *newname* especifica otra ruta de acceso.  
-  
- `ENOENT`  
- Archivo o ruta de acceso especificado por *oldname* no encontrado.  
-  
- `EINVAL`  
- El nombre contiene caracteres no válidos.  
-  
- Para otros valores devueltos posibles, vea [_doserrno, _errno, syserrlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función **rename** cambia el nombre del archivo o directorio especificado por *oldname* por el nombre proporcionado por *newname*. El nombre anterior debe ser la ruta de acceso de un archivo o directorio existente. El nombre nuevo no debe ser el nombre de un archivo o directorio existente. Puede usar **rename** para mover un archivo de un directorio o dispositivo a otro indicando una ruta de acceso diferente en el argumento *newname*. Sin embargo, no puede usar **rename** para mover un directorio. Se puede cambiar el nombre de los directorios, pero estos no se pueden mover.  
-  
- `_wrename` es una versión con caracteres anchos de **_rename**; los argumentos para `_wrename` son cadenas de caracteres anchos. `_wrename` y **_rename** se comportan de forma idéntica.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_trename`|**rename**|**rename**|`_wrename`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|**rename**|\<io.h> o \<stdio.h>|  
-|`_wrename`|\<stdio.h> o \<wchar.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_renamer.c  
-/* This program attempts to rename a file named  
- * CRT_RENAMER.OBJ to CRT_RENAMER.JBO. For this operation  
- * to succeed, a file named CRT_RENAMER.OBJ must exist and  
- * a file named CRT_RENAMER.JBO must not exist.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int  result;  
-   char old[] = "CRT_RENAMER.OBJ", new[] = "CRT_RENAMER.JBO";  
-  
-   /* Attempt to rename file: */  
-   result = rename( old, new );  
-   if( result != 0 )  
-      printf( "Could not rename '%s'\n", old );  
-   else  
-      printf( "File '%s' renamed to '%s'\n", old, new );  
-}  
-```  
-  
-## <a name="output"></a>Salida  
-  
-```  
-File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Control de archivos](../../c-runtime-library/file-handling.md)
+
+Cambia el nombre de un archivo o de un directorio.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int rename(
+   const char *oldname,
+   const char *newname
+);
+int _wrename(
+   const wchar_t *oldname,
+   const wchar_t *newname
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*oldname*<br/>
+Puntero al nombre anterior.
+
+*newname*<br/>
+Puntero al nombre nuevo.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas funciones devuelve 0 si se realiza correctamente. Produce un error, la función devuelve un valor distinto de cero y establece **errno** a uno de los siguientes valores:
+
+|valor de errno|Condición|
+|-|-|
+**EACCES**|El archivo o directorio especificado por *newname* ya existe o no se pudo crear (ruta de acceso no válida), o bien *oldname* es un directorio y *newname* especifica otra ruta de acceso.
+**ENOENT**|Archivo o ruta de acceso especificado por *oldname* no encontrado.
+**EINVAL**|El nombre contiene caracteres no válidos.
+
+Para otros valores devueltos posibles, vea [_doserrno, _errno, syserrlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+La función **rename** cambia el nombre del archivo o directorio especificado por *oldname* por el nombre proporcionado por *newname*. El nombre anterior debe ser la ruta de acceso de un archivo o directorio existente. El nombre nuevo no debe ser el nombre de un archivo o directorio existente. Puede usar **rename** para mover un archivo de un directorio o dispositivo a otro indicando una ruta de acceso diferente en el argumento *newname*. Sin embargo, no puede usar **rename** para mover un directorio. Se puede cambiar el nombre de los directorios, pero estos no se pueden mover.
+
+**_wrename** es una versión con caracteres anchos de **_rename**; los argumentos a **_wrename** son cadenas de caracteres anchos. **_wrename** y **_rename** se comportan exactamente igual.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_trename**|**rename**|**rename**|**_wrename**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**rename**|\<io.h> o \<stdio.h>|
+|**_wrename**|\<stdio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_renamer.c
+/* This program attempts to rename a file named
+* CRT_RENAMER.OBJ to CRT_RENAMER.JBO. For this operation
+* to succeed, a file named CRT_RENAMER.OBJ must exist and
+* a file named CRT_RENAMER.JBO must not exist.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   int  result;
+   char old[] = "CRT_RENAMER.OBJ", new[] = "CRT_RENAMER.JBO";
+
+   /* Attempt to rename file: */
+   result = rename( old, new );
+   if( result != 0 )
+      printf( "Could not rename '%s'\n", old );
+   else
+      printf( "File '%s' renamed to '%s'\n", old, new );
+}
+```
+
+### <a name="output"></a>Salida
+
+```Output
+File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'
+```
+
+## <a name="see-also"></a>Vea también
+
+[Control de archivos](../../c-runtime-library/file-handling.md)<br/>

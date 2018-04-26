@@ -1,13 +1,13 @@
 ---
 title: cpow, cpowf, cpowl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cpow
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b47a19b364854f207d3f1923923e64bb319f8ce
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a9ae1fd2d71e3876be8c814d531dfdfe6b434fde
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
-Recupera el valor de un número elevado a la potencia especificada, donde la base y el exponente son números complejos. Esta función tiene un corte de bifurcación del exponente en el eje negativo real.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_Dcomplex cpow(   
-   _Dcomplex x, _Dcomplex y   
-);  
-_Fcomplex cpow(   
-   _Fcomplex x, _Fcomplex y   
-);  // C++ only  
-_Lcomplex cpow(   
-   _Lcomplex x, _Lcomplex y   
-);  // C++ only  
-_Fcomplex cpowf(   
-   _Fcomplex x, _Fcomplex y   
-);  
-_Lcomplex cpowl(   
-   _Lcomplex x, _Lcomplex y   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- La base.  
-  
- `y`  
- El exponente.  
-  
-## <a name="return-value"></a>Valor devuelto  
- El valor de `x` elevado a la potencia de `y` con un corte de bifurcación de `x` en el eje negativo real.  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cpow` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `cpow` siempre toma y devuelve un valor `_Dcomplex` .  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado C|Encabezado C++|  
-|-------------|--------------|------------------|  
-|`cpow`,               `cpowf`, `cpowl`|\<complex.h>|\<ccomplex>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
- [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
- [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)
+
+Recupera el valor de un número elevado a la potencia especificada, donde la base y el exponente son números complejos. Esta función tiene un corte de bifurcación del exponente en el eje negativo real.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+_Dcomplex cpow(
+   _Dcomplex x, _Dcomplex y
+);
+_Fcomplex cpow(
+   _Fcomplex x, _Fcomplex y
+);  // C++ only
+_Lcomplex cpow(
+   _Lcomplex x, _Lcomplex y
+);  // C++ only
+_Fcomplex cpowf(
+   _Fcomplex x, _Fcomplex y
+);
+_Lcomplex cpowl(
+   _Lcomplex x, _Lcomplex y
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+La base.
+
+*y*<br/>
+El exponente.
+
+## <a name="return-value"></a>Valor devuelto
+
+El valor de *x* elevado a la potencia de *y* a una bifurcación de cortar para *x* a lo largo del eje negativo real.
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **cpow** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cpow** siempre toma y devuelve un **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado C|Encabezado C++|
+|-------------|--------------|------------------|
+|**cpow**, **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
+[cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>
+[clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)<br/>
+[clog, clogf, clogl](clog-clogf-clogl.md)<br/>

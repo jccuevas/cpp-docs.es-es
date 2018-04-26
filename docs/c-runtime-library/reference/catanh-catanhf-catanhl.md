@@ -46,64 +46,69 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abce100af16bff2ec7fd2de82d66ec3a7e59604e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d80800bc5eae41e19f8c74888be21eca272c8ee
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
-Recupera la tangente hiperbólica inversa de un número complejo, con cortes de bifurcación fuera del intervalo [-1; + 1] en el eje real.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_Dcomplex catanh(   
-   _Dcomplex z   
-);  
-_Fcomplex catanh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catanh(   
-   _Lcomplex z   
-);  //  C++ only  
-_Fcomplex catanhf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `z`  
- Número complejo que representa un ángulo en radianes.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Tangente hiperbólica inversa de `z` en radianes. El resultado es ilimitado a lo largo del eje real y en el intervalo [-iπ/2; + iπ/2] en el eje imaginario. Se producirá un error de dominio si `z` está fuera del intervalo [-1, +1]. Se producirá un error de polo si `z` es -1 o +1.  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `catanh` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `catanh` siempre toma y devuelve un valor `_Dcomplex` .  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado C|Encabezado C++|  
-|-------------|--------------|------------------|  
-|`catanh`,               `catanhf`, `catanhl`|\<complex.h>|\<ccomplex>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Recupera la tangente hiperbólica inversa de un número complejo, con cortes de bifurcación fuera del intervalo [-1; + 1] en el eje real.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+_Dcomplex catanh(
+   _Dcomplex z
+);
+_Fcomplex catanh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex catanh(
+   _Lcomplex z
+);  //  C++ only
+_Fcomplex catanhf(
+   _Fcomplex z
+);
+_Lcomplex catanhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Z*<br/>
+Número complejo que representa un ángulo en radianes.
+
+## <a name="return-value"></a>Valor devuelto
+
+La tangente hiperbólica inversa de *z*, en radianes. El resultado es ilimitado a lo largo del eje real y en el intervalo [-iπ/2; + iπ/2] en el eje imaginario. Se producirá un error de dominio si *z* está fuera del intervalo [-1, + 1]. Se producirá un error de polo si *z* es -1 o + 1.
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **catanh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **catanh** siempre toma y devuelve un **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado C|Encabezado C++|
+|-------------|--------------|------------------|
+|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

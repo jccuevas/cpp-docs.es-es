@@ -1,13 +1,13 @@
 ---
 title: ccos, ccosf, ccosl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ccos
@@ -40,70 +40,75 @@ helpviewer_keywords:
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0be2f564c3a190c0d056a975e3350eae4c1a8be3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4124cd72ac876fc3a4c44f975d3b949cb05458d9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos, ccosf, ccosl
-Recupera el coseno de un número complejo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_Dcomplex ccos(   
-   _Dcomplex z   
-);  
-_Fcomplex ccos(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex ccos(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex ccosf(   
-   _Fcomplex z   
-);  
-_Lcomplex ccosl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `z`  
- Número complejo que representa el ángulo en radianes.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Coseno de `z` en radianes.  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `ccos` que toman y devuelven los valores `_Fcomplex` y `_Lcomplex`. En un programa de C, `ccos` siempre toma y devuelve un valor `_Dcomplex` .  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado C|Encabezado C++|  
-|-------------|--------------|------------------|  
-|`ccos`,               `ccosf`, `ccosl`|\<complex.h>|\<ccomplex>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Recupera el coseno de un número complejo.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+_Dcomplex ccos(
+   _Dcomplex z
+);
+_Fcomplex ccos(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex ccos(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex ccosf(
+   _Fcomplex z
+);
+_Lcomplex ccosl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Z*<br/>
+Número complejo que representa el ángulo en radianes.
+
+## <a name="return-value"></a>Valor devuelto
+
+El coseno de *z*, en radianes.
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ccos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ccos** siempre toma y devuelve un **_Dcomplex** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado C|Encabezado C++|
+|-------------|--------------|------------------|
+|**ccos**, **ccosf**, **ccosl**|\<complex.h>|\<ccomplex>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan, catanf, catanl](catan-catanf-catanl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

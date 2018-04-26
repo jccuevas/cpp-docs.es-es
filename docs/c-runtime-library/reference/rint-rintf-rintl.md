@@ -1,12 +1,12 @@
 ---
 title: rint, rintf, rintl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rintf
@@ -36,97 +36,104 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a67e17487486bd6a48c3a1829aeae342e0e56b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 255ddd3bfcc3ed5430b822a9f193c93fabba8733
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
-Redondea un valor de punto flotante al entero más cercano en el formato de punto flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double rint( double x );  
-float rint( float x );  // C++ only  
-long double rint( long double x );  // C++ only  
-float rintf( float x );   
-long double rintl( long double x );  
-  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- Valor de punto flotante que se va a redondear.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Las funciones `rint` devuelven un valor de punto flotante que representa el entero más cercano a `x`. Los valores a medio camino se redondean en función de la configuración actual del modo de redondeo de puntos flotantes, al igual que las funciones `nearbyint`. Al contrario de lo que sucede con las funciones `nearbyint`, las funciones `rint` pueden generar la excepción de punto flotante `FE_INEXACT` si el valor del resultado es distinto del argumento. No se devuelve ningún error.  
-  
-|Entrada|Excepción SEH|Excepción de `_matherr`|  
-|-----------|-------------------|--------------------------|  
-|± ∞, QNAN, IND|ninguna|ninguna|  
-|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `rint` que toman y devuelven los valores `float` y `long double`. En un programa C, `rint` siempre y devuelve `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado C|Encabezado C++|  
-|--------------|--------------|------------------|  
-|`rint`, `rintf`, `rintl`|\<math.h>|\<cmath>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_rint.c  
-// Build with: cl /W3 /Tc crt_rint.c  
-// This example displays the rounded results of  
-// the floating-point values 2.499999, -2.499999,   
-// 2.8, -2.8, 2.5 and -2.5.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 2.499999;  
-   float y = 2.8f;  
-   long double z = 2.5;  
-  
-   printf("rint(%f) is %.0f\n", x, rint (x));  
-   printf("rint(%f) is %.0f\n", -x, rint (-x));  
-   printf("rintf(%f) is %.0f\n", y, rintf(y));  
-   printf("rintf(%f) is %.0f\n", -y, rintf(-y));  
-   printf("rintl(%Lf) is %.0Lf\n", z, rintl(z));  
-   printf("rintl(%Lf) is %.0Lf\n", -z, rintl(-z));  
-}  
-```  
-  
-```Output  
-rint(2.499999) is 2  
-rint(-2.499999) is -2  
-rintf(2.800000) is 3  
-rintf(-2.800000) is -3  
-rintl(2.500000) is 3  
-rintl(-2.500000) is -3  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [fmod, fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)   
- [lround, lroundf, lroundl, llround, llroundf, llroundl](../../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)   
- [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)   
- [rint](../../c-runtime-library/reference/rint-rintf-rintl.md)
+
+Redondea un valor de punto flotante al entero más cercano en el formato de punto flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double rint( double x );
+float rintf( float x );
+long double rintl( long double x );
+```
+
+```cpp
+float rint( float x );  // C++ only
+long double rint( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+Valor de punto flotante que se va a redondear.
+
+## <a name="return-value"></a>Valor devuelto
+
+El **rint** funciones devuelven un valor de punto flotante que representa el entero más cercano a *x*. Valores a medio camino se redondean según la configuración actual del modo de redondeo de punto flotante, el mismo que el **nearbyint** funciones. A diferencia de la **nearbyint** funciones, la **rint** funciones pueden producir el **FE_INEXACT** excepciones de punto flotante si el resultado es distinto en el valor del argumento. No se devuelve ningún error.
+
+|Entrada|Excepción SEH|**_matherr** (excepción)|
+|-----------|-------------------|--------------------------|
+|± ∞, QNAN, IND|ninguna|ninguna|
+|Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **rint** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **rint** siempre toma y devuelve un **doble**.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado C|Encabezado C++|
+|--------------|--------------|------------------|
+|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_rint.c
+// Build with: cl /W3 /Tc crt_rint.c
+// This example displays the rounded results of
+// the floating-point values 2.499999, -2.499999,
+// 2.8, -2.8, 2.5 and -2.5.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 2.499999;
+   float y = 2.8f;
+   long double z = 2.5;
+
+   printf("rint(%f) is %.0f\n", x, rint (x));
+   printf("rint(%f) is %.0f\n", -x, rint (-x));
+   printf("rintf(%f) is %.0f\n", y, rintf(y));
+   printf("rintf(%f) is %.0f\n", -y, rintf(-y));
+   printf("rintl(%Lf) is %.0Lf\n", z, rintl(z));
+   printf("rintl(%Lf) is %.0Lf\n", -z, rintl(-z));
+}
+```
+
+```Output
+rint(2.499999) is 2
+rint(-2.499999) is -2
+rintf(2.800000) is 3
+rintf(-2.800000) is -3
+rintl(2.500000) is 3
+rintl(-2.500000) is -3
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[fmod, fmodf](fmod-fmodf.md)<br/>
+[lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
+[lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
+[rint](rint-rintf-rintl.md)<br/>

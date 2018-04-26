@@ -1,12 +1,12 @@
 ---
 title: _get_dstbias | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_dstbias
@@ -36,55 +36,57 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6d43b904b96f7323c76637d1f38c024d4696f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 15d3b4167e030f3861b7f01bc20bcbd8358dc376
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdstbias"></a>_get_dstbias
-Recupera el desplazamiento de horario de verano en segundos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      error_t _get_dstbias(   
-    int* seconds  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `seconds`  
- Desplazamiento en segundos del horario de verano.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cero si se ejecuta correctamente, o un valor `errno` si se produce un error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_get_dstbias` recupera el número de segundos en el horario de verano como un entero. Si el horario de verano está en vigor, el desplazamiento predeterminado es de 3600 segundos, que es la cantidad de segundos que hay en una hora (si bien en algunas regiones el desplazamiento es de dos horas).  
-  
- Si `seconds` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EINVAL`.  
-  
- Le recomendamos usar esta función en vez de la macro `_dstbias` o la función desusada `__dstbias`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_get_dstbias`|\<time.h>|  
-  
- Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Administración del tiempo](../../c-runtime-library/time-management.md)   
- [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname](../../c-runtime-library/reference/get-tzname.md)
+
+Recupera el desplazamiento de horario de verano en segundos.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+error_t _get_dstbias( int* seconds );
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Segundos*<br/>
+Desplazamiento en segundos del horario de verano.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cero si se realiza correctamente, o un **errno** valor si se produce un error.
+
+## <a name="remarks"></a>Comentarios
+
+El **_get_dstbias** función recupera el número de segundos en el horario de verano como un entero. Si el horario de verano está en vigor, el desplazamiento predeterminado es de 3600 segundos, que es la cantidad de segundos que hay en una hora (si bien en algunas regiones el desplazamiento es de dos horas).
+
+Si *segundos* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+
+Se recomienda usar esta función en lugar de la macro **_dstbias** o la función en desuso **__dstbias**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_get_dstbias**|\<time.h>|
+
+Para obtener más información, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Administración del tiempo](../../c-runtime-library/time-management.md)<br/>
+[errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[_get_daylight](get-daylight.md)<br/>
+[_get_timezone](get-timezone.md)<br/>
+[_get_tzname](get-tzname.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _set_abort_behavior | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Especifica la acción que se debe llevar a cabo cuando un programa finaliza de forma anormal.
 
 > [!NOTE]
-> No utilice la `abort` función para cerrar una aplicación de Microsoft Store, excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obtener más información, consulte [ciclo de vida de aplicación UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> No utilice la [anular](abort.md) función para cerrar una aplicación de Microsoft Store, excepto en pruebas o en escenarios de depuración. No se permiten formas mediante programación o la interfaz de usuario para cerrar una aplicación de tienda según la [las directivas de Microsoft Store](http://go.microsoft.com/fwlink/?LinkId=865936). Para obtener más información, consulte [ciclo de vida de aplicación UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] _marcas_  
-Nuevo valor de las marcas `abort`.
+*flags*<br/>
+Nuevo valor de la [anular](abort.md) marcas.
 
-[in] _mask_  
-Máscara para los bits de las marcas `abort` que se deben establecer.
+*máscara*<br/>
+Máscara para la [anular](abort.md) marcas de bits para establecer.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -73,13 +73,13 @@ Valor anterior de las marcas.
 
 ## <a name="remarks"></a>Comentarios
 
-Hay dos marcas `abort`: `_WRITE_ABORT_MSG` y `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` determina si se imprime un mensaje de texto de ayuda cuando un programa finaliza de forma anormal. El mensaje indica que la aplicación ha llamado a la función `abort`. El comportamiento predeterminado consiste en imprimir el mensaje. `_CALL_REPORTFAULT` (si se establece) especifica que se genera y notifica un volcado de memoria Watson cuando se llama a `abort`. De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
+Hay dos [anular](abort.md) marcas: **_WRITE_ABORT_MSG** y **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** determina si se imprime un mensaje de texto de ayuda cuando un programa se termina de forma anómala. El mensaje indica que la aplicación ha llamado el [anular](abort.md) función. El comportamiento predeterminado consiste en imprimir el mensaje. **_CALL_REPORTFAULT**, si se establece, especifica que un volcado de Watson se genera y notifica cuando [anular](abort.md) se llama. De forma predeterminada, los informes de volcado de memoria están habilitados en las compilaciones que no son de DEBUG.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>Vea también
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

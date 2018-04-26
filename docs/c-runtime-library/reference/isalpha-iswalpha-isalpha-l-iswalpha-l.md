@@ -1,12 +1,12 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswalpha
@@ -47,73 +47,77 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b71e7ca28f1835e1940a780f66d76924dee9e6c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
-Determina si un entero representa un carácter alfabético.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int isalpha(   
-   int c   
-);  
-int iswalpha(   
-   wint_t c   
-);  
-int _isalpha_l(   
-   int c,  
-   _locale_t locale   
-);  
-int _iswalpha_l(   
-   wint_t c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `c`  
- Entero que se va a probar.  
-  
- `locale`  
- Configuración regional que se va a usar en lugar de la configuración regional actual.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas rutinas devuelve un valor distinto de cero si `c` es una representación concreta de un carácter alfabético. `isalpha` Devuelve un valor distinto de cero si `c` está en los intervalos A - Z o a - z. `iswalpha` devuelve un valor distinto de cero solo para caracteres anchos para los que `iswupper` o `iswlower` es distinto de cero; es decir, para cualquier carácter ancho que pertenezca a un juego definido por la implementación para el que ni `iswcntrl`, ni `iswdigit` ni `iswpunct` ni `iswspace` sea distinto de cero. Cada una de estas rutinas devuelve 0 si `c` no cumple la condición de prueba.  
-  
- Las versiones de estas funciones que tienen el sufijo `_l` usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- El comportamiento de `isalpha` e `_isalpha_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
-|`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`isalpha`|\<ctype.h>|  
-|`iswalpha`|\<ctype.h> o \<wchar.h>|  
-|`_isalpha_l`|\<ctype.h>|  
-|`_iswalpha_l`|\<ctype.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)
+
+Determina si un entero representa un carácter alfabético.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int isalpha(
+   int c
+);
+int iswalpha(
+   wint_t c
+);
+int _isalpha_l(
+   int c,
+   _locale_t locale
+);
+int _iswalpha_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*<br/>
+Entero que se va a probar.
+
+*locale*<br/>
+Configuración regional que se va a usar en lugar de la configuración regional actual.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter alfabético. **isalpha** devuelve un valor distinto de cero si *c* está en los intervalos A - Z o a - z. **iswalpha** devuelve un valor distinto de cero solo para caracteres anchos que [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) o **iswlower** es distinto de cero; es decir, para cualquier carácter ancho que es parte de un conjunto definido por la implementación para que ni **iswcntrl**, **iswdigit**, **iswpunct**, o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+
+Las versiones de estas funciones que tienen la **_l** sufijo usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+El comportamiento de **isalpha** y **_isalpha_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
+|**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**isalpha**|\<ctype.h>|
+|**iswalpha**|\<ctype.h> o \<wchar.h>|
+|**_isalpha_l**|\<ctype.h>|
+|**_iswalpha_l**|\<ctype.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

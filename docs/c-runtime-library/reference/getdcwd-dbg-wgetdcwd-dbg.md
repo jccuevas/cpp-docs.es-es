@@ -1,12 +1,12 @@
 ---
 title: _getdcwd_dbg, _wgetdcwd_dbg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getdcwd_dbg
@@ -39,85 +39,90 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 788ef0f0b745132c4b8d270129d8a182a2774361
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6b9709a5dad5bd83dc34c7e2aff7cc888b7b3451
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
-Versiones de depuración de las funciones [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) (disponibles únicamente durante la depuración).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-char *_getdcwd_dbg(  
-   int drive,  
-   char *buffer,  
-   int maxlen,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-wchar_t *_wgetdcwd_dbg(  
-   int drive,  
-   wchar_t *buffer,  
-   int maxlen,  
-   int blockType,  
-   const char *filename,  
-   int linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `drive`  
- Nombre de la unidad de disco.  
-  
- `buffer`  
- Ubicación de almacenamiento de la ruta de acceso.  
-  
- `maxlen`  
- Longitud máxima de la ruta de acceso en caracteres: `char` para `_getdcwd_dbg` y `wchar_t` para `_wgetdcwd_dbg`.  
-  
- `blockType`  
- Tipo de bloque de memoria solicitado: `_CLIENT_BLOCK` o `_NORMAL_BLOCK`.  
-  
- `filename`  
- Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o valor `NULL`.  
-  
- `linenumber`  
- Número de línea del archivo de código fuente en la que se solicitó la operación de asignación o valor `NULL`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve un puntero a `buffer`. Un valor devuelto de `NULL` indica un error, y `errno` se establece en `ENOMEM`, que indica que no hay memoria suficiente para asignar los bytes de `maxlen` (cuando un argumento de `NULL` se proporciona como `buffer`), o en `ERANGE`, que indica que la ruta de acceso es más larga que los caracteres de `maxlen` . Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Las funciones `_getdcwd_dbg` y `_wgetdcwd_dbg` son idénticas a `_getdcwd` y `_wgetdcwd`, salvo que, si se define `_DEBUG`, estas funciones usan la versión de depuración de `malloc` y `_malloc_dbg` para asignar memoria si se pasa `NULL` como parámetro de `buffer`. Para obtener más información, consulte [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
-  
- En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En lugar de ello, se puede definir la marca `_CRTDBG_MAP_ALLOC`. Si se define `_CRTDBG_MAP_ALLOC`, las llamadas a `_getdcwd` y `_wgetdcwd` se reasignan a `_getdcwd_dbg` y `_wgetdcwd_dbg`, respectivamente, con el parámetro `blockType` establecido en `_NORMAL_BLOCK`. Por consiguiente, no necesario llamar a estas funciones explícitamente a menos que se desee marcar los bloques del montón como `_CLIENT_BLOCK`. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tgetdcwd_dbg`|`_getdcwd_dbg`|`_getdcwd_dbg`|`_wgetdcwd_dbg`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_getdcwd_dbg`|\<crtdbg.h>|  
-|`_wgetdcwd_dbg`|\<crtdbg.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   
- [Control de directorio](../../c-runtime-library/directory-control.md)   
- [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)
+
+Versiones de depuración de las funciones [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md) (disponibles únicamente durante la depuración).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char *_getdcwd_dbg(
+   int drive,
+   char *buffer,
+   int maxlen,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+wchar_t *_wgetdcwd_dbg(
+   int drive,
+   wchar_t *buffer,
+   int maxlen,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Unidad*<br/>
+Nombre de la unidad de disco.
+
+*buffer*<br/>
+Ubicación de almacenamiento de la ruta de acceso.
+
+*MAXLEN*<br/>
+Longitud máxima de la ruta de acceso en caracteres: **char** para **_getdcwd_dbg** y **wchar_t** para **_wgetdcwd_dbg**.
+
+*blockType*<br/>
+Tipo del bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
+
+*filename*<br/>
+Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+
+*linenumber*<br/>
+Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero a *búfer*. A **NULL** valor devuelto indica un error, y **errno** se establece en **ENOMEM**, que indica que no hay memoria suficiente para asignar *maxlen* bytes (cuando un **NULL** argumento se proporciona como *búfer*), o a **ERANGE**, que indica que la ruta de acceso es más larga que *maxlen*  caracteres. Para obtener más información, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_getdcwd_dbg** y **_wgetdcwd_dbg** funciones son idénticas a **_getdcwd** y **_wgetdcwd** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc** y **_malloc_dbg** para asignar memoria si **NULL** se pasa como el *búfer* parámetro. Para obtener más información, consulte [_malloc_dbg](malloc-dbg.md).
+
+En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la **_CRTDBG_MAP_ALLOC** marca. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_getdcwd** y **_wgetdcwd** se reasignan a **_getdcwd_dbg** y **_ wgetdcwd_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tgetdcwd_dbg**|**_getdcwd_dbg**|**_getdcwd_dbg**|**_wgetdcwd_dbg**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_getdcwd_dbg**|\<crtdbg.h>|
+|**_wgetdcwd_dbg**|\<crtdbg.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>
+[Control de directorio](../../c-runtime-library/directory-control.md)<br/>
+[Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

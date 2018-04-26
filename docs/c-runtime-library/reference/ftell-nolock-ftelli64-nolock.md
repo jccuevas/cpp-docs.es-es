@@ -1,12 +1,12 @@
 ---
 title: _ftell_nolock, _ftelli64_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ftelli64_nolock
@@ -38,54 +38,59 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56f40af318ce2c1684ded8fe03ddc98ba1b219f8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f00920fbb262cd564ce0ac6bc454d3ef560c6941
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
-Obtiene la posición actual de un puntero de archivo, sin bloquear el subproceso.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-long _ftell_nolock(   
-   FILE *stream   
-);  
-__int64 _ftelli64_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `stream`  
- Destino de la estructura `FILE`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Igual que `ftell` y `_ftelli64`. Para obtener más información, consulte [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)**.**  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones son versiones que no son de bloqueo de `ftell` y `_ftelli64`, respectivamente. Son idénticas a `ftell` y `_ftelli64` salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|Encabezado opcional|  
-|--------------|---------------------|---------------------|  
-|`ftell_nolock`|\<stdio.h>|\<errno.h>|  
-|`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
- [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
- [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
- [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)
+
+Obtiene la posición actual de un puntero de archivo, sin bloquear el subproceso.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+long _ftell_nolock(
+   FILE *stream
+);
+__int64 _ftelli64_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Secuencia*<br/>
+Destino del **archivo** estructura.
+
+## <a name="return-value"></a>Valor devuelto
+
+Igual que **ftell** y **_ftelli64**. Para obtener más información, consulte [ftell, _ftelli64](ftell-ftelli64.md).
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones son no realiza el bloqueo versiones de **ftell** y **_ftelli64**, respectivamente. Son idénticas a **ftell** y **_ftelli64** salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|Encabezado opcional|
+|--------------|---------------------|---------------------|
+|**ftell_nolock**|\<stdio.h>|\<errno.h>|
+|**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetpos](fgetpos.md)<br/>
+[fseek, _fseeki64](fseek-fseeki64.md)<br/>
+[_lseek, _lseeki64](lseek-lseeki64.md)<br/>
+[ftell, _ftelli64](ftell-ftelli64.md)<br/>

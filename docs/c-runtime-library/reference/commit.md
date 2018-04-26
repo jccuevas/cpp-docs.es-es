@@ -1,12 +1,12 @@
 ---
 title: _commit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _commit
@@ -35,52 +35,57 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5a3f1e8d1f4a122ecf5a66393fa5c1f5c65f1b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9396fd502f5137b469c9f92110bfc23c9d2fb246
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="commit"></a>_commit
-Vacía el contenido de un archivo directamente en el disco.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _commit(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `fd`  
- Descriptor de archivo que hace referencia al archivo abierto.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_commit` devuelve 0 si el archivo se ha vaciado correctamente en el disco. Un valor devuelto de -1 indica un error.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_commit` fuerza el sistema operativo a escribir el archivo asociado a `fd` en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.  
-  
- Si `fd` es un descriptor de archivo no válido, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y `errno` se establece en `EBADF`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezados opcionales|  
-|-------------|---------------------|----------------------|  
-|`_commit`|\<io.h>|\<errno.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_read](../../c-runtime-library/reference/read.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+Vacía el contenido de un archivo directamente en el disco.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _commit(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*FD*<br/>
+Descriptor de archivo que hace referencia al archivo abierto.
+
+## <a name="return-value"></a>Valor devuelto
+
+**_commit** devuelve 0 si el archivo se generó correctamente vacía en el disco. Un valor devuelto de -1 indica un error.
+
+## <a name="remarks"></a>Comentarios
+
+El **_commit** función obliga al sistema operativo para escribir el archivo asociado a *fd* en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.
+
+Si *fd* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezados opcionales|
+|-------------|---------------------|----------------------|
+|**_commit**|\<io.h>|\<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_read](read.md)<br/>
+[_write](write.md)<br/>

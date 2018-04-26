@@ -1,12 +1,12 @@
 ---
 title: _CrtDoForAllClientObjects | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtDoForAllClientObjects
@@ -32,58 +32,60 @@ helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1da4ada3286b863444bb567a4fad8cf693f9253
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 83c555899807c9236b803b0576bc8bf6884fd944
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
-Llama a una función proporcionada por la aplicación para todos los tipos `_CLIENT_BLOCK` del montón (solo versión de depuración).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void _CrtDoForAllClientObjects(   
-   void ( * pfn )( void *, void * ),  
-   void *context  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `pfn`  
- Puntero a la función de devolución de llamada proporcionada por la aplicación. El primer parámetro de esta función señala a los datos. El segundo parámetro es el puntero de contexto que se pasa a la llamada a `_CrtDoForAllClientObjects`.  
-  
- `context`  
- Puntero al contexto proporcionado por la aplicación que se va a pasar a la función proporcionada por la aplicación.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_CrtDoForAllClientObjects` busca en la lista vinculada del montón bloques de memoria con el tipo `_CLIENT_BLOCK` y llama a la función proporcionada por la aplicación cuando se encuentra un bloque de este tipo. El bloque encontrado y el parámetro `context` se pasan como argumentos a la función proporcionada por la aplicación. Durante la depuración, una aplicación puede realizar el seguimiento de un grupo específico de asignaciones llamando explícitamente a las funciones del montón de depuración para asignar memoria y especificando que se asigne a los bloques el tipo de bloque `_CLIENT_BLOCK` . A continuación, se puede realizar el seguimiento y la notificación de estos bloques por separado durante la detección de pérdidas y la creación de informes sobre el estado de la memoria.  
-  
- Si el campo de bits `_CRTDBG_ALLOC_MEM_DF` de la marca [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) no está activado, el resultado de `_CrtDoForAllClientObjects` se devuelve inmediatamente. Si no se define [_DEBUG](../../c-runtime-library/debug.md) , las llamadas a `_CrtDoForAllClientObjects` se quitan durante el preprocesamiento.  
-  
- Para más información sobre el tipo `_CLIENT_BLOCK` y cómo lo pueden usar otras funciones de depuración, vea [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
- Si `pfn` es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) se establecen en `EINVAL` y la función vuelve.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_CrtDoForAllClientObjects`|\<crtdbg.h>, \<errno.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
- **Bibliotecas:** solo versiones de depuración de las bibliotecas en tiempo de ejecución de C universales.  
-  
-## <a name="see-also"></a>Vea también  
- [Rutinas de depuración](../../c-runtime-library/debug-routines.md)   
- [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)   
- [Funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details)   
- [_CrtReportBlockType](../../c-runtime-library/reference/crtreportblocktype.md)
+
+Llama a una función proporcionada por la aplicación para todos los **_CLIENT_BLOCK** tipos en el montón (solo versión de depuración).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void _CrtDoForAllClientObjects(
+   void ( * pfn )( void *, void * ),
+   void *context
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PFN* puntero a la función de devolución de llamada de función proporcionada por la aplicación. El primer parámetro de esta función señala a los datos. El segundo parámetro es el puntero de contexto que se pasa a la llamada a **_CrtDoForAllClientObjects**.
+
+*contexto* puntero al contexto proporcionada por la aplicación para pasar a la función proporcionada por la aplicación.
+
+## <a name="remarks"></a>Comentarios
+
+El **_CrtDoForAllClientObjects** función busca en la lista del montón vinculado bloques de memoria con el **_CLIENT_BLOCK** tipo y llama a la función proporcionada por la aplicación cuando un bloque de este tipo se encuentra. El bloque encontrado y el *contexto* parámetro se pasan como argumentos a la función proporcionada por la aplicación. Durante la depuración, una aplicación puede realizar un seguimiento de un grupo específico de asignaciones llamando explícitamente a la depuración funciones del montón para asignar memoria y especificando que se asigne a los bloques de la **_CLIENT_BLOCK** tipo de bloque. A continuación, se puede realizar el seguimiento y la notificación de estos bloques por separado durante la detección de pérdidas y la creación de informes sobre el estado de la memoria.
+
+Si el **_CRTDBG_ALLOC_MEM_DF** campo de bits de la [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) marca no está activada, **_CrtDoForAllClientObjects** devuelve inmediatamente. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtDoForAllClientObjects** se quitan durante el preprocesamiento.
+
+Para obtener más información sobre la **_CLIENT_BLOCK** escribir y ver cómo puede usar otras funciones de depuración, [tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+Si *pfn* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) está establecido en **EINVAL** y devuelve la función.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_CrtDoForAllClientObjects**|\<crtdbg.h>, \<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+**Bibliotecas:** solo versiones de depuración de las bibliotecas en tiempo de ejecución de C universales.
+
+## <a name="see-also"></a>Vea también
+
+[Rutinas de depuración](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtSetDbgFlag](crtsetdbgflag.md)<br/>
+[Funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details)<br/>
+[_CrtReportBlockType](crtreportblocktype.md)<br/>

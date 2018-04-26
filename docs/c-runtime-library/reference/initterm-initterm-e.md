@@ -1,12 +1,12 @@
 ---
 title: _initterm, _initterm_e | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _initterm_e
@@ -37,44 +37,48 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27e165131b44181f1ee12f11477892fc144c267
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 968e354662deb065aa373d3044f638dc6cf077c4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
-Métodos internos que recorren una tabla de punteros de función y los inicializan.  
-  
- El primer puntero es la ubicación inicial de la tabla y el segundo puntero, la ubicación final.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void __cdecl _initterm(  
-   PVFV *,  
-   PVFV *  
-);  
-  
-int __cdecl _initterm_e(  
-   PVFV *,  
-   PVFV *  
-);  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Un código de error distinto de cero si se produce un error de inicialización y genera un error; 0 si no se produce ningún error.  
-  
-## <a name="remarks"></a>Comentarios  
- Estos métodos solo se llaman internamente durante la inicialización de un programa de C++. No llame a estos métodos en un programa.  
-  
- Cuando estos métodos recorren una tabla de entradas de función, omiten las entradas `NULL` y continúan.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Métodos internos que recorren una tabla de punteros de función y los inicializan.
+
+El primer puntero es la ubicación inicial de la tabla y el segundo puntero, la ubicación final.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void __cdecl _initterm(
+   PVFV *,
+   PVFV *
+);
+
+int __cdecl _initterm_e(
+   PVFV *,
+   PVFV *
+);
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Un código de error distinto de cero si se produce un error de inicialización y genera un error; 0 si no se produce ningún error.
+
+## <a name="remarks"></a>Comentarios
+
+Estos métodos solo se llaman internamente durante la inicialización de un programa de C++. No llame a estos métodos en un programa.
+
+Cuando estos métodos recorrer una tabla de entradas de la función, omiten **NULL** entradas y continuar.
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>

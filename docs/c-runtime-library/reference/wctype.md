@@ -1,12 +1,12 @@
 ---
 title: wctype | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctype
@@ -30,61 +30,66 @@ helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17006f31e02e7aed60a20e088502fe969059084c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bbad04d3c56015ddea10a058ae8b262d7f94d40f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctype"></a>wctype
-Determina una regla de clasificación para códigos de caracteres anchos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-wctype_t wctype(  
-   const char * property   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `property`  
- Cadena de propiedad.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si la categoría `LC_CTYPE` de la configuración regional actual no define una regla de clasificación cuyo nombre coincida con la cadena de propiedad `property`, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](../../c-runtime-library/reference/towctrans.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función determina una regla de clasificación para códigos de caracteres anchos. Los siguientes pares de llamadas tienen el mismo comportamiento en todas las configuraciones regionales (aunque una implementación puede definir reglas de clasificación adicionales incluso en la configuración regional "C"):  
-  
-|Función|Igual que|  
-|--------------|-------------|  
-|`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
-|`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
-|`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
-|`iswdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "digit" ) )`|  
-|`iswgraph(`  `c`  `)`|`iswctype(`  `c` `, wctype( "graph" ) )`|  
-|`iswlower(`  `c`  `)`|`iswctype(`  `c` `, wctype( "lower" ) )`|  
-|`iswprint(`  `c`  `)`|`iswctype(`  `c` `, wctype( "print" ) )`|  
-|`iswpunct(`  `c`  `)`|`iswctype(`  `c` `, wctype( "punct" ) )`|  
-|`iswspace(`  `c`  `)`|`iswctype(`  `c` `, wctype( "space" ) )`|  
-|`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
-|`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`wctype`|\<wctype.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Determina una regla de clasificación para códigos de caracteres anchos.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+wctype_t wctype(
+   const char * property
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*propiedad*<br/>
+Cadena de propiedad.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si el **LC_CTYPE** categoría de la configuración regional actual no define una regla de clasificación cuyo nombre coincide con la cadena de propiedad *propiedad*, la función devuelve cero. De lo contrario, devuelve un valor distinto de cero adecuado como segundo argumento de una llamada subsiguiente a [towctrans](towctrans.md).
+
+## <a name="remarks"></a>Comentarios
+
+La función determina una regla de clasificación para códigos de caracteres anchos. Los siguientes pares de llamadas tienen el mismo comportamiento en todas las configuraciones regionales (aunque una implementación puede definir reglas de clasificación adicionales incluso en la configuración regional "C"):
+
+|Función|Igual que|
+|--------------|-------------|
+|iswalnum(c)|iswctype (c, wctype ("alnum"))|
+|iswalpha(c)|iswctype (c, wctype ("alfa"))|
+|iswcntrl(c)|iswctype (c, wctype ("CTRL"))|
+|iswdigit(c)|iswctype (c, wctype ("dígitos"))|
+|iswgraph(c)|iswctype (c, wctype ("gráfico"))|
+|iswlower(c)|iswctype (c, wctype ("menor"))|
+|iswprint(c)|iswctype (c, wctype ("print"))|
+|iswpunct(c)|iswctype (c, wctype ("puntuación"))|
+|iswspace(c)|iswctype (c, wctype ("espacio"))|
+|iswupper(c)|iswctype (c, wctype ("superior"))|
+|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**wctype**|\<wctype.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

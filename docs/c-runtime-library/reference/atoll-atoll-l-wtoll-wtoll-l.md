@@ -1,12 +1,12 @@
 ---
 title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wtoll
@@ -42,142 +42,146 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673e8aa823e8624dc70a06447db3da5c68617fc5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8c6c3876b3b4f603bd4a0bcdfeceee17583de300
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
-Convierte una cadena en un entero `long long`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-long long atoll(  
-   const char *str   
-);  
-long long _wtoll(  
-   const wchar_t *str   
-);  
-long long _atoll_l(  
-   const char *str,  
-   _locale_t locale  
-);  
-long long _wtoll_l(  
-   const wchar_t *str,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Cadena que se va a convertir.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada función devuelve el valor `long long` que se genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para `atoll` si la entrada no se puede convertir en un valor de ese tipo.  
-  
- En caso de desbordamiento con valores enteros positivos grandes, `atoll` devuelve `LLONG_MAX`; en caso de desbordamiento con valores enteros negativos grandes, devuelve `LLONG_MIN`.  
-  
- En todos los casos de valores fuera del intervalo, `errno` se establece en `ERANGE`. Si el parámetro que se pasa es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven 0.  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones convierten una cadena de caracteres en un valor entero `long long`.  
-  
- La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.  
-  
- El argumento `str` para `atoll` tiene el formato siguiente:  
-  
-```  
-[whitespace] [sign] [digits]  
-```  
-  
- Un `whitespace` consta de caracteres de espacio o tabulación, que se omiten; `sign` sea más (+) o menos (-); y `digits` es uno o más dígitos.  
-  
- `_wtoll` es idéntica a `atoll`, salvo en que toma una cadena de caracteres anchos como parámetro.  
-  
- Las versiones de estas funciones que tienen el sufijo `_l` son idénticas a las versiones que no lo tienen, salvo en que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, consulte [Configuración regional](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tstoll`|`atoll`|`atoll`|`_wtoll`|  
-|`_tstoll_l`|`_atoll_l`|`_atoll_l`|`_wtoll_l`|  
-|`_ttoll`|`_atoll`|`_atoll`|`_wtoll`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutinas|Encabezado necesario|  
-|--------------|---------------------|  
-|`atoll`, `_atoll_l`|\<stdlib.h>|  
-|`_wtoll`, `_wtoll_l`|\<stdlib.h> o \<wchar.h>|  
-  
-## <a name="example"></a>Ejemplo  
- Este programa muestra cómo se pueden usar las funciones `atoll` para convertir números almacenados como cadenas en valores numéricos.  
-  
-```  
-// crt_atoll.c  
-// Build with: cl /W4 /Tc crt_atoll.c  
-// This program shows how to use the atoll   
-// functions to convert numbers stored as   
-// strings to numeric values.  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main(void)  
-{  
-    char *str = NULL;  
-    long long value = 0;  
-  
-    // An example of the atoll function  
-    // with leading and trailing white spaces.  
-    str = "  -27182818284 ";  
-    value = atoll(str);  
-    printf("Function: atoll(\"%s\") = %lld\n", str, value);  
-  
-    // Another example of the atoll function   
-    // with an arbitrary decimal point.  
-    str = "314127.64";  
-    value = atoll(str);  
-    printf("Function: atoll(\"%s\") = %lld\n", str, value);  
-  
-    // Another example of the atoll function  
-    // with an overflow condition occurring.  
-    str = "3336402735171707160320";  
-    value = atoll(str);  
-    printf("Function: atoll(\"%s\") = %lld\n", str, value);  
-    if (errno == ERANGE)  
-    {  
-       printf("Overflow condition occurred.\n");  
-    }  
-}  
-```  
-  
-```Output  
-Function: atoll("  -27182818284 ") = -27182818284  
-Function: atoll("314127.64") = 314127  
-Function: atoll("3336402735171707160320") = 9223372036854775807  
-Overflow condition occurred.  
-  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+
+Convierte una cadena en un **largo** **largo** entero.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+long long atoll(
+   const char *str
+);
+long long _wtoll(
+   const wchar_t *str
+);
+long long _atoll_l(
+   const char *str,
+   _locale_t locale
+);
+long long _wtoll_l(
+   const wchar_t *str,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Cadena que se va a convertir.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada función devuelve el **largo** **largo** valor generado mediante la interpretación de los caracteres de entrada como un número. El valor devuelto para **atoll** es 0 si la entrada no se puede convertir en un valor de ese tipo.
+
+Desbordamiento con valores enteros positivos grandes, **atoll** devuelve **LLONG_MAX**, y de desbordamiento con valores enteros negativos grandes, devuelve **LLONG_MIN**.
+
+En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro que se pasa es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones convierten una cadena de caracteres para un **largo** **largo** valor entero.
+
+La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que finaliza la cadena.
+
+El *str* argumento pasado a **atoll** tiene la forma siguiente:
+
+> [*espacio en blanco*] [*inicio de sesión*] [*dígitos*]
+
+A *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); y *dígitos* es uno o más dígitos.
+
+**_wtoll** es idéntico a **atoll** salvo que toma una cadena de caracteres anchos como parámetro.
+
+Las versiones de estas funciones que tienen la **_l** sufijo son idénticas a las versiones que no lo tiene, salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tstoll**|**atoll**|**atoll**|**_wtoll**|
+|**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
+|**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutinas|Encabezado necesario|
+|--------------|---------------------|
+|**Atoll**, **_atoll_l**|\<stdlib.h>|
+|**_wtoll**, **_wtoll_l**|\<stdlib.h> o \<wchar.h>|
+
+## <a name="example"></a>Ejemplo
+
+Este programa muestra cómo utilizar el **atoll** funciones para convertir números almacenados como cadenas en valores numéricos.
+
+```C
+// crt_atoll.c
+// Build with: cl /W4 /Tc crt_atoll.c
+// This program shows how to use the atoll
+// functions to convert numbers stored as
+// strings to numeric values.
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+
+int main(void)
+{
+    char *str = NULL;
+    long long value = 0;
+
+    // An example of the atoll function
+    // with leading and trailing white spaces.
+    str = "  -27182818284 ";
+    value = atoll(str);
+    printf("Function: atoll(\"%s\") = %lld\n", str, value);
+
+    // Another example of the atoll function
+    // with an arbitrary decimal point.
+    str = "314127.64";
+    value = atoll(str);
+    printf("Function: atoll(\"%s\") = %lld\n", str, value);
+
+    // Another example of the atoll function
+    // with an overflow condition occurring.
+    str = "3336402735171707160320";
+    value = atoll(str);
+    printf("Function: atoll(\"%s\") = %lld\n", str, value);
+    if (errno == ERANGE)
+    {
+       printf("Overflow condition occurred.\n");
+    }
+}
+```
+
+```Output
+Function: atoll("  -27182818284 ") = -27182818284
+Function: atoll("314127.64") = 314127
+Function: atoll("3336402735171707160320") = 9223372036854775807
+Overflow condition occurred.
+
+```
+
+## <a name="see-also"></a>Vea también
+
+[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_fcvt](fcvt.md)<br/>
+[_gcvt](gcvt.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

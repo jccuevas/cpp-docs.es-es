@@ -1,13 +1,13 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl | Documentos de Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - nearbyint
@@ -40,73 +40,69 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4cce9fb5d95da5e65a064d622da22e4d0f0a8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0aacdeb67e7c467bf6f8719172dfd9771e0cec8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
-Redondea el valor de punto flotante especificado en un entero y devuelve ese valor con un formato de punto flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double nearbyint(  
-   double x  
-);  
-  
-float nearbyint(  
-   float x  
-); //C++ only  
-  
-long double nearbyint(  
-   long double x  
-); //C++ only  
-  
-float nearbyintf(  
-   float x  
-);  
-  
-long double nearbyintl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- [in] `x`  
- El valor que se va a redondear.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si se realiza correctamente, devuelve `x`, redondeado al entero más cercano usando el formato de redondeo actual, de acuerdo con lo que se defina en fegetround. De lo contrario, es posible que la función devuelva uno de los siguientes valores:  
-  
-|Problema|Volver|  
-|-----------|------------|  
-|`x` = ±INFINITY|±Infinity, sin cambios|  
-|`x` = ±0|± 0, sin cambios|  
-|`x` = NaN|NaN|  
-  
- Los errores no se notifican a través de [_matherr](../../c-runtime-library/reference/matherr.md); en concreto, esta función no notifica ninguna excepción FE_INEXACT.  
-  
-## <a name="remarks"></a>Comentarios  
- La principal diferencia entre esta función y `rint` es que esta función no genera la excepción de punto flotante inexacta.  
-  
- Dado que los valores de punto flotante máximos son enteros exactos, esta función nunca se desbordará por sí misma, sino que la salida podría desbordar el valor devuelto, según la versión de la función que use.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado C|Encabezado C++|  
-|--------------|--------------|------------------|  
-|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Redondea el valor de punto flotante especificado en un entero y devuelve ese valor con un formato de punto flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double nearbyint( double x );
+float nearbyintf( float x );
+long double nearbyintl( long double x );
+```
+
+```cpp
+float nearbyint( float x ); //C++ only
+long double nearbyint( long double x ); //C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+El valor que se va a redondear.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si se realiza correctamente, devuelve *x*, redondeado al entero más próximo, usando el formato de redondeo actual devuelto por [fegetround](fegetround-fesetround2.md). De lo contrario, es posible que la función devuelva uno de los siguientes valores:
+
+|Problema|Volver|
+|-----------|------------|
+|*x* = ±INFINITY|±Infinity, sin cambios|
+|*x* = ± 0|± 0, sin cambios|
+|*x* = NaN|NaN|
+
+No se notifican errores a través de [_matherr](matherr.md); en concreto, esta función no informa de cualquier **FE_INEXACT** excepciones.
+
+## <a name="remarks"></a>Comentarios
+
+La principal diferencia entre esta función y [rint](rint-rintf-rintl.md) es que esta función no provoca la excepción de punto flotante inexacto.
+
+Dado que los valores de punto flotante máximos son enteros exactos, esta función nunca se desbordará por sí misma, sino que la salida podría desbordar el valor devuelto, según la versión de la función que use.
+
+C++ permite las sobrecargas, es posible llamar a las sobrecargas de **nearbyint** que toman y devuelven **float** o **largo** **doble** parámetros. En un programa C, **nearbyint** siempre toma dos valores double y devuelve un valor de tipo double.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado C|Encabezado C++|
+|--------------|--------------|------------------|
+|**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> o \<math.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
+[Matemáticas y compatibilidad de punto flotante](../floating-point-support.md)<br/>

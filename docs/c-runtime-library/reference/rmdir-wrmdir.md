@@ -1,12 +1,12 @@
 ---
 title: _rmdir, _wrmdir | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wrmdir
@@ -42,78 +42,81 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527b9baa6da22ae33ef0bd14ded46780aecaa0d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f1532aebb588ca67316a1317e0d27184309a5701
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
-Elimina un directorio.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      int _rmdir(  
-   const char *dirname   
-);  
-int _wrmdir(  
-   const wchar_t *dirname   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `dirname`  
- Ruta de acceso del directorio que se va a quitar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de -1 indica un error y `errno` se establece en uno de los siguientes valores:  
-  
- **ENOTEMPTY**  
- La ruta de acceso especificada no es un directorio, el directorio no está vacío o el directorio es el directorio de trabajo actual o el directorio raíz.  
-  
- `ENOENT`  
- La ruta de acceso no es válida.  
-  
- **EACCES**  
- Un programa tiene un identificador abierto en el directorio.  
-  
- Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_rmdir` elimina el directorio especificado por `dirname`. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.  
-  
- `_wrmdir` es una versión con caracteres anchos de `_rmdir`; el argumento `dirname` para `_wrmdir` es una cadena de caracteres anchos. Por lo demás, `_wrmdir` y `_rmdir` se comportan de forma idéntica.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_trmdir`|`_rmdir`|`_rmdir`|`_wrmdir`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_rmdir`|\<direct.h>|  
-|`_wrmdir`|\<direct.h> o \<wchar.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Control de directorio](../../c-runtime-library/directory-control.md)   
- [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)
+
+Elimina un directorio.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _rmdir(
+   const char *dirname
+);
+int _wrmdir(
+   const wchar_t *dirname
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*DirName*<br/>
+Ruta de acceso del directorio que se va a quitar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente. Un valor devuelto de -1 indica un error y **errno** se establece en uno de los siguientes valores:
+
+|valor de errno|Condición|
+|-|-|
+**ENOTEMPTY**|La ruta de acceso especificada no es un directorio, el directorio no está vacío o el directorio es el directorio de trabajo actual o el directorio raíz.
+**ENOENT**|La ruta de acceso no es válida.
+**EACCES**|Un programa tiene un identificador abierto en el directorio.
+
+Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_rmdir** función elimina el directorio especificado por *dirname*. El directorio debe estar vacío y no debe ser el directorio de trabajo actual ni el directorio raíz.
+
+**_wrmdir** es una versión con caracteres anchos de **_rmdir**; el *dirname* argumento pasado a **_wrmdir** es una cadena de caracteres anchos. **_wrmdir** y **_rmdir** se comportan exactamente igual.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_rmdir**|\<direct.h>|
+|**_wrmdir**|\<direct.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [_mkdir](mkdir-wmkdir.md).
+
+## <a name="see-also"></a>Vea también
+
+[Control de directorio](../../c-runtime-library/directory-control.md)<br/>
+[_chdir, _wchdir](chdir-wchdir.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

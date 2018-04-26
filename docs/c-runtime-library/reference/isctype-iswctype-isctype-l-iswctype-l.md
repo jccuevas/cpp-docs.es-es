@@ -1,12 +1,12 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isctype_l
@@ -47,81 +47,86 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe43830894be3c004fb21598b0324b864fe5b9b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 25df7ddaaea8c1f4df0907ebd92827f2a4865007
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
-Prueba `c` para ver si tiene la propiedad especificada por el argumento de `desc`. Para cada valor válido de `desc`, hay una rutina de clasificación de caracteres anchos equivalente.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _isctype(  
-   int c,  
-   _ctype_t desc  
-);  
-int _isctype_l(  
-   int c,  
-   _ctype_t desc,  
-   _locale_t locale  
-);  
-int iswctype(  
-   wint_t c,  
-   wctype_t desc   
-);  
-int _iswctype_l(  
-   wint_t c,  
-   wctype_t desc,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `c`  
- Entero que se va a probar.  
-  
- `desc`  
- Propiedad que se va a probar. Normalmente se recupera mediante ctype o [wctype](../../c-runtime-library/reference/wctype.md).  
-  
- `locale`  
- Configuración regional que se va a usar para las pruebas dependientes de la configuración regional.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_isctype` y `iswctype` devuelven un valor distinto de cero si `c` tiene la propiedad especificada por `desc` en la configuración regional, o 0 si no la tiene. Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- El comportamiento de `_isctype` e `_isctype_l` es indefinido si `c` no se encuentra al final del archivo ni en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca CRT de depuración y `c` no es uno de estos valores, las funciones generan una aserción.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`n/a`|`_isctype`|`n/a`|`_iswctype`|  
-|`n/a`|`_isctype_l`|`n/a`|`_iswctype_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_isctype`|\<ctype.h>|  
-|`iswctype`|\<ctype.h> o \<wchar.h>|  
-|`_isctype_l`|\<ctype.h>|  
-|`_iswctype_l`|\<ctype.h> o \<wchar.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Clasificación de caracteres](../../c-runtime-library/character-classification.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)
+
+Pruebas *c* para la propiedad ctype especificada por el *desc* argumento. Para cada valor válido de *desc*, hay una rutina equivalente de clasificación de caracteres anchos.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _isctype(
+   int c,
+   _ctype_t desc
+);
+int _isctype_l(
+   int c,
+   _ctype_t desc,
+   _locale_t locale
+);
+int iswctype(
+   wint_t c,
+   wctype_t desc
+);
+int _iswctype_l(
+   wint_t c,
+   wctype_t desc,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*<br/>
+Entero que se va a probar.
+
+*DESC*<br/>
+Propiedad que se va a probar. Normalmente se recupera mediante ctype o [wctype](wctype.md).
+
+*locale*<br/>
+Configuración regional que se va a usar para las pruebas dependientes de la configuración regional.
+
+## <a name="return-value"></a>Valor devuelto
+
+**_isctype** y **iswctype** devuelven un valor distinto de cero si *c* tiene la propiedad especificada por *desc* en la configuración regional actual o 0 si no es así. Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+El comportamiento de **_isctype** y **_isctype_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|N/D|**_isctype**|N/D|**_iswctype**|
+|N/D|**_isctype_l**|N/D|**_iswctype_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_isctype**|\<ctype.h>|
+|**iswctype**|\<ctype.h> o \<wchar.h>|
+|**_isctype_l**|\<ctype.h>|
+|**_iswctype_l**|\<ctype.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vea también
+
+[Clasificación de caracteres](../../c-runtime-library/character-classification.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[is, isw (rutinas)](../../c-runtime-library/is-isw-routines.md)<br/>

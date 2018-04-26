@@ -1,12 +1,12 @@
 ---
 title: _recalloc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _recalloc
@@ -32,81 +32,86 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de1b57dfed2d678722c2ccf496ac7a6f6d6a2fcb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a87aa06cecd27db22354108f283802775f62b02e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="recalloc"></a>_recalloc
-Combinación de `realloc` y `calloc`. Reasigna una matriz en la memoria e inicializa sus elementos a 0.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void *_recalloc(   
-   void *memblock  
-   size_t num,  
-   size_t size   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `memblock`  
- Puntero al bloque de memoria asignado previamente.  
-  
- `num`  
- Número de elementos.  
-  
- `size`  
- Longitud en bytes de cada elemento.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_recalloc` devuelve un puntero `void` al bloque de memoria reasignado (y, probablemente, trasladado).  
-  
- Si no hay memoria suficiente para expandir el bloque al tamaño determinado, el bloque original permanece inalterado y se devuelve `NULL`.  
-  
- Si el tamaño solicitado es cero, el bloque señalado por `memblock` se libera; el valor devuelto es `NULL` y `memblock` sigue apuntando a un bloque liberado.  
-  
- El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para obtener un puntero a un tipo distinto de `void`, use una conversión de tipo en el valor devuelto.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_recalloc` cambia el tamaño de un bloque de memoria asignado. El argumento `memblock` apunta al principio del bloque de memoria. Si `memblock` es `NULL`, `_recalloc` se comporta del mismo modo que [calloc](../../c-runtime-library/reference/calloc.md) y asigna un nuevo bloque de `num`  *  `size` bytes. Cada elemento se inicializa en 0. Si `memblock` no es `NULL`, debe ser un puntero devuelto por una llamada anterior a `calloc`, [malloc](../../c-runtime-library/reference/malloc.md) o [realloc](../../c-runtime-library/reference/realloc.md).  
-  
- Dado que el bloque nuevo puede estar en una nueva ubicación de memoria, no se garantiza que el puntero devuelto por `_recalloc` sea el puntero que se pasa a través del argumento `memblock`.  
-  
- `_recalloc` establece `errno` en `ENOMEM` si se produce un error de asignación de memoria o si la cantidad de memoria solicitada supera `_HEAP_MAXREQ`. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- `recalloc` llama a `realloc` para usar la función [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) de C++ y establecer el nuevo modo de controlador. El nuevo modo de controlador indica si, en caso de error, `realloc` va a llamar a la rutina del nuevo controlador, según lo establecido por [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). De forma predeterminada, `realloc` no llama a la rutina del nuevo controlador en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando `_recalloc` no pueda asignar memoria, `realloc` llame a la rutina del nuevo controlador de la misma forma que hace el operador `new` cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a  
-  
-```  
-_set_new_mode(1)  
-```  
-  
- temprano en el programa o vincúlelo con NEWMODE.OBJ.  
-  
- Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, `_recalloc` se resuelve como [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- `_recalloc` está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no modifica las variables globales y que el puntero devuelto no tiene alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_recalloc`|\<stdlib.h> y \<malloc.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Asignación de memoria](../../c-runtime-library/memory-allocation.md)   
- [_recalloc_dbg](../../c-runtime-library/reference/recalloc-dbg.md)   
- [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md)   
- [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)   
- [free](../../c-runtime-library/reference/free.md)   
- [Opciones de vínculo](../../c-runtime-library/link-options.md)
+
+Una combinación de **realloc** y **calloc**. Reasigna una matriz en la memoria e inicializa sus elementos a 0.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void *_recalloc(
+   void *memblock
+   size_t num,
+   size_t size
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*memblock*<br/>
+Puntero al bloque de memoria asignado previamente.
+
+*Número*<br/>
+Número de elementos.
+
+*size*<br/>
+Longitud en bytes de cada elemento.
+
+## <a name="return-value"></a>Valor devuelto
+
+**_recalloc** devuelve un **void** puntero al bloque de memoria reasignado (y, probablemente, trasladado).
+
+Si no hay memoria suficiente para expandir el bloque al tamaño especificado, el bloque original se permanecen sin cambios, y **NULL** se devuelve.
+
+Si el tamaño solicitado es cero, el bloque que señala *memblock* se libera; el valor devuelto es **NULL**, y *memblock* haciendo referencia a un bloque liberado.
+
+El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para obtener un puntero a un tipo distinto de **void**, use un conversión de tipo en el valor devuelto.
+
+## <a name="remarks"></a>Comentarios
+
+El **_recalloc** función cambia el tamaño de un bloque de memoria asignado. El *memblock* argumento apunta al principio del bloque de memoria. Si *memblock* es **NULL**, **_recalloc** se comporta del mismo modo que [calloc](calloc.md) y asigna un nuevo bloque de *número*  *  *tamaño* bytes. Cada elemento se inicializa en 0. Si *memblock* no **NULL**, debe ser un puntero devuelto por una llamada anterior a **calloc**, [malloc](malloc.md), o [realloc ](realloc.md).
+
+Dado que el nuevo bloque puede ser en una nueva ubicación de memoria, el puntero devuelto por **_recalloc** no se garantiza que el puntero que se pasa a través de la *memblock* argumento.
+
+**_recalloc** establece **errno** a **ENOMEM** si se produce un error en la asignación de memoria o si la cantidad de memoria solicitada supera **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+**recalloc** llamadas **realloc** para poder usar C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **realloc** consiste en llamar a la rutina del controlador nuevo según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **realloc** no llama a la rutina del controlador de nuevo en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **_recalloc** no puede asignar memoria, **realloc** llama a la rutina del controlador de nuevo en la misma forma en que la **nueva** (operador) realiza cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
+
+```C
+_set_new_mode(1);
+```
+
+temprano en el programa o vincúlelo con NEWMODE.OBJ.
+
+Cuando la aplicación se vincula con una versión de depuración de las bibliotecas de tiempo de ejecución de C, **_recalloc** se resuelve como [_recalloc_dbg](recalloc-dbg.md). Para obtener más información sobre cómo se administra el montón durante el proceso de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+**_recalloc** está marcado como `__declspec(noalias)` y `__declspec(restrict)`, lo que significa que se garantiza que la función no se puede modificar las variables globales y que el puntero devuelto no es un alias. Para obtener más información, consulte [noalias](../../cpp/noalias.md) y [restrict](../../cpp/restrict.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_recalloc**|\<stdlib.h> y \<malloc.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Asignación de memoria](../../c-runtime-library/memory-allocation.md)<br/>
+[_recalloc_dbg](recalloc-dbg.md)<br/>
+[_aligned_recalloc](aligned-recalloc.md)<br/>
+[_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>
+[free](free.md)<br/>
+[Opciones de vínculo](../../c-runtime-library/link-options.md)<br/>

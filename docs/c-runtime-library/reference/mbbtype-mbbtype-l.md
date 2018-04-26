@@ -1,12 +1,12 @@
 ---
 title: _mbbtype, _mbbtype_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbbtype
@@ -37,76 +37,81 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beaa8e11b8593205dd192547097e6f7228625410
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc67c09d1196308df89d70a02cf2cea4c713b0d2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
-Devuelve el tipo de bytes, según el byte anterior.  
-  
+
+Devuelve el tipo de bytes, según el byte anterior.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _mbbtype(  
-   unsigned char c,  
-   int type   
-);  
-int _mbbtype_l(  
-   unsigned char c,  
-   int type,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `c`  
- Carácter que se va a probar.  
-  
- `type`  
- El tipo de byte que se va a probar.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_mbbtype`devuelve el tipo de byte en una cadena. Esta decisión es contextual, según lo especificado por el valor de `type`, que proporciona la condición de prueba del control. `type` es el tipo del byte anterior de la cadena. Las constantes de manifiesto de la siguiente tabla se definen en Mbctype.h.  
-  
-|Valor de `type`|Pruebas `_mbbtype` para|Valor devuelto|`c`|  
-|---------------------|--------------------------|------------------|---------|  
-|Cualquier valor excepto 1|Byte único o byte inicial válidos|`_MBC_SINGLE` (0)|Un solo byte (0 x 20 - 0x7E, 0xA1 - 0xDF)|  
-|Cualquier valor excepto 1|Byte único o byte inicial válidos|`_MBC_LEAD` (1)|Byte de un carácter multibyte inicial (0 x 81 - 0x9F, 0xE0 - 0xFC)|  
-|Cualquier valor excepto 1|Byte único o byte inicial válidos.|`_MBC_ILLEGAL`<br /><br /> ( -1)|Carácter no válido (cualquier valor excepto 0 x 20 - 0x7E, 0xA1 - 0xDF, 0 x 81 - 0x9F, 0xE0 - 0xFC|  
-|1|Byte final válido|`_MBC_TRAIL` (2)|Byte final de juegos de caracteres multibyte (0 x 40 - 0x7E, 0 x 80 - 0xFC)|  
-|1|Byte final válido|`_MBC_ILLEGAL`<br /><br /> ( -1)|Carácter no válido (cualquier valor excepto 0 x 20 - 0x7E, 0xA1 - 0xDF, 0 x 81 - 0x9F, 0xE0 - 0xFC|  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_mbbtype` determina el tipo de un byte de un carácter multibyte. Si el valor de `type` es cualquier valor excepto 1, `_mbbtype` prueba para un byte único o un byte inicial válidos de un carácter multibyte. Si el valor de `type` es 1, `_mbbtype` prueba para un byte final válido de un carácter multibyte.  
-  
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. La versión `_mbbtype` de esta función usa la configuración regional actual de su comportamiento dependiente de la configuración regional; la versión `_mbbtype_l` es idéntica, salvo que usa el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- En versiones anteriores, `_mbbtype` se denominaba `chkctype`. Para el código nuevo use `_mbbtype`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezado opcional|  
-|-------------|---------------------|---------------------|  
-|`_mbbtype`|\<mbstring.h>|\<mbctype.h>*|  
-|`_mbbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
-  
- \* Para las definiciones de constantes de manifiesto que se usan como valores devueltos.  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Clasificación de bytes](../../c-runtime-library/byte-classification.md)
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _mbbtype(
+   unsigned char c,
+   int type
+);
+int _mbbtype_l(
+   unsigned char c,
+   int type,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*<br/>
+Carácter que se va a probar.
+
+*type*<br/>
+El tipo de byte que se va a probar.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+**_mbbtype** devuelve el tipo de byte de una cadena. Esta decisión es contextual, según lo especificado por el valor de *tipo*, que proporciona la condición de prueba del control. *tipo* es el tipo del byte anterior de la cadena. Las constantes de manifiesto de la siguiente tabla se definen en Mbctype.h.
+
+|Valor de *tipo*|**_mbbtype** para las pruebas|Valor devuelto|*c*|
+|---------------------|--------------------------|------------------|---------|
+|Cualquier valor excepto 1|Byte único o byte inicial válidos|**_MBC_SINGLE** (0)|Un solo byte (0 x 20 - 0x7E, 0xA1 - 0xDF)|
+|Cualquier valor excepto 1|Byte único o byte inicial válidos|**_MBC_LEAD** (1)|Byte de un carácter multibyte inicial (0 x 81 - 0x9F, 0xE0 - 0xFC)|
+|Cualquier valor excepto 1|Byte único o byte inicial válidos.|**_MBC_ILLEGAL**<br /><br /> ( -1)|Carácter no válido (cualquier valor excepto 0 x 20 - 0x7E, 0xA1 - 0xDF, 0 x 81 - 0x9F, 0xE0 - 0xFC|
+|1|Byte final válido|**_MBC_TRAIL** (2)|Byte final de juegos de caracteres multibyte (0 x 40 - 0x7E, 0 x 80 - 0xFC)|
+|1|Byte final válido|**_MBC_ILLEGAL**<br /><br /> ( -1)|Carácter no válido (cualquier valor excepto 0 x 20 - 0x7E, 0xA1 - 0xDF, 0 x 81 - 0x9F, 0xE0 - 0xFC|
+
+## <a name="remarks"></a>Comentarios
+
+El **_mbbtype** función determina el tipo de un byte de un carácter multibyte. Si el valor de *tipo* es cualquier valor excepto 1, **_mbbtype** pruebas para un válido byte único o byte inicial de un carácter multibyte. Si el valor de *tipo* es 1, **_mbbtype** comprueba si un byte final válido de un carácter multibyte.
+
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. El **_mbbtype** versión de esta función usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la **_mbbtype_l** versión es idéntica, salvo que usa el parámetro de configuración regional que se pasa en su lugar . Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+En versiones anteriores, **_mbbtype** se llamaba **chkctype**. Para código nuevo, use **_mbbtype** en su lugar.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezado opcional|
+|-------------|---------------------|---------------------|
+|**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
+
+\* Para las definiciones de constantes de manifiesto que se usan como valores devueltos.
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Clasificación de bytes](../../c-runtime-library/byte-classification.md)<br/>

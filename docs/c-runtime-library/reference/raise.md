@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>Parámetros
 
-*sig*  
+*sig*<br/>
 Señal que se va a producir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -73,14 +73,14 @@ La función **raise** envía *sig* al programa en ejecución. Si una llamada ant
 
 |Señal|Significado|Default|
 |------------|-------------|-------------|
-|`SIGABRT`|Terminación anómala|Finaliza el programa de llamada con el código de salida 3|
-|`SIGFPE`|Error de punto flotante|Finaliza el programa de llamada|
-|`SIGILL`|Instrucción no válida|Finaliza el programa de llamada|
-|`SIGINT`|Interrupción de CTRL+C|Finaliza el programa de llamada|
-|`SIGSEGV`|Acceso no válido a almacenamiento|Finaliza el programa de llamada|
-|`SIGTERM`|Solicitud de finalización enviada al programa|Omite la señal|
+|**SIGABRT**|Terminación anómala|Finaliza el programa de llamada con el código de salida 3|
+|**SIGFPE**|Error de punto flotante|Finaliza el programa de llamada|
+|**SIGILL**|Instrucción no válida|Finaliza el programa de llamada|
+|**SIGINT**|Interrupción de CTRL+C|Finaliza el programa de llamada|
+|**SIGSEGV**|Acceso no válido a almacenamiento|Finaliza el programa de llamada|
+|**SIGTERM**|Solicitud de finalización enviada al programa|Omite la señal|
 
-Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no es controlada, la función establece `errno` en `EINVAL` y devuelve un valor distinto de cero.
+Si el argumento no es una señal válida según lo especificado anteriormente, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si no se controla, la función establece **errno** a **EINVAL** y devuelve un valor distinto de cero.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -92,6 +92,6 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="see-also"></a>Vea también
 
-[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[Control de proceso y de entorno](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

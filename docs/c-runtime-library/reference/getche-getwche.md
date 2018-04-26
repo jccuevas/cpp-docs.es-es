@@ -1,12 +1,12 @@
 ---
 title: _getche, _getwche | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getwche
@@ -37,92 +37,96 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 050fa0024c827caf8a7f27b5462a341bea344bfb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70648b53b0d2fcf10442fe195dd07a3f904b039e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getche-getwche"></a>_getche, _getwche
-Obtiene un carácter de la consola con repetición.  
-  
+
+Obtiene un carácter de la consola con repetición.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _getche( void );  
-wint_t _getwche( void );  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve el carácter leído. No se devuelve ningún error.  
-  
-## <a name="remarks"></a>Comentarios  
- Las funciones `_getche` y `_getwche` leen un solo carácter de la consola con repetición, es decir, el carácter se muestra en la consola. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.  
-  
- Estas funciones bloquean el subproceso de llamada y son, por consiguiente, seguras para subprocesos. Para obtener versiones que no sean de bloqueo, consulte [_getche_nolock, _getwche_nolock](../../c-runtime-library/reference/getche-nolock-getwche-nolock.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_getche`|`_getche`|`_getch`|`_getwche`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_getche`|\<conio.h>|  
-|`_getwche`|\<conio.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_getche.c  
-// compile with: /c  
-// This program reads characters from  
-// the keyboard until it receives a 'Y' or 'y'.  
-  
-#include <conio.h>  
-#include <ctype.h>  
-  
-int main( void )  
-{  
-   int ch;  
-  
-   _cputs( "Type 'Y' when finished typing keys: " );  
-   do  
-   {  
-      ch = _getche();  
-      ch = toupper( ch );  
-   } while( ch != 'Y' );  
-  
-   _putch( ch );  
-   _putch( '\r' );    // Carriage return  
-   _putch( '\n' );    // Line feed       
-}  
-```  
-  
-```Input  
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _getche( void );
+wint_t _getwche( void );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve el carácter leído. No se devuelve ningún error.
+
+## <a name="remarks"></a>Comentarios
+
+El **_getche** y **_getwche** funciones leen un solo carácter de la consola con repetición, lo que significa que el carácter se muestra en la consola. Ninguna de estas funciones se puede usar para leer CTRL+C. Al leer una tecla de función o de dirección, se debe llamar dos veces a cada función: la primera llamada devuelve 0 o 0xE0, y la segunda devuelve el código de tecla real.
+
+Estas funciones bloquean el subproceso de llamada y son, por consiguiente, seguras para subprocesos. Para obtener versiones que no sean de bloqueo, consulte [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_getche**|**_getche**|**_getch**|**_getwche**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_getche**|\<conio.h>|
+|**_getwche**|\<conio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_getche.c
+// compile with: /c
+// This program reads characters from
+// the keyboard until it receives a 'Y' or 'y'.
+
+#include <conio.h>
+#include <ctype.h>
+
+int main( void )
+{
+   int ch;
+
+   _cputs( "Type 'Y' when finished typing keys: " );
+   do
+   {
+      ch = _getche();
+      ch = toupper( ch );
+   } while( ch != 'Y' );
+
+   _putch( ch );
+   _putch( '\r' );    // Carriage return
+   _putch( '\n' );    // Line feed
+}
+```
+
+```Input
 abcdefy
 ```
-  
-```Output  
-Type 'Y' when finished typing keys: abcdefyY  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)   
- [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+
+```Output
+Type 'Y' when finished typing keys: abcdefyY
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>
+[_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

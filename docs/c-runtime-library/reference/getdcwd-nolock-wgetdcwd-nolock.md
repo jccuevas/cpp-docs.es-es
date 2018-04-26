@@ -1,12 +1,12 @@
 ---
 title: _getdcwd_nolock, _wgetdcwd_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
@@ -43,74 +43,79 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c1d9f4c57ef942f11f5e5dee79356a3e2d7f47a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 53f050868e84c102c0d84dd22e03e27cf733ea5f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
-Obtiene la ruta de acceso completa del directorio de trabajo actual en la unidad especificada.  
-  
+
+Obtiene la ruta de acceso completa del directorio de trabajo actual en la unidad especificada.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-char *_getdcwd_nolock(   
-   int drive,  
-   char *buffer,  
-   int maxlen   
-);  
-wchar_t *_wgetdcwd_nolock(   
-   int drive,  
-   wchar_t *buffer,  
-   int maxlen   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `drive`  
- Unidad de disco.  
-  
- `buffer`  
- Ubicación de almacenamiento de la ruta de acceso.  
-  
- `maxlen`  
- Longitud máxima de la ruta de acceso en caracteres: `char` para `_getdcwd` y `wchar_t` para `_wgetdcwd`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Consulte [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md).  
-  
-## <a name="remarks"></a>Comentarios  
- `_getdcwd_nolock` y `_wgetdcwd_nolock` son exactamente iguales que `_getdcwd` y `_wgetdcwd`, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tgetdcwd_nolock`|`_getdcwd_nolock`|`_getdcwd_nolock`|`_wgetdcwd_nolock`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_getdcwd_nolock`|\<direct.h>|  
-|`_wgetdcwd_nolock`|\<direct.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Control de directorio](../../c-runtime-library/directory-control.md)   
- [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir, _wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char *_getdcwd_nolock(
+   int drive,
+   char *buffer,
+   int maxlen
+);
+wchar_t *_wgetdcwd_nolock(
+   int drive,
+   wchar_t *buffer,
+   int maxlen
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Unidad*<br/>
+Unidad de disco.
+
+*buffer*<br/>
+Ubicación de almacenamiento de la ruta de acceso.
+
+*MAXLEN*<br/>
+Longitud máxima de ruta de acceso en caracteres: **char** para **_getdcwd** y **wchar_t** para **_wgetdcwd**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Consulte [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
+
+## <a name="remarks"></a>Comentarios
+
+**_getdcwd_nolock** y **_wgetdcwd_nolock** son idénticas a **_getdcwd** y **_wgetdcwd**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_getdcwd_nolock**|\<direct.h>|
+|**_wgetdcwd_nolock**|\<direct.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Control de directorio](../../c-runtime-library/directory-control.md)<br/>
+[_chdir, _wchdir](chdir-wchdir.md)<br/>
+[_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
+[_getdrive](getdrive.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>

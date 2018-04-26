@@ -1,12 +1,12 @@
 ---
 title: _fsopen, _wfsopen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfsopen
@@ -44,143 +44,148 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29ace593ec55a74db72a9bfd9d8f155055923a83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a29a81c3430674ddc6d3c04b64fb6dcee3b6a039
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
-Abre un flujo con uso compartido de archivos.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-FILE *_fsopen(   
-   const char *filename,  
-   const char *mode,  
-   int shflag   
-);  
-FILE *_wfsopen(   
-   const wchar_t *filename,  
-   const wchar_t *mode,  
-   int shflag   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `filename`  
- Nombre del archivo que se va a abrir.  
-  
- `mode`  
- Tipo de acceso permitido.  
-  
- `shflag`  
- Tipo de uso compartido permitido.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas funciones devuelve un puntero al flujo. Un valor de puntero null indica un error. Si `filename` o `mode` es `NULL` o una cadena vacía, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven `NULL` y establecen `errno` en `EINVAL`.  
-  
- Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_fsopen` abre el archivo especificado por `filename` como un flujo y lo prepara para una lectura o escritura compartida posterior, como establecen los argumentos `shflag` y el modo. `_wfsopen` es una versión con caracteres anchos de `_fsopen`; los argumentos `filename` y `mode` para `_wfsopen` son cadenas de caracteres anchos. Por lo demás, `_wfsopen` y `_fsopen` se comportan de forma idéntica.  
-  
- La cadena de caracteres `mode` especifica el tipo de acceso solicitado para el archivo, como se muestra en la tabla siguiente.  
-  
-|Término|Definición|  
-|----------|----------------|  
-|`"r"`|Abre para lectura. Si el archivo no existe o no se encuentra, la llamada de `_fsopen` falla.|  
-|`"w"`|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.|  
-|`"a"`|Se abre para escribir al final del archivo (anexo); primero crea el archivo si no existe.|  
-|`"r+"`|Abre para lectura y escritura. (El archivo debe existir.)|  
-|`"w+"`|Abre un archivo vacío para lectura y escritura. Si el archivo especificado existe, se destruye su contenido.|  
-|`"a+"`|Se abre para leer y anexar; primero crea el archivo si no existe.|  
-  
- Use los tipos `"w"` y `"w+"` con cuidado, ya que podrían destruir archivos existentes.  
-  
- Cuando un archivo se abre con el tipo de acceso `"a"` o `"a+"`, todas las operaciones de escritura se producen al final del archivo. El puntero de archivo se puede mover mediante `fseek` o `rewind`, pero se desplaza siempre al final del archivo antes de que se realice cualquier operación de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando se especifica el tipo de acceso `"r+"`, `"w+"` o `"a+"`, se permiten la lectura y la escritura (se dice que el archivo está abierto para actualización). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](../../c-runtime-library/reference/fsetpos.md), [fseek](../../c-runtime-library/reference/fseek-fseeki64.md) o [rewind](../../c-runtime-library/reference/rewind.md). Si se desea, se puede especificar la posición actual para la operación `fsetpos` o `fseek`. Además de los valores anteriores, uno de los caracteres siguientes se puede incluir en `mode` para especificar el modo de traducción de las nuevas líneas y de la administración de archivos.  
-  
-|Término|Definición|  
-|----------|----------------|  
-|`t`|Abre un archivo en modo de texto (traducido). En este modo, carro retorno-combinaciones de línea (CR-LF) se traducen en avances de una línea (LF) en la entrada y caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o lectura y escritura, `_fsopen` comprueba si hay un Ctrl+Z al final del archivo y lo quita, si es posible. Se hace así porque el uso de `fseek` y `ftell` para desplazarse por un archivo que finaliza con CTRL+Z puede hacer que `fseek` se comporte de forma incorrecta cerca del final del archivo.|  
-|`b`|Abre un archivo en modo binario (sin traducir); las conversiones anteriores se suprimen.|  
-|`S`|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.|  
-|`R`|Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco.|  
-|`T`|Especifica un archivo como temporal. Si es posible, no se vuelca en el disco.|  
-|`D`|Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo.|  
-  
- Si no se especifica `t` o `b` en `mode`, el modo de traducción está definido por la variable de modo predeterminado `_fmode`. Si se agrega `t` o `b` como prefijo al argumento, se produce un error en la función y devuelve `NULL`. Para obtener una descripción de los modos de texto y binario, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
-  
- El argumento `shflag` es una expresión constante compuesta por una de las constantes de manifiesto siguientes, que se definen en Share.h.  
-  
-|Término|Definición|  
-|----------|----------------|  
-|`_SH_COMPAT`|Establece el modo de compatibilidad para aplicaciones de 16 bits.|  
-|`_SH_DENYNO`|Permite el acceso de lectura y escritura.|  
-|`_SH_DENYRD`|Deniega el acceso de lectura al archivo.|  
-|`_SH_DENYRW`|Deniega el acceso de lectura y escritura al archivo.|  
-|`_SH_DENYWR`|Deniega el acceso de escritura al archivo.|  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tfsopen`|`_fsopen`|`_fsopen`|`_wfsopen`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|Encabezados opcionales|  
-|--------------|---------------------|----------------------|  
-|`_fsopen`|\<stdio.h>|\<share.h><br /><br /> Para la constante de manifiesto del parámetro `shflag`.|  
-|`_wfsopen`|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Para la constante de manifiesto del parámetro `shflag`.|  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_fsopen.c  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <share.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-  
-   // Open output file for writing. Using _fsopen allows us to  
-   // ensure that no one else writes to the file while we are  
-   // writing to it.  
-    //  
-   if( (stream = _fsopen( "outfile", "wt", _SH_DENYWR )) != NULL )  
-   {  
-      fprintf( stream, "No one else in the network can write "  
-                       "to this file until we are done.\n" );  
-      fclose( stream );  
-   }  
-   // Now others can write to the file while we read it.  
-   system( "type outfile" );  
-}  
-```  
-  
-```Output  
-No one else in the network can write to this file until we are done.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [ferror](../../c-runtime-library/reference/ferror.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_setmode](../../c-runtime-library/reference/setmode.md)   
- [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)
+
+Abre un flujo con uso compartido de archivos.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+FILE *_fsopen(
+   const char *filename,
+   const char *mode,
+   int shflag
+);
+FILE *_wfsopen(
+   const wchar_t *filename,
+   const wchar_t *mode,
+   int shflag
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*filename*<br/>
+Nombre del archivo que se va a abrir.
+
+*mode*<br/>
+Tipo de acceso permitido.
+
+*shflag*<br/>
+Tipo de uso compartido permitido.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas funciones devuelve un puntero al flujo. Un valor de puntero null indica un error. Si *filename* o *modo* es **NULL** o una cadena vacía, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **NULL** y establecer **errno** a **EINVAL**.
+
+Para obtener más información sobre estos y otros códigos error, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_fsopen** función abre el archivo especificado por *filename* como una secuencia y se prepara el archivo para posterior lectura o escritura compartida, de acuerdo con el modo y *shflag*argumentos. **_wfsopen** es una versión con caracteres anchos de **_fsopen**; el *filename* y *modo* argumentos **_wfsopen** son cadenas de caracteres anchos. **_wfsopen** y **_fsopen** se comportan exactamente igual.
+
+La cadena de caracteres *modo* especifica el tipo de acceso solicitado para el archivo, como se muestra en la tabla siguiente.
+
+|Término|de esquema JSON|
+|----------|----------------|
+|**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra, el **_fsopen** llamadas se produce un error.|
+|**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.|
+|**"a"**|Se abre para escribir al final del archivo (anexo); primero crea el archivo si no existe.|
+|**"r+"**|Abre para lectura y escritura. (El archivo debe existir.)|
+|**"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo especificado existe, se destruye su contenido.|
+|**"a+"**|Se abre para leer y anexar; primero crea el archivo si no existe.|
+
+Use la **"w"** y **"w +"** tipos con cuidado, ya que podrían destruir archivos existentes.
+
+Cuando se abre un archivo con el **"a"** o **"+"** acceder a tipo, todas las operaciones de escritura aparecen al final del archivo. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier operación se lleva a cabo de escritura. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando el **"r +"**, **"w +"**, o **"+"** se especifica el tipo de acceso, se permiten la lectura y escritura (se dice que el archivo está abierto para actualización). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). Puede especificar la posición actual para la [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) operación, si lo desea. Además de los valores anteriores, uno de los siguientes caracteres puede incluirse en *modo* para especificar el modo de traducción para las nuevas líneas y de administración de archivos.
+
+|Término|de esquema JSON|
+|----------|----------------|
+|**t**|Abre un archivo en modo de texto (traducido). En este modo, carro retorno-combinaciones de línea (CR-LF) se traducen en avances de una línea (LF) en la entrada y caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o lectura/escritura, **_fsopen** comprueba si hay un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplazarse por un archivo que finaliza con CTRL+Z puede hacer [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo.|
+|**b**|Abre un archivo en modo binario (sin traducir); las conversiones anteriores se suprimen.|
+|**S**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.|
+|**R**|Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco.|
+|**T**|Especifica un archivo como temporal. Si es posible, no se vuelca en el disco.|
+|**D**|Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo.|
+
+Si no se especifica **t** o **b** en *mode*, el modo de traducción está definido por la variable de modo predeterminado **_fmode**. Si **t** o **b** tiene como prefijo al argumento, la función se produce un error y devuelve **NULL**. Para obtener una descripción de los modos de texto y binario, consulte [E/S de archivo en modo texto y en modo binario](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+
+El argumento *shflag* es una expresión constante compuesta por una de las siguientes constantes de manifiesto, definidas en Share.h.
+
+|Término|de esquema JSON|
+|----------|----------------|
+|**_SH_COMPAT**|Establece el modo de compatibilidad para aplicaciones de 16 bits.|
+|**_SH_DENYNO**|Permite el acceso de lectura y escritura.|
+|**_SH_DENYRD**|Deniega el acceso de lectura al archivo.|
+|**_SH_DENYRW**|Deniega el acceso de lectura y escritura al archivo.|
+|**_SH_DENYWR**|Deniega el acceso de escritura al archivo.|
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|Encabezados opcionales|
+|--------------|---------------------|----------------------|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Para la constante de manifiesto *shflag* parámetro.|
+|**_wfsopen**|\<stdio.h> o \<wchar.h>|\<share.h><br /><br /> Para la constante de manifiesto *shflag* parámetro.|
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_fsopen.c
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <share.h>
+
+int main( void )
+{
+   FILE *stream;
+
+   // Open output file for writing. Using _fsopen allows us to
+   // ensure that no one else writes to the file while we are
+   // writing to it.
+    //
+   if( (stream = _fsopen( "outfile", "wt", _SH_DENYWR )) != NULL )
+   {
+      fprintf( stream, "No one else in the network can write "
+                       "to this file until we are done.\n" );
+      fclose( stream );
+   }
+   // Now others can write to the file while we read it.
+   system( "type outfile" );
+}
+```
+
+```Output
+No one else in the network can write to this file until we are done.
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[ferror](ferror.md)<br/>
+[_fileno](fileno.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_setmode](setmode.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>

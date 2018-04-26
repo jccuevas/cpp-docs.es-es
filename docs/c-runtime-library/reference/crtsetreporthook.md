@@ -1,12 +1,12 @@
 ---
 title: _CrtSetReportHook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetReportHook
@@ -31,67 +31,73 @@ helpviewer_keywords:
 - CrtSetReportHook function
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c7b3a8954c39e8157834297ab5ac3a747420af8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: faa7e5726555ef8000cd393f8f2f7061024095ed
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
-Instala una función de generación de informes definida por el cliente enlazándola al proceso de creación de informes de depuración en tiempo de ejecución de C (solo versión de depuración).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-_CRT_REPORT_HOOK _CrtSetReportHook(   
-   _CRT_REPORT_HOOK reportHook   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `reportHook`  
- Nueva función de creación de informes definida por el cliente que se va a enlazar al proceso de creación de informes de depuración en tiempo de ejecución de C.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve la función de creación de informes definida por el cliente anterior.  
-  
-## <a name="remarks"></a>Comentarios  
- `_CrtSetReportHook` permite que una aplicación use su propia función de creación de informes en el proceso de creación de informes de la biblioteca de depuración en tiempo de ejecución de C. Por consiguiente, siempre que se llame a [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) para generar un informe de depuración, se llama primero a la función de creación de informes de la aplicación. Esta funcionalidad permite que una aplicación realice operaciones como el filtrado de informes de depuración, de modo que se pueda centrar en determinados tipos de asignación o enviar un informe a destinos no disponibles mediante `_CrtDbgReport`. Cuando no se define [_DEBUG](../../c-runtime-library/debug.md), las llamadas a `_CrtSetReportHook` se quitan durante el preprocesamiento.  
-  
- Para obtener una versión más sólida de `_CrtSetReportHook`, consulte [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md).  
-  
- La función `_CrtSetReportHook` instala la nueva función de creación de informes definida por el cliente especificada en `reportHook` y devuelve el enlace definido por el cliente anterior. En el ejemplo siguiente se muestra cómo se deben crear prototipos de un enlace de informe definido por el cliente:  
-  
-```  
-int YourReportHook( int reportType, char *message, int *returnValue );  
-```  
-  
- donde `reportType` es el tipo de informe de depuración (`_CRT_WARN`, `_CRT_ERROR` o `_CRT_ASSERT`), `message` es el mensaje totalmente ensamblado de usuario de depuración que se debe incluir en el informe, y `returnValue` es el valor especificado por la función de creación de informes definida por el cliente que `_CrtDbgReport` debe devolver. Para obtener una descripción completa de los tipos de informe disponibles, consulte la función [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md).  
-  
- Si la función de creación de informes definida por el cliente controla completamente el mensaje de depuración para que no sea necesario ningún otro informe, la función debe devolver `TRUE`. Cuando la función devuelve `FALSE`, se llama a `_CrtDbgReport` para generar el informe de depuración mediante la configuración actual de tipo, modo y archivo de informe. Además, si se especifica el valor devuelto por `_CrtDbgReport` en `returnValue`, la aplicación también puede controlar si se produce una interrupción de depuración. Para obtener una descripción completa de cómo se configura y genera el informe de depuración, consulte `_CrtSetReportMode`, [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) y `_CrtDbgReport`.  
-  
- Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).  
-  
+
+Instala una función de generación de informes definida por el cliente enlazándola al proceso de creación de informes de depuración en tiempo de ejecución de C (solo versión de depuración).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+_CRT_REPORT_HOOK _CrtSetReportHook(
+   _CRT_REPORT_HOOK reportHook
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*reportHook*<br/>
+Nueva función de creación de informes definida por el cliente que se va a enlazar al proceso de creación de informes de depuración en tiempo de ejecución de C.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve la función de creación de informes definida por el cliente anterior.
+
+## <a name="remarks"></a>Comentarios
+
+**_CrtSetReportHook** permite que una aplicación usar su propia reporting función en la biblioteca de depuración en tiempo de ejecución de C proceso de notificación. Por consiguiente, siempre que se llame a [_CrtDbgReport](crtdbgreport-crtdbgreportw.md) para generar un informe de depuración, se llama primero a la función de creación de informes de la aplicación. Esta funcionalidad permite a una aplicación realizar operaciones como el filtrado de informes de depuración para que pueda centrarse en los tipos de asignación concretos o enviar un informe a destinos no están disponibles mediante el uso de **_CrtDbgReport**. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetReportHook** se quitan durante el preprocesamiento.
+
+Para obtener una versión más sólida de **_CrtSetReportHook**, consulte [_CrtSetReportHook2](crtsetreporthook2-crtsetreporthookw2.md).
+
+El **_CrtSetReportHook** función instala la nueva función especificada en para generar informes definida por el cliente *reportHook* y devuelve el enlace definido por el cliente anterior. En el ejemplo siguiente se muestra cómo se deben crear prototipos de un enlace de informe definido por el cliente:
+
+```C
+int YourReportHook( int reportType, char *message, int *returnValue );
+```
+
+donde *reportType* es el tipo de informe de depuración (**_CRT_WARN**, **_CRT_ERROR**, o **_CRT_ASSERT**), *mensaje* es el mensaje de usuario totalmente ensamblado de depuración para poder estar contenidos en el informe, y **returnValue** el valor especificado por definido por el cliente informa de función que debe devolver **_ CrtDbgReport**. Para obtener una descripción completa de los tipos de informe disponibles, consulte la función [_CrtSetReportMode](crtsetreportmode.md).
+
+Si la función de creación de informes definida por el cliente controla completamente el mensaje de depuración, que no se requiera ningún informe posterior, la función debe devolver **TRUE**. Cuando la función devuelve **FALSE**, **_CrtDbgReport** se invoca para generar el informe de depuración mediante la configuración actual para el tipo de informe, el modo y el archivo. Además, especificando el **_CrtDbgReport** devolver valor de **returnValue**, la aplicación también puede controlar si se produce una interrupción de depuración. Para obtener una descripción completa de cómo se configura y se genera el informe de depuración, consulte **_CrtSetReportMode**, [_CrtSetReportFile](crtsetreportfile.md), y **_CrtDbgReport**.
+
+Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
+
 > [!NOTE]
->  Si la aplicación se compila con `/clr` y se llama a la función de creación de informes una vez que la aplicación se ha cerrado, CLR inicia una excepción si la función de creación de informes llama a cualquier función de CRT.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_CrtSetReportHook`|\<crtdbg.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Rutinas de depuración](../../c-runtime-library/debug-routines.md)   
- [_CrtGetReportHook](../../c-runtime-library/reference/crtgetreporthook.md)
+> Si la aplicación se compila con **/CLR** y la función de creación de informes se llama después de que la aplicación se ha cerrado principal, el CLR iniciará una excepción si la función de creación de informes llama a las funciones de CRT.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_CrtSetReportHook**|\<crtdbg.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Solo versiones de depuración de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>Vea también
+
+[Rutinas de depuración](../../c-runtime-library/debug-routines.md)<br/>
+[_CrtGetReportHook](crtgetreporthook.md)<br/>

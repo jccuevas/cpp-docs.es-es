@@ -1,12 +1,12 @@
 ---
 title: wctomb, _wctomb_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wctomb_l
@@ -37,92 +37,98 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb05340bee89ff86c4ab30a61f32ca53c71519b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fe99a7394e9ec883780a1f70d8cecb004814e39c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
-Convierte un carácter ancho en el carácter multibyte correspondiente. Hay disponibles versiones más seguras de estas funciones; vea [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int wctomb(  
-   char *mbchar,  
-   wchar_t wchar   
-);  
-int _wctomb_l(  
-   char *mbchar,  
-   wchar_t wchar,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `mbchar`  
- Dirección de un carácter multibyte.  
-  
- `wchar`  
- Carácter ancho.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si `wctomb` convierte el carácter ancho en un carácter multibyte, devuelve el número de bytes (que nunca es mayor que `MB_CUR_MAX`) en el carácter ancho. Si `wchar` es el carácter nulo ancho (L'\0'), `wctomb` devuelve 1. Si el puntero de destino `mbchar` es NULL, `wctomb` devuelve 0. Si la conversión no es posible en la configuración regional actual, `wctomb` devuelve -1 y `errno` está establecido en `EILSEQ`.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `wctomb` convierte su argumento `wchar` en el carácter multibyte correspondiente y almacena el resultado en `mbchar`. Puede llamar a la función desde cualquier ubicación de cualquier programa. `wctomb` usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; `_wctomb_l` es igual que `wctomb`, salvo que en su lugar usa la configuración regional pasada. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
- `wctomb` valida sus parámetros. Si `mbchar` es `NULL`, se invoca al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve -1.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`wctomb`|\<stdlib.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
- Este programa muestra el comportamiento de la función wctomb.  
-  
-```  
-// crt_wctomb.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int i;  
-   wchar_t wc = L'a';  
-   char *pmb = (char *)malloc( MB_CUR_MAX );  
-  
-   printf( "Convert a wide character:\n" );  
-   i = wctomb( pmb, wc ); // C4996  
-   // Note: wctomb is deprecated; consider using wctomb_s  
-   printf( "   Characters converted: %u\n", i );  
-   printf( "   Multibyte character: %.1s\n\n", pmb );  
-}  
-```  
-  
-```Output  
-Convert a wide character:  
-   Characters converted: 1  
-   Multibyte character: a  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+Convierte un carácter ancho en el carácter multibyte correspondiente. Hay disponibles versiones más seguras de estas funciones; vea [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int wctomb(
+   char *mbchar,
+   wchar_t wchar
+);
+int _wctomb_l(
+   char *mbchar,
+   wchar_t wchar,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*mbchar*<br/>
+Dirección de un carácter multibyte.
+
+*wchar*<br/>
+Carácter ancho.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si **wctomb** convierte el carácter ancho en un carácter multibyte, devuelve el número de bytes (que nunca es mayor que **MB_CUR_MAX**) en el carácter ancho. Si *wchar* es el carácter null de caracteres anchos (L '\0'), **wctomb** devuelve 1. Si el puntero de destino *mbchar* es NULL, **wctomb** devuelve 0. Si la conversión no es posible en la configuración regional actual, **wctomb** devuelve -1 y **errno** está establecido en **EILSEQ**.
+
+## <a name="remarks"></a>Comentarios
+
+El **wctomb** función convierte su *wchar* argumento en el carácter multibyte correspondiente y almacena el resultado en *mbchar*. Puede llamar a la función desde cualquier ubicación de cualquier programa. **wctomb** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; **_wctomb_l** es idéntico a **wctomb** salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+**wctomb** valida sus parámetros. Si *mbchar* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**wctomb**|\<stdlib.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+Este programa muestra el comportamiento de la función wctomb.
+
+```cpp
+// crt_wctomb.cpp
+// compile with: /W3
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int i;
+   wchar_t wc = L'a';
+   char *pmb = (char *)malloc( MB_CUR_MAX );
+
+   printf( "Convert a wide character:\n" );
+   i = wctomb( pmb, wc ); // C4996
+   // Note: wctomb is deprecated; consider using wctomb_s
+   printf( "   Characters converted: %u\n", i );
+   printf( "   Multibyte character: %.1s\n\n", pmb );
+}
+```
+
+```Output
+Convert a wide character:
+   Characters converted: 1
+   Multibyte character: a
+```
+
+## <a name="see-also"></a>Vea también
+
+[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

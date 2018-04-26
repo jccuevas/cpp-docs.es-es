@@ -1,13 +1,13 @@
 ---
 title: _fread_nolock_s2 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fread_nolock_s
@@ -30,64 +30,69 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 438e12cd9a2a4099231e2dfb9c2ba27375811ea7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 55259cabf4edcbda53845d5b041bc05f4e792bc7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
-Lee datos desde una secuencia, sin bloquear otros subprocesos. Esta versión de [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) incluye mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-size_t _fread_nolock_s(   
-   void *buffer,  
-   size_t bufferSize,  
-   size_t elementSize,  
-   size_t elementCount,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `buffer`  
- Ubicación de almacenamiento de los datos.  
-  
- `bufferSize`  
- Tamaño del búfer de destino en bytes.  
-  
- `elementSize`  
- Tamaño del elemento que se va a leer en bytes.  
-  
- `elementCount`  
- Número máximo de elementos que se va a leer.  
-  
- `stream`  
- Puntero a la estructura `FILE` .  
-  
-## <a name="return-value"></a>Valor devuelto  
- Consulte [fread_s](../../c-runtime-library/reference/fread-s.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Esta función es una versión que no es de bloqueo de `fread_s`. Es idéntica a `fread_s` , salvo que no está protegidas contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`_fread_nolock_s`|C: \<stdio.h>; C++: \<cstdio> o \<stdio.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [_read](../../c-runtime-library/reference/read.md)
+
+Lee datos desde una secuencia, sin bloquear otros subprocesos. Esta versión de [fread_nolock](fread-nolock.md) incluye mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+size_t _fread_nolock_s(
+   void *buffer,
+   size_t bufferSize,
+   size_t elementSize,
+   size_t elementCount,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*buffer*<br/>
+Ubicación de almacenamiento de los datos.
+
+*BufferSize*<br/>
+Tamaño del búfer de destino en bytes.
+
+*elementSize*<br/>
+Tamaño del elemento que se va a leer en bytes.
+
+*valor de elementCount*<br/>
+Número máximo de elementos que se va a leer.
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Consulte [fread_s](fread-s.md).
+
+## <a name="remarks"></a>Comentarios
+
+Esta función es una versión no realiza el bloqueo de **fread_s**. Es idéntico a **fread_s** salvo que no está protegida contra interferencias de otros subprocesos. Puede ser más rápidas porque no incurre en la sobrecarga de bloquear otros subprocesos. Use esta función solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**_fread_nolock_s**|C: \<stdio.h>; C++: \<cstdio> o \<stdio.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fwrite](fwrite.md)<br/>
+[_read](read.md)<br/>

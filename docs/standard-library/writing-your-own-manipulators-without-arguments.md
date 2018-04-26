@@ -1,60 +1,61 @@
 ---
 title: Escribir manipuladores propios sin argumentos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd4084a7ba4b011d95258867646fac20b5c6572
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7661e8df55f8b7de0cac546c15369247cc6bf2c8
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Escribir manipuladores propios sin argumentos
-Escribir manipuladores que no usan argumentos no requiere la derivación de clases ni el uso de macros complejas. Supongamos que su impresora requiere el par \<ESC >[ para entrar en modo de negrita. Puede insertar este par directamente en la secuencia:  
-  
-```  
-cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;  
-```  
-  
- O puede definir el manipulador `bold`, que inserta los caracteres:  
-  
-```  
-ostream& bold(ostream& os) {  
-    return os <<'\033' <<'[';  
-}  
-cout <<"regular " <<bold <<"boldface" <<endl;  
-```  
-  
- La función `bold` definida globalmente toma un argumento de referencia `ostream` y devuelve la referencia `ostream`. No es una función miembro ni una función friend porque no necesita tener acceso a los elementos de ninguna clase privada. La función `bold` se conecta a la secuencia porque el operador `<<` de la secuencia se sobrecarga para aceptar este tipo de función, mediante una declaración de aspecto similar al siguiente:  
-  
-```  
-_Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))  
-{     // call ios_base manipulator  
+
+Escribir manipuladores que no usan argumentos no requiere la derivación de clases ni el uso de macros complejas. Supongamos que su impresora requiere el par \<ESC >[ para entrar en modo de negrita. Puede insertar este par directamente en la secuencia:
+
+```cpp
+cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;
+```
+
+O puede definir el manipulador `bold`, que inserta los caracteres:
+
+```cpp
+ostream& bold(ostream& os) {
+    return os <<'\033' <<'[';
+}
+cout <<"regular " <<bold <<"boldface" <<endl;
+```
+
+La función `bold` definida globalmente toma un argumento de referencia `ostream` y devuelve la referencia `ostream`. No es una función miembro ni una función friend porque no necesita tener acceso a los elementos de ninguna clase privada. La función `bold` se conecta a la secuencia porque el operador `<<` de la secuencia se sobrecarga para aceptar este tipo de función, mediante una declaración de aspecto similar al siguiente:
+
+```cpp
+_Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
+{     // call ios_base manipulator
  (*_Pfn)(*(ios_base *)this);
 
     return (*this);
 
-}  
-```  
-  
- Puede usar esta característica para ampliar otros operadores sobrecargados. En este caso, que `bold` inserte caracteres en la secuencia es algo eventual. La función se llama cuando se inserta en la secuencia, no necesariamente cuando se imprimen los caracteres adyacentes. Por tanto, la impresión podría retrasarse debido al almacenamiento en búfer de la secuencia.  
-  
-## <a name="see-also"></a>Vea también  
- [Flujos de salida](../standard-library/output-streams.md)
+}
+```
 
+Puede usar esta característica para ampliar otros operadores sobrecargados. En este caso, que `bold` inserte caracteres en la secuencia es algo eventual. La función se llama cuando se inserta en la secuencia, no necesariamente cuando se imprimen los caracteres adyacentes. Por tanto, la impresión podría retrasarse debido al almacenamiento en búfer de la secuencia.
+
+## <a name="see-also"></a>Vea también
+
+[Flujos de salida](../standard-library/output-streams.md)<br/>

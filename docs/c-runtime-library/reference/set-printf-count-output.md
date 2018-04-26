@@ -1,12 +1,12 @@
 ---
 title: _set_printf_count_output | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_printf_count_output
@@ -33,73 +33,77 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279b14f0387348d322bbe09428af24daa5fd2f69
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 505d87a98ed212a4be7e23a05127686b370c9176
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
-Habilite o deshabilite la compatibilidad del formato `%n` en las funciones de las familias [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _set_printf_count_output(  
-   int enable  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `enable`  
- Un valor distinto de cero para habilitar el soporte de `%n`; 0 para deshabilitar el soporte de `%n`.  
-  
-## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- El estado del soporte de `%n` antes de llamar a esta función: valor distinto de cero si el soporte de `%n` estaba habilitado o 0 si estaba deshabilitado.  
-  
-## <a name="remarks"></a>Comentarios  
- Por motivos de seguridad, la compatibilidad con el especificador de formato `%n` está deshabilitada de forma predeterminada en `printf` y en todas sus variantes. Si `%n` aparece en una especificación de formato `printf`, el comportamiento predeterminado consiste en invocar al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Al llamar a `_set_printf_count_output` con un argumento distinto de cero provocarán `printf`-familia de funciones para interpretar `%n` tal y como se describe en [sintaxis de especificación de formato: funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_set_printf_count_output`|\<stdio.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```C  
-// crt_set_printf_count_output.c  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int e;  
-   int i;  
-   e = _set_printf_count_output( 1 );  
-   printf( "%%n support was %sabled.\n",  
-        e ? "en" : "dis" );  
-   printf( "%%n support is now %sabled.\n",  
-        _get_printf_count_output() ? "en" : "dis" );  
-   printf( "12345%n6789\n", &i ); // %n format should set i to 5  
-   printf( "i = %d\n", i );  
-}  
-```  
-  
-```Output  
-%n support was disabled.  
-%n support is now enabled.  
-123456789  
-i = 5  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)
+
+Habilitar o deshabilitar la compatibilidad de la **%n** dar formato de [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-familia de funciones.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _set_printf_count_output(
+   int enable
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*habilitar* un valor distinto de cero para habilitar **%n** admitir, 0 para deshabilitar la **%n** admite.
+
+## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
+
+El estado de **%n** admite antes de llamar a esta función: if distinto de cero **%n** se habilita la compatibilidad, 0 si se deshabilitó.
+
+## <a name="remarks"></a>Comentarios
+
+Por razones de seguridad, compatibilidad con la **%n** especificador de formato está deshabilitada de forma predeterminada en **printf** y todas sus variantes. Si **%n** se encuentra en un **printf** especificación de formato, el comportamiento predeterminado consiste en que se invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Al llamar a **_set_printf_count_output** con un argumento distinto de cero provocarán **printf**-familia de funciones para interpretar **%n** tal y como se describe en [formato Sintaxis de especificación: funciones de printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_set_printf_count_output**|\<stdio.h>|
+
+Para obtener información adicional sobre compatibilidad, consulte [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_set_printf_count_output.c
+#include <stdio.h>
+
+int main()
+{
+   int e;
+   int i;
+   e = _set_printf_count_output( 1 );
+   printf( "%%n support was %sabled.\n",
+        e ? "en" : "dis" );
+   printf( "%%n support is now %sabled.\n",
+        _get_printf_count_output() ? "en" : "dis" );
+   printf( "12345%n6789\n", &i ); // %n format should set i to 5
+   printf( "i = %d\n", i );
+}
+```
+
+```Output
+%n support was disabled.
+%n support is now enabled.
+123456789
+i = 5
+```
+
+## <a name="see-also"></a>Vea también
+
+[_get_printf_count_output](get-printf-count-output.md)<br/>

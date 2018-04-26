@@ -1,12 +1,12 @@
 ---
 title: _cputs, _cputws | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _cputws
@@ -39,122 +39,128 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7878b552624e5edd476db138bab50e254a46558
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3e0bef289dc989b95b7f561abf1b6bcb79861f06
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
-Coloca una cadena en la consola.  
-  
+
+Coloca una cadena en la consola.
+
 > [!IMPORTANT]
->  Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _cputs(   
-   const char *str   
-);  
-int _cputws(  
-   const wchar_t *str   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Cadena de salida  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si la operación se realiza correctamente, `_cputs` devuelve 0. Si se produce un error en la función, devuelve un valor distinto de cero.  
-  
-## <a name="remarks"></a>Comentarios  
- La `_cputs` función escribe la cadena terminada en null a la que `str` apunta directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.  
-  
- Esta función valida su parámetro. Si `str` es **NULL**, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y se devuelve -1.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_cputts**|`_cputs`|`_cputs`|`_cputws`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezado opcional|  
-|-------------|---------------------|---------------------|  
-|`_cputs`|\<conio.h>|\<errno.h>|  
-|`_cputws`|\<conio.h>|\<errno.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```C  
-// crt_cputs.c  
-// compile with: /c  
-// This program first displays a string to the console.  
-  
-#include <conio.h>  
-#include <errno.h>  
-  
-void print_to_console(char* buffer)  
-{  
-   int retval;  
-   retval = _cputs( buffer );  
-   if (retval)  
-   {  
-       if (errno == EINVAL)  
-       {  
-         _cputs( "Invalid buffer in print_to_console.\r\n");  
-       }  
-       else  
-         _cputs( "Unexpected error in print_to_console.\r\n");  
-   }  
-}  
-  
-void wprint_to_console(wchar_t* wbuffer)  
-{  
-   int retval;  
-   retval = _cputws( wbuffer );  
-   if (retval)  
-   {  
-       if (errno == EINVAL)  
-       {  
-         _cputws( L"Invalid buffer in wprint_to_console.\r\n");  
-       }  
-       else  
-         _cputws( L"Unexpected error in wprint_to_console.\r\n");  
-   }  
-}  
-  
-int main()  
-{  
-  
-   // String to print at console.   
-   // Notice the \r (return) character.   
-   char* buffer = "Hello world (courtesy of _cputs)!\r\n";  
-   wchar_t *wbuffer = L"Hello world (courtesy of _cputws)!\r\n";  
-   print_to_console(buffer);  
-   wprint_to_console( wbuffer );  
-}  
-```  
-  
-```Output  
-Hello world (courtesy of _cputs)!  
-Hello world (courtesy of _cputws)!  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)   
- [_putch, _putwch](../../c-runtime-library/reference/putch-putwch.md)
+> Esta API no se puede usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _cputs(
+   const char *str
+);
+int _cputws(
+   const wchar_t *str
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Cadena de salida
+
+## <a name="return-value"></a>Valor devuelto
+
+Si se realiza correctamente, **_cputs** devuelve 0. Si se produce un error en la función, devuelve un valor distinto de cero.
+
+## <a name="remarks"></a>Comentarios
+
+El **_cputs** función escribe la cadena terminada en null que apunta a *str* directamente en la consola. No se anexa ninguna combinación de retorno de carro y salto de línea (CR-LF) automáticamente a la cadena.
+
+Esta función valida su parámetro. Si *str* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y se devuelve -1.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_cputts**|**_cputs**|**_cputs**|**_cputws**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezado opcional|
+|-------------|---------------------|---------------------|
+|**_cputs**|\<conio.h>|\<errno.h>|
+|**_cputws**|\<conio.h>|\<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_cputs.c
+// compile with: /c
+// This program first displays a string to the console.
+
+#include <conio.h>
+#include <errno.h>
+
+void print_to_console(char* buffer)
+{
+   int retval;
+   retval = _cputs( buffer );
+   if (retval)
+   {
+       if (errno == EINVAL)
+       {
+         _cputs( "Invalid buffer in print_to_console.\r\n");
+       }
+       else
+         _cputs( "Unexpected error in print_to_console.\r\n");
+   }
+}
+
+void wprint_to_console(wchar_t* wbuffer)
+{
+   int retval;
+   retval = _cputws( wbuffer );
+   if (retval)
+   {
+       if (errno == EINVAL)
+       {
+         _cputws( L"Invalid buffer in wprint_to_console.\r\n");
+       }
+       else
+         _cputws( L"Unexpected error in wprint_to_console.\r\n");
+   }
+}
+
+int main()
+{
+
+   // String to print at console.
+   // Notice the \r (return) character.
+   char* buffer = "Hello world (courtesy of _cputs)!\r\n";
+   wchar_t *wbuffer = L"Hello world (courtesy of _cputws)!\r\n";
+   print_to_console(buffer);
+   wprint_to_console( wbuffer );
+}
+```
+
+```Output
+Hello world (courtesy of _cputs)!
+Hello world (courtesy of _cputws)!
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de consola y de puerto](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_putch, _putwch](putch-putwch.md)<br/>

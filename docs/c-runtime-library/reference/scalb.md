@@ -1,15 +1,16 @@
 ---
-title: _scalb | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _scalb, _scalbf | Documentos de Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _scalb
+- _scalbf
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,60 +27,71 @@ apitype: DLLExport
 f1_keywords:
 - scalb
 - _scalb
+- _scalbf
 dev_langs:
 - C++
 helpviewer_keywords:
 - exponential calculations
 - _scalb function
+- _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f68d1e14a4f92c2ed7ee481966dc46c4384341f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f27f0c6ad88a8d0d89ab9bb66ba68eac0625507c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="scalb"></a>_scalb
-Escala el argumento por una potencia de 2.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double _scalb(  
-   double x,  
-   long exp   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- Valor de punto flotante de precisión doble.  
-  
- `exp`  
- Exponente de entero largo.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve un valor exponencial si es correcto. Si se produce desbordamiento (según cuál sea el signo de `x`), `_scalb` devuelve `HUGE_VAL`; el `errno` variable se establece en `ERANGE`.  
-  
- Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_scalb` calcula el valor de `x *` 2exp.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_scalb`|\<float.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [ldexp](../../c-runtime-library/reference/ldexp.md)
+# <a name="scalb-scalbf"></a>_scalb, _scalbf
+
+Escala el argumento por una potencia de 2.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double _scalb(
+   double x,
+   long exp
+);
+float _scalbf(
+   float x,
+   long exp
+); /* x64 only */
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+Valor de punto flotante de precisión doble.
+
+*exp*<br/>
+Exponente de entero largo.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve un valor exponencial si es correcto. Si se produce desbordamiento (según cuál sea el signo de *x*), **_scalb** devuelve **HUGE_VAL**; el **errno** variable se establece en  **ERANGE**.
+
+Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_scalb** función calcula el valor de *x* * 2<sup>*exp*</sup>.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_scalb**, **_scalbf**|\<float.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[ldexp](ldexp.md)<br/>

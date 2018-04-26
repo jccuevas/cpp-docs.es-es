@@ -1,12 +1,12 @@
 ---
 title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _atoi64_l
@@ -55,139 +55,143 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f643c2d62468669fdf91cf22eb07fb73b0e358d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 69afae8702d707395b09c4848d62aebf6b24aa8f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
-Convierte una cadena en un entero de 64 bits.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-__int64 _atoi64(  
-   const char *str   
-);  
-__int64 _wtoi64(  
-   const wchar_t *str   
-);  
-__int64 _atoi64_l(  
-   const char *str,  
-   _locale_t locale  
-);  
-__int64 _wtoi64_l(  
-   const wchar_t *str,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Cadena que se va a convertir.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada función devuelve el valor `__int64` que se genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0 para `_atoi64` si la entrada no se puede convertir en un valor de ese tipo.  
-  
- En caso de desbordamiento con valores enteros positivos grandes, `_atoi64` devuelve `I64_MAX` y `I64_MIN` en caso de desbordamiento con valores enteros negativos grandes.  
-  
- En todos los casos de valores fuera del intervalo, `errno` se establece en `ERANGE`. Si el parámetro pasado es `NULL`, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven 0.  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones convierten una cadena de caracteres en un valor entero de 64 bits.  
-  
- La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.  
-  
- El argumento `str` para `_atoi64` tiene el formato siguiente:  
-  
-```  
-[whitespace] [sign] [digits]]  
-```  
-  
- Un `whitespace` consta de caracteres de espacio o tabulación, que se omiten; `sign` sea más (+) o menos (-); y `digits` es uno o más dígitos.  
-  
- `_wtoi64` es idéntica a `_atoi64`, salvo en que toma una cadena de caracteres anchos como parámetro.  
-  
- Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tstoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
-|`_ttoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutinas|Encabezado necesario|  
-|--------------|---------------------|  
-|`_atoi64`, `_atoi64_l`|\<stdlib.h>|  
-|`_wtoi64`, `_wtoi64_l`|\<stdlib.h> o \<wchar.h>|  
-  
-## <a name="example"></a>Ejemplo  
- Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos con las funciones `_atoi64`.  
-  
-```  
-// crt_atoi64.c  
-// This program shows how numbers stored as  
-// strings can be converted to numeric values  
-// using the _atoi64 functions.  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( void )  
-{  
-    char    *str = NULL;  
-    __int64 value = 0;  
-  
-    // An example of the _atoi64 function  
-    // with leading and trailing white spaces.  
-    str = "  -2309 ";  
-    value = _atoi64( str );  
-    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );  
-  
-    // Another example of the _atoi64 function   
-    // with an arbitrary decimal point.  
-    str = "314127.64";  
-    value = _atoi64( str );  
-    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );  
-  
-    // Another example of the _atoi64 function  
-    // with an overflow condition occurring.  
-    str = "3336402735171707160320";  
-    value = _atoi64( str );  
-    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );  
-    if (errno == ERANGE)  
-    {  
-       printf("Overflow condition occurred.\n");  
-    }  
-}  
-```  
-  
-```Output  
-Function: _atoi64( "  -2309 " ) = -2309  
-Function: _atoi64( "314127.64" ) = 314127  
-Function: _atoi64( "3336402735171707160320" ) = -1  
-Overflow condition occurred.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Conversión de datos](../../c-runtime-library/data-conversion.md)   
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [_ecvt](../../c-runtime-library/reference/ecvt.md)   
- [_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [_gcvt](../../c-runtime-library/reference/gcvt.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](../../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)
+
+Convierte una cadena en un entero de 64 bits.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+__int64 _atoi64(
+   const char *str
+);
+__int64 _wtoi64(
+   const wchar_t *str
+);
+__int64 _atoi64_l(
+   const char *str,
+   _locale_t locale
+);
+__int64 _wtoi64_l(
+   const wchar_t *str,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Cadena que se va a convertir.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada función devuelve el **__int64** valor generado mediante la interpretación de los caracteres de entrada como un número. El valor devuelto es 0 para **_atoi64** si la entrada no se puede convertir en un valor de ese tipo.
+
+En el caso de desbordamiento con valores enteros positivos grandes, **_atoi64** devuelve **I64_MAX** y **I64_MIN** en el caso de desbordamiento con valores enteros negativos grandes.
+
+En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si se pasa el parámetro es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones convierten una cadena de caracteres en un valor entero de 64 bits.
+
+La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
+
+El *str* argumento pasado a **_atoi64** tiene la forma siguiente:
+
+> [*espacio en blanco*] [*inicio de sesión*] [*dígitos*]
+
+A *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); y *dígitos* es uno o más dígitos.
+
+**_wtoi64** es idéntico a **_atoi64** salvo que toma una cadena de caracteres anchos como parámetro.
+
+Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tstoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
+|**_ttoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutinas|Encabezado necesario|
+|--------------|---------------------|
+|**_atoi64**, **_atoi64_l**|\<stdlib.h>|
+|**_wtoi64**, **_wtoi64_l**|\<stdlib.h> o \<wchar.h>|
+
+## <a name="example"></a>Ejemplo
+
+Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos utilizando la **_atoi64** funciones.
+
+```C
+// crt_atoi64.c
+// This program shows how numbers stored as
+// strings can be converted to numeric values
+// using the _atoi64 functions.
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+
+int main( void )
+{
+    char    *str = NULL;
+    __int64 value = 0;
+
+    // An example of the _atoi64 function
+    // with leading and trailing white spaces.
+    str = "  -2309 ";
+    value = _atoi64( str );
+    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );
+
+    // Another example of the _atoi64 function
+    // with an arbitrary decimal point.
+    str = "314127.64";
+    value = _atoi64( str );
+    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );
+
+    // Another example of the _atoi64 function
+    // with an overflow condition occurring.
+    str = "3336402735171707160320";
+    value = _atoi64( str );
+    printf( "Function: _atoi64( \"%s\" ) = %d\n", str, value );
+    if (errno == ERANGE)
+    {
+       printf("Overflow condition occurred.\n");
+    }
+}
+```
+
+```Output
+Function: _atoi64( "  -2309 " ) = -2309
+Function: _atoi64( "314127.64" ) = 314127
+Function: _atoi64( "3336402735171707160320" ) = -1
+Overflow condition occurred.
+```
+
+## <a name="see-also"></a>Vea también
+
+[Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[_ecvt](ecvt.md)<br/>
+[_fcvt](fcvt.md)<br/>
+[_gcvt](gcvt.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l](atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)<br/>

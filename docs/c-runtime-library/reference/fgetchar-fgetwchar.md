@@ -1,12 +1,12 @@
 ---
 title: _fgetchar, _fgetwchar | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fgetchar
@@ -41,92 +41,96 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b6f6933d8483e3fee792829b0efde8e35ad91a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
-Lee un carácter de una cadena `stdin`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _fgetchar( void );  
-wint_t _fgetwchar( void );  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- `_fgetchar` devuelve el carácter leído como `int`, o `EOF` para indicar un error o un final de archivo. **_**`fgetwchar` devuelve, en forma de [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve `WEOF` para indicar un error o el final de archivo. En el caso de las dos funciones, use `feof` o `ferror` diferenciar un error de una condición de fin de archivo.  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones leen un solo carácter de `stdin`. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.  
-  
- `_fgetchar` es equivalente a `fgetc( stdin )`. También equivale a `getchar`, pero implementado solo como función, y no como una función y una macro. `_fgetwchar` es la versión con caracteres anchos de `_fgetchar`.  
-  
- Estas funciones no son compatibles con el estándar ANSI.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fgettchar`|`_fgetchar`|`_fgetchar`|`_fgetwchar`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`_fgetchar`|\<stdio.h>|  
-|`_fgetwchar`|\<stdio.h> o \<wchar.h>|  
-  
- La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:`stdin`, `stdout`, y `stderr`, se deben redirigir antes de que las funciones de tiempo de ejecución de C puedan usarlos en [! Aplicaciones INCLUDEUWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_fgetchar.c  
-// This program uses _fgetchar to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-//  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Read in first 80 characters and place them in "buffer":  
-   ch = _fgetchar();  
-   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = _fgetchar();  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-      Line one.  
-Line two.Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Lee un carácter de **stdin**.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _fgetchar( void );
+wint_t _fgetwchar( void );
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+**_fgetchar** devuelve el carácter leído como un **int** o devolver **EOF** para indicar un error o el final del archivo. **_ *** fgetwchar** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que se corresponde con el carácter leído o devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error de una condición de final de archivo.
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones leen un solo carácter de **stdin**. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
+
+**_fgetchar** es equivalente a `fgetc( stdin )`. También es equivalente a **getchar**, pero implementado solo como una función, en lugar de como una función y una macro. **_fgetwchar** es la versión con caracteres anchos de **_fgetchar**.
+
+Estas funciones no son compatibles con el estándar ANSI.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fgettchar**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**_fgetchar**|\<stdio.h>|
+|**_fgetwchar**|\<stdio.h> o \<wchar.h>|
+
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:**stdin**, **stdout**, y **stderr**: se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_fgetchar.c
+// This program uses _fgetchar to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+//
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char buffer[81];
+   int  i, ch;
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = _fgetchar();
+   for( i=0; (i < 80 ) && ( feof( stdin ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = _fgetchar();
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+}
+```
+
+```Output
+
+      Line one.
+Line two.Line one.
+Line two.
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

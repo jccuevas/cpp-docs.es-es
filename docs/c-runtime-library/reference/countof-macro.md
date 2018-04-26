@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof (Macro)
 
@@ -58,15 +58,15 @@ El número de elementos de la matriz, expresada como un **size_t**.
 
 ## <a name="remarks"></a>Comentarios
 
-`_countof` se implementa como una macro de preprocesador de estilo funciones. La versión de C++ tiene máquinas plantillas adicionales para detectar en tiempo de compilación si se pasa un puntero en lugar de una matriz declarada estáticamente.
+**_countof** se implementa como una macro de preprocesador de estilo funciones. La versión de C++ tiene máquinas plantillas adicionales para detectar en tiempo de compilación si se pasa un puntero en lugar de una matriz declarada estáticamente.
 
-Asegúrese de que *matriz* es en realidad una matriz, no es un puntero. En C, `_countof` genera resultados erróneos si *matriz* es un puntero. En C++, `_countof` no se puede compilar si *matriz* es un puntero.  Una matriz se pasa como un parámetro a una función *decae a un puntero*, lo que significa que dentro de la función, no se puede usar `_countof` para determinar el alcance de la matriz.
+Asegúrese de que *matriz* es en realidad una matriz, no es un puntero. En C, **_countof** genera resultados erróneos si *matriz* es un puntero. En C++, **_countof** no se puede compilar si *matriz* es un puntero.  Una matriz se pasa como un parámetro a una función *decae a un puntero*, lo que significa que dentro de la función, no se puede usar **_countof** para determinar el alcance de la matriz.
 
 ## <a name="requirements"></a>Requisitos
 
 |Macro|Encabezado necesario|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>Ejemplo
 

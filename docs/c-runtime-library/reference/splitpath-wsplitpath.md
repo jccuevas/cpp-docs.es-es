@@ -1,12 +1,12 @@
 ---
 title: _splitpath, _wsplitpath | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wsplitpath
@@ -42,102 +42,102 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a44cc1bf0bdd48a01e6bd2da58367451486049
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 29102810363e6501d622ac065b63d0bfe978911a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
-Divida un nombre de ruta de acceso en componentes. Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-void _splitpath(  
-   const char *path,  
-   char *drive,  
-   char *dir,  
-   char *fname,  
-   char *ext   
-);  
-void _wsplitpath(  
-   const wchar_t *path,  
-   wchar_t *drive,  
-   wchar_t *dir,  
-   wchar_t *fname,  
-   wchar_t *ext   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `path`  
- Ruta de acceso completa.  
-  
- `drive`  
- Letra de unidad, seguida de dos puntos (`:`). Puede pasar `NULL` para este parámetro si no necesita la letra de unidad.  
-  
- `dir`  
- Ruta de directorio, incluida la barra diagonal final. Se pueden usar las barras diagonales (`/`), las barras diagonales inversas (`\`) o ambas. Puede pasar `NULL` para este parámetro si no necesita la ruta de acceso del directorio.  
-  
- `fname`  
- Nombre de archivo base (sin extensión). Puede pasar `NULL` para este parámetro si no necesita el nombre de archivo.  
-  
- `ext`  
- Extensión de nombre de archivo, incluido el punto inicial (`.`). Puede pasar `NULL` para este parámetro si no necesita la extensión de nombre de archivo.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_splitpath` divide una ruta de acceso en los cuatro componentes respectivos. `_splitpath` controla automáticamente argumentos de cadenas de caracteres multibyte según corresponda, reconociendo secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. `_wsplitpath` es una versión con caracteres anchos de `_splitpath`; los argumentos a `_wsplitpath` son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.  
-  
- **Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tsplitpath`|`_splitpath`|`_splitpath`|`_wsplitpath`|  
-  
- Cada componente de la ruta de acceso completa se almacena en un búfer independiente; las constantes de manifiesto `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` y `_MAX_EXT` (definidas en STDLIB.H) especifican el tamaño máximo para cada componente de archivo. Los componentes de archivos que son más grandes que las constantes de manifiesto correspondientes provocan daños en el montón.  
-  
- Cada búfer debe ser igual de grande que la constante de manifiesto correspondiente con el fin de evitar posibles saturaciones en los búferes.  
-  
- En la tabla siguiente se enumeran los valores de las constantes de manifiesto.  
-  
-|nombre|Valor|  
-|----------|-----------|  
-|_MAX_DRIVE|3|  
-|_MAX_DIR|256|  
-|_MAX_FNAME|256|  
-|_MAX_EXT|256|  
-  
- Si la ruta de acceso completa no contiene ningún componente (por ejemplo, un nombre de archivo), `_splitpath` asigna cadenas vacías a los búferes correspondientes.  
-  
- Puede pasar `NULL` a `_splitpath` para cualquier parámetro distinto de `path` que no necesite.  
-  
- Si `path` es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, `errno` se establece en `EINVAL` y la función devuelve `EINVAL`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_splitpath`|\<stdlib.h>|  
-|`_wsplitpath`|\<stdlib.h> o \<wchar.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Control de archivos](../../c-runtime-library/file-handling.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)
+
+Divida un nombre de ruta de acceso en componentes. Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+void _splitpath(
+   const char *path,
+   char *drive,
+   char *dir,
+   char *fname,
+   char *ext
+);
+void _wsplitpath(
+   const wchar_t *path,
+   wchar_t *drive,
+   wchar_t *dir,
+   wchar_t *fname,
+   wchar_t *ext
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*ruta de acceso* ruta de acceso completa.
+
+*unidad* letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
+
+*dir* ruta de acceso de directorio, incluida la barra diagonal final. Barras diagonales ( **/** ), barras diagonales inversas ( **\\** ), o ambos pueden ser utilizados. Puede pasar **NULL** para este parámetro si no necesita la ruta de acceso de directorio.
+
+*fname* basar el nombre de archivo (sin extensión). Puede pasar **NULL** para este parámetro si no es necesario el nombre de archivo.
+
+*ext* extensión de nombre de archivo, incluido el período inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
+
+## <a name="remarks"></a>Comentarios
+
+El **_splitpath** función divide una ruta de acceso en sus cuatro componentes. **_splitpath** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath** es una versión con caracteres anchos de **_splitpath**; los argumentos a **_wsplitpath** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+
+**Nota de seguridad** Estas funciones representan una posible amenaza por un problema de saturación del búfer. Los problemas de saturación del búfer son un método frecuente de ataque del sistema, que produce una elevación de privilegios no justificada. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer). Hay disponibles versiones más seguras de estas funciones; vea [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
+
+Cada componente de la ruta de acceso completa se almacena en un búfer independiente; las constantes de manifiesto **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, y **_MAX_EXT** (definido en STDLIB. (H) Especifique el tamaño máximo para cada componente de archivo. Los componentes de archivos que son más grandes que las constantes de manifiesto correspondientes provocan daños en el montón.
+
+Cada búfer debe ser igual de grande que la constante de manifiesto correspondiente con el fin de evitar posibles saturaciones en los búferes.
+
+En la tabla siguiente se enumeran los valores de las constantes de manifiesto.
+
+|nombre|Valor|
+|----------|-----------|
+|**_MAX_DRIVE**|3|
+|**_MAX_DIR**|256|
+|**_MAX_FNAME**|256|
+|**_MAX_EXT**|256|
+
+Si la ruta de acceso completa no contiene un componente (por ejemplo, un nombre de archivo), **_splitpath** asigna vacía cadenas a los búferes correspondientes.
+
+Puede pasar **NULL** a **_splitpath** para cualquier parámetro distinto de *ruta de acceso* que no es necesario.
+
+Si *ruta de acceso* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **EINVAL**.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_splitpath**|\<stdlib.h>|
+|**_wsplitpath**|\<stdlib.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [_makepath](makepath-wmakepath.md).
+
+## <a name="see-also"></a>Vea también
+
+[Control de archivos](../../c-runtime-library/file-handling.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_makepath, _wmakepath](makepath-wmakepath.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md)<br/>

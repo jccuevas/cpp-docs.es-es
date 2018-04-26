@@ -1,5 +1,5 @@
 ---
-title: _itoa_s, _itow_s functions | Microsoft Docs
+title: _itoa_s, las funciones de _itow_s | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/21/2018
 ms.technology:
@@ -86,15 +86,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 1f4d00b7938c9fce4e96cd900e460721d9ebe662
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-Convierte un entero en cadena. Se trata de versiones de la [_itoa, funciones de _itow](../../c-runtime-library/reference/itoa-itow.md) con mejoras de seguridad, como se describe en [características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convierte un entero en cadena. Se trata de versiones de la [_itoa, funciones de _itow](itoa-itow.md) con mejoras de seguridad, como se describe en [características de seguridad en CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -161,22 +161,22 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 |value|buffer|size|radix|Volver|
 |-----------|------------|----------------------|-----------|------------|
-|any|`NULL`|any|any|`EINVAL`|
-|any|any|<=0|any|`EINVAL`|
-|any|any|<= longitud de la cadena de resultados necesaria|any|`EINVAL`|
-|any|any|any|*base* < 2 o *base* > 36|`EINVAL`|
+|any|**NULL**|any|any|**EINVAL**|
+|any|any|<=0|any|**EINVAL**|
+|any|any|<= longitud de la cadena de resultados necesaria|any|**EINVAL**|
+|any|any|any|*base* < 2 o *base* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemas de seguridad
 
-Estas funciones pueden generar una infracción de acceso si *búfer* no apunta a la memoria válido y no es `NULL`, o si la longitud del búfer no es suficiente para contener la cadena de resultado.
+Estas funciones pueden generar una infracción de acceso si *búfer* no apunta a la memoria válido y no es **NULL**, o si la longitud del búfer no es suficiente para contener la cadena de resultado.
 
 ## <a name="remarks"></a>Comentarios
 
-Excepto para los parámetros y el valor devuelto, el `_itoa_s` y `_itow_s` familias de función tienen el mismo comportamiento que menos seguro correspondiente `_itoa` y `_itow` versiones.
+Excepto para los parámetros y el valor devuelto, el **_itoa_s** y **_itow_s** familias de función tienen el mismo comportamiento que menos seguro correspondiente **_itoa** y **_itow** versiones.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Las versiones de la biblioteca de depuración de estas funciones rellenan primero el búfer con 0xFD. Para deshabilitar este comportamiento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 La biblioteca CRT incluye cómodas macros para definir el tamaño del búfer necesario para convertir el mayor valor posible de cada tipo de entero, incluido el terminador null y firmar carácter, para varias bases de datos comunes. Para obtener información, consulte [macros de recuento de conversión de máximo](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +184,18 @@ La biblioteca CRT incluye cómodas macros para definir el tamaño del búfer nec
 
 |Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> o \<wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> o \<wchar.h>|
 
 Estas funciones son específicos de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +272,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Vea también
 
 [Conversión de datos](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa, _itow funciones](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa, _itow funciones](itoa-itow.md)<br/>

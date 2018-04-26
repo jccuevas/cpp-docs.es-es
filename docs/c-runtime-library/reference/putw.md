@@ -1,12 +1,12 @@
 ---
 title: _putw | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putw
@@ -34,95 +34,100 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4c72da2b3002008d4f81fdac87f0a300dcdbc1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0f57ca7d619005ed8a4f67626dd5349bd4f8bc18
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putw"></a>_putw
-Escribe un entero en una secuencia.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-      int _putw(  
-   int binint,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- *binint*  
- Entero binario que se generará.  
-  
- `stream`  
- Puntero a la estructura **FILE**.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Devuelve el valor escrito. El valor devuelto `EOF` podría indicar un error. Como `EOF` también es un valor entero legítimo, use `ferror` para comprobar un error. Si `stream` es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece `errno` en `EINVAL` y devuelve `EOF`.  
-  
- Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_putw` escribe un valor binario de tipo `int` en la posición actual de *stream.* `_putw` no afecta a la alineación de los elementos de la secuencia ni tampoco supone ninguna alineación especial. `_putw` sirve principalmente para la compatibilidad con bibliotecas anteriores. Se pueden producir problemas de portabilidad con `_putw` porque el tamaño de un `int` y el orden de los bytes en un `int` son distintos en los sistemas.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_putw`|\<stdio.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="libraries"></a>Bibliotecas  
- Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_putw.c  
-/* This program uses _putw to write a  
- * word to a stream, then performs an error check.  
- */  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   unsigned u;  
-   if( fopen_s( &stream, "data.out", "wb" ) )  
-      exit( 1 );  
-   for( u = 0; u < 10; u++ )  
-   {  
-      _putw( u + 0x2132, stream );   /* Write word to stream. */  
-      if( ferror( stream ) )         /* Make error check. */  
-      {  
-         printf( "_putw failed" );  
-         clearerr_s( stream );  
-         exit( 1 );  
-      }  
-   }  
-   printf( "Wrote ten words\n" );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="output"></a>Salida  
-  
-```  
-Wrote ten words  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [_getw](../../c-runtime-library/reference/getw.md)
+
+Escribe un entero en una secuencia.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _putw(
+   int binint,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*binint*<br/>
+Entero binario que se generará.
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve el valor escrito. Un valor devuelto de **EOF** podría indicar un error. Dado que **EOF** también es un valor entero legítimo, utilice **ferror** para comprobar un error. Si *flujo* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EOF**.
+
+Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_putw** función escribe un valor binario de tipo **int** a la posición actual del *secuencia.* **_putw** no afecta a la alineación de los elementos en la secuencia ni tampoco suponga ninguna alineación especial. **_putw** es principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de bytes de un **int** varía según los sistemas.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_putw**|\<stdio.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Bibliotecas
+
+Todas las versiones de las [bibliotecas en tiempo de ejecución de C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_putw.c
+/* This program uses _putw to write a
+* word to a stream, then performs an error check.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   unsigned u;
+   if( fopen_s( &stream, "data.out", "wb" ) )
+      exit( 1 );
+   for( u = 0; u < 10; u++ )
+   {
+      _putw( u + 0x2132, stream );   /* Write word to stream. */
+      if( ferror( stream ) )         /* Make error check. */
+      {
+         printf( "_putw failed" );
+         clearerr_s( stream );
+         exit( 1 );
+      }
+   }
+   printf( "Wrote ten words\n" );
+   fclose( stream );
+}
+```
+
+### <a name="output"></a>Salida
+
+```Output
+Wrote ten words
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[_getw](getw.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbscspn_l
@@ -48,126 +48,131 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459eaaaa914161fdd2dd8d27876b2972fe1e6618
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00b9fd51b22dfbe33dacd74070188ce2f75a9f6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
-Devuelve el índice de la primera aparición en una cadena de un carácter que pertenece a un conjunto de caracteres.  
-  
+
+Devuelve el índice de la primera aparición en una cadena de un carácter que pertenece a un conjunto de caracteres.
+
 > [!IMPORTANT]
->  `_mbschr` y `_mbschr_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-size_t strcspn(  
-   const char *str,  
-   const char *strCharSet   
-);  
-size_t wcscspn(  
-   const wchar_t *str,  
-   const wchar_t *strCharSet   
-);  
-size_t _mbscspn(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet   
-);  
-size_t _mbscspn_l(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `str`  
- Cadena terminada en un valor nulo en la que se ha buscado.  
-  
- `strCharSet`  
- Juego de caracteres terminado en NULL.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Estas funciones devuelven el índice del primer carácter de `str` que está en `strCharSet`. Si ninguno de los caracteres de `str` está en `strCharSet`, el valor devuelto es la longitud de `str`.  
-  
- No se reserva ningún valor devuelto para indicar un error.  
-  
-## <a name="remarks"></a>Comentarios  
- `wcscspn` y `_mbscspn` son versiones de caracteres anchos y multibyte de `strcspn`. Los argumentos de `wcscspn` son cadenas de caracteres anchos; los de `_mbscspn` son cadenas de caracteres multibyte.  
-  
- `_mbscspn` valida sus parámetros. Si `str` o `strCharSet` es un puntero nulo, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece `errno` en `EINVAL`. `strcspn` y `wcscspn` no validan sus parámetros. Estas tres funciones se comportan exactamente igual.  
-  
- El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo `_l` usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscspn`|`strcspn`|`_mbscspn`|`wcscspn`|  
-|`n/a`|`n/a`|`_mbscspn_l`|`n/a`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`strcspn`|\<string.h>|  
-|`wcscspn`|\<string.h> o \<wchar.h>|  
-|`_mbscspn`, `_mbscspn_l`|\<mbstring.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_strcspn.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-void test( const char * str, const char * strCharSet )  
-{  
-   int pos = strcspn( str, strCharSet );  
-   printf( "strcspn( \"%s\", \"%s\" ) = %d\n", str, strCharSet, pos );      
-}  
-  
-int main( void )  
-{  
-   test( "xyzbxz", "abc" );  
-   test( "xyzbxz", "xyz" );  
-   test( "xyzbxz", "no match" );  
-   test( "xyzbxz", "" );  
-   test( "", "abc" );  
-   test( "", "" );  
-}  
-```  
-  
-```Output  
-strcspn( "xyzbxz", "abc" ) = 3  
-strcspn( "xyzbxz", "xyz" ) = 0  
-strcspn( "xyzbxz", "no match" ) = 6  
-strcspn( "xyzbxz", "" ) = 6  
-strcspn( "", "abc" ) = 0  
-strcspn( "", "" ) = 0  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)   
- [Configuración regional](../../c-runtime-library/locale.md)   
- [Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbschr** y **_mbschr_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+size_t strcspn(
+   const char *str,
+   const char *strCharSet
+);
+size_t wcscspn(
+   const wchar_t *str,
+   const wchar_t *strCharSet
+);
+size_t _mbscspn(
+   const unsigned char *str,
+   const unsigned char *strCharSet
+);
+size_t _mbscspn_l(
+   const unsigned char *str,
+   const unsigned char *strCharSet,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*str*<br/>
+Cadena terminada en un valor nulo en la que se ha buscado.
+
+*strCharSet*<br/>
+Juego de caracteres terminado en NULL.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+Estas funciones devuelven el índice del primer carácter de *str* que se encuentra en *strCharSet*. Si ninguno de los caracteres de *str* en *strCharSet*, a continuación, el valor devuelto es la longitud de *str*.
+
+No se reserva ningún valor devuelto para indicar un error.
+
+## <a name="remarks"></a>Comentarios
+
+**wcscspn** y **_mbscspn** son versiones de caracteres multibyte y anchos de **strcspn**. Los argumentos de **wcscspn** son caracteres anchos cadenas; los de **_mbscspn** son cadenas de caracteres multibyte.
+
+**_mbscspn** valida sus parámetros. Si el valor *str* o *strCharSet* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EINVAL**. **strcspn** y **wcscspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
+|N/D|N/D|**_mbscspn_l**|N/D|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**strcspn**|\<string.h>|
+|**wcscspn**|\<string.h> o \<wchar.h>|
+|**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_strcspn.c
+
+#include <string.h>
+#include <stdio.h>
+
+void test( const char * str, const char * strCharSet )
+{
+   int pos = strcspn( str, strCharSet );
+   printf( "strcspn( \"%s\", \"%s\" ) = %d\n", str, strCharSet, pos );
+}
+
+int main( void )
+{
+   test( "xyzbxz", "abc" );
+   test( "xyzbxz", "xyz" );
+   test( "xyzbxz", "no match" );
+   test( "xyzbxz", "" );
+   test( "", "abc" );
+   test( "", "" );
+}
+```
+
+```Output
+strcspn( "xyzbxz", "abc" ) = 3
+strcspn( "xyzbxz", "xyz" ) = 0
+strcspn( "xyzbxz", "no match" ) = 6
+strcspn( "xyzbxz", "" ) = 6
+strcspn( "", "abc" ) = 0
+strcspn( "", "" ) = 0
+```
+
+## <a name="see-also"></a>Vea también
+
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

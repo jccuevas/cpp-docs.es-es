@@ -1,12 +1,12 @@
 ---
 title: 'Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs'
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _j0
@@ -47,120 +47,125 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6a31388bdf629ed1a133eaf91f715360b020319
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 10e57651a3349f37b485eb8c4fe6a41276432fb5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
-Calcula la función Bessel de la clase del primer o segundo tipo, de órdenes 0, 1 o n. Las funciones Bessel suelen usarse en las matemáticas de la teoría de las ondas electromagnéticas.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double _j0(   
-   double x   
-);  
-double _j1(   
-   double x   
-);  
-double _jn(   
-   int n,  
-   double x   
-);  
-double _y0(   
-   double x   
-);  
-double _y1(   
-   double x   
-);  
-double _yn(   
-   int n,  
-   double x   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- Valor de punto flotante.  
-  
- `n`  
- Orden de enteros de la función Bessel.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Cada una de estas rutinas devuelve una función Bessel de `x`. Si `x` es negativo en las funciones `_y0`, `_y1`o `_yn` , la rutina se establece `errno` en `EDOM`, imprime un mensaje de error `_DOMAIN` `stderr`y devuelve `_HUGE_VAL`. Puede modificar el control de errores mediante `_matherr`.  
-  
-## <a name="remarks"></a>Comentarios  
- Las rutinas `_j0`, `_j1`y `_jn` devuelven funciones Bessel del primer tipo: ordena 0, 1 y n, respectivamente.  
-  
-|Entrada|Excepción SEH|Excepción de Matherr|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|`INVALID`|`_DOMAIN`|  
-  
- Las rutinas `_y0`, `_y1`y `_yn` devuelven funciones Bessel del segundo tipo: ordena 0, 1 y n, respectivamente.  
-  
-|Entrada|Excepción SEH|Excepción de Matherr|  
-|-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|`INVALID`|`_DOMAIN`|  
-|± 0|`ZERODIVIDE`|`_SING`|  
-|&#124;x&#124;<0.0|`INVALID`|`_DOMAIN`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_j0`, `_j1`, `_jn`, `_y0`, `_y1`, `_yn`|\<cmath> (C++), \<math.h> (C, C++)|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_bessel1.c  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double x = 2.387;  
-   int n = 3, c;  
-  
-   printf( "Bessel functions for x = %f:\n", x );  
-   printf( " Kind   Order  Function     Result\n\n" );  
-   printf( " First  0      _j0( x )     %f\n", _j0( x ) );  
-   printf( " First  1      _j1( x )     %f\n", _j1( x ) );  
-   for( c = 2; c < 5; c++ )  
-      printf( " First  %d      _jn( %d, x )  %f\n", c, c, _jn( c, x ) );  
-   printf( " Second 0      _y0( x )     %f\n", _y0( x ) );  
-   printf( " Second 1      _y1( x )     %f\n", _y1( x ) );  
-   for( c = 2; c < 5; c++ )  
-      printf( " Second %d      _yn( %d, x )  %f\n", c, c, _yn( c, x ) );  
-}  
-```  
-  
-```Output  
-Bessel functions for x = 2.387000:  
- Kind   Order  Function     Result  
-  
- First  0      _j0( x )     0.009288  
- First  1      _j1( x )     0.522941  
- First  2      _jn( 2, x )  0.428870  
- First  3      _jn( 3, x )  0.195734  
- First  4      _jn( 4, x )  0.063131  
- Second 0      _y0( x )     0.511681  
- Second 1      _y1( x )     0.094374  
- Second 2      _yn( 2, x )  -0.432608  
- Second 3      _yn( 3, x )  -0.819314  
- Second 4      _yn( 4, x )  -1.626833  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)
+
+Calcula la función Bessel de la clase del primer o segundo tipo, de órdenes 0, 1 o n. Las funciones Bessel suelen usarse en las matemáticas de la teoría de las ondas electromagnéticas.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double _j0(
+   double x
+);
+double _j1(
+   double x
+);
+double _jn(
+   int n,
+   double x
+);
+double _y0(
+   double x
+);
+double _y1(
+   double x
+);
+double _yn(
+   int n,
+   double x
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+Valor de punto flotante.
+
+*n*<br/>
+Orden de enteros de la función Bessel.
+
+## <a name="return-value"></a>Valor devuelto
+
+Cada una de estas rutinas devuelve una función Bessel de *x*. Si *x* es negativo en el **_y0**, **_y1**, o **_yn** funciones, la rutina se establece **errno** a  **EDOM**, imprime un **_DOMAIN** mensaje de error que **stderr**y devuelve **_HUGE_VAL**. Puede modificar mediante el uso de control de errores **_matherr**.
+
+## <a name="remarks"></a>Comentarios
+
+El **_j0**, **_j1**, y **_jn** rutinas devuelven funciones Bessel del primer tipo: ordena 0, 1 y n, respectivamente.
+
+|Entrada|Excepción SEH|Excepción de Matherr|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|**NO VÁLIDO**|**_DOMAIN**|
+
+El **_y0**, **_y1**, y **_yn** rutinas devuelven funciones Bessel del segundo tipo: ordena 0, 1 y n, respectivamente.
+
+|Entrada|Excepción SEH|Excepción de Matherr|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|**NO VÁLIDO**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0.0|**NO VÁLIDO**|**_DOMAIN**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_bessel1.c
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double x = 2.387;
+   int n = 3, c;
+
+   printf( "Bessel functions for x = %f:\n", x );
+   printf( "   Kind   Order  Function     Result\n\n" );
+   printf( "   First  0      _j0( x )     %f\n", _j0( x ) );
+   printf( "   First  1      _j1( x )     %f\n", _j1( x ) );
+   for( c = 2; c < 5; c++ )
+      printf( "   First  %d      _jn( %d, x )  %f\n", c, c, _jn( c, x ) );
+   printf( "   Second 0      _y0( x )     %f\n", _y0( x ) );
+   printf( "   Second 1      _y1( x )     %f\n", _y1( x ) );
+   for( c = 2; c < 5; c++ )
+      printf( "   Second %d      _yn( %d, x )  %f\n", c, c, _yn( c, x ) );
+}
+```
+
+```Output
+Bessel functions for x = 2.387000:
+   Kind   Order  Function     Result
+
+   First  0      _j0( x )     0.009288
+   First  1      _j1( x )     0.522941
+   First  2      _jn( 2, x )  0.428870
+   First  3      _jn( 3, x )  0.195734
+   First  4      _jn( 4, x )  0.063131
+   Second 0      _y0( x )     0.511681
+   Second 1      _y1( x )     0.094374
+   Second 2      _yn( 2, x )  -0.432608
+   Second 3      _yn( 3, x )  -0.819314
+   Second 4      _yn( 4, x )  -1.626833
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[_matherr](matherr.md)<br/>

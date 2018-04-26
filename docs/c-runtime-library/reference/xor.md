@@ -1,12 +1,12 @@
 ---
 title: xor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,57 +29,60 @@ dev_langs:
 helpviewer_keywords:
 - xor function
 ms.assetid: 0fe9554b-d87b-4487-92ed-366c6dc21df2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b899703833f2506439c58db5f9f19e64b9378d1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e1abd83bd0b3e93012b27ce6ec0d2d8b40194113
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xor"></a>xor
-Alternativa al operador ^.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-  
-#define xor ^  
-  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- La macro produce el operador ^.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// iso646_xor.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 3, b = 2, result;  
-  
-   result= a ^ b;  
-   cout << result << endl;  
-  
-   result= a xor_eq b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-1  
-1  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<iso646.h>
+
+Alternativa al operador ^.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+
+#define xor ^
+
+```
+
+## <a name="remarks"></a>Comentarios
+
+La macro produce el operador ^.
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// iso646_xor.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 3, b = 2, result;
+
+   result= a ^ b;
+   cout << result << endl;
+
+   result= a xor_eq b;
+   cout << result << endl;
+}
+```
+
+```Output
+1
+1
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<iso646.h>

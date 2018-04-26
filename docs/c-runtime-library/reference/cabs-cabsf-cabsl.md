@@ -1,13 +1,13 @@
 ---
 title: cabs, cabsf, cabsl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cabs
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5e2a256b0120a42ef5963b3989b64edd5d95fca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 233353d7af20a50ba7c55dbbe57fe8dde3373da5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
-Recupera el valor absoluto de un número complejo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double cabs(   
-   _Dcomplex z   
-);  
-float cabs(   
-   _Fcomplex z   
-);  // C++ only  
-long double cabs(   
-   _Lcomplex z   
-);  // C++ only  
-float cabsf(   
-   _Fcomplex z   
-);  
-long double cabsl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `z`  
- Número complejo.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Valor absoluto de `z`.  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `cabs` que toman los valores `_Fcomplex` o `_Lcomplex` y devuelven los valores `float` o `long double`. En un programa de C, `cabs` siempre toma un valor `_Dcomplex` y devuelve un valor `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado C|Encabezado C++|  
-|-------------|--------------|------------------|  
-|`cabs`,               `cabsf`, `cabsl`|\<complex.h>|\<ccomplex>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)
+
+Recupera el valor absoluto de un número complejo.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double cabs(
+   _Dcomplex z
+);
+float cabs(
+   _Fcomplex z
+);  // C++ only
+long double cabs(
+   _Lcomplex z
+);  // C++ only
+float cabsf(
+   _Fcomplex z
+);
+long double cabsl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Z*<br/>
+Número complejo.
+
+## <a name="return-value"></a>Valor devuelto
+
+El valor absoluto de *z*.
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **cabs** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **cabs** siempre tiene un **_Dcomplex** valor determinado y devuelve un **doble** valor.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado C|Encabezado C++|
+|-------------|--------------|------------------|
+|**Cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>

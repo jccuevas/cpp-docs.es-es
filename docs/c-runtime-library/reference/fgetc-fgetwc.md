@@ -1,12 +1,12 @@
 ---
 title: fgetc, fgetwc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fgetwc
@@ -39,117 +39,122 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39149a3963e6950e708499d64efe3c412df96fb5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 82db726bc0296027536798771680cc1326fc00df
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
-Lea un carácter de una secuencia.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int fgetc(   
-   FILE *stream   
-);  
-wint_t fgetwc(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `stream`  
- Puntero a la estructura `FILE` .  
-  
-## <a name="return-value"></a>Valor devuelto  
- `fgetc` devuelve el carácter leído como `int` o devuelve `EOF` para indicar un error o el final de archivo. `fgetwc` devuelve, en forma de [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho correspondiente al carácter leído, o bien devuelve `WEOF` para indicar un error o el final de archivo. En el caso de las dos funciones, use `feof` o `ferror` diferenciar un error de una condición de fin de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si `stream` es `NULL`, `fgetc` y `fgetwc` invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `EOF`.  
-  
-## <a name="remarks"></a>Comentarios  
- Cada una de estas funciones lee un único carácter de la posición actual del archivo asociado a `stream`. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.  
-  
- `fgetc` equivale a `getc`, pero solo se implementa como función, no como función y macro.  
-  
- `fgetwc` es la versión de caracteres anchos de `fgetc`; lee `c` como carácter multibyte o carácter ancho en función de que `stream` se abra en modo de texto o en modo binario.  
-  
- Las versiones con el sufijo `_nolock` son idénticas, salvo que no están protegidas contra interferencias de otros subprocesos.  
-  
- Para obtener más información sobre el procesamiento de caracteres anchos y caracteres multibyte en los modos binarios y de texto, consulte [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fgettc`|`fgetc`|`fgetc`|`fgetwc`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`fgetc`|\<stdio.h>|  
-|`fgetwc`|\<stdio.h> o \<wchar.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_fgetc.c  
-// This program uses getc to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Open file to read line from:  
-   fopen_s( &stream, "crt_fgetc.txt", "r" );  
-   if( stream == NULL )  
-      exit( 0 );  
-  
-   // Read in first 80 characters and place them in "buffer":   
-   ch = fgetc( stream );  
-   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = fgetc( stream );  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="input-crtfgetctxt"></a>Entrada: crt_fgetc.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Salida  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+Lea un carácter de una secuencia.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int fgetc(
+   FILE *stream
+);
+wint_t fgetwc(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+**fgetc** devuelve el carácter leído como un **int** o devuelve **EOF** para indicar un error o el final del archivo. **fgetwc** devuelve, como un [wint_t](../../c-runtime-library/standard-types.md), el carácter ancho que se corresponde con el carácter leído o devuelve **WEOF** para indicar un error o el final del archivo. Para ambas funciones, use **feof** o **ferror** para distinguir entre un error de una condición de final de archivo. Si se produce un error de lectura, se establece el indicador de error para la secuencia. Si *flujo* es **NULL**, **fgetc** y **fgetwc** invocan el controlador de parámetros no válidos, tal y como se describe en [parámetro Validación](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EOF**.
+
+## <a name="remarks"></a>Comentarios
+
+Cada una de estas funciones lee un único carácter de la posición actual del archivo asociado con *flujo*. A continuación, la función aumenta el puntero de archivo asociado (si está definido) para señalar al carácter siguiente. Si el flujo está al final del archivo, se establece la marca de fin de archivo para el flujo.
+
+**fgetc** es equivalente a **getc**, pero se implementa como una función, en lugar de como una función y una macro.
+
+**fgetwc** es la versión con caracteres anchos de **fgetc**; lee **c** como un carácter multibyte o carácter ancho en función de si *flujo* se abre en modo de texto o modo binario.
+
+Las versiones que tienen el sufijo **_nolock** son idénticas, salvo que no están protegidas contra las interferencias de otros subprocesos.
+
+Para obtener más información sobre el procesamiento de caracteres anchos y caracteres multibyte en los modos binarios y de texto, consulte [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**fgetc**|\<stdio.h>|
+|**fgetwc**|\<stdio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_fgetc.c
+// This program uses getc to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   char buffer[81];
+   int  i, ch;
+
+   // Open file to read line from:
+   fopen_s( &stream, "crt_fgetc.txt", "r" );
+   if( stream == NULL )
+      exit( 0 );
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = fgetc( stream );
+   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = fgetc( stream );
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+   fclose( stream );
+}
+```
+
+## <a name="input-crtfgetctxt"></a>Entrada: crt_fgetc.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Salida
+
+```Output
+Line one.
+Line two.
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _status87, _statusfp, _statusfp2 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _statusfp2
@@ -47,103 +47,108 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fb4af11e17dbd0303b435090661c1b73456479
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4e6028d98be0d3b5648018712b47d506f73550a6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
-Obtiene la palabra de estado de punto flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-unsigned int _status87( void );  
-unsigned int _statusfp( void );  
-void _statusfp2(unsigned int *px86, unsigned int *pSSE2)  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `px86`  
- Esta dirección se rellena con la palabra de estado para la unidad de punto flotante x87.  
-  
- `pSSE2`  
- Esta dirección se rellena con la palabra de estado para la unidad de punto flotante SSE2.  
-  
-## <a name="return-value"></a>Valor devuelto  
- En el caso de `_status87` y `_statusfp`, los bits del valor devuelto indican el estado de punto flotante. Vea el archivo de inclusión de FLOAT.H para obtener una definición de los bits devueltos por `_statusfp`. Muchas funciones de la biblioteca matemática modifican la palabra de estado de punto flotante, con resultados imprevisibles. La optimización puede reordenar, combinar y eliminar operaciones de punto flotante en torno a llamadas a `_status87`, `_statusfp` y funciones relacionadas. Use la opción del compilador [/Od (Deshabilitar (Depurar))](../../build/reference/od-disable-debug.md) o la directiva pragma [fenv_access](../../preprocessor/fenv-access.md) para evitar optimizaciones que reordenen las operaciones de punto flotante. Los valores devueltos de `_clearfp` y `_statusfp`, así como los parámetros devueltos de `_statusfp2`, son más confiables si se realizan menos operaciones de punto flotante entre estados conocidos de la palabra de estado de punto flotante.  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_statusfp` obtiene la palabra de estado de punto flotante. La palabra de estado es una combinación del estado de procesador de punto flotante y otras condiciones detectadas por el controlador de excepciones de punto flotante, por ejemplo, desbordamiento y subdesbordamiento de la pila de punto flotante. Las excepciones sin máscara se comprueban antes de que se devuelva el contenido de la palabra de estado. De esta forma, el llamador recibe información sobre las excepciones pendientes. En plataformas x86, `_statusfp` devuelve una combinación del estado de punto flotante de x87 y SSE2. En las plataformas x64, el estado que se devuelve se basa en el estado de MXCSR de SSE. En las plataformas ARM, `_statusfp` devuelve el estado del registro de FPSCR.  
-  
- `_statusfp` es una versión independiente de la plataforma y portable de `_status87`. Es idéntica a `_status87` en plataformas Intel (x86) y también es compatible con las plataformas x64 y ARM. Para asegurarse de que el código de punto flotante se puede llevar a todas las arquitecturas, use `_statusfp`. Si solo va a usar plataformas x86, puede usar `_status87` o `_statusfp`.  
-  
- Se recomienda `_statusfp2` para los chips (como Pentium IV) que tienen procesadores de punto flotante de x87 y de SSE2. En el caso de `_statusfp2`, las direcciones se rellenan usando la palabra de estado de punto flotante para el procesador de punto flotante de x87 o de SSE2. En el caso de chips que admite procesadores de punto flotante de x87 y SSE2, EM_AMBIGUOUS se establece en 1 si se usa `_statusfp` o `_controlfp`, y la acción es ambigua porque podría referirse a la palabra de estado de punto flotante de x87 o SSE2. La función `_statusfp2` solo se admite en plataformas x86.  
-  
- Estas funciones no son útiles para [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime (CLR) solo es compatible con la precisión de punto flotante predeterminada.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`_status87`, `_statusfp`, `_statusfp2`|\<float.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_statusfp.c  
-// Build by using: cl /W4 /Ox /nologo crt_statusfp.c  
-// This program creates various floating-point errors and  
-// then uses _statusfp to display messages that indicate these problems.  
-  
-#include <stdio.h>  
-#include <float.h>  
-#pragma fenv_access(on)  
-  
-double test( void )  
-{  
-   double a = 1e-40;  
-   float b;  
-   double c;  
-  
-   printf("Status = 0x%.8x - clear\n", _statusfp());  
-  
-   // Assignment into b is inexact & underflows:   
-   b = (float)(a + 1e-40);  
-   printf("Status = 0x%.8x - inexact, underflow\n", _statusfp());  
-  
-   // c is denormal:   
-   c = b / 2.0;   
-   printf("Status = 0x%.8x - inexact, underflow, denormal\n",   
-            _statusfp());  
-  
-   // Clear floating point status:   
-   _clearfp();  
-   return c;  
-}  
-  
-int main(void)  
-{  
-   return (int)test();  
-}  
-```  
-  
-```Output  
-Status = 0x00000000 - clear  
-Status = 0x00000003 - inexact, underflow  
-Status = 0x00080003 - inexact, underflow, denormal  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [_clear87, _clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
- [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)
+
+Obtiene la palabra de estado de punto flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+unsigned int _status87( void );
+unsigned int _statusfp( void );
+void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*px86*<br/>
+Esta dirección se rellena con la palabra de estado para la unidad de punto flotante x87.
+
+*pSSE2*<br/>
+Esta dirección se rellena con la palabra de estado para la unidad de punto flotante SSE2.
+
+## <a name="return-value"></a>Valor devuelto
+
+Para **_status87** y **_statusfp**, los bits en el valor devuelto indican el estado de punto flotante. Vea el tipo FLOAT. H incluir archivos para una definición de los bits devueltos por **_statusfp**. Muchas funciones de la biblioteca matemática modifican la palabra de estado de punto flotante, con resultados imprevisibles. La optimización puede reordenar, combinar y eliminar operaciones de punto flotante alrededor de las llamadas a **_status87**, **_statusfp**y funciones relacionadas. Use la opción del compilador [/Od (Deshabilitar (Depurar))](../../build/reference/od-disable-debug.md) o la directiva pragma [fenv_access](../../preprocessor/fenv-access.md) para evitar optimizaciones que reordenen las operaciones de punto flotante. Valores devueltos de **_clearfp** y **_statusfp**y también los parámetros de valor devueltos de **_statusfp2**, son más confiables si se realizan menos operaciones de punto flotante entre Estados conocidos de la palabra de estado de punto flotante.
+
+## <a name="remarks"></a>Comentarios
+
+El **_statusfp** función obtiene la palabra de estado de punto flotante. La palabra de estado es una combinación del estado de procesador de punto flotante y otras condiciones detectadas por el controlador de excepciones de punto flotante, por ejemplo, desbordamiento y subdesbordamiento de la pila de punto flotante. Las excepciones sin máscara se comprueban antes de que se devuelva el contenido de la palabra de estado. De esta forma, el llamador recibe información sobre las excepciones pendientes. En x86 plataformas, **_statusfp** devuelve una combinación de x87 y estado de punto flotante SSE2. En las plataformas x64, el estado que se devuelve se basa en el estado de MXCSR de SSE. En plataformas ARM, **_statusfp** devuelve el estado desde el registro fpscr.
+
+**_statusfp** es una versión independiente de la plataforma y portable de **_status87**. Es idéntico a **_status87** en plataformas Intel (x86) y también es compatible con la x64 y las plataformas ARM. Para asegurarse de que el código de punto flotante es portable a todas las arquitecturas, use **_statusfp**. Si solo va a usar x86 plataformas, puede usar **_status87** o **_statusfp**.
+
+Se recomienda **_statusfp2** para los chips (como Pentium IV) que tienen un x87 y un procesador de punto flotante SSE2. Para **_statusfp2**, las direcciones se rellenan mediante el uso de la palabra de estado de punto flotante para x87 o el procesador de punto flotante SSE2. Chips que admite x87 y procesadores de punto flotante SSE2, EM_AMBIGUOUS se establece en 1 si **_statusfp** o **_controlfp** se utiliza y la acción es ambigua porque podría referirse a x87 o SSE2 palabra de estado de punto flotante. El **_statusfp2** función solo se admite en x86 plataformas.
+
+Estas funciones no son útiles para [/clr (compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) porque common language runtime (CLR) solo es compatible con la precisión de punto flotante predeterminada.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**_status87**, **_statusfp**, **_statusfp2**|\<float.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_statusfp.c
+// Build by using: cl /W4 /Ox /nologo crt_statusfp.c
+// This program creates various floating-point errors and
+// then uses _statusfp to display messages that indicate these problems.
+
+#include <stdio.h>
+#include <float.h>
+#pragma fenv_access(on)
+
+double test( void )
+{
+   double a = 1e-40;
+   float b;
+   double c;
+
+   printf("Status = 0x%.8x - clear\n", _statusfp());
+
+   // Assignment into b is inexact & underflows:
+   b = (float)(a + 1e-40);
+   printf("Status = 0x%.8x - inexact, underflow\n", _statusfp());
+
+   // c is denormal:
+   c = b / 2.0;
+   printf("Status = 0x%.8x - inexact, underflow, denormal\n",
+            _statusfp());
+
+   // Clear floating point status:
+   _clearfp();
+   return c;
+}
+
+int main(void)
+{
+   return (int)test();
+}
+```
+
+```Output
+Status = 0x00000000 - clear
+Status = 0x00000003 - inexact, underflow
+Status = 0x00080003 - inexact, underflow, denormal
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[_clear87, _clearfp](clear87-clearfp.md)<br/>
+[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>

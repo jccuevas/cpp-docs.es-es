@@ -1,12 +1,12 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fseek_nolock
@@ -38,63 +38,67 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 413811b5a0a02324de455ff521b729f2fd8295ea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2fdc44fef5de0a24e35df30d3605d1b5e46c4a6b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
-Mueve el puntero de archivo a una ubicación especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _fseek_nolock(   
-   FILE *stream,  
-   long offset,  
-   int origin   
-);  
-int _fseeki64_nolock(   
-   FILE *stream,  
-   __int64 offset,  
-   int origin   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `stream`  
- Puntero a la estructura de `FILE`.  
-  
- `offset`  
- Número de bytes desde `origin.`.  
-  
- `origin`  
- Posición inicial.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Igual que [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md), respectivamente.  
-  
-## <a name="remarks"></a>Comentarios  
- Estas funciones son versiones que no son de bloqueo de `fseek` y `_fseeki64`, respectivamente. Son idénticas a `fseek` y `_fseeki64`, salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`fseek`|\<stdio.h>|  
-|`_fseeki64`|\<stdio.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [ftell, _ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [_lseek, _lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
- [rewind](../../c-runtime-library/reference/rewind.md)
+
+Mueve el puntero de archivo a una ubicación especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _fseek_nolock(
+   FILE *stream,
+   long offset,
+   int origin
+);
+int _fseeki64_nolock(
+   FILE *stream,
+   __int64 offset,
+   int origin
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+*offset*<br/>
+Número de bytes de *origin*.
+
+*origin*<br/>
+Posición inicial.
+
+## <a name="return-value"></a>Valor devuelto
+
+Igual que [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente.
+
+## <a name="remarks"></a>Comentarios
+
+Estas funciones son las versiones no realiza el bloqueo de [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md), respectivamente. Estos son idénticos a [fseek](fseek-fseeki64.md) y [_fseeki64](fseek-fseeki64.md) salvo que no están protegidas contra interferencias de otros subprocesos. Es posible que estas funciones sean más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[ftell, _ftelli64](ftell-ftelli64.md)<br/>
+[_lseek, _lseeki64](lseek-lseeki64.md)<br/>
+[rewind](rewind.md)<br/>

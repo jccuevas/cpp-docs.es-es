@@ -1,12 +1,12 @@
 ---
 title: _creat, _wcreat | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _creat
@@ -41,125 +41,130 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0355f28ada6313e201b8d761813767135ee3cbf8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 73ed20925501e9f797e7a5a2b7895ff0f80a5b1a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
-Crear un archivo nuevo. `_creat` y `_wcreat` han quedado en desuso; use [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md) en su lugar.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _creat(   
-   const char *filename,  
-   int pmode   
-);  
-int _wcreat(   
-   const wchar_t *filename,  
-   int pmode   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `filename`  
- Nombre del nuevo archivo.  
-  
- `pmode`  
- Configuración de permisos.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Estas funciones, si se ejecutan correctamente, devuelven un descriptor de archivo para el archivo creado. De lo contrario, las funciones devuelven -1 y establecen `errno` tal como se muestra en la tabla siguiente.  
-  
-|Valor de `errno`|Descripción|  
-|---------------------|-----------------|  
-|`EACCES`|`filename` especifica un archivo existente de solo lectura o un directorio en lugar de un archivo.|  
-|`EMFILE`|No hay más descriptores de archivo disponibles.|  
-|`ENOENT`|No se pudo encontrar el archivo especificado.|  
-  
- Si `filename` es NULL, estas funciones invocan al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven -1.  
-  
- Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `_creat` crea otro archivo o abre y trunca uno existente. `_wcreat` es una versión con caracteres anchos de `_creat`; el argumento `filename` para `_wcreat` es una cadena de caracteres anchos. Por lo demás, `_wcreat` y `_creat` se comportan de forma idéntica.  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcreat`|`_creat`|`_creat`|`_wcreat`|  
-  
- Si el archivo especificado con `filename` no existe, se crea otro archivo con la configuración de permisos especificada y se abre para escritura. Si el archivo ya existe y su configuración de permisos permite escritura, `_creat` trunca el archivo en la longitud 0, lo que destruye el contenido anterior y lo abre para escritura. La configuración de permisos, `pmode`, solo se aplica a archivos recién creados. El nuevo archivo recibe la configuración de permisos especificada cuando se cierra por primera vez. La expresión de entero `pmode` contiene una o ambas constantes del manifiesto, `_S_IWRITE` y `_S_IREAD`, que se definen en SYS\Stat.h. Cuando ambas constantes se especifican, se unen con el operador `OR` bit a bit ( **&#124;**). El parámetro `pmode` se establece en uno de los valores siguientes.  
-  
-|Valor|Definición|  
-|-----------|----------------|  
-|`_S_IWRITE`|Escritura permitida.|  
-|`_S_IREAD`|Lectura permitida.|  
-|`_S_IREAD &#124; _S_IWRITE`|Lectura y escritura permitidas.|  
-  
- Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por consiguiente, los modos `_S_IWRITE` y `_S_IREAD | _S_IWRITE` son equivalentes. Los archivos abiertos con `_creat` siempre se abren en modo de compatibilidad (consulte [_sopen](../../c-runtime-library/reference/sopen-wsopen.md)) con `_SH_DENYNO`.  
-  
- `_creat` aplica la máscara de permisos de archivo actual a `pmode` antes de que se establezcan los permisos (consulte [_umask](../../c-runtime-library/reference/umask.md)). `_creat` sirve principalmente para la compatibilidad con bibliotecas anteriores. Una llamada a `_open` con `_O_CREAT` y `_O_TRUNC` en el parámetro `oflag` es equivalente a `_creat` y es preferible en caso de nuevo código.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezado opcional|  
-|-------------|---------------------|---------------------|  
-|`_creat`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-|`_wcreat`|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-  
- Para obtener más información de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_creat.c  
-// compile with: /W3  
-// This program uses _creat to create  
-// the file (or truncate the existing file)  
-// named data and open it for writing.  
-  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int fh;  
-  
-   fh = _creat( "data", _S_IREAD | _S_IWRITE ); // C4996  
-   // Note: _creat is deprecated; use _sopen_s instead  
-   if( fh == -1 )  
-      perror( "Couldn't create data file" );  
-   else  
-   {  
-      printf( "Created data file.\n" );  
-      _close( fh );  
-   }  
-}  
-```  
-  
-```Output  
-Created data file.  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)   
- [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_close](../../c-runtime-library/reference/close.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [_umask](../../c-runtime-library/reference/umask.md)
+
+Crear un archivo nuevo. **_creat** y **_wcreat** han quedado en desuso; use [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) en su lugar.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int _creat(
+   const char *filename,
+   int pmode
+);
+int _wcreat(
+   const wchar_t *filename,
+   int pmode
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*filename*<br/>
+Nombre del nuevo archivo.
+
+*pmode*<br/>
+Configuración de permisos.
+
+## <a name="return-value"></a>Valor devuelto
+
+Estas funciones, si se ejecutan correctamente, devuelven un descriptor de archivo para el archivo creado. De lo contrario, las funciones devuelven -1 y establecen **errno** tal como se muestra en la tabla siguiente.
+
+|**errno** configuración|Descripción|
+|---------------------|-----------------|
+|**EACCES**|*nombre de archivo* especifica un archivo de sólo lectura existente o especifica un directorio en lugar de un archivo.|
+|**EMFILE**|No hay más descriptores de archivo disponibles.|
+|**ENOENT**|No se pudo encontrar el archivo especificado.|
+
+Si *filename* es NULL, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven -1.
+
+Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **_creat** función crea un nuevo archivo o lo abre y trunca uno ya existente. **_wcreat** es una versión con caracteres anchos de **_creat**; el *filename* argumento pasado a **_wcreat** es una cadena de caracteres anchos. **_wcreat** y **_creat** se comportan exactamente igual.
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
+
+Si el archivo especificado por *nombre de archivo* no existe, un nuevo archivo se crea con la configuración del permiso especificado y se abre para escribir en él. Si el archivo ya existe y su configuración de permisos permite escribir, **_creat** trunca la longitud del archivo hasta 0, destruir el contenido anterior y lo abre para escritura. La configuración del permiso, *pmode*, se aplica a solo los archivos recién creados. El nuevo archivo recibe la configuración de permisos especificada cuando se cierra por primera vez. La expresión de entero *pmode* contiene una o ambas de las constantes de manifiesto **_S_IWRITE** y **_S_IREAD**, definida en sys\stat. Cuando ambas constantes se proporcionan, se combinan con el bit a bit u operador ( **&#124;** ). El *pmode* parámetro se establece en uno de los siguientes valores.
+
+|Valor|de esquema JSON|
+|-----------|----------------|
+|**_S_IWRITE**|Escritura permitida.|
+|**_S_IREAD**|Lectura permitida.|
+|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lectura y escritura permitidas.|
+
+Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Los modos de **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** , a continuación, son equivalentes. Los archivos abiertos con **_creat** siempre se abren en modo de compatibilidad (vea [_sopen](sopen-wsopen.md)) con **_SH_DENYNO**.
+
+**_creat** aplica la máscara de permisos de archivo actual a *pmode* antes de establecer los permisos (vea [_umask](umask.md)). **_creat** se proporciona principalmente por compatibilidad con bibliotecas anteriores. Una llamada a **_open** con **_O_CREAT** y **_O_TRUNC** en el *oflag* parámetro es equivalente al **_creat**y es preferible para el código nuevo.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezado opcional|
+|-------------|---------------------|---------------------|
+|**_creat**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wcreat**|\<io.h> o \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_creat.c
+// compile with: /W3
+// This program uses _creat to create
+// the file (or truncate the existing file)
+// named data and open it for writing.
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int fh;
+
+   fh = _creat( "data", _S_IREAD | _S_IWRITE ); // C4996
+   // Note: _creat is deprecated; use _sopen_s instead
+   if( fh == -1 )
+      perror( "Couldn't create data file" );
+   else
+   {
+      printf( "Created data file.\n" );
+      _close( fh );
+   }
+}
+```
+
+```Output
+Created data file.
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de bajo nivel](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chmod, _wchmod](chmod-wchmod.md)<br/>
+[_chsize](chsize.md)<br/>
+[_close](close.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>
+[_umask](umask.md)<br/>
