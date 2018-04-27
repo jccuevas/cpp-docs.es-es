@@ -1,12 +1,12 @@
 ---
 title: atanh, atanhf, atanhl | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - atanhl
@@ -36,98 +36,94 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043a08b2064efcd10a9d5165a6cff97118dc965d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f56568fa4e38d68e45acf976a8802971e63ea66
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
-Calcula la tangente hiperbólica inversa.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double atanh(  
-   double x   
-);  
-float atanh(  
-   float x   
-);  // C++ only  
-long double atanh(  
-   long double x  
-);  // C++ only  
-float atanhf(  
-   float x   
-);  
-long double atanhl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`  
- Valor de punto flotante.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Las funciones `atanh` devuelven la tangente hiperbólica inversa (arcotangente hiperbólica) de `x`. Si `x` es mayor que 1 o menor que -1, `errno` está establecido en `EDOM` y el resultado es un valor NaN reservado. Si `x` equivale a 1 o -1, se devuelve un valor infinito positivo o negativo respectivamente, y `errno` se establece en `ERANGE`.  
-  
-|Entrada|Excepción SEH|Excepción de `Matherr`|  
-|-----------|-------------------|-------------------------|  
-|± QNAN,IND|ninguna|ninguna|  
-|`X` ≥ 1; `x` ≤ -1|ninguna|ninguna|  
-  
-## <a name="remarks"></a>Comentarios  
- Puesto que C++ permite las sobrecargas, es posible llamar a las sobrecargas de `atanh` que toman y devuelven los valores `float` o `long double`. En un programa C, `atanh` siempre toma y devuelve un tipo `double`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado C|Encabezado C++|  
-|--------------|--------------|------------------|  
-|`atanh`, `atanhf`, `atanhl`|\<math.h>|\<cmath>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_atanh.c  
-// This program displays the hyperbolic tangent of pi / 4  
-// and the arc hyperbolic tangent of the result.  
-//  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double pi = 3.1415926535;  
-   double x, y;  
-  
-   x = tanh( pi / 4 );  
-   y = atanh( x );  
-   printf( "tanh( %f ) = %f\n", pi/4, x );  
-   printf( "atanh( %f ) = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-tanh( 0.785398 ) = 0.655794  
-atanh( 0.655794 ) = 0.785398  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
- [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [_CItan](../../c-runtime-library/citan.md)
+
+Calcula la tangente hiperbólica inversa.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double atanh( double x );
+float atanhf( float x );
+long double atanhl( long double x );
+```
+
+```cpp
+float atanh( float x );  // C++ only
+long double atanh( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*<br/>
+Valor de punto flotante.
+
+## <a name="return-value"></a>Valor devuelto
+
+El **atanh** funciones devuelven la tangente hiperbólica inversa (arcotangente hiperbólica) de *x*. Si *x* es mayor que 1 o menor que -1, **errno** está establecido en **EDOM** y el resultado es un valor NaN reservado. Si *x* es igual a 1 o -1, un infinito positivo o negativo se devuelve, respectivamente, y **errno** está establecido en **ERANGE**.
+
+|Entrada|Excepción SEH|**Matherr** (excepción)|
+|-----------|-------------------|-------------------------|
+|± QNAN,IND|ninguna|ninguna|
+|*X* ≥ 1; *x* ≤ -1|ninguna|ninguna|
+
+## <a name="remarks"></a>Comentarios
+
+Como C++ permite las sobrecargas, puede llamar a sobrecargas de **atanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **atanh** siempre toma y devuelve **doble**.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado C|Encabezado C++|
+|--------------|--------------|------------------|
+|**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_atanh.c
+// This program displays the hyperbolic tangent of pi / 4
+// and the arc hyperbolic tangent of the result.
+//
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double pi = 3.1415926535;
+   double x, y;
+
+   x = tanh( pi / 4 );
+   y = atanh( x );
+   printf( "tanh( %f ) = %f\n", pi/4, x );
+   printf( "atanh( %f ) = %f\n", x, y );
+}
+```
+
+```Output
+tanh( 0.785398 ) = 0.655794
+atanh( 0.655794 ) = 0.785398
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
+[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>

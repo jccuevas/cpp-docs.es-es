@@ -1,12 +1,12 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcstok_s_l
@@ -56,125 +56,125 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: 
+caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 868d9d3fc206931b20858ee360c2380cc5f03d61
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9be62937a5c687c93f0280a8f3ca9d8acc955567
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
-Busca el siguiente token en una cadena, con la configuración regional actual o con la configuración regional que se pase. Estas versiones de [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+Busca el siguiente token en una cadena, con la configuración regional actual o con la configuración regional que se pase. Estas versiones de [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  `_mbstok_s` y `_mbstok_s_l` no se pueden usar en aplicaciones que se ejecutan en Windows en tiempo de ejecución. Para obtener más información, consulte [funciones de CRT no admitidas en aplicaciones de la plataforma Universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```
-char* strtok_s(  
-   char* str,  
-   const char* delimiters,  
-   char** context  
+> **_mbstok_s** y **_mbstok_s_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+char* strtok_s(
+   char* str,
+   const char* delimiters,
+   char** context
 );
 
-char* _strtok_s_l(  
-   char* str,  
-   const char* delimiters,  
-   char** context,  
-   _locale_t locale  
-);  
+char* _strtok_s_l(
+   char* str,
+   const char* delimiters,
+   char** context,
+   _locale_t locale
+);
 
-wchar_t* wcstok_s(  
-   wchar_t* str,  
-   const wchar_t* delimiters,   
-   wchar_t** context  
-); 
- 
-wchar_t *_wcstok_s_l(  
-   wchar_t* str,  
-   const wchar_t* delimiters,   
-   wchar_t** context,  
-   _locale_t locale  
-);  
+wchar_t* wcstok_s(
+   wchar_t* str,
+   const wchar_t* delimiters,
+   wchar_t** context
+);
 
-unsigned char* _mbstok_s(  
-   unsigned char* str,  
-   const unsigned char* delimiters,   
-   char** context  
-);  
+wchar_t *_wcstok_s_l(
+   wchar_t* str,
+   const wchar_t* delimiters,
+   wchar_t** context,
+   _locale_t locale
+);
 
-unsigned char* _mbstok_s(  
-   unsigned char* str,  
-   const unsigned char* delimiters,   
-   char** context,  
-   _locale_t locale  
-);  
-```  
-  
-### <a name="parameters"></a>Parámetros  
+unsigned char* _mbstok_s(
+   unsigned char* str,
+   const unsigned char* delimiters,
+   char** context
+);
 
-*str*  
-Una cadena que contiene el símbolo (token) o los tokens para buscar.  
-  
-*delimiters*  
-El conjunto de caracteres de delimitador que se va a usar.  
-  
-*context*  
-Se utiliza para almacenar información de posición entre llamadas a la función.  
-  
-*locale*  
-Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
+unsigned char* _mbstok_s(
+   unsigned char* str,
+   const unsigned char* delimiters,
+   char** context,
+   _locale_t locale
+);
+```
 
-Devuelve un puntero al siguiente token que se encuentra en *str*. Devuelve `NULL` cuando no se encuentren más tokens. Cada llamada modifica *str* al sustituir una `NULL` caracteres para el primer delimitador que aparece después del token devuelto.  
-  
-### <a name="error-conditions"></a>Condiciones de error  
-  
-|*str*|*delimiters*|*context*|Valor devuelto|`errno`|  
-|----------------|------------------|---------------|------------------|-------------|  
-|`NULL`|any|puntero a un puntero nulo|`NULL`|`EINVAL`|  
-|any|`NULL`|any|`NULL`|`EINVAL`|  
-|any|any|`NULL`|`NULL`|`EINVAL`|  
-  
-Si *str* es `NULL` pero *contexto* es un puntero a un puntero de contexto válido, no hay ningún error.  
-  
-## <a name="remarks"></a>Comentarios  
+### <a name="parameters"></a>Parámetros
 
-El `strtok_s` familia de funciones busca el siguiente token en *str*. El juego de caracteres en *delimitadores* especifica los delimitadores posibles del token que se encuentren en *str* en la llamada actual. `wcstok_s` y `_mbstok_s` son versiones de caracteres anchos y multibyte de `strtok_s`. Los argumentos y valores devueltos de `wcstok_s` y `_wcstok_s_l` son cadenas de caracteres anchos; los de `_mbstok_s` y `_mbstok_s_l` son cadenas de caracteres multibyte. Por lo demás, estas funciones se comportan exactamente igual.  
+*str*<br/>
+Una cadena que contiene el símbolo (token) o los tokens para buscar.
 
-Esta función valida sus parámetros. Si se produce una condición de error, como se describe en la tabla de condiciones de error, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen `errno` en `EINVAL` y devuelven `NULL`.
+*Delimitadores*<br/>
+El conjunto de caracteres de delimitador que se va a usar.
 
-En la primera llamada a `strtok_s` la función omite los delimitadores iniciales y devuelve un puntero al primer token de *str*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *str* mediante una serie de llamadas a `strtok_s`. Cada llamada a `strtok_s` modifica *str* insertando un carácter nulo después del token devuelto por la llamada. El *contexto* puntero realiza un seguimiento de la cadena que se está leyendo y dónde en la cadena siguiente token se leerá. Para leer el token siguiente de *str*, llame a `strtok_s` con un `NULL` valor para el *str* argumento y pase el mismo *contexto* parámetro. El `NULL` *str* argumento causas `strtok_s` para buscar el siguiente token en modificados *str*. El *delimitadores* argumento acepta cualquier valor de una llamada a la siguiente para que el juego de delimitadores puede variar.
+*Contexto*<br/>
+Se utiliza para almacenar información de posición entre llamadas a la función.
 
-Puesto que la *contexto* parámetro reemplaza los búferes estáticos que se usan en `strtok` y `_strtok_l`, es posible analizar dos cadenas simultáneamente en el mismo subproceso.
+*locale*<br/>
+Configuración regional que se va a usar.
 
-El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la configuración regional; vea [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el `_l` sufijo usar la configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional. Las versiones con el `_l` sufijo son idénticas salvo que usan en su lugar el *configuración regional* parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+## <a name="return-value"></a>Valor devuelto
+
+Devuelve un puntero al siguiente token que se encuentra en *str*. Devuelve **NULL** cuando no se encuentren más tokens. Cada llamada modifica *str* al sustituir una **NULL** caracteres para el primer delimitador que aparece después del token devuelto.
+
+### <a name="error-conditions"></a>Condiciones de error
+
+|*str*|*Delimitadores*|*Contexto*|Valor devuelto|**errno**|
+|----------------|------------------|---------------|------------------|-------------|
+|**NULL**|any|puntero a un puntero nulo|**NULL**|**EINVAL**|
+|any|**NULL**|any|**NULL**|**EINVAL**|
+|any|any|**NULL**|**NULL**|**EINVAL**|
+
+Si *str* es **NULL** pero *contexto* es un puntero a un puntero de contexto válido, no hay ningún error.
+
+## <a name="remarks"></a>Comentarios
+
+El **strtok_s** familia de funciones busca el siguiente token en *str*. El juego de caracteres en *delimitadores* especifica los delimitadores posibles del token que se encuentren en *str* en la llamada actual. **wcstok_s** y **_mbstok_s** son versiones de caracteres multibyte y anchos de **strtok_s**. Los argumentos y valores devueltos de **wcstok_s** y **_wcstok_s_l** son caracteres anchos cadenas; los de **_mbstok_s** y **_mbstok_s_l**son cadenas de caracteres multibyte. Por lo demás, estas funciones se comportan exactamente igual.
+
+Esta función valida sus parámetros. Si se produce una condición de error, como se describe en la tabla de condiciones de error, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **NULL**.
+
+En la primera llamada a **strtok_s** la función omite los delimitadores iniciales y devuelve un puntero al primer token de *str*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *str* mediante una serie de llamadas a **strtok_s**. Cada llamada a **strtok_s** modifica *str* insertando un carácter nulo después del token devuelto por la llamada. El *contexto* puntero realiza un seguimiento de la cadena que se está leyendo y dónde en la cadena siguiente token se leerá. Para leer el token siguiente de *str*, llame a **strtok_s** con un **NULL** valor para el *str* argumento y pase el mismo  *contexto* parámetro. El **NULL** *str* argumento causas **strtok_s** para buscar el siguiente token en modificados *str*. El *delimitadores* argumento acepta cualquier valor de una llamada a la siguiente para que el juego de delimitadores puede variar.
+
+Puesto que la *contexto* parámetro reemplaza los búferes estáticos que se usan en **strtok** y **_strtok_l**, es posible analizar dos cadenas simultáneamente en el mismo subproceso.
+
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el **_l** sufijo usar la configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional. Las versiones con el **_l** sufijo son idénticas salvo que usan en su lugar el *configuración regional* parámetro. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario|
 |-------------|---------------------|
-|`strtok_s`|\<string.h>|
-|`_strtok_s_l`|\<string.h>|
-|`wcstok_s`,<br />`_wcstok_s_l`|\<string.h> o \<wchar.h>|
-|`_mbstok_s`,<br />`_mbstok_s_l`|\<mbstring.h>|
+|**strtok_s**|\<string.h>|
+|**_strtok_s_l**|\<string.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<string.h> o \<wchar.h>|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
-Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
 |Rutina TCHAR.H|\_UNICODE & \_MBCS sin definir|\_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|`_tcstok_s`|`strtok_s`|`_mbstok_s`|`wcstok_s`|
-|`_tcstok_s_l`|`_strtok_s_l`|`_mbstok_s_l`|`_wcstok_s_l`|
+|**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
+|**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
 
 ## <a name="example"></a>Ejemplo
 
@@ -221,31 +221,31 @@ int main(void)
         }
     }
 }
-```  
-  
-```Output  
-Tokens:  
- A  
-        Another  
- string  
-        string  
- of  
-        parsed  
- tokens  
-        at  
- and  
-        the  
- some  
-        same  
- more  
-        time.  
- tokens  
-```  
-  
-## <a name="see-also"></a>Vea también  
+```
 
-[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)  
-[Configuración regional](../../c-runtime-library/locale.md)  
-[Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)  
-[strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)  
-[strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+```Output
+Tokens:
+A
+        Another
+string
+        string
+of
+        parsed
+tokens
+        at
+and
+        the
+some
+        same
+more
+        time.
+tokens
+```
+
+## <a name="see-also"></a>Vea también
+
+[Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Configuración regional](../../c-runtime-library/locale.md)<br/>
+[Interpretación de secuencias de caracteres de varios bytes](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

@@ -57,269 +57,273 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a4939c9fc71245528198c686ca9ed7024c858d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: a8c47f3d1a65d9a48f0a76cd6dd9876d799e583f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-Escribe datos con formato en una cadena. Hay disponibles versiones más seguras de estas funciones; vea [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int snprintf(  
-   char *buffer,  
-   size_t count,  
-   const char *format [,  
-   argument] ...   
-);  
-int _snprintf(  
-   char *buffer,  
-   size_t count,  
-   const char *format [,  
-   argument] ...   
-);  
-int _snprintf_l(  
-   char *buffer,  
-   size_t count,  
-   const char *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-int _snwprintf(  
-   wchar_t *buffer,  
-   size_t count,  
-   const wchar_t *format [,  
-   argument] ...   
-);  
-int _snwprintf_l(  
-   wchar_t *buffer,  
-   size_t count,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-template <size_t size>  
-int _snprintf(  
-   char (&buffer)[size],  
-   size_t count,  
-   const char *format [,  
-   argument] ...   
-); // C++ only  
-template <size_t size>  
-int _snprintf_l(  
-   char (&buffer)[size],  
-   size_t count,  
-   const char *format,  
-   locale_t locale [,  
-   argument] ...   
-); // C++ only  
-template <size_t size>  
-int _snwprintf(  
-   wchar_t (&buffer)[size],  
-   size_t count,  
-   const wchar_t *format [,  
-   argument] ...   
-); // C++ only  
-template <size_t size>  
-int _snwprintf_l(  
-   wchar_t (&buffer)[size],  
-   size_t count,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument] ...   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `buffer`  
- Ubicación de almacenamiento del resultado.  
-  
- `count`  
- Número máximo de caracteres que se pueden almacenar.  
-  
- `format`  
- Cadena de control de formato.  
-  
- `argument`  
- Argumentos opcionales.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
- Para obtener más información, vea [Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="return-value"></a>Valor devuelto  
- Deje que `len` sea la longitud de la cadena de datos con formato, sin incluir el carácter null final. `len` y `count` se especifican en bytes para `snprintf` y `_snprintf`, y en caracteres anchos para `_snwprintf`.  
-  
- Para todas las funciones, si `len` < `count`, se almacenan `len` caracteres en `buffer`, se anexa un terminador null y se devuelve `len` .  
-  
- La función `snprintf` trunca el resultado cuando `len` es mayor o igual que `count`, y coloca un terminador null en `buffer[count-1]`. El valor devuelto es `len`, el número de caracteres que habrían resultado si `count` hubiese sido lo suficientemente grande. La función `snprintf` devuelve un valor negativo si se produce un error de codificación.  
-  
- Para todas las funciones distintas de `snprintf`, si `len` = `count`, se almacenan `len` caracteres en `buffer`, no se anexa ningún terminador null y se devuelve `len` . Si `len` > `count`, se almacenan `count` caracteres en `buffer`, no se anexa ningún terminador null y se devuelve un valor negativo.  
-  
- Si `buffer` es un puntero null y `count` es cero, se devuelve `len` como el número de caracteres necesarios para dar formato al resultado, sin incluir el carácter null final. Para realizar una llamada correcta con los mismos parámetros `argument` y `locale` , asigne un búfer que contenga al menos `len` + 1 caracteres.  
-  
- Si `buffer` es un puntero null y `count` es distinto de cero, o si `format` es un puntero null, se invoca el controlador de parámetros no válidos, como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen `errno` en `EINVAL`.  
-  
- Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `snprintf` y la familia de funciones `_snprintf` dan formato y almacenan `count` caracteres o menos en `buffer`. La función `snprintf` siempre almacena un carácter null final y trunca el resultado si es necesario. La familia de funciones `_snprintf` solo anexa un carácter null final si la longitud de la cadena con formato es estrictamente menor que `count` caracteres. Cada `argument` (si existe) se convierte y se muestra según la especificación de formato correspondiente de `format`. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el argumento `format` para [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.  
-  
+Escribe datos con formato en una cadena. Hay disponibles versiones más seguras de estas funciones; vea [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int snprintf(
+   char *buffer,
+   size_t count,
+   const char *format [,
+   argument] ...
+);
+int _snprintf(
+   char *buffer,
+   size_t count,
+   const char *format [,
+   argument] ...
+);
+int _snprintf_l(
+   char *buffer,
+   size_t count,
+   const char *format,
+   locale_t locale [,
+   argument] ...
+);
+int _snwprintf(
+   wchar_t *buffer,
+   size_t count,
+   const wchar_t *format [,
+   argument] ...
+);
+int _snwprintf_l(
+   wchar_t *buffer,
+   size_t count,
+   const wchar_t *format,
+   locale_t locale [,
+   argument] ...
+);
+template <size_t size>
+int _snprintf(
+   char (&buffer)[size],
+   size_t count,
+   const char *format [,
+   argument] ...
+); // C++ only
+template <size_t size>
+int _snprintf_l(
+   char (&buffer)[size],
+   size_t count,
+   const char *format,
+   locale_t locale [,
+   argument] ...
+); // C++ only
+template <size_t size>
+int _snwprintf(
+   wchar_t (&buffer)[size],
+   size_t count,
+   const wchar_t *format [,
+   argument] ...
+); // C++ only
+template <size_t size>
+int _snwprintf_l(
+   wchar_t (&buffer)[size],
+   size_t count,
+   const wchar_t *format,
+   locale_t locale [,
+   argument] ...
+); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*buffer*<br/>
+Ubicación de almacenamiento del resultado.
+
+*count*<br/>
+Número máximo de caracteres que se pueden almacenar.
+
+*format*<br/>
+Cadena de control de formato.
+
+*Argumento*<br/>
+Argumentos opcionales.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+Para obtener más información, vea [Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="return-value"></a>Valor devuelto
+
+Permiten **len** sea la longitud de la cadena de datos con formato, sin incluir el carácter null final. Ambos **len** y *recuento* se expresan en bytes para **snprintf** y **_snprintf**, caracteres anchos para **_snwprintf**.
+
+Para todas las funciones, si **len** < *recuento*, **len** caracteres se almacenan en *búfer*, se anexa un terminador null, y **len** se devuelve.
+
+El **snprintf** función trunca el resultado cuando **len** es mayor o igual que *recuento*, mediante la colocación de un terminador null en `buffer[count-1]`. El valor devuelto es **len**, el número de caracteres que se habrían resultado si *recuento* era lo suficientemente grande. El **snprintf** función devuelve un valor negativo si se produce un error de codificación.
+
+Para todas las funciones excepto **snprintf**si **len** = *recuento*, **len** caracteres se almacenan en  *búfer*, no se anexa ningún terminador null y **len** se devuelve. Si **len** > *recuento*, *recuento* caracteres se almacenan en *búfer*, ningún terminador null no es anexado, negativo se devuelve el valor.
+
+Si *búfer* es un puntero nulo y *recuento* es cero, **len** se devuelve como el número de caracteres necesarios para dar formato al resultado, sin incluir el carácter null final. Para realizar una llamada correcta con el mismo *argumento* y *configuración regional* parámetros, asigne un búfer que contenga al menos **len** + 1 caracteres.
+
+Si *búfer* es un puntero nulo y *recuento* es distinto de cero, o si *formato* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+
+Para obtener información sobre estos y otros códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **snprintf** función y la **_snprintf** familia de funciones formato y almacenan *recuento* caracteres o menos en *búfer*. El **snprintf** función siempre almacena un carácter nulo de terminación, trunca el resultado si es necesario. El **_snprintf** familia de funciones solo anexa un carácter null final si la longitud de cadena con formato es estrictamente menor que *recuento* caracteres. Cada *argumento* (si existe) se convierte y se muestra según la especificación de formato correspondiente de *formato*. El formato consta de caracteres ordinarios y tiene el mismo formato y función que el *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+
 > [!IMPORTANT]
->  Asegúrese de que `format` no es una cadena definida por el usuario. Puesto que las funciones `_snprintf` no garantizan la finalización en NULL, en concreto cuando el valor devuelto es `count`, hay que asegurarse de que vayan seguidas de código que agregue el terminador null. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
-  
- A partir del UCRT en Visual Studio 2015 y Windows 10, la palabra clave `snprintf` ya no es idéntica a `_snprintf`. El comportamiento de la función `snprintf` es ahora compatible con el estándar C99.  
-  
- `_snwprintf` es una versión con caracteres anchos de `_snprintf`; los argumentos de puntero a `_snwprintf` son cadenas de carácter ancho. La detección de errores de codificación en `_snwprintf` puede diferir de la de `_snprintf`. `_snwprintf`, como `swprintf`, escribe el resultado en una cadena en lugar de hacerlo en un destino de tipo `FILE`.  
-  
- Las versiones de estas funciones que tienen el sufijo `_l` son idénticas salvo que usan el parámetro de configuración regional que se pasa en lugar de la configuración regional del subproceso actual.  
-  
- En C++, estas funciones tienen sobrecargas de plantilla que invocan sus homólogos más seguros y más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_sntprintf`|`_snprintf`|`_snprintf`|`_snwprintf`|  
-|`_sntprintf_l`|`_snprintf_l`|`_snprintf_l`|`_snwprintf_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
-|`_snwprintf`, `_snwprintf_l`|\<stdio.h> o \<wchar.h>|  
-  
- Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Ejemplo  
-  
-```C  
-// crt_snprintf.c  
-// compile with: /W3  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-#if !defined(__cplusplus)  
-typedef int bool;  
-const bool true = 1;  
-const bool false = 0;  
-#endif  
-  
-#define FAIL 0 // change to 1 and see what happens  
-  
-int main(void)  
-{  
-   char buffer[200];  
-   const static char s[] = "computer"  
-#if FAIL  
-"computercomputercomputercomputercomputercomputercomputercomputer"  
-"computercomputercomputercomputercomputercomputercomputercomputer"  
-"computercomputercomputercomputercomputercomputercomputercomputer"  
-"computercomputercomputercomputercomputercomputercomputercomputer"  
-#endif  
-   ;  
-   const char c = 'l';   
-   const int i = 35;  
-#if FAIL  
-   const double fp = 1e300; // doesn't fit in the buffer  
-#else  
-   const double fp = 1.7320534;  
-#endif  
-   /* !subtract one to prevent "squeezing out" the terminal nul! */  
-   const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;  
-   int bufferUsed = 0;  
-   int bufferLeft = bufferSize - bufferUsed;  
-   bool bSuccess = true;  
-   buffer[0] = 0;  
-  
-   /* Format and print various data: */  
-  
-   if (bufferLeft > 0)  
-   {  
-      int perElementBufferUsed = _snprintf(&buffer[bufferUsed],   
-      bufferLeft, "   String: %s\n", s ); // C4996  
-      // Note: _snprintf is deprecated; consider _snprintf_s instead  
-      if (bSuccess = (perElementBufferUsed >= 0))  
-      {  
-         bufferUsed += perElementBufferUsed;  
-         bufferLeft -= perElementBufferUsed;  
-         if (bufferLeft > 0)  
-         {  
-            int perElementBufferUsed = _snprintf(&buffer[bufferUsed],   
-            bufferLeft, "   Character: %c\n", c ); // C4996  
-            if (bSuccess = (perElementBufferUsed >= 0))  
-            {  
-               bufferUsed += perElementBufferUsed;  
-               bufferLeft -= perElementBufferUsed;  
-               if (bufferLeft > 0)  
-               {  
-                  int perElementBufferUsed = _snprintf(&buffer  
-                  [bufferUsed], bufferLeft, "   Integer: %d\n", i ); // C4996  
-                  if (bSuccess = (perElementBufferUsed >= 0))  
-                  {  
-                     bufferUsed += perElementBufferUsed;  
-                     bufferLeft -= perElementBufferUsed;  
-                     if (bufferLeft > 0)  
-                     {  
-                        int perElementBufferUsed = _snprintf(&buffer  
-                        [bufferUsed], bufferLeft, "   Real: %f\n", fp ); // C4996  
-                        if (bSuccess = (perElementBufferUsed >= 0))  
-                        {  
-                           bufferUsed += perElementBufferUsed;  
-                        }  
-                     }  
-                  }  
-               }  
-            }  
-         }  
-      }  
-   }  
-  
-   if (!bSuccess)  
-   {  
-      printf("%s\n", "failure");  
-   }  
-   else  
-   {  
-      /* !store nul because _snprintf doesn't necessarily (if the string   
-       * fits without the terminal nul, but not with it)!  
-       * bufferUsed might be as large as bufferSize, which normally is   
-       * like going one element beyond a buffer, but in this case   
-       * subtracted one from bufferSize, so we're ok.  
-       */  
-      buffer[bufferUsed] = 0;  
-      printf( "Output:\n%s\ncharacter count = %d\n", buffer, bufferUsed );  
-   }  
-   return EXIT_SUCCESS;  
-}  
-```  
-  
-```Output  
-Output:  
-   String: computer  
-   Character: l  
-   Integer: 35  
-   Real: 1.732053  
-  
-character count = 69  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)
+> Asegúrese de que *format* no es una cadena definida por el usuario. Dado que la **_snprintf** funciones no garantizan la finalización en NULL, en particular, cuando el valor devuelto es *recuento*: asegúrese de que vayan seguidas de código que agrega el terminador nulo. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+
+A partir del ucrt de Visual Studio 2015 y Windows 10, **snprintf** ya no es idéntico a **_snprintf**. El **snprintf** comportamiento de la función ahora es compatible con el estándar C99.
+
+**_snwprintf** es una versión con caracteres anchos de **_snprintf**; los argumentos de puntero a **_snwprintf** son cadenas de caracteres anchos. Detección de errores en de codificación **_snwprintf** pueden diferir de la de **_snprintf**. **_snwprintf**, igual que **swprintf**, escribe los resultados en una cadena en lugar de un destino de tipo **archivo**.
+
+Las versiones de estas funciones que tienen la **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+
+En C++, estas funciones tienen sobrecargas de plantilla que invocan sus homólogos más seguros y más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina Tchar.h|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
+|**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**snprintf**, **_snprintf**, **_snprintf_l**|\<stdio.h>|
+|**_snwprintf**, **_snwprintf_l**|\<stdio.h> o \<wchar.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_snprintf.c
+// compile with: /W3
+#include <stdio.h>
+#include <stdlib.h>
+
+#if !defined(__cplusplus)
+typedef int bool;
+const bool true = 1;
+const bool false = 0;
+#endif
+
+#define FAIL 0 // change to 1 and see what happens
+
+int main(void)
+{
+   char buffer[200];
+   const static char s[] = "computer"
+#if FAIL
+"computercomputercomputercomputercomputercomputercomputercomputer"
+"computercomputercomputercomputercomputercomputercomputercomputer"
+"computercomputercomputercomputercomputercomputercomputercomputer"
+"computercomputercomputercomputercomputercomputercomputercomputer"
+#endif
+   ;
+   const char c = 'l';
+   const int i = 35;
+#if FAIL
+   const double fp = 1e300; // doesn't fit in the buffer
+#else
+   const double fp = 1.7320534;
+#endif
+   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
+   int bufferUsed = 0;
+   int bufferLeft = bufferSize - bufferUsed;
+   bool bSuccess = true;
+   buffer[0] = 0;
+
+   /* Format and print various data: */
+
+   if (bufferLeft > 0)
+   {
+      int perElementBufferUsed = _snprintf(&buffer[bufferUsed],
+      bufferLeft, "   String: %s\n", s ); // C4996
+      // Note: _snprintf is deprecated; consider _snprintf_s instead
+      if (bSuccess = (perElementBufferUsed >= 0))
+      {
+         bufferUsed += perElementBufferUsed;
+         bufferLeft -= perElementBufferUsed;
+         if (bufferLeft > 0)
+         {
+            int perElementBufferUsed = _snprintf(&buffer[bufferUsed],
+            bufferLeft, "   Character: %c\n", c ); // C4996
+            if (bSuccess = (perElementBufferUsed >= 0))
+            {
+               bufferUsed += perElementBufferUsed;
+               bufferLeft -= perElementBufferUsed;
+               if (bufferLeft > 0)
+               {
+                  int perElementBufferUsed = _snprintf(&buffer
+                  [bufferUsed], bufferLeft, "   Integer: %d\n", i ); // C4996
+                  if (bSuccess = (perElementBufferUsed >= 0))
+                  {
+                     bufferUsed += perElementBufferUsed;
+                     bufferLeft -= perElementBufferUsed;
+                     if (bufferLeft > 0)
+                     {
+                        int perElementBufferUsed = _snprintf(&buffer
+                        [bufferUsed], bufferLeft, "   Real: %f\n", fp ); // C4996
+                        if (bSuccess = (perElementBufferUsed >= 0))
+                        {
+                           bufferUsed += perElementBufferUsed;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   if (!bSuccess)
+   {
+      printf("%s\n", "failure");
+   }
+   else
+   {
+      /* !store nul because _snprintf doesn't necessarily (if the string
+       * fits without the terminal nul, but not with it)!
+       * bufferUsed might be as large as bufferSize, which normally is
+       * like going one element beyond a buffer, but in this case
+       * subtracted one from bufferSize, so we're ok.
+       */
+      buffer[bufferUsed] = 0;
+      printf( "Output:\n%s\ncharacter count = %d\n", buffer, bufferUsed );
+   }
+   return EXIT_SUCCESS;
+}
+```
+
+```Output
+Output:
+   String: computer
+   Character: l
+   Integer: 35
+   Real: 1.732053
+
+character count = 69
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
+[vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)<br/>

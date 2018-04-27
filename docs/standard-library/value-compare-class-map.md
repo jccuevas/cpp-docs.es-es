@@ -1,12 +1,12 @@
 ---
-title: "value_compare (Clase) (&lt;asignación&gt;) | Microsoft Docs"
-ms.custom: 
+title: value_compare (Clase) (&lt;asignación&gt;) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - std::value_compare
@@ -18,24 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbb0f651c22702fdad7ca392fa76e4827c6c2e25
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 134d364c38b30584b2f8c242cd824ea522bc9259
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare (Clase) (&lt;asignación&gt;)
-Proporciona un objeto de función que puede comparar los elementos de una asignación comparando los valores de sus claves para determinar su orden relativo en la asignación.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```
+
+Proporciona un objeto de función que puede comparar los elementos de una asignación comparando los valores de sus claves para determinar su orden relativo en la asignación.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 class value_compare : public binary_function<value_type, value_type, bool>
 {
 public:
@@ -44,25 +45,26 @@ public:
 protected:
     key_compare comp;
 };
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El criterio de comparación proporcionado por `value_compare` entre **value_types** de elementos enteros incluidos en una asignación se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto **comp** de tipo `key_compare` almacenado en el objeto de función proporcionado por `value_compare` para comparar los componentes de clave de ordenación de dos elementos.  
-  
- Para conjuntos y conjuntos múltiples, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, `value_compare` es equivalente a `key_compare`. No lo es para asignaciones y asignaciones múltiples, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.  
-  
-## <a name="example"></a>Ejemplo  
-  Vea el ejemplo de [value_comp](../standard-library/map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar `value_compare`.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<map>  
-  
- **Espacio de nombres:** std  
-  
-## <a name="see-also"></a>Vea también  
- [binary_function (Struct)](../standard-library/binary-function-struct.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+```
 
+## <a name="remarks"></a>Comentarios
 
+El criterio de comparación proporcionado por `value_compare` entre **value_types** de elementos enteros incluidos en una asignación se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto **comp** de tipo `key_compare` almacenado en el objeto de función proporcionado por `value_compare` para comparar los componentes de clave de ordenación de dos elementos.
 
+Para conjuntos y conjuntos múltiples, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, `value_compare` es equivalente a `key_compare`. No lo es para asignaciones y asignaciones múltiples, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [value_comp](../standard-library/map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar `value_compare`.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<map>
+
+**Espacio de nombres:** std
+
+## <a name="see-also"></a>Vea también
+
+[binary_function (Struct)](../standard-library/binary-function-struct.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

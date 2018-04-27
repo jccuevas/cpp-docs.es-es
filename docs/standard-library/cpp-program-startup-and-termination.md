@@ -1,12 +1,12 @@
 ---
-title: "Inicio y terminación de un programa de C++ | Microsoft Docs"
-ms.custom: 
+title: Inicio y terminación de un programa de C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,37 +18,37 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42baa08777e8e898ee4c6e49ce74b03c293c9b96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eec5c6d72152f2aaea8d77df7ca65bf5f5f5565b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-program-startup-and-termination"></a>Inicio y terminación de un programa de C++
-Un programa de C++ realiza las mismas operaciones que un programa de C al inicio del programa y en la finalización del programa, además de algunas más que se describen aquí.  
-  
- Antes de que el entorno de destino llame a la función `main`, y después de que almacene cualquier valor inicial constante que especifique en todos los objetos que tienen duración estática, el programa ejecuta los constructores restantes de esos objetos estáticos. No se especifica el orden de ejecución entre unidades de traducción, pero puede suponer que algunos objetos [iostreams](../standard-library/iostreams-conventions.md) se inicializan correctamente para que los usen estos constructores estáticos. Estos flujos de texto de control son:  
-  
--   [cin](../standard-library/iostream.md#cin): para la entrada estándar.  
-  
--   [cout](../standard-library/iostream.md#cout): para la salida estándar.  
-  
--   [cerr](../standard-library/iostream.md#cerr): para la salida de error estándar no almacenado en el búfer.  
-  
--   [clog](../standard-library/iostream.md#clog): para la salida de error estándar almacenado en el búfer.  
-  
- También puede usar estos objetos dentro de los destructores a los que llaman los objetos estáticos, durante la finalización del programa.  
-  
- Al igual que con C, al volver de `main` o llamar a `exit`, se llama a todas las funciones registradas con `atexit` en orden inverso de registro. Una excepción producida a partir de una función registrada de ese tipo llama a `terminate`.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Un programa de C++ realiza las mismas operaciones que un programa de C al inicio del programa y en la finalización del programa, además de algunas más que se describen aquí.
 
+Antes de que el entorno de destino llame a la función `main`, y después de que almacene cualquier valor inicial constante que especifique en todos los objetos que tienen duración estática, el programa ejecuta los constructores restantes de esos objetos estáticos. No se especifica el orden de ejecución entre unidades de traducción, pero puede suponer que algunos objetos [iostreams](../standard-library/iostreams-conventions.md) se inicializan correctamente para que los usen estos constructores estáticos. Estos flujos de texto de control son:
+
+- [cin](../standard-library/iostream.md#cin): para la entrada estándar.
+
+- [cout](../standard-library/iostream.md#cout): para la salida estándar.
+
+- [cerr](../standard-library/iostream.md#cerr): para la salida de error estándar no almacenado en el búfer.
+
+- [clog](../standard-library/iostream.md#clog): para la salida de error estándar almacenado en el búfer.
+
+También puede usar estos objetos dentro de los destructores a los que llaman los objetos estáticos, durante la finalización del programa.
+
+Al igual que con C, al volver de `main` o llamar a `exit`, se llama a todas las funciones registradas con `atexit` en orden inverso de registro. Una excepción producida a partir de una función registrada de ese tipo llama a `terminate`.
+
+## <a name="see-also"></a>Vea también
+
+[Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

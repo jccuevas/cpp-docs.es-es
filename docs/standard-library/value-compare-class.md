@@ -1,12 +1,12 @@
 ---
 title: value_compare (clase) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - value_compare
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ecc53d5bd7069d364d881c69f34d4a25b44915
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9019b39ff9df7137a1de6723a6fbb64e595ce678
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="valuecompare-class"></a>value_compare (Clase)
-Proporciona un objeto de función que puede comparar los elementos de hash_map al comparar los valores de sus claves para determinar su orden relativo en hash_map.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```
+
+Proporciona un objeto de función que puede comparar los elementos de hash_map al comparar los valores de sus claves para determinar su orden relativo en hash_map.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
 class value_compare
  : std::public binary_function<value_type, value_type, bool>
 {
@@ -43,32 +44,31 @@ public:
  {
     return (comp(left.first, right.first));
 
- }
+}
 protected:
     value_compare(const key_compare& c) : comp (c) { }
     key_compare comp;
 };
-```  
-  
-## <a name="remarks"></a>Comentarios  
- El criterio de comparación proporcionado por value_compare entre **value_types** de elementos enteros incluidos en una hash_map se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto **comp** de tipo `key_compare` almacenado en el objeto de función proporcionado por value_compare para comparar los componentes de clave de ordenación de dos elementos.  
-  
- Para hash_set y hash_multiset, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, value_compare es equivalente a `key_compare`. No lo es para hash_map y hash_multimap, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.  
-  
-   
-  
-## <a name="example"></a>Ejemplo  
- Vea el ejemplo de [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar value_compare.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<hash_map>  
-  
- **Espacio de nombres:** stdext  
-  
-## <a name="see-also"></a>Vea también  
- [binary_function (Struct)](../standard-library/binary-function-struct.md)   
- [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)
+```
 
+## <a name="remarks"></a>Comentarios
 
+El criterio de comparación proporcionado por value_compare entre **value_types** de elementos enteros incluidos en una hash_map se induce de una comparación entre las claves de los respectivos elementos mediante la construcción de la clase auxiliar. El operador de la función miembro usa el objeto **comp** de tipo `key_compare` almacenado en el objeto de función proporcionado por value_compare para comparar los componentes de clave de ordenación de dos elementos.
 
+Para hash_set y hash_multiset, que son simples contenedores donde los valores de clave son idénticos a los valores de elemento, value_compare es equivalente a `key_compare`. No lo es para hash_map y hash_multimap, dado que el valor de los elementos de tipo `pair` no es idéntico al valor de clave del elemento.
+
+## <a name="example"></a>Ejemplo
+
+Vea el ejemplo de [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) para obtener un ejemplo de cómo declarar y usar value_compare.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<hash_map>
+
+**Espacio de nombres:** stdext
+
+## <a name="see-also"></a>Vea también
+
+[binary_function (Struct)](../standard-library/binary-function-struct.md)<br/>
+[Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Referencia de biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>

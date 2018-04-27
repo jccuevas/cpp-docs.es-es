@@ -1,12 +1,12 @@
 ---
 title: '&lt;hash_map&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,9 +52,9 @@ Define las clases de plantilla de contenedor hash_map y hash_multimap y sus plan
 
 ### <a name="classes"></a>Clases
 
-|||
+|Clase|Descripción|
 |-|-|
-|[Clase hash_compare](hash-compare-class.md)|Describe un objeto que se puede usar con cualquiera de los contenedores asociativos hash (hash_map, hash_multimap, hash_set o hash_multiset) como objeto de parámetro **Traits** predeterminado para ordenar y aplicar algoritmos hash a los elementos que contienen.|
+|[hash_compare (Clase)](hash-compare-class.md)|Describe un objeto que se puede usar con cualquiera de los contenedores asociativos hash (hash_map, hash_multimap, hash_set o hash_multiset) como objeto de parámetro **Traits** predeterminado para ordenar y aplicar algoritmos hash a los elementos que contienen.|
 |[Clase value_compare](value-compare-class.md)|Proporciona un objeto de función que puede comparar los elementos de hash_map al comparar los valores de sus claves para determinar su orden relativo en hash_map.|
 |[Clase hash_map](hash-map-class.md)|Se usa para el almacenamiento y la recuperación rápida de datos de una colección en la que cada elemento es un par que tiene una clave de ordenación cuyo valor es único y un valor de datos asociado.|
 |[Clase hash_multimap](hash-multimap-class.md)|Se usa para el almacenamiento y la recuperación rápida de datos de una colección en la que cada elemento es un par que tiene una clave de ordenación cuyo valor no necesita ser único y un valor de datos asociado.|
@@ -67,6 +67,6 @@ Define las clases de plantilla de contenedor hash_map y hash_multimap y sus plan
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)  
-[Seguridad para subprocesos en la biblioteca estándar de C++](thread-safety-in-the-cpp-standard-library.md)  
-[Referencia de biblioteca estándar de C++](cpp-standard-library-reference.md)  
+[Referencia de archivos de encabezado](cpp-standard-library-header-files.md)
+[seguridad para subprocesos en la biblioteca estándar de C++](thread-safety-in-the-cpp-standard-library.md)
+[referencia de la biblioteca estándar de C++](cpp-standard-library-reference.md)

@@ -1,12 +1,12 @@
 ---
-title: "Conversiones estándar | Documentos de Microsoft"
-ms.custom: 
+title: Conversiones estándar | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 El lenguaje C++ define conversiones entre sus tipos fundamentales. También define conversiones para tipos derivados de puntero, referencia y puntero a miembro. Estas conversiones se denominan "conversiones estándar". (Para obtener más información sobre los tipos, los tipos estándar y los tipos derivados, vea [tipos](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Las promociones que poseen la cualidad de conservación de valores y las promociones que conservan el tipo signed/unsigned generan normalmente los mismos resultados. Sin embargo, pueden generar resultados diferentes si el objeto que se promueve es uno de los siguientes:  
   
--   Un operando de  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o **>=**  
+-   Un operando de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, o **>=**  
   
      Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.  
   
--   El operando izquierdo de  **>>**  o **>>=**  
+-   El operando izquierdo de **>>** o **>>=**  
   
      Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.  
   
@@ -120,8 +120,7 @@ int main()
   
  Los objetos de tipos enteros sin signo se pueden convertir en los tipos con signo correspondientes. Sin embargo, este tipo de conversión puede producir una interpretación incorrecta de los datos si el valor del objeto sin signo está fuera del intervalo que puede representar el tipo con signo, como se muestra en el ejemplo siguiente:  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  Un objeto de tipo flotante se puede convertir en un tipo menos preciso, si se encuentra en un intervalo representable por ese tipo. (Consulte [límites de punto flotante](../cpp/floating-limits.md) para los intervalos de tipos de punto flotante.) Si el valor original no se puede representar con exactitud, se puede convertir en el siguiente valor representable mayor o menor. Si no existe dicho valor, el resultado es indefinido. Considere el ejemplo siguiente:  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- El valor máximo que se puede representar por tipo **float** es 3.402823466E38: un número mucho menor que 1E300. Por tanto, el número se convierte a infinito y el resultado es 1.#INF.  
+ El valor máximo que se puede representar por tipo **float** es 3.402823466E38: un número mucho menor que 1E300. Por lo tanto, el número se convierte a infinito y el resultado es "inf".  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversiones entre tipos integrales y de punto flotante  
  Algunas expresiones pueden producir la conversión de objetos de tipo flotante a tipos enteros, o viceversa. Cuando un objeto de tipo entero se convierte a un tipo flotante y el valor original no se puede representar correcta, el resultado es el siguiente valor más alto o más bajo que se puede representar.  

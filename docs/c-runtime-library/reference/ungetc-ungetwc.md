@@ -1,12 +1,12 @@
 ---
 title: ungetc, ungetwc | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ungetwc
@@ -37,107 +37,112 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d65453f1254e4c42658ef6f27d7c90d2ad0022b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9ce7de35118d4dd9c365b758a398b865e646036
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
-Vuelve a insertar un carácter en el flujo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int ungetc(  
-   int c,  
-   FILE *stream   
-);  
-wint_t ungetwc(  
-   wint_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `c`  
- Carácter que se va a devolver.  
-  
- `stream`  
- Puntero a la estructura `FILE` .  
-  
-## <a name="return-value"></a>Valor devuelto  
- Si es correcto, cada una de estas funciones devuelve el argumento de carácter `c`. Si `c` no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y `ungetc` devuelve `EOF`; `ungetwc` devuelve `WEOF`. Si `stream` es `NULL`, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, se devuelve `EOF` o `WEOF` y `errno` se establece en `EINVAL`.  
-  
- Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `ungetc` vuelve a insertar el carácter `c` en `stream` y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Siguiente operación de lectura en `stream` comienza con `c`. Los intentos de insertar `EOF` en el flujo mediante `ungetc` se omiten.  
-  
- Los caracteres que `ungetc` pone en el flujo se podrían borrar si se llama a `fflush`, `fseek`, `fsetpos` o `rewind` antes de que se lea el carácter del flujo. El indicador de posición de archivo tendrá el valor que tenía antes de que se volvieran a insertar los caracteres. El almacenamiento externo correspondiente al flujo no cambia. Si una llamada de `ungetc` en un flujo de texto se realiza correctamente, el indicador de posición del archivo está sin especificar hasta que se leen o se descarten todos los caracteres que se han vuelto a insertar. En cada llamada correcta de `ungetc` en un flujo binario se reduce el indicador de posición de archivo. Si el valor era 0 antes de una llamada, el valor queda sin definir después de la llamada.  
-  
- Los resultados son imprevisibles si se llama a `ungetc` dos veces sin que haya una operación de lectura o de posición de archivo entre las dos llamadas. Después de una llamada a `fscanf`, una llamada a `ungetc` puede generar un error a menos que se haya realizado otra operación de lectura (por ejemplo `getc`). La razón es que la función `fscanf` ya llama a `ungetc`.  
-  
- `ungetwc` es una versión con caracteres anchos de `ungetc`. Sin embargo, en cada llamada correcta de `ungetwc` en un flujo de texto o binario, el valor del indicador de posición de archivo no se especifica hasta que se leen o se descartan todos los caracteres que se han vuelto a insertar.  
-  
- Estas funciones son seguras para subprocesos y bloquean los datos confidenciales durante la ejecución. Para obtener una versión que no es de bloqueo, vea [_ungetc_nolock, _ungetwc_nolock](../../c-runtime-library/reference/ungetc-nolock-ungetwc-nolock.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ungettc`|`ungetc`|`ungetc`|`ungetwc`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`ungetc`|\<stdio.h>|  
-|`ungetwc`|\<stdio.h> o \<wchar.h>|  
-  
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, `stdin`, `stdout`, y `stderr`, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_ungetc.c  
-// This program first converts a character  
-// representation of an unsigned integer to an integer. If  
-// the program encounters a character that is not a digit,  
-// the program uses ungetc to replace it in the  stream.  
-//  
-  
-#include <stdio.h>  
-#include <ctype.h>  
-  
-int main( void )  
-{  
-   int ch;  
-   int result = 0;  
-  
-   // Read in and convert number:  
-   while( ((ch = getchar()) != EOF) && isdigit( ch ) )  
-      result = result * 10 + ch - '0';    // Use digit.  
-   if( ch != EOF )  
-      ungetc( ch, stdin );                // Put nondigit back.  
-   printf( "Number = %d\nNext character in stream = '%c'",   
-            result, getchar() );  
-}  
-```  
-  
-```Output  
-  
-      521aNumber = 521  
-Next character in stream = 'a'  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Vuelve a insertar un carácter en el flujo.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int ungetc(
+   int c,
+   FILE *stream
+);
+wint_t ungetwc(
+   wint_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*c*<br/>
+Carácter que se va a devolver.
+
+*Secuencia*<br/>
+Puntero a la estructura **FILE**.
+
+## <a name="return-value"></a>Valor devuelto
+
+Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no se puede volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **ungetc** devuelve ** EOF`; **ungetwc` devuelve **WEOF**. Si *flujo* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **EOF** o **WEOF** se devuelve y **errno** está establecido en **EINVAL**.
+
+Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **ungetc** función inserta el carácter *c* a *flujo* y borra el indicador de fin de archivo. El flujo debe estar abierto para lectura. Siguiente operación de lectura en *flujo* comienza con *c*. Intentos de insertar **EOF** en el flujo mediante **ungetc** se omite.
+
+Caracteres que se colocan en el flujo **ungetc** se podrían borrar si **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**, o [rebobinar](rewind.md) se llama antes de que el carácter se lee de la secuencia. El indicador de posición de archivo tendrá el valor que tenía antes de que se volvieran a insertar los caracteres. El almacenamiento externo correspondiente al flujo no cambia. En una correcta **ungetc** llamada en una secuencia de texto, el indicador de posición de archivo no está especificado hasta que todos los caracteres vuelto se leen o se descartan. En cada uno de ellos correcta **ungetc** llamada en una secuencia binaria, el indicador de posición de archivo es reducido; si el valor era 0 antes de la llamada, el valor es indefinido después de la llamada.
+
+Los resultados son impredecibles si **ungetc** se llama dos veces sin una lectura o la operación de posicionamiento de archivo entre las dos llamadas. Después de llamar a **fscanf**, una llamada a **ungetc** puede producir un error a menos que otra operación de lectura (como **getc**) se ha realizado. Esto es porque **fscanf** por sí mismo llama **ungetc**.
+
+**ungetwc** es una versión con caracteres anchos de **ungetc**. Sin embargo, en cada uno de ellos correcta **ungetwc** llamada en un flujo de texto o binario, el valor del indicador de posición de archivo no está especificado hasta que se leen o se descartan todos los caracteres de vuelto.
+
+Estas funciones son seguras para subprocesos y bloquean los datos confidenciales durante la ejecución. Para obtener una versión que no es de bloqueo, vea [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ungettc**|**ungetc**|**ungetc**|**ungetwc**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|**ungetc**|\<stdio.h>|
+|**ungetwc**|\<stdio.h> o \<wchar.h>|
+
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_ungetc.c
+// This program first converts a character
+// representation of an unsigned integer to an integer. If
+// the program encounters a character that is not a digit,
+// the program uses ungetc to replace it in the  stream.
+//
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main( void )
+{
+   int ch;
+   int result = 0;
+
+   // Read in and convert number:
+   while( ((ch = getchar()) != EOF) && isdigit( ch ) )
+      result = result * 10 + ch - '0';    // Use digit.
+   if( ch != EOF )
+      ungetc( ch, stdin );                // Put nondigit back.
+   printf( "Number = %d\nNext character in stream = '%c'",
+            result, getchar() );
+}
+```
+
+```Output
+
+      521aNumber = 521
+Next character in stream = 'a'
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

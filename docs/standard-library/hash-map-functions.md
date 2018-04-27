@@ -1,76 +1,75 @@
 ---
 title: Funciones de &lt;hash_map&gt; | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-caps.latest.revision: 
+caps.latest.revision: 9
 manager: ghogen
-ms.openlocfilehash: 4240316aadf964b972c46a00c6ee4a09cc4626d6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d54cf0181a80ccb763cfe76f8eb89ade5a56b7d4
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt-functions"></a>Funciones de &lt;hash_map&gt;
-|||  
-|-|-|  
-|[swap](#swap)|[swap (hash_map)](#swap_hash_map)|  
-  
-##  <a name="swap_hash_map"></a>  swap (hash_map)  
-  
+
+|||
+|-|-|
+|[swap](#swap)|[swap (hash_map)](#swap_hash_map)|
+
+## <a name="swap_hash_map"></a>  swap (hash_map)
+
 > [!NOTE]
->  Esta API está obsoleta. La alternativa es la [clase unordered_map](../standard-library/unordered-map-class.md).  
-  
- Intercambia los elementos de dos objetos hash_map.  
-  
-```
+> Esta API está obsoleta. La alternativa es la [clase unordered_map](../standard-library/unordered-map-class.md).
+
+Intercambia los elementos de dos objetos hash_map.
+
+```cpp
 void swap(
     hash_map <Key, Type, Traits, Alloctor>& left,
     hash_map <Key, Type, Traits, Allocator>& right);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- `right`  
- Objeto hash_map cuyos elementos se van a intercambiar con los del objeto map `left`.  
-  
- `left`  
- Objeto hash_map cuyos elementos se van a intercambiar con los del objeto map `right`.  
-  
-### <a name="remarks"></a>Comentarios  
- La función de plantilla es un algoritmo especializado en la clase contenedora hash_map para ejecutar la función miembro `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template \<class T> void swap(T&, T&)** del archivo de encabezado de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
-  
-##  <a name="swap"></a>  swap  
-  
-> [!NOTE]
->  Esta API está obsoleta. La alternativa es la [clase unordered_multimap](../standard-library/unordered-multimap-class.md).  
-  
- Intercambia los elementos de dos objetos hash_multimap.  
-  
 ```
+
+### <a name="parameters"></a>Parámetros
+
+`right` Hash_map cuyos elementos se van a intercambiar con los del mapa `left`.
+
+`left` Hash_map cuyos elementos se van a intercambiar con los del mapa `right`.
+
+### <a name="remarks"></a>Comentarios
+
+La función de plantilla es un algoritmo especializado en la clase contenedora hash_map para ejecutar la función miembro `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template \<class T> void swap(T&, T&)** del archivo de encabezado de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
+
+## <a name="swap"></a>  swap
+
+> [!NOTE]
+> Esta API está obsoleta. La alternativa es la [clase unordered_multimap](../standard-library/unordered-multimap-class.md).
+
+Intercambia los elementos de dos objetos hash_multimap.
+
+```cpp
 void swap(
     hash_multimap <Key, Type, Traits, Alloctor>& left,
     hash_multimap <Key, Type, Traits, Allocator>& right);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- `right`  
- Objeto hash_multimap cuyos elementos se van a intercambiar con los del objeto map `left`.  
-  
- `left`  
- Objeto hash_multimap cuyos elementos se van a intercambiar con los del objeto map `right`.  
-  
-### <a name="remarks"></a>Comentarios  
- La función de plantilla es un algoritmo especializado en la clase contenedora hash_multimap para ejecutar la función miembro `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template \<class T> void swap(T&, T&)** del archivo de encabezado de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.  
-  
-## <a name="see-also"></a>Vea también  
- [<hash_map>](../standard-library/hash-map.md)
+```
 
+### <a name="parameters"></a>Parámetros
 
+`right` El hash_multimap cuyos elementos se van a intercambiar con los del mapa `left`.
 
+`left` El hash_multimap cuyos elementos se van a intercambiar con los del mapa `right`.
+
+### <a name="remarks"></a>Comentarios
+
+La función de plantilla es un algoritmo especializado en la clase contenedora hash_multimap para ejecutar la función miembro `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. Se trata de una instancia de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla **template \<class T> void swap(T&, T&)** del archivo de encabezado de algoritmo funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
+
+## <a name="see-also"></a>Vea también
+
+[<hash_map>](../standard-library/hash-map.md)<br/>

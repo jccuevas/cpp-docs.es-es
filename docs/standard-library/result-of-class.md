@@ -1,13 +1,13 @@
 ---
 title: result_of (Clase) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - type_traits/std::result_of
@@ -20,52 +20,52 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 256f24ad40234db2bbc191a50b0d7e05de39c073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e05b8eb4352ca1556f8266dfc73247222583d4a8
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="resultof-class"></a>result_of (Clase)
-Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-template<class>  
-struct result_of; // Causes a static assert  
-  
-template <class Fn, class... ArgTypes>  
+
+Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+template<class>
+struct result_of; // Causes a static assert
+
+template <class Fn, class... ArgTypes>
 struct result_of<Fn(ArgTypes...)>;
 
-// Helper type  
+// Helper type
 template<class T>
    using result_of_t = typename result_of<T>::type;
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `Fn`  
- El tipo que se puede llamar para la consulta.  
-  
- `ArgTypes`  
- Los tipos de la lista de argumentos para el tipo que se puede llamar para la consulta.  
-  
-## <a name="remarks"></a>Comentarios  
- Use esta plantilla para determinar en tiempo de compilación el tipo de resultado de `Fn`(`ArgTypes`), donde `Fn` es un tipo que se puede llamar, la referencia a la función o la referencia al tipo que se puede llamar, invocado mediante una lista de argumentos de los tipos de `ArgTypes`. El miembro `type` de la clase de plantilla menciona el tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` si la expresión no evaluada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` tiene el formato correcto. De lo contrario, la clase de plantilla no tiene ningún miembro `type`. El tipo `Fn` y todos los tipos en el paquete de parámetros `ArgTypes` deben ser tipos completos, `void` o matrices de límite desconocido.  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** \<type_traits>  
-  
- **Espacio de nombres:** std  
-  
-## <a name="see-also"></a>Vea también  
- [<type_traits>](../standard-library/type-traits.md)
+```
 
+### <a name="parameters"></a>Parámetros
 
+`Fn` El tipo que se puede llamar a la consulta.
 
+`ArgTypes` Los tipos de la lista de argumentos para el tipo que se puede llamar a la consulta.
+
+## <a name="remarks"></a>Comentarios
+
+Use esta plantilla para determinar en tiempo de compilación el tipo de resultado de `Fn`(`ArgTypes`), donde `Fn` es un tipo que se puede llamar, la referencia a la función o la referencia al tipo que se puede llamar, invocado mediante una lista de argumentos de los tipos de `ArgTypes`. El miembro `type` de la clase de plantilla menciona el tipo de resultado de `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` si la expresión no evaluada `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` tiene el formato correcto. De lo contrario, la clase de plantilla no tiene ningún miembro `type`. El tipo `Fn` y todos los tipos en el paquete de parámetros `ArgTypes` deben ser tipos completos, `void` o matrices de límite desconocido.
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** \<type_traits>
+
+**Espacio de nombres:** std
+
+## <a name="see-also"></a>Vea también
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

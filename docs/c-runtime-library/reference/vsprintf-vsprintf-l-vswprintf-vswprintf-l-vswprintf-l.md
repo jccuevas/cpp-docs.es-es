@@ -1,12 +1,12 @@
 ---
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vswprintf_l
@@ -54,184 +54,188 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 05f4578918ed7c869deb4732cf6368fa1a90f263
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int vsprintf(  
-   char *buffer,  
-   const char *format,  
-   va_list argptr   
-);   
-int _vsprintf_l(  
-   char *buffer,  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);   
-int vswprintf(  
-   wchar_t *buffer,  
-   size_t count,  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vswprintf_l(  
-   wchar_t *buffer,  
-   size_t count,  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int __vswprintf_l(  
-   wchar_t *buffer,  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-template <size_t size>  
-int vsprintf(  
-   char (&buffer)[size],  
-   const char *format,  
-   va_list argptr   
-); // C++ only  
-template <size_t size>  
-int _vsprintf_l(  
-   char (&buffer)[size],  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-); // C++ only  
-template <size_t size>  
-int vswprintf(  
-   wchar_t (&buffer)[size],  
-   const wchar_t *format,  
-   va_list argptr   
-); // C++ only  
-template <size_t size>  
-int _vswprintf_l(  
-   wchar_t (&buffer)[size],  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `buffer`  
- Ubicación de almacenamiento del resultado.  
-  
- `count`  
- Número máximo de caracteres que se van a almacenar, en la versión `UNICODE` de esta función.  
-  
- `format`  
- Especificación de formato.  
-  
- `argptr`  
- Puntero a la lista de argumentos.  
-  
- `locale`  
- Configuración regional que se va a usar.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `vsprintf` y `vswprintf` devuelven el número de caracteres escritos, sin incluir el carácter de terminación nulo, o un valor negativo si se produce un error de salida. Si `buffer` o `format` es un puntero nulo, estas funciones invocan al controlador de parámetros no válidos, tal como se explica en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen `errno` en `EINVAL`.  
-  
- Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Comentarios  
- Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, aplica formato a los datos determinados y los escribe en la memoria a la que señala `buffer`.  
-  
- Las versiones de estas funciones con el sufijo `_l` son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.  
-  
+Escribe un resultado con formato mediante un puntero a una lista de argumentos. Hay disponibles versiones más seguras de estas funciones; vea [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+int vsprintf(
+   char *buffer,
+   const char *format,
+   va_list argptr
+);
+int _vsprintf_l(
+   char *buffer,
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int vswprintf(
+   wchar_t *buffer,
+   size_t count,
+   const wchar_t *format,
+   va_list argptr
+);
+int _vswprintf_l(
+   wchar_t *buffer,
+   size_t count,
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+int __vswprintf_l(
+   wchar_t *buffer,
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+template <size_t size>
+int vsprintf(
+   char (&buffer)[size],
+   const char *format,
+   va_list argptr
+); // C++ only
+template <size_t size>
+int _vsprintf_l(
+   char (&buffer)[size],
+   const char *format,
+   locale_t locale,
+   va_list argptr
+); // C++ only
+template <size_t size>
+int vswprintf(
+   wchar_t (&buffer)[size],
+   const wchar_t *format,
+   va_list argptr
+); // C++ only
+template <size_t size>
+int _vswprintf_l(
+   wchar_t (&buffer)[size],
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+); // C++ only
+```
+
+### <a name="parameters"></a>Parámetros
+
+*buffer*<br/>
+Ubicación de almacenamiento del resultado.
+
+*count*<br/>
+Número máximo de caracteres que se va a almacenar en las versiones de cadena de caracteres anchos de esta función.
+
+*format*<br/>
+Especificación de formato.
+
+*argptr*<br/>
+Puntero a la lista de argumentos.
+
+*locale*<br/>
+Configuración regional que se va a usar.
+
+## <a name="return-value"></a>Valor devuelto
+
+**vsprintf** y **vswprintf** devuelve el número de caracteres escritos, sin incluir el carácter nulo final o un valor negativo si se produce un error de salida. Si *búfer* o *formato* es un puntero nulo, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL**.
+
+Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Comentarios
+
+Cada una de estas funciones toma un puntero a una lista de argumentos y, a continuación, se da formato y escribe los datos especificados en la memoria que señala *búfer*.
+
+Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional del subproceso actual.
+
 > [!IMPORTANT]
->  Usar `vsprintf`, hay es ninguna forma de limitar el número de caracteres escritos, lo que significa que el código mediante esta función es susceptible a saturaciones del búfer. En su lugar, use [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que `format` no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).  
-  
- `vswprintf` se ajusta a ISO C estándar, que requiere el segundo parámetro, `count`, de tipo `size_t`. Para imponer el comportamiento no estándar anterior, defina `_CRT_NON_CONFORMING_SWPRINTFS.` El comportamiento anterior no puede estar en una versión posterior, por lo que el código se debe cambiar de forma que use el nuevo comportamiento estándar.  
-  
- En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico  
-  
-|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vstprintf`|`vsprintf`|`vsprintf`|`vswprintf`|  
-|`_vstprintf_l`|`_vsprintf_l`|`_vsprintf_l`|`_vswprintf_l`|  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|Encabezados opcionales|  
-|-------------|---------------------|----------------------|  
-|`vsprintf`, `_vsprintf_l`|\<stdio.h> y \<stdarg.h>|\<varargs.h>*|  
-|`vswprintf`, `_vswprintf_l`|\<stdio.h> o \<wchar.h> y \<stdarg.h>|\<varargs.h>*|  
-  
- \* Necesario para la compatibilidad con UNIX V.  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_vsprintf.c  
-// compile with: /W3  
-// This program uses vsprintf to write to a buffer.  
-// The size of the buffer is determined by _vscprintf.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <stdarg.h>  
-  
-void test( char * format, ... )  
-{  
-    va_list args;  
-    int     len;  
-    char    *buffer;  
-  
-    // retrieve the variable arguments  
-    va_start( args, format );  
-  
-    len = _vscprintf( format, args ) // _vscprintf doesn't count  
-                                + 1; // terminating '\0'  
-  
-    buffer = (char*)malloc( len * sizeof(char) );  
-  
-    vsprintf( buffer, format, args ); // C4996  
-    // Note: vsprintf is deprecated; consider using vsprintf_s instead  
-    puts( buffer );  
-  
-    free( buffer ); 
-    va_end( args ); 
-}  
-  
-int main( void )  
-{  
-   test( "%d %c %d", 123, '<', 456 );  
-   test( "%s", "This is a string" );  
-}  
-```  
-  
-```Output  
-123 < 456  
-This is a string  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [E/S de secuencia](../../c-runtime-library/stream-i-o.md)   
- [vprintf (Funciones)](../../c-runtime-library/vprintf-functions.md)   
- [Sintaxis de especificación de formato: Funciones printf y wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+> Usar **vsprintf**, hay es ninguna forma de limitar el número de caracteres escritos, lo que significa que el código mediante esta función es susceptible a saturaciones del búfer. En su lugar, use [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) o llame a [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) para determinar el tamaño de búfer necesario. Además, asegúrese de que *formato* no es una cadena definida por el usuario. Para obtener más información, vea [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795)(Evitar saturaciones del búfer).
+
+**vswprintf** se ajusta a la Standard C ISO, que requiere el segundo parámetro, *recuento*, del tipo **size_t**. Para imponer el comportamiento no estándar anterior, defina **_CRT_NON_CONFORMING_SWPRINTFS**. El comportamiento anterior no puede estar en una versión futura, por lo que el código se debe cambiar para usar el nuevo comportamiento estándar.
+
+En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
+
+|Rutina TCHAR.H|_UNICODE y _MBCS no definidos|_MBCS definido|_UNICODE definido|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vstprintf**|**vsprintf**|**vsprintf**|**vswprintf**|
+|**_vstprintf_l**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|Encabezados opcionales|
+|-------------|---------------------|----------------------|
+|**vsprintf**, **_vsprintf_l**|\<stdio.h> y \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**, **_vswprintf_l**|\<stdio.h> o \<wchar.h> y \<stdarg.h>|\<varargs.h>*|
+
+\* Necesario para la compatibilidad con UNIX V.
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_vsprintf.c
+// compile with: /W3
+// This program uses vsprintf to write to a buffer.
+// The size of the buffer is determined by _vscprintf.
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+
+void test( char * format, ... )
+{
+    va_list args;
+    int     len;
+    char    *buffer;
+
+    // retrieve the variable arguments
+    va_start( args, format );
+
+    len = _vscprintf( format, args ) // _vscprintf doesn't count
+                                + 1; // terminating '\0'
+
+    buffer = (char*)malloc( len * sizeof(char) );
+
+    vsprintf( buffer, format, args ); // C4996
+    // Note: vsprintf is deprecated; consider using vsprintf_s instead
+    puts( buffer );
+
+    free( buffer );
+    va_end( args );
+}
+
+int main( void )
+{
+   test( "%d %c %d", 123, '<', 456 );
+   test( "%s", "This is a string" );
+}
+```
+
+```Output
+123 < 456
+This is a string
+```
+
+## <a name="see-also"></a>Vea también
+
+[E/S de secuencia](../../c-runtime-library/stream-i-o.md)<br/>
+[vprintf (funciones)](../../c-runtime-library/vprintf-functions.md)<br/>
+[Sintaxis de especificación de formato: printf y wprintf (funciones)](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
