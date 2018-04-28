@@ -1,12 +1,12 @@
 ---
-title: "C4000 de advertencias del compilador a través de C4199 | Documentos de Microsoft"
-ms.custom: 
+title: C4000 de advertencias del compilador a través de C4199 | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 de advertencias del compilador a través de C4199
 
@@ -159,6 +159,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4051|conversión de tipo; posible pérdida de datos|
 |Advertencia del compilador (nivel 4) C4052|las declaraciones de función son distintas; una de ellas contiene argumentos de variable|
 |Advertencia del compilador (nivel 4) C4053|un operando void para '?:'|
+|[Advertencia del compilador (nivel 1) C4055](compiler-warning-level-1-c4055.md)|'conversión': del puntero de datos '*type1*'al puntero de función'*type2*'|
 |[Advertencia del compilador (nivel 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|desbordamiento en aritmética de constante de punto flotante|
 |Advertencia del compilador (nivel 4) C4057|'operador': 'identificador1' se diferencia de direccionamiento indirecto a tipos base ligeramente distintos de 'identificador2'|
 |Advertencia C4060 del compilador|la instrucción switch no contiene etiquetas 'case' o 'default'|
@@ -232,7 +233,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4155|eliminación de expresión de matriz sin utilizar el formato de matriz de 'delete'|
 |[Advertencia del compilador (nivel 2) C4156](../../error-messages/compiler-warnings/compiler-warning-level-2-c4156.md)|eliminación de una expresión de matriz sin utilizar la forma de matriz de 'delete'; formato de matriz sustituido|
 |[Advertencia del compilador (nivel 1) C4157](../../error-messages/compiler-warnings/compiler-warning-level-1-c4157.md)|se omite el pragma por el compilador de C|
-|Advertencia del compilador (nivel 1) C4158|assuming #pragma pointers_to_members(full_generality, 'inheritance_type')|
+|Advertencia del compilador (nivel 1) C4158|Suponiendo que utiliza #pragma pointers_to_members (full_generality, 'inheritance_type')|
 |[Advertencia del compilador (nivel 3) C4159](../../error-messages/compiler-warnings/compiler-warning-level-3-c4159.md)|#pragma ' pragma'(pop,...): ha sacado de identificador push 'identificador'|
 |Advertencia del compilador (nivel 1) C4160|#pragma ' pragma'(pop,...): no se ha encontrado el identificador push 'identificador'|
 |Advertencia del compilador (nivel 3) C4161|#pragma ' pragma'(pop...): más elementos POP que Push|

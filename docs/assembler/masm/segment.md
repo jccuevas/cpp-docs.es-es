@@ -1,12 +1,9 @@
 ---
-title: SEGMENT | Microsoft Docs
-ms.custom: 
+title: SEGMENTO | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - SEGMENT
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="segment"></a>SEGMENT
 Define un segmento de programa llamado *nombre* con atributos de segmento  
@@ -48,7 +43,7 @@ name ENDS
 |**BYTE**|Siguiente dirección de bytes disponibles.|  
 |**WORD**|Dirección del próximo word disponible (2 bytes por word).|  
 |**DWORD**|Dirección del próximo disponible palabra doble (4 bytes por palabra doble).|  
-|**PARA**|Siguiente dirección de párrafo disponibles (16 bytes por párrafo).|  
+|**PÁRRAFO**|Siguiente dirección de párrafo disponibles (16 bytes por párrafo).|  
 |**PAGE**|Siguiente dirección de página disponible (256 bytes por página).|  
 |**ALINEAR**(*n*)|Siguiente disponible *n*direcciones de n bytes. Para obtener más información, vea la sección Comentarios.|  
   
@@ -57,8 +52,8 @@ name ENDS
  *combine*  
  **PÚBLICA**, **pila**, **común**, **memoria**, **en *** dirección*, **privada**  
   
- *use*  
- **USE16**, **USE32**, **FLAT**  
+ *Uso*  
+ **USE16**, **USE32**, **SIN FORMATO**  
   
  `characteristics`  
  **INFORMACIÓN de**, **leer**, **escribir**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, y **descartar**  

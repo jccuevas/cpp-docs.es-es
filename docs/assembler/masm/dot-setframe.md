@@ -1,12 +1,9 @@
 ---
-title: .SETFRAME | Microsoft Docs
-ms.custom: 
+title: . SETFRAME | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .SETFRAME
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fce923925cba53e0c5f8dc57450cbfb64b00e056
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c49d512534a11f01376deac41006e55c6b7b9d89
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="setframe"></a>.SETFRAME
 Rellenos en el marco de registrar el campo y el desplazamiento en la información de desenredo mediante el registro especificado (`reg`) y el desplazamiento (`offset`). El desplazamiento debe ser un múltiplo de 16 y menor o igual que 240. Esta directiva también genera una `UWOP_SET_FPREG` entrada al código de desenredo para registra especificado utilizando el desplazamiento actual del prólogo.  
