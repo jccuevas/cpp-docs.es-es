@@ -11,14 +11,13 @@ f1_keywords:
 - POGOSAFEMODE
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 886fbae5fbeb7606ec0321595f061d2262988170
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO ejecutar en modo seguro para subprocesos)
 
@@ -26,7 +25,7 @@ ms.lasthandoff: 03/22/2018
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/POGOSAFEMODE**
+> **/ POGOSAFEMODE**
 
 ## <a name="remarks"></a>Comentarios
 
@@ -57,6 +56,6 @@ Para ejecutar la generación de perfiles PGO en modo seguro, debe usar **/genpro
 ## <a name="see-also"></a>Vea también
 
 [/GENPROFILE y /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
-[/LTCG](ltcg-link-time-code-generation.md)<br/>
+[/ LTCG](ltcg-link-time-code-generation.md)<br/>
 [Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)<br/>
 [Variables de entorno para las optimizaciones guiadas por perfiles](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>

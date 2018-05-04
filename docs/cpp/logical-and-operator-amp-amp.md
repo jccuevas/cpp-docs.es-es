@@ -1,12 +1,9 @@
 ---
-title: "Operador AND lógico: &amp; &amp; | Documentos de Microsoft"
-ms.custom: 
+title: 'Operador AND lógico: &amp; &amp; | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="logical-and-operator-ampamp"></a>Operador AND lógico:&amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Operador AND lógico: &amp;&amp;
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
@@ -58,7 +53,7 @@ char *pch = 0;
  Si `pch` es null (0), el lado derecho de la expresión no se evalúa. Por consiguiente, la asignación a través de un puntero null es imposible.  
   
 ## <a name="operator-keyword-for-"></a>Palabra clave del operador para &&  
- El **y** operador es el equivalente de texto de  **&&** . Hay dos maneras de obtener acceso a la **y** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
+ El **y** operador es el equivalente de texto de **&&**. Hay dos maneras de obtener acceso a la **y** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   
 ## <a name="example"></a>Ejemplo  
   

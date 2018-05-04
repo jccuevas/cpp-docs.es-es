@@ -1,12 +1,9 @@
 ---
 title: Inicializadores | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>Inicializadores
 Un inicializador especifica el valor inicial de una variable. Se pueden inicializar variables en estos contextos:  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>Inicialización predeterminada  
+### <a name="default_initialization"></a> Inicialización predeterminada  
  La inicialización predeterminada de clases, structs y uniones es la inicialización con un constructor predeterminado. Se puede llamar al constructor predeterminado sin una expresión de inicialización o con la palabra clave `new`:  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>Inicialización de agregado  
+### <a name="agginit"></a> Inicialización de agregado  
  La inicialización de agregado es una forma de inicialización de lista para matrices o tipos de clase (a menudo structs o uniones) que tienen:  
   
 -   ningún miembro privado o protegido  
@@ -531,7 +526,7 @@ int main()
  ![Gráfico de decisión de inicialización de tipos de referencia](../cpp/media/vc38s71.gif "vc38S71")  
 Gráfico de decisión de inicialización de tipos de referencia  
   
- Las referencias a `volatile` tipos (declarados como `volatile` *typename*  **&**  *identificador*) se pueden inicializar con `volatile` objetos del mismo tipo o con objetos que no se ha declarado como `volatile`. No pueden, sin embargo, inicializarse con **const** objetos de ese tipo. De forma similar, las referencias a **const** tipos (declarados como **const** *typename*  **&**  *identificador* ) se pueden inicializar con **const** objetos del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se ha declarado como **const**). No pueden, sin embargo, inicializarse con objetos `volatile` de ese tipo.  
+ Las referencias a `volatile` tipos (declarados como `volatile` *typename *** &** *identificador*) se pueden inicializar con `volatile` objetos del mismo tipo o con objetos que no se ha declarado como `volatile`. No pueden, sin embargo, inicializarse con **const** objetos de ese tipo. De forma similar, las referencias a **const** tipos (declarados como **const** *typename *** &** *identificador*) puede ser inicializado con **const** objetos del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se ha declarado como **const**). No pueden, sin embargo, inicializarse con objetos `volatile` de ese tipo.  
   
  Las referencias que no se califican con la **const** o `volatile` palabra clave se puede inicializar con objetos declarados como **const** ni `volatile`.  
   

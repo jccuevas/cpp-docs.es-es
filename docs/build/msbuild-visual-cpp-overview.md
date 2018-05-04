@@ -2,28 +2,23 @@
 title: Información general sobre MSBuild (Visual C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Información general sobre MSBuild (Visual C++)  
   
@@ -84,15 +79,15 @@ De forma predeterminada, los archivos de soporte técnico principales de Visual 
   
 |Directorio|Descripción|  
 |---------------|-----------------|  
-|*unidad*: \Program archivos *(x86)*\Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ <br /><br />*unidad*: \Program archivos *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*versión*\ |Contiene los archivos de destino principal (.targets) y archivos de propiedades (.props) que se utilizan en los destinos. De forma predeterminada, la macro $(VCTargetsPath) hace referencia a este directorio.|  
-|*unidad*: \Program archivos *(x86)*\Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\ <br /><br />*unidad*: \Program archivos *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versión*\Platforms\\*plataforma*\ |Contiene los archivos específicos de la plataforma de destino y la propiedad que invalidan los destinos y propiedades de su directorio primario. Este directorio también contiene un archivo DLL que define las tareas que se utilizan en los destinos de este directorio.<br /><br /> El *plataforma* marcador de posición representa la ARM, Win32 o x64 subdirectorio.|  
-|*unidad*: \Program archivos *(x86)*\Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de herramientas*\ <br /><br />*unidad*: \Program archivos *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*versión*\Platforms\\*plataforma*\ PlatformToolsets\\*conjunto de herramientas*\ <br /><br />*unidad*: \Program archivos *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de herramientas*\ |Contiene los directorios que permiten a la compilación generar aplicaciones de Visual C++ utilizando los *conjunto de herramientas*.<br /><br /> El *año* y *edición* 2017 de Visual Studio y ediciones posteriores usan marcadores de posición. El *versión* marcador de posición es V110 para Visual Studio 2012, V120 para Visual Studio 2013 o V140 para Visual Studio 2015. El *plataforma* marcador de posición representa la ARM, Win32 o x64 subdirectorio. El *conjunto de herramientas* marcador de posición representa el subdirectorio del conjunto de herramientas, por ejemplo, v140 para la creación de aplicaciones de Windows mediante el conjunto de herramientas de Visual Studio 2015, v120_xp para compilar para Windows XP con el conjunto de herramientas de Visual Studio 2013 o v110_wp80 a compilar aplicaciones de Windows Phone 8.0 con el conjunto de herramientas de Visual Studio 2012.<br /><br />La ruta de acceso que contiene los directorios que permiten a la compilación generar aplicaciones de Visual C++ 2008 o Visual C++ 2010 no incluye el *versión*y el *plataforma* representa el marcador de posición el procesador Itanium, Win32 o x64 subdirectorio. El *conjunto de herramientas* marcador de posición representa el subdirectorio de conjunto de herramientas v90 o v100.|  
+|*unidad*: \Program archivos *(x86)* \Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ <br /><br />*unidad*: \Program archivos *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*versión*\ |Contiene los archivos de destino principal (.targets) y archivos de propiedades (.props) que se utilizan en los destinos. De forma predeterminada, la macro $(VCTargetsPath) hace referencia a este directorio.|  
+|*unidad*: \Program archivos *(x86)* \Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\ <br /><br />*unidad*: \Program archivos *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versión*\Platforms\\*plataforma*\ |Contiene los archivos específicos de la plataforma de destino y la propiedad que invalidan los destinos y propiedades de su directorio primario. Este directorio también contiene un archivo DLL que define las tareas que se utilizan en los destinos de este directorio.<br /><br /> El *plataforma* marcador de posición representa la ARM, Win32 o x64 subdirectorio.|  
+|*unidad*: \Program archivos *(x86)* \Microsoft Visual Studio\\*año*\\*edición*\Common7\IDE\VC\VCTargets\ Plataformas\\*plataforma*\PlatformToolsets\\*conjunto de herramientas*\ <br /><br />*unidad*: \Program archivos *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*versión*\Platforms\\*plataforma*\ PlatformToolsets\\*conjunto de herramientas*\ <br /><br />*unidad*: \Program archivos *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*plataforma*\PlatformToolsets\\*conjunto de herramientas*\ |Contiene los directorios que permiten a la compilación generar aplicaciones de Visual C++ utilizando los *conjunto de herramientas*.<br /><br /> El *año* y *edición* 2017 de Visual Studio y ediciones posteriores usan marcadores de posición. El *versión* marcador de posición es V110 para Visual Studio 2012, V120 para Visual Studio 2013 o V140 para Visual Studio 2015. El *plataforma* marcador de posición representa la ARM, Win32 o x64 subdirectorio. El *conjunto de herramientas* marcador de posición representa el subdirectorio del conjunto de herramientas, por ejemplo, v140 para la creación de aplicaciones de Windows mediante el conjunto de herramientas de Visual Studio 2015, v120_xp para compilar para Windows XP con el conjunto de herramientas de Visual Studio 2013 o v110_wp80 a compilar aplicaciones de Windows Phone 8.0 con el conjunto de herramientas de Visual Studio 2012.<br /><br />La ruta de acceso que contiene los directorios que permiten a la compilación generar aplicaciones de Visual C++ 2008 o Visual C++ 2010 no incluye el *versión*y el *plataforma* representa el marcador de posición el procesador Itanium, Win32 o x64 subdirectorio. El *conjunto de herramientas* marcador de posición representa el subdirectorio de conjunto de herramientas v90 o v100.|  
   
 ### <a name="support-files"></a>Archivos de soporte técnico  
   
 Los directorios de archivos de compatibilidad contienen archivos con estas extensiones:  
   
-|Extensión|Descripción|  
+|Comprobación de actualización|Descripción|  
 |---------------|-----------------|  
 |.targets|Contiene `Target` elementos XML que especifican las tareas que se ejecutan en el destino. También puede contener `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`, definidos por el usuario `Item` elementos que se utilizan para asignar archivos y opciones de línea de comandos a los parámetros de tarea.<br /><br /> Para obtener más información, consulte [elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|  
 |.props|Contiene `Property Group` definidos por el usuario `Property` elementos XML que especifican los valores de archivo y los parámetros que se usan durante una compilación.<br /><br /> También puede contener `ItemDefinitionGroup` definidos por el usuario `Item` elementos XML que especifican los valores adicionales. Los elementos definidos en un grupo de definición de elemento son similares a propiedades, pero no se pueden tener acceso desde la línea de comandos. Archivos de proyecto de Visual C++, se usa con frecuencia elementos en lugar de propiedades para representar los valores.<br /><br /> Para obtener más información, consulte [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), y [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|  

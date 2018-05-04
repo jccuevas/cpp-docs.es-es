@@ -2,11 +2,8 @@
 title: try-finally (instrucción) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 **Específicos de Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Gramática  
  *try-finally-statement*:  
- `__try`*compound-statement*  
+ `__try` *instrucción compuesta*  
   
- `__finally`*compound-statement*  
+ `__finally` *instrucción compuesta*  
   
  La instrucción `try-finally` es una extensión de Microsoft a los lenguajes C y C++ que permite que las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. La instrucción `try-finally` es especialmente útil para las rutinas que tienen varios lugares donde comprobar un error, lo que puede causar que la rutina termine antes de tiempo.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si se produce una excepción en la función D y se controla en A, se llama a los controladores de finalización en este orden mientras el sistema desenreda la pila: D, C, B.  
   
- ![Orden de terminación &#45; la ejecución del controlador](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Orden de terminación&#45;ejecución del controlador](../cpp/media/vc38cx1.gif "vc38CX1")  
 Orden de terminación-ejecución de controladores  
   
 > [!NOTE]

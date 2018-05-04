@@ -1,12 +1,9 @@
 ---
-title: "Restricciones de la función principal | Documentos de Microsoft"
-ms.custom: 
+title: Restricciones de la función principal | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Main
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - main function, restrictions on using
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a94844a0d5636c58a764114ed6f413923d69950
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-restrictions"></a>Restricciones de la función main
 Varias restricciones se aplican a la **principal** función que no se aplican a otras funciones de C++. El **principal** función:  

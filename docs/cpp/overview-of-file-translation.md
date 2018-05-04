@@ -2,11 +2,8 @@
 title: Información general de traducción de archivos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>Información general de traducción de archivos
 Los programas de C++, como los programas de C, constan de uno o más archivos. Cada uno de estos archivos se traduce en el orden conceptual siguiente (el orden real sigue la regla “como si”: la traducción se debe realizar como si se hubieran seguido estos pasos):  
@@ -58,7 +53,7 @@ Los programas de C++, como los programas de C, constan de uno o más archivos. C
   
 -   Una macro predefinida, **__cplusplus**, sólo se define para C++. Vea [Macros predefinidas](../preprocessor/predefined-macros.md) en el *referencia del preprocesador* para obtener más información.  
   
--   El preprocesador de C no reconoce los operadores de C++: **.\*** ,  **-> \*** , y `::`. Vea [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) y [expresiones](../cpp/expressions-cpp.md), para obtener más información acerca de los operadores.  
+-   El preprocesador de C no reconoce los operadores de C++: **.\*** , **-> \***, y `::`. Vea [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) y [expresiones](../cpp/expressions-cpp.md), para obtener más información acerca de los operadores.  
   
 ## <a name="see-also"></a>Vea también  
  [Convenciones léxicas](../cpp/lexical-conventions.md)

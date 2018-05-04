@@ -1,12 +1,9 @@
 ---
 title: Clase de IDispEventSimpleImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89f565c1e32f1208fbb039321d26b9175596d57e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl (clase)
 Esta clase proporciona las implementaciones de la `IDispatch` métodos sin obtener información de tipo de una biblioteca de tipos.  
@@ -75,9 +70,9 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|Interrumpe la conexión con el origen de eventos de forma predeterminada.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IDispEventSimpleImpl`Proporciona una manera de implementar una interfaz de envío de eventos sin necesidad de proporcionar código de implementación para cada método o evento en esa interfaz. `IDispEventSimpleImpl`proporciona implementaciones de la `IDispatch` métodos. Basta con proporcionar implementaciones para los que está interesado en el control de eventos.  
+ `IDispEventSimpleImpl` Proporciona una manera de implementar una interfaz de envío de eventos sin necesidad de proporcionar código de implementación para cada método o evento en esa interfaz. `IDispEventSimpleImpl` proporciona implementaciones de la `IDispatch` métodos. Basta con proporcionar implementaciones para los que está interesado en el control de eventos.  
   
- `IDispEventSimpleImpl`funciona junto con el mapa de receptores de eventos en la clase de eventos de ruta a la función de controlador adecuado. Para utilizar esta clase:  
+ `IDispEventSimpleImpl` funciona junto con el mapa de receptores de eventos en la clase de eventos de ruta a la función de controlador adecuado. Para utilizar esta clase:  
   
 -   Agregar un [macro SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) macro en el mapa de receptores de eventos para cada evento en todos los objetos que desea administrar.  
   
@@ -92,7 +87,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl** proporciona la misma funcionalidad que [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), excepto en que no obtiene información de tipo de la interfaz de una biblioteca de tipos. Los asistentes generan código que se basa solo en `IDispEventImpl`, pero puede usar `IDispEventSimpleImpl` agregando el código a mano. Utilice `IDispEventSimpleImpl` cuando no tiene una biblioteca de tipos que describe la interfaz de eventos o para evitar la sobrecarga asociada al uso de la biblioteca de tipos.  
   
 > [!NOTE]
-> `IDispEventImpl`y `IDispEventSimpleImpl` proporcionar su propia implementación de **IUnknown:: QueryInterface** habilitar cada `IDispEventImpl` o `IDispEventSimpleImpl` clase para que actúe como una identidad de COM independiente mientras sigue permitiendo el acceso directo a los miembros de clase base en el objeto COM principal.  
+> `IDispEventImpl` y `IDispEventSimpleImpl` proporcionar su propia implementación de **IUnknown:: QueryInterface** habilitar cada `IDispEventImpl` o `IDispEventSimpleImpl` clase para que actúe como una identidad de COM independiente mientras sigue permitiendo el acceso directo a los miembros de clase de base el objeto COM principal.  
   
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
  Llamar a este método para establecer una conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT Advise(IUnknown* pUnk);
  [in] Un puntero a la **IUnknown** interfaz del objeto de origen de eventos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`cualquier error o `HRESULT` valor.  
+ `S_OK` cualquier error o `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentarios  
  Una vez establecida la conexión, los eventos desencadenados desde *pUnk* se enrutará a los controladores en la clase mediante el mapa de receptores de eventos.  
@@ -128,9 +123,9 @@ HRESULT Advise(IUnknown* pUnk);
 > [!NOTE]
 >  Si la clase se deriva de varios `IDispEventSimpleImpl` clases, debe eliminar la ambigüedad de llamadas a este método mediante ámbito de la llamada con la clase base concreta que le interesen.  
   
- `Advise`establece una conexión con el origen de eventos de forma predeterminada, obtiene el IID del origen del evento de manera predeterminada del objeto tal y como se determina por [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
+ `Advise` establece una conexión con el origen de eventos de forma predeterminada, obtiene el IID del origen del evento de manera predeterminada del objeto tal y como se determina por [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   
-##  <a name="dispeventadvise"></a>IDispEventSimpleImpl:: DispEventAdvise  
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl:: DispEventAdvise  
  Llamar a este método para establecer una conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -145,7 +140,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
  Un puntero a lo IID del objeto de origen de eventos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`cualquier error o `HRESULT` valor.  
+ `S_OK` cualquier error o `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentarios  
  Posteriormente, se activan los eventos desde *pUnk* se enrutará a los controladores en la clase mediante el mapa de receptores de eventos.  
@@ -153,9 +148,9 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  Si la clase se deriva de varios `IDispEventSimpleImpl` clases, debe eliminar la ambigüedad de llamadas a este método mediante ámbito de la llamada con la clase base concreta que le interesen.  
   
- `DispEventAdvise`establece una conexión con el origen de eventos especificado en `pdiid`.  
+ `DispEventAdvise` establece una conexión con el origen de eventos especificado en `pdiid`.  
   
-##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl:: DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl:: DispEventUnadvise  
  Si se interrumpe la conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -170,7 +165,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
  Un puntero a lo IID del objeto de origen de eventos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`cualquier error o `HRESULT` valor.  
+ `S_OK` cualquier error o `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentarios  
  Una vez que la conexión se interrumpe, eventos ya no se enrutarán a las funciones de controlador enumeradas en el mapa de receptores de eventos.  
@@ -178,9 +173,9 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  Si la clase se deriva de varios `IDispEventSimpleImpl` clases, debe eliminar la ambigüedad de llamadas a este método mediante ámbito de la llamada con la clase base concreta que le interesen.  
   
- `DispEventAdvise`interrumpe una conexión que se ha establecido con el origen de eventos especificado en `pdiid`.  
+ `DispEventAdvise` interrumpe una conexión que se ha establecido con el origen de eventos especificado en `pdiid`.  
   
-##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames  
  Esta implementación de **IDispatch:: GetIDsOfNames** devuelve **E_NOTIMPL**.  
   
 ```
@@ -195,7 +190,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) en el SDK de Windows.  
   
-##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  Esta implementación de **IDispatch:: GetTypeInfo** devuelve **E_NOTIMPL**.  
   
 ```
@@ -208,7 +203,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) en el SDK de Windows.  
   
-##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  Esta implementación de **IDispatch:: GetTypeInfoCount** devuelve **E_NOTIMPL**.  
   
 ```
@@ -218,7 +213,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) en el SDK de Windows.  
   
-##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  Esta implementación de **IDispatch:: Invoke** llamadas a los controladores de eventos en el evento aparecen mapa de receptores.  
   
 ```
@@ -236,7 +231,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
-##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  Si se interrumpe la conexión con el origen del evento representado por *pUnk*.  
   
 ```
@@ -248,7 +243,7 @@ HRESULT Unadvise(IUnknown* pUnk);
  [in] Un puntero a la **IUnknown** interfaz del objeto de origen de eventos.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`cualquier error o `HRESULT` valor.  
+ `S_OK` cualquier error o `HRESULT` valor.  
   
 ### <a name="remarks"></a>Comentarios  
  Una vez que la conexión se interrumpe, eventos ya no se enrutarán a las funciones de controlador enumeradas en el mapa de receptores de eventos.  
@@ -256,7 +251,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 > [!NOTE]
 >  Si la clase se deriva de varios `IDispEventSimpleImpl` clases, debe eliminar la ambigüedad de llamadas a este método mediante ámbito de la llamada con la clase base concreta que le interesen.  
   
- `Unadvise`interrumpe una conexión que se ha establecido con el origen de evento predeterminado especificado en `pdiid`.  
+ `Unadvise` interrumpe una conexión que se ha establecido con el origen de evento predeterminado especificado en `pdiid`.  
   
  **Unavise** saltos de una conexión con el origen de eventos de forma predeterminada, obtiene el IID del origen del evento predeterminado del objeto tal y como se determina por [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   

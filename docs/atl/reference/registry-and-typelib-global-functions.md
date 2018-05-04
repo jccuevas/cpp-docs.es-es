@@ -1,12 +1,9 @@
 ---
 title: Funciones globales Registry y TypeLib | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funciones globales Registry y TypeLib
 Estas funciones proporcionan compatibilidad para cargar y registrar una biblioteca de tipos.  
@@ -68,7 +63,7 @@ Estas funciones proporcionan compatibilidad para cargar y registrar una bibliote
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 Utilice esta función para determinar si la aplicación redirige el acceso de registro a la **HKEY_CURRENT_USER** (**HKCU**) nodo.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -79,10 +74,10 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
 ### <a name="parameters"></a>Parámetros  
  [out] `pEnabled`  
- `TRUE`indica que la información de registro se dirige a la **HKCU** nodo; `FALSE` indica que la aplicación escribe información de registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` indica que la información de registro se dirige a la **HKCU** nodo; `FALSE` indica que la aplicación escribe información de registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método es correcto, de lo contrario la `HRESULT` código de error si se produce un error.  
+ `S_OK` Si el método es correcto, de lo contrario la `HRESULT` código de error si se produce un error.  
   
 ### <a name="remarks"></a>Comentarios  
  Redirección del registro no está habilitada de forma predeterminada. Si habilita esta opción, el acceso al registro se redirige a **HKEY_CURRENT_USER\Software\Classes**.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  Crea la clave del registro especificada.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 Elimina la clave del registro especificada.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  Esta función se invoca para registrar una biblioteca de tipos.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  Abre la clave del registro especificada.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 Abre la clave del registro especificada. 
 
 ### <a name="syntax"></a>Sintaxis  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  Una aplicación auxiliar para anular el registro de un controlador de vista previa.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 Establece si la aplicación redirige el acceso de registro a la **HKEY_CURRENT_USER** (**HKCU**) nodo.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -279,10 +274,10 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bEnable`  
- `TRUE`indica que la información de registro se dirige a la **HKCU** nodo; `FALSE` indica que la aplicación escribe información de registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` indica que la información de registro se dirige a la **HKCU** nodo; `FALSE` indica que la aplicación escribe información de registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método es correcto, de lo contrario la `HRESULT` código de error si se produce un error.  
+ `S_OK` Si el método es correcto, de lo contrario la `HRESULT` código de error si se produce un error.  
   
 ### <a name="remarks"></a>Comentarios  
  Redirección del registro no está habilitada de forma predeterminada. Si habilita esta opción, el acceso al registro se redirige a **HKEY_CURRENT_USER\Software\Classes**.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  Esta función se invoca para anular el registro de una biblioteca de tipos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  Esta función se invoca para cargar una biblioteca de tipos.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>Comentarios  
  Esta función auxiliar es usada por [AtlRegisterTypeLib](#atlregistertypelib) y [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  Esta función quedó en desuso en Visual Studio 2013 y se quitó en Visual Studio 2015.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  Esta función se invoca para leer el Registro del sistema o escribir en él.  
 
 ### <a name="syntax"></a>Sintaxis  

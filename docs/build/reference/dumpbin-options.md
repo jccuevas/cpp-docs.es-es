@@ -2,12 +2,9 @@
 title: Opciones de DUMPBIN | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - dumpbin
 dev_langs:
@@ -15,70 +12,68 @@ dev_langs:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93d2de8a8912d9f141443b10bd5cdc0448c23ecd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dumpbin-options"></a>Opciones de DUMPBIN
 Una opción consta de un especificador de opción, que es un guión (-) o una barra diagonal (/), seguido del nombre de la opción. Los nombres de opción no pueden abreviarse. Algunas opciones toman argumentos, y éstos se especifican precedidos de dos puntos (:). No se permiten espacios ni tabulaciones dentro de una especificación de opción. Use uno o más espacios o tabulaciones para separar especificaciones de opción en la línea de comandos. En los nombres de opción y sus palabras clave, y en los argumentos de nombre de archivo, no se distingue mayúsculas de minúsculas. La mayoría de las opciones se aplican a todos los archivos binarios; algunas sólo se aplican a determinados tipos de archivos. De forma predeterminada, DUMPBIN envía la información a la salida estándar. Use la [/OUT](../../build/reference/out-dumpbin.md) opción para enviar la salida a un archivo.  
   
  DUMPBIN tiene las siguientes opciones:  
   
--   [/ ALL](../../build/reference/all.md)  
+-   [/ALL](../../build/reference/all.md)  
   
 -   [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)  
   
 -   [/CLRHEADER](../../build/reference/clrheader.md)  
   
--   [/ DEPENDIENTES](../../build/reference/dependents.md)  
+-   [/DEPENDENTS](../../build/reference/dependents.md)  
   
--   [/ DIRECTIVAS](../../build/reference/directives.md)  
+-   [/DIRECTIVES](../../build/reference/directives.md)  
   
--   [/ DISASM](../../build/reference/disasm.md)  
+-   [/DISASM](../../build/reference/disasm.md)  
   
 -   [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)  
   
--   [/ EXPORTACIONES](../../build/reference/dash-exports.md)  
+-   [/EXPORTS](../../build/reference/dash-exports.md)  
   
--   [/ FPO](../../build/reference/fpo.md)  
+-   [/FPO](../../build/reference/fpo.md)  
   
--   [/ ENCABEZADOS](../../build/reference/headers.md)  
+-   [/HEADERS](../../build/reference/headers.md)  
   
 -   [/ IMPORTACIONES](../../build/reference/imports-dumpbin.md)  
   
--   [/ LINENUMBERS](../../build/reference/linenumbers.md)  
+-   [/LINENUMBERS](../../build/reference/linenumbers.md)  
   
--   [/ LINKERMEMBER](../../build/reference/linkermember.md)  
+-   [/LINKERMEMBER](../../build/reference/linkermember.md)  
   
--   [/ LOADCONFIG](../../build/reference/loadconfig.md)  
+-   [/LOADCONFIG](../../build/reference/loadconfig.md)  
   
 -   [/ ENTRADA SALIDA](../../build/reference/out-dumpbin.md)  
   
--   [/ PDATA](../../build/reference/pdata.md)  
+-   [/PDATA](../../build/reference/pdata.md)  
   
 -   [/PDBPATH](../../build/reference/pdbpath.md)  
   
--   [/ INTERVALO](../../build/reference/range.md)  
+-   [/RANGE](../../build/reference/range.md)  
   
--   [/ RAWDATA](../../build/reference/rawdata.md)  
+-   [/RAWDATA](../../build/reference/rawdata.md)  
   
--   [/ REUBICACIONES](../../build/reference/relocations.md)  
+-   [/RELOCATIONS](../../build/reference/relocations.md)  
   
 -   [/ SECCIÓN](../../build/reference/section-dumpbin.md)  
   
--   [/ RESUMEN](../../build/reference/summary.md)  
+-   [/SUMMARY](../../build/reference/summary.md)  
   
--   [/ SÍMBOLOS](../../build/reference/symbols.md)  
+-   [/SYMBOLS](../../build/reference/symbols.md)  
   
--   [/ TLS](../../build/reference/tls.md)  
+-   [/TLS](../../build/reference/tls.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de compilación de C/c ++](../../build/reference/c-cpp-build-tools.md)   

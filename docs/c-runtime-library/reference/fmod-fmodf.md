@@ -1,16 +1,17 @@
 ---
-title: fmod, fmodf | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fmod, fmodf, fmodl | Documentos de Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmod
 - fmodf
+- fmodl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,90 +34,100 @@ dev_langs:
 helpviewer_keywords:
 - calculating floating-point remainders
 - fmodf function
+- fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bf7fec2d8e05628f09297f4af92011237fc5f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
-ms.translationtype: MT
+ms.openlocfilehash: c31ec67e3b5c75c334a985461365c7b139758427
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="fmod-fmodf"></a>fmod, fmodf
-Calcula el resto de punto flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-double fmod(   
-   double x,  
-   double y   
-);  
-float fmod(  
-   float x,  
-   float y   
-);  // C++ only  
-long double fmod(  
-   long double x,  
-   long double y  
-);  // C++ only  
-float fmodf(   
-   float x,  
-   float y   
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- `x`, `y`  
- Valores de punto flotante.  
-  
-## <a name="return-value"></a>Valor devuelto  
- `fmod` devuelve el resto de punto flotante de `x` / `y`. Si el valor de `y` es 0,0, `fmod` devuelve un valor NaN reservado. Para obtener información sobre la representación de un valor NaN reservado por la familia `printf`, consulte [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="remarks"></a>Comentarios  
- La función `fmod` calcula el resto de punto flotante `f` de `x` / `y` de manera que `x` = `i` `*` `y` + `f`, donde `i` es un entero, `f` tiene el mismo signo que `x` y el valor absoluto de `f` es menor que el valor absoluto de `y`.  
-  
- Dado que C++ admite sobrecargas, puede llamar a las sobrecargas de `fmod`. En un programa C, `fmod` siempre toma dos valores Double y devuelve uno.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Función|Encabezado necesario|  
-|--------------|---------------------|  
-|`fmod`, `fmodf`|\<math.h>|  
-  
- Para obtener información adicional de compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md) en la Introducción.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// crt_fmod.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = fmod( w, x );  
-   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)   
- [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [_CIfmod](../../c-runtime-library/cifmod.md)
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
+
+Calcula el resto de punto flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```C
+double fmod(
+   double x,
+   double y
+);
+float fmod(
+   float x,
+   float y
+);  // C++ only
+long double fmod(
+   long double x,
+   long double y
+);  // C++ only
+float fmodf(
+   float x,
+   float y
+);
+long double fmodl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*x*, *y*<br/>
+Valores de punto flotante.
+
+## <a name="return-value"></a>Valor devuelto
+
+**fmod** devuelve el resto de punto flotante de *x* / *y*. Si el valor de *y* es 0,0, **fmod** devuelve un valor NaN reservado. Para obtener información acerca de la representación en forma de un valor NaN reservado por la **printf** familia, vea [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="remarks"></a>Comentarios
+
+El **fmod** función calcula el resto de punto flotante *f* de *x* / *y* que *x*  =  *i* * *y* + *f*, donde *i* es un entero, *f* tiene el mismo signo que *x*y el valor absoluto de *f* es menor que el valor absoluto de *y*.
+
+C++ permite las sobrecargas, es posible llamar a las sobrecargas de **fmod** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **fmod** siempre toma dos **doble** argumentos y devuelve un **doble**.
+
+## <a name="requirements"></a>Requisitos
+
+|Función|Encabezado necesario|
+|--------------|---------------------|
+|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+
+Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Ejemplo
+
+```C
+// crt_fmod.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = fmod( w, x );
+   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>Vea también
+
+[Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
+[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
+[_CIfmod](../../c-runtime-library/cifmod.md)<br/>

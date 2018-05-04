@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generar compilación instrumentada de generación de perfiles)
 
@@ -31,8 +30,8 @@ Especifican la generación de un archivo .pgd mediante el enlazador para admitir
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]<br/>
-> **/FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**]|[**EXACT**|**NOEXACT**]|**MEMMAX=**_#_|**MEMMIN=**_#_|[**PATH**|**NOPATH** ]|[**TRACKEH** |**NOTRACKEH** ]|**PGD=**_filename_}]
+> **/ GENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Ruta de acceso**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]<br/>
+> **/ FASTGENPROFILE**[**:**{[**COUNTER32**|**COUNTER64**] | [ **EXACT**|**NOEXACT**] | **MEMMAX =**_#_|**MEMMIN =**_#_| [ **Ruta de acceso**|**NOPATH** ] | [ **TRACKEH** |**NOTRACKEH** ] | **PGD =**_filename_}]
 
 ### <a name="arguments"></a>Argumentos
 
@@ -44,16 +43,16 @@ Usar **COUNTER32** para especificar el uso de contadores de sondeo de 32 bits, y
 **EXACTA** &AMP;#124; **NOEXACT**<br/>
 Use **EXACT** para especificar incrementos interbloqueados de subprocesos para los sondeos. **NOEXACT** especifica las operaciones de incremento para los sondeos. El valor predeterminado es **NOEXACT**.
 
-**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
+**MEMMAX**=*valor*, **MEMMIN**=*valor*<br/>
 Use **MEMMAX** y **MEMMIN** para especificar los tamaños de reserva máximo y mínimo para los datos de entrenamiento en memoria. El valor es la cantidad de memoria que se reserva en bytes. De forma predeterminada, estos valores se determinan mediante una heurística interna.
 
-**PATH**  &#124; **NOPATH** <br/>
+**RUTA DE ACCESO** &AMP;#124; **NOPATH**  <br/>
 Use **ruta de acceso** para especificar un conjunto independiente de contadores PGO para cada ruta de acceso única a una función. Use **NOPATH** para especificar un único conjunto de contadores para cada función. Cuando se especifica **/genprofile**, el valor predeterminado es **ruta de acceso** . Cuando se especifica **/fastgenprofile**, el valor predeterminado es **NOPATH** .
 
-**TRACKEH**  &#124; **NOTRACKEH** <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
 Especifican si se deben usar contadores adicionales para mantener un recuento preciso cuando se produzcan excepciones durante el entrenamiento. Use **TRACKEH** para especificar contadores adicionales para un recuento exacto. Usar **NOTRACKEH** para especificar contadores únicos para el código que no usa excepciones control o que no produce excepciones en los escenarios de aprendizaje.  Cuando se especifica **/genprofile**, el valor predeterminado es **TRACKEH** . Cuando se especifica **/fastgenprofile**, el valor predeterminado es **NOTRACKEH** .
 
-**PGD**=*filename*<br/>
+**PGD**=*nombre de archivo*<br/>
 Especifica un nombre de archivo base para el archivo .pgd. De forma predeterminada, el enlazador usa el nombre de archivo de imagen ejecutable base con una extensión .pgd.
 
 ## <a name="remarks"></a>Comentarios

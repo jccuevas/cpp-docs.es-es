@@ -1,12 +1,9 @@
 ---
 title: Clase CComCachedTearOffObject | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1072faed01033bec9fec127318334f8a61ac29e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Clase CComCachedTearOffObject
 Esta clase implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para una interfaz desplazable.  
@@ -80,7 +75,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` objeto derivado de la clase desplazable (la clase `contained`).|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComCachedTearOffObject`implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para una interfaz desplazable. Esta clase difiere de `CComTearOffObject` en que `CComCachedTearOffObject` tiene su propio **IUnknown**, independiente del objeto propietario de **IUnknown** (el propietario es el objeto para el que está creando el desplazable). `CComCachedTearOffObject`mantiene su propio recuento de referencias en su **IUnknown** y elimina a sí mismo una vez que su recuento de referencias es cero. Sin embargo, si realiza una consulta para cualquiera de su desplazable interfaces, el recuento de referencias del objeto propietario **IUnknown** se incrementará.  
+ `CComCachedTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para una interfaz desplazable. Esta clase difiere de `CComTearOffObject` en que `CComCachedTearOffObject` tiene su propio **IUnknown**, independiente del objeto propietario de **IUnknown** (el propietario es el objeto para el que está creando el desplazable). `CComCachedTearOffObject` mantiene su propio recuento de referencias en su **IUnknown** y elimina a sí mismo una vez que su recuento de referencias es cero. Sin embargo, si realiza una consulta para cualquiera de su desplazable interfaces, el recuento de referencias del objeto propietario **IUnknown** se incrementará.  
   
  Si el `CComCachedTearOffObject` objeto ya se crean instancias de implementar el desplazable y la interfaz desplazable es consultar de nuevo, en el mismo `CComCachedTearOffObject` se vuelve a usar el objeto. En cambio, si implementa una interfaz desplazable un `CComTearOffObject` nuevo se consulta a través del objeto propietario, otro `CComTearOffObject` se crearán instancias de.  
   
@@ -98,7 +93,7 @@ public CComObjectRootEx<contained
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  
  Incrementa el recuento de referencias de la `CComCachedTearOffObject` objeto en 1.  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que puede ser útil para el diagnóstico y prueba.  
   
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject  
  El constructor.  
   
 ```
@@ -122,7 +117,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Inicializa el `CComContainedObject` miembro, [m_contained](#m_contained).  
   
-##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  Destructor.  
   
 ```
@@ -132,7 +127,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados y llamadas [FinalRelease](#finalrelease).  
   
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct  
  Llamadas **m_contained::FinalConstruct** crear `m_contained`, `CComContainedObject` <  `contained`> objeto que se usa para tener acceso a la interfaz implementada por la clase desplazable.  
   
 ```
@@ -142,14 +137,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease  
  Llamadas **m_contained::FinalRelease** para liberar `m_contained`, `CComContainedObject` <  `contained`> objeto.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objeto derivado de la clase desplazable.  
   
 ```
@@ -163,7 +158,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>Comentarios  
  Los métodos `m_contained` hereda se utilizan para acceder a la interfaz desplazable de la clase desplazable mediante el objeto almacenado en caché desplazable `QueryInterface`, `FinalConstruct`, y `FinalRelease`.  
   
-##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  Si la interfaz solicitada es **IUnknown**, devuelve un puntero a la `CComCachedTearOffObject`del propio **IUnknown** e incrementa el recuento de referencias. De lo contrario, las consultas para la interfaz en su clase desplazable utilizando la [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) método se hereda de `CComObjectRootEx`.  
 
   
-##  <a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>  CComCachedTearOffObject::Release  
  Disminuye el recuento de referencias en 1 y, si el recuento de referencias es 0, elimina el `CComCachedTearOffObject` objeto.  
   
 ```
