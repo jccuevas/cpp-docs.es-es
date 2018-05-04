@@ -1,13 +1,10 @@
 ---
-title: "Usar parámetros reemplazables (registrador de ATL) | Documentos de Microsoft"
-ms.custom: 
+title: Usar parámetros reemplazables (registrador de ATL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usar parámetros reemplazables (el registrador de &#39; s preprocesador)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usar parámetros reemplazables (el registrador&#39;s preprocesador)
 Parámetros reemplazables permiten que un cliente del registrador especificar los datos de tiempo de ejecución. Para ello, el registrador mantiene un mapa de reemplazo en el que escribe los valores asociados a los parámetros reemplazables en el script. El registrador realiza estas entradas en tiempo de ejecución.  
   
-##  <a name="_atl_using_.25.module.25"></a>Utilizar % MODULE %  
+##  <a name="_atl_using_.25.module.25"></a> Utilizar % MODULE %  
  El [Asistente para controles ATL](../atl/reference/atl-control-wizard.md) genera automáticamente un script que usa `%MODULE%`. ATL utiliza este parámetro reemplazable para la ubicación real del archivo DLL o EXE de su servidor.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Concatenar datos de tiempo de ejecución con los datos de la secuencia de comandos  

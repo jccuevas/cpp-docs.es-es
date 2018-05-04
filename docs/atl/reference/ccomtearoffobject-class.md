@@ -1,12 +1,9 @@
 ---
 title: Clase CComTearOffObject | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomtearoffobject-class"></a>Clase CComTearOffObject
 Esta clase implementa una interfaz desplazable.  
@@ -82,9 +77,9 @@ class CComTearOffObject : public Base
 |[m_pOwner](#m_powner)|Un puntero a un `CComObject` deriva de la clase propietaria.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComTearOffObject`implementa una interfaz desplazable como un objeto independiente que se crea una instancia solo cuando se consulta esa interfaz. El desplazable se elimina cuando su recuento de referencias se convierte en cero. Por lo general, compilar una interfaz desplazable para una interfaz que se usa con poca frecuencia, puesto que utilizando un desplazable guarda un puntero vtable en todas las instancias del objeto principal.  
+ `CComTearOffObject` implementa una interfaz desplazable como un objeto independiente que se crea una instancia solo cuando se consulta esa interfaz. El desplazable se elimina cuando su recuento de referencias se convierte en cero. Por lo general, compilar una interfaz desplazable para una interfaz que se usa con poca frecuencia, puesto que utilizando un desplazable guarda un puntero vtable en todas las instancias del objeto principal.  
   
- Debe derivar la clase que implementa el desplazable de `CComTearOffObjectBase` y de cualquier interfaces que desea que su objeto desplazable a admitir. `CComTearOffObjectBase`se hace plantilla en la clase de propietario y el modelo de subprocesos. La clase de propietario es la clase del objeto para el que se implementa un desplazable. Si no especifica un modelo de subprocesos, se utiliza el modelo de subprocesos de manera predeterminada.  
+ Debe derivar la clase que implementa el desplazable de `CComTearOffObjectBase` y de cualquier interfaces que desea que su objeto desplazable a admitir. `CComTearOffObjectBase` se hace plantilla en la clase de propietario y el modelo de subprocesos. La clase de propietario es la clase del objeto para el que se implementa un desplazable. Si no especifica un modelo de subprocesos, se utiliza el modelo de subprocesos de manera predeterminada.  
   
  Debe crear un mapa de COM para la clase desplazable. Cuando se crea una instancia de ATL el desplazable, creará **CComTearOffObject\<CYourTearOffClass >** o **CComCachedTearOffObject\<CYourTearOffClass >**.  
   
@@ -100,7 +95,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>  CComTearOffObject::AddRef  
  Incrementa el recuento de referencias de la `CComTearOffObject` objeto en uno.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Valor devuelto  
  Un valor que puede ser útil para el diagnóstico y prueba.  
   
-##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject  
  El constructor.  
   
 ```
@@ -124,7 +119,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Recuento de referencias del propietario se incrementa en uno.  
   
-##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
  Destructor.  
   
 ```
@@ -134,7 +129,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados, las llamadas FinalRelease y reduce el módulo de recuento de bloqueo.  
   
-##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  El constructor.  
   
 ```
@@ -144,7 +139,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el [m_pOwner](#m_powner) miembro **NULL**.  
   
-##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
  Un puntero a un [CComObject](../../atl/reference/ccomobject-class.md) objeto derivado de *propietario*.  
   
 ```
@@ -158,7 +153,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>Comentarios  
  El puntero se inicializa en **NULL** durante la construcción.  
   
-##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  Recupera un puntero a la interfaz solicitada.  
   
 ```
@@ -178,7 +173,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Comentarios  
  Consultas en primer lugar para las interfaces de la clase desplazable. Si la interfaz no está allí, busca la interfaz en el objeto de propietario. Si la interfaz solicitada es **IUnknown**, devuelve el **IUnknown** del propietario.  
   
-##  <a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>  CComTearOffObject::Release  
  Disminuye el recuento de referencias en uno y, si el recuento de referencias es cero, elimina el `CComTearOffObject`.  
   
 ```

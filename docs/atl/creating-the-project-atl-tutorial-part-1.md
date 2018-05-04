@@ -1,27 +1,22 @@
 ---
 title: Crear el proyecto (ATL Tutorial, parte 1) | Documentos de Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aedf7b4112d4c8d4bb5b2a174e93925f5a46ce5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Crear el proyecto (Tutorial de ATL, Parte 1)
 Este tutorial le guía paso a paso para un proyecto ATL sin atributos que crea un objeto ActiveX que muestra un polígono. El objeto incluye opciones para permitir que al usuario para cambiar el número de lados que componen el polígono y el código para actualizar la presentación.  
