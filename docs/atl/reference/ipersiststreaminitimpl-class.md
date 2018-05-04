@@ -1,12 +1,9 @@
 ---
 title: Clase IPersistStreamInitImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStreamInitImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Clase IPersistStreamInitImpl
 Esta clase implementa **IUnknown** y proporciona una implementación predeterminada de la [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfaz.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
  Recupera el CLSID del objeto.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>Comentarios  
  Vea [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) en el SDK de Windows.  
   
-##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  Recupera el tamaño de la secuencia necesaria para guardar los datos del objeto.  
   
 ```
@@ -103,7 +98,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>Comentarios  
  Vea [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) en el SDK de Windows.  
   
-##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  Inicializa un objeto recién creado.  
   
 ```
@@ -113,7 +108,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>Comentarios  
  Vea [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) en el SDK de Windows.  
   
-##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
  Comprueba si los datos del objeto ha cambiado desde que se guardó por última vez.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>Comentarios  
  Vea [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) en el SDK de Windows.  
   
-##  <a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  Carga las propiedades del objeto de la secuencia especificada.  
   
 ```
@@ -135,7 +130,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  Vea [IPersistStreamInit:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) en el SDK de Windows.  
   
-##  <a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  Guarda las propiedades del objeto en la secuencia especificada.  
   
 ```

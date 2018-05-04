@@ -1,12 +1,9 @@
 ---
 title: __unhook | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 Disocia un método de control de un evento.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Un puntero al método de evento del que desenlaza el método de controlador de eventos:  
   
 -   Eventos de C++ nativo: *SourceClass* es la clase de origen de eventos y *EventMethod* es el evento.  
@@ -64,7 +59,7 @@ long  __unhook(
  `interface`  
  El nombre de la interfaz que se va a Desenlazar de `receiver`, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **true**.  
   
- *origen*  
+ *Origen*  
  Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en **event_receiver**, *origen* puede ser uno de los siguientes:  
   
 -   Un puntero nativo de objeto de origen de eventos.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   Un puntero de objeto administrado (para eventos administrados).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Un puntero al método de controlador de eventos que se a desenlazar de un evento. El controlador se especifica como un método de una clase o una referencia a la misma; si no se especifica el nombre de la clase, `__unhook` supone que la clase es aquella en que se llama.  
   
 -   Eventos de C++ nativo: *ReceiverClass* es la clase de receptor de eventos y `HandlerMethod` es el controlador.  

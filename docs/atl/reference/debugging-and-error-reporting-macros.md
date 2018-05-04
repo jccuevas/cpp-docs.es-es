@@ -1,12 +1,9 @@
 ---
-title: "Macros de informes de errores y depuración | Documentos de Microsoft"
-ms.custom: 
+title: Macros de informes de errores y depuración | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de informes de errores y depuración
 Estas macros proporcionan funciones de seguimiento y depuración útiles.  
@@ -45,7 +40,7 @@ Estas macros proporcionan funciones de seguimiento y depuración útiles.
 |[ATLTRACE](#alttrace)|Informa de advertencias en un dispositivo de salida, como la ventana del depurador, según las marcas indicados y los niveles. Se incluye por compatibilidad con versiones anteriores.|  
 |[ATLTRACE2](#atltrace2)|Informa de advertencias en un dispositivo de salida, como la ventana del depurador, según las marcas indicados y los niveles.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Definir esta macro antes de incluir los archivos de encabezado ATL para realizar el seguimiento de todos los `AddRef` y **versión** llama en interfaces de los componentes en la ventana de salida.  
   
 ```
@@ -72,9 +67,9 @@ Estas macros proporcionan funciones de seguimiento y depuración útiles.
  La información proporcionada aquí se asigna directamente a la información proporcionada en las instrucciones de seguimiento anterior, para poder examinar los recuentos de referencia a lo largo de la duración completa de un código thunk de interfaz. Además, obtendrá un valor que indica el número máximo de referencias en dicho código thunk de interfaz.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`puede utilizarse en las compilaciones comerciales.  
+> `_ATL_DEBUG_INTERFACES` puede utilizarse en las compilaciones comerciales.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Escribe todas las llamadas a `QueryInterface` en la ventana de salida.  
   
 ```
@@ -86,7 +81,7 @@ Estas macros proporcionan funciones de seguimiento y depuración útiles.
   
  *nombre de la interfaz* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  El `ATLASSERT` macro realiza la misma funcionalidad que la [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro que encontró en la biblioteca de tiempo de ejecución de C.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  Esta macro se usa para validar los parámetros pasados a una función.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  En las compilaciones de depuración de ATL, envía la cadena " `funcname` no se ha implementado" en el dispositivo de volcado de memoria y devuelve **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Informa de advertencias en un dispositivo de salida, como la ventana del depurador, según las marcas indicados y los niveles. Se incluye por compatibilidad con versiones anteriores.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Comentarios  
  Vea [ATLTRACE2](#atltrace2) para obtener una descripción de **ATLTRACE**. **ATLTRACE** y `ATLTRACE2` tienen el mismo comportamiento, **ATLTRACE** se incluye por compatibilidad con versiones anteriores.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Informa de advertencias en un dispositivo de salida, como la ventana del depurador, según las marcas indicados y los niveles.  
   
 ```
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  En versiones de lanzamiento, `ATLTRACE2` se compila a `(void) 0`.  
   
- `ATLTRACE2`limita el contenido de la cadena que se enviará al dispositivo de volcado de memoria a no más de 1023 caracteres, después de darle formato.  
+ `ATLTRACE2` limita el contenido de la cadena que se enviará al dispositivo de volcado de memoria a no más de 1023 caracteres, después de darle formato.  
   
  **ATLTRACE** y `ATLTRACE2` tienen el mismo comportamiento, **ATLTRACE** se incluye por compatibilidad con versiones anteriores.  
   

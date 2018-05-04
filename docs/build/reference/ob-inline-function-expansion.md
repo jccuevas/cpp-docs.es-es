@@ -1,13 +1,10 @@
 ---
-title: "-Ob (expansión de funciones Inline) | Documentos de Microsoft"
-ms.custom: 
+title: -Ob (expansión de funciones Inline) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Expansión de funciones inline)
 
@@ -81,7 +76,7 @@ Puede usar el `#pragma` [auto_inline](../../preprocessor/auto-inline.md) directi
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
 
-1. Expanda **propiedades de configuración**, **C/C++**y seleccione **optimización**.
+1. Expanda **propiedades de configuración**, **C/C++** y seleccione **optimización**.
 
 1. Modificar el **expansión de funciones Inline** propiedad.
 
@@ -91,6 +86,6 @@ Puede usar el `#pragma` [auto_inline](../../preprocessor/auto-inline.md) directi
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)  
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)  
 [Opciones del compilador](../../build/reference/compiler-options.md)  
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

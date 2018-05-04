@@ -1,12 +1,9 @@
 ---
 title: Clase CComDynamicUnkArray | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray (clase)
 Esta clase almacena una matriz de **IUnknown** punteros.  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  Vea [agregar puntos de conexión a un objeto](../../atl/adding-connection-points-to-an-object.md) para obtener más información acerca de cómo automatizar la creación de la conexión de punto de proxy.  
   
 > [!NOTE]
-> **Tenga en cuenta** la clase **CComDynamicUnkArray** utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<`  *n*  `>`, donde  *n*  es el número de puntos de conexión necesaria.  
+> **Tenga en cuenta** la clase **CComDynamicUnkArray** utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<` *n* `>`, donde *n*es el número de puntos de conexión necesaria.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  Llamar a este método para agregar un **IUnknown** puntero a la matriz.  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la cookie asociada con el puntero recién agregado.  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  Devuelve un puntero al principio de la colección de **IUnknown** punteros de interfaz.  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  Antes de usar el **IUnknown** interfaz, debe comprobar que no es **NULL**.  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Vacía la matriz.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  El constructor.  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Comentarios  
  Establece el tamaño de la colección en cero e inicializa los valores para **NULL**. El destructor libera la colección, si es necesario.  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Destructor.  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Comentarios  
  Libera los recursos asignados por el constructor de clase.  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  Devuelve un puntero a uno más allá de la última **IUnknown** puntero en la colección.  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un **IUnknown** puntero de interfaz.  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Recupera el elemento en el índice especificado.  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>Valor devuelto  
  Un puntero a un [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaz.  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Llamar a este método para obtener la cookie asociada con un determinado **IUnknown** puntero.  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Comentarios  
  Si hay más de una instancia de la misma **IUnknown** puntero, esta función devuelve la cookie para la primera de ellas.  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Devuelve la longitud de una matriz.  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Longitud de la matriz.  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  Llamar a este método para obtener el **IUnknown** puntero asociado a una cookie determinada.  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el **IUnknown** puntero, o NULL si no se encuentra ninguna cookie de búsqueda de coincidencias.  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  Llamar a este método para quitar un **IUnknown** puntero de la matriz.  
   
 ```

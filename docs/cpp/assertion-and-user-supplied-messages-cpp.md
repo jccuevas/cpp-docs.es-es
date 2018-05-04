@@ -2,11 +2,8 @@
 title: Aserción y mensajes proporcionados por el usuario (C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93798dadee3e4270d82eac84a794c6133c05c07
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Aserción y mensajes proporcionados por el usuario (C++)
 El C++ lenguaje admite tres error mecanismos de control que le ayudan a depuración la aplicación: la [#error (directiva)](../preprocessor/hash-error-directive-c-cpp.md), el [static_assert](../cpp/static-assert.md) palabra clave y el [assert (macro), _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Los tres mecanismos emiten mensajes de error y dos de ellos también prueban las aserciones de software. Una aserción de software especifica una condición que se espera que sea cierta (valor true) en un determinado punto del programa. Si se produce un error de aserción en tiempo de compilación, el compilador emite un mensaje de diagnóstico y un error de compilación. Si se produce un error de aserción en tiempo de ejecución, el sistema operativo emite un mensaje de diagnóstico y cierra la aplicación.  

@@ -1,30 +1,25 @@
 ---
 title: Identificar los elementos del proyecto de Control DHTML | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 525ad4e073607064234641f6544a11901ded0096
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificar los elementos del proyecto de Control DHTML
 La mayoría del código control DHTML es exactamente igual al creado para cualquier control ATL. Para obtener una comprensión básica del código genérico, examine la [tutorial ATL](../atl/active-template-library-atl-tutorial.md), y lea las secciones [crear un proyecto ATL](../atl/reference/creating-an-atl-project.md) y [aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md).  

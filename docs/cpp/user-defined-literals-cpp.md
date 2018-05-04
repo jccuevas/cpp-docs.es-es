@@ -2,26 +2,21 @@
 title: Literales (C++) definido por el usuario | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>Literales definidos por el usuario (C++)
 Hay cinco categorías principales de literales: entero, carácter, punto flotante, cadena, booleano y puntero.  A partir de C++ 11, puede definir sus propios literales en función de estas categorías para proporcionar atajos sintácticos para expresiones comunes y aumentar la seguridad de tipos. Por ejemplo, supongamos que tiene una clase Distance. Puede definir un literal para kilómetros y otro para millas, y fomentar que usuario sea explícito sobre las unidades de medida escribiendo simplemente: auto d = 42,0_km o auto d = 42,0_mi. No hay ninguna ventaja ni desventaja de rendimiento con literales definidos por el usuario; se usan principalmente por comodidad o para la deducción de tipos de tiempo de compilación. La biblioteca estándar tiene literales definidos por el usuario para std: String, std:: Complex y unidades en las operaciones de tiempo y la duración de la \<chrono > encabezado:  

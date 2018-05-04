@@ -1,13 +1,10 @@
 ---
 title: Implementar la interfaz de control de eventos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementar la interfaz de control de eventos
 ATL le ayuda con los tres elementos necesarios para el control de eventos: implementar la interfaz de eventos, aconsejar el origen del evento y desaconsejar el origen del evento. Los pasos precisos que deberá tomar dependen del tipo de la interfaz de eventos y los requisitos de rendimiento de la aplicación.  

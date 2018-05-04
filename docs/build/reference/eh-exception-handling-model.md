@@ -1,13 +1,10 @@
 ---
 title: -EH (modelo de control de excepciones) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modelo de control de excepciones)
 Especifica el tipo de control de excepciones que usa el compilador, cuándo deben optimizarse las comprobaciones de excepciones y si se destruirán los objetos de C++ que quedan fuera del ámbito debido a una excepción. Si no se especifica **/EH** , el compilador detectará tanto las excepciones estructuradas asincrónicas como las excepciones de C++, pero no destruirá los objetos de C++ que estén fuera de ámbito debido a una excepción asincrónica.  
@@ -115,7 +110,7 @@ int main() {
   
 1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  En el panel izquierdo, expanda **Propiedades de configuración**, **C/C++**y **Generación de código**.  
+2.  En el panel izquierdo, expanda **Propiedades de configuración**, **C/C++** y **Generación de código**.  
   
 3.  Modifique la propiedad **Habilitar excepciones de C++** .  
   

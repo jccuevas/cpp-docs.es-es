@@ -1,12 +1,9 @@
 ---
 title: Clase CStringElementTraits | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraits
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraits class
 ms.assetid: 74d7134b-099d-4455-bf91-3e68ccbf95bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025c9aa66a8647fd5d8ca9803aedb50b27ed3be1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraits-class"></a>Clase CStringElementTraits
 Esta clase proporciona funciones estáticas utilizadas por las clases de colección para almacenar `CString` objetos.  
@@ -76,7 +71,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** cstringt.h  
   
-##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
  Llame a esta función estática para comparar dos elementos de cadena para la igualdad.  
   
 ```
@@ -93,7 +88,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve true si los elementos en caso contrario, son iguales, false.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
  Llame a esta función estática para comparar dos elementos de cadena.  
   
 ```
@@ -111,7 +106,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  Cero si las cadenas son idénticas, < 0 si `str1` es menor que `str2`, o 0 > Si `str1` es mayor que `str2`. El [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) método se usa para realizar las comparaciones.  
 
   
-##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
  Llame a esta función estática para copiar `CString` elementos almacenados en un objeto de clase de colección.  
   
 ```
@@ -134,7 +129,7 @@ static void CopyElements(
 ### <a name="remarks"></a>Comentarios  
  No deben superponerse a los elementos de origen y de destino.  
   
-##  <a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>  CStringElementTraits::Hash  
  Llame a esta función estática para calcular un valor hash para el elemento de la cadena especificada.  
   
 ```
@@ -148,21 +143,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de hash, que se calcula con el contenido de la cadena.  
   
-##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
  El tipo de datos que se usará para agregar elementos al objeto de clase de colección.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
  Llame a esta función estática para reubicar `CString` elementos almacenados en un objeto de clase de colección.  
   
 ```

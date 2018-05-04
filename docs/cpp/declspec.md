@@ -1,12 +1,9 @@
 ---
-title: __declspec | Microsoft Docs
-ms.custom: 
+title: __declspec | Documentos de Microsoft
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,18 +30,18 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 ## <a name="grammar"></a>Gramática
 
 *decl-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
 
 *extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier*<sub>participar</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Alinear (** *#* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**asignar ("** *segname* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**AppDomain**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**  
+&nbsp;&nbsp;&nbsp;&nbsp;**En desuso**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
@@ -55,14 +51,14 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**proceso**  
-&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Proceso**  
+&nbsp;&nbsp;&nbsp;&nbsp;**propiedad (** { **obtener =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Restringir**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
-&nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**subproceso**  
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**  
 
 El espacio en blanco separa la secuencia de modificador de la declaración. En secciones posteriores aparecen ejemplos.
 

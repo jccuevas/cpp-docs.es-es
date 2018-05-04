@@ -1,12 +1,9 @@
 ---
 title: Clase CAtlWinModule | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlWinModule
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlwinmodule-class"></a>Clase CAtlWinModule
 Esta clase proporciona compatibilidad para los componentes de la ventana ATL.  
@@ -70,7 +65,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
  Este método inicializa y agrega un `_AtlCreateWndData` estructura.  
   
 ```
@@ -87,7 +82,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>Comentarios  
  Este método llama a [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) que inicializa un [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) estructura. Esta estructura se almacenará la **esto** puntero, que se usa para obtener la instancia de clase en los procedimientos de ventana.  
   
-##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  El constructor.  
   
 ```
@@ -97,7 +92,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Comentarios  
  Si se produce un error en la inicialización, un **EXCEPTION_NONCONTINUABLE** se produce la excepción.  
   
-##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  Destructor.  
   
 ```
@@ -107,7 +102,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
  Este método devuelve un puntero a un `_AtlCreateWndData` estructura.  
   
 ```

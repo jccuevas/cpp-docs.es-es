@@ -1,12 +1,9 @@
 ---
 title: CSimpleDialog (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog (clase)
 Esta clase implementa un cuadro de diálogo modal básica.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|Crea un cuadro de diálogo modal.|  
   
 ## <a name="remarks"></a>Comentarios  
- Implementa un cuadro de diálogo modal con funcionalidad básica. `CSimpleDialog`proporciona compatibilidad para controles comunes de Windows. Para crear y mostrar un cuadro de diálogo modal, cree una instancia de esta clase, proporcionando el nombre de una plantilla de recursos existente para el cuadro de diálogo. El objeto de cuadro de diálogo se cierra cuando el usuario hace clic en cualquier control con un valor predefinido (por ejemplo, IDOK o IDCANCEL).  
+ Implementa un cuadro de diálogo modal con funcionalidad básica. `CSimpleDialog` proporciona compatibilidad para controles comunes de Windows. Para crear y mostrar un cuadro de diálogo modal, cree una instancia de esta clase, proporcionando el nombre de una plantilla de recursos existente para el cuadro de diálogo. El objeto de cuadro de diálogo se cierra cuando el usuario hace clic en cualquier control con un valor predefinido (por ejemplo, IDOK o IDCANCEL).  
   
- `CSimpleDialog`le permite crear cuadros de diálogo modales solo. `CSimpleDialog`proporciona el procedimiento de cuadro de diálogo, que utiliza el mapa de mensajes predeterminado para dirigir mensajes a los controladores adecuados.  
+ `CSimpleDialog` le permite crear cuadros de diálogo modales solo. `CSimpleDialog` proporciona el procedimiento de cuadro de diálogo, que utiliza el mapa de mensajes predeterminado para dirigir mensajes a los controladores adecuados.  
   
  Vea [implementa un cuadro de diálogo](../../atl/implementing-a-dialog-box.md) para obtener más información.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  Invoca un cuadro de diálogo modal y devuelve el resultado de cuadro de diálogo cuando haya finalizado.  
   
 ```

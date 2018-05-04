@@ -1,12 +1,9 @@
 ---
 title: __clrcall | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Específicos de Microsoft**  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [/CLR (compilación de common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implica que todas las funciones y los punteros de función son `__clrcall` y el compilador no permite que una función dentro de la operación de compilación se marquen como algo distinto de `__clrcall`. Cuando **/CLR: pure** se utiliza, `__clrcall` sólo se puede especificar en punteros de función y declaraciones externas.  
   
- Se puede llamar directamente a `__clrcall` funciones desde código C++ existente que se ha compilado con **/CLR** siempre que esa función tenga una implementación MSIL. `__clrcall`las funciones no se puede llamar directamente desde funciones con asm insertado y denomínelo intrínsecas de CPU, por ejemplo, incluso si esas funciones se compilan con **/CLR**.  
+ Se puede llamar directamente a `__clrcall` funciones desde código C++ existente que se ha compilado con **/CLR** siempre que esa función tenga una implementación MSIL. `__clrcall` las funciones no se puede llamar directamente desde funciones con asm insertado y denomínelo intrínsecas de CPU, por ejemplo, incluso si esas funciones se compilan con **/CLR**.  
   
  Los punteros de función`__clrcall` solo están diseñados para usarse en el dominio de aplicación en el que se crearon.  En lugar de pasar punteros de función `__clrcall` a través de dominios de aplicación, utilice <xref:System.CrossAppDomainDelegate>. Para obtener más información, consulte [dominios de aplicación y Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   

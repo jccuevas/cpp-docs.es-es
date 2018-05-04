@@ -1,12 +1,12 @@
 ---
 title: Almacenamiento Local (TLS) para el subproceso | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subproceso puede asignar ubicaciones en las que almacenar los datos específicos de esos subproceso. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), y [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Para obtener más información acerca de cómo se implementa el almacenamiento local de subprocesos en Windows, consulte [almacenamiento Local de subprocesos (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>Implementación del compilador para TLS  
+##  <a name="_core_compiler_implementation_for_tls"></a> Implementación del compilador para TLS  
  **C ++ 11:** el `thread_local` especificador de clase de almacenamiento es la manera recomendada para especificar el almacenamiento local de subprocesos para los objetos y miembros de clase. Para obtener más información, consulte [clases de almacenamiento (C++)](../cpp/storage-classes-cpp.md).  
   
  Visual C++ también proporciona un atributo específico de Microsoft, [subproceso](../cpp/thread.md), como modificador de clase de almacenamiento extendida. Use la `__declspec` palabra clave para declarar un **subproceso** variable. Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:  
@@ -119,7 +119,7 @@ __declspec( thread ) int tls_i = 1;
   
      C++ no permite este tipo de inicialización dinámica de datos de subproceso debido a posibles mejoras futuras en el servicio de almacenamiento local para el subproceso.  
   
--   En sistemas operativos de Windows anteriores a [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], `__declspec`(thread) tiene algunas limitaciones. Si una DLL declara cualquier dato u objeto como `__declspec`(thread), puede producir un error de protección si se carga dinámicamente. Después de carga el archivo DLL mediante [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), se producirá un error del sistema siempre que el código hace referencia el `__declspec`datos (subproceso). Como el espacio para variables globales de un subproceso se asigna en tiempo de ejecución, el tamaño de este espacio se basa en un cálculo de los requisitos de la aplicación más los requisitos de todas las DLL que se vinculan estáticamente. Cuando se utiliza `LoadLibrary`, no se puede extender este espacio para albergar las variables locales para el subproceso declaradas con `__declspec`(thread). Use las API de TLS, como [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), en la DLL para asignar TLS en caso de que se pueden cargar el archivo DLL con `LoadLibrary`.  
+-   En sistemas operativos Windows anteriores a Windows Vista, `__declspec`(thread) tiene algunas limitaciones. Si una DLL declara cualquier dato u objeto como `__declspec`(thread), puede producir un error de protección si se carga dinámicamente. Después de carga el archivo DLL mediante [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), se producirá un error del sistema siempre que el código hace referencia el `__declspec`datos (subproceso). Como el espacio para variables globales de un subproceso se asigna en tiempo de ejecución, el tamaño de este espacio se basa en un cálculo de los requisitos de la aplicación más los requisitos de todas las DLL que se vinculan estáticamente. Cuando se utiliza `LoadLibrary`, no se puede extender este espacio para albergar las variables locales para el subproceso declaradas con `__declspec`(thread). Use las API de TLS, como [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), en la DLL para asignar TLS en caso de que se pueden cargar el archivo DLL con `LoadLibrary`.  
   
 ## <a name="see-also"></a>Vea también  
  [Multithreading con C y Win32](../parallel/multithreading-with-c-and-win32.md)   

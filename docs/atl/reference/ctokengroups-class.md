@@ -1,12 +1,9 @@
 ---
 title: Clase CTokenGroups | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenGroups
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 8ccf73cdeac0e7522551c6ddb7bef6b0122297ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokengroups-class"></a>Clase CTokenGroups
 Esta clase es un contenedor para la **TOKEN_GROUPS** estructura.  
@@ -56,7 +51,7 @@ class CTokenGroups
 |Name|Descripción|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|El constructor.|  
-|[CTokenGroups::~CTokenGroups](#dtor)|Destructor.|  
+|[CTokenGroups:: ~ CTokenGroups](#dtor)|Destructor.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -88,7 +83,7 @@ class CTokenGroups
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsecurity.h  
   
-##  <a name="add"></a>CTokenGroups::Add  
+##  <a name="add"></a>  CTokenGroups::Add  
  Agrega un `CSid` o existente **TOKEN_GROUPS** estructura especificada en el `CTokenGroups` objeto.  
   
 ```
@@ -109,7 +104,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ### <a name="remarks"></a>Comentarios  
  Estos métodos agregan uno o varios `CSid` objetos y sus atributos asociados a la `CTokenGroups` objeto.  
   
-##  <a name="ctokengroups"></a>CTokenGroups::CTokenGroups  
+##  <a name="ctokengroups"></a>  CTokenGroups::CTokenGroups  
  El constructor.  
   
 ```
@@ -125,7 +120,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>Comentarios  
  El `CTokenGroups` , opcionalmente, se puede crear el objeto con un **TOKEN_GROUPS** definida previamente o estructura `CTokenGroups` objeto.  
   
-##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups  
+##  <a name="dtor"></a>  CTokenGroups:: ~ CTokenGroups  
  Destructor.  
   
 ```
@@ -135,7 +130,7 @@ virtual ~CTokenGroups() throw();
 ### <a name="remarks"></a>Comentarios  
  El destructor libera todos los recursos asignados.  
   
-##  <a name="delete"></a>CTokenGroups::Delete  
+##  <a name="delete"></a>  CTokenGroups::Delete  
  Elimina un `CSid` y sus atributos asociados de la `CTokenGroups` objeto.  
   
 ```
@@ -166,7 +161,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de [CSid](../../atl/reference/csid-class.md) objetos y sus atributos asociados, incluidos en el `CTokenGroups` objeto.  
   
-##  <a name="getlength"></a>CTokenGroups::GetLength  
+##  <a name="getlength"></a>  CTokenGroups::GetLength  
  Devuelve el tamaño de la **CTokenGroup** objeto.  
   
 ```
@@ -227,7 +222,7 @@ bool LookupSid(
 ### <a name="remarks"></a>Comentarios  
  Establecer `pdwAttributes` a NULL proporciona una manera de confirmar la existencia de la `CSid` sin tener acceso a los atributos. Tenga en cuenta que este método no debe usarse para comprobar los derechos de acceso. Las aplicaciones deberían usar el [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) método.  
   
-##  <a name="operator_eq"></a>CTokenGroups::operator =  
+##  <a name="operator_eq"></a>  CTokenGroups::operator =  
  Operador de asignación.  
   
 ```
@@ -242,7 +237,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CTokenGroups` objeto.  
   
-##  <a name="operator_const_token_groups__star"></a>TOKEN_GROUPS const CTokenGroups::operator *  
+##  <a name="operator_const_token_groups__star"></a>  TOKEN_GROUPS const CTokenGroups::operator *  
  Convierte un valor a un puntero a la **TOKEN_GROUPS** estructura.  
   
 ```  

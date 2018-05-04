@@ -1,29 +1,24 @@
 ---
 title: Reglas generales para la sobrecarga de operadores | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-for-operator-overloading"></a>Reglas generales para la sobrecarga de operadores
 Las reglas siguientes restringen la forma en que se implementan los operadores sobrecargados. Sin embargo, no se aplican a la [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores, que se tratan por separado.  
@@ -59,7 +54,7 @@ Las reglas siguientes restringen la forma en que se implementan los operadores s
   
 -   Los operadores binarios declarados como funciones miembro toman un argumento; si se declaran como funciones globales, toman dos argumentos.  
   
--   Si un operador puede usarse como unario o un operador binario (**&**,  **\*** ,  **+** , y  **-** ), puede sobrecargar por separado cada uso.  
+-   Si un operador puede usarse como unario o un operador binario (**&**, **\***, **+**, y **-**), puede sobrecargar por separado cada uso.  
   
 -   Los operadores sobrecargados no pueden tener argumentos predeterminados.  
   

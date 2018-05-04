@@ -1,27 +1,22 @@
 ---
 title: Control de excepciones de ARM | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones auxiliares de lenguaje. En este documento se describe el control de excepciones en Windows en ARM, así como las funciones auxiliares de lenguaje que usa el código generado mediante MASM y el compilador de Visual C++.  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  El código 0xFD es un código especial para la finalización de la secuencia que quiere decir que el epílogo es una instrucción de 16 bits más larga que el prólogo. Esto permite que se puedan compartir un mayor número de códigos de desenredado.  
   
- En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Con una asignación unívoca entre códigos de operación y códigos de desenredado, si desenredáramos desde la instrucción  *n*  en el epílogo, el responsable del desenredado debería omitir los primeros  *n*  códigos de desenredado.  
+ En este ejemplo, si tiene lugar una excepción mientras el cuerpo de la función entre el prólogo y el epílogo se está ejecutando, el desenredado se inicia con el epílogo, con un desplazamiento 0 en el código del epílogo. Esto corresponde al desplazamiento 0x140 del ejemplo. El responsable del desenredado ejecuta la secuencia de desenredado completa, porque no se ha efectuado ninguna limpieza. Si, en lugar de esto, la excepción se produjera en una instrucción posterior al inicio del código del epílogo, el responsable del desenredado podrá realizar el desenredado correctamente omitiendo el primer código de desenredado. Con una asignación unívoca entre códigos de operación y códigos de desenredado, si desenredáramos desde la instrucción *n* en el epílogo, el responsable del desenredado debería omitir los primeros *n* códigos de desenredado.  
   
- Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. Por lo general, si desenredáramos desde la instrucción  *n*  en el prólogo, desenredado debería empezar a ejecutarse en  *n*  códigos desde el final de la lista de códigos de desenredado.  
+ Esta misma lógica es perfectamente válida, pero a la inversa, para el prólogo. Si desenredamos desde el desplazamiento 0 del prólogo, no hay que ejecutar nada. Si desenredamos desde una instrucción, la secuencia de desenredado debería iniciar un código de desenredado del final, ya que los códigos de desenredado del prólogo se almacenan en orden inverso. Por lo general, si desenredáramos desde la instrucción *n* en el prólogo, desenredado debería empezar a ejecutarse en *n* códigos desde el final de la lista de códigos de desenredado.  
   
  Los códigos de desenredado del prólogo y los epílogos no siempre coinciden plenamente. En tal caso, la matriz de códigos de desenredado puede contener varias secuencias de códigos. Emplee la siguiente lógica para averiguar el desplazamiento por el que empezar a procesar códigos:  
   

@@ -2,12 +2,9 @@
 title: -EXPORT (exporta una función) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporta una función)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Comentarios  
  Con esta opción, puede exportar una función desde el programa para que otros programas pueden llamar a la función. También puede exportar los datos. Exportaciones generalmente se definen en un archivo DLL.  
   
- El *entrada* es el nombre de la función o elemento de datos que va a ser utilizada por el programa que realiza la llamada. `ordinal`Especifica un índice en la tabla de exportaciones en el intervalo 1 a 65535; Si no se especifica `ordinal`, LINK asigna uno. El **NONAME** palabra clave exporta la función solo como un valor ordinal, sin un *entrada*.  
+ El *entrada* es el nombre de la función o elemento de datos que va a ser utilizada por el programa que realiza la llamada. `ordinal` Especifica un índice en la tabla de exportaciones en el intervalo 1 a 65535; Si no se especifica `ordinal`, LINK asigna uno. El **NONAME** palabra clave exporta la función solo como un valor ordinal, sin un *entrada*.  
   
  El **datos** palabra clave especifica que el elemento exportado es un elemento de datos. El elemento de datos en el programa cliente debe declararse mediante **extern __declspec (dllimport)**.  
   

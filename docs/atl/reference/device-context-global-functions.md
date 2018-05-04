@@ -1,29 +1,24 @@
 ---
 title: Funciones globales de contexto de dispositivo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 dev_langs:
 - C++
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aa685604580423262ab694d1285897cd29eef63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37d54fbe9391cb53cca1d84401e90bb6fd47a479
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="device-context-global-functions"></a>Funciones globales de contexto de dispositivo
 Esta función crea un contexto de dispositivo para un dispositivo determinado.  
@@ -32,7 +27,7 @@ Esta función crea un contexto de dispositivo para un dispositivo determinado.
 |-|-|  
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Crea un contexto de dispositivo.|  
   
-##  <a name="atlcreatetargetdc"></a>AtlCreateTargetDC  
+##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
  Crea un contexto de dispositivo para el dispositivo especificado en el [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estructura.  
   
 ```

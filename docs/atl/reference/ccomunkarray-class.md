@@ -1,12 +1,9 @@
 ---
 title: Clase CComUnkArray | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComUnkArray
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray (clase)
 Esta clase almacena **IUnknown** punteros y está diseñado para utilizarse como un parámetro a la [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) clase de plantilla.  
@@ -77,12 +72,12 @@ class CComUnkArray
  Vea [agregar puntos de conexión a un objeto](../../atl/adding-connection-points-to-an-object.md) para obtener más información acerca de cómo automatizar la creación de la conexión de punto de proxy.  
   
 > [!NOTE]
-> **Tenga en cuenta** la clase [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<`  *n*  `>`, donde  *n*  es el número de puntos de conexión necesaria.  
+> **Tenga en cuenta** la clase [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) utiliza la **Agregar clase** asistente al crear un control que tiene puntos de conexión. Si desea especificar manualmente el número de puntos de conexión, cambie la referencia de **CComDynamicUnkArray** a `CComUnkArray<` *n* `>`, donde *n*es el número de puntos de conexión necesaria.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>  CComUnkArray::Add  
  Llamar a este método para agregar un **IUnknown** puntero a la matriz.  
   
 ```
@@ -96,7 +91,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la cookie asociada con el puntero recién agregado, o 0 si la matriz no es lo suficientemente grande como para contener el nuevo puntero.  
   
-##  <a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>  CComUnkArray::begin  
  Devuelve un puntero al principio de la colección de **IUnknown** punteros de interfaz.  
   
 ```
@@ -112,7 +107,7 @@ IUnknown**
   
  Antes de usar el **IUnknown** interfaz, debe comprobar que no es **NULL**.  
   
-##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  El constructor.  
   
 ```
@@ -122,7 +117,7 @@ CComUnkArray();
 ### <a name="remarks"></a>Comentarios  
  Establece la colección para contener `nMaxSize` **IUnknown** punteros e inicializa los punteros a **NULL**.  
   
-##  <a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>  CComUnkArray::end  
  Devuelve un puntero a uno más allá de la última **IUnknown** puntero en la colección.  
   
 ```
@@ -138,7 +133,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
  Llamar a este método para obtener la cookie asociada con un determinado **IUnknown** puntero.  
   
 ```
@@ -155,7 +150,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Comentarios  
  Si hay más de una instancia de la misma **IUnknown** puntero, esta función devuelve la cookie para la primera de ellas.  
   
-##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
  Llamar a este método para obtener el **IUnknown** puntero asociado a una cookie determinada.  
   
 ```
@@ -169,7 +164,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el **IUnknown** puntero, o NULL si no se encuentra ninguna cookie de búsqueda de coincidencias.  
   
-##  <a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>  CComUnkArray::Remove  
  Llamar a este método para quitar un **IUnknown** puntero de la matriz.  
   
 ```

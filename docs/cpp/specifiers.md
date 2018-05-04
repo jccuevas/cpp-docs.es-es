@@ -2,11 +2,8 @@
 title: Especificadores | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarations, specifiers
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352ef898c9380c55e90205129ba6fe48bf352856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifiers"></a>Especificadores
 Este tema se describe la *decl-specifiers* componente (especificadores de declaración) de un [declaración](declarations-and-definitions-cpp.md).  
@@ -38,11 +33,11 @@ Este tema se describe la *decl-specifiers* componente (especificadores de declar
   
  *especificador de función*  
   
- [Friend](../cpp/friend-cpp.md)  
+ [friend](../cpp/friend-cpp.md)  
   
  [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [__declspec](../cpp/declspec.md) `(` *extended-decl-modifier-seq*`)`  
+ [__declspec](../cpp/declspec.md) `(` *extended-decl-modifier-seq* `)`  
   
 ## <a name="remarks"></a>Comentarios  
  El *decl-specifiers* parte de una declaración es la secuencia más larga de *decl-specifiers* que se pueden tomar para indicar un nombre de tipo, sin incluir el puntero o referencia modificadores. El resto de la declaración es la *declarador*, que incluye el nombre introducido.  

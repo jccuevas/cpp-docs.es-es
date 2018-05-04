@@ -1,13 +1,10 @@
 ---
 title: -REBASE | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |Modificador|Acción|  
 |--------------|------------|  
-|BASE de**=***dirección*|Proporciona una dirección inicial para reasignar direcciones base a los archivos. Especifique *dirección* en formato decimal o notación del lenguaje c. Si no se especifica BASE, la dirección base inicial predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|  
+|BASE **= *** dirección*|Proporciona una dirección inicial para reasignar direcciones base a los archivos. Especifique *dirección* en formato decimal o notación del lenguaje c. Si no se especifica BASE, la dirección base inicial predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|  
 |BASEFILE|Crea un archivo denominado COFFBASE. TXT, que es un archivo de texto en el formato esperado por del vínculo/opción de BASE.|  
 |ABAJO|Hace que EDITBIN reasigne las direcciones base hacia abajo desde una dirección final. Los archivos se vuelven a asignar en el orden especificado, con el primer archivo que se encuentra en la dirección más alta posible bajo el final del intervalo de direcciones. BASE debe usarse con abajo para asegurarse de suficiente espacio de direcciones para basar los archivos. Para determinar el espacio de dirección necesario para los archivos especificados, ejecute EDITBIN con la opción /REBASE en los archivos y agregue 64 KB al tamaño total mostrado.|  
   

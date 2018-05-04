@@ -1,13 +1,10 @@
 ---
-title: "Archivos en línea en un archivo MAKE | Documentos de Microsoft"
-ms.custom: 
+title: Archivos en línea en un archivo MAKE | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - makefiles, inline files
 - files [C++], inline
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c4cbf72b8731a23ef6b7810d34921e21095699
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1203a38380e9d5975460fe05de3ced32b939c237
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inline-files-in-a-makefile"></a>Archivos insertados en un archivo MAKE
 Un archivo en línea contiene texto que se especifique en el archivo MAKE. Su nombre se puede usar en comandos como entrada (por ejemplo, un archivo de comandos de vínculo), o puede pasar comandos al sistema operativo. El archivo se crea en el disco cuando se ejecuta un comando que crea el archivo.  

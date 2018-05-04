@@ -1,12 +1,9 @@
 ---
 title: Varias Interfaces duales | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d87164439a4128ff6205ea6bc3ee3d9cc5573a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-dual-interfaces"></a>Varias Interfaces duales
 Puede que desee combinar las ventajas de una interfaz dual (es decir, la flexibilidad de vtable y enlace de tiempo de ejecución, lo que hace que la clase disponibles para los lenguajes de scripting, así como de C++) con las técnicas de herencia múltiple.  

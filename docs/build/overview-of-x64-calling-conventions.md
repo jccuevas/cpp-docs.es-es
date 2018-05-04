@@ -1,27 +1,22 @@
 ---
-title: "Información general sobre x64 convenciones de llamada | Documentos de Microsoft"
-ms.custom: 
+title: Información general sobre x64 convenciones de llamada | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Información general sobre las convenciones de llamada x64
 Dos diferencias importantes entre x86 y [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] son la capacidad de direccionamiento de 64 bits y un conjunto simple de 64 bits de 16 registros de uso general. Dado el registros ampliado conjunto, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utiliza la [__fastcall](../cpp/fastcall.md) convención de llamada y un modelo de control de excepciones basado en RISC. El `__fastcall` convención usa registros para los cuatro primeros argumentos y el marco de pila para pasar argumentos adicionales.  

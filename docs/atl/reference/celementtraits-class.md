@@ -1,12 +1,9 @@
 ---
 title: Clase CElementTraits | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraits
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe629a08170ce011b22595c8b821b278e16faa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c530622f096ef14d4eb3de56e5219e8f7df4f082
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraits-class"></a>Clase CElementTraits
 Esta clase se utiliza por las clases de colección para proporcionar las funciones y métodos para mover, copiar, comparación y operaciones hash.  
@@ -43,7 +38,7 @@ class CElementTraits : public CDefaultElementTraits<T>
  El tipo de datos que se almacenará en la colección.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta clase proporciona métodos y funciones estáticas predeterminado para mover, copiar, comparar y hash elementos almacenados en un objeto de clase de colección. `CElementTraits`se especifica como el proveedor predeterminado de estas operaciones mediante las clases de colección [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), y [CRBTree](../../atl/reference/crbtree-class.md).  
+ Esta clase proporciona métodos y funciones estáticas predeterminado para mover, copiar, comparar y hash elementos almacenados en un objeto de clase de colección. `CElementTraits` se especifica como el proveedor predeterminado de estas operaciones mediante las clases de colección [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), y [CRBTree](../../atl/reference/crbtree-class.md).  
   
  Las implementaciones predeterminadas será suficiente para tipos de datos simples, pero si se utilizan las clases de colección para almacenar objetos más complejos, se deben invalidar las funciones y los métodos proporcionados por el usuario las implementaciones.  
   

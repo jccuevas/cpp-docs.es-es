@@ -1,12 +1,9 @@
 ---
 title: Clase CComQIPtr | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomqiptr-class"></a>Clase CComQIPtr
 Una clase de puntero inteligente para administrar los punteros de interfaz COM.  
@@ -73,7 +68,7 @@ class CComQIPtr: public CComPtr<T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
   
-##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr  
  El constructor.  
   
 ```
@@ -93,7 +88,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  `piid`  
  Un puntero a lo IID de `T`.  
   
-##  <a name="operator_eq"></a>CComQIPtr::operator =  
+##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  El operador de asignación.  
   
 ```

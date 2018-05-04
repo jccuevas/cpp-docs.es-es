@@ -2,10 +2,7 @@
 title: -std (especificar la versión estándar del lenguaje) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /std
 - -std
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb248f4c7ce1d9520bc328ed59b75ff081659996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fed80f0f9763b7e988c40a9d9f38f4e0f18eeb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar la versión estándar del lenguaje)
 
@@ -51,7 +46,7 @@ El valor predeterminado **/std:c ++ 14** opción habilita el conjunto de caracte
 
 Para obtener más información sobre qué características C ++ 14 y C ++ 17 se habilitan cuando **/std:c ++ 14** está especificado, vea las notas de [conformidad de lenguaje de Visual C++](../../visual-cpp-language-conformance.md).
   
-El **/std:c ++ 17** opción permite que el conjunto completo de C ++ 17 características implementadas por el compilador de Visual C++. Esta opción deshabilita el compilador y el soporte técnico de la biblioteca estándar para las características que se cambian o nuevas en las versiones de las actualizaciones de borrador de trabajo y defectos del estándar de C++ después de C ++ 17.  
+El **/std:c ++ 17** opción permite que el conjunto completo de C ++ 17 características implementadas por el compilador de Visual C++. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características nuevas o que se han modificado en las versiones del borrador de trabajo y las actualizaciones de defectos de C++ Standard posteriores a C++17.  
   
 El **/std:c ++ más reciente** opción habilita el conjunto de características de lenguaje y la biblioteca de C++ implementada Visual C++ para realizar un seguimiento más C ++ 20 borrador de trabajo y defectos actualizaciones recientes del estándar de C++ que no están incluidas en C ++ 17. Utilice este modificador para obtener la entrada de blog-características de lenguaje C ++ 17 admitidas por el compilador y la biblioteca estándar. Para obtener una lista de idiomas admitidos y características de la biblioteca, consulte [What's New para Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). El **/std:c ++ más reciente** opción no habilita las características protegidas por la **/ experimental** cambiar.  
   

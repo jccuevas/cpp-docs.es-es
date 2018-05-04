@@ -1,12 +1,9 @@
 ---
 title: Clase CComObjectStack | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectStack
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectstack-class"></a>Clase CComObjectStack
 Esta clase crea un objeto COM temporal y le proporciona una implementación básica de **IUnknown**.  
@@ -72,7 +67,7 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene el **HRESULT** devuelto durante la construcción de la `CComObjectStack` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComObjectStack`se utiliza para crear un objeto COM temporal y proporcionar el objeto de una implementación básica de **IUnknown**. Normalmente, el objeto se usa como una variable local dentro de una función (que es, se inserta en la pila). Puesto que el objeto se destruye cuando se termina la función, el recuento de referencias no se realiza para aumentar la eficacia.  
+ `CComObjectStack` se utiliza para crear un objeto COM temporal y proporcionar el objeto de una implementación básica de **IUnknown**. Normalmente, el objeto se usa como una variable local dentro de una función (que es, se inserta en la pila). Puesto que el objeto se destruye cuando se termina la función, el recuento de referencias no se realiza para aumentar la eficacia.  
   
  En el ejemplo siguiente se muestra cómo crear un objeto COM que se usa dentro de una función:  
   
@@ -88,7 +83,7 @@ class CComObjectStack
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>  CComObjectStack::AddRef  
  Devuelve el valor cero.  
   
 ```
@@ -101,7 +96,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>Comentarios  
  En modo de depuración, llama a `_ASSERTE`.  
   
-##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack  
  El constructor.  
   
 ```
@@ -111,7 +106,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>Comentarios  
  Llamadas `FinalConstruct` y, a continuación, establece [m_hResFinalConstruct](#m_hresfinalconstruct) a la `HRESULT` devuelto por `FinalConstruct`. Si no se ha derivado su clase base de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar sus propios `FinalConstruct` método. El destructor llama a `FinalRelease`.  
   
-##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  Destructor.  
   
 ```
@@ -121,14 +116,14 @@ CComObjectStack();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados y llamadas [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
  Contiene el `HRESULT` procedentes de la llamada `FinalConstruct` durante la construcción de la `CComObjectStack` objeto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
  Devuelve **E_NOINTERFACE**.  
   
 ```
@@ -142,7 +137,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>Comentarios  
  En modo de depuración, llama a `_ASSERTE`.  
   
-##  <a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>  CComObjectStack::Release  
  Devuelve el valor cero.  
   
 ```

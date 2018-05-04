@@ -2,12 +2,9 @@
 title: Campos de bits de C++ | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Campos de bits de C++
 Las clases y estructuras pueden contener miembros que ocupan menos almacenamiento que un tipo entero. Estos miembros se especifican como campos de bits. La sintaxis de un campo de bits *declarador de miembro* especificación se indica a continuación:  
@@ -85,7 +80,7 @@ struct Date {
   
  el diseño de memoria es el que se muestra en la ilustración siguiente.  
   
- ![Diseño de objeto de fecha con cero &#45; campo de bits de longitud](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![Diseño de objeto de fecha con cero&#45;campo de bits de longitud](../cpp/media/vc38uq2.png "vc38UQ2")  
 Diseño de objeto de fecha con campo de bits de longitud cero  
   
  El tipo subyacente de un campo de bits debe ser un tipo entero, como se describe en [tipos fundamentales](../cpp/fundamental-types-cpp.md).  

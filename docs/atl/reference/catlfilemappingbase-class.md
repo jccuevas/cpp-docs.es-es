@@ -1,12 +1,9 @@
 ---
 title: Clase CAtlFileMappingBase | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>Clase CAtlFileMappingBase
 Esta clase representa un archivo asignado a memoria.  
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  El constructor.  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  Destructor.  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados por la clase y llama el [CAtlFileMappingBase::Unmap](#unmap) método.  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Llamar a este método para copiar desde un objeto de asignación de archivos.  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK` resultado correcto o error `HRESULT` en caso de error.  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Llame a este método para obtener los datos de un objeto de asignación de archivos.  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un puntero a los datos.  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  Llamar a este método para devolver un identificador para el objeto de asignación de archivos.  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un identificador para el objeto de asignación de archivos.  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  Llamar a este método para obtener el tamaño de asignación de un objeto de asignación de archivos.  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  Llame a este método para abrir o crear un objeto de asignación de archivo para el archivo especificado.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>Parámetros  
  `hFile`  
- Identificador para el archivo desde el que se va a crear un objeto de asignación. `hFile`debe ser válido y no puede establecerse en INVALID_HANDLE_VALUE.  
+ Identificador para el archivo desde el que se va a crear un objeto de asignación. `hFile` debe ser válido y no puede establecerse en INVALID_HANDLE_VALUE.  
   
  `nMappingSize`  
  El tamaño de asignación. Si es 0, el tamaño máximo del objeto de asignación de archivo es igual que el tamaño actual del archivo identificado por *hFile.*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  Llamar a este método para crear un objeto de asignación de archivos que permite el acceso completo a todos los procesos.  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>Parámetros  
  `nMappingSize`  
- El tamaño de asignación. Si es 0, el tamaño máximo del objeto de asignación de archivo es igual que el tamaño actual del objeto de asignación del archivo identificado por`szName.`  
+ El tamaño de asignación. Si es 0, el tamaño máximo del objeto de asignación de archivo es igual que el tamaño actual del objeto de asignación del archivo identificado por `szName.`  
   
  `szName`  
  El nombre del objeto de asignación.  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Comentarios  
  **MapShareMem** permite que un objeto de asignación de archivos existente, creado por [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), compartir entre procesos.  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Llamar a este método para abrir un objeto de asignación de archivos con nombre para el archivo especificado.  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  El nombre del objeto de asignación. Si hay un identificador abierto para un objeto de asignación de archivo con este nombre y el descriptor de seguridad en el objeto de asignación no entra en conflicto con el `dwViewDesiredAccess` la operación de apertura de parámetro, se realiza correctamente.  
   
  `nMappingSize`  
- El tamaño de asignación. Si es 0, el tamaño máximo del objeto de asignación de archivo es igual que el tamaño actual del objeto de asignación del archivo identificado por`szName.`  
+ El tamaño de asignación. Si es 0, el tamaño máximo del objeto de asignación de archivo es igual que el tamaño actual del objeto de asignación del archivo identificado por `szName.`  
   
  `nOffset`  
  El desplazamiento del archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Comentarios  
  En las compilaciones de depuración, se producirá un error de aserción si los parámetros de entrada no son válidos.  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  Establece el objeto de asignación de archivos actual a otro objeto de asignación de archivos.  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve una referencia al objeto actual.  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  Llame a este método para anular la asignación de un objeto de asignación de archivos.  
   
 ```

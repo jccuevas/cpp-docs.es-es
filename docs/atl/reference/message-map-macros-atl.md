@@ -1,12 +1,9 @@
 ---
 title: Macros de mapa (ATL) del mensaje | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -46,17 +43,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200d82c9d9b2ca0456ae5de4d6c937be69e212bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f026e7b8190b311b16e86673b6f2271637442df0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensajes (ATL)
 Estas macros definen entradas y mapas de mensajes.  
@@ -101,7 +96,7 @@ Estas macros definen entradas y mapas de mensajes.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>  ALT_MSG_MAP  
  Marca el principio de un mapa de mensajes alternativo.  
   
 ```
@@ -135,7 +130,7 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
 
-##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP  
  Marca el principio del mapa de mensajes predeterminado.  
   
 ```
@@ -210,7 +205,7 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -225,7 +220,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
  [in] El identificador del mapa de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `CHAIN_MSG_MAP_ALT`dirige los mensajes a un mapa de mensajes alternativo en una clase base. Debe haberse declarado este mapa de mensajes alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Para dirigir los mensajes al mapa de mensajes predeterminado de una clase base (declarados con [BEGIN_MSG_MAP](#begin_msg_map)), utilice `CHAIN_MSG_MAP`. Para obtener un ejemplo, vea [CHAIN_MSG_MAP](#chain_msg_map).  
+ `CHAIN_MSG_MAP_ALT` dirige los mensajes a un mapa de mensajes alternativo en una clase base. Debe haberse declarado este mapa de mensajes alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Para dirigir los mensajes al mapa de mensajes predeterminado de una clase base (declarados con [BEGIN_MSG_MAP](#begin_msg_map)), utilice `CHAIN_MSG_MAP`. Para obtener un ejemplo, vea [CHAIN_MSG_MAP](#chain_msg_map).  
   
 > [!NOTE]
 >  Siempre comienzan con un mapa de mensajes `BEGIN_MSG_MAP`. A continuación, puede declarar mapas de mensajes alternativo posteriores con `ALT_MSG_MAP`. El [END_MSG_MAP](#end_msg_map) macro marca el final del mapa de mensajes. Cada mapa de mensajes debe tener exactamente una instancia de `BEGIN_MSG_MAP` y `END_MSG_MAP`.  
@@ -235,7 +230,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -250,7 +245,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
  [in] El identificador del mapa de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `CHAIN_MSG_MAP_ALT_MEMBER`dirige mensajes a un mapa de mensajes alternativo de un miembro de datos. Debe haberse declarado este mapa de mensajes alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Para dirigir los mensajes al mapa de mensajes predeterminado de un miembro de datos (declarados con [BEGIN_MSG_MAP](#begin_msg_map)), utilice `CHAIN_MSG_MAP_MEMBER`. Para obtener un ejemplo, vea [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
+ `CHAIN_MSG_MAP_ALT_MEMBER` dirige mensajes a un mapa de mensajes alternativo de un miembro de datos. Debe haberse declarado este mapa de mensajes alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Para dirigir los mensajes al mapa de mensajes predeterminado de un miembro de datos (declarados con [BEGIN_MSG_MAP](#begin_msg_map)), utilice `CHAIN_MSG_MAP_MEMBER`. Para obtener un ejemplo, vea [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
   
 > [!NOTE]
 >  Siempre comienzan con un mapa de mensajes `BEGIN_MSG_MAP`. A continuación, puede declarar mapas de mensajes alternativo posteriores con `ALT_MSG_MAP`. El [END_MSG_MAP](#end_msg_map) macro marca el final del mapa de mensajes. Cada mapa de mensajes debe tener exactamente una instancia de `BEGIN_MSG_MAP` y `END_MSG_MAP`.  
@@ -260,7 +255,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -272,7 +267,7 @@ CHAIN_MSG_MAP(theChainClass)
  [in] El nombre de la clase base que contiene el mapa de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `CHAIN_MSG_MAP`dirige los mensajes al mapa de mensajes predeterminado de una clase base (declarados con [BEGIN_MSG_MAP](#begin_msg_map)). Para dirigir los mensajes al mapa de mensajes alternativo de una clase base (declarados con [ALT_MSG_MAP](#alt_msg_map)), utilice [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
+ `CHAIN_MSG_MAP` dirige los mensajes al mapa de mensajes predeterminado de una clase base (declarados con [BEGIN_MSG_MAP](#begin_msg_map)). Para dirigir los mensajes al mapa de mensajes alternativo de una clase base (declarados con [ALT_MSG_MAP](#alt_msg_map)), utilice [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
   
 > [!NOTE]
 >  Siempre comienzan con un mapa de mensajes `BEGIN_MSG_MAP`. A continuación, puede declarar mapas de mensajes alternativo posteriores con `ALT_MSG_MAP`. El [END_MSG_MAP](#end_msg_map) macro marca el final del mapa de mensajes. Cada mapa de mensajes debe tener exactamente una instancia de `BEGIN_MSG_MAP` y `END_MSG_MAP`.  
@@ -288,12 +283,12 @@ CHAIN_MSG_MAP(theChainClass)
   
 -   Si un procedimiento de ventana está usando el mapa de mensajes alternativo primer en `CMyClass`, todos los mensajes se dirigen a `CMyBaseClass`del mapa de mensajes predeterminado.  
   
--   Si está utilizando un procedimiento de ventana `CMyClass`del mapa de mensajes alternativo segundo y `OnChar` no identificador de un mensaje, el mensaje se dirige a la asignación de mensajes alternativo especificado en `CMyBaseClass`. `CMyBaseClass`debe haberse declarado este mapa de mensajes con `ALT_MSG_MAP(1)`.  
+-   Si está utilizando un procedimiento de ventana `CMyClass`del mapa de mensajes alternativo segundo y `OnChar` no identificador de un mensaje, el mensaje se dirige a la asignación de mensajes alternativo especificado en `CMyBaseClass`. `CMyBaseClass` debe haberse declarado este mapa de mensajes con `ALT_MSG_MAP(1)`.  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -305,7 +300,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
  [in] El identificador único para el mapa de mensajes de un objeto.  
   
 ### <a name="remarks"></a>Comentarios  
- `CHAIN_MSG_MAP_DYNAMIC`dirige los mensajes, en tiempo de ejecución para el mapa de mensajes de forma predeterminada en otro objeto. El objeto y el mapa de mensajes que están asociadas a *dynaChainID*, que se define a través de [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Debe derivar la clase de `CDynamicChain` para poder usar `CHAIN_MSG_MAP_DYNAMIC`. Para obtener un ejemplo, vea el [CDynamicChain](../../atl/reference/cdynamicchain-class.md) información general.  
+ `CHAIN_MSG_MAP_DYNAMIC` dirige los mensajes, en tiempo de ejecución para el mapa de mensajes de forma predeterminada en otro objeto. El objeto y el mapa de mensajes que están asociadas a *dynaChainID*, que se define a través de [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Debe derivar la clase de `CDynamicChain` para poder usar `CHAIN_MSG_MAP_DYNAMIC`. Para obtener un ejemplo, vea el [CDynamicChain](../../atl/reference/cdynamicchain-class.md) información general.  
 
   
 > [!NOTE]
@@ -316,7 +311,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -328,7 +323,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  [in] El nombre del miembro de datos que contiene el mapa de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `CHAIN_MSG_MAP_MEMBER`dirige los mensajes al mapa de mensajes predeterminado de un miembro de datos (declarados con [BEGIN_MSG_MAP](#begin_msg_map)). Para dirigir los mensajes al mapa de mensajes alternativo de un miembro de datos (declarados con [ALT_MSG_MAP](#alt_msg_map)), utilice [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
+ `CHAIN_MSG_MAP_MEMBER` dirige los mensajes al mapa de mensajes predeterminado de un miembro de datos (declarados con [BEGIN_MSG_MAP](#begin_msg_map)). Para dirigir los mensajes al mapa de mensajes alternativo de un miembro de datos (declarados con [ALT_MSG_MAP](#alt_msg_map)), utilice [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
   
 > [!NOTE]
 >  Siempre comienzan con un mapa de mensajes `BEGIN_MSG_MAP`. A continuación, puede declarar mapas de mensajes alternativo posteriores con `ALT_MSG_MAP`. El [END_MSG_MAP](#end_msg_map) macro marca el final del mapa de mensajes. Cada mapa de mensajes debe tener exactamente una instancia de `BEGIN_MSG_MAP` y `END_MSG_MAP`.  
@@ -349,7 +344,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
  Similar a [COMMAND_HANDLER](#command_handler), pero se asigna un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje basándose únicamente en el código de notificación.  
   
 ```
@@ -366,7 +361,7 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>  COMMAND_HANDLER  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -384,7 +379,7 @@ COMMAND_HANDLER(id, code, func)
  [in] El nombre de la función de controlador de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `COMMAND_HANDLER`asigna un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje a la función de controlador especificado, basada en el código de notificación y el identificador del control. Por ejemplo:  
+ `COMMAND_HANDLER` asigna un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje a la función de controlador especificado, basada en el código de notificación y el identificador del control. Por ejemplo:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -404,7 +399,7 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
  Similar a [COMMAND_HANDLER](#command_handler), pero se asigna un [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensaje basándose solo en el identificador del elemento de menú, control o acelerador.  
   
 ```
@@ -421,7 +416,7 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
  Similar a [COMMAND_RANGE_HANDLER](#command_range_handler), pero se asigna [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensajes con un código de notificación específica de un intervalo de controles a una función de controlador único.  
   
 ```
@@ -447,7 +442,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
  Similar a [COMMAND_HANDLER](#command_handler), pero se asigna [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensajes entre una gama de controles a una función de controlador único.  
   
 ```
@@ -470,7 +465,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP  
  Declara una asignación de mensaje vacío.  
   
 ```
@@ -478,11 +473,11 @@ DECLARE_EMPTY_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `DECLARE_EMPTY_MSG_MAP`es una macro de conveniencia que llama a las macros [BEGIN_MSG_MAP](#begin_msg_map) y [END_MSG_MAP](#end_msg_map) para crear un mapa de mensajes vacíos:  
+ `DECLARE_EMPTY_MSG_MAP` es una macro de conveniencia que llama a las macros [BEGIN_MSG_MAP](#begin_msg_map) y [END_MSG_MAP](#end_msg_map) para crear un mapa de mensajes vacíos:  
   
  [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER  
  Proporciona un controlador predeterminado para la ventana secundaria (control) que va a recibir los mensajes; reflejados el controlador correctamente pasará los mensajes no controlados en `DefWindowProc`.  
   
 ```
@@ -492,7 +487,7 @@ DEFAULT_REFLECTION_HANDLER()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>  END_MSG_MAP  
  Marca el final de un mapa de mensajes.  
   
 ```
@@ -518,7 +513,7 @@ END_MSG_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS  
  Reenvía los mensajes de notificación a la ventana primaria.  
   
 ```
@@ -531,7 +526,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>  MESSAGE_HANDLER  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -546,7 +541,7 @@ MESSAGE_HANDLER( msg, func )
  [in] El nombre de la función de controlador de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `MESSAGE_HANDLER`asigna un mensaje de Windows a la función de controlador especificado.  
+ `MESSAGE_HANDLER` asigna un mensaje de Windows a la función de controlador especificado.  
   
  Cualquier función especificada en un `MESSAGE_HANDLER` macro debe definirse como sigue:  
   
@@ -567,7 +562,7 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER  
  Similar a [MESSAGE_HANDLER](#message_handler), pero los mapas de mensajes de un intervalo de Windows a una función de controlador único.  
   
 ```
@@ -587,7 +582,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
  Similar a [NOTIFY_HANDLER](#notify_handler), pero se asigna un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensaje basándose únicamente en el código de notificación.  
   
 ```
@@ -604,7 +599,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>  NOTIFY_HANDLER  
  Define una entrada en un mapa de mensajes.  
   
 ```
@@ -622,7 +617,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] El nombre de la función de controlador de mensajes.  
   
 ### <a name="remarks"></a>Comentarios  
- `NOTIFY_HANDLER`asigna un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensaje a la función de controlador especificado, basada en el código de notificación y el identificador del control.  
+ `NOTIFY_HANDLER` asigna un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensaje a la función de controlador especificado, basada en el código de notificación y el identificador del control.  
   
  Cualquier función especificada en un `NOTIFY_HANDLER` macro debe definirse como sigue:  
   
@@ -643,7 +638,7 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
  Similar a [NOTIFY_HANDLER](#notify_handler), pero se asigna un [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) basado en mensajes sólo en el identificador del control.  
   
 ```
@@ -660,7 +655,7 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
  Similar a [NOTIFY_RANGE_HANDLER](#notify_range_handler), pero se asigna [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensajes con un código de notificación específica de un intervalo de controles a una función de controlador único.  
   
 ```
@@ -686,7 +681,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
  Similar a [NOTIFY_HANDLER](#notify_handler), pero se asigna [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) mensajes entre una gama de controles a una función de controlador único.  
   
 ```
@@ -709,7 +704,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS  
  Refleja los mensajes de notificación a la ventana secundaria (control) que les envía.  
   
 ```
@@ -722,7 +717,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER  
  Similar a [COMMAND_CODE_HANDLER](#command_code_handler), pero se asigna comandos reflejados desde la ventana primaria.  
   
 ```
@@ -739,7 +734,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
    
-##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER  
  Similar a [COMMAND_HANDLER](#command_handler), pero se asigna comandos reflejados desde la ventana primaria.  
   
 ```
@@ -759,7 +754,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER  
  Similar a [COMMAND_ID_HANDLER](#command_id_handler), pero se asigna comandos reflejados desde la ventana primaria.  
   
 ```
@@ -776,7 +771,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  Similar a [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), pero se asigna comandos reflejados desde la ventana primaria.  
   
 ```
@@ -799,7 +794,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER  
  Similar a [COMMAND_RANGE_HANDLER](#command_range_handler), pero se asigna comandos reflejados desde la ventana primaria.  
   
 ```
@@ -819,7 +814,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER  
  Similar a [NOTIFY_CODE_HANDLER](#notify_code_handler), pero se asigna notificaciones reflejadas desde la ventana primaria.  
   
 ```
@@ -836,7 +831,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER  
  Similar a [NOTIFY_HANDLER](#notify_handler), pero se asigna notificaciones reflejadas desde la ventana primaria.  
   
 ```
@@ -856,7 +851,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER  
  Similar a [NOTIFY_ID_HANDLER](#notify_id_handler), pero se asigna notificaciones reflejadas desde la ventana primaria.  
   
 ```
@@ -873,7 +868,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
 
-##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  Similar a [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), pero se asigna notificaciones reflejadas desde la ventana primaria.  
   
 ```
@@ -896,7 +891,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h   
   
-##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER  
  Similar a [NOTIFY_RANGE_HANDLER](#notify_range_handler), pero se asigna notificaciones reflejadas desde la ventana primaria.  
   
 ```

@@ -1,13 +1,10 @@
 ---
 title: -Fr -FR, (crear. SBR truncado) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BrowseInformation
 - VC.Project.VCCLCompilerTool.BrowseInformation
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 911ab24407f74391186568df58f5111253c41cae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6f61a3360c820a2d47d54f7c174af484079d154
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crear archivo .Sbr)
 Crea archivos. sbr.  
@@ -62,7 +57,7 @@ Crea archivos. sbr.
   
 1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).  
   
-2.  En el panel de navegación, elija **C o C++**y, a continuación, página de propiedades **Información de examen** .  
+2.  En el panel de navegación, elija **C o C++** y, a continuación, página de propiedades **Información de examen** .  
   
 3.  Modifique el **Archivo de información de examen** o la propiedad **Habilitar información de examen** .  
   

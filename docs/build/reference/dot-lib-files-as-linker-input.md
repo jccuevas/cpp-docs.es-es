@@ -1,13 +1,10 @@
 ---
 title: . Lib archivos como entrada del vinculador | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lib-files-as-linker-input"></a>archivos .Lib como entrada del vinculador
 LINK acepta bibliotecas estándar y COFF bibliotecas de importación, que normalmente tienen la extensión. lib. Bibliotecas estándar contienen objetos y se crean mediante la herramienta LIB. Bibliotecas de importación contienen información acerca de las exportaciones en otros programas y se crean por el vínculo cuando compila un programa que contiene exportaciones o la herramienta LIB. Para obtener información sobre cómo utilizar LIB para crear estándar o bibliotecas de importación, consulte [referencia de LIB](../../build/reference/lib-reference.md). Para obtener más información sobre el uso de vínculo para crear una biblioteca de importación, vea la [/DLL](../../build/reference/dll-build-a-dll.md) opción.  

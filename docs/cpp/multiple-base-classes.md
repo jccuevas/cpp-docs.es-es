@@ -2,11 +2,8 @@
 title: Varias clases Base | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Varias clases base
 Como se describe en [herencia múltiple](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), una clase puede derivarse de más de una clase base. En un modelo de herencia múltiple (donde las clases derivadas de más de una clase base), las clases base se especifican utilizando el *base-list* elemento de gramática. Por ejemplo, se puede especificar la declaración de clase para `CollectionOfBook`, derivada de `Collection` y `Book`:  
@@ -69,7 +64,7 @@ Gráfico de línea de comida simulada
   
  En la ilustración, `Queue` es la clase base de `CashierQueue` y `LunchQueue`. Sin embargo, cuando ambas clases se combinan para formar `LunchCashierQueue`, surge el siguiente problema: la nueva clase contiene dos subobjetos de tipo `Queue`, uno de `CashierQueue` y otro de `LunchQueue`. La ilustración siguiente muestra el diseño de memoria conceptual (el diseño de memoria real se podría optimizar).  
   
- ![Comida simulada &#45; objeto line](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simular comida&#45;objeto line](../cpp/media/vc38xp2.gif "vc38XP2")  
 Objeto de línea de comida simulada  
   
  Observe que hay dos subobjetos `Queue` en el objeto `LunchCashierQueue`. El código siguiente declara `Queue` como clase base virtual:  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  La palabra clave `virtual` garantiza que solo se incluye una copia del subobjeto `Queue` (consulte la ilustración siguiente).  
   
- ![Comida simulada &#45; objeto de línea, clases base virtuales](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simular comida&#45;line (objeto), clases base virtuales](../cpp/media/vc38xp3.gif "vc38XP3")  
 Objeto de línea de comida simulada con clases base virtuales  
   
  Una clase puede tener un componente virtual y un componente no virtual de un tipo determinado. Esto sucede en las condiciones que se muestran en la siguiente ilustración.  

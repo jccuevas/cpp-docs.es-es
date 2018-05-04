@@ -1,29 +1,24 @@
 ---
 title: Control de resumen de eventos ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>Resumen de control de eventos ATL
 En general, el control de eventos COM es un proceso relativamente sencillo. Hay tres pasos principales:  
@@ -44,7 +39,7 @@ En general, el control de eventos COM es un proceso relativamente sencillo. Hay 
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|No|Sí|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|No|No|  
   
- \*Al utilizar las clases de compatibilidad con ATL, nunca necesarias para implementar la **IUnknown** o `IDispatch` métodos manualmente.  
+ \* Al utilizar las clases de compatibilidad con ATL, nunca necesarias para implementar la **IUnknown** o `IDispatch` métodos manualmente.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Aconsejar y desaconsejar el origen del evento  
  Hay tres maneras principales de aconsejar y desaconsejar un origen de eventos con ATL.  
@@ -52,7 +47,7 @@ En general, el control de eventos COM es un proceso relativamente sencillo. Hay 
 |Función para aconsejar|Función para desaconsejar.|Más adecuado para su uso con|Debe realizar un seguimiento de una cookie|Comentarios|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [¡CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable o interfaces duales | Sí | `AtlAdvise` es una función ATL global. `CComPtrBase::Advise`se utiliza por [CComPtr](../atl/reference/ccomptr-class.md) y [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [¡CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable o interfaces duales | Sí | `AtlAdvise` es una función ATL global. `CComPtrBase::Advise` se utiliza por [CComPtr](../atl/reference/ccomptr-class.md) y [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
 
 |[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl:: DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Ya no | Menos parámetros que `AtlAdvise` desde la clase base realiza más trabajo. |  
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Controles ActiveX en controles compuestos | Ya no | `CComCompositeControl::AdviseSinkMap` aconseja todas las entradas del mapa de receptores de eventos. La misma función desaconseja las entradas. Este método se llama de forma automática la `CComCompositeControl` clase. |  

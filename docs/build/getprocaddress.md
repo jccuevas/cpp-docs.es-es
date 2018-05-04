@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Utilice el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función se desea a llamada o la exportación de la función ordinal.  
+Procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Utilice el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee en la llamada o el ordinal de exportación de la función.  
   
  Dado que está llamando a la función DLL mediante un puntero y no hay ninguna comprobación de tipo en tiempo de compilación, asegúrese de que los parámetros a la función son correctos para que no sobrepasar la memoria asignada en la pila y provoca una infracción de acceso. Una manera de ayudar a proporcionar seguridad de tipos es consultar los prototipos de función de las funciones exportadas y crear typedefs coincidentes para los punteros de función. Por ejemplo:  
   

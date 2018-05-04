@@ -1,12 +1,9 @@
 ---
 title: Clase CStringElementTraitsI | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringElementTraitsI
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringelementtraitsi-class"></a>Clase CStringElementTraitsI
 Esta clase proporciona funciones estáticas relacionadas con las cadenas almacenadas en objetos de clase de colección. Es similar a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), pero realiza comparaciones entre mayúsculas y minúsculas.  
@@ -77,7 +72,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
  Llame a esta función estática para comparar dos elementos de cadena para la igualdad, pasando por alto las diferencias en los casos.  
   
 ```
@@ -97,7 +92,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Comentarios  
  Las comparaciones distinguen entre mayúsculas y minúsculas.  
   
-##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
  Llame a esta función estática para comparar dos elementos de cadena, se omitirá las diferencias en los casos.  
   
 ```
@@ -118,7 +113,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>Comentarios  
  Las comparaciones distinguen entre mayúsculas y minúsculas.  
   
-##  <a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  Llame a esta función estática para calcular un valor hash para el elemento de la cadena especificada.  
   
 ```
@@ -132,14 +127,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de hash, que se calcula con el contenido de la cadena.  
   
-##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
  El tipo de datos que se usará para agregar elementos al objeto de clase de colección.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de objeto de la clase de colección.  
   
 ```

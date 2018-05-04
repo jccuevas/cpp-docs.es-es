@@ -1,12 +1,9 @@
 ---
-title: "Conversión | Documentos de Microsoft"
-ms.custom: 
+title: Conversión | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting"></a>Conversión
 El lenguaje C++ permite que, si una clase se deriva de una clase base que contiene funciones virtuales, se pueda usar un puntero a ese tipo de clase base para llamar a las implementaciones de las funciones virtuales que residen en el objeto de la clase derivada. Una clase que contiene funciones virtuales se denomina a veces “clase polimórfica”.  
@@ -41,7 +36,7 @@ Jerarquía de clases
   
  Un objeto de tipo `C` se podría visualizar tal y como se muestra en la ilustración siguiente.  
   
- ![Clase C con sub &#45; los objetos B y A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![Clase C con sub&#45;objetos B y A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 Clase C con subobjeto B y subobjeto A  
   
  Dada una instancia de la clase `C`, hay un subobjeto `B` y un objeto `A`. La instancia de `C`, incluidos los subobjetos `A` y `B`, es el "objeto completo".  

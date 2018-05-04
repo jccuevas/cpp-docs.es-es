@@ -1,13 +1,10 @@
 ---
 title: Modificar el Control DHTML ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3810236aca4661a6cdcd8399294cdb73e97948fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modificar el Control DHTML ATL
 El Asistente para controles ATL proporciona código de inicio para que pueda compilar y ejecutar el control, por lo que puede ver cómo los métodos se escriben en los archivos de proyecto y cómo DHTML llama a código de C++ del control mediante los métodos de envío. Puede agregar cualquier método de envío a la interfaz. A continuación, puede llamar a los métodos en el recurso HTML.  

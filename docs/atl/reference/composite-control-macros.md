@@ -1,12 +1,9 @@
 ---
 title: Macros de Control compuesto | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b609801a1716e47b208644be02d4746abf8c288a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61335d25b0d9b97fe1c7e9915aa9c3d8583eb854
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-macros"></a>Macros de controles compuestos
 Estas macros definen mapas de receptor de eventos y entradas.  
@@ -45,7 +40,7 @@ Estas macros definen mapas de receptor de eventos y entradas.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
 
-##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP  
  Declara el principio de la asignación de receptor de eventos para el control compuesto.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
-##  <a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>  END_SINK_MAP  
  Declara el final de la asignación de receptor de eventos para el control compuesto.  
   
 ```
@@ -75,7 +70,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
-##  <a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>  SINK_ENTRY  
  Declara la función de controlador ( `fn`) para el evento especificado ( `dispid`), del control identificado por `id`.  
   
 ```
@@ -98,7 +93,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
-##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX y SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX y SINK_ENTRY_EX_P
  Declara la función de controlador ( `fn`) para el evento especificado ( `dispid`), de la interfaz de envío ( *iid)*, para el control identificado por `id`.  
   
 ```
@@ -128,7 +123,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>Comentarios  
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
-##  <a name="sink_entry_info"></a>Macro SINK_ENTRY_INFO y SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>  Macro SINK_ENTRY_INFO y SINK_ENTRY_INFO_P  
  Use la `SINK_ENTRY_INFO` macro dentro de un mapa de receptores de eventos para proporcionar la información necesaria para [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) enrutar eventos a la función de controlador correspondiente.  
   
 ```
@@ -153,7 +148,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
  [in] Nombre de la función de controlador de eventos. Esta función debe usar el **_stdcall** convención de llamada y tener la signatura de estilo de dispinterface adecuado.  
   
  `info`  
- [in] Escriba la información de la función de controlador de eventos. Esta información de tipo se proporciona en forma de un puntero a un `_ATL_FUNC_INFO` estructura. `CC_CDECL`es la única opción admitida de Windows CE para la `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. Cualquier otro valor no es compatible, por tanto, su comportamiento sin definir.  
+ [in] Escriba la información de la función de controlador de eventos. Esta información de tipo se proporciona en forma de un puntero a un `_ATL_FUNC_INFO` estructura. `CC_CDECL` es la única opción admitida de Windows CE para la `CALLCONV` campo de la `_ATL_FUNC_INFO` estructura. Cualquier otro valor no es compatible, por tanto, su comportamiento sin definir.  
   
 ### <a name="remarks"></a>Comentarios  
  Los parámetros de cuatro primeros macro son las mismas que para la [SINK_ENTRY_EX](#sink_entry_ex) macro. El último parámetro proporciona información de tipo para el evento. Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  

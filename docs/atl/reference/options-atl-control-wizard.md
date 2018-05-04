@@ -1,12 +1,9 @@
 ---
 title: Opciones, Asistente para controles ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60cc90ca5d5c374c223f9fe350d1a6a7357329ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab1062d32aadc2ec4af68cda8bca02ac1a45a526
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
 Inserte aquí "Búsqueda de resumen de los resultados".  

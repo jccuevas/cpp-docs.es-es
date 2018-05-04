@@ -1,12 +1,9 @@
 ---
 title: Clase CComCompositeControl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>Clase CComCompositeControl
 Esta clase proporciona los métodos necesarios para implementar un control compuesto.  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>Comentarios  
  Las clases derivadas de la clase `CComCompositeControl` heredar la funcionalidad de un control compuesto de ActiveX. Controles ActiveX que derivan de `CComCompositeControl` se hospedan en un cuadro de diálogo estándar. Estos tipos de controles se denominan controles compuestos porque son capaz de hospedar otros controles (controles nativos de Windows y controles ActiveX).  
   
- `CComCompositeControl`identifica el recurso de cuadro de diálogo para usarlos al crear el control compuesto mediante la búsqueda de un miembro de datos enumerados en la clase secundaria. El miembro IDD de esta clase secundaria se establece en el identificador de recurso del recurso de cuadro de diálogo que se usará como la ventana del control. El siguiente es un ejemplo del miembro de datos que derivan de la clase `CComCompositeControl` debe contener para identificar el recurso de cuadro de diálogo que se usará para la ventana del control:  
+ `CComCompositeControl` identifica el recurso de cuadro de diálogo para usarlos al crear el control compuesto mediante la búsqueda de un miembro de datos enumerados en la clase secundaria. El miembro IDD de esta clase secundaria se establece en el identificador de recurso del recurso de cuadro de diálogo que se usará como la ventana del control. El siguiente es un ejemplo del miembro de datos que derivan de la clase `CComCompositeControl` debe contener para identificar el recurso de cuadro de diálogo que se usará para la ventana del control:  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl:: AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl:: AdviseSinkMap  
  Llame a este método para notificar o no notificar todos los controles hospedados por el control compuesto.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Comentarios  
  La implementación base de este método busca a través de las entradas del mapa de receptores en el evento. A continuación, se le informa de o se desaconseja los puntos de conexión a los objetos COM descritos por las entradas de receptor de la asignación receptor de eventos. Este método de miembro también se basa en el hecho de que la clase derivada hereda de una instancia de `IDispEventImpl` para cada control en el mapa de receptores que va a ser aconsejable o desaconsejarán.  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  Llamar a este método para calcular el tamaño en **HIMETRIC** unidades del recurso de cuadro de diálogo utilizado para hospedar el control compuesto.  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Comentarios  
  Se devuelve el tamaño en el `size` parámetro.  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  Se llama a este método para crear la ventana de control para el control compuesto.  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>Comentarios  
  Normalmente se llama a este método durante la activación en contexto del control.  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  El constructor.  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el [CComCompositeControl::m_hbrBackground](#m_hbrbackground) y [CComCompositeControl::m_hWndFocus](#m_hwndfocus) los miembros de datos es NULL.  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  Destructor.  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Comentarios  
  Elimina el objeto del fondo, si existe.  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  Llamar a este método para crear la ventana de control y notificar los controles hospedados.  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Comentarios  
  Este método llama a [CComCompositeControl::Create](#create) y [CComCompositeControl:: AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  El pincel del fondo.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  El identificador de la ventana que tiene actualmente el foco.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  Llame a este método para establecer el color de fondo del control compuesto con color de fondo del contenedor.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Lógica u operador: || | Documentos de Microsoft"
-ms.custom: 
+title: 'Lógica u operador: || | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>Operador OR lógico: ||
 ## <a name="syntax"></a>Sintaxis  
@@ -56,7 +51,7 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  En el ejemplo anterior, si `x` es igual a `w`, `y` o `z`, el segundo argumento de la función `printf` se evalúa como true y se imprime el valor 1. De lo contrario, se evalúa como false y se imprime el valor 0. En cuanto una de las condiciones se evalúe como true, se interrumpe la evaluación.  
   
-## <a name="operator-keyword-for-124124"></a>Palabra clave del operador para &#124; &#124;  
+## <a name="operator-keyword-for-124124"></a>Palabra clave del operador para&#124;&#124;  
  El **o** operador es el equivalente de texto de `||`. Hay dos maneras de obtener acceso a la **o** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   
 ## <a name="example"></a>Ejemplo  

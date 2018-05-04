@@ -1,13 +1,10 @@
 ---
-title: "Cambiar el generador de clases predeterminado y el modelo de agregación | Documentos de Microsoft"
-ms.custom: 
+title: Cambiar el generador de clases predeterminado y el modelo de agregación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,20 +18,18 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb88a4c7827fcd43c26819a6f546779e35863cc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Cambiar el generador de clases predeterminado y el modelo de agregación
-ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir el modelo de generador y agregación de clase predeterminado para el objeto. `CComCoClass`Especifica las dos macros siguientes:  
+ATL usa [CComCoClass](../atl/reference/ccomcoclass-class.md) para definir el modelo de generador y agregación de clase predeterminado para el objeto. `CComCoClass` Especifica las dos macros siguientes:  
   
 -   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) declara el generador de clases como [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
   

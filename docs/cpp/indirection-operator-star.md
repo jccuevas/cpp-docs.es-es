@@ -1,12 +1,9 @@
 ---
 title: 'Operador de direccionamiento indirecto: * | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-operator-"></a>Operador de direccionamiento indirecto: *
 ## <a name="syntax"></a>Sintaxis  
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El operador de direccionamiento indirecto unario (**\***) desreferencia un puntero; es decir, convierte un valor de puntero a un valor l. El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo. El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero. El uso de la  **\***  operador en este contexto es diferente de su significado como operador binario, que es multiplicación.  
+ El operador de direccionamiento indirecto unario (**\***) desreferencia un puntero; es decir, convierte un valor de puntero a un valor l. El operando del operador de direccionamiento indirecto debe ser un puntero a un tipo. El resultado de la expresión de direccionamiento indirecto es el tipo del que se deriva el tipo de puntero. El uso de la **\*** operador en este contexto es diferente de su significado como operador binario, que es multiplicación.  
   
  Si el operando señala a una función, el resultado es un designador de función. Si señala a una ubicación de almacenamiento, el resultado es un valor L que designa la ubicación de almacenamiento.  
   

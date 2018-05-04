@@ -1,29 +1,24 @@
 ---
 title: Exportar clases de cadena mediante CStringT | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportar clases de cadena mediante CStringT
 En el pasado, los desarrolladores de MFC se derivan de `CString` especializar sus propias clases de cadena. En Microsoft Visual C++ .NET (versión 8.0 de MFC), el [CString](../atl-mfc-shared/using-cstring.md) clase ha sido reemplazada por una clase de plantilla denominada [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Esto proporciona varias ventajas:  
@@ -32,7 +27,7 @@ En el pasado, los desarrolladores de MFC se derivan de `CString` especializar su
   
 -   Con la nueva `CStringT` clase de plantilla, puede personalizar `CString` comportamiento mediante los parámetros de plantilla que especifican rasgos de caracteres, similares a las plantillas en la biblioteca estándar de C++.  
   
--   Cuando exporta su propia clase de cadena de un archivo DLL mediante `CStringT`, el compilador también automáticamente exporta la `CString` clase base. Puesto que `CString` es una clase de plantilla, se pueden crear instancias por el compilador cuando se utiliza, a menos que sea compatible con el compilador que `CString` se importa desde un archivo DLL. Si ha migrado los proyectos de Visual C++ 6.0 a Visual C++. NET, que podría haber visto errores de símbolo del vinculador para un definido de forma múltiple `CString` debido a la colisión de la `CString` importados desde un archivo DLL y la versión local tiene instancia. La manera adecuada para hacer esto se describe a continuación. Para obtener más información sobre este problema, vea el artículo de Knowledge Base, "vinculación errores al importar derivada CString clases" (Q309801) en [http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx).  
+-   Cuando exporta su propia clase de cadena de un archivo DLL mediante `CStringT`, el compilador también automáticamente exporta la `CString` clase base. Puesto que `CString` es una clase de plantilla, se pueden crear instancias por el compilador cuando se utiliza, a menos que sea compatible con el compilador que `CString` se importa desde un archivo DLL. Si ha migrado los proyectos de Visual C++ 6.0 a Visual C++. NET, que podría haber visto errores de símbolo del vinculador para un definido de forma múltiple `CString` debido a la colisión de la `CString` importados desde un archivo DLL y la versión local tiene instancia. La manera adecuada para hacer esto se describe a continuación. Para obtener más información sobre este problema, vea el artículo de Knowledge Base, "vinculación errores al importar derivada CString clases" (Q309801) en [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).  
   
  El siguiente escenario hará que el vinculador generar errores de símbolo para clases multiplicar definidas. Se supone que va a exportar una `CString`-clase derivada (`CMyString`) desde un archivo DLL de extensión MFC:  
   

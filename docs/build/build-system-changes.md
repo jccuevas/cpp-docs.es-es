@@ -2,12 +2,9 @@
 title: Cambios del sistema de compilación | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>Cambios del sistema de compilación
 Se utiliza el sistema de MSBuild para compilar proyectos de Visual C++. Sin embargo, en Visual Studio 2008 y versiones anteriores, se utiliza el sistema de VCBuild. Ciertos tipos de archivo y conceptos que dependían de VCBuild no existe o se representan de forma diferente en el sistema actual. Este documento describen las diferencias en el sistema de compilación actual.  
@@ -68,7 +63,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>. vcxproj.user archivos  
  Un archivo de usuario (. vcxproj.user) almacena propiedades específicas del usuario, para la configuración de ejemplo, depuración e implementación. El archivo vcxproj.user se aplica a todos los proyectos para un usuario determinado.  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters archivo  
  Cuando **el Explorador de soluciones** se utiliza para agregar un archivo a un proyecto, el archivo de filtros (. vcxproj.filters) define dónde en la **el Explorador de soluciones** vista se agrega el archivo, en función de su extensión de nombre de archivo de árbol.  
   
 ## <a name="vc-directories-settings"></a>Configuración de directorios de VC ++  

@@ -1,29 +1,24 @@
 ---
-title: "Implementar una página de propiedades (ATL) | Documentos de Microsoft"
-ms.custom: 
+title: Implementar una página de propiedades (ATL) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementar una página de propiedades
 Este ejemplo muestra cómo crear una página de propiedades que muestra (y permite cambiar) las propiedades de la [clases de documento](../mfc/document-classes.md) interfaz.  
@@ -50,7 +45,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
   
 - [Crear una macro](#vcconcreating_a_macro) que probará la página de propiedades.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a>Agregar la clase de página de propiedades ATL  
+##  <a name="vcconusing_the_atl_object_wizard"></a> Agregar la clase de página de propiedades ATL  
  En primer lugar, cree un nuevo proyecto ATL para un servidor de archivo DLL denominado `ATLPages7`. Ahora use la [Asistente para páginas de propiedades ATL](../atl/reference/atl-property-page-wizard.md) para generar una página de propiedades. Conceder a la página de propiedades un **nombre corto** de **DocProperties** , a continuación, cambie a la **cadenas** página para establecer elementos específicos de la página de propiedades como se muestra en la tabla siguiente.  
   
 |Elemento|Valor|  
@@ -66,7 +61,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
   
  Haga clic en **Aceptar** para que el asistente genere la página de propiedades.  
   
-##  <a name="vcconediting_the_dialog_resource"></a>Editar el recurso de cuadro de diálogo  
+##  <a name="vcconediting_the_dialog_resource"></a> Editar el recurso de cuadro de diálogo  
  Ahora que se ha generado la página de propiedades, debe agregar algunos controles para el recurso de cuadro de diálogo que representa la página. Agregar un cuadro de edición, un control de texto estático y una casilla de verificación y establezca sus identificadores como se muestra a continuación:  
   
  ![Edición de un recurso de cuadro de diálogo](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
@@ -76,7 +71,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
 > [!NOTE]
 >  El recurso de cuadro de diálogo no incluye un marco ni botones de comando ni tiene el aspecto con pestañas que podría haber esperado. Estas características son proporcionadas por un marco de página de propiedades como el que se creó mediante una llamada [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
-##  <a name="vcconadding_message_handlers"></a>Agregar controladores de mensajes  
+##  <a name="vcconadding_message_handlers"></a> Agregar controladores de mensajes  
  Con los controles en su lugar, puede agregar controladores de mensajes para actualizar el estado modificado de la página cuando cambia el valor de uno de los controles:  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
@@ -86,7 +81,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
 > [!NOTE]
 >  En sus propias páginas de propiedades, deberá realizar un seguimiento de exactamente qué propiedades se han modificado por el usuario para que no puede actualizar las propiedades que no han cambiado. Este ejemplo implementa dicho código realizando el seguimiento de los valores de propiedad original y comparándolos con los valores actuales de la interfaz de usuario cuando llega el momento para aplicar los cambios.  
   
-##  <a name="vcconhousekeeping"></a>Tareas de mantenimiento  
+##  <a name="vcconhousekeeping"></a> Tareas de mantenimiento  
  Ahora agregue un par de `#import` instrucciones a DocProperties.h para que el compilador conoce el **documento** interfaz:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
@@ -95,7 +90,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>Reemplazar setObjects  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Reemplazar setObjects  
  La primera `IPropertyPageImpl` es el método que es necesario invalidar [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). A continuación agregará código para comprobar que se ha pasado un único objeto y que admite la **documento** interfaz que espera:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
@@ -103,7 +98,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
 > [!NOTE]
 >  Tiene sentido para admitir un único objeto de esta página porque le permitirá al usuario establecer el nombre de archivo del objeto, un único archivo puede existir en cada ubicación.  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>Reemplazar IPropertyPageImpl  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Reemplazar IPropertyPageImpl  
  El paso siguiente es inicializar la página de propiedades con los valores de propiedad del objeto subyacente cuando la página se crea por primera vez.  
   
  En este caso, deberá agregar a los miembros siguientes a la clase ya también utilizará los valores de propiedad iniciales para la comparación cuando los usuarios de la página aplicar sus cambios:  
@@ -116,7 +111,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
   
  Este código usa los métodos COM de la **documento** interfaz para obtener las propiedades que le interesa. A continuación, utiliza los contenedores de la API de Win32 proporcionados por [CDialogImpl](../atl/reference/cdialogimpl-class.md) y sus clases base para mostrar los valores de propiedad para el usuario.  
   
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a>Reemplazar IPropertyPageImpl:: Apply  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Reemplazar IPropertyPageImpl:: Apply  
  Cuando los usuarios desean aplicar los cambios a los objetos, el sitio de la página de propiedades llamará el [aplicar](../atl/reference/ipropertypageimpl-class.md#apply) método. Éste es el lugar para hacer lo contrario del código de **activar** , mientras que **activar** tardó valores del objeto y ellos inserta en los controles en la página de propiedades, **aplicar** toma los valores de los controles en la página de propiedades y los envía en el objeto.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
@@ -127,7 +122,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
 > [!NOTE]
 > **Documento** expone **FullName** como una propiedad de solo lectura. Para actualizar el nombre de archivo del documento en función de los cambios realizados en la página de propiedades, tiene que utilizar el **guardar** método para guardar el archivo con un nombre diferente. Por lo tanto, no tiene el código en una página de propiedades limita a obtener o establecer las propiedades.  
   
-##  <a name="vccontesting_the_property_page"></a>Mostrar la página de propiedades  
+##  <a name="vccontesting_the_property_page"></a> Mostrar la página de propiedades  
  Para mostrar esta página, debe crear un objeto auxiliar simple. El objeto auxiliar proporcionará un método que simplifica la **OleCreatePropertyFrame** API para mostrar una sola página conectada a un único objeto. Esta aplicación auxiliar se va a diseñar para que se puede usar desde Visual Basic.  
   
  Utilice la [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md) y [ATL Simple Object Wizard](../atl/reference/atl-simple-object-wizard.md) para generar una nueva clase y usar `Helper` como su nombre corto. Una vez creado, agregue un método tal como se muestra en la tabla siguiente.  
@@ -143,7 +138,7 @@ Este ejemplo muestra cómo crear una página de propiedades que muestra (y permi
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a>Crear una Macro  
+##  <a name="vcconcreating_a_macro"></a> Crear una Macro  
  Una vez que haya generado el proyecto, puede probar la página de propiedades y el objeto auxiliar mediante una sencilla macro que puede crear y ejecutar en el entorno de desarrollo de Visual Studio. Esta macro creará una aplicación auxiliar de objeto y después llamar a su **ShowPage** método utilizando el ProgID de la **DocProperties** página de propiedades y el **IUnknown** puntero del documento actualmente activas en el editor de Visual Studio. El código que necesita para esta macro se muestra a continuación:  
   
 ```  

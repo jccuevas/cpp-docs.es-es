@@ -2,11 +2,8 @@
 title: Estructura de control de excepciones (C/C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Aunque Windows y Visual C++ admiten el control de excepciones estructurado (SEH), se recomienda utilizar el control de excepciones de C++ estándar de ISO porque hace que el código sea más portátil y flexible. Sin embargo, en el código existente o en determinadas clases de programas, quizás tenga que seguir utilizando SEH.  
@@ -38,9 +33,9 @@ Aunque Windows y Visual C++ admiten el control de excepciones estructurado (SEH)
 ## <a name="grammar"></a>Gramática  
  *try-except-statement* :  
   
- `__try`*compound-statement*  
+ `__try` *instrucción compuesta*  
   
- `__except`( `expression` ) *compound-statement*  
+ `__except` ( `expression` ) *compound-statement*  
   
 ## <a name="remarks"></a>Comentarios  
  Con SEH, puede asegurarse de que recursos como los bloques de memoria y los archivos son correctos si la ejecución finaliza inesperadamente. También se pueden controlar determinados problemas, como memoria insuficiente, mediante código estructurado conciso que no utiliza instrucciones `goto` ni realiza pruebas detalladas de los códigos de retorno.  

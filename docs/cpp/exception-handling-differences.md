@@ -1,12 +1,9 @@
 ---
 title: Diferencias en el control de excepciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4577739c7ef141576361e6db630eafbe432e913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-handling-differences"></a>Diferencias en el control de excepciones
 La diferencia principal entre el control de excepciones estructurado y el control de excepciones de C++ consiste en que el modelo de control de excepciones de C++ trata los tipos, mientras que el modelo de control de excepciones estructurado de C trata las excepciones de un tipo, específicamente, `unsigned int`. Es decir, las excepciones de C se identifican mediante un valor entero sin signo, mientras que las excepciones de C++ se identifican mediante el tipo de datos. Cuando se produce una excepción en C, cada controlador posible ejecuta un filtro que examina el contexto de excepción de C y determina si debe aceptar la excepción, pasarla a otro controlador u omitirla. Cuando se produce una excepción en C++, puede ser de cualquier tipo.  
@@ -71,7 +66,7 @@ In finally.
 Caught a C exception.  
 ```  
   
-##  <a name="_core_c_exception_wrapper_class"></a>Clase contenedora de excepciones de C  
+##  <a name="_core_c_exception_wrapper_class"></a> Clase contenedora de excepciones de C  
  En un ejemplo simple como el anterior, puede capturar la excepción de C solo por puntos suspensivos (**...** ) **catch** controlador. No se comunica al controlador ninguna información sobre el tipo o la naturaleza de la excepción. Aunque este método funcione, en algunos casos puede ser necesario definir una transformación entre los dos modelos de control de excepciones para asociar cada excepción de C a una clase concreta. Para ello, se puede definir una clase "contenedora" de excepciones de C, que se puede utilizar o de la que se puede derivar para atribuir un tipo de clase concreto a una excepción de C. Al hacerlo, cada excepción de C puede controlarse mediante C++ **catch** controlador de forma más independiente que en el ejemplo anterior.  
   
  La clase contenedora puede tener una interfaz que se compone de algunas funciones miembro que determinan el valor de la excepción y que tienen acceso a la información extendida del contexto de la excepción proporcionada por el modelo de excepciones de C. Puede que también desee definir un constructor predeterminado y un constructor que acepte un argumento `unsigned int` (para proporcionar la representación subyacente de la excepción de C) y un constructor de copias bit a bit. A continuación se muestra una posible implementación de la clase contenedora de excepciones de C:  

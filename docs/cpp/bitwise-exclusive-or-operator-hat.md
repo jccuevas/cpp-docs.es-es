@@ -1,12 +1,9 @@
 ---
 title: 'Operador OR exclusivo bit a bit: ^ | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operador OR exclusivo bit a bit: ^
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +39,7 @@ El operador OR exclusivo bit a bit (**^**) compara cada bit del primer operando 
 Ambos operandos del operador OR exclusivo bit a bit deben ser de tipos enteros. Las conversiones aritméticas habituales descritas en [conversiones estándar](standard-conversions.md) se aplican a los operandos.  
   
 ## <a name="operator-keyword-for-"></a>Palabra clave de operador para ^  
-El **xor** operador es el equivalente de texto de  **^** . Hay dos maneras de obtener acceso a la **xor** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
+El **xor** operador es el equivalente de texto de **^**. Hay dos maneras de obtener acceso a la **xor** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).  
   
 ## <a name="example"></a>Ejemplo  
   

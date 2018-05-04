@@ -2,11 +2,8 @@
 title: Clase IOleInPlaceObjectWindowlessImpl | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f455172723be4f46751b45d244e74dda5fcacae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5616258405eb8346132d32b8f7fd71d0b4794d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Clase IOleInPlaceObjectWindowlessImpl
 Esta clase implementa **IUnknown** y proporciona métodos que permiten un control sin ventana que se va a recibir mensajes de ventana como participar en operaciones de arrastrar y colocar.  
@@ -86,7 +81,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  Devuelve **E_NOTIMPL**.  
   
 ```
@@ -96,7 +91,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) en el SDK de Windows.  
   
-##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  Devuelve **E_NOTIMPL**.  
   
 ```
@@ -106,7 +101,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535) en el SDK de Windows.  
   
-##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow  
  El contenedor llama a esta función para obtener el identificador de ventana del control.  
   
 ```
@@ -118,7 +113,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  Vea [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) en el SDK de Windows.  
   
-##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  Llamado por el contenedor para desactivar un control activo en contexto.  
   
 ```
@@ -130,7 +125,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  Vea [IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) en el SDK de Windows.  
   
-##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  Envía un mensaje desde un contenedor a un control sin ventana que está activo en contexto.  
   
 ```
@@ -144,7 +139,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783) en el SDK de Windows.  
   
-##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  Devuelve **E_NOTIMPL**.  
   
 ```
@@ -154,7 +149,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) en el SDK de Windows.  
   
-##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  El contenedor llama para informar al control que ha cambiado su tamaño o la posición.  
   
 ```
@@ -166,7 +161,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  Vea [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) en el SDK de Windows.  
   
-##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  Desactiva y quita la interfaz de usuario del control que admite la activación en contexto.  
   
 ```

@@ -2,26 +2,21 @@
 title: Explícitamente como valores predeterminados y las funciones eliminadas | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 En C++11, las funciones establecidas como valor predeterminado y eliminadas proporcionan un control explícito sobre si las funciones miembro especiales se generan automáticamente. Las funciones eliminadas también proporcionan un lenguaje simple para impedir que se realicen promociones de tipo problemáticas en argumentos de funciones de todos los tipos (funciones miembro especiales, así como funciones miembro normales y funciones no miembro) que podrían provocar una llamada a función no deseada.  

@@ -1,13 +1,10 @@
 ---
 title: Operadores de preprocesamiento de archivos MAKE | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>Operadores de preprocesamiento de archivos MAKE
 Las expresiones de preprocesamiento de archivos Make pueden usar operadores que actúan sobre valores constantes, códigos de salida de comandos, cadenas, macros y rutas de acceso del sistema de archivos. Para evaluar la expresión, el preprocesador expande primero las macros, luego ejecuta los comandos y, después, realiza las operaciones. Las operaciones se evalúan en el orden de agrupación explícita entre paréntesis y, luego, en el orden de precedencia de los operadores. El resultado es un valor constante.  
@@ -45,8 +40,8 @@ Las expresiones de preprocesamiento de archivos Make pueden usar operadores que 
   
 |Operador|Descripción|  
 |--------------|-----------------|  
-|`DEFINED(`*Nombredelamacro*`)`|Genera un valor lógico para el estado actual de la definición de *Nombredelamacro*.|  
-|`EXIST(`*ruta de acceso*`)`|Genera un valor lógico de la existencia de un archivo en *ruta de acceso*.|  
+|`DEFINED(` *nombredemacro* `)`|Genera un valor lógico para el estado actual de la definición de *Nombredelamacro*.|  
+|`EXIST(` *Ruta de acceso* `)`|Genera un valor lógico de la existencia de un archivo en *ruta de acceso*.|  
 |||  
 |`!`|NOT lógico unario.|  
 |`~`|Complemento de uno unario.|  

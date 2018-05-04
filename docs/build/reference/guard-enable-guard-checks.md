@@ -1,27 +1,22 @@
 ---
-title: "-PROTECCIÓN (habilitar comprobaciones de restricción) | Documentos de Microsoft"
-ms.custom: 
+title: -PROTECCIÓN (habilitar comprobaciones de restricción) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48abdc4f923ed01ecba482b82da897d06fd56dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d05dd4f9d213c3d2729459486a9d0cfdbd79110
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar comprobaciones de restricción)
 Especifica la compatibilidad con las comprobaciones de Protección de flujo de control en la imagen ejecutable.  

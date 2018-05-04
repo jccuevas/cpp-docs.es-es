@@ -2,11 +2,8 @@
 title: Clase IOleObjectImpl | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleObjectImpl
@@ -58,17 +55,15 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f710953a32ccb32c63742ab28e84818f3a330336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a98d3e0ad75d2eaa0325699369bfe4473182049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleobjectimpl-class"></a>Clase IOleObjectImpl
 Esta clase implementa **IUnknown** y es la interfaz principal a través del cual un contenedor se comunica con un control.  
@@ -147,7 +142,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="advise"></a>IOleObjectImpl::Advise  
+##  <a name="advise"></a>  IOleObjectImpl::Advise  
  Establece una conexión de consulta con el control.  
   
 ```
@@ -159,7 +154,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) en el SDK de Windows.  
   
-##  <a name="close"></a>IOleObjectImpl::Close  
+##  <a name="close"></a>  IOleObjectImpl::Close  
  Cambia el estado del control de ejecución a cargar.  
   
 ```
@@ -173,7 +168,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  Vea [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) en el SDK de Windows.  
   
-##  <a name="doverb"></a>IOleObjectImpl::DoVerb  
+##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  Indica al control que realice una de las acciones enumeradas.  
   
 ```
@@ -202,7 +197,7 @@ STDMETHOD(DoVerb)(
   
  Vea [DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) en el SDK de Windows.  
   
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
+##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  Indica al control para descartar cualquier estado de deshacer que mantiene.  
   
 ```
@@ -219,7 +214,7 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK`.  
   
-##  <a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
+##  <a name="doverbhide"></a>  IOleObjectImpl::DoVerbHide  
  Desactiva y quita la interfaz de usuario del control y oculta el control.  
   
 ```
@@ -236,7 +231,7 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK`.  
   
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
+##  <a name="doverbinplaceactivate"></a>  IOleObjectImpl::DoVerbInPlaceActivate  
  Se ejecuta el control y su ventana se instala, pero no instala la interfaz de usuario del control.  
   
 ```
@@ -256,7 +251,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="remarks"></a>Comentarios  
  Activa el control en su lugar mediante una llamada a [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). A menos que el miembro de datos de la clase de control `m_bWindowOnly` es **TRUE**, `DoVerbInPlaceActivate` primero intenta activar el control como un control sin ventana (posible únicamente si el contenedor admite [IOleInPlaceSiteWindowless ](http://msdn.microsoft.com/library/windows/desktop/ms682300)). Si se produce un error, la función intenta activar el control con características extendidas (posible únicamente si el contenedor admite [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). Si se produce un error, la función intenta activar el control con ninguna característica extendida (posible únicamente si el contenedor admite [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). Si la activación se realiza correctamente, la función notifica el contenedor que se ha activado el control.  
   
-##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
+##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  Hace que el control editarse a abrir en una ventana independiente.  
   
 ```
@@ -273,7 +268,7 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve `S_OK`.  
   
-##  <a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
+##  <a name="doverbprimary"></a>  IOleObjectImpl::DoVerbPrimary  
  Define la acción realizada cuando el usuario hace doble clic en el control.  
   
 ```
@@ -293,7 +288,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, establecido para mostrar las páginas de propiedades. Puede invalidar esto en la clase del control para invocar un comportamiento diferente con doble clic; Por ejemplo, reproducir un vídeo o visite activo en contexto.  
   
-##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
+##  <a name="doverbshow"></a>  IOleObjectImpl::DoVerbShow  
  Indica el contenedor para que el control sea visible.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los estándar `HRESULT` valores.  
   
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
+##  <a name="doverbuiactivate"></a>  IOleObjectImpl::DoVerbUIActivate  
  Activa la interfaz de usuario del control y notifica al contenedor que están siendo remplazados sus menús con menús compuestos.  
   
 ```
@@ -327,7 +322,7 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>Valor devuelto  
  Uno de los estándar `HRESULT` valores.  
   
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
+##  <a name="enumadvise"></a>  IOleObjectImpl::EnumAdvise  
  Proporciona una enumeración de conexiones de consulta registradas para este control.  
   
 ```
@@ -337,7 +332,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) en el SDK de Windows.  
   
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
+##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  Proporciona una enumeración de las acciones registradas (verbos) para este control mediante una llamada a **OleRegEnumVerbs**.  
   
 ```
@@ -349,7 +344,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
   
  Vea [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) en el SDK de Windows.  
   
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
+##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  Coloca el puntero en el miembro de datos de la clase de control [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) en *ppClientSite* e incrementa el recuento de referencias en el puntero.  
   
 ```
@@ -359,7 +354,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) en el SDK de Windows.  
   
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
+##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  Recupera los datos desde el Portapapeles.  
   
 ```
@@ -374,7 +369,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) en el SDK de Windows.  
   
-##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
+##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  Recupera el tamaño de presentación de un control que se ejecuta en unidades HIMETRIC (0,01 milímetros por unidad).  
   
 ```
@@ -388,7 +383,7 @@ STDMETHOD(GetExtent)(
   
  Vea [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) en el SDK de Windows.  
   
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
+##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  Devuelve un puntero a la información de estado registrados para el control mediante una llamada a **OleRegGetMiscStatus**.  
   
 ```
@@ -402,7 +397,7 @@ STDMETHOD(GetMiscStatus)(
   
  Vea [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) en el SDK de Windows.  
   
-##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
+##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  Recupera el moniker del control.  
   
 ```
@@ -418,7 +413,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) en el SDK de Windows.  
   
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
+##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  Devuelve el identificador de clase del control.  
   
 ```
@@ -428,7 +423,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) en el SDK de Windows.  
   
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
+##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  Devuelve el nombre de tipo de usuario del control mediante una llamada a **OleRegGetUserType**.  
   
 ```
@@ -442,7 +437,7 @@ STDMETHOD(GetUserType)(
   
  Vea [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) en el SDK de Windows.  
   
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData  
+##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  Inicializa el control de datos seleccionado.  
   
 ```
@@ -458,7 +453,7 @@ STDMETHOD(InitFromData)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) en el SDK de Windows.  
   
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
+##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  Comprueba si el control está actualizado.  
   
 ```
@@ -471,7 +466,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) en el SDK de Windows.  
   
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
+##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  Llamado por el método [DoVerbDiscardUndo](#doverbdiscardundo) después de que se descarta el estado de deshacer.  
   
 ```
@@ -484,7 +479,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que se descarta el estado de deshacer.  
   
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
+##  <a name="onpostverbhide"></a>  IOleObjectImpl::OnPostVerbHide  
  Llamado por el método [DoVerbHide](#doverbhide) después de que el control está oculto.  
   
 ```
@@ -497,7 +492,7 @@ HRESULT OnPostVerbHide();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que el control está oculto.  
   
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
+##  <a name="onpostverbinplaceactivate"></a>  IOleObjectImpl::OnPostVerbInPlaceActivate  
  Llamado por el método [DoVerbInPlaceActivate](#doverbinplaceactivate) después de activa el control en su lugar.  
   
 ```
@@ -510,7 +505,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que el control está activado en su lugar.  
   
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
+##  <a name="onpostverbopen"></a>  IOleObjectImpl::OnPostVerbOpen  
  Llamado por el método [DoVerbOpen](#doverbopen) después de que el control se ha abierto para su edición en una ventana independiente.  
   
 ```
@@ -523,7 +518,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que el control se ha abierto para su edición en una ventana independiente.  
   
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
+##  <a name="onpostverbshow"></a>  IOleObjectImpl::OnPostVerbShow  
  Llamado por el método [DoVerbShow](#doverbshow) después de que se ha realizado el control visible.  
   
 ```
@@ -536,7 +531,7 @@ HRESULT OnPostVerbShow();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que se ha realizado el control visible.  
   
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
+##  <a name="onpostverbuiactivate"></a>  IOleObjectImpl::OnPostVerbUIActivate  
  Llamado por el método [DoVerbUIActivate](#doverbuiactivate) después de activar la interfaz de usuario del control.  
   
 ```
@@ -549,7 +544,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método con código que quiere que se ejecuta después de que se ha activado la interfaz de usuario del control.  
   
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
+##  <a name="onpreverbdiscardundo"></a>  IOleObjectImpl::OnPreVerbDiscardUndo  
  Llamado por el método [DoVerbDiscardUndo](#doverbdiscardundo) antes de la anulación se descarta el estado.  
   
 ```
@@ -562,7 +557,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que el estado de deshacer que se descartan, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
+##  <a name="onpreverbhide"></a>  IOleObjectImpl::OnPreVerbHide  
  Llamado por el método [DoVerbHide](#doverbhide) antes de que el control está oculto.  
   
 ```
@@ -575,7 +570,7 @@ HRESULT OnPreVerbHide();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que el control está oculto, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
+##  <a name="onpreverbinplaceactivate"></a>  IOleObjectImpl::OnPreVerbInPlaceActivate  
  Llamado por el método [DoVerbInPlaceActivate](#doverbinplaceactivate) antes de que el control está activado en su lugar.  
   
 ```
@@ -588,7 +583,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que el control está activado en su lugar, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
+##  <a name="onpreverbopen"></a>  IOleObjectImpl::OnPreVerbOpen  
  Llamado por el método [DoVerbOpen](#doverbopen) antes de que el control se ha abierto para su edición en una ventana independiente.  
   
 ```
@@ -601,7 +596,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que el control se abre para su edición en una ventana independiente, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
+##  <a name="onpreverbshow"></a>  IOleObjectImpl::OnPreVerbShow  
  Llamado por el método [DoVerbShow](#doverbshow) antes de que se ha realizado el control visible.  
   
 ```
@@ -614,7 +609,7 @@ HRESULT OnPreVerbShow();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que el control que se hacen visibles, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
+##  <a name="onpreverbuiactivate"></a>  IOleObjectImpl::OnPreVerbUIActivate  
  Llamado por el método [DoVerbUIActivate](#doverbuiactivate) antes de que se ha activado la interfaz de usuario del control.  
   
 ```
@@ -627,7 +622,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="remarks"></a>Comentarios  
  Para evitar que la interfaz de usuario del control está activado, invalide este método para devolver un valor HRESULT de error.  
   
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
+##  <a name="setclientsite"></a>  IOleObjectImpl::SetClientSite  
  Indica el control sobre su sitio de cliente en el contenedor.  
   
 ```
@@ -639,7 +634,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
   
  Vea [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) en el SDK de Windows.  
   
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
+##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  Recomienda una combinación de colores a la aplicación del control, si existe.  
   
 ```
@@ -652,7 +647,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) en el SDK de Windows.  
   
-##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
+##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  Establece la extensión del área de presentación del control.  
   
 ```
@@ -670,7 +665,7 @@ STDMETHOD(SetExtent)(
   
  Vea [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) en el SDK de Windows.  
   
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
+##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  Indica que el control a los nombres de la aplicación de contenedor y el documento contenedor.  
   
 ```
@@ -683,7 +678,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) en el SDK de Windows.  
   
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
+##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  Indica al control ¿cuál es su moniker.  
   
 ```
@@ -698,7 +693,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) en el SDK de Windows.  
   
-##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
+##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  Elimina la conexión de consulta almacenada en la clase de control `m_spOleAdviseHolder` miembro de datos.  
   
 ```
@@ -708,7 +703,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) en el SDK de Windows.  
   
-##  <a name="update"></a>IOleObjectImpl::Update  
+##  <a name="update"></a>  IOleObjectImpl::Update  
  Actualiza el control.  
   
 ```

@@ -1,10 +1,10 @@
 ---
 title: Compilar el código de C o C++ en la línea de comandos | Documentos de Microsoft
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilar el código de C o C++ en la línea de comandos
 
@@ -93,10 +92,10 @@ Es la manera más sencilla para especificar una arquitectura de compilación det
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architecture*<br/>
+*Arquitectura*<br/>
 Este argumento opcional especifica la arquitectura de host y de destino para usar. Si *arquitectura* no se especifica, se utiliza el entorno de compilación de forma predeterminada. Se admiten los siguientes argumentos:
 
-|*architecture*|Compilador|Arquitectura del equipo host|Crear la arquitectura de salida (destino)|
+|*Arquitectura*|Compilador|Arquitectura del equipo host|Crear la arquitectura de salida (destino)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo de 32 bits|x86, x64|x86|
 |**x86\_amd64** o **x86\_x64**|cross x64 en x86|x86, x64|x64|
@@ -144,7 +143,7 @@ Para compilar un proyecto de C o C++ en la línea de comandos, Visual Studio pro
 [CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
 Utilice el compilador (cl.exe) para compilar y vincular archivos de código fuente en aplicaciones, bibliotecas y DLL.
 
-[Link](../build/reference/linking.md)<br/>
+[Vínculo](../build/reference/linking.md)<br/>
 Utilice el enlazador (link.exe) para vincular bibliotecas y archivos de objeto compilados en aplicaciones y DLL.
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>

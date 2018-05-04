@@ -2,11 +2,8 @@
 title: Clase CAtlTransactionManager | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Clase CAtlTransactionManager
 Clase CAtlTransactionManager proporciona un contenedor para las funciones de administrador de transacciones de Kernel (KTM).  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |nombre|Descripción|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Si la reserva es compatible; `FALSE` en caso contrario.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Si la reserva es compatible; `FALSE` en caso contrario.|  
 |[m_hTransaction](#m_htransaction)|El identificador de la transacción.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  Destructor de CAtlTransactionManager.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Comentarios  
  En el procesamiento normal, la transacción se confirma automáticamente y cerrada. Si se llama al destructor durante una operación de desenredo de la excepción, la transacción se revierte y se cierra.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  Constructor CAtlTransactionManager.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parámetros  
  `bFallback`  
- `TRUE`Indica compatibilidad con reserva. Si se produce un error en la transacción de función, la clase llama automáticamente a la función "sin transacciones". `FALSE`indica que no hay llamadas "reserva".  
+ `TRUE` Indica compatibilidad con reserva. Si se produce un error en la transacción de función, la clase llama automáticamente a la función "sin transacciones". `FALSE` indica que no hay llamadas "reserva".  
   
  `bAutoCreateTransaction`  
- `TRUE`indica que el controlador de transacciones se crea automáticamente en el constructor. `FALSE`indica que no lo están.  
+ `TRUE` indica que el controlador de transacciones se crea automáticamente en el constructor. `FALSE` indica que no lo están.  
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="close"></a>Cerrar  
+##  <a name="close"></a>  Cerrar  
  Cierra el identificador de transacción.  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `CloseHandle` función. Automáticamente se llama al método en el destructor.  
   
-##  <a name="commit"></a>Confirmación  
+##  <a name="commit"></a>  Confirmación  
  Solicitudes que se confirma la transacción.  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `CommitTransaction` función. Automáticamente se llama al método en el destructor.  
   
-##  <a name="create"></a>Crear  
+##  <a name="create"></a>  Crear  
  Crea el identificador de transacción.  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `CreateTransaction` función. Consulte  
   
-##  <a name="createfile"></a>Creación de archivo  
+##  <a name="createfile"></a>  Creación de archivo  
  Crea o abre un archivo, una secuencia de archivos o un directorio como una operación con transacciones.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `CreateFileTransacted` función.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Elimina un archivo existente como una operación con transacciones.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `DeleteFileTransacted` función.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Busca un directorio de un archivo o un subdirectorio como una operación con transacciones.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `FindFirstFileTransacted` función.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Recupera los atributos de sistema de archivos para un archivo o directorio especificado como una operación con transacciones.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `GetFileAttributesTransacted` función.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Recupera los atributos de sistema de archivos para un archivo o directorio especificado como una operación con transacciones.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `GetFileAttributesTransacted` función.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  Devuelve el identificador de transacción.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Determina si están habilitadas las llamadas de reserva.  
   
 ```
@@ -307,8 +302,8 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Si la reserva es compatible; `FALSE` en caso contrario.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Si la reserva es compatible; `FALSE` en caso contrario.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  El identificador de la transacción.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Mueve un archivo existente o un directorio, incluidos a sus elementos secundarios, como una operación con transacciones.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `MoveFileTransacted` función.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Crea la clave del registro especificada y lo asocia con una transacción. Si la clave ya existe, la función lo abre.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `RegCreateKeyTransacted` función.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Elimina una subclave y sus valores de la vista específica de la plataforma especificada del registro como una operación con transacciones.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `RegDeleteKeyTransacted` función.  
   
-##  <a name="regopenkeyex"></a>Error en RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  Error en RegOpenKeyEx  
  Abre la clave del registro especificada y lo asocia con una transacción.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `RegOpenKeyTransacted` función.  
   
-##  <a name="rollback"></a>Reversión  
+##  <a name="rollback"></a>  Reversión  
  Solicitudes que se revierte la transacción.  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Comentarios  
  Llama a este contenedor el `RollbackTransaction` función.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Establece los atributos de un archivo o directorio como una operación con transacciones.  
   
 ```

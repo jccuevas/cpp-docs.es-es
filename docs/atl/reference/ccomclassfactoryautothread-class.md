@@ -2,11 +2,8 @@
 title: Clase CComClassFactoryAutoThread | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactoryAutoThread
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 916bd22a982e70a7acb50793723be23416516d04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Clase CComClassFactoryAutoThread
 Esta clase implementa la [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de interfaz y permite a los objetos que se creen en varios contenedores.  
@@ -54,7 +49,7 @@ class CComClassFactoryAutoThread
 |[CComClassFactoryAutoThread::LockServer](#lockserver)|Bloquea el generador de clases en la memoria.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComClassFactoryAutoThread`es similar a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), pero permite que los objetos que se creen en varios contenedores. Para sacar partido de esta compatibilidad, derive su módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` es similar a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), pero permite que los objetos que se creen en varios contenedores. Para sacar partido de esta compatibilidad, derive su módulo EXE de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Objetos ATL normalmente adquieren un generador de clases derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Esta clase incluye la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como el generador de clases de forma predeterminada. Usar `CComClassFactoryAutoThread`, especifique el [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro en la definición de clase del objeto. Por ejemplo:  
   
@@ -72,7 +67,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
  Crea un objeto del CLSID especificado y recupera un puntero de interfaz a este objeto.  
   
 ```
@@ -98,7 +93,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>Comentarios  
  Si el módulo se deriva de [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` primero selecciona un subproceso para crear el objeto en el contenedor asociado.  
   
-##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
  Aumenta y disminuye el módulo recuento de bloqueos mediante una llamada a **_Module::Lock** y **_Module::Unlock**, respectivamente.  
   
 ```

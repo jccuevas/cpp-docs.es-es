@@ -1,10 +1,10 @@
 ---
 title: /Zc (ajuste) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Ajuste)
 
@@ -43,7 +42,7 @@ Estos son los `/Zc` opciones del compilador:
 |Opción|Comportamiento|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Habilitar C ++ 17 exceso dinámica asignación alineadas (activado de forma predeterminada en C ++ 17).|
-|[auto\[-\]](zc-auto-deduce-variable-type.md)|Exigir el significado de C++ estándar nueva para `auto` (de forma predeterminada).|
+|[Automático\[-\]](zc-auto-deduce-variable-type.md)|Exigir el significado de C++ estándar nueva para `auto` (de forma predeterminada).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vinculación externa para `constexpr` variables (desactivado de forma predeterminada).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Exigir Standard C++ `for` las reglas de ámbito (de forma predeterminada).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` en las funciones necesarias (de forma predeterminada).|
@@ -56,7 +55,7 @@ Estos son los `/Zc` opciones del compilador:
 |[Ternario\[-\]](zc-ternary.md)|Aplicar reglas de operador condicional en tipos de operandos (desactivado de forma predeterminada).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Habilitar la inicialización local estática de subprocesos (de forma predeterminada).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Suponga `operator new` produce en caso de error (desactivado de forma predeterminada).|
-|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilitar trígrafos (obsoletas, desactivado de forma predeterminada).|
+|[trígrafos\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilitar trígrafos (obsoletas, desactivado de forma predeterminada).|
 |[twoPhase-](zc-twophase.md)|Usar análisis de comportamiento (que cumple las especificaciones de forma predeterminada) de las plantillas no conformes.|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` es un tipo nativo, no en una definición de tipo (de forma predeterminada).|
 

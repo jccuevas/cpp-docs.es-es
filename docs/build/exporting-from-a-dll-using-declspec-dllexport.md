@@ -1,13 +1,10 @@
 ---
 title: Exportar desde un archivo DLL Mediante__declspec (dllexport) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportar desde un archivo DLL mediante __declspec(dllexport)
 Microsoft introducida **__export** en la versión del compilador de 16 bits de Visual C++ para permitir que el compilador genera automáticamente los nombres de exportación y colocarlos en un archivo .lib. Este archivo .lib puede utilizarse como una biblioteca .lib estática para vincularlo a un archivo DLL.  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`no se puede aplicar a una función con el `__clrcall` convención de llamada.  
+>  `__declspec(dllexport)` no se puede aplicar a una función con el `__clrcall` convención de llamada.  
   
  Al compilar el archivo DLL, normalmente se crea un archivo de encabezado que contiene los prototipos de función o las clases que va a exportar y agregue **__declspec (dllexport)** a las declaraciones en el archivo de encabezado. Para que el código sea más legible, defina una macro para **__declspec (dllexport)** y utilice la macro con cada símbolo que se va a exportar:  
   

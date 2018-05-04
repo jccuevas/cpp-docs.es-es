@@ -1,12 +1,9 @@
 ---
 title: Tipos fundamentales (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentales (C++)
 Los tipos fundamentales de C++ se dividen en tres categorías: entero, punto flotante y void. Los tipos enteros son capaces de controlar números enteros. Los tipos de punto flotante son capaces de especificar valores que pueden tener partes fraccionarias.  
@@ -85,9 +80,9 @@ Los tipos fundamentales de C++ se dividen en tres categorías: entero, punto flo
 ||`bool`|El tipo `bool` es un tipo entero que puede tener uno de dos valores: `true` o `false`. Su tamaño no está especificado.|  
 ||`short`|El tipo `short` `int` (o simplemente `short`) es un tipo entero que es superior o igual al tamaño del tipo `char`e inferior o igual al tamaño del tipo `int`.<br /><br /> Los objetos del tipo `short` se pueden declarar como `signed` `short` o `unsigned short`. `Signed short` es un sinónimo de `short`.|  
 ||`int`|El tipo `int` es un tipo entero que es superior o igual al tamaño del tipo `short` `int`e inferior o igual al tamaño del tipo `long`.<br /><br /> Los objetos del tipo `int` se pueden declarar como `signed` `int` o `unsigned` `int`. `Signed` `int` es un sinónimo de `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|En el entero con tamaño `__int n`, `n` es el tamaño, en bits, de la variable de entero. `__int8`, `__int16`, `__int32` y `__int64` son palabras clave específicas de Microsoft. No todos los tipos están disponibles en todas las arquitecturas. `(__int128`no se admite.)|  
+||`__int8`, `__int16`, `__int32`, `__int64`|En el entero con tamaño `__int n`, `n` es el tamaño, en bits, de la variable de entero. `__int8`, `__int16`, `__int32` y `__int64` son palabras clave específicas de Microsoft. No todos los tipos están disponibles en todas las arquitecturas. `(__int128` no se admite.)|  
 ||`long`|El tipo `long` (o `long` `int`) es un tipo entero que es superior o igual al tamaño del tipo `int`.<br /><br /> Los objetos del tipo `long` se pueden declarar como `signed` `long` o `unsigned` `long`. `Signed` `long` es un sinónimo de `long`.|  
-||`long` `long`|Mayor que `long`sin signo.<br /><br /> Los objetos del tipo `long long` se pueden declarar como `signed` `long long` o `unsigned` `long long`. `signed``long long` es un sinónimo de `long long`.|  
+||`long` `long`|Mayor que `long`sin signo.<br /><br /> Los objetos del tipo `long long` se pueden declarar como `signed` `long long` o `unsigned` `long long`. `signed` `long long` es un sinónimo de `long long`.|  
 ||`wchar_t`, `__wchar_t`|Una variable del tipo `wchar_t` indica un carácter ancho o multibyte. De forma predeterminada, `wchar_t` es un tipo nativo, pero se puede usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para convertir `wchar_t` en una typedef para `unsigned short`. El `__wchar_t` tipo es un sinónimo específico de Microsoft para el tipo `wchar_t` nativo.<br /><br /> Use el prefijo L delante de un carácter o un literal de cadena para designar el tipo de carácter ancho.|  
 |Punto flotante|`float`|El tipo `float` es el tipo de punto flotante más pequeño.|  
 ||`double`|El tipo `double` es un tipo flotante superior o igual al tipo `float`, pero inferior o igual al tamaño del tipo `long` `double`.<br /><br /> Específico de Microsoft: la representación de `long double` y `double` es idéntica. Sin embargo, `long double` y `double` son tipos distintos.|  

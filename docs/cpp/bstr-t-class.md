@@ -1,12 +1,9 @@
 ---
-title: _bstr_t Class | Microsoft Docs
-ms.custom: 
+title: _bstr_t (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t (Clase)
 **Específicos de Microsoft**  
@@ -44,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[Assign](../cpp/bstr-t-assign.md)|Copia un valor `BSTR` en el valor `BSTR` contenido en `_bstr_t`.|  
+|[asignar](../cpp/bstr-t-assign.md)|Copia un valor `BSTR` en el valor `BSTR` contenido en `_bstr_t`.|  
 |[Asociar](../cpp/bstr-t-attach.md)|Vincula un contenedor `_bstr_t` a un `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Crea una copia del objeto `BSTR` encapsulado.|  
 |[Desasociar](../cpp/bstr-t-detach.md)|Devuelve el `BSTR` contenido en `_bstr_t` y desasocia `BSTR` de `_bstr_t`.|  
@@ -61,12 +56,12 @@ ms.lasthandoff: 01/25/2018
 |[operador +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena dos cadenas.|  
 |[operador !](../cpp/bstr-t-operator-logical-not.md)|Comprueba si el objeto encapsulado `BSTR` es un **NULL** cadena.|  
 |[operador ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Compara dos objetos `_bstr_t`.|  
-|[operador wchar_t * &#124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrae los punteros al objeto `BSTR` multibyte o Unicode encapsulado.|  
+|[operador wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrae los punteros al objeto `BSTR` multibyte o Unicode encapsulado.|  
   
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** \<comutil.h>  
+ **Encabezado:** \<comutil.h >  
   
  **Lib:** omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   

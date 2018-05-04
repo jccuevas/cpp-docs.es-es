@@ -1,12 +1,9 @@
 ---
 title: Clase de CSid | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>CSid (clase)
 Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).  
@@ -97,11 +92,11 @@ class CSid
   
 |||  
 |-|-|  
-|[operador ==](#operator_eq_eq)|Comprueba la igualdad de dos objetos de descriptor de seguridad|  
-|[operador! =](#operator_neq)|Comprueba dos objetos de descriptor de seguridad no son iguales|  
-|[operador\<](#operator_lt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
+|[operator ==](#operator_eq_eq)|Comprueba la igualdad de dos objetos de descriptor de seguridad|  
+|[operator !=](#operator_neq)|Comprueba dos objetos de descriptor de seguridad no son iguales|  
+|[Operador \<](#operator_lt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
 |[operador >](#operator_gt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
-|[operador\<=](#operator_lt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
+|[Operador \<=](#operator_lt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
 |[operador > =](#operator_gt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -175,7 +170,7 @@ explicit CSid(
   
  Si se produce un error en la inicialización, el constructor produce una [CAtlException clase](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>  CSid::~CSid  
+##  <a name="dtor"></a>  CSid:: ~ CSid  
  Destructor.  
   
 ```
@@ -185,7 +180,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>Comentarios  
  El destructor libera los recursos adquiridos por el objeto.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  Una matriz de [CSid](../../atl/reference/csid-class.md) objetos.  
   
 ```
@@ -195,7 +190,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>Comentarios  
  Esta definición de tipo especifica el tipo de matriz que puede usarse para recuperar los identificadores de seguridad de una ACL (lista de control de acceso). Vea [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  Devuelve el nombre de dominio asociado a la `CSid` objeto.  
   
 ```
@@ -228,7 +223,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>Comentarios  
  Vea [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) en el SDK de Windows para obtener más detalles.  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  Devuelve la longitud de la `CSid` objeto.  
   
 ```
@@ -254,7 +249,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la dirección de la `CSid` objeto subyacente del `SID` estructura.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  Devuelve un puntero a la **SID_IDENTIFIER_AUTHORITY** estructura.  
   
 ```
@@ -342,9 +337,9 @@ bool LoadAccount(
  Devuelve **true** se ejecuta correctamente, **false** en caso de error. Para obtener información de errores extendida, realice una llamada a `GetLastError`.  
   
 ### <a name="remarks"></a>Comentarios  
- `LoadAccount`intenta encontrar un identificador de seguridad para el nombre especificado. Vea [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) para obtener más detalles.  
+ `LoadAccount` intenta encontrar un identificador de seguridad para el nombre especificado. Vea [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) para obtener más detalles.  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  Operador de asignación.  
   
 ```
@@ -359,7 +354,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve una referencia a la actualización `CSid` objeto.  
   
-##  <a name="operator_eq_eq"></a>CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  Comprueba la igualdad de dos objetos de descriptor de seguridad.  
   
 ```
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si los descriptores de seguridad son iguales, de lo contrario, **false**.  
   
-##  <a name="operator_neq"></a>CSid::operator! =  
+##  <a name="operator_neq"></a>  CSid::operator! =  
  Comprueba dos objetos de descriptor de seguridad no son iguales.  
   
 ```
@@ -397,7 +392,7 @@ bool operator!=(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si los descriptores de seguridad no son iguales, de lo contrario **false**.  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  Compara el valor relativo de dos objetos de descriptor de seguridad.  
   
 ```
@@ -416,7 +411,7 @@ bool operator<(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si `lhs` es menor que `rhs`, en caso contrario, **false**.  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  Compara el valor relativo de dos objetos de descriptor de seguridad.  
   
 ```
@@ -435,7 +430,7 @@ bool operator<=(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si `lhs` es menor o igual que `rhs`, en caso contrario, **false**.  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  Compara el valor relativo de dos objetos de descriptor de seguridad.  
   
 ```
@@ -454,7 +449,7 @@ bool operator>(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si `lhs` es mayor que `rhs`, en caso contrario, **false**.  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  Compara el valor relativo de dos objetos de descriptor de seguridad.  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Valor devuelto  
  **True** si `lhs` es mayor o igual que `rhs`, en caso contrario, **false**.  
   
-##  <a name="operator_const_sid__star"></a>SID const CSid::operator *  
+##  <a name="operator_const_sid__star"></a>  SID const CSid::operator *  
  Conversiones de un `CSid` objeto a un puntero a un `SID` estructura (identificador de seguridad).  
   
 ```  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Indica un `SID` para un equipo.|  
   
 ### <a name="remarks"></a>Comentarios  
- Llame a [CSid::LoadAccount](#loadaccount) para actualizar la `CSid` objeto antes de llamar a `SidNameUse` para devolver su estado. `SidNameUse`no cambia el estado del objeto (mediante una llamada a **LookupAccountName** o **LookupAccountSid**), pero sólo devuelve el estado actual.  
+ Llame a [CSid::LoadAccount](#loadaccount) para actualizar la `CSid` objeto antes de llamar a `SidNameUse` para devolver su estado. `SidNameUse` no cambia el estado del objeto (mediante una llamada a **LookupAccountName** o **LookupAccountSid**), pero sólo devuelve el estado actual.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de seguridad](../../visual-cpp-samples.md)   

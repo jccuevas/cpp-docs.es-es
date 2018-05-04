@@ -1,27 +1,22 @@
 ---
 title: RUNTIME_FUNCTION (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c2f28380d4a14cf7617653ede20468c45649a8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="struct-runtimefunction"></a>RUNTIME_FUNCTION (Estructura)
 Control de excepciones basado en tabla requiere una entrada de la tabla para todas las funciones que asignan espacio de pila o llamar a otra función (por ejemplo, funciones de hoja). Entradas de la tabla de función tienen el formato:  

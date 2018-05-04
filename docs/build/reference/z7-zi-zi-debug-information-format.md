@@ -1,6 +1,6 @@
 ---
-title: "-Z7, - Zi, - ZI (formato de la información de depuración) | Documentos de Microsoft"
-ms.custom: 
+title: -Z7, - Zi, - ZI (formato de la información de depuración) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato de la información de depuración)
 
@@ -46,7 +45,7 @@ Especifica el tipo de información de depuración creada para el programa y si e
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Z**{**7**|**i**|**I**}  
+> **/ Z**{**7**|**i**|**I**}  
 
 ## <a name="remarks"></a>Comentarios
 
@@ -79,7 +78,7 @@ Si se crea una biblioteca de objetos que se compilaron con **/Zi**, el archivo .
 
 ### <a name="zi"></a>/ZI
 
-El **/Zi** opción es similar a **/Zi**, pero produce un archivo PDB en un formato que admita la [editar y continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) característica. Para usar Editar y continuar características de depuración, debe usar esta opción. La característica Editar y continuar es útil para la productividad del desarrollador, pero puede causar problemas de ajuste de tamaño, el rendimiento y el compilador de código. Dado que la mayoría de las optimizaciones es incompatible con Editar y continuar, uso **/Zi** deshabilita cualquier `#pragma optimize` las instrucciones en el código. El **/Zi** opción también es compatible con el uso de la [&#95; &#95; LÍNEA &#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md); código compilado con **/Zi** no se puede usar **&#95; &#95; LÍNEA &#95; &#95;**  como un argumento de plantilla sin tipo, aunque **&#95; &#95; LÍNEA &#95; &#95;**  puede utilizarse en expansiones de macros.
+El **/Zi** opción es similar a **/Zi**, pero produce un archivo PDB en un formato que admita la [editar y continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) característica. Para usar Editar y continuar características de depuración, debe usar esta opción. La característica Editar y continuar es útil para la productividad del desarrollador, pero puede causar problemas de ajuste de tamaño, el rendimiento y el compilador de código. Dado que la mayoría de las optimizaciones es incompatible con Editar y continuar, uso **/Zi** deshabilita cualquier `#pragma optimize` las instrucciones en el código. El **/Zi** opción también es compatible con el uso de la [ &#95; &#95;línea&#95; &#95; macro predefinida](../../preprocessor/predefined-macros.md); código compilado con **/Zi** no se puede usar **&#95; &#95;Línea&#95; &#95;** como un argumento de plantilla sin tipo, aunque **&#95; &#95;línea&#95; &#95;** pueden usarse en las expansiones de macros.
 
 El **/Zi** opción obliga a ambos el [/Gy (habilitar vinculación en el nivel de función)](../../build/reference/gy-enable-function-level-linking.md) y [/FC (Full ruta de acceso del archivo de código fuente en diagnósticos)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) opciones que se utilizarán en la compilación.
 

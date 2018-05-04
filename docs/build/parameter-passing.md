@@ -2,26 +2,21 @@
 title: Pasar parámetros | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec0c5b6fe00430c8b08fefdd8781b677004085e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameter-passing"></a>Paso de parámetros
 Los primeros cuatro argumentos de entero se pasan en registros. Valores enteros se pasan (en orden de izquierda a derecha) en RCX, RDX, R8 y R9. Argumentos de cinco y superior se pasan en la pila. Todos los argumentos son justificado a la derecha en los registros. Esto se hace por lo que el destinatario puede omitir los bits superiores del registro si tienen que ser y puede tener acceso a solo la parte del registro que necesita.  

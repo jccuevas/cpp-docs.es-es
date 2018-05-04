@@ -1,13 +1,10 @@
 ---
-title: "-ZW (compilación de Windows en tiempo de ejecución) | Documentos de Microsoft"
-ms.custom: 
+title: -ZW (compilación de Windows en tiempo de ejecución) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbaa6d708cf882d3f396cc2a68159a520a017f8d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fce6c6825ed4ae715a2f4cde6b0e1ffa8b3b6733
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows Runtime)
 Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) para la creación de aplicaciones de la plataforma Universal de Windows (UWP).  
@@ -55,7 +50,7 @@ Compila el código fuente para admitir [!INCLUDE[cppwrt](../../build/reference/i
   
 -   Automático recuento de referencias de objetos en tiempo de ejecución de Windows y automática de descarte de un objeto cuando su recuento de referencias llega a cero.  
   
- Dado que el vinculador incremental no es compatible con los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) no es compatible con la opción   **/ZW** .  
+ Dado que el vinculador incremental no es compatible con los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) no es compatible con la opción  **/ZW**.  
   
  Para obtener más información, consulte [referencia del lenguaje Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   

@@ -1,13 +1,10 @@
 ---
-title: "Cómo: incrustar un manifiesto en una aplicación de C/C ++ | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: incrustar un manifiesto en una aplicación de C/C ++ | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
 Se recomienda que una aplicación de C/C ++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final, porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen; vea [generación de manifiestos en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar los archivos MAKE existentes para incrustar automáticamente el manifiesto dentro del archivo binario final.  

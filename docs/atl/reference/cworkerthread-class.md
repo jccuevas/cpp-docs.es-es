@@ -1,12 +1,9 @@
 ---
 title: Clase CWorkerThread | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>Clase CWorkerThread
 Esta clase crea un subproceso de trabajo o usa uno existente, espera a que en uno o varios identificadores de objeto de kernel y ejecuta una función de cliente especificado cuando se señala a uno de los controladores.  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  Llamar a este método para agregar el identificador de un objeto que puede esperar a la lista mantenida por el subproceso de trabajo.  
   
 ```
@@ -129,7 +124,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>Comentarios  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) se llamará a través de `pClient` cuando el identificador, `hObject`, se envía una señal.  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  Llamar a este método para agregar un temporizador periódico representan a la lista mantenida por el subproceso de trabajo.  
   
 ```
@@ -161,14 +156,14 @@ HRESULT AddTimer(
   
  Pasar el identificador de temporizador de `phTimer` a [CWorkerThread::RemoveHandle](#removehandle) para cerrar el temporizador.  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  El constructor.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  Destructor.  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [CWorkerThread::Shutdown](#shutdown).  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  Llamar a este método para obtener el identificador de subproceso del subproceso de trabajo.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el identificador de subproceso o NULL si no se ha inicializado el subproceso de trabajo.  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  Llame a este método para obtener el identificador de subproceso del subproceso de trabajo.  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el identificador del subproceso o NULL si no se ha inicializado el subproceso de trabajo.  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  Llamar a este método para inicializar el subproceso de trabajo.  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  Vea [CWorkerThread::Shutdown](#shutdown) para obtener información sobre cómo se cambia el comportamiento de ese método cuando se inicializa mediante un puntero a un objeto existente.  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  Llamar a este método para quitar un identificador de la lista de objetos representan.  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>Comentarios  
  Cuando se quita el identificador [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) se llamará en el objeto asociado que se pasó a [AddHandle](#addhandle). Si se produce un error en esta llamada, `CWorkerThread` llamará a las ventanas [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) función en el identificador.  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Llamar a este método para cerrar el subproceso de trabajo.  
   
 ```

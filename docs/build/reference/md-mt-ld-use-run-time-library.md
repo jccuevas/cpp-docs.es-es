@@ -2,12 +2,9 @@
 title: -MD, -MT, -LD (utilizar la biblioteca en tiempo de ejecución) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (utilizar la biblioteca en tiempo de ejecución)
 Indica si un módulo multiproceso es un archivo DLL y especifica versiones comerciales o de depuración de la biblioteca en tiempo de ejecución.  

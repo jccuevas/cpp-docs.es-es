@@ -1,12 +1,9 @@
 ---
 title: Sobrecarga de funciones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Se denominan *sobrecargados* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos. 
@@ -45,7 +40,7 @@ Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguient
 |Uso de nombres `typedef`|No|  
 |Límites de matriz sin especificar|No|  
 |**Const** o `volatile`|Sí, cuando se aplica a toda función|
-|[ref-qualifier](#ref-qualifier)|Sí|  
+|[calificador de referencia](#ref-qualifier)|Sí|  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo se puede usar la sobrecarga.  
@@ -261,12 +256,12 @@ volatile Over&
   
 |Conversión del tipo|Conversión al tipo|  
 |-----------------------|---------------------|  
-|*type-name*|*nombre de tipo* **&**|  
-|*nombre de tipo* **&**|*type-name*|  
+|*nombre de tipo*|*nombre de tipo* **&**|  
+|*nombre de tipo* **&**|*nombre de tipo*|  
 |*nombre de tipo* **]**|*nombre de tipo\**|  
 |*nombre de tipo* **(** *lista de argumentos* **)**|**(**  *\*nombre-tipo* **) (** *lista de argumentos* **)**|  
-|*type-name*|**Const** *nombre de tipo*|  
-|*type-name*|`volatile` *nombre de tipo*|  
+|*nombre de tipo*|**Const** *nombre de tipo*|  
+|*nombre de tipo*|`volatile` *nombre de tipo*|  
 |*nombre de tipo\**|**Const** *nombre de tipo\**|  
 |*nombre de tipo\**|`volatile` *nombre de tipo\**|  
   
@@ -274,13 +269,13 @@ volatile Over&
   
 1.  Coincidencia exacta. Una coincidencia exacta entre los tipos con los que se llama a la función y los tipos declarados en el prototipo de función siempre es la mejor coincidencia. Las secuencias de conversiones triviales se clasifican como coincidencias exactas. Sin embargo, las secuencias que no realizan ninguna de estas conversiones se consideran mejores que las secuencias que convierten:  
   
-    -   De puntero, puntero a **const** (`type`  **\***  a **const** `type`  **\***  ).  
+    -   De puntero, puntero a **const** (`type` **\*** a **const** `type` **\*** ).  
   
-    -   De puntero, puntero a `volatile` (`type`  **\***  a `volatile` `type`  **\*** ).  
+    -   De puntero, puntero a `volatile` (`type` **\*** a `volatile` `type` **\***).  
   
-    -   De referencia, en referencia a **const** (`type`  **&**  a **const** `type`  **&** ).  
+    -   De referencia, en referencia a **const** (`type` **&** a **const** `type` **&**).  
   
-    -   De referencia, en referencia a `volatile` (`type`  **&**  a `volatile` `type`  **&** ).  
+    -   De referencia, en referencia a `volatile` (`type` **&** a `volatile` `type` **&**).  
   
 2.  Coincidencia mediante promociones. Cualquier secuencia no clasificada como coincidencia exacta que contiene solo promociones de enteros, conversiones de **float** a **doble**, y conversiones triviales se clasifica como coincidencia mediante promociones. Aunque no es una coincidencia tan buena como cualquier coincidencia exacta, una coincidencia mediante promociones es mejor que una coincidencia mediante conversiones estándar.  
   

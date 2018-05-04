@@ -1,12 +1,9 @@
 ---
 title: Clase IConnectionPointContainerImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointContainerImpl
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - connection points [C++], container
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e3a6ee6790c4fa0e93fe312d6a6b840b754a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Clase IConnectionPointContainerImpl
 Esta clase implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos.  
@@ -57,11 +52,11 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 |[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Recupera un puntero de interfaz al punto de conexión que admite el IID especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IConnectionPointContainerImpl`implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos. `IConnectionPointContainerImpl`proporciona dos métodos que puede llamar un cliente para recuperar más información acerca de un objeto conectable:  
+ `IConnectionPointContainerImpl` implementa un contenedor de punto de conexión para administrar una colección de [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) objetos. `IConnectionPointContainerImpl` proporciona dos métodos que puede llamar un cliente para recuperar más información acerca de un objeto conectable:  
   
-- `EnumConnectionPoints`permite al cliente determinar qué salida interfaces admite el objeto.  
+- `EnumConnectionPoints` permite al cliente determinar qué salida interfaces admite el objeto.  
   
-- `FindConnectionPoint`permite al cliente determinar si el objeto admite una interfaz de salida específica.  
+- `FindConnectionPoint` permite al cliente determinar si el objeto admite una interfaz de salida específica.  
   
  Para obtener información sobre el uso de puntos de conexión en ATL, vea el artículo [puntos de conexión](../../atl/atl-connection-points.md).  
   
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  
  Crea un enumerador para recorrer en iteración los puntos de conexión admitidos en el objeto conectable.  
   
 ```
@@ -83,7 +78,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>Comentarios  
  Vea [IConnectionPointContainer:: EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) en el SDK de Windows.  
   
-##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
  Recupera un puntero de interfaz al punto de conexión que admite el IID especificado.  
   
 ```

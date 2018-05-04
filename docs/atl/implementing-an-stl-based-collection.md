@@ -1,29 +1,24 @@
 ---
-title: "Implementación de una colección de basada en la biblioteca estándar de C++ | Documentos de Microsoft"
-ms.custom: 
+title: Implementación de una colección de basada en la biblioteca estándar de C++ | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a09f54598b525346a65b56a335711f114878cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementación de una colección de basada en la biblioteca estándar de C++
 ATL proporciona el `ICollectionOnSTLImpl` interfaz que le permite implementar rápidamente interfaces de colección basada en la biblioteca estándar de C++ en los objetos. Para entender cómo funciona esta clase, funcionará a través de un ejemplo simple (a continuación) que usa esta clase para implementar una colección de solo lectura dirigida a los clientes de automatización.  
@@ -46,10 +41,10 @@ ATL proporciona el `ICollectionOnSTLImpl` interfaz que le permite implementar r�
   
 -   [Agregue código para rellenar la colección](#vcconpopulate_the_collection).  
   
-##  <a name="vccongenerating_an_object"></a>Generar un nuevo objeto Simple  
+##  <a name="vccongenerating_an_object"></a> Generar un nuevo objeto Simple  
  Cree un nuevo proyecto, asegurándose de que está desactivada la casilla atributos en configuración de la aplicación. Utilice el cuadro de diálogo Agregar clase de ATL y agregar Asistente para objetos simples para generar un objeto Simple denominado `Words`. Asegúrese de que llama a una interfaz dual `IWords` se genera. Objetos de la clase generada se utilizará para representar una colección de palabras (es decir, cadenas).  
   
-##  <a name="vcconedit_the_idl"></a>Editar el archivo IDL  
+##  <a name="vcconedit_the_idl"></a> Editar el archivo IDL  
  Ahora, abra el archivo IDL y agregue las tres propiedades necesarias activar `IWords` en una interfaz de colección de solo lectura, tal y como se muestra a continuación:  
   
  [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
@@ -68,7 +63,7 @@ ATL proporciona el `ICollectionOnSTLImpl` interfaz que le permite implementar r�
   
 6.  El valor utilizado para el DISPID de la **recuento** propiedad es totalmente arbitraria. No hay ningún DISPID estándar para esta propiedad.  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a>Crear definiciones de tipo para el almacenamiento y la exposición  
+##  <a name="vcconstorage_and_exposure_typedefs"></a> Crear definiciones de tipo para el almacenamiento y la exposición  
  Una vez que se define la interfaz de colección, debe decidir cómo se almacenarán los datos y cómo se expondrán los datos a través del enumerador.  
   
  Las respuestas a estas preguntas pueden proporcionarse en forma de un número de definiciones de tipos, que puede agregar en la parte superior del archivo de encabezado para la clase recién creada:  
@@ -79,26 +74,26 @@ ATL proporciona el `ICollectionOnSTLImpl` interfaz que le permite implementar r�
   
  Puesto que la compatibilidad con Visual Basic es vital para el éxito de esta interfaz, el enumerador devuelto por la `_NewEnum` propiedad debe admitir la **IEnumVARIANT** interfaz. Esta es la interfaz de enumerador solo entendida por Visual Basic.  
   
-##  <a name="vcconcopy_classes"></a>Crear definiciones de tipos para las clases de directiva de copia  
+##  <a name="vcconcopy_classes"></a> Crear definiciones de tipos para las clases de directiva de copia  
  Las definiciones de tipo que ha creado hasta ahora proporcionan toda la información que necesita crear otros typedefs para las clases de copia que se usará en el enumerador y la colección:  
   
  [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
  En este ejemplo, puede usar la opción de instalación `GenericCopy` clase definida en VCUE_Copy.h y VCUE_CopyString.h desde el [ATLCollections](../visual-cpp-samples.md) ejemplo. Puede utilizar esta clase en otro código, pero puede que necesite definir más especializaciones de `GenericCopy` para admitir tipos de datos utilizados en sus propias colecciones. Para obtener más información, consulte [clases de directiva de copia de ATL](../atl/atl-copy-policy-classes.md).  
   
-##  <a name="vcconenumeration_and_collection"></a>Crear definiciones de tipo de enumeración y colección  
+##  <a name="vcconenumeration_and_collection"></a> Crear definiciones de tipo de enumeración y colección  
  Ahora todos los parámetros de plantilla necesarios para especializar la `CComEnumOnSTL` y `ICollectionOnSTLImpl` clases para esta situación se han proporcionado en forma de definiciones de tipo. Para simplificar el uso de las especializaciones, cree dos typedefs más como se muestra a continuación:  
   
  [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
  Ahora `CollectionType` es un sinónimo de una especialización de `ICollectionOnSTLImpl` que implementa el `IWords` interfaz definida anteriormente y proporciona un enumerador que admite **IEnumVARIANT**.  
   
-##  <a name="vcconedit_the_generated_code"></a>Editar el código generado por el Asistente  
+##  <a name="vcconedit_the_generated_code"></a> Editar el código generado por el Asistente  
  Ahora debe derivar `CWords` de la implementación de la interfaz representada por la `CollectionType` (typedef) en lugar de `IWords`, tal y como se muestra a continuación:  
   
  [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a>Agregar código para rellenar la colección  
+##  <a name="vcconpopulate_the_collection"></a> Agregar código para rellenar la colección  
  Lo único que queda es rellenar el vector con datos. En este sencillo ejemplo, puede agregar algunas palabras a la colección en el constructor para la clase:  
   
  [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  

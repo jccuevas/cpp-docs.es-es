@@ -2,11 +2,8 @@
 title: Asistente para consumidores ATL OLE DB | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 Este asistente configura una clase de consumidor OLE DB con los enlaces de datos necesario para tener acceso al origen de datos especificados a través del proveedor OLE DB especificado.  
@@ -70,7 +65,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
   
     3. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar registrados todas las bases de datos en el servidor de datos y seleccionar uno.  
   
-         O bien  
+         -o bien-  
   
  **Adjuntar un archivo de base de datos como un nombre de base de datos:** especificar un archivo que se usará como la base de datos; escriba la ruta de acceso explícita.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Clases de puntos de conexión ATL | Documentos de Microsoft"
-ms.custom: 
+title: Clases de puntos de conexión ATL | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9845fdffdd951809ee7127c5fec86097a6219354
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49acd19fcb25751ac9223b557b068383556f63f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-connection-point-classes"></a>Clases de puntos de conexión ATL
 ATL utiliza las siguientes clases para admitir puntos de conexión:  

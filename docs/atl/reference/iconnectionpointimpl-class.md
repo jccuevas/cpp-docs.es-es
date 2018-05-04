@@ -1,12 +1,9 @@
 ---
 title: Clase IConnectionPointImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointimpl-class"></a>Clase IConnectionPointImpl
 Esta clase implementa un punto de conexión.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|Administra las conexiones para el punto de conexión.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IConnectionPointImpl`implementa un punto de conexión, que permite que un objeto exponer una interfaz de salida al cliente. El cliente implementa esta interfaz en un objeto denominado receptor.  
+ `IConnectionPointImpl` implementa un punto de conexión, que permite que un objeto exponer una interfaz de salida al cliente. El cliente implementa esta interfaz en un objeto denominado receptor.  
   
  ATL usa [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) para implementar el objeto conectable. Cada punto de conexión en el objeto conectable representa una interfaz de salida, identificada por `piid`. Clase *VCDtox* administra las conexiones entre el punto de conexión y un receptor. Cada conexión se identifica mediante una "cookie".  
   
@@ -88,7 +83,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>  IConnectionPointImpl::Advise  
  Establece una conexión entre el punto de conexión y un receptor.  
   
 ```
@@ -102,7 +97,7 @@ STDMETHOD(Advise)(
   
  Vea [IConnectionPoint:: Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) en el SDK de Windows.  
   
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  Crea un enumerador para recorrer en iteración las conexiones para el punto de conexión.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>Comentarios  
  Vea [IConnectionPoint:: EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) en el SDK de Windows.  
   
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  Recupera el IID de la interfaz representada por el punto de conexión.  
   
 ```
@@ -122,7 +117,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>Comentarios  
  Vea [IConnectionPoint:: GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) en el SDK de Windows.  
   
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  Recupera un puntero de interfaz para el objeto conectable.  
   
 ```
@@ -132,7 +127,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>Comentarios  
  Vea [IConnectionPoint:: GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) en el SDK de Windows.  
   
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  Administra las conexiones entre el objeto de punto de conexión y un receptor.  
   
 ```
@@ -142,7 +137,7 @@ CDV m_vec;
 ### <a name="remarks"></a>Comentarios  
  De forma predeterminada, `m_vec` es de tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).  
   
-##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
  Finaliza una conexión previamente establecida mediante [Advise](#advise).  
   
 ```

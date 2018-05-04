@@ -1,13 +1,10 @@
 ---
-title: "Función CAtlServiceModuleT:: Run | Documentos de Microsoft"
-ms.custom: 
+title: 'Función CAtlServiceModuleT:: Run | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule::Run
 - CServiceModule.Run
@@ -17,22 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a07ad6b09fa10a81b500625531226dc18fc6281a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemoduletrun-function"></a>Función CAtlServiceModuleT:: Run
 **Ejecutar** contiene las llamadas a `PreMessageLoop`, `RunMessageLoop`, y `PostMessageLoop`. Después de que se llama, `PreMessageLoop` almacena primero el identificador de subproceso. del servicio El servicio utilizará este identificador para cerrarse a sí mismo mediante el envío de un **WM_QUIT** mensaje cuando se utiliza la función API de Win32, [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  
   
- `PreMessageLoop`a continuación, llama `InitializeSecurity`. De forma predeterminada, `InitializeSecurity` llamadas [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con el descriptor de seguridad establecido en NULL, lo que significa que cualquier usuario tenga acceso al objeto.  
+ `PreMessageLoop` a continuación, llama `InitializeSecurity`. De forma predeterminada, `InitializeSecurity` llamadas [CoInitializeSecurity](http://msdn.microsoft.com/library/windows/desktop/ms693736) con el descriptor de seguridad establecido en NULL, lo que significa que cualquier usuario tenga acceso al objeto.  
   
  Si no desea que el servicio para especificar su propia seguridad, reemplace `PreMessageLoop` y no llame a `InitializeSecurity`, y COM, a continuación, determinar la configuración de seguridad del registro. Es una manera cómoda de configuración del registro con el [DCOMCNFG](../atl/dcomcnfg.md) utilidad que se describe más adelante en esta sección.  
   

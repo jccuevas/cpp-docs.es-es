@@ -1,12 +1,9 @@
 ---
 title: Expresiones con operadores unarios | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>Expresiones con operadores unarios
 Los operadores unarios actúan solo sobre un operando en una expresión. Los operadores unarios son los siguientes:  
@@ -64,17 +59,17 @@ Los operadores unarios actúan solo sobre un operando en una expresión. Los ope
   
 -   *postfix-expression*  
   
--   `++`*expresión unaria*  
+-   `++` *expresión unaria*  
   
--   `--`*expresión unaria*  
+-   `--` *expresión unaria*  
   
 -   *operador unario* *cast-expression*  
   
--   `sizeof`*expresión unaria*  
+-   `sizeof` *expresión unaria*  
   
--   `sizeof(`*nombre-tipo*`)`  
+-   `sizeof(` *nombre de tipo* `)`  
   
--   `decltype(`*expresión*`)`  
+-   `decltype(` *Expresión* `)`  
   
 -   *expresión de asignación*  
   
@@ -82,7 +77,7 @@ Los operadores unarios actúan solo sobre un operando en una expresión. Los ope
   
  Cualquier *postfix-expression* se considera un *expresión unaria*, y porque cualquier expresión principal se considera un *postfix-expression*, es cualquier expresiones primarias considera un *expresión unaria* también. Para obtener más información, consulte [expresiones de postfijo](../cpp/postfix-expressions.md) y [expresiones primarias](../cpp/primary-expressions.md).  
   
- A *operador unario* consta de uno o varios de los símbolos siguientes:`* & + - ! ~`  
+ A *operador unario* consta de uno o varios de los símbolos siguientes: `* & + - ! ~`  
   
  El *cast-expression* es una expresión unaria con una conversión opcional para cambiar el tipo. Para obtener más información, consulte [operador de conversión: ()](../cpp/cast-operator-parens.md).  
   

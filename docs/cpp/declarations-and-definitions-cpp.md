@@ -1,27 +1,22 @@
 ---
 title: Declaraciones y definiciones (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarations-and-definitions-c"></a>Declaraciones y definiciones (C++)
 Las declaraciones introducen nombres en un programa, por ejemplo, los nombres de variables, espacios de nombres, funciones y clases. Las declaraciones también especifican información de tipos y otras características del objeto que se declara. Antes de poder usar un nombre, hay que declararlo; en C++, el punto en el que se declara un nombre determina si es visible para el compilador. Imposible hacer referencia a una función o clase que se declara en algún punto posterior de la unidad de compilación; Puede usar *reenviar declaraciones* para evitar esta limitación.  

@@ -2,11 +2,8 @@
 title: Control de acceso de miembro (C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>Control de acceso a miembros (C++)
 Controles de acceso le permiten separar la [pública](../cpp/public-cpp.md) interfaz de una clase desde la [privada](../cpp/private-cpp.md) detalles de implementación y la [protegido](../cpp/protected-cpp.md) los miembros que son únicamente para usar por clases derivadas. El especificador de acceso se aplica a todos los miembros declarados después de él hasta que se encuentra el especificador de acceso siguiente.  

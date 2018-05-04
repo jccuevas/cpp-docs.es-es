@@ -1,30 +1,25 @@
 ---
 title: Agregar una propiedad al Control (ATL Tutorial, parte 3) | Documentos de Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Agregar una propiedad al control (Tutorial de ATL, Parte 3)
-`IPolyCtl`es la interfaz que contiene las propiedades y los métodos del control personalizado y lo agregará una propiedad en.  
+`IPolyCtl` es la interfaz que contiene las propiedades y los métodos del control personalizado y lo agregará una propiedad en.  
   
 ### <a name="to-add-a-property-using-the-add-property-wizard"></a>Para agregar una propiedad mediante el Asistente para agregar propiedades  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Ahora tiene una propiedad denominada `Sides`. En el paso siguiente, cambiará el código de dibujo para usarlo.  
   
- [Vuelva al paso 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Al paso 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [Vuelva al paso 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [al paso 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

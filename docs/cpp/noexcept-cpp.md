@@ -1,41 +1,36 @@
 ---
 title: noexcept (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/12/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - noexcept_cpp
 dev_langs:
 - C++
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b78c19cb156312b6087b75e50c0e0fa28a00246
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: a0cc12c5b82e1cb8cda8243020f91614fe840502
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 **C ++ 11:** especifica si una función puede producir excepciones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-> *noexcept-expression*:  
+> *expresión de noexcept*:  
 > &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
-> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept (** *expresión constante* **)**  
   
 ### <a name="parameters"></a>Parámetros  
- *constant-expression*  
+ *expresión de constante*  
  Una expresión constante de tipo `bool` que indica si el conjunto de posibles tipos de excepción está vacío. La versión incondicional es equivalente a `noexcept(true)`.  
   
 ## <a name="remarks"></a>Comentarios  

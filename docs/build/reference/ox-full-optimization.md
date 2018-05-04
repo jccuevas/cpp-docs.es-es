@@ -1,13 +1,10 @@
 ---
-title: "-Ox (habilitar la mayoría de las optimizaciones de velocidad) | Documentos de Microsoft"
-ms.custom: 
+title: -Ox (habilitar la mayoría de las optimizaciones de velocidad) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (habilitar la mayoría de las optimizaciones de velocidad)
 
@@ -47,9 +42,9 @@ El **/Ox** opción del compilador es lo mismo que usar las siguientes opciones d
 
 - [/Ob (expansión de funciones Inline)](../../build/reference/ob-inline-function-expansion.md), donde el parámetro de opción es 2 (**/Ob2**)
 
-- [/Og (optimizaciones globales)](../../build/reference/og-global-optimizations.md)
+- [/Og (Optimizaciones globales)](../../build/reference/og-global-optimizations.md)
 
-- [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (Generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/Ot (favorecer código rápido)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -61,7 +56,7 @@ El **/Ox** opción del compilador es lo mismo que usar las siguientes opciones d
 
 - [/ O2 (maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (deshabilitar (depurar))](../../build/reference/od-disable-debug.md)
+- [/Od (Deshabilitar (Depurar))](../../build/reference/od-disable-debug.md)
 
 Puede cancelar la polarización hacia la velocidad de la **/Ox** opción del compilador si especifica **/Oxs**, que combina la **/Ox** opción del compilador con [/Os (favorecer pequeña Código)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Las opciones combinadas favorecen un tamaño de código.
 
@@ -81,6 +76,6 @@ Para aplicar todas las optimizaciones de nivel de archivo disponibles para versi
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)  
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)  
 [Opciones del compilador](../../build/reference/compiler-options.md)  
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

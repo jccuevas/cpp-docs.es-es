@@ -2,11 +2,8 @@
 title: decltype (C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (C++)
 El especificador de tipo `decltype` produce el tipo de una expresión especificada. El `decltype` escriba especificador, junto con el [palabra clave auto](../cpp/auto-cpp.md), es útil principalmente para los desarrolladores que crean bibliotecas de plantillas. Use `auto` y `decltype` para declarar una función de plantilla cuyo tipo de valor devuelto depende de los tipos de sus argumentos de plantilla. O bien utilice `auto` y `decltype` para declarar una función de plantilla que contenga una llamada a otra función y devuelva el tipo de valor devuelto de la función contenida.  
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  El prototipo siguiente muestra la sintaxis de una declaración de función alternativa. Tenga en cuenta que la `const` y `volatile` calificadores y el `throw` [una especificación de excepción](../cpp/exception-specifications-throw-cpp.md) son opcionales. El *cuerpo_función* marcador de posición representa una instrucción compuesta que especifica lo que hace la función. Como procedimiento recomendado, de codificación el *expresión* marcador de posición en el `decltype` instrucción debe coincidir con la expresión especificada por el `return` instrucción, si hay alguno, en el *cuerpo_función*.  
   
- **Auto** *function_name* **(** *parámetros*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volátiles**<sub>opt</sub>  **->**  **decltype (** *expresión* **)** **throw**<sub>opt</sub> **{** *cuerpo_función* **};**  
+ **Auto** *function_name* **(** *parámetros*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volátiles**<sub>opt</sub> **->** **decltype (** *expresión* **)** **throw**<sub>opt</sub> **{** *cuerpo_función* **};**  
   
  En el ejemplo de código siguiente, el tipo de valor devuelto especificado en tiempo de compilación de la función de plantilla `myFunc` viene determinado por los tipos de los argumentos de plantilla `t` y `u`. Como procedimiento de codificación recomendado, el ejemplo de código también utiliza referencias rvalue y la `forward` plantilla de función, que son compatibles con *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Requisitos  
  Visual C++ 2010 o versiones posteriores.  
   
- `decltype(auto)`requiere Visual Studio 2015 o versiones posterior.  
+ `decltype(auto)` requiere Visual Studio 2015 o versiones posterior.  
   

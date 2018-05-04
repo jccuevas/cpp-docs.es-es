@@ -1,12 +1,9 @@
 ---
-title: "Ámbito (Visual C++) | Documentos de Microsoft"
-ms.custom: 
+title: Ámbito (Visual C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>Ámbito (Visual C++)
 Los nombres de C++ solo se pueden utilizar en determinadas áreas de un programa. Esta área se denomina "ámbito" del nombre. El ámbito determina la "duración" de un nombre que no denota un objeto de extensión estática. El ámbito también determina la visibilidad de un nombre, cuando se llama a los constructores y destructores de clase, y cuando se inicializan variables locales respecto al ámbito. (Para obtener más información, consulte [constructores](../cpp/constructors-cpp.md) y [destructores](../cpp/destructors-cpp.md).) Hay cinco tipos de ámbito:  
@@ -50,7 +45,7 @@ Los nombres de C++ solo se pueden utilizar en determinadas áreas de un programa
   
      En C++, el ámbito de archivo también se conoce como ámbito de espacio de nombres.  
   
--   **Ámbito de clase** nombres de miembros de clase tienen ámbito de clase. Pueden tener acceso a funciones miembro de clase solo mediante los operadores de selección de miembro (**.** o  **->** ) u operadores de puntero a miembro (**.\***  o  **-> \*** ) en un objeto o un puntero a un objeto de esa clase; datos de miembro de clase no estáticos se consideran locales para el objeto de esa clase. Considere la siguiente declaración de clase:  
+-   **Ámbito de clase** nombres de miembros de clase tienen ámbito de clase. Pueden tener acceso a funciones miembro de clase solo mediante los operadores de selección de miembro (**.** o **->**) u operadores de puntero a miembro (**.\***  o **-> \***) en un objeto o un puntero a un objeto de esa clase; datos de miembro de clase no estáticos se consideran locales para el objeto de esa clase. Considere la siguiente declaración de clase:  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ Los nombres de C++ solo se pueden utilizar en determinadas áreas de un programa
 ## <a name="hiding-names"></a>Ocultar nombres  
  Puede ocultar un nombre declarándolo en un bloque delimitado. En la ilustración siguiente, `i` se declara dentro del bloque interno, ocultando de esta manera la variable asociada a `i` en el ámbito del bloque externo.  
   
- ![Bloque &#45; ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1")  
 Ámbito de bloque y ocultación de nombres  
   
  El resultado del programa que se muestra en la figura es:  

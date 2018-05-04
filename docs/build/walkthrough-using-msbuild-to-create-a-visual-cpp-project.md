@@ -1,13 +1,10 @@
 ---
 title: 'Tutorial: Usar MSBuild para crear un proyecto de Visual C++ | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Tutorial: Usar MSBuild para crear un proyecto de Visual C++
 Este tutorial muestra cómo utilizar [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] para compilar un proyecto de Visual C++ en un símbolo del sistema. Obtendrá información sobre cómo crear los archivos de origen de C++ y un archivo de proyecto basado en XML para una aplicación de consola de Visual C++. Después de compilar el proyecto, obtendrá información sobre cómo personalizar el proceso de compilación.  
@@ -191,7 +186,7 @@ Este tutorial muestra cómo utilizar [!INCLUDE[vstecmsbuild](../build/includes/v
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]crea un directorio para los archivos de salida y, a continuación, compila y vincula el proyecto para generar el programa Myproject.exe. Al finalizar el proceso de compilación, use el comando siguiente para ejecutar la aplicación:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] crea un directorio para los archivos de salida y, a continuación, compila y vincula el proyecto para generar el programa Myproject.exe. Al finalizar el proceso de compilación, use el comando siguiente para ejecutar la aplicación:  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  La aplicación debería mostrar "¡Hello, de MSBuild!" en la ventana de la consola.  
   
 ## <a name="customizing-your-project"></a>Personalizar el proyecto  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]le permite ejecutar destinos de compilación predefinidos, aplicar propiedades definidas por el usuario y usar herramientas personalizadas, eventos, y pasos de compilación. En esta sección se muestra las tareas siguientes:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] le permite ejecutar destinos de compilación predefinidos, aplicar propiedades definidas por el usuario y usar herramientas personalizadas, eventos, y pasos de compilación. En esta sección se muestra las tareas siguientes:  
   
 -   Usar [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] con destinos de compilación.  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>Agregar personalizaciones de MSBuild  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]proporciona varias maneras de personalizar el proceso de compilación. Los temas siguientes muestra cómo agregar pasos de compilación personalizada, herramientas y eventos a su [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] proyecto:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] proporciona varias maneras de personalizar el proceso de compilación. Los temas siguientes muestra cómo agregar pasos de compilación personalizada, herramientas y eventos a su [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] proyecto:  
   
 -   [Procedimiento para agregar un paso de compilación personalizado a proyectos de MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

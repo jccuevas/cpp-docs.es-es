@@ -1,27 +1,22 @@
 ---
 title: Objetos dispone de recursos (RAII) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e23cc81666086bc34352a351ead8006b6c859f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objects-own-resources-raii"></a>Recursos propios de los objetos (RAII)
 Asegúrese de que los recursos propios objetos. Este principio es también se denomina "resource acquisition is initialization" o "RAII."  

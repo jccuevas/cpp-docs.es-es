@@ -1,27 +1,22 @@
 ---
-title: "Cómo: diseño de seguridad de las excepciones | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: diseño de seguridad de las excepciones | Documentos de Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-design-for-exception-safety"></a>Cómo: Diseñar para la seguridad de las excepciones
 Una de las ventajas del mecanismo de excepciones es que la ejecución, así como los datos sobre la excepción, saltan directamente de la instrucción que produce la excepción a la primera instrucción catch que la controla. El controlador puede ser cualquier número de niveles en la pila de llamadas. Las funciones a las que se llama entre la instrucción try y la instrucción throw no se requieren para saber nada sobre la excepción que se produce.  Sin embargo, tienen que diseñarse de forma que puedan quedar fuera de ámbito “inesperadamente” en cualquier punto donde una excepción pudiera propagarse de arriba a abajo, y lo hagan sin dejar detrás objetos parcialmente creados, memoria perdida o estructuras de datos que están en estado inutilizable.  

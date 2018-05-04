@@ -2,12 +2,9 @@
 title: Referencia de DUMPBIN | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - dumpbin
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7fa9e9f559c79b4a0a99d2b444138ddb6bf56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dumpbin-reference"></a>Referencia de DUMPBIN
 El Microsoft COFF Binary File Dumper (DUMPBIN. (EXE) muestra información acerca de los archivos binarios de formato de archivo de objeto común (COFF). Puede utilizar DUMPBIN para examinar archivos objeto COFF, bibliotecas estándar de objetos COFF, archivos ejecutables y bibliotecas de vínculos dinámicos (DLL).  

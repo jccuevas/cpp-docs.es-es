@@ -1,12 +1,9 @@
 ---
-title: "Operador de subíndice: | Documentos de Microsoft"
-ms.custom: 
+title: 'Operador de subíndice: | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>Operador de subíndice:
 ## <a name="syntax"></a>Sintaxis  
@@ -53,7 +48,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  En el ejemplo anterior, la expresión `nArray[2]` es idéntica a `2[nArray]`. El motivo es que el resultado de una expresión de subíndice *e1 *** [** *e2* **]** viene dado por:  
   
- **\*( (** *e2* **)** *+* **(***e1***) )**  
+ **\*((** *e2* **)** *+* **(***e1***))**  
   
  La dirección producida por la expresión no es *e2* bytes a partir de la dirección *e1*. En su lugar, la dirección se ha ampliado para producir el siguiente objeto de la matriz *e2*. Por ejemplo:  
   
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, * expression1***[***expression2 ***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de la última expresión de subíndice se evalúa, a menos que el valor del puntero final apunta un tipo de matriz.  
+ Las expresiones de subíndice se asocian de izquierda a derecha. La expresión de subíndice más a la izquierda, * expression1 ***[*** expression2 ***]**, se evalúa primero. La dirección resultante de agregar *expression1* y *expression2* forma una expresión de puntero; entonces, se agrega *expression3* a esta expresión de puntero para formar una nueva expresión de puntero, y así sucesivamente, hasta que se haya agregado la última expresión de subíndice. El operador de direccionamiento indirecto (**\***) se aplica después de la última expresión de subíndice se evalúa, a menos que el valor del puntero final apunta un tipo de matriz.  
   
  Las expresiones con varios subíndices hacen referencia a elementos de matrices multidimensionales. Una matriz multidimensional es una matriz cuyos elementos son matrices. Por ejemplo, el primer elemento de una matriz tridimensional es una matriz con dos dimensiones. En el ejemplo siguiente se declara y se inicializa una matriz bidimensional de caracteres simple:  
   

@@ -2,28 +2,23 @@
 title: Crear su propia función auxiliar | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76172804cc271a740244d06e791db35d534c69e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6b8e397fecc8f14140cd7c86217421d5aa1a749
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-your-own-helper-function"></a>Crear una función auxiliar personalizada
 Desea proporcionar su propia versión de la rutina para realizar un procesamiento específico basado en los nombres de las DLL o las importaciones. Hay dos métodos para hacerlo: de codificación sus propias, basándose en el código proporcionado, es posible o simplemente enlazar la versión proporcionada mediante los enlaces de notificación detallados anteriormente.  

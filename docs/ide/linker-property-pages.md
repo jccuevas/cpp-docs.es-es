@@ -1,12 +1,12 @@
 ---
-title: "Páginas de propiedades vinculador | Documentos de Microsoft"
-ms.custom: 
+title: Páginas de propiedades vinculador | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>páginas de propiedades Vinculador
 
@@ -51,7 +51,7 @@ Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft
 
 ### <a name="per-user-redirection"></a>Redirección por usuario
 
-Registro en Visual Studio se ha realizado tradicionalmente en HKEY_CLASSES_ROOT (HKCR). Con [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]para tener acceso a HKCR se debe ejecutar Visual Studio en modo elevado. Los desarrolladores no siempre desean trabajar en modo elevado, pero aun así deben trabajar con el registro. La redirección por usuario le permite registrar sin tener que trabajar en este modo.
+Registro en Visual Studio se ha realizado tradicionalmente en HKEY_CLASSES_ROOT (HKCR). Con Windows Vista y sistemas operativos posteriores, para tener acceso a HKCR debe ejecutar Visual Studio en modo elevado. Los desarrolladores no siempre desean trabajar en modo elevado, pero aun así deben trabajar con el registro. La redirección por usuario le permite registrar sin tener que trabajar en este modo.
 
 Redirección por usuario fuerza las escrituras en HKCR se redirija a HKEY\_actual\_usuario (HKCU). Si se desactiva la redirección por usuario, es posible que [Project Build Error PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) cuando el programa intenta escribir en HKCR.
 

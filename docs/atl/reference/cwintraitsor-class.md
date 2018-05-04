@@ -2,11 +2,8 @@
 title: Clase CWinTraitsOR | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraitsor-class"></a>Clase CWinTraitsOR
 Esta clase proporciona un método para estandarizar los estilos utilizados al crear un objeto de ventana.  
@@ -72,7 +67,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
  Llame a esta función para recuperar una combinación (mediante el operador lógico OR) de los estilos estándar de la `CWinTraits` objeto y los estilos predeterminados especificados por `t_dwStyle`.  
   
 ```
@@ -86,7 +81,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>Valor devuelto  
  Una combinación de estilos que se pasan en `dwStyle` y el valor predeterminado que los especificados por `t_dwStyle`, mediante el operador lógico OR.  
   
-##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
  Llame a esta función para recuperar una combinación (mediante el operador lógico OR) de los estilos extendidos de la `CWinTraits` objeto y los estilos predeterminados especificados por `t_dwStyle`.  
   
 ```

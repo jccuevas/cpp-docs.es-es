@@ -1,12 +1,9 @@
 ---
-title: "Funciones globales de notificación de errores y depuración | Documentos de Microsoft"
-ms.custom: 
+title: Funciones globales de notificación de errores y depuración | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb3257b5205587b27a83671ed8e610aad5373eef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funciones globales de notificación de errores y depuración
 Estas funciones proporcionan funciones de seguimiento y depuración útiles.  
@@ -40,7 +35,7 @@ Estas funciones proporcionan funciones de seguimiento y depuración útiles.
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Produce una excepción `CAtlException`.|  
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Llame a esta función para notificar un error en función del resultado de la función de Windows `GetLastError`.|  
   
-##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError  
+##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError  
  Devuelve el último valor de código de error del subproceso que realiza la llamada con el formato HRESULT.  
   
 ```
@@ -48,12 +43,12 @@ HRESULT AtlHresultFromLastError();
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `AtlHresultFromLastError`llamadas `GetLastError` para obtener el último error y devuelve el error después de convertir en un valor HRESULT con el **HRESULT_FROM_WIN32** macro.  
+ `AtlHresultFromLastError` llamadas `GetLastError` para obtener el último error y devuelve el error después de convertir en un valor HRESULT con el **HRESULT_FROM_WIN32** macro.  
 
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
 
-##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32  
+##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32  
  Convierte un código de error Win32 en un valor HRESULT.  
   
 ```
@@ -73,7 +68,7 @@ AtlHresultFromWin32(DWORD error);
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
 
-##  <a name="atlreporterror"></a>AtlReportError  
+##  <a name="atlreporterror"></a>  AtlReportError  
  Configura el `IErrorInfo` interfaz para proporcionar información de error a los clientes del objeto.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT WINAPI AtlReportError(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
     
-##  <a name="atlthrow"></a>AtlThrow  
+##  <a name="atlthrow"></a>  AtlThrow  
  Llame a esta función para notificar un error en función de un código de estado `HRESULT`.  
   
 ```
@@ -194,7 +189,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atldef.h  
 
-##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32  
+##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32  
  Llame a esta función para notificar un error en función del resultado de la función de Windows `GetLastError`.  
   
 ```

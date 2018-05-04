@@ -1,27 +1,22 @@
 ---
 title: Definiciones de estructura y constantes | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c39809c89b350f9c8754f05687363ecac6271c5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-constant-definitions"></a>Definiciones de estructura y de constante
 La rutina auxiliar predeterminada utiliza varias estructuras para comunicarse con las funciones de enlace y durante las excepciones. Estos son los valores de notificación y de error, las estructuras de información y el tipo de puntero a función de enlace que se pasa a los enlaces:  

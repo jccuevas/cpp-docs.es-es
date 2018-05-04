@@ -2,11 +2,8 @@
 title: Declaraciones de clase anidada | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-class-declarations"></a>Declaraciones de clase anidadas
 Una clase puede declararse dentro del ámbito de otra clase. Esta clase se denomina una “clase anidada”. Las clases anidadas se consideran dentro del ámbito de la clase envolvente y están disponibles para su uso dentro de ese ámbito. Para hacer referencia a una clase anidada de un ámbito distinto al ámbito de inclusión inmediato, debe utilizar un nombre completo.  

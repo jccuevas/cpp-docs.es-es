@@ -1,27 +1,22 @@
 ---
-title: "/APPCONTAINER (aplicación de la tienda UWP/Microsoft) | Documentos de Microsoft"
-ms.custom: 
+title: /APPCONTAINER (aplicación de la tienda UWP/Microsoft) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8ca1a3ed5adaada689d374eeb3e67bae6c989e0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (aplicación de la tienda de Microsoft)
 Especifica si el vinculador crea una imagen ejecutable que se debe ejecutar en un contenedor de la aplicación.  

@@ -2,26 +2,21 @@
 title: Sistema de tipos de C++ (C++ moderno) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 El concepto de *tipo* es muy importante en C++. Cada variable, argumento de función y valor devuelto por una función debe tener un tipo para compilarse. Asimismo, antes de evaluar cada una de las expresiones (incluidos los valores literales), el compilador da implícitamente un tipo a estas expresiones. Algunos ejemplos de tipos `int` que almacena valores integrales, `double` para almacenar valores de punto flotante (también conocido como *escalares* tipos de datos), o la clase de biblioteca estándar [std:: basic_string](../standard-library/basic-string-class.md) para almacenar el texto. Puede crear su propio tipo definiendo un objeto `class` o `struct`. El tipo especifica la cantidad de memoria que se asignará para la variable (o el resultado de la expresión), las clases de valores que se pueden almacenar en esa variable, cómo se interpretan estos valores (como patrones de bits) y las operaciones que se pueden realizar en ella. Este artículo contiene información general sobre las principales características del sistema de tipos de C++.  

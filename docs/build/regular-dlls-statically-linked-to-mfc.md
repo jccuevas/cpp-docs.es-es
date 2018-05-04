@@ -1,13 +1,10 @@
 ---
-title: "Archivos DLL MFC regular vinculadas estáticamente a MFC | Documentos de Microsoft"
-ms.custom: 
+title: Archivos DLL MFC regular vinculadas estáticamente a MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: c48fdfb0b10541c1643ec49038e29cfa60c633d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Archivos DLL MFC regular vinculadas estáticamente a MFC
 Normal que MFC DLL vinculado estáticamente a MFC es un archivo DLL que utiliza MFC internamente y las funciones exportadas en el archivo DLL pueden llamarse desde archivos ejecutables MFC o no MFC. Como se describe en el nombre, este tipo de archivo DLL se compila con la versión de biblioteca de vínculos estáticos de MFC. Las funciones se suelen exportar desde DLL de MFC mediante la interfaz estándar de C normal. Para obtener un ejemplo de cómo escribir, crear y usar una DLL normales de MFC, vea el ejemplo [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

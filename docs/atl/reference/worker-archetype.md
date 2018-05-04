@@ -1,29 +1,24 @@
 ---
 title: Trabajo Arquetipo | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>Arquetipo de trabajo
 Las clases que se ajustan a la *trabajo* Arquetipo proporcionar el código para procesar elementos de trabajo en cola en un grupo de subprocesos.  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  Un puntero a la [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estructura que se utiliza para crear la cola en qué trabajo se pusieron en cola los elementos.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 Se llama para inicializar el objeto de trabajo antes de que las solicitudes se pasan a `WorkerArchetype::Execute`.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devolver **TRUE** se ejecuta correctamente, **FALSE** en caso de error.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 Una definición de tipo para el tipo de elemento de trabajo que puede ser procesado por la clase de trabajo.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>Comentarios  
  Este tipo debe usarse como el primer parámetro de `WorkerArchetype::Execute` y debe ser capaz de que se va a convertir a y desde un ULONG_PTR.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 Llamado para cancelar la inicialización del objeto de trabajo después de que se han pasado todas las solicitudes al `WorkerArchetype::Execute`).  
     
 ``` 

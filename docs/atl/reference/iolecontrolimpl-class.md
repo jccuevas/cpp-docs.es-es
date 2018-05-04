@@ -1,12 +1,9 @@
 ---
 title: Clase IOleControlImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iolecontrolimpl-class"></a>Clase IOleControlImpl
 Esta clase proporciona una implementación predeterminada de la **IOleControl** interfaz e implementa **IUnknown**.  
@@ -73,7 +68,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlctl.h  
   
-##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
  En la implementación de ATL, `FreezeEvents` incrementa la clase de control `m_nFreezeEvents` miembro de datos si `bFreeze` es **TRUE**y disminuye `m_nFreezeEvents` si `bFreeze` es **FALSE**.  
   
 ```
@@ -81,11 +76,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- `FreezeEvents`a continuación, devuelve `S_OK`.  
+ `FreezeEvents` a continuación, devuelve `S_OK`.  
   
  Vea [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) en el SDK de Windows.  
   
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Escribe información acerca del comportamiento de teclado del control.  
   
 ```
@@ -98,7 +93,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve **E_NOTIMPL**.  
   
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  Informa a un control que ha cambiado una o varias de las propiedades de ambiente del contenedor.  
   
 ```
@@ -111,7 +106,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>Comentarios  
  Vea [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) en el SDK de Windows.  
   
-##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Informa al control que un usuario ha presionado una pulsación de tecla especificado.  
   
 ```

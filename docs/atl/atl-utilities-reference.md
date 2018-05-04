@@ -1,27 +1,22 @@
 ---
 title: Referencia de utilidades ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>Referencia de utilidades de ATL
 ATL proporciona código para manipular las rutas de acceso y las direcciones URL en forma de [CPathT](../atl/reference/cpatht-class.md) y [CUrl](../atl/reference/curl-class.md). Un grupo de subprocesos, [CThreadPool](../atl/reference/cthreadpool-class.md), puede utilizar en las aplicaciones. Este código se puede encontrar en atlpath.h y atlutil.h.  

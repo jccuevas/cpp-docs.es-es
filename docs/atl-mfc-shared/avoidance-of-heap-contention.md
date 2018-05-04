@@ -1,29 +1,24 @@
 ---
-title: "Prevención de contención del montón | Documentos de Microsoft"
-ms.custom: 
+title: Prevención de contención del montón | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>Prevención de contención del montón
 Los administradores de cadena predeterminada proporcionados por MFC y ATL son contenedores sencillos sobre un montón global. Este montón global es totalmente seguro para subprocesos, lo que significa que varios subprocesos pueden asignar y liberar memoria en él simultáneamente sin dañar el montón. Con el fin de proporcionar seguridad para subprocesos, el montón tiene que serializar el acceso a sí mismo. Esto se realiza normalmente con una sección crítica o un mecanismo de bloqueo similar. Cuando dos subprocesos intentan obtener acceso al montón simultáneamente, un subproceso se bloquea hasta que finalice la solicitud del otro subproceso. Para muchas aplicaciones, esta situación se produce raramente y el impacto en el rendimiento del mecanismo de bloqueo del montón es insignificante. Sin embargo, para las aplicaciones que tienen acceso con frecuencia el montón desde varios subprocesos contención de bloqueo del montón puede hacer que la aplicación se ejecute más despacio que si se tratara de un único subproceso (incluso en equipos con varias CPU).  

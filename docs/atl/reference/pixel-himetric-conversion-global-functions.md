@@ -1,12 +1,9 @@
 ---
-title: "Funciones globales de conversión de píxel HIMETRIC | Documentos de Microsoft"
-ms.custom: 
+title: Funciones globales de conversión de píxel HIMETRIC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d670d667345c233fc499cda42194dfafa185dfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funciones globales de conversión de píxel/HIMETRIC
 Estas funciones proporcionan compatibilidad para la conversión entre píxeles y unidades HIMETRIC.  
@@ -37,7 +32,7 @@ Estas funciones proporcionan compatibilidad para la conversión entre píxeles y
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|Convierte unidades HIMETRIC (cada unidad es de 0,01 milímetros) en píxeles.|  
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|Convierte los píxeles en unidades HIMETRIC (cada unidad es de 0,01 milímetros).|  
   
-##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
+##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  Convierte un tamaño de objeto en unidades HIMETRIC (cada unidad es de 0,01 milímetros) a un tamaño en píxeles del dispositivo de pantalla.  
   
  
@@ -60,7 +55,7 @@ extern void AtlHiMetricToPixel(
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** atlwin.h  
   
-##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
+##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
  Convierte un tamaño de objeto especificado en píxeles en el dispositivo de pantalla en un tamaño especificado en unidades HIMETRIC (cada unidad es de 0,01 milímetros).  
   
 ```

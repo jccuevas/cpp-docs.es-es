@@ -2,11 +2,8 @@
 title: Macros de asignación de propiedad | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Macros de asignación de propiedad
 Estas macros definen asignaciones de propiedad y las entradas.  
@@ -47,7 +42,7 @@ Estas macros definen asignaciones de propiedad y las entradas.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Marca el principio de asignación de propiedad del objeto.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  Cuando se crea un objeto con el Asistente para proyectos ATL, el asistente creará una asignación de propiedad vacío especificando `BEGIN_PROP_MAP` seguido [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`No guardar la extensión (es decir, las dimensiones) de una asignación de propiedad, porque un objeto con una asignación de propiedad no puede tener una interfaz de usuario, por lo que no habría ninguna extensión. Si el objeto es un control ActiveX con una interfaz de usuario, tiene una extensión. En este caso, debe especificar [PROP_DATA_ENTRY](#prop_data_entry) en la asignación de propiedad para proporcionar la extensión.  
+ `BEGIN_PROP_MAP` No guardar la extensión (es decir, las dimensiones) de una asignación de propiedad, porque un objeto con una asignación de propiedad no puede tener una interfaz de usuario, por lo que no habría ninguna extensión. Si el objeto es un control ActiveX con una interfaz de usuario, tiene una extensión. En este caso, debe especificar [PROP_DATA_ENTRY](#prop_data_entry) en la asignación de propiedad para proporcionar la extensión.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Indica la extensión o dimensiones, de un control ActiveX.  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Utilice esta macro para escribir una descripción, la propiedad DISPID y la propiedad página de propiedades CLSID en asignación de propiedad del objeto.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
  Similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero le permite especificar un IID determinado si el objeto admite varias interfaces duales.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Use esta macro para especificar una página de propiedades CLSID en asignación de propiedad del objeto.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] El CLSID de una página de propiedades.  
   
 ### <a name="remarks"></a>Comentarios  
- `PROP_PAGE`es similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero no requiere una descripción de la propiedad o el DISPID.  
+ `PROP_PAGE` es similar a [PROP_ENTRY_TYPE](#prop_entry_type), pero no requiere una descripción de la propiedad o el DISPID.  
   
 > [!NOTE]
 >  Si ya ha escrito un CLSID con `PROP_ENTRY_TYPE` o [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), no es necesario realizar una entrada adicional con `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Marca el final de la asignación de propiedad del objeto.  
   
 ```

@@ -1,27 +1,22 @@
 ---
-title: "Uniforme de inicialización y constructores que delegan | Documentos de Microsoft"
-ms.custom: 
+title: Uniforme de inicialización y constructores que delegan | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d8f9724ba7f26ac9df9b81c1e4c3f6213f76a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialización uniforme y constructores de delegación
 En C++ moderno, puede usar *la inicialización de llave* para cualquier tipo, sin el signo igual. Además, se puede utilizar la delegación de constructores para simplificar el código cuando hay varios constructores que realizan un trabajo similar.  

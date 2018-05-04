@@ -1,13 +1,10 @@
 ---
-title: "-ENTRADA (símbolo de punto de entrada) | Documentos de Microsoft"
-ms.custom: 
+title: -ENTRADA (símbolo de punto de entrada) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Símbolo de punto de entrada)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |Nombre de la función|Valor predeterminado de|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (o **wmainCRTStartup**)|Una aplicación que utiliza /SUBSYSTEM:CONSOLE; llamadas `main` (o `wmain`)|  
-|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Una aplicación que use/SUBSYSTEM:**WINDOWS**; llamadas `WinMain` (o `wWinMain`), que se debe definir para usar`__stdcall`|  
-|**_DllMainCRTStartup**|UN ARCHIVO DLL; llamadas `DllMain` si existe, que se debe definir para usar`__stdcall`|  
+|**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Una aplicación que use/SUBSYSTEM:**WINDOWS**; llamadas `WinMain` (o `wWinMain`), que se debe definir para usar `__stdcall`|  
+|**_DllMainCRTStartup**|UN ARCHIVO DLL; llamadas `DllMain` si existe, que se debe definir para usar `__stdcall`|  
   
  Si el [/DLL](../../build/reference/dll-build-a-dll.md) o [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) no se especifica la opción, el vinculador seleccionará un subsistema y punto de entrada dependiendo de si `main` o `WinMain` está definido.  
   

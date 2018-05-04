@@ -2,28 +2,23 @@
 title: Cómo compila BSCMAKE un. Archivo BSC | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cdc8a2840e3beb1272b33b2794f70a979684f46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Cómo compila BSCMAKE un archivo .Bsc
 BSCMAKE genera o vuelve a generar un archivo .bsc de la manera más eficaz que puede. Para evitar posibles problemas, es importante comprender el proceso de compilación.  

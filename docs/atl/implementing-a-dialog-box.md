@@ -1,13 +1,10 @@
 ---
-title: "Implementar un cuadro de diálogo | Documentos de Microsoft"
-ms.custom: 
+title: Implementar un cuadro de diálogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Implementar un cuadro de diálogo
 Hay dos maneras de agregar un cuadro de diálogo al proyecto ATL: utilizar el Asistente de cuadro de diálogo ATL o agregarlo manualmente.  
@@ -45,7 +40,7 @@ Hay dos maneras de agregar un cuadro de diálogo al proyecto ATL: utilizar el As
 > [!NOTE]
 >  Cuando se crea un cuadro de diálogo mediante el Asistente de cuadro de diálogo ATL, el asistente agrega automáticamente el `IDD` miembro como un `enum` tipo.  
   
- `CDialogImpl`le permite implementar modal o un cuadro de diálogo no modal que hospeda controles de Windows. `CAxDialogImpl`le permite implementar modal o un cuadro de diálogo no modal que hospeda los controles ActiveX y de Windows.  
+ `CDialogImpl` le permite implementar modal o un cuadro de diálogo no modal que hospeda controles de Windows. `CAxDialogImpl` le permite implementar modal o un cuadro de diálogo no modal que hospeda los controles ActiveX y de Windows.  
   
  Para crear un cuadro de diálogo modal, cree una instancia de su `CDialogImpl`-deriva (o `CAxDialogImpl`-derivado) clase y, a continuación, llame a la [DoModal](../atl/reference/cdialogimpl-class.md#domodal) método. Para cerrar el cuadro de diálogo modal, llame a la [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) método desde un controlador de mensajes. Para crear un cuadro de diálogo no modal, llame a la [crear](../atl/reference/cdialogimpl-class.md#create) en lugar del método `DoModal`. Para destruir un cuadro de diálogo no modal, llame a [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

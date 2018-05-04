@@ -1,27 +1,22 @@
 ---
 title: Algoritmos (C++ moderno) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d89f6b5116459018cb50eb58b976f6f853ed088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="algorithms-modern-c"></a>Algoritmos (C++ moderno)
 Para la programación de C++ moderno, recomendamos que use los algoritmos en el [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md). Estos son algunos ejemplos importantes:  

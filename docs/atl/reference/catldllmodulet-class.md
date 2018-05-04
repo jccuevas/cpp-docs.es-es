@@ -1,12 +1,9 @@
 ---
 title: Clase CAtlDllModuleT | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlDllModuleT
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 650924898532e352df30d7e8173620b974f30138
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b1ea8b5922454d32961f0e7d87eda16f55fe52c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catldllmodulet-class"></a>Clase CAtlDllModuleT
 Esta clase representa el módulo para un archivo DLL.  
@@ -70,7 +65,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |[CAtlDllModuleT::GetClassObject](#getclassobject)|Devuelve un generador de clases. Invocado por [DllGetClassObject](#dllgetclassobject).|  
   
 ## <a name="remarks"></a>Comentarios  
- `CAtlDllModuleT`representa el módulo de una biblioteca de vínculos dinámicos (DLL) y proporciona funciones que se usan en todos los proyectos DLL. Esta especialización de [CAtlModuleT](../../atl/reference/catlmodulet-class.md) clase incluye compatibilidad para el registro.  
+ `CAtlDllModuleT` representa el módulo de una biblioteca de vínculos dinámicos (DLL) y proporciona funciones que se usan en todos los proyectos DLL. Esta especialización de [CAtlModuleT](../../atl/reference/catlmodulet-class.md) clase incluye compatibilidad para el registro.  
   
  Para obtener más información sobre los módulos de ATL, vea [clases de módulo ATL](../../atl/atl-module-classes.md).  
   
@@ -86,21 +81,21 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
+##  <a name="catldllmodulet"></a>  CAtlDllModuleT::CAtlDllModuleT  
  El constructor.  
   
 ```
 CAtlDllModuleT() throw();
 ```  
   
-##  <a name="dtor"></a>CAtlDllModuleT:: ~ CAtlDllModuleT  
+##  <a name="dtor"></a>  CAtlDllModuleT:: ~ CAtlDllModuleT  
  Destructor.  
   
 ```
 ~CAtlDllModuleT() throw();
 ```  
   
-##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
+##  <a name="dllcanunloadnow"></a>  CAtlDllModuleT::DllCanUnloadNow  
  Comprueba si se puede descargar el archivo DLL.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT DllCanUnloadNow() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se puede descargar el archivo DLL o S_FALSE si no es posible.  
   
-##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
+##  <a name="dllgetclassobject"></a>  CAtlDllModuleT::DllGetClassObject  
  Devuelve el generador de clases.  
   
 ```
@@ -133,7 +128,7 @@ HRESULT DllGetClassObject(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
+##  <a name="dllmain"></a>  CAtlDllModuleT::DllMain  
  El punto de entrada opcional en una biblioteca de vínculos dinámicos (DLL).  
   
 ```
@@ -153,7 +148,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="remarks"></a>Comentarios  
  Deshabilitar el DLL_THREAD_ATTACH y DLL_THREAD_DETACH notificación llamadas pueden ser una optimización útil para aplicaciones multiproceso que tiene muchos archivos DLL, que crear y eliminar subprocesos con frecuencia y cuyo archivos DLL no necesita estas notificaciones de nivel de subproceso de datos adjuntos/desasociación.  
   
-##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
+##  <a name="dllregisterserver"></a>  CAtlDllModuleT::DllRegisterServer  
  Agrega entradas al registro del sistema para los objetos en el archivo DLL.  
   
 ```
@@ -167,7 +162,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
+##  <a name="dllunregisterserver"></a>  CAtlDllModuleT::DllUnregisterServer  
  Quita las entradas del registro del sistema para los objetos en el archivo DLL.  
   
 ```
@@ -181,7 +176,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
+##  <a name="getclassobject"></a>  CAtlDllModuleT::GetClassObject  
  Crea un objeto del CLSID especificado.  
   
 ```

@@ -2,11 +2,8 @@
 title: Juegos de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - Character sets
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b1046ea7588a6cc5eb3274473f4e4bee9daccd
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-sets"></a>Juegos de caracteres
 El texto de un programa de C++ se almacena en archivos de código fuente que usan una codificación de caracteres determinada. El estándar de C++ especifica un juego básico de caracteres de código fuente para los archivos de código fuente y un juego básico de caracteres de ejecución para los archivos compilados. Visual C++ permite usar un juego adicional de caracteres específicos de la configuración regional en los archivos de código fuente y los archivos compilados.  

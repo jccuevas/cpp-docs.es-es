@@ -2,12 +2,9 @@
 title: -OPT (optimizaciones) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimizaciones)
 Controla las optimizaciones que efectúa LINK durante una compilación.  
@@ -63,7 +58,7 @@ Controla las optimizaciones que efectúa LINK durante una compilación.
   
  Especificar **/OPT: ICF** no habilita la **/OPT: ref** opción.  
   
- **FIREWALL DE WINDOWS [=** `iterations` **] &AMP;#124; NOICF**   
+ **FIREWALL DE WINDOWS [=** `iterations` **] &AMP;#124; NOICF**  
  Use **/OPT: ICF [=**`iterations`**]** para realizar un plegamiento idéntico de COMDAT. Las funciones COMDAT redundantes se pueden quitar de la salida del vinculador. El parámetro opcional `iterations` especifica el número de veces que se recorren los símbolos en busca de duplicados. El número predeterminado de iteraciones es dos. En iteraciones adicionales es posible localizar más duplicados que no se han cubierto mediante el plegamiento de las iteraciones anteriores.  
   
  El vinculador se comporta de manera diferente cuando **/OPT: ref** se especifica, y **ICF** está en vigor de forma predeterminada, que cuando **/OPT: REF, ICF** se especifica explícitamente. La forma de **ICF** que está habilitado con **/OPT: ref** por sí solo no dobla datos de solo lectura: Esto incluye .rdata, .pdata y .xdata. Por tanto, aparecen menos funciones plegadas cuando las imágenes se generan para [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ya que las funciones de estos módulos son más dependientes de los datos de solo lectura, como .pdata y .xdata. Para obtener completa **ICF** plegamiento de comportamiento, especifique explícitamente **/OPT: ICF**.  

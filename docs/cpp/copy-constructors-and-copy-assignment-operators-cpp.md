@@ -1,12 +1,9 @@
 ---
-title: "Constructores de copia y operadores de asignación de copia (C++) | Documentos de Microsoft"
-ms.custom: 
+title: Constructores de copia y operadores de asignación de copia (C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructores de copia y operadores de asignación de copia (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  Si no declara un constructor de copias, el compilador genera uno automáticamente miembro a miembro.  Si no declara una asignación de copia, el compilador genera una automáticamente miembro a miembro. Declarar un constructor de copias no suprime el operador de asignación de copias generado por el compilador, ni viceversa. Si se implementa cualquiera de ellos, es recomendable implementar también el otro de modo que el significado del código esté claro.  
    
- El constructor de copias toma un argumento de tipo *nombre de la clase***&**, donde *nombre de la clase* es el nombre de la clase para el que se define el constructor. Por ejemplo:  
+ El constructor de copias toma un argumento de tipo * clase-name ***&**, donde *nombre de la clase* es el nombre de la clase para el que se define el constructor. Por ejemplo:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Hacer que el tipo de argumento del constructor de copias *nombre de clase const*  **&**  siempre que sea posible. Esto evita que el constructor de copias modifique accidentalmente el objeto del que se está copiando. También permite copiar de **const** objetos.  
+>  Hacer que el tipo de argumento del constructor de copias *clase const-nombre *** &** siempre que sea posible. Esto evita que el constructor de copias modifique accidentalmente el objeto del que se está copiando. También permite copiar de **const** objetos.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Constructores de copias generados por el compilador  
- Constructores de copias generado por el compilador, como los constructores de copias definido por el usuario, tienen un único argumento de tipo "hacen referencia a *nombre de la clase*." Una excepción es cuando todas las clases base y miembro tienen constructores de copias declarados como tomando un único argumento de tipo **const** *nombre de la clase***&**. En tal caso, el argumento del constructor de copias generados por el compilador también es **const**.  
+ Constructores de copias generado por el compilador, como los constructores de copias definido por el usuario, tienen un único argumento de tipo "hacen referencia a *nombre de la clase*." Una excepción es cuando todas las clases base y miembro tienen constructores de copias declarados como tomando un único argumento de tipo **const** * clase-name ***&**. En tal caso, el argumento del constructor de copias generados por el compilador también es **const**.  
   
  Cuando el tipo de argumento al constructor de copias no es **const**, inicialización copiando un **const** objeto genera un error. Lo contrario no es cierto: si el argumento es **const**, puede inicializar copiando un objeto que no sea **const**.  
   
- Operadores de asignación generados por el compilador siguen el mismo patrón con respecto a **const.** Toman un único argumento de tipo *nombre de la clase*  **&**  a menos que los operadores de asignación de todas las clases base y miembro tomen argumentos de tipo **const** *nombre de la clase &.* En este caso, la clase generado de toma de operador de asignación un **const** argumento.  
+ Operadores de asignación generados por el compilador siguen el mismo patrón con respecto a **const.** Toman un único argumento de tipo *clase-nombre *** &**, a menos que los operadores de asignación de todas las clases base y miembro tomen argumentos de tipo **const** *nombre de la clase &.* En este caso, la clase generado de toma de operador de asignación un **const** argumento.  
   
 > [!NOTE]
 >  Cuando los constructores de copias, generados por el compilador o definidos por el usuario, inicializan las clases base virtuales, estas se inicializan solo una vez: en el momento en que se construyen.  

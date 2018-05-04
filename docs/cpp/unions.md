@@ -1,12 +1,9 @@
 ---
 title: Uniones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - union_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unions"></a>Uniones
 `union` es un tipo definido por el usuario en el que todos los miembros comparten la misma ubicación de memoria. Esto significa que, en un momento dado, una unión no puede contener más de un objeto de su lista de miembros. También significa que, independientemente de cuántos miembros tiene una unión, en todo momento usa únicamente la memoria suficiente para almacenar al miembro más grande.  
@@ -645,7 +640,7 @@ int main()
  ![Almacenamiento de datos en una unión de tipo numérico](../cpp/media/vc38ul1.png "vc38UL1")  
 Almacenamiento de datos en unión de tipo numérico  
   
-## <a name="anonymous_unions"></a>Uniones anónimas  
+## <a name="anonymous_unions"></a> Uniones anónimas  
  Uniones anónimas son uniones declaradas sin un *nombre de la clase* o *lista de declaradores*.  
   
 ```cpp  

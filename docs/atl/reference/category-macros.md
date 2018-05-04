@@ -2,11 +2,8 @@
 title: Macros de categoría | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -34,17 +31,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1eba97ef5253041752d4b8abfcd6ea7300b8492
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="category-macros"></a>Macros de categoría
 Estas macros definen asignaciones de categoría.  
@@ -59,7 +54,7 @@ Estas macros definen asignaciones de categoría.
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP  
  Marca el principio de la asignación de categoría.  
   
 ```
@@ -85,7 +80,7 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>  END_CATEGORY_MAP  
  Marca el final de la asignación de categoría.  
   
 ```
@@ -95,7 +90,7 @@ END_CATEGORY_MAP()
 ### <a name="example"></a>Ejemplo  
  Vea el ejemplo de [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY  
  Agregar un `IMPLEMENTED_CATEGORY` macro para el componente [mapa de categoría de](#begin_category_map) para especificar que se debe registrar como implementación de la categoría identificada por la `catID` parámetro.  
   
 ```
@@ -128,7 +123,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>  REQUIRED_CATEGORY  
  Agregar un `REQUIRED_CATEGORY` macro para el componente [mapa de categoría de](#begin_category_map) para especificar que se debe registrar que requieran la categoría identificada por la `catID` parámetro.  
   
 ```

@@ -1,12 +1,9 @@
 ---
 title: Clase CAtlComModule | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlComModule
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47e85f3aab75f8fafb76977847ce36d37808af60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlcommodule-class"></a>Clase CAtlComModule
 Esta clase implementa un módulo de servidor COM.  
@@ -61,7 +56,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Llame a este método para anular el registro de una biblioteca de tipos.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CAtlComModule`implementa un módulo de servidor COM, lo que permite un cliente tener acceso a los componentes del módulo.  
+ `CAtlComModule` implementa un módulo de servidor COM, lo que permite un cliente tener acceso a los componentes del módulo.  
   
  Esta clase reemplaza el atributo obsolete [CComModule](../../atl/reference/ccommodule-class.md) clase usada en versiones anteriores de ATL. Vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.  
   
@@ -73,7 +68,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>  CAtlComModule::CAtlComModule  
  El constructor.  
   
 ```
@@ -83,7 +78,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Comentarios  
  Inicializa el módulo.  
   
-##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule  
  Destructor.  
   
 ```
@@ -93,7 +88,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los generadores de clases.  
   
-##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>  CAtlComModule::RegisterServer  
  Llamar a este método para actualizar el registro del sistema para cada objeto del mapa de objetos.  
   
 ```
@@ -113,7 +108,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>Comentarios  
  Llama a la función global [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver).  
   
-##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CAtlComModule::RegisterTypeLib  
  Llamar a este método para registrar una biblioteca de tipos.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>Comentarios  
  Agrega información sobre una biblioteca de tipos para el registro del sistema. Si la instancia del módulo que contiene varias bibliotecas de tipos, utilice la primera versión de este método para especificar qué biblioteca de tipos se debe usar.  
   
-##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlComModule::UnregisterServer  
  Llame a este método para anular el registro de cada objeto del mapa de objetos.  
   
 ```
@@ -153,7 +148,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>Comentarios  
  Llama a la función global [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).  
   
-##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>  CAtlComModule::UnRegisterTypeLib  
  Llame a este método para anular el registro de una biblioteca de tipos.  
   
 ```

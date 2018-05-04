@@ -1,12 +1,9 @@
 ---
-title: "Fecha y hora: compatibilidad con automatización | Documentos de Microsoft"
-ms.custom: 
+title: 'Fecha y hora: compatibilidad con automatización | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - calculations, date and time
 - time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a40a8fe49d9564714c328b657bc0d85d52ad84b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 915bcd5487f423b6240061a0e85f5554a3224397
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-automation-support"></a>Fecha y hora: compatibilidad con automatización
 En este artículo se describe cómo aprovechar las ventajas de los servicios de biblioteca de clase relacionados con la administración de fecha y hora. Los procedimientos descritos incluyen:  
@@ -46,19 +41,19 @@ En este artículo se describe cómo aprovechar las ventajas de los servicios de 
   
  El [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) clase proporciona una manera de representar la información de fecha y hora. Proporciona una mayor granularidad y un intervalo mayor que el [CTime](../atl-mfc-shared/reference/ctime-class.md) clase. El [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) clase representa el tiempo transcurrido, como la diferencia entre dos `COleDateTime` objetos.  
   
- El `COleDateTime` y `COleDateTimeSpan` clases están diseñadas para usarse con la `COleVariant` clase usada en la automatización. `COleDateTime`y `COleDateTimeSpan` también son útiles en la programación de la base de datos MFC, pero pueden usarse siempre que lo desee para manipular valores de fecha y hora. Aunque la `COleDateTime` clase tiene un mayor intervalo de valores y granularidad más fina que la `CTime` (clase), requiere más espacio de almacenamiento por cada objeto que `CTime`. Hay también algunas consideraciones especiales cuando se trabaja con subyacente **fecha** tipo. Vea [el tipo de fecha](../atl-mfc-shared/date-type.md) para obtener más detalles sobre la implementación de **fecha**.  
+ El `COleDateTime` y `COleDateTimeSpan` clases están diseñadas para usarse con la `COleVariant` clase usada en la automatización. `COleDateTime` y `COleDateTimeSpan` también son útiles en la programación de la base de datos MFC, pero pueden usarse siempre que lo desee para manipular valores de fecha y hora. Aunque la `COleDateTime` clase tiene un mayor intervalo de valores y granularidad más fina que la `CTime` (clase), requiere más espacio de almacenamiento por cada objeto que `CTime`. Hay también algunas consideraciones especiales cuando se trabaja con subyacente **fecha** tipo. Vea [el tipo de fecha](../atl-mfc-shared/date-type.md) para obtener más detalles sobre la implementación de **fecha**.  
   
- `COleDateTime`objetos se pueden usar para representar fechas comprendidas entre el 1 de enero de 100 y el 31 de diciembre de 9999. `COleDateTime`los objetos son flotantes valores de punto, con una resolución aproximada de 1 milisegundo. `COleDateTime`se basa en el **fecha** tipo de datos, definido en la documentación de MFC bajo [COleDateTime:: operador DATE](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). La implementación real de **fecha** se extiende más allá de estos límites. El `COleDateTime` implementación impone estos límites para facilitar el trabajo con la clase.  
+ `COleDateTime` objetos se pueden usar para representar fechas comprendidas entre el 1 de enero de 100 y el 31 de diciembre de 9999. `COleDateTime` los objetos son flotantes valores de punto, con una resolución aproximada de 1 milisegundo. `COleDateTime` se basa en el **fecha** tipo de datos, definido en la documentación de MFC bajo [COleDateTime:: operador DATE](../atl-mfc-shared/reference/coledatetime-class.md#operator_date). La implementación real de **fecha** se extiende más allá de estos límites. El `COleDateTime` implementación impone estos límites para facilitar el trabajo con la clase.  
   
- `COleDateTime`no admite fechas del calendario juliano. Se supone que el calendario gregoriano para extender en el tiempo para el 1 de enero de 100.  
+ `COleDateTime` no admite fechas del calendario juliano. Se supone que el calendario gregoriano para extender en el tiempo para el 1 de enero de 100.  
   
- `COleDateTime`omite el horario de verano (DST). En el ejemplo de código siguiente se compara dos métodos de cálculo de un intervalo de tiempo que cruza la fecha de cambio de horario de verano: uno utilizando CRT y otro usando `COleDateTime`. Horario de verano cambia, en la mayoría de las configuraciones regionales, en la segunda semana de abril y el tercero en octubre.  
+ `COleDateTime` omite el horario de verano (DST). En el ejemplo de código siguiente se compara dos métodos de cálculo de un intervalo de tiempo que cruza la fecha de cambio de horario de verano: uno utilizando CRT y otro usando `COleDateTime`. Horario de verano cambia, en la mayoría de las configuraciones regionales, en la segunda semana de abril y el tercero en octubre.  
   
  El primer método establece dos `CTime` objetos, *tiempo1* y *al tiempo2*, 5 de abril y 6 de abril respectivamente, utilizando las estructuras de tipo C estándares **tm** y `time_t`. El código muestra *tiempo1* y *al tiempo2* y el intervalo de tiempo entre ellos.  
   
  El segundo método, crea dos `COleDateTime` objetos, `oletime1` y `oletime2`y los establece en las mismas fechas que *tiempo1* y *al tiempo2*. Muestra `oletime1` y `oletime2` y el intervalo de tiempo entre ellos.  
   
- CRT calcula correctamente una diferencia de 23 horas. `COleDateTimeSpan`calcula una diferencia de 24 horas.  
+ CRT calcula correctamente una diferencia de 23 horas. `COleDateTimeSpan` calcula una diferencia de 24 horas.  
   
  Tenga en cuenta que se utiliza una solución cerca del final del ejemplo para mostrar correctamente la fecha usando `COleDateTime::Format`. Vea el artículo de Knowledge Base "Error: se produce un error en Format para `COleDateTime` y `COleDateTimeSpan`" (Q167338).  
   

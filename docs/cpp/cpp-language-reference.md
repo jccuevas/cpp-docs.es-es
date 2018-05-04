@@ -1,13 +1,10 @@
 ---
 title: Referencia del lenguaje C++ | Documentos de Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
 Esta referencia explica el lenguaje de programación C++ tal como se implementa en Microsoft Visual C++. La organización se basa en *The Annotated C++ Reference Manual* de Margaret Ellis y Bjarne Stroustrup y en los estándares de internacionales de C++ de ANSI/ISO (ISO/IEC FDIS 14882). Se incluyen las implementaciones específicas de Microsoft de las características del lenguaje C++.  

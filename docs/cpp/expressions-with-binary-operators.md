@@ -1,12 +1,9 @@
 ---
 title: Expresiones con operadores binarios | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beed0eaa26b025cec56252e6d82588019e0d467a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-binary-operators"></a>Expresiones con operadores binarios
 Los operadores binarios actúan sobre dos operandos de una expresión. Los operadores binarios son:  
@@ -76,7 +71,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   [Operador lógico AND (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [OR lógico (&#124; &#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [Operador lógico OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [Operadores de asignación](../cpp/assignment-operators.md)  
   
@@ -100,7 +95,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
   
     -   Asignación y OR exclusivo bit a bit (^=)  
   
-    -   Bit a bit asignación y OR inclusiva (&#124; =)  
+    -   Bit a bit asignación y OR inclusiva (&#124;=)  
   
 -   [Operador de coma](../cpp/comma-operator.md) (,)  
   

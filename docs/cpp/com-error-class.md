@@ -1,12 +1,9 @@
 ---
-title: _com_error Class | Microsoft Docs
-ms.custom: 
+title: _com_error (clase) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerror-class"></a>_com_error (Clase)
 **Específicos de Microsoft**  
@@ -78,9 +73,9 @@ ms.lasthandoff: 01/25/2018
 **FIN de Específicos de Microsoft**  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** \<comdef.h>  
+ **Encabezado:** \<comdef.h >  
   
- `Lib:`omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
+ `Lib:` omsuppw.lib o comsuppwd.lib (vea [/Zc: wchar_t (wchar_t es tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obtener más información)  
   
 ## <a name="see-also"></a>Vea también  
  [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)   

@@ -1,27 +1,22 @@
 ---
-title: "Cómo: interfaz entre código excepcional y no excepcional | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: interfaz entre código excepcional y no excepcional | Documentos de Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Cómo: Interfaz entre código excepcional y no excepcional
 En este artículo se describe cómo implementar el control de excepciones coherente en un módulo de C++ y cómo traducir esas excepciones a códigos de error, y vicecersa, en los límites de la excepción.  

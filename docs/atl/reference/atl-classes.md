@@ -1,12 +1,9 @@
 ---
 title: Clases ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>Clases ATL
 Active Template Library (ATL) incluye las siguientes clases. Para buscar una clase determinada por categoría, vea la [general sobre la clase ATL](../../atl/atl-class-overview.md).  
@@ -94,7 +89,7 @@ Active Template Library (ATL) incluye las siguientes clases. Para buscar una cla
 |[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|Esta clase proporciona los mismos métodos que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) pero no proporciona una sección crítica.|atlcore.h|  
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|Esta clase proporciona métodos para trabajar con punteros de interfaz y la tabla de interfaz global (GIT).|atlbase.h|  
 |[CComHeap](../../atl/reference/ccomheap-class.md)|Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones de asignación de memoria COM.|ATLComMem.h|  
-|[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Una clase de puntero inteligente para administrar los punteros del montón.|atlbase.h|  
+|[Plantilla CComHeapPtr](../../atl/reference/ccomheapptr-class.md)|Una clase de puntero inteligente para administrar los punteros del montón.|atlbase.h|  
 |[CComModule](../../atl/reference/ccommodule-class.md)|A partir de ATL 7.0, `CComModule` está obsoleta: vea [módulos de ATL](../../atl/atl-module-classes.md) para obtener más detalles.|atlbase.h|  
 |[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|Esta clase proporciona métodos de subprocesos para aumentar y disminuir el valor de una variable.|atlbase.h|  
 |[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|Esta clase proporciona métodos de subprocesos para aumentar y disminuir el valor de una variable, sin bloqueo de sección crítica o funcionalidad desbloquear.|atlbase.h|  

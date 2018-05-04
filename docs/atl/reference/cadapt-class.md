@@ -1,12 +1,9 @@
 ---
 title: Clase CAdapt | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAdapt
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4e565b1e2c20abf31919774d7bc6eb34f4c5f78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cabdf0a396f50f548cbe01a765411120ff7dd9f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cadapt-class"></a>Clase CAdapt
 Esta plantilla se utiliza para ajustar las clases que vuelven a definir el operador address-of para devolver algo distinto de la dirección del objeto.  
@@ -72,9 +67,9 @@ class CAdapt
 |[CAdapt::m_T](#m_t)|Datos que se están adaptando.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CAdapt`es una plantilla sencilla que se utiliza para ajustar las clases que vuelven a definir el operador address-of ( `operator &`) para devolver un valor distinto de la dirección del objeto. Algunos ejemplos de este tipo de clases son `CComBSTR`, `CComPtr` y `CComQIPtr` de ATL y la clase compatible con COM del compilador, `_com_ptr_t`. Todas estas clases vuelven a definir el operador address-of para devolver la dirección de uno de sus miembros de datos (`BSTR` en el caso de `CComBSTR` y un puntero de interfaz en el caso de las demás clases).  
+ `CAdapt` es una plantilla sencilla que se utiliza para ajustar las clases que vuelven a definir el operador address-of ( `operator &`) para devolver un valor distinto de la dirección del objeto. Algunos ejemplos de este tipo de clases son `CComBSTR`, `CComPtr` y `CComQIPtr` de ATL y la clase compatible con COM del compilador, `_com_ptr_t`. Todas estas clases vuelven a definir el operador address-of para devolver la dirección de uno de sus miembros de datos (`BSTR` en el caso de `CComBSTR` y un puntero de interfaz en el caso de las demás clases).  
   
- La función principal de `CAdapt` es ocultar el operador address-of definido por la clase `T`, aunque mantiene las características de la clase adaptada. `CAdapt`cumple esta función manteniendo un miembro público, [m_T](#m_t), del tipo `T`y definiendo operadores de conversión, operadores de comparación y un constructor de copias para permitir que las especializaciones de `CAdapt` tratará como si fueran objetos de tipo `T`.  
+ La función principal de `CAdapt` es ocultar el operador address-of definido por la clase `T`, aunque mantiene las características de la clase adaptada. `CAdapt` cumple esta función manteniendo un miembro público, [m_T](#m_t), del tipo `T`y definiendo operadores de conversión, operadores de comparación y un constructor de copias para permitir que las especializaciones de `CAdapt` tratará como si fueran objetos de tipo `T`.  
   
  La clase `CAdapt` del adaptador es útil porque algunas clases de estilo contenedor esperan poder obtener las direcciones de sus objetos contenidos utilizando el operador address-of. La nueva definición del operador address-of puede frustrar este requisito, lo que normalmente produce errores de compilación e impide el uso del tipo no adaptado con clases que esperan que “simplemente funcione”. `CAdapt` proporciona un mecanismo para evitar estos problemas.  
   
@@ -83,7 +78,7 @@ class CAdapt
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcomcli.h  
   
-##  <a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>  CAdapt::CAdapt  
  Los constructores permiten a un objeto de adaptador sea de manera predeterminada construido, copiado de un objeto de tipo adaptado o copiado de otro objeto de adaptador.  
   
 ```
@@ -101,7 +96,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  Un objeto de adaptador cuyos datos contenidos deben copiar (o mover) en el objeto adaptador recién construido.  
   
-##  <a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>  CAdapt::m_T  
  Contiene los datos que se va a adaptar.  
   
 ```
@@ -111,7 +106,7 @@ T m_T;
 ### <a name="remarks"></a>Comentarios  
  Esto **público** miembro de datos son accesibles directamente o indirectamente con [operador const T &](#operator_const_t_amp) y [operador T &](#operator_t_amp).  
   
-##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>  CAdapt::operator const T&amp;  
  Devuelve un **const** hacen referencia a la [m_T](#m_t) miembro, lo que el objeto de adaptador tratará como si fuera un objeto de tipo `T`.  
   
 ```  
@@ -121,7 +116,7 @@ operator const T&() const;
 ### <a name="return-value"></a>Valor devuelto  
  A **const** hacen referencia a `m_T`.  
   
-##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>  CAdapt::operator T&amp;  
  Devuelve una referencia a la [m_T](#m_t) miembro, lo que el objeto de adaptador tratará como si fuera un objeto de tipo `T`.  
   
 ```  
@@ -131,7 +126,7 @@ operator T&();
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia a `m_T`.  
   
-##  <a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>  CAdapt::operator &lt;  
  Compara un objeto de tipo adaptado con [m_T](#m_t).  
   
 ```
@@ -145,7 +140,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>Valor devuelto  
  El resultado de la comparación entre `m_T` y `rSrc`.  
   
-##  <a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>  CAdapt::operator =  
  El operador de asignación asigna el argumento `rSrc`, para el miembro de datos [m_T](#m_t) y devuelve el objeto de adaptador actual.  
   
 ```
@@ -158,12 +153,12 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  `rSrc`  
  Una referencia a un objeto de tipo adaptado a copiarse. 
 
- `rSrCA`Una referencia a un objeto que se va a mover. 
+ `rSrCA` Una referencia a un objeto que se va a mover. 
   
 ### <a name="return-value"></a>Valor devuelto  
  Una referencia al objeto actual.  
   
-##  <a name="operator_eq_eq"></a>CAdapt::operator ==  
+##  <a name="operator_eq_eq"></a>  CAdapt::operator ==  
  Compara un objeto de tipo adaptado con [m_T](#m_t).  
   
 ```

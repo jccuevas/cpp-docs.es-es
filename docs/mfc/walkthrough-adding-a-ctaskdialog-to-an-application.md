@@ -1,12 +1,12 @@
 ---
-title: "Tutorial: Agregar una clase CTaskDialog a una aplicación | Documentos de Microsoft"
-ms.custom: 
+title: 'Tutorial: Agregar una clase CTaskDialog a una aplicación | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Tutorial: Agregar una clase CTaskDialog a una aplicación
 En este tutorial se presenta la [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) y se muestra cómo agregar una a la aplicación.  
   
- La clase `CTaskDialog` es un cuadro de diálogo de tarea que reemplaza el cuadro de mensaje de Windows en [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. La clase `CTaskDialog` mejora el cuadro de mensaje original y agrega funcionalidad. Todavía se admite el cuadro de mensaje de Windows en [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ El `CTaskDialog` es un cuadro de diálogo de tarea que reemplaza el cuadro de mensaje de Windows en Windows Vista o posterior. La clase `CTaskDialog` mejora el cuadro de mensaje original y agrega funcionalidad. El cuadro de mensaje de Windows todavía se admite en Visual Studio.  
   
 > [!NOTE]
->  Las versiones de Windows anteriores a [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] no admiten la clase `CTaskDialog`. Debe programar una opción de cuadro de diálogo alternativa si quiere mostrar un mensaje a un usuario que ejecute la aplicación en una versión anterior de Windows. Puede usar el método estático [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) para determinar en tiempo de ejecución si el equipo de un usuario puede mostrar una clase `CTaskDialog`. Además, la clase `CTaskDialog` solo está disponible cuando la aplicación se compila con la biblioteca de Unicode.  
+> Las versiones de Windows anteriores a Windows Vista no admiten la `CTaskDialog`. Debe programar una opción de cuadro de diálogo alternativa si quiere mostrar un mensaje a un usuario que ejecute la aplicación en una versión anterior de Windows. Puede usar el método estático [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) para determinar en tiempo de ejecución si el equipo de un usuario puede mostrar una clase `CTaskDialog`. Además, la clase `CTaskDialog` solo está disponible cuando la aplicación se compila con la biblioteca de Unicode.  
   
  La clase `CTaskDialog` admite varios elementos opcionales para recopilar y mostrar información. Por ejemplo, una clase `CTaskDialog` puede mostrar vínculos de comandos, botones personalizados, iconos personalizados y un pie de página. La clase `CTaskDialog` también tiene varios métodos que permiten consultar el estado del cuadro de diálogo de tarea para determinar qué elementos opcionales seleccionó el usuario.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 o versiones posteriores  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista o posterior  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Reemplazar un cuadro de mensaje de Windows por una clase CTaskDialog  
  En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskDialog`, que consiste en reemplazar el cuadro de mensaje de Windows. En este ejemplo también se cambia el icono asociado al cuadro de diálogo de tarea. Si se cambia el icono, la clase `CTaskDialog` parece idéntica al cuadro de mensaje de Windows.  

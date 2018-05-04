@@ -1,12 +1,9 @@
 ---
 title: Clase CDefaultCompareTraits | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultCompareTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13c8bfd8ac02979f82e205ec86269b7ac40c8b08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaultcomparetraits-class"></a>Clase CDefaultCompareTraits
 Esta clase proporciona las funciones de comparación de elementos de predeterminado.  
@@ -61,7 +56,7 @@ class CDefaultCompareTraits
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
+##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
  Llame a esta función para comparar la igualdad de dos elementos.  
   
 ```
@@ -81,7 +76,7 @@ static bool CompareElements(const T& element1, const T& element2);
 ### <a name="remarks"></a>Comentarios  
  La implementación predeterminada de esta función es la igualdad ( `==`) operador. Para los objetos distintos de los tipos de datos simple, esta función puede deben invalidarse.  
   
-##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
  Llame a esta función para determinar el elemento mayor y menor.  
   
 ```
@@ -105,7 +100,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Comentarios  
- La implementación predeterminada de esta función usa la `==`,  **\<** , y  **>**  operadores. Para los objetos distintos de los tipos de datos simple, esta función puede deben invalidarse.  
+ La implementación predeterminada de esta función usa la `==`, **\<**, y **>** operadores. Para los objetos distintos de los tipos de datos simple, esta función puede deben invalidarse.  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de clases](../../atl/atl-class-overview.md)

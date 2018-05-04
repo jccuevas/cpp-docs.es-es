@@ -1,13 +1,10 @@
 ---
 title: Macros de recursividad | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - recursion macros
 - macros, recursion
 ms.assetid: c53e5ae7-619e-46b1-bdc2-86d8c7798b1d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d9ef7f194151fb3259712759d0c29ed157d564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2759deaff6014cbba40c97f9d627baf6a800732f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recursion-macros"></a>Macros de recursividad
 Usar macros de recursividad para llamar a NMAKE de forma recursiva. Las sesiones recursivas heredan macros de línea de comandos y variables de entorno e información de Tools.ini. No heredan reglas de inferencia definidas por el archivo MAKE o **. SUFIJOS** y **. Muy VALIOSO** especificaciones. Para pasar macros a una sesión NMAKE recursiva, establecer una variable de entorno con SET antes de la llamada recursiva, defina una macro en el comando para la llamada recursiva o definir una macro en Tools.ini.  
   
-|Macro|Definición|  
+|Macro|de esquema JSON|  
 |-----------|----------------|  
 |**ASEGÚRESE DE**|Comando usado originalmente para llamar a NMAKE.<br /><br /> La macro $ (Make) proporciona la ruta de acceso completa a nmake.exe.|  
 |**MAKEDIR**|Directorio actual cuando se llamó a NMAKE.|  

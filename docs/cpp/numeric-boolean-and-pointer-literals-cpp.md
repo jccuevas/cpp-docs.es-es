@@ -1,12 +1,9 @@
 ---
-title: "Literales numéricos, booleanos y puntero (C++) | Documentos de Microsoft"
-ms.custom: 
+title: Literales numéricos, booleanos y puntero (C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Literales numéricos, booleanos y puntero (C++)
 Un literal es un elemento de programa que representa directamente un valor. En este artículo se tratan los literales de tipo entero, de punto flotante, booleanos y de puntero. Para obtener información sobre los literales de cadena y carácter, vea [cadena y literales de carácter (C++)](../cpp/string-and-character-literals-cpp.md). También puede definir sus propios literales basándose en cualquiera de estas categorías; Para obtener más información consulte [literales definidos por el usuario (C++)](../cpp/user-defined-literals-cpp.md)  

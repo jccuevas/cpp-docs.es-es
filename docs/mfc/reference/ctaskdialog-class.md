@@ -1,12 +1,12 @@
 ---
 title: Clase CTaskDialog | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CTaskDialog
@@ -125,17 +125,17 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ecde926a27fbf4fa74cabdec6ff4d54f7d89216
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebe8b22c0bd05a36f0bcdbfa21ad97105ee1ae2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 Un cuadro de diálogo emergente que funciona como un cuadro de mensaje pero que puede mostrar información adicional al usuario. `CTaskDialog` también incluye funcionalidad para recopilar información del usuario.  
@@ -219,7 +219,7 @@ class CTaskDialog : public CObject
 |-|-|  
 |`m_aButtons`|La matriz de controles de botón de comando para el `CTaskDialog`.|  
 |`m_aRadioButtons`|La matriz de controles de botón de radio para la `CTaskDialog`.|  
-|`m_bVerified`|`TRUE`indica que la casilla de verificación está activada; `FALSE` indica no lo es.|  
+|`m_bVerified`|`TRUE` indica que la casilla de verificación está activada; `FALSE` indica no lo es.|  
 |`m_footerIcon`|El icono en el pie de página de la `CTaskDialog`.|  
 |`m_hWnd`|Un identificador de la ventana para el `CTaskDialog`.|  
 |`m_mainIcon`|El icono principal de la `CTaskDialog`.|  
@@ -246,7 +246,7 @@ class CTaskDialog : public CObject
 |`m_strVerification`|La cadena que el `CTaskDialog` muestra a la derecha de la casilla de verificación.|  
   
 ## <a name="remarks"></a>Comentarios  
- La `CTaskDialog` clase reemplaza el cuadro de mensaje de Windows estándar y tiene funcionalidad adicional, como los nuevos controles para recopilar información del usuario. Esta clase está en la biblioteca MFC en [!INCLUDE[vs_dev10_long](../../build/includes/vs_dev10_long_md.md)]. El `CTaskDialog` está disponible a partir de [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. Las versiones anteriores de Windows no pueden mostrar el `CTaskDialog` objeto. Utilice `CTaskDialog::IsSupported` para determinar en tiempo de ejecución si el usuario actual pueda mostrar el cuadro de diálogo de tarea. El cuadro de mensaje estándar de Windows se sigue admitiendo en [!INCLUDE[vs_dev10_long](../../build/includes/vs_dev10_long_md.md)].  
+ La `CTaskDialog` clase reemplaza el cuadro de mensaje de Windows estándar y tiene funcionalidad adicional, como los nuevos controles para recopilar información del usuario. Esta clase está en la biblioteca MFC en [!INCLUDE[vs_dev10_long](../../build/includes/vs_dev10_long_md.md)]. La `CTaskDialog` está disponible a partir de Windows Vista. Las versiones anteriores de Windows no pueden mostrar el `CTaskDialog` objeto. Utilice `CTaskDialog::IsSupported` para determinar en tiempo de ejecución si el usuario actual pueda mostrar el cuadro de diálogo de tarea. El cuadro de mensaje estándar de Windows se sigue admitiendo en [!INCLUDE[vs_dev10_long](../../build/includes/vs_dev10_long_md.md)].  
   
  La `CTaskDialog` está disponible solo cuando se compila la aplicación mediante el uso de la biblioteca de Unicode.  
   
@@ -258,11 +258,11 @@ class CTaskDialog : public CObject
 Ejemplo de la clase CTaskDialog  
   
 ## <a name="requirements"></a>Requisitos  
- **Sistema operativo mínimo necesario:**[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+ **Sistema operativo mínimo necesario:** Windows Vista  
   
  **Encabezado:** afxtaskdialog.h  
   
-##  <a name="addcommandcontrol"></a>CTaskDialog::AddCommandControl  
+##  <a name="addcommandcontrol"></a>  CTaskDialog::AddCommandControl  
  Agrega un nuevo control de botón de comando a la `CTaskDialog`.  
   
 ```  
@@ -294,7 +294,7 @@ void AddCommandControl(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="addradiobutton"></a>CTaskDialog::AddRadioButton  
+##  <a name="addradiobutton"></a>  CTaskDialog::AddRadioButton  
  Agrega un botón de radio a la `CTaskDialog`.  
   
 ```  
@@ -322,7 +322,7 @@ void CTaskDialog::AddRadioButton(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="clickcommandcontrol"></a>CTaskDialog::ClickCommandControl  
+##  <a name="clickcommandcontrol"></a>  CTaskDialog::ClickCommandControl  
  Haga clic en un control de botón de comando o un botón comunes mediante programación.  
   
 ```  
@@ -337,7 +337,7 @@ void ClickCommandControl(int nCommandControlID) const;
 ### <a name="remarks"></a>Comentarios  
  Este método genera el mensaje de windows `TDM_CLICK_BUTTON`.  
   
-##  <a name="clickradiobutton"></a>CTaskDialog::ClickRadioButton  
+##  <a name="clickradiobutton"></a>  CTaskDialog::ClickRadioButton  
  Haga clic en un botón de radio mediante programación.  
   
 ```  
@@ -352,7 +352,7 @@ void ClickRadioButton(int nRadioButtonID) const;
 ### <a name="remarks"></a>Comentarios  
  Este método genera el mensaje de windows `TDM_CLICK_RADIO_BUTTON`.  
   
-##  <a name="ctaskdialog"></a>CTaskDialog::CTaskDialog  
+##  <a name="ctaskdialog"></a>  CTaskDialog::CTaskDialog  
  Crea una instancia de la [clase CTaskDialog](../../mfc/reference/ctaskdialog-class.md).  
   
 ```  
@@ -411,7 +411,7 @@ CTaskDialog(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="domodal"></a>CTaskDialog::DoModal  
+##  <a name="domodal"></a>  CTaskDialog::DoModal  
  Muestra el `CTaskDialog` y la convierte en modal.  
   
 ```  
@@ -433,7 +433,7 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="getcommonbuttoncount"></a>CTaskDialog::GetCommonButtonCount  
+##  <a name="getcommonbuttoncount"></a>  CTaskDialog::GetCommonButtonCount  
  Recupera el número de botones comunes.  
   
 ```  
@@ -448,7 +448,7 @@ int GetCommonButtonCount() const;
   
  La lista enumerada de botones se proporciona en CommCtrl.h.  
   
-##  <a name="getcommonbuttonflag"></a>CTaskDialog::GetCommonButtonFlag  
+##  <a name="getcommonbuttonflag"></a>  CTaskDialog::GetCommonButtonFlag  
  Convierte un estándar de botón de Windows para el tipo de botón común asociado a la [clase CTaskDialog](../../mfc/reference/ctaskdialog-class.md).  
   
 ```  
@@ -462,7 +462,7 @@ int GetCommonButtonFlag(int nButtonId) const;
 ### <a name="return-value"></a>Valor devuelto  
  El valor de la correspondiente `CTaskDialog` botón comunes. Si no hay ningún botón comunes correspondiente, este método devuelve 0.  
   
-##  <a name="getcommonbuttonid"></a>CTaskDialog::GetCommonButtonId  
+##  <a name="getcommonbuttonid"></a>  CTaskDialog::GetCommonButtonId  
  Convierte uno de los tipos comunes de botón asociados a la [clase CTaskDialog](../../mfc/reference/ctaskdialog-class.md) a un botón de Windows estándar.  
   
 ```  
@@ -476,7 +476,7 @@ int GetCommonButtonId(int nFlag);
 ### <a name="return-value"></a>Valor devuelto  
  El valor del botón estándar de Windows correspondiente. Si no hay ningún botón de Windows correspondiente, el método devuelve 0.  
   
-##  <a name="getoptions"></a>CTaskDialog::GetOptions  
+##  <a name="getoptions"></a>  CTaskDialog::GetOptions  
  Devuelve las marcas de opción de este `CTaskDialog`.  
   
 ```  
@@ -492,7 +492,7 @@ int GetOptions() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="getselectedcommandcontrolid"></a>CTaskDialog::GetSelectedCommandControlID  
+##  <a name="getselectedcommandcontrolid"></a>  CTaskDialog::GetSelectedCommandControlID  
  Devuelve el control de botón de comando seleccionado.  
   
 ```  
@@ -508,7 +508,7 @@ int GetSelectedCommandControlID() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="getselectedradiobuttonid"></a>CTaskDialog::GetSelectedRadioButtonID  
+##  <a name="getselectedradiobuttonid"></a>  CTaskDialog::GetSelectedRadioButtonID  
  Devuelve el botón de radio seleccionado.  
   
 ```  
@@ -524,7 +524,7 @@ int GetSelectedRadioButtonID() const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="getverificationcheckboxstate"></a>CTaskDialog::GetVerificationCheckboxState  
+##  <a name="getverificationcheckboxstate"></a>  CTaskDialog::GetVerificationCheckboxState  
  Recupera el estado de la casilla de verificación.  
   
 ```  
@@ -532,12 +532,12 @@ BOOL GetVerificationCheckboxState() const;
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si se activa la casilla de verificación, `FALSE` si no lo está.  
+ `TRUE` Si se activa la casilla de verificación, `FALSE` si no lo está.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="iscommandcontrolenabled"></a>CTaskDialog::IsCommandControlEnabled  
+##  <a name="iscommandcontrolenabled"></a>  CTaskDialog::IsCommandControlEnabled  
  Determina si un control de botón de comando o un botón está habilitado.  
   
 ```  
@@ -549,7 +549,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
  El identificador del control de botón de comando o botón Probar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el control está habilitado, `FALSE` si no lo está.  
+ `TRUE` Si el control está habilitado, `FALSE` si no lo está.  
   
 ### <a name="remarks"></a>Comentarios  
  Puede usar este método para determinar la disponibilidad de los controles de botón de comando y los botones comunes de la `CTaskDialog Class`.  
@@ -559,7 +559,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="isradiobuttonenabled"></a>CTaskDialog::IsRadioButtonEnabled  
+##  <a name="isradiobuttonenabled"></a>  CTaskDialog::IsRadioButtonEnabled  
  Determina si un botón de radio está habilitado.  
   
 ```  
@@ -571,7 +571,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
  El identificador del botón de radio para probar.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si está habilitado el botón de radio, `FALSE` si no lo está.  
+ `TRUE` Si está habilitado el botón de radio, `FALSE` si no lo está.  
   
 ### <a name="remarks"></a>Comentarios  
  Si `nRadioButtonID` no es un identificador válido para un botón de radio, este método produce una excepción.  
@@ -579,7 +579,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="issupported"></a>CTaskDialog::IsSupported  
+##  <a name="issupported"></a>  CTaskDialog::IsSupported  
  Determina si el equipo que ejecuta la aplicación admite la `CTaskDialog`.  
   
 ```  
@@ -587,7 +587,7 @@ static BOOL IsSupported();
 ```  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el equipo es compatible con la `CTaskDialog`; `FALSE` en caso contrario.  
+ `TRUE` Si el equipo es compatible con la `CTaskDialog`; `FALSE` en caso contrario.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice esta función para determinar en tiempo de ejecución si el equipo que ejecuta la aplicación es compatible con la `CTaskDialog Class`. Si el equipo no admite el `CTaskDialog`, debe proporcionar otro método para comunicar información al usuario. La aplicación se bloqueará si intenta usar un `CTaskDialog` en un equipo que no es compatible con la `CTaskDialog` clase.  
@@ -595,7 +595,7 @@ static BOOL IsSupported();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]  
   
-##  <a name="loadcommandcontrols"></a>CTaskDialog::LoadCommandControls  
+##  <a name="loadcommandcontrols"></a>  CTaskDialog::LoadCommandControls  
  Agrega controles de botón de comando mediante el uso de datos de la tabla de cadenas.  
   
 ```  
@@ -619,7 +619,7 @@ void LoadCommandControls(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="loadradiobuttons"></a>CTaskDialog::LoadRadioButtons  
+##  <a name="loadradiobuttons"></a>  CTaskDialog::LoadRadioButtons  
  Agrega controles de botón de radio con datos de la tabla de cadenas.  
   
 ```  
@@ -643,7 +643,7 @@ void LoadRadioButtons(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="navigateto"></a>CTaskDialog::NavigateTo  
+##  <a name="navigateto"></a>  CTaskDialog::NavigateTo  
  Transfiere el foco a otra `CTaskDialog`.  
   
 ```  
@@ -658,7 +658,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 ### <a name="remarks"></a>Comentarios  
  Este método oculta actual `CTaskDialog` cuando muestre el `oTaskDialog`. El `oTaskDialog` se muestra en la misma ubicación que el actual `CTaskDialog`.  
   
-##  <a name="oncommandcontrolclick"></a>CTaskDialog::OnCommandControlClick  
+##  <a name="oncommandcontrolclick"></a>  CTaskDialog::OnCommandControlClick  
  El marco de trabajo llama a este método cuando el usuario hace clic en un control de botón de comando.  
   
 ```  
@@ -675,7 +675,7 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="oncreate"></a>CTaskDialog::OnCreate  
+##  <a name="oncreate"></a>  CTaskDialog::OnCreate  
  El marco de trabajo llama a este método después de crear el `CTaskDialog`.  
   
 ```  
@@ -688,7 +688,7 @@ virtual HRESULT OnCreate();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="ondestroy"></a>CTaskDialog::OnDestroy  
+##  <a name="ondestroy"></a>  CTaskDialog::OnDestroy  
  El marco de trabajo llama a este método inmediatamente antes de que se destruirán los `CTaskDialog`.  
   
 ```  
@@ -701,7 +701,7 @@ virtual HRESULT OnDestroy();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onexpandbuttonclick"></a>CTaskDialog::OnExpandButtonClick  
+##  <a name="onexpandbuttonclick"></a>  CTaskDialog::OnExpandButtonClick  
  El marco de trabajo llama a este método cuando el usuario hace clic en el botón de expansión.  
   
 ```  
@@ -718,7 +718,7 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onhelp"></a>CTaskDialog::OnHelp  
+##  <a name="onhelp"></a>  CTaskDialog::OnHelp  
  El marco de trabajo llama a este método cuando el usuario solicita ayuda.  
   
 ```  
@@ -731,7 +731,7 @@ virtual HRESULT OnHelp();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onhyperlinkclick"></a>CTaskDialog::OnHyperlinkClick  
+##  <a name="onhyperlinkclick"></a>  CTaskDialog::OnHyperlinkClick  
  El marco de trabajo llama a este método cuando el usuario hace clic en un hipervínculo.  
   
 ```  
@@ -750,7 +750,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
   
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="oninit"></a>CTaskDialog::OnInit  
+##  <a name="oninit"></a>  CTaskDialog::OnInit  
  El marco de trabajo llama a este método cuando el `CTaskDialog` se inicializa.  
   
 ```  
@@ -763,7 +763,7 @@ virtual HRESULT OnInit();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onnavigatepage"></a>CTaskDialog::OnNavigatePage  
+##  <a name="onnavigatepage"></a>  CTaskDialog::OnNavigatePage  
  El marco de trabajo llama a este método en respuesta a la [CTaskDialog::NavigateTo](#navigateto) método.  
   
 ```  
@@ -776,7 +776,7 @@ virtual HRESULT OnNavigatePage();
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onradiobuttonclick"></a>CTaskDialog::OnRadioButtonClick  
+##  <a name="onradiobuttonclick"></a>  CTaskDialog::OnRadioButtonClick  
  El marco de trabajo llama a este método cuando el usuario selecciona un control de botón de radio.  
   
 ```  
@@ -793,7 +793,7 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="ontimer"></a>CTaskDialog::OnTimer  
+##  <a name="ontimer"></a>  CTaskDialog::OnTimer  
  El marco de trabajo llama a este método cuando el temporizador expire.  
   
 ```  
@@ -810,7 +810,7 @@ virtual HRESULT OnTimer(long lTime);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="onverificationcheckboxclick"></a>CTaskDialog::OnVerificationCheckboxClick  
+##  <a name="onverificationcheckboxclick"></a>  CTaskDialog::OnVerificationCheckboxClick  
  El marco de trabajo llama a este método cuando el usuario hace clic en la casilla de verificación.  
   
 ```  
@@ -819,7 +819,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bChecked`  
- `TRUE`indica que la casilla de verificación está seleccionada; `FALSE` indica no lo es.  
+ `TRUE` indica que la casilla de verificación está seleccionada; `FALSE` indica no lo es.  
   
 ### <a name="return-value"></a>Valor devuelto  
  La implementación predeterminada devuelve `S_OK`.  
@@ -827,7 +827,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ### <a name="remarks"></a>Comentarios  
  Invalide este método en una clase derivada para implementar un comportamiento personalizado.  
   
-##  <a name="removeallcommandcontrols"></a>CTaskDialog::RemoveAllCommandControls  
+##  <a name="removeallcommandcontrols"></a>  CTaskDialog::RemoveAllCommandControls  
  Quita todos los controles de botón de comando de la `CTaskDialog`.  
   
 ```  
@@ -837,7 +837,7 @@ void RemoveAllCommandControls();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="removeallradiobuttons"></a>CTaskDialog::RemoveAllRadioButtons  
+##  <a name="removeallradiobuttons"></a>  CTaskDialog::RemoveAllRadioButtons  
  Quita todos los botones de radio de la `CTaskDialog`.  
   
 ```  
@@ -847,7 +847,7 @@ void RemoveAllRadioButtons();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="setcommandcontroloptions"></a>CTaskDialog::SetCommandControlOptions  
+##  <a name="setcommandcontroloptions"></a>  CTaskDialog::SetCommandControlOptions  
  Actualiza un control de botón de comando en el `CTaskDialog`.  
   
 ```  
@@ -873,7 +873,7 @@ void SetCommandControlOptions(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="setcommonbuttonoptions"></a>CTaskDialog::SetCommonButtonOptions  
+##  <a name="setcommonbuttonoptions"></a>  CTaskDialog::SetCommonButtonOptions  
  Actualiza un subconjunto de los botones comunes para habilitarse y requieren la elevación de UAC.  
   
 ```  
@@ -890,7 +890,7 @@ void SetCommonButtonOptions(
  Una máscara de los botones comunes que requieren elevación.  
   
 ### <a name="remarks"></a>Comentarios  
- Puede establecer los botones comunes disponibles para una instancia de la [clase CTaskDialog](../../mfc/reference/ctaskdialog-class.md) utilizando el constructor [CTaskDialog::CTaskDialog](#ctaskdialog) y el método [CTaskDialog::SetCommonButtons ](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions`no admite la adición de nuevos botones comunes.  
+ Puede establecer los botones comunes disponibles para una instancia de la [clase CTaskDialog](../../mfc/reference/ctaskdialog-class.md) utilizando el constructor [CTaskDialog::CTaskDialog](#ctaskdialog) y el método [CTaskDialog::SetCommonButtons ](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions` no admite la adición de nuevos botones comunes.  
   
  Si utiliza este método para deshabilitar o elevar un botón comunes que no está disponible para el `CTaskDialog`, este método produce una excepción utilizando la [Asegúrese](diagnostic-services.md#ensure) macro.  
   
@@ -899,7 +899,7 @@ void SetCommonButtonOptions(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]  
   
-##  <a name="setcommonbuttons"></a>CTaskDialog::SetCommonButtons  
+##  <a name="setcommonbuttons"></a>  CTaskDialog::SetCommonButtons  
  Agrega los botones comunes para la `CTaskDialog`.  
   
 ```  
@@ -931,7 +931,7 @@ void SetCommonButtons(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]  
   
-##  <a name="setcontent"></a>CTaskDialog::SetContent  
+##  <a name="setcontent"></a>  CTaskDialog::SetContent  
  Actualiza el contenido de la `CTaskDialog`.  
   
 ```  
@@ -948,7 +948,7 @@ void SetContent(const CString& strContent);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setdefaultcommandcontrol"></a>CTaskDialog::SetDefaultCommandControl  
+##  <a name="setdefaultcommandcontrol"></a>  CTaskDialog::SetDefaultCommandControl  
  Especifica el control de botón de comando predeterminado.  
   
 ```  
@@ -967,7 +967,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]  
   
-##  <a name="setdefaultradiobutton"></a>CTaskDialog::SetDefaultRadioButton  
+##  <a name="setdefaultradiobutton"></a>  CTaskDialog::SetDefaultRadioButton  
  Especifica el botón de radio predeterminado.  
   
 ```  
@@ -986,7 +986,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="setdialogwidth"></a>CTaskDialog::SetDialogWidth  
+##  <a name="setdialogwidth"></a>  CTaskDialog::SetDialogWidth  
  Ajusta el ancho de la `CTaskDialog`.  
   
 ```  
@@ -1005,7 +1005,7 @@ void SetDialogWidth(int nWidth = 0);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setexpansionarea"></a>CTaskDialog::SetExpansionArea  
+##  <a name="setexpansionarea"></a>  CTaskDialog::SetExpansionArea  
  Actualiza el área de expansión de la `CTaskDialog`.  
   
 ```  
@@ -1033,7 +1033,7 @@ void SetExpansionArea(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setfootericon"></a>CTaskDialog::SetFooterIcon  
+##  <a name="setfootericon"></a>  CTaskDialog::SetFooterIcon  
  Actualiza el icono de pie de página de la `CTaskDialog`.  
   
 ```  
@@ -1058,7 +1058,7 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setfootertext"></a>CTaskDialog::SetFooterText  
+##  <a name="setfootertext"></a>  CTaskDialog::SetFooterText  
  Actualiza el texto en el pie de página de la `CTaskDialog`.  
   
 ```  
@@ -1075,7 +1075,7 @@ void SetFooterText(const CString& strFooterText);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setmainicon"></a>CTaskDialog::SetMainIcon  
+##  <a name="setmainicon"></a>  CTaskDialog::SetMainIcon  
  Actualiza el icono principal de la `CTaskDialog`.  
   
 ```  
@@ -1098,7 +1098,7 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setmaininstruction"></a>CTaskDialog::SetMainInstruction  
+##  <a name="setmaininstruction"></a>  CTaskDialog::SetMainInstruction  
  Actualiza la instrucción principal de la `CTaskDialog`.  
   
 ```  
@@ -1115,7 +1115,7 @@ void SetMainInstruction(const CString& strInstructions);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setoptions"></a>CTaskDialog::SetOptions  
+##  <a name="setoptions"></a>  CTaskDialog::SetOptions  
  Configura las opciones para el `CTaskDialog`.  
   
 ```  
@@ -1182,7 +1182,7 @@ void SetOptions(int nOptionFlag);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="setprogressbarmarquee"></a>CTaskDialog::SetProgressBarMarquee  
+##  <a name="setprogressbarmarquee"></a>  CTaskDialog::SetProgressBarMarquee  
  Configura una barra de marquesina de la `CTaskDialog` y lo agrega al cuadro de diálogo.  
   
 ```  
@@ -1193,7 +1193,7 @@ void SetProgressBarMarquee(
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bEnabled`  
- `TRUE`Para habilitar la barra de marquesina. `FALSE` para deshabilitar la barra de marquesina y quítelo de la `CTaskDialog`.  
+ `TRUE` Para habilitar la barra de marquesina. `FALSE` para deshabilitar la barra de marquesina y quítelo de la `CTaskDialog`.  
   
  [in] `nMarqueeSpeed`  
  Un entero que indica la velocidad de la barra de marquesina.  
@@ -1201,14 +1201,14 @@ void SetProgressBarMarquee(
 ### <a name="remarks"></a>Comentarios  
  La barra de marquesina aparece debajo del texto principal de la `CTaskDialog Class`.  
   
- Use `nMarqueeSpeed` para establecer la velocidad de la barra de marquesina; valores mayores indican una velocidad más lenta. Un valor de 0 para `nMarqueeSpeed` hace que la barra de marquesina se mueva a la velocidad predeterminada para [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)].  
+ Use `nMarqueeSpeed` para establecer la velocidad de la barra de marquesina; valores mayores indican una velocidad más lenta. Un valor de 0 para `nMarqueeSpeed` hace que la barra de marquesina se mueva a la velocidad predeterminada para Windows.  
   
  Este método produce una excepción con el [Asegúrese](diagnostic-services.md#ensure) macro si `nMarqueeSpeed` es menor que 0.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="setprogressbarposition"></a>CTaskDialog::SetProgressBarPosition  
+##  <a name="setprogressbarposition"></a>  CTaskDialog::SetProgressBarPosition  
  Ajusta la posición de la barra de progreso.  
   
 ```  
@@ -1225,7 +1225,7 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="setprogressbarrange"></a>CTaskDialog::SetProgressBarRange  
+##  <a name="setprogressbarrange"></a>  CTaskDialog::SetProgressBarRange  
  Ajusta el intervalo de la barra de progreso.  
   
 ```  
@@ -1251,7 +1251,7 @@ void SetProgressBarRange(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="setprogressbarstate"></a>CTaskDialog::SetProgressBarState  
+##  <a name="setprogressbarstate"></a>  CTaskDialog::SetProgressBarState  
  Establece el estado de la barra de progreso y lo muestra en el `CTaskDialog`.  
   
 ```  
@@ -1281,7 +1281,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]  
   
-##  <a name="setradiobuttonoptions"></a>CTaskDialog::SetRadioButtonOptions  
+##  <a name="setradiobuttonoptions"></a>  CTaskDialog::SetRadioButtonOptions  
  Habilita o deshabilita un botón de radio.  
   
 ```  
@@ -1295,7 +1295,7 @@ void SetRadioButtonOptions(
  El identificador del control de botón de radio.  
   
  [in] `bEnabled`  
- `TRUE`Para habilitar el botón de radio; `FALSE` para deshabilitar el botón de radio.  
+ `TRUE` Para habilitar el botón de radio; `FALSE` para deshabilitar el botón de radio.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método produce una excepción con el [Asegúrese](diagnostic-services.md#ensure) macro si `nRadioButtonID` no es un identificador válido para un botón de radio.  
@@ -1303,7 +1303,7 @@ void SetRadioButtonOptions(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]  
   
-##  <a name="setverificationcheckbox"></a>CTaskDialog::SetVerificationCheckbox  
+##  <a name="setverificationcheckbox"></a>  CTaskDialog::SetVerificationCheckbox  
  Establece el estado de activación de la casilla de verificación.  
   
 ```  
@@ -1312,12 +1312,12 @@ void SetVerificationCheckbox(BOOL bChecked);
   
 ### <a name="parameters"></a>Parámetros  
  [in] `bChecked`  
- `TRUE`para que la comprobación de la casilla de verificación seleccionada cuando la `CTaskDialog` se muestra; `FALSE` para que la comprobación de la casilla de verificación no está seleccionada cuando la `CTaskDialog` se muestra.  
+ `TRUE` para que la comprobación de la casilla de verificación seleccionada cuando la `CTaskDialog` se muestra; `FALSE` para que la comprobación de la casilla de verificación no está seleccionada cuando la `CTaskDialog` se muestra.  
   
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="setverificationcheckboxtext"></a>CTaskDialog::SetVerificationCheckboxText  
+##  <a name="setverificationcheckboxtext"></a>  CTaskDialog::SetVerificationCheckboxText  
  Establece el texto que se muestra a la derecha de la casilla de verificación.  
   
 ```  
@@ -1334,7 +1334,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]  
   
-##  <a name="setwindowtitle"></a>CTaskDialog::SetWindowTitle  
+##  <a name="setwindowtitle"></a>  CTaskDialog::SetWindowTitle  
  Establece el título de la `CTaskDialog`.  
   
 ```  
@@ -1350,7 +1350,7 @@ void SetWindowTitle(CString& strWindowTitle);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]  
   
-##  <a name="showdialog"></a>CTaskDialog::ShowDialog  
+##  <a name="showdialog"></a>  CTaskDialog::ShowDialog  
  Crea y muestra un `CTaskDialog`.  
   
 ```  
@@ -1405,7 +1405,7 @@ static INT_PTR ShowDialog(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]  
   
-##  <a name="taskdialogcallback"></a>CTaskDialog::TaskDialogCallback  
+##  <a name="taskdialogcallback"></a>  CTaskDialog::TaskDialogCallback  
  El marco de trabajo llama a este método en respuesta a diversos mensajes de Windows.  
   
 ```  

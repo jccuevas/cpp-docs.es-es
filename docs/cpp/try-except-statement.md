@@ -1,12 +1,9 @@
 ---
-title: "Intente-excepto instrucción | Documentos de Microsoft"
-ms.custom: 
+title: Intente-excepto instrucción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>try-except (Instrucción)
 
@@ -105,7 +100,7 @@ A `goto` instrucción también puede saltar fuera de la sección protegida, y no
 
 Control de excepciones estructurado proporciona dos funciones intrínsecas que están disponibles para su uso con el **intente-excepto** instrucción: `GetExceptionCode` y `GetExceptionInformation`.
 
-`GetExceptionCode`Devuelve el código (un entero de 32 bits) de la excepción.
+`GetExceptionCode` Devuelve el código (un entero de 32 bits) de la excepción.
 
 La función intrínseca `GetExceptionInformation` devuelve un puntero a una estructura que contiene información adicional sobre la excepción. A través de este puntero, se puede tener acceso al estado que tenía el equipo en el momento de producirse una excepción de hardware. La estructura es como se detalla a continuación:
 
@@ -124,11 +119,11 @@ La función intrínseca `AbnormalTermination` está disponible dentro de un cont
 
 excpt.h define algunos nombres alternativos para estos intrínsecos:
 
-`GetExceptionCode`es equivalente a`_exception_code`
+`GetExceptionCode` es equivalente a `_exception_code`
 
- `GetExceptionInformation`es equivalente a`_exception_info`
+ `GetExceptionInformation` es equivalente a `_exception_info`
 
- `AbnormalTermination`es equivalente a`_abnormal_termination`
+ `AbnormalTermination` es equivalente a `_abnormal_termination`
   
 ## <a name="example"></a>Ejemplo
 

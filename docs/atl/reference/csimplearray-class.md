@@ -1,12 +1,9 @@
 ---
 title: Clase CSimpleArray | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleArray
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplearray-class"></a>Clase CSimpleArray
 Esta clase proporciona métodos para administrar una matriz simple.  
@@ -85,7 +80,7 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>Comentarios  
- `CSimpleArray`Proporciona métodos para crear y administrar una matriz simple, de un determinado tipo `T`.  
+ `CSimpleArray` Proporciona métodos para crear y administrar una matriz simple, de un determinado tipo `T`.  
   
  El parámetro `TEqual` proporciona un medio para definir una función de la igualdad de dos elementos de tipo `T`. Mediante la creación de una clase similar a [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), es posible modificar el comportamiento de la prueba de igualdad para cualquier matriz determinada. Por ejemplo, cuando se trabaja con una matriz de punteros, puede ser útil definir la igualdad como función de los valores que hacen referencia a los punteros. La implementación predeterminada usa **operator=()**.  
   
@@ -97,7 +92,7 @@ class CSimpleArray
 ## <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>  CSimpleArray::Add  
  Agrega un nuevo elemento a la matriz.  
   
 ```
@@ -114,7 +109,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
  El constructor para el objeto de matriz.  
   
 ```
@@ -129,7 +124,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Comentarios  
  Inicializa los miembros de datos, crear una nueva y vacía `CSimpleArray` objeto o una copia de un miembro de `CSimpleArray` objeto.  
   
-##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  Destructor.  
   
 ```
@@ -139,7 +134,7 @@ CSimpleArray();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>  CSimpleArray::Find  
  Busca un elemento de la matriz.  
   
 ```
@@ -156,7 +151,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>  CSimpleArray::GetData  
  Devuelve un puntero a los datos almacenados en la matriz.  
   
 ```
@@ -166,7 +161,7 @@ T* GetData() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve un puntero a los datos de la matriz.  
   
-##  <a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>  CSimpleArray::GetSize  
  Devuelve el número de elementos almacenados en la matriz.  
   
 ```
@@ -176,7 +171,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de elementos almacenados en la matriz.  
   
-##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  Recupera un elemento de la matriz.  
   
 ```
@@ -193,7 +188,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>  CSimpleArray::operator =  
  Operador de asignación.  
   
 ```
@@ -215,7 +210,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>  CSimpleArray::Remove  
  Quita un elemento determinado de la matriz.  
   
 ```
@@ -232,7 +227,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>Comentarios  
  Cuando se quita un elemento, se vuelven a numerar los elementos restantes de la matriz para rellenar el espacio vacío.  
   
-##  <a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  Quita todos los elementos de la matriz.  
   
 ```
@@ -242,7 +237,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Comentarios  
  Quita todos los elementos almacenados actualmente en la matriz.  
   
-##  <a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
  Quita el elemento especificado de la matriz.  
   
 ```
@@ -259,7 +254,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>Comentarios  
  Cuando se quita un elemento, se vuelven a numerar los elementos restantes de la matriz para rellenar el espacio vacío.  
   
-##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Establezca el elemento especificado de la matriz.  
   
 ```

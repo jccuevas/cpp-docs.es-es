@@ -1,12 +1,9 @@
 ---
-title: "Macros de conversión de cadena | Documentos de Microsoft"
-ms.custom: 
+title: Macros de conversión de cadena | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>Macros de conversión de cadenas
 
 Estas macros proporcionan funciones de conversión de cadena.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>Macros de conversión de cadena MFC y ATL
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macros de conversión de cadena MFC y ATL
 
 Las macros de conversión de cadena en las que se centra este tema son válidas tanto para ATL como para MFC. Para obtener más información sobre la conversión de cadenas MFC, vea [TN059: usar Macros de conversión de MBCS/Unicode de MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) y [globales y Macros de MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>Macros de conversión de cadenas TEXTMETRIC y DEVMODE
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de conversión de cadenas TEXTMETRIC y DEVMODE
 
 Estas macros crean una copia de un [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) o [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) permite organizar y convertir las cadenas dentro de la nueva estructura a un nuevo tipo de cadena. Las macros de asignación memoria en la pila para la nueva estructura y devuelven un puntero a la nueva estructura.  
   

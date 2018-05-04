@@ -1,12 +1,9 @@
 ---
 title: Macros de opciones del compilador | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-macros"></a>Opciones del compilador de Macros
 Estas macros controlan las características del compilador específico.  
@@ -54,7 +49,7 @@ Estas macros controlan las características del compilador específico.
 |[ATL_NOINLINE](#atl_noinline)|Un símbolo que indica una función no debe estar entre línea.|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Define si todos los objetos utilizan el modelo de subprocesamiento único.|  
   
-##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
  Convierte un símbolo que habilita los errores en los proyectos desde versiones anteriores de ATL.  
   
 ```
@@ -88,7 +83,7 @@ Estas macros controlan las características del compilador específico.
   
  Nuevos proyectos tienen este `#define` establecido en stdafx.h de forma predeterminada.  
   
-##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED  
  Define si uno o varios de los objetos utilizan el apartamento de subproceso.  
   
 ```
@@ -98,7 +93,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>Comentarios  
  Especifica el apartamento de subproceso. Vea [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) de otros subprocesos opciones, y [opciones, Asistente para objetos simples de ATL](../../atl/reference/options-atl-simple-object-wizard.md) para obtener una descripción de los subprocesos los modelos disponibles para un objeto ATL.  
   
-##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  Hace que ciertas `CString` constructores explícitos, evitar las conversiones involuntarias.  
   
 ```
@@ -110,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Mediante el uso de la macro _T en todos los argumentos de cadena de constructor, puede definir _ATL_CSTRING_EXPLICIT_CONSTRUCTORS y evitar errores de compilación, independientemente de si se ha definido _UNICODE.  
   
-##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING  
  Definir esta macro con el fin de forzar el uso de sintaxis compatible con el estándar de C++ de ANSI para el puntero a las funciones miembro. Utiliza esta macro provocará el error del compilador C4867 generarse cuando se utilizan la sintaxis no estándar para inicializar un puntero a una función miembro.  
   
 ```
@@ -132,7 +127,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Tenga en cuenta que para las macros de mapa que agregue el carácter '&', no debe agregarlo nuevo en el código.  
   
-##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED  
  Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutral.  
   
 ```
@@ -142,7 +137,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>Comentarios  
  Especifica el subprocesamiento libre. Subprocesamiento libre equivale a un modelo de apartamento multiproceso. Vea [especificar el modelo de subprocesamiento del proyecto](../../atl/specifying-the-threading-model-for-a-project-atl.md) de otros subprocesos opciones, y [opciones, Asistente para objetos simples de ATL](../../atl/reference/options-atl-simple-object-wizard.md) para obtener una descripción de los subprocesos los modelos disponibles para un objeto ATL.  
   
-##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
  Un símbolo que indica el proyecto tendrá los objetos que están marcados como ambos, libre o Neutral.  
   
 ```
@@ -152,7 +147,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>Comentarios  
  Si se define este símbolo, extraerá ATL en el código que se sincronizará correctamente el acceso a los datos globales. Código nuevo debe usar la macro equivalente [_ATL_FREE_THREADED](#_atl_free_threaded) en su lugar.  
   
-##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
  Un símbolo que impide el uso predeterminado de espacio de nombres como ATL.  
   
 ```
@@ -162,7 +157,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>Comentarios  
  Si no se define este símbolo, incluidos atlbase.h llevará a cabo **con espacio de nombres ATL** de forma predeterminada, lo que puede dar lugar a conflictos de nomenclatura. Para evitar esto, defina este símbolo.  
   
-##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
  Un símbolo que impide que el código relacionado con COM que se está compilando con el proyecto.  
   
 ```

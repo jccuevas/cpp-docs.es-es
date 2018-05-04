@@ -1,12 +1,9 @@
 ---
 title: Clase IAtlStringMgr | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b99b0b1f35ecbc35b4096ac8c2260d0a55680d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05d7ff0a38c0a557016887e6fce92fcb0bf28226
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr (clase)
 Esta clase representa la interfaz para un `CStringT` Administrador de memoria.  
@@ -51,7 +46,7 @@ __interface IAtlStringMgr
 |||  
 |-|-|  
 |[Asignar](#allocate)|Llamar a este método para asignar una nueva estructura de datos de cadena.|  
-|[Clon](#clone)|Llamar a este método para devolver un puntero a un nuevo administrador de cadena para su uso con otra instancia de `CSimpleStringT`.|  
+|[clon](#clone)|Llamar a este método para devolver un puntero a un nuevo administrador de cadena para su uso con otra instancia de `CSimpleStringT`.|  
 |[Libre](#free)|Llamar a este método para liberar una estructura de datos de cadena.|  
 |[GetNilString](#getnilstring)|Devuelve un puntero a la `CStringData` objeto utilizada por los objetos de cadena vacía.|  
 |[Reasignar](#reallocate)|Llame a este método para reasignar una estructura de datos de cadena.|  
@@ -64,7 +59,7 @@ __interface IAtlStringMgr
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlsimpstr.h  
   
-##  <a name="allocate"></a>Pasado IAtlStringMgr:: Allocate  
+##  <a name="allocate"></a>  Pasado IAtlStringMgr:: Allocate  
  Asigna una nueva estructura de datos de cadena.  
   
 ```
@@ -90,7 +85,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  Para obtener ejemplos de uso, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>  IAtlStringMgr::Clone  
  Devuelve un puntero a un nuevo administrador de cadena para su uso con otra instancia de `CSimpleStringT`.  
   
 ```
@@ -108,7 +103,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  Para obtener ejemplos de uso, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>  IAtlStringMgr::Free  
  Libera una estructura de datos de cadena.  
   
 ```
@@ -125,7 +120,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  Para obtener ejemplos de uso, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString  
  Devuelve un puntero a una estructura de datos de cadena para una cadena vacía.  
   
 ```
@@ -144,7 +139,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  Para obtener ejemplos de uso, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
-##  <a name="reallocate"></a>IAtlStringMgr:: ReAllocate  
+##  <a name="reallocate"></a>  IAtlStringMgr:: ReAllocate  
  Reasigna una estructura de datos de cadena.  
   
 ```

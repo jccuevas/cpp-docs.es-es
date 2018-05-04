@@ -1,27 +1,22 @@
 ---
 title: Tipos escalares | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5490bb33cafd8d2942e434ab9c50e34441506463
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-types"></a>Tipos escalares
 Aunque el acceso a los datos puede provenir de cualquier alineación, se recomienda que los datos se alineen según su límite natural, para evitar la pérdida de rendimiento (o una multiplicidad de ello). Las enumeraciones son enteros constantes y se tratan como enteros de 32 bits. En la tabla siguiente describe la definición de tipo y el almacenamiento recomendado para él, ya que pertenece a la alineación con los siguientes valores de alineación:  

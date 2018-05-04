@@ -1,12 +1,9 @@
 ---
 title: Clase CHeapPtr | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtr
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptr-class"></a>Clase CHeapPtr
 Una clase de puntero inteligente para administrar los punteros del montón.  
@@ -73,7 +68,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 |[CHeapPtr::operator =](#operator_eq)|El operador de asignación.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CHeapPtr`se deriva de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) y de forma predeterminada, usa las rutinas de CRT (en [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) para asignar y liberar memoria. La clase [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) puede utilizarse para construir una lista de punteros del montón. Vea también [plantilla CComHeapPtr](../../atl/reference/ccomheapptr-class.md), que utiliza las rutinas de asignación de memoria COM.  
+ `CHeapPtr` se deriva de [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) y de forma predeterminada, usa las rutinas de CRT (en [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) para asignar y liberar memoria. La clase [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) puede utilizarse para construir una lista de punteros del montón. Vea también [plantilla CComHeapPtr](../../atl/reference/ccomheapptr-class.md), que utiliza las rutinas de asignación de memoria COM.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -83,7 +78,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  
   
-##  <a name="allocate"></a>CHeapPtr::Allocate  
+##  <a name="allocate"></a>  CHeapPtr::Allocate  
  Llamar a este método para asignar memoria en el montón para almacenar objetos.  
   
 ```
@@ -103,7 +98,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
-##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
+##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr  
  El constructor.  
   
 ```
@@ -122,7 +117,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
-##  <a name="operator_eq"></a>CHeapPtr::operator =  
+##  <a name="operator_eq"></a>  CHeapPtr::operator =  
  Operador de asignación.  
   
 ```
@@ -140,7 +135,7 @@ CHeapPtr<T, Allocator>& operator=(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
-##  <a name="reallocate"></a>CHeapPtr::Reallocate  
+##  <a name="reallocate"></a>  CHeapPtr::Reallocate  
  Llamar a este método para volver a asignar la memoria en el montón.  
   
 ```

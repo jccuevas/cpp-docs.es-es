@@ -1,12 +1,9 @@
 ---
 title: Destructores (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae1ca6923bc7e67218e35c5a6c86b9f4ac112e59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="destructors-c"></a>Destructores (C++)
 Un destructor es una función miembro que se invoca automáticamente cuando el objeto queda fuera del ámbito o se destruyeron de forma explícita mediante una llamada a `delete`. Un destructor tiene el mismo nombre que la clase, precedido por una tilde (`~`). Por ejemplo, el destructor de la clase `String` se declara como: `~String()`. Si no se define un destructor, el compilador proporcionará un valor predeterminado; para muchas clases de esto es suficiente. Solo necesita definir un destructor personalizado cuando la clase almacena los identificadores de recursos de sistema que necesitan que se liberen o punteros que poseen la memoria que señalan a.

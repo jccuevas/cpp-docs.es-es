@@ -1,27 +1,22 @@
 ---
 title: Bienvenido a C++ (C++ moderno) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Aquí está otra vez C++ (C++ moderno)
 C++ es uno de los lenguajes de programación más utilizados en el mundo. Los programas bien escritos de C++ son rápidos y eficaces. El lenguaje es más flexible que otros lenguajes, ya que se puede utilizar para crear una amplia gama de aplicaciones, desde divertidos y emocionantes juegos, para software científico de alto rendimiento, hasta controladores de dispositivos, programas incrustados y aplicaciones cliente de Windows. Durante más de 20 años, C++ se ha utilizado para resolver problemas como estos y muchos otros. Lo que es posible que no sepa es que un creciente número de programadores de C++ han doblado la programación estilo C poco elegante de ayer y han puesto C++ moderno en su lugar.  
@@ -36,7 +31,7 @@ C++ es uno de los lenguajes de programación más utilizados en el mundo. Los pr
   
 -   Punteros inteligentes en lugar de punteros sin formato.  
   
--   `std::string`y `std::wstring` tipos (vea [ \<cadena >](../standard-library/string.md)) en lugar de sin formato `char[]` matrices.  
+-   `std::string` y `std::wstring` tipos (vea [ \<cadena >](../standard-library/string.md)) en lugar de sin formato `char[]` matrices.  
   
 -   [Biblioteca estándar de C++](../standard-library/cpp-standard-library-header-files.md) como contenedores `vector`, `list`, y `map` en lugar de matrices sin formato o contenedores personalizados. Vea [ \<vector >](../standard-library/vector.md), [ \<lista >](../standard-library/list.md), y [ \<mapa >](../standard-library/map.md).  
   

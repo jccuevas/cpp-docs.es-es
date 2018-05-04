@@ -2,11 +2,8 @@
 title: Literales de cadena y carácter (C++) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 C++ admite varios tipos de cadenas y caracteres, y proporciona maneras de expresar valores literales de cada uno de esos tipos. En el código fuente, el contenido de los literales de carácter y cadena se expresa mediante un juego de caracteres. Los nombres de carácter universal y los caracteres de escape permiten expresar cualquier cadena con tan solo el juego básico de caracteres de código fuente. Un literal de cadena sin formato permite evitar la utilización de caracteres de escape y puede usarse para expresar todos los tipos de literales de cadena. También se pueden crear literales std::string sin necesidad de seguir pasos adicionales de construcción o conversión.  

@@ -1,29 +1,24 @@
 ---
 title: Agregados y uniones | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>Agregados y uniones
 Otros tipos, como matrices, estructuras y uniones, tienen requisitos de alineación más estrictos que garantizan coherente agregada y union almacenamiento y recuperación de datos. Estas son las definiciones de matriz, estructura y unión:  
@@ -53,8 +48,8 @@ Otros tipos, como matrices, estructuras y uniones, tienen requisitos de alineaci
 |**FP32 (precisión simple)**|**float**|Palabra doble|  
 |**FP64 (precisión doble)**|**double**|Quadword|  
 |**PUNTERO**|**\***|Quadword|  
-|`__m64`|**struct __m64**|Quadword|  
-|`__m128`|**struct __m128**|Octaword|  
+|`__m64`|**__m64 (struct)**|Quadword|  
+|`__m128`|**__m128 (struct)**|Octaword|  
   
  Se aplican las siguientes reglas de alineación de agregados:  
   

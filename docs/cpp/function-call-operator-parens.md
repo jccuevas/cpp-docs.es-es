@@ -1,12 +1,9 @@
 ---
-title: "Operador de llamada de función: () | Documentos de Microsoft"
-ms.custom: 
+title: 'Operador de llamada de función: () | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-call-operator-"></a>Operador de llamada de función: ()
 Una expresión de postfijo seguida del operador de llamada de función, **()**, especifica una llamada de función.  
@@ -189,4 +184,4 @@ int main() {
 ## <a name="see-also"></a>Vea también  
  [Expresiones de postfijo](../cpp/postfix-expressions.md)   
  [Los operadores integrados de C++, prioridad y asociatividad](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Llamada de función](../c-language/function-call-c.md)   
+ [Llamada a función](../c-language/function-call-c.md)   

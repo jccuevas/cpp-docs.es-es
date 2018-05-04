@@ -1,13 +1,10 @@
 ---
 title: -fp (Especificar comportamiento de punto flotante) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Especificar comportamiento de punto flotante)
 Especifica el comportamiento de punto flotante en un archivo de código fuente.  
@@ -42,7 +37,7 @@ Especifica el comportamiento de punto flotante en un archivo de código fuente.
 ```  
   
 ## <a name="flags"></a>Marcas  
- **precisa**  
+ **Precisa**  
  El valor predeterminado.  
   
  Mejora la coherencia de las pruebas de punto flotante de igualdad y desigualdad deshabilitando las optimizaciones que podrían cambiar la precisión de los cálculos de punto flotante. (Es necesario mantener una precisión específica para preservar la compatibilidad estricta con ANSI). De forma predeterminada, en el código de arquitecturas x86, el compilador utiliza los registros de 80 bits para mantener los resultados intermedios de los cálculos de punto flotante. Esto aumenta la velocidad del programa y reduce su tamaño. No obstante, dado que en el cálculo están involucrados tipos de datos de punto flotante que se representan en memoria con menos de 80 bits, utilizar los bits adicionales de precisión (80 bits menos el número de bits de un tipo de punto flotante más pequeño) en un cálculo laborioso puede generar resultados incoherentes.  
@@ -67,7 +62,7 @@ Especifica el comportamiento de punto flotante en un archivo de código fuente.
   
  **/ fp: precisa** reemplaza la **/Op** opción del compilador.  
   
- **rápido**  
+ **El rápido**  
  La mayoría de las veces, crea el código más rápido, ya que relaja las reglas para optimizar las operaciones de punto flotante. Esto permite al compilador optimizar el código de punto flotante para mejorar la velocidad en detrimento de la precisión y la exactitud. Cuando **/fp: Fast** se especifica, el compilador no puede redondeo correctamente en instrucciones de asignación, conversiones de tipo o llamadas de función y no puede realizar el redondeo de expresiones intermedias. El compilador puede reordenar las operaciones o realizar transformaciones algebraicas (por ejemplo, con arreglo a reglas asociativas y distributivas), sin que esto afecte a los resultados de precisión finita. El compilador puede cambiar las operaciones y los operandos a una precisión simple en lugar de seguir las reglas de promoción de tipos de C++. Siempre se habilitan las optimizaciones de contracción de específicos de punto flotante ([fp_contract](../../preprocessor/fp-contract.md) es ON). Excepciones de punto flotante y acceso de entorno FPU están deshabilitadas (**/fp: excepto-** está implícito y [fenv_access](../../preprocessor/fenv-access.md) es OFF).  
   
  **/ fp: Fast** no se puede usar con **/fp: strict** o **/fp: precisa**. Se utiliza la última opción especificada en la línea de comandos. Si se especifica **/fp: Fast** y **/fp: excepto** genera un error del compilador.  

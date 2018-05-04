@@ -1,12 +1,9 @@
 ---
 title: Clase CElementTraitsBase | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraitsbase-class"></a>Clase CElementTraitsBase
 Esta clase proporciona copia de forma predeterminada y move los métodos de una clase de colección.  
@@ -70,7 +65,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcoll.h  
   
-##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
  Llamar a este método para copiar los elementos almacenados en un objeto de clase de colección.  
   
 ```
@@ -93,21 +88,21 @@ static void CopyElements(
 ### <a name="remarks"></a>Comentarios  
  No deben superponerse a los elementos de origen y de destino.  
   
-##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  El tipo de datos que se usará para agregar elementos a la colección.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
  El tipo de datos que se usará para recuperar los elementos de la colección.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
  Llame a este método para cambiar la posición de elementos almacenados en un objeto de clase de colección.  
   
 ```

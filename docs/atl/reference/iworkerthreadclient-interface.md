@@ -1,12 +1,9 @@
 ---
 title: Interfaz IWorkerThreadClient | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IWorkerThreadClient
@@ -18,20 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b0578b3fbe16d21a12edf2ac5eb91528419e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iworkerthreadclient-interface"></a>Interfaz IWorkerThreadClient
-`IWorkerThreadClient`es la interfaz implementada por los clientes de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) clase.  
+`IWorkerThreadClient` es la interfaz implementada por los clientes de la [CWorkerThread](../../atl/reference/cworkerthread-class.md) clase.  
   
 > [!IMPORTANT]
 >  Esta clase y sus miembros no se pueden usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.  
@@ -57,7 +52,7 @@ __interface IWorkerThreadClient
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  Implemente este método para cerrar el identificador asociado a este objeto.  
   
 ```
@@ -79,7 +74,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  Implemente este método para ejecutar código cuando se señaliza el identificador asociado a este objeto.  
   
 ```

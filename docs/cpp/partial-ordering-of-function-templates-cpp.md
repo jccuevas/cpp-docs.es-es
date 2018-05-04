@@ -1,29 +1,24 @@
 ---
-title: "Ordenación parcial de plantillas de función (C++) | Documentos de Microsoft"
-ms.custom: 
+title: Ordenación parcial de plantillas de función (C++) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordenación parcial de plantillas de función (C++)
 
@@ -49,7 +44,7 @@ Utilice el proceso siguiente para determinar si un candidato de plantilla de fun
 
      2. Una plantilla que toma solo __T\*__  es más especializado que toma un solo __T__, porque el tipo de un hipotético __X\*__  es un argumento válido para un __T__ argumento de plantilla, pero __X__ no es un argumento válido para un __T\*__  argumento de plantilla.
 
-     3. __const T__ es más especializado que __T__, porque __const X__ es un argumento válido para un __T__ argumento de plantilla, pero __X__ no es un argumento válido para un __const T__ argumento de plantilla.
+     3. __const T__ es más especializado que __T__, porque __const X__ es un argumento válido para un __T__ argumento de plantilla, pero __X__ es no es un argumento válido para un __const T__ argumento de plantilla.
 
      4. __const T\*__  es más especializado que __T\*__, porque __const X\*__  es un argumento válido para un __T\*__  argumento de plantilla, pero __X\*__  no es un argumento válido para un __const T\*__  argumento de plantilla.
 

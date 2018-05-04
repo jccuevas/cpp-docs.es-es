@@ -1,13 +1,10 @@
 ---
 title: Importaciones mutuas | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Importaciones mutuas
 Exportar o importar a otro archivo ejecutable presenta complicaciones cuando las importaciones mutuas (o circulares). Por ejemplo, dos archivos DLL importan símbolos entre sí, similar a funciones mutuamente recursivas.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- .Dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Si utiliza símbolos independientes para cada DLL `CExampleB` se exporta y `CExampleA` se importa al generar B.dll. `CExampleA`se exporta al generar A.dll y se importa al ser utilizada por B.dll (o algún otro cliente).  
+ .Dll se genera con `/D A_IMPL` y B.dll se genera con `/D B_IMPL`. Si utiliza símbolos independientes para cada DLL `CExampleB` se exporta y `CExampleA` se importa al generar B.dll. `CExampleA` se exporta al generar A.dll y se importa al ser utilizada por B.dll (o algún otro cliente).  
   
  No se puede realizar este tipo de distribución en capas cuando se usa la integrada **AFX_EXT_CLASS** y `_AFXEXT` símbolos de preprocesador. La técnica descrita anteriormente soluciona este problema de forma no al contrario que el mecanismo de MFC utiliza al generar sus tecnologías activas, base de datos y archivos DLL de extensión de MFC de la red.  
   

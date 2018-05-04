@@ -1,12 +1,9 @@
 ---
 title: Asignar y liberar memoria para un BSTR | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - bstr
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - memory deallocation, BSTR memory
 - strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 282ceac05587452fad750f05b642c0ffd5b929a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46ab5ae9d6f0bfa98231cbc41aa4ae0d10b89537
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Asignación y liberación de memoria para un BSTR
 Cuando creas `BSTR`s y pasarlos entre objetos COM, debe tener cuidado en el tratamiento de la memoria que se usan con el fin de evitar pérdidas de memoria. Cuando un `BSTR` permanece dentro de una interfaz, debe liberar su memoria cuando haya terminado con él. Sin embargo, cuando un `BSTR` pasa fuera de una interfaz, el objeto receptor responsabiliza de la administración de memoria.  

@@ -1,12 +1,9 @@
 ---
 title: __hook | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 Asocia un método de control a un evento.  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Un puntero al método de evento al que se enlaza el método de controlador de eventos:  
   
 -   Eventos de C++ nativo: *SourceClass* es la clase de origen de eventos y *EventMethod* es el evento.  
@@ -60,7 +55,7 @@ long __hook(
  `interface`  
  El nombre de la interfaz que se va a enlazar a `receiver`, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **true**.  
   
- *origen*  
+ *Origen*  
  Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en **event_receiver**, *origen* puede ser uno de los siguientes:  
   
 -   Un puntero nativo de objeto de origen de eventos.  
@@ -69,7 +64,7 @@ long __hook(
   
 -   Un puntero de objeto administrado (para eventos administrados).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Un puntero al método de controlador de eventos que se a enlazar a un evento. El controlador se especifica como un método de una clase o una referencia a la misma; si no se especifica el nombre de la clase, `__hook` supone que la clase es aquella en que se llama.  
   
 -   Eventos de C++ nativo: *ReceiverClass* es la clase de receptor de eventos y `HandlerMethod` es el controlador.  
@@ -89,7 +84,7 @@ long __hook(
   
  Hay dos formas de `__hook`. Puede usar la primera forma (cuatro argumento) en la mayoría de los casos, concretamente, para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **false** .  
   
- En estos casos no necesita enlazar todos los métodos en una interfaz antes de desencadenar un evento en uno de los métodos; solo debe enlazarse el método que controlará el evento. Puede usar la segunda forma (dos argumentos) de `__hook` solo para un receptor de eventos COM en el que *layout_dependent***= true**.  
+ En estos casos no necesita enlazar todos los métodos en una interfaz antes de desencadenar un evento en uno de los métodos; solo debe enlazarse el método que controlará el evento. Puede usar la segunda forma (dos argumentos) de `__hook` solo para un receptor de eventos COM en el que * layout_dependent ***= true**.  
   
  `__hook` devuelve un valor de tipo long. Un valor devuelto distinto de cero indica que se ha producido un error (los eventos administrados producirán una excepción).  
   

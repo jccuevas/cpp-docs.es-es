@@ -1,30 +1,25 @@
 ---
 title: -kernel (crear Kernel modo binario) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Crear binario en modo kernel)
 Crea un archivo binario que se pueden ejecutar en el kernel de Windows.  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Algunos las siguientes combinaciones de arquitectura de destino y el **/arch** opción de generar un error cuando se usan con **/kernel**:  
   
--   **/ arch: {SSE &#124; SSE2 &#124; AVX}** no se admiten en x86. Solo **/arch:IA32** es compatible con **/kernel** en x86.  
+-   **/ arch: {SSE&#124;SSE2&#124;AVX}** no se admiten en x86. Solo **/arch:IA32** es compatible con **/kernel** en x86.  
   
 -   **/ arch: AVX** no es compatible con **/kernel** en x64.  
   
@@ -91,7 +86,7 @@ class NONPAGESECTION MyNonPagedClass
     ||**/ kernel** obj|**/kernel-** obj, obj MASM, o cvtresed|Mezcla de **/kernel** y **/kernel-** objetos|  
     |-|----------------------|-----------------------------------------------|-------------------------------------------------|  
     |**/ kernel de vínculo**|Sí|Sí|Sí con advertencia LNK4257|  
-    |**vínculo**|Sí|Sí|Sí|  
+    |**Vínculo**|Sí|Sí|Sí|  
   
      **Objeto de vinculación de LNK4257 no compilado con/kernel; no puede ejecutar la imagen**  
   

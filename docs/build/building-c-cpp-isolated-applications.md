@@ -1,29 +1,24 @@
 ---
-title: "Aplicaciones aisladas de compilación de C/C ++ | Documentos de Microsoft"
-ms.custom: 
+title: Aplicaciones aisladas de compilación de C/C ++ | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76b0c1fa5b509ae495a12fb63164d7da01f402aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69de94159ef792aedff35efe81e8bb663d571105
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-isolated-applications"></a>Compilar aplicaciones aisladas de C/C++
 Una aplicación aislada sólo depende de ensamblados en paralelo y enlaza a sus dependencias mediante un manifiesto. No es necesaria para la aplicación sea completamente aislado para poder ejecutarse correctamente en Windows; Sin embargo, al invertir en aislar totalmente su aplicación, puede ahorrar tiempo si tiene que mantener la aplicación en el futuro. Para obtener más información sobre las ventajas de aislar totalmente su aplicación, consulte [aplicaciones aisladas](http://msdn.microsoft.com/library/aa375190).  

@@ -1,29 +1,24 @@
 ---
 title: Sintaxis de las expresiones lambda | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e41be4a1c69f6bf39e4ca0ede5b0afbe3a09f776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1faf0458a9cf1a528e9a0c2582e8d2ec3715f149
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lambda-expression-syntax"></a>Sintaxis de la expresión lambda
 En este artículo se demuestra la sintaxis y los elementos estructurales de las expresiones lambda. Para obtener una descripción de las expresiones lambda, vea [expresiones Lambda](../cpp/lambda-expressions-in-cpp.md).  
@@ -176,7 +171,7 @@ There are 4 even numbers in the vector.
 ## <a name="see-also"></a>Vea también  
  [Expresiones lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Ejemplos de expresiones Lambda](../cpp/examples-of-lambda-expressions.md)   
- [generar](../standard-library/algorithm-functions.md#generate)   
+ [Generar](../standard-library/algorithm-functions.md#generate)   
  [generate_n](../standard-library/algorithm-functions.md#generate_n)   
  [for_each](../standard-library/algorithm-functions.md#for_each)   
  [Especificaciones de excepciones (throw)](../cpp/exception-specifications-throw-cpp.md)   

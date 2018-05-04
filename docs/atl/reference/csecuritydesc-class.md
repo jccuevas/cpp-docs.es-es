@@ -1,12 +1,9 @@
 ---
 title: Clase de CSecurityDesc | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>Clase de CSecurityDesc
 Esta clase es un contenedor para la **SECURITY_DESCRIPTOR** estructura.  
@@ -140,7 +135,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Comentarios  
  El `CSecurityDesc` , opcionalmente, se puede crear el objeto con un **SECURITY_DESCRIPTOR** definida previamente o estructura `CSecurityDesc` objeto.  
   
-##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc:: ~ CSecurityDesc  
  Destructor.  
   
 ```
@@ -355,7 +350,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>Comentarios  
  Para establecer esta marca, utilice la [CSecurityDesc::SetGroup](#setgroup) método.  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  Determina si el identificador de seguridad de propietario del descriptor de seguridad (SID) se ha establecido de forma predeterminada.  
   
 ```
@@ -460,7 +455,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>Comentarios  
  Un descriptor de seguridad en formato absoluto contiene punteros a la información que contiene, en lugar de que contiene la información en Sí. Un descriptor de seguridad en formato autorelativo contiene la información en un bloque de memoria contiguo. En un descriptor de seguridad autorelativo, un **SECURITY_DESCRIPTOR** siempre inicia la estructura de la información, pero el descriptor de seguridad de otros componentes pueden seguir la estructura en cualquier orden. En lugar de utilizar direcciones de memoria, los componentes del descriptor de seguridad se identifican por desplazamientos desde el principio del descriptor de seguridad. Este formato resulta útil cuando un descriptor de seguridad debe ser almacenado en un disco o transmitido por medio de un protocolo de comunicación. Para obtener más información, consulte [absoluto y descriptores de seguridad de Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Operador de asignación.  
   
 ```
@@ -475,7 +470,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve la actualización `CSecurityDesc` objeto.  
   
-##  <a name="operator_const_security_descriptor__star"></a>SECURITY_DESCRIPTOR const CSecurityDesc::operator *  
+##  <a name="operator_const_security_descriptor__star"></a>  SECURITY_DESCRIPTOR const CSecurityDesc::operator *  
  Convierte un valor a un puntero a la **SECURITY_DESCRIPTOR** estructura.  
   
 ```  
@@ -575,7 +570,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parámetros  
- *Sacl*  
+ *SACL*  
  Puntero a un `CSacl` objeto que especifica la SACL del descriptor de seguridad. Este parámetro no debe ser NULL y debe ser un objeto CSacl. A diferencia de las DACL, no hay ninguna diferencia entre NULL y una SACL vacía, como objetos SACL no especifican derechos de acceso de solo auditoría información.  
   
  `bDefaulted`  

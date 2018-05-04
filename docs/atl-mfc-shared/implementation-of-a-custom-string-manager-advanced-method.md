@@ -1,29 +1,24 @@
 ---
-title: "Implementación de un administrador de cadenas personalizado (método de avanzado) | Documentos de Microsoft"
-ms.custom: 
+title: Implementación de un administrador de cadenas personalizado (método de avanzado) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Implementación de un administrador de cadenas personalizado (método avanzado)
 En situaciones especializadas, puede implementar un administrador de la cadena personalizada que cambiar algo más que el montón se utiliza para asignar memoria. En esta situación, debe implementar manualmente el [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaz como su administrador de cadenas personalizado.  
@@ -34,7 +29,7 @@ En situaciones especializadas, puede implementar un administrador de la cadena p
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) este campo apunta a la `IAtlStringMgr` interfaz usada para administrar estos datos de cadena. Cuando `CStringT` debe reasignar o liberar el búfer de cadena que llama a los métodos Reallocate o Free de esta interfaz, pasando el `CStringData` estructura como un parámetro. Al asignar un `CStringData` estructura en el Administrador de cadenas, debe establecer este campo para que apunte a su administrador de cadenas personalizado.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) este campo contiene la longitud actual de la lógica de la cadena almacenada en el búfer sin incluir el carácter null final. `CStringT`actualiza este campo cuando cambia la longitud de la cadena. Al asignar un `CStringData` estructura, el Administrador de cadenas debe establecer este campo en cero. Al reasignar un `CStringData` estructura, el Administrador de cadenas personalizado debe dejar este campo sin modificar.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) este campo contiene la longitud actual de la lógica de la cadena almacenada en el búfer sin incluir el carácter null final. `CStringT` actualiza este campo cuando cambia la longitud de la cadena. Al asignar un `CStringData` estructura, el Administrador de cadenas debe establecer este campo en cero. Al reasignar un `CStringData` estructura, el Administrador de cadenas personalizado debe dejar este campo sin modificar.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) este campo contiene el número máximo de caracteres (excepto el carácter null final) que se pueden almacenar en el búfer de cadena sin reasignarlo. Cada vez que `CStringT` necesita aumentar la longitud lógica de la cadena, en primer lugar comprueba este campo para asegurarse de que hay suficiente espacio en el búfer. Si se produce un error en la comprobación, `CStringT` llama a su administrador de cadenas personalizado para reasignar el búfer. Al asignar o reasignar una `CStringData` estructura, debe establecer este campo en al menos el número de caracteres solicitado en el **nChars** parámetro [pasado IAtlStringMgr:: Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) o [IAtlStringMgr:: ReAllocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Si hay más espacio en el búfer a la solicitada, puede establecer este valor para reflejar la cantidad de espacio disponible real. Esto permite `CStringT` aumente la cadena para rellenar todo el espacio asignado antes de que devuelva la llamada en el Administrador de cadenas para reasignar el búfer.  
   
