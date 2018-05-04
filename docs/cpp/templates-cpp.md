@@ -1,12 +1,9 @@
 ---
 title: Plantillas (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>Plantillas (C++)
 Las plantillas son la base de programación genérica en C++. Como un lenguaje fuertemente tipado, C++ requiere que todas las variables que tienen un tipo específico, ya sea explícitamente declarado por el programador o deduce el compilador. Sin embargo, muchos algoritmos y estructuras de datos tenga el mismo aspecto independientemente del tipo que funcionan en. Habilitar plantillas para definir las operaciones de una clase o función y permitir al usuario especificar qué hormigón tipos esas operaciones debe funcionar en.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- El código anterior describe una plantilla para una función genérica con un parámetro de tipo único `T`, cuyo valor devuelto y llamar a parámetros (lhs y rhs) son todas de este tipo. Puede asignar un parámetro de tipo que como, pero por convención solo mayúsculas se usa normalmente. `T`es un parámetro de plantilla; el `typename` palabra clave indica que este parámetro es un marcador de posición para un tipo. Cuando se llama a la función, el compilador reemplazará todas las instancias de `T` con el argumento de tipo concreto que es especificado por el usuario o deduce el compilador. El proceso en el que el compilador genera una clase o función de una plantilla se conoce como *crear instancias de plantillas*;   `minimum<int>` es una instancia de la plantilla `minimum<T>`.  
+ El código anterior describe una plantilla para una función genérica con un parámetro de tipo único `T`, cuyo valor devuelto y llamar a parámetros (lhs y rhs) son todas de este tipo. Puede asignar un parámetro de tipo que como, pero por convención solo mayúsculas se usa normalmente. `T` es un parámetro de plantilla; el `typename` palabra clave indica que este parámetro es un marcador de posición para un tipo. Cuando se llama a la función, el compilador reemplazará todas las instancias de `T` con el argumento de tipo concreto que es especificado por el usuario o deduce el compilador. El proceso en el que el compilador genera una clase o función de una plantilla se conoce como *crear instancias de plantillas*;   `minimum<int>` es una instancia de la plantilla `minimum<T>`.  
   
  En otra parte, un usuario puede declarar una instancia de la plantilla que está especializada para int. Supongamos que get_a() y get_b() son funciones que devuelven un valor int:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  Las reglas de cómo el compilador realiza la deducción de tipos de plantillas de función se basan en las reglas para las funciones normales. Para obtener más información, consulte [sobrecarga resolución de plantilla de llamadas a funciones](../cpp/overload-resolution-of-function-template-calls.md).  
   
-## <a id="type_parameters"></a>Parámetros de tipo  
+## <a id="type_parameters"></a> Parámetros de tipo  
  En el `minimum` plantilla anterior, tenga en cuenta que el parámetro de tipo `T` no está calificado de ninguna manera hasta que se usa en los parámetros de llamada de función, que se agregan las constante y calificadores de referencia.  
   
  No hay ningún límite práctico para el número de parámetros de tipo. Varios parámetros se separan por comas:  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  Otros tipos de valores, incluidos los punteros y referencias se pueden pasar como parámetros sin tipo. Por ejemplo, puede pasar un puntero a una función o un objeto de función a personalizar alguna operación en el código de plantilla.  
   
-## <a id="template_parameters"></a>Plantillas como parámetros de plantilla  
+## <a id="template_parameters"></a> Plantillas como parámetros de plantilla  
  Una plantilla puede ser un parámetro de plantilla. En este ejemplo, MyClass2 tiene dos parámetros de plantilla: un parámetro typename `T` y un parámetro de plantilla `Arr`:  
   
 ```cpp  

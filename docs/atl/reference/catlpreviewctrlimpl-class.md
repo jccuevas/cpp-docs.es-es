@@ -1,12 +1,9 @@
 ---
 title: Clase CAtlPreviewCtrlImpl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Clase CAtlPreviewCtrlImpl
 Esta clase es una implementación de ATL de una ventana que se coloca en una ventana host proporcionada por el Shell de vista previa avanzada.  
@@ -115,7 +110,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlpreviewctrlimpl.h  
   
-##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  Construye un objeto de control de vista previa.  
   
 ```
@@ -125,7 +120,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
  Se destruye un objeto de control de vista previa.  
   
 ```
@@ -134,7 +129,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
  Llama a un controlador de vista previa avanzada para crear la ventana de Windows.  
   
 ```
@@ -153,7 +148,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
  Llama a un controlador de vista previa avanzada cuando es necesario destruir este control.  
   
 ```
@@ -162,7 +157,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
  Lo llama el marco de trabajo para representar la vista previa.  
   
 ```
@@ -175,7 +170,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
  Establece el foco a este control de entrada.  
   
 ```
@@ -184,7 +179,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
  Color de fondo de la ventana de vista previa.  
   
 ```
@@ -193,7 +188,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
  Color del texto de la ventana de vista previa.  
   
 ```
@@ -202,7 +197,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
  Fuente utilizada para mostrar texto en la ventana de vista previa.  
   
 ```
@@ -211,7 +206,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
  Controla el mensaje WM_PAINT.  
   
 ```
@@ -240,7 +235,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
  Indica a este control para volver a dibujar.  
   
 ```
@@ -249,7 +244,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
  Establece a un nuevo elemento primario para este control.  
   
 ```
@@ -262,7 +257,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
  Llama a un controlador de vista previa avanzada cuando sea necesario establecer los objetos visuales de vista previa enriquecida contenido.  
   
 ```
@@ -284,7 +279,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
  Establece un nuevo rectángulo delimitador para este control.  
   
 ```

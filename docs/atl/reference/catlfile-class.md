@@ -2,11 +2,8 @@
 title: Clase CAtlFile | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>Clase CAtlFile
 Esta clase proporciona un contenedor fino alrededor de las ventanas de API de control de archivos.  
@@ -94,7 +89,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  El constructor.  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Comentarios  
  El constructor de copias transfiere la propiedad del identificador del archivo de la versión original `CAtlFile` objeto para el objeto recién creado.  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  Llame a este método para crear o abrir un archivo.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Comentarios  
  Llamadas [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) para crear o abrir el archivo.  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  Llamar a este método para borrar los búferes para el archivo y hacer que todos los datos almacenados en búfer se escriban en el archivo.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) para vaciar los datos almacenados en búfer en el archivo.  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Llamar a este método para obtener los resultados de una operación superpuesta en el archivo.  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Comentarios  
  Llamadas [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) para obtener los resultados de una operación superpuesta en el archivo.  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Llamar a este método para obtener la posición actual del puntero de archivo.  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para obtener la posición actual del puntero de archivo.  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  Llame a este método para obtener el tamaño en bytes del archivo.  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) para obtener el tamaño en bytes del archivo.  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Llame a este método para bloquear una región en el archivo para evitar que otros procesos tengan acceso a él.  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Devuelve `S_OK` resultado correcto o error `HRESULT` en caso de error.  
   
 ### <a name="remarks"></a>Comentarios  
- Llamadas [encontraba](http://msdn.microsoft.com/library/windows/desktop/aa365202) para bloquear una región en el archivo. El bloqueo de bytes en un archivo impide que otros procesos obtengan acceso a dichos bytes. Se puede bloquear más de una región de un archivo, pero no las áreas superpuestas se permiten. Cuando haya desbloqueado una región, con [CAtlFile::UnlockRange](#unlockrange), el intervalo de bytes debe corresponder exactamente con la región que se ha bloqueado anteriormente. `LockRange`no combina regiones adyacentes; Si dos regiones bloqueadas son adyacentes, debe desbloquear a cada uno de ellos por separado.  
+ Llamadas [encontraba](http://msdn.microsoft.com/library/windows/desktop/aa365202) para bloquear una región en el archivo. El bloqueo de bytes en un archivo impide que otros procesos obtengan acceso a dichos bytes. Se puede bloquear más de una región de un archivo, pero no las áreas superpuestas se permiten. Cuando haya desbloqueado una región, con [CAtlFile::UnlockRange](#unlockrange), el intervalo de bytes debe corresponder exactamente con la región que se ha bloqueado anteriormente. `LockRange` no combina regiones adyacentes; Si dos regiones bloqueadas son adyacentes, debe desbloquear a cada uno de ellos por separado.  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Puntero a un `CAtlTransactionManager` objeto.  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  Llamar a este método para leer los datos desde un archivo a partir de la posición indicada por el puntero de archivo.  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Comentarios  
  Llamar las tres primeras formas [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), la última [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) para leer datos desde el archivo. Use [CAtlFile::Seek](#seek) para mover el puntero de archivo.  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  Llamar a este método para mover el puntero de archivo del archivo.  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Comentarios  
  Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) para mover el puntero de archivo.  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  Llamar a este método para establecer el tamaño del archivo.  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) y [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) para establecer el tamaño del archivo. Una vez devuelta, se coloca el puntero de archivo al final del archivo.  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Llamar a este método para desbloquear una región del archivo.  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) para desbloquear una región del archivo.  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  Llame a este método para escribir datos en el archivo a partir de la posición indicada por el puntero de archivo.  
   
 ```

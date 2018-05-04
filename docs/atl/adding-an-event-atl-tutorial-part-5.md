@@ -1,27 +1,22 @@
 ---
 title: Agregar un evento (ATL Tutorial, parte 5) | Documentos de Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Agregar un evento (Tutorial de ATL, Parte 5)
 En este paso, agregará un `ClickIn` y un `ClickOut` evento al control ATL. Se activará la `ClickIn` evento si el usuario hace clic dentro del polígono y activan `ClickOut` si el usuario hace clic fuera de. Las tareas para agregar un evento son los siguientes:  
@@ -82,7 +77,7 @@ En este paso, agregará un `ClickIn` y un `ClickOut` evento al control ATL. Se a
   
 1.  Recompile el proyecto.  
   
-     O bien  
+     -o bien-  
   
 2.  Haga clic en el archivo Polygon.idl en el Explorador de soluciones y haga clic en **compilar** en el menú contextual.  
   
@@ -134,7 +129,7 @@ En este paso, agregará un `ClickIn` y un `ClickOut` evento al control ATL. Se a
   
  A continuación, agregará una página de propiedades.  
   
- [Vuelva al paso 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [Al paso 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Vuelva al paso 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [al paso 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial](../atl/active-template-library-atl-tutorial.md)

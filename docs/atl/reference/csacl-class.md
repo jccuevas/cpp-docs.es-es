@@ -1,12 +1,9 @@
 ---
 title: Clase CSacl | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSacl
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csacl-class"></a>Clase CSacl
 Esta clase es un contenedor para una estructura SACL (lista de control de acceso del sistema).  
@@ -152,7 +147,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Comentarios  
  El `CSacl` objeto puede crearse de forma opcional con existente **ACL** estructura. Asegúrese de que este parámetro es una lista de control de acceso de sistema (SACL) y no una lista de control de acceso discrecional (DACL). En las compilaciones de depuración, si se proporciona una DACL se producirá una aserción. En versiones de lanzamiento se omiten todas las entradas de una DACL.  
   
-##  <a name="dtor"></a>  CSacl::~CSacl  
+##  <a name="dtor"></a>  CSacl:: ~ CSacl  
  Destructor.  
   
 ```
@@ -172,7 +167,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el número de ACE contenidos en la `CSacl` objeto.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Operador de asignación.  
   
 ```

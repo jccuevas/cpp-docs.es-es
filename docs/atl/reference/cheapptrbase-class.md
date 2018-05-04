@@ -1,12 +1,9 @@
 ---
 title: Clase CHeapPtrBase | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrbase-class"></a>Clase CHeapPtrBase
 Esta clase constituye la base para varias clases de puntero inteligente de montón.  
@@ -93,7 +88,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcore.h  
   
-##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
  Llamar a este método para asignar memoria.  
   
 ```
@@ -110,7 +105,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>Comentarios  
  En compilaciones de depuración, se producirá un error de aserción si el [CHeapPtrBase::m_pData](#m_pdata) variable miembro actualmente apunta a un valor existente; es decir, no es igual a NULL.  
   
-##  <a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>  CHeapPtrBase::Attach  
  Llamar a este método para tomar posesión de un puntero existente.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(T* pData) throw();
   
  En compilaciones de depuración, se producirá un error de aserción si el [CHeapPtrBase::m_pData](#m_pdata) variable miembro actualmente apunta a un valor existente; es decir, no es igual a NULL.  
   
-##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  Destructor.  
   
 ```
@@ -136,7 +131,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>Comentarios  
  Libera todos los recursos asignados.  
   
-##  <a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>  CHeapPtrBase::Detach  
  Llamar a este método para liberar la propiedad de un puntero.  
   
 ```
@@ -149,7 +144,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la propiedad de un puntero, Establece la [CHeapPtrBase::m_pData](#m_pdata) variable miembro en NULL y devuelve una copia del puntero.  
   
-##  <a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>  CHeapPtrBase::Free  
  Llamar a este método para eliminar un objeto al que señala un `CHeapPtrBase`.  
   
 ```
@@ -159,7 +154,7 @@ void Free() throw();
 ### <a name="remarks"></a>Comentarios  
  El objeto señalado por el `CHeapPtrBase` se libera y el [CHeapPtrBase::m_pData](#m_pdata) variable miembro se establece en NULL.  
   
-##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  La variable de miembro de datos de puntero.  
   
 ```
@@ -169,7 +164,7 @@ T* m_pData;
 ### <a name="remarks"></a>Comentarios  
  Esta variable miembro contiene la información del puntero.  
   
-##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  La & (operador).  
   
 ```
@@ -180,7 +175,7 @@ T** operator&() throw();
  Devuelve la dirección del objeto que señala el `CHeapPtrBase` objeto.  
   
 
-##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
  El operador de puntero a miembro.  
   
@@ -194,7 +189,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>Comentarios  
  Utilice este operador para llamar a un método en una clase que señala el `CHeapPtrBase` objeto. En compilaciones de depuración, se producirá un error de aserción si el `CHeapPtrBase` apunta a NULL.  
   
-##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  El operador de conversión.  
   
 ```  
@@ -204,7 +199,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>Comentarios  
  Devuelve [CHeapPtrBase::m_pData](#m_pdata).  
   
-##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
  Llamar a este método para volver a asignar memoria.  
   
 ```

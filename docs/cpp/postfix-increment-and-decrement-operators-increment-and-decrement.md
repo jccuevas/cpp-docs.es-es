@@ -1,12 +1,9 @@
 ---
 title: 'Operadores de incremento y decremento de postfijo: ++ y--| Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento y decremento postfijos: ++ y --
 ## <a name="syntax"></a>Sintaxis  
@@ -56,7 +51,7 @@ i++;
   
  Cuando se aplica un operador de postfijo a un argumento de función, no es seguro que el valor del argumento aumente o disminuya antes de que se pase a la función.  Para obtener más información, vea la sección 1.9.17 del estándar C++.  
   
- Aplicar el operador de incremento de postfijo a un puntero a una matriz de objetos de tipo **largo** realidad se agregan cuatro a la representación interna del puntero. Este comportamiento hace que el puntero, lo que anteriormente se conoce a la  *n* elemento de la matriz, para hacer referencia a la (*n*+ 1) elemento.  
+ Aplicar el operador de incremento de postfijo a un puntero a una matriz de objetos de tipo **largo** realidad se agregan cuatro a la representación interna del puntero. Este comportamiento hace que el puntero, lo que anteriormente se conoce a la *n*elemento de la matriz, para hacer referencia a la (*n*+ 1) elemento.  
   
  Los operandos e incremento de postfijo operadores de decremento deben ser modificables (no **const**) valores l de tipo aritmético o puntero. El tipo del resultado es el mismo que el de la *postfix-expression*, pero ya no es un valor l.  
   

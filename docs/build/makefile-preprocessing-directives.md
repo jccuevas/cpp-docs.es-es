@@ -1,13 +1,10 @@
 ---
 title: Directivas de preprocesamiento de archivos MAKE | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -48,23 +45,21 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-directives"></a>Directivas de preprocesamiento de archivos MAKE
 Las directivas de preprocesamiento no distinguen mayúsculas de minúsculas. El punto inicial de signo de exclamación (!) debe aparecer al principio de la línea. Cero o más espacios o tabulaciones pueden aparecer después del punto de exclamación, para la sangría.  
   
  **! CMDSWITCHES**  
- {**+**&#124;  **-** }*opción*... Convierte a cada uno *opción* aparece activado o desactivado. Deben haber espacios ni tabulaciones antes el + o - operador. no pueden estar entre el operador y el [opción letras](../build/nmake-options.md). Letras no distinguen mayúsculas de minúsculas y se especifican sin una barra diagonal (/). Para activar unas opciones y desactivar otras, utilizar especificaciones independientes de **! CMDSWITCHES**.  
+ {**+** &#124; **-**}*opción*... Convierte a cada uno *opción* aparece activado o desactivado. Deben haber espacios ni tabulaciones antes el + o - operador. no pueden estar entre el operador y el [opción letras](../build/nmake-options.md). Letras no distinguen mayúsculas de minúsculas y se especifican sin una barra diagonal (/). Para activar unas opciones y desactivar otras, utilizar especificaciones independientes de **! CMDSWITCHES**.  
   
  Sólo/d, / I, /N y /S se pueden usar en un archivo MAKE. En Tools.ini, se admiten todas las opciones excepto/f, / Help, / nologo, / X, y /?. Cambios especificados en un bloque de descripción no surtirán efecto hasta el siguiente bloque de descripción. Esta directiva actualiza **MAKEFLAGS**; los cambios se heredan durante la recursividad si **MAKEFLAGS** se especifica.  
   
@@ -74,7 +69,7 @@ Las directivas de preprocesamiento no distinguen mayúsculas de minúsculas. El 
  **! MENSAJE***texto*   
  Muestra *texto* a la salida estándar. Los espacios o tabulaciones antes *texto* se omiten.  
   
- **! INCLUIR**[  **\<** ] *filename*[  **>** ]  
+ **! INCLUIR**[ **\<**] *filename*[ **>**]  
  Lee *filename* como un archivo MAKE, a continuación, continúa con el archivo MAKE actual. NMAKE busca *filename* primero en el directorio actual o especificado, a continuación, recursiva en los directorios de cualquier principal MAKE (archivos), a continuación, si *filename* está incluido entre corchetes angulares (\<>), en los directorios especificados por la **INCLUDE** macro, que inicialmente se establece en la variable de entorno INCLUDE. Es útil para pasar **. SUFIJOS** configuración, **. Muy VALIOSO**y las reglas de inferencia para archivos MAKE recursivos.  
   
  **! IF**  `constantexpression`  
@@ -86,7 +81,7 @@ Las directivas de preprocesamiento no distinguen mayúsculas de minúsculas. El 
  **! IFNDEF***Nombredelamacro*   
  ¡Procesa instrucciones entre **! IFNDEF** y la siguiente instrucción **! ELSE** o `!ENDIF` si *Nombredelamacro* no está definido.  
   
- **! ELSE**[**IF** *constantexpression* &#124; **IFDEF** *Nombredelamacro*&#124; **IFNDEF** *Nombredelamacro*]  
+ **! ELSE**[**IF** *constantexpression* &#124; **IFDEF** *Nombredelamacro* &#124; **IFNDEF**  *Nombredelamacro*]  
  ¡Procesa instrucciones entre **! ELSE** y el siguiente `!ENDIF` si anterior **! IF**, `!IFDEF`, o **! IFNDEF** instrucción que se evalúa como cero. Las palabras clave opcionales ofrecen un control de preprocesamiento.  
   
  **! ELSEIF**  

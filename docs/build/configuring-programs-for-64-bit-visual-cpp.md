@@ -1,13 +1,10 @@
 ---
 title: Configurar Visual C++ de 64 bits, x64 destinos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe0ee3eaa3dd5e53d213496fa2520f4de1e1776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaae71fb55b176ee4903978a6b4b5a8624dc049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Configurar Visual C++ de 64 bits, x64 destinos
 
@@ -49,9 +44,9 @@ Esta sección contiene temas sobre cómo destinar 64-bit x64 herramientas de gen
   
 [align](../cpp/align-cpp.md)  
   
-[/CLR (compilación de common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)  
+[/clr (Compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)  
   
-[/favor (optimizar para específicos de la arquitectura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+[/favor (Optimizar para valores específicos de la arquitectura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 [Guía de programación para Windows de 64 bits](http://msdn.microsoft.com/library/windows/desktop/bb427430)  
   

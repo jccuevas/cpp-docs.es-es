@@ -1,12 +1,9 @@
 ---
 title: IDispEventImpl (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispEventImpl
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7809a61fe39a4b4b913531de29e03c3eb440c418
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (clase)
 Esta clase proporciona las implementaciones de la `IDispatch` métodos.  
@@ -99,9 +94,9 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 |[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Recupera el tipo básico de un tipo definido por el usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IDispEventImpl`Proporciona una manera de implementar una interfaz de envío de eventos sin necesidad de proporcionar código de implementación para cada método o evento en esa interfaz. `IDispEventImpl`proporciona implementaciones de la `IDispatch` métodos. Basta con proporcionar implementaciones para los que está interesado en el control de eventos.  
+ `IDispEventImpl` Proporciona una manera de implementar una interfaz de envío de eventos sin necesidad de proporcionar código de implementación para cada método o evento en esa interfaz. `IDispEventImpl` proporciona implementaciones de la `IDispatch` métodos. Basta con proporcionar implementaciones para los que está interesado en el control de eventos.  
   
- `IDispEventImpl`funciona junto con el mapa de receptores de eventos en la clase de eventos de ruta a la función de controlador adecuado. Para utilizar esta clase:  
+ `IDispEventImpl` funciona junto con el mapa de receptores de eventos en la clase de eventos de ruta a la función de controlador adecuado. Para utilizar esta clase:  
   
 
  Agregar un [SINK_ENTRY](composite-control-macros.md#sink_entry) o [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex) macro en el mapa de receptores de eventos para cada evento en todos los objetos que desea administrar. Cuando se usa `IDispEventImpl` como una clase base de un control compuesto, también puede llamar a [AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap) para establecer e interrumpir la conexión con los orígenes de eventos para todas las entradas del mapa de recepción de eventos. En otros casos, o para un mayor control, llame a [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) para establecer la conexión entre el objeto de origen y la clase base. Llame a [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise) para interrumpir la conexión.  
@@ -109,10 +104,10 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
  Debe derivar de `IDispEventImpl` (con un valor único para `nID`) para cada objeto para la que necesita controlar los eventos. Volver a utilizar la clase base, desaconsejar con objeto de un origen, a continuación, se avisa en un objeto de origen diferente, pero el número máximo de objetos de origen que pueda ser controlada por un único objeto al mismo tiempo está limitado por el número de `IDispEventImpl` clases base.  
   
- `IDispEventImpl`proporciona la misma funcionalidad que [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), excepto en que obtiene información de tipo de la interfaz desde una biblioteca de tipos, en lugar de tener que suministrados como un puntero a un [estructuras _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) estructura. Use `IDispEventSimpleImpl` al no tener una biblioteca de tipos que describe la interfaz de eventos o para evitar la sobrecarga asociada al uso de la biblioteca de tipos.  
+ `IDispEventImpl` proporciona la misma funcionalidad que [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), excepto en que obtiene información de tipo de la interfaz desde una biblioteca de tipos, en lugar de tener que suministrados como un puntero a un [estructuras _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) estructura. Use `IDispEventSimpleImpl` al no tener una biblioteca de tipos que describe la interfaz de eventos o para evitar la sobrecarga asociada al uso de la biblioteca de tipos.  
   
 > [!NOTE]
-> `IDispEventImpl`y `IDispEventSimpleImpl` proporcionar su propia implementación de **IUnknown:: QueryInterface** habilitar cada `IDispEventImpl` y `IDispEventSimpleImpl` clase para que actúe como una identidad de COM independiente mientras sigue permitiendo el acceso directo a la clase base miembros en el objeto COM principal.  
+> `IDispEventImpl` y `IDispEventSimpleImpl` proporcionar su propia implementación de **IUnknown:: QueryInterface** habilitar cada `IDispEventImpl` y `IDispEventSimpleImpl` clase para que actúe como una identidad de COM independiente mientras sigue permitiendo el acceso directo a los miembros de clase de base el objeto COM principal.  
   
  Implementación de ATL CE de ActiveX eventos receptores solo admite valores devueltos de tipo HRESULT o void de los métodos de controlador de eventos; cualquier otro tipo de valor devuelto no es compatible y su comportamiento es indefinido.  
   
@@ -130,7 +125,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
+##  <a name="getfuncinfofromid"></a>  IDispEventImpl::GetFuncInfoFromId  
  Busca el índice de la función para el identificador de envío especificado.  
   
 ```
@@ -157,7 +152,7 @@ HRESULT GetFuncInfoFromId(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames  
  Un solo miembro y un conjunto opcional de nombres de argumento se asigna a un conjunto correspondiente de entero de envío (DISPID), que se puede usar en las llamadas subsiguientes a [IDispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ```
@@ -172,7 +167,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) en el SDK de Windows.  
   
-##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo  
  Recupera la información de tipo de un objeto, que se puede usar después para obtener la información de tipo de una interfaz.  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(GetTypeInfo)(
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispEventImpl::GetTypeInfoCount  
  Recupera el número de interfaces de información de tipo que proporciona un objeto (0 ó 1).  
   
 ```
@@ -194,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>Comentarios  
  Vea [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) en el SDK de Windows.  
   
-##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
+##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType  
  Recupera el tipo básico de un tipo definido por el usuario.  
   
 ```
@@ -216,14 +211,14 @@ VARTYPE GetUserDefinedType(
 ### <a name="remarks"></a>Comentarios  
  Vea [ITypeInfo:: GetRefTypeInfo](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00).  
   
-##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
+##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl  
  El constructor. Almacena los valores de los parámetros de plantilla de clase `plibid`, `pdiid`, `wMajor`, y `wMinor`.  
   
 ```
 IDispEventImpl();
 ```  
   
-##  <a name="tihclass"></a>IDispEventImpl::tihclass  
+##  <a name="tihclass"></a>  IDispEventImpl::tihclass  
  Esta definición de tipo es una instancia del parámetro de plantilla de clase `tihclass`.  
   
 ```
@@ -231,7 +226,7 @@ typedef tihclass _tihclass;
 ```  
   
 ### <a name="remarks"></a>Comentarios  
- De forma predeterminada, es la clase `CComTypeInfoHolder`. `CComTypeInfoHolder`administra la información de tipo para la clase.  
+ De forma predeterminada, es la clase `CComTypeInfoHolder`. `CComTypeInfoHolder` administra la información de tipo para la clase.  
   
 ## <a name="see-also"></a>Vea también  
  [Estructura de estructuras _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   

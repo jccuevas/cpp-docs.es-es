@@ -1,29 +1,24 @@
 ---
-title: "Escribir un filtro de excepción | Documentos de Microsoft"
-ms.custom: 
+title: Escribir un filtro de excepción | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Escribir un filtro de excepción
 Para controlar una excepción puede saltar al nivel del controlador de la excepción o puede continuar la ejecución. En lugar de utilizar el código de controlador de excepciones para controlar la excepción y pasar a través de, puede usar *filtro* para corregir el problema y, a continuación, al devolver -1, reanudar el flujo normal sin borrar la pila.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  Es una buena idea usar una llamada de función en la *filtro* expresión cada vez que *filtro* necesite realizar alguna tarea compleja. La evaluación de la expresión hace que se ejecute la función (en este caso, `Eval_Exception`).  
   
- Tenga en cuenta el uso de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) para determinar la excepción. Debe llamar a esta función dentro del propio filtro. `Eval_Exception`no se puede llamar **GetExceptionCode**, pero debe tener el código de excepción.  
+ Tenga en cuenta el uso de [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) para determinar la excepción. Debe llamar a esta función dentro del propio filtro. `Eval_Exception` no se puede llamar **GetExceptionCode**, pero debe tener el código de excepción.  
   
  Este controlador pasa el control a otro controlador a menos que la excepción sea un desbordamiento de números enteros o de punto flotante. En tal caso, el controlador llama a una función (`ResetVars` es solo un ejemplo, no una función API) para restablecer algunas variables globales. *Bloque de instrucción de 2*, que en este ejemplo no está vacía, nunca puede ejecutarse porque `Eval_Exception` nunca devuelve EXCEPTION_EXECUTE_HANDLER (1).  
   

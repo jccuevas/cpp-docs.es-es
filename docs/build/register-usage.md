@@ -2,26 +2,21 @@
 title: Uso de registros | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6792fcf035ee698767c9dd099cb7b84f5b784616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-usage"></a>Uso de registros
 La arquitectura de [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] proporciona 16 registros de índole general (a los que nos referiremos en adelante como registros de enteros), así como otros 16 registros de XMM/YMM, disponibles para el uso de puntos flotantes. Los registros volátiles son registros residuales que el llamador da por hecho que van a destruirse a lo largo de la llamada. En cuanto a los registros no volátiles, es necesarios conservar sus valores a lo largo de la llamada de función, y el destinatario de la llamada debe guardarlos si se usan.  

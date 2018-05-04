@@ -1,12 +1,9 @@
 ---
 title: Clase CGlobalHeap | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CGlobalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cglobalheap-class"></a>Clase CGlobalHeap
 Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones del montón global Win32.  
@@ -56,7 +51,7 @@ class CGlobalHeap : public IAtlMemMgr
 |[Cglobalheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CGlobalHeap`implementa las funciones de asignación de memoria mediante las funciones del montón global Win32.  
+ `CGlobalHeap` implementa las funciones de asignación de memoria mediante las funciones del montón global Win32.  
   
 > [!NOTE]
 >  Las funciones del montón global son más lentas que otras funciones de administración de memoria y no proporcionan tantas características. Por lo tanto, las aplicaciones nuevas deben utilizar el [funciones del montón](http://msdn.microsoft.com/library/windows/desktop/aa366711). Están disponibles en la [CWin32Heap](../../atl/reference/cwin32heap-class.md) clase. Funciones globales todavía se utilizan por DDE y las funciones del Portapapeles.  
@@ -72,7 +67,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlmem.h  
   
-##  <a name="allocate"></a>Cglobalheap:: Allocate  
+##  <a name="allocate"></a>  Cglobalheap:: Allocate  
  Llame a este método para asignar un bloque de memoria.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Implementado mediante [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) con un parámetro de marca de **GMEM_FIXED**.  
   
-##  <a name="free"></a>Cglobalheap:: Free  
+##  <a name="free"></a>  Cglobalheap:: Free  
  Llamar a este método para liberar un bloque de memoria asignada por este administrador de memoria.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementado mediante [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
-##  <a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  Llamar a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Comentarios  
  Implementado mediante [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593).  
   
-##  <a name="reallocate"></a>Cglobalheap:: ReAllocate  
+##  <a name="reallocate"></a>  Cglobalheap:: ReAllocate  
  Llame a este método para reasignar la memoria asignada por este administrador de memoria.  
   
 ```

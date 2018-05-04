@@ -1,12 +1,9 @@
 ---
 title: Interfaz de interfaces IAxWinHostWindow | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1d0d41439748cd0ddbc981ecb1d74194d5fbd59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interfaz IAxWinHostWindow (interfaz)
 Esta interfaz proporciona métodos para manipular un control y su objeto de host.  
@@ -70,7 +65,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (que también se incluye en ATLBase.h)|  
   
-##  <a name="attachcontrol"></a>IAxWinHostWindow:: AttachControl  
+##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl  
  Asocia un control existente (e inicializado anteriormente) con el objeto de host mediante la ventana identificada por `hWnd`.  
   
 ```
@@ -87,7 +82,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl  
  Crea un control, lo inicializa y lo hospeda en la ventana identificada por `hWnd`.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateControl)(
   
  Para crear un control ActiveX con licencia, consulte [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx  
  Crea un control ActiveX, lo inicializa y lo hospeda en la ventana especificada, tal como [IAxWinHostWindow::CreateControl](#createcontrol).  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(CreateControlEx)(
   
  Para crear un control ActiveX con licencia, consulte [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).  
   
-##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl  
  Devuelve el puntero de interfaz especificado proporcionado por el control hospedado.  
   
 ```
@@ -176,7 +171,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch  
  Establece la interfaz dispinterface externa, que está disponible para los controles contenidos a través de la [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) método.  
   
 ```
@@ -190,7 +185,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>Valor devuelto  
  Un valor `HRESULT` estándar.  
   
-##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler  
  Llame a esta función para establecer la externa [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) interfaz para el `CAxWindow` objeto.  
   
 ```
@@ -210,7 +205,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ## <a name="see-also"></a>Vea también  
  [Interfaz IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
- [AtlAxGetControl](composite-control-global-functions.md#atlaxgethost)
+ [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 
 
 

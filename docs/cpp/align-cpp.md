@@ -1,12 +1,9 @@
 ---
 title: Alinear (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -38,13 +33,13 @@ Use `__declspec(align(#))` para controlar con precisión la alineación de datos
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (align (**  *#*  **))** *declarador*  
+> **__declspec (align (** *#* **))** *declarador*  
 
 ## <a name="remarks"></a>Comentarios
 
 Las aplicaciones de escritura que utilizan las últimas instrucciones de procesador presentan nuevas restricciones y problemas. En particular, muchas nuevas instrucciones requieren que los datos se alineen con límites de 16 bytes. Además, la alineación de datos utilizados con frecuencia en el tamaño de la línea de la memoria caché de un procesador concreto mejora el rendimiento de la memoria caché. Por ejemplo, si define una estructura cuyo tamaño es inferior a 32 bytes, puede que desee alinearla en 32 bytes para asegurarse de que los objetos de ese tipo de estructura se almacenen en caché de forma eficaz.
 
-\#es el valor de alineación. Las entradas válidas son potencias enteras de dos desde 1 hasta 8192 (bytes), como 2, 4, 8, 16, 32 o 64. `declarator` corresponde a los datos que se declaran como alineados.
+\# es el valor de alineación. Las entradas válidas son potencias enteras de dos desde 1 hasta 8192 (bytes), como 2, 4, 8, 16, 32 o 64. `declarator` corresponde a los datos que se declaran como alineados.
 
 Para obtener información sobre cómo devolver un valor de tipo `size_t` que es el requisito de alineación del tipo, consulte [__alignof](../cpp/alignof-operator.md). Para obtener información acerca de cómo declarar punteros sin alinear cuando se destinan a procesadores de 64 bits, consulte [__unaligned](../cpp/unaligned.md).
 
@@ -94,7 +89,7 @@ Para obtener más información, consulte:
 
 - [Ejemplos de alineación de estructuras](../build/examples-of-structure-alignment.md) (x64 específico)
 
-##  <a name="vclrfalignexamples"></a>Ejemplos para alinear
+##  <a name="vclrfalignexamples"></a> Ejemplos para alinear
 
 En los ejemplos siguientes se muestra cómo `__declspec(align(#))` afecta al tamaño y la alineación de estructuras de datos. En los ejemplos se suponen las definiciones siguientes:
 
@@ -185,7 +180,7 @@ void fn() {
 
 La alineación cuando la memoria se asignó en el montón depende de qué función de asignación se invoque.  Por ejemplo, si utiliza `malloc`, el resultado depende del tamaño de operando. Si *arg* > = 8, la memoria devuelta tiene una alineación de 8 bytes. Si *arg* < 8, la alineación de la memoria devuelta es la primera potencia de 2 inferior a *arg*. Por ejemplo, si utiliza malloc(7), la alineación es de 4 bytes.
 
-##  <a name="vclrf_declspecaligntypedef"></a>Definir tipos nuevos con __declspec(align(#))
+##  <a name="vclrf_declspecaligntypedef"></a> Definir tipos nuevos con __declspec(align(#))
 
 Puede definir un tipo con una característica de alineación.
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Ahora, `aType` y `bType` son el mismo tamaño (8 bytes), pero las variables de tipo `bType` tienen una alineación de 32 bytes.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>Alinear los datos en almacenamiento Local de subprocesos
+##  <a name="vclrfthreadlocalstorageallocation"></a> Alinear los datos en almacenamiento Local de subprocesos
 
 El almacenamiento local de subprocesos estáticos (TLS) creado con el atributo `__declspec(thread)` y colocado en la sección de TLS en la imagen funciona para la alineación exactamente igual que los datos estáticos normales. Para crear datos TLS, el sistema operativo asigna a la memoria el tamaño de la sección de TLS y respetando el atributo de la alineación de la sección de TLS.
 
@@ -221,7 +216,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Cómo alinear trabajos con empaquetado de datos
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Cómo alinear trabajos con empaquetado de datos
 
 El **/Zp** opción del compilador y el `pack` pragma tiene el efecto de empaquetar datos para los miembros de estructura y unión. Este ejemplo se muestra cómo **/Zp** y `__declspec(align(#))` trabajan juntos:
 

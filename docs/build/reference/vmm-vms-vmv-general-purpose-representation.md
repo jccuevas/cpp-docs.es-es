@@ -1,13 +1,10 @@
 ---
-title: "-vmm, - las máquinas virtuales, - vmv (representación de propósito General) | Documentos de Microsoft"
-ms.custom: 
+title: -vmm, - las máquinas virtuales, - vmv (representación de propósito General) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Representación de propósito general)
 Se usa cuando [/vmb, /vmg (método de representación)](../../build/reference/vmb-vmg-representation-method.md) está seleccionado como el [método de representación](../../build/reference/vmb-vmg-representation-method.md). Estas opciones indican el modelo de herencia de la definición de clase aún no encontrada.  

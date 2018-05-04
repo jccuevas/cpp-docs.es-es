@@ -1,13 +1,10 @@
 ---
 title: Hospedar controles ActiveX mediante AXHost de ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - hosting ActiveX controls
 - AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hospedar controles ActiveX mediante AXHost de ATL
 En este tema se muestra cómo crear AXHost y cómo hospedar un control ActiveX mediante varias funciones ATL. También muestra cómo obtener acceso a los eventos de control y el receptor (mediante [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) desde el control hospedado. El ejemplo hospeda el control de calendario en una ventana principal o en una ventana secundaria.  
@@ -41,7 +36,7 @@ En este tema se muestra cómo crear AXHost y cómo hospedar un control ActiveX m
   
  A continuación, se muestra un resumen:  
   
-|USE_METHOD|Host|Controlar el acceso y la recepción de eventos|Función explicada|  
+|USE_METHOD|administrador de flujos de trabajo|Controlar el acceso y la recepción de eventos|Función explicada|  
 |-----------------|----------|--------------------------------------|---------------------------|  
 |1|Ventana secundaria|Un solo paso|CreateControlLicEx|  
 |2|Ventana principal|Un solo paso|AtlAxCreateControlLicEx|  

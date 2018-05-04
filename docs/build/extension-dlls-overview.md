@@ -1,13 +1,10 @@
 ---
-title: "Archivos DLL de extensión: Información general sobre | Documentos de Microsoft"
-ms.custom: 
+title: 'Archivos DLL de extensión: Información general sobre | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407ed0c63dce8e350c24ac5f260876fb6ab47576
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bd851b9335e2b1ecffc8873590f176d7ebb2205
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mfc-extension-dlls-overview"></a>Archivos DLL de extensión MFC: información general
 Una extensión MFC DLL es un archivo DLL que implementa clases reutilizables derivadas de clases de Microsoft Foundation Class Library existentes. Archivos DLL de extensión MFC se generan con la versión de biblioteca de vínculos dinámicos de MFC (conocida también como la versión compartida de MFC). Sólo archivos ejecutables MFC (aplicaciones o archivos DLL de MFC estándar) que se generan con la versión compartida de MFC pueden utilizar un archivo DLL de extensión MFC. Con un archivo DLL de extensión MFC, puede derivar nuevas clases personalizadas a partir de MFC y ofrecer esta versión extendida de MFC a las aplicaciones que llamen al archivo DLL.  

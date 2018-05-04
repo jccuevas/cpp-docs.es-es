@@ -1,12 +1,9 @@
 ---
 title: Clase CHandle | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHandle
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd58ba8ce15bb26b4e5b768baedbf8ddfe829f2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chandle-class"></a>Clase CHandle
 Esta clase proporciona métodos para crear y usar un identificador de objeto.  
@@ -76,12 +71,12 @@ class CHandle
  A `CHandle` cada vez que se requiere un identificador de objeto que se puede usar: la principal diferencia es que la `CHandle` objeto se eliminan automáticamente.  
   
 > [!NOTE]
->  Algunas funciones de la API utilizará NULL como un identificador vacío o no es válido, mientras que otros usan INVALID_HANDLE_VALUE. `CHandle`solo utiliza NULL y trata INVALID_HANDLE_VALUE como un identificador real. Si se llama a una API que puede devolver INVALID_HANDLE_VALUE, debe comprobar este valor antes de llamar a [CHandle::Attach](#attach) o pasarlo a la `CHandle` constructor y en su lugar, pase el valor NULL.  
+>  Algunas funciones de la API utilizará NULL como un identificador vacío o no es válido, mientras que otros usan INVALID_HANDLE_VALUE. `CHandle` solo utiliza NULL y trata INVALID_HANDLE_VALUE como un identificador real. Si se llama a una API que puede devolver INVALID_HANDLE_VALUE, debe comprobar este valor antes de llamar a [CHandle::Attach](#attach) o pasarlo a la `CHandle` constructor y en su lugar, pase el valor NULL.  
   
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>  CHandle::Attach  
  Llamar a este método para asociar la `CHandle` objeto en un identificador existente.  
   
 ```
@@ -90,12 +85,12 @@ void Attach(HANDLE h) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `h`  
- `CHandle`asumirá la propiedad del identificador `h`.  
+ `CHandle` asumirá la propiedad del identificador `h`.  
   
 ### <a name="remarks"></a>Comentarios  
  Asigna la `CHandle` el objeto a la `h` controlar. En las compilaciones de depura, se generará una ATLASSERT si `h` es NULL. Se realiza ninguna otra comprobación en cuanto a la validez del identificador.  
   
-##  <a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>  CHandle::CHandle  
  El constructor.  
   
 ```
@@ -111,7 +106,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Comentarios  
  Crea un nuevo `CHandle` objeto, utilizando opcionalmente un identificador existente o `CHandle` objeto.  
   
-##  <a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>  CHandle:: ~ CHandle  
  Destructor.  
   
 ```
@@ -121,7 +116,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la `CHandle` objeto mediante una llamada a [CHandle::Close](#close).  
   
-##  <a name="close"></a>CHandle::Close  
+##  <a name="close"></a>  CHandle::Close  
  Llamar a este método para cerrar un `CHandle` objeto.  
   
 ```
@@ -131,7 +126,7 @@ void Close() throw();
 ### <a name="remarks"></a>Comentarios  
  Cierra un identificador de objeto abierto. Si el identificador no es NULL, lo que será el caso si **cerrar** ya ha sido llama, se producirán un ATLASSERT en compilaciones de depuración.  
   
-##  <a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>  CHandle::Detach  
  Llamar a este método para separar un identificador de un `CHandle` objeto.  
   
 ```
@@ -144,14 +139,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera la propiedad del identificador.  
   
-##  <a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>  CHandle::m_h  
  La variable de miembro que almacena el identificador.  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>  CHandle::operator =  
  El operador de asignación.  
   
 ```
@@ -160,7 +155,7 @@ CHandle& operator=(CHandle& h) throw();
   
 ### <a name="parameters"></a>Parámetros  
  `h`  
- `CHandle`asumirá la propiedad del identificador `h`.  
+ `CHandle` asumirá la propiedad del identificador `h`.  
   
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve una referencia al nuevo `CHandle` objeto.  
@@ -168,7 +163,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>Comentarios  
  Si el `CHandle` objeto actualmente contiene un identificador, se cerrará. El `CHandle` del objeto que se pasa en tendrá su referencia de identificador que se establece en NULL. Esto garantiza que dos `CHandle` objetos nunca contendrá el mismo identificador de activo.  
   
-##  <a name="operator_handle"></a>CHandle::operator identificador  
+##  <a name="operator_handle"></a>  CHandle::operator identificador  
  Devuelve el valor del identificador almacenado.  
   
 ```  

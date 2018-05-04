@@ -1,13 +1,10 @@
 ---
-title: "¿Qué es la biblioteca ATL API de hospedaje de controles? | Microsoft Docs"
-ms.custom: 
+title: ¿Qué es la biblioteca ATL API de hospedaje de controles? | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>¿Qué es la biblioteca ATL API de hospedaje de controles?
 Hospedaje de controles de ATL la API es el conjunto de funciones que permite que cualquier ventana pueda actuar como un contenedor de controles ActiveX. Estas funciones pueden ser estática o dinámicamente vinculan en el proyecto, ya que están disponibles como código fuente y exponen por ATL90.dll. Las funciones de hospedaje de controles se muestran en la tabla siguiente.  
@@ -38,9 +33,9 @@ Hospedaje de controles de ATL la API es el conjunto de funciones que permite que
 |[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Crea un objeto host, se conecta a la ventana suministrada y, a continuación, cargue un control (también permite que los receptores de eventos para configurarse).|  
 |[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada, tal como [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
 |[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Crea un cuadro de diálogo no modal a partir de un recurso de cuadro de diálogo y devuelve el identificador de ventana.|  
-|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxdialogbox)|Crea un cuadro de diálogo modal a partir de un recurso de cuadro de diálogo.|  
+|[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Crea un cuadro de diálogo modal a partir de un recurso de cuadro de diálogo.|  
 |[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Devuelve el **IUnknown** puntero de interfaz del control hospedado en una ventana.|  
-|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgethost)|Devuelve el **IUnknown** puntero de interfaz del objeto host conectado a una ventana.|  
+|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Devuelve el **IUnknown** puntero de interfaz del objeto host conectado a una ventana.|  
 |[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Inicializa el código de hospedaje de controles.|  
 |[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Desinicializa el código de hospedaje de controles.|  
   

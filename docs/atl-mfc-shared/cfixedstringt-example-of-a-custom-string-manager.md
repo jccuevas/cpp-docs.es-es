@@ -1,32 +1,27 @@
 ---
 title: 'CFixedStringT: Ejemplo de un administrador de cadenas personalizado | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Ejemplo de un administrador de cadenas personalizado
-La biblioteca ATL implementa un ejemplo de un administrador de cadenas personalizado utilizado por la clase [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), llamado **CFixedStringMgr**. `CFixedStringT`se deriva de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una cadena que asigna sus datos de caracteres como parte de la `CFixedStringT` propio objeto siempre que la cadena es menor que la longitud especificada por el **t_nChars** parámetro de plantilla de `CFixedStringT`. Con este enfoque, la cadena no necesita el montón en absoluto, a menos que la longitud de la cadena exceda el tamaño del búfer fijo. Dado que `CFixedStringT` no siempre use un montón para asignar sus datos de cadena, no se puede usar **CAtlStringMgr** como su administrador de la cadena. Utiliza un administrador de la cadena personalizada (**CFixedStringMgr**), que implementa el [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaz. Esta interfaz se explica en [implementación de un administrador de cadenas personalizado (método avanzado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+La biblioteca ATL implementa un ejemplo de un administrador de cadenas personalizado utilizado por la clase [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), llamado **CFixedStringMgr**. `CFixedStringT` se deriva de [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una cadena que asigna sus datos de caracteres como parte de la `CFixedStringT` propio objeto siempre que la cadena es menor que la longitud especificada por el **t_nChars** parámetro de plantilla de `CFixedStringT`. Con este enfoque, la cadena no necesita el montón en absoluto, a menos que la longitud de la cadena exceda el tamaño del búfer fijo. Dado que `CFixedStringT` no siempre use un montón para asignar sus datos de cadena, no se puede usar **CAtlStringMgr** como su administrador de la cadena. Utiliza un administrador de la cadena personalizada (**CFixedStringMgr**), que implementa el [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaz. Esta interfaz se explica en [implementación de un administrador de cadenas personalizado (método avanzado)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
  El constructor de **CFixedStringMgr** toma tres parámetros:  
   

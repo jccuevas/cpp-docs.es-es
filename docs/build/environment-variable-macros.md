@@ -1,13 +1,10 @@
 ---
 title: Macros de variables de entorno | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variable-macros"></a>Macros de variables de entorno
 NMAKE hereda definiciones de macro para variables de entorno que existían antes del inicio de la sesión. Si se establece una variable en el entorno de sistema operativo, está disponible como una macro NMAKE. Los nombres heredados se convierten a mayúsculas. Herencia tiene lugar antes del preprocesamiento. Utilice la opción /E para hacer que las macros heredadas de variables de entorno reemplacen las macros con el mismo nombre en el archivo MAKE.  

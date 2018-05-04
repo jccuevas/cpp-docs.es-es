@@ -2,12 +2,9 @@
 title: Llamar a funciones DLL desde aplicaciones de Visual Basic | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
 Para que aplicaciones de Visual Basic (o aplicaciones programadas en otros lenguajes, como Pascal o Fortran) para llamar a funciones en un archivo DLL de C o C++, las funciones deben exportarse con la convención llamada correcta sin ninguna decoración de nombres realizarla el compilador.  
   
- `__stdcall`crea la convención de llamada correcta para la función (la función llamada limpia la pila y parámetros se pasan de derecha a izquierda) pero decora el nombre de la función de forma diferente. Por lo que, cuando **__declspec (dllexport)** se utiliza en una función exportada en un archivo DLL, se exporta el nombre representativo.  
+ `__stdcall` crea la convención de llamada correcta para la función (la función llamada limpia la pila y parámetros se pasan de derecha a izquierda) pero decora el nombre de la función de forma diferente. Por lo que, cuando **__declspec (dllexport)** se utiliza en una función exportada en un archivo DLL, se exporta el nombre representativo.  
   
  El `__stdcall` la decoración de nombres se agrega como prefijo el nombre del símbolo con un carácter de subrayado (_) y anexa el símbolo con un signo de arroba (@) carácter seguido del número de bytes en la lista de argumentos (el espacio de pila requerido). Como resultado, la función cuando se declara como:  
   

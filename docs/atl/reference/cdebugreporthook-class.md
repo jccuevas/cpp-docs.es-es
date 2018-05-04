@@ -1,12 +1,9 @@
 ---
 title: Clase CDebugReportHook | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDebugReportHook
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (clase)
 Utilice esta clase para enviar informes de depuración a una canalización con nombre.  
@@ -72,7 +67,7 @@ class CDebugReportHook
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlutil.h  
   
-##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  
  Llamadas [SetPipeName](#setpipename), [SetTimeout](#settimeout), y [SetHook](#sethook).  
   
 ```
@@ -92,14 +87,14 @@ CDebugReportHook(
  `dwTimeout`  
  El tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.  
   
-##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
  Llamadas [CDebugReportHook::RemoveHook](#removehook).  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
  La función de supervisión personalizada que se enlaza al proceso de notificación de depuración en tiempo de ejecución C.  
   
 ```
@@ -116,7 +111,7 @@ static int __cdecl CDebugReportHookProc(
  `message`  
  La cadena de mensaje.  
   
- *returnValue*  
+ *ReturnValue*  
  El valor que debe devolver [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
   
 ### <a name="return-value"></a>Valor devuelto  
@@ -127,7 +122,7 @@ static int __cdecl CDebugReportHookProc(
   
  El código de esta función se ejecuta en el contexto de seguridad subyacente del subproceso que realiza la llamada, es decir, la suplantación está deshabilitada para la duración de esta función.  
   
-##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  Llamar a este método para detener el envío de informes de depuración a la canalización con nombre y restaurar el enlace de informe anterior.  
   
 ```
@@ -137,7 +132,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) para restaurar el enlace de informe anterior.  
   
-##  <a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>  CDebugReportHook::SetHook  
  Llame a este método para empezar a enviar informes de depuración a la canalización con nombre.  
   
 ```
@@ -147,7 +142,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>Comentarios  
  Llamadas [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) disponer de informes de depuración que se enrutan a través de [CDebugReportHookProc](#cdebugreporthookproc) a la canalización con nombre. Esta clase realiza un seguimiento del enlace de informe anterior para que pueda restaurar cuando [RemoveHook](#removehook) se llama.  
   
-##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
  Llame a este método para establecer la máquina y el nombre de la canalización a la que se enviarán los informes de depuración.  
   
 ```
@@ -166,7 +161,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.  
   
-##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
  Llamar a este método para establecer el tiempo en milisegundos que esta clase esperará a que la canalización con nombre hasta que esté disponible.  
   
 ```

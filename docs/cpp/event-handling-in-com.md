@@ -1,12 +1,9 @@
 ---
 title: Control de eventos en COM | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>Control de eventos en COM
 En el control de eventos COM, configurar un receptor de origen y de evento de eventos mediante el [event_source](../windows/event-source.md) y [event_receiver](../windows/event-receiver.md) atributos, respectivamente, especificando `type` = **com**. Estos atributos insertan el código adecuado para las interfaces personalizadas, de envío y duales para permitir que las clases a las que se aplican desencadenen eventos y los controlen a través de puntos de conexión de COM.  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Eventos COM dependientes del diseño  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Eventos COM dependientes del diseño  
  La dependencia de diseño solo es un problema para la programación COM. En el control de eventos nativos y administrados, las firmas (tipo de valor devuelto, convención de llamada y argumentos) de los controladores deben coincidir con sus eventos, pero los nombres de controlador no tienen que coincidir con sus eventos.  
   
  Sin embargo, en el control de eventos de COM, al establecer el *layout_dependent* parámetro de **event_receiver** a **true**, se aplica la coincidencia de nombre y firma. Esto significa que los nombres y las firmas de los controladores del receptor de eventos deben coincidir exactamente con los nombres y las firmas de los eventos a los que están enlazados.  

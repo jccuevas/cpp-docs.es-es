@@ -1,12 +1,9 @@
 ---
 title: Compatibilidad con (MBCS) de juego de caracteres Multibyte y Unicode | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)
 

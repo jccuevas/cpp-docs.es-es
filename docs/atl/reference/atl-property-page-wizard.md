@@ -1,12 +1,9 @@
 ---
-title: "Asistente para páginas de propiedades ATL | Documentos de Microsoft"
-ms.custom: 
+title: Asistente para páginas de propiedades ATL | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 Este asistente [agrega una página de propiedades en un proyecto ATL](../../atl/reference/adding-an-atl-property-page.md) o a un proyecto MFC con compatibilidad con ATL. Una página de propiedades ATL proporciona una interfaz de usuario para establecer las propiedades (o llamar a los métodos) de uno o más objetos COM.  
@@ -45,7 +40,7 @@ Este asistente [agrega una página de propiedades en un proyecto ATL](../../atl/
   
 |||  
 |-|-|  
-|Término|Definición|  
+|Término|de esquema JSON|  
 |**Nombre corto**|Establece el nombre abreviado para el objeto. El nombre que proporcione determina la clase y **coclase** nombres, el archivo (**.cpp** y **. h**), los nombres de la **tipo** nombre y el  **Id. de programa**, a menos que cambie estos campos individualmente.|  
 |**archivo .h**|Establece el nombre del archivo de encabezado para la nueva clase del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación de su elección, o para anexar la declaración de clase a un archivo existente. Si selecciona un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **finalizar** en el asistente.<br /><br /> El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **finalizar**, el asistente le preguntará si para indicar si se debe anexar la declaración de clase para el contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **n** para volver al asistente y especificar otro nombre de archivo.|  
 |**Clase**|Establece el nombre de la clase que implementa el objeto. Este nombre se basa en el nombre que se proporciona en **nombre corto**, precedido por 'C', el prefijo habitual en un nombre de clase.|  

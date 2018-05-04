@@ -2,11 +2,8 @@
 title: Los operadores integrados de C++, prioridad y asociatividad | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Los operadores integrados de C++, prioridad y asociatividad
 
@@ -70,7 +65,7 @@ Operador *prioridad* especifica el orden de las operaciones en las expresiones q
 |[Destruir objeto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Conversión de tipos](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Prioridad de grupo 4, de izquierda a derecha asociatividad**|
-|[Puntero a miembro (objetos o punteros)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; o -> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[Puntero a miembro (objetos o punteros)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; o ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Prioridad de 5, de izquierda a derecha asociatividad de grupo**|
 |[Multiplicación](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[División](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|

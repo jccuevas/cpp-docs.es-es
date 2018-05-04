@@ -1,29 +1,24 @@
 ---
 title: COM + 1.0, Asistente para componentes ATL COM + 1.0 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 dev_langs:
 - C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a23f148fbdc611c8a11d8116b2e7dff34fc9d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Asistente para componentes ATL COM+ 1.0
 Use esta página del Asistente para componentes ATL COM + 1.0 para especificar el tipo de interfaz y las interfaces adicionales que se deben admitir.  
@@ -56,7 +51,7 @@ Use esta página del Asistente para componentes ATL COM + 1.0 para especificar e
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Compatible**|Especifica que el objeto nunca es la raíz de una secuencia de transacción agregando la custom(TLBATTR_TRANS_SUPPORTED,0) de macro de atributo de componente en el archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|  
-|**Obligatorio**|Especifica que el objeto puede o no sea la raíz de una secuencia de transacción agregando la custom(TLBATTR_TRANS_REQUIRED,0) de macro de atributo de componente en el archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|  
+|**Obligatoria**|Especifica que el objeto puede o no sea la raíz de una secuencia de transacción agregando la custom(TLBATTR_TRANS_REQUIRED,0) de macro de atributo de componente en el archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|  
 |**No se admite**|Especifica que el objeto excluye las transacciones. Agrega el custom(TLBATTR_TRANS_NOTSUPP,0) de macro de atributo de componente para el archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|  
 |**Se requiere nueva**|Especifica que el objeto siempre es la raíz de una secuencia de transacción agregando la custom(TLBATTR_TRANS_REQNEW,0) de macro de atributo de componente en el archivo .h (proyectos con atributos) o al archivo .idl (proyectos sin atributos).|  
   

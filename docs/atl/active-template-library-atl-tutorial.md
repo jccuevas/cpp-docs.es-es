@@ -1,13 +1,10 @@
 ---
 title: Tutorial de Active Template Library (ATL) | Documentos de Microsoft
-ms.custom: 
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 069d5d84b06850705db5c48f09bb0d0122f58fa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-tutorial"></a>Tutorial de Active Template Library (ATL)
 ATL está diseñado para simplificar el proceso de creación de controles eficaz, flexibles y ligeros. Este tutorial le guía a través de la creación de un control ActiveX, que muestra muchos de los fundamentos de ATL y COM.  

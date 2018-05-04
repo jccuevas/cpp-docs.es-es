@@ -1,13 +1,10 @@
 ---
 title: Tipos de archivos DLL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>Tipos de archivos DLL
 Este tema proporciona información para ayudarle a determinar el tipo de archivo DLL para compilar.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Diferentes tipos de archivos DLL disponibles  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Diferentes tipos de archivos DLL disponibles  
  Mediante Visual C++, puede generar archivos DLL para Win32 de C o C++ que no utilizan la biblioteca (Microsoft Foundation Classes). Puede crear un proyecto DLL que no son de MFC con el Asistente para aplicaciones de Win32.  
   
  La propia biblioteca MFC está disponible, en cualquier bibliotecas de vínculos estáticos o en un número de archivos DLL, con el Asistente para archivos DLL de MFC. Si el archivo DLL utiliza MFC, Visual C++ admite tres escenarios diferentes de desarrollo de DLL:  
@@ -53,7 +48,7 @@ Este tema proporciona información para ayudarle a determinar el tipo de archivo
   
 -   [Qué tipo de archivo DLL para usar](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>Decidir qué tipo de DLL que se utilizan  
+##  <a name="_core_which_kind_of_dll_to_use"></a> Decidir qué tipo de DLL que se utilizan  
  Si el archivo DLL no usa MFC, utilice Visual C++ para generar un archivo DLL para Win32 que no basado en MFC. Vincular al archivo DLL a MFC (estática o dinámicamente) ocupa mucha memoria y mucho espacio en disco. No debe vincularse a MFC a menos que el archivo DLL realmente utiliza MFC.  
   
  Si el archivo DLL va a utilizar MFC y se usará en las aplicaciones MFC o no están basados en MFC, deberá generar una DLL de MFC normal que se vincula dinámicamente a MFC o una DLL de MFC normal que se vincula estáticamente a MFC. En la mayoría de los casos, probablemente desee usar una DLL de MFC normal que se vincula dinámicamente a MFC, porque el tamaño de archivo del archivo DLL será mucho menor y el ahorro de memoria derivado de utilizar la versión compartida de MFC puede ser importante. Si se vinculan estáticamente a MFC, el tamaño de archivo del archivo DLL se ser mayor y posiblemente ocupará memoria adicional, ya que cargará su propia copia privada del código de biblioteca MFC.  

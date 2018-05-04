@@ -1,12 +1,9 @@
 ---
 title: Clase CComClassFactory2 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>Clase CComClassFactory2
 Esta clase implementa la [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfaz.  
@@ -46,7 +41,7 @@ class CComClassFactory2 : public IClassFactory2,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *licencia*  
+ *Licencia*  
  Una clase que implementa las funciones estáticas siguientes:  
   
 - **estática VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
@@ -68,7 +63,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|Crea y devuelve una clave de licencia.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CComClassFactory2`implementa el [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfaz, que es una extensión de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles objeto creación a través de una licencia. Una ejecución de fábrica de clase en un equipo con licencia puede proporcionar una clave de licencia de tiempo de ejecución. Esta clave de licencia permite que una aplicación crear instancias de objetos cuando no existe una licencia completo de equipo.  
+ `CComClassFactory2` implementa el [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interfaz, que es una extensión de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** controles objeto creación a través de una licencia. Una ejecución de fábrica de clase en un equipo con licencia puede proporcionar una clave de licencia de tiempo de ejecución. Esta clave de licencia permite que una aplicación crear instancias de objetos cuando no existe una licencia completo de equipo.  
   
  Objetos ATL normalmente adquieren un generador de clases derivando de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Esta clase incluye la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) como el generador de clases de forma predeterminada. Usar `CComClassFactory2`, especifique el [macro DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) macro en la definición de clase del objeto. Por ejemplo:  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`se deriva de ambos **CComClassFactory2Base** y *licencia*. **CComClassFactory2Base**, a su vez, deriva de **IClassFactory2** y **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` se deriva de ambos **CComClassFactory2Base** y *licencia*. **CComClassFactory2Base**, a su vez, deriva de **IClassFactory2** y **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
  `CComObjectRootBase`  
@@ -94,7 +89,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  Crea un objeto del CLSID especificado y recupera un puntero de interfaz a este objeto.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>Comentarios  
  Requiere que se autoriza el uso de completamente el equipo. Si no existe una licencia completo de equipo, llame a [CreateInstanceLic](#createinstancelic).  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  Similar a [CreateInstance](#createinstance), salvo que `CreateInstanceLic` requiere una clave de licencia.  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>Comentarios  
  Puede obtener una clave licencia con [RequestLicKey](#requestlickey). Para crear un objeto en un equipo sin licencia, se debe llamar a `CreateInstanceLic`.  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  Rellena un [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) capacidades de licencia de estructura con información que describe el generador de clases.  
   
 ```
@@ -169,7 +164,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>Comentarios  
  El `fRuntimeKeyAvail` un miembro de esta estructura indica si, dada una clave de licencia, el generador de clases permite que los objetos se creen en un equipo sin licencia. El *fLicVerified* miembro indica si existe una licencia completo de equipo.  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
  Aumenta y disminuye el módulo recuento de bloqueos mediante una llamada a **_Module::Lock** y **_Module::Unlock**, respectivamente.  
   
 ```
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  Al llamar a `LockServer` permite a un cliente almacenar en un generador de clases para que se pueden crear rápidamente varios objetos.  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  Crea y devuelve una clave de licencia, siempre que el `fRuntimeKeyAvail` miembro de la [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) estructura es **TRUE**.  
   
 ```

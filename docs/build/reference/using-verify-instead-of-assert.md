@@ -1,13 +1,10 @@
 ---
 title: Usar VERIFY en lugar de ASSERT | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - assert
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 712c22bec1d6ce2d67208de9a139dff7621ad4cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-verify-instead-of-assert"></a>Usar VERIFY en lugar de ASSERT
 Imagine que cuando se ejecuta la versión de depuración de la aplicación MFC, no hay ningún problema. Sin embargo, la versión de lanzamiento de la misma aplicación se bloquea, devuelve resultados incorrectos o presenta algún otro comportamiento extraño.  
@@ -57,9 +52,9 @@ free( buf );
   
 -   la llamada a `calloc( )` nunca se produce, dejando `buf` no inicializado, o  
   
--   `strcpy_s( )`copias "`Hello, World`" en una ubicación aleatoria de la memoria, posiblemente, termina la aplicación o haciendo que el sistema deje de responder, o  
+-   `strcpy_s( )` copias "`Hello, World`" en una ubicación aleatoria de la memoria, posiblemente, termina la aplicación o haciendo que el sistema deje de responder, o  
   
--   `free()`intenta liberar memoria que nunca se asignó.  
+-   `free()` intenta liberar memoria que nunca se asignó.  
   
  Para utilizar ASSERT correctamente, el ejemplo de código se debe cambiar a lo siguiente:  
   

@@ -1,12 +1,9 @@
 ---
 title: Clase de CAtlModule | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModule
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be5d5a777d4b9aed9ee4d07016771ee91c913b0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodule-class"></a>Clase de CAtlModule
 Esta clase proporciona métodos que se usan varias clases de módulo ATL.  
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlbase.h  
   
-##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements  
  Invalide este método para agregar parámetros a la asignación de reemplazo de componente de registro de ATL (registrador).  
   
 ```
@@ -115,7 +110,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  Vea el tema [utilizar parámetros reemplazables (el preprocesador del registrador)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) para obtener más detalles.  
   
-##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc  
  Agrega una nueva función que se invoca cuando finaliza el módulo.  
   
 ```
@@ -132,7 +127,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve S_OK si se ejecuta correctamente, o un valor HRESULT de error en caso de error.  
   
-##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>  CAtlModule::CAtlModule  
  El constructor.  
   
 ```
@@ -142,7 +137,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Comentarios  
  Inicializa a los miembros de datos e inicia una sección crítica alrededor de subproceso del módulo.  
   
-##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule  
  Destructor.  
   
 ```
@@ -152,7 +147,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera a todos los miembros de datos.  
   
-##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr  
  Recupera un puntero a la tabla de interfaz Global.  
   
 ```
@@ -173,7 +168,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  Vea [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) para obtener información sobre la tabla de interfaz Global.  
   
-##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Devuelve el recuento de bloqueos.  
   
 ```
@@ -183,7 +178,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Devuelve el recuento de bloqueos. Este valor puede ser útil para el diagnóstico y depuración.  
   
-##  <a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>  CAtlModule::Lock  
  Incrementa el recuento de bloqueos.  
   
 ```
@@ -193,21 +188,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Incrementa el recuento de bloqueos y devuelve el valor actualizado. Este valor puede ser útil para el diagnóstico y depuración.  
   
-##  <a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>  CAtlModule::m_libid  
  Contiene el GUID del módulo actual.  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>  CAtlModule::m_pGIT  
  Puntero a la tabla de interfaz Global.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>  CAtlModule::Term  
  Libera a todos los miembros de datos.  
   
 ```
@@ -217,7 +212,7 @@ void Term() throw();
 ### <a name="remarks"></a>Comentarios  
  Libera a todos los miembros de datos. El destructor llama a este método.  
   
-##  <a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>  CAtlModule::Unlock  
  Reduce el recuento de bloqueos.  
   
 ```
@@ -227,7 +222,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>Valor devuelto  
  Disminuye el recuento de bloqueos y devuelve el valor actualizado. Este valor puede ser útil para el diagnóstico y depuración.  
   
-##  <a name="updateregistryfromresourced"></a>CAtlModule:: UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CAtlModule:: UpdateRegistryFromResourceD  
  Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado.  
   
 ```
@@ -265,7 +260,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  Este método llama a [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) y [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).  
   
-##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper  
  Este método es invocado por `UpdateRegistryFromResourceD` para realizar la actualización del registro.  
   
 ```
@@ -291,7 +286,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>Comentarios  
  Este método proporciona la implementación de [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
-##  <a name="updateregistryfromresources"></a>CAtlModule:: UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CAtlModule:: UpdateRegistryFromResourceS  
  Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado. Este método se vincula estáticamente al componente de registro de ATL.  
   
 ```

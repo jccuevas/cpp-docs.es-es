@@ -1,13 +1,10 @@
 ---
 title: / FA, /Fa (archivo de lista) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Archivo de lista)
 Crea un archivo de lista que contiene el código ensamblador.  
@@ -60,7 +55,7 @@ Opcional. Incluye código máquina en la lista.
 `s`  
 Opcional. Incluye código fuente en la lista.  
   
-`u`Es opcional. Codifica el archivo de lista en formato UTF-8 e incluye un marcador de orden de bytes. De forma predeterminada, el archivo está codificado como ANSI. Use `u` para crear un archivo de lista que se muestre correctamente en cualquier sistema, o si utiliza Unicode archivos de código fuente como entrada para el compilador.  
+`u` Es opcional. Codifica el archivo de lista en formato UTF-8 e incluye un marcador de orden de bytes. De forma predeterminada, el archivo está codificado como ANSI. Use `u` para crear un archivo de lista que se muestre correctamente en cualquier sistema, o si utiliza Unicode archivos de código fuente como entrada para el compilador.  
   
 Si ambos `s` y `u` se especifican y si un origen de archivo de código utiliza una codificación Unicode de UTF-8 y, a continuación, las líneas de código en el archivo de ASM podrían no mostrarse correctamente.  
   
@@ -73,7 +68,7 @@ Una *origen*archivo asm se crea para cada archivo de código fuente en la compil
 *FileName.Extension*  
 Un archivo de lista denominado *filename.extension* se coloca en el directorio actual. Esto solo es válido cuando se compila un archivo de código de origen único.  
   
-*directorio*\  
+*Directorio*\  
 Una *source_file*archivo asm se crea y se coloca en el especificado *directory* para cada archivo de código fuente en la compilación. Tenga en cuenta la barra diagonal necesaria. Se permiten rutas de acceso sólo en el disco actual.  
   
 *directorio*\\*filename* un archivo de lista denominado *filename*asm se coloca en especificado *directory*. Esto solo es válido cuando se compila un archivo de código de origen único.  

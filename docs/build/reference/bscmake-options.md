@@ -2,12 +2,9 @@
 title: Opciones de BSCMAKE | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>Opciones de BSCMAKE
 En esta sección se describen las opciones disponibles para controlar BSCMAKE. Varias opciones controlan el contenido del archivo de información de examen mediante la exclusión o inclusión de cierta información. Las opciones de exclusión pueden permitir que BSCMAKE se ejecute con mayor rapidez y que se genere un archivo .bsc menor. Nombres de opción distinguen entre mayúsculas y minúsculas (excepto **/HELP** y **/nologo**).  
@@ -70,7 +65,7 @@ En esta sección se describen las opciones disponibles para controlar BSCMAKE. V
  /Es  
  Excluye del archivo de información de examen todos los archivos de inclusión especificados con una ruta de acceso absoluta o que se encuentran en una ruta de acceso absoluta especificada en la variable de entorno INCLUDE. (Normalmente, estos son los archivos de inclusión del sistema, que contienen gran cantidad de información posiblemente innecesaria en el archivo de información de examen). Esta opción no excluye los archivos especificados sin una ruta de acceso, los especificados con rutas de acceso relativas ni los que se encuentran en una ruta de acceso relativa en INCLUDE. Puede usar el **/EI** opción junto con **/es** para excluir los archivos que **/es** no excluye. Si desea excluir solo algunos de los archivos que **/es** excluye, use **/EI** en lugar de **/es** y enumerar los archivos que desee excluir.  
   
- /errorreport: [Ninguno &#124; símbolo del sistema &#124; cola &#124; enviar]  
+ /errorreport: [Ninguno &#124; símbolo del sistema &#124; cola &#124; envío]  
  Permite enviar información a Microsoft sobre errores internos de bscmake.exe.  
   
  Para obtener más información sobre **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
@@ -82,7 +77,7 @@ En esta sección se describen las opciones disponibles para controlar BSCMAKE. V
  Incluye los símbolos sin referencia. De forma predeterminada, BSCMAKE no registra los símbolos definidos a los que no se hace referencia. Si se ha empaquetado un archivo .sbr, esta opción no afecta a ese archivo de entrada porque el compilador ya ha quitado los símbolos sin referencia.  
   
  /n  
- Fuerza una compilación no incremental. Use  **/n**  para forzar una compilación completa del archivo de información de examen si existe o no un archivo .bsc y para impedir que los archivos .sbr que se va a truncar. Vea [cómo compila BSCMAKE un archivo .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
+ Fuerza una compilación no incremental. Use **/n** para forzar una compilación completa del archivo de información de examen si existe o no un archivo .bsc y para impedir que los archivos .sbr que se va a truncar. Vea [cómo compila BSCMAKE un archivo .bsc](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).  
   
  /NOLOGO  
  Suprime el mensaje de copyright de BSCMAKE.  

@@ -1,27 +1,22 @@
 ---
-title: "Prólogo y epílogo | Documentos de Microsoft"
-ms.custom: 
+title: Prólogo y epílogo | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2939293fe5fbdfd07cb12470790de5b064489d7f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prolog-and-epilog"></a>Prólogo y epílogo
 Cada función que asigna espacio de pila, llama a otras funciones, guarda los registros no volátiles o usa el control de excepciones debe tener un prólogo cuyos límites de direcciones se describen en los datos de desenredo asociados a la entrada de tabla de la función respectiva (vea [(X64) el control de excepciones](../build/exception-handling-x64.md)). El prólogo guarda argumento registros en sus direcciones particulares si es necesario, inserta los registros no volátiles en la pila, asigna la parte fija de la pila para los objetos temporales y variables locales y, opcionalmente, establece un puntero de marco. Datos de desenredo asociado debe describir la acción del prólogo y debe proporcionar la información necesaria para deshacer el efecto del código de prólogo.  

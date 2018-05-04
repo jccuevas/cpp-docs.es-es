@@ -2,11 +2,8 @@
 title: Funciones globales de Control compuesto | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de controles compuestos
 Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y para crear, hospedar y otorgar licencias a controles ActiveX.  
@@ -64,7 +59,7 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog  
  Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario.  
    
 ```
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Para obtener más información acerca de cómo editar secuencias de comandos de recursos, consulte [Cómo: abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](http://msdn.microsoft.com/library/windows/desktop/aa380902) en Windows SDK*: herramientas de SDK*.  
+ Para obtener más información acerca de cómo editar secuencias de comandos de recursos, consulte [Cómo: abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](http://msdn.microsoft.com/library/windows/desktop/aa380902) en Windows SDK *: herramientas de SDK*.  
   
  Para obtener más información sobre los cuadros de diálogo en general, consulte [DialogBox](http://msdn.microsoft.com/library/windows/desktop/ms645452) y [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) en el SDK de Windows.  
   
@@ -159,9 +154,9 @@ ATLAPI AtlAxCreateControl(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   A ProgID such as "MSCAL.Calendar.7"  
+-   Un identificador de programa, como "MSCAL. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -207,9 +202,9 @@ ATLAPI AtlAxCreateControlEx(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   A ProgID such as "MSCAL.Calendar.7"  
+-   Un identificador de programa, como "MSCAL. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -262,9 +257,9 @@ ATLAPI AtlAxCreateControlLic(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   A ProgID such as "MSCAL.Calendar.7"  
+-   Un identificador de programa, como "MSCAL. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -312,9 +307,9 @@ ATLAPI AtlAxCreateControlLicEx(
  `lpszName`  
  Un puntero a una cadena que se va a pasar al control. Debe tener el formato de una de las maneras siguientes:  
   
--   A ProgID such as "MSCAL.Calendar.7"  
+-   Un identificador de programa, como "MSCAL. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
 -   Una dirección URL como "http://www.microsoft.com"  
   
@@ -384,7 +379,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  El objeto de control que se va a adjuntar debe inicializarse correctamente antes de llamar a `AtlAxAttachControl`.  
   
-##  <a name="atlaxgethost"></a>  AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetControl  
  Obtiene un puntero de interfaz directo al contenedor de una ventana especificada (si existe) en función de su identificador.  
   
 ```

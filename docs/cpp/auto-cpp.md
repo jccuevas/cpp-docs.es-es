@@ -1,12 +1,9 @@
 ---
 title: Auto (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-c"></a>Auto (C++)
 Deduce el tipo de una variable declarada a partir de su expresión de inicialización.  
@@ -141,7 +136,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|No se puede usar un símbolo antes de inicializarlo. En la práctica, esto significa que una variable no se puede usar para inicializarse a sí misma.|  
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|No se puede convertir en un tipo que se declara con la palabra clave `auto`.|  
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Todos los símbolos de una lista de declaradores que se declara con la palabra clave `auto` deben resolverse en el mismo tipo. Para obtener más información, consulte [declaraciones y definiciones](declarations-and-definitions-cpp.md).|  
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|El [sizeof](../cpp/sizeof-operator.md) y [typeid](../windows/typeid-cpp-component-extensions.md) operadores no se pueden aplicar a un símbolo que se declara con el `auto` palabra clave.|  
+|[EL ERROR C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|El [sizeof](../cpp/sizeof-operator.md) y [typeid](../windows/typeid-cpp-component-extensions.md) operadores no se pueden aplicar a un símbolo que se declara con el `auto` palabra clave.|  
   
 ## <a name="examples"></a>Ejemplos  
  Estos fragmentos de código muestran algunas de las formas de las que se puede usar la palabra clave `auto`.  
@@ -227,7 +222,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [auto Keyword](../cpp/auto-keyword.md)   
+ [Auto (palabra clave)](../cpp/auto-keyword.md)   
  [Palabras clave](../cpp/keywords-cpp.md)   
  [/ Zc: Auto (deducir tipo de Variable)](../build/reference/zc-auto-deduce-variable-type.md)   
  [sizeof (operador)](../cpp/sizeof-operator.md)   

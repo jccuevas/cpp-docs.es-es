@@ -11,14 +11,13 @@ f1_keywords:
 - USEPROFILE
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c2e63d5e65d2528f77852d9466d4161d7cc6a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 156a571eaa3db31b8c5345f1550346503651665d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/ USEPROFILE (PGO ejecutar en modo seguro para subprocesos)
 
@@ -26,14 +25,14 @@ Esta opción del vinculador junto con [/LTCG (generación de código en tiempo d
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
+> **/ USEPROFILE**[**:**{**dinámico**|**PGD =**_filename_}]
 
 ### <a name="arguments"></a>Argumentos
 
 **AGRESIVA**<br/>
 Este argumento opcional especifica que se deben usar las optimizaciones de velocidad agresiva durante la generación de código optimizado.
 
-**PGD**=*filename*<br/>
+**PGD**=*nombre de archivo*<br/>
 Especifica un nombre de archivo base para el archivo .pgd. De forma predeterminada, el vinculador usa el nombre del archivo ejecutable base con una extensión de pgd.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,6 +64,6 @@ El **/useprofile** opción del vinculador es nueva en Visual Studio 2015.
 ## <a name="see-also"></a>Vea también
 
 [/GENPROFILE y /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
-[/LTCG](ltcg-link-time-code-generation.md)<br/>
+[/ LTCG](ltcg-link-time-code-generation.md)<br/>
 [Optimizaciones guiadas por perfiles](../../build/reference/profile-guided-optimizations.md)<br/>
 [Variables de entorno para las optimizaciones guiadas por perfiles](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>

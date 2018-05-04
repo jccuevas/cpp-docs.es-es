@@ -1,13 +1,10 @@
 ---
 title: MSBuild (Visual C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Puede usar el **MSBuild** herramienta para crear una aplicación de Visual C++ desde la línea de comandos. El proceso de compilación se controla mediante la información de un archivo de proyecto (.vcxproj) que puede crear y editar. El archivo de proyecto especifica opciones de compilación en función de la compilación fases, condiciones y eventos.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Término|Definición|  
+|Término|de esquema JSON|  
 |----------|----------------|  
 |[Información general sobre MSBuild (Visual C++)](../build/msbuild-visual-cpp-overview.md)|Describe cómo Visual C++ utiliza el **MSBuild** sistema.|  
 |[Cambios del sistema de compilación](../build/build-system-changes.md)|Se describen algunas de las diferencias entre el sistema de compilación actual y la versión anterior.|  

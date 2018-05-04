@@ -1,12 +1,9 @@
 ---
 title: Opciones, Asistente para objetos simples ATL | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 Use esta página del Asistente para objetos simples ATL para diseñar para una mayor eficiencia y soporte técnico de error para el objeto.  
@@ -40,8 +35,8 @@ Use esta página del Asistente para objetos simples ATL para diseñar para una m
 |Opción|Descripción|  
 |------------|-----------------|  
 |`Single`|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Vea [los contenedores uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112) y [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) para obtener más información.|  
-|**Apartment**|Especifica que el objeto utiliza apartamento de subproceso. Apartamento de subproceso equivalente al único. Cada objeto de un componente de subprocesamiento controlado se le asigna un apartamento para su subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden utilizarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un suministro de mensajes de Windows (valor predeterminado).<br /><br /> Vea [los contenedores uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obtener más información.|  
-|**Both**|Especifica que el objeto puede usar apartamento o subprocesamiento libre, dependiendo de qué tipo de un subproceso se crea.|  
+|**Apartamento**|Especifica que el objeto utiliza apartamento de subproceso. Apartamento de subproceso equivalente al único. Cada objeto de un componente de subprocesamiento controlado se le asigna un apartamento para su subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden utilizarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un suministro de mensajes de Windows (valor predeterminado).<br /><br /> Vea [los contenedores uniproceso](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obtener más información.|  
+|**Ambos**|Especifica que el objeto puede usar apartamento o subprocesamiento libre, dependiendo de qué tipo de un subproceso se crea.|  
 |**Libre**|Especifica que el objeto utiliza subprocesamiento libre. Subprocesamiento libre equivale a un modelo de apartamento multiproceso. Vea [apartamentos multiproceso](http://msdn.microsoft.com/library/windows/desktop/ms693421) para obtener más información.|  
 |**Neutral**|Especifica que el objeto sigue las directrices para apartamentos multiproceso, pero pueden ejecutar en cualquier tipo de subproceso.|  
   
@@ -59,10 +54,10 @@ Use esta página del Asistente para objetos simples ATL para diseñar para una m
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable posee funciones de interfaz personalizada y enlace tardío `IDispatch` métodos). Permite a los clientes COM y [controladores de automatización](../../mfc/automation-clients.md) para tener acceso al objeto. El valor predeterminado.|  
+|**Doble**|Especifica que el objeto admite una interfaz dual (su tabla vtable posee funciones de interfaz personalizada y enlace tardío `IDispatch` métodos). Permite a los clientes COM y [controladores de automatización](../../mfc/automation-clients.md) para tener acceso al objeto. El valor predeterminado.|  
 |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable posee funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente en los límites de proceso.<br /><br /> -   **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de la interfaz personalizada.|  
   
- **Support**  
+ **Soporte técnico**  
  Indica compatibilidad adicional para el objeto.  
   
 |Opción|Descripción|  

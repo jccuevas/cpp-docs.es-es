@@ -1,12 +1,9 @@
 ---
 title: Clases y Structs (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - classes [C++]
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac15db222aed3abad980f4e1a0c715c099e2019c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classes-and-structs-c"></a>Clases y structs (C++)
 En esta sección se presentan las clases y structs de C++. Las dos construcciones son idénticas en C++, salvo que, en los structs, la accesibilidad predeterminada es pública, mientras que en las clases es privada.  
@@ -42,7 +37,7 @@ En esta sección se presentan las clases y structs de C++. Las dos construccione
   
 -   [Información general sobre miembros de clase](../cpp/class-member-overview.md)  
   
--   [Control de acceso de miembro](../cpp/member-access-control-cpp.md)  
+-   [Control de acceso a miembros](../cpp/member-access-control-cpp.md)  
   
 -   [Herencia](../cpp/inheritance-cpp.md)  
   

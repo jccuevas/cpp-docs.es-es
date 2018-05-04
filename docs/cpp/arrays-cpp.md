@@ -1,12 +1,9 @@
 ---
 title: Matrices (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Un inicializador opcional.  Vea [inicializadores](../cpp/initializers.md).  
   
- El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) elemento, donde  *n*  es el número de elementos de la matriz puede contener. El *expresión constante* debe ser de un tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida sólo cuando la matriz es el último campo en un `struct` o **union** y cuando están habilitadas las extensiones de Microsoft (/Ze).  
+ El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) elemento, donde *n* es el número de elementos de la matriz puede contener. El *expresión constante* debe ser de un tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida sólo cuando la matriz es el último campo en un `struct` o **union** y cuando están habilitadas las extensiones de Microsoft (/Ze).  
   
  En el ejemplo siguiente se muestra cómo definir una matriz en tiempo de ejecución:  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  Especifica una matriz de tipo `int`, organizada conceptualmente en una matriz bidimensional de cinco filas y siete columnas, como se muestra en la ilustración siguiente:  
   
- ![Diseño conceptual de un múltiples &#45; matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Diseño conceptual de un múltiples&#45;matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1")  
 Diseño conceptual de matriz multidimensional  
   
  En las declaraciones de matrices multidimensionales que tienen una lista de inicializadores (como se describe en [inicializadores](../cpp/initializers.md)), se puede omitir la expresión constante que especifica los límites de la primera dimensión. Por ejemplo:  
