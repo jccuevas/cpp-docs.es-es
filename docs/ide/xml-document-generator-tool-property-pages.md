@@ -1,13 +1,10 @@
 ---
-title: "Páginas de propiedades de herramienta de generador de documento XML | Documentos de Microsoft"
-ms.custom: 
+title: Páginas de propiedades de herramienta de generador de documento XML | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
 - VC.Project.VCXDCMakeTool.SuppressStartupBanner
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc09dafc0f07bc16a11dd255419440b6464456c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Herramienta Generador de documentos XML (Páginas de propiedades)
 La página de propiedades de la herramienta Generador de documentos XML expone la funcionalidad de xdcmake.exe. xdcmake.exe combina archivos .xdc en un archivo .xml cuando el código fuente contiene comentarios de documentación y [/doc (procesar comentarios de documentación) (C/C ++)](../build/reference/doc-process-documentation-comments-c-cpp.md) se especifica,. Vea [etiquetas recomendadas para comentarios de documentación](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) para obtener información sobre cómo agregar comentarios de documentación en código fuente.  

@@ -1,13 +1,10 @@
 ---
-title: "Crear una aplicación MFC basada en formularios | Documentos de Microsoft"
-ms.custom: 
+title: Crear una aplicación MFC basada en formularios | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcforms.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Crear una aplicación MFC basada en formularios
 Un formulario es un cuadro de diálogo con controles que permiten a un usuario tener acceso a datos y, posiblemente, modificarlos. Es posible que quiera desarrollar una aplicación en la que el usuario elija entre un conjunto de formularios. Normalmente, una aplicación basada en formularios permite a los formularios de acceso de usuario haciendo clic en **New** desde el **archivo** menú. Una aplicación basada en cuadros de diálogo, que no ofrece a los usuarios acceso a una **New** opción en el **archivo** menú, también se considera una aplicación basada en formularios.  

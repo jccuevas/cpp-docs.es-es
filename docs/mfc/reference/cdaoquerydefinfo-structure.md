@@ -1,13 +1,10 @@
 ---
 title: CDaoQueryDefInfo (estructura) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo (Estructura)
 El `CDaoQueryDefInfo` estructura contiene información sobre un objeto de definición de consulta definido para objetos de acceso a datos (DAO).  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>Comentarios  
  La definición de consulta es un objeto de clase [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). Las referencias a principal, secundaria y todo lo anterior indican cómo se devuelve la información de la [función miembro GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) función de miembro de clase `CDaoDatabase`.  
   
- La información recuperada por la [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) función miembro se almacena en un `CDaoQueryDefInfo` estructura. Llame a `GetQueryDefInfo` para el objeto de base de datos en cuya colección de definiciones de consulta se almacena el objeto de definición de consulta. `CDaoQueryDefInfo`También define un `Dump` compila la función miembro en versiones de depuración. Puede usar `Dump` para volcar el contenido de un `CDaoQueryDefInfo` objeto. Clase `CDaoDatabase` también proporciona funciones miembro para obtener acceso directamente a todas las propiedades que se devuelven en un `CDaoQueryDefInfo` objeto, por lo que probablemente rara vez deberá llamar a `GetQueryDefInfo`.  
+ La información recuperada por la [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) función miembro se almacena en un `CDaoQueryDefInfo` estructura. Llame a `GetQueryDefInfo` para el objeto de base de datos en cuya colección de definiciones de consulta se almacena el objeto de definición de consulta. `CDaoQueryDefInfo` También define un `Dump` compila la función miembro en versiones de depuración. Puede usar `Dump` para volcar el contenido de un `CDaoQueryDefInfo` objeto. Clase `CDaoDatabase` también proporciona funciones miembro para obtener acceso directamente a todas las propiedades que se devuelven en un `CDaoQueryDefInfo` objeto, por lo que probablemente rara vez deberá llamar a `GetQueryDefInfo`.  
   
  Al anexar un nuevo campo u objeto de parámetro a la colección de campos o parámetros de un objeto de definición de consulta, se produce una excepción si la base de datos subyacente no admite el tipo de datos especificado para el nuevo objeto.  
   

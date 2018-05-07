@@ -1,30 +1,25 @@
 ---
-title: "Contenedores de controles ActiveX: Insertar un Control en una aplicación de contenedor de Control | Documentos de Microsoft"
-ms.custom: 
+title: 'Contenedores de controles ActiveX: Insertar un Control en una aplicación de contenedor de Control | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], inserting controls
 - ActiveX controls [MFC], adding to projects
 ms.assetid: bbb617ff-872f-43d8-b4d6-c49adb16b148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1eaaf0426726f252fc4990f06faa73b0598cfbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 716c045fc10b4dd5f3dede20a233d958e669bbd7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Contenedores de controles ActiveX: Insertar un control en una aplicación de contenedor de controles
 Antes de que puede tener acceso a un control ActiveX desde una aplicación de contenedor de controles ActiveX, debe agregar el control ActiveX a la aplicación de contenedor mediante el [insertar ActiveX Control](../windows/insert-activex-control-dialog-box.md) cuadro de diálogo.  

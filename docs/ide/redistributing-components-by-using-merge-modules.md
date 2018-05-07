@@ -1,30 +1,25 @@
 ---
-title: "Redistribuir componentes mediante módulos de combinación | Documentos de Microsoft"
-ms.custom: 
+title: Redistribuir componentes mediante módulos de combinación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093c732563844b14a3f99662150d4db9b2fac1fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redistribuir componentes mediante módulos de fusión mediante combinación
 Visual Studio incluye [módulos de combinación](http://msdn.microsoft.com/library/aa367434) para cada componente de Visual C++ que se para puede redistribuir con una aplicación. Cuando un módulo de fusión mediante combinación se compila en un archivo de instalación de Windows Installer, habilita la implementación de determinados archivos DLL en los equipos que tienen una plataforma específica. En el archivo de instalación, especifique que los módulos de fusión mediante combinación son requisitos previos para la aplicación. Cuando se instala Visual Studio, los módulos de combinación se instalan en \Program Files\Common Files\Merge Modules\\. (Solo las versiones de no son de depuración de archivos DLL de Visual C++ se pueden redistribuir.) Para obtener más información y un vínculo a una lista de módulos de combinación que cuentan con licencia para su redistribución, vea [redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).  

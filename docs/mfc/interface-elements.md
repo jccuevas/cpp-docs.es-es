@@ -1,30 +1,25 @@
 ---
 title: Elementos de la interfaz | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Elementos de la interfaz
 Este documento describe los elementos de interfaz que se introdujeron en [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 y también se describe las diferencias con la versión anterior de la biblioteca.  
@@ -49,7 +44,7 @@ Este documento describe los elementos de interfaz que se introdujeron en [!INCLU
  El sitio de vinculación (o la ventana de marco principal) posee todos los paneles y ventanas de marco reducido en una aplicación. El sitio de vinculación contiene un [CDockingManager](../mfc/reference/cdockingmanager-class.md) miembro. Este miembro mantiene una lista de todos los paneles que pertenecen al sitio de vinculación. La lista está ordenada por lo que los paneles creados en los bordes exteriores de sitio de vinculación se colocan al principio de la lista. Cuando el marco de trabajo vuelve a dibujarse el sitio de vinculación, se repite a lo largo de esta lista y ajusta el diseño de cada panel para incluir el rectángulo delimitador actual del sitio de vinculación. Puede llamar a `AdjustDockingLayout` o `RecalcLayout` cuando se tenga que ajustar el diseño de acoplamiento y el marco de trabajo redirige esta llamada para el Administrador de acoplamiento.  
   
 ## <a name="dock-bars"></a>Barras de acoplamiento  
- Puede colocar cada ventana de marco principal *acoplar barras* a lo largo de los bordes. Una barra de acoplamiento es un panel que pertenece a un [clase CDockSite](../mfc/reference/cdocksite-class.md). Acoplar barras pueden aceptar los objetos derivados de [CPane](../mfc/reference/cpane-class.md), por ejemplo, las barras de herramientas. Para crear barras de acoplamiento cuando se inicialice la ventana de marco principal, llame a `EnableDocking`. Para habilitar las barras de ocultación automática, llame a `EnableAutoHideBars`. `EnableAutoHideBars`crea [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objetos y los coloca junto a cada barra de acoplamiento.  
+ Puede colocar cada ventana de marco principal *acoplar barras* a lo largo de los bordes. Una barra de acoplamiento es un panel que pertenece a un [clase CDockSite](../mfc/reference/cdocksite-class.md). Acoplar barras pueden aceptar los objetos derivados de [CPane](../mfc/reference/cpane-class.md), por ejemplo, las barras de herramientas. Para crear barras de acoplamiento cuando se inicialice la ventana de marco principal, llame a `EnableDocking`. Para habilitar las barras de ocultación automática, llame a `EnableAutoHideBars`. `EnableAutoHideBars` crea [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objetos y los coloca junto a cada barra de acoplamiento.  
   
  Cada barra de acoplamiento se divide en filas de acoplamiento. Acoplar filas se representan mediante la [CDockingPanesRow clase](../mfc/reference/cdockingpanesrow-class.md). Cada fila de acoplamiento contiene una lista de las barras de herramientas. Si un usuario acopla una barra de herramientas o mueve la barra de herramientas de una fila a otra dentro de la misma barra de acoplamiento, el marco de trabajo ya sea crea una nueva fila y cambia el tamaño de la barra de acoplamiento en consecuencia, o coloca la barra de herramientas en una fila existente.  
   
@@ -66,7 +61,7 @@ Este documento describe los elementos de interfaz que se introdujeron en [!INCLU
  De forma predeterminada, cada `CDockablePane` es compatible con la característica Ocultar automáticamente. Cuando un usuario hace clic en el botón de anclaje en el título de la `CDockablePane`, el marco de trabajo activa el panel en modo de ocultación automática. Para controlar el clic, el marco de trabajo crea un [clase CMFCAutoHideBar](../mfc/reference/cmfcautohidebar-class.md) y un [clase CMFCAutoHideButton](../mfc/reference/cmfcautohidebutton-class.md) asociados con el `CMFCAutoHideBar` objeto. El marco de trabajo coloca la nueva `CMFCAutoHideBar` en el [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). El marco de trabajo también asocia el `CMFCAutoHideButton` a la barra de herramientas. El [CDockingManager clase](../mfc/reference/cdockingmanager-class.md) mantiene el `CDockablePane`.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Barras de Control con pestañas y barras de Outlook  
- El [CMFCBaseTabCtrl clase](../mfc/reference/cmfcbasetabctrl-class.md) implementa la funcionalidad básica de una ventana con pestañas con pestañas separables. Para usar un `CMFCBaseTabCtrl` de objeto, inicializar un [CBaseTabbedPane (clase)](../mfc/reference/cbasetabbedpane-class.md) en la aplicación. `CBaseTabbedPane`se deriva de `CDockablePane` y mantiene un puntero a un `CMFCBaseTabCtrl` objeto. El `CBaseTabbedPane` permite a los usuarios acoplar y cambiar el tamaño de las barras de control de pestaña. Use [CDockablePane:: Attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) para crear dinámicamente las barras de control que se acopla y con pestañas.  
+ El [CMFCBaseTabCtrl clase](../mfc/reference/cmfcbasetabctrl-class.md) implementa la funcionalidad básica de una ventana con pestañas con pestañas separables. Para usar un `CMFCBaseTabCtrl` de objeto, inicializar un [CBaseTabbedPane (clase)](../mfc/reference/cbasetabbedpane-class.md) en la aplicación. `CBaseTabbedPane` se deriva de `CDockablePane` y mantiene un puntero a un `CMFCBaseTabCtrl` objeto. El `CBaseTabbedPane` permite a los usuarios acoplar y cambiar el tamaño de las barras de control de pestaña. Use [CDockablePane:: Attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) para crear dinámicamente las barras de control que se acopla y con pestañas.  
   
  El control de barra de Outlook también se basa en las barras con pestañas. El [CMFCOutlookBar (clase)](../mfc/reference/cmfcoutlookbar-class.md) se deriva de `CBaseTabbedPane`. Para obtener más información sobre cómo usar la barra de Outlook, consulte [CMFCOutlookBar (clase)](../mfc/reference/cmfcoutlookbar-class.md).  
   

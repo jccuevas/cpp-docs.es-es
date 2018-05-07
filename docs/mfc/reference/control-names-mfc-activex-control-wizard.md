@@ -1,13 +1,10 @@
 ---
 title: Nombres del control, Asistente para controles ActiveX MFC | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.names
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3444ec69ea96ee89ed7a0965f3575fc79e3b9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a406bf633715f6a6e9546295da3b02a41f0063
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nombres del control, Asistente para controles ActiveX MFC
 Especifique los nombres de la clase de control y la clase de página de propiedades, los nombres de tipo y escriba los identificadores para el control. Con la excepción de **nombre corto**, todos los demás campos se pueden editar por separado. Si cambia el texto para **nombre corto**, el cambio se reflejará en los nombres de todos los demás campos en esta página. Este comportamiento de nomenclatura está diseñado para que todos los nombres fácilmente identificables automáticamente a medida que desarrolla el control.  

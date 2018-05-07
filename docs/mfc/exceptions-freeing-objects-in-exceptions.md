@@ -1,13 +1,10 @@
 ---
 title: 'Excepciones: Liberar objetos en excepciones | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a422347e319fabbd91f20e0ebf7897865f1ca4c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21a63a55103cbefda2ba501c5609b772b2203166
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Excepciones: Liberar objetos en las excepciones
 Este artículo explica la necesidad y el método de liberar objetos cuando se produce una excepción. Entre los temas se incluyen los siguientes:  
@@ -53,14 +48,14 @@ Este artículo explica la necesidad y el método de liberar objetos cuando se pr
   
  Como se indica anteriormente, `myPerson` no se eliminará si se produce una excepción por `SomeFunc`. Ejecución salta directamente al siguiente controlador de excepción exterior, omitiendo la salida de función normal y el código que elimina el objeto. El puntero al objeto se sale del ámbito cuando la excepción deja la función y la memoria ocupada por el objeto nunca se recuperarán siempre y cuando se ejecuta el programa. Se trata de una pérdida de memoria; se detectaría mediante el uso de los diagnósticos de memoria.  
   
-##  <a name="_core_handling_the_exception_locally"></a>Controlar la excepción localmente  
+##  <a name="_core_handling_the_exception_locally"></a> Controlar la excepción localmente  
  El **try/catch** paradigma proporciona un método de programación estable para evitar pérdidas de memoria y garantizar que los objetos se destruyen cuando se producen excepciones. Por ejemplo, el ejemplo mostrado anteriormente en este artículo puede reescribirse como sigue:  
   
  [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
   
  Este nuevo ejemplo configura un controlador de excepciones para detectar la excepción y controlarla localmente. A continuación, sale de la función normalmente y destruye el objeto. El aspecto importante de este ejemplo es que se ha establecido un contexto para detectar la excepción con la **try/catch** bloques. Sin un marco de excepción local, la función nunca sabría que una excepción se ha iniciado y no tendrán la oportunidad de salir normalmente y destruir el objeto.  
   
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a>Producir excepciones después de destruir objetos  
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> Producir excepciones después de destruir objetos  
  Otra manera de controlar las excepciones es pasarlas el contexto de control de excepciones externo siguiente. En su **catch** bloque, puede hacer una limpieza de los objetos asignados localmente y, a continuación, inicia la excepción para su posterior procesamiento.  
   
  La función iniciadora puede o no necesitar desasignar objetos del montón. Si la función siempre desasigna el objeto del montón antes de devolver en el caso normal, la función también debe desasignar el objeto de montón de antes de iniciar la excepción. Por otro lado, si la función no suele desasignar el objeto antes de devolver en el caso normal, a continuación, debe decidir caso por caso si debe desasignarse el objeto de montón.  

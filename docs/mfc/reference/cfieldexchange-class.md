@@ -2,11 +2,8 @@
 title: Clase CFieldExchange | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>Clase CFieldExchange
 Admite las rutinas de intercambio de campos de registro (RFX) y de intercambio masivo de campos de registro (RFX Masivo) utilizadas por las clases de base de datos.  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange:: SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos del conjunto de registros, columna o parámetro, representado por todas las llamadas siguientes a las funciones RFX hasta la siguiente llamada a `SetFieldType`.|  
   
 ## <a name="remarks"></a>Comentarios  
- `CFieldExchange`no tiene una clase base.  
+ `CFieldExchange` no tiene una clase base.  
   
  Utilice esta clase si está escribiendo rutinas de intercambio de datos para tipos de datos personalizados o cuando se implementan la obtención masiva de filas; en caso contrario, no directamente usará esta clase. RFX y RFX masivo intercambia datos entre los miembros de datos de campo del objeto de conjunto de registros y los campos correspondientes del registro actual en el origen de datos.  
   
 > [!NOTE]
 >  Si está trabajando con las clases de Data Access Objects (DAO) en lugar de las clases de Open Database Connectivity (ODBC), utilice la clase [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) en su lugar. Para obtener más información, vea el artículo [: base de datos de información general de programación](../../data/data-access-programming-mfc-atl.md).  
   
- Un `CFieldExchange` objeto proporciona la información de contexto necesaria para que el intercambio de campos de registros o intercambio masivo de campos de registros pueda colocar. `CFieldExchange`los objetos admiten una serie de operaciones, incluidos los parámetros de enlace y los miembros de datos de campo y el establecimiento de varias marcas en los campos del registro actual. Se realizan operaciones RFX y RFX masivo en miembros de datos de la clase de conjunto de registros de tipos definidos por el `enum` **FieldType** en `CFieldExchange`. Posibles **FieldType** valores son:  
+ Un `CFieldExchange` objeto proporciona la información de contexto necesaria para que el intercambio de campos de registros o intercambio masivo de campos de registros pueda colocar. `CFieldExchange` los objetos admiten una serie de operaciones, incluidos los parámetros de enlace y los miembros de datos de campo y el establecimiento de varias marcas en los campos del registro actual. Se realizan operaciones RFX y RFX masivo en miembros de datos de la clase de conjunto de registros de tipos definidos por el `enum` **FieldType** en `CFieldExchange`. Posibles **FieldType** valores son:  
   
 - **CFieldExchange::outputColumn** para los miembros de datos de campo.  
   
@@ -75,7 +70,7 @@ class CFieldExchange
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  Si escribe su propia función RFX, llame a `IsFieldType` al principio de la función para determinar si se puede realizar la operación actual en un tipo de miembro de datos campo o parámetro determinado (un **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, o **CFieldExchange::inoutParam** ).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>Comentarios  
  Sigue el modelo de las funciones RFX existentes.  
   
-##  <a name="setfieldtype"></a>CFieldExchange:: SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange:: SetFieldType  
  Se necesita una llamada a `SetFieldType` en la clase de conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) invalidar.  
   
 ```  

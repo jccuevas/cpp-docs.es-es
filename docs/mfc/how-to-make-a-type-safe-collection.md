@@ -1,13 +1,10 @@
 ---
-title: "Cómo: crear una colección con seguridad de tipos | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: crear una colección con seguridad de tipos | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Cómo: Crear una colección con seguridad de tipos
 En este artículo se explica cómo hacer que las colecciones con seguridad de tipos para sus propios tipos de datos. Entre los temas se incluyen los siguientes:  
@@ -42,7 +37,7 @@ En este artículo se explica cómo hacer que las colecciones con seguridad de ti
   
  La biblioteca Microsoft Foundation Class proporciona colecciones con seguridad de tipos predefinidas basadas en plantillas de C++. Dado que son plantillas, estas clases ayudan a proporcionar seguridad de tipos y la facilidad de uso sin la conversión de tipos y otros trabajos adicionales relacionados con el uso de una clase sin plantilla para este propósito. El ejemplo MFC [recopilar](../visual-cpp-samples.md) muestra el uso de clases de colección basadas en plantillas en una aplicación MFC. En general, utilice estas clases cada vez que escriba código nuevo de colecciones.  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>Utilizar clases basadas en plantillas de seguridad de tipos  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Utilizar clases basadas en plantillas de seguridad de tipos  
   
 #### <a name="to-use-template-based-classes"></a>Utilizar clases basadas en plantillas  
   
@@ -58,10 +53,10 @@ En este artículo se explica cómo hacer que las colecciones con seguridad de ti
   
  En este ejemplo se muestra la declaración de una lista de enteros. El primer parámetro en el paso 1 es el tipo de datos que se almacenan como elementos de la lista. El segundo parámetro especifica cómo los datos se pasarse y devueltos por las funciones miembro de la clase de colección, como **agregar** y `GetAt`.  
   
-##  <a name="_core_implementing_helper_functions"></a>Implementar funciones auxiliares  
+##  <a name="_core_implementing_helper_functions"></a> Implementar funciones auxiliares  
  Las clases de colección basadas en plantillas `CArray`, `CList`, y `CMap` utilizar cinco funciones auxiliares globales que se pueden personalizar según sea necesario para la clase de colección derivada. Para obtener información sobre estas funciones auxiliares, vea [aplicaciones auxiliares de clase de colección](../mfc/reference/collection-class-helpers.md) en el *referencia de MFC*. Implementación de la función de serialización es necesario para la mayoría de los usos de las clases de colección basadas en plantillas.  
   
-###  <a name="_core_serializing_elements"></a>Seleccionar elementos  
+###  <a name="_core_serializing_elements"></a> Seleccionar elementos  
  El `CArray`, `CList`, y `CMap` clases llamada `SerializeElements` para almacenar elementos de colección o leerlos desde un archivo.  
   
  La implementación predeterminada de la `SerializeElements` función auxiliar realiza una escritura bit a bit de los objetos en el archivo o lee desde el archivo a los objetos, dependiendo de si los objetos se almacenan en un bit a bit o se recupera desde el archivo. Invalidar `SerializeElements` si esta acción no es adecuada.  
@@ -72,7 +67,7 @@ En este artículo se explica cómo hacer que las colecciones con seguridad de ti
   
  Los operadores de inserción sobrecargados para `CArchive` llamar a `CObject::Serialize` (o una función de reemplazo) para cada **CPerson** objeto.  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>Utilizar clases de colección no es de plantilla  
+##  <a name="_core_using_nontemplate_collection_classes"></a> Utilizar clases de colección no es de plantilla  
  MFC también es compatible con las clases de colección introducidas con la versión 1.0 de MFC. Estas clases no se basan en plantillas. Pueden usarse para contener datos de los tipos admitidos `CObject*`, **UINT**, `DWORD`, y `CString`. Puede usar estas colecciones predefinidas (como `CObList`) para contener colecciones de cualquier objeto derivado de `CObject`. MFC también proporciona otras colecciones predefinidas para contener los tipos primitivos como **UINT** y anular punteros (`void`*). En general, sin embargo, a menudo resulta útil definir sus propias colecciones con seguridad de tipos para almacenar los objetos de una clase más específica y sus derivados. Tenga en cuenta que si lo hace, con las clases de colección no basada en plantillas es más trabajo que el uso de las clases basadas en plantillas.  
   
  Hay dos maneras de crear colecciones con seguridad de tipos con las colecciones sin plantilla:  

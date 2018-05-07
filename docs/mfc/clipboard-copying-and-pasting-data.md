@@ -1,37 +1,32 @@
 ---
 title: 'Portapapeles: Copiar y pegar datos | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
 Este tema describe el trabajo mínimo necesario para implementar copiar a y pegar desde el Portapapeles en una aplicación OLE. Se recomienda que lea la [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) temas antes de continuar.  
   
  Para poder implementar copiar o pegar, primero debe proporcionar funciones para controlar las opciones de copiar, cortar y pegar en el menú Edición.  
   
-##  <a name="_core_copying_or_cutting_data"></a>Copiar o cortar datos  
+##  <a name="_core_copying_or_cutting_data"></a> Copiar o cortar datos  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Para copiar los datos en el Portapapeles  
   
@@ -47,7 +42,7 @@ Este tema describe el trabajo mínimo necesario para implementar copiar a y pega
   
  Para ver un ejemplo de esta secuencia, vea la **funciones OnEditCut** y **OnEditCopy** programas de ejemplo de las funciones de la aplicación OLE [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md). Tenga en cuenta que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que ya está completado el paso 1.  
   
-##  <a name="_core_pasting_data"></a>Pegar datos  
+##  <a name="_core_pasting_data"></a> Pegar datos  
  Pegar datos es más complicado que copiarlos porque debe elegir el formato que se usará para pegar los datos en la aplicación.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Para pegar datos desde el Portapapeles  

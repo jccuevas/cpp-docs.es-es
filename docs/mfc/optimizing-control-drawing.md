@@ -1,29 +1,24 @@
 ---
 title: Optimizar el dibujo de Control | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>Optimizar el dibujo de controles
 Cuando un control se indica a dibujarse a sí mismo en un contexto de dispositivo proporcionado por el contenedor, lo normalmente selecciona objetos GDI (por ejemplo, lápices, pinceles y fuentes) en el contexto de dispositivo, realiza sus operaciones de dibujo y restaura los objetos GDI anteriores. Si el contenedor tiene varios controles que se van a dibujar en el mismo contexto de dispositivo, y cada control selecciona los objetos GDI que necesita, tiempo puede guardarse si los controles no restaurar individualmente los objetos previamente seleccionados. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.  

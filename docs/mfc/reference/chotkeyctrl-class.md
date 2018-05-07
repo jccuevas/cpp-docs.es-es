@@ -2,11 +2,8 @@
 title: CHotKeyCtrl (clase) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 Proporciona la funcionalidad del control común de tecla de acceso rápido de Windows.  
@@ -95,14 +90,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
  Construye un objeto `CHotKeyCtrl`.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
  Crea un control de tecla de acceso rápido y lo adjunta a un `CHotKeyCtrl` objeto.  
   
 ```  
@@ -134,7 +129,7 @@ virtual BOOL Create(
   
  Si desea utilizar los estilos extendidos de windows con el control, llame a [CreateEx](#createex) en lugar de **crear**.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  Llame a esta función para crear un control (una ventana secundaria) y asociarlo con el `CHotKeyCtrl` objeto.  
   
 ```  
@@ -168,7 +163,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Comentarios  
  Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  Recupera las marcas de código y el modificador virtuales teclas de método abreviado de teclado de un control de tecla de acceso rápido.  
   
 ```  
@@ -201,7 +196,7 @@ void GetHotKey(
 ### <a name="remarks"></a>Comentarios  
  El código de tecla virtual y las teclas modificadoras juntas definen el método abreviado de teclado.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
  Llame a esta función miembro para obtener el nombre traducido de la tecla de acceso rápido.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>Comentarios  
  El nombre que devuelve esta función miembro procede del controlador de teclado. Puede instalar un controlador de teclado no localizada en una versión localizada de Windows y viceversa.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  Llame a esta función miembro para obtener el nombre traducido de la clave asignada a un código de tecla virtual especificado.  
   
 ```  
@@ -239,7 +234,7 @@ static CString GetKeyName(
 ### <a name="example"></a>Ejemplo  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
  Establece el método abreviado de teclado para un control de tecla de acceso rápido.  
   
 ```  
@@ -267,7 +262,7 @@ void SetHotKey(
 ### <a name="remarks"></a>Comentarios  
  El código de tecla virtual y las teclas modificadoras juntas definen el método abreviado de teclado.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
  Llame a esta función para definir las combinaciones no válidas y la combinación de modificador predeterminado para un control de tecla de acceso rápido.  
   
 ```  
@@ -280,21 +275,21 @@ void SetRules(
  `wInvalidComb`  
  Matriz de marcas que especifica las combinaciones de teclas no válidas. Puede ser una combinación de los siguientes valores:  
   
-- `HKCOMB_A`ALT  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL + ALT  
   
-- `HKCOMB_NONE`Claves no modificadas  
+- `HKCOMB_NONE` Claves no modificadas  
   
-- `HKCOMB_S`TECLA MAYÚS  
+- `HKCOMB_S` TECLA MAYÚS  
   
-- `HKCOMB_SA`MAYÚS + ALT  
+- `HKCOMB_SA` MAYÚS + ALT  
   
-- `HKCOMB_SC`MAYÚS + CTRL  
+- `HKCOMB_SC` MAYÚS + CTRL  
   
-- `HKCOMB_SCA`MAYÚS + CTRL + ALT  
+- `HKCOMB_SCA` MAYÚS + CTRL + ALT  
   
  `wModifiers`  
  Matriz de marcas que especifica la combinación de teclas que se usará cuando el usuario especifica una combinación no válida. Para obtener más información sobre las marcas de modificador, consulte [GetHotKey](#gethotkey).  
