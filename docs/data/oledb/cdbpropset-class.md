@@ -1,12 +1,9 @@
 ---
 title: CDBPropSet (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBPropSet
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropSet class
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 716b0785ba4f785063709d989eb95c5c4f390f4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8d75715ed0dc65fbbf5b581bfea48816e5bd00ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet (Clase)
 Hereda de la **DBPROPSET** estructurar y agrega un constructor que inicializa los campos clave, así como la `AddProperty` acceder a método.  
@@ -45,7 +40,7 @@ class CDBPropSet : public tagDBPROPSET
   
 |||  
 |-|-|  
-|[AddProperty](../../data/oledb/cdbpropset-addproperty.md)|Agrega una propiedad al conjunto de propiedades.|  
+|[addProperty](../../data/oledb/cdbpropset-addproperty.md)|Agrega una propiedad al conjunto de propiedades.|  
 |[CDBPropSet](../../data/oledb/cdbpropset-cdbpropset.md)|Constructor.|  
 |[SetGUID](../../data/oledb/cdbpropset-setguid.md)|Establece el **guidPropertySet** campo de la **DBPROPSET** estructura.|  
   

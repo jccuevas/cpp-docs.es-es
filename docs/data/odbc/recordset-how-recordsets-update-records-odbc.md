@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Actualizar los registros (ODBC) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: Actualizar los registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -51,7 +46,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  [Conjunto de registros: Más sobre las actualizaciones (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) completa el caso de actualización del conjunto de registros y explica cómo afectan las transacciones a las actualizaciones, cómo cerrar un conjunto de registros o el desplazamiento afecta a las actualizaciones en curso y cómo interactúan las actualizaciones con las actualizaciones de otros usuarios.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>El rol de actualizar el conjunto de registros  
+##  <a name="_core_your_role_in_recordset_updating"></a> El rol de actualizar el conjunto de registros  
  La siguiente tabla muestra su rol en el uso de conjuntos de registros para agregar, editar o eliminar registros, junto con lo que hace el marco de trabajo para usted.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Actualizar el conjunto de registros: El y el marco de trabajo  
@@ -66,7 +61,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Para obtener más información acerca de las transacciones, vea [transacción (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>El búfer de edición  
+##  <a name="_core_the_edit_buffer"></a> El búfer de edición  
  Tomados colectivamente, los miembros de datos de campo de un conjunto de registros actúan como búfer de edición que contiene un registro, el registro actual. Las operaciones de actualización usan este búfer para operar en el registro actual.  
   
 -   Cuando se agrega un registro, el búfer de edición se utiliza para crear un nuevo registro. Cuando termine de agregar el registro, el registro que era anteriormente actual vuelve actual.  
@@ -78,7 +73,7 @@ Este tema es aplicable a las clases ODBC de MFC.
 > [!NOTE]
 >  El búfer de edición desempeña ningún papel en la eliminación del registro. Cuando se elimina el registro actual, el registro se marca como eliminado, y el conjunto de registros es "no está en un registro" hasta que se desplaza a un registro diferente.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Conjuntos de registros dinámicos e instantáneas  
+##  <a name="_core_dynasets_and_snapshots"></a> Conjuntos de registros dinámicos e instantáneas  
  [Conjuntos de registros dinámicos](../../data/odbc/dynaset.md) actualizar el contenido de un registro mientras se desplaza al registro. [Las instantáneas](../../data/odbc/snapshot.md) son representaciones estáticas de los registros, por lo que no se actualiza el contenido de un registro a menos que llame a [Requery](../../mfc/reference/crecordset-class.md#requery). Para usar todas las funciones de conjuntos de registros dinámicos, debe estar trabajando con un controlador ODBC que se ajusta del nivel de compatibilidad con la API de ODBC adecuado. Para obtener más información, consulte [ODBC](../../data/odbc/odbc-basics.md) y [Dynaset](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Vea también  

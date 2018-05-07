@@ -1,13 +1,10 @@
 ---
 title: 'ODBC: Biblioteca de cursores ODBC | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: Biblioteca de cursores ODBC
 Este tema describe la biblioteca de cursores ODBC y explica cómo usarlo. Para obtener más información, consulte:  
@@ -49,7 +44,7 @@ Este tema describe la biblioteca de cursores ODBC y explica cómo usarlo. Para o
   
  La biblioteca de cursores ODBC es una biblioteca de vínculos dinámicos (DLL) que se encuentra entre el Administrador de controladores ODBC y el controlador. En términos de ODBC, un controlador conserva un cursor para realizar un seguimiento de su posición en el conjunto de registros. El cursor marca la posición en el conjunto de registros a los que ya se ha desplazado: el registro actual.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Biblioteca de cursores y nivel 1 controladores ODBC  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Biblioteca de cursores y nivel 1 controladores ODBC  
  La biblioteca de cursores ODBC proporciona a los controladores de nivel 1 las siguientes capacidades nuevas:  
   
 -   Desplazamiento hacia delante y hacia atrás. Controladores de nivel 2 no necesitan la biblioteca de cursores porque ya están desplazables.  
@@ -58,7 +53,7 @@ Este tema describe la biblioteca de cursores ODBC y explica cómo usarlo. Para o
   
  La biblioteca de cursores ofrece instantáneas (cursores estáticos) aunque no se admiten normalmente por el controlador. Si el controlador ya es compatible con los cursores estáticos, no es necesario cargar la biblioteca de cursores para obtener compatibilidad con instantáneas. Si utiliza la biblioteca de cursores, puede utilizar solo las instantáneas y conjuntos de registros solo hacia delante. Si el controlador es compatible con conjuntos de registros dinámicos (cursores KEYSET_DRIVEN) y desea utilizarlos, no debe usar la biblioteca de cursores. Si desea utilizar instantáneas y conjuntos de registros dinámicos, se debe basar en dos diferentes `CDatabase` objetos (dos conexiones distintas) a menos que el controlador es compatible con ambos.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>Actualizaciones por posición y las columnas de marca de tiempo  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> Actualizaciones por posición y las columnas de marca de tiempo  
   
 > [!NOTE]
 >  Mediante las clases ODBC de MFC, como se describe en este tema, o las clases DAO de MFC se puede tener acceso a los orígenes de datos ODBC.  
@@ -75,7 +70,7 @@ Este tema describe la biblioteca de cursores ODBC y explica cómo usarlo. Para o
  El segundo problema está relacionado con las limitaciones de la clase [CTime](../../atl-mfc-shared/reference/ctime-class.md) cuando se usa con el `RFX_Date` función para transferir información de fecha y hora a o desde una tabla. Procesar la `CTime` objeto supone una sobrecarga en forma de procesamiento adicional intermedio durante la transferencia de datos. El intervalo de fechas de `CTime` objetos también podrían limitar demasiado para algunas aplicaciones. Una nueva versión de la `RFX_Date` función toma un ODBC **TIMESTAMP_STRUCT** parámetro en lugar de un `CTime` objeto. Para obtener más información, consulte `RFX_Date` en [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *referencia de MFC*.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>Uso de la biblioteca de cursores  
+##  <a name="_core_using_the_cursor_library"></a> Uso de la biblioteca de cursores  
  Cuando se conecta a un origen de datos, mediante una llamada a [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) o [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) , puede especificar si desea utilizar la biblioteca de cursores para el origen de datos. Si va a crear instantáneas en dicho origen de datos, especifique la **CDatabase:: useCursorLib** opción en el `dwOptions` parámetro `OpenEx` o especificar **TRUE** para el  **bUseCursorLib** parámetro **abiertos** (el valor predeterminado es **TRUE**). Si el controlador ODBC admite conjuntos de registros dinámicos y desea abrir conjuntos de registros dinámicos en el origen de datos, no utilice la biblioteca de cursores (enmascara alguna funcionalidad del controlador necesaria para conjuntos de registros dinámicos). En ese caso, no especifique **CDatabase:: useCursorLib** en `OpenEx` o especificar **FALSE** para el **bUseCursorLib** parámetro en **abrir**.  
   
 ## <a name="see-also"></a>Vea también  

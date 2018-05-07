@@ -2,12 +2,9 @@
 title: Conceptos básicos del uso de excepciones administradas | Documentos de Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Conceptos básicos del uso de excepciones administradas
 Este tema explica el control de excepciones en aplicaciones administradas. Es decir, una aplicación que se compila con la **/CLR** opción del compilador.  
@@ -48,7 +43,7 @@ Este tema explica el control de excepciones en aplicaciones administradas. Es de
   
  Para obtener más información sobre las diferencias en el control de excepciones en aplicaciones administradas y no administradas, vea [las diferencias en la excepción control de comportamiento en las extensiones administradas para C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Producir excepciones en /clr  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> Producir excepciones en /clr  
  La expresión throw de C++ se ha ampliado para producir un identificador a un tipo CLR. En el ejemplo siguiente se crea un tipo de excepción personalizada y, a continuación, inicia una instancia de ese tipo:  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Bloques de Try/Catch para las extensiones CLR  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Bloques de Try/Catch para las extensiones CLR  
  El mismo **intente**/**catch** estructura de bloque se puede utilizar para detectar excepciones nativas y CLR:  
   
 ```  

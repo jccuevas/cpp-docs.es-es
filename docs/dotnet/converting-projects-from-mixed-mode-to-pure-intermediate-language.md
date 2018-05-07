@@ -1,13 +1,10 @@
 ---
 title: Convertir proyectos de modo mixto al lenguaje intermedio puro | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Convertir proyectos de modo mixto a lenguaje intermedio puro
 Todos los proyectos de Visual C++ CLR vinculan a las bibliotecas de tiempo de ejecución de C de forma predeterminada. Por lo tanto, estos proyectos se clasifican como aplicaciones en modo mixto, ya que combinan código nativo con código que tenga como destino common language runtime (código administrado). Cuando se compilan, sino que se compilan en lenguaje intermedio (IL), también conocido como lenguaje intermedio de Microsoft (MSIL).  
@@ -54,7 +49,7 @@ Todos los proyectos de Visual C++ CLR vinculan a las bibliotecas de tiempo de ej
         // #include <tchar.h>  
         ```  
   
-         O bien  
+         -o bien-  
   
          Por ejemplo, en aplicaciones de Windows Forms:  
   
@@ -104,4 +99,4 @@ Todos los proyectos de Visual C++ CLR vinculan a las bibliotecas de tiempo de ej
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Representa un entero de 32 bits sin signo.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Representa un entero de 64 bits sin signo.|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Tipo específico de la plataforma que se usa para representar un puntero o un identificador.|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|
+        |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Indica un método que no devuelve un valor; es decir, el método tiene el tipo de valor devuelto void.|

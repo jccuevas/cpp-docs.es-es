@@ -1,12 +1,9 @@
 ---
 title: CMyProviderCommand (MyProviderRS.H) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0852b619dc89df4ab9a04f2e7dcbac5d308fce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 La `CMyProviderCommand` clase es la implementación para el objeto de comando de proveedor. Proporciona la implementación para la `IAccessor`, `ICommandText`, y **ICommandProperties** interfaces. La `IAccessor` interfaz es la misma que del conjunto de filas. El objeto de comando utiliza el descriptor de acceso para especificar enlaces de parámetros. El objeto de conjunto de filas los utiliza para especificar enlaces para las columnas de salida. La `ICommandText` interfaz es una forma útil de especificar un comando textualmente. Este ejemplo se utiliza la `ICommandText` interfaz más adelante cuando agrega código personalizado; también invalida la `ICommand::Execute` método. El **ICommandProperties** interfaz controla todas las propiedades de los objetos de comando y el conjunto de filas.  

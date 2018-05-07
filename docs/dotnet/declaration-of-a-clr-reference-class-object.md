@@ -1,31 +1,26 @@
 ---
-title: "Declaración de un objeto de clase de referencia CLR | Documentos de Microsoft"
-ms.custom: 
+title: Declaración de un objeto de clase de referencia CLR | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - types [C++], reference types
 - reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12cead3a142c69da56390ca6f5bf32cecc3b0075
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>Declaración de un objeto de una clase de referencia de CLR
 La sintaxis para declarar y crear instancias de un objeto de un tipo de clase de referencia ha cambiado de extensiones administradas para C++ a Visual C++.  

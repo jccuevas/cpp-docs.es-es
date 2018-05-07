@@ -1,12 +1,9 @@
 ---
 title: Error del compilador C2555 | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2555
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c66b464ac38a46716fbed972939feef1273ad03d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d2d1a710177e2c8c72b0afeff662dddf1c22ef5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2555"></a>Error del compilador C2555
 'clase1:: función1': función virtual de reemplazo tipo devuelto es diferente y no es covariante de 'clase2:: función2'  

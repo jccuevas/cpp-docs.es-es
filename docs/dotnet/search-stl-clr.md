@@ -1,12 +1,9 @@
 ---
-title: "búsqueda (STL/CLR) | Documentos de Microsoft"
-ms.custom: 
+title: búsqueda (STL/CLR) | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::search
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - search function [STL/CLR]
 ms.assetid: 3317c7f4-9f47-44b8-a7c7-73948a2f83e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f21b80d20e1f84e8f0e2091054fa5c9c3fe463
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fb0b045e15c5ab491f0f7a4f2514898526b8fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="search-stlclr"></a>search (STL/CLR)
 Busca la primera aparición de una secuencia dentro de un intervalo de destino cuyos elementos son iguales que los de una secuencia determinada de elementos o cuyos elementos son equivalentes según lo especificado por un predicado binario a los elementos de la secuencia especificada.  

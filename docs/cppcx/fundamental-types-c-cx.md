@@ -1,24 +1,19 @@
 ---
 title: Tipos fundamentales (C++ / CX) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 Además el estándar C++ tipos integrados, C++ / CX admite el sistema de tipos que se define mediante la arquitectura de Windows Runtime ofreciendo typedefs para los tipos de Windows Runtime fundamentales que se asignan a los tipos de C++ estándar... C++ / CX implementa tipos fundamentales numéricos, caracteres y un valor booleano. Estas typedefs se definen en el el espacio de nombres `default` , que nunca debe especificarse de manera explícita. Además, C++ / CX ofrece contenedores e implementaciones concretas para determinados tipos de Windows Runtime y las interfaces.  
@@ -26,15 +21,15 @@ Además el estándar C++ tipos integrados, C++ / CX admite el sistema de tipos q
 ## <a name="boolean-and-character-types"></a>Tipos de caracteres y booleanos  
  En la tabla siguiente se muestran los tipos de caracteres y booleanos integrados, y sus equivalentes de C++ estándar.  
   
-|Espacio de nombres|C++ / nombre CX|Definición|Nombre de C++ estándar|Intervalo de valores|  
+|Espacio de nombres|C++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |Plataforma|Booleano|Un valor booleano de 8 bits.|bool|`true` (distinto de cero) y `false` (cero)|  
-|default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> O bien<br /><br /> L'c'|(Especificado por el estándar Unicode)|  
+|default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> -o bien-<br /><br /> L'c'|(Especificado por el estándar Unicode)|  
   
 ## <a name="numeric-types"></a>Tipos numéricos  
  En la tabla siguiente se muestran los tipos numéricos integrados. Los tipos numéricos se declaran en el espacio de nombres `default` y son typedefs para el tipo integrado de C++ correspondiente. No todos los tipos integrados de C++ (por ejemplo, long) se admiten en el tiempo de ejecución de Windows. Para lograr coherencia y claridad, se recomienda utilizar C++ / nombre CX.  
   
-|C++ / nombre CX|Definición|Nombre de C++ estándar|Intervalo de valores|  
+|C++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|  
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |int8|Valor numérico con signo de 8 bits.|signed char|-128 a 127|  
 |uint8|Valor numérico sin signo de 8 bits.|unsigned char|De {0} a 255|  
@@ -50,7 +45,7 @@ Además el estándar C++ tipos integrados, C++ / CX admite el sistema de tipos q
 ## <a name="windows-runtime-types"></a>Tipos de tiempo de ejecución de Windows  
  En la tabla siguiente se muestra algunos otros tipos que se definen mediante la arquitectura en tiempo de ejecución de Windows y están integrados en C++ / CX. Object y String son tipos de referencia. Los demás son tipos de valores. Todos estos tipos se declaran en el espacio de nombres `Platform` . Para una lista completa, vea [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
   
-|nombre|Definición|  
+|nombre|de esquema JSON|  
 |----------|----------------|  
 |Object|Representa cualquier tipo en tiempo de ejecución de Windows.|  
 |String|Serie de caracteres que representan texto.|  

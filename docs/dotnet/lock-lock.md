@@ -1,12 +1,9 @@
 ---
 title: Lock::lock | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 Construye un `lock` objeto, opcionalmente esperando a adquirir el bloqueo indefinidamente, durante un período determinado de tiempo, o no en absoluto.  
@@ -67,7 +62,7 @@ template<class T> lock(
 ## <a name="remarks"></a>Comentarios  
  Las tres primeras formas del constructor intentan adquirir un bloqueo en `_object` dentro del período de tiempo de espera especificado (o <xref:System.Threading.Timeout.Infinite> si no se especifica ninguno).  
   
- La cuarta forma del constructor no adquiere un bloqueo en `_object`. `lock_later`es un miembro de la [lock_when (enumeración)](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) a adquirir el bloqueo en este caso.  
+ La cuarta forma del constructor no adquiere un bloqueo en `_object`. `lock_later` es un miembro de la [lock_when (enumeración)](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) a adquirir el bloqueo en este caso.  
   
  El bloqueo se libera automáticamente cuando se llama al destructor.  
   

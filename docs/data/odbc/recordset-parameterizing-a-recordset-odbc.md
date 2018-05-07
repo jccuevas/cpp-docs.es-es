@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Parametrizar un conjunto de registros (ODBC) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: Parametrizar un conjunto de registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -44,7 +39,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   [Cómo pasar información de parámetros a un objeto de conjunto de registros en tiempo de ejecución](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Conjuntos de registros con parámetros  
+##  <a name="_core_parameterized_recordsets"></a> Conjuntos de registros con parámetros  
  Un conjunto de registros con parámetros permite pasar información de parámetros en tiempo de ejecución. Esto tiene dos efectos de gran valor:  
   
 -   Podría dar como resultado una mayor velocidad de ejecución.  
@@ -53,7 +48,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Cuando se llama a **abiertos** para ejecutar la consulta, el conjunto de registros usa la información de parámetros para completar su **SQL SELECT** instrucción. Se puede parametrizar cualquier conjunto de registros.  
   
-##  <a name="_core_when_to_use_parameters"></a>Cuándo utilizar parámetros  
+##  <a name="_core_when_to_use_parameters"></a> Cuándo utilizar parámetros  
  Entre los usos típicos de los parámetros se incluyen:  
   
 -   Pasar argumentos de tiempo de ejecución para una consulta predefinida.  
@@ -97,7 +92,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Para obtener más información acerca de los filtros, vea [conjunto de registros: filtrar registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Parametrizar la clase de conjunto de registros  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrizar la clase de conjunto de registros  
   
 > [!NOTE]
 >  En esta sección se aplica a objetos derivados de `CRecordset` qué masiva de filas no se ha implementado la obtención. Si utilizas una fila de forma masiva de filas, implementar los parámetros es un proceso similar. Para obtener más información, consulte [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ Este tema es aplicable a las clases ODBC de MFC.
 
 >  La cadena más probable para trabajar con es la cadena que especifica (si existe) para la clase [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) miembro de datos, pero algunos controladores ODBC podrían permitir parámetros en otras cláusulas SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Pasar valores de parámetro en tiempo de ejecución  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Pasar valores de parámetro en tiempo de ejecución  
  Debe especificar valores de parámetro antes de llamar a **abiertos** (para un nuevo objeto de conjunto de registros) o **Requery** (por otra ya existente).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Para pasar valores de parámetro a un objeto de conjunto de registros en tiempo de ejecución  

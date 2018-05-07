@@ -1,13 +1,10 @@
 ---
 title: Acceso a datos en Visual C++ | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Acceso a datos en Visual C++
 
@@ -57,7 +52,7 @@ Desde 2011, Microsoft cuenta con ODBC como el estándar de conexión para las ap
 
 [Introducción al almacenamiento de Blob desde C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) almacenamiento de blobs de Azure es un servicio que almacena los datos no estructurados en la nube como objetos/blobs. El almacenamiento de blobs puede almacenar cualquier tipo de texto o datos binarios, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs también se conoce como "almacenamiento de objetos".
 
-[Referencia del programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) ODBC la interfaz está diseñada para su uso con el lenguaje de programación de C. El uso de la interfaz ODBC abarca tres áreas: instrucciones SQL, llamadas a funciones de ODBC y programación de C.
+[ Referencia del programador de ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) ODBC la interfaz está diseñada para su uso con el lenguaje de programación de C. El uso de la interfaz ODBC abarca tres áreas: instrucciones SQL, llamadas a funciones de ODBC y programación de C.
 
 ## <a name="see-also"></a>Vea también
 [Visual C++](../visual-cpp-in-visual-studio.md)

@@ -1,12 +1,9 @@
 ---
 title: Crear un proveedor actualizable | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Crear un proveedor actualizable
 Visual C++ admite proveedores actualizables o que pueden actualizar (escribir en) el almacén de datos. En este tema se describe cómo crear proveedores actualizables mediante plantillas OLE DB.  
@@ -162,13 +157,13 @@ FlushData(HROW, HACCESSOR);
 ### <a name="when-to-flush"></a>Cuándo se debe vaciar  
  La llamada de plantillas de proveedor `FlushData` cada vez que los datos deben escribirse en el almacén de datos; Esto normalmente (aunque no siempre) se produce como resultado de las llamadas a las funciones siguientes:  
   
--   **IRowsetChange::DeleteRows**  
+-   **IRowsetChange:: DeleteRows**  
   
--   **IRowsetChange::SetData**  
+-   **IRowsetChange:: SetData**  
   
 -   **IRowsetChange:: InsertRows** (si hay datos nuevos para insertar en la fila)  
   
--   **IRowsetUpdate::Update**  
+-   **IRowsetUpdate:: Update**  
   
 ### <a name="how-it-works"></a>Cómo funciona  
  El consumidor realiza una llamada que requiere una operación de vaciado (como **actualización**) y esta llamada se pasa al proveedor, que siempre hace lo siguiente:  
@@ -414,7 +409,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Marcadores de columna  
- Si decide admitir valores predeterminados en las columnas, deberá establecerlo mediante metadatos en la  **\< ***clase de proveedor***> SchemaRowset** clase. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Si decide admitir valores predeterminados en las columnas, deberá establecerlo mediante metadatos en la  **\< ***clase de proveedor***> SchemaRowset** clase. Establecer *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  También tiene la responsabilidad de establecer los marcadores de columna, que se especifican utilizando el **DBCOLUMNFLAGS** tipo enumerado. Los marcadores de columna describen las características de la columna.  
   

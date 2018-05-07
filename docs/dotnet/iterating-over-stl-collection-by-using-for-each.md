@@ -1,30 +1,25 @@
 ---
-title: "Iterar por la colección de biblioteca estándar de C++ mediante for each | Documentos de Microsoft"
-ms.custom: 
+title: Iterar por la colección de biblioteca estándar de C++ mediante for each | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 963c8a4213da756f03e95924940dc179bd305f60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>Iterar por la colección de biblioteca estándar de C++ mediante for each
 El `for each` palabra clave puede utilizarse para recorrer en iteración una colección de la biblioteca estándar de C++.  

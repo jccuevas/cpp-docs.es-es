@@ -1,12 +1,9 @@
 ---
-title: "Cómo: exponer un contenedor STL/CLR desde un ensamblado | Documentos de Microsoft"
-ms.custom: 
+title: 'Cómo: exponer un contenedor STL/CLR desde un ensamblado | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 84505edf0877a5ae20d28906dde7f4c709574034
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58edb96d3947cc5694731d78c6aa71a855ef7aa9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Cómo: Exponer un contenedor de STL/CLR desde un ensamblado
 Contenedores STL/CLR como `list` y `map` se implementan como clases ref de plantilla. Dado que se crean instancias de las plantillas de C++ en tiempo de compilación, dos clases de plantilla que tienen exactamente la misma firma, pero están en distintos ensamblados son realmente diferentes tipos. Esto significa que no se puede usar las clases de plantilla en los límites del ensamblado.  

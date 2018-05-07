@@ -1,24 +1,19 @@
 ---
 title: Sistema de tipos (C++ / CX) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 Mediante el uso de la arquitectura en tiempo de ejecución de Windows, puede utilizar C++ / CX, Visual Basic, Visual C# y JavaScript para escribir aplicaciones y componentes directamente acceso a la API de Windows e interactuar con otras aplicaciones de Windows Runtime y los componentes. Aplicaciones universales de plataforma de Windows que se escriben en C++ se compilan en código nativo que se ejecuta directamente en la CPU. Aplicaciones universales de plataforma de Windows que se escriben en C# o Visual Basic se compilan en lenguaje intermedio de Microsoft (MSIL) y se ejecutan en common language runtime (CLR). Aplicaciones universales de plataforma de Windows que se escriben en JavaScript se ejecutan en un entorno de tiempo de ejecución. Los propios componentes de sistema operativo de Windows en tiempo de ejecución se escriben en C++ y se ejecutan como código nativo. Todos estos componentes y aplicaciones de la plataforma Universal de Windows se comunican directamente a través de la interfaz binaria de aplicaciones de Windows en tiempo de ejecución (ABI).  
@@ -27,15 +22,15 @@ Mediante el uso de la arquitectura en tiempo de ejecución de Windows, puede uti
   
  Si quiere ver una discusión en profundidad sobre la proyección del lenguaje C++/CX y cómo funciona tras los bastidores, consulte estas publicaciones de blogs:  
   
-1.  [C++ / CX parte 0 de \[ n \]: Introducción](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C++ / CX parte 0 de \[n\]: Introducción](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C++ / CX parte 1 de \[ n \]: una clase Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C++ / CX parte 1 de \[n\]: una clase Simple](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C++ / CX parte 2 de \[ n \]: tipos que usan sombreros](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C++ / CX parte 2 de \[n\]: tipos que usan sombreros](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C++ / CX parte 3 de \[ n \]: en construcción](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C++ / CX parte 3 de \[n\]: en construcción](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C++ / CX parte 4 de \[ n \]: las funciones miembro estáticas](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C++ / CX parte 4 de \[n\]: las funciones miembro estáticas](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Archivos de metadatos de Windows (.winmd)  
  Cuando se compila una aplicación de plataforma Universal de Windows que está escrita en C++, el compilador genera el archivo ejecutable en código máquina nativo y también genera un archivo de metadatos (.winmd) independiente de Windows que contiene las descripciones de los tipos públicos de tiempo de ejecución de Windows, que incluyen clases, structs, enumeraciones, interfaces, interfaces parametrizadas y delegados. El formato de los metadatos se parece al formato que se utiliza en los ensamblados de .NET Framework.  En un componente de C++, el archivo .winmd solo contiene metadatos; el código ejecutable reside en un archivo independiente. Este es el caso de los componentes en tiempo de ejecución de Windows que se incluyen con Windows. El nombre de archivo WinMD tiene que coincidir o ser un prefijo del espacio de nombres raíz en el código fuente. (Para los lenguajes de .NET Framework, el archivo de .winmd contiene el código y los metadatos, como un ensamblado de .NET Framework).  

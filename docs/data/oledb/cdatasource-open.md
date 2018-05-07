@@ -1,12 +1,9 @@
 ---
 title: 'CDataSource:: Open | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Abre una conexión a un origen de datos mediante un **CLSID**, **ProgID**, o `CEnumerator` moniker o pide al usuario un cuadro de diálogo de localizador.  
@@ -86,7 +81,7 @@ HRESULT Open(LPCSTR szProgID,
  *nPropertySets*  
  [in] El número de [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) estructuras pasan en el *pPropSet* argumento.  
   
- *pName*  
+ *nombreDeProveedor*  
  [in] El nombre de la base de datos con la que se va a conectar.  
   
  *pUserName*  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  Un `HRESULT` estándar.  
   
 ## <a name="remarks"></a>Comentarios  
- La sobrecarga del método que usa el parámetro `hWnd` abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB de [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ La sobrecarga del método que usa el parámetro `hWnd` abre un objeto de origen de datos con los componentes del servicio en oledb32.dll; este archivo DLL contiene la implementación de características de componentes de servicio como la agrupación de recursos y la inscripción automática de transacciones, entre otras. Para obtener más información, vea "Servicios OLE DB" en referencia del programador de OLE DB de [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Las sobrecargas del método que no usan el parámetro `hWnd` abren un objeto de origen de datos sin utilizar los componentes del servicio en oledb32.dll. A [CDataSource](../../data/oledb/cdatasource-class.md) objeto abierto con estas sobrecargas de función se podrá usar ninguna de las funciones de componentes del servicio.  
   

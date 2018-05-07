@@ -1,24 +1,19 @@
 ---
 title: Espacios de nombres y visibilidad de tipos (C++ / CX) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilidad de espacios de nombres y tipos (C++/CX)
 Un espacio de nombres es una construcción de C++ estándar para agrupar tipos que tienen funcionalidad relacionada y para evitar conflictos de nombre en bibliotecas. El sistema de tipos en tiempo de ejecución de Windows requiere que todos los tipos públicos de tiempo de ejecución de Windows, las de su propio código, incluidas se deben declarar en un espacio de nombres en el ámbito de espacio de nombres. Los tipos públicos que se declaran en el ámbito global o que se anidan dentro de otra clase producen un error en tiempo de compilación.  
@@ -42,7 +37,7 @@ Un espacio de nombres es una construcción de C++ estándar para agrupar tipos q
 |private|La accesibilidad predeterminada. El mismo significado que en C++ estándar.|No|  
 |protected|El mismo significado que en C++ estándar, tanto dentro de la aplicación o componente como en los metadatos.|Sí|  
 |public|El mismo significado que en C++ estándar.|Sí|  
-|`public protected` -or- `protected public`|Accesibilidad protegida en metadatos, pública dentro de la aplicación o componente.|Sí|  
+|`public protected` - o bien- `protected public`|Accesibilidad protegida en metadatos, pública dentro de la aplicación o componente.|Sí|  
 |`protected private` o `private protected`|No visible en los metadatos; accesibilidad protegida dentro de la aplicación o componente.||  
 |`internal` o `private public`|El miembro es público dentro de la aplicación o componente, pero no está visible en los metadatos.|No|  
   

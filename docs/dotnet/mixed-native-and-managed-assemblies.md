@@ -1,13 +1,10 @@
 ---
 title: Mixto (nativos y administrados) ensamblados | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Ensamblados mixtos (nativos y administrados)
 Los ensamblados mixtos son capaces de contener tanto instrucciones máquina no administradas como instrucciones MSIL. Esto les permite llamar y ser llamados por componentes .NET, a la vez que conservan la compatibilidad con componentes totalmente no administrados. Mediante ensamblados mixtos, los desarrolladores pueden crear aplicaciones con una combinación de funcionalidad administrada y no administrada. Esto crea ensamblados mixtos ideales para migrar aplicaciones existentes de Visual C++ a la plataforma .NET.  
@@ -69,7 +64,7 @@ Los ensamblados mixtos son capaces de contener tanto instrucciones máquina no a
  [Cómo: Crear una aplicación de confianza parcial quitando la dependencia de la DLL de la biblioteca CRT](../dotnet/create-a-partially-trusted-application.md)  
  Describe cómo crear una aplicación de Common Language Runtime de confianza parcial mediante Visual C++, quitando la dependencia de msvcm90.dll.  
   
- Para obtener más información sobre cómo codificar instrucciones para ensamblados mixtos, vea el artículo MSDN "An Overview of Managed/Unmanaged Code Interoperability" en [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Para obtener más información sobre cómo codificar instrucciones para ensamblados mixtos, vea el artículo MSDN "An Overview of Managed/Unmanaged Code Interoperability" en [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>Vea también  
  [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)

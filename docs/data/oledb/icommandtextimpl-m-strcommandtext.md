@@ -1,12 +1,9 @@
 ---
-title: ICommandTextImpl::m_strCommandText | Microsoft Docs
-ms.custom: 
+title: 'ICommandTextImpl:: M_strcommandtext | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::ICommandTextImpl::m_strCommandText
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - m_strCommandText
 ms.assetid: a15e7b2c-e5ff-4570-a7d7-171a60914c7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c60a29062bffb98dfe4e747ff99914dd2040e704
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 85bf95da968eda465879686c996e10e986cca996
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandtextimplmstrcommandtext"></a>ICommandTextImpl::m_strCommandText
 Almacena la cadena de texto de comando.  
@@ -49,5 +44,5 @@ CComBSTR m_strCommandText;
   
 ## <a name="see-also"></a>Vea también  
  [ICommandTextImpl (clase)](../../data/oledb/icommandtextimpl-class.md)   
- [ICommandTextImpl::GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)   
+ [ICommandTextImpl:: Getcommandtext](../../data/oledb/icommandtextimpl-getcommandtext.md)   
  [ICommandTextImpl::SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)

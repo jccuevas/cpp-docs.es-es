@@ -1,24 +1,19 @@
 ---
 title: Opciones del compilador y del vinculador (C++ / CX) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 Una variable de entorno, C++ / CX compilador opciones y las opciones del vinculador admiten la compilación de aplicaciones para el tiempo de ejecución de Windows.  
@@ -40,7 +35,7 @@ Una variable de entorno, C++ / CX compilador opciones y las opciones del vincula
 |Opción|Descripción|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Marca el archivo ejecutable como que se puede ejecutar en appcontainer (solo).|  
-|/ WINMD [: {N &#124; SOLO}]|Emite un archivo .winmd y un archivo binario asociado. Esta opción se debe pasar al enlazador para que se emita un .winmd.<br /><br /> **NO:**no genera un archivo .winmd, pero sí un archivo binario.<br /><br /> **ONLY:**genera un archivo .winmd, pero no un archivo binario.|  
+|/ WINMD [: {N&AMP;#124;SÓLO}]|Emite un archivo .winmd y un archivo binario asociado. Esta opción se debe pasar al enlazador para que se emita un .winmd.<br /><br /> **NO:** no genera un archivo .winmd, pero sí un archivo binario.<br /><br /> **ONLY:** genera un archivo .winmd, pero no un archivo binario.|  
 |/WINMDFILE:*nombre_de_archivo*|El nombre del archivo .winmd que se va a generar, en lugar del nombre de archivo .winmd predeterminado. Si se especifican varios nombres de archivo en la línea de comandos, se usará el último nombre.|  
 |/WINMDDELAYSIGN[:NO]|Firma parcialmente el archivo .winmd y coloca la clave pública en el archivo binario.<br /><br /> **NO:**(predeterminado) no firma el archivo .winmd.<br /><br /> /WINMDDELAYSIGN no tiene ningún efecto a menos que también se especifiquen /WINMDKEYFILE o /WINMDKEYCONTAINER.|  
 |/WINMDKEYCONTAINER:*nombre*|Especifica un contenedor de claves para firmar un ensamblado. El parámetro *nombre* corresponde al contenedor de claves que se usa para firmar el archivo de metadatos.|  

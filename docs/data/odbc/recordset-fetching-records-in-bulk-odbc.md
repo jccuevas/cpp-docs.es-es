@@ -1,13 +1,10 @@
 ---
 title: 'Conjunto de registros: Obtener registros de forma masiva (ODBC) | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Conjunto de registros: Obtener registros de forma masiva (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -49,7 +44,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   [Cómo implementar el intercambio masivo de campos de registros](#_core_how_to_implement_bulk_record_field_exchange).  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>¿Cómo admite CRecordset la obtención masiva de filas  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> ¿Cómo admite CRecordset la obtención masiva de filas  
  Antes de abrir el objeto de conjunto de registros, puede definir un tamaño de conjunto de filas con el `SetRowsetSize` función miembro. El tamaño del conjunto de filas especifica cuántos registros se deben recuperar durante una sola operación de obtención. Cuando se implementa la obtención masiva de filas, el tamaño del conjunto de filas predeterminado es 25. Si no se implementa la obtención masiva de filas, el tamaño del conjunto de filas permanece fijo en 1.  
   
  Después de haber inicializado el tamaño del conjunto de filas, llame a la [abiertos](../../mfc/reference/crecordset-class.md#open) función miembro. Debe especificar el `CRecordset::useMultiRowFetch` opción de la **dwOptions** parámetro para implementar la obtención masiva de filas. Adicionalmente, puede establecer la **CRecordset:: userAllocMultiRowBuffers** opción. El mecanismo de intercambio de campos de registros de forma masiva usa matrices para almacenar las múltiples filas de datos recuperados durante una búsqueda. Estos búferes de almacenamiento pueden asignarse automáticamente por el marco de trabajo o se puede asignar manualmente. Especificar el **CRecordset:: userAllocMultiRowBuffers** opción implica que se realizará la asignación.  
@@ -67,7 +62,7 @@ Este tema es aplicable a las clases ODBC de MFC.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Mueve el cursor una fila determinada en un conjunto de filas.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Función virtual que cambia el valor para el tamaño del conjunto de filas en el valor especificado.|  
   
-##  <a name="_core_special_considerations"></a>Consideraciones especiales  
+##  <a name="_core_special_considerations"></a> Consideraciones especiales  
  Aunque la obtención masiva de filas es un aumento del rendimiento, algunas características funcionan de manera diferente. Antes de decidirse a implementar la obtención masiva de filas, considere lo siguiente:  
   
 -   El marco de trabajo llama automáticamente a la `DoBulkFieldExchange` función de miembro para transferir datos desde el origen de datos para el objeto de conjunto de registros. Sin embargo, no se transfieren datos desde el conjunto de registros en el origen de datos. Llamar a la `AddNew`, **editar**, **eliminar**, o **actualización** resultados de las funciones de miembro en un error de aserción. Aunque `CRecordset` actualmente no proporciona un mecanismo para actualizar filas masivas de datos, puede escribir sus propias funciones mediante la función API de ODBC **SQLSetPos**. Para obtener más información acerca de **SQLSetPos**, consulte el *referencia del programador del SDK de ODBC* en la documentación de MSDN.  
@@ -78,7 +73,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   A diferencia de intercambio de campos de registros, los asistentes no admiten el intercambio masivo de campos de registros. Esto significa que debe declarar manualmente los miembros de datos de campo y reemplazar manualmente `DoBulkFieldExchange` escribiendo llamadas a las funciones de RFX masivo. Para obtener más información, consulte [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md) en el *Class Library Reference*.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>Cómo implementar el intercambio masivo de campos de registro  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> Cómo implementar el intercambio masivo de campos de registro  
  Intercambio masivo de campos de registros, transfiere un conjunto de filas de datos del origen de datos para el objeto de conjunto de registros. Las funciones de RFX masivo usan matrices para almacenar estos datos, así como matrices para almacenar la longitud de cada elemento de datos en el conjunto de filas. En la definición de clase, debe definir a los miembros de datos de campo como punteros para tener acceso a las matrices de datos. Además, debe definir un conjunto de punteros para tener acceso a las matrices de longitudes. Los miembros de datos de parámetro no deben declararse como punteros; declarar miembros de datos de parámetro cuando se usa el intercambio masivo de campos de registros es igual que declararlos cuando mediante el intercambio de campos de registros. El código siguiente muestra un ejemplo sencillo:  
   
 ```  

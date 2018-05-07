@@ -1,13 +1,10 @@
 ---
-title: "Intercambio de campos de registros: Trabajar con el código de Asistente | Documentos de Microsoft"
-ms.custom: 
+title: 'Intercambio de campos de registros: Trabajar con el código de Asistente | Documentos de Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Intercambio de campos de registros: Trabajar con el código de asistente
 Este tema explica el código que el Asistente para aplicaciones MFC y **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) para la compatibilidad con RFX y cómo puede modificar ese código.  
@@ -47,11 +42,11 @@ Este tema explica el código que el Asistente para aplicaciones MFC y **Agregar 
   
 -   Declaraciones de los miembros de datos de campo de conjunto de registros en la clase de conjunto de registros  
   
--   Una invalidación de`CRecordset::DoFieldExchange`  
+-   Una invalidación de `CRecordset::DoFieldExchange`  
   
 -   Inicialización de miembros de datos de campo de conjunto de registros en el constructor de clase de conjunto de registros  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Declaraciones de miembros de datos de campo  
+##  <a name="_core_the_field_data_member_declarations"></a> Declaraciones de miembros de datos de campo  
  El asistente escribe una declaración de clase de conjunto de registros en un archivo .h que se parezca a lo siguiente para la clase `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Además, tenga en cuenta que el asistente reemplaza la `DoFieldExchange` función miembro de clase `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>Reemplazo de DoFieldExchange  
+##  <a name="_core_the_dofieldexchange_override"></a> Reemplazo de DoFieldExchange  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) es la esencia de RFX. Las llamadas de framework `DoFieldExchange` cualquier momento que necesite mover los datos de origen de datos al conjunto de registros o de conjunto de registros al origen de datos. `DoFieldExchange`también admite la obtención de información acerca de campo miembros de datos a través de la [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) y [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funciones miembro.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) es la esencia de RFX. Las llamadas de framework `DoFieldExchange` cualquier momento que necesite mover los datos de origen de datos al conjunto de registros o de conjunto de registros al origen de datos. `DoFieldExchange` también admite la obtención de información acerca de campo miembros de datos a través de la [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) y [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funciones miembro.  
   
  El siguiente `DoFieldExchange` de reemplazo es para la `CSections` clase. El asistente escribe la función en el archivo .cpp para la clase de conjunto de registros.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   El `pFX` puntero a un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) objeto de que el marco de trabajo pasa cuando llama a `DoFieldExchange`. El `CFieldExchange` objeto especifica la operación que `DoFieldExchange` es llevar a cabo, la dirección de la transferencia y otra información de contexto.  
   
-##  <a name="_core_the_recordset_constructor"></a>Constructor de conjunto de registros  
+##  <a name="_core_the_recordset_constructor"></a> Constructor de conjunto de registros  
  El constructor de conjunto de registros que generan los asistentes contiene dos elementos relacionados con RFX:  
   
 -   Una inicialización para cada miembro de datos de campo  

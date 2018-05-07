@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Desplazamiento (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Conjunto de registros: Desplazamiento (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -44,7 +39,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
 -   [En qué circunstancias desplazamiento es y no se admite](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Desplazamiento de un registro a otro  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Desplazamiento de un registro a otro  
  Clase `CRecordset` proporciona el **mover** funciones miembro para desplazarse dentro de un conjunto de registros. Estas funciones mueven el registro actual por conjuntos de filas. Si ha implementado la obtención masiva de filas, una **mover** operación cambia de posición el conjunto de registros por el tamaño del conjunto de filas. Si no ha implementado de filas masiva de filas, una llamada a un **mover** función cambia de posición el conjunto de registros mediante un único registro cada vez. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`Devuelve un valor distinto de cero si el conjunto de registros está colocado más allá del último registro. `IsBOF`Devuelve un valor distinto de cero si el conjunto de registros se coloca delante del primer registro (antes de todos los registros). En cualquier caso, no hay ningún registro actual para operar en. Si se llama a `MovePrev` cuando `IsBOF` ya está **TRUE** o llamar a `MoveNext` cuando `IsEOF` ya está **TRUE**, el marco de trabajo produce una `CDBException`. También puede usar `IsBOF` y `IsEOF` para comprobar si un conjunto de registros vacío.  
+ `IsEOF` Devuelve un valor distinto de cero si el conjunto de registros está colocado más allá del último registro. `IsBOF` Devuelve un valor distinto de cero si el conjunto de registros se coloca delante del primer registro (antes de todos los registros). En cualquier caso, no hay ningún registro actual para operar en. Si se llama a `MovePrev` cuando `IsBOF` ya está **TRUE** o llamar a `MoveNext` cuando `IsEOF` ya está **TRUE**, el marco de trabajo produce una `CDBException`. También puede usar `IsBOF` y `IsEOF` para comprobar si un conjunto de registros vacío.  
   
  Para obtener más información sobre la navegación de conjunto de registros, vea [conjunto de registros: marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Cuando se admite el desplazamiento  
+##  <a name="_core_when_scrolling_is_supported"></a> Cuando se admite el desplazamiento  
  Según su diseño original, SQL proporcionaba sólo desplazamiento hacia delante, pero ODBC extiende las funciones de desplazamiento. El nivel disponible de compatibilidad con desplazamiento depende de los controladores ODBC que la aplicación funcione con nivel de conformidad de API de ODBC de su controlador, y si la biblioteca de cursores ODBC se carga en memoria. Para obtener más información, consulte [ODBC](../../data/odbc/odbc-basics.md) y [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

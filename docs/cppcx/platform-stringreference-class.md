@@ -1,11 +1,8 @@
 ---
 title: Stringreference (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 Tipo de optimización que puedes usar para pasar datos de tipo String desde parámetros de entrada `Platform::String^` a otros métodos con un mínimo de operaciones de copia.  
@@ -45,7 +40,7 @@ class StringReference
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[StringReference::StringReference](#ctor)|Dos constructores para crear instancias de `StringReference`.|  
+|[Stringreference](#ctor)|Dos constructores para crear instancias de `StringReference`.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -53,15 +48,15 @@ class StringReference
 |----------|-----------------|  
 |[Stringreference:: Data](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|  
 |[Stringreference:: Length](#length)|Devuelve el número de caracteres de la cadena.|  
-|[StringReference::GetHSTRING](#gethstring)|Devuelve los datos de tipo String como HSTRING.|  
-|[StringReference::GetString](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|  
+|[Stringreference:: Gethstring](#gethstring)|Devuelve los datos de tipo String como HSTRING.|  
+|[Stringreference:: GetString](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[StringReference::operator=](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|  
-|[StringReference::operator()](#operator-call)|Convierte `StringReference` en `Platform::String^`.|  
+|[Stringreference:: operator =](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|  
+|[Stringreference::operator()](#operator-call)|Convierte `StringReference` en `Platform::String^`.|  
   
 ### <a name="requirements"></a>Requisitos  
  **Cliente mínimo admitido:** Windows 8  
@@ -132,7 +127,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>  StringReference::operator= Operator
+## <a name="operator-assign"></a>  Stringreference:: operator = (operador)
 Asigna el objeto especificado al objeto `StringReference` actual.  
   
 ### <a name="syntax"></a>Sintaxis  

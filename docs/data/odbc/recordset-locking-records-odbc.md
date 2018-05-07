@@ -2,12 +2,9 @@
 title: 'Conjunto de registros: Bloquear registros (ODBC) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-locking-records-odbc"></a>Conjunto de registros: Bloquear registros (ODBC)
 Este tema es aplicable a las clases ODBC de MFC.  
@@ -46,7 +41,7 @@ Este tema es aplicable a las clases ODBC de MFC.
 > [!NOTE]
 >  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si ha implementado la obtención masiva de filas, parte de la información no se aplica. Por ejemplo, no se puede llamar a la **editar** y **actualización** funciones miembro. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_record.2d.locking_modes"></a>Modos de bloqueo de registros  
+##  <a name="_core_record.2d.locking_modes"></a> Modos de bloqueo de registros  
  Las clases de base de datos proporcionan dos [modos de bloqueo de registro](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
 -   (El valor predeterminado) de bloqueo optimista  
@@ -63,7 +58,7 @@ Este tema es aplicable a las clases ODBC de MFC.
   
  Bloqueo optimista bloquea el registro en el origen de datos solo durante la **actualización** llamar. Si se utiliza el bloqueo optimista en un entorno multiusuario, la aplicación debe controlar un **actualización** condición de error. El bloqueo pesimista bloquea el registro en cuanto se llama a **editar** y no lo libera hasta que llamada **actualización** (se indican errores a través de la `CDBException` mecanismo, no por un valor de **FALSE** devuelto por **actualización**). El bloqueo pesimista tiene una penalización de rendimiento potencial para otros usuarios, porque el acceso simultáneo al mismo registro podría tener que esperar hasta la finalización de la aplicación **actualización** proceso.  
   
-##  <a name="_core_locking_records_in_your_recordset"></a>Bloquear registros en el conjunto de registros  
+##  <a name="_core_locking_records_in_your_recordset"></a> Bloquear registros en el conjunto de registros  
  Si desea cambiar un objeto de conjunto de registros [modo de bloqueo](#_core_record.2d.locking_modes) de manera predeterminada, debe cambiar el modo antes de llamar a **editar**.  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Para cambiar el modo de bloqueo actual para el conjunto de registros  

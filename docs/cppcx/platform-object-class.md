@@ -1,11 +1,8 @@
 ---
 title: 'Clase Platform:: Object | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
 Proporciona un comportamiento común para clases ref y structs ref en aplicaciones de Windows en tiempo de ejecución. Todas las instancias de clase ref y struct ref se pueden convertir implícitamente a Platform::Object^ y pueden invalidar su método ToString virtual.  
@@ -46,7 +41,7 @@ public ref class Object : Object
   
 |Name|Descripción|  
 |----------|-----------------|  
-|[Object::Object](#ctor)|Inicializa una nueva instancia de la clase Object.|  
+|[Object](#ctor)|Inicializa una nueva instancia de la clase Object.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -54,7 +49,7 @@ public ref class Object : Object
 |----------|-----------------|  
 |[Object:: Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|  
 |[Object::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|  
-|[Object::ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|  
+|[Object:: ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|  
 |[ToString](#tostring)|Devuelve una cadena que representa el objeto actual. Puede invalidarse.|  
 |[GetType](#gettype)|Obtiene un [Platform::Type](../cppcx/platform-type-class.md) que describe la instancia actual.|  
   
@@ -90,7 +85,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>  Object::GetHashCode Method
+## <a name="gethashcode"></a>  Object:: GetHashCode (método)
 Devuelve el valor de identidad `IUnknown`* para esta instancia si es un objeto COM o un valor hash calculado si no es un objeto COM.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -134,7 +129,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>Vea también  
  [Clase Platform:: Type](../cppcx/platform-type-class.md)   
  [Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)   
- [Type System](../cppcx/type-system-c-cx.md
+ [Sistema de tipos] (.. /cppcx/Type-System-c-CX.MD
   
 ## <a name="ctor"></a>  Constructor de Object
 Inicializa una nueva instancia de la clase Object.  

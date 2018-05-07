@@ -1,13 +1,10 @@
 ---
-title: "Llamar a funciones nativas desde código administrado | Documentos de Microsoft"
-ms.custom: 
+title: Llamar a funciones nativas desde código administrado | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Llamar a funciones nativas desde código administrado
 Common language runtime proporciona servicios de invocación de plataforma o PInvoke, que habilita el código administrado llame a funciones de estilo C en bibliotecas de vínculos dinámicos (DLL) nativas. Se utilizan los mismos datos que el cálculo de referencias para interoperabilidad de COM con el tiempo de ejecución y para el mecanismo "It Just Works" o IJW.  
@@ -40,9 +35,9 @@ Common language runtime proporciona servicios de invocación de plataforma o PIn
   
 -   [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Invocación de un vistazo más cerca de la plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Aproximación a la invocación de plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Los ejemplos de esta sección solo se muestra cómo `PInvoke` puede utilizarse. `PInvoke`puede simplificar la serialización de datos personalizados porque proporciona información de serialización mediante declaración en atributos en lugar de escribir código de serialización de procedimiento.  
+ Los ejemplos de esta sección solo se muestra cómo `PInvoke` puede utilizarse. `PInvoke` puede simplificar la serialización de datos personalizados porque proporciona información de serialización mediante declaración en atributos en lugar de escribir código de serialización de procedimiento.  
   
 > [!NOTE]
 >  La biblioteca de serialización proporciona una manera alternativa de calcular las referencias de datos entre los entornos nativos y administrados de forma optimizada. Vea [información general de serialización en C++](../dotnet/overview-of-marshaling-in-cpp.md) para obtener más información acerca de la biblioteca de serialización. La biblioteca de serialización es útil sólo para los datos y no para las funciones.  
