@@ -1,12 +1,9 @@
 ---
 title: Las herramientas del vinculador LNK1237 Error | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1237
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee9ec0e197d51f76ff57ef06f5584c55df0a4746
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ffc337d6b1548db4717dc4b87ff8aa25ef92e93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1237"></a>Error de las herramientas del vinculador LNK1237
 durante la generación de código, el compilador ha introducido referencia al símbolo 'symbol' definido en el módulo 'module' compilado con/GL  
   
- Durante la generación de código, el compilador no debe introducir los símbolos que se resuelven más adelante a definiciones compiladas **/GL**. `symbol`es un símbolo que se ha introducido y posteriormente resuelto con una definición compilada con **/GL**.  
+ Durante la generación de código, el compilador no debe introducir los símbolos que se resuelven más adelante a definiciones compiladas **/GL**. `symbol` es un símbolo que se ha introducido y posteriormente resuelto con una definición compilada con **/GL**.  
   
  Para obtener más información, consulte [/GL (Optimización de todo el programa)](../../build/reference/gl-whole-program-optimization.md).  
   

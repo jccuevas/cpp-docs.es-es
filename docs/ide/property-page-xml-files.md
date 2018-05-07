@@ -1,29 +1,24 @@
 ---
 title: Archivos de regla de propiedad Page XML | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>Archivos de regla de propiedad Page XML
 Las páginas de propiedades de proyecto en el IDE se configuran por archivos XML en la carpeta VCTargets. La ruta de acceso exacta depende de qué ediciones de Visual Studio están instalados y el idioma del producto. Para Visual Studio de 2017 Enterprise Edition, en inglés, la ruta de acceso es `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Los archivos XML describen los nombres de las reglas, las categorías y las propiedades individuales, su tipo de datos, valores predeterminados y cómo se van a mostrar. Cuando se establece una propiedad en el IDE, el nuevo valor se almacena en el archivo de proyecto.
@@ -114,13 +109,13 @@ La siguiente sección describe cada elementos principales y algunos de los metad
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`indica el sistema del proyecto que todas las propiedades de la regla deben escribirse en el archivo de proyecto o el archivo de hoja de propiedades (dependiendo de qué nodo se utilizó para generar las páginas de propiedades). El otro valor posible es "UserFile" que va a escribir el valor en el archivo .user.
+   - `Persistence="ProjectFile` indica el sistema del proyecto que todas las propiedades de la regla deben escribirse en el archivo de proyecto o el archivo de hoja de propiedades (dependiendo de qué nodo se utilizó para generar las páginas de propiedades). El otro valor posible es "UserFile" que va a escribir el valor en el archivo .user.
 
-   - `ItemType="ClCompile"`indica que las propiedades se almacenará como metadatos ItemDefinition o metadatos de elemento (éste último sólo si se han generado las páginas de propiedades de un nodo de archivo en el Explorador de soluciones) de este tipo de elemento. Si no se establece este campo, la propiedad se escribe como una propiedad común en un PropertyGroup.
+   - `ItemType="ClCompile"` indica que las propiedades se almacenará como metadatos ItemDefinition o metadatos de elemento (éste último sólo si se han generado las páginas de propiedades de un nodo de archivo en el Explorador de soluciones) de este tipo de elemento. Si no se establece este campo, la propiedad se escribe como una propiedad común en un PropertyGroup.
 
-   - `Label=""`indica que cuando las propiedades se escriben como `ItemDefinition` metadatos, la etiqueta del elemento primario ItemDefinitionGroup estará vacía (cada elemento de MSBuild puede tener una etiqueta). Visual Studio de 2017 usa grupos de etiquetado para navegar por el archivo .vcxproj del proyecto. Tenga en cuenta que los grupos que contienen la mayoría de las propiedades regla tienen una cadena vacía como una etiqueta.
+   - `Label=""` indica que cuando las propiedades se escriben como `ItemDefinition` metadatos, la etiqueta del elemento primario ItemDefinitionGroup estará vacía (cada elemento de MSBuild puede tener una etiqueta). Visual Studio de 2017 usa grupos de etiquetado para navegar por el archivo .vcxproj del proyecto. Tenga en cuenta que los grupos que contienen la mayoría de las propiedades regla tienen una cadena vacía como una etiqueta.
 
-   - `HasConfigurationCondition="true"`indica al sistema de proyecto para fijar una condición de configuración con el valor para que surte efecto sólo para la configuración del proyecto actual (la condición puede colocarse en el grupo primario o el propio valor). Por ejemplo, abra las páginas de propiedades del nodo de proyecto y establezca el valor de la propiedad **tratar advertencias como errores** en **propiedades de configuración > General de C o C++** en "Sí". El siguiente valor se escribe en el archivo de proyecto. Tenga en cuenta la condición de configuración adjunta al elemento primario ItemDefinitionGroup.
+   - `HasConfigurationCondition="true"` indica al sistema de proyecto para fijar una condición de configuración con el valor para que surte efecto sólo para la configuración del proyecto actual (la condición puede colocarse en el grupo primario o el propio valor). Por ejemplo, abra las páginas de propiedades del nodo de proyecto y establezca el valor de la propiedad **tratar advertencias como errores** en **propiedades de configuración > General de C o C++** en "Sí". El siguiente valor se escribe en el archivo de proyecto. Tenga en cuenta la condición de configuración adjunta al elemento primario ItemDefinitionGroup.
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">

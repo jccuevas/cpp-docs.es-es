@@ -1,13 +1,10 @@
 ---
 title: Agregar clase de Asistente para controles ActiveX | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>Asistente para agregar clases a partir de un control ActiveX
 Use este asistente para agregar una clase MFC desde un control ActiveX disponible. El asistente crea una clase para cada interfaz que se agregue desde el control ActiveX seleccionado.  
@@ -60,9 +55,9 @@ Use este asistente para agregar una clase MFC desde un control ActiveX disponibl
 |**<\<**|Quita todas las clases en el **clases generadas** lista. If no está disponible la **clases generadas** lista está vacía.|  
   
  **Clases generadas**  
- Especifica los nombres de clase que se generarán a partir de las interfaces agregadas con la  **>**  o  **>>**  botón. Puede hacer clic en esta casilla para seleccionar una clase y, a continuación, utilice el arriba o abajo teclas para desplazarse a través de la lista ver cada nombre de clase en el `Class` cuadro y nombre de archivo en el **archivo .h** cuadro que genera el asistente al hacer clic en  **Finalizar**. Puede seleccionar solo una clase a la vez en este cuadro.  
+ Especifica los nombres de clase que se generarán a partir de las interfaces agregadas con la **>** o **>>** botón. Puede hacer clic en esta casilla para seleccionar una clase y, a continuación, utilice el arriba o abajo teclas para desplazarse a través de la lista ver cada nombre de clase en el `Class` cuadro y nombre de archivo en el **archivo .h** cuadro que genera el asistente al hacer clic en  **Finalizar**. Puede seleccionar solo una clase a la vez en este cuadro.  
   
- Puede quitar una clase, selecciónelo en esta lista y haga clic en  **<** . No es necesario seleccionar una clase en el **clases generadas** cuadro para quitar todas las clases; haciendo clic  **<<** , quite todas las clases de la **clases generadas** cuadro.  
+ Puede quitar una clase, selecciónelo en esta lista y haga clic en **<**. No es necesario seleccionar una clase en el **clases generadas** cuadro para quitar todas las clases; haciendo clic **<<**, quite todas las clases de la **clases generadas** cuadro.  
   
  `Class`  
  Especifica el nombre de la clase seleccionada en el **clases generadas** cuadro que el asistente agrega al hacer clic en **finalizar**. Puede modificar el nombre de la `Class` cuadro.  

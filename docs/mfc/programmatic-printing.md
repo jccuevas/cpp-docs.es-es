@@ -1,13 +1,10 @@
 ---
-title: "Imprimir mediante programación | Documentos de Microsoft"
-ms.custom: 
+title: Imprimir mediante programación | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Imprimir mediante programación
 OLE proporciona los medios para identificar de forma única documentos persistentes (**GetClassFile**) y cargarlos en su código asociado (`CoCreateInstance`, **QueryInterface**, **Iid_ipersiststorage**, **IPersistFile:: Load**, y **IPersistStorage:: Load**). Para habilitar la impresión de documentos, la contención de documentos activos (mediante un diseño existente de OLE no incluido con OLE 2.0 originalmente) presenta una interfaz de impresión estándar básica, `IPrint`, que normalmente está disponible a través de cualquier objeto que se puede cargar el estado persistente del tipo de documento. Cada vista de un documento activo, opcionalmente, puede admitir el **IPrint** interfaz para proporcionar estas capacidades.  
@@ -61,7 +56,7 @@ interface IPrint : IUnknown
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`Normalmente se implementa en el mismo objeto que es compatible con `IPersistFile` o `IPersistStorage`. Los autores de llamadas tenga en cuenta la capacidad de imprimir mediante programación el estado persistente de alguna clase buscando en el registro para la clave "Printable". Actualmente, "Imprimibles" indican compatibilidad con al menos `IPrint`; otras interfaces pueden definirse en el futuro, a continuación, lo que estaría disponible a través de `QueryInterface` donde **IPrint** simplemente representa el nivel de base de soporte técnico.  
+ `IPrint` Normalmente se implementa en el mismo objeto que es compatible con `IPersistFile` o `IPersistStorage`. Los autores de llamadas tenga en cuenta la capacidad de imprimir mediante programación el estado persistente de alguna clase buscando en el registro para la clave "Printable". Actualmente, "Imprimibles" indican compatibilidad con al menos `IPrint`; otras interfaces pueden definirse en el futuro, a continuación, lo que estaría disponible a través de `QueryInterface` donde **IPrint** simplemente representa el nivel de base de soporte técnico.  
   
  Durante un procedimiento de impresión, puede que desee el cliente o el contenedor que inició la impresión para controlar si debe continuar la impresión. Por ejemplo, el contenedor puede admitir un comando "Detener impresión" que debe finalizar el trabajo de impresión tan pronto como sea posible. Para admitir esta capacidad, el cliente de un objeto imprimible puede implementar un objeto de receptor de notificaciones breves con la interfaz de `IContinueCallback`:  
   

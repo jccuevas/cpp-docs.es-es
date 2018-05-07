@@ -1,12 +1,9 @@
 ---
 title: CDBErrorInfo (clase) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBErrorInfo
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBErrorInfo class
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ae65a1a04d5befdfcd22327def8f60d96c9d4cff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 59222e30fe4a0ee7914c4a4d4e8dfa0d6d3a260b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo (Clase)
 Proporciona compatibilidad para el procesamiento de error de OLE DB mediante OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interfaz.  

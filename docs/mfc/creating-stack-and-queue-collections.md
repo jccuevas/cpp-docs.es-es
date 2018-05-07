@@ -1,13 +1,10 @@
 ---
 title: Crear colecciones de pila y cola | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>Crear colecciones de pila y de cola
 Este artículo explica cómo crear otras estructuras de datos, como [pilas](#_core_stacks) y [colas](#_core_queues), lista de clases de MFC. Los ejemplos utilizan las clases derivadas de `CList`, pero puede usar `CList` directamente a menos que necesite agregar funcionalidad.  
   
-##  <a name="_core_stacks"></a>Pilas  
+##  <a name="_core_stacks"></a> Pilas  
  Dado que la colección de lista estándar tiene un encabezado y un final, resulta fácil crear una colección de lista derivada que imita el comportamiento de una pila de último en primero en salir. Una pila es como una pila de bandejas de una cafetería. Cuando se agregan bandejas a la pila, salen encima de la pila. La última bandeja agregada es el primero que se va a quitar. Las funciones de miembro de colección de lista `AddHead` y `RemoveHead` se pueden utilizar para agregar y quitar elementos específicamente del principio de la lista; por lo tanto, el último agregado elemento es el primero que se va a quitar.  
   
 #### <a name="to-create-a-stack-collection"></a>Para crear una colección de pila  
@@ -48,7 +43,7 @@ Este artículo explica cómo crear otras estructuras de datos, como [pilas](#_co
   
  Tenga en cuenta que este enfoque expone subyacente `CObList` clase. El usuario puede llamar a cualquier `CObList` función miembro, si tiene sentido para una pila o no.  
   
-##  <a name="_core_queues"></a>Colas  
+##  <a name="_core_queues"></a> Colas  
  Dado que la colección de lista estándar tiene un encabezado y una cola, también es fácil crear una colección de lista derivada que imita el comportamiento de una cola primero en el primero en salir. Una cola es como una línea de personas en una cafetería. La primera persona en línea es la primera que se pueda servir. Cuando lo emite más personas, van al final de la línea debe esperar su turno. Las funciones de miembro de colección de lista `AddTail` y `RemoveHead` se pueden utilizar para agregar y quitar elementos específicamente del encabezamiento o del final de la lista; por lo tanto, el último agregado elemento siempre es el último que se va a quitar.  
   
 #### <a name="to-create-a-queue-collection"></a>Para crear una colección de colas  

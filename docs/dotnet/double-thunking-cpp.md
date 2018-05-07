@@ -1,13 +1,10 @@
 ---
 title: Doble thunk (C++) | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Doble thunk (C++)
 Doble thunk se refiere a la pérdida de rendimiento que pueden surgir al punto de entrada nativo de la función llama a una llamada de función en un contexto administrado llama función administrada de Visual C++ y donde la ejecución del programa para poder llamar a la función administrada. Este tema explica dónde ocurre double thunk y cómo se puede evitar para mejorar el rendimiento.  
@@ -40,7 +35,7 @@ Doble thunk se refiere a la pérdida de rendimiento que pueden surgir al punto d
   
  De forma similar, si exporta ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) una función administrada, se genera un punto de entrada nativo y cualquier función que importa y llama a esa función llamará a través del punto de entrada nativo. Para evitar el doble código thunk en esta situación, no utilice la semántica de importación/exportación nativa; basta con hacer referencia a los metadatos a través de `#using` (consulte [#using (directiva)](../preprocessor/hash-using-directive-cpp.md)).  
   
- El compilador se actualizó para reducir el doble código thunk innecesario. Por ejemplo, cualquier función con un tipo administrado en la firma (incluido el tipo de valor devuelto) implícitamente se marcará como `__clrcall`. Para obtener más información sobre la eliminación de doble código thunk, vea [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ El compilador se actualizó para reducir el doble código thunk innecesario. Por ejemplo, cualquier función con un tipo administrado en la firma (incluido el tipo de valor devuelto) implícitamente se marcará como `__clrcall`. Para obtener más información sobre la eliminación de doble código thunk, vea [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Ejemplo  
   

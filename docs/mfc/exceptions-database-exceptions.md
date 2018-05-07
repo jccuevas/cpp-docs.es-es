@@ -1,13 +1,10 @@
 ---
 title: 'Excepciones: Excepciones de base de datos | Documentos de Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Excepciones: Excepciones de base de datos
 En este artículo se explica cómo controlar las excepciones de base de datos. La mayoría de los materiales en este artículo se aplica si está trabajando con las clases MFC para Open Database Connectivity (ODBC) o las clases MFC para Data Access Objects (DAO). Material específico a uno de los modelos se marca explícitamente. Entre los temas se incluyen los siguientes:  
@@ -39,7 +34,7 @@ En este artículo se explica cómo controlar las excepciones de base de datos. L
   
 -   [Un ejemplo de control de excepciones de base de datos](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Enfoques para control de excepciones  
+##  <a name="_core_approaches_to_exception_handling"></a> Enfoques para control de excepciones  
  El enfoque es el mismo independientemente de si trabaja con DAO u ODBC.  
   
  Siempre debería escribir controladores de excepciones para controlar condiciones excepcionales.  
@@ -62,7 +57,7 @@ En este artículo se explica cómo controlar las excepciones de base de datos. L
   
  Información adicional sobre los errores DAO, el tipo de objeto DAO Error y la colección de errores de DAO está disponible en la clase [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Un ejemplo de control de excepciones de base de datos  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Un ejemplo de control de excepciones de base de datos  
  En el ejemplo siguiente se intenta construir una [CRecordset](../mfc/reference/crecordset-class.md)-objeto del montón con derivado la **nueva** operador y, a continuación, abra el conjunto de registros (para un origen de datos ODBC). Para obtener un ejemplo similar para las clases DAO, vea "Ejemplo de excepción DAO" a continuación.  
   
 ### <a name="odbc-exception-example"></a>Ejemplo de excepción ODBC  

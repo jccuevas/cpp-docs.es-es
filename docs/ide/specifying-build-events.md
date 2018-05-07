@@ -2,12 +2,9 @@
 title: Especificar eventos de compilación | Documentos de Microsoft
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>Especificar eventos de compilación
 
@@ -60,7 +55,7 @@ Para obtener información general sobre los eventos de compilación, consulte [I
 
       Varios archivos de entrada y salidos se pueden especificar simbólicamente con macros MSBuild. Para obtener información sobre cómo especificar la ubicación de archivos o los nombres de los conjuntos de archivos, consulte [comunes Macros para propiedades y comandos de generación](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Dado que el carácter '%' está reservado por MSBuild, si especifica una variable de entorno reemplaza cada  **%**  carácter con escape la **% 25** secuencia de escape hexadecimal. Por ejemplo, reemplace **% WINDIR %** con **25WINDIR % 25**. MSBuild reemplaza cada **% 25** de secuencia con el  **%**  antes de tener acceso a la variable de entorno de caracteres.
+      Dado que el carácter '%' está reservado por MSBuild, si especifica una variable de entorno reemplaza cada **%** carácter con escape la **% 25** secuencia de escape hexadecimal. Por ejemplo, reemplace **% WINDIR %** con **25WINDIR % 25**. MSBuild reemplaza cada **% 25** de secuencia con el **%** antes de tener acceso a la variable de entorno de caracteres.
 
    - En **descripción**, escriba una descripción para este evento. La descripción se imprime en la **salida** ventana cuando se produce este evento.
 

@@ -1,13 +1,10 @@
 ---
-title: "Implementación de la barra de herramientas MFC | Documentos de Microsoft"
-ms.custom: 
+title: Implementación de la barra de herramientas MFC | Documentos de Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementación de barra de herramientas de MFC
 Una barra de herramientas es un [barra de control](../mfc/control-bars.md) que contiene las imágenes de mapa de bits de controles. Estas imágenes se comportan como botones de comando, casillas o botones de radio. MFC proporciona la clase [CToolbar](../mfc/reference/ctoolbar-class.md) para administrar las barras de herramientas.  
@@ -64,12 +59,12 @@ Una barra de herramientas es un [barra de control](../mfc/control-bars.md) que c
   
 -   [El mapa de bits de barra de herramientas](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a>Botones de barra de herramientas  
+##  <a name="_core_toolbar_buttons"></a> Botones de barra de herramientas  
  Los botones de una barra de herramientas son análogos a los elementos de un menú. Ambos tipos de objetos de la interfaz de usuario generan comandos, que se pueden administrar mediante las funciones de controlador que el programa proporciona. Los botones de la barra de herramientas duplican a menudo la funcionalidad de los comandos de menú y proporcionan una interfaz de usuario alternativa para la misma funcionalidad. Para organizar esta duplicación de forma sencilla, asigne el mismo id. al botón y al elemento de menú.  
   
  Puede hacer que los botones de una barra de herramientas aparezcan y se comporten como botones de comando, las casillas o los botones de radio. Para obtener más información, vea la clase [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a>Acoplar y desacoplar las barras de herramientas  
+##  <a name="_core_docking_and_floating_toolbars"></a> Acoplar y desacoplar las barras de herramientas  
  Una barra de herramientas de MFC puede:  
   
 -   Mantenerse estática a lo largo de un lado de la ventana primaria.  
@@ -82,10 +77,10 @@ Una barra de herramientas es un [barra de control](../mfc/control-bars.md) que c
   
  Para obtener más información, vea el artículo [acoplar y desacoplar barras de herramientas](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a>Barras de herramientas e información sobre herramientas  
+##  <a name="_core_toolbars_and_tool_tips"></a> Barras de herramientas e información sobre herramientas  
  También se puede hacer que las barras de herramientas de MFC muestren "información sobre herramientas", que son ventanas emergentes minúsculas que contienen una breve descripción de texto del propósito de un botón de la barra de herramientas. Cuando el usuario mueve el mouse sobre un botón de la barra de herramientas, la ventana de información sobre herramientas emerge para proporcionar una sugerencia. Para obtener más información, vea el artículo [información sobre herramientas de barra de herramientas](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>Las clases CToolBar y CToolBarCtrl  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> Las clases CToolBar y CToolBarCtrl  
  Administrar las barras de herramientas de la aplicación a través de la clase [CToolBar](../mfc/reference/ctoolbar-class.md). A partir de la versión 4.0 de MFC, `CToolBar` se ha implementado de nuevo para utilizar el control común de barra de herramientas que está disponible en Windows 95 o versiones posteriores y en Windows NT versión 3.51 o versiones posteriores.  
   
  Esta nueva implementación da lugar a menos código MFC para las barras de herramientas, porque MFC utiliza la compatibilidad con el sistema operativo. La nueva implementación también mejora la capacidad. Puede usar `CToolBar` funciones de miembro para manipular las barras de herramientas, o pueden obtener una referencia a subyacente [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) de objetos y llamar a funciones su miembro para la personalización de la barra de herramientas y una funcionalidad adicional.  
@@ -95,7 +90,7 @@ Una barra de herramientas es un [barra de control](../mfc/control-bars.md) que c
   
  Vea también el ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a>El mapa de bits de barra de herramientas  
+##  <a name="_core_the_toolbar_bitmap"></a> El mapa de bits de barra de herramientas  
  Una vez construido, un objeto `CToolBar` carga un solo mapa de bits que contiene una imagen de cada botón para crear la imagen de la barra de herramientas. El Asistente para aplicaciones crea un mapa de bits de barra de herramientas estándar que se puede personalizar con Visual C++ [editor de la barra de herramientas](../windows/toolbar-editor.md).  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  

@@ -1,13 +1,10 @@
 ---
 title: Enrutamiento de comandos | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 Su responsabilidad a la hora de trabajar con comandos se limita a crear conexiones de mapa de mensajes entre los comandos y sus funciones de controlador, una tarea para la cual se usa la ventana Propiedades. También debe escribir la mayoría de los controladores de comando.  
@@ -48,7 +43,7 @@ Su responsabilidad a la hora de trabajar con comandos se limita a crear conexion
   
 |Cuando un objeto de este tipo recibe un comando. . .|Se da a si mismo y a otros objetos de destino del comando una oportunidad de controlar el comando, en este orden:|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Ventana de marco MDI (`CMDIFrameWnd`)|1.  Active`CMDIChildWnd`<br />2.  Esta ventana de marco<br />3.  Aplicación (`CWinApp` objeto)|  
+|Ventana de marco MDI (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  Esta ventana de marco<br />3.  Aplicación (`CWinApp` objeto)|  
 |Ventana de marco de documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Vista activa<br />2.  Esta ventana de marco<br />3.  Aplicación (`CWinApp` objeto)|  
 |Ver|1.  Esta vista<br />2.  Documento asociado a la vista|  
 |Documento|1.  Este documento<br />2.  Plantilla de documento asociada al documento|  

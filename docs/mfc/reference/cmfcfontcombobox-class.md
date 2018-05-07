@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCFontComboBox | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>Clase CMFCFontComboBox
 La `CMFCFontComboBox` clase crea un control de cuadro combinado que contiene una lista de fuentes.  
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Construye un objeto `CMFCFontComboBox`.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Recupera información sobre la fuente seleccionada actualmente.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Comentarios  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Indica qué fuente que se va a utilizar para dibujar las etiquetas de elemento en el cuadro combinado de fuente actual para el marco de trabajo.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Comentarios  
  Este miembro del grupo de `TRUE` para dirigir el marco de trabajo para utilizar la misma fuente para dibujar cada etiqueta de elemento. Este miembro del grupo de `FALSE` para dirigir el marco de trabajo para dibujar cada etiqueta de elemento con la fuente cuyo nombre es el mismo que la etiqueta. El valor predeterminado de este miembro es `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Selecciona la fuente que coincide con los criterios especificados en el cuadro combinado de fuente.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Especifica un juego de caracteres. El valor predeterminado es DEFAULT_CHARSET. Para obtener más información, consulte el `lfCharSet` miembro de la [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estructura.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si un elemento en el cuadro combinado de fuente coincide con el objeto de descripción de la fuente especificada o el nombre de la fuente y el juego de caracteres; en caso contrario, `FALSE`.  
+ `TRUE` Si un elemento en el cuadro combinado de fuente coincide con el objeto de descripción de la fuente especificada o el nombre de la fuente y el juego de caracteres; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Utilice este método para seleccionar y desplácese hasta el elemento en el cuadro combinado de fuente que corresponde a la fuente especificada.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Inicializa la lista de elementos en el cuadro combinado de fuente.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Especifica el tono de fuente y la familia. El valor predeterminado es DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valor devuelto  
- `TRUE`Si el cuadro combinado de fuente se inicializó correctamente; en caso contrario, `FALSE`.  
+ `TRUE` Si el cuadro combinado de fuente se inicializó correctamente; en caso contrario, `FALSE`.  
   
 ### <a name="remarks"></a>Comentarios  
  Este método inicializa el cuadro combinado de fuente enumerar las fuentes instaladas actualmente que coinciden con los parámetros especificados e insertar los nombres de fuente en el cuadro combinado de fuente.  

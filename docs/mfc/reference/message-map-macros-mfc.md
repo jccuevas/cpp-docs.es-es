@@ -1,13 +1,10 @@
 ---
 title: Macros de mapa (MFC) del mensaje | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 28b8a6e6e34399cb16ba3ec9e4f25562962c2dd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 Para admitir los mapas de mensajes, MFC proporciona las macros siguientes:  
@@ -86,7 +81,7 @@ Para admitir los mapas de mensajes, MFC proporciona las macros siguientes:
  Para obtener más información sobre los mapas de mensajes, la declaración de mapa de mensajes y demarcación macros y las macros de asignación de mensajes, vea [mapas de mensajes](../../mfc/reference/message-maps-mfc.md) y [control de mensajes y los temas de asignación](../../mfc/message-handling-and-mapping.md). Para obtener más información acerca de los intervalos de mapa de mensajes, vea [controladores para intervalos de mapa de mensajes de](../../mfc/handlers-for-message-map-ranges.md).  
 
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 Comienza la definición de la asignación de mensaje.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -142,7 +137,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
  
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
  Declara que la clase define un mapa de mensajes. Cada `CCmdTarget`-clase derivada en el programa debe proporcionar un mapa de mensajes para controlar los mensajes.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -172,7 +167,7 @@ class CMainFrame : public CMDIFrameWnd
  **Encabezado:** afxwin.h  
 
 
-## <a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
 Termina la definición de la asignación de mensaje.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -187,7 +182,7 @@ END_MESSAGE_MAP( )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxwin.h  
 
-## <a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a>  ON_COMMAND
 Esta macro asigna un mensaje de comando a una función miembro.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -220,7 +215,7 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>ON_COMMAND_EX
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
 Extiende la función miembro de controlador de comandos.  
    
 ### <a name="syntax"></a>Sintaxis  
@@ -262,7 +257,7 @@ Para obtener más información, vea la nota técnica [TN006: mapas de mensajes] 
  [TN006: mapas de mensajes] tm006-message-maps.md)
 
   
-## <a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a>  ON_CONTROL
 Indica que las funciones que va a controlar un mensaje de notificación de control personalizado.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -292,7 +287,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
  **Encabezado:** afxmsg_.h  
   
 
-## <a name="on_message"></a>ON_MESSAGE  
+## <a name="on_message"></a>  ON_MESSAGE  
 Indica que las funciones que va a controlar un mensaje definido por el usuario.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -345,7 +340,7 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmsg_.h  
 
-## <a name="on_olecmd"></a>ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD  
 Enruta los comandos a través de la interfaz de envío de comandos `IOleCommandTarget`.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -365,9 +360,9 @@ ON_OLECMD( pguid, olecmdid, id )
  El identificador del menú, barra de herramientas Id., Id. de botón u otros del recurso u objeto que se emite el comando.  
   
 ### <a name="remarks"></a>Comentarios  
- `IOleCommandTarget`permite que un contenedor recibir comandos que se originan en la interfaz de usuario del DocObject y permite al contenedor enviar los mismos comandos (como nuevo, abrir, guardar como e imprimir en el menú archivo; y copiar, pegar, deshacer, y así sucesivamente en el menú Editar) a DocObject.  
+ `IOleCommandTarget` permite que un contenedor recibir comandos que se originan en la interfaz de usuario del DocObject y permite al contenedor enviar los mismos comandos (como nuevo, abrir, guardar como e imprimir en el menú archivo; y copiar, pegar, deshacer, y así sucesivamente en el menú Editar) a DocObject.  
   
- `IOleCommandTarget`es más sencillo que del automatización OLE `IDispatch`. `IOleCommandTarget`se basa completamente en un conjunto estándar de comandos que no suelen tener argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando). Si es necesario enviar comandos con argumentos, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
+ `IOleCommandTarget` es más sencillo que del automatización OLE `IDispatch`. `IOleCommandTarget` se basa completamente en un conjunto estándar de comandos que no suelen tener argumentos, y no está implicada ninguna información de tipo (seguridad de tipos se reduce para argumentos del comando). Si es necesario enviar comandos con argumentos, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
  El `IOleCommandTarget` comandos de menú estándar se han implementado por MFC en las macros siguientes:  
   
@@ -474,7 +469,7 @@ ON_OLECMD( pguid, olecmdid, id )
  [Clase COleCmdUI](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 Las ventanas **RegisterWindowMessage** función se utiliza para definir un nuevo mensaje de ventana que se garantiza que sea único en todo el sistema.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -512,7 +507,7 @@ END_MESSAGE_MAP()
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Controladores definidos por el usuario](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
 Indica qué función se tratará el mensaje registrado por la función RegisterWindowMessage de Windows.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -534,7 +529,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmsg_.h  
 
-## <a name="on_thread_message"></a>ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
 Indica que las funciones que va a controlar un mensaje definido por el usuario.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -551,12 +546,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
  El nombre de la `CWinThread`-message-función de controlador al que está asignado el mensaje.  
   
 ### <a name="remarks"></a>Comentarios  
- `ON_THREAD_MESSAGE`debe usarse en lugar de `ON_MESSAGE` cuando haya un `CWinThread` clase. Mensajes definidos por el usuario son los mensajes que no sean Windows estándares **WM_MESSAGE** mensajes. Debe haber exactamente uno `ON_THREAD_MESSAGE` instrucción de macro en el mapa de mensajes para cada mensaje definido por el usuario que se debe asignar a una función de controlador de mensajes.  
+ `ON_THREAD_MESSAGE` debe usarse en lugar de `ON_MESSAGE` cuando haya un `CWinThread` clase. Mensajes definidos por el usuario son los mensajes que no sean Windows estándares **WM_MESSAGE** mensajes. Debe haber exactamente uno `ON_THREAD_MESSAGE` instrucción de macro en el mapa de mensajes para cada mensaje definido por el usuario que se debe asignar a una función de controlador de mensajes.  
   
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxole.h  
 
-## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
 Esta macro indica las funciones que va a controlar un mensaje de comando de actualización de interfaz de usuario.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -583,7 +578,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
 ### <a name="see-also"></a>Vea también  
  [CCmdUI (clase)](ccmdui-class.md)
 
-## <a name="on_command_range"></a>ON_COMMAND_RANGE  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
 Use esta macro para asignar un intervalo contiguo de identificadores de comando a una función de controlador único mensaje.  
   
 ### <a name="syntax"></a>Sintaxis
@@ -633,7 +628,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
 Asigna un intervalo contiguo de identificadores de comando a una función de controlador de mensaje de actualización individual.  
   
 ### <a name="syntax"></a>Sintaxis  
@@ -660,7 +655,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 ### <a name="requirements"></a>Requisitos  
  **Encabezado:** afxmsg_.h  
 
-## <a name="on_control_range"></a>ON_CONTROL_RANGE     
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
 Usar esta macro para asignar un intervalo contiguo de identificadores de control a una función de controlador de mensaje único para un mensaje de notificación de Windows especificado, como **BN_CLICKED**.  
   
 ### <a name="syntax"></a>Sintaxis  

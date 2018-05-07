@@ -1,12 +1,9 @@
 ---
 title: Clase CMFCBaseToolBar | Documentos de Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCBaseToolBar
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c57a09465a342a74e69d199d725ec64e7c60ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbasetoolbar-class"></a>Clase CMFCBaseToolBar
 Clase base para las barras de herramientas.  
@@ -76,7 +71,7 @@ class CMFCBaseToolBar : public CPane
 ## <a name="requirements"></a>Requisitos  
  **Encabezado:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
  Devuelve el modo de acoplamiento.  
   
 ```  
@@ -86,7 +81,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 ### <a name="return-value"></a>Valor devuelto  
  El modo de acoplamiento.  
   
-##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
  Devuelve el tamaño mínimo de una barra de herramientas.  
   
 ```  
@@ -97,7 +92,7 @@ virtual void GetMinSize(CSize& size) const;
  [out] `size`  
  El tamaño mínimo de una barra de herramientas.  
   
-##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
  Lo llama el marco de trabajo después de realizar cambios de elemento primario del panel.  
   
 ```  
